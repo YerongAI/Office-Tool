@@ -10,7 +10,7 @@ We encourage everyone to help with localization. The following is how to do.
 
 1. Fork this repository
 
-2. Translate ````string.xaml```` to your own language then save it as ````zh-tw.xaml````
+2. Translate ````string.xaml```` to your own language then save it like ````zh-tw.xaml````
 
 3. Copy it to the right path, like string/zh-tw.xaml
 

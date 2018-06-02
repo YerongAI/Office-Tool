@@ -1,6 +1,6 @@
 # Office Tool Plus
-Office Tool Plus is a tool for managing, downloading, installing and activating Office. Based on Microsoft's Office Deployment Tool. You can custom configure your Office installation, or download offline files to install Office.
-What's more, you can manage your installed Office, change update channel, add language pack and custom uninstall Office.
+Office Tool Plus is a tool for managing, downloading and installing Office. Based on Microsoft's Office Deployment Tool. You can customize configure your Office installation, or download offline files to install Office.
+What's more, you can manage your installed Office, change update channel, add language pack and customize uninstall Office.
 
 ### [Download](https://otp.landian.la) Office Tool Plus
 

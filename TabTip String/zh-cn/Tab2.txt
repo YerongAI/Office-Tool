@@ -1,0 +1,52 @@
+﻿默认配置为安装 32 位的 Office，包含 Word、PowerPoint、Excel，如无特殊需要，可以直接开始安装。
+
+套件包含应用程序，因此当你选定套件后，您可以在应用程序列表中选择需要安装的应用程序，勾选即为安装。
+虽然产品里面也有应用程序的 ID，但是很多情况下是不会选择的，如果你选了，有啥后果请自行负责。
+
+产品列表里包括 Visio 和 Project，其中分专业版，标准版和零售版与批量版。一般情况选择 XVolume（批量版），安装完成后可以使用 OTP 的 KMS 激活。若您有产品密钥或者有对应的账户，安装 Retail 版本。
+有关 套件/产品 ID 的更详细信息，请查看本文后半部分
+
+安装语言默认匹配系统语言，当模式为 匹配系统语言时，语言列表用于指定 Fallback 属性，即当系统的语言不受 Office 支持时，ODT (Office Deployment Tool) 会使用 Fallback 属性中指定的语言来安装 Office，若未指定 Fallback 属性，则默认安装 en-us 语言。仅可以设置一个 Fallback 属性。
+当模式为 匹配先前 MSI 版本的语言时，ODT 会查找计算机上已安装了的 MSI 版本的 Office 的语言，并将其设置为 Office 的安装语言。此项必须与 RemoveMSI 属性一起使用，以便从 MSI 版本升级至 C2R 版本，若您的计算机上没有 MSI 版本的 Office，请勿选择此项。
+当模式为 从列表中选择时，列表中被勾选的语言将会被设置为 Office 安装语言。其中，当您选择了多个语言时，设置的第一个语言将会被用于确定 Shell UI 区域性，包括快捷方式，右键单击上下文菜单和工具提示。单击语言列表右边的空白区域并拖动可以对语言进行排序。
+
+有关其他属性的详细信息，请前往微软的网站 https://docs.microsoft.com/zh-cn/DeployOffice/configuration-options-for-the-office-2016-deployment-tool 查看详细信息。
+
+从按钮菜单中选择 立即应用 应用程序首选项 设置 时，会将 应用程序首选项 中的设置立即应用到当前已安装的 Office 应用程序上并生效，如若没有安装 Office 产品，请勿使用此项。
+
+------------- ------------- 套件/产品 ID 参考 ------------- -------------
+ProPlusRetail                     Office 2016 专业增强版
+ProfessionalRetail             Office 2016 专业版
+O365ProPlusRetail            Office 365 ProPlus，适用于Office 365教育版、Office 365 专业增强版、Office 365 企业版 E3、Office 365 企业版 E4、Office 365 企业版 E5、Office 365 中型企业版
+O365HomePremRetail      Office 365 家庭高级版
+O365BusinessRetail          Office 365 商业版、Office 365 商业高级版
+O365SmallBusPremRetail Office 小型企业高级版
+HomeBusinessRetail         Office 家庭高级版
+HomeStudentRetail          Office 家庭学生版
+ProjectProXVolume          Project 专业版 批量版
+ProjectProRetail               Project 专业版 零售版
+ProjectStdXVolume          Project 标准版 批量版
+ProjectStdRetail               Project 标准版 零售版
+VisioProXVolume             Visio 专业版 批量版
+VisioProRetail                  Visio 专业版 零售版
+VisioStdXVolume             Visio 标准版 批量版
+VisioStdRetail                  Visio 标准版 零售版
+LanguagePack                 语言包
+
+----------- ----------- 2019 套件/产品 ID 参考 ----------- -----------
+ProPlus2019Retail              Office 2019 专业增强版   预览版
+VisioPro2019Retail             Visio Pro 2019 零售版     预览版
+ProjectPro2019Retail         Project Pro 2019 零售版  预览版
+VisioPro2019XVolume       Visio Pro 2019 批量版     预览版
+ProjectPro2019XVolume   Project Pro 2019 批量版  预览版
+
+------------ ------------ 常见问题以及解决办法 ------------ ------------
+写在开头：如果您的系统不是原版系统，而是经过修改、精简的系统或者是 Ghost 来的系统，请重装原版系统。此类系统常常因为系统文件被修改/破坏严重而导致 ODT 和 Click to Run 无法正常运行。重装原版系统是最简便、最有效的方法，有关原版系统可以前往 MSDN 我告诉你 下载。
+
+在开始安装之前，请关闭所有无关的软件，包括360，各种管家以及毒霸等各种杀毒、安全软件。否则容易卡在 We're getting things ready...
+
+如提示 You have the Windows Installer based program installed in your computer 或者 you have the 32 (或 64) bit program installed in your computer, 请从程序与功能中卸载之前旧版本的 Office，如已经卸载或者无法正常卸载，请使用 管理 - 卸载 页面提供的脚本/工具清除 Office。清除完成后，请再次尝试，如有必要，请先重启计算机后再试。如果依然继续此提示，请加入我们的群组并获取相应的帮助文档进行操作。
+
+如提示 We can't download a required file, 请尝试重新下载离线文件，或者在线安装 Office。如果离线文件有多个版本，请手动指定可用的版本，或者清除无法使用的版本。
+
+如果出现其他提示，请尝试清除 Office，最终解决办法：重装原版 Windows

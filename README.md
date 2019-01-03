@@ -4,7 +4,7 @@ What's more, you can manage your installed Office, change update channel, add la
 
 ### [Download](https://otp.landian.la) Office Tool Plus
 
-### Mirror [Download](https://www.fczbl.vip/drive/?/SYSSOF/OTP/Office%20Tool%20v5.8.4.1.zip) Office Tool Plus v5.8.4.1 Beta
+### Mirror [Download](https://mirrors.yuntu.ca/office-tool/) Office Tool Plus
 
 ### Help with localization
 

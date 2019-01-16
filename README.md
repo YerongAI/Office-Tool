@@ -2,9 +2,9 @@
 Office Tool Plus is a tool for managing, downloading and installing Office. Based on Microsoft's Office Deployment Tool. You can customize configure your Office installation and download offline files to install Office without Internet.
 What's more, you can manage your installed Office, change update channel, add language pack and customize uninstall Office.
 
-### [Download](https://otp.landian.la) Office Tool Plus
+### [Download](https://otp.landian.vip/) Office Tool Plus
 
-### Mirror [Download](https://www.fczbl.vip/drive/?/SYSSOF/OTP/Office%20Tool%20v5.8.4.1.zip) Office Tool Plus v5.8.4.1 Beta
+### Mirror [Download](https://mirrors.yuntu.ca/office-tool/) Office Tool Plus
 
 ### Help with localization
 

@@ -4,7 +4,8 @@
     <!-- Country settings, it is usded to get information from server. -->
     <sys:String x:Key="Culture">pl-pl</sys:String>
     <!-- Header -->
-    <sys:String x:Key="ISOMode">Tryb ISO</sys:String>
+    <sys:String x:Key="ISOMode">- Tryb ISO</sys:String>
+    <sys:String x:Key="SafeMode">- Safe Mode</sys:String>
     <!-- Global -->
     <sys:String x:Key="TabTip">Wskazówka</sys:String>
     <sys:String x:Key="TabTipError">Nie udało się uzyskać informacji z serwera.</sys:String>
@@ -51,6 +52,7 @@
     <sys:String x:Key="Announcement">Ogłoszenie</sys:String>
     <sys:String x:Key="ReacquireAnnouncement">(Kliknij, aby ponowić próbę)</sys:String>
     <sys:String x:Key="SwitchServer">Click here to switch servers and try again.</sys:String>
+    <sys:String x:Key="ServerUnavailable">The server is not available, please check the network connection. Click here to reconnect.</sys:String>
     <!-- Manage Page -->
     <sys:String x:Key="Tab1Launcher">Zainstalowane</sys:String>
     <sys:String x:Key="Tab1Uninstall">Odinstaluj</sys:String>
@@ -107,6 +109,7 @@
     <sys:String x:Key="Tab2DownloadWay">Sposób:</sys:String>
     <sys:String x:Key="Tab2WayThunder">Szybki</sys:String>
     <sys:String x:Key="Tab2WaySetup">Normalny</sys:String>
+    <sys:String x:Key="Tab2UseHTTPS">Connect using HTTPS</sys:String>
     <sys:String x:Key="Tab2ProxyType">Proxy Type:</sys:String>
     <sys:String x:Key="Tab2SettingsServerAddress">Adres serwera:</sys:String>
     <sys:String x:Key="Tab2SettingsUserName">Nazwa Użytkownika:</sys:String>
@@ -128,9 +131,9 @@
     <sys:String x:Key="Tab3Language3">Wybierz z listy</sys:String>
     <!-- Install Page 2 -->
     <sys:String x:Key="Tab3Advanced">Zaawansowane</sys:String>
-    <sys:String x:Key="Tab3GeneralSettings">General Settings</sys:String>
-    <sys:String x:Key="Tab3OrganizationName">Provide your organization name to set the Company property on Office documents.</sys:String>
-    <sys:String x:Key="Tab3Description">Provide a description for this configuration for documentation purposes.</sys:String>
+    <sys:String x:Key="Tab3GeneralSettings">Ustawienia główne</sys:String>
+    <sys:String x:Key="Tab3OrganizationName">Podaj nazwę organizacji, aby ustawić właściwość firmy w dokumentach pakietu Office.</sys:String>
+    <sys:String x:Key="Tab3Description">Podaj opis tej konfiguracji dla celów dokumentacji.</sys:String>
     <sys:String x:Key="Tab3InstallSettings">Ustawienia instalacji</sys:String>
     <sys:String x:Key="Tab3SourcePath">Ścieżka źródłowa:</sys:String>
     <sys:String x:Key="Tab3DownloadPath">Pobierz ścieżkę:</sys:String>
@@ -323,14 +326,14 @@
     <sys:String x:Key="Tab5OutputFormat">Format wyjściowy:</sys:String>
     <sys:String x:Key="Tab5SelectFile">Wybierz plik (i)</sys:String>
     <!-- Tool Box Page -->
-    <sys:String x:Key="ToolBoxRepair">Repair</sys:String>
-    <sys:String x:Key="ToolBoxRepairOfficeDocumentIcon">Repair Office documents icon</sys:String>
-    <sys:String x:Key="ToolBoxRepairODIDescription">If the icon for the Office documents doesn't display properly, you can try to repair the registry. After the repair is complete, you must use the Quick Repair for Office.</sys:String>
-    <sys:String x:Key="ToolBoxRepairActivationFailed">Repair Office activation</sys:String>
-    <sys:String x:Key="ToolBoxRepairAFDescription">If you get an unknown error when you activate Office and you have used KMS tool, you can use this method to repair the registry.</sys:String>
-    <sys:String x:Key="ToolBoxRepairVBS">Repair VBS file associations</sys:String>
-    <sys:String x:Key="ToolBoxRepairVBSDescription">If you are prompted for an error when you activate Office: There is no script extension for the file extension ".vbs", you can try to repair the registry.</sys:String>
-    <!-- Settings Page -->
+    <sys:String x:Key="ToolBoxRepair">Naprawa</sys:String>
+    <sys:String x:Key="ToolBoxRepairOfficeDocumentIcon">Napraw ikonę dokumentów Office</sys:String>
+    <sys:String x:Key="ToolBoxRepairODIDescription">Jeśli ikona dokumentów pakietu Office nie jest wyświetlana poprawnie, można spróbować naprawić rejestr. Po zakończeniu naprawy należy skorzystać z Szybkiej naprawy dla pakietu Office.</sys:String>
+    <sys:String x:Key="ToolBoxRepairActivationFailed">Napraw aktywację pakietu Office</sys:String>
+    <sys:String x:Key="ToolBoxRepairAFDescription">W przypadku nieznanego błędu podczas aktywacji pakietu Office i użycia narzędzia KMS można użyć tej metody, aby naprawić rejestr.</sys:String>
+    <sys:String x:Key="ToolBoxRepairVBS">Napraw powiązania plików VBS</sys:String>
+    <sys:String x:Key="ToolBoxRepairVBSDescription">Jeśli pojawi się monit o błędzie podczas aktywacji pakietu Office: Nie ma rozszerzenia skryptu dla rozszerzenia pliku ".vbs", możesz spróbować naprawić rejestr.</sys:String>
+    <!-- Ustawienia Page -->
     <sys:String x:Key="SettingsNone">Brak</sys:String>
     <sys:String x:Key="SettingsAD">Po zakończeniu pobierania</sys:String>
     <sys:String x:Key="SettingsAI">Po zakończeniu instalacji</sys:String>
@@ -342,15 +345,16 @@
     <sys:String x:Key="SettingsDisplay">Ustawienia wyświetlania</sys:String>
     <sys:String x:Key="SettingsTopmost">Zawsze na wierzchu</sys:String>
     <sys:String x:Key="SettingsRTL">Przełącz układ RTL</sys:String>
+    <sys:String x:Key="SettingsTransparency">Transparency</sys:String>
     <sys:String x:Key="SettingsFontsize">Rozmiar czcionki</sys:String>
     <sys:String x:Key="SettingsBrightness">Jasność</sys:String>
-    <sys:String x:Key="SettingsServer">Server Settings</sys:String>
+    <sys:String x:Key="SettingsServer">Ustawienia serwera</sys:String>
     <sys:String x:Key="SettingsOTL">Pobierz Office Tool Lite (OTL)</sys:String>
     <!-- About Page -->
     <sys:String x:Key="AppInf">Informacje o aplikacji</sys:String>
     <sys:String x:Key="UpdateDate">Zaktualizowano na:</sys:String>
     <sys:String x:Key="Creator">Opracowany przez Yerong, w oparciu o Office Deployment Tool.</sys:String>
-    <sys:String x:Key="Copyright">Prawo autorskie © 2012-2018 Landian News Wszelkie prawa zastrzeżone.</sys:String>
+    <sys:String x:Key="Copyright">Prawo autorskie © 2012-2019 Landian News Wszelkie prawa zastrzeżone.</sys:String>
     <sys:String x:Key="IconDesign">Ikona projektu</sys:String>
     <sys:String x:Key="Translator">Tłumaczenie</sys:String>
 
@@ -390,7 +394,7 @@
     <sys:String x:Key="MsgDownloadVerError">Nie można pobrać informacji o wersji, sprawdź, czy numer wersji / kanału jest poprawny, a sieć jest w normie.</sys:String>
     <sys:String x:Key="MsgSetupDownload">Używając oficjalnego programu do pobierania plików offline, Aby uniknąć błędów, usuń pobrany plik. Kontynuować?</sys:String>
     <sys:String x:Key="MsgSetupConfigError">Oficjalny program Microsoft nie obsługuje bieżącej konfiguracji architektury / trybu pobierania, ponownie skonfiguruj, a następnie spróbuj ponownie.</sys:String>
-    <sys:String x:Key="MsgOfflineFileExist">już istnieje, chcesz nadpisać?</sys:String>
+    <sys:String x:Key="MsgOfflineFileExist">Już istnieje, chcesz nadpisać?</sys:String>
     <sys:String x:Key="MsgAria2cDownload">Używa Aria2c do pobierania plików offline. Aby uniknąć błędów, usuń pobrany plik. ontinue?</sys:String>
     <sys:String x:Key="MsgDownloadSuccessful">Pliki offline zostały pobrane.</sys:String>
     <!-- Message about Thunder (迅雷) -->
@@ -451,18 +455,18 @@
     <sys:String x:Key="ToastLicensesInstallError">Błąd, brak plików licencji znalezionych w wybranym katalogu.</sys:String>
     <sys:String x:Key="ToastLicensesInstallSuccess">Zainstalowane licencje.</sys:String>
     <sys:String x:Key="ToastInputError">Wprowadzanie niepoprawnie.</sys:String>
-    <sys:String x:Key="ToastRepairSucceeded">Repair Succeeded.</sys:String>
+    <sys:String x:Key="ToastRepairSucceeded">Naprawa powiodła się.</sys:String>
     <sys:String x:Key="ToastWorkerIsBusy">W tleła działa, proszę czekać do zakończenia i spróbować ponownie.</sys:String>
 
     <!-- Message about ToolTip, notice that you need to control string length. -->
     <sys:String x:Key="ToolTipEmpty">Pusty</sys:String>
     <sys:String x:Key="ToolTipChannelChanged">Sprawdź to po zmianie kanału aktualizacji.</sys:String>
-    <sys:String x:Key="ToolTipCreateShortcut">Right click to create a shortcut on desktop.</sys:String>
+    <sys:String x:Key="ToolTipCreateShortcut">Kliknij prawym przyciskiem myszy, aby utworzyć skrót na pulpicie.</sys:String>
     <sys:String x:Key="ToolTipChannelEdit">Wybierz kanał z menu lub wprowadź ścieżkę HTTP, aby określić źródło.</sys:String>
     <sys:String x:Key="ToolTipSpeedLimitNumber">Kliknij, aby zmienić jednostkę.</sys:String>
     <sys:String x:Key="ToolTipSuites">Pakiet zawiera aplikacje.</sys:String>
-    <sys:String x:Key="ToolTipProductIDEdit">If you want to config more suites or products, please use Comma「,」to split each id.</sys:String>
-    <sys:String x:Key="ToolTipProductMAK">Product Key Settings are only available for Volume Licensing products and suites.</sys:String>
+    <sys:String x:Key="ToolTipProductIDEdit">Jeśli chcesz skonfigurować więcej pakietów lub produktów, użyj przecinka 「,」, aby podzielić każdy identyfikator.</sys:String>
+    <sys:String x:Key="ToolTipProductMAK">Ustawienia klucza produktu są dostępne tylko w przypadku produktów i pakietów licencji zbiorczych.</sys:String>
     <sys:String x:Key="ToolTipInstallWay">Jeśli wybierzesz offline, atrybut Ścieżka źródłowa zostanie zastosowany.</sys:String>
     <sys:String x:Key="ToolTipDragLanguageItems">Przeciągnij, aby posortować język. Język pierwszego ustawienia określi kulturę interfejsu użytkownika powłoki, w tym skróty, menu kontekstowe i etykiety narzędzi po kliknięciu prawym przyciskiem myszy.</sys:String>
     <sys:String x:Key="ToolTipAllowCDNFallback">Jeśli pakiet językowy nie jest dostępny w usłudze SourcePath, a ustawienie AllowCDNFallBack ma wartość True, to ODT użyje plików źródłowych z Office CDN.</sys:String>

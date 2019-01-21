@@ -149,7 +149,7 @@ PowerPoint 演示文稿中存在旧的嵌入式媒体文件，而没有可用的
 
 Click to Run 默认将 Office 安装至系统盘，此设置由微软管理，无法更改。
 
-####语言设置说明
+#### 语言设置说明
 在语言列表中，带有颜色的语言类型为 Full，Full 代表这个语言在 Office 内可以以所选语言显示界面、帮助以及拥有所选语言的校对工具。
 
 黑色的语言类型为 Partial，代表这个语言包含某些 Office 应用程序的所选界面语言，同时也包含校对工具。
@@ -428,7 +428,6 @@ docx                Strict Open XML 文档
 odt                 OpenDocument 文本
 
 #### PowerPoint 文档格式参照表
-
 pptx                PowerPoint 演示文稿
 pptm                启用宏的 PowerPoint 演示文稿
 ppt                 PowerPoint 97-2003 演示文稿
@@ -459,7 +458,6 @@ pptx                Strict Open XML 演示文稿
 odp                 OpenDocument 演示文稿
 
 #### Excel 文档格式参照表
-
 xlsx                Excel 工作簿
 xlsm                Excel 启用宏的工作簿
 xlsb                Excel 二进制工作簿

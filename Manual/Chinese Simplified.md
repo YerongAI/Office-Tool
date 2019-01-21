@@ -94,7 +94,6 @@ PerpetualVL2019: Office 2019 长期服务版本。是 Office Professional Plus 2
 Insiders: 每月频道（定向）（以前称为预览体验计划 - 慢）。如果预览体验成员希望收到频率较低、稳定性较高的更新，则此级别非常适合。大约每月发布一次每月频道（定向）内部版本，这些版本完全受支持
 
 InsiderFast: 预览体验计划（以前称为预览体验计划 - 快）。如果预览体验成员要使用最早的内部版本发现问题并提供有关仍处于开发阶段的新功能的反馈，且不介意使用不受支持的版本所带来的轻微风险，则此级别非常适合
------------------------------------------------------------
 
 有关更新通道的更多信息，请参考[此条链接](https://docs.microsoft.com/zh-cn/DeployOffice/overview-of-update-channels-for-office-365-proplus)
 
@@ -166,77 +165,76 @@ Click to Run 默认将 Office 安装至系统盘，此设置由微软管理，�
 当模式为 匹配先前 MSI 版本的语言时，ODT 会查找计算机上已安装了的 MSI 版本的 Office 的语言，并将其设置为 Office 的安装语言。此项必须与 RemoveMSI 属性一起使用，以便从 MSI 版本升级至 C2R 版本，若您的计算机上没有 MSI 版本的 Office，请勿选择此项。
 
 当模式为 从列表中选择时，列表中被勾选的语言将会被设置为 Office 安装语言。其中，当您选择了多个语言时，设置的第一个语言将会被用于确定 Shell UI 区域性，包括快捷方式，右键单击上下文菜单和工具提示。单击语言列表右边的空白区域并拖动可以对语言进行排序。
-----------------------------------------------------------
 
 有关其他属性的详细信息，请前往[微软的网站](https://docs.microsoft.com/zh-cn/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)查看详细信息
 
 #### Office 365 套件/产品 ID 参考
-O365ProPlusRetail            Office 365 ProPlus，适用于Office 365教育版、Office 365 专业增强版、Office 365 企业版 E3、Office 365 企业版 E4、Office 365 企业版 E5、Office 365 中型企业版
+O365ProPlusRetail       Office 365 ProPlus，适用于Office 365教育版、Office 365 专业增强版、Office 365 企业版 E3、
+                        Office 365 企业版 E4、Office 365 企业版 E5、Office 365 中型企业版
 O365HomePremRetail      Office 365 家庭高级版
-O365BusinessRetail          Office 365 商业版、Office 365 商业高级版
-O365SmallBusPremRetail Office 小型企业高级版
+O365BusinessRetail      Office 365 商业版、Office 365 商业高级版
+O365SmallBusPremRetail  Office 小型企业高级版
 
 #### 2016 套件/产品 ID 参考
-ProPlusRetail                     Office 专业增强版 - 零售版
-ProfessionalRetail             Office 专业版 - 零售版
-StandardRetail                  Office 标准版 - 零售版
-HomeBusinessRetail         Office 家庭高级版
-HomeStudentRetail          Office 家庭学生版
+ProPlusRetail           Office 专业增强版 - 零售版
+ProfessionalRetail      Office 专业版 - 零售版
+StandardRetail          Office 标准版 - 零售版
+HomeBusinessRetail      Office 家庭高级版
+HomeStudentRetail       Office 家庭学生版
 
-ProjectProXVolume          Project 专业版 - 批量版
-ProjectProRetail               Project 专业版 - 零售版 - for Office 365
-ProjectStdXVolume          Project 标准版 - 批量版
-ProjectStdRetail               Project 标准版 - 零售版
-VisioProXVolume             Visio 专业版 - 批量版
-VisioProRetail                  Visio 专业版 - 零售版 - for Office 365
-VisioStdXVolume             Visio 标准版 - 批量版
-VisioStdRetail                  Visio 标准版 - 零售版
+ProjectProXVolume       Project 专业版 - 批量版
+ProjectProRetail        Project 专业版 - 零售版 - for Office 365
+ProjectStdXVolume       Project 标准版 - 批量版
+ProjectStdRetail        Project 标准版 - 零售版
+VisioProXVolume         Visio 专业版 - 批量版
+VisioProRetail          Visio 专业版 - 零售版 - for Office 365
+VisioStdXVolume         Visio 标准版 - 批量版
+VisioStdRetail          Visio 标准版 - 零售版
 
 #### 2019 套件/产品 ID 参考
-ProPlus2019Retail              Office 专业增强版 - 零售版
-ProPlus2019Volume           Office 专业增强版 - 批量版
-Standard2019Retail            Office 标准版 - 零售版
-Standard2019Volume         Office 标准版 - 批量版
+ProPlus2019Retail       Office 专业增强版 - 零售版
+ProPlus2019Volume       Office 专业增强版 - 批量版
+Standard2019Retail      Office 标准版 - 零售版
+Standard2019Volume      Office 标准版 - 批量版
 
-ProjectPro2019Volume      Project 专业版 批量版
-ProjectPro2019Retail         Project 专业版 零售版
-ProjectStd2019Volume      Project 标准版 批量版
-ProjectStd2019Retail          Project 标准版 零售版
-VisioPro2019Volume         Visio 专业版 批量版
-VisioPro2019Retail             Visio 专业版 零售版
-VisioStd2019Volume         Visio 标准版 批量版
-VisioStd2019Retail             Visio 标准版 零售版
+ProjectPro2019Volume    Project 专业版 批量版
+ProjectPro2019Retail    Project 专业版 零售版
+ProjectStd2019Volume    Project 标准版 批量版
+ProjectStd2019Retail    Project 标准版 零售版
+VisioPro2019Volume      Visio 专业版 批量版
+VisioPro2019Retail      Visio 专业版 零售版
+VisioStd2019Volume      Visio 标准版 批量版
+VisioStd2019Retail      Visio 标准版 零售版
 
 #### 其他产品 ID 参考
-LanguagePack                                 语言包
-ProofingTools                                  语言校对工具
-AccessRuntimeRetail                        Access 运行时
-AccessRetail                                     Access 2016 零售版
-Access2019Retail                             Access 2019 零售版
-Access2019Volume                          Access 2019 批量版
-ExcelRetail                                        Excel 2016 零售版
-Excel2019Retail                                Excel 2019 零售版
-Excel2019Volume                             Excel 2019 批量版
-OneNoteRetail                                 OneNote 2016 零售版
-OneNoteFreeRetail                          OneNote 免费版
-OutlookRetail                                   Outlook 2016 零售版
-Outlook2019Retail                           Outlook 2019 零售版
-Outlook2019Volume                       Outlook 2019 批量版
-PowerPointRetail                             PowerPoint 2016 零售版
-PowerPoint2019Retail                      PowerPoint 2019 零售版
-PowerPoint2019Volume                  PowerPoint 2019 批量版
-PublisherRetail                                 Publisher 2016 零售版
-Publisher2019Retail                         Publisher 2019 零售版
-Publisher2019Volume                      Publisher 2019 批量版
+LanguagePack                        语言包
+ProofingTools                       语言校对工具
+AccessRuntimeRetail                 Access 运行时
+AccessRetail                        Access 2016 零售版
+Access2019Retail                    Access 2019 零售版
+Access2019Volume                    Access 2019 批量版
+ExcelRetail                         Excel 2016 零售版
+Excel2019Retail                     Excel 2019 零售版
+Excel2019Volume                     Excel 2019 批量版
+OneNoteRetail                       OneNote 2016 零售版
+OneNoteFreeRetail                   OneNote 免费版
+OutlookRetail                       Outlook 2016 零售版
+Outlook2019Retail                   Outlook 2019 零售版
+Outlook2019Volume                   Outlook 2019 批量版
+PowerPointRetail                    PowerPoint 2016 零售版
+PowerPoint2019Retail                PowerPoint 2019 零售版
+PowerPoint2019Volume                PowerPoint 2019 批量版
+PublisherRetail                     Publisher 2016 零售版
+Publisher2019Retail                 Publisher 2019 零售版
+Publisher2019Volume                 Publisher 2019 批量版
 SkypeforBusinessRetail
-SkypeforBusinessEntryRetail           Skype for Business (Office 365)
+SkypeforBusinessEntryRetail         Skype for Business (Office 365)
 SkypeforBusiness2019Retail
 SkypeforBusiness2019Volume
 SkypeforBusinessEntry2019Retail  
-WordRetail                                        Word 2016 零售版
-Word2019Retail                                Word 2019 零售版
-Word2019Volume                             Word 2019 批量版
------------------------------------------------------------
+WordRetail                          Word 2016 零售版
+Word2019Retail                      Word 2019 零售版
+Word2019Volume                      Word 2019 批量版
 
 有关产品 ID 的更多信息，请前往[微软的网站](https://go.microsoft.com/fwlink/p/?LinkID=301891)查看详细信息
 
@@ -298,7 +296,6 @@ KMS 激活步骤：安装对应的 批量（Volume）证书，比如你要激活
 KMS 激活成功后，Office 会默认 7 天与服务器连接一次并自动续期，最大持续激活时间为 180 天。
 当服务器正常，系统正常，网络正常的默认情况下，激活剩余时间不会低于 172 天，因此也可以达到 “永久激活” 的效果。
 此步骤由 Windows 自行完成，无需人工干涉，也没有任何后台程序驻留。
----------------------------------------------------------------------
 
 OTP 保证不会对用户的计算机进行任何未经授权的修改，更不会进行任何破解。
 对于 KMS 服务器，您可以在受支持的路由器上搭建一个，或者是百度搜索 KMS 服务器地址即可。
@@ -358,41 +355,40 @@ Sending activation request (KMS V4) 1 of 1  -> 03612-00206-524-247319-03-1100-14
 如您不知是否为批量版，请安装对应的 Volume 证书，然后再使用 GVLK
 使用 KMS 激活必须要配置一个 KMS 服务器地址，否则无法激活 Office。
 
-#### Office 2019 GVLK 密钥（KMS 专用）
-Office Pro Plus 2019     NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP
-Office Standard 2019   6NWWJ-YQWMR-QKGCB-6TMB3-9D9HK
-Project Pro 2019           B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B
-Project Std 2019           C4F7P-NCP8C-6CQPT-MQHV9-JXD2M
-Visio Pro 2019              9BGNQ-K37YR-RQHF2-38RQ3-7VCBB
-Visio Std 2019              7TQNQ-K3YQQ-3PFH7-CCPPM-X4VQ2
-Access 2019                  9N9PT-27V4Y-VJ2PD-YXFMF-YTFQT
-Excel 2019                    TMJWT-YYNMB-3BKTF-644FC-RVXBD
-Outlook 2019               7HD7K-N4PVK-BHBCQ-YWQRW-XW4VK
-PowerPoint 2019         RRNCX-C64HY-W2MM7-MCH9G-TJHMQ
-Publisher 2019             G2KWX-3NW6P-PY93R-JXK2T-C9Y9V
-Skype for Business       NCJ33-JHBBY-HTK98-MYCV8-HMKHJ
-Word 2019                   PBX3G-NWMT6-Q7XBW-PYJGG-WXD33
+#### Office 2019 GVLK（KMS 专用）
+Office Pro Plus 2019      NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP
+Office Standard 2019      6NWWJ-YQWMR-QKGCB-6TMB3-9D9HK
+Project Pro 2019          B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B
+Project Std 2019          C4F7P-NCP8C-6CQPT-MQHV9-JXD2M
+Visio Pro 2019            9BGNQ-K37YR-RQHF2-38RQ3-7VCBB
+Visio Std 2019            7TQNQ-K3YQQ-3PFH7-CCPPM-X4VQ2
+Access 2019               9N9PT-27V4Y-VJ2PD-YXFMF-YTFQT
+Excel 2019                TMJWT-YYNMB-3BKTF-644FC-RVXBD
+Outlook 2019              7HD7K-N4PVK-BHBCQ-YWQRW-XW4VK
+PowerPoint 2019           RRNCX-C64HY-W2MM7-MCH9G-TJHMQ
+Publisher 2019            G2KWX-3NW6P-PY93R-JXK2T-C9Y9V
+Skype for Business        NCJ33-JHBBY-HTK98-MYCV8-HMKHJ
+Word 2019                 PBX3G-NWMT6-Q7XBW-PYJGG-WXD33
 
-#### Office 2016 GVLK 密钥（KMS 专用）
-Office Pro Plus 2016     XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99
-Office Standard 2016   JNRGM-WHDWX-FJJG3-K47QV-DRTFM
-Office Mondo 2016      HFTND-W9MK4-8B7MJ-B6C4G-XQBR2
+#### Office 2016 GVLK（KMS 专用）
+Office Pro Plus 2016      XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99
+Office Standard 2016      JNRGM-WHDWX-FJJG3-K47QV-DRTFM
+Office Mondo 2016         HFTND-W9MK4-8B7MJ-B6C4G-XQBR2
 Project Pro 2016          WGT24-HCNMF-FQ7XH-6M8K7-DRTW9
 Project Std 2016          D8NRQ-JTYM3-7J2DX-646CT-6836M
-Visio Pro 2016             69WXN-MBYV6-22PQG-3WGHK-RM6XC
-Visio Std 2016             NY48V-PPYYH-3F4PX-XJRKJ-W4423
-Access 2016                 GNH9Y-D2J4T-FJHGG-QRVH7-QPFDW
-Excel 2016                    9C2PK-NWTVB-JMPW8-BFT28-7FTBF
-OneNote 2016             DR92N-9HTF2-97XKM-XW2WJ-XW3J6
+Visio Pro 2016            69WXN-MBYV6-22PQG-3WGHK-RM6XC
+Visio Std 2016            NY48V-PPYYH-3F4PX-XJRKJ-W4423
+Access 2016               GNH9Y-D2J4T-FJHGG-QRVH7-QPFDW
+Excel 2016                9C2PK-NWTVB-JMPW8-BFT28-7FTBF
+OneNote 2016              DR92N-9HTF2-97XKM-XW2WJ-XW3J6
 Outlook 2016              R69KK-NTPKF-7M3Q4-QYBHW-6MT9B
-PowerPoint 2016         J7MQP-HNJ4Y-WJ7YM-PFYGF-BY6C6
+PowerPoint 2016           J7MQP-HNJ4Y-WJ7YM-PFYGF-BY6C6
 Publisher 2016            F47MM-N3XJP-TQXJ9-BP99D-8K837
-Skype for Business      869NQ-FJ69K-466HW-QYCP2-DDBV6
-Word 2016                  WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6
+Skype for Business        869NQ-FJ69K-466HW-QYCP2-DDBV6
+Word 2016                 WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6
 
 #### Office 365 默认密钥（激活功能专用）
 O365ProPlusRetail         DRNV7-VGMM2-B3G9T-4BF84-VMFTK
-----------------------------------------------------------------------
 
 ### 转换文档
 此功能依赖 Office，请确保您的计算机上已安装最新版本的 Office，否则可能会出现各种不可预知的问题！
@@ -413,80 +409,79 @@ O365ProPlusRetail         DRNV7-VGMM2-B3G9T-4BF84-VMFTK
 一般情况下，Office 应用程序在保存文档为旧格式的时候会执行兼容性检查，如果检查到有问题会弹出框来提醒用户，在出现此对话框时，用户只可以选择手动处理这些提示，否则转换文档不会继续执行。
 
 #### Word 文档格式参照表
-docx ----------------------- Word 文档
-docm ---------------------- 启用宏的 Word 文档
-doc ------------------------ Word 97-2003 文档
-dotx ----------------------- Word 模板
-dotm ---------------------- 启用宏的 Word 模板
-dot ------------------------ Word 97-2003 模板
-pdf ------------------------ PDF 文件
-xps ------------------------ XPS 文档
-mht, mhtml --------------- 单个文件网页
-htm, html ----------------- 网页
-htm, html ----------------- 筛选过的网页
-rtf ------------------------- RTF 格式
-txt ------------------------- 纯文本
-xml ------------------------ Word XML 文档
-xml ------------------------ Word 2003 文档
-docx ----------------------- Strict Open XML 文档
-odt ------------------------ OpenDocument 文本
+docx                Word 文档
+docm                启用宏的 Word 文档
+doc                 Word 97-2003 文档
+dotx                Word 模板
+dotm                启用宏的 Word 模板
+dot                 Word 97-2003 模板
+pdf                 PDF 文件
+xps                 XPS 文档
+mht, mhtml          单个文件网页
+htm, html           网页
+htm, html           筛选过的网页
+rtf                 RTF 格式
+txt                 纯文本
+xml                 Word XML 文档
+xml                 Word 2003 文档
+docx                Strict Open XML 文档
+odt                 OpenDocument 文本
 
 #### PowerPoint 文档格式参照表
 
-pptx -------------------------- PowerPoint 演示文稿
-pptm ------------------------- 启用宏的 PowerPoint 演示文稿
-ppt --------------------------- PowerPoint 97-2003 演示文稿
-pdf --------------------------- PDF 文档
-xps --------------------------- XPS 文档
-potx -------------------------- PowerPoint 模板
-potm ------------------------- PowerPoint 启用宏的模板
-pot --------------------------- PowerPoint 97-2003 模板
-thmx ------------------------- Office 主题
-ppsx ------------------------- PowerPoint 放映
-ppsm ------------------------ 启用宏的 PowerPoint 放映
-pps -------------------------- PowerPoint 97-2003 放映
-ppam ------------------------ PowerPoint 加载项
-ppa -------------------------- PowerPoint 97-2003 加载项
-xml -------------------------- PowerPoint XML 演示文稿
-mp4 ------------------------- MPEG-4 视频
-wmv ------------------------- Windows Media 视频
-gif --------------------------- GIF 可移植网络图形格式
-jpg -------------------------- JPEG 文件交换格式
-png ------------------------- PNG 可移植网络图形格式
-tif --------------------------- TIFF Tag 图像文件格式
-bmp ------------------------- 设备无关位图
-wmf ------------------------- Windows 图元文件
-emf ------------------------- 增强型 Windows 元文件
-rtf --------------------------- 大纲/RTF 文件
-pptx ------------------------- PowerPoint 图片演示文稿
-pptx ------------------------- Strict Open XML 演示文稿
-odp ------------------------- OpenDocument 演示文稿
+pptx                PowerPoint 演示文稿
+pptm                启用宏的 PowerPoint 演示文稿
+ppt                 PowerPoint 97-2003 演示文稿
+pdf                 PDF 文档
+xps                 XPS 文档
+potx                PowerPoint 模板
+potm                PowerPoint 启用宏的模板
+pot                 PowerPoint 97-2003 模板
+thmx                Office 主题
+ppsx                PowerPoint 放映
+ppsm                启用宏的 PowerPoint 放映
+pps                 PowerPoint 97-2003 放映
+ppam                PowerPoint 加载项
+ppa                 PowerPoint 97-2003 加载项
+xml                 PowerPoint XML 演示文稿
+mp4                 MPEG-4 视频
+wmv                 Windows Media 视频
+gif                 GIF 可移植网络图形格式
+jpg                 JPEG 文件交换格式
+png                 PNG 可移植网络图形格式
+tif                 TIFF Tag 图像文件格式
+bmp                 设备无关位图
+wmf                 Windows 图元文件
+emf                 增强型 Windows 元文件
+rtf                 大纲/RTF 文件
+pptx                PowerPoint 图片演示文稿
+pptx                Strict Open XML 演示文稿
+odp                 OpenDocument 演示文稿
 
 #### Excel 文档格式参照表
 
-xlsx ------------------------- Excel 工作簿
-xlsm ------------------------ Excel 启用宏的工作簿
-xlsb ------------------------- Excel 二进制工作簿
-xls -------------------------- Excel 97-2003 工作簿
-csv ------------------------- CSV UTF-8 (逗号分隔)
-xml ------------------------- XML 数据
-mht, mhtml ---------------- 单个文件网页
-htm, html ------------------ 网页
-xltx ------------------------- Excel 模板
-xltm ------------------------ Excel 启用宏的模板
-xlt -------------------------- Excel 97-2003 模板
-txt -------------------------- 文本文件 (制表符分隔)
-txt -------------------------- Unicode 文本
-xml ------------------------- XML 电子表格 2003
-xls -------------------------- Microsoft Excel 5.0/95 工作簿
-csv ------------------------- CSV (逗号分隔)
-prn ------------------------- 带格式的文本文件 (空格分隔)
-dif -------------------------- DIF (数据交换格式)
-slk -------------------------- SYLK (符号连链接)
-xlam ----------------------- Excel 加载宏
-xla ------------------------- Excel 97-2003 加载宏
-pdf ------------------------ PDF 文档
-xps ------------------------ XPS 文档
-xlsx ----------------------- Strict Open XML 电子表格
-ods ----------------------- OpenDocument 电子表格
--------------------------------------------------------------
+xlsx                Excel 工作簿
+xlsm                Excel 启用宏的工作簿
+xlsb                Excel 二进制工作簿
+xls                 Excel 97-2003 工作簿
+csv                 CSV UTF-8 (逗号分隔)
+xml                 XML 数据
+mht, mhtml          单个文件网页
+htm, html           网页
+xltx                Excel 模板
+xltm                Excel 启用宏的模板
+xlt                 Excel 97-2003 模板
+txt                 文本文件 (制表符分隔)
+txt                 Unicode 文本
+xml                 XML 电子表格 2003
+xls                 Microsoft Excel 5.0/95 工作簿
+csv                 CSV (逗号分隔)
+prn                 带格式的文本文件 (空格分隔)
+dif                 DIF (数据交换格式)
+slk                 SYLK (符号连链接)
+xlam                Excel 加载宏
+xla                 Excel 97-2003 加载宏
+pdf                 PDF 文档
+xps                 XPS 文档
+xlsx                Strict Open XML 电子表格
+ods                 OpenDocument 电子表格

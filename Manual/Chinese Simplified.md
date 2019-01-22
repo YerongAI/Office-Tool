@@ -220,34 +220,34 @@ VisioStd2019Retail|Visio 标准版 零售版
 #### 其他产品 ID 参考
 产品 ID|产品名称
 :---|:---
-LanguagePack语言包
-ProofingTools语言校对工具
-AccessRuntimeRetail|Access运行时
-AccessRetail|Access2016零售版
-Access2019Retail|Access2019零售版
-Access2019Volume|Access2019批量版
-ExcelRetail|Excel2016零售版
-Excel2019Retail|Excel2019零售版
-Excel2019Volume|Excel2019批量版
-OneNoteRetail|OneNote2016零售版
-OneNoteFreeRetail|OneNote免费版
-OutlookRetail|Outlook2016零售版
-Outlook2019Retail|Outlook2019零售版
-Outlook2019Volume|Outlook2019批量版
-PowerPointRetail|PowerPoint2016零售版
-PowerPoint2019Retail|PowerPoint2019零售版
-PowerPoint2019Volume|PowerPoint2019批量版
-PublisherRetail|Publisher2016零售版
-Publisher2019Retail|Publisher2019零售版
-Publisher2019Volume|Publisher2019批量版
+LanguagePack|语言包
+ProofingTools|语言校对工具
+AccessRuntimeRetail|Access 运行时
+AccessRetail|Access 2016 零售版
+Access2019Retail|Access 2019 零售版
+Access2019Volume|Access 2019 批量版
+ExcelRetail|Excel 2016 零售版
+Excel2019Retail|Excel 2019 零售版
+Excel2019Volume|Excel 2019 批量版
+OneNoteRetail|OneNote 2016 零售版
+OneNoteFreeRetail|OneNote 免费版
+OutlookRetail|Outlook 2016 零售版
+Outlook2019Retail|Outlook 2019 零售版
+Outlook2019Volume|Outlook 2019 批量版
+PowerPointRetail|PowerPoint 2016 零售版
+PowerPoint2019Retail|PowerPoint 2019 零售版
+PowerPoint2019Volume|PowerPoint 2019 批量版
+PublisherRetail|Publisher 2016 零售版
+Publisher2019Retail|Publisher 2019 零售版
+Publisher2019Volume|Publisher 2019 批量版
 SkypeforBusinessRetail|
-SkypeforBusinessEntryRetail|SkypeforBusiness(Office365)
+SkypeforBusinessEntryRetail|SkypeforBusiness (Office365)
 SkypeforBusiness2019Retail|
 SkypeforBusiness2019Volume|
 SkypeforBusinessEntry2019Retail|
-WordRetail|Word2016零售版
-Word2019Retail|Word2019零售版
-Word2019Volume|Word2019批量版
+WordRetail|Word 2016 零售版
+Word2019Retail|Word 2019 零售版
+Word2019Volume|Word 2019 批量版
 
 有关产品 ID 的更多信息，请前往[微软的网站](https://go.microsoft.com/fwlink/p/?LinkID=301891)查看详细信息
 

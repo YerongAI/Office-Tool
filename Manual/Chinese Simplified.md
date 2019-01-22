@@ -73,27 +73,26 @@ C2R 语言是 ClickToRun 界面的显示语言。也就是我们平常看到的�
 
 Aria2c 支持设置 HTTP/FTP/SFTP 代理，当代理类型选择 HTTP/FTP/SFTP 时，只需要填写相关信息即可成功设置代理。
 
-如果在使用迅雷下载时遇到下载进度不动，卡 100% 的问题，可以尝试先暂停下载再继续下载。
+**如果在使用迅雷下载时遇到下载进度不动，卡 100% 的问题，可以尝试先暂停下载再继续下载。**
 
 #### 下载引擎差异
-迅雷下载   显示下载进度、文件大小、下载速度以及文件名等信息，支持断点续传
-
-Aria2c      单独在 CMD 窗口显示下载信息（请勿点击 CMD 窗口避免下载被暂停）
-
-微软官方   仅有下载状态显示
+引擎|说明
+:---|:---
+迅雷下载|显示下载进度、文件大小、下载速度以及文件名等信息，支持断点续传
+Aria2c|单独在 CMD 窗口显示下载信息（请勿点击 CMD 窗口避免下载被暂停）
+微软官方|仅有下载状态显示
 
 #### 更新通道解释
-Broad: 半年频道。一年仅向用户提供几次 Office 功能更新。
+通道 ID|通道名称|通道解释
+:---|:---|:---
+Broad|半年频道|一年仅向用户提供几次 Office 功能更新。
+Targeted|半年频道（定向）|让试点用户和应用兼容性测试人员有机会测试下一个半年通道。适用于IT 测试、应用和加载项所有者、具有代表性的最终用户
+Monthly|每月频道|最新 Office 功能一经推出，便立即提供给用户。
+PerpetualVL2019|Office 2019 长期服务版本|是 Office Professional Plus 2019 和 Office Standard 2019 的支持更新通道。 它也是 Project 2019 和 Visio 2019 批量许可版本的默认更新通道。
+Insiders|每月频道（定向）（以前称为预览体验计划 - 慢）|如果预览体验成员希望收到频率较低、稳定性较高的更新，则此级别非常适合。大约每月发布一次每月频道（定向）内部版本，这些版本完全受支持
+InsiderFast|预览体验计划（以前称为预览体验计划 - 快）|如果预览体验成员要使用最早的内部版本发现问题并提供有关仍处于开发阶段的新功能的反馈，且不介意使用不受支持的版本所带来的轻微风险，则此级别非常适合
+Dogfood|暂无解释|
 
-Targeted: 半年频道（定向）。让试点用户和应用兼容性测试人员有机会测试下一个半年通道。适用于IT 测试、应用和加载项所有者、具有代表性的最终用户
-
-Monthly: 每月频道。最新 Office 功能一经推出，便立即提供给用户。
-
-PerpetualVL2019: Office 2019 长期服务版本。是 Office Professional Plus 2019 和 Office Standard 2019 的支持更新通道。 它也是 Project 2019 和 Visio 2019 批量许可版本的默认更新通道。
-
-Insiders: 每月频道（定向）（以前称为预览体验计划 - 慢）。如果预览体验成员希望收到频率较低、稳定性较高的更新，则此级别非常适合。大约每月发布一次每月频道（定向）内部版本，这些版本完全受支持
-
-InsiderFast: 预览体验计划（以前称为预览体验计划 - 快）。如果预览体验成员要使用最早的内部版本发现问题并提供有关仍处于开发阶段的新功能的反馈，且不介意使用不受支持的版本所带来的轻微风险，则此级别非常适合
 
 有关更新通道的更多信息，请参考[此条链接](https://docs.microsoft.com/zh-cn/DeployOffice/overview-of-update-channels-for-office-365-proplus)
 
@@ -101,14 +100,15 @@ InsiderFast: 预览体验计划（以前称为预览体验计划 - 快）。如�
 
 为方便查看，下表列出了每个更新通道通常多久添加一次功能更新、安全更新程序和与安全无关的更新程序。 
 
-更新通道           功能更新                    安全更新        与安全无关的更新
-
-每月频道             每月一次                     每月一次            每月一次 
-半年频道             半年一次（1、7 月）  每月一次            半年一次 
-半年频道（定向）半年一次（3、9 月）  每月一次            每月一次 
+更新通道|功能更新|安全更新|与安全无关的更新
+:---|:---|:---|:---
+每月频道|每月一次|每月一次|每月一次 
+半年频道|半年一次（1 月、7 月）|每月一次|半年一次 
+半年频道（定向）|半年一次（3 月、9 月）|每月一次|每月一次 
 
 安全更新程序通常于当月的第二个星期二发布。
 
+查看[微软官方](https://support.office.com/zh-cn/article/选择-64-位或-32-位版本的-office-2dee7807-8f95-4d0c-b5fe-6c6f49b8d261)对于选择 64 位或者 32 位的解释
 #### 选择 64 位版的原因
 运行 64 位版 Windows 的计算机通常比其 32 位 前身拥有更多资源，例如处理能力和内存。此外，与 32 位应用程序相比，64 位应用程序可以访问更多内存（1.84 千万拍字节）。因此，如果你的方案包含大型文件和/或处理大型数据集，且你的计算机运行 64 位版 Windows，则存在下列情况时，64 位是恰当的选择：
 
@@ -158,123 +158,155 @@ Click to Run 默认将 Office 安装至系统盘，此设置由微软管理，�
 
 注意：Full 类型的语言是不可缺少的，当安装 Partial 或者 Proofing 类型的语言时，必须确保需要选择一个 Full 类型的语言，否则 Office 将无法正常安装或者会默认安装英语语言包。
 
-安装语言默认匹配系统语言，当模式为 匹配系统语言时，语言列表用于指定 Fallback 属性，即当系统的语言不受 Office 支持时，ODT (Office Deployment Tool) 会使用 Fallback 属性中指定的语言来安装 Office，若未指定 Fallback 属性，则默认安装 en-us 语言。仅可以设置一个 Fallback 属性。
+安装语言默认匹配系统语言
 
-当模式为匹配已安装的 Office 时，ODT 会匹配目前已安装的 Office 的语言，这在增删组件或者产品时会非常有用。
+---
+##### 匹配系统语言
+语言列表用于指定 Fallback 属性，即当系统的语言不受 Office 支持时，ODT (Office Deployment Tool) 会使用 Fallback 属性中指定的语言来安装 Office，若未指定 Fallback 属性，则默认安装 en-us 语言。仅可以设置一个 Fallback 属性。
 
-当模式为 匹配先前 MSI 版本的语言时，ODT 会查找计算机上已安装了的 MSI 版本的 Office 的语言，并将其设置为 Office 的安装语言。此项必须与 RemoveMSI 属性一起使用，以便从 MSI 版本升级至 C2R 版本，若您的计算机上没有 MSI 版本的 Office，请勿选择此项。
+##### 匹配已安装的 Office
+ODT 会匹配目前已安装的 Office 的语言，这在增删组件或者产品时会非常有用。
 
-当模式为 从列表中选择时，列表中被勾选的语言将会被设置为 Office 安装语言。其中，当您选择了多个语言时，设置的第一个语言将会被用于确定 Shell UI 区域性，包括快捷方式，右键单击上下文菜单和工具提示。单击语言列表右边的空白区域并拖动可以对语言进行排序。
+##### 匹配先前 MSI 版本的语言
+ODT 会查找计算机上已安装了的 MSI 版本的 Office 的语言，并将其设置为 Office 的安装语言。此项必须与 RemoveMSI 属性一起使用，以便从 MSI 版本升级至 C2R 版本，若您的计算机上没有 MSI 版本的 Office，请勿选择此项。
 
+##### 从列表中选择
+列表中被勾选的语言将会被设置为 Office 安装语言。其中，当您选择了多个语言时，设置的第一个语言将会被用于确定 Shell UI 区域性，包括快捷方式，右键单击上下文菜单和工具提示。单击语言列表右边的空白区域并拖动可以对语言进行排序。
+
+---
 有关其他属性的详细信息，请前往[微软的网站](https://docs.microsoft.com/zh-cn/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)查看详细信息
 
 #### Office 365 套件/产品 ID 参考
-O365ProPlusRetail       Office 365 ProPlus，适用于Office 365教育版、Office 365 专业增强版、Office 365 企业版 E3、
-                        Office 365 企业版 E4、Office 365 企业版 E5、Office 365 中型企业版
-O365HomePremRetail      Office 365 家庭高级版
-O365BusinessRetail      Office 365 商业版、Office 365 商业高级版
-O365SmallBusPremRetail  Office 小型企业高级版
+产品 ID|产品名称
+:---|:---
+O365ProPlusRetail|Office 365 ProPlus，适用于Office 365教育版、Office 365 专业增强版、Office 365 企业版 E3、Office 365 企业版 E4、Office 365 企业版 E5、Office 365 中型企业版
+O365HomePremRetail|Office 365 家庭高级版
+O365BusinessRetail|Office 365 商业版、Office 365 商业高级版
+O365SmallBusPremRetail|Office 小型企业高级版
 
 #### 2016 套件/产品 ID 参考
-ProPlusRetail           Office 专业增强版 - 零售版
-ProfessionalRetail      Office 专业版 - 零售版
-StandardRetail          Office 标准版 - 零售版
-HomeBusinessRetail      Office 家庭高级版
-HomeStudentRetail       Office 家庭学生版
-
-ProjectProXVolume       Project 专业版 - 批量版
-ProjectProRetail        Project 专业版 - 零售版 - for Office 365
-ProjectStdXVolume       Project 标准版 - 批量版
-ProjectStdRetail        Project 标准版 - 零售版
-VisioProXVolume         Visio 专业版 - 批量版
-VisioProRetail          Visio 专业版 - 零售版 - for Office 365
-VisioStdXVolume         Visio 标准版 - 批量版
-VisioStdRetail          Visio 标准版 - 零售版
+产品 ID|产品名称
+:---|:---
+ProPlusRetail|Office 专业增强版 - 零售版
+ProfessionalRetail|Office 专业版 - 零售版
+StandardRetail|Office 标准版 - 零售版
+HomeBusinessRetail|Office 家庭高级版
+HomeStudentRetail|Office 家庭学生版
+ProjectProXVolume|Project 专业版 - 批量版
+ProjectProRetail|Project 专业版 - 零售版 - for Office 365
+ProjectStdXVolume|Project 标准版 - 批量版
+ProjectStdRetail|Project 标准版 - 零售版
+VisioProXVolume|Visio 专业版 - 批量版
+VisioProRetail|Visio 专业版 - 零售版 - for Office 365
+VisioStdXVolume|Visio 标准版 - 批量版
+VisioStdRetail|Visio 标准版 - 零售版
 
 #### 2019 套件/产品 ID 参考
-ProPlus2019Retail       Office 专业增强版 - 零售版
-ProPlus2019Volume       Office 专业增强版 - 批量版
-Standard2019Retail      Office 标准版 - 零售版
-Standard2019Volume      Office 标准版 - 批量版
-
-ProjectPro2019Volume    Project 专业版 批量版
-ProjectPro2019Retail    Project 专业版 零售版
-ProjectStd2019Volume    Project 标准版 批量版
-ProjectStd2019Retail    Project 标准版 零售版
-VisioPro2019Volume      Visio 专业版 批量版
-VisioPro2019Retail      Visio 专业版 零售版
-VisioStd2019Volume      Visio 标准版 批量版
-VisioStd2019Retail      Visio 标准版 零售版
+产品 ID|产品名称
+:---|:---
+ProPlus2019Retail|Office 专业增强版 - 零售版
+ProPlus2019Volume|Office 专业增强版 - 批量版
+Standard2019Retail|Office 标准版 - 零售版
+Standard2019Volume|Office 标准版 - 批量版
+ProjectPro2019Volume|Project 专业版 批量版
+ProjectPro2019Retail|Project 专业版 零售版
+ProjectStd2019Volume|Project 标准版 批量版
+ProjectStd2019Retail|Project 标准版 零售版
+VisioPro2019Volume|Visio 专业版 批量版
+VisioPro2019Retail|Visio 专业版 零售版
+VisioStd2019Volume|Visio 标准版 批量版
+VisioStd2019Retail|Visio 标准版 零售版
 
 #### 其他产品 ID 参考
-LanguagePack                        语言包
-ProofingTools                       语言校对工具
-AccessRuntimeRetail                 Access 运行时
-AccessRetail                        Access 2016 零售版
-Access2019Retail                    Access 2019 零售版
-Access2019Volume                    Access 2019 批量版
-ExcelRetail                         Excel 2016 零售版
-Excel2019Retail                     Excel 2019 零售版
-Excel2019Volume                     Excel 2019 批量版
-OneNoteRetail                       OneNote 2016 零售版
-OneNoteFreeRetail                   OneNote 免费版
-OutlookRetail                       Outlook 2016 零售版
-Outlook2019Retail                   Outlook 2019 零售版
-Outlook2019Volume                   Outlook 2019 批量版
-PowerPointRetail                    PowerPoint 2016 零售版
-PowerPoint2019Retail                PowerPoint 2019 零售版
-PowerPoint2019Volume                PowerPoint 2019 批量版
-PublisherRetail                     Publisher 2016 零售版
-Publisher2019Retail                 Publisher 2019 零售版
-Publisher2019Volume                 Publisher 2019 批量版
-SkypeforBusinessRetail
-SkypeforBusinessEntryRetail         Skype for Business (Office 365)
-SkypeforBusiness2019Retail
-SkypeforBusiness2019Volume
-SkypeforBusinessEntry2019Retail  
-WordRetail                          Word 2016 零售版
-Word2019Retail                      Word 2019 零售版
-Word2019Volume                      Word 2019 批量版
+产品 ID|产品名称
+:---|:---
+LanguagePack语言包
+ProofingTools语言校对工具
+AccessRuntimeRetail|Access运行时
+AccessRetail|Access2016零售版
+Access2019Retail|Access2019零售版
+Access2019Volume|Access2019批量版
+ExcelRetail|Excel2016零售版
+Excel2019Retail|Excel2019零售版
+Excel2019Volume|Excel2019批量版
+OneNoteRetail|OneNote2016零售版
+OneNoteFreeRetail|OneNote免费版
+OutlookRetail|Outlook2016零售版
+Outlook2019Retail|Outlook2019零售版
+Outlook2019Volume|Outlook2019批量版
+PowerPointRetail|PowerPoint2016零售版
+PowerPoint2019Retail|PowerPoint2019零售版
+PowerPoint2019Volume|PowerPoint2019批量版
+PublisherRetail|Publisher2016零售版
+Publisher2019Retail|Publisher2019零售版
+Publisher2019Volume|Publisher2019批量版
+SkypeforBusinessRetail|
+SkypeforBusinessEntryRetail|SkypeforBusiness(Office365)
+SkypeforBusiness2019Retail|
+SkypeforBusiness2019Volume|
+SkypeforBusinessEntry2019Retail|
+WordRetail|Word2016零售版
+Word2019Retail|Word2019零售版
+Word2019Volume|Word2019批量版
 
 有关产品 ID 的更多信息，请前往[微软的网站](https://go.microsoft.com/fwlink/p/?LinkID=301891)查看详细信息
 
 #### 常见问题以及解决办法
 写在开头：如果您的系统不是原版系统，而是经过修改、精简的系统或者是 Ghost 来的系统，请重装原版系统。此类系统常常因为系统文件被修改/破坏严重而导致 Office Deployment Tool 和 Click to Run 无法正常运行。重装原版系统是最快速、最有效的方法，有关原版系统可以前往 MSDN 我告诉你 下载。
 
-问题：卡在 We're getting things ready... 
-问题原因：很大可能与 360，管家以及毒霸等各种杀毒、安全软件有关。
-解决办法1：关闭这些第三方杀毒/安全软件
-解决办法2：尝试使用 OTL 安装 Office，设置页面提供了下载选项。
+---
+名称|信息
+:---|:---
+问题|卡在 We're getting things ready... 
+问题原因|很大可能与 360，管家以及毒霸等各种杀毒、安全软件有关。
+解决办法1|关闭这些第三方杀毒/安全软件
+解决办法2|尝试使用 OTL 安装 Office，设置页面提供了下载选项。
 
-问题：提示 You have the Windows Installer based program installed in your computer
-问题原因：已经有基于 MSI 的 Office 安装在系统中
-解决办法：卸载旧版本的 Office （包括 Visio 和 Project）；或者在可选设置页面勾选 移除现有的 MSI 版本的 Office 并再次尝试安装。
+名称|信息
+:---|:---
+问题|提示 You have the Windows Installer based program installed in your computer
+问题原因|已经有基于 MSI 的 Office 安装在系统中
+解决办法|卸载旧版本的 Office （包括 Visio 和 Project）；或者在可选设置页面勾选 移除现有的 MSI 版本的 Office 并再次尝试安装。
+
 如已经卸载或者无法正常卸载，请使用 管理 - 卸载 页面提供的脚本/工具清除 Office。
 清除完成后，重启计算机后再试。
 如果依然继续此提示，请参阅 管理 页中说明里提到的手动卸载 Office。
 
-问题：提示 you have the 32 (or 64) bit program installed in your computer
-问题原因：有其他版本的 Office 已经安装在系统中，这些版本无法共存
-解决办法1：卸载这些版本的 Office 并重新安装
-解决办法2：安装与已存在的 Office 相同类型的版本。比如 32 位的选择 32 位的，64 位选择 64 位的。
+名称|信息
+:---|:---
+问题|提示 you have the 32 (or 64) bit program installed in your computer
+问题原因|有其他版本的 Office 已经安装在系统中，这些版本无法共存
+解决办法1|卸载这些版本的 Office 并重新安装
+解决办法2|安装与已存在的 Office 相同类型的版本。比如 32 位的选择 32 位的，64 位选择 64 位的。
 
-问题：提示 We can't download a required file
-问题原因：无法下载所需文件
-解决办法：尝试重新下载离线文件，或者在线安装 Office。
+名称|信息
+:---|:---
+问题|提示 We can't download a required file
+问题原因|无法下载所需文件
+解决办法|尝试重新下载离线文件，或者在线安装 Office。
+
 如果离线文件有多个版本，请在可选设置中手动指定可用的版本，或者清除无法使用的版本。
 
-问题：提示 This product can't be installed on the selected update channel
-问题原因：通道与套件/产品不对应
-解决办法：2019 系列的套件和产品要对应通道 PerpetualVL2019。其他的套件/产品选择此通道也会报错，请选择其他通道。
+名称|信息
+:---|:---
+问题|提示 This product can't be installed on the selected update channel
+问题原因|通道与套件/产品不对应
+解决办法|2019 系列的套件和产品要对应通道 PerpetualVL2019。其他的套件/产品选择此通道也会报错，请选择其他通道。
 
-问题：提示 This product require Windows 10 to continue
-问题原因：这个产品只支持在 Windows 10 中安装
-解决办法1：更新您的系统至 Windows 10 之后再安装 Office。如果您并未打算安装 Office 2019，请更改套件、产品。
-解决办法2：使用 Office Tool Lite 在 Windows 7 上强制安装 Office。如果您无法使用 OTL 在 Win 7 上安装 Office 2019，请参照 B站教程 通过更改许可证的方法来使用 Office 2019。
+名称|信息
+:---|:---
+问题|提示 This product require Windows 10 to continue
+问题原因|这个产品只支持在 Windows 10 中安装
+解决办法1|更新您的系统至 Windows 10 之后再安装 Office。如果您并未打算安装 Office 2019，请更改套件、产品。
+解决办法2|使用 Office Tool Lite 在 Windows 7 上强制安装 Office。
+
+如果您无法使用 OTL 在 Win 7 上安装 Office 2019，请参照 B站教程 通过更改许可证的方法来使用 Office 2019。
 
 通用解决办法：清除 Office，关闭其他软件，重启电脑再试，清理文件和注册表再试
+
 最终解决办法：重装原版 Windows
 
+---
 ### 激活 Office
 若要转换 Office 授权，请直接安装对应的证书即可。
 举个例子：比如要转换 Office 2016 Retail -> Office 2016 Volume，安装 Office 2016 Volume 即可完成转换。
@@ -285,13 +317,16 @@ Word2019Volume                      Word 2019 批量版
 只有当计算机上安装了基于 C2R 版本的 Office 时，OTP 才会读取 Office 证书并在下拉框中显示。否则 OTP 仅会显示内置的 Volume (批量版) 证书。
 
 #### Office 激活方法以及步骤
-密钥在线激活步骤：直接安装密钥，然后点击激活即可。若密钥有效以及版本对应，Office 将成功激活。此过程亦可以在 Office 内完成。
+##### 密钥在线激活步骤
+直接安装密钥，然后点击激活即可。若密钥有效以及版本对应，Office 将成功激活。此过程亦可以在 Office 内完成。
 激活成功后，Office 将会一直保持激活状态。
 
-电话激活步骤：安装密钥，确保其可以用于电话激活，然后在安装密钥按钮的按钮菜单中，点击查看安装 ID，使用此 ID 在微软提供的方式内获取 确认 ID，然后安装 确认 ID，若 确认 ID 和 安装 ID 对应，Office 即可成功离线激活。
+##### 电话激活步骤
+安装密钥，确保其可以用于电话激活，然后在安装密钥按钮的按钮菜单中，点击查看安装 ID，使用此 ID 在微软提供的方式内获取 确认 ID，然后安装 确认 ID，若 确认 ID 和 安装 ID 对应，Office 即可成功离线激活。
 激活成功后，Office 将会一直保持激活状态。
 
-KMS 激活步骤：安装对应的 批量（Volume）证书，比如你要激活 Office 2016 就安装 Office 2016 Volume 证书，然后设定一个 KMS 地址，当一切配置无误、网络正常、服务器正常的情况下，点击激活按钮，Office 将会顺利激活。
+##### KMS 激活步骤
+安装对应的 批量（Volume）证书，比如你要激活 Office 2016 就安装 Office 2016 Volume 证书，然后设定一个 KMS 地址，当一切配置无误、网络正常、服务器正常的情况下，点击激活按钮，Office 将会顺利激活。
 
 KMS 激活成功后，Office 会默认 7 天与服务器连接一次并自动续期，最大持续激活时间为 180 天。
 当服务器正常，系统正常，网络正常的默认情况下，激活剩余时间不会低于 172 天，因此也可以达到 “永久激活” 的效果。
@@ -331,24 +366,32 @@ Sending activation request (KMS V4) 1 of 1  -> 03612-00206-524-247319-03-1100-14
 清除激活状态会将密钥和证书一并清除。
 
 #### 常见错误以及解决办法
-错误代码1：0x8007007B
-错误原因：文件名、目录名或卷标语法不正确
-错误代码2：0x8007232B
-错误原因：DNS 名称不存在
-解决办法：在工具箱内修复 Office 的激活，然后再设定 KMS 服务器地址，再进行激活操作
+名称|信息
+:---|:---
+错误代码1|0x8007007B
+错误原因|文件名、目录名或卷标语法不正确
+错误代码2|0x8007232B
+错误原因|DNS 名称不存在
+解决办法|在工具箱内修复 Office 的激活，然后再设定 KMS 服务器地址，再进行激活操作
 
-错误提示：软件授权服务报告许可证未安装
-错误原因：这个许可证安装的是默认的密钥
-解决办法：无需解决
+名称|信息
+:---|:---
+错误提示|软件授权服务报告许可证未安装
+错误原因|这个许可证安装的是默认的密钥
+解决办法|无需解决
 
-错误提示：软件授权服务报告未找到产品 SKU
-错误原因：许可证没有安装，或者密钥和证书不对应
-解决办法：安装对应的授权证书，或者更换其他密钥
+名称|信息
+:---|:---
+错误提示|软件授权服务报告未找到产品 SKU
+错误原因|许可证没有安装，或者密钥和证书不对应
+解决办法|安装对应的授权证书，或者更换其他密钥
 
-错误提示1：发生未知错误
-错误提示2：软件授权服务报告许可证使用失败
-错误原因：Windows Insider 的 Bug，导致 Office 无法正常验证激活信息
-解决办法：将 Software Protection 服务停止，然后将 C:\Windows\System32\spp\store_test\2.0 下的三个 (.dat) 文件删除（有一个隐藏的）。然后再重新进行一切激活操作
+名称|信息
+:---|:---
+错误提示1|发生未知错误
+错误提示2|软件授权服务报告许可证使用失败
+错误原因|Windows Insider 的 Bug，导致 Office 无法正常验证激活信息
+解决办法|将 Software Protection 服务停止，然后将 C:\Windows\System32\spp\store_test\2.0 下的三个 (.dat) 文件删除（有一个隐藏的）。然后再重新进行一切激活操作
 
 #### 重要提示
 使用 GVLK 之前，请确保您的 Office 为批量版
@@ -356,23 +399,25 @@ Sending activation request (KMS V4) 1 of 1  -> 03612-00206-524-247319-03-1100-14
 使用 KMS 激活必须要配置一个 KMS 服务器地址，否则无法激活 Office。
 
 #### Office 2019 GVLK（KMS 专用）
-Office Pro Plus 2019      NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP
-Office Standard 2019      6NWWJ-YQWMR-QKGCB-6TMB3-9D9HK
-Project Pro 2019          B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B
-Project Std 2019          C4F7P-NCP8C-6CQPT-MQHV9-JXD2M
-Visio Pro 2019            9BGNQ-K37YR-RQHF2-38RQ3-7VCBB
-Visio Std 2019            7TQNQ-K3YQQ-3PFH7-CCPPM-X4VQ2
-Access 2019               9N9PT-27V4Y-VJ2PD-YXFMF-YTFQT
-Excel 2019                TMJWT-YYNMB-3BKTF-644FC-RVXBD
-Outlook 2019              7HD7K-N4PVK-BHBCQ-YWQRW-XW4VK
-PowerPoint 2019           RRNCX-C64HY-W2MM7-MCH9G-TJHMQ
-Publisher 2019            G2KWX-3NW6P-PY93R-JXK2T-C9Y9V
-Skype for Business        NCJ33-JHBBY-HTK98-MYCV8-HMKHJ
-Word 2019                 PBX3G-NWMT6-Q7XBW-PYJGG-WXD33
+产品|密钥
+:---|:---
+Office Pro Plus 2019|NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP
+Office Standard 2019|6NWWJ-YQWMR-QKGCB-6TMB3-9D9HK
+Project Pro 2019|B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B
+Project Std 2019|C4F7P-NCP8C-6CQPT-MQHV9-JXD2M
+Visio Pro 2019|9BGNQ-K37YR-RQHF2-38RQ3-7VCBB
+Visio Std 2019|7TQNQ-K3YQQ-3PFH7-CCPPM-X4VQ2
+Access 2019|9N9PT-27V4Y-VJ2PD-YXFMF-YTFQT
+Excel 2019|TMJWT-YYNMB-3BKTF-644FC-RVXBD
+Outlook 2019|7HD7K-N4PVK-BHBCQ-YWQRW-XW4VK
+PowerPoint 2019|RRNCX-C64HY-W2MM7-MCH9G-TJHMQ
+Publisher 2019|G2KWX-3NW6P-PY93R-JXK2T-C9Y9V
+Skype for Business|NCJ33-JHBBY-HTK98-MYCV8-HMKHJ
+Word 2019|PBX3G-NWMT6-Q7XBW-PYJGG-WXD33
 
 #### Office 2016 GVLK（KMS 专用）
 产品|密钥
-:---:|:---:
+:---|:---
 Office Pro Plus 2016|XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99
 Office Standard 2016|JNRGM-WHDWX-FJJG3-K47QV-DRTFM
 Office Mondo 2016|HFTND-W9MK4-8B7MJ-B6C4G-XQBR2
@@ -391,7 +436,7 @@ Word 2016|WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6
 
 #### Office 365 默认密钥（激活功能专用）
 产品|密钥
-:---:|:---:
+:---|:---
 O365ProPlusRetail|DRNV7-VGMM2-B3G9T-4BF84-VMFTK
 
 ### 转换文档
@@ -413,77 +458,83 @@ O365ProPlusRetail|DRNV7-VGMM2-B3G9T-4BF84-VMFTK
 一般情况下，Office 应用程序在保存文档为旧格式的时候会执行兼容性检查，如果检查到有问题会弹出框来提醒用户，在出现此对话框时，用户只可以选择手动处理这些提示，否则转换文档不会继续执行。
 
 #### Word 文档格式参照表
-docx                Word 文档
-docm                启用宏的 Word 文档
-doc                 Word 97-2003 文档
-dotx                Word 模板
-dotm                启用宏的 Word 模板
-dot                 Word 97-2003 模板
-pdf                 PDF 文件
-xps                 XPS 文档
-mht, mhtml          单个文件网页
-htm, html           网页
-htm, html           筛选过的网页
-rtf                 RTF 格式
-txt                 纯文本
-xml                 Word XML 文档
-xml                 Word 2003 文档
-docx                Strict Open XML 文档
-odt                 OpenDocument 文本
+扩展名|格式名称
+:---|:---
+docx|Word 文档
+docm|启用宏的 Word 文档
+doc|Word 97-2003 文档
+dotx|Word 模板
+dotm|启用宏的 Word 模板
+dot|Word 97-2003 模板
+pdf|PDF 文件
+xps|XPS 文档
+mht, mhtml|单个文件网页
+htm, html|网页
+htm, html|筛选过的网页
+rtf|RTF 格式
+txt|纯文本
+xml|Word XML 文档
+xml|Word 2003 文档
+docx|Strict Open XML 文档
+odt|OpenDocument 文本
 
 #### PowerPoint 文档格式参照表
-pptx                PowerPoint 演示文稿
-pptm                启用宏的 PowerPoint 演示文稿
-ppt                 PowerPoint 97-2003 演示文稿
-pdf                 PDF 文档
-xps                 XPS 文档
-potx                PowerPoint 模板
-potm                PowerPoint 启用宏的模板
-pot                 PowerPoint 97-2003 模板
-thmx                Office 主题
-ppsx                PowerPoint 放映
-ppsm                启用宏的 PowerPoint 放映
-pps                 PowerPoint 97-2003 放映
-ppam                PowerPoint 加载项
-ppa                 PowerPoint 97-2003 加载项
-xml                 PowerPoint XML 演示文稿
-mp4                 MPEG-4 视频
-wmv                 Windows Media 视频
-gif                 GIF 可移植网络图形格式
-jpg                 JPEG 文件交换格式
-png                 PNG 可移植网络图形格式
-tif                 TIFF Tag 图像文件格式
-bmp                 设备无关位图
-wmf                 Windows 图元文件
-emf                 增强型 Windows 元文件
-rtf                 大纲/RTF 文件
-pptx                PowerPoint 图片演示文稿
-pptx                Strict Open XML 演示文稿
-odp                 OpenDocument 演示文稿
+扩展名|格式名称
+:---|:---
+pptx|PowerPoint 演示文稿
+pptm|启用宏的 PowerPoint 演示文稿
+ppt|PowerPoint 97-2003 演示文稿
+pdf|PDF 文档
+xps|XPS 文档
+potx|PowerPoint 模板
+potm|PowerPoint 启用宏的模板
+pot|PowerPoint 97-2003 模板
+thmx|Office 主题
+ppsx|PowerPoint 放映
+ppsm|启用宏的 PowerPoint 放映
+pps|PowerPoint 97-2003 放映
+ppam|PowerPoint 加载项
+ppa|PowerPoint 97-2003 加载项
+xml|PowerPoint XML 演示文稿
+mp4|MPEG-4 视频
+wmv|Windows Media 视频
+gif|GIF 可移植网络图形格式
+jpg|JPEG 文件交换格式
+png|PNG 可移植网络图形格式
+tif|TIFF Tag 图像文件格式
+bmp|设备无关位图
+wmf|Windows 图元文件
+emf|增强型 Windows 元文件
+rtf|大纲/RTF 文件
+pptx|PowerPoint 图片演示文稿
+pptx|Strict Open XML 演示文稿
+odp|OpenDocument 演示文稿
 
 #### Excel 文档格式参照表
-xlsx                Excel 工作簿
-xlsm                Excel 启用宏的工作簿
-xlsb                Excel 二进制工作簿
-xls                 Excel 97-2003 工作簿
-csv                 CSV UTF-8 (逗号分隔)
-xml                 XML 数据
-mht, mhtml          单个文件网页
-htm, html           网页
-xltx                Excel 模板
-xltm                Excel 启用宏的模板
-xlt                 Excel 97-2003 模板
-txt                 文本文件 (制表符分隔)
-txt                 Unicode 文本
-xml                 XML 电子表格 2003
-xls                 Microsoft Excel 5.0/95 工作簿
-csv                 CSV (逗号分隔)
-prn                 带格式的文本文件 (空格分隔)
-dif                 DIF (数据交换格式)
-slk                 SYLK (符号连链接)
-xlam                Excel 加载宏
-xla                 Excel 97-2003 加载宏
-pdf                 PDF 文档
-xps                 XPS 文档
-xlsx                Strict Open XML 电子表格
-ods                 OpenDocument 电子表格
+扩展名|格式名称
+:---|:---
+xlsx|Excel 工作簿
+xlsm|Excel 启用宏的工作簿
+xlsb|Excel 二进制工作簿
+xls|Excel 97-2003 工作簿
+csv|CSV UTF-8 (逗号分隔)
+xml|XML 数据
+mht, mhtml|单个文件网页
+htm, html|网页
+xltx|Excel 模板
+xltm|Excel 启用宏的模板
+xlt|Excel 97-2003 模板
+txt|文本文件 (制表符分隔)
+txt|Unicode 文本
+xml|XML 电子表格 2003
+xls|Microsoft Excel 5.0/95 工作簿
+csv|CSV (逗号分隔)
+prn|带格式的文本文件 (空格分隔)
+dif|DIF (数据交换格式)
+slk|SYLK (符号连链接)
+xlam|Excel 加载宏
+xla|Excel 97-2003 加载宏
+pdf|PDF 文档
+xps|XPS 文档
+xlsx|Strict Open XML 电子表格
+ods|OpenDocument 电子表格

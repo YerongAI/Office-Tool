@@ -2,6 +2,8 @@
 
 Office Tool Plus 是基于微软的 Office Deployment Tool 打造的一个用于部署、管理 Office 的一个小工具，如果您需要了解如何详细部署 Office，您也可以前往微软的 [Office Deployment Tool](https://docs.microsoft.com/zh-cn/deployoffice/configuration-options-for-the-office-2016-deployment-tool) 官网查看说明，微软官网对部署 Office 有详细的解释
 
+默认情况下，Office Tool Plus 会尝试获取当前用户的最高权限，若当前用户不是管理员账户，则会尝试获取管理员权限，如果 Office Tool Plus 以普通权限运行，则只能进行一些基本操作，例如下载 Office 或者查看部分信息。
+
 ## Office Tool 详细的介绍
 
 ### 管理 Office

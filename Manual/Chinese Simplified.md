@@ -33,9 +33,9 @@ C2R 语言是 ClickToRun 界面的显示语言。也就是我们平常看到的�
 有关如何手动卸载 Office，请参考[此条链接](https://support.office.com/zh-cn/article/手动卸载-Office-4e2904ea-25c8-4544-99ee-17696bb3027b)
 
 ### 下载 Office
-在此处，您可以下载安装 Office 时所需的安装文件。使用安装文件可以在无网络的情况下安装 Office。亦可以将安装文件分发到您的网络中，以便使用您的网络的客户端可以使用此安装文件安装 Office，从而节省带宽或者是方便管理。
+在此处，您可以下载安装 Office 时所需的安装文件。Office Tool Plus 所下载的安装文件均来自于微软的 Office CDN 服务器，使用安装文件可以在无网络的情况下安装 Office。亦可以将安装文件分发到您的网络中，以便使用您的网络的客户端可以使用此安装文件安装 Office，从而节省带宽或者是方便管理。
 
-安装文件不区分 Office 授权版本，您可以在安装时指定版本，例如 Office 365，Office 2016 家庭版， Office 2019 专业增强版，Visio 专业版等版本。
+安装文件包含 Office、Visio，Project 及其各个授权版本，例如 Office 家庭版，Office 专业增强版，Office 365 专业增强版以及 Visio 专业版 Project 标准版等等。
 
 体系架构中，x86 代表 32 位，x64 代表 64位。选择 All 会将 64 位和 32 位的安装文件一并下载，这会耗费更多的时间。如无特殊需求请勿选择 All。
 有关更新通道以及体系架构的详细解释，请查看本段的最后部分。
@@ -53,7 +53,7 @@ C2R 语言是 ClickToRun 界面的显示语言。也就是我们平常看到的�
 
 #### 定位安装文件
 若要选择安装文件，请定位到 Office 文件夹所在的文件夹，OTP 即可自动识别安装文件。
-举个例子：有一个安装文件的路径为：D:\Yerong\Office Tool\Office，在定位安装文件时，只需要定位到：D:\Yerong\Office Tool 即可。
+举个例子：有一个安装文件的路径为：D:\Yerong\Office Tool\Office\Data，在定位安装文件时，只需要定位到：D:\Yerong\Office Tool 即可。
 如果是 ISO 镜像文件，请先挂载镜像文件，再使用 OTP 定位位置。
 
 #### 下载旧版本的操作步骤
@@ -311,7 +311,7 @@ Word2019Volume|Word 2019 批量版
 ---
 ### 激活 Office
 若要转换 Office 授权，请直接安装对应的证书即可。
-举个例子：比如要转换 Office 2016 Retail -> Office 2016 Volume，安装 Office 2016 Volume 即可完成转换。
+举个例子：比如要转换 Office 2016 Retail -> Office 2016 Volume，安装 Office 2016 Volume 许可证即可完成转换。
 安装完成后，可以使用对应的密钥来激活，同时也可以做到多授权版本共存。
 
 点击旁边的省略按钮可以自定义选择并安装证书。

@@ -1,13 +1,17 @@
-﻿# Office Tool Plus 使用手册
+﻿# Office Tool 使用手册
 
 Office Tool Plus 是基于微软的 Office Deployment Tool 打造的一个用于部署、管理 Office 的一个小工具，如果您需要了解如何详细部署 Office，您也可以前往微软的 [Office Deployment Tool](https://docs.microsoft.com/zh-cn/deployoffice/configuration-options-for-the-office-2016-deployment-tool) 官网查看说明，微软官网对部署 Office 有详细的解释
 
-默认情况下，Office Tool Plus 会尝试获取当前用户的最高权限，若当前用户不是管理员账户，则会尝试获取管理员权限，如果 Office Tool Plus 以普通权限运行，则只能进行一些基本操作，例如下载 Office 或者查看部分信息。
+Office Tool Lite 则是一款小巧的 Office 部署工具，它可以不依赖任何第三方软件来进行 Office 的部署以及管理，在企业或者学校等大型环境中可以使用 Office Tool Lite 来分发 Office  的安装包进行大批量 Office 部署。使用方法和 Office Tool Plus 类似，却拥有自己独特的内容。
+
+Office Tool 需要 Net Framework 4.6.1 的支持，如 Windows 7 系统无法正常启动 Office Tool，请尝试安装对应版本的 Net Framework，[点击此处下载](http://go.microsoft.com/fwlink/?linkid=780597) 在线安装包或者 [点击此处下载](http://go.microsoft.com/fwlink/?LinkId=780601) 离线安装包
+
+默认情况下，Office Tool 会尝试获取当前用户的最高权限，若当前用户不是管理员账户，则会尝试获取管理员权限，如果 Office Tool 以普通权限运行，则只能进行一些基本操作，例如下载 Office 或者查看部分信息。
 
 ## Office Tool 详细的介绍
 
 ### 管理 Office
-Office Tool Plus 仅支持管理 Click To Run 版本的 Office，其他版本的 Office 不受支持。如果您还在使用旧版本的 Office，我们建议您卸载旧版本的 Office 并使用 OTP 安装新版 Office。
+Office Tool 仅支持管理 Click To Run 版本的 Office，其他版本的 Office 不受支持。如果您还在使用旧版本的 Office，我们建议您卸载旧版本的 Office 并使用 Office Tool 安装新版 Office。
 
 在快速启动里，点击可以启动对应的 Office 应用程序，右键单击可以在桌面上创建对应的 Office 应用程序的快捷方式。
 
@@ -18,7 +22,7 @@ C2R 语言是 ClickToRun 界面的显示语言。也就是我们平常看到的�
 
 更改任何配置后，请点击保存按钮以便保存更改，可能需要重新启动 Office 应用程序以使更改生效。
 
-#### 卸载 Office
+#### 卸载 Office (Office Tool Lite 不支持自定义卸载)
 
 自定义卸载可以用于批量卸载套件、产品或者自定义卸载语言包。
 
@@ -33,7 +37,7 @@ C2R 语言是 ClickToRun 界面的显示语言。也就是我们平常看到的�
 有关如何手动卸载 Office，请参考[此条链接](https://support.office.com/zh-cn/article/手动卸载-Office-4e2904ea-25c8-4544-99ee-17696bb3027b)
 
 ### 下载 Office
-在此处，您可以下载安装 Office 时所需的安装文件。Office Tool Plus 所下载的安装文件均来自于微软的 Office CDN 服务器，使用安装文件可以在无网络的情况下安装 Office。亦可以将安装文件分发到您的网络中，以便使用您的网络的客户端可以使用此安装文件安装 Office，从而节省带宽或者是方便管理。
+在此处，您可以下载安装 Office 时所需的安装文件。Office Tool 所下载的安装文件均来自于微软的 Office CDN 服务器，使用安装文件可以在无网络的情况下安装 Office。亦可以将安装文件分发到您的网络中，以便使用您的网络的客户端可以使用此安装文件安装 Office，从而节省带宽或者是方便管理。
 
 安装文件包含 Office、Visio，Project 及其各个授权版本，例如 Office 家庭版，Office 专业增强版，Office 365 专业增强版以及 Visio 专业版 Project 标准版等等。
 
@@ -44,19 +48,19 @@ C2R 语言是 ClickToRun 界面的显示语言。也就是我们平常看到的�
 
 下载前请检查安装文件是否有残留，如果有，请点击左下角的安装文件信息，然后点击删除文件即可。
 
-下载完成后，Office Tool Plus 会发出通知并自动识别安装文件，您可以在设置中配置下载完成后是否自动启动安装程序，或者下载完成后执行关机、重启等操作。
+下载完成后，Office Tool 会发出通知并自动识别安装文件，您可以在设置中配置下载完成后是否自动启动安装程序，或者下载完成后执行关机、重启等操作。
 
 #### 分享安装文件
-若要分享安装文件，您可以选择将下载好的 Office 文件夹分享给其他人，或者是使用 OTP 创建 ISO 文件并与他人共享。
-当您使用 OTP 创建 ISO 文件时，请务必确保 Office 文件夹与 OTP 同目录（默认同目录），否则创建的 ISO 文件将不会包含离线文件。
-创建的 ISO 文件可以直接挂载并使用，其内置 Office Tool Plus，可以直接运行。
+若要分享安装文件，您可以选择将下载好的 Office 文件夹分享给其他人，或者是使用 Office Tool 创建 ISO 文件并与他人共享。
+当您使用 Office Tool 创建 ISO 文件时，请务必确保 Office 文件夹与 Office Tool 同目录（默认同目录），否则创建的 ISO 文件将不会包含离线文件。
+创建的 ISO 文件可以直接挂载并使用，其内置 Office Tool，可以直接运行。
 
 #### 定位安装文件
-若要选择安装文件，请定位到 Office 文件夹所在的文件夹，OTP 即可自动识别安装文件。
+若要选择安装文件，请定位到 Office 文件夹所在的文件夹，Office Tool 即可自动识别安装文件。
 举个例子：有一个安装文件的路径为：D:\Yerong\Office Tool\Office\Data，在定位安装文件时，只需要定位到：D:\Yerong\Office Tool 即可。
-如果是 ISO 镜像文件，请先挂载镜像文件，再使用 OTP 定位位置。
+如果是 ISO 镜像文件，请先挂载镜像文件，再使用 Office Tool 定位位置。
 
-#### 下载旧版本的操作步骤
+#### 下载旧版本的操作步骤 (Office Tool Lite 不支持此功能)
 选择一个通道，然后点击查看历史版本按钮，获取对应通道的历史版本的内部版本号（通常为 xxxxx.xxxxx）。然后点击开始按钮旁的按钮菜单，选择下载旧版本，在弹出来的提示框中，输入 16.0.xxxxx.xxxxx，其中 xxxxx.xxxxx 是 Office 的内部版本号，点击确定即可开始下载历史版本。
 
 #### 语言设置说明
@@ -68,7 +72,7 @@ C2R 语言是 ClickToRun 界面的显示语言。也就是我们平常看到的�
 
 注意：Full 类型的语言是不可缺少的，比如你需要安装一个 Partial 或者 Proofing 类型的语言时，必须确保需要选择一个 Full 类型的语言，否则 Office 将无法正常安装。
 
-#### 下载引擎说明
+#### 下载引擎说明 (Office Tool Lite 无第三方下载引擎)
 下载引擎是用于从 Office CDN 下载安装文件的程序。
 
 下载引擎分别有迅雷、Aria2c 以及微软官方程序，这些程序均内置在 Office Tool Plus 中，无需额外安装。当某个引擎出现问题时，可以在下载设置中切换下载引擎。
@@ -160,7 +164,7 @@ Click to Run 默认将 Office 安装至系统盘，此设置由微软管理，�
 
 注意：Full 类型的语言是不可缺少的，当安装 Partial 或者 Proofing 类型的语言时，必须确保需要选择一个 Full 类型的语言，否则 Office 将无法正常安装或者会默认安装英语语言包。
 
-安装语言默认匹配系统语言
+安装语言默认匹配系统语言 (Office Tool Lite 不支持其他语言配置)
 
 ---
 ##### 匹配系统语言
@@ -190,10 +194,14 @@ O365SmallBusPremRetail|Office 小型企业高级版
 产品 ID|产品名称
 :---|:---
 ProPlusRetail|Office 专业增强版 - 零售版
+ProPlusVolume|Office 专业增强版 - 批量版 (仅 Office Tool Lite 支持)
 ProfessionalRetail|Office 专业版 - 零售版
 StandardRetail|Office 标准版 - 零售版
+StandardVolume|Office 标准版 - 批量版 (仅 Office Tool Lite 支持)
 HomeBusinessRetail|Office 家庭高级版
 HomeStudentRetail|Office 家庭学生版
+MondoRetail|Office Mondo - 零售版
+MondoVolume|Office Mondo - 批量版 (仅 Office Tool Lite 支持)
 ProjectProXVolume|Project 专业版 - 批量版
 ProjectProRetail|Project 专业版 - 零售版 - for Office 365
 ProjectStdXVolume|Project 标准版 - 批量版
@@ -262,13 +270,13 @@ Word2019Volume|Word 2019 批量版
 问题|卡在 We're getting things ready... 
 问题原因|很大可能与 360，管家以及毒霸等各种杀毒、安全软件有关。
 解决办法1|关闭这些第三方杀毒/安全软件
-解决办法2|尝试使用 OTL 安装 Office，设置页面提供了下载选项。
+解决办法2|尝试使用 Office Tool Lite 安装 Office。
 
 名称|信息
 :---|:---
 问题|提示 You have the Windows Installer based program installed in your computer
 问题原因|已经有基于 MSI 的 Office 安装在系统中
-解决办法|卸载旧版本的 Office （包括 Visio 和 Project）；或者在可选设置页面勾选 移除现有的 MSI 版本的 Office 并再次尝试安装。
+解决办法|卸载旧版本的 Office （包括 Visio 和 Project）；或者在 Office Tool Plus 的可选设置页面勾选 移除现有的 MSI 版本的 Office 并再次尝试安装。
 
 如已经卸载或者无法正常卸载，请使用 管理 - 卸载 页面提供的脚本/工具清除 Office。
 清除完成后，重启计算机后再试。
@@ -316,7 +324,9 @@ Word2019Volume|Word 2019 批量版
 
 点击旁边的省略按钮可以自定义选择并安装证书。
 
-只有当计算机上安装了基于 C2R 版本的 Office 时，OTP 才会读取 Office 证书并在下拉框中显示。否则 OTP 仅会显示内置的 Volume (批量版) 证书。
+只有当计算机上安装了基于 C2R 版本的 Office 时，Office Tool 才会读取 Office 证书并在下拉框中显示。否则 Office Tool Plus 仅会显示内置的 Volume (批量版) 证书，Office Tool Lite 则什么都不会显示。
+
+Office Tool Lite 不支持自定义安装证书，也没有内置证书。
 
 #### Office 激活方法以及步骤
 ##### 密钥在线激活步骤
@@ -334,10 +344,10 @@ KMS 激活成功后，Office 会默认 7 天与服务器连接一次并自动续
 当服务器正常，系统正常，网络正常的默认情况下，激活剩余时间不会低于 172 天，因此也可以达到 “永久激活” 的效果。
 此步骤由 Windows 自行完成，无需人工干涉，也没有任何后台程序驻留。
 
-OTP 保证不会对用户的计算机进行任何未经授权的修改，更不会进行任何破解。
+Office Tool 保证不会对用户的计算机进行任何未经授权的修改，更不会进行任何破解。
 对于 KMS 服务器，您可以在受支持的路由器上搭建一个，或者是百度搜索 KMS 服务器地址即可。
 
-#### 检测 KMS 可用性
+#### 检测 KMS 可用性 (Office Tool Lite 不支持此功能)
 输入一个 KMS 地址，然后在按钮菜单中点击检测 KMS 可用性。
 
 一般情况下会返回如下的结果：
@@ -357,7 +367,7 @@ Sending activation request (KMS V4) 1 of 1  -> 03612-00206-524-247319-03-1100-14
 
 将不需要的授权的最后五位数密钥复制，将其粘贴到密钥框中，然后在按钮菜单中选择卸载密钥，即可清除此激活信息。
 
-#### 清除 Office 激活状态
+#### 清除 Office 激活状态 (Office Tool Lite 不支持此功能)
 在证书管理的按钮菜单中，可以清除所有许可证。
 清除许可证后，第一次打开 Office 应用程序需要修复以重新安装默认的许可证。
 或者您可以手动安装许可证，安装完毕后，可以重新激活 Office。
@@ -374,7 +384,7 @@ Sending activation request (KMS V4) 1 of 1  -> 03612-00206-524-247319-03-1100-14
 错误原因|文件名、目录名或卷标语法不正确
 错误代码2|0x8007232B
 错误原因|DNS 名称不存在
-解决办法|在工具箱内修复 Office 的激活，然后再设定 KMS 服务器地址，再进行激活操作
+解决办法|在 Office Tool Plus 的工具箱内修复 Office 的激活，然后再设定 KMS 服务器地址，再进行激活操作
 
 名称|信息
 :---|:---
@@ -441,7 +451,7 @@ Word 2016|WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6
 :---|:---
 O365ProPlusRetail|DRNV7-VGMM2-B3G9T-4BF84-VMFTK
 
-### 转换文档
+### 转换文档 (Office Tool Lite 不支持此功能)
 此功能依赖 Office，请确保您的计算机上已安装最新版本的 Office，否则可能会出现各种不可预知的问题！
 
 #### Office 文档转换步骤

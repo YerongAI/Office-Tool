@@ -60,7 +60,7 @@ C2R 语言是 ClickToRun 界面的显示语言。也就是我们平常看到的�
 举个例子：有一个安装文件的路径为：D:\Yerong\Office Tool\Office\Data，在定位安装文件时，只需要定位到：D:\Yerong\Office Tool 即可。
 如果是 ISO 镜像文件，请先挂载镜像文件，再使用 Office Tool 定位位置。
 
-#### 下载旧版本的操作步骤 (Office Tool Lite 不支持此功能)
+#### 下载旧版本的操作步骤 (Office Tool Lite 不支持下载其他历史版本)
 在检查版本号后，可以直接在版本号选择框中选择一个历史版本。
 
 如果需要下载其他历史版本，点击查看历史版本按钮，获取对应通道的历史版本的内部版本号（通常为 xxxxx.xxxxx）。然后在版本号框中输入 16.0.xxxxx.xxxxx，其中 xxxxx.xxxxx 是 Office 的内部版本号，点击开始即可开始下载历史版本。

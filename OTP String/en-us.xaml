@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
-    <!-- Country settings, it is usded to get information from server. -->
+    <!-- Country settings, it is used to get information from server. -->
     <sys:String x:Key="Culture">en-us</sys:String>
     <!-- Header -->
     <sys:String x:Key="ISOMode">- ISO Mode</sys:String>
@@ -94,6 +94,7 @@
     <sys:String x:Key="Tab2Cancel">Cancel</sys:String>
     <sys:String x:Key="Tab2CreateISO">Create ISO file</sys:String>
     <sys:String x:Key="Tab2Channel">Channel:</sys:String>
+    <sys:String x:Key="Tab2Version">Version (optional):</sys:String>
     <sys:String x:Key="Tab2CreatedTimeUTC">Created time(UTC):</sys:String>
     <sys:String x:Key="Tab2Language">Language</sys:String>
     <sys:String x:Key="Tab2CheckVersion">Check version</sys:String>
@@ -178,7 +179,7 @@
     <sys:String x:Key="Tab4InstallCID">Install CID</sys:String>
     <sys:String x:Key="Tab4KMSManage">KMS Manage</sys:String>
     <sys:String x:Key="Tab4KMSAddress">KMS address</sys:String>
-    <sys:String x:Key="Tab4KMSPort">Port (Optional)</sys:String>
+    <sys:String x:Key="Tab4KMSPort">Port (optional)</sys:String>
     <sys:String x:Key="Tab4CheckKMS">Check KMS state</sys:String>
     <sys:String x:Key="Tab4SetKMS">Set server address</sys:String>
     <sys:String x:Key="Tab4SetPort">Set server port</sys:String>
@@ -240,7 +241,7 @@
 
     <sys:String x:Key="MsgRunning">Office Tool Plus is running now.</sys:String>
     <sys:String x:Key="MsgPermission">Office Tool Plus is started with normal privileges, some features will not available, do you want to start Office Tool Plus with administrator privileges?</sys:String>
-    <sys:String x:Key="MsgSafeMode">OTP exited abnorly. Enable safe mode this time?</sys:String>
+    <sys:String x:Key="MsgSafeMode">OTP has Crashed. Enable safe mode this time?</sys:String>
     <sys:String x:Key="MsgSelf-repairFailed">Self-repair failed!</sys:String>
     <sys:String x:Key="MsgExitQuestion">OTP is working now, confirm exit?</sys:String>
     <sys:String x:Key="MsgADIQuestion">You're going to shutdown/reboot now, are you sure?</sys:String>
@@ -250,24 +251,23 @@
     <!-- Message about Installation Files -->
     <sys:String x:Key="MsgInstallationDownloadSuccessful">Installation files download successful.</sys:String>
     <sys:String x:Key="MsgInstallationPathWarning">Detects that the installation files path has non-English characters and may affect the Setup program's normal operation, try moving/renaming the folder.</sys:String>
-    <sys:String x:Key="MsgInstallationPlural">There are multiple versions of installation files. If necessary,please manually adjusted before installation. Otherwise, install the latest version by default.</sys:String>
+    <sys:String x:Key="MsgInstallationPlural">There are multiple versions of installation files. If necessary, please manually adjusted before installation. Otherwise, install the latest version by default.</sys:String>
     <sys:String x:Key="MsgInstallationPlatform32">32 Bit</sys:String>
     <sys:String x:Key="MsgInstallationPlatform64">64 Bit</sys:String>
     <sys:String x:Key="MsgInstallationLosed">The following file(s) missed, please try redownload.</sys:String>
     <sys:String x:Key="MsgInstallationLosedTitle">Installation file(s) missed</sys:String>
     <sys:String x:Key="MsgSelectInstallationFiles">Select the location of the Office installation files.</sys:String>
     <sys:String x:Key="MsgDeleteInstallationFiles">Sure to delete the installation file(s)?</sys:String>
-
     <sys:String x:Key="MsgWriteInfError">Save information failed!</sys:String>
     <sys:String x:Key="MsgCleanOffice">Sure to clean Office? It cannot be canceled once it is started.</sys:String>
     <sys:String x:Key="MsgRunScript">Do not manipulate the script during execution to prevent the script from being paused or closed. continue?</sys:String>
-    <!-- Messsage about download -->
+    <!-- Message about download -->
     <sys:String x:Key="MsgDownloadVer3">Make sure the version number is correct and correspond to the channel.</sys:String>
-    <sys:String x:Key="MsgDownloadVerError">Failed to get version information, check that the version Number/Channel is correct and the network is normal.</sys:String>
-    <sys:String x:Key="MsgSetupDownload">Will using the official program to download installation files,To avoid mistakes, please delete the downloaded file. Continue?</sys:String>
+    <sys:String x:Key="MsgDownloadVerError">Failed to get version information, check that the version Number/Channel is correct, and the network is normal.</sys:String>
+    <sys:String x:Key="MsgSetupDownload">Will using the official program to download installation files, to avoid mistakes, please delete the downloaded file. Continue?</sys:String>
     <sys:String x:Key="MsgSetupConfigError">Microsoft official program does not support the current architecture/download mode configuration, please reconfigure, and then try again.</sys:String>
-    <sys:String x:Key="MsgInstallationFileExist">already exists, wanna overwrite?</sys:String>
-    <sys:String x:Key="MsgAria2cDownload">Will using Aria2c to download installation files. To avoid mistakes, please delete the downloaded file. ontinue?</sys:String>
+    <sys:String x:Key="MsgInstallationFileExist">The file %filename% already exists, would you like to re-download this file?</sys:String>
+    <sys:String x:Key="MsgAria2cDownload">Will using Aria2c to download installation files. To avoid mistakes, please delete the downloaded file. continue?</sys:String>
     <sys:String x:Key="MsgDownloadSuccessful">Installation files have been downloaded.</sys:String>
     <!-- Message about Thunder (迅雷) -->
     <sys:String x:Key="MsgDownloadErrorTitle">Download error</sys:String>
@@ -291,6 +291,7 @@
     <sys:String x:Key="MsgThunderErrorTimeOut">Task timeout.</sys:String>
     <sys:String x:Key="MsgThunderErrorCrashed">Thunder download engine has crashed.</sys:String>
     <sys:String x:Key="MsgThunderErrorCancel">The task is canceled.</sys:String>
+    
     <!-- Message about Install Office -->
     <sys:String x:Key="MsgSelectSavePath">Select save path</sys:String>
     <sys:String x:Key="MsgSaveFileSuccessful">File saved successfully</sys:String>
@@ -310,9 +311,9 @@
 
     <!-- Message about Toast Bar -->
     <sys:String x:Key="ToastUpdateAvailable">New version available, if you want to upgrade, please copy OTP to another folder.</sys:String>
-    <sys:String x:Key="ToastInstallationNone">Can't find any installation files, please redownload or select another floder.</sys:String>
-    <sys:String x:Key="ToastInstallationError">Some installation files are missed, please redownload or select another floder.</sys:String>
-    <sys:String x:Key="ToastLanguagePackError">Did not detect language information, please check whether the installation files is complete.</sys:String>
+    <sys:String x:Key="ToastInstallationNone">Can't find any installation files, please redownload or select another folder.</sys:String>
+    <sys:String x:Key="ToastInstallationError">Some installation files are missed, please redownload or select another folder.</sys:String>
+    <sys:String x:Key="ToastLanguagePackError">Did not detect language information, please check whether the installation files are complete.</sys:String>
     <sys:String x:Key="ToastSaveSuccessful">Save successful.</sys:String>
     <sys:String x:Key="ToastSelectionError">No suite(s) or product(s) selected.</sys:String>
     <sys:String x:Key="ToastNoInstallationFiles">No installation file found.</sys:String>
@@ -334,23 +335,23 @@
     <sys:String x:Key="ToolTipEmpty">Empty</sys:String>
     <sys:String x:Key="ToolTipChannelChanged">Check this when you changed the update channel.</sys:String>
     <sys:String x:Key="ToolTipCreateShortcut">Right click to create a shortcut on desktop.</sys:String>
-    <sys:String x:Key="ToolTipChannelEdit">Select a channel from the menu, or enter a HTTP path to specify the source.</sys:String>
-    <sys:String x:Key="ToolTipSpeedLimitNumber">Click to swich unit.</sys:String>
+    <sys:String x:Key="ToolTipChannelEdit">Select a channel from the menu or enter a HTTP path to specify the source.</sys:String>
+    <sys:String x:Key="ToolTipSpeedLimitNumber">Click to switch unit.</sys:String>
     <sys:String x:Key="ToolTipSuites">Suite contains applications.</sys:String>
     <sys:String x:Key="ToolTipProductIDEdit">If you want to config more suites or products, please use Comma「,」to split each id.</sys:String>
     <sys:String x:Key="ToolTipProductMAK">Product Key Settings are only available for Volume Licensing products and suites.</sys:String>
     <sys:String x:Key="ToolTipInstallWay">If you choose offline, Source Path attribute will take effect.</sys:String>
-    <sys:String x:Key="ToolTipDragLanguageItems">Drag to sort the language. The language of the first setting will determines the Shell UI culture, including shortcuts, right-click context menus, and tooltips.</sys:String>
-    <sys:String x:Key="ToolTipAllowCDNFallback">If the language pack isn't available in the SourcePath and the AllowCDNFallBack setting is set to True, then the ODT will use source files from the Office CDN.</sys:String>
+    <sys:String x:Key="ToolTipDragLanguageItems">Drag to sort the language. The language of the first setting will determine the Shell UI culture, including shortcuts, right-click context menus, and tooltips.</sys:String>
+    <sys:String x:Key="ToolTipAllowCDNFallback">If the language pack isn't available in the Source Path and the Allow CDN Fallback setting is set to True, then the ODT will use source files from the Office CDN.</sys:String>
     <sys:String x:Key="ToolTipDiaplayNone">After checking this option, Office will be installed with no user interface: no progress bars, completion screens, error messages, or other user interface are displayed.</sys:String>
-    <sys:String x:Key="ToolTipAcceptEULA">If AcceptEULA is set to TRUE, the "Microsoft Software License Terms" dialog box will not be displayed. We recommend that administrators set AcceptEULA to TRUE.</sys:String>
+    <sys:String x:Key="ToolTipAcceptEULA">If Accept EULA is set to TRUE, the "Microsoft Software License Terms" dialog box will not be displayed. We recommend that administrators set Accept EULA to TRUE.</sys:String>
     <sys:String x:Key="ToolTipResources">If the source path is blank, the Office CDN is used by default as the source.</sys:String>
     <sys:String x:Key="ToolTipForceCloseApps">When set to TRUE, this will force the closure of any applications that block Office installations. Data loss may occur.</sys:String>
     <sys:String x:Key="ToolTipDisableUpdate">Office won't check for updates.</sys:String>
     <sys:String x:Key="ToolTipInstallLicenses">Click Install licenses to continue.</sys:String>
-    <sys:String x:Key="ToolTipKey">Install key, or input the last 5 characters of installed key to uninstall.</sys:String>
+    <sys:String x:Key="ToolTipKey">Install key or input the last 5 characters of installed key to uninstall.</sys:String>
 
-    <!-- Text about TextBox, notice to control the string length. -->
+    <!-- Text about Textbox, notice to control the string length. -->
     <sys:String x:Key="TextBlockMAK">Multiple Activation Key (MAK).</sys:String>
     <sys:String x:Key="TextBlockResources">Local, network, or HTTP path.</sys:String>
 </ResourceDictionary>

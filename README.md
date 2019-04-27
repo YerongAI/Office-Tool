@@ -14,7 +14,7 @@ Thanks you very much.
 
 But actually, it is only contains partial codes, (●ˇ∀ˇ●) so you can only use editor such as NotePad.
 
-Note: You CAN'T cpoy this codes to commercial use without my permisson!
+Note: You CAN'T copy this codes to commercial use without my permisson!
 
 ### Help with localization
 

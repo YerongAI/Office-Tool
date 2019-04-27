@@ -1,0 +1,141 @@
+﻿<Window x:Name="Window" x:Class="Zmy.Wpf.CMessageBox.CMessageBoxWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" WindowStartupLocation="CenterScreen"
+        BorderBrush="{Binding Background, ElementName=Window}" Background="#FFEB3C00" MaxHeight="600" Width="500" ResizeMode="NoResize" 
+        Title="{Binding MessageBoxTitle}" SizeToContent="Height" Loaded="Window_Loaded" MinHeight="230" UseLayoutRounding="True"
+        Activated="Window_Activated" Deactivated="Window_Deactivated" Icon="/Office Tool Plus;component/Image/FIRSTRUN 001.ico">
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="1" CornerRadius="0" CaptionHeight="30"/>
+    </WindowChrome.WindowChrome>
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}" x:Key="HeaderButtonStyle">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#333A2820"/>
+                            </Trigger>
+
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#663A2820"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="{x:Type Button}" x:Key="NormalButtonStyle">
+            <Setter Property="Foreground" Value="{Binding Background, ElementName=Window}"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="MinWidth" Value="80"/>
+            <Setter Property="Margin" Value="15,0"/>
+            <Setter Property="IsDefault" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{Binding Background, ElementName=Window}" BorderThickness="1" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#26008CFF"/>
+                            </Trigger>
+
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#3F008CFF"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="{x:Type Button}" x:Key="NotNormalButtonStyle">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="MinWidth" Value="80"/>
+            <Setter Property="Margin" Value="15,0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="#FF8C8C8C" BorderThickness="1" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#264B4B4B"/>
+                            </Trigger>
+
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#3F4B4B4B"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Window.TaskbarItemInfo>
+        <TaskbarItemInfo Description="{Binding Title, ElementName=Window}">
+            <TaskbarItemInfo.ThumbButtonInfos>
+                <ThumbButtonInfo Description="{DynamicResource MsgButtonOK}" Visibility="{Binding Visibility, ElementName=OKButton}" Click="OKButton_Click" ImageSource="/Office Tool Plus;component/Image/Yes.png"/>
+                <ThumbButtonInfo Description="{DynamicResource MsgButtonCancel}" Visibility="{Binding Visibility, ElementName=CancelButton}" ImageSource="/Office Tool Plus;component/Image/No.png" Click="CancelButton_Click"/>
+                <ThumbButtonInfo Description="{DynamicResource MsgButtonYes}" Visibility="{Binding Visibility, ElementName=YesButton}" ImageSource="/Office Tool Plus;component/Image/Yes.png" Click="YesButton_Click"/>
+                <ThumbButtonInfo Description="{DynamicResource MsgButtonNo}" Visibility="{Binding Visibility, ElementName=NoButton}" ImageSource="/Office Tool Plus;component/Image/No.png" Click="NoButton_Click"/>
+            </TaskbarItemInfo.ThumbButtonInfos>
+        </TaskbarItemInfo>
+    </Window.TaskbarItemInfo>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Background="White" FlowDirection="LeftToRight">
+            <Button WindowChrome.IsHitTestVisibleInChrome="True" Click="CloseWindowButton_Click" Style="{StaticResource HeaderButtonStyle}" IsCancel="True" IsTabStop="False" HorizontalAlignment="Right" Width="35">
+                <Canvas>
+                    <Line X1="-5" Y1="-5" X2="5" Y2="5" Stroke="{Binding Background, ElementName=Window}"/>
+                    <Line X1="-5"  Y1="5" X2="5" Y2="-5" Stroke="{Binding Background, ElementName=Window}"/>
+                </Canvas>
+            </Button>
+            <WrapPanel HorizontalAlignment="Left" ItemHeight="35">
+                <Path WindowChrome.IsHitTestVisibleInChrome="True" Data="M207,94 L230,100 230,160 207,166 170,151.42 207,157 207,105 181,113 181,145 170,151 170,110 z" Height="20" Stretch="Fill" Width="17" Margin="12,7.5,8,7.5" VerticalAlignment="Center" Fill="{Binding Foreground, ElementName=WindowTitle}"/>
+                <TextBlock x:Name="WindowTitle" Foreground="{Binding Background, ElementName=Window}" Text="Office Tool Plus" VerticalAlignment="Center"/>
+            </WrapPanel>
+        </Grid>
+        <Grid Background="White" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <WrapPanel Margin="25,30,25,5" Focusable="False">
+                <Grid>
+                    <Path x:Name="IconPath" Data="M0,0 C40,0 40,60 0,60 -40,60 -40,0 0,0" HorizontalAlignment="Left" Stretch="Fill" VerticalAlignment="Center" Width="25" Height="25" StrokeThickness="2"/>
+                    <Label x:Name="IconContent" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="25" Height="25" FontSize="14" Foreground="{Binding Stroke, ElementName=IconPath}" FontWeight="Bold"/>
+                </Grid>
+                <TextBlock Text="{Binding MessageBoxTitle}" FontSize="18" Foreground="{Binding Background, ElementName=Window}" VerticalAlignment="Center" Margin="5,0,0,0"/>
+            </WrapPanel>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" Grid.Row="1" Margin="0,10,0,30">
+                <TextBlock Text="{Binding MessageBoxText}" TextWrapping="Wrap" Margin="25,0"/>
+            </ScrollViewer>
+            <WrapPanel Grid.Row="2" HorizontalAlignment="Right" ItemHeight="35">
+                <Button Content="{DynamicResource MsgButtonOK}" x:Name="OKButton" Click="OKButton_Click" Style="{StaticResource NormalButtonStyle}" Visibility="{Binding OKButtonVisibility, Mode=OneWay}"/>
+                <Button Content="{DynamicResource MsgButtonYes}" x:Name="YesButton" Click="YesButton_Click" Style="{StaticResource NormalButtonStyle}" Visibility="{Binding YesButtonVisibility, Mode=OneWay}"/>
+                <Button Content="{DynamicResource MsgButtonNo}" x:Name="NoButton" Click="NoButton_Click" Style="{StaticResource NotNormalButtonStyle}" Visibility="{Binding NoButtonVisibility, Mode=OneWay}"/>
+                <Button Content="{DynamicResource MsgButtonCancel}" x:Name="CancelButton" Click="CancelButton_Click" Style="{StaticResource NotNormalButtonStyle}" Visibility="{Binding CancelButtonVisibility, Mode=OneWay}"/>
+            </WrapPanel>
+            <CheckBox x:Name="ApplyToAll" Content="{DynamicResource MsgApplyToAll}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,15" Foreground="{Binding Background, ElementName=Window}" Grid.Row="2" Visibility="{Binding ApplyToAllVisibility, Mode=OneWay}"/>
+        </Grid>
+    </Grid>
+</Window>

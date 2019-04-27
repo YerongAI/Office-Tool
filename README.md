@@ -1,4 +1,4 @@
-# Office Tool
+﻿# Office Tool
 Office Tool is a tool for managing, downloading and installing Office. Office Tool Plus was based on Microsoft's Office Deployment Tool. You can customize configure your Office installation and download installation files to install Office without Internet.
 What's more, you can manage your installed Office, change update channel, add language packs and customize uninstall Office.
 
@@ -14,7 +14,7 @@ Thanks you very much.
 
 But actually, it is only contains partial codes, (●ˇ∀ˇ●) so you can only use editor such as NotePad.
 
-Note: You CAN'T copy this codes to commercial use without my permisson!
+Note: You CAN'T copy this codes to use without my permisson!
 
 ### Help with localization
 

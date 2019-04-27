@@ -1,4 +1,4 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -646,3 +646,5 @@ namespace OfficeToolPlus
         #endregion
     }
 }
+
+		//Copyright © 2019 Landiannews |By Yerong | https://otp.landian.vip/

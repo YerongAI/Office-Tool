@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System;
 using System.Xml;
 using System.Xml.Linq;
@@ -6,6 +6,7 @@ using System.Linq;
 
 namespace OTP
 {
+	//Copyright © 2019 Landiannews |By Yerong | https://otp.landian.vip/
     class CreateXML
     {
         private static readonly List<InstallConfig> ProductConfigList = new List<InstallConfig>(2);

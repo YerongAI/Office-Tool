@@ -12,6 +12,10 @@ If you have any ideas about coding, you can fork this repository and coding by y
 
 Thanks you very much.
 
+But actually, it is only contains partial codes, (●ˇ∀ˇ●) so you can only use editor such as NotePad.
+
+Note: You CAN'T cpoy this codes to commercial use without my permisson!
+
 ### Help with localization
 
 We encourage everyone to help with localization. The following is how to do.

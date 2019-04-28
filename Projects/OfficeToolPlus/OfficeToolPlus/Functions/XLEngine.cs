@@ -27,6 +27,9 @@ static class XL
     [DllImport("files\\Thunder\\xldl.dll", CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode, ThrowOnUnmappableChar = true)]
     public static extern bool XL_SetUserAgent(string pszUserAgent);
 
+    [DllImport("files\\Thunder\\xldl.dll", CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode, ThrowOnUnmappableChar = true)]
+    public static extern bool XL_SetProxy(DOWN_PROXY_INFO stProxyInfo);
+
     [DllImport("files\\Thunder\\xldl.dll", EntryPoint = "XL_QueryTaskInfoEx", CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode, ThrowOnUnmappableChar = true)]
     [return: MarshalAs(UnmanagedType.Bool)]
     public static extern  bool XL_QueryTaskInfoEx(IntPtr hTask, [Out()]DownTaskInfo stTaskInfo);
@@ -197,6 +200,83 @@ static class XL
 
        ///TASK_ERROR_ID_INVALID -> 0x43
         TASK_ERROR_ID_INVALID = 67
+    }
+
+    public enum DOWN_PROXY_TYPE
+    {
+
+        ///PROXY_TYPE_IE -> 0
+        PROXY_TYPE_IE = 0,
+
+        ///PROXY_TYPE_HTTP -> 1
+        PROXY_TYPE_HTTP = 1,
+
+        ///PROXY_TYPE_SOCK4 -> 2
+        PROXY_TYPE_SOCK4 = 2,
+
+        ///PROXY_TYPE_SOCK5 -> 3
+        PROXY_TYPE_SOCK5 = 3,
+
+        ///PROXY_TYPE_FTP -> 4
+        PROXY_TYPE_FTP = 4,
+
+        ///PROXY_TYPE_UNKOWN -> 255
+        PROXY_TYPE_UNKOWN = 255
+    }
+
+    public enum DOWN_PROXY_AUTH_TYPE
+    {
+
+        ///PROXY_AUTH_NONE -> 0
+        PROXY_AUTH_NONE = 0,
+
+        PROXY_AUTH_AUTO,
+
+        PROXY_AUTH_BASE64,
+
+        PROXY_AUTH_NTLM,
+
+        PROXY_AUTH_DEGEST,
+
+        PROXY_AUTH_UNKOWN
+    }
+
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
+    public class DOWN_PROXY_INFO
+    {
+
+        ///BOOL->int
+        [MarshalAs(UnmanagedType.Bool)]
+
+        public bool bIEProxy;
+        ///BOOL->int
+        [MarshalAs(UnmanagedType.Bool)]
+
+        public bool bProxy;
+        ///DOWN_PROXY_TYPE
+
+        public DOWN_PROXY_TYPE stPType;
+        ///DOWN_PROXY_AUTH_TYPE
+
+        public DOWN_PROXY_AUTH_TYPE stAType;
+        ///wchar_t[2048]
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 2048)]
+
+        public string szHost;
+        ///INT32->int
+
+        public int nPort;
+        ///wchar_t[50]
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 50)]
+
+        public string szUser;
+        ///wchar_t[50]
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 50)]
+
+        public string szPwd;
+        ///wchar_t[2048]
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 2048)]
+        public string szDomain;
     }
 }
 

@@ -96,45 +96,7 @@ namespace Zmy.Wpf.CMessageBox
             }));
             window.MessageBoxText = cmessageBoxText;
             window.OKButtonVisibility = Visibility.Visible;
-            var fc = new BrushConverter();
-            switch (CMessageBoxImage)
-            {
-                case CMessageBoxImage.Error:
-                    {
-                        window.IconPath.Visibility = window.IconContent.Visibility = Visibility.Visible;
-                        window.IconPath.Stroke = (Brush)fc.ConvertFrom("#FFFF0000");
-                        window.IconContent.Content = "✕";
-                        SystemSounds.Hand.Play();
-                        break;
-                    }
-                case CMessageBoxImage.Question:
-                    {
-                        window.IconPath.Visibility = window.IconContent.Visibility = Visibility.Visible;
-                        window.IconPath.Stroke = (Brush)fc.ConvertFrom("#FF008CFF");
-                        window.IconContent.Content = "?";
-                        break;
-                    }
-                case CMessageBoxImage.Warning:
-                    {
-                        window.IconPath.Visibility = window.IconContent.Visibility = Visibility.Visible;
-                        window.IconPath.Stroke = (Brush)fc.ConvertFrom("#FFFFE100");
-                        window.IconContent.Content = "!";
-                        SystemSounds.Exclamation.Play();
-                        break;
-                    }
-                case CMessageBoxImage.Info:
-                    {
-                        window.IconPath.Visibility = window.IconContent.Visibility = Visibility.Visible;
-                        window.IconPath.Stroke = (Brush)fc.ConvertFrom("#FF008CFF");
-                        window.IconContent.Content = "!";
-                        SystemSounds.Asterisk.Play();
-                        break;
-                    }
-                default:
-                    {
-                        break;
-                    }
-            }
+            SwitchIcon(CMessageBoxImage, window);
             Application.Current.Dispatcher.Invoke(new Action(() =>
             {
                 window.ShowDialog();
@@ -180,45 +142,7 @@ namespace Zmy.Wpf.CMessageBox
             window.MessageBoxText = cmessageBoxText;
             window.MessageBoxTitle = caption;
             window.OKButtonVisibility = Visibility.Visible;
-            var fc = new BrushConverter();
-            switch (CMessageBoxImage)
-            {
-                case CMessageBoxImage.Error:
-                    {
-                        window.IconPath.Visibility = window.IconContent.Visibility = Visibility.Visible;
-                        window.IconPath.Stroke = (Brush)fc.ConvertFrom("#FFFF0000");
-                        window.IconContent.Content = "✕";
-                        SystemSounds.Hand.Play();
-                        break;
-                    }
-                case CMessageBoxImage.Question:
-                    {
-                        window.IconPath.Visibility = window.IconContent.Visibility = Visibility.Visible;
-                        window.IconPath.Stroke = (Brush)fc.ConvertFrom("#FF008CFF");
-                        window.IconContent.Content = "?";
-                        break;
-                    }
-                case CMessageBoxImage.Warning:
-                    {
-                        window.IconPath.Visibility = window.IconContent.Visibility = Visibility.Visible;
-                        window.IconPath.Stroke = (Brush)fc.ConvertFrom("#FFFFE100");
-                        window.IconContent.Content = "!";
-                        SystemSounds.Exclamation.Play();
-                        break;
-                    }
-                case CMessageBoxImage.Info:
-                    {
-                        window.IconPath.Visibility = window.IconContent.Visibility = Visibility.Visible;
-                        window.IconPath.Stroke = (Brush)fc.ConvertFrom("#FF008CFF");
-                        window.IconContent.Content = "!";
-                        SystemSounds.Asterisk.Play();
-                        break;
-                    }
-                default:
-                    {
-                        break;
-                    }
-            }
+            SwitchIcon(CMessageBoxImage, window);
             Application.Current.Dispatcher.Invoke(new Action(() =>
             {
                 window.ShowDialog();
@@ -300,45 +224,7 @@ namespace Zmy.Wpf.CMessageBox
             }));
             window.MessageBoxText = cmessageBoxText;
             window.MessageBoxTitle = caption;
-            switch (CMessageBoxButton)
-            {
-                case CMessageBoxButton.OK:
-                    {
-                        window.OKButtonVisibility = Visibility.Visible;
-                        break;
-                    }
-                case CMessageBoxButton.OKCancel:
-                    {
-                        window.OKButtonVisibility = Visibility.Visible;
-                        window.CancelButtonVisibility = Visibility.Visible;
-                        break;
-                    }
-                case CMessageBoxButton.YesNO:
-                    {
-                        window.YesButtonVisibility = Visibility.Visible;
-                        window.NoButtonVisibility = Visibility.Visible;
-                        break;
-                    }
-                case CMessageBoxButton.AllYesAllNo:
-                    {
-                        window.YesButtonVisibility = Visibility.Visible;
-                        window.NoButtonVisibility = Visibility.Visible;
-                        window.ApplyToAllVisibility = Visibility.Visible;
-                        break;
-                    }
-                case CMessageBoxButton.YesNoCancel:
-                    {
-                        window.YesButtonVisibility = Visibility.Visible;
-                        window.NoButtonVisibility = Visibility.Visible;
-                        window.CancelButtonVisibility = Visibility.Visible;
-                        break;
-                    }
-                default:
-                    {
-                        window.OKButtonVisibility = Visibility.Visible;
-                        break;
-                    }
-            }
+            SwitchBoxButton(CMessageBoxButton, window);
             Application.Current.Dispatcher.Invoke(new Action(() =>
             {
                 window.ShowDialog();
@@ -364,84 +250,8 @@ namespace Zmy.Wpf.CMessageBox
             
             window.MessageBoxText = cmessageBoxText;
             window.MessageBoxTitle = caption;
-            switch (CMessageBoxButton)
-            {
-                case CMessageBoxButton.OK:
-                    {
-                        window.OKButtonVisibility = Visibility.Visible;
-                        break;
-                    }
-                case CMessageBoxButton.OKCancel:
-                    {
-                        window.OKButtonVisibility = Visibility.Visible;
-                        window.CancelButtonVisibility = Visibility.Visible;
-                        break;
-                    }
-                case CMessageBoxButton.YesNO:
-                    {
-                        window.YesButtonVisibility = Visibility.Visible;
-                        window.NoButtonVisibility = Visibility.Visible;
-                        break;
-                    }
-                case CMessageBoxButton.AllYesAllNo:
-                    {
-                        window.YesButtonVisibility = Visibility.Visible;
-                        window.NoButtonVisibility = Visibility.Visible;
-                        window.ApplyToAllVisibility = Visibility.Visible;
-                        break;
-                    }
-                case CMessageBoxButton.YesNoCancel:
-                    {
-                        window.YesButtonVisibility = Visibility.Visible;
-                        window.NoButtonVisibility = Visibility.Visible;
-                        window.CancelButtonVisibility = Visibility.Visible;
-                        break;
-                    }
-                default:
-                    {
-                        window.OKButtonVisibility = Visibility.Visible;
-                        break;
-                    }
-            }
-            var fc = new BrushConverter();
-            switch (CMessageBoxImage)
-            {
-                case CMessageBoxImage.Error:
-                    {
-                        window.IconPath.Visibility = window.IconContent.Visibility = Visibility.Visible;
-                        window.IconPath.Stroke = (Brush)fc.ConvertFrom("#FFFF0000");
-                        window.IconContent.Content = "✕";
-                        SystemSounds.Hand.Play();
-                        break;
-                    }
-                case CMessageBoxImage.Question:
-                    {
-                        window.IconPath.Visibility = window.IconContent.Visibility = Visibility.Visible;
-                        window.IconPath.Stroke = (Brush)fc.ConvertFrom("#FF008CFF");
-                        window.IconContent.Content = "?";
-                        break;
-                    }
-                case CMessageBoxImage.Warning:
-                    {
-                        window.IconPath.Visibility = window.IconContent.Visibility = Visibility.Visible;
-                        window.IconPath.Stroke = (Brush)fc.ConvertFrom("#FFFFE100");
-                        window.IconContent.Content = "!";
-                        SystemSounds.Exclamation.Play();
-                        break;
-                    }
-                case CMessageBoxImage.Info:
-                    {
-                        window.IconPath.Visibility = window.IconContent.Visibility = Visibility.Visible;
-                        window.IconPath.Stroke = (Brush)fc.ConvertFrom("#FF008CFF");
-                        window.IconContent.Content = "!";
-                        SystemSounds.Asterisk.Play();
-                        break;
-                    }
-                default:
-                    {
-                        break;
-                    }
-            }
+            SwitchBoxButton(CMessageBoxButton, window);
+            SwitchIcon(CMessageBoxImage, window);
             Application.Current.Dispatcher.Invoke(new Action(() =>
             {
                 window.ShowDialog();
@@ -511,7 +321,7 @@ namespace Zmy.Wpf.CMessageBox
             #endregion
 
             #region 默认按钮
-            switch(CMessageBoxDefaultButton)
+            switch (CMessageBoxDefaultButton)
             {
                 case CMessageBoxDefaultButton.OK:
                     {
@@ -551,37 +361,84 @@ namespace Zmy.Wpf.CMessageBox
                     }
             }
             #endregion
+            SwitchIcon(CMessageBoxImage, window);
+            Application.Current.Dispatcher.Invoke(new Action(() =>
+            {
+                window.ShowDialog();
+            }));
+            return window.Result;
+        }
+
+        private static void SwitchBoxButton(CMessageBoxButton CMessageBoxButton, CMessageBoxWindow window)
+        {
+            switch (CMessageBoxButton)
+            {
+                case CMessageBoxButton.OK:
+                    {
+                        window.OKButtonVisibility = Visibility.Visible;
+                        break;
+                    }
+                case CMessageBoxButton.OKCancel:
+                    {
+                        window.OKButtonVisibility = Visibility.Visible;
+                        window.CancelButtonVisibility = Visibility.Visible;
+                        break;
+                    }
+                case CMessageBoxButton.YesNO:
+                    {
+                        window.YesButtonVisibility = Visibility.Visible;
+                        window.NoButtonVisibility = Visibility.Visible;
+                        break;
+                    }
+                case CMessageBoxButton.AllYesAllNo:
+                    {
+                        window.YesButtonVisibility = Visibility.Visible;
+                        window.NoButtonVisibility = Visibility.Visible;
+                        window.ApplyToAllVisibility = Visibility.Visible;
+                        break;
+                    }
+                case CMessageBoxButton.YesNoCancel:
+                    {
+                        window.YesButtonVisibility = Visibility.Visible;
+                        window.NoButtonVisibility = Visibility.Visible;
+                        window.CancelButtonVisibility = Visibility.Visible;
+                        break;
+                    }
+                default:
+                    {
+                        window.OKButtonVisibility = Visibility.Visible;
+                        break;
+                    }
+            }
+        }
+
+        private static void SwitchIcon(CMessageBoxImage CMessageBoxImage, CMessageBoxWindow window)
+        {
             var fc = new BrushConverter();
             switch (CMessageBoxImage)
             {
                 case CMessageBoxImage.Error:
                     {
-                        window.IconPath.Visibility = window.IconContent.Visibility = Visibility.Visible;
-                        window.IconPath.Stroke = (Brush)fc.ConvertFrom("#FFFF0000");
-                        window.IconContent.Content = "✕";
+                        window.IconPath.Data = Geometry.Parse("M1024,512c0,282.8-229.2,512-512,512S0,794.8,0,512S229.2,0,512,0S1024,229.2,1024,512z M752.1,679.5L682,749L512.7,578.3L342.5,749l-70-70.5l170.7-168.4L272.4,339.9l68.7-70l171.6,170.7   l171.2-170.7l67.3,72.4L581.8,510.1L752.1,679.5z");
+                        window.IconPath.Fill = (Brush)fc.ConvertFrom("#FFFF0000");
                         SystemSounds.Hand.Play();
                         break;
                     }
                 case CMessageBoxImage.Question:
                     {
-                        window.IconPath.Visibility = window.IconContent.Visibility = Visibility.Visible;
-                        window.IconPath.Stroke = (Brush)fc.ConvertFrom("#FF008CFF");
-                        window.IconContent.Content = "?";
+                        window.IconPath.Data = Geometry.Parse("M1024,512c0,282.8-229.2,512-512,512S0,794.8,0,512S229.2,0,512,0S1024,229.2,1024,512z M544,660.4H429.3v-40.8c0-31,5.6-57.4,16.9-79.3c11.3-21.9,30.3-43.8,56.9-65.8c30.7-25.2,51.1-45.8,61.3-61.9   c10.1-16.1,15.2-33.4,15.2-51.9c0-21.4-7.5-38.5-22.6-51.3c-15.1-12.7-36.7-19.1-64.8-19.1c-54.5,0-105.2,20.3-152.1,60.8V217.1   c51.9-29,107.3-43.5,166.4-43.5c66.3,0,117.9,15.2,154.7,45.6c36.8,30.4,55.2,71.6,55.2,123.4c0,33.3-7.5,64-22.6,92.1   c-15.1,28.1-41,57.1-77.8,86.9c-31,24.6-50.8,44-59.3,58c-8.5,14.1-12.8,30.9-12.8,50.6V660.4z M487.1,723.8   c22,0,40.8,7.1,56.5,21.3c15.6,14.2,23.5,31.4,23.5,51.7c0,19.7-7.8,36.7-23.5,50.8S509.1,869,487.1,869   c-22.3,0-41.1-7.2-56.5-21.5c-15.4-14.3-23-31.2-23-50.6c0-20,7.7-37.2,23-51.5C446,731,464.8,723.8,487.1,723.8z");
+                        window.IconPath.Fill = (Brush)fc.ConvertFrom("#FF008CFF");
                         break;
                     }
                 case CMessageBoxImage.Warning:
                     {
-                        window.IconPath.Visibility = window.IconContent.Visibility = Visibility.Visible;
-                        window.IconPath.Stroke = (Brush)fc.ConvertFrom("#FFFFE100");
-                        window.IconContent.Content = "!";
+                        window.IconPath.Fill = (Brush)fc.ConvertFrom("#FFFFE100");
                         SystemSounds.Exclamation.Play();
                         break;
                     }
                 case CMessageBoxImage.Info:
                     {
-                        window.IconPath.Visibility = window.IconContent.Visibility = Visibility.Visible;
-                        window.IconPath.Stroke = (Brush)fc.ConvertFrom("#FF008CFF");
-                        window.IconContent.Content = "!";
+                        window.IconPath.Fill = (Brush)fc.ConvertFrom("#FF008CFF");
                         SystemSounds.Asterisk.Play();
                         break;
                     }
@@ -590,11 +447,7 @@ namespace Zmy.Wpf.CMessageBox
                         break;
                     }
             }
-            Application.Current.Dispatcher.Invoke(new Action(() =>
-            {
-                window.ShowDialog();
-            }));
-            return window.Result;
+            window.IconPath.Visibility = Visibility.Visible;
         }
     }
 }

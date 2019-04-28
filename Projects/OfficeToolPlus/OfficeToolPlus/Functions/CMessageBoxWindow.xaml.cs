@@ -138,7 +138,7 @@ namespace Zmy.Wpf.CMessageBox
             DataContext = this;
 
             MessageBoxTitle = Application.Current.FindResource("MsgNormalTitle").ToString();
-            ApplyToAllVisibility = OKButtonVisibility =  CancelButtonVisibility = YesButtonVisibility = NoButtonVisibility = IconPath.Visibility = IconContent.Visibility = Visibility.Collapsed;
+            ApplyToAllVisibility = OKButtonVisibility =  CancelButtonVisibility = YesButtonVisibility = NoButtonVisibility = IconPath.Visibility = Visibility.Collapsed;
             normalButtonStyle = FindResource("NormalButtonStyle") as Style;
             notNormalButtonStyle = FindResource("NotNormalButtonStyle") as Style;
 

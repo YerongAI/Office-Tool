@@ -1,8 +1,9 @@
-﻿using System.IO;
+using System.IO;
 using System.Text;
 
 namespace OTP.Functions
 {
+	//Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
     class CheckHash
     {
         private readonly string hashValue;

@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace OTP
 {
-	//Copyright © 2019 Landiannews |By Yerong | https://otp.landian.vip/
+	//Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
     class CreateXML
     {
         private static readonly List<InstallConfig> ProductConfigList = new List<InstallConfig>(2);
@@ -27,6 +27,7 @@ namespace OTP
             internal bool? OfficeMgmtCOM;
             internal bool ForceUpgrade;
             internal bool AllowCdnFallback;
+            internal bool MigrateArch;
             // Display Element
             internal bool DisplayLevel;
             internal bool AcceptEULA;
@@ -54,6 +55,7 @@ namespace OTP
                 //PropertyList.Clear();
                 OfficeMgmtCOM = null;
                 ForceUpgrade = false;
+                MigrateArch = false;
                 AllowCdnFallback = false;
                 DisplayLevel = false;
                 AcceptEULA = false;
@@ -75,6 +77,7 @@ namespace OTP
                     PropertyList.Clear();
                     OfficeMgmtCOM = null;
                     ForceUpgrade = false;
+                    MigrateArch = false;
                     AllowCdnFallback = false;
                     DisplayLevel = false;
                     AcceptEULA = false;
@@ -234,6 +237,7 @@ namespace OTP
                                            new XAttribute("DownloadPath", DownloadPath),//指定下载位置
                                            new XAttribute("Version", Version),//指定要安装的版本
                                            new XAttribute("ForceUpgrade", ForceUpgrade.ToString().Replace("False", "").ToUpper()),
+                                           new XAttribute("MigrateArch", MigrateArch.ToString().Replace("False", "").Replace("True", "TRUE")),
                                            new XAttribute("AllowCdnFallback", AllowCdnFallback.ToString().Replace("False", "")),
                                            new XAttribute("OfficeMgmtCOM", OfficeMgmtCOM.ToString().Replace("null", "")));//指定是否使用配置管理器管理更新
 

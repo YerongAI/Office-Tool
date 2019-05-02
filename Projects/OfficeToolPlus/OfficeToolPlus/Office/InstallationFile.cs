@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -6,7 +6,7 @@ using System.Xml.Linq;
 
 namespace OTP
 {
-	//Copyright © 2019 Landiannews |By Yerong | https://otp.landian.vip/
+    //Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
     class InstallationFile
     {
         private readonly List<InstallationFileList> lists = new List<InstallationFileList>();

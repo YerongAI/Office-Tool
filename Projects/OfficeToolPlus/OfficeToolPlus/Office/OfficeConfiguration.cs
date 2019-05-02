@@ -1,9 +1,9 @@
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
 using System.Collections.Generic;
 
 namespace OTP
 {
-	//Copyright © 2019 Landiannews |By Yerong | https://otp.landian.vip/
+    //Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
     class OfficeConfiguration
     {
         internal bool HasOffice;

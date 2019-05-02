@@ -60,6 +60,10 @@ namespace OTP
                         ChannelChanged = false;
                     }
                 }
+                else
+                {
+                    ChannelChanged = false;
+                }
                 h = subKey.GetValue("ProductReleaseIds");//已安装产品
                 if (h != null)
                 {
@@ -127,6 +131,10 @@ namespace OTP
                     {
                         UpdateEnabled = false;
                     }
+                }
+                else
+                {
+                    UpdateEnabled = false;
                 }
                 h = subKey.GetValue("UpdateChannel");//更新通道
                 if (h != null)

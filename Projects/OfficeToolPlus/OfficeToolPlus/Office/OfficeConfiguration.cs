@@ -105,12 +105,15 @@ namespace OTP
                 {
                     ClickToRunPath = h.ToString();
                 }
-                foreach (string item in InstalledProduct)
+                if (InstalledProduct != null)
                 {
-                    h = subKey.GetValue(item + ".EmailAddress");//拥有者
-                    if (h != null)
+                    foreach (string item in InstalledProduct)
                     {
-                        ProductOwner = h.ToString();
+                        h = subKey.GetValue(item + ".EmailAddress");//拥有者
+                        if (h != null)
+                        {
+                            ProductOwner = h.ToString();
+                        }
                     }
                 }
                 h = subKey.GetValue("UpdatesEnabled");//是否自动更新
@@ -163,7 +166,6 @@ namespace OTP
                 {
                     subKey.SetValue("UpdateChannel", UpdateChannel);
                     subKey.SetValue("CDNBaseUrl", UpdateChannel);
-                    //subKey.SetValue("AudienceId", UpdateChannel.Replace(CDNLink, ""));
                 }
                 foreach (string item in InstalledProduct)
                 {

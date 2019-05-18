@@ -134,6 +134,7 @@ namespace Zmy.Wpf.CMessageBox
         #region 构造函数
         public CMessageBoxWindow()
         {
+            Owner = Application.Current.Windows[0];
             InitializeComponent();
             DataContext = this;
 

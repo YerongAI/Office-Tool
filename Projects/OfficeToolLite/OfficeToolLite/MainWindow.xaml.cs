@@ -181,7 +181,7 @@ namespace OfficeToolLite
                     From = (Color)color.ConvertFrom(LayoutRoot.Background.ToString()),
                     Duration = TimeSpan.FromMilliseconds(350)
                 };
-                if (HomeTab.SelectedIndex == 0 || HomeTab.SelectedIndex == 5 || HomeTab.SelectedIndex == -1)
+                if (HomeTab.SelectedIndex == 0 || HomeTab.SelectedIndex == 6 || HomeTab.SelectedIndex == -1)
                 {
                     ColorChange.To = (Color)color.ConvertFrom("#EB3C00"); //Office Color
                 }
@@ -200,6 +200,10 @@ namespace OfficeToolLite
                 else if (HomeTab.SelectedIndex == 4)
                 {
                     ColorChange.To = (Color)color.ConvertFrom("#0078D7"); //Outlook Color
+                }
+                else if (HomeTab.SelectedIndex == 5)
+                {
+                    ColorChange.To = (Color)color.ConvertFrom("#672B7A"); //OneNote Color
                 }
                 else
                 {

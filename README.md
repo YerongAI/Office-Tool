@@ -10,9 +10,11 @@ Office Tool Lite is based on Windows API, it can run without any other files. Wi
 
 What's more, Office Tool Lite support to install volume products like Office 2016 Volume, and you can make an ISO file to install Office by Office Tool Lite.
 
-## [Download](https://otp.landian.vip/) Office Tool
+## Download Office Tool
 
-## Mirror [Download](https://mirrors.yuntu.ca/office-tool/) Office Tool
+[Official website](https://otp.landian.vip/)
+
+[Mirror download](https://mirrors.yuntu.ca/office-tool/) by [云图小镇](https://www.yuntu.ca/)
 
 ## Help with localization
 

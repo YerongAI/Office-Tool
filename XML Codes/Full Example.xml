@@ -1,0 +1,63 @@
+<Configuration>
+  <Info Description="This is a full example of XML file. You CAN'T use the codes to install Office!" />
+  <Add OfficeClientEdition="32" Channel="Monthly" SourcePath="C:\Office" DownloadPath="C:\Office" Version="16.0.00000.00000" ForceUpgrade="TRUE" MigrateArch="TRUE" AllowCdnFallback="True" OfficeMgmtCOM="True">
+    <Product ID="O365ProPlusRetail">
+      <Language ID="MatchOS" Fallback="en-us" />
+      <Language ID="MatchInstalled" TargetProduct="All" />
+      <Language ID="MatchPreviousMSI" />
+      <Language ID="en-us" />
+      <Language ID="zh-cn" />
+      <ExcludeApp ID="Access" />
+      <ExcludeApp ID="Excel" />
+      <ExcludeApp ID="Groove" />
+      <ExcludeApp ID="Lync" />
+      <ExcludeApp ID="OneDrive" />
+      <ExcludeApp ID="OneNote" />
+      <ExcludeApp ID="Outlook" />
+      <ExcludeApp ID="PowerPoint" />
+      <ExcludeApp ID="Publisher" />
+      <ExcludeApp ID="Teams" />
+      <ExcludeApp ID="Word" />
+    </Product>
+    <Product ID="VisioProXVolume">
+      <Language ID="MatchOS" Fallback="en-us" />
+      <Language ID="MatchInstalled" TargetProduct="All" />
+      <Language ID="MatchPreviousMSI" />
+      <Language ID="en-us" />
+      <Language ID="zh-cn" />
+      <ExcludeApp ID="Groove" />
+      <ExcludeApp ID="OneDrive" />
+    </Product>
+    <Product ID="ProjectProXVolume">
+      <Language ID="MatchOS" Fallback="en-us" />
+      <Language ID="MatchInstalled" TargetProduct="All" />
+      <Language ID="MatchPreviousMSI" />
+      <Language ID="en-us" />
+      <Language ID="zh-cn" />
+      <ExcludeApp ID="Groove" />
+      <ExcludeApp ID="OneDrive" />
+    </Product>
+  </Add>
+  <Display Level="None" AcceptEULA="TRUE" />
+  <Logging Level="Standard" Path="%temp%" />
+  <Property Name="AUTOACTIVATE" Value="1" />
+  <Property Name="FORCEAPPSHUTDOWN" Value="TRUE" />
+  <Property Name="SharedComputerLicensing" Value="1" />
+  <Property Name="SCLCacheOverride" Value="1" />
+  <Property Name="SCLCacheOverrideDirectory" Value="C:\Office-Activation" />
+  <Property Name="PACKAGEGUID" Value="12345678-ABCD-1234-ABCD-1234567890AB" />
+  <Updates Enabled="TRUE" UpdatePath="C:\Office" UpdateChannel="Broad" TargetVersion="16.0.11111.11111" DeadLine="12/31/9999 08:00" />
+  <RemoveMSI>
+    <IgnoreProduct ID="VisPro" />
+    <IgnoreProduct ID="VisStd" />
+    <IgnoreProduct ID="PrjPro" />
+    <IgnoreProduct ID="PrjStd" />
+    <IgnoreProduct ID="SPD" />
+    <IgnoreProduct ID="InfoPath" />
+    <IgnoreProduct ID="InfoPathR" />
+  </RemoveMSI>
+  <AppSettings>
+    <Setup Name="Company" Value="Landian Office 365" />
+    <!-- No App Preferences -->
+  </AppSettings>
+</Configuration>

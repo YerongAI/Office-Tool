@@ -134,6 +134,7 @@ namespace Zmy.Wpf.CMessageBox
         #region 构造函数
         public CMessageBoxWindow()
         {
+            Owner = Application.Current.Windows[0];
             InitializeComponent();
             DataContext = this;
 
@@ -197,7 +198,9 @@ namespace Zmy.Wpf.CMessageBox
                 Thickness thickness = new Thickness(1);
                 BorderThickness = thickness;
             }
-            Background = Application.Current.Windows[0].BorderBrush;
+            Background = Application.Current.Windows[0].Background;
+            Foreground = Application.Current.Windows[0].Foreground;
+            BorderBrush = Application.Current.Windows[0].BorderBrush;
             Opacity = Application.Current.Windows[0].Opacity;
             Topmost = Application.Current.Windows[0].Topmost;
             FontSize = Application.Current.Windows[0].FontSize;
@@ -209,10 +212,9 @@ namespace Zmy.Wpf.CMessageBox
             Binding binding = new Binding
             {
                 Source = Window,
-                Path = new PropertyPath(BackgroundProperty)
+                Path = new PropertyPath(BorderBrushProperty)
             };
             WindowTitle.SetBinding(ForegroundProperty, binding);
-            //HeaderTitle.Foreground = new SolidColorBrush(Colors.White);
         }
 
         private void Window_Deactivated(object sender, EventArgs e)

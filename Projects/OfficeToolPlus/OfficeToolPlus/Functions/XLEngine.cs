@@ -133,7 +133,6 @@ static class XL
 
     public enum DOWN_TASK_STATUS
     {
-
        ///NOITEM -> 0
         NOITEM = 0,
 
@@ -152,7 +151,6 @@ static class XL
 
     public enum TASK_ERROR_TYPE
     {
-
        ///TASK_ERROR_UNKNOWN -> 0x00
         TASK_ERROR_UNKNOWN = 0,
 
@@ -204,7 +202,6 @@ static class XL
 
     public enum DOWN_PROXY_TYPE
     {
-
         ///PROXY_TYPE_IE -> 0
         PROXY_TYPE_IE = 0,
 
@@ -226,7 +223,6 @@ static class XL
 
     public enum DOWN_PROXY_AUTH_TYPE
     {
-
         ///PROXY_AUTH_NONE -> 0
         PROXY_AUTH_NONE = 0,
 
@@ -244,7 +240,6 @@ static class XL
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
     public class DOWN_PROXY_INFO
     {
-
         ///BOOL->int
         [MarshalAs(UnmanagedType.Bool)]
 
@@ -279,4 +274,3 @@ static class XL
         public string szDomain;
     }
 }
-

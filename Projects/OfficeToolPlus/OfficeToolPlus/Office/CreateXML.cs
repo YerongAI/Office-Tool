@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System;
 using System.Xml;
 using System.Xml.Linq;
@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace OTP
 {
-	//Copyright © 2019 Landiannews |By Yerong | https://otp.landian.vip/
+    //Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
     class CreateXML
     {
         private static readonly List<InstallConfig> ProductConfigList = new List<InstallConfig>(2);
@@ -27,6 +27,7 @@ namespace OTP
             internal bool? OfficeMgmtCOM;
             internal bool ForceUpgrade;
             internal bool AllowCdnFallback;
+            internal bool MigrateArch;
             // Display Element
             internal bool DisplayLevel;
             internal bool AcceptEULA;
@@ -54,6 +55,7 @@ namespace OTP
                 //PropertyList.Clear();
                 OfficeMgmtCOM = null;
                 ForceUpgrade = false;
+                MigrateArch = false;
                 AllowCdnFallback = false;
                 DisplayLevel = false;
                 AcceptEULA = false;
@@ -75,6 +77,7 @@ namespace OTP
                     PropertyList.Clear();
                     OfficeMgmtCOM = null;
                     ForceUpgrade = false;
+                    MigrateArch = false;
                     AllowCdnFallback = false;
                     DisplayLevel = false;
                     AcceptEULA = false;
@@ -90,9 +93,9 @@ namespace OTP
             /// </summary>
             /// <param name="ProductID">产品 ID</param>
             /// <param name="LanguageID">产品的语言</param>
-            public void AddProduct(string ProductID, string[] LanguageID)
+            public void AddProduct(string ProductID, List<string> LanguageID)
             {
-                InstallConfig arguments = new InstallConfig(ProductID, "", LanguageID, "", null);
+                InstallConfig arguments = new InstallConfig(ProductID, "", LanguageID, "", new List<string>());
                 ProductConfigList.Add(arguments);
             }
 
@@ -102,7 +105,7 @@ namespace OTP
             /// <param name="ProductID">产品 ID</param>
             /// <param name="LanguageID">产品的语言</param>
             /// <param name="ExcludeApps">指定要排除的应用程序 ID</param>
-            public void AddProduct(string ProductID, string MAK, string[] LanguageID, string[] ExcludeApps)
+            public void AddProduct(string ProductID, string MAK, List<string> LanguageID, List<string> ExcludeApps)
             {
                 InstallConfig arguments = new InstallConfig(ProductID, MAK, LanguageID, "", ExcludeApps);
                 ProductConfigList.Add(arguments);
@@ -114,7 +117,7 @@ namespace OTP
             /// <param name="ProductID">产品 ID</param>
             /// <param name="LanguageID">产品的语言</param>
             /// <param name="ExcludeApps">指定要排除的应用程序 ID</param>
-            public void AddProduct(string ProductID, string MAK, string[] LanguageID, string FallbackLanguage, string[] ExcludeApps)
+            public void AddProduct(string ProductID, string MAK, List<string> LanguageID, string FallbackLanguage, List<string> ExcludeApps)
             {
                 InstallConfig arguments = new InstallConfig(ProductID, MAK, LanguageID, FallbackLanguage, ExcludeApps);
                 ProductConfigList.Add(arguments);
@@ -167,7 +170,7 @@ namespace OTP
             /// <summary>
             /// 获取指定元素的语言 ID，index 指定元素下标
             /// </summary>
-            public string[] GetLanguage(int index)
+            public List<string> GetLanguage(int index)
             {
                 if (index >= ProductConfigList.Count)
                     throw new Exception("Index out of list length!");
@@ -178,7 +181,7 @@ namespace OTP
             /// <summary>
             /// 获取指定元素的排除的应用程序，index 指定元素下标
             /// </summary>
-            public string[] GetExcludeApp(int index)
+            public List<string> GetExcludeApp(int index)
             {
                 if (index >= ProductConfigList.Count)
                     throw new Exception("Index out of list length!");
@@ -234,6 +237,7 @@ namespace OTP
                                            new XAttribute("DownloadPath", DownloadPath),//指定下载位置
                                            new XAttribute("Version", Version),//指定要安装的版本
                                            new XAttribute("ForceUpgrade", ForceUpgrade.ToString().Replace("False", "").ToUpper()),
+                                           new XAttribute("MigrateArch", MigrateArch.ToString().Replace("False", "").Replace("True", "TRUE")),
                                            new XAttribute("AllowCdnFallback", AllowCdnFallback.ToString().Replace("False", "")),
                                            new XAttribute("OfficeMgmtCOM", OfficeMgmtCOM.ToString().Replace("null", "")));//指定是否使用配置管理器管理更新
 
@@ -425,7 +429,7 @@ namespace OTP
 
         class InstallConfig//安装配置信息构造
         {
-            public InstallConfig(string ProductID, string MAK, string[] LanguageID, string FallbackLanguage, string[] ExcludeApps)
+            public InstallConfig(string ProductID, string MAK, List<string> LanguageID, string FallbackLanguage, List<string> ExcludeApps)
             {
                 this.ProductID = ProductID;
                 this.MAK = MAK;
@@ -436,9 +440,9 @@ namespace OTP
 
             public string ProductID { get; set; }
             public string MAK { get; set; }
-            public string[] LanguageID { get; set; }
+            public List<string> LanguageID { get; set; }
             public string FallbackLanguage { get; set; }
-            public string[] ExcludeApps { get; set; }
+            public List<string> ExcludeApps { get; set; }
         }
 
         class Property

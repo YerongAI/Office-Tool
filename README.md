@@ -10,6 +10,20 @@ Office Tool Lite is based on Windows API, it can run without any other files. Wi
 
 What's more, Office Tool Lite support to install volume products like Office 2016 Volume, and you can make an ISO file to install Office by Office Tool Lite.
 
+## Technical Articles
+
+[Configuration options](https://docs.microsoft.com/en-us/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)
+
+## Quick Start
+
+We recommend that you first download the installation file. 
+
+Simply go to the Download page and click Start.
+
+After the download is complete, go to the Installation page, select the products you want to install, and click the Install button to begin the installation.
+
+You need to activate Office after install.
+
 ## Download Office Tool
 
 [Official website](https://otp.landian.vip/)

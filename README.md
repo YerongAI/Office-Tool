@@ -1,14 +1,10 @@
-﻿# Office Tool
+﻿# Office Tool PLus
 
-Office Tool is a tool for managing, downloading and installing Office.
+Office Tool Plus is a tool for managing, downloading and installing Office.
 
 Office Tool Plus is based on Microsoft's Office Deployment Tool. You can customize configure your Office installation and download installation files to install Office without Internet.
 
 What's more, you can manage your installed Office, add language packs or customize uninstall Office.
-
-Office Tool Lite is based on Windows API, it can run without any other files. With Office Tool Lite, you can deploy Office quickly in your company or school.
-
-What's more, Office Tool Lite support to install volume products like Office 2016 Volume, and you can make an ISO file to install Office by Office Tool Lite.
 
 ## Technical Articles
 
@@ -24,7 +20,7 @@ After the download is complete, go to the Installation page, select the products
 
 You need to activate Office after install.
 
-## Download Office Tool
+## Download Office Tool Plus
 
 [Official website](https://otp.landian.vip/)
 
@@ -46,7 +42,7 @@ We encourage everyone to help with localization. The following is how to do.
 
 1. Save your translation file to a path, like ````D:\Date\zh-cn.xaml````.
 
-2. Open application, such as Office Tool Plus.
+2. Open application.
 
 3. Go to settings page, click ````Load localization file.````
 

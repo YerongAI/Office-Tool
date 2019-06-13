@@ -9,10 +9,10 @@
     </WindowChrome.WindowChrome>
     <Window.Resources>
         <Style TargetType="{x:Type Button}" x:Key="HeaderButtonStyle">
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
+            <Setter Property="IsTabStop" Value="False"/>
             <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -30,7 +30,6 @@
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
-
                 </Setter.Value>
             </Setter>
         </Style>
@@ -157,7 +156,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Background="{Binding Background, ElementName=Window}" FlowDirection="LeftToRight">
-            <Button WindowChrome.IsHitTestVisibleInChrome="True" Click="CloseWindowButton_Click" Style="{StaticResource HeaderButtonStyle}" IsCancel="True" IsTabStop="False" HorizontalAlignment="Right" Width="35">
+            <Button Click="CloseWindowButton_Click" Style="{DynamicResource HeaderButtonStyle}" IsCancel="True" Width="35">
                 <Canvas>
                     <Line X1="-5" Y1="-5" X2="5" Y2="5" Stroke="{Binding BorderBrush, ElementName=Window}"/>
                     <Line X1="-5"  Y1="5" X2="5" Y2="-5" Stroke="{Binding BorderBrush, ElementName=Window}"/>

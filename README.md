@@ -10,7 +10,7 @@ What's more, you can manage your installed Office, add language packs or customi
 
 ### Download Office Tool Plus
 
-[Official website](https://otp.landian.vip/)
+[Official website](https://otp.landian.vip/zh-cn/)
 
 [Mirror download](https://delivery.yuntu.moe/office-tool/) by [云图小镇](https://www.yuntu.moe/)
 
@@ -88,7 +88,7 @@ Office Tool Plus 基于微软的 Office Deployment Tool 打造，使用 Office T
 
 ### 下载 Office Tool Plus
 
-[官方网站](https://otp.landian.vip/)
+[官方网站](https://otp.landian.vip/zh-cn/)
 
 [下载站](https://delivery.yuntu.moe/office-tool/) by [云图小镇](https://www.yuntu.moe/)
 

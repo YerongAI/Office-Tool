@@ -1,8 +1,6 @@
 ﻿[English](/README.md) | [简体中文](/README-zh_cn.md) | 繁體中文
 # Office Tool PLus
 
-## Chinese (繁體中文) Version
-
 歡迎使用 Office Tool Plus ，這是一個用來管理、下載、安裝 Office 的工具。
 
 這個應用程式是參考、使用微軟 Office Deployment 製作的。將零散的系統指令集結成圖形化介面，讓大眾能快速直覺的部署 Office、客製化安裝 Office。

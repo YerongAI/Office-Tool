@@ -1,5 +1,6 @@
-﻿[English](/README.md) | [简体中文](/README-zh_cn.md) | 繁體中文
-# Office Tool PLus
+﻿# Office Tool PLus
+
+[English](/README.md) | [简体中文](/README-zh_cn.md) | 繁體中文
 
 歡迎使用 Office Tool Plus ，這是一個用來管理、下載、安裝 Office 的工具。
 
@@ -9,7 +10,7 @@
 
 [註一]僅限 `Click To Run`。
 
-### 如何下載？
+## 下載
 
 [官方網站](https://otp.cotpear.com/zh-tw/)
 
@@ -17,11 +18,11 @@
 
 [Github](https://github.com/YerongAI/Office-Tool/releases)
 
-### 相關知識庫
+## 相關知識庫
 
-[自訂安裝選項說明](https://docs.microsoft.com/zh-cn/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)
+[自訂安裝選項說明](https://docs.microsoft.com/zh-tw/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)
 
-### 快速入門
+## 快速入門
 
 在開始之前，請先備妥 Office 產品金鑰。
 
@@ -29,12 +30,12 @@ Office Tool Plus 的每一項功能都非常直觀。若您想要長久儲存安
 
 當下載完成後，至`安裝` 功能頁，依照畫面中的選項，選擇您想安裝的產品、設定後點選`開始安裝`即可。程式預設安裝的產品為Word, PowerPoint 和 Excel。
 
-### 合法性
+## 合法性
 
 Office Tool Plus 是使用微軟 [Office Deployment Tool](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run)參考製作的，
 主要是在 Office Deployment Tool 基礎上再新增了相關功能以便更便利的部署 Office。
 
-#### 關於啟用授權模組
+### 關於啟用授權模組
 
 啟用授權模組是使用微軟的 ospp.vbs (Office Software Protect Platform) 及相關檔案製作的。所有授權操作皆由 ospp.vbs 執行。
 
@@ -42,10 +43,9 @@ Office Tool Plus 是使用微軟 [Office Deployment Tool](https://docs.microsoft
 
 若想查詢相關檔案的操作說明，你可以在````"C:\Program Files\Microsoft Office\Office16\OSPP.HTM"```` 找到。(需安裝 Office)
 
-
 ----------------------------------------------------------
 
-### 協助我們進行本地化工作
+## 協助我們進行本地化工作
 
 我們歡迎社群上的任何人協助我們進行本地化工作。若你想加入我們，請參考以下說明。
 
@@ -53,9 +53,9 @@ Office Tool Plus 是使用微軟 [Office Deployment Tool](https://docs.microsoft
 
 2. 打開任一你看得懂的語言文件(例如) ````zh-cn.xaml```` ，並另存新檔成你的語言代碼、對應的路徑，例如 ````OfficeToolPlus/Language/zh-tw.xaml````
 
-4. Make a Pull Request.
+3. Make a Pull Request.
 
-#### 如何測試本地化(語言)文件
+### 如何測試本地化(語言)文件
 
 1. 下載您的語言文件到電腦中。
 
@@ -67,13 +67,13 @@ Office Tool Plus 是使用微軟 [Office Deployment Tool](https://docs.microsoft
 
 若您的本地化(語言)文件並無程式語法錯誤，Office Tool Plus 將會載入您的語言文件。在這之後，程式可能會顯示無法正常連線伺服器，這是正常的。當你正式提交相關文件後，我們將會設定相關配置。
 
-#### 本地化之後...
+### 本地化之後...
 
 若您願意無限期的為 Office Tool Plus 進行當地化的管理，我們將會給予你 Office Tool Plus 的管理程式(Admin Center)。您可以利用此權限，建立新公告、設定背景圖、修改提示等。
 
 ````Admin 相關文件正在更新中...````
 
-### 一同開發
+## 一同開發
 
 我們非常感謝您！在開發期間，我們並未將完整編譯碼上傳至 Github，因此在正規的編輯器中，您可能會出現錯誤。若要解決該問題，您可能要使用VS Code 等進行修改，cs 測試通過後提交。
 我們會進行相關測試，並與你持續討論。

@@ -1,5 +1,6 @@
-﻿[English](/README.md) | 简体中文 | [繁體中文](/README-zh_tw.md)
-# Office Tool PLus
+﻿# Office Tool PLus
+
+[English](/README.md) | 简体中文 | [繁體中文](/README-zh_tw.md)
 
 Office Tool Plus 是一个用来管理、下载、安装 Office 的小工具。
 
@@ -7,17 +8,17 @@ Office Tool Plus 基于微软的 Office Deployment Tool 打造，使用 Office T
 
 更多的是，你可以使用 Office Tool Plus 管理已经安装的 Office (仅限基于 Click To Run 的)，更改配置、卸载单独产品或者添加语言包。
 
-### 下载 Office Tool Plus
+## 下载 Office Tool Plus
 
 [官方网站](https://otp.landian.vip/zh-cn/)
 
 [下载站](https://delivery.yuntu.moe/office-tool/) by [云图小镇](https://www.yuntu.moe/)
 
-### 技术文章
+## 技术文章
 
 [配置选项的说明](https://docs.microsoft.com/zh-cn/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)
 
-### 快速入门
+## 快速入门
 
 我们建议您先下载 Office 安装文件再进行安装。
 
@@ -27,17 +28,17 @@ Office Tool Plus 基于微软的 Office Deployment Tool 打造，使用 Office T
 
 当安装完成后，你需要使用有效的许可证激活 Office。
 
-### 应用程序合法性
+## 应用程序合法性
 
 Office Tool Plus 是基于微软的 [Office Deployment Tool](https://docs.microsoft.com/zh-cn/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run) 打造的，并且我们在 Office Deployment Tool 的基础上添加了一些额外的功能以便用户更方便地部署 Office。
 
-#### 关于激活模块
+### 关于激活模块
 
 激活模块是基于微软的 ospp.vbs (Office Software Protect Platform) 制作的。所有激活操作都由 ospp.vbs 执行。同时为了用户能更好地理解 OSPP 的内容，我们还对其进行了翻译 (zh-cn, zh-tw).
 
 您可以在 ````"C:\Program Files\Microsoft Office\Office16\OSPP.HTM"```` 中查看 OSPP 的操作说明 (需要先安装 Office).
 
-### 帮助我们进行应用程序本地化工作
+## 帮助我们进行应用程序本地化工作
 
 我们鼓励任何人帮助我们进行应用程序本地化（翻译）工作，以下是如何操作的说明：
 
@@ -49,7 +50,7 @@ Office Tool Plus 是基于微软的 [Office Deployment Tool](https://docs.micros
 
 4. Make a Pull Request.
 
-#### 如何测试您的翻译文件
+### 如何测试您的翻译文件
 
 1. 保存您翻译的文件至一个路径，类似于 ````D:\Date\zh-cn.xaml````.
 
@@ -61,13 +62,13 @@ Office Tool Plus 是基于微软的 [Office Deployment Tool](https://docs.micros
 
 如果一切没问题，应用程序将会加载您选择的语言资源文件，如果您在添加一个新的翻译到 Office Tool Plus，那么 OTP 可能会显示无法连接到服务器，这是正常的。当您正式提交翻译之后，我们会配置服务器。
 
-#### 还有更多
+### 还有更多
 
 对于每一位翻译人员来说，我们会给予一个 Admin 应用程序，通过 Admin 应用程序，您可以更改公告，添加背景图，修改说明等等。
 
 ````Admin 正在开发中````
 
-### 与我们一起开发
+## 与我们一起开发
 
 If you have any ideas about coding, you can fork this repository and coding by yourself, after done, make a pull request and explain what you changed and how to use it or why you change it.
 

@@ -51,7 +51,7 @@ Office Tool Plus 是使用微軟 [Office Deployment Tool](https://docs.microsoft
 
 1. Fork this repository
 
-2. 打開任一你看得懂的語言文件(例如) ````zh-cn.xaml```` ，並另存新檔成你的語言代碼、對應的路徑，例如 ````OfficeToolPlus/Language/zh-tw.xaml````
+2. 打開任一你看得懂的語言文件(例如 ````zh-cn.xaml````) ，並另存新檔成你的語言代碼、對應的路徑，例如 ````OfficeToolPlus/Language/zh-tw.xaml````
 
 3. Make a Pull Request.
 
@@ -69,7 +69,7 @@ Office Tool Plus 是使用微軟 [Office Deployment Tool](https://docs.microsoft
 
 ### 本地化之後...
 
-若您願意無限期的為 Office Tool Plus 進行當地化的管理，我們將會給予你 Office Tool Plus 的管理程式(Admin Center)。您可以利用此權限，建立新公告、設定背景圖、修改提示等。
+若您願意無限期的為 Office Tool Plus 進行當地化的管理，我們將會給予你 Office Tool Plus 的管理程式(Admin Center)。您可以利用此權限，建立新公告、設定背景圖片、修改提示等。
 
 ````Admin 相關文件正在更新中...````
 

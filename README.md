@@ -38,6 +38,16 @@ The activate function was based on Microsoft's ospp.vbs (Office Software Protect
 
 You can view the description of OSPP in ````"C:\Program Files\Microsoft Office\Office16\OSPP.HTM"```` (Office installed required).
 
+------------------------------
+
+## Thanks to the collaborators!
+
+ - Portuguese (Brazil) / [Hélio de Souza](https://sway.office.com/RVue6qySNJ2DzYrs?ref=Link)
+ - Polish (Poland) / JakubDriver
+ - Korean (Korea) / [Jay Jang](https://github.com/yaeyaya)
+ - Traditional Chinese (Taiwan) / [Yi Chi](https://github.com/chiyi4488)
+
+------------------------------
 ## Help With Localization
 
 We encourage everyone to help with localization. The following is how to do.

@@ -38,6 +38,17 @@ Office Tool Plus 是基于微软的 [Office Deployment Tool](https://docs.micros
 
 您可以在 ````"C:\Program Files\Microsoft Office\Office16\OSPP.HTM"```` 中查看 OSPP 的操作说明 (需要先安装 Office).
 
+----------------------------------------------------------
+## 感谢合作者!
+### Thanks to the collaborators!
+
+ - Portuguese (Brazil) / [Hélio de Souza](https://sway.office.com/RVue6qySNJ2DzYrs?ref=Link)
+ - Polish (Poland) / JakubDriver
+ - Korean (Korea) / [Jay Jang](https://github.com/yaeyaya)
+ - Traditional Chinese (Taiwan) / [Yi Chi](https://github.com/chiyi4488)
+ 
+----------------------------------------------------------
+
 ## 帮助我们进行应用程序本地化工作
 
 我们鼓励任何人帮助我们进行应用程序本地化（翻译）工作，以下是如何操作的说明：

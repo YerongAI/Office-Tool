@@ -1,4 +1,4 @@
-﻿# Office Tool PLus
+﻿# Office Tool Plus
 
 [English](/README.md) | [简体中文](/README-zh_cn.md) | 繁體中文
 
@@ -6,34 +6,39 @@
 
 這個應用程式是參考、使用微軟 Office Deployment 製作的。將零散的系統指令集結成圖形化介面，讓大眾能快速直覺的部署 Office、客製化安裝 Office。
 
-除了能夠部署 Office 之外，也能修改已安裝 Office 相關設定、移除單項產品、新增語言等。(註一)
+除了能夠部署 Office 之外，也能修改已安裝 Office 相關設定、移除單項產品、新增語言等。<sup>[註一]</sup>
+
 
 [註一]僅限 `Click To Run`。
 
 ## 下載
 
-[官方網站](https://otp.cotpear.com/zh-tw/)
+[官方網站](https://otp.landian.vip/zh-tw/)
+
+[備用 官方網站](https://otp.cotpear.com/zh-tw/)<sup>[註二]</sup>
 
 [備用載點](https://delivery.yuntu.moe/office-tool/) (感謝 [云图小镇](https://www.yuntu.moe/) 提供)
 
 [Github](https://github.com/YerongAI/Office-Tool/releases)
 
-## 相關知識庫
+[註二]由於主要官方網站伺服器於中國，在某些時刻連線不穩定，若網站無法開啟，請使用[ [備用 官方網站](https://otp.cotpear.com/zh-tw/) ]
 
-[自訂安裝選項說明](https://docs.microsoft.com/zh-tw/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)
+## 微軟相關知識庫 
+
+ - [自訂安裝選項說明](https://docs.microsoft.com/zh-tw/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)
 
 ## 快速入門
 
 在開始之前，請先備妥 Office 產品金鑰。
 
-Office Tool Plus 的每一項功能都非常直觀。若您想要長久儲存安裝檔案，我們建議您先至`下載`功能頁，下載(離線)安裝檔案(擇選相關下載設定後點選`開始下載`)，再進行安裝。
+Office Tool Plus 的每一項功能都非常直觀。若您想要長久儲存安裝檔案，我們建議您先至 `下載` 功能頁，下載(離線)安裝檔案(擇選相關下載設定後點選`開始下載`)，再進行安裝。
 
-當下載完成後，至`安裝` 功能頁，依照畫面中的選項，選擇您想安裝的產品、設定後點選`開始安裝`即可。程式預設安裝的產品為Word, PowerPoint 和 Excel。
+當下載完成後，至 `安裝` 功能頁，依照畫面中的選項，選擇您想安裝的產品、設定後點選`開始安裝`即可。程式預設安裝的產品為Word, PowerPoint 和 Excel。
 
 ## 合法性
 
-Office Tool Plus 是使用微軟 [Office Deployment Tool](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run)參考製作的，
-主要是在 Office Deployment Tool 基礎上再新增了相關功能以便更便利的部署 Office。
+Office Tool Plus 是使用 微軟 [Office Deployment Tool](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run) 參考製作的，
+主要是在 Office Deployment Tool 基礎上再新增了相關功能來更加便利的部署 Office。
 
 ### 關於啟用授權模組
 
@@ -41,7 +46,7 @@ Office Tool Plus 是使用微軟 [Office Deployment Tool](https://docs.microsoft
 
 為了使用者能夠更好理解啟用時的相關內容，我們也進行了相關檔案的翻譯。(zh-cn, zh-tw)
 
-若想查詢相關檔案的操作說明，你可以在````"C:\Program Files\Microsoft Office\Office16\OSPP.HTM"```` 找到。(需安裝 Office)
+若想查詢相關檔案的操作說明，你可以在 ````"C:\Program Files\Microsoft Office\Office16\OSPP.HTM"```` 找到。(需安裝 Office)
 
 ----------------------------------------------------------
 
@@ -49,7 +54,7 @@ Office Tool Plus 是使用微軟 [Office Deployment Tool](https://docs.microsoft
 
 我們歡迎社群上的任何人協助我們進行本地化工作。若你想加入我們，請參考以下說明。
 
-1. Fork this repository
+1. Fork this repository.
 
 2. 打開任一你看得懂的語言文件(例如 ````zh-cn.xaml````) ，並另存新檔成你的語言代碼、對應的路徑，例如 ````OfficeToolPlus/Language/zh-tw.xaml````
 
@@ -59,9 +64,9 @@ Office Tool Plus 是使用微軟 [Office Deployment Tool](https://docs.microsoft
 
 1. 下載您的語言文件到電腦中。
 
-2. 開啟 Office Tool Plus.
+2. 開啟 Office Tool Plus。
 
-3. 開啟`設定`功能頁，按一下 ````Load localization file.````。
+3. 開啟`設定`功能頁，按一下 ````Load localization file````。
 
 4. 選擇並開啟您的語言文件。
 
@@ -71,14 +76,11 @@ Office Tool Plus 是使用微軟 [Office Deployment Tool](https://docs.microsoft
 
 若您願意無限期的為 Office Tool Plus 進行當地化的管理，我們將會給予你 Office Tool Plus 的管理程式(Admin Center)。您可以利用此權限，建立新公告、設定背景圖片、修改提示等。
 
-````Admin 相關文件正在更新中...````
-
 ## 一同開發
 
-我們非常感謝您！在開發期間，我們並未將完整編譯碼上傳至 Github，因此在正規的編輯器中，您可能會出現錯誤。若要解決該問題，您可能要使用VS Code 等進行修改，cs 測試通過後提交。
+在開發期間，我們並未將完整編譯碼上傳至 Github，因此在正規的編輯器中，您可能會出現錯誤。若要解決該問題，您可能要使用VS Code 等進行修改，cs 測試通過後提交。
 我們會進行相關測試，並與你持續討論。
 
 謝謝您為修復錯誤、最佳化程式、新增新功能做出貢獻！
-我们是很感谢您的。
 
 P.S ：若你想將這個專案進行複製、建立新應用等。請先與我們聯絡。

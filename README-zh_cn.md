@@ -1,6 +1,6 @@
 ﻿# Office Tool Plus
 
-[English](/README.md) | 简体中文 | [繁體中文](/README-zh_tw.md)
+[English](/README.md) | 简体中文 | [繁體中文](/README-zh_tw.md) | [한국어](/README-ko_kr.md)
 
 Office Tool Plus 是一个用来管理、下载、安装 Office 的小工具。
 
@@ -38,16 +38,12 @@ Office Tool Plus 是基于微软的 [Office Deployment Tool](https://docs.micros
 
 您可以在 ````"C:\Program Files\Microsoft Office\Office16\OSPP.HTM"```` 中查看 OSPP 的操作说明 (需要先安装 Office).
 
-----------------------------------------------------------
-## 感谢合作者!
-### Thanks to the collaborators!
+## 感谢以下翻译提供者和地区管理员
 
- - Portuguese (Brazil) / [Hélio de Souza](https://sway.office.com/RVue6qySNJ2DzYrs?ref=Link)
- - Polish (Poland) / JakubDriver
- - Korean (Korea) / [Jay Jang](https://github.com/yaeyaya)
- - Traditional Chinese (Taiwan) / [Yi Chi](https://github.com/chiyi4488)
- 
-----------------------------------------------------------
+- Portuguese (Brazil) / [Hélio de Souza](https://sway.office.com/RVue6qySNJ2DzYrs?ref=Link)
+- Polish (Poland) / JakubDriver
+- Korean (Korea) / [Jay Jang](https://github.com/yaeyaya)
+- Traditional Chinese (Taiwan) / [Yi Chi](https://github.com/chiyi4488)
 
 ## 帮助我们进行应用程序本地化工作
 
@@ -77,7 +73,7 @@ Office Tool Plus 是基于微软的 [Office Deployment Tool](https://docs.micros
 
 对于每一位翻译人员来说，我们会给予一个 Admin 应用程序，通过 Admin 应用程序，您可以更改公告，添加背景图，修改说明等等。
 
-````Admin 正在开发中````
+````如要取得 Admin 应用程序，您需要加入我们的翻译工作，并完成基本的应用程序翻译和维护工作，之后您便有资格获取 Admin，```` [发送邮件](mailto:yerong@coolhub.top) ````申请即可。````
 
 ## 与我们一起开发
 

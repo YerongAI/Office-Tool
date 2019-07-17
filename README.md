@@ -1,6 +1,6 @@
 ﻿# Office Tool Plus
 
-English | [简体中文](/README-zh_cn.md) | [繁體中文](/README-zh_tw.md)
+English | [简体中文](/README-zh_cn.md) | [繁體中文](/README-zh_tw.md) | [한국어](/README-ko_kr.md)
 
 Office Tool Plus is a tool for managing, downloading and installing Office.
 
@@ -38,16 +38,13 @@ The activate function was based on Microsoft's ospp.vbs (Office Software Protect
 
 You can view the description of OSPP in ````"C:\Program Files\Microsoft Office\Office16\OSPP.HTM"```` (Office installed required).
 
-------------------------------
+## Thanks to the collaborators
 
-## Thanks to the collaborators!
+- Portuguese (Brazil) / [Hélio de Souza](https://sway.office.com/RVue6qySNJ2DzYrs?ref=Link)
+- Polish (Poland) / JakubDriver
+- Korean (Korea) / [Jay Jang](https://github.com/yaeyaya)
+- Traditional Chinese (Taiwan) / [Yi Chi](https://github.com/chiyi4488)
 
- - Portuguese (Brazil) / [Hélio de Souza](https://sway.office.com/RVue6qySNJ2DzYrs?ref=Link)
- - Polish (Poland) / JakubDriver
- - Korean (Korea) / [Jay Jang](https://github.com/yaeyaya)
- - Traditional Chinese (Taiwan) / [Yi Chi](https://github.com/chiyi4488)
-
-------------------------------
 ## Help With Localization
 
 We encourage everyone to help with localization. The following is how to do.
@@ -76,7 +73,7 @@ After that, application will load your translation, if you are adding a new tran
 
 For each translator, we will give them an Admin app that allows you to change the announcement and upload a background image.
 
-````Admin app is still developing.````
+````For each translator, we will give them an Admin app that allows you to change the announcement and upload a background image.```` [Send a e-mail](mailto:yerong@coolhub.top) ````to us.````
 
 ## Help With Coding
 

@@ -40,16 +40,14 @@ Office Tool Plus는 마이크로소프트의[Office Deployment Tool](https://doc
 
 ````"C:\Program Files\Microsoft Office\Office16\OSPP.HTM"````에서 OSPP조치 설명을 확인할 수 있습니다(Office를 먼저 설치 해야함).
 
-----------------------------------------------------------
 ## 협력자 감사합니다
-### Thanks to the collaborators!
 
- - Portuguese (Brazil) / [Hélio de Souza](https://sway.office.com/RVue6qySNJ2DzYrs?ref=Link)
- - Polish (Poland) / JakubDriver
- - Korean (Korea) / [Jay Jang](https://github.com/yaeyaya)
- - Traditional Chinese (Taiwan) / [Yi Chi](https://github.com/chiyi4488)
- 
-----------------------------------------------------------
+### Thanks to the collaborators
+
+- Portuguese (Brazil) / [Hélio de Souza](https://sway.office.com/RVue6qySNJ2DzYrs?ref=Link)
+- Polish (Poland) / JakubDriver
+- Korean (Korea) / [Jay Jang](https://github.com/yaeyaya)
+- Traditional Chinese (Taiwan) / [Yi Chi](https://github.com/chiyi4488)
 
 ## 현지화(로컬리제이션) 도움 요청
 
@@ -71,7 +69,7 @@ Office Tool Plus는 마이크로소프트의[Office Deployment Tool](https://doc
 4. 저장한 변역파일을 선택함
 
 문제 없으면 응용프로그램이 선택된 언어 리소스 파일을 로드할 겁니다. 새 변역을 추가하면 Office Tool Plus가 서버에 연결하지 못 하는 메시지 표시할 수 있지만 이 현상은 정상입니다. 변역을 확인후 저희는 서버 새설정할 겁니다.
- 
+
 ### 더 많은 정보
 
 저희는 변역자마다 Admin응용프로그램을 제공합니다. 번역자가 이 으용프로그램을 통해서 공지사항, 배경화면과 설명내용 등 정보를 간편하게 수정할 수 있습니다.

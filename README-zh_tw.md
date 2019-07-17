@@ -1,13 +1,12 @@
 ﻿# Office Tool Plus
 
-[English](/README.md) | [简体中文](/README-zh_cn.md) | 繁體中文
+[English](/README.md) | [简体中文](/README-zh_cn.md) | 繁體中文 | [한국어](/README-ko_kr.md)
 
 歡迎使用 Office Tool Plus ，這是一個用來管理、下載、安裝 Office 的工具。
 
 這個應用程式是參考、使用微軟 Office Deployment 製作的。將零散的系統指令集結成圖形化介面，讓大眾能快速直覺的部署 Office、客製化安裝 Office。
 
 除了能夠部署 Office 之外，也能修改已安裝 Office 相關設定、移除單項產品、新增語言等。 <sup>[註一]</sup>
-
 
 [註一]僅限 `Click To Run`。
 
@@ -23,9 +22,9 @@
 
 [註二]由於主要官方網站伺服器於中國，在某些時刻連線不穩定，若網站無法開啟，請使用[[備用 官方網站](https://otp.cotpear.com/zh-tw/)]。
 
-## 微軟相關知識庫 
+## 微軟相關知識庫
 
- - [自訂安裝選項說明](https://docs.microsoft.com/zh-tw/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)
+- [自訂安裝選項說明](https://docs.microsoft.com/zh-tw/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)
 
 ## 快速入門
 
@@ -48,16 +47,12 @@ Office Tool Plus 使用 微軟 [Office Deployment Tool](https://docs.microsoft.c
 
 若想查詢相關檔案的操作說明，你可以在 ````"C:\Program Files\Microsoft Office\Office16\OSPP.HTM"```` 找到。(需安裝 Office)
 
-----------------------------------------------------------
-## 感謝合作者!
-### Thanks to the collaborators!
+## 感謝合作者
 
- - Portuguese (Brazil) / [Hélio de Souza](https://sway.office.com/RVue6qySNJ2DzYrs?ref=Link)
- - Polish (Poland) / JakubDriver
- - Korean (Korea) / [Jay Jang](https://github.com/yaeyaya)
- - Traditional Chinese (Taiwan) / [Yi Chi](https://github.com/chiyi4488)
- 
-----------------------------------------------------------
+- Portuguese (Brazil) / [Hélio de Souza](https://sway.office.com/RVue6qySNJ2DzYrs?ref=Link)
+- Polish (Poland) / JakubDriver
+- Korean (Korea) / [Jay Jang](https://github.com/yaeyaya)
+- Traditional Chinese (Taiwan) / [Yi Chi](https://github.com/chiyi4488)
 
 ## 協助我們進行本地化工作
 
@@ -81,7 +76,7 @@ Office Tool Plus 使用 微軟 [Office Deployment Tool](https://docs.microsoft.c
 
 若你的本地化(語言)文件並無程式語法錯誤，Office Tool Plus 將會載入你的語言文件。在這之後，程式可能會顯示無法正常連線伺服器，這是正常的。當你正式提交相關文件後，我們將會設定相關配置。
 
-### 本地化之後...
+### 本地化之後
 
 若你願意無限期的為 Office Tool Plus 進行當地化的管理，我們將會給予你 Office Tool Plus 的管理程式(Admin Center)。你可以利用此權限，建立新公告、設定背景圖片、修改提示等。
 

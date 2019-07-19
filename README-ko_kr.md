@@ -28,11 +28,11 @@ Office Tool Plus열린후 다운로드 페이지에 이동하고 시작 버튼�
 
 설치 완료후 유효한 라이선스가 있어야 Office정품인정을 받을 수 있습니다.
 
-## 응용프로그램의 범률 관련사항
+## 응용프로그램의 법률 관련사항
 
 Office Tool Plus는 마이크로소프트의[Office Deployment Tool](https://docs.microsoft.com/zh-cn/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run)를 기반으로 만들고 추가기능을 통해서 사용자에게 더 편한 Office배포 경험을 제공합니다.
 
-[통역자 추가 주의사항: 중국 이외의 다른 국가 및 지역의 사용자 분들이 해당 국가 및 지역의 관련 범률을 준수하여 사용하십시오]
+**통역자 추가 주의사항: 중국 이외의 다른 국가 및 지역의 사용자 분들이 해당 국가 및 지역의 관련 법률을 준수하여 사용하십시오
 
 ### 정품인정 모듈에 관한 사항
 

@@ -172,6 +172,19 @@ namespace OTP
                 }
                 if (UpdateChannel != null)
                 {
+                    object h = subKey.GetValue("UpdateChannel");//更新通道
+                    if (h != null)
+                    {
+                        string registData = h.ToString().ToLower();
+                        if (registData != UpdateChannel)
+                        {
+                            RegistryKey tempSubKey = localKey.OpenSubKey(@"SOFTWARE\Microsoft\Office\ClickToRun\Configuration", true);
+                            tempSubKey.DeleteValue("UpdateUrl", false);
+                            tempSubKey.DeleteValue("UpdateToVersion", false);
+                            tempSubKey = localKey.OpenSubKey(@"SOFTWARE\Microsoft\Office\ClickToRun\Updates", true);
+                            tempSubKey.DeleteValue("UpdateToVersion", false);
+                        }
+                    }
                     subKey.SetValue("UpdateChannel", UpdateChannel);
                     subKey.SetValue("CDNBaseUrl", UpdateChannel);
                 }

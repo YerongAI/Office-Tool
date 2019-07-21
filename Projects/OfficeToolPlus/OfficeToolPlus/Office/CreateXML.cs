@@ -3,6 +3,7 @@ using System;
 using System.Xml;
 using System.Xml.Linq;
 using System.Linq;
+using System.IO;
 
 namespace OTP
 {
@@ -214,6 +215,8 @@ namespace OTP
             {
                 try
                 {
+                    if (!Directory.Exists(FilePath))
+                        Directory.CreateDirectory(FilePath);
                     XmlWriterSettings settings = new XmlWriterSettings
                     {
                         Encoding = new System.Text.UTF8Encoding(true),
@@ -286,7 +289,8 @@ namespace OTP
                                 ProductElemtnt.SetAttributeValue("PIDKEY", ProductConfigList[i].MAK);
                             AddElement.Add(ProductElemtnt);
                         }
-                        RootElement.Add(AddElement);
+                        if (AddElement.HasAttributes || AddElement.HasElements)
+                            RootElement.Add(AddElement);
 
                         if (DisplayLevel == true || AcceptEULA == true)
                         {
@@ -327,7 +331,7 @@ namespace OTP
                         XElement UpdateTempElemtnt = new XElement("Updates",
                               new XAttribute("Enabled", UpdateEnabled.ToString().Replace("True", "FALSE").Replace("False", "TRUE").Replace("null", "")),
                               new XAttribute("UpdatePath", UpdatePath),
-                              new XAttribute("UpdateChannel", UpdateChannel),
+                              new XAttribute("Channel", UpdateChannel),
                               new XAttribute("TargetVersion", TargetVersion),
                               new XAttribute("DeadLine", Deadline));
                         XElement UpdateElemtnt = new XElement("Updates",
@@ -417,15 +421,9 @@ namespace OTP
                 }
                 catch
                 {
-                    try
-                    {
-                        System.IO.Directory.CreateDirectory(FilePath);
-                    }
-                    catch { }
                     throw;
                 }
             }
-        }
 
         class InstallConfig//安装配置信息构造
         {

@@ -11,8 +11,8 @@ using System.Windows.Shapes;
 
 namespace OfficeTool.Functions
 {
-    // Markdown Reader by Yerong | https://otp.landian.vip/
-    // Only supported title, image, line and highlight.
+    // Markdown Reader by Yerong | https://otp.landian.vip/ | 2019/07/23
+    // Only supported title, image, line, text color and text style.
     // Only used in Office Tool Plus.
 
     class MarkdownReader
@@ -27,108 +27,197 @@ namespace OfficeTool.Functions
             {
                 if (line.StartsWith("# "))
                 {
+                    // 一级标题
                     AddTitle(line.Substring(2), 22, FontWeights.Normal);
                 }
                 else if (line.StartsWith("## "))
                 {
+                    // 二级标题
                     AddTitle(line.Substring(3), 18, FontWeights.Normal);
                 }
                 else if (line.StartsWith("### "))
                 {
+                    // 三级标题
                     AddTitle(line.Substring(4), 15, FontWeights.Normal);
                 }
                 else if (line.StartsWith("#### "))
                 {
+                    // 四级标题
                     AddTitle(line.Substring(5), 12, FontWeights.Bold);
                 }
                 else if (line.StartsWith("##### "))
                 {
+                    // 五级标题
                     AddTitle(line.Substring(6), 10, FontWeights.Bold);
                 }
                 else if (line.StartsWith("###### "))
                 {
+                    // 六级标题
                     AddTitle(line.Substring(7), 8, FontWeights.Bold);
                 }
-                else if (line.Contains("---") && line.Replace("-", "").Length == 0)
+                else if ((line.Contains("---") && line.Replace("-", "").Length == 0) || (line.Contains("***") && line.Replace("*", "").Length == 0))
                 {
+                    // 横线
                     AddLine();
+                    AddText("\n");
+                }
+                else if (line.Contains("```") && line.Replace("`", "").Length == 0)
+                {
+                    // 代码块（伪，无语法高亮，且只能单独复制）
+                    string temp = string.Empty;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        if (line.Contains("```") && line.Replace("`", "").Length == 0)
+                            break;
+                        temp += line + "\n";
+                    }
+                    TextBox textBox = new TextBox
+                    {
+                        Text = temp.Remove(temp.Length - 1),
+                        Background = new SolidColorBrush(Colors.Gainsboro),
+                        BorderThickness = new Thickness(0),
+                        Padding = new Thickness(15),
+                        IsReadOnly = true,
+                        TextWrapping = TextWrapping.Wrap,
+                    };
+                    paragraph.Inlines.Add(textBox);
                     AddText("\n");
                 }
                 else
                 {
-                    string text = string.Empty;
                     string content = string.Empty;
-                    string link;
-                    string target = string.Empty;
                     Queue queue = new Queue();
-                    for (int i = 0; i < line.Length; i++)
+                    TextType type = TextType.Unknown;
+                    for (int i = 0; i <= line.Length; i++)
                     {
-                        if (queue.Count > 0)
+                        if (i == line.Length)
                         {
-                            if (line[i] == ']' && queue.Peek().ToString().Contains("["))
+                            if (queue.Count > 0)
+                                AddText(GetText(queue));
+                            break;
+                        }
+                        if (line[i] == '[' || line[i] == '!' || line[i] == '(' || line[i] == '`' || line[i] == '*' || line[i] == '~')
+                        {
+                            if (i < line.Length - 1)
+                                if (line[i] == '!' && line[i + 1] == '[')
+                                    continue;
+                            if (queue.Count > 0 && type == TextType.Unknown)
                             {
-                                target = queue.Dequeue().ToString();
-                                content = string.Empty;
-                                while (queue.Count > 0)
-                                    content += queue.Dequeue().ToString();
+                                AddText(GetText(queue));
                             }
-                            else if (line[i] == ')' && queue.Peek().ToString() == "(")
+                            if (type == TextType.Unknown)
                             {
-                                queue.Dequeue();
-                                link = string.Empty;
-                                while (queue.Count > 0)
-                                    link += queue.Dequeue().ToString();
-                                if (content != string.Empty)
+                                switch (line[i])
                                 {
-                                    if (target == "![")
-                                        AddImage(link, content);
+                                    case '[':
+                                        type = TextType.HyperLinkText;
+                                        if (i > 0)
+                                        {
+                                            if (line[i - 1] == '!')
+                                                queue.Enqueue(line[i - 1]);
+                                        }
+                                        break;
+                                    case '(':
+                                        type = TextType.HyperLink;
+                                        break;
+                                    case '`':
+                                        type = TextType.Code;
+                                        break;
+                                    case '*':
+                                        if (type == TextType.Unknown)
+                                        {
+                                            type = TextType.Oblique;
+                                            while (line[++i] == '*')
+                                                type++;
+                                        }
+                                        break;
+                                    case '~':
+                                        type = TextType.Strikethrough;
+                                        break;
+                                }
+                                queue.Enqueue(line[i]);
+                                continue;
+                            }
+                        }
+                        queue.Enqueue(line[i]);
+                        if (type != TextType.Unknown)
+                        {
+                            if (line[i] == ']' && type == TextType.HyperLinkText)
+                            {
+                                string temp = GetText(queue);
+                                if (i < line.Length - 1)
+                                    if (line[i + 1] == '(')
+                                    {
+                                        content = temp;
+                                        type = TextType.Unknown;
+                                        continue;
+                                    }
+                                content = string.Empty;
+                                AddText(temp);
+                                type = TextType.Unknown;
+                            }
+                            else if (line[i] == ')' && type == TextType.HyperLink)
+                            {
+                                if (content.Length > 0)
+                                {
+                                    queue.Dequeue();
+                                    string temp = GetText(queue);
+                                    if (content[0] == '!')
+                                        AddImage(content.Remove(content.Length - 1).Remove(0, 2), temp.Remove(temp.Length - 1));
                                     else
-                                        AddLink(content, link);
-                                    content = string.Empty;
+                                        AddLink(content.Remove(content.Length - 1).Remove(0, 1), temp.Remove(temp.Length - 1));
                                 }
                                 else
                                 {
-                                    AddText("(" + link + ")");
+                                    AddText(GetText(queue));
                                 }
+                                type = TextType.Unknown;
                             }
-                            else if (line[i] == '`' && queue.Peek().ToString() == "`")
+                            else if (line[i] == '`' && type == TextType.Code)
                             {
                                 queue.Dequeue();
-                                string temp = string.Empty;
-                                while (queue.Count > 0)
-                                    temp += queue.Dequeue().ToString();
-                                AddText(temp, Colors.Red);
+                                string temp = GetText(queue);
+                                AddText(temp.Remove(temp.Length - 1), Colors.Red);
+                                type = TextType.Unknown;
                             }
-                            else
+                            else if (line[i] == '~' && type == TextType.Strikethrough && queue.Count > 2)
                             {
-                                queue.Enqueue(line[i]);
+                                queue.Dequeue();
+                                if (queue.Peek().ToString() == "~")
+                                    continue;
+                                string temp = GetText(queue);
+                                AddText(temp.Remove(temp.Length - 2), type);
+                                type = TextType.Unknown;
                             }
-                            continue;
+                            else if (line[i] == '*')
+                            {
+                                if (queue.Peek().ToString() == "*")
+                                {
+                                    queue.Dequeue();
+                                    continue;
+                                }
+                                string temp = GetText(queue);
+                                AddText(temp.Remove(temp.IndexOf('*')), type);
+                                type = TextType.Unknown;
+                            }
                         }
-                        if (line[i] != '[' && line[i] != '(' && line[i] != '`')
-                            text += line[i];
                         else
                         {
-                            if (text != string.Empty)
-                            {
-                                AddText(text);
-                                text = string.Empty;
-                            }
-                            if (i > 0 && line[i - 1] == '!' && line[i] == '[')
-                                queue.Enqueue(line[i - 1] + line[i]);
-                            else
-                                queue.Enqueue(line[i]);
+                            AddText(GetText(queue));
+                            type = TextType.Unknown;
                         }
-                    }
-                    if (text != string.Empty)
-                    {
-                        AddText(text);
                     }
                     AddText("\n");
                 }
             }
         }
 
+        /// <summary>
+        /// 添加标题
+        /// </summary>
+        /// <param name="text">标题文本</param>
+        /// <param name="fontSize">字体大小</param>
+        /// <param name="weights">字体样式</param>
         private void AddTitle(string text, int fontSize, FontWeight weights)
         {
             Run run = new Run
@@ -146,6 +235,10 @@ namespace OfficeTool.Functions
             AddText("\n");
         }
 
+        /// <summary>
+        /// 添加常规文本，无任何特殊格式
+        /// </summary>
+        /// <param name="text">文本内容</param>
         private void AddText(string text)
         {
             Run run = new Run
@@ -155,26 +248,11 @@ namespace OfficeTool.Functions
             paragraph.Inlines.Add(run);
         }
 
-        private void AddText(string text, FontWeight weights)
-        {
-            Run run = new Run
-            {
-                Text = text,
-                FontWeight = weights
-            };
-            paragraph.Inlines.Add(run);
-        }
-
-        private void AddText(string text, FontStyle style)
-        {
-            Run run = new Run
-            {
-                Text = text,
-                FontStyle = style
-            };
-            paragraph.Inlines.Add(run);
-        }
-
+        /// <summary>
+        /// 以指定的颜色添加文本
+        /// </summary>
+        /// <param name="text">文本内容</param>
+        /// <param name="color">文本颜色</param>
         private void AddText(string text, Color color)
         {
             Run run = new Run
@@ -185,6 +263,36 @@ namespace OfficeTool.Functions
             paragraph.Inlines.Add(run);
         }
 
+        /// <summary>
+        /// 添加具有特定格式的文本
+        /// </summary>
+        /// <param name="text">文本内容</param>
+        /// <param name="type">文本类型</param>
+        private void AddText(string text, TextType type)
+        {
+            Run run = new Run
+            {
+                Text = text,
+            };
+            if (type == TextType.Strikethrough)
+                run.TextDecorations = TextDecorations.Strikethrough;
+            else if (type == TextType.Bold)
+                run.FontWeight = FontWeights.Bold;
+            else if (type == TextType.Oblique)
+                run.FontStyle = FontStyles.Oblique;
+            else if (type == TextType.Italic)
+            {
+                run.FontWeight = FontWeights.Bold;
+                run.FontStyle = FontStyles.Italic;
+            }
+            paragraph.Inlines.Add(run);
+        }
+
+        /// <summary>
+        /// 添加超链接
+        /// </summary>
+        /// <param name="text">文本内容</param>
+        /// <param name="link">链接</param>
         private void AddLink(string text, string link)
         {
             Run run = new Run(text);
@@ -199,6 +307,9 @@ namespace OfficeTool.Functions
             paragraph.Inlines.Add(hyperlink);
         }
 
+        /// <summary>
+        /// 添加一条横线
+        /// </summary>
         private void AddLine()
         {
             SolidColorBrush brush = new SolidColorBrush
@@ -209,8 +320,8 @@ namespace OfficeTool.Functions
             {
                 Y1 = 5,
                 Y2 = 5,
-                X2 = 4000,
-                Width = 4000,
+                X2 = 2000,
+                Width = 2000,
                 Stroke = brush
             };
             InlineUIContainer container = new InlineUIContainer
@@ -220,14 +331,20 @@ namespace OfficeTool.Functions
             paragraph.Inlines.Add(container);
         }
 
-        private void AddImage(string link, string toolTip)
+        /// <summary>
+        /// 添加一个图片
+        /// </summary>
+        /// <param name="toolTip">提示内容</param>
+        /// <param name="link">图片链接</param>
+        private void AddImage(string toolTip, string link)
         {
             BitmapImage bmp = new BitmapImage(new Uri(link));
             Image img = new Image
             {
                 Source = bmp,
                 ToolTip = toolTip,
-                Stretch = Stretch.None
+                Stretch = Stretch.Uniform,
+                StretchDirection = StretchDirection.DownOnly
             };
             InlineUIContainer container = new InlineUIContainer
             {
@@ -236,9 +353,33 @@ namespace OfficeTool.Functions
             paragraph.Inlines.Add(container);
         }
 
+        private string GetText(Queue queue)
+        {
+            string temp = string.Empty;
+            while (queue.Count > 0)
+                temp += queue.Dequeue().ToString();
+            return temp;
+        }
+
+        /// <summary>
+        /// 以 Paragraph 类返回 Markdown 内容
+        /// </summary>
+        /// <returns></returns>
         public Paragraph GetParagraph()
         {
             return paragraph;
+        }
+
+        private enum TextType
+        {
+            Oblique = 0,
+            Bold = 1,
+            Italic = 2,
+            Strikethrough = 3,
+            HyperLinkText = 4,
+            HyperLink = 5,
+            Code = 6,
+            Unknown = 7
         }
     }
 }

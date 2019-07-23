@@ -21,6 +21,7 @@ namespace OfficeTool.Functions
      Oblique: *some text*
      Bold: *some text*
      Italic and bold: ***some text***
+     Highlight text: ==some text==
      Line: Three * or - or more.
      Hyper link: [Text](Link)
      Image: [Image Tooltip](Link)
@@ -48,7 +49,7 @@ namespace OfficeTool.Functions
                         AddText(GetText(queue));
                     }
                     // 一级标题
-                    AddTitle(line.Substring(2), 22, FontWeights.Normal);
+                    AddTitle(line.Substring(2), 28, FontWeights.Normal);
                 }
                 else if (line.StartsWith("## "))
                 {
@@ -57,7 +58,7 @@ namespace OfficeTool.Functions
                         AddText(GetText(queue));
                     }
                     // 二级标题
-                    AddTitle(line.Substring(3), 18, FontWeights.Normal);
+                    AddTitle(line.Substring(3), 24, FontWeights.Normal);
                 }
                 else if (line.StartsWith("### "))
                 {
@@ -66,7 +67,7 @@ namespace OfficeTool.Functions
                         AddText(GetText(queue));
                     }
                     // 三级标题
-                    AddTitle(line.Substring(4), 15, FontWeights.Normal);
+                    AddTitle(line.Substring(4), 18, FontWeights.Normal);
                 }
                 else if (line.StartsWith("#### "))
                 {
@@ -75,7 +76,7 @@ namespace OfficeTool.Functions
                         AddText(GetText(queue));
                     }
                     // 四级标题
-                    AddTitle(line.Substring(5), 12, FontWeights.Bold);
+                    AddTitle(line.Substring(5), 15, FontWeights.Bold);
                 }
                 else if (line.StartsWith("##### "))
                 {
@@ -84,7 +85,7 @@ namespace OfficeTool.Functions
                         AddText(GetText(queue));
                     }
                     // 五级标题
-                    AddTitle(line.Substring(6), 10, FontWeights.Bold);
+                    AddTitle(line.Substring(6), 13, FontWeights.Bold);
                 }
                 else if (line.StartsWith("###### "))
                 {
@@ -93,7 +94,7 @@ namespace OfficeTool.Functions
                         AddText(GetText(queue));
                     }
                     // 六级标题
-                    AddTitle(line.Substring(7), 8, FontWeights.Bold);
+                    AddTitle(line.Substring(7), 11, FontWeights.Bold);
                 }
                 else if ((line.Contains("---") && line.Replace("-", "").Length == 0) || (line.Contains("***") && line.Replace("*", "").Length == 0))
                 {
@@ -138,7 +139,7 @@ namespace OfficeTool.Functions
                     TextType type = TextType.Unknown;
                     for (int i = 0; i < line.Length; i++)
                     {
-                        if (line[i] == '[' || line[i] == '!' || line[i] == '(' || line[i] == '`' || line[i] == '*' || line[i] == '~')
+                        if (line[i] == '[' || line[i] == '!' || line[i] == '(' || line[i] == '`' || line[i] == '*' || line[i] == '~' || line[i] == '=')
                         {
                             if (i < line.Length - 1)
                                 if (line[i] == '!' && line[i + 1] == '[')
@@ -175,6 +176,9 @@ namespace OfficeTool.Functions
                                         break;
                                     case '~':
                                         type = TextType.Strikethrough;
+                                        break;
+                                    case '=':
+                                        type = TextType.Highlight;
                                         break;
                                 }
                                 queue.Enqueue(line[i]);
@@ -242,6 +246,17 @@ namespace OfficeTool.Functions
                                 AddText(temp.Remove(temp.IndexOf('*')), type);
                                 type = TextType.Unknown;
                             }
+                            else if (line[i] == '=')
+                            {
+                                if (queue.Peek().ToString() == "=")
+                                {
+                                    queue.Dequeue();
+                                    continue;
+                                }
+                                string temp = GetText(queue);
+                                AddTextWithBackground(temp.Remove(temp.IndexOf('=')), Colors.Yellow);
+                                type = TextType.Unknown;
+                            }
                         }
                     }
                 }
@@ -267,7 +282,7 @@ namespace OfficeTool.Functions
                 Text = text
             };
             paragraph.Inlines.Add(run);
-            if (fontSize == 22)
+            if (fontSize == 28)
             {
                 AddText("\n");
                 AddLine();
@@ -299,6 +314,21 @@ namespace OfficeTool.Functions
             {
                 Text = text,
                 Foreground = new SolidColorBrush(color),
+            };
+            paragraph.Inlines.Add(run);
+        }
+
+        /// <summary>
+        /// 添加具有特定背景色的文本
+        /// </summary>
+        /// <param name="text">文本内容</param>
+        /// <param name="color">背景色</param>
+        private void AddTextWithBackground(string text, Color color)
+        {
+            Run run = new Run
+            {
+                Text = text,
+                Background = new SolidColorBrush(color),
             };
             paragraph.Inlines.Add(run);
         }
@@ -416,10 +446,11 @@ namespace OfficeTool.Functions
             Bold = 1,
             Italic = 2,
             Strikethrough = 3,
-            HyperLinkText = 4,
-            HyperLink = 5,
-            Code = 6,
-            Unknown = 7
+            Highlight = 4,
+            HyperLinkText = 5,
+            HyperLink = 6,
+            Code = 7,
+            Unknown = 8
         }
     }
 }

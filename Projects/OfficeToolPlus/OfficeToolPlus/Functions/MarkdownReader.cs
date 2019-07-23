@@ -14,6 +14,21 @@ namespace OfficeTool.Functions
     // Markdown Reader by Yerong | https://otp.landian.vip/ | 2019/07/23
     // Only supported title, image, line, text color and text style.
     // Only used in Office Tool Plus.
+    /*
+     Supported format
+     Title: 1, 2, 3, 4, 5, 6 (#, ##, ###, ####, #####, ######)
+     Red color text: `some text`
+     Oblique: *some text*
+     Bold: *some text*
+     Italic and bold: ***some text***
+     Line: Three * or - or more.
+     Hyper link: [Text](Link)
+     Image: [Image Tooltip](Link)
+     Code block (No highlight and grammar check, don't support type of codes):
+     ```
+     some text
+     ```
+     */
 
     class MarkdownReader
     {
@@ -23,46 +38,79 @@ namespace OfficeTool.Functions
         {
             StringReader reader = new StringReader(originText);
             string line;
+            Queue queue = new Queue();
             while ((line = reader.ReadLine()) != null)
             {
                 if (line.StartsWith("# "))
                 {
+                    if (queue.Count > 0)
+                    {
+                        AddText(GetText(queue));
+                    }
                     // 一级标题
                     AddTitle(line.Substring(2), 22, FontWeights.Normal);
                 }
                 else if (line.StartsWith("## "))
                 {
+                    if (queue.Count > 0)
+                    {
+                        AddText(GetText(queue));
+                    }
                     // 二级标题
                     AddTitle(line.Substring(3), 18, FontWeights.Normal);
                 }
                 else if (line.StartsWith("### "))
                 {
+                    if (queue.Count > 0)
+                    {
+                        AddText(GetText(queue));
+                    }
                     // 三级标题
                     AddTitle(line.Substring(4), 15, FontWeights.Normal);
                 }
                 else if (line.StartsWith("#### "))
                 {
+                    if (queue.Count > 0)
+                    {
+                        AddText(GetText(queue));
+                    }
                     // 四级标题
                     AddTitle(line.Substring(5), 12, FontWeights.Bold);
                 }
                 else if (line.StartsWith("##### "))
                 {
+                    if (queue.Count > 0)
+                    {
+                        AddText(GetText(queue));
+                    }
                     // 五级标题
                     AddTitle(line.Substring(6), 10, FontWeights.Bold);
                 }
                 else if (line.StartsWith("###### "))
                 {
+                    if (queue.Count > 0)
+                    {
+                        AddText(GetText(queue));
+                    }
                     // 六级标题
                     AddTitle(line.Substring(7), 8, FontWeights.Bold);
                 }
                 else if ((line.Contains("---") && line.Replace("-", "").Length == 0) || (line.Contains("***") && line.Replace("*", "").Length == 0))
                 {
+                    if (queue.Count > 0)
+                    {
+                        AddText(GetText(queue));
+                    }
                     // 横线
                     AddLine();
                     AddText("\n");
                 }
                 else if (line.Contains("```") && line.Replace("`", "").Length == 0)
                 {
+                    if (queue.Count > 0)
+                    {
+                        AddText(GetText(queue));
+                    }
                     // 代码块（伪，无语法高亮，且只能单独复制）
                     string temp = string.Empty;
                     while ((line = reader.ReadLine()) != null)
@@ -85,17 +133,11 @@ namespace OfficeTool.Functions
                 }
                 else
                 {
+                    line += "\n";
                     string content = string.Empty;
-                    Queue queue = new Queue();
                     TextType type = TextType.Unknown;
-                    for (int i = 0; i <= line.Length; i++)
+                    for (int i = 0; i < line.Length; i++)
                     {
-                        if (i == line.Length)
-                        {
-                            if (queue.Count > 0)
-                                AddText(GetText(queue));
-                            break;
-                        }
                         if (line[i] == '[' || line[i] == '!' || line[i] == '(' || line[i] == '`' || line[i] == '*' || line[i] == '~')
                         {
                             if (i < line.Length - 1)
@@ -201,14 +243,12 @@ namespace OfficeTool.Functions
                                 type = TextType.Unknown;
                             }
                         }
-                        else
-                        {
-                            AddText(GetText(queue));
-                            type = TextType.Unknown;
-                        }
                     }
-                    AddText("\n");
                 }
+            }
+            if (queue.Count > 0)
+            {
+                AddText(GetText(queue));
             }
         }
 
@@ -320,8 +360,8 @@ namespace OfficeTool.Functions
             {
                 Y1 = 5,
                 Y2 = 5,
-                X2 = 2000,
-                Width = 2000,
+                X2 = 4200,
+                Width = 4200,
                 Stroke = brush
             };
             InlineUIContainer container = new InlineUIContainer

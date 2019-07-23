@@ -225,7 +225,7 @@ namespace OfficeTool.Functions
                                 AddText(temp.Remove(temp.IndexOf('*')), type);
                                 type = TextType.Unknown;
                             }
-                            else if (line[i] == '=')
+                            else if (line[i] == '=' && type == TextType.Highlight)
                             {
                                 if (queue.Peek().ToString() == "=")
                                 {

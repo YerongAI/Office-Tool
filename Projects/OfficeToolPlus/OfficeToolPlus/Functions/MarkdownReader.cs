@@ -49,13 +49,15 @@ namespace OfficeTool.Functions
                 {
                     AddText(GetText(queue));
                     // 一级标题
-                    AddTitle(line.Substring(2), 28, FontWeights.Normal);
+                    AddTitle(line.Substring(2), 26, FontWeights.Normal);
+                    AddLine();
+                    AddText("\n");
                 }
                 else if (line.StartsWith("## "))
                 {
                     AddText(GetText(queue));
                     // 二级标题
-                    AddTitle(line.Substring(3), 24, FontWeights.Normal);
+                    AddTitle(line.Substring(3), 22, FontWeights.Normal);
                 }
                 else if (line.StartsWith("### "))
                 {
@@ -255,15 +257,9 @@ namespace OfficeTool.Functions
             {
                 FontSize = fontSize,
                 FontWeight = weights,
-                Text = text
+                Text = text + "\n"
             };
             paragraph.Inlines.Add(run);
-            if (fontSize == 28)
-            {
-                AddText("\n");
-                AddLine();
-            }
-            AddText("\n");
         }
 
         /// <summary>

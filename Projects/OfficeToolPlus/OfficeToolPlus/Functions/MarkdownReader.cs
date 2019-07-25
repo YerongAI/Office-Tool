@@ -283,7 +283,7 @@ namespace OfficeTool.Functions
         /// <param name="text">文本内容</param>
         private void AddText(string text)
         {
-            if (text.Length > 0)
+            if (!string.IsNullOrEmpty(text))
             {
                 Run run = new Run
                 {
@@ -361,7 +361,7 @@ namespace OfficeTool.Functions
                 ToolTip = link
             };
             hyperlink.Inlines.Add(run);
-            if (link != string.Empty)
+            if (!string.IsNullOrEmpty(link))
             {
                 hyperlink.NavigateUri = new Uri(link);
                 hyperlink.RequestNavigate += (sender, args) => Process.Start(args.Uri.ToString());
@@ -404,10 +404,13 @@ namespace OfficeTool.Functions
             Image img = new Image
             {
                 Source = bmp,
-                ToolTip = toolTip,
                 Stretch = Stretch.Uniform,
                 StretchDirection = StretchDirection.DownOnly
             };
+            if (!string.IsNullOrEmpty(toolTip))
+            {
+                img.ToolTip = toolTip;
+            }
             InlineUIContainer container = new InlineUIContainer
             {
                 Child = img

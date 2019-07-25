@@ -25,7 +25,7 @@ namespace OfficeTool.Functions
      Highlight text (高亮文本): ==some text==
      Line (横线): Three * or - or more.
      Hyper link (超链接): [Text](Link)
-     Image (图片): [Image Tooltip](Link)
+     Image (图片): ![Image Tooltip](Link)
      Code block (No highlight and grammar check, don't support type of codes):
      ```
      some text

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Windows;
@@ -11,7 +12,7 @@ using System.Windows.Shapes;
 
 namespace OfficeTool.Functions
 {
-    // Markdown Reader by Yerong | https://otp.landian.vip/ | 2019/07/23
+    // Markdown Reader by Yerong | https://otp.landian.vip/ | 2019/07/25
     // Only supported title, image, line, text color and text style.
     // Only used in Office Tool Plus.
     /*
@@ -42,12 +43,12 @@ namespace OfficeTool.Functions
         {
             StringReader reader = new StringReader(originText);
             string line;
-            Queue queue = new Queue();
+            List<char> list = new List<char>();
             while ((line = reader.ReadLine()) != null)
             {
                 if (line.StartsWith("# "))
                 {
-                    AddText(GetText(queue));
+                    AddText(GetText(list));
                     // 一级标题
                     AddTitle(line.Substring(2), 26, FontWeights.Normal);
                     AddLine();
@@ -55,44 +56,44 @@ namespace OfficeTool.Functions
                 }
                 else if (line.StartsWith("## "))
                 {
-                    AddText(GetText(queue));
+                    AddText(GetText(list));
                     // 二级标题
                     AddTitle(line.Substring(3), 22, FontWeights.Normal);
                 }
                 else if (line.StartsWith("### "))
                 {
-                    AddText(GetText(queue));
+                    AddText(GetText(list));
                     // 三级标题
                     AddTitle(line.Substring(4), 18, FontWeights.Normal);
                 }
                 else if (line.StartsWith("#### "))
                 {
-                    AddText(GetText(queue));
+                    AddText(GetText(list));
                     // 四级标题
                     AddTitle(line.Substring(5), 15, FontWeights.Bold);
                 }
                 else if (line.StartsWith("##### "))
                 {
-                    AddText(GetText(queue));
+                    AddText(GetText(list));
                     // 五级标题
                     AddTitle(line.Substring(6), 13, FontWeights.Bold);
                 }
                 else if (line.StartsWith("###### "))
                 {
-                    AddText(GetText(queue));
+                    AddText(GetText(list));
                     // 六级标题
                     AddTitle(line.Substring(7), 11, FontWeights.Bold);
                 }
                 else if ((line.Contains("---") && line.Replace("-", "").Length == 0) || (line.Contains("***") && line.Replace("*", "").Length == 0))
                 {
-                    AddText(GetText(queue));
+                    AddText(GetText(list));
                     // 横线
                     AddLine();
                     AddText("\n");
                 }
                 else if (line.Contains("```") && line.Replace("`", "").Length == 0)
                 {
-                    AddText(GetText(queue));
+                    AddText(GetText(list));
                     // 代码块（伪，无语法高亮，且只能单独复制）
                     string temp = string.Empty;
                     while ((line = reader.ReadLine()) != null)
@@ -125,9 +126,9 @@ namespace OfficeTool.Functions
                             if (i < line.Length - 1)
                                 if (line[i] == '!' && line[i + 1] == '[')
                                     continue;
-                            if (queue.Count > 0 && type == TextType.Unknown)
+                            if (list.Count > 0 && type == TextType.Unknown)
                             {
-                                AddText(GetText(queue));
+                                AddText(GetText(list));
                             }
                             if (type == TextType.Unknown)
                             {
@@ -138,11 +139,12 @@ namespace OfficeTool.Functions
                                         if (i > 0)
                                         {
                                             if (line[i - 1] == '!')
-                                                queue.Enqueue(line[i - 1]);
+                                                list.Insert(0, line[i - 1]);
                                         }
                                         break;
                                     case '(':
-                                        type = TextType.HyperLink;
+                                        if (content != string.Empty)
+                                            type = TextType.HyperLink;
                                         break;
                                     case '`':
                                         type = TextType.Code;
@@ -152,7 +154,10 @@ namespace OfficeTool.Functions
                                         {
                                             type = TextType.Oblique;
                                             while (line[++i] == '*')
+                                            {
+                                                list.Add(line[i]);
                                                 type++;
+                                            }
                                         }
                                         break;
                                     case '~':
@@ -162,16 +167,16 @@ namespace OfficeTool.Functions
                                         type = TextType.Highlight;
                                         break;
                                 }
-                                queue.Enqueue(line[i]);
+                                list.Add(line[i]);
                                 continue;
                             }
                         }
-                        queue.Enqueue(line[i]);
+                        list.Add(line[i]);
                         if (type != TextType.Unknown)
                         {
                             if (line[i] == ']' && type == TextType.HyperLinkText)
                             {
-                                string temp = GetText(queue);
+                                string temp = GetText(list);
                                 if (i < line.Length - 1)
                                     if (line[i + 1] == '(')
                                     {
@@ -185,56 +190,66 @@ namespace OfficeTool.Functions
                             }
                             else if (line[i] == ')' && type == TextType.HyperLink)
                             {
+                                List<char> head = list.FindAll(delegate (char s) {
+                                    return s == '(';
+                                });
+                                List<char> tail = list.FindAll(delegate (char s) {
+                                    return s == ')';
+                                });
+                                if (head.Count != tail.Count)
+                                    continue;
                                 if (content.Length > 0)
                                 {
-                                    queue.Dequeue();
-                                    string temp = GetText(queue);
+                                    list.RemoveAt(0);
+                                    list.RemoveAt(list.Count - 1);
+                                    string temp = GetText(list);
                                     if (content[0] == '!')
-                                        AddImage(content.Remove(content.Length - 1).Remove(0, 2), temp.Remove(temp.Length - 1));
+                                        AddImage(content.Remove(content.Length - 1).Remove(0, 2), temp);
                                     else
-                                        AddLink(content.Remove(content.Length - 1).Remove(0, 1), temp.Remove(temp.Length - 1));
+                                        AddLink(content.Remove(content.Length - 1).Remove(0, 1), temp);
                                 }
                                 else
                                 {
-                                    AddText(GetText(queue));
+                                    AddText(GetText(list));
                                 }
                                 type = TextType.Unknown;
                             }
                             else if (line[i] == '`' && type == TextType.Code)
                             {
-                                queue.Dequeue();
-                                string temp = GetText(queue);
+                                list.RemoveAt(0);
+                                string temp = GetText(list);
                                 AddText(temp.Remove(temp.Length - 1), Colors.Red);
                                 type = TextType.Unknown;
                             }
-                            else if (line[i] == '~' && type == TextType.Strikethrough && queue.Count > 2)
+                            else if (line[i] == '~' && type == TextType.Strikethrough && list.Count > 2)
                             {
-                                queue.Dequeue();
-                                if (queue.Peek().ToString() == "~")
+                                list.RemoveAt(0);
+                                if (list[0] == '~')
                                     continue;
-                                string temp = GetText(queue);
-                                AddText(temp.Remove(temp.Length - 2), type);
+                                list.RemoveRange(list.Count - 2, 2);
+                                string temp = GetText(list);
+                                AddText(temp, type);
                                 type = TextType.Unknown;
                             }
                             else if (line[i] == '*')
                             {
-                                if (queue.Peek().ToString() == "*")
+                                if (list[0] == '*')
                                 {
-                                    queue.Dequeue();
+                                    list.RemoveAt(0);
                                     continue;
                                 }
-                                string temp = GetText(queue);
+                                string temp = GetText(list);
                                 AddText(temp.Remove(temp.IndexOf('*')), type);
                                 type = TextType.Unknown;
                             }
                             else if (line[i] == '=' && type == TextType.Highlight)
                             {
-                                if (queue.Peek().ToString() == "=")
+                                if (list[0] == '=')
                                 {
-                                    queue.Dequeue();
+                                    list.RemoveAt(0);
                                     continue;
                                 }
-                                string temp = GetText(queue);
+                                string temp = GetText(list);
                                 AddTextWithBackground(temp.Remove(temp.IndexOf('=')), Colors.Yellow);
                                 type = TextType.Unknown;
                             }
@@ -242,7 +257,7 @@ namespace OfficeTool.Functions
                     }
                 }
             }
-            AddText(GetText(queue));
+            AddText(GetText(list));
         }
 
         /// <summary>
@@ -341,9 +356,11 @@ namespace OfficeTool.Functions
         private void AddLink(string text, string link)
         {
             Run run = new Run(text);
-            Hyperlink hyperlink = new Hyperlink();
+            Hyperlink hyperlink = new Hyperlink
+            {
+                ToolTip = link
+            };
             hyperlink.Inlines.Add(run);
-            hyperlink.IsEnabled = true;
             if (link != string.Empty)
             {
                 hyperlink.NavigateUri = new Uri(link);
@@ -399,15 +416,18 @@ namespace OfficeTool.Functions
         }
 
         /// <summary>
-        /// 返回队列中所有的文字，队列中的文字会被清空
+        /// 返回列表中所有的文字，列表中的文字会被清空
         /// </summary>
-        /// <param name="queue">源队列</param>
+        /// <param name="list">源列表</param>
         /// <returns></returns>
-        private string GetText(Queue queue)
+        private string GetText(List<char> list)
         {
             string temp = string.Empty;
-            while (queue.Count > 0)
-                temp += queue.Dequeue().ToString();
+            foreach (char ch in list)
+            {
+                temp += ch;
+            }
+            list.Clear();
             return temp;
         }
 

@@ -1,9 +1,10 @@
-using System.IO;
+﻿using System.IO;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace OTP.Functions
 {
-	//Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
+    //Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/ | 2019/7/26
     class CheckHash
     {
         private readonly string hashValue;
@@ -21,23 +22,23 @@ namespace OTP.Functions
             switch (type)
             {
                 case HashType.MD5:
-                    System.Security.Cryptography.MD5CryptoServiceProvider MD5Hash = new System.Security.Cryptography.MD5CryptoServiceProvider();
+                    MD5CryptoServiceProvider MD5Hash = new MD5CryptoServiceProvider();
                     retVal = MD5Hash.ComputeHash(file);
                     break;
                 case HashType.SHA1:
-                    System.Security.Cryptography.SHA1CryptoServiceProvider SHA1Hash = new System.Security.Cryptography.SHA1CryptoServiceProvider();
+                    SHA1CryptoServiceProvider SHA1Hash = new SHA1CryptoServiceProvider();
                     retVal = SHA1Hash.ComputeHash(file);
                     break;
                 case HashType.SHA256:
-                    System.Security.Cryptography.SHA256CryptoServiceProvider SHA256Hash = new System.Security.Cryptography.SHA256CryptoServiceProvider();
+                    SHA256CryptoServiceProvider SHA256Hash = new SHA256CryptoServiceProvider();
                     retVal = SHA256Hash.ComputeHash(file);
                     break;
                 case HashType.SHA384:
-                    System.Security.Cryptography.SHA384CryptoServiceProvider SHA384Hash = new System.Security.Cryptography.SHA384CryptoServiceProvider();
+                    SHA384CryptoServiceProvider SHA384Hash = new SHA384CryptoServiceProvider();
                     retVal = SHA384Hash.ComputeHash(file);
                     break;
                 case HashType.SHA512:
-                    System.Security.Cryptography.SHA512CryptoServiceProvider SHA512Hash = new System.Security.Cryptography.SHA512CryptoServiceProvider();
+                    SHA512CryptoServiceProvider SHA512Hash = new SHA512CryptoServiceProvider();
                     retVal = SHA512Hash.ComputeHash(file);
                     break;
             }

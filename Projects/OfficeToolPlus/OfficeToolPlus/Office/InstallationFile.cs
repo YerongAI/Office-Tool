@@ -134,9 +134,9 @@ namespace OTP
                             if (lists[i].HasError == false)
                             {
                                 string path = Environment.GetEnvironmentVariable("temp");
+                                Process process = new Process();
                                 try
                                 {
-                                    Process process = new Process();
                                     process.StartInfo.FileName = "expand";
                                     process.StartInfo.Arguments = "-F:*.xml \"" + InstallationPath + "\\Office\\Data\\" + "v32_" + lists[i].Version + ".cab\" " + path;
                                     process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
@@ -147,7 +147,10 @@ namespace OTP
                                     lists[i].FFN = xml.Attribute("FFNRoot").Value;
                                     File.Delete(path + "\\VersionDescriptor.xml");
                                 }
-                                catch { }
+                                finally
+                                {
+                                    process.Dispose();
+                                }
                             }
                         }
                     }
@@ -176,9 +179,9 @@ namespace OTP
                             if (lists[i].HasError == false)
                             {
                                 string path = Environment.GetEnvironmentVariable("temp");
+                                Process process = new Process();
                                 try
                                 {
-                                    Process process = new Process();
                                     process.StartInfo.FileName = "expand";
                                     process.StartInfo.Arguments = "-F:*.xml \"" + InstallationPath + "\\Office\\Data\\" + "v64_" + lists[i].Version + ".cab\" " + path;
                                     process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
@@ -189,7 +192,10 @@ namespace OTP
                                     lists[i].FFN = xml.Attribute("FFNRoot").Value;
                                     File.Delete(path + "\\VersionDescriptor.xml");
                                 }
-                                catch { }
+                                finally
+                                {
+                                    process.Dispose();
+                                }
                             }
                         }
                     }

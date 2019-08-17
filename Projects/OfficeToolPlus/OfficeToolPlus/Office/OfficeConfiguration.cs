@@ -16,10 +16,9 @@ namespace OTP
         public OfficeConfiguration()
         {
             InstalledProductName = new List<string>();
+            RegistryKey localKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
             try
             {
-                RegistryKey localKey;
-                localKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
                 RegistryKey subKey = localKey.OpenSubKey(@"SOFTWARE\Microsoft\Office\ClickToRun\Configuration");
                 if (subKey == null)
                 {
@@ -92,6 +91,7 @@ namespace OTP
                                 }
                             }
                         }
+                        registryKey.Close();
                     }
                 }
                 h = subKey.GetValue("Platform");//体系架构
@@ -148,14 +148,17 @@ namespace OTP
             {
                 throw;
             }
+            finally
+            {
+                localKey.Close();
+            }
         }
 
         public bool Save()
         {
+            RegistryKey localKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
             try
             {
-                RegistryKey localKey;
-                localKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
                 RegistryKey subKey = localKey.OpenSubKey(@"SOFTWARE\Microsoft\Office\ClickToRun\Configuration", true);
                 if (subKey == null)
                 {
@@ -199,6 +202,10 @@ namespace OTP
             catch
             {
                 throw;
+            }
+            finally
+            {
+                localKey.Close();
             }
         }
 

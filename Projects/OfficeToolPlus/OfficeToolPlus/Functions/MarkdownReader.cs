@@ -258,6 +258,7 @@ namespace OfficeTool.Functions
                 }
             }
             AddText(GetText(list));
+            reader.Close();
         }
 
         /// <summary>

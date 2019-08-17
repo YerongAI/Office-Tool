@@ -24,22 +24,27 @@ namespace OTP.Functions
                 case HashType.MD5:
                     MD5CryptoServiceProvider MD5Hash = new MD5CryptoServiceProvider();
                     retVal = MD5Hash.ComputeHash(file);
+                    MD5Hash.Dispose();
                     break;
                 case HashType.SHA1:
                     SHA1CryptoServiceProvider SHA1Hash = new SHA1CryptoServiceProvider();
                     retVal = SHA1Hash.ComputeHash(file);
+                    SHA1Hash.Dispose();
                     break;
                 case HashType.SHA256:
                     SHA256CryptoServiceProvider SHA256Hash = new SHA256CryptoServiceProvider();
                     retVal = SHA256Hash.ComputeHash(file);
+                    SHA256Hash.Dispose();
                     break;
                 case HashType.SHA384:
                     SHA384CryptoServiceProvider SHA384Hash = new SHA384CryptoServiceProvider();
                     retVal = SHA384Hash.ComputeHash(file);
+                    SHA384Hash.Dispose();
                     break;
                 case HashType.SHA512:
                     SHA512CryptoServiceProvider SHA512Hash = new SHA512CryptoServiceProvider();
                     retVal = SHA512Hash.ComputeHash(file);
+                    SHA512Hash.Dispose();
                     break;
             }
             file.Close();

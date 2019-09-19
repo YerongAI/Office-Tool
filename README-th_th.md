@@ -1,6 +1,6 @@
 ﻿# โปรแกรม Office Tool Plus
 
-English | [简体中文](/README-zh_cn.md) | [繁體中文](/README-zh_tw.md) | [한국어](/README-ko_kr.md) | [Italiano](/README-it_it.md) | ไทย/Thai
+[English](/README.md) | [简体中文](/README-zh_cn.md) | [繁體中文](/README-zh_tw.md) | [한국어](/README-ko_kr.md) | [Italiano](/README-it_it.md) | ไทย/Thai
 
 Office Tool Plus คือโปรแกรมสำหรับจัดการ การดาวน์โหลด, การติดตั้งชุดโปรแกรม Office.
 

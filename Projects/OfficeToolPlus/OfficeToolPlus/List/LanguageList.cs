@@ -1,198 +1,222 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace OTP.List
 {
-    //Copyright © 2019 Landiannews |By Yerong | https://otp.landian.vip/
     class LanguageList
     {
+		// Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
+	
         // For more information please visit: https://docs.microsoft.com/en-us/DeployOffice/overview-of-deploying-languages-in-office-365-proplus#languages-culture-codes-and-companion-proofing-languages
-        private readonly List<List> LangList = new List<List>(100);
+        private static readonly List<LangInfo> LangList = new List<LangInfo>(110);
         public LanguageList()
         {
-            List lang1 = new List("العربية (المملكة العربية السعودية)", "ar-sa", 1025, "Full");
-            List lang2 = new List("български (България)", "bg-bg", 1026, "Full");
-            List lang3 = new List("简体中文 (中国)", "zh-cn", 2052, "Full");
-            List lang4 = new List("繁體中文 (台灣)", "zh-tw", 1028, "Full");
-            List lang5 = new List("hrvatski (Hrvatska)", "hr-hr", 1050, "Full");
-            List lang6 = new List("čeština (Česká republika)", "cs-cz", 1029, "Full");
-            List lang7 = new List("dansk (Danmark)", "da-dk", 1030, "Full");
-            List lang8 = new List("Nederlands (Nederland)", "nl-nl", 1043, "Full");
-            List lang9 = new List("English (United States)", "en-us", 1033, "Full");
-            List lang10 = new List("eesti (Eesti)", "et-ee", 1061, "Full");
-            List lang11 = new List("suomi (Suomi)", "fi-fi", 1035, "Full");
-            List lang12 = new List("français (France)", "fr-fr", 1036, "Full");
-            List lang13 = new List("Deutsch (Deutschland)", "de-de", 1031, "Full");
-            List lang14 = new List("Ελληνικά (Ελλάδα)", "el-gr", 1032, "Full");
-            List lang15 = new List("עברית (ישראל)", "he-il", 1037, "Full");
-            List lang16 = new List("हिंदी (भारत)", "hi-in", 1081, "Full");
-            List lang17 = new List("magyar (Magyarország)", "hu-hu", 1038, "Full");
-            List lang18 = new List("Bahasa Indonesia (Indonesia)", "id-id", 1057, "Full");
-            List lang19 = new List("italiano (Italia)", "it-it", 1040, "Full");
-            List lang20 = new List("日本語 (日本)", "ja-jp", 1041, "Full");
-            List lang21 = new List("Қазақ (Қазақстан)", "kk-kz", 1087, "Full");
-            List lang22 = new List("한국어(대한민국)", "ko-kr", 1042, "Full");
-            List lang23 = new List("latviešu (Latvija)", "lv-lv", 1062, "Full");
-            List lang24 = new List("lietuvių (Lietuva)", "lt-lt", 1063, "Full");
-            List lang25 = new List("Bahasa Melayu (Malaysia)", "ms-my", 1086, "Full");
-            List lang26 = new List("norsk, bokmål (Norge)", "nb-no", 1044, "Full");
-            List lang27 = new List("polski (Polska)", "pl-pl", 1045, "Full");
-            List lang28 = new List("português (Brasil)", "pt-br", 1046, "Full");
-            List lang29 = new List("português (Portugal)", "pt-pt", 2070, "Full");
-            List lang30 = new List("română (România)", "ro-ro", 1048, "Full");
-            List lang31 = new List("русский (Россия)", "ru-ru", 1049, "Full");
-            List lang32 = new List("srpski (Srbija)", "sr-latn-rs", 9242, "Full");
-            List lang33 = new List("slovenčina (Slovenská republika)", "sk-sk", 1051, "Full");
-            List lang34 = new List("slovenščina (Slovenija)", "sl-si", 1060, "Full");
-            List lang35 = new List("español (España, alfabetización internacional)", "es-es", 3082, "Full");
-            List lang36 = new List("svenska (Sverige)", "sv-se", 1053, "Full");
-            List lang37 = new List("ไทย (ไทย)", "th-th", 1054, "Full");
-            List lang38 = new List("Türkçe (Türkiye)", "tr-tr", 1055, "Full");
-            List lang39 = new List("українська (Україна)", "uk-ua", 1058, "Full");
-            List lang40 = new List("Tiếng Việt (Việt Nam)", "vi-vn", 1066, "Full");
-            List lang41 = new List("Afrikaans (Suid-Afrika)", "af-za", 1078, "Partial");
-            List lang42 = new List("Shqip (Shqipëria)", "sq-al", 1052, "Partial");
-            List lang43 = new List("Հայերեն (Հայաստան)", "hy-am", 1067, "Partial");
-            List lang44 = new List("অসমীয়া (ভাৰত)", "as-in", 1101, "Partial");
-            List lang45 = new List("Azərbaycan dili (Azərbaycan)", "az-Latn-az", 1068, "Partial");
-            List lang46 = new List("বাংলা (বাংলাদেশ)", "bn-bd", 2117, "Partial");
-            List lang47 = new List("বাংলা (ভারত)", "bn-in", 1093, "Partial");
-            List lang48 = new List("euskara (euskara)", "eu-es", 1069, "Partial");
-            List lang49 = new List("bosanski (Bosna i Hercegovina)", "bs-latn-ba", 5146, "Partial");
-            List lang50 = new List("Català (Català)", "ca-es", 1027, "Partial");
-            List lang51 = new List("Valencià (Espanya)", "ca-es-valencia", 2051, "Partial");
-            List lang52 = new List("galego (galego)", "gl-es", 1110, "Partial");
-            List lang53 = new List("ქართული (საქართველო)", "ka-ge", 1079, "Partial");
-            List lang54 = new List("ગુજરાતી (ભારત)", "gu-in", 1095, "Partial");
-            List lang55 = new List("íslenska (Ísland)", "is-is", 1039, "Partial");
-            List lang56 = new List("Gaeilge (Éire)", "ga-ie", 2108, "Partial");
-            List lang57 = new List("ಕನ್ನಡ (ಭಾರತ)", "kn-in", 1099, "Partial");
-            List lang58 = new List("Kiswahili (Kenya)", "sw-ke", 1089, "Partial");
-            List lang59 = new List("कोंकणी (भारत)", "kok-in", 1111, "Partial");
-            List lang60 = new List("Кыргыз (Кыргызстан)", "ky-kg", 1088, "Partial");
-            List lang61 = new List("Lëtzebuergesch (Lëtzebuerg)", "lb-lu", 1134, "Partial");
-            List lang62 = new List("македонски јазик (Македонија)", "mk-mk", 1071, "Partial");
-            List lang63 = new List("മലയാളം (ഭാരതം)", "ml-in", 1100, "Partial");
-            List lang64 = new List("Malti (Malta)", "mt-mt", 1082, "Partial");
-            List lang65 = new List("Reo Māori (Aotearoa)", "mi-nz", 1153, "Partial");
-            List lang66 = new List("मराठी (भारत)", "mr-in", 1102, "Partial");
-            List lang67 = new List("नेपाली (नेपाल)", "ne-np", 1121, "Partial");
-            List lang68 = new List("norsk, nynorsk (Noreg)", "nn-no", 2068, "Partial");
-            List lang69 = new List("ଓଡ଼ିଆ (ଭାରତ)", "or-in", 1096, "Partial");
-            List lang70 = new List("فارسى (ایران)", "fa-ir", 1065, "Partial");
-            List lang71 = new List("ਪੰਜਾਬੀ (ਭਾਰਤ)", "pa-in", 1094, "Partial");
-            List lang72 = new List("Gàidhlig (An Rìoghachd Aonaichte)", "gd-gb", 1169, "Partial");
-            List lang73 = new List("српски (Босна и Херцеговина)", "sr-cyrl-ba", 7194, "Partial");
-            List lang74 = new List("српски (Србија)", "sr-cyrl-rs", 10266, "Partial");
-            List lang75 = new List("සිංහල (ශ්‍රී ලං", "si-lk", 1115, "Partial");
-            List lang76 = new List("தமிழ் (இந்தியா)", "ta-in", 1097, "Partial");
-            List lang77 = new List("Татар (Россия)", "tt-ru", 1092, "Partial");
-            List lang78 = new List("తెలుగు (భారత దే", "te-in", 1098, "Partial");
-            List lang79 = new List("اُردو (پاکستان", "ur-pk", 1056, "Partial");
-            List lang80 = new List("O'zbekcha (O'zbekiston Respublikasi)", "uz-Latn-uz", 1091, "Partial");
-            List lang81 = new List("Cymraeg (Y Deyrnas Unedig)", "cy-gb", 1106, "Partial");
-            List lang82 = new List("Hausa (Nijeriya)", "ha-Latn-ng", 1128, "Proofing");
-            List lang83 = new List("Sesotho sa Leboa (Afrika Borwa)", "ig-ng", 1132, "Proofing");
-            List lang84 = new List("isiXhosa (uMzantsi Afrika)", "xh-za", 1076, "Proofing");
-            List lang85 = new List("isiZulu (iNingizimu Afrika)", "zu-za", 1077, "Proofing");
-            List lang86 = new List("Kinyarwanda (Rwanda)", "rw-rw", 1159, "Proofing");
-            List lang87 = new List("پښتو (افغانستان)", "ps-af", 1123, "Proofing");
-            List lang88 = new List("Rumantsch (Svizra)", "rm-ch", 1047, "Proofing");
-            List lang89 = new List("Sesotho sa Leboa (Afrika Borwa)", "nso-za", 1132, "Proofing");
-            List lang90 = new List("Setswana (Aforika Borwa)", "tn-za", 1074, "Proofing");
-            List lang91 = new List("Wolof (Senegaal)", "wo-sn", 1160, "Proofing");
-            List lang92 = new List("Yoruba (Nigeria)", "yo-ng", 1130, "Proofing");
-            LangList.Add(lang1);
-            LangList.Add(lang2);
-            LangList.Add(lang3);
-            LangList.Add(lang4);
-            LangList.Add(lang5);
-            LangList.Add(lang6);
-            LangList.Add(lang7);
-            LangList.Add(lang8);
-            LangList.Add(lang9);
-            LangList.Add(lang10);
-            LangList.Add(lang11);
-            LangList.Add(lang12);
-            LangList.Add(lang13);
-            LangList.Add(lang14);
-            LangList.Add(lang15);
-            LangList.Add(lang16);
-            LangList.Add(lang17);
-            LangList.Add(lang18);
-            LangList.Add(lang19);
-            LangList.Add(lang20);
-            LangList.Add(lang21);
-            LangList.Add(lang22);
-            LangList.Add(lang23);
-            LangList.Add(lang24);
-            LangList.Add(lang25);
-            LangList.Add(lang26);
-            LangList.Add(lang27);
-            LangList.Add(lang28);
-            LangList.Add(lang29);
-            LangList.Add(lang30);
-            LangList.Add(lang31);
-            LangList.Add(lang32);
-            LangList.Add(lang33);
-            LangList.Add(lang34);
-            LangList.Add(lang35);
-            LangList.Add(lang36);
-            LangList.Add(lang37);
-            LangList.Add(lang38);
-            LangList.Add(lang39);
-            LangList.Add(lang40);
-            LangList.Add(lang41);
-            LangList.Add(lang42);
-            LangList.Add(lang43);
-            LangList.Add(lang44);
-            LangList.Add(lang45);
-            LangList.Add(lang46);
-            LangList.Add(lang47);
-            LangList.Add(lang48);
-            LangList.Add(lang49);
-            LangList.Add(lang50);
-            LangList.Add(lang51);
-            LangList.Add(lang52);
-            LangList.Add(lang53);
-            LangList.Add(lang54);
-            LangList.Add(lang55);
-            LangList.Add(lang56);
-            LangList.Add(lang57);
-            LangList.Add(lang58);
-            LangList.Add(lang59);
-            LangList.Add(lang60);
-            LangList.Add(lang61);
-            LangList.Add(lang62);
-            LangList.Add(lang63);
-            LangList.Add(lang64);
-            LangList.Add(lang65);
-            LangList.Add(lang66);
-            LangList.Add(lang67);
-            LangList.Add(lang68);
-            LangList.Add(lang69);
-            LangList.Add(lang70);
-            LangList.Add(lang71);
-            LangList.Add(lang72);
-            LangList.Add(lang73);
-            LangList.Add(lang74);
-            LangList.Add(lang75);
-            LangList.Add(lang76);
-            LangList.Add(lang77);
-            LangList.Add(lang78);
-            LangList.Add(lang79);
-            LangList.Add(lang80);
-            LangList.Add(lang81);
-            LangList.Add(lang82);
-            LangList.Add(lang83);
-            LangList.Add(lang84);
-            LangList.Add(lang85);
-            LangList.Add(lang86);
-            LangList.Add(lang87);
-            LangList.Add(lang88);
-            LangList.Add(lang89);
-            LangList.Add(lang90);
-            LangList.Add(lang91);
-            LangList.Add(lang92);
+            if (LangList.Count == 0)
+            {
+                LangInfo lang1 = new LangInfo("العربية (المملكة العربية السعودية)", "ar-sa", 1025, LanguageType.Full);
+                LangInfo lang2 = new LangInfo("български (България)", "bg-bg", 1026, LanguageType.Full);
+                LangInfo lang3 = new LangInfo("čeština (Česká republika)", "cs-cz", 1029, LanguageType.Full);
+                LangInfo lang4 = new LangInfo("dansk (Danmark)", "da-dk", 1030, LanguageType.Full);
+                LangInfo lang5 = new LangInfo("Deutsch (Deutschland)", "de-de", 1031, LanguageType.Full);
+                LangInfo lang6 = new LangInfo("Ελληνικά (Ελλάδα)", "el-gr", 1032, LanguageType.Full);
+                LangInfo lang7 = new LangInfo("English (United States)", "en-us", 1033, LanguageType.Full);
+                LangInfo lang8 = new LangInfo("español (España, alfabetización internacional)", "es-es", 3082, LanguageType.Full);
+                LangInfo lang9 = new LangInfo("eesti (Eesti)", "et-ee", 1061, LanguageType.Full);
+                LangInfo lang10 = new LangInfo("suomi (Suomi)", "fi-fi", 1035, LanguageType.Full);
+                LangInfo lang11 = new LangInfo("français (France)", "fr-fr", 1036, LanguageType.Full);
+                LangInfo lang12 = new LangInfo("עברית (ישראל)", "he-il", 1037, LanguageType.Full);
+                LangInfo lang13 = new LangInfo("हिंदी (भारत)", "hi-in", 1081, LanguageType.Full);
+                LangInfo lang14 = new LangInfo("hrvatski (Hrvatska)", "hr-hr", 1050, LanguageType.Full);
+                LangInfo lang15 = new LangInfo("magyar (Magyarország)", "hu-hu", 1038, LanguageType.Full);
+                LangInfo lang16 = new LangInfo("Bahasa Indonesia (Indonesia)", "id-id", 1057, LanguageType.Full);
+                LangInfo lang17 = new LangInfo("italiano (Italia)", "it-it", 1040, LanguageType.Full);
+                LangInfo lang18 = new LangInfo("日本語 (日本)", "ja-jp", 1041, LanguageType.Full);
+                LangInfo lang19 = new LangInfo("Қазақ (Қазақстан)", "kk-kz", 1087, LanguageType.Full);
+                LangInfo lang20 = new LangInfo("한국어(대한민국)", "ko-kr", 1042, LanguageType.Full);
+                LangInfo lang21 = new LangInfo("lietuvių (Lietuva)", "lt-lt", 1063, LanguageType.Full);
+                LangInfo lang22 = new LangInfo("latviešu (Latvija)", "lv-lv", 1062, LanguageType.Full);
+                LangInfo lang23 = new LangInfo("Bahasa Melayu (Malaysia)", "ms-my", 1086, LanguageType.Full);
+                LangInfo lang24 = new LangInfo("norsk, bokmål (Norge)", "nb-no", 1044, LanguageType.Full);
+                LangInfo lang25 = new LangInfo("Nederlands (Nederland)", "nl-nl", 1043, LanguageType.Full);
+                LangInfo lang26 = new LangInfo("polski (Polska)", "pl-pl", 1045, LanguageType.Full);
+                LangInfo lang27 = new LangInfo("português (Brasil)", "pt-br", 1046, LanguageType.Full);
+                LangInfo lang28 = new LangInfo("português (Portugal)", "pt-pt", 2070, LanguageType.Full);
+                LangInfo lang29 = new LangInfo("română (România)", "ro-ro", 1048, LanguageType.Full);
+                LangInfo lang30 = new LangInfo("русский (Россия)", "ru-ru", 1049, LanguageType.Full);
+                LangInfo lang31 = new LangInfo("slovenčina (Slovenská republika)", "sk-sk", 1051, LanguageType.Full);
+                LangInfo lang32 = new LangInfo("slovenščina (Slovenija)", "sl-si", 1060, LanguageType.Full);
+                LangInfo lang33 = new LangInfo("srpski (Srbija)", "sr-Latn-rs", 9242, LanguageType.Full);
+                LangInfo lang34 = new LangInfo("svenska (Sverige)", "sv-se", 1053, LanguageType.Full);
+                LangInfo lang35 = new LangInfo("ไทย (ไทย)", "th-th", 1054, LanguageType.Full);
+                LangInfo lang36 = new LangInfo("Türkçe (Türkiye)", "tr-tr", 1055, LanguageType.Full);
+                LangInfo lang37 = new LangInfo("українська (Україна)", "uk-ua", 1058, LanguageType.Full);
+                LangInfo lang38 = new LangInfo("Tiêng Việt (Việt Nam)", "vi-vn", 1066, LanguageType.Full);
+                LangInfo lang39 = new LangInfo("简体中文 (中国)", "zh-cn", 2052, LanguageType.Full);
+                LangInfo lang40 = new LangInfo("繁體中文 (台灣)", "zh-tw", 1028, LanguageType.Full);
+                LangInfo lang41 = new LangInfo("Afrikaans", "af-za", 1078, LanguageType.Partial);
+                LangInfo lang42 = new LangInfo("অসমীয়া", "as-in", 1101, LanguageType.Partial);
+                LangInfo lang43 = new LangInfo("azərbaycan dili", "az-Latn-az", 1068, LanguageType.Partial);
+                LangInfo lang44 = new LangInfo("বাংলা (বাংলাদেশ)", "bn-bd", 2117, LanguageType.Partial);
+                LangInfo lang45 = new LangInfo("বাংলা", "bn-in", 1093, LanguageType.Partial);
+                LangInfo lang46 = new LangInfo("bosanski", "bs-latn-ba", 5146, LanguageType.Partial);
+                LangInfo lang47 = new LangInfo("Català", "ca-es", 1027, LanguageType.Partial);
+                LangInfo lang48 = new LangInfo("Valencià", "ca-es-valencia", 2051, LanguageType.Partial);
+                LangInfo lang49 = new LangInfo("Cymraeg", "cy-gb", 1106, LanguageType.Partial);
+                LangInfo lang50 = new LangInfo("Euskara", "eu-es", 1069, LanguageType.Partial);
+                LangInfo lang51 = new LangInfo("فارسی", "fa-ir", 1065, LanguageType.Partial);
+                LangInfo lang52 = new LangInfo("Gaeilge", "ga-ie", 2108, LanguageType.Partial);
+                LangInfo lang53 = new LangInfo("Gàidhlig", "gd-gb", 1169, LanguageType.Partial);
+                LangInfo lang54 = new LangInfo("Galego", "gl-es", 1110, LanguageType.Partial);
+                LangInfo lang55 = new LangInfo("ગુજરાતી", "gu-in", 1095, LanguageType.Partial);
+                LangInfo lang56 = new LangInfo("Հայերեն", "hy-am", 1067, LanguageType.Partial);
+                LangInfo lang57 = new LangInfo("íslenska", "is-is", 1039, LanguageType.Partial);
+                LangInfo lang58 = new LangInfo("ქართული", "ka-ge", 1079, LanguageType.Partial);
+                LangInfo lang59 = new LangInfo("ಕನ್ನಡ", "kn-in", 1099, LanguageType.Partial);
+                LangInfo lang60 = new LangInfo("कोंकणी", "kok-in", 1111, LanguageType.Partial);
+                LangInfo lang61 = new LangInfo("Кыргыз", "ky-kg", 1088, LanguageType.Partial);
+                LangInfo lang62 = new LangInfo("Lëtzebuergesch", "lb-lu", 1134, LanguageType.Partial);
+                LangInfo lang63 = new LangInfo("Reo Māori", "mi-nz", 1153, LanguageType.Partial);
+                LangInfo lang64 = new LangInfo("Македонски", "mk-mk", 1071, LanguageType.Partial);
+                LangInfo lang65 = new LangInfo("മലയാളം", "ml-in", 1100, LanguageType.Partial);
+                LangInfo lang66 = new LangInfo("[मराठी]", "mr-in", 1102, LanguageType.Partial);
+                LangInfo lang67 = new LangInfo("Malti", "mt-mt", 1082, LanguageType.Partial);
+                LangInfo lang68 = new LangInfo("नेपाली", "ne-np", 1121, LanguageType.Partial);
+                LangInfo lang69 = new LangInfo("nynorsk", "nn-no", 2068, LanguageType.Partial);
+                LangInfo lang70 = new LangInfo("ଓଡିଆ", "or-in", 1096, LanguageType.Partial);
+                LangInfo lang71 = new LangInfo("ਪੰਜਾਬੀ", "pa-in", 1094, LanguageType.Partial);
+                LangInfo lang72 = new LangInfo("සිංහල", "si-lk", 1115, LanguageType.Partial);
+                LangInfo lang73 = new LangInfo("Shqip", "sq-al", 1052, LanguageType.Partial);
+                LangInfo lang74 = new LangInfo("српски", "sr-cyrl-ba", 7194, LanguageType.Partial);
+                LangInfo lang75 = new LangInfo("српски", "sr-cyrl-rs", 10266, LanguageType.Partial);
+                LangInfo lang76 = new LangInfo("Kiswahili", "sw-ke", 1089, LanguageType.Partial);
+                LangInfo lang77 = new LangInfo("தமிழ்", "ta-in", 1097, LanguageType.Partial);
+                LangInfo lang78 = new LangInfo("తెలుగు", "te-in", 1098, LanguageType.Partial);
+                LangInfo lang79 = new LangInfo("Татар", "tt-ru", 1092, LanguageType.Partial);
+                LangInfo lang80 = new LangInfo("اردو", "ur-pk", 1056, LanguageType.Partial);
+                LangInfo lang81 = new LangInfo("o'zbekcha", "uz-Latn-uz", 1091, LanguageType.Partial);
+                LangInfo lang82 = new LangInfo("አማርኛ", "am-et", 1118, LanguageType.PartialWithoutProofingTools);
+                LangInfo lang83 = new LangInfo("Беларуская", "be-by", 1059, LanguageType.PartialWithoutProofingTools);
+                LangInfo lang84 = new LangInfo("Filipino", "fil-ph", 1124, LanguageType.PartialWithoutProofingTools);
+                LangInfo lang85 = new LangInfo("ភាសាខ្មែរ", "km-kh", 1107, LanguageType.PartialWithoutProofingTools);
+                LangInfo lang86 = new LangInfo("Монгол хэл", "mn-mn", 1104, LanguageType.PartialWithoutProofingTools);
+                LangInfo lang87 = new LangInfo("درى", "prs-af", 1164, LanguageType.PartialWithoutProofingTools);
+                LangInfo lang88 = new LangInfo("Runasimi", "quz-pe", 3179, LanguageType.PartialWithoutProofingTools);
+                LangInfo lang89 = new LangInfo("سنڌي", "sd-arab-pk", 2137, LanguageType.PartialWithoutProofingTools);
+                LangInfo lang90 = new LangInfo("türkmen dili", "tk-tm", 1090, LanguageType.PartialWithoutProofingTools);
+                LangInfo lang91 = new LangInfo("ئۇيغۇرچە", "ug-cn", 1152, LanguageType.PartialWithoutProofingTools);
+                LangInfo lang92 = new LangInfo("Hausa", "ha-Latn-ng", 1128, LanguageType.ProofingTools);
+                LangInfo lang93 = new LangInfo("Igbo", "ig-ng", 1136, LanguageType.ProofingTools);
+                LangInfo lang94 = new LangInfo("Sesotho sa Leboa", "nso-za", 1132, LanguageType.ProofingTools);
+                LangInfo lang95 = new LangInfo("پښتو", "ps-af", 1123, LanguageType.ProofingTools);
+                LangInfo lang96 = new LangInfo("Rumantsch", "rm-ch", 1047, LanguageType.ProofingTools);
+                LangInfo lang97 = new LangInfo("Kinyarwanda", "rw-rw", 1159, LanguageType.ProofingTools);
+                LangInfo lang98 = new LangInfo("Setswana", "tn-za", 1074, LanguageType.ProofingTools);
+                LangInfo lang99 = new LangInfo("Wolof", "wo-sn", 1160, LanguageType.ProofingTools);
+                LangInfo lang100 = new LangInfo("isiXhosa", "xh-za", 1076, LanguageType.ProofingTools);
+                LangInfo lang101 = new LangInfo("ede Yorùbá", "yo-ng", 1130, LanguageType.ProofingTools);
+                LangInfo lang102 = new LangInfo("isiZulu", "zu-za", 1077, LanguageType.ProofingTools);
+                LangList.Add(lang1);
+                LangList.Add(lang2);
+                LangList.Add(lang3);
+                LangList.Add(lang4);
+                LangList.Add(lang5);
+                LangList.Add(lang6);
+                LangList.Add(lang7);
+                LangList.Add(lang8);
+                LangList.Add(lang9);
+                LangList.Add(lang10);
+                LangList.Add(lang11);
+                LangList.Add(lang12);
+                LangList.Add(lang13);
+                LangList.Add(lang14);
+                LangList.Add(lang15);
+                LangList.Add(lang16);
+                LangList.Add(lang17);
+                LangList.Add(lang18);
+                LangList.Add(lang19);
+                LangList.Add(lang20);
+                LangList.Add(lang21);
+                LangList.Add(lang22);
+                LangList.Add(lang23);
+                LangList.Add(lang24);
+                LangList.Add(lang25);
+                LangList.Add(lang26);
+                LangList.Add(lang27);
+                LangList.Add(lang28);
+                LangList.Add(lang29);
+                LangList.Add(lang30);
+                LangList.Add(lang31);
+                LangList.Add(lang32);
+                LangList.Add(lang33);
+                LangList.Add(lang34);
+                LangList.Add(lang35);
+                LangList.Add(lang36);
+                LangList.Add(lang37);
+                LangList.Add(lang38);
+                LangList.Add(lang39);
+                LangList.Add(lang40);
+                LangList.Add(lang41);
+                LangList.Add(lang42);
+                LangList.Add(lang43);
+                LangList.Add(lang44);
+                LangList.Add(lang45);
+                LangList.Add(lang46);
+                LangList.Add(lang47);
+                LangList.Add(lang48);
+                LangList.Add(lang49);
+                LangList.Add(lang50);
+                LangList.Add(lang51);
+                LangList.Add(lang52);
+                LangList.Add(lang53);
+                LangList.Add(lang54);
+                LangList.Add(lang55);
+                LangList.Add(lang56);
+                LangList.Add(lang57);
+                LangList.Add(lang58);
+                LangList.Add(lang59);
+                LangList.Add(lang60);
+                LangList.Add(lang61);
+                LangList.Add(lang62);
+                LangList.Add(lang63);
+                LangList.Add(lang64);
+                LangList.Add(lang65);
+                LangList.Add(lang66);
+                LangList.Add(lang67);
+                LangList.Add(lang68);
+                LangList.Add(lang69);
+                LangList.Add(lang70);
+                LangList.Add(lang71);
+                LangList.Add(lang72);
+                LangList.Add(lang73);
+                LangList.Add(lang74);
+                LangList.Add(lang75);
+                LangList.Add(lang76);
+                LangList.Add(lang77);
+                LangList.Add(lang78);
+                LangList.Add(lang79);
+                LangList.Add(lang80);
+                LangList.Add(lang81);
+                LangList.Add(lang82);
+                LangList.Add(lang83);
+                LangList.Add(lang84);
+                LangList.Add(lang85);
+                LangList.Add(lang86);
+                LangList.Add(lang87);
+                LangList.Add(lang88);
+                LangList.Add(lang89);
+                LangList.Add(lang90);
+                LangList.Add(lang91);
+                LangList.Add(lang92);
+                LangList.Add(lang93);
+                LangList.Add(lang94);
+                LangList.Add(lang95);
+                LangList.Add(lang96);
+                LangList.Add(lang97);
+                LangList.Add(lang98);
+                LangList.Add(lang99);
+                LangList.Add(lang100);
+                LangList.Add(lang101);
+                LangList.Add(lang102);
+            }
         }
 
         /// <summary>
@@ -201,7 +225,7 @@ namespace OTP.List
         /// <param name="id">语言标识符</param>
         /// <param name="language">要获取的信息，以 object 类型返回</param>
         /// <returns></returns>
-        public object GetInfByID(string id, LanguageType language)
+        public object GetInfByID(string id, LanguageInfo language)
         {
             for (int i = 0; i < LangList.Count; i++)
             {
@@ -209,11 +233,11 @@ namespace OTP.List
                 {
                     switch (language)
                     {
-                        case LanguageType.Name:
+                        case LanguageInfo.Name:
                             return LangList[i].Name;
-                        case LanguageType.Num:
+                        case LanguageInfo.Num:
                             return LangList[i].Num;
-                        case LanguageType.Type:
+                        case LanguageInfo.Type:
                             return LangList[i].Type;
                     }
                 }
@@ -221,18 +245,13 @@ namespace OTP.List
             return null;
         }
 
-        public List<string> GetIDs()
+        public List<LangInfo> GetList()
         {
-            List<string> vs = new List<string>(100);
-            for (int i = 0; i < LangList.Count; i++)
-            {
-                vs.Add(LangList[i].ID);
-            }
-            return vs;
+            return LangList;
         }
     }
 
-    class List
+    class LangInfo
     {
         /// <summary>
         /// 语言信息列表
@@ -241,7 +260,7 @@ namespace OTP.List
         /// <param name="ID">语言标识符</param>
         /// <param name="Num">语言标识码</param>
         /// <param name="Type">语言类型</param>
-        public List(string Name, string ID, int Num, string Type)
+        public LangInfo(string Name, string ID, int Num, LanguageType Type)
         {
             this.Name = Name;
             this.ID = ID;
@@ -252,16 +271,24 @@ namespace OTP.List
         public string Name { get; }
         public string ID { get; }
         public int Num { get; }
-        public string Type { get; }
+        public LanguageType Type { get; }
     }
 
     /// <summary>
     /// 语言列表数据类型
     /// </summary>
-    public enum LanguageType
+    public enum LanguageInfo
     {
         Name = 0,
         Num = 1,
         Type = 2
+    }
+
+    enum LanguageType
+    {
+        Full = 0,
+        ProofingTools = 1,
+        Partial = 2,
+        PartialWithoutProofingTools = 3
     }
 }

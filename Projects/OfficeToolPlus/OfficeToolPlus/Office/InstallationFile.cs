@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OTP.List;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -29,7 +30,7 @@ namespace OTP
             bool bit64 = false;
             bool bit86 = false;
             List<string> file = new List<string>(10);
-            List.LanguageList languageList = new List.LanguageList();
+            LanguageList languageList = new LanguageList();
             foreach (DirectoryInfo var in ds)
             {
                 if (File.Exists(InstallationPath + "\\Office\\Data\\v64.cab") && File.Exists(InstallationPath + "\\Office\\Data\\v64_" + var.Name + ".cab")) //64位文件检测
@@ -39,6 +40,7 @@ namespace OTP
                     file.Add("\\Office\\Data\\v64_" + var.Name + ".cab");
                     file.Add("\\Office\\Data\\" + var.Name + "\\i640.cab");
                     file.Add("\\Office\\Data\\" + var.Name + "\\s640.cab");
+                    file.Add("\\Office\\Data\\" + var.Name + "\\stream.x64.x-none.dat");
                     for (int n = 0; n < file.Count - 1; n++)
                     {
                         if (File.Exists(InstallationPath + file[n].ToString()) == false)
@@ -49,16 +51,8 @@ namespace OTP
                     }
                     if (FileExists)
                     {
-                        if (File.Exists(InstallationPath + "\\Office\\Data\\" + var.Name + "\\stream.x64.x-none.dat") == true)
-                        {
-                            InstallationFileList item = new InstallationFileList(var.Name, false, null, false, "");
-                            lists.Add(item);
-                        }
-                        else
-                        {
-                            InstallationFileList item = new InstallationFileList(var.Name, false, false, false, "");
-                            lists.Add(item);
-                        }
+                        InstallationFileList item = new InstallationFileList(var.Name, false, false, "");
+                        lists.Add(item);
                     }
                 }
                 if (File.Exists(InstallationPath + "\\Office\\Data\\v32.cab") && File.Exists(InstallationPath + "\\Office\\Data\\v32_" + var.Name + ".cab"))//32位文件检测
@@ -69,6 +63,7 @@ namespace OTP
                     file.Add("\\Office\\Data\\" + var.Name + "\\i320.cab");
                     file.Add("\\Office\\Data\\" + var.Name + "\\i640.cab");
                     file.Add("\\Office\\Data\\" + var.Name + "\\s320.cab");
+                    file.Add("\\Office\\Data\\" + var.Name + "\\stream.x86.x-none.dat");
                     for (int n = 0; n < file.Count - 1; n++)
                     {
                         if (File.Exists(InstallationPath + file[n].ToString()) == false)
@@ -79,16 +74,8 @@ namespace OTP
                     }
                     if (FileExists)
                     {
-                        if (File.Exists(InstallationPath + "\\Office\\Data\\" + var.Name + "\\stream.x86.x-none.dat") == true)
-                        {
-                            InstallationFileList item = new InstallationFileList(var.Name, true, null, false, "");
-                            lists.Add(item);
-                        }
-                        else
-                        {
-                            InstallationFileList item = new InstallationFileList(var.Name, true, false, false, "");
-                            lists.Add(item);
-                        }
+                        InstallationFileList item = new InstallationFileList(var.Name, true, false, "");
+                        lists.Add(item);
                     }
                 }
             }
@@ -104,26 +91,20 @@ namespace OTP
             for (int i = 0; i < lists.Count; i++)
             {
                 lists[i].Language = new List<string>(10);
-                foreach (string id in languageList.GetIDs())
+                foreach (LangInfo lang in languageList.GetList())
                 {
-                    string num = languageList.GetInfByID(id, List.LanguageType.Num).ToString();
-                    string type = languageList.GetInfByID(id, List.LanguageType.Type).ToString();
-                    if (lists[i].Is32Platform)
+                    if (lists[i].Is32Platform == true)
                     {
-                        if (File.Exists(InstallationPath + "\\Office\\Data\\" + lists[i].Version + "\\" + "stream.x86." + id + ".dat"))//检测对应的安装文件是否存在
+                        if (File.Exists(InstallationPath + "\\Office\\Data\\" + lists[i].Version + "\\" + "stream.x86." + lang.ID + ".dat"))//检测对应的安装文件是否存在
                         {
-                            lists[i].Language.Add(id);
+                            lists[i].Language.Add(lang.ID);
                             file.Clear();
-                            if (type == "Full")
+                            if (lang.Type == LanguageType.Full)
                             {
-                                if (lists[i].IsFullPack == null)
-                                    lists[i].IsFullPack = true;
-                                file.Add(InstallationPath + "\\Office\\Data\\" + lists[i].Version + "\\i32" + num + ".cab");
-                                file.Add(InstallationPath + "\\Office\\Data\\" + lists[i].Version + "\\i64" + num + ".cab");
+                                file.Add(InstallationPath + "\\Office\\Data\\" + lists[i].Version + "\\i32" + lang.Num + ".cab");
+                                file.Add(InstallationPath + "\\Office\\Data\\" + lists[i].Version + "\\i64" + lang.Num + ".cab");
                             }
-                            else if (lists[i].IsFullPack == null)
-                                lists[i].IsFullPack = false;
-                            file.Add(InstallationPath + "\\Office\\Data\\" + lists[i].Version + "\\s32" + num + ".cab");
+                            file.Add(InstallationPath + "\\Office\\Data\\" + lists[i].Version + "\\s32" + lang.Num + ".cab");
                             for (int n = 0; n < file.Count; n++)
                             {
                                 if (File.Exists(file[n].ToString()) == false)//文件检测
@@ -156,19 +137,15 @@ namespace OTP
                     }
                     else
                     {
-                        if (File.Exists(InstallationPath + "\\Office\\Data\\" + lists[i].Version + "\\" + "stream.x64." + id + ".dat"))//检测对应的安装文件是否存在
+                        if (File.Exists(InstallationPath + "\\Office\\Data\\" + lists[i].Version + "\\" + "stream.x64." + lang.ID + ".dat"))//检测对应的安装文件是否存在
                         {
-                            lists[i].Language.Add(id);
+                            lists[i].Language.Add(lang.ID);
                             file.Clear();
-                            if (type == "Full")
+                            if (lang.Type == LanguageType.Full)
                             {
-                                if (lists[i].IsFullPack == null)
-                                    lists[i].IsFullPack = true;
-                                file.Add(InstallationPath + "\\Office\\Data\\" + lists[i].Version + "\\i64" + num + ".cab");
+                                file.Add(InstallationPath + "\\Office\\Data\\" + lists[i].Version + "\\i64" + lang.Num + ".cab");
                             }
-                            else if (lists[i].IsFullPack == null)
-                                lists[i].IsFullPack = false;
-                            file.Add(InstallationPath + "\\Office\\Data\\" + lists[i].Version + "\\s64" + num + ".cab");
+                            file.Add(InstallationPath + "\\Office\\Data\\" + lists[i].Version + "\\s64" + lang.Num + ".cab");
                             for (int n = 0; n < file.Count; n++)
                             {
                                 if (File.Exists(file[n].ToString()) == false)//文件检测
@@ -201,6 +178,14 @@ namespace OTP
                     }
                 }
             }
+            for (int i = lists.Count - 1; i > 0; i--)
+            {
+                if (lists[i].Version == lists[i - 1].Version && lists[i].HasError == lists[i - 1].HasError)
+                {
+                    lists[i - 1].Is32Platform = null;
+                    lists.RemoveAt(i);
+                }
+            }
             for (int i = 0; i < InstallationPath.Length; i++)
             {
                 if (InstallationPath[i] > 127)
@@ -215,39 +200,14 @@ namespace OTP
             string ver = string.Empty;
             for (int i = 0; i < lists.Count; i++)
             {
-                ver += lists[i].Version + " - " + lists[i].Is32Platform.ToString().Replace("True", "x86").Replace("False", "x64") + ",";
+                ver += lists[i].Version + " - " + lists[i].Is32Platform.ToString().Replace("True", "x86").Replace("False", "x64").Replace("null", "All") + ",";
             }
             return ver.Remove(ver.Length - 1);
         }
 
-        public string GetVersion(int index)
+        public List<InstallationFileList> GetInstallations()
         {
-            return lists[index].Version;
-        }
-
-        public List<string> GetLanguage(int index)
-        {
-            return lists[index].Language;
-        }
-
-        public bool Is32Platform(int index)
-        {
-            return lists[index].Is32Platform;
-        }
-
-        public bool? IsFullPack(int index)
-        {
-            return lists[index].IsFullPack;
-        }
-
-        public bool HasError(int index)
-        {
-            return lists[index].HasError;
-        }
-
-        public string GetFFN(int index)
-        {
-            return lists[index].FFN;
+            return lists;
         }
 
         public int Count()
@@ -258,19 +218,17 @@ namespace OTP
 
     class InstallationFileList
     {
-        public InstallationFileList(string Version, bool Is32Platform, bool? IsFullPack, bool HasError, string FFN)
+        public InstallationFileList(string Version, bool? Is32Platform, bool HasError, string FFN)
         {
             this.Version = Version;
             this.Is32Platform = Is32Platform;
-            this.IsFullPack = IsFullPack;
             this.HasError = HasError;
             this.FFN = FFN;
         }
 
         public string Version { get; }
         public List<string> Language { get; set; }
-        public bool Is32Platform { get; }
-        public bool? IsFullPack { get; set; }
+        public bool? Is32Platform { get; set; }
         public bool HasError { get; set; }
         public string FFN { get; set; }
     }

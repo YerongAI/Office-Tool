@@ -180,7 +180,7 @@
     <sys:String x:Key="DownloadWayThunder">Thunder</sys:String>
     <sys:String x:Key="DownloadUseHTTPS">HTTPS 연결 사용</sys:String>
     <sys:String x:Key="DownloadSettingsThunder">Thunder설정</sys:String>
-    <sys:String x:Key="DownloadSpeedLimit">속도 제한:</sys:String>
+    <sys:String x:Key="DownloadSpeedLimit">속도 제한</sys:String>
     <sys:String x:Key="DownloadSetSpeedLimit">속도 제한 설정</sys:String>
     <sys:String x:Key="DownloadProxyType">대리 유형:</sys:String>
     <sys:String x:Key="DownloadSettingsServerAddress">서버 주소:</sys:String>
@@ -374,8 +374,7 @@
     <sys:String x:Key="MsgRunScript">스크리프트 진행 일시 중지나 닫기를 피하기 위해서 진행 과정 중에 스크리프트에 대해 조치하지마세요. 계속하겠습니까?</sys:String>
     <!-- Message about Download -->
     <sys:String x:Key="MsgDownloadVerError">버전정보 가져오기 실패하였으니 버전과 채널 정확성을 확인하고 네트워크 연렬 상태 확인하세요.</sys:String>
-    <sys:String x:Key="MsgSetupDownload">공식 프로그램을 통해 다운로드 시작할 겁니다. 에러 나타나지 않도록 이미 다운로드된 파일을 전부 삭제하세요. 계속하겠습니까?</sys:String>
-    <sys:String x:Key="MsgSetupConfigError">마이크로소프트 공식 프로그램이 해당하는 운영체제나 다운로드 모드 설정을 지원하지 않아 다시 선택하고 시도하세요.</sys:String>
+    <sys:String x:Key="MsgSetupConfigError">Office Deployment Tool doesn't support the current architecture mode. Please modify the configuration and try again.</sys:String>
     <sys:String x:Key="MsgInstallationFileExist">%filename% 이미 존재하며 다시 다운로드하겠습니까?</sys:String>
     <sys:String x:Key="MsgDownloadSuccessful">설피 파일 다운로드 완료</sys:String>
     <sys:String x:Key="MsgCreateISOError">Can't find Office installation in Office Tool Plus root directory, please download installation first! Or move installation to working path.</sys:String>
@@ -404,8 +403,6 @@
     <!-- Message about Deploy Office -->
     <sys:String x:Key="MsgSelectSavePath">저장 위치 선택</sys:String>
     <sys:String x:Key="MsgSaveFileSuccessful">파일 저장 성공</sys:String>
-    <sys:String x:Key="MsgInstallLanguagePackError">Office제품 없어서 설치진행할 수 없습니다.</sys:String>
-    <sys:String x:Key="MsgProductsToAdd">제품:</sys:String>
     <sys:String x:Key="MsgExcludedApps">제외된 앱:</sys:String>
     <sys:String x:Key="MsgInstallConfigurationQuestion">상세 설정 정보 알아보려 코드를 확인하세요. 위의 기본 설정이 맞습니까?</sys:String>
     <sys:String x:Key="MsgInstallConfiguration">Office설치 설정</sys:String>
@@ -428,14 +425,14 @@
     <sys:String x:Key="ToastSaveSuccessful">저장 성공</sys:String>
     <sys:String x:Key="ToastSelectionError">Please add at least one product or language. Or select a product to configure.</sys:String>
     <sys:String x:Key="ToastNoInstallationFiles">설치 파일 없음</sys:String>
-    <sys:String x:Key="ToastDownloadError">버전 정보 가져오기 실패하여 다시 시도하거나 마이크로소프트 공식 프로그램으로 진행하세요.</sys:String>
+    <sys:String x:Key="ToastDownloadError">Unable to get version information, please try again or switch engine to Office Deployment Tool.</sys:String>
     <sys:String x:Key="ToastSetProxySuccessfully">대리 설정 성공.</sys:String>
     <sys:String x:Key="ToastSetProxyFailed">대리 설정 실패.</sys:String>
     <sys:String x:Key="ToastAllExist">모든 파일이 존재하여 다운로드할 파일 없습니다.</sys:String>
-    <sys:String x:Key="ToastSetupWorking">배치 도구가 실행되고 있어서 완료까지 기다려주세요.</sys:String>
-    <sys:String x:Key="ToastAutomicStartedSetup">자동 배치 도구 시작됨</sys:String>
-    <sys:String x:Key="ToastSetupExitedNormally">자동 배치 도구 정상 중료</sys:String>
-    <sys:String x:Key="ToastSetupExitedWithError">자도 배치 도구 비정상 중료</sys:String>
+    <sys:String x:Key="ToastSetupWorking">Office Deployment Tool is running, please wait for execution to finished and retry.</sys:String>
+    <sys:String x:Key="ToastAutomicStartedSetup">Office Deployment Tool has started automatically.</sys:String>
+    <sys:String x:Key="ToastSetupExitedNormally">Office Deployment Tool exited normally.</sys:String>
+    <sys:String x:Key="ToastSetupExitedWithError">Error occurred exiting the Office Deployment Tool.</sys:String>
     <sys:String x:Key="ToastLicensesInstallError">선택된 경로에서 증서 발견되지 않음</sys:String>
     <sys:String x:Key="ToastLicensesInstallSuccess">라이선스 설치 완료</sys:String>
     <sys:String x:Key="ToastInputError">입력 에러</sys:String>
@@ -444,7 +441,6 @@
 
     <!--  Message about ToolTip, notice that you need to control string length.  -->
     <sys:String x:Key="ToolTipEmpty">비우기</sys:String>
-    <sys:String x:Key="ToolTipChannelChanged">업데이트 채널 바꾸려면 이 옵션을 선택하세요</sys:String>
     <sys:String x:Key="ToolTipCreateShortcut">우 클릭해서 바탕화면에서 단축키를 생성한다</sys:String>
     <sys:String x:Key="ToolTipInstallWay">오프라인 설치 방식을 선택하면 소스 경로 속성은 활성화되고 않으면 활성화되자 않을겁니다.</sys:String>
     <sys:String x:Key="ToolTipMigrateArch">이송 구조가 선택되면 기존된 Office설치가 정의된 구조로 변경합니다.</sys:String>

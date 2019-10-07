@@ -180,7 +180,7 @@
     <sys:String x:Key="DownloadWayThunder">Szybki</sys:String>
     <sys:String x:Key="DownloadUseHTTPS">Połącz za pomocą protokołu HTTPS</sys:String>
     <sys:String x:Key="DownloadSettingsThunder">Ustawienia Thunder</sys:String>
-    <sys:String x:Key="DownloadSpeedLimit">Ograniczenie prędkości:</sys:String>
+    <sys:String x:Key="DownloadSpeedLimit">Ograniczenie prędkości</sys:String>
     <sys:String x:Key="DownloadSetSpeedLimit">Ustaw limit</sys:String>
     <sys:String x:Key="DownloadProxyType">Typ Proxy:</sys:String>
     <sys:String x:Key="DownloadSettingsServerAddress">Adres serwera:</sys:String>
@@ -374,9 +374,8 @@
     <sys:String x:Key="MsgRunScript">Nie manipuluj skryptem podczas wykonywania, aby zapobiec wstrzymaniu lub zamknięciu skryptu. kontynuować?</sys:String>
     <!-- Message about Download -->
     <sys:String x:Key="MsgDownloadVerError">Nie można pobrać informacji o wersji, sprawdź, czy numer wersji/kanału jest poprawny, a sieć jest w normie.</sys:String>
-    <sys:String x:Key="MsgSetupDownload">Korzystając z oficjalnego programu do pobierania plików instalacyjnych, Aby uniknąć błędów, usuń pobrany plik. Dalej?</sys:String>
-    <sys:String x:Key="MsgSetupConfigError">Oficjalny program Microsoft nie obsługuje bieżącej konfiguracji architektury/trybu pobierania, ponownie skonfiguruj, a następnie spróbuj ponownie.</sys:String>
-    <sys:String x:Key="MsgInstallationFileExist">Plik% nazwa_pliku% już istnieje, czy chcesz ponownie pobrać ten plik?</sys:String>
+    <sys:String x:Key="MsgSetupConfigError">Office Deployment Tool doesn't support the current architecture mode. Please modify the configuration and try again.</sys:String>
+    <sys:String x:Key="MsgInstallationFileExist">Plik %filename% już istnieje, czy chcesz ponownie pobrać ten plik?</sys:String>
     <sys:String x:Key="MsgDownloadSuccessful">Pliki instalacyjne zostały pobrane.</sys:String>
     <sys:String x:Key="MsgCreateISOError">Nie można znaleźć instalacji pakietu Office w katalogu głównym pakietu Office Tool Plus, najpierw pobierz instalację! Lub przenieś instalację na działającą ścieżkę.</sys:String>
     <!-- Message about Thunder -->
@@ -404,15 +403,13 @@
     <!-- Message about Deploy Office -->
     <sys:String x:Key="MsgSelectSavePath">Wybierz ścieżkę zapisu</sys:String>
     <sys:String x:Key="MsgSaveFileSuccessful">Plik zapisany pomyślnie</sys:String>
-    <sys:String x:Key="MsgInstallLanguagePackError">Nie wykryto produktów pakietu Office, nie można rozpocząć instalacji.</sys:String>
-    <sys:String x:Key="MsgProductsToAdd">Produkt(y):</sys:String>
     <sys:String x:Key="MsgExcludedApps">Wyłączone aplikacje:</sys:String>
     <sys:String x:Key="MsgInstallConfigurationQuestion">Wyświetl kod dla konfiguracji szczegółów, czy powyższa podstawowa konfiguracja jest poprawna?</sys:String>
     <sys:String x:Key="MsgInstallConfiguration">Konfiguracja instalacji pakietu Office</sys:String>
     <sys:String x:Key="MsgArchitectureError">Nie można zainstalować pakietu Office (%architecture%), ponieważ na komputerze zainstalowany jest pakiet %currentArchitecture% Office: \n\n%currentProduct%\n32-bitowe i 64-bitowe wersje programów pakietu Office nie dogadują się, więc możesz tylko jeden typ byćjest zainstalowany na raz. Spróbuj zamiast tego zainstalować wersję Office %currentArchitecture% lub odinstaluj inne programy %currentArchitecture% Office i ponów próbę instalacji.</sys:String>
     <sys:String x:Key="MsgNotificationAboutModule">Uwaga: Wybierasz instalację pakietu Office przy użyciu modułu Office Tool Plus. W tym trybie zostaną zastosowane tylko ustawienia podstawowe, a wszystkie ustawienia zaawansowane nie zostaną zastosowane. Aby użyć ustawień zaawansowanych, użyj modułu Narzędzie do wdrażania pakietu Office. Dalej?</sys:String>
     <sys:String x:Key="MsgProductsError">Office nie mógł zostać zainstalowany, ponieważ wybrałeś produkt: \n\n%product%\n\nNarzędzie Office Deployment Tool nie obsługuje instalacji produktu. Aby zainstalować produkt, zmień moduł na Office Tool Plus w ustawieniach instalacji lub wybierz inny produkt i spróbuj ponownie zainstalować.</sys:String>
-    <sys:String x:Key="MsgChannelError">Nie można zainstalować pakietu Office, ponieważ wybrałeś produkt pakietu Office 2019 Volume:\n\n%produktu%\n\nW pakiecie Office 2019 Volume należy zainstalować w kanale Office 2019 Perpetual Enterprise, zmień kanał w ustawieniach instalacji i spróbuj ponownie lub zainstaluj ponownie inne produkty biurowe. Jeśli używasz instalacji offline, upewnij się, że pobrałeś instalację z właściwego kanału.</sys:String>
+    <sys:String x:Key="MsgChannelError">Nie można zainstalować pakietu Office, ponieważ wybrałeś produkt pakietu Office 2019 Volume:\n\n%product%\n\nW pakiecie Office 2019 Volume należy zainstalować w kanale Office 2019 Perpetual Enterprise, zmień kanał w ustawieniach instalacji i spróbuj ponownie lub zainstaluj ponownie inne produkty biurowe. Jeśli używasz instalacji offline, upewnij się, że pobrałeś instalację z właściwego kanału.</sys:String>
     <!-- Message about Activate Office -->
     <sys:String x:Key="MsgSelectLicensesPath">Wybierz folder zawierający licencje.</sys:String>
     <sys:String x:Key="MsgInstallLicenses">Możesz nie widzieć informacji o aktywacji w pakiecie Office po zainstalowaniu licencji Office, ale możesz wyświetlać informacje lub aktywować Office przez OTP. Kontynuować?</sys:String>
@@ -429,13 +426,13 @@
     <sys:String x:Key="ToastSelectionError">Dodaj co najmniej jeden produkt lub język. Lub wybierz produkt do skonfigurowania.</sys:String>
     <sys:String x:Key="ToastNoInstallationFiles">Nie znaleziono pliku instalacyjnego.</sys:String>
     <sys:String x:Key="ToastAllExist">Nie ma potrzeby pobierania pliku, wszystkie pliki istnieją.</sys:String>
-    <sys:String x:Key="ToastDownloadError">Nie można uzyskać informacji o wersji, spróbuj ponownie lub przełącz silnik na Normalny.</sys:String>
+    <sys:String x:Key="ToastDownloadError">Unable to get version information, please try again or switch engine to Office Deployment Tool.</sys:String>
     <sys:String x:Key="ToastSetProxySuccessfully">Ustawiono pomyślnie serwer proxy.</sys:String>
     <sys:String x:Key="ToastSetProxyFailed">Ustawienie proxy nie powiodło się!</sys:String>
-    <sys:String x:Key="ToastSetupWorking">Narzędzie do wdrażania działa, proszę czekać na zakończenie wykonywania i spróbować ponownie.</sys:String>
-    <sys:String x:Key="ToastAutomicStartedSetup">Narzędzie do wdrażania uruchomiło się automatycznie.</sys:String>
-    <sys:String x:Key="ToastSetupExitedNormally">Narzędzie do wdrażania zostało zakończone normalnie.</sys:String>
-    <sys:String x:Key="ToastSetupExitedWithError">Narzędzie do wdrażania zakończyło się błędem.</sys:String>
+    <sys:String x:Key="ToastSetupWorking">Office Deployment Tool is running, please wait for execution to finished and retry.</sys:String>
+    <sys:String x:Key="ToastAutomicStartedSetup">Office Deployment Tool has started automatically.</sys:String>
+    <sys:String x:Key="ToastSetupExitedNormally">Office Deployment Tool exited normally.</sys:String>
+    <sys:String x:Key="ToastSetupExitedWithError">Error occurred exiting the Office Deployment Tool.</sys:String>
     <sys:String x:Key="ToastLicensesInstallError">Brak plików licencji znalezionych w wybranym katalogu.</sys:String>
     <sys:String x:Key="ToastLicensesInstallSuccess">Zainstalowane licencje.</sys:String>
     <sys:String x:Key="ToastInputError">Nieprawidłowe dane wejściowe.</sys:String>
@@ -444,7 +441,6 @@
 
     <!-- Message about ToolTip, notice that you need to control string length. -->
     <sys:String x:Key="ToolTipEmpty">Pusty</sys:String>
-    <sys:String x:Key="ToolTipChannelChanged">Sprawdź to po zmianie kanału aktualizacji.</sys:String>
     <sys:String x:Key="ToolTipCreateShortcut">Kliknij prawym przyciskiem myszy, aby utworzyć skrót na pulpicie.</sys:String>
     <sys:String x:Key="ToolTipInstallWay">Jeśli wybierzesz offline, atrybut Ścieżka źródłowa zostanie zastosowany.</sys:String>
     <sys:String x:Key="ToolTipMigrateArch">Jeśli architektura migracji jest zaznaczona, istniejąca instalacja pakietu Office zostanie zmieniona na obecnie określoną architekturę.</sys:String>

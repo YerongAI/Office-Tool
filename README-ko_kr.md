@@ -1,6 +1,6 @@
 ﻿# Office Tool Plus
 
-[English](/README.md) | [简体中文](/README-zh_cn.md) | [繁體中文](/README-zh_tw.md) | 한국어 | [Italiano](/README-it_it.md) | [ไทย/Thai](/README-th_th.md)
+[English](/README.md) | [简体中文](/README-zh_cn.md) | [繁體中文](/README-zh_tw.md) | 한국어 | [Italiano](/README-it_it.md) | [ไทย/Thai](/README-th_th.md) | [polski](/README-pl_pl.md)
 
 Office Tool Plus는 하나의 Office 관리, 다운로드와 설치 보조 툴입니다.
 

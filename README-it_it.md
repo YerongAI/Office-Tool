@@ -1,6 +1,6 @@
 ﻿# Office Tool Plus
 
-[English](/README.md) | [简体中文](/README-zh_cn.md) | [繁體中文](/README-zh_tw.md) | [한국어](/README-ko_kr.md) | Italiano | [ไทย/Thai](/README-th_th.md)
+[English](/README.md) | [简体中文](/README-zh_cn.md) | [繁體中文](/README-zh_tw.md) | [한국어](/README-ko_kr.md) | Italiano | [ไทย/Thai](/README-th_th.md) | [polski](/README-pl_pl.md)
 
 Office Tool Plus è uno strumento per la gestione, il download e l'installazione di Office.
 

@@ -4,6 +4,60 @@ Just for viewing. ```DO NOT TRANSLATE IT.```
 
 ---
 
+Update for v.6.6.0　　　　　　　　　　　　2019/09/18
+
+---
+
+1. 修复了当 Office 离线路径为小写时，无法正确识别离线文件的问题。
+2. 优化了 Office 安装配置逻辑。
+3. 修复了无法自动更新在线资源的问题。
+
+Update for v.6.5.0　　　　　　　　　　　　2019/08/08
+
+---
+
+1. 添加了西班牙语(西班牙) español (España, alfabetización internacional).
+
+Update for v.6.4.0　　　　　　　　　　　　2019/07/24
+
+---
+
+1. 支持 Markdown 格式的文本，现在已应用到说明中，使用户能更好地理解。
+2. 修复了在线安装报错 404 的问题。
+
+Update for v.6.3.3　　　　　　　　　　　　2019/07/17
+
+---
+
+1. 优化转换文档操作逻辑，修复很多情况下无法正常转换的问题。
+2. 修复无法更改更新通道的问题。
+3. 修复 Updates 中 Channel 设置错误的问题。
+4. 修复 XML 文档中生成的参数有误的问题。
+
+Update for v.6.3.2　　　　　　　　　　　　2019/07/08
+
+---
+
+1. 更新检查版本号的方式，解决检查版本号时，获得的版本号过旧的问题。
+
+Update for v.6.3.0　　　　　　　　　　　　2019/06/13
+
+---
+
+1. 将 Office Tool Lite 中的功能迁移到 Office Tool Plus 中，OTL 不再维护。
+
+Update for v.6.2.3　　　　　　　　　　　　2019/06/09
+
+---
+
+1. 添加了意大利语 (it-it)，感谢 garf02。
+
+Update for v.6.2.2　　　　　　　　　　　　2019/06/01
+
+---
+
+1. 在 Win 10 系统下可自适应暗黑主题。
+
 Update for v.6.2.0　　　　　　　　　　　　2019/05/17
 
 ---

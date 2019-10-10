@@ -66,6 +66,10 @@ namespace OTP
                 if (h != null)
                 {
                     ClickToRunLanguage = h.ToString();
+                    Languages = new List<string>
+                    {
+                        ClickToRunLanguage
+                    };
                 }
                 h = subKey.GetValue("ClientFolder");//C2R 所在目录
                 if (h != null)
@@ -81,6 +85,7 @@ namespace OTP
                 h = subKey.GetValue("ProductReleaseIds");//已安装产品
                 if (h != null)
                 {
+
                     string registData = h.ToString();
                     subKey = localKey.OpenSubKey(@"SOFTWARE\Microsoft\Office\ClickToRun\Configuration");
 
@@ -101,10 +106,6 @@ namespace OTP
                         if (h != null)
                             owner = h.ToString();
 
-                        Languages = new List<string>
-                        {
-                            ClickToRunLanguage
-                        };
                         foreach (string s in tempKey.GetSubKeyNames())
                         {
                             if (s.Contains(id))

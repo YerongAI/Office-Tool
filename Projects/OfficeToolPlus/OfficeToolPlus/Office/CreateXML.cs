@@ -4,6 +4,7 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Linq;
 using System.IO;
+using OTP.List;
 
 namespace OTP
 {
@@ -144,50 +145,9 @@ namespace OTP
                 RemoveOffice = removeOffice;
             }
 
-            /// <summary>
-            /// 获取指定元素的产品 ID，index 指定元素下标
-            /// </summary>
-            public string GetProduct(int index)
+            public List<InstallConfig> GetProductsList()
             {
-                if (index >= ProductConfigList.Count)
-                    throw new Exception("Index out of list length!");
-                else
-                    return ProductConfigList[index].ProductID;
-            }
-
-            /// <summary>
-            /// 获取指定元素的MAK，index 指定元素下标
-            /// </summary>
-            public string GetMAK(int index)
-            {
-                if (index >= ProductConfigList.Count)
-                    throw new Exception("Index out of list length!");
-                else if (GetProduct(index).Contains("Volume"))
-                    return ProductConfigList[index].MAK;
-                else
-                    return string.Empty;
-            }
-
-            /// <summary>
-            /// 获取指定元素的语言 ID，index 指定元素下标
-            /// </summary>
-            public List<string> GetLanguage(int index)
-            {
-                if (index >= ProductConfigList.Count)
-                    throw new Exception("Index out of list length!");
-                else
-                    return ProductConfigList[index].LanguageID;
-            }
-
-            /// <summary>
-            /// 获取指定元素的排除的应用程序，index 指定元素下标
-            /// </summary>
-            public List<string> GetExcludeApp(int index)
-            {
-                if (index >= ProductConfigList.Count)
-                    throw new Exception("Index out of list length!");
-                else
-                    return ProductConfigList[index].ExcludeApps;
+                return ProductConfigList;
             }
 
             /// <summary>
@@ -196,14 +156,6 @@ namespace OTP
             public int Length()
             {
                 return ProductConfigList.Count;
-            }
-
-            /// <summary>
-            /// 清空所有的元素
-            /// </summary>
-            public void Clear()
-            {
-                ProductConfigList.Clear();
             }
 
             /// <summary>
@@ -425,7 +377,7 @@ namespace OTP
                 }
             }
 
-        class InstallConfig//安装配置信息构造
+        public class InstallConfig//安装配置信息构造
         {
             public InstallConfig(string ProductID, string MAK, List<string> LanguageID, string FallbackLanguage, List<string> ExcludeApps)
             {

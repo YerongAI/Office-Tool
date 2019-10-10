@@ -6,7 +6,7 @@
 
 ---
 
-**当您可以通过正常操作卸载 Office 时，请不要随意强制移除 Office！**仅当 Office 无法正常卸载时，才应该通过内置的工具/脚本强制删除 Office。此类脚本/工具均收集与微软官方网站，可放心使用！`执行过程中，请不要操作计算机，避免造成脚本/工具的卡顿。`
+**当您可以通过正常操作卸载 Office 时，请不要随意强制移除 Office！**仅当 Office 无法正常卸载时，才应该通过内置的工具/脚本强制删除 Office。此类脚本/工具均收集于微软官方网站，可放心使用！`执行过程中，请不要操作计算机，避免造成脚本/工具的卡顿。`
 
 ## 文档转换说明
 
@@ -24,7 +24,7 @@
 
 ### Word
 
-```txt
+```
 docx		Word 文档
 docm		启用宏的 Word 文档
 doc		Word 97-2003 文档
@@ -46,7 +46,7 @@ odt		OpenDocument 文本
 
 ### PowerPoint
 
-```txt
+```
 pptx	PowerPoint 演示文稿
 pptm	启用宏的 PowerPoint 演示文稿
 ppt	PowerPoint 97-2003 演示文稿
@@ -79,7 +79,7 @@ odp	OpenDocument 演示文稿
 
 ### Excel
 
-```txt
+```
 xlsx		Excel 工作簿
 xlsm		Excel 启用宏的工作簿
 xlsb		Excel 二进制工作簿

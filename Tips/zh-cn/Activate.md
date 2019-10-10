@@ -1,10 +1,6 @@
 # 激活 Office 说明
 
-`本工具没有任何破解、修改行为，请放心使用。`
-
-```txt
 若您使用本工具激活失败，首先检查自己操作是否有误，下方说明中有 Office 的激活步骤说明，若您确定您的操作无误但又无法激活 Office，建议检查系统是否有问题。激活成功后，Office 各项功能均可正常使用，可以登录微软账号。
-```
 
 ## 目录
 
@@ -16,7 +12,7 @@
 4. 查询激活状态
 5. 清除 Office 激活信息
 6. 常见错误以及解决办法
-7. GVLK 密钥列表
+7. GVLK 列表
 
 ## 安装证书
 
@@ -48,12 +44,7 @@
 
 激活前，请确保您的 Office 是批量版，如果不确定，请安装对应的 批量（Volume）证书，比如你要激活 Office 2016 就安装 Office 2016 Volume 证书，`然后设定一个 KMS 地址`，当一切配置无误、网络正常、服务器正常的情况下，点击激活按钮，Office 将会顺利激活。
 
-`KMS 激活成功后，Office 会默认 7 天与服务器连接一次并自动续期，最大持续激活时间为 180 天。`
-当服务器正常，系统正常，网络正常的默认情况下，激活剩余时间不会低于 172 天，因此也可以达到 “永久激活” 的效果。
-`此步骤由 Windows 自行完成，无需人工干涉，也没有任何后台程序驻留。`
-
-OTP 保证不会对用户的计算机进行任何未经授权的修改，更不会进行任何破解。
-对于 KMS 服务器，您可以在受支持的路由器上搭建一个，或者是百度搜索 KMS 服务器地址即可。
+`KMS 激活成功后，Office 会默认 7 天与服务器连接一次并自动续期，最大持续激活时间为 180 天。此步骤由 Windows 自行完成，无需人工干涉，也没有任何后台程序驻留。`
 
 ## 检测 KMS 可用性
 
@@ -135,7 +126,7 @@ Sending activation request (KMS V4) 1 of 1  -> 03612-00206-524-247319-03-1100-14
 错误原因：系统关键服务被禁用
 解决办法：在“服务”中将 Windows Management Instrumentation 服务启用，启用后，再次尝试操作。
 
-## GVLK 密钥列表
+## GVLK 列表
 
 ---
 
@@ -146,7 +137,7 @@ Sending activation request (KMS V4) 1 of 1  -> 03612-00206-524-247319-03-1100-14
 获取更多信息请访问 [用于 Office 2019 和 Office 2016 的 KMS 和基于 Active Directory 激活的 GVLK](https://docs.microsoft.com/zh-cn/DeployOffice/vlactivation/gvlks)
 
 ```txt
-Office 2019 GVLK 密钥
+Office 2019 GVLK
 
 Office Pro Plus 2019	NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP
 Office Standard 2019	6NWWJ-YQWMR-QKGCB-6TMB3-9D9HK
@@ -162,7 +153,7 @@ Publisher 2019		G2KWX-3NW6P-PY93R-JXK2T-C9Y9V
 Skype for Business	NCJ33-JHBBY-HTK98-MYCV8-HMKHJ
 Word 2019		PBX3G-NWMT6-Q7XBW-PYJGG-WXD33
 
-Office 2016 GVLK 密钥
+Office 2016 GVLK
 
 Office Pro Plus 2016	XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99
 Office Standard 2016	JNRGM-WHDWX-FJJG3-K47QV-DRTFM

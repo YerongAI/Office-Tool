@@ -288,7 +288,6 @@
     <sys:String x:Key="ActivateViewLicenses">Отобразить информацию о лицензии для установленных лицензий.</sys:String>
     <sys:String x:Key="ActivateViewFailureHistory">Отобразить историю отказов MAK/Retail активации.</sys:String>
     <sys:String x:Key="ActivateViewKMSHistory">Отобразить историю активации KMS.</sys:String>
-    <sys:String x:Key="ActivateResult">Результат</sys:String>
     <!-- Tool Box Page -->
     <sys:String x:Key="ToolboxRepair">Repair</sys:String>
     <sys:String x:Key="ToolboxRemoveOffice">Force Remove Office</sys:String>
@@ -409,7 +408,8 @@
     <sys:String x:Key="MsgArchitectureError">Office (%architecture%) couldn't be installed because you have the %currentArchitecture% Office installed on your computer:\n\n%currentProduct%\n32 bit and 64 bit versions of Office programs don't get along, so you can only have one type installed at a time. Please try installing the %currentArchitecture% version of Office instead, or uninstall your other %currentArchitecture% Office programs and try this installation again.</sys:String>
     <sys:String x:Key="MsgNotificationAboutModule">Note: You choose to install Office using the Office Tool Plus module. In this mode, only the basic settings will be applied and all advanced settings will not take effect. To use advanced settings, use the Office Deployment Tool module. Continue?</sys:String>
     <sys:String x:Key="MsgProductsError">Office couldn't be installed because you selected the product: \n\n%product%\n\nOffice Deployment Tool doesn't support installing the product. To install the product, change the module to Office Tool Plus in install settings, or select another product and try your installation again.</sys:String>
-    <sys:String x:Key="MsgChannelError">Office couldn't be installed because you selected the Office 2019 Volume product:\n\n%product%\n\nOffice 2019 Volume must be installed in Office 2019 Perpetual Enterprise channel, please change channel in install settings and try again, or install other Office products. If you are using offline installation, please make sure you downloaded installation from the correct channel.</sys:String>
+    <sys:String x:Key="MsgAddProductError">Office couldn't be installed, the following products can't coexist:\n\nSelected products:\n%selectedProduct%\nInstalled products:\n%product%\nPlease uninstall the installed products, or select another product to install.</sys:String>
+    <sys:String x:Key="MsgChannelError">Office couldn't be installed. The following product can't be installed on the selected channel: \n\n%selectedProduct%\n\nPlease change the channel, or select another product and try again. If you are using offline installation, please make sure you've downloaded the Office installation files from the correct channel.</sys:String>
     <!-- Message about Activate Office -->
     <sys:String x:Key="MsgSelectLicensesPath">Выберите папку, содержащую лицензии.</sys:String>
     <sys:String x:Key="MsgInstallLicenses">Вы не можете видеть информацию об активации в Office после установки лицензии Office, но вы можете просмотреть информацию или активировать Office через OTP. Продолжить?</sys:String>
@@ -424,6 +424,7 @@
     <sys:String x:Key="ToastInstallationError">Some installation files are missed, please redownload or select another floder.</sys:String>
     <sys:String x:Key="ToastSaveSuccessful">Save successful.</sys:String>
     <sys:String x:Key="ToastSelectionError">Не выбран ни один пакет или продукт.</sys:String>
+    <sys:String x:Key="ToastUninstallLanguagePackError">You can't uninstall all language packs that are full types.</sys:String>
     <sys:String x:Key="ToastNoInstallationFiles">No installation file found.</sys:String>
     <sys:String x:Key="ToastAllExist">Нет необходимости загружать файл, все файлы существуют.</sys:String>
     <sys:String x:Key="ToastDownloadError">Unable to get version information, please try again or switch engine to Office Deployment Tool.</sys:String>

@@ -1,11 +1,10 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace OTP.List
 {
     class LanguageList
     {
-		// Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
-	
+        // Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
         // For more information please visit: https://docs.microsoft.com/en-us/DeployOffice/overview-of-deploying-languages-in-office-365-proplus#languages-culture-codes-and-companion-proofing-languages
         private static readonly List<LangInfo> LangList = new List<LangInfo>(110);
         public LanguageList()
@@ -227,20 +226,18 @@ namespace OTP.List
         /// <returns></returns>
         public object GetInfByID(string id, LanguageInfo language)
         {
-            for (int i = 0; i < LangList.Count; i++)
+            foreach (LangInfo lang in LangList)
             {
-                if (LangList[i].ID == id)
-                {
+                if (lang.ID == id)
                     switch (language)
                     {
                         case LanguageInfo.Name:
-                            return LangList[i].Name;
+                            return lang.Name;
                         case LanguageInfo.Num:
-                            return LangList[i].Num;
+                            return lang.Num;
                         case LanguageInfo.Type:
-                            return LangList[i].Type;
+                            return lang.Type;
                     }
-                }
             }
             return null;
         }

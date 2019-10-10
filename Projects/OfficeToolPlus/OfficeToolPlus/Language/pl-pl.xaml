@@ -171,9 +171,9 @@
     <sys:String x:Key="DownloadStart">Start</sys:String>
     <sys:String x:Key="DownloadPause">Pauza</sys:String>
     <sys:String x:Key="DownloadResume">Wznów</sys:String>
+    <sys:String x:Key="DownloadCancel">Anulować</sys:String>
     <sys:String x:Key="DownloadChannel">Kanał:</sys:String>
     <sys:String x:Key="DownloadHistoricVersion">Wersja historyczna (opcjonalny):</sys:String>
-    <sys:String x:Key="DownloadUnknown">Nieznany</sys:String>
     <sys:String x:Key="DownloadLanguage">Język</sys:String>
     <sys:String x:Key="DownloadDownloadSettings">Ustawienia pobierania</sys:String>
     <sys:String x:Key="DownloadDownloadWay">Sposób:</sys:String>
@@ -288,7 +288,6 @@
     <sys:String x:Key="ActivateViewLicenses">Wyświetl informacje o licencji dla zainstalowanych licencji.</sys:String>
     <sys:String x:Key="ActivateViewFailureHistory">Wyświetla historię awarii MAK/Aktywacja detaliczna.</sys:String>
     <sys:String x:Key="ActivateViewKMSHistory">Wyświetl historię aktywacji klienta KMS.</sys:String>
-    <sys:String x:Key="ActivateResult">Wynik</sys:String>
     <!-- Toolbox Page -->
     <sys:String x:Key="ToolboxRepair">Naprawa</sys:String>
     <sys:String x:Key="ToolboxRemoveOffice">Wymuś usunięcie pakietu Office</sys:String>
@@ -374,7 +373,7 @@
     <sys:String x:Key="MsgRunScript">Nie manipuluj skryptem podczas wykonywania, aby zapobiec wstrzymaniu lub zamknięciu skryptu. kontynuować?</sys:String>
     <!-- Message about Download -->
     <sys:String x:Key="MsgDownloadVerError">Nie można pobrać informacji o wersji, sprawdź, czy numer wersji/kanału jest poprawny, a sieć jest w normie.</sys:String>
-    <sys:String x:Key="MsgSetupConfigError">Office Deployment Tool doesn't support the current architecture mode. Please modify the configuration and try again.</sys:String>
+    <sys:String x:Key="MsgSetupConfigError">Narzędzie do wdrażania pakietu Office nie obsługuje bieżącego trybu architektury. Zmodyfikuj konfigurację i spróbuj ponownie.</sys:String>
     <sys:String x:Key="MsgInstallationFileExist">Plik %filename% już istnieje, czy chcesz ponownie pobrać ten plik?</sys:String>
     <sys:String x:Key="MsgDownloadSuccessful">Pliki instalacyjne zostały pobrane.</sys:String>
     <sys:String x:Key="MsgCreateISOError">Nie można znaleźć instalacji pakietu Office w katalogu głównym pakietu Office Tool Plus, najpierw pobierz instalację! Lub przenieś instalację na działającą ścieżkę.</sys:String>
@@ -409,7 +408,8 @@
     <sys:String x:Key="MsgArchitectureError">Nie można zainstalować pakietu Office (%architecture%), ponieważ na komputerze zainstalowany jest pakiet %currentArchitecture% Office: \n\n%currentProduct%\n32-bitowe i 64-bitowe wersje programów pakietu Office nie dogadują się, więc możesz tylko jeden typ byćjest zainstalowany na raz. Spróbuj zamiast tego zainstalować wersję Office %currentArchitecture% lub odinstaluj inne programy %currentArchitecture% Office i ponów próbę instalacji.</sys:String>
     <sys:String x:Key="MsgNotificationAboutModule">Uwaga: Wybierasz instalację pakietu Office przy użyciu modułu Office Tool Plus. W tym trybie zostaną zastosowane tylko ustawienia podstawowe, a wszystkie ustawienia zaawansowane nie zostaną zastosowane. Aby użyć ustawień zaawansowanych, użyj modułu Narzędzie do wdrażania pakietu Office. Dalej?</sys:String>
     <sys:String x:Key="MsgProductsError">Office nie mógł zostać zainstalowany, ponieważ wybrałeś produkt: \n\n%product%\n\nNarzędzie Office Deployment Tool nie obsługuje instalacji produktu. Aby zainstalować produkt, zmień moduł na Office Tool Plus w ustawieniach instalacji lub wybierz inny produkt i spróbuj ponownie zainstalować.</sys:String>
-    <sys:String x:Key="MsgChannelError">Nie można zainstalować pakietu Office, ponieważ wybrałeś produkt pakietu Office 2019 Volume:\n\n%product%\n\nW pakiecie Office 2019 Volume należy zainstalować w kanale Office 2019 Perpetual Enterprise, zmień kanał w ustawieniach instalacji i spróbuj ponownie lub zainstaluj ponownie inne produkty biurowe. Jeśli używasz instalacji offline, upewnij się, że pobrałeś instalację z właściwego kanału.</sys:String>
+    <sys:String x:Key="MsgAddProductError">Nie można zainstalować pakietu Office, następujące produkty nie mogą współistnieć:\n\nSelected products:\n%selectedProduct%\nZainstalowane produkty:\n%product%\nOdinstaluj zainstalowane produkty lub wybierz inny produkt do zainstalowania.</sys:String>
+    <sys:String x:Key="MsgChannelError">Nie można zainstalować pakietu Office. Następującego produktu nie można zainstalować na wybranym kanale: \n\n%selectedProduct%\n\nZmień kanał lub wybierz inny produkt i spróbuj ponownie. Jeśli korzystasz z instalacji offline, upewnij się, że pliki instalacyjne pakietu Office zostały pobrane z właściwego kanału.</sys:String>
     <!-- Message about Activate Office -->
     <sys:String x:Key="MsgSelectLicensesPath">Wybierz folder zawierający licencje.</sys:String>
     <sys:String x:Key="MsgInstallLicenses">Możesz nie widzieć informacji o aktywacji w pakiecie Office po zainstalowaniu licencji Office, ale możesz wyświetlać informacje lub aktywować Office przez OTP. Kontynuować?</sys:String>
@@ -424,15 +424,16 @@
     <sys:String x:Key="ToastInstallationError">Niektóre pliki instalacyjne są pomijane, ponownie pobierz lub wybierz inny folder.</sys:String>
     <sys:String x:Key="ToastSaveSuccessful">Zapisano pomyślnie.</sys:String>
     <sys:String x:Key="ToastSelectionError">Dodaj co najmniej jeden produkt lub język. Lub wybierz produkt do skonfigurowania.</sys:String>
+    <sys:String x:Key="ToastUninstallLanguagePackError">Nie można odinstalować wszystkich pakietów językowych, które są pełnymi typami.</sys:String>
     <sys:String x:Key="ToastNoInstallationFiles">Nie znaleziono pliku instalacyjnego.</sys:String>
     <sys:String x:Key="ToastAllExist">Nie ma potrzeby pobierania pliku, wszystkie pliki istnieją.</sys:String>
-    <sys:String x:Key="ToastDownloadError">Unable to get version information, please try again or switch engine to Office Deployment Tool.</sys:String>
+    <sys:String x:Key="ToastDownloadError">Nie można uzyskać informacji o wersji, spróbuj ponownie lub przełącz silnik na narzędzie narzędzie do wdrażania pakietu Office.</sys:String>
     <sys:String x:Key="ToastSetProxySuccessfully">Ustawiono pomyślnie serwer proxy.</sys:String>
     <sys:String x:Key="ToastSetProxyFailed">Ustawienie proxy nie powiodło się!</sys:String>
-    <sys:String x:Key="ToastSetupWorking">Office Deployment Tool is running, please wait for execution to finished and retry.</sys:String>
-    <sys:String x:Key="ToastAutomicStartedSetup">Office Deployment Tool has started automatically.</sys:String>
-    <sys:String x:Key="ToastSetupExitedNormally">Office Deployment Tool exited normally.</sys:String>
-    <sys:String x:Key="ToastSetupExitedWithError">Error occurred exiting the Office Deployment Tool.</sys:String>
+    <sys:String x:Key="ToastSetupWorking">Narzędzie do wdrażania pakietu Office jest uruchomione. Poczekaj na zakończenie wykonywania i spróbuj ponownie.</sys:String>
+    <sys:String x:Key="ToastAutomicStartedSetup">Narzędzie do wdrażania pakietu Office uruchomiło się automatycznie.</sys:String>
+    <sys:String x:Key="ToastSetupExitedNormally">Narzędzie do wdrażania pakietu Office zostało zakończone normalnie.</sys:String>
+    <sys:String x:Key="ToastSetupExitedWithError">Wystąpił błąd podczas wychodzenia z narzędzia narzędzie do wdrażania pakietu Office.</sys:String>
     <sys:String x:Key="ToastLicensesInstallError">Brak plików licencji znalezionych w wybranym katalogu.</sys:String>
     <sys:String x:Key="ToastLicensesInstallSuccess">Zainstalowane licencje.</sys:String>
     <sys:String x:Key="ToastInputError">Nieprawidłowe dane wejściowe.</sys:String>

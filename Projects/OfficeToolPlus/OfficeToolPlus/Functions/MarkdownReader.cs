@@ -91,7 +91,7 @@ namespace OfficeTool.Functions
                     AddLine();
                     AddText("\n");
                 }
-                else if (line.Contains("```") && line.Replace("`", "").Length == 0)
+                else if (line.StartsWith("```"))
                 {
                     AddText(GetText(list));
                     // 代码块（伪，无语法高亮，且只能单独复制）

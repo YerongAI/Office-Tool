@@ -2,13 +2,9 @@
 
 ## What is Tips
 
----
-
 Tips is the help text that is used in the description in the upper right corner of the Office Tool Plus. Users can read these help texts to learn how to use Office Tool Plus.
 
 ## How To Translate
-
----
 
 We recommend using Visual Studio Code or other markdown text editors to translate these texts.
 
@@ -33,7 +29,5 @@ https://docs.microsoft.com/en-us/DeployOffice/vlactivation/gvlks
 Or you can open this website, get links to other languages ​​and replace them in the help content.
 
 ## Finally
-
----
 
 When you submit your translation, we will update it to the Office Tool Plus documentation. You can bring your translation signature.

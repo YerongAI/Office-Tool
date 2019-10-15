@@ -10,7 +10,7 @@ Além do mais, você pode gerenciar seu Office instalado, adicionar pacotes de i
 
 ## Download Office Tool Plus
 
-[Website Oficial](https://otp.landian.vip/zh-cn/)
+[Site Oficial](https://otp.landian.vip/zh-cn/)
 
 [Download alternativo](https://delivery.yuntu.moe/office-tool/) por [云图小镇](https://www.yuntu.moe/)
 

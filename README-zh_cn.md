@@ -1,6 +1,6 @@
 ﻿# Office Tool Plus
 
-[English](/README.md) | 简体中文 | [繁體中文](/README-zh_tw.md) | [한국어](/README-ko_kr.md) | [Italiano](/README-it_it.md) | [ไทย/Thai](/README-th_th.md) | [polski](/README-pl_pl.md)
+[English](/README.md) | 简体中文 | [繁體中文](/README-zh_tw.md) | [한국어](/README-ko_kr.md) | [Italiano](/README-it_it.md) | [ไทย/Thai](/README-th_th.md) | [polski](/README-pl_pl.md) | [Brazilian Portuguese](/README-pt_br.md)
 
 Office Tool Plus 是一个用来管理、下载、安装 Office 的小工具。
 

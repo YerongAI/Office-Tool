@@ -1,6 +1,6 @@
 ﻿# Office Tool Plus
 
-polski | [English](/README.md) | [简体 中文] (/ README-zh_cn.md) | [繁體 中文] (/ README-zh_tw.md) | [한국어] (/ README-ko_kr.md) | [Italiano] (/ README-it_it.md) | [ไทย /Thai](/README-th_th.md)
+polski | [English](/README.md) | [简体 中文] (/ README-zh_cn.md) | [繁體 中文] (/ README-zh_tw.md) | [한국어] (/ README-ko_kr.md) | [Italiano] (/ README-it_it.md) | [ไทย /Thai](/README-th_th.md) | [Brazilian Portuguese](/README-pt_br.md)
 
 Office Tool Plus to narzędzie do zarządzania, pobierania i instalowania pakietu Office.
 
@@ -10,13 +10,13 @@ Co więcej, możesz zarządzać zainstalowanym pakietem Office, dodawać pakiety
 
 ## Pobierz Office Tool Plus
 
-[Oficjalna strona] (https://otp.landian.vip/zh-cn/)
+[Oficjalna strona](https://otp.landian.vip/zh-cn/)
 
-[Mirror download] (https://delivery.yuntu.moe/office-tool/) autor: [云图 小镇] (https://www.yuntu.moe/)
+[Mirror download](https://delivery.yuntu.moe/office-tool/) autor: [云图 小镇](https://www.yuntu.moe/)
 
 ## Artykuły techniczne
 
-[Opcje konfiguracji] (https://docs.microsoft.com/en-us/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)
+[Opcje konfiguracji](https://docs.microsoft.com/en-us/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)
 
 ## Szybki start
 
@@ -30,20 +30,20 @@ Musisz aktywować pakiet Office po instalacji.
 
 ## Legalność aplikacji
 
-Pakiet Office Tool Plus jest oparty na narzędziu Microsoft [Office Deployment Tool] (https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run). I dodaliśmy niektóre funkcje zgodnie z potrzebami użytkowników.
+Pakiet Office Tool Plus jest oparty na narzędziu Microsoft [Office Deployment Tool](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run). I dodaliśmy niektóre funkcje zgodnie z potrzebami użytkowników.
 
 ### Informacje o aktywacji funkcji
 
 Funkcja aktywacji została oparta na Microsoft ospp.vbs (Office Software Protect Platform), wszystkie operacje aktywacji są wykonywane przez ospp.vbs. Aby umożliwić użytkownikom lepsze zrozumienie OSPP, przetłumaczyliśmy go (zh-cn, zh-tw).
 
-Opis OSPP można wyświetlić w `` C: \ Program Files \ Microsoft Office \ Office16 \ OSPP.HTM '' `` (wymagany pakiet Office).
+Opis OSPP można wyświetlić w ``C: \ Program Files \ Microsoft Office \ Office16 \ OSPP.HTM ''`` (wymagany pakiet Office).
 
 ## Dzięki współpracownikom
 
-- Portugalski (Brazylia) / [Hélio de Souza] (https://sway.office.com/RVue6qySNJ2DzYrs?ref=Link)
+- Portugalski (Brazylia) / [Hélio de Souza](https://sway.office.com/RVue6qySNJ2DzYrs?ref=Link)
 - polski (Polska) / JakubDriver
-- Koreański (Korea) / [Jay Jang] (https://github.com/yaeyaya)
-- Chiński tradycyjny (Tajwan) / [Yi Chi] (https://github.com/chiyi4488)
+- Koreański (Korea) / [Jay Jang](https://github.com/yaeyaya)
+- Chiński tradycyjny (Tajwan) / [Yi Chi](https://github.com/chiyi4488)
 
 ## Pomoc z lokalizacją
 
@@ -51,7 +51,7 @@ Zachęcamy wszystkich do pomocy w lokalizacji. Oto jak to zrobić.
 
 1. Rozwidlaj to repozytorium
 
-2. Przetłumacz `` zh-cn.xaml`` na swój język, a następnie zapisz go jak `` zh-tw.xaml````
+2. Przetłumacz ``zh-cn.xaml`` na swój język, a następnie zapisz go jak `` zh-tw.xaml````
 
 3. Skopiuj go do właściwej ścieżki, na przykład OfficeToolPlus / Language / zh-tw.xaml
 
@@ -59,7 +59,7 @@ Zachęcamy wszystkich do pomocy w lokalizacji. Oto jak to zrobić.
 
 ### Jak sprawdzić swoje tłumaczenie
 
-1. Zapisz plik tłumaczenia w ścieżce, na przykład `` D: \ Date \ zh-cn.xaml``.
+1. Zapisz plik tłumaczenia w ścieżce, na przykład ``D: \ Date \ zh-cn.xaml``.
 
 2. Otwórz aplikację.
 
@@ -73,7 +73,7 @@ Następnie aplikacja załaduje tłumaczenie, jeśli dodajesz nowe tłumaczenie d
 
 Dla każdego tłumacza udostępnimy aplikację administracyjną, która umożliwia zmianę ogłoszenia i przesłanie obrazu tła.
 
-`` Dla każdego tłumacza damy mu aplikację administracyjną, która umożliwia zmianę ogłoszenia i przesłanie obrazu tła. '' [Wyślij e-mail] (mailto: yerong@coolhub.top) `` `` do nas. ''
+`` Dla każdego tłumacza damy mu aplikację administracyjną, która umożliwia zmianę ogłoszenia i przesłanie obrazu tła. '' [Wyślij e-mail] (mailto: yerong@coolhub.top) ```` do nas. ''
 
 ## Pomoc z kodowaniem
 

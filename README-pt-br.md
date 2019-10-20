@@ -6,7 +6,7 @@ O Office Tool Plus é uma ferramenta para fazer o download, gerenciar e instalar
 
 O Office Tool Plus é baseado na Ferramenta de Implantação do Office da Microsoft. Você pode personalizar, configurar a instalação do Office e baixar os arquivos de instalação para instalar o Office. Após baixar os arquivos, você pode fazer a instalação mesmo sem ter uma conexão à Internet.
 
-Além do mais, você pode gerenciar seu Office instalado, adicionar pacotes de idioma ou personalizar a desinstalação do Office.
+Além disso, você pode gerenciar seu Office instalado, adicionar pacotes de idioma ou personalizar a desinstalação do Office.
 
 ## Download Office Tool Plus
 

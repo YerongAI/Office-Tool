@@ -30,6 +30,8 @@ Office Tool Plus Module is a small module that we developed to install Office. I
 
 [Office Customization Tool](https://config.office.com/deploymentsettings)
 
+**If you want to install Office 2019 Volume in Windows 7, please change module to Office Tool Plus!**
+
 `Note: When you have problems installing with the Office Deployment Tool, try the Office Tool Plus module!`
 
 ## Channel Setting
@@ -47,7 +49,7 @@ Office 2016/2019 [Retail]/365 can choose other channels (Except Office 2019 Perp
 
 Before start, we recommend reading the Channel Setting section first.
 
-Click [+ Add product] button and select what you want. For Office/Visio, you can uncheck unwanted apps **(Groove means OneDrive for Business，Lync means Skype for Business)**.
+Click [+ Add product] button and select what you want. For Office/Visio, you can uncheck unwanted apps **(Groove means OneDrive for Business, Lync means Skype for Business)**.
 
 Click [+ Add language pack] button and select your language. If you didn't specify a language pack, Office Tool Plus will match the system language by default (If it can't be adapted, [en-us] - English (US) will be installed as the main language).
 
@@ -74,8 +76,6 @@ If you have a product with several apps installed such as Office 365, including 
 ### Remove Products/Language Packs
 
 Check the products/language packs you want to uninstall in the list, then click the submenu "Uninstall selected product(s)/language pack(s)" of [Deploy Office] button to start.
-
-`Note: Please leave at least one language pack of type [Full], otherwise the entire Office will be uninstalled!`
 
 ## Office 365 Product ID
 

@@ -1,7 +1,5 @@
 # About Activation
 
-`This tool doesn't have any cracking or modification behavior, please feel free to use it. (Yes! Virus like to say that! hahaha~)`
-
 ```txt
 If you activate Office failed with this tool, please check your operation first (There are steps in the instructions below). If the problem still exists, please try to check your operating system. After the successful activation, everything is ready to go.
 ```
@@ -25,7 +23,7 @@ Once a license is installed, it can be activated with the corresponding key.
 For example: If you want your Office 2016 Retail -> Office 2016 Volume, just install the Office 2016 Volume license.
 After the installation, the old license won't be overwritten. So, we can have multiple licenses for one software.
 
-If you want to install your local license files, just click the […] button.
+If you want to install your local license files, just click the [...] button.
 
 `Note: If the C2R-based version of Office is installed on your computer, OTP will try to read all available licenses and display them in the drop down box. Otherwise only the built-in Volume licenses will be displayed.`
 

@@ -1,6 +1,6 @@
 # 部署 Office 说明
 
-在这里，您可以管理当前已安装的 Office 产品和语言包。如果没有安装 Office，则可以进行全新安装。
+在这里，您可以管理当前已安装的 Office 产品和语言包。如果没有安装 Office，则可以进行全新安装。**由于微软限制，Office 仅可以安装在系统盘上。**
 
 您可以在版本信息中查询当前每个通道上 Office 发布的版本以及发布日期。查询完毕后，您可以在下载或者安装时指定版本。不指定默认安装最新版本。
 
@@ -25,9 +25,11 @@ Office Tool Plus 模块是我们自行编写的一个安装 Office 的小模块�
 
 [Office 部署工具官方网站](https://aka.ms/ODT)
 
-[Office 部署工具的配置选项](https://docs.microsoft.com/zh-cn/DeployOffice/configuration-options-for-the-office-2016-deployment-tool#product-element)
+[Office 部署工具的配置选项](https://docs.microsoft.com/zh-cn/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)
 
 [Office 自定义工具](https://config.office.com)
+
+**欲从 Windows 7 上安装 Office 2019 批量版，请务必使用 Office Tool Plus 模块！**
 
 `当您使用 Office 部署工具安装时遇到无法解决的问题，不妨试一下 Office Tool Plus 安装模块哦！`
 

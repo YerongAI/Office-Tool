@@ -44,6 +44,7 @@ Opis OSPP można wyświetlić w ``C: \ Program Files \ Microsoft Office \ Office
 - polski (Polska) / JakubDriver
 - Koreański (Korea) / [Jay Jang](https://github.com/yaeyaya)
 - Chiński tradycyjny (Tajwan) / [Yi Chi](https://github.com/chiyi4488)
+- język angielski (Stany Zjednoczone) / [Moedog](https://prprpr.love)
 
 ## Pomoc z lokalizacją
 

@@ -44,6 +44,7 @@ The activate function was based on Microsoft's ospp.vbs (Office Software Protect
 - โปลิส (โปแลนด์) / JakubDriver+
 - เกาหลี (Korea) / [Jay Jang](https://github.com/yaeyaya)
 - ภาษาจีน (ใต้หวัน) / [Yi Chi](https://github.com/chiyi4488)
+- อังกฤษ (สหรัฐอเมริกา) / [Moedog](https://prprpr.love)
 
 ## ช่วยเราแปลภาษา
 

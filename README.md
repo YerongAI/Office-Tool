@@ -44,6 +44,7 @@ You can view the description of OSPP in ````"C:\Program Files\Microsoft Office\O
 - Polish (Poland) / JakubDriver
 - Korean (Korea) / [Jay Jang](https://github.com/yaeyaya)
 - Traditional Chinese (Taiwan) / [Yi Chi](https://github.com/chiyi4488)
+- English (United States) / [Moedog](https://prprpr.love)
 
 ## Help With Localization
 

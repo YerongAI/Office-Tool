@@ -48,6 +48,7 @@ Office Tool Plus는 마이크로소프트의[Office Deployment Tool](https://doc
 - Polish (Poland) / JakubDriver
 - Korean (Korea) / [Jay Jang](https://github.com/yaeyaya)
 - Traditional Chinese (Taiwan) / [Yi Chi](https://github.com/chiyi4488)
+- English (United States) / [Moedog](https://prprpr.love)
 
 ## 현지화(로컬리제이션) 도움 요청
 

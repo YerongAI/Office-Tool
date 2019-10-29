@@ -44,6 +44,7 @@ Office Tool Plus 是基于微软的 [Office Deployment Tool](https://docs.micros
 - Polish (Poland) / JakubDriver
 - Korean (Korea) / [Jay Jang](https://github.com/yaeyaya)
 - Traditional Chinese (Taiwan) / [Yi Chi](https://github.com/chiyi4488)
+- English (United States) / [Moedog](https://prprpr.love)
 
 ## 帮助我们进行应用程序本地化工作
 

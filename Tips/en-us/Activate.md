@@ -12,7 +12,7 @@ If you activate Office failed with this tool, please check your operation first 
 2. Activate License (Activate Office)
 3. Check KMS Server
 4. Query Activation Status
-5. Clear Activation
+5. Manage Office Activation
 6. Generic Volume License Keys (GVLKs)
 
 ## Install License
@@ -30,6 +30,8 @@ If you want to install your local license files, just click the [...] button.
 ## Activate License
 
 ---
+
+`Note: The only way to activate Office 365 is to login your Office 365 account.`
 
 ### Online Activation
 
@@ -69,24 +71,31 @@ Click the [Display activation information] button below to query the license inf
 
 `Note: Office is activated only when the license status is ---LICENSED--- .`
 
-## Clear Activation
+## Manage Office Activation
 
 ---
+
+### Uninstall Office Product Key
 
 Click the [Display activation information] button below to query the license information for the installed keys.
 
 Copy the last 5 characters of installed product key of the unneeded license, paste it into the Key Management input box, then click the submenu "Uninstall key".
 
-### Clear Activation Status (All)
+![Uninstall Office Product Key](https://coolhub.top/wp-content/uploads/2019/10/QQ截图20191029144031.png)
+
+### Uninstall All Office Product Keys
+
+In the submenu of Key Management, you can uninstall all keys.
+After all keys are uninstalled, all activations will be cleared, you need to reactivate Office.
+
+
+### Clear All Office Licenses
 
 In the submenu of License Management, you can clear licenses.
 After all licenses are cleared, you need to repair Office at the first time you open the Office application (Office will reset the licenses to default).
 Or you can install the license manually. After that, you can activate Office again.
 
-In the submenu of Key Management, you can uninstall all keys.
-After all keys are uninstalled, all activations will be cleared, you need to reactivate Office.
-
-The submenu "Clear activation" means that all the above operations will be performed.
+**The submenu "Clear activation" means that all the above operations will be performed.**
 
 ## Generic Volume License Keys (GVLKs)
 

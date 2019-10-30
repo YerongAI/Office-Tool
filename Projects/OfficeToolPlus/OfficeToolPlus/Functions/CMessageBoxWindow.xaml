@@ -155,7 +155,7 @@
             <RowDefinition Height="35"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid Background="{Binding Background, ElementName=Window}" FlowDirection="LeftToRight">
+        <Grid Background="{Binding Background, ElementName=Window}">
             <Button Click="CloseWindowButton_Click" Style="{DynamicResource HeaderButtonStyle}" IsCancel="True" Width="35">
                 <Canvas>
                     <Line X1="-5" Y1="-5" X2="5" Y2="5" Stroke="{Binding BorderBrush, ElementName=Window}"/>
@@ -163,8 +163,8 @@
                 </Canvas>
             </Button>
             <WrapPanel HorizontalAlignment="Left" ItemHeight="35">
-                <Path WindowChrome.IsHitTestVisibleInChrome="True" Data="M207,94 L230,100 230,160 207,166 170,151.42 207,157 207,105 181,113 181,145 170,151 170,110 z" Height="20" Stretch="Fill" Width="17" Margin="12,7.5,8,7.5" VerticalAlignment="Center" Fill="{Binding Foreground, ElementName=WindowTitle}"/>
-                <TextBlock x:Name="WindowTitle" Foreground="{Binding BorderBrush, ElementName=Window}" Text="Office Tool Plus" VerticalAlignment="Center"/>
+                <Path WindowChrome.IsHitTestVisibleInChrome="True" FlowDirection="LeftToRight" Data="M207,94 L230,100 230,160 207,166 170,151.42 207,157 207,105 181,113 181,145 170,151 170,110 z" Height="20" Stretch="Fill" Width="17" Margin="12,7.5,8,7.5" VerticalAlignment="Center" Fill="{Binding Foreground, ElementName=WindowTitle}"/>
+                <TextBlock x:Name="WindowTitle" Foreground="{Binding BorderBrush, ElementName=Window}" Text="Office Tool Plus" VerticalAlignment="Center" FlowDirection="LeftToRight"/>
             </WrapPanel>
         </Grid>
         <Grid Background="{Binding Background, ElementName=Window}" Grid.Row="1">
@@ -179,6 +179,9 @@
             </WrapPanel>
             <ScrollViewer VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" Grid.Row="1" Margin="0,10,0,30">
                 <TextBlock Text="{Binding MessageBoxText}" TextWrapping="Wrap" Margin="25,0"/>
+            </ScrollViewer>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" Grid.Row="1" Margin="0,10,0,30" CanContentScroll="True">
+                <RichTextBox x:Name="richTextBox" Background="Transparent" Foreground="{Binding Foreground, ElementName=Window}" Margin="25,0" BorderThickness="0" IsReadOnly="True" IsDocumentEnabled="True"/>
             </ScrollViewer>
             <WrapPanel Grid.Row="2" HorizontalAlignment="Right" ItemHeight="35">
                 <Button Content="{DynamicResource MsgButtonOK}" x:Name="OKButton" Click="OKButton_Click" Style="{StaticResource NormalButtonStyle}" Visibility="{Binding OKButtonVisibility, Mode=OneWay}"/>

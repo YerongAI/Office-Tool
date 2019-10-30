@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -190,10 +189,12 @@ namespace OfficeTool.Functions
                             }
                             else if (line[i] == ')' && type == TextType.HyperLink)
                             {
-                                List<char> head = list.FindAll(delegate (char s) {
+                                List<char> head = list.FindAll(delegate (char s)
+                                {
                                     return s == '(';
                                 });
-                                List<char> tail = list.FindAll(delegate (char s) {
+                                List<char> tail = list.FindAll(delegate (char s)
+                                {
                                     return s == ')';
                                 });
                                 if (head.Count != tail.Count)
@@ -365,7 +366,17 @@ namespace OfficeTool.Functions
             if (!string.IsNullOrEmpty(link))
             {
                 hyperlink.NavigateUri = new Uri(link);
-                hyperlink.RequestNavigate += (sender, args) => Process.Start(args.Uri.ToString());
+                hyperlink.RequestNavigate += (sender, args) =>
+                {
+                    try
+                    {
+                        Process.Start(args.Uri.ToString());
+                    }
+                    catch
+                    {
+
+                    }
+                };
             }
             paragraph.Inlines.Add(hyperlink);
         }

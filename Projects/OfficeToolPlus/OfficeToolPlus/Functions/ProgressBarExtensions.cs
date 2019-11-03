@@ -15,7 +15,8 @@ namespace OfficeTool.Functions
         {
             DoubleAnimation animation = new DoubleAnimation(percentage, TimeSpan.FromMilliseconds(300))
             {
-                DecelerationRatio = 0.7
+                AccelerationRatio = 0,
+                DecelerationRatio = 0.6
             };
             progressBar.BeginAnimation(System.Windows.Controls.Primitives.RangeBase.ValueProperty, animation);
         }

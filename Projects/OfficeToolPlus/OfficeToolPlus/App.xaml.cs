@@ -17,7 +17,7 @@ namespace OfficeToolPlus
             {
                 langRd =
                     LoadComponent(
-                             new Uri(@"Language\" + currentCultureInfo.Name.Replace("zh-hk", "zh-tw") + ".xaml", UriKind.Relative))
+                             new Uri(@"Language\" + currentCultureInfo.Name.ToLower().Replace("zh-hk", "zh-tw") + ".xaml", UriKind.Relative))
                     as ResourceDictionary;
             }
             catch

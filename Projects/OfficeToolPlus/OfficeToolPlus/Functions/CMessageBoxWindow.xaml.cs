@@ -38,6 +38,12 @@ namespace Zmy.Wpf.CMessageBox
             set;
         }
 
+        public System.Windows.Documents.Paragraph ParagraphContent
+        {
+            get;
+            set;
+        }
+
         public Visibility OKButtonVisibility
         {
             get;
@@ -72,11 +78,11 @@ namespace Zmy.Wpf.CMessageBox
         {
             set
             {
-                if(value == ButtonStyle.NormalButtonStyle)
+                if (value == ButtonStyle.NormalButtonStyle)
                 {
                     OKButton.Style = normalButtonStyle;
                 }
-                else if(value == ButtonStyle.NotNormalButtonStyle)
+                else if (value == ButtonStyle.NotNormalButtonStyle)
                 {
                     OKButton.Style = notNormalButtonStyle;
                 }
@@ -139,7 +145,7 @@ namespace Zmy.Wpf.CMessageBox
             DataContext = this;
 
             MessageBoxTitle = Application.Current.FindResource("MsgNormalTitle").ToString();
-            ApplyToAllVisibility = OKButtonVisibility =  CancelButtonVisibility = YesButtonVisibility = NoButtonVisibility = IconPath.Visibility = Visibility.Collapsed;
+            ApplyToAllVisibility = OKButtonVisibility = CancelButtonVisibility = YesButtonVisibility = NoButtonVisibility = IconPath.Visibility = Visibility.Collapsed;
             normalButtonStyle = FindResource("NormalButtonStyle") as Style;
             notNormalButtonStyle = FindResource("NotNormalButtonStyle") as Style;
 
@@ -205,6 +211,12 @@ namespace Zmy.Wpf.CMessageBox
             Topmost = Application.Current.Windows[0].Topmost;
             FontSize = Application.Current.Windows[0].FontSize;
             FlowDirection = Application.Current.Windows[0].FlowDirection;
+
+            if (ParagraphContent != null)
+            {
+                richTextBox.Document.Blocks.Clear();
+                richTextBox.Document.Blocks.Add(ParagraphContent);
+            }
         }
 
         private void Window_Activated(object sender, EventArgs e)

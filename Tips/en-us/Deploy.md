@@ -4,6 +4,8 @@ Here you can manage the currently installed Office products and language packs. 
 
 You can query the version number and the release date on each channel in Version Information. After that, you can specify the version at the time of download or installation. If it's not specified, the latest version will be specified by default.
 
+**Note: Office can only be installed on your system disk. This is determined by Microsoft.**
+
 ## Contents
 
 ---
@@ -30,6 +32,8 @@ Office Tool Plus Module is a small module that we developed to install Office. I
 
 [Office Customization Tool](https://config.office.com/deploymentsettings)
 
+**If you want to install Office 2019 Volume in Windows 7, please change module to Office Tool Plus!**
+
 `Note: When you have problems installing with the Office Deployment Tool, try the Office Tool Plus module!`
 
 ## Channel Setting
@@ -47,7 +51,7 @@ Office 2016/2019 [Retail]/365 can choose other channels (Except Office 2019 Perp
 
 Before start, we recommend reading the Channel Setting section first.
 
-Click [+ Add product] button and select what you want. For Office/Visio, you can uncheck unwanted apps **(Groove means OneDrive for Business，Lync means Skype for Business)**.
+Click [+ Add product] button and select what you want. For Office/Visio, you can uncheck unwanted apps **(Groove means OneDrive for Business, Lync means Skype for Business)**.
 
 Click [+ Add language pack] button and select your language. If you didn't specify a language pack, Office Tool Plus will match the system language by default (If it can't be adapted, [en-us] - English (US) will be installed as the main language).
 
@@ -63,7 +67,7 @@ If Office is already installed on your computer, you can add or remove products/
 
 ### Add Products/Language Packs
 
-Just click [+ Add product] button and select what you want. 
+Just click [+ Add product]/[+ Add language pack] button and select what you want. 
 
 `Note: To avoid problems, do NOT add an installed product/language pack.`
 
@@ -74,8 +78,6 @@ If you have a product with several apps installed such as Office 365, including 
 ### Remove Products/Language Packs
 
 Check the products/language packs you want to uninstall in the list, then click the submenu "Uninstall selected product(s)/language pack(s)" of [Deploy Office] button to start.
-
-`Note: Please leave at least one language pack of type [Full], otherwise the entire Office will be uninstalled!`
 
 ## Office 365 Product ID
 
@@ -102,7 +104,11 @@ For more information, please visit [Product IDs that are supported by the Office
 
 The installation files is the installation package for Office. Office Tool Plus can download Office installation files from Microsoft servers and make ISO images. After downloading the installation files, you can use offline installation or share them to others to save bandwidth or reduce time.
 
+The channel determines what version of the office you can install, so we recommend reading the Channel Setting section first.
+
 Click the submenu "Download installation files" of Installation Files Manage to start. You can set it up yourself or use the Office Tool Plus default settings, then click [Start] button to download.
+
+![Download Installation Files](https://coolhub.top/wp-content/uploads/2019/10/QQ截图20191029144904.png)
 
 ### More Information
 

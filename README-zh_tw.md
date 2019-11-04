@@ -53,6 +53,7 @@ Office Tool Plus 使用 微軟 [Office Deployment Tool](https://docs.microsoft.c
 - Polish (Poland) / JakubDriver
 - Korean (Korea) / [Jay Jang](https://github.com/yaeyaya)
 - Traditional Chinese (Taiwan) / [Yi Chi](https://github.com/chiyi4488)
+- English (United States) / [Moedog](https://prprpr.love)
 
 ## 協助我們進行本地化工作
 

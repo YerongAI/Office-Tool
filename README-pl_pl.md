@@ -1,6 +1,6 @@
 ﻿# Office Tool Plus
 
-polski | [English](/README.md) | [简体 中文] (/ README-zh_cn.md) | [繁體 中文] (/ README-zh_tw.md) | [한국어] (/ README-ko_kr.md) | [Italiano] (/ README-it_it.md) | [ไทย /Thai](/README-th_th.md) | [Brazilian Portuguese](/README-pt_br.md)
+[English](/README.md) | [简体中文](/README-zh_cn.md) | [繁體中文](/README-zh_tw.md) | [한국어](/README-ko_kr.md) | [Italiano](/README-it_it.md) | [ไทย/Thai](/README-th_th.md) | polski | [Brazilian Portuguese](/README-pt_br.md)
 
 Office Tool Plus to narzędzie do zarządzania, pobierania i instalowania pakietu Office.
 
@@ -44,6 +44,7 @@ Opis OSPP można wyświetlić w ``C: \ Program Files \ Microsoft Office \ Office
 - polski (Polska) / JakubDriver
 - Koreański (Korea) / [Jay Jang](https://github.com/yaeyaya)
 - Chiński tradycyjny (Tajwan) / [Yi Chi](https://github.com/chiyi4488)
+- język angielski (Stany Zjednoczone) / [Moedog](https://prprpr.love)
 
 ## Pomoc z lokalizacją
 

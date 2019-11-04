@@ -44,6 +44,7 @@ La funzione di attivazione è basata su ospp.vbs di Microsoft (Office Software P
 - Polish (Poland) / JakubDriver
 - Korean (Korea) / [Jay Jang](https://github.com/yaeyaya)
 - Traditional Chinese (Taiwan) / [Yi Chi](https://github.com/chiyi4488)
+- English (United States) / [Moedog](https://prprpr.love)
 
 ## Aitaci con la Traduzione
 

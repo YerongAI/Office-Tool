@@ -18,7 +18,7 @@ namespace OTP.Functions
         {
             hashValue = string.Empty;
             byte[] retVal = null;
-            FileStream file = new FileStream(resFile, FileMode.Open);
+            FileStream file = new FileStream(resFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             switch (type)
             {
                 case HashType.MD5:

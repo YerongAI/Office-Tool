@@ -214,6 +214,7 @@ namespace Zmy.Wpf.CMessageBox
 
             if (ParagraphContent != null)
             {
+                richTextBox.Visibility = Visibility.Visible;
                 richTextBox.Document.Blocks.Clear();
                 richTextBox.Document.Blocks.Add(ParagraphContent);
             }

@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace OTP
 {
-    //Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
+    // Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
     class InstallationFile
     {
         private readonly List<InstallationFileList> lists = new List<InstallationFileList>();
@@ -90,6 +90,7 @@ namespace OTP
             }
             for (int i = 0; i < lists.Count; i++)
             {
+                string platform = "v32_";
                 lists[i].Language = new List<string>(10);
                 foreach (LangInfo lang in languageList.GetList())
                 {
@@ -112,31 +113,11 @@ namespace OTP
                                     lists[i].HasError = true;
                                 }
                             }
-                            if (lists[i].HasError == false)
-                            {
-                                string path = Environment.GetEnvironmentVariable("temp");
-                                Process process = new Process();
-                                try
-                                {
-                                    process.StartInfo.FileName = "expand";
-                                    process.StartInfo.Arguments = "-F:*.xml \"" + InstallationPath + "\\Office\\Data\\" + "v32_" + lists[i].Version + ".cab\" " + path;
-                                    process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                                    process.Start();
-                                    process.WaitForExit(30000);
-                                    XElement loadxml = XElement.Load(path + "\\VersionDescriptor.xml");
-                                    XElement xml = loadxml.Element("DeliveryMechanism");
-                                    lists[i].FFN = xml.Attribute("FFNRoot").Value;
-                                    File.Delete(path + "\\VersionDescriptor.xml");
-                                }
-                                finally
-                                {
-                                    process.Dispose();
-                                }
-                            }
                         }
                     }
                     else
                     {
+                        platform = "v64_";
                         if (File.Exists(InstallationPath + "\\Office\\Data\\" + lists[i].Version + "\\" + "stream.x64." + lang.ID + ".dat"))//检测对应的安装文件是否存在
                         {
                             lists[i].Language.Add(lang.ID);
@@ -153,28 +134,32 @@ namespace OTP
                                     lists[i].HasError = true;
                                 }
                             }
-                            if (lists[i].HasError == false)
-                            {
-                                string path = Environment.GetEnvironmentVariable("temp");
-                                Process process = new Process();
-                                try
-                                {
-                                    process.StartInfo.FileName = "expand";
-                                    process.StartInfo.Arguments = "-F:*.xml \"" + InstallationPath + "\\Office\\Data\\" + "v64_" + lists[i].Version + ".cab\" " + path;
-                                    process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                                    process.Start();
-                                    process.WaitForExit(30000);
-                                    XElement loadxml = XElement.Load(path + "\\VersionDescriptor.xml");
-                                    XElement xml = loadxml.Element("DeliveryMechanism");
-                                    lists[i].FFN = xml.Attribute("FFNRoot").Value;
-                                    File.Delete(path + "\\VersionDescriptor.xml");
-                                }
-                                finally
-                                {
-                                    process.Dispose();
-                                }
-                            }
                         }
+                    }
+                }
+                if (lists[i].HasError == false)
+                {
+                    string path = Environment.GetEnvironmentVariable("temp");
+                    Process process = new Process();
+                    try
+                    {
+                        process.StartInfo.FileName = "expand";
+                        process.StartInfo.Arguments = "-F:*.xml \"" + InstallationPath + "\\Office\\Data\\" + platform + lists[i].Version + ".cab\" " + path;
+                        process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        process.Start();
+                        process.WaitForExit(30000);
+                        if (File.Exists(path + "\\VersionDescriptor.xml"))
+                        {
+                            XElement loadxml = XElement.Load(path + "\\VersionDescriptor.xml");
+                            XElement xml = loadxml.Element("DeliveryMechanism");
+                            lists[i].FFN = xml.Attribute("FFNRoot").Value;
+                            File.Delete(path + "\\VersionDescriptor.xml");
+                        }
+                    }
+                    catch { }
+                    finally
+                    {
+                        process.Dispose();
                     }
                 }
             }
@@ -200,7 +185,7 @@ namespace OTP
             string ver = string.Empty;
             for (int i = 0; i < lists.Count; i++)
             {
-                ver += lists[i].Version + " - " + lists[i].Is32Platform.ToString().Replace("True", "x86").Replace("False", "x64").Replace("null", "All") + ",";
+                ver += lists[i].Version + ",";
             }
             return ver.Remove(ver.Length - 1);
         }

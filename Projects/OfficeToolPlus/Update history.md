@@ -4,6 +4,26 @@ Just for viewing. ```DO NOT TRANSLATE IT.```
 
 ---
 
+Update for v.7.2.0　　　　　　　　　　　　2019/11/07
+
+---
+
+1. 更新 Office Deployment Tool 为最新版本。
+2. 修复了诸多的 bug 并提高了 OTP 的性能。
+
+Update for v.7.0.1　　　　　　　　　　　　2019/10/31
+
+---
+
+1. 新增阿拉伯语，感谢 Ibrahim.
+2. 其他问题修复以及性能提升。
+
+Update for v.7.0.0　　　　　　　　　　　　2019/10/28
+
+---
+
+1. 修复了历史版本不匹配的问题。
+
 Update for v.7.0.0　　　　　　　　　　　　2019/10/14
 
 ---

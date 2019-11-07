@@ -81,7 +81,7 @@ Click the [Display activation information] button below to query the license inf
 
 Copy the last 5 characters of installed product key of the unneeded license, paste it into the Key Management input box, then click the submenu "Uninstall key".
 
-![Uninstall Office Product Key](https://coolhub.top/wp-content/uploads/2019/10/QQ截图20191029144031.png)
+![Uninstall Office Product Key](https://coolhub.top/wp-content/uploads/2019/11/卸载产品密钥.png)
 
 ### Uninstall All Office Product Keys
 

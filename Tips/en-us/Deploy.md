@@ -108,7 +108,7 @@ The channel determines what version of the office you can install, so we recomme
 
 Click the submenu "Download installation files" of Installation Files Manage to start. You can set it up yourself or use the Office Tool Plus default settings, then click [Start] button to download.
 
-![Download Installation Files](https://coolhub.top/wp-content/uploads/2019/10/QQ截图20191029144904.png)
+![Download Installation Files](https://coolhub.top/wp-content/uploads/2019/11/QQ截图20191107202304-1.png)
 
 ### More Information
 

@@ -85,13 +85,3 @@ Successivamente, l'applicazione caricherà la tua traduzione, se stai aggiungend
 Per ogni traduttore, forniremo loro un'app di amministrazione che consente di modificare l'annuncio e caricare un'immagine di sfondo.
 
 ````Per ogni traduttore, forniremo loro un'app di amministrazione che consente di modificare l'annuncio e caricare un'immagine di sfondo..```` [Inviaci una e-mail](mailto:yerong@coolhub.top)
-
-## Aiuto con la Codifica
-
-Se hai idee sulla codifica, puoi forkare questo repository e codificare da solo, dopo aver fatto, fai una richiesta pull e spiega cosa hai cambiato e come usarlo o perché lo modifichi.
-
-Grazie mille.
-
-Ma in realtà contiene solo codici parziali, (●ˇ∀ˇ●) quindi puoi usare solo editor come NotePad.
-
-Nota: NON PUOI copiare questi codici senza il mio permesso!

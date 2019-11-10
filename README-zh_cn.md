@@ -85,13 +85,3 @@ Office Tool Plus 是基于微软的 [Office Deployment Tool](https://docs.micros
 对于每一位翻译人员来说，我们会给予一个 Admin 应用程序，通过 Admin 应用程序，您可以更改公告，添加背景图，修改说明等等。
 
 ````如要取得 Admin 应用程序，您需要加入我们的翻译工作，并完成基本的应用程序翻译和维护工作，之后您便有资格获取 Admin，```` [发送邮件](mailto:yerong@coolhub.top) ````申请即可。````
-
-## 与我们一起开发
-
-If you have any ideas about coding, you can fork this repository and coding by yourself, after done, make a pull request and explain what you changed and how to use it or why you change it.
-
-我们是很感谢您的。
-
-不过需要注意的是，GitHub 上只有一部分代码，没有完整代码。 (●ˇ∀ˇ●) 所以你只可以用一些代码编辑器，例如 VS Code 等进行编写，cs 测试通过后可以提交给我们，我们会对其进行测试，感谢您为修复错误、提高应用程序性能、新增新功能做出贡献。
-
-温馨提示：要使用我的代码，最好先经过我的同意。

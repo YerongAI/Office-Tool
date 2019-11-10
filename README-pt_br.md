@@ -85,13 +85,3 @@ Depois disso, o aplicativo carregará a sua tradução. Se você estiver adicion
 Para cada tradutor, daremos um aplicativo de administração, que permite alterar as informações e fazer o upload de uma imagem de fundo.
 
 ````Para cada tradutor, daremos um aplicativo de administração, que permite alterar as informações e fazer o upload de uma imagem de fundo.````[Nos envie um e-mail](mailto:yerong@coolhub.top).
-
-## Ajuda com o Código
-
-Se você tem alguma idéia sobre codificação, você pode fazer um fork deste repositório e codificar você mesmo. Depois de feito, faça um Pull Request explicando o que foi alterado e como usar ou porque você fez as alterações.
-
-Muito obrigado.
-
-Mas, na verdade, ele só contém códigos parciais, (●ˇ∀ˇ●) então você só pode usar o editor como o Notepad.
-
-Nota: Você não pode copiar estes códigos para usar sem minha expressa permissão!

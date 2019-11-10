@@ -85,13 +85,3 @@ Następnie aplikacja załaduje tłumaczenie, jeśli dodajesz nowe tłumaczenie d
 Dla każdego tłumacza udostępnimy aplikację administracyjną, która umożliwia zmianę ogłoszenia i przesłanie obrazu tła.
 
 `` Dla każdego tłumacza damy mu aplikację administracyjną, która umożliwia zmianę ogłoszenia i przesłanie obrazu tła. '' [Wyślij e-mail] (mailto: yerong@coolhub.top) ```` do nas. ''
-
-## Pomoc z kodowaniem
-
-Jeśli masz jakieś pomysły na temat kodowania, możesz samodzielnie rozwidlić to repozytorium i kodowanie, po zakończeniu złożyć żądanie ściągnięcia i wyjaśnić, co zmieniłeś i jak go używać lub dlaczego go zmienić.
-
-Dziękuję bardzo
-
-Ale tak naprawdę zawiera tylko częściowe kody (● ●), więc możesz używać tylko edytora, takiego jak NotePad.
-
-Uwaga: NIE MOŻESZ kopiować tych kodów do użycia bez mojej zgody!

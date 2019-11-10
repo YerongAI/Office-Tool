@@ -10,9 +10,9 @@ What's more, you can manage your installed Office, add language packs or customi
 
 ## Download Office Tool Plus
 
-[Official website](https://otp.landian.vip/zh-cn/)
+[Official website](https://otp.landian.vip/)
 
-[Mirror download](https://delivery.yuntu.moe/office-tool/) by [云图小镇](https://www.yuntu.moe/)
+[Mirror download](https://delivery.yuntu.dev/office-tool/) by [云图小镇](https://www.yuntu.dev/)
 
 ## Technical Articles
 
@@ -20,13 +20,7 @@ What's more, you can manage your installed Office, add language packs or customi
 
 ## Quick Start
 
-We recommend that you first download the installation file.
-
-Simply go to the Download page and click Start.
-
-After the download is complete, go to the Installation page, select the products you want to install, and click the Install button to begin the installation.
-
-You need to activate Office after install.
+Go to Deploy page, add a product that you want to install, then click Deploy to start your installation.
 
 ## Application Legitimacy
 
@@ -85,13 +79,3 @@ After that, application will load your translation, if you are adding a new tran
 For each translator, we will give them an Admin app that allows you to change the announcement and upload a background image.
 
 ````For each translator, we will give them an Admin app that allows you to change the announcement and upload a background image.```` [Send a e-mail](mailto:yerong@coolhub.top) ````to us.````
-
-## Help With Coding
-
-If you have any ideas about coding, you can fork this repository and coding by yourself, after done, make a pull request and explain what you changed and how to use it or why you change it.
-
-Thanks you very much.
-
-But actually, it is only contains partial codes, (●ˇ∀ˇ●) so you can only use editor such as NotePad.
-
-Note: You CAN'T copy this codes to use without my permisson!

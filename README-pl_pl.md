@@ -10,9 +10,9 @@ Co więcej, możesz zarządzać zainstalowanym pakietem Office, dodawać pakiety
 
 ## Pobierz Office Tool Plus
 
-[Oficjalna strona](https://otp.landian.vip/zh-cn/)
+[Oficjalna strona](https://otp.landian.vip/)
 
-[Mirror download](https://delivery.yuntu.moe/office-tool/) autor: [云图 小镇](https://www.yuntu.moe/)
+[Mirror download](https://delivery.yuntu.dev/office-tool/) autor: [云图 小镇](https://www.yuntu.dev/)
 
 ## Artykuły techniczne
 

@@ -10,9 +10,9 @@ Office Tool Plus บนพื้นฐานระบบสำหรับ Deplo
 
 ## ดาวน์โหลด Office Tool Plus
 
-[ดาวน์โหลดบนเว็บไซต์หลัก](https://otp.landian.vip/th-th/)
+[ดาวน์โหลดบนเว็บไซต์หลัก](https://otp.landian.vip/)
 
-[ตัวเลือกการดาวน์โหลดอื่นๆ](https://delivery.yuntu.moe/office-tool/) by [云图小镇](https://www.yuntu.moe/)
+[ตัวเลือกการดาวน์โหลดอื่นๆ](https://delivery.yuntu.dev/office-tool/) by [云图小镇](https://www.yuntu.dev/)
 
 ## บทความเกี่ยวกับเทคนิคการตั้งค่า
 

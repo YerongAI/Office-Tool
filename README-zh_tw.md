@@ -12,13 +12,11 @@
 
 ## 下載
 
-[官方網站](https://otp.landian.vip/zh-tw/)
+[官方網站](https://otp.landian.vip/)
 
 [備用 官方網站](https://otp.cotpear.com/zh-tw/) <sup>[註二]</sup>
 
-[備用載點](https://delivery.yuntu.moe/office-tool/) (感謝 [云图小镇](https://www.yuntu.moe/) 提供)
-
-[Github](https://github.com/YerongAI/Office-Tool/releases)
+[備用載點](https://delivery.yuntu.dev/office-tool/) (感謝 [云图小镇](https://www.yuntu.dev/) 提供)
 
 [註二]由於主要官方網站伺服器於中國，在某些時刻連線不穩定，若網站無法開啟，請使用[[備用 官方網站](https://otp.cotpear.com/zh-tw/)]。
 

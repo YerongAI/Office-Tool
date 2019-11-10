@@ -10,9 +10,9 @@ Office Tool Plus가 기 존재 Office( Click To Run방식만 한정)를 변경, 
 
 ## Office Tool Plus 다운로드
 
-[공식 사이트](https://otp.landian.vip/zh-cn/)
+[공식 사이트](https://otp.landian.vip/)
 
-[다운로드 사이트](https://delivery.yuntu.moe/office-tool/) by [Yuntu](https://www.yuntu.moe/)
+[다운로드 사이트](https://delivery.yuntu.dev/office-tool/) by [Yuntu](https://www.yuntu.dev/)
 
 ## 기술설명서
 
@@ -74,7 +74,7 @@ Office Tool Plus는 마이크로소프트의[Office Deployment Tool](https://doc
 ### 더 많은 정보
 
 저희는 변역자마다 Admin응용프로그램을 제공합니다. 번역자가 이 으용프로그램을 통해서 공지사항, 배경화면과 설명내용 등 정보를 간편하게 수정할 수 있습니다.
-**[이메일](mailto:yerong@coolhub.top)로 신청하면 됩니다. 
+**[이메일](mailto:yerong@coolhub.top)로 신청하면 됩니다.
 
 ## 같이 코딩하자
 

@@ -10,9 +10,9 @@ Inoltre, puoi gestire Office installato, aggiungere language pack o personalizza
 
 ## Scarica Office Tool Plus
 
-[Official website](https://otp.landian.vip/zh-cn/)
+[Official website](https://otp.landian.vip/)
 
-[Mirror download](https://delivery.yuntu.moe/office-tool/) by [云图小镇](https://www.yuntu.moe/)
+[Mirror download](https://delivery.yuntu.dev/office-tool/) by [云图小镇](https://www.yuntu.dev/)
 
 ## Articoli Tecnici
 

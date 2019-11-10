@@ -10,9 +10,9 @@ Office Tool Plus 基于微软的 Office Deployment Tool 打造，使用 Office T
 
 ## 下载 Office Tool Plus
 
-[官方网站](https://otp.landian.vip/zh-cn/)
+[官方网站](https://otp.landian.vip/)
 
-[下载站](https://delivery.yuntu.moe/office-tool/) by [云图小镇](https://www.yuntu.moe/)
+[下载站](https://delivery.yuntu.dev/office-tool/) by [云图小镇](https://www.yuntu.dev/)
 
 ## 技术文章
 

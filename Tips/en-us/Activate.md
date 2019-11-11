@@ -25,7 +25,7 @@ After the installation, the old license won't be overwritten. So, we can have mu
 
 If you want to install your local license files, just click the [...] button.
 
-`Note: If the C2R-based version of Office is installed on your computer, OTP will try to read all available licenses and display them in the drop down box. Otherwise only the built-in Volume licenses will be displayed.`
+`Note: If the Click to Run based version of Office is installed on your computer, OTP will try to read all available licenses and display them in the drop down box. Otherwise only the built-in Volume licenses will be displayed.`
 
 ## Activate License
 

@@ -4,7 +4,7 @@
 
 Office Tool Plus to narzędzie do zarządzania, pobierania i instalowania pakietu Office.
 
-Office Tool Plus jest oparty na narzędziu Microsoft Office Deployment Tool. Możesz dostosować konfigurację instalacji pakietu Office i pobrać pliki instalacyjne, aby zainstalować pakiet Office bez Internetu.
+Office Tool Plus jest oparty na narzędziu Microsoft [Office Deployment Tool](https://docs.microsoft.com/pl-pl/DeployOffice/overview-of-the-office-2016-deployment-tool). Możesz dostosować konfigurację instalacji pakietu Office i pobrać pliki instalacyjne, aby zainstalować pakiet Office bez Internetu.
 
 Co więcej, możesz zarządzać zainstalowanym pakietem Office, dodawać pakiety językowe lub dostosowywać odinstalowywanie pakietu Office.
 
@@ -26,7 +26,7 @@ You need to Activate Office after installation.
 
 ## Legalność aplikacji
 
-Pakiet Office Tool Plus jest oparty na narzędziu Microsoft [Office Deployment Tool](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run). I dodaliśmy niektóre funkcje zgodnie z potrzebami użytkowników.
+Pakiet Office Tool Plus jest oparty na narzędziu Microsoft [Office Deployment Tool](https://docs.microsoft.com/pl-pl/DeployOffice/overview-of-the-office-2016-deployment-tool). I dodaliśmy niektóre funkcje zgodnie z potrzebami użytkowników.
 
 ### Informacje o aktywacji funkcji
 

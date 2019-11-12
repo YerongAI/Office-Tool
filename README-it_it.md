@@ -26,7 +26,7 @@ You need to Activate Office after installation.
 
 ## Legittimità dell'Applicazione
 
-Office Tool Plus sugli [Strumenti di Sviluppo di Office](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run). E abbiamo aggiunto alcune funzioni in base alle esigenze degli utenti.
+Office Tool Plus sugli [Strumenti di Sviluppo di Office](https://docs.microsoft.com/it-it/DeployOffice/overview-of-the-office-2016-deployment-tool). E abbiamo aggiunto alcune funzioni in base alle esigenze degli utenti.
 
 ### Informazioni sulla Funzione di Attivazione
 

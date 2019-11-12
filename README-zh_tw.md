@@ -4,7 +4,7 @@
 
 歡迎使用 Office Tool Plus ，這是一個用來管理、下載、安裝 Office 的工具。
 
-這個應用程式是參考、使用微軟 [Office Deployment Tool](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run) 製作的。將零散的系統指令集結成圖形化介面，讓大眾能快速直覺的部署 Office、客製化安裝 Office。
+這個應用程式是參考、使用微軟 [Office Deployment Tool](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-2016-deployment-tool) 製作的。將零散的系統指令集結成圖形化介面，讓大眾能快速直覺的部署 Office、客製化安裝 Office。
 
 除了能夠部署 Office 之外，也能修改已安裝 Office 相關設定、移除單項產品、新增語言等。 <sup>[註一]</sup>
 
@@ -34,7 +34,7 @@ You need to Activate Office after installation.
 
 ## 合法性
 
-Office Tool Plus 使用 微軟 [Office Deployment Tool](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run) 參考製作的，
+Office Tool Plus 使用 微軟 [Office Deployment Tool](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-2016-deployment-tool) 參考製作的，
 主要是在 Office Deployment Tool 基礎上再新增了相關功能來更加便利的部署 Office。
 
 ### 關於啟用授權模組

@@ -4,7 +4,7 @@ English | [简体中文](/README-zh_cn.md) | [繁體中文](/README-zh_tw.md) | 
 
 Office Tool Plus is a tool for managing, downloading and installing Office.
 
-Office Tool Plus is based on Microsoft's [Office Deployment Tool](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run). You can customize configure your Office installation and download installation files to install Office without Internet.
+Office Tool Plus is based on Microsoft's [Office Deployment Tool](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-2016-deployment-tool). You can customize configure your Office installation and download installation files to install Office without Internet.
 
 What's more, you can manage your installed Office, add language packs or customize uninstall Office.
 
@@ -24,7 +24,7 @@ Go to Deploy page, add a product that you want to install, then click Deploy to 
 
 ## Application Legitimacy
 
-Office Tool Plus is based on Microsoft's [Office Deployment Tool](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run). And we added some functions according to the needs of users.
+Office Tool Plus is based on Microsoft's [Office Deployment Tool](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-2016-deployment-tool). And we added some functions according to the needs of users.
 
 ### About Activate Function
 

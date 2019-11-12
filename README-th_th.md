@@ -26,7 +26,7 @@ You need to Activate Office after installation.
 
 ## สิทธิตามกฎหมายของโปรแกรม
 
-Office Tool Plus ถูกพัฒนาบนพื้นฐานของชุด Microsoft's [Office Deployment Tool](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run). และเราได้เพิ่มฟังก์ชั่นบางอย่างตามความต้องการของผู้ใช้งาน.
+Office Tool Plus ถูกพัฒนาบนพื้นฐานของชุด Microsoft's [Office Deployment Tool](https://docs.microsoft.com/th-th/DeployOffice/overview-of-the-office-2016-deployment-tool). และเราได้เพิ่มฟังก์ชั่นบางอย่างตามความต้องการของผู้ใช้งาน.
 
 ### เกี่ยวกับฟังก์ชั่นการเปิดใช้งานชุดโปรแกรม Office
 

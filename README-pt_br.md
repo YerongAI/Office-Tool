@@ -20,13 +20,9 @@ Além do mais, você pode gerenciar seu Office instalado, adicionar pacotes de i
 
 ## Início rápido
 
-Para começar, recomendamos fazer o download dos arquivos de instalação.
+Go to Deploy page, add a product (or more) that you want to install, then click Deploy to start your installation. You can configure other settings if you want.
 
-Basta ir à página de Download e clicar em Iniciar.
-
-Depois que o download estiver concluído, vá até a página de Instalação, selecione os produtos que deseja instalar e clique no botão Instalar para iniciar a instalação.
-
-Você precisará ativar o Office após a instalação.
+You need to Activate Office after installation.
 
 ## Legitimidade do aplicativo
 

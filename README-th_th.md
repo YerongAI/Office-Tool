@@ -20,13 +20,9 @@ Office Tool Plus บนพื้นฐานระบบสำหรับ Deplo
 
 ## การเริ่มต้นใช้งาน
 
-ก่อนอื่นเราขอแนะนำให้คุณเาวน์โหลดไฟล์ตัวติดตั้ง Office ก่อน.
+Go to Deploy page, add a product (or more) that you want to install, then click Deploy to start your installation. You can configure other settings if you want.
 
-โดยไปที่หน้าดาวน์โหลด และคลิกที่ปุ่ม เริ่มต้น.
-
-หลังจากดาวน์โหลดเสร็จแล้ว ให้ไปที่หน้าการติดตั้ง แล้วเลือกโปรแกรมที่คุณต้องการติดตั้ง จากนั้นคลิกที่ปุ่มติดตั้งเพื่อเริ่มการติดตั้งโปรแกรมนั้นๆ
-
-คุณจำเป็นต้องมีการเปิดใช้งานโปรแกรม Office หลังจากติดตั้งเสร็จ
+You need to Activate Office after installation.
 
 ## สิทธิตามกฎหมายของโปรแกรม
 

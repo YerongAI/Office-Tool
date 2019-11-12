@@ -4,7 +4,7 @@
 
 Office Tool Plus 是一个用来管理、下载、安装 Office 的小工具。
 
-Office Tool Plus 基于微软的 Office Deployment Tool 打造，使用 Office Tool Plus, 你可以快速地部署 Office，自定义部署 Office，想安装什么，不想安装什么，都随你设置。
+Office Tool Plus 基于微软的 [Office Deployment Tool](https://docs.microsoft.com/zh-cn/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run) 打造，使用 Office Tool Plus, 你可以快速地部署 Office，自定义部署 Office，想安装什么，不想安装什么，都随你设置。
 
 更多的是，你可以使用 Office Tool Plus 管理已经安装的 Office (仅限基于 Click To Run 的)，更改配置、卸载单独产品或者添加语言包。
 
@@ -20,11 +20,9 @@ Office Tool Plus 基于微软的 Office Deployment Tool 打造，使用 Office T
 
 ## 快速入门
 
-我们建议您先下载 Office 安装文件再进行安装。
+我们建议您使用先下载再安装的方式进行部署。
 
-下载安装文件很简单，打开工具，转到下载页，点击开始即可。
-
-当下载完成后，转到安装页面，选择你想安装的产品，然后点击开始安装即可。默认情况下已经配置了 Word, PowerPoint 和 Excel.
+要部署 Office 很简单，到部署页面添加自己想安装的产品以及应用程序，然后开始部署即可。如有需要，可以修改其他设置。
 
 当安装完成后，你需要使用有效的许可证激活 Office。
 

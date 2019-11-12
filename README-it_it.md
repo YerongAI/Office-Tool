@@ -20,13 +20,9 @@ Inoltre, puoi gestire Office installato, aggiungere language pack o personalizza
 
 ## Avvio Rapido
 
-Ti consigliamo di scaricare prima il file di installazione.
+Go to Deploy page, add a product (or more) that you want to install, then click Deploy to start your installation. You can configure other settings if you want.
 
-Vai semplicemente alla pagina di download e fai clic su Avvia.
-
-Al termine del download, vai alla pagina di installazione, seleziona i prodotti che desideri installare e fai clic sul pulsante Installa per iniziare l'installazione.
-
-È necessario attivare Office dopo l'installazione.
+You need to Activate Office after installation.
 
 ## Legittimità dell'Applicazione
 

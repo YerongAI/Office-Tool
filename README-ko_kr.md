@@ -20,13 +20,9 @@ Office Tool Plus가 기 존재 Office( Click To Run방식만 한정)를 변경, 
 
 ## 간단설명서
 
-먼저 Office 설치파일을 다운로드 완료후 설치 진행하는 것이 권장합니다.
+Go to Deploy page, add a product (or more) that you want to install, then click Deploy to start your installation. You can configure other settings if you want.
 
-Office Tool Plus열린후 다운로드 페이지에 이동하고 시작 버튼을 누르면 설치파일 다운로드하기가 바로 진행합니다.
-
-다운로드 완료후 설치 페이지에 이동하고 설치할 제품을 선택해서 시작 버튼을 누러 설치 진행합니다. 기존설치제품은 Word, PowerPoint와 Excel입니다.
-
-설치 완료후 유효한 라이선스가 있어야 Office정품인정을 받을 수 있습니다.
+You need to Activate Office after installation.
 
 ## 응용프로그램의 법률 관련사항
 

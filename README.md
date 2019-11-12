@@ -4,7 +4,7 @@ English | [简体中文](/README-zh_cn.md) | [繁體中文](/README-zh_tw.md) | 
 
 Office Tool Plus is a tool for managing, downloading and installing Office.
 
-Office Tool Plus is based on Microsoft's Office Deployment Tool. You can customize configure your Office installation and download installation files to install Office without Internet.
+Office Tool Plus is based on Microsoft's [Office Deployment Tool](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run). You can customize configure your Office installation and download installation files to install Office without Internet.
 
 What's more, you can manage your installed Office, add language packs or customize uninstall Office.
 
@@ -75,7 +75,5 @@ We encourage everyone to help with localization. The following is how to do.
 After that, application will load your translation, if you are adding a new translation to application, it will show: failed to connect to server. It's normal.
 
 ### What is More
-
-For each translator, we will give them an Admin app that allows you to change the announcement and upload a background image.
 
 ````For each translator, we will give them an Admin app that allows you to change the announcement and upload a background image.```` [Send a e-mail](mailto:yerong@coolhub.top) ````to us.````

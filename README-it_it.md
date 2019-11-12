@@ -82,6 +82,4 @@ Successivamente, l'applicazione caricherà la tua traduzione, se stai aggiungend
 
 ### Inoltre
 
-Per ogni traduttore, forniremo loro un'app di amministrazione che consente di modificare l'annuncio e caricare un'immagine di sfondo.
-
 ````Per ogni traduttore, forniremo loro un'app di amministrazione che consente di modificare l'annuncio e caricare un'immagine di sfondo..```` [Inviaci una e-mail](mailto:yerong@coolhub.top)

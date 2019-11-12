@@ -82,6 +82,4 @@ Następnie aplikacja załaduje tłumaczenie, jeśli dodajesz nowe tłumaczenie d
 
 ### Co więcej
 
-Dla każdego tłumacza udostępnimy aplikację administracyjną, która umożliwia zmianę ogłoszenia i przesłanie obrazu tła.
-
 `` Dla każdego tłumacza damy mu aplikację administracyjną, która umożliwia zmianę ogłoszenia i przesłanie obrazu tła. '' [Wyślij e-mail] (mailto: yerong@coolhub.top) ```` do nas. ''

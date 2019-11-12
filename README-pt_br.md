@@ -82,6 +82,4 @@ Depois disso, o aplicativo carregará a sua tradução. Se você estiver adicion
 
 ### E mais
 
-Para cada tradutor, daremos um aplicativo de administração, que permite alterar as informações e fazer o upload de uma imagem de fundo.
-
 ````Para cada tradutor, daremos um aplicativo de administração, que permite alterar as informações e fazer o upload de uma imagem de fundo.````[Nos envie um e-mail](mailto:yerong@coolhub.top).

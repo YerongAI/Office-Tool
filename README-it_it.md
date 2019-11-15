@@ -20,17 +20,13 @@ Inoltre, puoi gestire Office installato, aggiungere language pack o personalizza
 
 ## Avvio Rapido
 
-Ti consigliamo di scaricare prima il file di installazione.
+Go to Deploy page, add a product (or more) that you want to install, then click Deploy to start your installation. You can configure other settings if you want.
 
-Vai semplicemente alla pagina di download e fai clic su Avvia.
-
-Al termine del download, vai alla pagina di installazione, seleziona i prodotti che desideri installare e fai clic sul pulsante Installa per iniziare l'installazione.
-
-È necessario attivare Office dopo l'installazione.
+You need to Activate Office after installation.
 
 ## Legittimità dell'Applicazione
 
-Office Tool Plus sugli [Strumenti di Sviluppo di Office](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run). E abbiamo aggiunto alcune funzioni in base alle esigenze degli utenti.
+Office Tool Plus sugli [Strumenti di Sviluppo di Office](https://docs.microsoft.com/it-it/DeployOffice/overview-of-the-office-2016-deployment-tool). E abbiamo aggiunto alcune funzioni in base alle esigenze degli utenti.
 
 ### Informazioni sulla Funzione di Attivazione
 
@@ -81,7 +77,5 @@ Incoraggiamo tutti ad aiutare con la localizzazione. Di seguito è come fare.
 Successivamente, l'applicazione caricherà la tua traduzione, se stai aggiungendo una nuova traduzione all'applicazione, mostrerà: impossibile connettersi al server. È normale.
 
 ### Inoltre
-
-Per ogni traduttore, forniremo loro un'app di amministrazione che consente di modificare l'annuncio e caricare un'immagine di sfondo.
 
 ````Per ogni traduttore, forniremo loro un'app di amministrazione che consente di modificare l'annuncio e caricare un'immagine di sfondo..```` [Inviaci una e-mail](mailto:yerong@coolhub.top)

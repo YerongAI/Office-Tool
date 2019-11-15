@@ -4,7 +4,7 @@
 
 Office Tool Plus는 하나의 Office 관리, 다운로드와 설치 보조 툴입니다.
 
-Office Tool Plus는 마이크로소프트 Office Deployment Tool를 기반으로 만들고 사용자에게 빠르고 편한 Office배포 기능을 제공합니다.
+Office Tool Plus는 마이크로소프트 [Office 배포 도구를](https://docs.microsoft.com/ko-kr/DeployOffice/overview-of-the-office-2016-deployment-tool)를 기반으로 만들고 사용자에게 빠르고 편한 Office배포 기능을 제공합니다.
 
 Office Tool Plus가 기 존재 Office( Click To Run방식만 한정)를 변경, 단독제품을 제거하거나 언어 패키지 추가도 가능합니다.
 
@@ -20,17 +20,13 @@ Office Tool Plus가 기 존재 Office( Click To Run방식만 한정)를 변경, 
 
 ## 간단설명서
 
-먼저 Office 설치파일을 다운로드 완료후 설치 진행하는 것이 권장합니다.
+Go to Deploy page, add a product (or more) that you want to install, then click Deploy to start your installation. You can configure other settings if you want.
 
-Office Tool Plus열린후 다운로드 페이지에 이동하고 시작 버튼을 누르면 설치파일 다운로드하기가 바로 진행합니다.
-
-다운로드 완료후 설치 페이지에 이동하고 설치할 제품을 선택해서 시작 버튼을 누러 설치 진행합니다. 기존설치제품은 Word, PowerPoint와 Excel입니다.
-
-설치 완료후 유효한 라이선스가 있어야 Office정품인정을 받을 수 있습니다.
+You need to Activate Office after installation.
 
 ## 응용프로그램의 법률 관련사항
 
-Office Tool Plus는 마이크로소프트의[Office Deployment Tool](https://docs.microsoft.com/zh-cn/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run)를 기반으로 만들고 추가기능을 통해서 사용자에게 더 편한 Office배포 경험을 제공합니다.
+Office Tool Plus는 마이크로소프트의[Office 배포 도구를](https://docs.microsoft.com/ko-kr/DeployOffice/overview-of-the-office-2016-deployment-tool)를 기반으로 만들고 추가기능을 통해서 사용자에게 더 편한 Office배포 경험을 제공합니다.
 
 **통역자 추가 주의사항: 중국 이외의 다른 국가 및 지역의 사용자 분들이 해당 국가 및 지역의 관련 법률을 준수하여 사용하십시오
 

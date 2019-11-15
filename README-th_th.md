@@ -20,17 +20,13 @@ Office Tool Plus บนพื้นฐานระบบสำหรับ Deplo
 
 ## การเริ่มต้นใช้งาน
 
-ก่อนอื่นเราขอแนะนำให้คุณเาวน์โหลดไฟล์ตัวติดตั้ง Office ก่อน.
+Go to Deploy page, add a product (or more) that you want to install, then click Deploy to start your installation. You can configure other settings if you want.
 
-โดยไปที่หน้าดาวน์โหลด และคลิกที่ปุ่ม เริ่มต้น.
-
-หลังจากดาวน์โหลดเสร็จแล้ว ให้ไปที่หน้าการติดตั้ง แล้วเลือกโปรแกรมที่คุณต้องการติดตั้ง จากนั้นคลิกที่ปุ่มติดตั้งเพื่อเริ่มการติดตั้งโปรแกรมนั้นๆ
-
-คุณจำเป็นต้องมีการเปิดใช้งานโปรแกรม Office หลังจากติดตั้งเสร็จ
+You need to Activate Office after installation.
 
 ## สิทธิตามกฎหมายของโปรแกรม
 
-Office Tool Plus ถูกพัฒนาบนพื้นฐานของชุด Microsoft's [Office Deployment Tool](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run). และเราได้เพิ่มฟังก์ชั่นบางอย่างตามความต้องการของผู้ใช้งาน.
+Office Tool Plus ถูกพัฒนาบนพื้นฐานของชุด Microsoft's [Office Deployment Tool](https://docs.microsoft.com/th-th/DeployOffice/overview-of-the-office-2016-deployment-tool). และเราได้เพิ่มฟังก์ชั่นบางอย่างตามความต้องการของผู้ใช้งาน.
 
 ### เกี่ยวกับฟังก์ชั่นการเปิดใช้งานชุดโปรแกรม Office
 
@@ -82,7 +78,5 @@ We encourage everyone to help with localization. The following is how to do.
 หลังจากนั้น โปรแกรมจะทำการโหลดไฟล์ภาษา ถ้าคุณกำลังเพิ่มภาษาใหม่ลงไปยังโปรแกรม คุณจะพบข้อผิดพลาด : พบข้อผิดพลาดการเชื่อมต่อกับเซิร์ฟเวอร์. ซึ่งถือว่ามันปกติ
 
 ### เพิ่มเติม
-
-สำหรับผู้แปลภาษาเราจะมอบ ชุดโปรแกรมสำหรับผู้ดูแล ให้ ซึ่งโปรแกรมรุ่นพิเศษนี้ จะอนุญาตให้คุณเปลี่ยนแปลงประกาศ และสามารถอัพโหลดไฟล์ภาพพื้นหลังของโปรแกรมได้.
 
 ````สำหรับผู้แปลภาษาเราจะมอบ ชุดโปรแกรมสำหรับผู้ดูแล ให้ ซึ่งโปรแกรมรุ่นพิเศษนี้ จะอนุญาตให้คุณเปลี่ยนแปลงประกาศ และสามารถอัพโหลดไฟล์ภาพพื้นหลังของโปรแกรมได้.```` [Send a e-mail](mailto:yerong@coolhub.top) ````ไปหาเรา.````

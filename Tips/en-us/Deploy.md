@@ -71,9 +71,9 @@ Just click [+ Add product]/[+ Add language pack] button and select what you want
 
 `Note: To avoid problems, do NOT add an installed product/language pack.`
 
-### Change Products
+### Change Applications
 
-If you have a product with several apps installed such as Office 365, including Word, PowerPoint, Excel, Outlook, etc. If you want to uninstall an app, please select this product first, then uncheck unwanted apps, finally click the [Deploy Office] button.
+If you want to change an app(s) for a product(s), please select this product first, then check wanted apps, uncheck unwanted apps, finally click the [Deploy Office] button.
 
 ### Remove Products/Language Packs
 

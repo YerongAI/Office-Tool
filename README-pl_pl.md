@@ -4,7 +4,7 @@
 
 Office Tool Plus to narzędzie do zarządzania, pobierania i instalowania pakietu Office.
 
-Office Tool Plus jest oparty na narzędziu Microsoft Office Deployment Tool. Możesz dostosować konfigurację instalacji pakietu Office i pobrać pliki instalacyjne, aby zainstalować pakiet Office bez Internetu.
+Office Tool Plus jest oparty na narzędziu Microsoft [Office Deployment Tool](https://docs.microsoft.com/pl-pl/DeployOffice/overview-of-the-office-2016-deployment-tool). Możesz dostosować konfigurację instalacji pakietu Office i pobrać pliki instalacyjne, aby zainstalować pakiet Office bez Internetu.
 
 Co więcej, możesz zarządzać zainstalowanym pakietem Office, dodawać pakiety językowe lub dostosowywać odinstalowywanie pakietu Office.
 
@@ -20,17 +20,13 @@ Co więcej, możesz zarządzać zainstalowanym pakietem Office, dodawać pakiety
 
 ## Szybki start
 
-Zalecamy, aby najpierw pobrać plik instalacyjny.
+Go to Deploy page, add a product (or more) that you want to install, then click Deploy to start your installation. You can configure other settings if you want.
 
-Po prostu przejdź do strony pobierania i kliknij Start.
-
-Po zakończeniu pobierania przejdź do strony Instalacja, wybierz produkty, które chcesz zainstalować, i kliknij przycisk Instaluj, aby rozpocząć instalację.
-
-Musisz aktywować pakiet Office po instalacji.
+You need to Activate Office after installation.
 
 ## Legalność aplikacji
 
-Pakiet Office Tool Plus jest oparty na narzędziu Microsoft [Office Deployment Tool](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run). I dodaliśmy niektóre funkcje zgodnie z potrzebami użytkowników.
+Pakiet Office Tool Plus jest oparty na narzędziu Microsoft [Office Deployment Tool](https://docs.microsoft.com/pl-pl/DeployOffice/overview-of-the-office-2016-deployment-tool). I dodaliśmy niektóre funkcje zgodnie z potrzebami użytkowników.
 
 ### Informacje o aktywacji funkcji
 
@@ -81,7 +77,5 @@ Zachęcamy wszystkich do pomocy w lokalizacji. Oto jak to zrobić.
 Następnie aplikacja załaduje tłumaczenie, jeśli dodajesz nowe tłumaczenie do aplikacji, wyświetli się: nie udało się połączyć z serwerem. To normalne.
 
 ### Co więcej
-
-Dla każdego tłumacza udostępnimy aplikację administracyjną, która umożliwia zmianę ogłoszenia i przesłanie obrazu tła.
 
 `` Dla każdego tłumacza damy mu aplikację administracyjną, która umożliwia zmianę ogłoszenia i przesłanie obrazu tła. '' [Wyślij e-mail] (mailto: yerong@coolhub.top) ```` do nas. ''

@@ -4,7 +4,7 @@
 
 O Office Tool Plus é uma ferramenta para fazer o download, gerenciar e instalar o Office.
 
-O Office Tool Plus é baseado na Ferramenta de Implantação do Office da Microsoft. Você pode personalizar, configurar a instalação do Office e baixar os arquivos de instalação para instalar o Office. Após baixar os arquivos, você pode fazer a instalação mesmo sem ter uma conexão à Internet.
+O Office Tool Plus é baseado na [Ferramenta de Implantação do Office](https://docs.microsoft.com/pt-br/DeployOffice/overview-of-the-office-2016-deployment-tool) da Microsoft. Você pode personalizar, configurar a instalação do Office e baixar os arquivos de instalação para instalar o Office. Após baixar os arquivos, você pode fazer a instalação mesmo sem ter uma conexão à Internet.
 
 Além do mais, você pode gerenciar seu Office instalado, adicionar pacotes de idioma ou personalizar a desinstalação do Office.
 
@@ -20,17 +20,13 @@ Além do mais, você pode gerenciar seu Office instalado, adicionar pacotes de i
 
 ## Início rápido
 
-Para começar, recomendamos fazer o download dos arquivos de instalação.
+Go to Deploy page, add a product (or more) that you want to install, then click Deploy to start your installation. You can configure other settings if you want.
 
-Basta ir à página de Download e clicar em Iniciar.
-
-Depois que o download estiver concluído, vá até a página de Instalação, selecione os produtos que deseja instalar e clique no botão Instalar para iniciar a instalação.
-
-Você precisará ativar o Office após a instalação.
+You need to Activate Office after installation.
 
 ## Legitimidade do aplicativo
 
-O Office Tool Plus é baseado na [Ferramenta de Implantação do Office](https://docs.microsoft.com/pt-br/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run) da Microsoft. Nós adicionamos algumas funções de acordo com as necessidades dos usuários.
+O Office Tool Plus é baseado na [Ferramenta de Implantação do Office](https://docs.microsoft.com/pt-br/DeployOffice/overview-of-the-office-2016-deployment-tool) da Microsoft. Nós adicionamos algumas funções de acordo com as necessidades dos usuários.
 
 ### Sobre a função de Ativação
 
@@ -81,7 +77,5 @@ Selecione o arquivo que você acabou de salvar.
 Depois disso, o aplicativo carregará a sua tradução. Se você estiver adicionando uma nova tradução no aplicativo, ele mostrará: Falha ao se conectar ao servidor. Isso é normal.
 
 ### E mais
-
-Para cada tradutor, daremos um aplicativo de administração, que permite alterar as informações e fazer o upload de uma imagem de fundo.
 
 ````Para cada tradutor, daremos um aplicativo de administração, que permite alterar as informações e fazer o upload de uma imagem de fundo.````[Nos envie um e-mail](mailto:yerong@coolhub.top).

@@ -20,9 +20,9 @@ Co więcej, możesz zarządzać zainstalowanym pakietem Office, dodawać pakiety
 
 ## Szybki start
 
-Go to Deploy page, add a product (or more) that you want to install, then click Deploy to start your installation. You can configure other settings if you want.
+Przejdź do strony Wdróż, dodaj produkt (lub więcej), który chcesz zainstalować, a następnie kliknij Wdróż, aby rozpocząć instalację. Jeśli chcesz, możesz skonfigurować inne ustawienia.
 
-You need to Activate Office after installation.
+Musisz aktywować pakiet Office po instalacji.
 
 ## Legalność aplikacji
 

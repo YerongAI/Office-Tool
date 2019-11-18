@@ -1,6 +1,6 @@
 ﻿# Office Tool Plus
 
-[English](/README.md) | [简体中文](/README-zh_cn.md) | 繁體中文 | [한국어](/README-ko_kr.md) | [Italiano](/README-it_it.md) | [ไทย/Thai](/README-th_th.md) | [polski](/README-pl_pl.md) | [Brazilian Portuguese](/README-pt_br.md)
+[⬅ 返回](https://github.com/YerongAI/Office-Tool)
 
 歡迎使用 Office Tool Plus ，這是一個用來管理、下載、安裝 Office 的工具。
 

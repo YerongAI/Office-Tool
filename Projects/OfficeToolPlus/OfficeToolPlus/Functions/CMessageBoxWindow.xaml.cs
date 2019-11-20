@@ -218,6 +218,8 @@ namespace Zmy.Wpf.CMessageBox
                 richTextBox.Document.Blocks.Clear();
                 richTextBox.Document.Blocks.Add(ParagraphContent);
             }
+            if (string.IsNullOrEmpty(MessageBoxTitle))
+                IconPath.Visibility = Visibility.Collapsed;
         }
 
         private void Window_Activated(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿# Office Tool Plus
 
-[⬅ Back](https://github.com/YerongAI/Office-Tool)
+[⬅ Zurück](https://github.com/YerongAI/Office-Tool)
 
 Office Tool Plus ist eine Software zur Verwaltung, Installation und zum Herunterladen von Office.
 

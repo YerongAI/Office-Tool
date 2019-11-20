@@ -73,7 +73,9 @@ namespace OfficeTool.Functions
 
         private void PowerControl(string flag)
         {
+#pragma warning disable IDE0067 // 丢失范围之前释放对象
             ManagementClass mcWin32 = new ManagementClass("Win32_OperatingSystem");
+#pragma warning restore IDE0067 // 丢失范围之前释放对象
             try
             {
                 mcWin32.Get();
@@ -95,7 +97,6 @@ namespace OfficeTool.Functions
             }
             finally
             {
-                mcWin32.Delete();
                 mcWin32.Dispose();
             }
         }

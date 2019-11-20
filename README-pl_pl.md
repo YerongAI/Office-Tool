@@ -1,6 +1,6 @@
 ﻿# Office Tool Plus
 
-[English](/README.md) | [简体中文](/README-zh_cn.md) | [繁體中文](/README-zh_tw.md) | [한국어](/README-ko_kr.md) | [Italiano](/README-it_it.md) | [ไทย/Thai](/README-th_th.md) | polski | [Brazilian Portuguese](/README-pt_br.md)
+[⬅ Back](https://github.com/YerongAI/Office-Tool)
 
 Office Tool Plus to narzędzie do zarządzania, pobierania i instalowania pakietu Office.
 
@@ -20,9 +20,9 @@ Co więcej, możesz zarządzać zainstalowanym pakietem Office, dodawać pakiety
 
 ## Szybki start
 
-Go to Deploy page, add a product (or more) that you want to install, then click Deploy to start your installation. You can configure other settings if you want.
+Przejdź do strony Wdróż, dodaj produkt (lub więcej), który chcesz zainstalować, a następnie kliknij Wdróż, aby rozpocząć instalację. Jeśli chcesz, możesz skonfigurować inne ustawienia.
 
-You need to Activate Office after installation.
+Musisz aktywować pakiet Office po instalacji.
 
 ## Legalność aplikacji
 

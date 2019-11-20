@@ -145,7 +145,7 @@ namespace Zmy.Wpf.CMessageBox
             DataContext = this;
 
             MessageBoxTitle = Application.Current.FindResource("MsgNormalTitle").ToString();
-            ApplyToAllVisibility = OKButtonVisibility = CancelButtonVisibility = YesButtonVisibility = NoButtonVisibility = IconPath.Visibility = Visibility.Collapsed;
+            ApplyToAllVisibility = OKButtonVisibility = CancelButtonVisibility = YesButtonVisibility = NoButtonVisibility = Visibility.Collapsed;
             normalButtonStyle = FindResource("NormalButtonStyle") as Style;
             notNormalButtonStyle = FindResource("NotNormalButtonStyle") as Style;
 
@@ -219,7 +219,9 @@ namespace Zmy.Wpf.CMessageBox
                 richTextBox.Document.Blocks.Add(ParagraphContent);
             }
             if (string.IsNullOrEmpty(MessageBoxTitle))
+            {
                 IconPath.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void Window_Activated(object sender, EventArgs e)

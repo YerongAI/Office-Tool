@@ -35,18 +35,17 @@ Sie können die Dokumentation von OSPP unter ````"C:\Program Files\Microsoft Off
 ## Danke an die Übersetzer
 
 - (ar-ps) العربية (الأراضي الفلسطينية) / Ibrahim
-- (de-de) Deutsch (Deutschland) / [Berny23](https://steamcommunity.com/id/Berny23)
+- (de-de) Deutsch (Deutschland) / [Berny23](https://github.com/Berny23)
 - (en-us) English (United States) / [Moedog](https://prprpr.love)
 - (es-es) Español (España, alfabetización internacional) / Xoseba
 - (fr-fr) Français (France) / Drake4478
-- (it-it) Italiano (Italia) / garf02
-- (ja-jp) 日本語 (日本) / 秋叶笙
+- (it-it) Italiano (Italia) / [garf02](https://github.com/garf02)
+- (ja-jp) 日本語 (日本) / [アカヤマ](https://github.com/akio1321)
 - (ko-kr) 한국어(대한민국) / [Jay Jang](https://github.com/yaeyaya)
 - (pl-pl) Polski (Polska) / JakubDriver
 - (pt-br) Português (Brasil) / [Hélio de Souza](https://sway.office.com/RVue6qySNJ2DzYrs?ref=Link)
-- (ru-ru) русский (Россия) - `(Not updated)` / Долматов Алексей
 - (tr-tr) Türkçe (Türkiye) / Turan Furkan Topak
-- (vi-vn) Tiêng Việt (Việt Nam) / phuocding
+- (vi-vn) Tiêng Việt (Việt Nam) / [phuocding](https://github.com/phuocding)
 - (zh-cn) 简体中文 (中国) / **官方语言 (Official language)**
 - (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://github.com/chiyi4488)
 

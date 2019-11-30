@@ -20,9 +20,9 @@ Office Tool Plus가 기 존재 Office( Click To Run방식만 한정)를 변경, 
 
 ## 간단설명서
 
-Go to Deploy page, add a product (or more) that you want to install, then click Deploy to start your installation. You can configure other settings if you want.
+배포 페이지에 가서 설치하려는 제품을 추가하고 배포 버튼을 누르면 설치가 시작됩니다. 다른 설정 항목도 지원됩니다.
 
-You need to Activate Office after installation.
+설치 환료 후 정품인정 해야합니다.
 
 ## 응용프로그램의 법률 관련사항
 

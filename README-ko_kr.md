@@ -41,19 +41,19 @@ Office Tool Plus는 마이크로소프트의[Office 배포 도구를](https://do
 ### Thanks to the collaborators
 
 - (ar-ps) العربية (الأراضي الفلسطينية) / Ibrahim
-- (de-de) Deutsch (Deutschland) / [Berny23](https://github.com/Berny23)
+- (de-de) Deutsch (Deutschland) / [Berny23](https://steamcommunity.com/id/Berny23)
 - (en-us) English (United States) / [Moedog](https://prprpr.love)
 - (es-es) Español (España, alfabetización internacional) / Xoseba
 - (fr-fr) Français (France) / Drake4478
 - (it-it) Italiano (Italia) / [garf02](https://github.com/garf02)
 - (ja-jp) 日本語 (日本) / [アカヤマ](https://github.com/akio1321)
-- (ko-kr) 한국어(대한민국) / [Jay Jang](https://github.com/yaeyaya)
+- (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)
 - (pl-pl) Polski (Polska) / JakubDriver
-- (pt-br) Português (Brasil) / [Hélio de Souza](https://sway.office.com/RVue6qySNJ2DzYrs?ref=Link)
+- (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec)
 - (tr-tr) Türkçe (Türkiye) / Turan Furkan Topak
 - (vi-vn) Tiêng Việt (Việt Nam) / [phuocding](https://github.com/phuocding)
 - (zh-cn) 简体中文 (中国) / **官方语言 (Official language)**
-- (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://github.com/chiyi4488)
+- (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://www.cotpear.com)
 
 ## 현지화(로컬리제이션) 도움 요청
 

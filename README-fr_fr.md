@@ -1,6 +1,6 @@
 ﻿# Office Tool Plus
 
-[⬅ Back](https://github.com/YerongAI/Office-Tool)
+[⬅ Précédent](https://github.com/YerongAI/Office-Tool)
 
 Office Tool Plus est un outil de gestion, de téléchargement et d'installation d'Office.
 
@@ -34,20 +34,20 @@ Vous pouvez consulter la description de l'OSPP dans ````"C:\Program Files\Micros
 
 ## Merci aux collaborateurs
 
-- (ar-ps) العربية (الأراضي الفلسطينية) / Ibrahim
-- (de-de) Deutsch (Deutschland) / [Berny23](https://steamcommunity.com/id/Berny23)
-- (en-us) English (United States) / [Moedog](https://prprpr.love)
-- (es-es) Español (España, alfabetización internacional) / Xoseba
+- (ar-ps) Arabe (Territoires palestiniens)) / Ibrahim
+- (de-de) Allemand (Allemagne) / [Berny23](https://steamcommunity.com/id/Berny23)
+- (en-us) Anglais (États-Unis) / [Moedog](https://prprpr.love)
+- (es-es) Espagnol (Espagne, alphabétisation internationale) / Xoseba
 - (fr-fr) Français (France) / Drake4478
-- (it-it) Italiano (Italia) / [garf02](https://github.com/garf02)
-- (ja-jp) 日本語 (日本) / [アカヤマ](https://github.com/akio1321)
-- (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)
-- (pl-pl) Polski (Polska) / JakubDriver
-- (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec)
-- (tr-tr) Türkçe (Türkiye) / Turan Furkan Topak
-- (vi-vn) Tiêng Việt (Việt Nam) / [phuocding](https://github.com/phuocding)
-- (zh-cn) 简体中文 (中国) / **官方语言 (Official language)**
-- (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://www.cotpear.com)
+- (it-it) Italien (Italie) / [garf02](https://github.com/garf02)
+- (ja-jp) Japonais (Japon) / [アカヤマ](https://github.com/akio1321)
+- (ko-kr) Anglais (Corée du Sud) / [Jay Jang](http://www.yaeyaya.com)
+- (pl-pl) Polonais (Pologne) / JakubDriver
+- (pt-br) Portugais (Brésil) / [Hélio de Souza](https://tinyurl.com/hdstec)
+- (tr-tr) Turc (Turquie) / Turan Furkan Topak
+- (vi-vn) Tieng Vietnam (Vietnam) / [phuocding](https://github.com/phuocding)
+- (zh-cn) Chinois simplifié (Chine) / **langue officielle (Langue officielle)**
+- (zh-tw) Chinois traditionnel (Taïwan) / [Yi Chi](https://www.cotpear.com)
 
 ## Aide à la localisation
 

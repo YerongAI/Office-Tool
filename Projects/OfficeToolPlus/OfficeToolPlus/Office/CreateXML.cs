@@ -1,18 +1,17 @@
-﻿using System.Collections.Generic;
-using System;
+﻿using OTP.List;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
-using System.Linq;
-using System.IO;
-using OTP.List;
 
 namespace OTP
 {
-    //Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
+    // Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
     class CreateXML
     {
-        private static readonly List<InstallConfig> ProductConfigList = new List<InstallConfig>(2);
-        private static readonly List<Property> PropertyList = new List<Property>(1);
+        private static readonly List<InstallConfig> ProductConfigList = new List<InstallConfig>();
+        private static readonly List<Property> PropertyList = new List<Property>();
 
         public class InstallArguments
         {
@@ -26,46 +25,32 @@ namespace OTP
             internal string OfficeClientEdition;
             internal string Channel;
             internal string DownloadPath;
-            internal bool? OfficeMgmtCOM;
-            internal bool ForceUpgrade;
-            internal bool AllowCdnFallback;
-            internal bool MigrateArch;
+            internal bool? OfficeMgmtCOM = null;
+            internal bool ForceUpgrade = false;
+            internal bool AllowCdnFallback = false;
+            internal bool MigrateArch = false;
             // Display Element
-            internal bool DisplayLevel;
-            internal bool AcceptEULA;
+            internal bool DisplayLevel = false;
+            internal bool AcceptEULA = false;
             // Logging Element
-            internal bool? LoggingLevel;
-            internal string LoggingPath;
+            internal bool? LoggingLevel = false;
+            internal string LoggingPath = "%temp%";
             // Updates Element
-            internal bool? UpdateEnabled;
+            internal bool? UpdateEnabled = null;
             internal string UpdatePath = string.Empty;
             internal string TargetVersion = string.Empty;
             internal string Deadline = string.Empty;
             internal string UpdateChannel = string.Empty;
             // RemoveMSI Element
-            internal bool RemoveMSI;
-            internal string[] IgnoreProduct;
+            internal bool RemoveMSI = false;
+            internal List<string> IgnoreProduct = new List<string>();
             // Remove Element
             private bool RemoveOffice;
 
             /// <summary>
             /// 构建安装文件配置
             /// </summary>
-            public InstallArguments()
-            {
-                //ProductConfigList.Clear();
-                //PropertyList.Clear();
-                OfficeMgmtCOM = null;
-                ForceUpgrade = false;
-                MigrateArch = false;
-                AllowCdnFallback = false;
-                DisplayLevel = false;
-                AcceptEULA = false;
-                LoggingLevel = null;
-                UpdateEnabled = null;
-                RemoveMSI = false;
-                LoggingPath = "%temp%";
-            }
+            public InstallArguments(){ }
 
             /// <summary>
             /// 构建安装文件配置
@@ -77,16 +62,6 @@ namespace OTP
                 {
                     ProductConfigList.Clear();
                     PropertyList.Clear();
-                    OfficeMgmtCOM = null;
-                    ForceUpgrade = false;
-                    MigrateArch = false;
-                    AllowCdnFallback = false;
-                    DisplayLevel = false;
-                    AcceptEULA = false;
-                    LoggingLevel = null;
-                    UpdateEnabled = null;
-                    RemoveMSI = false;
-                    LoggingPath = "%temp%";
                 }
             }
 
@@ -126,6 +101,23 @@ namespace OTP
             }
 
             /// <summary>
+            /// 设置产品的多次激活密钥 (MAK)
+            /// </summary>
+            /// <param name="ProductID">产品 ID</param>
+            /// <param name="MAK">多次激活密钥 (MAK)</param>
+            public void SetMAK(string ProductID, string MAK)
+            {
+                foreach (InstallConfig config in ProductConfigList)
+                {
+                    if (config.ProductID == ProductID)
+                    {
+                        config.MAK = MAK;
+                        break;
+                    }
+                }
+            }
+
+            /// <summary>
             /// 添加 Property 元素
             /// </summary>
             /// <param name="Name">需要定义的属性</param>
@@ -145,6 +137,10 @@ namespace OTP
                 RemoveOffice = removeOffice;
             }
 
+            /// <summary>
+            /// 获取所有的产品列表信息
+            /// </summary>
+            /// <returns>返回产品列表</returns>
             public List<InstallConfig> GetProductsList()
             {
                 return ProductConfigList;
@@ -184,17 +180,16 @@ namespace OTP
                             XElement description = new XElement("Info", new XAttribute("Description", Description));
                             RootElement.Add(description);
                         }
-                        //Add 内容
                         XElement AddElementTemp = new XElement("Add",
-                                           new XAttribute("OfficeClientEdition", OfficeClientEdition),//指定体系架构
-                                           new XAttribute("Channel", Channel),//指定更新通道
-                                           new XAttribute("SourcePath", SourcePath),//指定安装文件位置
-                                           new XAttribute("DownloadPath", DownloadPath),//指定下载位置
-                                           new XAttribute("Version", Version),//指定要安装的版本
+                                           new XAttribute("OfficeClientEdition", OfficeClientEdition),
+                                           new XAttribute("Channel", Channel),
+                                           new XAttribute("SourcePath", SourcePath),
+                                           new XAttribute("DownloadPath", DownloadPath),
+                                           new XAttribute("Version", Version),
                                            new XAttribute("ForceUpgrade", ForceUpgrade.ToString().Replace("False", "").ToUpper()),
                                            new XAttribute("MigrateArch", MigrateArch.ToString().Replace("False", "").Replace("True", "TRUE")),
                                            new XAttribute("AllowCdnFallback", AllowCdnFallback.ToString().Replace("False", "")),
-                                           new XAttribute("OfficeMgmtCOM", OfficeMgmtCOM.ToString().Replace("null", "")));//指定是否使用配置管理器管理更新
+                                           new XAttribute("OfficeMgmtCOM", OfficeMgmtCOM.ToString().Replace("null", "")));
 
                         XElement AddElement = new XElement("Add",
                                             from el in AddElementTemp.Attributes()
@@ -296,12 +291,12 @@ namespace OTP
                         }
                         if (RemoveMSI == true)
                         {
-                            if (IgnoreProduct == null)
+                            if (IgnoreProduct.Count == 0)
                             {
                                 XElement TempElemtnt = new XElement("RemoveMSI");
                                 RootElement.Add(TempElemtnt);
                             }
-                            else if (IgnoreProduct.Length > 0)
+                            else
                             {
                                 XElement TempElemtnt = new XElement("RemoveMSI");
                                 foreach (string id in IgnoreProduct)
@@ -377,7 +372,191 @@ namespace OTP
                 }
             }
 
-        public class InstallConfig//安装配置信息构造
+            /// <summary>
+            /// 加载 XML 配置文件
+            /// </summary>
+            /// <param name="filePath">文件路径</param>
+            public void LoadXMLFile(string filePath)
+            {
+                XElement loadxml = XElement.Load(filePath);
+                IEnumerable<XElement> MatchElements = from el in loadxml.Elements("Add")
+                                                      select el;
+                // Read Add Element
+                foreach (XElement ele in MatchElements)
+                {
+                    foreach (XAttribute attribute in ele.Attributes())
+                    {
+                        if (attribute.Name == "OfficeClientEdition")
+                        {
+                            OfficeClientEdition = attribute.Value;
+                        }
+                        else if (attribute.Name == "Channel")
+                        {
+                            Channel = attribute.Value;
+                        }
+                        else if (attribute.Name == "SourcePath")
+                        {
+                            SourcePath = attribute.Value;
+                        }
+                        else if (attribute.Name == "DownloadPath")
+                        {
+                            DownloadPath = attribute.Value;
+                        }
+                        else if (attribute.Name == "Version")
+                        {
+                            Version = attribute.Value;
+                        }
+                        else if (attribute.Name == "ForceUpgrade")
+                        {
+                            ForceUpgrade = (bool)attribute;
+                        }
+                        else if (attribute.Name == "MigrateArch")
+                        {
+                            MigrateArch = (bool)attribute;
+                        }
+                        else if (attribute.Name == "AllowCdnFallback")
+                        {
+                            AllowCdnFallback = (bool)attribute;
+                        }
+                        else if (attribute.Name == "OfficeMgmtCOM")
+                        {
+                            OfficeMgmtCOM = (bool)attribute;
+                        }
+                    }
+                    // Read Product Element
+                    foreach (XElement xElement in ele.Elements("Product"))
+                    {
+                        string productID = xElement.Attribute("ID").Value;
+                        List<string> languageID = new List<string>();
+                        List<string> excludeApps = new List<string>();
+                        foreach (XElement temp in xElement.Elements())
+                        {
+                            if (temp.Name == "Language")
+                            {
+                                languageID.Add(temp.Attribute("ID").Value);
+                            }
+                            else if (temp.Name == "ExcludeApp")
+                            {
+                                excludeApps.Add(temp.Attribute("ID").Value);
+                            }
+                        }
+                        if (xElement.Attribute("PIDKEY") != null)
+                        {
+                            AddProduct(productID, xElement.Attribute("PIDKEY").Value, languageID, excludeApps);
+                        }
+                        else
+                        {
+                            AddProduct(productID, "", languageID, excludeApps);
+                        }
+                    }
+                }
+
+                MatchElements = from el in loadxml.Elements("Display")
+                                select el;
+                // Read Display Element
+                foreach (XElement ele in MatchElements)
+                {
+                    if (ele.Attribute("Level") != null)
+                    {
+                        if (ele.Attribute("Level").Value == "None")
+                            DisplayLevel = true;
+                    }
+                    if (ele.Attribute("AcceptEULA") != null)
+                    {
+                        AcceptEULA = (bool)ele.Attribute("AcceptEULA");
+                    }
+                }
+
+                MatchElements = from el in loadxml.Elements("Logging")
+                                select el;
+                // Read Logging Element
+                foreach (XElement ele in MatchElements)
+                {
+                    if (ele.Attribute("Level").Value == "Standard")
+                    {
+                        LoggingLevel = true;
+                        LoggingPath = ele.Attribute("Path").Value;
+                    }
+                }
+
+                MatchElements = from el in loadxml.Elements("Property")
+                                select el;
+                // Read Property Element
+                foreach (XElement ele in MatchElements)
+                {
+                    AddProperty(ele.Attribute("Name").Value, ele.Attribute("Value").Value);
+                }
+
+                MatchElements = from el in loadxml.Elements("Updates")
+                                select el;
+                // Read Updates Element
+                foreach (XElement ele in MatchElements)
+                {
+                    foreach (XAttribute attribute in ele.Attributes())
+                    {
+                        if (attribute.Name == "Enabled")
+                        {
+                            UpdateEnabled = (bool)attribute;
+                        }
+                        else if (attribute.Name == "UpdatePath")
+                        {
+                            UpdatePath = attribute.Value;
+                        }
+                        else if (attribute.Name == "UpdateChannel")
+                        {
+                            UpdateChannel = attribute.Value;
+                        }
+                        else if (attribute.Name == "TargetVersion")
+                        {
+                            TargetVersion = attribute.Value;
+                        }
+                        else if (attribute.Name == "DeadLine")
+                        {
+                            Deadline = attribute.Value;
+                        }
+                    }
+                }
+
+                MatchElements = from el in loadxml.Elements("Info")
+                                select el;
+                // Read Info Element
+                foreach (XElement ele in MatchElements)
+                {
+                    Description = ele.Attribute("Description").Value;
+                }
+
+                MatchElements = from el in loadxml.Elements("RemoveMSI")
+                                select el;
+                // Read RemoveMSI Element
+                foreach (XElement ele in MatchElements)
+                {
+                    RemoveMSI = true;
+                    foreach (XElement element in ele.Elements())
+                    {
+                        if (element.Name == "IgnoreProduct" && element.Attribute("ID") != null)
+                        {
+                            IgnoreProduct.Add(element.Attribute("ID").Value);
+                        }
+                    }
+                }
+
+                MatchElements = from el in loadxml.Elements("AppSettings")
+                                select el;
+                // Read AppSettings Element
+                foreach (XElement ele in MatchElements)
+                {
+                    foreach (XElement element in ele.Elements())
+                    {
+                        if (element.Name == "Setup" && element.Attribute("Name") != null && element.Attribute("Value") != null)
+                        {
+                            CompanyName = element.Attribute("Value").Value;
+                        }
+                    }
+                }
+            }
+        }
+
+        public class InstallConfig
         {
             public InstallConfig(string ProductID, string MAK, List<string> LanguageID, string FallbackLanguage, List<string> ExcludeApps)
             {

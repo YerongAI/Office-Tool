@@ -1,18 +1,18 @@
 ﻿# Office Tool Plus
 
-[English](/README.md) | [简体中文](/README-zh_cn.md) | [繁體中文](/README-zh_tw.md) | 한국어 | [Italiano](/README-it_it.md) | [ไทย/Thai](/README-th_th.md) | [polski](/README-pl_pl.md)
+[⬅ Back](https://github.com/YerongAI/Office-Tool)
 
 Office Tool Plus는 하나의 Office 관리, 다운로드와 설치 보조 툴입니다.
 
-Office Tool Plus는 마이크로소프트 Office Deployment Tool를 기반으로 만들고 사용자에게 빠르고 편한 Office배포 기능을 제공합니다.
+Office Tool Plus는 마이크로소프트 [Office 배포 도구를](https://docs.microsoft.com/ko-kr/DeployOffice/overview-of-the-office-2016-deployment-tool)를 기반으로 만들고 사용자에게 빠르고 편한 Office배포 기능을 제공합니다.
 
 Office Tool Plus가 기 존재 Office( Click To Run방식만 한정)를 변경, 단독제품을 제거하거나 언어 패키지 추가도 가능합니다.
 
 ## Office Tool Plus 다운로드
 
-[공식 사이트](https://otp.landian.vip/zh-cn/)
+[공식 사이트](https://otp.landian.vip/)
 
-[다운로드 사이트](https://delivery.yuntu.moe/office-tool/) by [Yuntu](https://www.yuntu.moe/)
+[다운로드 사이트](https://delivery.yuntu.dev/office-tool/) by [Yuntu](https://www.yuntu.dev/)
 
 ## 기술설명서
 
@@ -20,17 +20,13 @@ Office Tool Plus가 기 존재 Office( Click To Run방식만 한정)를 변경, 
 
 ## 간단설명서
 
-먼저 Office 설치파일을 다운로드 완료후 설치 진행하는 것이 권장합니다.
+배포 페이지에 가서 설치하려는 제품을 추가하고 배포 버튼을 누르면 설치가 시작됩니다. 다른 설정 항목도 지원됩니다.
 
-Office Tool Plus열린후 다운로드 페이지에 이동하고 시작 버튼을 누르면 설치파일 다운로드하기가 바로 진행합니다.
-
-다운로드 완료후 설치 페이지에 이동하고 설치할 제품을 선택해서 시작 버튼을 누러 설치 진행합니다. 기존설치제품은 Word, PowerPoint와 Excel입니다.
-
-설치 완료후 유효한 라이선스가 있어야 Office정품인정을 받을 수 있습니다.
+설치 환료 후 정품인정 해야합니다.
 
 ## 응용프로그램의 법률 관련사항
 
-Office Tool Plus는 마이크로소프트의[Office Deployment Tool](https://docs.microsoft.com/zh-cn/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run)를 기반으로 만들고 추가기능을 통해서 사용자에게 더 편한 Office배포 경험을 제공합니다.
+Office Tool Plus는 마이크로소프트의[Office 배포 도구를](https://docs.microsoft.com/ko-kr/DeployOffice/overview-of-the-office-2016-deployment-tool)를 기반으로 만들고 추가기능을 통해서 사용자에게 더 편한 Office배포 경험을 제공합니다.
 
 **통역자 추가 주의사항: 중국 이외의 다른 국가 및 지역의 사용자 분들이 해당 국가 및 지역의 관련 법률을 준수하여 사용하십시오
 
@@ -44,10 +40,20 @@ Office Tool Plus는 마이크로소프트의[Office Deployment Tool](https://doc
 
 ### Thanks to the collaborators
 
-- Portuguese (Brazil) / [Hélio de Souza](https://sway.office.com/RVue6qySNJ2DzYrs?ref=Link)
-- Polish (Poland) / JakubDriver
-- Korean (Korea) / [Jay Jang](https://github.com/yaeyaya)
-- Traditional Chinese (Taiwan) / [Yi Chi](https://github.com/chiyi4488)
+- (ar-ps) العربية (الأراضي الفلسطينية) / Ibrahim
+- (de-de) Deutsch (Deutschland) / [Berny23](https://steamcommunity.com/id/Berny23)
+- (en-us) English (United States) / [Moedog](https://prprpr.love)
+- (es-es) Español (España, alfabetización internacional) / Xoseba
+- (fr-fr) Français (France) / Drake4478
+- (it-it) Italiano (Italia) / [garf02](https://github.com/garf02)
+- (ja-jp) 日本語 (日本) / [アカヤマ](https://github.com/akio1321)
+- (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)
+- (pl-pl) Polski (Polska) / JakubDriver
+- (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec)
+- (tr-tr) Türkçe (Türkiye) / Turan Furkan Topak
+- (vi-vn) Tiêng Việt (Việt Nam) / [phuocding](https://github.com/phuocding)
+- (zh-cn) 简体中文 (中国) / **官方语言 (Official language)**
+- (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://www.cotpear.com)
 
 ## 현지화(로컬리제이션) 도움 요청
 
@@ -73,16 +79,4 @@ Office Tool Plus는 마이크로소프트의[Office Deployment Tool](https://doc
 ### 더 많은 정보
 
 저희는 변역자마다 Admin응용프로그램을 제공합니다. 번역자가 이 으용프로그램을 통해서 공지사항, 배경화면과 설명내용 등 정보를 간편하게 수정할 수 있습니다.
-**[이메일](mailto:yerong@coolhub.top)로 신청하면 됩니다. 
-
-## 같이 코딩하자
-
-코딩에 관심이 있으면 이 리포지토리를 포크하고 같이 코딩하세요. 코딩 완료되면 풀 요청(Pull Request)하고 변경내용, 사용방법과 변경원인 등 정보를 비고로 추가하면 됩니다.
-
-모든 참여자에게 진심으로 감사 드리겠습니다.
-
-주의:
-힛허브에서 전제코드가 아닌 일부만 제공해서 VS Code등 코드 편집기민으로 코딩하고 CS테스트 완료후 제출할 수 있습니다. 저희는 받은 코드를 다시 테스트할 겁니다. 버그수정, 성능향상, 기능추가 등 개선을 제공해주셔서 감사합니다.
-
-사용허락:
-저희의 코드를 사용하려면 먼저 허락을 받아야합니당~
+**[이메일](mailto:yerong@coolhub.top)로 신청하면 됩니다.

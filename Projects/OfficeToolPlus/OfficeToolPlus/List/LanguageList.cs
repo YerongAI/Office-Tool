@@ -228,7 +228,7 @@ namespace OTP.List
         {
             foreach (LangInfo lang in LangList)
             {
-                if (lang.ID == id)
+                if (lang.ID.ToLower() == id.ToLower())
                     switch (language)
                     {
                         case LanguageInfo.Name:

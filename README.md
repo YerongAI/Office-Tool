@@ -1,18 +1,18 @@
 ﻿# Office Tool Plus
 
-English | [简体中文](/README-zh_cn.md) | [繁體中文](/README-zh_tw.md) | [한국어](/README-ko_kr.md) | [Italiano](/README-it_it.md) | [ไทย/Thai](/README-th_th.md) | [polski](/README-pl_pl.md)
+English | [简体中文](/README-zh_cn.md) | [繁體中文](/README-zh_tw.md) | [한국어](/README-ko_kr.md) | [Italiano](/README-it_it.md) | [ไทย/Thai](/README-th_th.md) | [polski](/README-pl_pl.md) | [Brazilian Portuguese](/README-pt_br.md) | [Français](/README-fr_fr.md) | [Deutsch](/README-de_de.md)
 
 Office Tool Plus is a tool for managing, downloading and installing Office.
 
-Office Tool Plus is based on Microsoft's Office Deployment Tool. You can customize configure your Office installation and download installation files to install Office without Internet.
+Office Tool Plus is based on Microsoft's [Office Deployment Tool](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-2016-deployment-tool). You can customize configure your Office installation and download installation files to install Office without Internet.
 
 What's more, you can manage your installed Office, add language packs or customize uninstall Office.
 
 ## Download Office Tool Plus
 
-[Official website](https://otp.landian.vip/zh-cn/)
+[Official website](https://otp.landian.vip/)
 
-[Mirror download](https://delivery.yuntu.moe/office-tool/) by [云图小镇](https://www.yuntu.moe/)
+[Mirror download](https://delivery.yuntu.dev/office-tool/) by [云图小镇](https://www.yuntu.dev/)
 
 ## Technical Articles
 
@@ -20,17 +20,11 @@ What's more, you can manage your installed Office, add language packs or customi
 
 ## Quick Start
 
-We recommend that you first download the installation file.
-
-Simply go to the Download page and click Start.
-
-After the download is complete, go to the Installation page, select the products you want to install, and click the Install button to begin the installation.
-
-You need to activate Office after install.
+Go to Deploy page, add a product that you want to install, then click Deploy to start your installation.
 
 ## Application Legitimacy
 
-Office Tool Plus is based on Microsoft's [Office Deployment Tool](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run). And we added some functions according to the needs of users.
+Office Tool Plus is based on Microsoft's [Office Deployment Tool](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-2016-deployment-tool). And we added some functions according to the needs of users.
 
 ### About Activate Function
 
@@ -40,10 +34,20 @@ You can view the description of OSPP in ````"C:\Program Files\Microsoft Office\O
 
 ## Thanks to the collaborators
 
-- Portuguese (Brazil) / [Hélio de Souza](https://sway.office.com/RVue6qySNJ2DzYrs?ref=Link)
-- Polish (Poland) / JakubDriver
-- Korean (Korea) / [Jay Jang](https://github.com/yaeyaya)
-- Traditional Chinese (Taiwan) / [Yi Chi](https://github.com/chiyi4488)
+- (ar-ps) العربية (الأراضي الفلسطينية) / Ibrahim
+- (de-de) Deutsch (Deutschland) / [Berny23](https://steamcommunity.com/id/Berny23)
+- (en-us) English (United States) / [Moedog](https://prprpr.love)
+- (es-es) Español (España, alfabetización internacional) / Xoseba
+- (fr-fr) Français (France) / Drake4478
+- (it-it) Italiano (Italia) / [garf02](https://github.com/garf02)
+- (ja-jp) 日本語 (日本) / [アカヤマ](https://github.com/akio1321)
+- (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)
+- (pl-pl) Polski (Polska) / JakubDriver
+- (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec)
+- (tr-tr) Türkçe (Türkiye) / Turan Furkan Topak
+- (vi-vn) Tiêng Việt (Việt Nam) / [phuocding](https://github.com/phuocding)
+- (zh-cn) 简体中文 (中国) / **官方语言 (Official language)**
+- (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://www.cotpear.com)
 
 ## Help With Localization
 
@@ -71,16 +75,4 @@ After that, application will load your translation, if you are adding a new tran
 
 ### What is More
 
-For each translator, we will give them an Admin app that allows you to change the announcement and upload a background image.
-
 ````For each translator, we will give them an Admin app that allows you to change the announcement and upload a background image.```` [Send a e-mail](mailto:yerong@coolhub.top) ````to us.````
-
-## Help With Coding
-
-If you have any ideas about coding, you can fork this repository and coding by yourself, after done, make a pull request and explain what you changed and how to use it or why you change it.
-
-Thanks you very much.
-
-But actually, it is only contains partial codes, (●ˇ∀ˇ●) so you can only use editor such as NotePad.
-
-Note: You CAN'T copy this codes to use without my permisson!

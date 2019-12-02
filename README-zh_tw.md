@@ -1,10 +1,10 @@
 ﻿# Office Tool Plus
 
-[English](/README.md) | [简体中文](/README-zh_cn.md) | 繁體中文 | [한국어](/README-ko_kr.md) | [Italiano](/README-it_it.md) | [ไทย/Thai](/README-th_th.md) | [polski](/README-pl_pl.md)
+[⬅ 返回](https://github.com/YerongAI/Office-Tool)
 
 歡迎使用 Office Tool Plus ，這是一個用來管理、下載、安裝 Office 的工具。
 
-這個應用程式是參考、使用微軟 Office Deployment 製作的。將零散的系統指令集結成圖形化介面，讓大眾能快速直覺的部署 Office、客製化安裝 Office。
+這個應用程式是參考、使用微軟 [Office Deployment Tool](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-2016-deployment-tool) 製作的。將零散的系統指令集結成圖形化介面，讓大眾能快速直覺的部署 Office、客製化安裝 Office。
 
 除了能夠部署 Office 之外，也能修改已安裝 Office 相關設定、移除單項產品、新增語言等。 <sup>[註一]</sup>
 
@@ -12,13 +12,11 @@
 
 ## 下載
 
-[官方網站](https://otp.landian.vip/zh-tw/)
+[官方網站](https://otp.landian.vip/)
 
 [備用 官方網站](https://otp.cotpear.com/zh-tw/) <sup>[註二]</sup>
 
-[備用載點](https://delivery.yuntu.moe/office-tool/) (感謝 [云图小镇](https://www.yuntu.moe/) 提供)
-
-[Github](https://github.com/YerongAI/Office-Tool/releases)
+[備用載點](https://delivery.yuntu.dev/office-tool/) (感謝 [云图小镇](https://www.yuntu.dev/) 提供)
 
 [註二]由於主要官方網站伺服器於中國，在某些時刻連線不穩定，若網站無法開啟，請使用[[備用 官方網站](https://otp.cotpear.com/zh-tw/)]。
 
@@ -30,13 +28,13 @@
 
 在開始之前，請先備妥 Office 產品金鑰。
 
-Office Tool Plus 的每一項功能都非常直觀。若你想要長久儲存安裝檔案，我們建議你先至 `下載` 功能頁，下載(離線)安裝檔案(擇選相關下載設定後點選`開始下載`)，再進行安裝。
+Go to Deploy page, add a product (or more) that you want to install, then click Deploy to start your installation. You can configure other settings if you want.
 
-當下載完成後，至 `安裝` 功能頁，依照畫面中的選項，選擇你想安裝的產品、設定後點選`開始安裝`即可。程式預設安裝的產品為Word, PowerPoint 和 Excel。
+You need to Activate Office after installation.
 
 ## 合法性
 
-Office Tool Plus 使用 微軟 [Office Deployment Tool](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run) 參考製作的，
+Office Tool Plus 使用 微軟 [Office Deployment Tool](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-2016-deployment-tool) 參考製作的，
 主要是在 Office Deployment Tool 基礎上再新增了相關功能來更加便利的部署 Office。
 
 ### 關於啟用授權模組
@@ -49,10 +47,20 @@ Office Tool Plus 使用 微軟 [Office Deployment Tool](https://docs.microsoft.c
 
 ## 感謝合作者
 
-- Portuguese (Brazil) / [Hélio de Souza](https://sway.office.com/RVue6qySNJ2DzYrs?ref=Link)
-- Polish (Poland) / JakubDriver
-- Korean (Korea) / [Jay Jang](https://github.com/yaeyaya)
-- Traditional Chinese (Taiwan) / [Yi Chi](https://github.com/chiyi4488)
+- (ar-ps) العربية (الأراضي الفلسطينية) / Ibrahim
+- (de-de) Deutsch (Deutschland) / [Berny23](https://steamcommunity.com/id/Berny23)
+- (en-us) English (United States) / [Moedog](https://prprpr.love)
+- (es-es) Español (España, alfabetización internacional) / Xoseba
+- (fr-fr) Français (France) / Drake4478
+- (it-it) Italiano (Italia) / [garf02](https://github.com/garf02)
+- (ja-jp) 日本語 (日本) / [アカヤマ](https://github.com/akio1321)
+- (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)
+- (pl-pl) Polski (Polska) / JakubDriver
+- (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec)
+- (tr-tr) Türkçe (Türkiye) / Turan Furkan Topak
+- (vi-vn) Tiêng Việt (Việt Nam) / [phuocding](https://github.com/phuocding)
+- (zh-cn) 简体中文 (中国) / **官方语言 (Official language)**
+- (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://www.cotpear.com)
 
 ## 協助我們進行本地化工作
 
@@ -79,12 +87,3 @@ Office Tool Plus 使用 微軟 [Office Deployment Tool](https://docs.microsoft.c
 ### 本地化之後
 
 若你願意無限期的為 Office Tool Plus 進行當地化的管理，我們將會給予你 Office Tool Plus 的管理程式(Admin Center)。你可以利用此權限，建立新公告、設定背景圖片、修改提示等。
-
-## 一同開發
-
-在開發期間，我們並未將完整編譯碼上傳至 Github，因此在正規的編輯器中，你可能會出現錯誤。若要解決該問題，你可能要使用 VS Code 等進行修改，cs 測試通過後提交。
-我們會進行相關測試，並與你持續討論。
-
-謝謝你為修復錯誤、最佳化程式、新增新功能做出貢獻！
-
-P.S: 若你想將這個專案進行複製、建立新應用等。請先與我們聯絡。

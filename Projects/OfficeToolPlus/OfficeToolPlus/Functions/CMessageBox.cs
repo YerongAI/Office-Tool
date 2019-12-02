@@ -154,6 +154,31 @@ namespace Zmy.Wpf.CMessageBox
         /// 显示消息框
         /// </summary>
         /// <param name="cmessageBoxText">消息内容</param>
+        /// <param name="caption">消息标题</param>
+        /// <param name="CMessageBoxImage">消息框图标</param>
+        public static CMessageBoxResult Show(System.Windows.Documents.Paragraph cmessageBoxContent, string caption, CMessageBoxButton CMessageBoxButton, CMessageBoxImage CMessageBoxImage, CMessageBoxDefaultButton CMessageBoxDefaultButton)
+        {
+            CMessageBoxWindow window = null;
+            Application.Current.Dispatcher.Invoke(new Action(() =>
+            {
+                window = new CMessageBoxWindow();
+            }));
+            window.ParagraphContent = cmessageBoxContent;
+            window.MessageBoxTitle = caption;
+            SwitchDefaultButton(CMessageBoxDefaultButton, window);
+            SwitchBoxButton(CMessageBoxButton, window);
+            SwitchIcon(CMessageBoxImage, window);
+            Application.Current.Dispatcher.Invoke(new Action(() =>
+            {
+                window.ShowDialog();
+            }));
+            return window.Result;
+        }
+
+        /// <summary>
+        /// 显示消息框
+        /// </summary>
+        /// <param name="cmessageBoxText">消息内容</param>
         /// <param name="CMessageBoxButton">消息框按钮</param>
         public static CMessageBoxResult Show(string cmessageBoxText, CMessageBoxButton CMessageBoxButton)
         {
@@ -163,45 +188,7 @@ namespace Zmy.Wpf.CMessageBox
                 window = new CMessageBoxWindow();
             }));
             window.MessageBoxText = cmessageBoxText;
-            switch(CMessageBoxButton)
-            {
-                case CMessageBoxButton.OK:
-                    {
-                        window.OKButtonVisibility = Visibility.Visible;
-                        break;
-                    }
-                case CMessageBoxButton.OKCancel:
-                    {
-                        window.OKButtonVisibility = Visibility.Visible;
-                        window.CancelButtonVisibility = Visibility.Visible;
-                        break;
-                    }
-                case CMessageBoxButton.YesNO:
-                    {
-                        window.YesButtonVisibility = Visibility.Visible;
-                        window.NoButtonVisibility = Visibility.Visible;
-                        break;
-                    }
-                case CMessageBoxButton.AllYesAllNo:
-                    {
-                        window.YesButtonVisibility = Visibility.Visible;
-                        window.NoButtonVisibility = Visibility.Visible;
-                        window.ApplyToAllVisibility = Visibility.Visible;
-                        break;
-                    }
-                case CMessageBoxButton.YesNoCancel:
-                    {
-                        window.YesButtonVisibility = Visibility.Visible;
-                        window.NoButtonVisibility = Visibility.Visible;
-                        window.CancelButtonVisibility = Visibility.Visible;
-                        break;
-                    }
-                default:
-                    {
-                        window.OKButtonVisibility = Visibility.Visible;
-                        break;
-                    }
-            }
+            SwitchBoxButton(CMessageBoxButton, window);
             Application.Current.Dispatcher.Invoke(new Action(() =>
             {
                 window.ShowDialog();
@@ -247,7 +234,7 @@ namespace Zmy.Wpf.CMessageBox
             {
                 window = new CMessageBoxWindow();
             }));
-            
+
             window.MessageBoxText = cmessageBoxText;
             window.MessageBoxTitle = caption;
             SwitchBoxButton(CMessageBoxButton, window);
@@ -278,49 +265,18 @@ namespace Zmy.Wpf.CMessageBox
             window.MessageBoxText = cmessageBoxText;
             window.MessageBoxTitle = caption;
 
-            #region 按钮
-            switch (CMessageBoxButton)
+            SwitchBoxButton(CMessageBoxButton, window);
+            SwitchDefaultButton(CMessageBoxDefaultButton, window);
+            SwitchIcon(CMessageBoxImage, window);
+            Application.Current.Dispatcher.Invoke(new Action(() =>
             {
-                case CMessageBoxButton.OK:
-                    {
-                        window.OKButtonVisibility = Visibility.Visible;
-                        break;
-                    }
-                case CMessageBoxButton.OKCancel:
-                    {
-                        window.OKButtonVisibility = Visibility.Visible;
-                        window.CancelButtonVisibility = Visibility.Visible;
-                        break;
-                    }
-                case CMessageBoxButton.YesNO:
-                    {
-                        window.YesButtonVisibility = Visibility.Visible;
-                        window.NoButtonVisibility = Visibility.Visible;
-                        break;
-                    }
-                case CMessageBoxButton.AllYesAllNo:
-                    {
-                        window.YesButtonVisibility = Visibility.Visible;
-                        window.NoButtonVisibility = Visibility.Visible;
-                        window.ApplyToAllVisibility = Visibility.Visible;
-                        break;
-                    }
-                case CMessageBoxButton.YesNoCancel:
-                    {
-                        window.YesButtonVisibility = Visibility.Visible;
-                        window.NoButtonVisibility = Visibility.Visible;
-                        window.CancelButtonVisibility = Visibility.Visible;
-                        break;
-                    }
-                default:
-                    {
-                        window.OKButtonVisibility = Visibility.Visible;
-                        break;
-                    }
-            }
-            #endregion
+                window.ShowDialog();
+            }));
+            return window.Result;
+        }
 
-            #region 默认按钮
+        private static void SwitchDefaultButton(CMessageBoxDefaultButton CMessageBoxDefaultButton, CMessageBoxWindow window)
+        {
             switch (CMessageBoxDefaultButton)
             {
                 case CMessageBoxDefaultButton.OK:
@@ -360,13 +316,6 @@ namespace Zmy.Wpf.CMessageBox
                         break;
                     }
             }
-            #endregion
-            SwitchIcon(CMessageBoxImage, window);
-            Application.Current.Dispatcher.Invoke(new Action(() =>
-            {
-                window.ShowDialog();
-            }));
-            return window.Result;
         }
 
         private static void SwitchBoxButton(CMessageBoxButton CMessageBoxButton, CMessageBoxWindow window)
@@ -432,12 +381,14 @@ namespace Zmy.Wpf.CMessageBox
                     }
                 case CMessageBoxImage.Warning:
                     {
+                        window.IconPath.Data = Geometry.Parse("M1024,512c0,282.8-229.2,512-512,512S0,794.8,0,512S229.2,0,512,0S1024,229.2,1024,512z M511,723.8c22,0,40.8,7.1,56.5,21.3c15.6,14.2,23.5,31.4,23.5,51.7c0,19.7-7.8,36.7-23.5,50.8S533,869,511,869   c-22,0-40.7-7.1-56.1-21.3c-15.4-14.2-23-31.1-23-50.8c0-20.3,7.7-37.5,23-51.7C470.3,730.9,489,723.8,511,723.8z M580.5,184.5   l-16.1,468H456.7l-15.2-468H580.5z");
                         window.IconPath.Fill = (Brush)fc.ConvertFrom("#FFFFE100");
                         SystemSounds.Exclamation.Play();
                         break;
                     }
                 case CMessageBoxImage.Info:
                     {
+                        window.IconPath.Data = Geometry.Parse("M1024,512c0,282.8-229.2,512-512,512S0,794.8,0,512S229.2,0,512,0S1024,229.2,1024,512z M511,723.8c22,0,40.8,7.1,56.5,21.3c15.6,14.2,23.5,31.4,23.5,51.7c0,19.7-7.8,36.7-23.5,50.8S533,869,511,869   c-22,0-40.7-7.1-56.1-21.3c-15.4-14.2-23-31.1-23-50.8c0-20.3,7.7-37.5,23-51.7C470.3,730.9,489,723.8,511,723.8z M580.5,184.5   l-16.1,468H456.7l-15.2-468H580.5z");
                         window.IconPath.Fill = (Brush)fc.ConvertFrom("#FF008CFF");
                         SystemSounds.Asterisk.Play();
                         break;
@@ -447,7 +398,6 @@ namespace Zmy.Wpf.CMessageBox
                         break;
                     }
             }
-            window.IconPath.Visibility = Visibility.Visible;
         }
     }
 }

@@ -1,6 +1,7 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xml:space="preserve">
     <!-- Country settings, it is used to get information from server. -->
     <sys:String x:Key="Culture">ja-jp</sys:String>
     <!-- Header -->
@@ -129,15 +130,14 @@
     <sys:String x:Key="GreetingLateAtNight">おやすみ、早めに休みを取ってください! %UserName%さん</sys:String>
     <!-- Home -->
     <sys:String x:Key="Homepage">公式サイト</sys:String>
-    <sys:String x:Key="Feedback">フィードバック</sys:String>
+    <sys:String x:Key="Contact">Contact us</sys:String>
     <sys:String x:Key="Donate">寄付</sys:String>
     <sys:String x:Key="JoinGroup">グループチャットに参加する</sys:String>
     <sys:String x:Key="OfficeCenter">Office センター</sys:String>
-    <sys:String x:Key="OfficeMFA">Office 認証</sys:String>
     <sys:String x:Key="BuyOffice">Office 365を購入する</sys:String>
     <sys:String x:Key="Announcement">お知らせ</sys:String>
     <sys:String x:Key="FriendlyLink">リンク集</sys:String>
-    <sys:String x:Key="ReacquireAnnouncement">「クリックして再試行してください」</sys:String>
+    <sys:String x:Key="ReacquireAnnouncement">サーバーが利用できません。クリックして再試行してください</sys:String>
     <sys:String x:Key="SwitchServer">ここをクリックしてサーバーを切り替えてやり直してください</sys:String>
     <sys:String x:Key="ServerUnavailable">サーバーが利用できません。ネットワーク接続を確認してください。 再接続するにはここをクリックしてください。</sys:String>
     <!-- Installation File Page -->
@@ -162,9 +162,6 @@
     <sys:String x:Key="DownloadDownloading">ダウンロード中</sys:String>
     <sys:String x:Key="DownloadPausing">一時停止中</sys:String>
     <sys:String x:Key="DownloadPaused">一時停止</sys:String>
-    <sys:String x:Key="DownloadError">エラーが発生しました</sys:String>
-    <sys:String x:Key="DownloadFinish">完了</sys:String>
-    <sys:String x:Key="DownloadStateCancel">取り消す</sys:String>
     <sys:String x:Key="DownloadCreating">ISOファイルの作成中…</sys:String>
     <sys:String x:Key="DownloadCreateFinish">ISOファイル作成完了</sys:String>
     <sys:String x:Key="DownloadPath">パス:</sys:String>
@@ -193,7 +190,7 @@
     <sys:String x:Key="DeployApps">アプリケーション:</sys:String>
     <sys:String x:Key="DeployAddProduct">製品を追加</sys:String>
     <!-- Language -->
-    <sys:String x:Key="DeployLanguagePackages">言語パッケージ</sys:String>
+    <sys:String x:Key="LanguagePack">言語パッケージ</sys:String>
     <sys:String x:Key="LanguageType">言語パッケージの種類: %1</sys:String>
     <sys:String x:Key="Full">完全パッケージ</sys:String>
     <sys:String x:Key="Partial">部分パッケージ</sys:String>
@@ -246,18 +243,20 @@
     <!-- Activate Settings -->
     <sys:String x:Key="DeployActivateSettings">アクティベーション設定</sys:String>
     <sys:String x:Key="DeployAcceptEULA">「EULA」を自動的に受け入れる</sys:String>
+    <sys:String x:Key="DeployProductMAK">MAK Setting</sys:String>
     <sys:String x:Key="DeployAutoActivate">自動アクティブ</sys:String>
-    <sys:String x:Key="DeploySCL">共有コンピュータライセンス「SCL」</sys:String>
-    <sys:String x:Key="DeploySCLCacheOverride">「SCL」キャッシュオーバーライド</sys:String>
-    <sys:String x:Key="DeploySCLCOD">「SCL」キャッシュオーバーライドディレクトリ:</sys:String>
-    <!-- Deploy Page Button -->
+    <sys:String x:Key="DeployProductActivation">Product Activation</sys:String>
+    <sys:String x:Key="DeployActivateByUser">User based.</sys:String>
+    <sys:String x:Key="DeployActivateBySCL">Shared computer.</sys:String>
+    <sys:String x:Key="DeployActivateSCLCacheOverride">Allow the licensing token to roam.</sys:String>
+    <sys:String x:Key="DeployBasedDevice">Device based.</sys:String>
+ <!-- Deploy Page Button -->
     <sys:String x:Key="StartDeploy">Officeの展開を開始</sys:String>
     <sys:String x:Key="UninstallSelectedProduct">選択した製品/言語をアンインストールします</sys:String>
     <sys:String x:Key="UninstallAllProducts">すべての製品/言語をアンインストールします</sys:String>
     <sys:String x:Key="DeployViewCode">コードを見る</sys:String>
-    <sys:String x:Key="DeploySaveAsXML">XMLとして保存</sys:String>
-    <sys:String x:Key="DeploySelectXML">XMLを選択</sys:String>
-    <sys:String x:Key="DeployCreatePackage">App-Vパッケージの作成</sys:String>
+    <sys:String x:Key="DeployExportXML">XMLとして保存</sys:String>
+    <sys:String x:Key="DeployImportXML">XMLを選択</sys:String>
     <!-- Activate Page -->
     <!-- Licenses -->
     <sys:String x:Key="ActivateLicensesManage">ライセンス管理</sys:String>
@@ -336,7 +335,7 @@
     <sys:String x:Key="AppInf">アプリケーション情報</sys:String>
     <sys:String x:Key="UpdateDate">更新日:</sys:String>
     <sys:String x:Key="Creator">Yerongが開発・維持する，「Office展開ツール」に基づいて。</sys:String>
-    <sys:String x:Key="Copyright">Copyright © 2012-2019 蓝点网著作権 All Rights Reserved.</sys:String>
+    <sys:String x:Key="Copyright">Copyright © 2012-%year% 蓝点网著作権 All Rights Reserved.</sys:String>
     <sys:String x:Key="ServerProvider">サーバープロバイダー</sys:String>
     <sys:String x:Key="Translator">翻訳者</sys:String>
     <sys:String x:Key="BackgroundImageSource">背景画像ソース</sys:String>
@@ -358,6 +357,7 @@
     <sys:String x:Key="MsgExitQuestion">プログラムは終了を確認する操作を実行していますか？</sys:String>
     <sys:String x:Key="MsgADIQuestion">自動的にシャットダウン/再起動するか、「OK」をクリックしてすぐに実行するか、この操作をキャンセルします。</sys:String>
     <sys:String x:Key="MsgNetFrameworkError">プログラムが正しく読み込まれていないため、「.NET Framework 4.6.1」がダウンロードされ、今すぐインストールされる可能性があります？</sys:String>
+    <sys:String x:Key="MsgUpdateAvailable">Update available. Download now?</sys:String>
     <sys:String x:Key="MsgUpdateError">アップデートエラー</sys:String>
     <sys:String x:Key="MsgCheckHashFailed">ハッシュ値の検証に失敗しました</sys:String>
     <!-- Message about Installation Files -->
@@ -402,14 +402,13 @@
     <!-- Message about Deploy Office -->
     <sys:String x:Key="MsgSelectSavePath">保存パスを選択</sys:String>
     <sys:String x:Key="MsgSaveFileSuccessful">ファイルを正常に保存しました</sys:String>
-    <sys:String x:Key="MsgExcludedApps">除外されたアプリ:</sys:String>
     <sys:String x:Key="MsgInstallConfigurationQuestion">詳細な設定については、コードを確認してください。上記の基本設定は正しいですか？</sys:String>
     <sys:String x:Key="MsgInstallConfiguration">Officeのインストール構成</sys:String>
-    <sys:String x:Key="MsgArchitectureError">Office「%architecture%」をインストールできませんでした。次の「%currentArchitecture%」ベースのOfficeがコンピューターにインストールされているため：\n\n%currentProduct%\n「32 ビット」と「64 ビット」のOfficeは共存できないため、一度にインストールできるOfficeは1種類のみです。 Office「%currentArchitecture%」をインストールするか、Office「%currentArchitecture%」をアンインストールして再インストールしてください。</sys:String>
+    <sys:String x:Key="MsgArchitectureError">Office「%architecture%」をインストールできませんでした。次の「%currentArchitecture%」ベースのOfficeがコンピューターにインストールされているため：&#x000A;&#x000A;%currentProduct%&#x000A;「32 ビット」と「64 ビット」のOfficeは共存できないため、一度にインストールできるOfficeは1種類のみです。 Office「%currentArchitecture%」をインストールするか、Office「%currentArchitecture%」をアンインストールして再インストールしてください。</sys:String>
     <sys:String x:Key="MsgNotificationAboutModule">注：「Office Tool Plus」モジュールを使用してOfficeをインストールすることを選択しますこのモードでは、基本設定のみが適用され、すべての詳細設定は有効になりません。詳細設定を使用するには、「Office展開ツール」モジュールを使用します。インストールを続行しますか？</sys:String>
-    <sys:String x:Key="MsgProductsError">次の製品を選択したため、Officeをインストールできません：\n\n%product%\n\n「Office展開ツール」は、この製品のインストールをサポートしていません。製品をインストールするには、インストールセットアップでインストールモジュールを「Office Tool Plus」に変更するか、別の製品を選択してインストールを再試行します。</sys:String>
-    <sys:String x:Key="MsgAddProductError">Officeをインストールできませんでした。次の製品は共存できません。\n\n選択した製品:\n%selectedProduct%\nインストールされた製品:\n%product%\nインストールされた製品をアンインストールするか、インストールする別の製品を選択してください。</sys:String>
-    <sys:String x:Key="MsgChannelError">Officeをインストールできませんでした。次の製品は選択したチャネルにインストールできません。\n\n%selectedProduct%\n\nチャネルを変更するか、別の製品を選択して再試行してください。オフラインインストールを使用している場合は、正しいチャネルからOfficeインストールファイルをダウンロードしたことを確認してください。</sys:String>
+    <sys:String x:Key="MsgProductsError">次の製品を選択したため、Officeをインストールできません：&#x000A;&#x000A;%product%&#x000A;&#x000A;「Office展開ツール」は、この製品のインストールをサポートしていません。製品をインストールするには、インストールセットアップでインストールモジュールを「Office Tool Plus」に変更するか、別の製品を選択してインストールを再試行します。</sys:String>
+    <sys:String x:Key="MsgAddProductError">Officeをインストールできませんでした。次の製品は共存できません。&#x000A;&#x000A;選択した製品:&#x000A;%selectedProduct%&#x000A;インストールされた製品:&#x000A;%product%&#x000A;インストールされた製品をアンインストールするか、インストールする別の製品を選択してください。</sys:String>
+    <sys:String x:Key="MsgChannelError">Officeをインストールできませんでした。次の製品は選択したチャネルにインストールできません。&#x000A;&#x000A;%selectedProduct%&#x000A;&#x000A;チャネルを変更するか、別の製品を選択して再試行してください。オフラインインストールを使用している場合は、正しいチャネルからOfficeインストールファイルをダウンロードしたことを確認してください。</sys:String>
     <!-- Message about Activate Office -->
     <sys:String x:Key="MsgSelectLicensesPath">ライセンスを含むフォルダを選択してください</sys:String>
     <sys:String x:Key="MsgInstallLicenses">アクティベーション情報は、Officeライセンスのインストール後にOfficeに表示されない場合がありますが、OTPを使用して照会または有効化することができます。続行しますか？</sys:String>
@@ -419,6 +418,7 @@
     <sys:String x:Key="MsgClearKeys">すべてのキーをアンインストールしてよろしいですか？</sys:String>
 
     <!-- Message about Toast Bar -->
+    <sys:String x:Key="ToastUpdateDownloading">Downloading update, # completed.</sys:String>
     <sys:String x:Key="ToastUpdateAvailable">新しいバージョンが検出されましたが、ISOモードでは更新できませんでした。 必要に応じて、別のフォルダにOTPを抽出して実行します。</sys:String>
     <sys:String x:Key="ToastInstallationNone">インストールファイルが見つかりません。別のフォルダを再ダウンロードするか選択してください。</sys:String>
     <sys:String x:Key="ToastInstallationError">いくつかのインストールファイルが失われています。再度ダウンロードするか、別のフォルダを選択してください。</sys:String>

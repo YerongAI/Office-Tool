@@ -74,18 +74,12 @@ namespace OfficeToolPlus
 
         private void MaxApp_Click(object sender, RoutedEventArgs e)
         {
-            Width = 780;
-            Height = 620;
+            SystemCommands.MaximizeWindow(this);
         }
 
-        private void MiniApp_Click(object sender, RoutedEventArgs e)
+        private void ResApp_Click(object sender, RoutedEventArgs e)
         {
-            Width = 450;
-            Height = 550;
-            if (WindowState == WindowState.Maximized)
-            {
-                WindowState = WindowState.Normal;
-            }
+            SystemCommands.RestoreWindow(this);
         }
 
         private void CloseApp_Click(object sender, RoutedEventArgs e)
@@ -94,231 +88,32 @@ namespace OfficeToolPlus
         }
         #endregion
 
-        private void OfficeInstallation_DoWork(object sender, DoWorkEventArgs e)
+        #region 激活 Office 页面
+        private void ConversionSelected_CheckBox_Click(object sender, RoutedEventArgs e)
         {
-            Process process = new Process();
-            process.StartInfo.FileName = "files\\setup.exe";
-            process.StartInfo.Arguments = e.Argument + " " + a + "Configuration.xml";
-            process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            process.Start();
-            process.WaitForExit();
-            e.Result = process.ExitCode.ToString();
-        }
-
-        private void InstallLicenses_DoWork(object sender, DoWorkEventArgs e)
-        {
-            Process p = new Process();
-            p.StartInfo.FileName = "cscript";
-            p.StartInfo.UseShellExecute = false;
-            p.StartInfo.RedirectStandardOutput = true;
-            p.StartInfo.CreateNoWindow = true;
-            string[] ar = (string[])e.Argument;
-            if (ar[0] == "2")
+            string id = string.Empty;
+            foreach (CheckBox item in ConversionSelected.Items.OfType<CheckBox>())
             {
-                XElement loadxml = XElement.Load(OfficeInstallPath + "\\root\\Licenses16\\c2rpridslicensefiles_auto.xml");
-                IEnumerable<XElement> MatchElements = from el in loadxml.Elements("ProductReleaseId")
-                                                      select el;
-
-                char[] separator = { ',' };
-                string[] Licenses = ar[1].Split(separator);
-                foreach (string id in Licenses)
+                if (item.IsChecked == true)
                 {
-                    foreach (XElement ele in MatchElements)
-                    {
-                        if (ele.Attribute("id").Value == id)
-                        {
-                            foreach (XElement elements in ele.Elements())
-                            {
-                                foreach (XElement element in elements.Element("Files").Elements())
-                                {
-                                    if (File.Exists("files\\activate\\ospp_" + Find("Culture") + ".vbs"))
-                                    {
-                                        p.StartInfo.Arguments = "//Nologo files\\activate\\ospp_" + Find("Culture") + ".vbs /inslic:\"" + OfficeInstallPath + "\\root\\Licenses16\\" + element.Attribute("name").Value + "\"";
-                                    }
-                                    else
-                                    {
-                                        p.StartInfo.Arguments = "//Nologo files\\activate\\ospp.vbs /inslic:\"" + OfficeInstallPath + "\\root\\Licenses16\\" + element.Attribute("name").Value + "\"";
-                                    }
-                                    p.Start();
-                                    string sOutput = p.StandardOutput.ReadToEnd();
-                                    Dispatcher.BeginInvoke(new Action(delegate
-                                    {
-                                        ResultBox.AppendText(sOutput);
-                                        ResultBox.ScrollToEnd();
-                                    }));
-                                }
-                            }
-                        }
-                    }
-                }
-                return;
-            }
-            else if (ar[0] == "0")
-            {
-                try //删除多余文件，避免出错
-                {
-                    DirectoryInfo di = new DirectoryInfo(a + "licenses\\");
-                    di.Delete(true);
-                }
-                catch
-                { }
-                ZipFile.ExtractToDirectory("files\\activate\\licenses.data", a);
-            }
-            string[] files = Directory.GetFiles(ar[1], "*.xrm-ms");//获取指定路径的证书文件
-            if (files.Length == 0)
-            {
-                e.Result = Find("ToastLicensesInstallError");
-                return;
-            }
-            if (ar[0] == "0")//是否指定 common 证书
-            {
-                string[] commonfiles = Directory.GetFiles(ar[3], "*.xrm-ms");
-                foreach (string s in commonfiles)
-                {
-                    FileInfo fi = new FileInfo(s);
-
-                    if (File.Exists("files\\activate\\ospp_" + Find("Culture") + ".vbs"))
-                    {
-                        p.StartInfo.Arguments = "//Nologo files\\activate\\ospp_" + Find("Culture") + ".vbs /inslic:\"" + ar[3] + "\\" + fi.Name + "\"";
-                    }
-                    else
-                    {
-                        p.StartInfo.Arguments = "//Nologo files\\activate\\ospp.vbs /inslic:\"" + ar[3] + "\\" + fi.Name + "\"";
-                    }
-                    p.Start();
-                    string sOutput = p.StandardOutput.ReadToEnd();
-                    Dispatcher.BeginInvoke(new Action(delegate
-                    {
-                        ResultBox.AppendText(sOutput);
-                        ResultBox.ScrollToEnd();
-                    }));
+                    id += item.Name + ",";
                 }
             }
-            foreach (string s in files)//安装指定路径的证书文件
+            if (id.Length == 0)
             {
-                FileInfo fi = new FileInfo(s);
-
-                if (File.Exists("files\\activate\\ospp_" + Find("Culture") + ".vbs"))
-                {
-                    p.StartInfo.Arguments = "//Nologo files\\activate\\ospp_" + Find("Culture") + ".vbs /inslic:\"" + ar[1] + "\\" + fi.Name + "\"";
-                }
-                else
-                {
-                    p.StartInfo.Arguments = "//Nologo files\\activate\\ospp.vbs /inslic:\"" + ar[1] + "\\" + fi.Name + "\"";
-                }
-                p.Start();
-                string sOutput = p.StandardOutput.ReadToEnd();
-                Dispatcher.BeginInvoke(new Action(delegate
-                {
-                    ResultBox.AppendText(sOutput);
-                    ResultBox.ScrollToEnd();
-                }));
-            }
-            if (ar[0] == "0")//安装 Key
-            {
-                if (ar[2] != string.Empty)
-                {
-                    if (File.Exists("files\\activate\\ospp_" + Find("Culture") + ".vbs"))
-                    {
-                        p.StartInfo.Arguments = "//Nologo files\\activate\\ospp_" + Find("Culture") + ".vbs /inpkey:" + ar[2];
-                    }
-                    else
-                    {
-                        p.StartInfo.Arguments = "//Nologo files\\activate\\ospp.vbs /inpkey:" + ar[2];
-                    }
-                    p.Start();
-                    string Output = p.StandardOutput.ReadToEnd();
-                    Dispatcher.BeginInvoke(new Action(delegate
-                    {
-                        ResultBox.AppendText(Output);
-                        ResultBox.AppendText(Environment.NewLine);
-                        ResultBox.ScrollToEnd();
-                    })).Wait();
-                }
-            }
-        }
-
-        private void InstallLicenses_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            if (e.Error != null)
-            {
-                CMessageBox.Show(e.Error.Message, CMessageBoxImage.Error);
-            }
-            else if (e.Result != null)
-            {
-                
+                ConversionSelected.SelectedIndex = 0;
             }
             else
             {
-                
-            }
-            try //删除多余文件，避免出错
-            {
-                DirectoryInfo di = new DirectoryInfo(a + "licenses\\");
-                di.Delete(true);
-            }
-            catch
-            { }
-            InstallLicenses.Dispose();
-        }
-
-        private void BackgroundDoWork(string FileName, string Arguments)
-        {
-            try
-            {
-                Process p = new Process();
-                p.StartInfo.FileName = FileName;
-                if (Arguments != null)
-                {
-                    if (FileName == string.Empty)
-                    {
-                        p.StartInfo.FileName = "cscript";
-                        if (File.Exists("files\\activate\\ospp_" + Find("Culture") + ".vbs"))
-                        {
-                            p.StartInfo.Arguments = "//Nologo files\\activate\\ospp_" + Find("Culture") + ".vbs /" + Arguments;
-                        }
-                        else
-                        {
-                            p.StartInfo.Arguments = "//Nologo files\\activate\\ospp.vbs /" + Arguments;
-                        }
-                    }
-                    else
-                    {
-                        p.StartInfo.Arguments = Arguments;
-                    }
-                }
-                p.StartInfo.UseShellExecute = false;
-                p.StartInfo.RedirectStandardInput = true;
-                p.StartInfo.RedirectStandardOutput = true;
-                p.StartInfo.CreateNoWindow = true;
-                p.EnableRaisingEvents = true;
-                p.OutputDataReceived += new DataReceivedEventHandler(Process_OutputDataReceived);
-                p.Exited += Process_Exited;
-                p.Start();
-                p.BeginOutputReadLine();
-            }
-            catch (Exception ex)
-            {
-                CMessageBox.Show(ex.Message, CMessageBoxImage.Error);
+                ConversionSelected.Text = id.Remove(id.Length - 1);
             }
         }
 
-        private void Process_OutputDataReceived(object sender, DataReceivedEventArgs e)
-        {
-            Dispatcher.BeginInvoke(new Action(delegate
-            {
-                ResultBox.AppendText(e.Data);
-                ResultBox.AppendText(Environment.NewLine);
-                ResultBox.ScrollToEnd();
-            }));
-        }
-        #endregion
-
-        #region 激活 Office 页面
         private void ILicenses_Click(object sender, RoutedEventArgs e)
         {
             if (InstallLicenses.IsBusy)
             {
+                ToastMessage(Find("ToastWorkerIsBusy"), Find("MsgNormalTitle"));
                 return;
             }
             if (CMessageBox.Show(Find("MsgInstallLicenses"), Find("MsgNormalTitle"), CMessageBoxButton.YesNO, CMessageBoxImage.Question) == CMessageBoxResult.Yes)
@@ -327,47 +122,54 @@ namespace OfficeToolPlus
                 string Key;
                 if (ConversionSelected.SelectedIndex == 0)
                 {
-                    Licenses_Dir = a + "licenses\\VOL\\ProPlus16";
-                    Key = "XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99";
+                    Licenses_Dir = TempInfo.FullName + "licenses\\VOL\\Mondo16";
+                    Key = "HFTND-W9MK4-8B7MJ-B6C4G-XQBR2";
                 }
                 else if (ConversionSelected.SelectedIndex == 1)
                 {
-                    Licenses_Dir = a + "licenses\\VOL\\Mondo16";
-                    Key = "HFTND-W9MK4-8B7MJ-B6C4G-XQBR2";
+                    Licenses_Dir = TempInfo.FullName + "licenses\\VOL\\ProPlus17";
+                    Key = "NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP";
                 }
                 else if (ConversionSelected.SelectedIndex == 2)
                 {
-                    Licenses_Dir = a + "licenses\\VOL\\Project16";
-                    Key = "WGT24-HCNMF-FQ7XH-6M8K7-DRTW9";
+                    Licenses_Dir = TempInfo.FullName + "licenses\\VOL\\Project17";
+                    Key = "B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B";
                 }
                 else if (ConversionSelected.SelectedIndex == 3)
                 {
-                    Licenses_Dir = a + "licenses\\VOL\\Visio16";
-                    Key = "69WXN-MBYV6-22PQG-3WGHK-RM6XC";
+                    Licenses_Dir = TempInfo.FullName + "licenses\\VOL\\Visio17";
+                    Key = "9BGNQ-K37YR-RQHF2-38RQ3-7VCBB";
                 }
                 else if (ConversionSelected.SelectedIndex == 4)
                 {
-                    Licenses_Dir = a + "licenses\\VOL\\ProPlus17";
-                    Key = "NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP";
+                    Licenses_Dir = TempInfo.FullName + "licenses\\VOL\\ProPlus16";
+                    Key = "XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99";
                 }
                 else if (ConversionSelected.SelectedIndex == 5)
                 {
-                    Licenses_Dir = a + "licenses\\VOL\\Project17";
-                    Key = "B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B";
+                    Licenses_Dir = TempInfo.FullName + "licenses\\VOL\\Project16";
+                    Key = "WGT24-HCNMF-FQ7XH-6M8K7-DRTW9";
                 }
                 else if (ConversionSelected.SelectedIndex == 6)
                 {
-                    Licenses_Dir = a + "licenses\\VOL\\Visio17";
-                    Key = "9BGNQ-K37YR-RQHF2-38RQ3-7VCBB";
+                    Licenses_Dir = TempInfo.FullName + "licenses\\VOL\\Visio16";
+                    Key = "69WXN-MBYV6-22PQG-3WGHK-RM6XC";
                 }
-                else
+                else if (ConversionSelected.SelectedIndex == -1)
                 {
                     string[] arg = new string[] { "2", "CommonLicenseFiles," + ConversionSelected.Text };
                     InstallLicenses.RunWorkerAsync(arg);
                     return;
                 }
+                else
+                {
+                    CheckBox item = ConversionSelected.SelectedItem as CheckBox;
+                    string[] arg = new string[] { "2", "CommonLicenseFiles," + item.Name };
+                    InstallLicenses.RunWorkerAsync(arg);
+                    return;
+                }
                 // 0 内置证书，1 证书路径，2 Office 文件夹
-                string[] ar = { "0", Licenses_Dir, Key, a + "licenses\\Common" };
+                string[] ar = { "0", Licenses_Dir, Key, TempInfo.FullName + "licenses\\Common" };
                 InstallLicenses.RunWorkerAsync(ar);
             }
         }
@@ -376,7 +178,7 @@ namespace OfficeToolPlus
         {
             if (InstallLicenses.IsBusy)
             {
-
+                ToastMessage(Find("ToastWorkerIsBusy"), Find("MsgNormalTitle"));
             }
             else
             {
@@ -390,6 +192,7 @@ namespace OfficeToolPlus
                     string[] ar = new string[] { "1", m_Dialog.SelectedPath.Trim() };
                     InstallLicenses.RunWorkerAsync(ar);
                 }
+                m_Dialog.Dispose();
             }
         }
 
@@ -440,7 +243,7 @@ namespace OfficeToolPlus
             }
             else
             {
-                Message(Find("ToastInputError"), Find("MsgError"));
+                ToastMessage(Find("ToastInputError"), Find("MsgError"));
             }
         }
 
@@ -454,7 +257,7 @@ namespace OfficeToolPlus
             }
             else
             {
-                Message(Find("ToastInputError"), Find("MsgError"));
+                ToastMessage(Find("ToastInputError"), Find("MsgError"));
             }
         }
 
@@ -494,7 +297,7 @@ namespace OfficeToolPlus
             }
             else
             {
-                Message(Find("ToastInputError"), Find("MsgError"));
+                ToastMessage(Find("ToastInputError"), Find("MsgError"));
             }
         }
 
@@ -539,7 +342,7 @@ namespace OfficeToolPlus
             }
             else
             {
-                Message(Find("ToastInputError"), Find("MsgError"));
+                ToastMessage(Find("ToastInputError"), Find("MsgError"));
             }
         }
 
@@ -562,7 +365,7 @@ namespace OfficeToolPlus
             }
             else
             {
-                Message(Find("ToastInputError"), Find("MsgError"));
+                ToastMessage(Find("ToastInputError"), Find("MsgError"));
             }
         }
 
@@ -590,7 +393,7 @@ namespace OfficeToolPlus
             }
             else
             {
-                Message(Find("ToastInputError"), Find("MsgError"));
+                ToastMessage(Find("ToastInputError"), Find("MsgError"));
             }
         }
 

@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xml:space="preserve">
     <!-- Country settings, it is used to get information from server. -->
     <sys:String x:Key="Culture">pl-pl</sys:String>
     <!-- Header -->
@@ -129,15 +130,14 @@
     <sys:String x:Key="GreetingLateAtNight">Drogi %UserName%, jest późno, miłego snu!</sys:String>
     <!-- Home -->
     <sys:String x:Key="Homepage">Witryna</sys:String>
-    <sys:String x:Key="Feedback">Feedback</sys:String>
+    <sys:String x:Key="Contact">Contáctenos</sys:String>
     <sys:String x:Key="Donate">Darowizny</sys:String>
     <sys:String x:Key="JoinGroup">Dołącz do grupy</sys:String>
     <sys:String x:Key="OfficeCenter">Office centrum</sys:String>
-    <sys:String x:Key="OfficeMFA">Office poświadczenie</sys:String>
     <sys:String x:Key="BuyOffice">Kup Office 365</sys:String>
     <sys:String x:Key="Announcement">Ogłoszenie</sys:String>
     <sys:String x:Key="FriendlyLink">Przyjazne linki</sys:String>
-    <sys:String x:Key="ReacquireAnnouncement">(Kliknij, aby ponowić próbę)</sys:String>
+    <sys:String x:Key="ReacquireAnnouncement">Serwer nie jest dostępny, kliknij, aby ponowić próbę.</sys:String>
     <sys:String x:Key="SwitchServer">Kliknij tutaj, aby przełączyć serwery i spróbuj ponownie.</sys:String>
     <sys:String x:Key="ServerUnavailable">Serwer nie jest dostępny, sprawdź połączenie sieciowe. Kliknij tutaj, aby ponownie się połączyć.</sys:String>
     <!-- Installation File Page -->
@@ -162,9 +162,6 @@
     <sys:String x:Key="DownloadDownloading">Pobieranie</sys:String>
     <sys:String x:Key="DownloadPausing">Wstrzymywanie ...</sys:String>
     <sys:String x:Key="DownloadPaused">Wstrzymane</sys:String>
-    <sys:String x:Key="DownloadError">Błąd</sys:String>
-    <sys:String x:Key="DownloadFinish">Pobrano pomyślnie</sys:String>
-    <sys:String x:Key="DownloadStateCancel">Anulowano</sys:String>
     <sys:String x:Key="DownloadCreating">Tworzenie pliku ISO ...</sys:String>
     <sys:String x:Key="DownloadCreateFinish">Plik ISO został utworzony pomyślnie</sys:String>
     <sys:String x:Key="DownloadPath">Ścieżka:</sys:String>
@@ -193,7 +190,7 @@
     <sys:String x:Key="DeployApps">Aplikacje:</sys:String>
     <sys:String x:Key="DeployAddProduct">Dodaj produkt</sys:String>
     <!-- Language -->
-    <sys:String x:Key="DeployLanguagePackages">Pakiety językowe</sys:String>
+    <sys:String x:Key="LanguagePack">Pakiety językowe</sys:String>
     <sys:String x:Key="LanguageType">Typ pakietu językowego: %1</sys:String>
     <sys:String x:Key="Full">Pełny</sys:String>
     <sys:String x:Key="Partial">Częściowy</sys:String>
@@ -246,18 +243,20 @@
     <!-- Activate Settings -->
     <sys:String x:Key="DeployActivateSettings">Ustawienia aktywacji</sys:String>
     <sys:String x:Key="DeployAcceptEULA">Automatycznie akceptuj umowę EULA</sys:String>
-    <sys:String x:Key="DeployAutoActivate">Automatycznie aktywuj</sys:String>
-    <sys:String x:Key="DeploySCL">Licencjonowanie współużytkowanego komputera (SCL)</sys:String>
-    <sys:String x:Key="DeploySCLCacheOverride">Przesłonięcie pamięci podręcznej SCL</sys:String>
-    <sys:String x:Key="DeploySCLCOD">Katalog nadpisywania pamięci podręcznej SCL:</sys:String>
-    <!-- Deploy Page Button -->
+    <sys:String x:Key="DeployProductMAK">Configuración MAK</sys:String>
+    <sys:String x:Key="DeployAutoActivate">Activación automática.</sys:String>
+    <sys:String x:Key="DeployProductActivation">Activación del producto</sys:String>
+    <sys:String x:Key="DeployActivateByUser">Basado en el usuario.</sys:String>
+    <sys:String x:Key="DeployActivateBySCL">Ordenador compartido.</sys:String>
+    <sys:String x:Key="DeployActivateSCLCacheOverride">Permitir que el token de licencia se desplace.</sys:String>
+    <sys:String x:Key="DeployBasedDevice">Basado en el dispositivo.</sys:String>
+   <!-- Deploy Page Button -->
     <sys:String x:Key="StartDeploy">Wdróż pakiet Office</sys:String>
     <sys:String x:Key="UninstallSelectedProduct">Odinstaluj wybrane produkty/języki</sys:String>
     <sys:String x:Key="UninstallAllProducts">Odinstaluj wszystkie produkty/języki</sys:String>
     <sys:String x:Key="DeployViewCode">Wyświetl kod</sys:String>
-    <sys:String x:Key="DeploySaveAsXML">Zapisz profil jako plik XML</sys:String>
-    <sys:String x:Key="DeploySelectXML">Wybierz plik XML</sys:String>
-    <sys:String x:Key="DeployCreatePackage">Utwórz pakiet App-V</sys:String>
+    <sys:String x:Key="DeployExportXML">Zapisz profil jako plik XML</sys:String>
+    <sys:String x:Key="DeployImportXML">Wybierz plik XML</sys:String>
     <!-- Activate Page -->
     <!-- Licenses -->
     <sys:String x:Key="ActivateLicensesManage">Zarządzanie licencjami</sys:String>
@@ -336,7 +335,7 @@
     <sys:String x:Key="AppInf">Informacje o aplikacji</sys:String>
     <sys:String x:Key="UpdateDate">Zaktualizowano na:</sys:String>
     <sys:String x:Key="Creator">Opracowany przez Yerong, w oparciu o Office Deployment Tool.</sys:String>
-    <sys:String x:Key="Copyright">Prawo autorskie © 2012-2019 蓝点网 Wszelkie prawa zastrzeżone.</sys:String>
+    <sys:String x:Key="Copyright">Prawo autorskie © 2012-%year% 蓝点网 Wszelkie prawa zastrzeżone.</sys:String>
     <sys:String x:Key="ServerProvider">Dostawca serwera</sys:String>
     <sys:String x:Key="Translator">Tłumaczenie</sys:String>
     <sys:String x:Key="BackgroundImageSource">Źródło obrazu tła</sys:String>
@@ -358,6 +357,7 @@
     <sys:String x:Key="MsgExitQuestion">OTP obecnie działa, potwierdź wyjście?</sys:String>
     <sys:String x:Key="MsgADIQuestion">Zamierzasz teraz zamknąć/zrestartować, czy na pewno?</sys:String>
     <sys:String x:Key="MsgNetFrameworkError">Nie można załadować aplikacji, spróbuj zainstalować .Net Framework 4.6.1 teraz?</sys:String>
+    <sys:String x:Key="MsgUpdateAvailable">Dostępna aktualizacja. Pobrać teraz?</sys:String>
     <sys:String x:Key="MsgUpdateError">Błąd aktualizacji</sys:String>
     <sys:String x:Key="MsgCheckHashFailed">Wartość sumy kontrolnej sumy kontrolnej nie powiodła się.</sys:String>
     <!-- Message about Installation Files -->
@@ -402,14 +402,13 @@
     <!-- Message about Deploy Office -->
     <sys:String x:Key="MsgSelectSavePath">Wybierz ścieżkę zapisu</sys:String>
     <sys:String x:Key="MsgSaveFileSuccessful">Plik zapisany pomyślnie</sys:String>
-    <sys:String x:Key="MsgExcludedApps">Wyłączone aplikacje:</sys:String>
     <sys:String x:Key="MsgInstallConfigurationQuestion">Wyświetl kod dla konfiguracji szczegółów, czy powyższa podstawowa konfiguracja jest poprawna?</sys:String>
     <sys:String x:Key="MsgInstallConfiguration">Konfiguracja instalacji pakietu Office</sys:String>
-    <sys:String x:Key="MsgArchitectureError">Nie można zainstalować pakietu Office (%architecture%), ponieważ na komputerze zainstalowany jest pakiet %currentArchitecture% Office: \n\n%currentProduct%\n32-bitowe i 64-bitowe wersje programów pakietu Office nie dogadują się, więc możesz tylko jeden typ byćjest zainstalowany na raz. Spróbuj zamiast tego zainstalować wersję Office %currentArchitecture% lub odinstaluj inne programy %currentArchitecture% Office i ponów próbę instalacji.</sys:String>
+    <sys:String x:Key="MsgArchitectureError">Nie można zainstalować pakietu Office (%architecture%), ponieważ na komputerze zainstalowany jest pakiet %currentArchitecture% Office: &#x000A;&#x000A;%currentProduct%&#x000A;32-bitowe i 64-bitowe wersje programów pakietu Office nie dogadują się, więc możesz tylko jeden typ byćjest zainstalowany na raz. Spróbuj zamiast tego zainstalować wersję Office %currentArchitecture% lub odinstaluj inne programy %currentArchitecture% Office i ponów próbę instalacji.</sys:String>
     <sys:String x:Key="MsgNotificationAboutModule">Uwaga: Wybierasz instalację pakietu Office przy użyciu modułu Office Tool Plus. W tym trybie zostaną zastosowane tylko ustawienia podstawowe, a wszystkie ustawienia zaawansowane nie zostaną zastosowane. Aby użyć ustawień zaawansowanych, użyj modułu Narzędzie do wdrażania pakietu Office. Dalej?</sys:String>
-    <sys:String x:Key="MsgProductsError">Office nie mógł zostać zainstalowany, ponieważ wybrałeś produkt: \n\n%product%\n\nNarzędzie Office Deployment Tool nie obsługuje instalacji produktu. Aby zainstalować produkt, zmień moduł na Office Tool Plus w ustawieniach instalacji lub wybierz inny produkt i spróbuj ponownie zainstalować.</sys:String>
-    <sys:String x:Key="MsgAddProductError">Nie można zainstalować pakietu Office, następujące produkty nie mogą współistnieć:\n\nWybrane produkty:\n%selectedProduct%\nZainstalowane produkty:\n%product%\nOdinstaluj zainstalowane produkty lub wybierz inny produkt do zainstalowania.</sys:String>
-    <sys:String x:Key="MsgChannelError">Nie można zainstalować pakietu Office. Następującego produktu nie można zainstalować na wybranym kanale: \n\n%selectedProduct%\n\nZmień kanał lub wybierz inny produkt i spróbuj ponownie. Jeśli korzystasz z instalacji offline, upewnij się, że pliki instalacyjne pakietu Office zostały pobrane z właściwego kanału.</sys:String>
+    <sys:String x:Key="MsgProductsError">Office nie mógł zostać zainstalowany, ponieważ wybrałeś produkt: &#x000A;&#x000A;%product%&#x000A;&#x000A;Narzędzie Office Deployment Tool nie obsługuje instalacji produktu. Aby zainstalować produkt, zmień moduł na Office Tool Plus w ustawieniach instalacji lub wybierz inny produkt i spróbuj ponownie zainstalować.</sys:String>
+    <sys:String x:Key="MsgAddProductError">Nie można zainstalować pakietu Office, następujące produkty nie mogą współistnieć:&#x000A;&#x000A;Wybrane produkty:&#x000A;%selectedProduct%&#x000A;Zainstalowane produkty:&#x000A;%product%&#x000A;Odinstaluj zainstalowane produkty lub wybierz inny produkt do zainstalowania.</sys:String>
+    <sys:String x:Key="MsgChannelError">Nie można zainstalować pakietu Office. Następującego produktu nie można zainstalować na wybranym kanale: &#x000A;&#x000A;%selectedProduct%&#x000A;&#x000A;Zmień kanał lub wybierz inny produkt i spróbuj ponownie. Jeśli korzystasz z instalacji offline, upewnij się, że pliki instalacyjne pakietu Office zostały pobrane z właściwego kanału.</sys:String>
     <!-- Message about Activate Office -->
     <sys:String x:Key="MsgSelectLicensesPath">Wybierz folder zawierający licencje.</sys:String>
     <sys:String x:Key="MsgInstallLicenses">Możesz nie widzieć informacji o aktywacji w pakiecie Office po zainstalowaniu licencji Office, ale możesz wyświetlać informacje lub aktywować Office przez OTP. Kontynuować?</sys:String>
@@ -419,6 +418,7 @@
     <sys:String x:Key="MsgClearKeys">Potwierdź odinstalowanie wszystkich kluczy?</sys:String>
 
     <!-- Message about Toast Bar -->
+    <sys:String x:Key="ToastUpdateDownloading">Pobieranie aktualizacji # zakończona.</sys:String>
     <sys:String x:Key="ToastUpdateAvailable">Nowa wersja jest dostępna, jeśli chcesz ją zaktualizować, skopiuj OTP do innego folderu.</sys:String>
     <sys:String x:Key="ToastInstallationNone">Nie można znaleźć plików instalacyjnych, ponownie pobierz lub wybierz inny folder.</sys:String>
     <sys:String x:Key="ToastInstallationError">Niektóre pliki instalacyjne są pomijane, ponownie pobierz lub wybierz inny folder.</sys:String>

@@ -212,15 +212,15 @@ namespace Zmy.Wpf.CMessageBox
             FontSize = Application.Current.Windows[0].FontSize;
             FlowDirection = Application.Current.Windows[0].FlowDirection;
 
+            if (string.IsNullOrEmpty(MessageBoxTitle))
+            {
+                MessageTitle.Visibility = Visibility.Collapsed;
+            }
             if (ParagraphContent != null)
             {
                 richTextBox.Visibility = Visibility.Visible;
                 richTextBox.Document.Blocks.Clear();
                 richTextBox.Document.Blocks.Add(ParagraphContent);
-            }
-            if (string.IsNullOrEmpty(MessageBoxTitle))
-            {
-                IconPath.Visibility = Visibility.Collapsed;
             }
         }
 

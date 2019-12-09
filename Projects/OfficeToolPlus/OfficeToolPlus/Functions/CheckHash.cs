@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace OTP.Functions
+namespace OfficeTool.Functions
 {
     //Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/ | 2019/7/26
     class CheckHash

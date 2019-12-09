@@ -1,13 +1,15 @@
-﻿using OTP.List;
+﻿using OfficeTool.List;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace OTP
+namespace OfficeTool
 {
     // Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
+    // For more information please visit: https://docs.microsoft.com/en-us/DeployOffice/configuration-options-for-the-office-2016-deployment-tool
+
     class CreateXML
     {
         private static readonly List<InstallConfig> ProductConfigList = new List<InstallConfig>();
@@ -33,7 +35,7 @@ namespace OTP
             internal bool DisplayLevel = false;
             internal bool AcceptEULA = false;
             // Logging Element
-            internal bool? LoggingLevel = false;
+            internal bool? LoggingLevel = null;
             internal string LoggingPath = "%temp%";
             // Updates Element
             internal bool? UpdateEnabled = null;
@@ -138,16 +140,21 @@ namespace OTP
             }
 
             /// <summary>
-            /// 获取所有的产品列表信息
+            /// Get all information of products
             /// </summary>
-            /// <returns>返回产品列表</returns>
+            /// <returns>Return products list</returns>
             public List<InstallConfig> GetProductsList()
             {
                 return ProductConfigList;
             }
 
+            public List<Property> GetProperties()
+            {
+                return PropertyList;
+            }
+
             /// <summary>
-            /// 获取列表的元素数量
+            /// Get the count of Product List
             /// </summary>
             public int Length()
             {
@@ -155,10 +162,10 @@ namespace OTP
             }
 
             /// <summary>
-            /// 建立 XML 文件
+            /// Create XML File
             /// </summary>
-            /// <param name="FilePath">文件保存路径</param>
-            /// <param name="FileName">文件名</param>
+            /// <param name="FilePath">Save path</param>
+            /// <param name="FileName">File name</param>
             public void CreateXMLFile(string FilePath, string FileName)
             {
                 try
@@ -171,6 +178,7 @@ namespace OTP
                         Indent = true,
                         OmitXmlDeclaration = true
                     };
+                    // Create XML
                     XmlWriter xw = XmlWriter.Create(FilePath + FileName, settings);
                     XElement RootElement = new XElement("Configuration");
                     if (RemoveOffice != true)
@@ -180,6 +188,7 @@ namespace OTP
                             XElement description = new XElement("Info", new XAttribute("Description", Description));
                             RootElement.Add(description);
                         }
+                        // Add Element Attributes
                         XElement AddElementTemp = new XElement("Add",
                                            new XAttribute("OfficeClientEdition", OfficeClientEdition),
                                            new XAttribute("Channel", Channel),
@@ -190,17 +199,18 @@ namespace OTP
                                            new XAttribute("MigrateArch", MigrateArch.ToString().Replace("False", "").Replace("True", "TRUE")),
                                            new XAttribute("AllowCdnFallback", AllowCdnFallback.ToString().Replace("False", "")),
                                            new XAttribute("OfficeMgmtCOM", OfficeMgmtCOM.ToString().Replace("null", "")));
-
+                        // Add [Add Element Attributes] to [Add Element]
                         XElement AddElement = new XElement("Add",
                                             from el in AddElementTemp.Attributes()
                                             where (string)el != string.Empty
                                             select el);
-
+                        // Foreach products in list and add to [Add Element]
                         for (int i = 0; i < ProductConfigList.Count; i++)
                         {
                             XElement LangElemtnt = new XElement("Product");
                             foreach (string LangID in ProductConfigList[i].LanguageID)
                             {
+                                // Language
                                 if (LangID != null)
                                 {
                                     if (ProductConfigList[i].FallbackLanguage != string.Empty)
@@ -218,20 +228,22 @@ namespace OTP
                                     }
                                 }
                             }
+                            // Product ID
                             XElement ProductElemtnt = new XElement("Product",
                                                   new XAttribute("ID", ProductConfigList[i].ProductID),
                                                   from el in LangElemtnt.Elements()
-                                                  select el);//指定产品 ID
-
+                                                  select el);
+                            // Product Exclude Apps
                             foreach (string appid in ProductConfigList[i].ExcludeApps)
                             {
                                 if (appid != null)
                                 {
                                     XElement AppElemtnt = new XElement("ExcludeApp",
-                                                          new XAttribute("ID", appid));//指定要排除的应用程序
+                                                          new XAttribute("ID", appid));
                                     ProductElemtnt.Add(AppElemtnt);
                                 }
                             }
+                            // Product MAK
                             if (ProductConfigList[i].MAK.Length == 29 && ProductConfigList[i].ProductID.Contains("Volume"))
                                 ProductElemtnt.SetAttributeValue("PIDKEY", ProductConfigList[i].MAK);
                             AddElement.Add(ProductElemtnt);
@@ -373,9 +385,9 @@ namespace OTP
             }
 
             /// <summary>
-            /// 加载 XML 配置文件
+            /// Load and read XML file
             /// </summary>
-            /// <param name="filePath">文件路径</param>
+            /// <param name="filePath">File path</param>
             public void LoadXMLFile(string filePath)
             {
                 XElement loadxml = XElement.Load(filePath);
@@ -574,7 +586,7 @@ namespace OTP
             public List<string> ExcludeApps { get; set; }
         }
 
-        class Property
+        public class Property
         {
             public Property(string Name, string Value)
             {

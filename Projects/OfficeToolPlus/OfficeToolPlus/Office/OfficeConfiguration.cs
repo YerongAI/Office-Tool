@@ -1,18 +1,22 @@
 ﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 
-namespace OTP
+namespace OfficeTool
 {
-    //Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
+    // Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
     class OfficeConfiguration
     {
-        internal List<InstalledProducts> installedProducts = new List<InstalledProducts>(3);
-        internal bool HasOffice;
-        internal string ClickToRunLanguage;
-        internal string UpdateChannel;
-        internal bool ChannelChanged;
-        internal string ProductOwner;
+        internal List<InstalledProducts> InstalledProductsList { get; set; } = new List<InstalledProducts>(3);
+        internal bool HasOffice { get; set; } = false;
+        internal string ClickToRunLanguage { get; set; }
+        internal string UpdateChannel { get; set; }
+        internal bool ChannelChanged { get; set; }
+        internal string ProductOwner { get; set; }
 
+        /// <summary>
+        /// Load Office Configuration information
+        /// </summary>
         public OfficeConfiguration()
         {
             RegistryKey localKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
@@ -25,23 +29,21 @@ namespace OTP
                     subKey = localKey.OpenSubKey(@"SOFTWARE\Microsoft\Office\ClickToRun\Configuration");
                     if (subKey == null)
                     {
-                        HasOffice = false;
                         return;
                     }
                 }
-                HasOffice = true;
-                object h = subKey.GetValue("InstallationPath");//安装路径
+                object h = subKey.GetValue("InstallationPath");
                 if (h != null)
                 {
                     InstallPath = h.ToString();
                 }
-                h = subKey.GetValue("ClientVersionToReport");//Client版本号
+                h = subKey.GetValue("ClientVersionToReport");
                 if (h != null)
                 {
                     string registData = h.ToString();
                     ClickToRunVersion = registData;
                 }
-                h = subKey.GetValue("UpdateChannelChanged");//是否已更改更新通道
+                h = subKey.GetValue("UpdateChannelChanged");
                 if (h != null)
                 {
                     if (h.ToString() == "True")
@@ -57,12 +59,12 @@ namespace OTP
                 {
                     ChannelChanged = false;
                 }
-                h = subKey.GetValue("Platform");//体系架构
+                h = subKey.GetValue("Platform");
                 if (h != null)
                 {
                     OfficePlatform = h.ToString();
                 }
-                h = subKey.GetValue("ClientCulture");//C2R 语言
+                h = subKey.GetValue("ClientCulture");
                 if (h != null)
                 {
                     ClickToRunLanguage = h.ToString();
@@ -71,28 +73,28 @@ namespace OTP
                         ClickToRunLanguage
                     };
                 }
-                h = subKey.GetValue("ClientFolder");//C2R 所在目录
+                h = subKey.GetValue("ClientFolder");
                 if (h != null)
                 {
                     ClickToRunPath = h.ToString();
                 }
-                h = subKey.GetValue("UpdateChannel");//更新通道
+                h = subKey.GetValue("UpdateChannel");
                 if (h != null)
                 {
                     string registData = h.ToString().ToLower();
                     UpdateChannel = registData;
                 }
-                h = subKey.GetValue("ProductReleaseIds");//已安装产品
+                h = subKey.GetValue("ProductReleaseIds");
                 if (h != null)
                 {
-
+                    // Get the all installed products
                     string registData = h.ToString();
                     subKey = localKey.OpenSubKey(@"SOFTWARE\Microsoft\Office\ClickToRun\Configuration");
 
                     RegistryKey tempKey = localKey.OpenSubKey(@"SOFTWARE\Microsoft\Office\ClickToRun\ProductReleaseIDs");
                     string path = tempKey.GetValue("ActiveConfiguration").ToString();
                     tempKey = localKey.OpenSubKey(@"SOFTWARE\Microsoft\Office\ClickToRun\ProductReleaseIDs\" + path);
-
+                    // Foreach all installed products information
                     foreach (string id in registData.Split(','))
                     {
                         string excludeApps = string.Empty;
@@ -131,7 +133,8 @@ namespace OTP
                         }
 
                         InstalledProducts products = new InstalledProducts(id, excludeApps, owner, version);
-                        installedProducts.Add(products);
+                        InstalledProductsList.Add(products);
+                        HasOffice = true;
                     }
                 }
                 subKey.Close();
@@ -167,7 +170,7 @@ namespace OTP
                 }
                 if (UpdateChannel != null)
                 {
-                    object h = subKey.GetValue("UpdateChannel");//更新通道
+                    object h = subKey.GetValue("UpdateChannel");
                     if (h != null)
                     {
                         string registData = h.ToString().ToLower();
@@ -183,16 +186,16 @@ namespace OTP
                     subKey.SetValue("UpdateChannel", UpdateChannel);
                     subKey.SetValue("CDNBaseUrl", UpdateChannel);
                 }
-                foreach (InstalledProducts item in installedProducts)
+                foreach (InstalledProducts item in InstalledProductsList)
                 {
                     subKey.SetValue(item.ProductID + ".EmailAddress", ProductOwner);
                 }
                 subKey.SetValue("UpdateChannelChanged", ChannelChanged.ToString());
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
             finally
             {
@@ -202,7 +205,7 @@ namespace OTP
 
         public class InstalledProducts
         {
-            public  InstalledProducts(string productID, string excludeApps, string owner, string version)
+            public InstalledProducts(string productID, string excludeApps, string owner, string version)
             {
                 ProductID = productID;
                 ExcludeApps = excludeApps;

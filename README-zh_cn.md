@@ -8,6 +8,22 @@ Office Tool Plus 基于微软的 [Office 部署工具](https://docs.microsoft.co
 
 更多的是，你可以使用 Office Tool Plus 管理已经安装的 Office (仅限基于 Click To Run 的)，更改配置、卸载单独产品或者添加语言包。
 
+## 系统要求
+
+Windows 7 SP1, Windows 8 和 Windows 10.
+
+Windows Server 2008 R2 SP1, Windows Server 2012 或者更高.
+
+`Microsoft .NET Framework 4.6.1`
+
+### 下载 Microsoft .NET Framework 4.6.1
+
+[在线安装程序](http://go.microsoft.com/fwlink/?LinkId=780597)
+
+[离线安装程序](http://go.microsoft.com/fwlink/?LinkId=780601)
+
+[Microsoft .Net Framework 4.6.1 语言包](http://go.microsoft.com/fwlink/?LinkId=780604)
+
 ## 下载 Office Tool Plus
 
 [官方网站](https://otp.landian.vip/)

@@ -8,6 +8,22 @@ Office Tool Plus는 마이크로소프트 [Office 배포 도구를](https://docs
 
 Office Tool Plus가 기 존재 Office( Click To Run방식만 한정)를 변경, 단독제품을 제거하거나 언어 패키지 추가도 가능합니다.
 
+## System Requirements
+
+Windows 7 SP1, Windows 8 and Windows 10.
+
+Windows Server 2008 R2 SP1, Windows Server 2012 or higher.
+
+`Microsoft .NET Framework 4.6.1`
+
+### Download Microsoft .NET Framework 4.6.1
+
+[Web Installer](http://go.microsoft.com/fwlink/?LinkId=780597)
+
+[Offline Installer](http://go.microsoft.com/fwlink/?LinkId=780601)
+
+[Language Packs for Microsoft .Net Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780604)
+
 ## Office Tool Plus 다운로드
 
 [공식 사이트](https://otp.landian.vip/)

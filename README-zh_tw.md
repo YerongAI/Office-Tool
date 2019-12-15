@@ -10,6 +10,22 @@
 
 [註一]僅限 `Click To Run`。
 
+## 系统要求
+
+Windows 7 SP1, Windows 8 和 Windows 10.
+
+Windows Server 2008 R2 SP1, Windows Server 2012 或者更高.
+
+`Microsoft .NET Framework 4.6.1`
+
+### 下载 Microsoft .NET Framework 4.6.1
+
+[在线安装程序](http://go.microsoft.com/fwlink/?LinkId=780597)
+
+[离线安装程序](http://go.microsoft.com/fwlink/?LinkId=780601)
+
+[Microsoft .Net Framework 4.6.1 语言包](http://go.microsoft.com/fwlink/?LinkId=780604)
+
 ## 下載
 
 [官方網站](https://otp.landian.vip/)

@@ -8,6 +8,22 @@ Office Tool Plus บนพื้นฐานระบบสำหรับ Deplo
 
 และอื่นๆ เช่น จัดการชุดโปรแกรม Office ที่มีอยู่ก่อนแล้ว, เพิ่มชุดภาษาของโปรแกรม Office หรือแม้กระทั่งการปรับแต่งไฟล์ตัวถอนการติดตั้งชุด Office.
 
+## System Requirements
+
+Windows 7 SP1, Windows 8 and Windows 10.
+
+Windows Server 2008 R2 SP1, Windows Server 2012 or higher.
+
+`Microsoft .NET Framework 4.6.1`
+
+### Download Microsoft .NET Framework 4.6.1
+
+[Web Installer](http://go.microsoft.com/fwlink/?LinkId=780597)
+
+[Offline Installer](http://go.microsoft.com/fwlink/?LinkId=780601)
+
+[Language Packs for Microsoft .Net Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780604)
+
 ## ดาวน์โหลด Office Tool Plus
 
 [ดาวน์โหลดบนเว็บไซต์หลัก](https://otp.landian.vip/)

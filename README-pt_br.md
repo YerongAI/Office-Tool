@@ -64,7 +64,7 @@ Você pode ver a descrição do OSPP em ````"C:\Program Files\Microsoft Office\O
 - (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec)
 - (tr-tr) Türkçe (Türkiye) / Turan Furkan Topak
 - (vi-vn) Tiêng Việt (Việt Nam) / [phuocding](https://github.com/phuocding)
-- (zh-cn) 简体中文 (中国) / **官方语言 (Official language)**
+- (zh-cn) 简体中文 (中国) / **官方语言 (Idioma oficial)**
 - (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://www.cotpear.com)
 
 ## Ajude com a tradução

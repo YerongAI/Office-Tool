@@ -174,8 +174,8 @@
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
             <WrapPanel Margin="25,30,25,5" Focusable="False">
-                <Path x:Name="IconPath" Width="25" Height="25" Stretch="Uniform"/>
-                <TextBlock Text="{Binding MessageBoxTitle}" FontSize="18" Foreground="{Binding BorderBrush, ElementName=Window}" VerticalAlignment="Center" Margin="5,0,0,0" Visibility="{Binding Visibility, ElementName=IconPath}"/>
+                <Path x:Name="IconPath" Width="25" MaxHeight="25" Stretch="Uniform"/>
+                <TextBlock x:Name="MessageTitle" Text="{Binding MessageBoxTitle}" FontSize="18" Foreground="{Binding BorderBrush, ElementName=Window}" VerticalAlignment="Center" Margin="5,0,0,0"/>
             </WrapPanel>
             <ScrollViewer VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" Grid.Row="1" Margin="0,10,0,30">
                 <TextBlock Text="{Binding MessageBoxText}" TextWrapping="Wrap" Margin="25,0"/>

@@ -40,7 +40,7 @@ namespace OfficeTool.Functions
         /// <param name="seconds">倒计时秒数</param>
         public void StartCountdown(int interval, int seconds)
         {
-            OTP.Functions.Timer timer = new OTP.Functions.Timer(true);
+            CustomTimer timer = new CustomTimer(true);
             ADIItemsAuto = new System.Timers.Timer(interval);
             ADIItemsAuto.Elapsed += (obj, args) =>
             {

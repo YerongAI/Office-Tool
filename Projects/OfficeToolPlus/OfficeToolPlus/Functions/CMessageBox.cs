@@ -179,50 +179,6 @@ namespace Zmy.Wpf.CMessageBox
         /// 显示消息框
         /// </summary>
         /// <param name="cmessageBoxText">消息内容</param>
-        /// <param name="CMessageBoxButton">消息框按钮</param>
-        public static CMessageBoxResult Show(string cmessageBoxText, CMessageBoxButton CMessageBoxButton)
-        {
-            CMessageBoxWindow window = null;
-            Application.Current.Dispatcher.Invoke(new Action(() =>
-            {
-                window = new CMessageBoxWindow();
-            }));
-            window.MessageBoxText = cmessageBoxText;
-            SwitchBoxButton(CMessageBoxButton, window);
-            Application.Current.Dispatcher.Invoke(new Action(() =>
-            {
-                window.ShowDialog();
-            }));
-            return window.Result;
-        }
-
-        /// <summary>
-        /// 显示消息框
-        /// </summary>
-        /// <param name="cmessageBoxText">消息内容</param>
-        /// <param name="caption">消息标题</param>
-        /// <param name="CMessageBoxButton">消息框按钮</param>
-        public static CMessageBoxResult Show(string cmessageBoxText, string caption, CMessageBoxButton CMessageBoxButton)
-        {
-            CMessageBoxWindow window = null;
-            Application.Current.Dispatcher.Invoke(new Action(() =>
-            {
-                window = new CMessageBoxWindow();
-            }));
-            window.MessageBoxText = cmessageBoxText;
-            window.MessageBoxTitle = caption;
-            SwitchBoxButton(CMessageBoxButton, window);
-            Application.Current.Dispatcher.Invoke(new Action(() =>
-            {
-                window.ShowDialog();
-            }));
-            return window.Result;
-        }
-
-        /// <summary>
-        /// 显示消息框
-        /// </summary>
-        /// <param name="cmessageBoxText">消息内容</param>
         /// <param name="caption">消息标题</param>
         /// <param name="CMessageBoxButton">消息框按钮</param>
         /// <param name="CMessageBoxImage">消息框图标</param>
@@ -395,6 +351,7 @@ namespace Zmy.Wpf.CMessageBox
                     }
                 default:
                     {
+                        window.IconPath.Visibility = Visibility.Collapsed;
                         break;
                     }
             }

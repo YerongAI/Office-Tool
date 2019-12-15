@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
 
-namespace OTP.List
+namespace OfficeTool.List
 {
+    // Language Information List
+    // Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
+    // For more information please visit: https://docs.microsoft.com/en-us/DeployOffice/overview-of-deploying-languages-in-office-365-proplus#languages-culture-codes-and-companion-proofing-languages
     class LanguageList
     {
-        // Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
-        // For more information please visit: https://docs.microsoft.com/en-us/DeployOffice/overview-of-deploying-languages-in-office-365-proplus#languages-culture-codes-and-companion-proofing-languages
         private static readonly List<LangInfo> LangList = new List<LangInfo>(110);
+
         public LanguageList()
         {
             if (LangList.Count == 0)
@@ -14,37 +16,37 @@ namespace OTP.List
                 LangInfo lang1 = new LangInfo("العربية (المملكة العربية السعودية)", "ar-sa", 1025, LanguageType.Full);
                 LangInfo lang2 = new LangInfo("български (България)", "bg-bg", 1026, LanguageType.Full);
                 LangInfo lang3 = new LangInfo("čeština (Česká republika)", "cs-cz", 1029, LanguageType.Full);
-                LangInfo lang4 = new LangInfo("dansk (Danmark)", "da-dk", 1030, LanguageType.Full);
+                LangInfo lang4 = new LangInfo("Dansk (Danmark)", "da-dk", 1030, LanguageType.Full);
                 LangInfo lang5 = new LangInfo("Deutsch (Deutschland)", "de-de", 1031, LanguageType.Full);
                 LangInfo lang6 = new LangInfo("Ελληνικά (Ελλάδα)", "el-gr", 1032, LanguageType.Full);
                 LangInfo lang7 = new LangInfo("English (United States)", "en-us", 1033, LanguageType.Full);
-                LangInfo lang8 = new LangInfo("español (España, alfabetización internacional)", "es-es", 3082, LanguageType.Full);
-                LangInfo lang9 = new LangInfo("eesti (Eesti)", "et-ee", 1061, LanguageType.Full);
-                LangInfo lang10 = new LangInfo("suomi (Suomi)", "fi-fi", 1035, LanguageType.Full);
-                LangInfo lang11 = new LangInfo("français (France)", "fr-fr", 1036, LanguageType.Full);
+                LangInfo lang8 = new LangInfo("Español (España, alfabetización internacional)", "es-es", 3082, LanguageType.Full);
+                LangInfo lang9 = new LangInfo("Eesti (Eesti)", "et-ee", 1061, LanguageType.Full);
+                LangInfo lang10 = new LangInfo("Suomi (Suomi)", "fi-fi", 1035, LanguageType.Full);
+                LangInfo lang11 = new LangInfo("Français (France)", "fr-fr", 1036, LanguageType.Full);
                 LangInfo lang12 = new LangInfo("עברית (ישראל)", "he-il", 1037, LanguageType.Full);
                 LangInfo lang13 = new LangInfo("हिंदी (भारत)", "hi-in", 1081, LanguageType.Full);
-                LangInfo lang14 = new LangInfo("hrvatski (Hrvatska)", "hr-hr", 1050, LanguageType.Full);
-                LangInfo lang15 = new LangInfo("magyar (Magyarország)", "hu-hu", 1038, LanguageType.Full);
+                LangInfo lang14 = new LangInfo("Hrvatski (Hrvatska)", "hr-hr", 1050, LanguageType.Full);
+                LangInfo lang15 = new LangInfo("Magyar (Magyarország)", "hu-hu", 1038, LanguageType.Full);
                 LangInfo lang16 = new LangInfo("Bahasa Indonesia (Indonesia)", "id-id", 1057, LanguageType.Full);
-                LangInfo lang17 = new LangInfo("italiano (Italia)", "it-it", 1040, LanguageType.Full);
+                LangInfo lang17 = new LangInfo("Italiano (Italia)", "it-it", 1040, LanguageType.Full);
                 LangInfo lang18 = new LangInfo("日本語 (日本)", "ja-jp", 1041, LanguageType.Full);
                 LangInfo lang19 = new LangInfo("Қазақ (Қазақстан)", "kk-kz", 1087, LanguageType.Full);
                 LangInfo lang20 = new LangInfo("한국어(대한민국)", "ko-kr", 1042, LanguageType.Full);
-                LangInfo lang21 = new LangInfo("lietuvių (Lietuva)", "lt-lt", 1063, LanguageType.Full);
-                LangInfo lang22 = new LangInfo("latviešu (Latvija)", "lv-lv", 1062, LanguageType.Full);
+                LangInfo lang21 = new LangInfo("Lietuvių (Lietuva)", "lt-lt", 1063, LanguageType.Full);
+                LangInfo lang22 = new LangInfo("Latviešu (Latvija)", "lv-lv", 1062, LanguageType.Full);
                 LangInfo lang23 = new LangInfo("Bahasa Melayu (Malaysia)", "ms-my", 1086, LanguageType.Full);
-                LangInfo lang24 = new LangInfo("norsk, bokmål (Norge)", "nb-no", 1044, LanguageType.Full);
+                LangInfo lang24 = new LangInfo("Norsk, bokmål (Norge)", "nb-no", 1044, LanguageType.Full);
                 LangInfo lang25 = new LangInfo("Nederlands (Nederland)", "nl-nl", 1043, LanguageType.Full);
-                LangInfo lang26 = new LangInfo("polski (Polska)", "pl-pl", 1045, LanguageType.Full);
-                LangInfo lang27 = new LangInfo("português (Brasil)", "pt-br", 1046, LanguageType.Full);
-                LangInfo lang28 = new LangInfo("português (Portugal)", "pt-pt", 2070, LanguageType.Full);
-                LangInfo lang29 = new LangInfo("română (România)", "ro-ro", 1048, LanguageType.Full);
+                LangInfo lang26 = new LangInfo("Polski (Polska)", "pl-pl", 1045, LanguageType.Full);
+                LangInfo lang27 = new LangInfo("Português (Brasil)", "pt-br", 1046, LanguageType.Full);
+                LangInfo lang28 = new LangInfo("Português (Portugal)", "pt-pt", 2070, LanguageType.Full);
+                LangInfo lang29 = new LangInfo("Română (România)", "ro-ro", 1048, LanguageType.Full);
                 LangInfo lang30 = new LangInfo("русский (Россия)", "ru-ru", 1049, LanguageType.Full);
-                LangInfo lang31 = new LangInfo("slovenčina (Slovenská republika)", "sk-sk", 1051, LanguageType.Full);
-                LangInfo lang32 = new LangInfo("slovenščina (Slovenija)", "sl-si", 1060, LanguageType.Full);
-                LangInfo lang33 = new LangInfo("srpski (Srbija)", "sr-Latn-rs", 9242, LanguageType.Full);
-                LangInfo lang34 = new LangInfo("svenska (Sverige)", "sv-se", 1053, LanguageType.Full);
+                LangInfo lang31 = new LangInfo("Slovenčina (Slovenská republika)", "sk-sk", 1051, LanguageType.Full);
+                LangInfo lang32 = new LangInfo("Slovenščina (Slovenija)", "sl-si", 1060, LanguageType.Full);
+                LangInfo lang33 = new LangInfo("Srpski (Srbija)", "sr-Latn-rs", 9242, LanguageType.Full);
+                LangInfo lang34 = new LangInfo("Svenska (Sverige)", "sv-se", 1053, LanguageType.Full);
                 LangInfo lang35 = new LangInfo("ไทย (ไทย)", "th-th", 1054, LanguageType.Full);
                 LangInfo lang36 = new LangInfo("Türkçe (Türkiye)", "tr-tr", 1055, LanguageType.Full);
                 LangInfo lang37 = new LangInfo("українська (Україна)", "uk-ua", 1058, LanguageType.Full);
@@ -219,10 +221,10 @@ namespace OTP.List
         }
 
         /// <summary>
-        /// 根据语言标识符获取其他信息
+        /// Get other information by Language ID
         /// </summary>
-        /// <param name="id">语言标识符</param>
-        /// <param name="language">要获取的信息，以 object 类型返回</param>
+        /// <param name="id">Language ID</param>
+        /// <param name="language">Type of information</param>
         /// <returns></returns>
         public object GetInfByID(string id, LanguageInfo language)
         {
@@ -242,6 +244,10 @@ namespace OTP.List
             return null;
         }
 
+        /// <summary>
+        /// Return the list of Language information
+        /// </summary>
+        /// <returns></returns>
         public List<LangInfo> GetList()
         {
             return LangList;
@@ -251,12 +257,12 @@ namespace OTP.List
     class LangInfo
     {
         /// <summary>
-        /// 语言信息列表
+        /// Language Info Record
         /// </summary>
-        /// <param name="Name">语言名称</param>
-        /// <param name="ID">语言标识符</param>
-        /// <param name="Num">语言标识码</param>
-        /// <param name="Type">语言类型</param>
+        /// <param name="Name">Language name</param>
+        /// <param name="ID">Language ID</param>
+        /// <param name="Num">Language number</param>
+        /// <param name="Type">Language type</param>
         public LangInfo(string Name, string ID, int Num, LanguageType Type)
         {
             this.Name = Name;
@@ -272,7 +278,7 @@ namespace OTP.List
     }
 
     /// <summary>
-    /// 语言列表数据类型
+    /// Language Info Type
     /// </summary>
     public enum LanguageInfo
     {
@@ -281,11 +287,14 @@ namespace OTP.List
         Type = 2
     }
 
+    /// <summary>
+    /// Language Type
+    /// </summary>
     enum LanguageType
     {
         Full = 0,
-        ProofingTools = 1,
-        Partial = 2,
-        PartialWithoutProofingTools = 3
+        Partial = 1,
+        PartialWithoutProofingTools = 2,
+        ProofingTools = 3,
     }
 }

@@ -8,6 +8,22 @@ Office Tool Plus basiert auf Microsofts [Office-Bereitstellungstool](https://doc
 
 Darüber hinaus können Sie Ihr installiertes Office verwalten, Sprachpakete hinzufügen oder Office-Produkte individuell deinstallieren.
 
+## System Requirements
+
+Windows 7 SP1, Windows 8 and Windows 10.
+
+Windows Server 2008 R2 SP1, Windows Server 2012 or higher.
+
+`Microsoft .NET Framework 4.6.1`
+
+### Download Microsoft .NET Framework 4.6.1
+
+[Web Installer](http://go.microsoft.com/fwlink/?LinkId=780597)
+
+[Offline Installer](http://go.microsoft.com/fwlink/?LinkId=780601)
+
+[Language Packs for Microsoft .Net Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780604)
+
 ## Office Tool Plus herunterladen
 
 [Offizielle Webseite](https://otp.landian.vip/)

@@ -1,12 +1,15 @@
 ﻿using System;
 
-namespace OTP.Functions
+namespace OfficeTool.Functions
 {
-    class Timer
+    /// <summary>
+    /// 自定义 Timer，实现计时以及倒计时功能
+    /// </summary>
+    class CustomTimer
     {
         private static DateTime dateTime = new DateTime();
 
-        public Timer(bool reset)
+        public CustomTimer(bool reset)
         {
             if (reset)
             {

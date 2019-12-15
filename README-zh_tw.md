@@ -1,4 +1,4 @@
-﻿# Office Tool Plus
+# Office Tool Plus
 
 [⬅ 返回](https://github.com/YerongAI/Office-Tool)
 
@@ -9,6 +9,22 @@
 除了能夠部署 Office 之外，也能修改已安裝 Office 相關設定、移除單項產品、新增語言等。 <sup>[註一]</sup>
 
 [註一]僅限 `Click To Run`。
+
+## 系统要求
+
+Windows 7 SP1, Windows 8 和 Windows 10.
+
+Windows Server 2008 R2 SP1, Windows Server 2012 或者更高.
+
+`Microsoft .NET Framework 4.6.1`
+
+### 下载 Microsoft .NET Framework 4.6.1
+
+[在线安装程序](http://go.microsoft.com/fwlink/?LinkId=780597)
+
+[离线安装程序](http://go.microsoft.com/fwlink/?LinkId=780601)
+
+[Microsoft .Net Framework 4.6.1 语言包](http://go.microsoft.com/fwlink/?LinkId=780604)
 
 ## 下載
 
@@ -24,13 +40,11 @@
 
 - [自訂安裝選項說明](https://docs.microsoft.com/zh-tw/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)
 
-## 快速入門
+## 快速入門 
 
-在開始之前，請先備妥 Office 產品金鑰。
+*在開始之前，請先備妥 Office 產品金鑰，Office Tool Plus 並沒有免費啟用 Office 的功能。*
 
-Go to Deploy page, add a product (or more) that you want to install, then click Deploy to start your installation. You can configure other settings if you want.
-
-You need to Activate Office after installation.
+首先，請至《部署》功能頁中，新增想要安裝的產品，然後按下「開始部署」即可開始您的安裝。另外，您也可以變更其他安裝設定，讓您的 Office 更符合您心意！
 
 ## 合法性
 
@@ -45,7 +59,7 @@ Office Tool Plus 使用 微軟 [Office Deployment Tool](https://docs.microsoft.c
 
 若想查詢相關檔案的操作說明，你可以在 ````"C:\Program Files\Microsoft Office\Office16\OSPP.HTM"```` 找到。(需安裝 Office)
 
-## 感謝合作者
+## 感謝以下提供者及合作者
 
 - (ar-ps) العربية (الأراضي الفلسطينية) / Ibrahim
 - (de-de) Deutsch (Deutschland) / [Berny23](https://steamcommunity.com/id/Berny23)
@@ -68,11 +82,11 @@ Office Tool Plus 使用 微軟 [Office Deployment Tool](https://docs.microsoft.c
 
 1. Fork this repository.
 
-2. 打開任一你看得懂的語言文件(例如 ````zh-cn.xaml````) ，並另存新檔成你的語言代碼、對應的路徑，例如 ````OfficeToolPlus/Language/zh-tw.xaml````。
+2. 打開任一你看得懂的語言文件（例如 ````zh-cn.xaml````），並另存新檔成你的語言代碼、對應的路徑，例如 ````OfficeToolPlus/Language/zh-tw.xaml````。
 
 3. Make a Pull Request.
 
-### 如何測試本地化(語言)文件
+### 如何測試本地化（語言）文件
 
 1. 下載你的語言文件到電腦中。
 

@@ -8,6 +8,22 @@ O Office Tool Plus é baseado na [Ferramenta de Implantação do Office](https:/
 
 Além do mais, você pode gerenciar seu Office instalado, adicionar pacotes de idioma ou personalizar a desinstalação do Office.
 
+## System Requirements
+
+Windows 7 SP1, Windows 8 and Windows 10.
+
+Windows Server 2008 R2 SP1, Windows Server 2012 or higher.
+
+`Microsoft .NET Framework 4.6.1`
+
+### Download Microsoft .NET Framework 4.6.1
+
+[Web Installer](http://go.microsoft.com/fwlink/?LinkId=780597)
+
+[Offline Installer](http://go.microsoft.com/fwlink/?LinkId=780601)
+
+[Language Packs for Microsoft .Net Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780604)
+
 ## Download Office Tool Plus
 
 [Site Oficial](https://otp.landian.vip/)

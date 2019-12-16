@@ -14,7 +14,7 @@ Windows 7 SP1, Windows 8 e Windows 10.
 
 Windows Server 2008 R2 SP1, Windows Server 2012 ou mais recente.
 
-`Microsoft .NET Framework 4.6.1`
+`Microsoft .NET Framework 4.6.1 ou mais recente.`
 
 ### Download do Microsoft .NET Framework 4.6.1
 

@@ -16,7 +16,7 @@ Windows 7 SP1, Windows 8 和 Windows 10.
 
 Windows Server 2008 R2 SP1, Windows Server 2012 或者更高.
 
-`Microsoft .NET Framework 4.6.1`
+`Microsoft .NET Framework 4.6.1 或者更高`
 
 ### 下载 Microsoft .NET Framework 4.6.1
 

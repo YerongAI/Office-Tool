@@ -104,7 +104,7 @@ namespace OfficeTool.Functions
                     TextBox textBox = new TextBox
                     {
                         Text = temp.Remove(temp.Length - 1),
-                        Background = new SolidColorBrush(Colors.Gainsboro),
+                        Background = new SolidColorBrush((Color)new ColorConverter().ConvertFrom("#7FDCDCDC")),
                         BorderThickness = new Thickness(0),
                         Padding = new Thickness(15),
                         IsReadOnly = true,

@@ -86,7 +86,6 @@ Copy the last 5 characters of installed product key of the unneeded license, pas
 In the submenu of Key Management, you can uninstall all keys.
 After all keys are uninstalled, all activations will be cleared, you need to reactivate Office.
 
-
 ### Clear All Office Licenses
 
 In the submenu of License Management, you can clear licenses.

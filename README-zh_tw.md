@@ -8,23 +8,23 @@
 
 除了能夠部署 Office 之外，也能修改已安裝 Office 相關設定、移除單項產品、新增語言等。 <sup>[註一]</sup>
 
-[註一]僅限 `Click To Run`。
+[註一] 僅限 `Click To Run`。
 
-## 系统要求
+## 系統需求
 
-Windows 7 SP1, Windows 8 和 Windows 10.
+ - Windows 7 SP1, Windows 8 和 Windows 10
 
-Windows Server 2008 R2 SP1, Windows Server 2012 或者更高.
+ - Windows Server 2008 R2 SP1, Windows Server 2012 以上版本
 
-`Microsoft .NET Framework 4.6.1 或者更高`
+ - **Microsoft .NET Framework 4.6.1 以上版本**
 
-### 下载 Microsoft .NET Framework 4.6.1
+### 下載 Microsoft .NET Framework 4.6.1
 
-[在线安装程序](http://go.microsoft.com/fwlink/?LinkId=780597)
+[Web 安裝程式](http://go.microsoft.com/fwlink/?LinkId=780597)
 
-[离线安装程序](http://go.microsoft.com/fwlink/?LinkId=780601)
+[離線安裝程式](http://go.microsoft.com/fwlink/?LinkId=780601)
 
-[Microsoft .Net Framework 4.6.1 语言包](http://go.microsoft.com/fwlink/?LinkId=780604)
+[Microsoft .Net Framework 4.6.1 語言套件 （離線安裝程式）](http://go.microsoft.com/fwlink/?LinkId=780604)
 
 ## 下載
 
@@ -34,7 +34,7 @@ Windows Server 2008 R2 SP1, Windows Server 2012 或者更高.
 
 [備用載點](https://delivery.yuntu.dev/office-tool/) (感謝 [云图小镇](https://www.yuntu.dev/) 提供)
 
-[註二]由於主要官方網站伺服器於中國，在某些時刻連線不穩定，若網站無法開啟，請使用[[備用 官方網站](https://otp.cotpear.com/zh-tw/)]。
+[註二] 由於主要官方網站伺服器於中國，在某些時刻連線不穩定，若網站無法開啟，請使用[[備用 官方網站](https://otp.cotpear.com/zh-tw/)]。
 
 ## 微軟相關知識庫
 

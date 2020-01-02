@@ -59,7 +59,7 @@ The activate function was based on Microsoft's ospp.vbs (Office Software Protect
 - (es-es) Español (España, alfabetización internacional) / Xoseba
 - (fr-fr) Français (France) / Drake4478
 - (it-it) Italiano (Italia) / [garf02](https://github.com/garf02)
-- (ja-jp) 日本語 (日本) / [アカヤマ](https://github.com/akio1321)
+- (ja-jp) 日本語 (日本) / [秋山ヘイワ](https://github.com/akio1321)
 - (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)
 - (pl-pl) Polski (Polska) / JakubDriver
 - (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec)

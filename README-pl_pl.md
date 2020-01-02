@@ -32,7 +32,7 @@ Windows Server 2008 R2 SP1, Windows Server 2012 or higher.
 
 ## Artykuły techniczne
 
-[Opcje konfiguracji](https://docs.microsoft.com/en-us/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)
+[Opcje konfiguracji](https://docs.microsoft.com/pl-pl/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)
 
 ## Szybki start
 
@@ -58,7 +58,7 @@ Opis OSPP można wyświetlić w ``C: \ Program Files \ Microsoft Office \ Office
 - (es-es) Español (España, alfabetización internacional) / Xoseba
 - (fr-fr) Français (France) / Drake4478
 - (it-it) Italiano (Italia) / [garf02](https://github.com/garf02)
-- (ja-jp) 日本語 (日本) / [アカヤマ](https://github.com/akio1321)
+- (ja-jp) 日本語 (日本) / [秋山ヘイワ](https://github.com/akio1321)
 - (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)
 - (pl-pl) Polski (Polska) / JakubDriver
 - (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec)

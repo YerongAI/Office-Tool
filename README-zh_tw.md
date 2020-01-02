@@ -40,7 +40,7 @@
 
 - [自訂安裝選項說明](https://docs.microsoft.com/zh-tw/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)
 
-## 快速入門 
+## 快速入門
 
 *在開始之前，請先備妥 Office 產品金鑰，Office Tool Plus 並沒有免費啟用 Office 的功能。*
 
@@ -67,7 +67,7 @@ Office Tool Plus 使用 微軟 [Office Deployment Tool](https://docs.microsoft.c
 - (es-es) Español (España, alfabetización internacional) / Xoseba
 - (fr-fr) Français (France) / Drake4478
 - (it-it) Italiano (Italia) / [garf02](https://github.com/garf02)
-- (ja-jp) 日本語 (日本) / [アカヤマ](https://github.com/akio1321)
+- (ja-jp) 日本語 (日本) / [秋山ヘイワ](https://github.com/akio1321)
 - (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)
 - (pl-pl) Polski (Polska) / JakubDriver
 - (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec)

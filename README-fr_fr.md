@@ -56,7 +56,7 @@ Vous pouvez consulter la description de l'OSPP dans ````"C:\Program Files\Micros
 - (es-es) Espagnol (Espagne, alphabétisation internationale) / Xoseba
 - (fr-fr) Français (France) / Drake4478
 - (it-it) Italien (Italie) / [garf02](https://github.com/garf02)
-- (ja-jp) Japonais (Japon) / [アカヤマ](https://github.com/akio1321)
+- (ja-jp) Japonais (Japon) / [秋山ヘイワ](https://github.com/akio1321)
 - (ko-kr) Anglais (Corée du Sud) / [Jay Jang](http://www.yaeyaya.com)
 - (pl-pl) Polonais (Pologne) / JakubDriver
 - (pt-br) Portugais (Brésil) / [Hélio de Souza](https://tinyurl.com/hdstec)

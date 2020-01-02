@@ -32,7 +32,7 @@ Windows Server 2008 R2 SP1, Windows Server 2012나 그 이후의 버전.
 
 ## 기술설명서
 
-[설정 옵션 설명](https://docs.microsoft.com/ko-kr/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)
+[설정 옵션 설명](https://docs.microsoft.com/ja-jp/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)
 
 ## 간단설명서
 
@@ -54,7 +54,7 @@ Office Tool Plus는 마이크로소프트의[Office 배포 도구를](https://do
 
 ## 협력자 감사합니다
 
-### Thanks to the collaborators
+### Thanks to the collaborators**
 
 - (ar-ps) العربية (الأراضي الفلسطينية) / Ibrahim
 - (de-de) Deutsch (Deutschland) / [Berny23](https://steamcommunity.com/id/Berny23)
@@ -62,7 +62,7 @@ Office Tool Plus는 마이크로소프트의[Office 배포 도구를](https://do
 - (es-es) Español (España, alfabetización internacional) / Xoseba
 - (fr-fr) Français (France) / Drake4478
 - (it-it) Italiano (Italia) / [garf02](https://github.com/garf02)
-- (ja-jp) 日本語 (日本) / [アカヤマ](https://github.com/akio1321)
+- (ja-jp) 日本語 (日本) / [秋山ヘイワ](https://github.com/akio1321)
 - (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)
 - (pl-pl) Polski (Polska) / JakubDriver
 - (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec)

@@ -26,8 +26,17 @@ Replace **zh-cn** to **en-us**.
 https://docs.microsoft.com/en-us/DeployOffice/vlactivation/gvlks
 ```
 
-Or you can open this website, get links to other languages ​​and replace them in the help content.
+Or you can open this website, get links to other languages and replace them in the help content.
 
 ## Finally
 
 When you submit your translation, we will update it to the Office Tool Plus documentation. You can bring your translation signature.
+
+## Thanks to the collaborators
+
+- (en-us) English (United States) / [Moedog](https://prprpr.love)
+- (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)
+- (pl-pl) Polski (Polska) / JakubDriver
+- (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec)
+- (zh-cn) 简体中文 (中国) / **官方语言 (Official language)**
+- (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://www.cotpear.com)

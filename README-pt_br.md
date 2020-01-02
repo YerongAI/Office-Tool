@@ -8,23 +8,23 @@ O Office Tool Plus é baseado na [Ferramenta de Implantação do Office](https:/
 
 Além do mais, você pode gerenciar seu Office instalado, adicionar pacotes de idioma ou personalizar a desinstalação do Office.
 
-## System Requirements
+## Requisitos de sistema
 
-Windows 7 SP1, Windows 8 and Windows 10.
+Windows 7 SP1, Windows 8 e Windows 10.
 
-Windows Server 2008 R2 SP1, Windows Server 2012 or higher.
+Windows Server 2008 R2 SP1, Windows Server 2012 ou mais recente.
 
-`Microsoft .NET Framework 4.6.1`
+`Microsoft .NET Framework 4.6.1 ou mais recente.`
 
-### Download Microsoft .NET Framework 4.6.1
+### Download do Microsoft .NET Framework 4.6.1
 
-[Web Installer](http://go.microsoft.com/fwlink/?LinkId=780597)
+[Instalador Web](http://go.microsoft.com/fwlink/?LinkId=780597)
 
-[Offline Installer](http://go.microsoft.com/fwlink/?LinkId=780601)
+[Instalador Offline](http://go.microsoft.com/fwlink/?LinkId=780601)
 
-[Language Packs for Microsoft .Net Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780604)
+[Pacotes de idioma para o Microsoft .Net Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780604)
 
-## Download Office Tool Plus
+## Download do Office Tool Plus
 
 [Site Oficial](https://otp.landian.vip/)
 
@@ -36,9 +36,9 @@ Windows Server 2008 R2 SP1, Windows Server 2012 or higher.
 
 ## Início rápido
 
-Go to Deploy page, add a product (or more) that you want to install, then click Deploy to start your installation. You can configure other settings if you want.
+Na página Gerenciar, adicione um ou mais produtos que deseja instalar e clique em Implantar o Office para iniciar a instalação. Você pode configurar outras opções se desejar.
 
-You need to Activate Office after installation.
+Será necessário ativar o Office após a instalação.
 
 ## Legitimidade do aplicativo
 
@@ -64,7 +64,7 @@ Você pode ver a descrição do OSPP em ````"C:\Program Files\Microsoft Office\O
 - (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec)
 - (tr-tr) Türkçe (Türkiye) / Turan Furkan Topak
 - (vi-vn) Tiêng Việt (Việt Nam) / [phuocding](https://github.com/phuocding)
-- (zh-cn) 简体中文 (中国) / **官方语言 (Official language)**
+- (zh-cn) 简体中文 (中国) / **官方语言 (Idioma oficial)**
 - (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://www.cotpear.com)
 
 ## Ajude com a tradução

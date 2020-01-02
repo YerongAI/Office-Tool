@@ -25,7 +25,7 @@ After the installation, the old license won't be overwritten. So, we can have mu
 
 If you want to install your local license files, just click the [...] button.
 
-`Note: If the Click to Run based version of Office is installed on your computer, OTP will try to read all available licenses and display them in the drop down box. Otherwise only the built-in Volume licenses will be displayed.`
+`Note: If the C2R-based version of Office is installed on your computer, Office Tool Plus will try to read all available licenses and display them in the drop down box. Otherwise only the built-in Volume licenses will be displayed.`
 
 ## Activate License
 
@@ -46,8 +46,6 @@ After the successful activation, Office will remain active.
 ### KMS Activation
 
 Please make sure you have Volume licensed versions of Office installed. If you don't know whether it is a volume version, please install the corresponding Volume licenses. For example, if you want to activate Office 2016, just install the Office 2016 Volume license. Then you need to input a valid KMS server address, `don't forget the [Set server address] button`. When everything is configured correctly, the network is normal, and the KMS server is normal, click the [Activate] button. Success? Enjoy it!
-
-How to get a KMS server address? Ask Google for help.
 
 ## Check KMS Server
 
@@ -81,13 +79,12 @@ Click the [Display activation information] button below to query the license inf
 
 Copy the last 5 characters of installed product key of the unneeded license, paste it into the Key Management input box, then click the submenu "Uninstall key".
 
-![Uninstall Office Product Key](https://coolhub.top/wp-content/uploads/2019/11/卸载产品密钥.png)
+![Uninstall Office Product Key](https://server.coolhub.top/OfficeTool/images/en-us/UninstallKey.png)
 
 ### Uninstall All Office Product Keys
 
 In the submenu of Key Management, you can uninstall all keys.
 After all keys are uninstalled, all activations will be cleared, you need to reactivate Office.
-
 
 ### Clear All Office Licenses
 

@@ -67,7 +67,7 @@ If Office is already installed on your computer, you can add or remove products/
 
 ### Add Products/Language Packs
 
-Just click [+ Add product]/[+ Add language pack] button and select what you want. 
+Just click [+ Add product]/[+ Add language pack] button and select what you want.
 
 `Note: To avoid problems, do NOT add an installed product/language pack.`
 

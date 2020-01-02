@@ -100,7 +100,7 @@ Office 365 个人版	O365HomePremRetail
 
 若要下载 Office 安装文件，请根据自己的需要配置体系架构，通道，语言默认匹配系统语言。Office Tool Plus 默认设置好，您可以直接开始下载安装文件。
 
-![下载安装文件](https://coolhub.top/wp-content/uploads/2019/11/QQ截图20191107202304-1.png)
+![下载安装文件](https://server.coolhub.top/OfficeTool/images/zh-cn/DownloadPanel.png)
 
 ### 获取更多信息请访问以下网站
 

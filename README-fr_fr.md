@@ -8,21 +8,21 @@ Office Tool Plus est basé sur Microsoft [Office Deployment Tool](https://docs.m
 
 De plus, vous pouvez gérer votre Office installé, ajouter des packs linguistiques ou personnaliser désinstaller Office..
 
-## System Requirements
+## Configuration requise
 
-Windows 7 SP1, Windows 8 and Windows 10.
+Windows 7 SP1, Windows 8 et Windows 10.
 
-Windows Server 2008 R2 SP1, Windows Server 2012 or higher.
+Windows Server 2008 R2 SP1, Windows Server 2012 ou plus élevé.
 
-`Microsoft .NET Framework 4.6.1`
+`Microsoft .NET Framework 4.6.1 ou plus élevé.`
 
-### Download Microsoft .NET Framework 4.6.1
+### Télécharger Microsoft .NET Framework 4.6.1
 
-[Web Installer](http://go.microsoft.com/fwlink/?LinkId=780597)
+[Installateur Web](http://go.microsoft.com/fwlink/?LinkId=780597)
 
-[Offline Installer](http://go.microsoft.com/fwlink/?LinkId=780601)
+[Installateur hors ligne](http://go.microsoft.com/fwlink/?LinkId=780601)
 
-[Language Packs for Microsoft .Net Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780604)
+[Packs de langues pour Microsoft .Net Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780604)
 
 ## Télécharger Office Tool Plus
 

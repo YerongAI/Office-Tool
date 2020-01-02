@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -19,7 +19,7 @@ namespace OfficeTool.Functions
      Title (标题): 1, 2, 3, 4, 5, 6 (#, ##, ###, ####, #####, ######)
      Red color text (红色文本): `some text`
      Oblique (斜体): *some text*
-     Bold (粗体): *some text*
+     Bold (粗体): **some text**
      Italic and bold (斜体加粗): ***some text***
      Highlight text (高亮文本): ==some text==
      Line (横线): Three * or - or more.
@@ -104,7 +104,7 @@ namespace OfficeTool.Functions
                     TextBox textBox = new TextBox
                     {
                         Text = temp.Remove(temp.Length - 1),
-                        Background = new SolidColorBrush(Colors.Gainsboro),
+                        Background = new SolidColorBrush((Color)new ColorConverter().ConvertFrom("#7FDCDCDC")),
                         BorderThickness = new Thickness(0),
                         Padding = new Thickness(15),
                         IsReadOnly = true,

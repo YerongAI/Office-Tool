@@ -117,17 +117,17 @@
 
     <!-- Greetings -->
     <!-- Showed when app started. -->
-    <sys:String x:Key="GreetingHi">Olá, %UserName% !</sys:String>
+    <sys:String x:Key="GreetingHi">Olá, {0} !</sys:String>
     <!-- 06:00 - 11:00 -->
-    <sys:String x:Key="GreetingGoodMorning">Bom dia, %UserName%.</sys:String>
+    <sys:String x:Key="GreetingGoodMorning">Bom dia, {0}.</sys:String>
     <!-- 11:00 - 13:00 -->
-    <sys:String x:Key="GreetingGoodAfternoon1">Boa tarde, %UserName%.</sys:String>
+    <sys:String x:Key="GreetingGoodAfternoon1">Boa tarde, {0}.</sys:String>
     <!-- 13:00 - 18:00 -->
-    <sys:String x:Key="GreetingGoodAfternoon2">Boa tarde, %UserName%.</sys:String>
+    <sys:String x:Key="GreetingGoodAfternoon2">Boa tarde, {0}.</sys:String>
     <!-- 18:00 - 22:00 -->
-    <sys:String x:Key="GreetingGoodEvening">Boa noite, %UserName%.</sys:String>
+    <sys:String x:Key="GreetingGoodEvening">Boa noite, {0}.</sys:String>
     <!-- 22:00 - 06:00 (+1) -->
-    <sys:String x:Key="GreetingLateAtNight">Caro, %UserName%. Está tarde.</sys:String>
+    <sys:String x:Key="GreetingLateAtNight">Caro, {0}. Está tarde.</sys:String>
     <!-- Home -->
     <sys:String x:Key="Homepage">Website</sys:String>
     <sys:String x:Key="Contact">Contate-nos</sys:String>
@@ -188,13 +188,13 @@
     <sys:String x:Key="DeployProductID">ID do Produto:</sys:String>
     <sys:String x:Key="DeployApps">Aplicativos:</sys:String>
     <sys:String x:Key="DeployAddProduct">Adicionar produto</sys:String>
-    <sys:String x:Key="DeployErrorConfig">⚠ The product can't coexist with existing products.</sys:String>
-    <sys:String x:Key="DeployErrorModule">⚠ The product requires installation using the Office Tool Plus module.</sys:String>
-    <sys:String x:Key="DeployErrorChannel">⚠ The product can't be installed on the selected channel: %selectedChannel%</sys:String>
-    <sys:String x:Key="DeployErrorCoexist">The product can't coexist with the following products:</sys:String>
+    <sys:String x:Key="DeployErrorConfig">⚠ O produto não pode coexistir com os produtos existentes.</sys:String>
+    <sys:String x:Key="DeployErrorModule">⚠ O produto requer instalação usando o módulo Office Tool Plus.</sys:String>
+    <sys:String x:Key="DeployErrorChannel">⚠ O produto não pode ser instalado no canal selecionado: {0}</sys:String>
+    <sys:String x:Key="DeployErrorCoexist">O produto não pode coexistir com os seguintes produtos:</sys:String>
     <!-- Language -->
     <sys:String x:Key="LanguagePack">Pacote de Idiomas</sys:String>
-    <sys:String x:Key="LanguageType">Tipo de pacote de idioma: %1</sys:String>
+    <sys:String x:Key="LanguageType">Tipo de pacote de idioma: {0}</sys:String>
     <sys:String x:Key="Full">Completo</sys:String>
     <sys:String x:Key="Partial">Parcial</sys:String>
     <sys:String x:Key="PartialWithoutProofingTools">Parcial sem revisores de texto</sys:String>
@@ -284,7 +284,65 @@
     <sys:String x:Key="ActivateSetKMS">Definir endereço do servidor</sys:String>
     <sys:String x:Key="ActivateSetPort">Definir porta do servidor</sys:String>
     <sys:String x:Key="ActivateClearKMS">Limpar o endereço do servidor (define a porta como padrão)</sys:String>
-   
+    <!-- Content Translation -->
+    <sys:String x:Key="ActivationTitle">Office Activation Processing</sys:String>
+    <sys:String x:Key="SKUID">SKU ID: </sys:String>
+    <sys:String x:Key="LicenseDescription">License Description: </sys:String>
+    <sys:String x:Key="LicenseStatus">License Status: </sys:String>
+    <sys:String x:Key="RemainGrace">Remain Grace: </sys:String>
+    <sys:String x:Key="RemainGraceDay">days</sys:String>
+    <sys:String x:Key="RemainGraceMin">minute(s) before expiring</sys:String>
+    <sys:String x:Key="Licexpiry">Beta Expiration: </sys:String>
+    <sys:String x:Key="ErrorCode">Error Code: </sys:String>
+    <sys:String x:Key="ErrorDescrpition">Error Description: </sys:String>
+    <sys:String x:Key="ErrorUnknown">An unknown error occurred.</sys:String>
+    <sys:String x:Key="ErrorCodeValue">An error code must start with '0x'. Example: 0xC004F009</sys:String>
+    <sys:String x:Key="StatusLicensed"> **---LICENSED---** </sys:String>
+    <sys:String x:Key="StatusUnlicensed"> `---UNLICENSED---` </sys:String>
+    <sys:String x:Key="StatusOOBGrace"> `---OOB_GRACE---` </sys:String>
+    <sys:String x:Key="StatusOOTGrace"> `---OOT_GRACE---` </sys:String>
+    <sys:String x:Key="StatusNonGenuineGrace"> `---NON_GENUINE_GRACE---` </sys:String>
+    <sys:String x:Key="StatusNotifications"> `---NOTIFICATIONS---` </sys:String>
+    <sys:String x:Key="StatusExtendedGrace"> `---EXTENDED GRACE---` </sys:String>
+    <sys:String x:Key="StatusUnknown"> `---UNKNOWN---` </sys:String>
+
+    <sys:String x:Key="AppliedSetting">Successfully applied setting.</sys:String>
+    <sys:String x:Key="NoKMSLics">No Office KMS licenses were found on the system.</sys:String>
+    <sys:String x:Key="NoKeyInstalled">No installed product keys detected.</sys:String>
+    <sys:String x:Key="UninstallKey">Product key uninstall successful.</sys:String>
+    <sys:String x:Key="ActivationSuccess">**Product activation successful**</sys:String>
+    <sys:String x:Key="OfflineActivationSuccess">**Offline product activation successful**</sys:String>
+    <sys:String x:Key="IKeySuccess">**Product key installation successful**</sys:String>
+    <sys:String x:Key="ProductKey">Last 5 characters of installed product key: </sys:String>
+    <sys:String x:Key="UninstallingKey">Uninstalling product key for: </sys:String>
+    <sys:String x:Key="ILicense">Installing Office license: </sys:String>
+    <sys:String x:Key="ILicenseSuccess">Office license installed successfully.</sys:String>
+    <sys:String x:Key="InstallationID">Installation ID:</sys:String>
+    <sys:String x:Key="SKMSEvent">Searching for KMS activation events on machine: </sys:String>
+    <sys:String x:Key="SIAEvent">Searching for Internet activation failure events on machine: </sys:String>
+    <sys:String x:Key="NoKMSEvent">No KMS activation events found on machine: </sys:String>
+    <sys:String x:Key="NoIAEvent">No failure events found on machine: </sys:String>
+    <sys:String x:Key="NoEvents">No events found.</sys:String>
+    <sys:String x:Key="SuccessEvent">Activation success event: </sys:String>
+    <sys:String x:Key="FailureEvent">Activation failure event: </sys:String>
+    <sys:String x:Key="ErrorSPPNotInstalled">Error: The Software Protection Platform service is not installed.</sys:String>
+    <sys:String x:Key="ErrorSPPNotRunning">Error: The Software Protection Platform service is not running.</sys:String>
+    <sys:String x:Key="ProductKeyNotFound">Product key not found</sys:String>
+    <sys:String x:Key="NotFound">Not found.</sys:String>
+    <sys:String x:Key="NotLicenseFound">No licenses found.</sys:String>
+    <sys:String x:Key="InfoOnly"> (for information purposes only as the status is licensed)</sys:String>
+    <sys:String x:Key="NoticeArticle">NOTICE: A KB article has been detected for activation failure: </sys:String>
+    <sys:String x:Key="ArticleLink">[Click here to get more information](https://support.microsoft.com/kb/2870357#Error0x</sys:String>
+    
+    <sys:String x:Key="VLActivationType">Activation Type Configuration: </sys:String>
+    <sys:String x:Key="ActRecent">Most recent successful activation client information: </sys:String>
+    <sys:String x:Key="KMSDNS">KMS machine name from DNS: </sys:String>
+    <sys:String x:Key="ADInfoAOName">Activation Object name: </sys:String>
+    <sys:String x:Key="ActivationInterval">Activation Interval: </sys:String>
+    <sys:String x:Key="RenewalInterval">Renewal Interval: </sys:String>
+    <sys:String x:Key="HostCaching">KMS host caching: </sys:String>
+    <sys:String x:Key="HostRegOverride">KMS machine: </sys:String>
+    <!-- Buttons -->
     <sys:String x:Key="ActivateActivate">Ativar</sys:String>
     <sys:String x:Key="ActivateViewInformation">Informações da Ativação</sys:String>
     <sys:String x:Key="ActivateViewLicenses">Exibir informações das licenças instaladas.</sys:String>
@@ -343,7 +401,7 @@
     <sys:String x:Key="AppInf">Informações do Aplicativo</sys:String>
     <sys:String x:Key="UpdateDate">Atualizado em:</sys:String>
     <sys:String x:Key="Creator">Desenvolvido por Yerong, com base na ferramenta de implantação do Office.</sys:String>
-    <sys:String x:Key="Copyright">Copyright © 2012-%year% 蓝点网. Todos os direitos reservados.</sys:String>
+    <sys:String x:Key="Copyright">Copyright © 2012-{0} 蓝点网. Todos os direitos reservados.</sys:String>
     <sys:String x:Key="ServerProvider">Provedor do Servidor</sys:String>
     <sys:String x:Key="Translator">Tradução</sys:String>
     <sys:String x:Key="BackgroundImageSource">Origem da imagem de fundo</sys:String>
@@ -374,7 +432,7 @@
     <sys:String x:Key="MsgInstallationLosedTitle">Arquivos de instalação ausentes</sys:String>
     <sys:String x:Key="MsgSelectInstallationFiles">Selecione o local dos arquivos de instalação do Office.</sys:String>
     <sys:String x:Key="MsgDeleteInstallationFiles">Deseja excluir o arquivo de instalação?</sys:String>
-    <sys:String x:Key="MsgDeleteLanguageFiles">Deseja excluir o %language%?</sys:String>
+    <sys:String x:Key="MsgDeleteLanguageFiles">Deseja excluir o {0}?</sys:String>
 
     <sys:String x:Key="MsgWriteInfError">Falha ao salvar as informações.</sys:String>
     <sys:String x:Key="MsgCleanOffice">Deseja limpar o Office? Esta operação não poderá ser cancelada depois de iniciada.</sys:String>
@@ -382,7 +440,7 @@
     <!-- Message about Download -->
     <sys:String x:Key="MsgDownloadVerError">Falha ao obter informações de versão. Verifique se o número de versão/canal está correto e a rede está normal.</sys:String>
     <sys:String x:Key="MsgSetupConfigError">A ferramenta de implantação do Office não oferece suporte ao modo de arquitetura atual. Por favor, modifique a configuração e tente novamente.</sys:String>
-    <sys:String x:Key="MsgInstallationFileExist">O arquivo %filename% já existe.  Deseja baixar novamente este arquivo?</sys:String>
+    <sys:String x:Key="MsgInstallationFileExist">O arquivo {0} já existe.  Deseja baixar novamente este arquivo?</sys:String>
     <sys:String x:Key="MsgDownloadSuccessful">Os arquivos de instalação foram baixados.</sys:String>
     <sys:String x:Key="MsgCreateISOError">Não é possível localizar a instalação do Office no diretório do Office Tool Plus. Faça o download da instalação primeiro ou mova a instalação para o caminho de trabalho.</sys:String>
     <!-- Message about Thunder -->
@@ -412,11 +470,11 @@
     <sys:String x:Key="MsgSaveFileSuccessful">Arquivo salvo com sucesso</sys:String>
     <sys:String x:Key="MsgInstallConfigurationQuestion">Veja o código com os detalhes da configuração. A configuração básica acima está correta?</sys:String>
     <sys:String x:Key="MsgInstallConfiguration">Configuração de instalação do Office</sys:String>
-    <sys:String x:Key="MsgArchitectureError">O Office %architecture% não pode ser instalado porque você possui o Office %currentArchitecture% instalado no seu computador:&#x000A;&#x000A;%currentProduct%&#x000A;As versões de 32 bits e 64 bits dos programas do Office não são compatíveis e você só pode ter um tipo instalado. Tente instalar a versão %currentArchitecture% do Office ou desinstale os programas do Office %currentArchitecture% e tente novamente.</sys:String>
+    <sys:String x:Key="MsgArchitectureError">O Office {0} não pode ser instalado porque você possui o Office {1} instalado no seu computador:&#x000A;&#x000A;{2}&#x000A;As versões de 32 bits e 64 bits dos programas do Office não são compatíveis e você só pode ter um tipo instalado. Tente instalar a versão {1} do Office ou desinstale os programas do Office {1} e tente novamente.</sys:String>
     <sys:String x:Key="MsgNotificationAboutModule">Nota: Você selecionou o módulo Office Tool Plus para instalar o Office. Neste modo, apenas as configurações básicas serão aplicadas e todas as configurações avançadas não serão efetivadas. Para usar as configurações avançadas, use o módulo Ferramenta de Implantação do Office. Deseja continuar?</sys:String>
-    <sys:String x:Key="MsgProductsError">O Office não pôde ser instalado porque você selecionou o produto: &#x000A;&#x000A;%product%&#x000A;&#x000A;A Ferramenta de Implantação do Office não suporta a instalação deste produto. Altere para o módulo Office Tool Plus nas configurações de instalação ou selecione outro produto e tente instalar novamente.</sys:String>
-    <sys:String x:Key="MsgAddProductError">O Office não pôde ser instalado. Os seguintes produtos não podem coexistir:&#x000A;&#x000A;Produtos selecionados:&#x000A;%selectedProduct%&#x000A;Produtos instalados:&#x000A;%product%&#x000A;Desinstale os produtos instalados ou selecione outro produto para instalar.</sys:String>
-    <sys:String x:Key="MsgChannelError">O Office não pôde ser instalado. Não é possível instalar o seguinte produto no canal selecionado: &#x000A;&#x000A;%selectedProduct%&#x000A;&#x000A;Por favor, altere o canal ou selecione outro produto e tente novamente. Se você estiver usando a instalação off-line, certifique-se que o download dos arquivos de instalação do Office foi feito usando o canal correto.</sys:String>
+    <sys:String x:Key="MsgProductsError">O Office não pôde ser instalado porque você selecionou o produto: &#x000A;&#x000A;{0}&#x000A;&#x000A;A Ferramenta de Implantação do Office não suporta a instalação deste produto. Altere para o módulo Office Tool Plus nas configurações de instalação ou selecione outro produto e tente instalar novamente.</sys:String>
+    <sys:String x:Key="MsgAddProductError">O Office não pôde ser instalado. Os seguintes produtos não podem coexistir:&#x000A;&#x000A;Produtos selecionados:&#x000A;{0}&#x000A;Produtos instalados:&#x000A;{1}&#x000A;Desinstale os produtos instalados ou selecione outro produto para instalar.</sys:String>
+    <sys:String x:Key="MsgChannelError">O Office não pôde ser instalado. Não é possível instalar o seguinte produto no canal selecionado: &#x000A;&#x000A;{0}&#x000A;&#x000A;Por favor, altere o canal ou selecione outro produto e tente novamente. Se você estiver usando a instalação off-line, certifique-se que o download dos arquivos de instalação do Office foi feito usando o canal correto.</sys:String>
     <!-- Message about Activate Office -->
     <sys:String x:Key="MsgSelectLicensesPath">Selecione uma pasta que contenha as licenças.</sys:String>
     <sys:String x:Key="MsgInstallLicenses">Você não poderá ver informações de ativação no Office após instalar uma licença, mas você pode exibir as informações ou ativar o Office por meio do Office Tool Plus. Deseja continuar?</sys:String>
@@ -426,7 +484,7 @@
     <sys:String x:Key="MsgClearKeys">Deseja desinstalar todas as chaves?</sys:String>
 
     <!-- Message about Toast Bar -->
-    <sys:String x:Key="ToastUpdateDownloading">Download da atualização: # concluído.</sys:String>
+    <sys:String x:Key="ToastUpdateDownloading">Download da atualização: {0} concluído.</sys:String>
     <sys:String x:Key="ToastUpdateAvailable">Nova versão disponível! Se deseja atualizar, copie o Office Tool Plus para outra pasta.</sys:String>
     <sys:String x:Key="ToastInstallationNone">Não é possível encontrar nenhum arquivo de instalação. Faça o download novamente ou selecione outra pasta.</sys:String>
     <sys:String x:Key="ToastInstallationError">Alguns arquivos de instalação estão ausentes. Por favor, baixe novamente ou selecione outra pasta.</sys:String>

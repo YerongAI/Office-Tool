@@ -117,17 +117,17 @@
 
     <!-- Greetings -->
     <!-- Showed when app started. -->
-    <sys:String x:Key="GreetingHi">您好! %UserName%</sys:String>
+    <sys:String x:Key="GreetingHi">您好! {0}</sys:String>
     <!-- 06:00 - 11:00 -->
-    <sys:String x:Key="GreetingGoodMorning">早安! %UserName%</sys:String>
+    <sys:String x:Key="GreetingGoodMorning">早安! {0}</sys:String>
     <!-- 11:00 - 13:00 -->
-    <sys:String x:Key="GreetingGoodAfternoon1">午安! %UserName%</sys:String>
+    <sys:String x:Key="GreetingGoodAfternoon1">午安! {0}</sys:String>
     <!-- 13:00 - 18:00 -->
-    <sys:String x:Key="GreetingGoodAfternoon2">下午好! %UserName%</sys:String>
+    <sys:String x:Key="GreetingGoodAfternoon2">下午好! {0}</sys:String>
     <!-- 18:00 - 22:00 -->
-    <sys:String x:Key="GreetingGoodEvening">晚安! %UserName%</sys:String>
+    <sys:String x:Key="GreetingGoodEvening">晚安! {0}</sys:String>
     <!-- 22:00 - 06:00 (+1) -->
-    <sys:String x:Key="GreetingLateAtNight">%UserName% 夜深了，注意休息哦! </sys:String>
+    <sys:String x:Key="GreetingLateAtNight">{0} 夜深了，注意休息哦! </sys:String>
     <!-- Home -->
     <sys:String x:Key="Homepage">官方網站</sys:String>
     <sys:String x:Key="Contact">聯繫我們</sys:String>
@@ -188,13 +188,13 @@
     <sys:String x:Key="DeployProductID">產品識別碼:</sys:String>
     <sys:String x:Key="DeployApps">軟體:</sys:String>
     <sys:String x:Key="DeployAddProduct">新增產品</sys:String>
-    <sys:String x:Key="DeployErrorConfig">⚠ 此产品无法与现有产品共存</sys:String>
-    <sys:String x:Key="DeployErrorModule">⚠ 此产品需要使用 Office Tool Plus 模块安装</sys:String>
-    <sys:String x:Key="DeployErrorChannel">⚠ 此产品无法安装在选定的通道上: %selectedChannel%</sys:String>
-    <sys:String x:Key="DeployErrorCoexist">此产品无法与下列产品共存：</sys:String>
+    <sys:String x:Key="DeployErrorConfig">⚠ 此產品無法與現有的產品共存</sys:String>
+    <sys:String x:Key="DeployErrorModule">⚠ 此產品必須使用 Office Tool Plus 模組安裝</sys:String>
+    <sys:String x:Key="DeployErrorChannel">⚠ 此產品無法使用「{0}」頻道安裝</sys:String>
+    <sys:String x:Key="DeployErrorCoexist">此產品無法與下列的產品共存：</sys:String>
     <!-- Language -->
     <sys:String x:Key="LanguagePack">語言套件</sys:String>
-    <sys:String x:Key="LanguageType">語言套件類型: %1</sys:String>
+    <sys:String x:Key="LanguageType">語言套件類型: {0}</sys:String>
     <sys:String x:Key="Full">完整</sys:String>
     <sys:String x:Key="Partial">部分並包含校訂工具</sys:String>
     <sys:String x:Key="PartialWithoutProofingTools">部分並不包含校訂工具</sys:String>
@@ -284,7 +284,65 @@
     <sys:String x:Key="ActivateSetKMS">設定伺服器位址</sys:String>
     <sys:String x:Key="ActivateSetPort">設定伺服器連接埠</sys:String>
     <sys:String x:Key="ActivateClearKMS">清除伺服器位址（重置連接埠為預設值）</sys:String>
+    <!-- Content Translation -->
+    <sys:String x:Key="ActivationTitle">Office 激活处理</sys:String>
+    <sys:String x:Key="SKUID">SKU ID: </sys:String>
+    <sys:String x:Key="LicenseDescription">许可证说明: </sys:String>
+    <sys:String x:Key="LicenseStatus">许可证状态: </sys:String>
+    <sys:String x:Key="RemainGrace">剩余期限: </sys:String>
+    <sys:String x:Key="RemainGraceDay">天</sys:String>
+    <sys:String x:Key="RemainGraceMin">分钟后到期</sys:String>
+    <sys:String x:Key="Licexpiry">测试版到期时间: </sys:String>
+    <sys:String x:Key="ErrorCode">错误代码: </sys:String>
+    <sys:String x:Key="ErrorDescrpition">错误信息: </sys:String>
+    <sys:String x:Key="ErrorUnknown">发生未知错误。</sys:String>
+    <sys:String x:Key="ErrorCodeValue">错误代码必须以 '0x' 开头. 例如: 0xC004F009</sys:String>
+    <sys:String x:Key="StatusLicensed"> **已许可** </sys:String>
+    <sys:String x:Key="StatusUnlicensed"> `未许可` </sys:String>
+    <sys:String x:Key="StatusOOBGrace"> `---OOB_宽限期---` </sys:String>
+    <sys:String x:Key="StatusOOTGrace"> `---OOT_宽限期---` </sys:String>
+    <sys:String x:Key="StatusNonGenuineGrace"> `---非正版宽限期---` </sys:String>
+    <sys:String x:Key="StatusNotifications"> `---通知状态---` </sys:String>
+    <sys:String x:Key="StatusExtendedGrace"> `---额外宽限期---` </sys:String>
+    <sys:String x:Key="StatusUnknown"> `---未知---` </sys:String>
 
+    <sys:String x:Key="AppliedSetting">成功应用设置。</sys:String>
+    <sys:String x:Key="NoKMSLics">没有在此计算机上发现 Office 批量许可证。</sys:String>
+    <sys:String x:Key="NoKeyInstalled">未检测到任何产品密钥</sys:String>
+    <sys:String x:Key="UninstallKey">产品密钥卸载成功</sys:String>
+    <sys:String x:Key="ActivationSuccess">**产品激活成功**</sys:String>
+    <sys:String x:Key="OfflineActivationSuccess">**Office 产品离线激活成功**</sys:String>
+    <sys:String x:Key="IKeySuccess">**产品密钥安装成功**</sys:String>
+    <sys:String x:Key="ProductKey">产品密钥的最后五个字符: </sys:String>
+    <sys:String x:Key="UninstallingKey">正在卸载以下产品的密钥: </sys:String>
+    <sys:String x:Key="ILicense">正在安装 Office 许可证: </sys:String>
+    <sys:String x:Key="ILicenseSuccess">Office 许可证安装成功。</sys:String>
+    <sys:String x:Key="InstallationID">安装 ID:</sys:String>
+    <sys:String x:Key="SKMSEvent">正在此计算机上搜索 KMS 激活事件: </sys:String>
+    <sys:String x:Key="SIAEvent">正在此计算机上搜索 Internet 激活事件: </sys:String>
+    <sys:String x:Key="NoKMSEvent">未在此计算机上发现 KMS 激活事件: </sys:String>
+    <sys:String x:Key="NoIAEvent">未在此计算机上发现激活失败事件: </sys:String>
+    <sys:String x:Key="NoEvents">未发现任何事件。</sys:String>
+    <sys:String x:Key="SuccessEvent">激活成功事件: </sys:String>
+    <sys:String x:Key="FailureEvent">激活失败事件: </sys:String>
+    <sys:String x:Key="ErrorSPPNotInstalled">错误：软件保护平台服务未安装。请确认 Office 是否已经安装在计算机上！</sys:String>
+    <sys:String x:Key="ErrorSPPNotRunning">错误：软件保护平台服务没有运行。</sys:String>
+    <sys:String x:Key="ProductKeyNotFound">未发现产品密钥</sys:String>
+    <sys:String x:Key="NotFound">未发现。</sys:String>
+    <sys:String x:Key="NotLicenseFound">未发现许可证</sys:String>
+    <sys:String x:Key="InfoOnly"> (仅供参考，此许可证已激活)</sys:String>
+    <sys:String x:Key="NoticeArticle">提示: 微软知识库文档中已提供关于此错误代码的信息: </sys:String>
+    <sys:String x:Key="ArticleLink">[点击这里获取更多信息](https://support.microsoft.com/kb/2870357#Error0x</sys:String>
+    
+    <sys:String x:Key="VLActivationType">激活类型配置信息: </sys:String>
+    <sys:String x:Key="ActRecent">最近成功激活的客户端信息: </sys:String>
+    <sys:String x:Key="KMSDNS">来自 DNS 的 KMS 计算机名称: </sys:String>
+    <sys:String x:Key="ADInfoAOName">激活对象名称: </sys:String>
+    <sys:String x:Key="ActivationInterval">激活间隔: </sys:String>
+    <sys:String x:Key="RenewalInterval">续期间隔: </sys:String>
+    <sys:String x:Key="HostCaching">KMS 主机缓存: </sys:String>
+    <sys:String x:Key="HostRegOverride">KMS 主机: </sys:String>
+    <!-- Buttons -->
     <sys:String x:Key="ActivateActivate">啟用</sys:String>
     <sys:String x:Key="ActivateViewInformation">顯示啟用資訊</sys:String>
     <sys:String x:Key="ActivateViewLicenses">顯示已安裝的授權資訊</sys:String>
@@ -343,7 +401,7 @@
     <sys:String x:Key="AppInf">程式資訊</sys:String>
     <sys:String x:Key="UpdateDate">更新時間:</sys:String>
     <sys:String x:Key="Creator">由 Yerong 開發以及維護，基於 Office 部署工具打造。</sys:String>
-    <sys:String x:Key="Copyright">Copyright © 2012-%year% 蓝点网 版權所有 All Rights Reserved.</sys:String>
+    <sys:String x:Key="Copyright">Copyright © 2012-{0} 蓝点网 版權所有 All Rights Reserved.</sys:String>
     <sys:String x:Key="ServerProvider">伺服器來源</sys:String>
     <sys:String x:Key="Translator">翻譯人員</sys:String>
     <sys:String x:Key="BackgroundImageSource">背景圖片來源</sys:String>
@@ -374,7 +432,7 @@
     <sys:String x:Key="MsgInstallationLosedTitle">安裝文件遺失</sys:String>
     <sys:String x:Key="MsgSelectInstallationFiles">選取包含安裝文件的路徑</sys:String>
     <sys:String x:Key="MsgDeleteInstallationFiles">確定要刪除安裝文件嗎？</sys:String>
-    <sys:String x:Key="MsgDeleteLanguageFiles">確定要刪除 %language% 嗎？</sys:String>
+    <sys:String x:Key="MsgDeleteLanguageFiles">確定要刪除 {0} 嗎？</sys:String>
 
     <sys:String x:Key="MsgWriteInfError">資料儲存失敗！</sys:String>
     <sys:String x:Key="MsgCleanOffice">>確定強制解除安裝 Office？一旦開始後將無法取消。</sys:String>
@@ -382,7 +440,7 @@
     <!-- Message about Download -->
     <sys:String x:Key="MsgDownloadVerError">取得版本資訊失敗，請確認版本編號與頻道設定是否正確、網路連線是否正常。</sys:String>
     <sys:String x:Key="MsgSetupConfigError">Office 部署工具不支援您選擇的系統架構及下載模式，請重新選擇，然後再次開始。</sys:String>
-    <sys:String x:Key="MsgInstallationFileExist">%filename% 已經存在，要取代此文件嗎？</sys:String>
+    <sys:String x:Key="MsgInstallationFileExist">{0} 已經存在，要取代此文件嗎？</sys:String>
     <sys:String x:Key="MsgDownloadSuccessful">安裝文件下載完成</sys:String>
     <sys:String x:Key="MsgCreateISOError">在 Office Tool 資料夾中找不到任何安裝文件，請在下載安裝文件（或移動安裝文件）後，再進行此操作。</sys:String>
     <!-- Message about Thunder -->
@@ -412,11 +470,11 @@
     <sys:String x:Key="MsgSaveFileSuccessful">已成功儲存文件</sys:String>
     <sys:String x:Key="MsgInstallConfigurationQuestion">如要了解詳細內容及設定，請查看「檢視代碼」，以上設定是否正確？</sys:String>
     <sys:String x:Key="MsgInstallConfiguration">準備好要安裝 Office 了嗎？</sys:String>
-    <sys:String x:Key="MsgArchitectureError">Office (%architecture%) 安裝失敗。您已安裝以下 %currentArchitecture%的產品: &#x000A;&#x000A;%currentProduct%&#x000A;您無法同時安裝 32 位元的 Office 和 64 位元的 Office，請先解除安裝 %currentArchitecture%版，或變更架構成 %currentArchitecture%，然後再次部署。</sys:String>
+    <sys:String x:Key="MsgArchitectureError">Office ({0}) 安裝失敗。您已安裝以下 {1}的產品: &#x000A;&#x000A;{2}&#x000A;您無法同時安裝 32 位元的 Office 和 64 位元的 Office，請先解除安裝 {1}版，或變更架構成 {1}，然後再次部署。</sys:String>
     <sys:String x:Key="MsgNotificationAboutModule">請注意：您已選擇使用 Office Tool Plus 模組進行安装。這個模式僅會套用基本設定。若您有設定選用設定，請點選「否」並修改為 Office 部署工具模組。確定要安裝？</sys:String>
-    <sys:String x:Key="MsgProductsError">Office 安裝失敗。Office 部署工具無法安裝這些產品:&#x000A;&#x000A;%product%&#x000A;&#x000A;請在安裝設定中修改安裝模組為 Office Tool Plus，或者選擇其他的產品，然後再次部署。</sys:String>
-    <sys:String x:Key="MsgAddProductError">Office 安裝失敗，以下產品無法同時存在：&#x000A;&#x000A;準備新增的產品:&#x000A;%selectedProduct%&#x000A;已安裝的產品:&#x000A;%product%&#x000A;若要繼續部署，請將「已安裝的產品」移除，或重新設定「新增產品」，然後再次部署。</sys:String>
-    <sys:String x:Key="MsgChannelError">Office 安裝失敗。您已選擇以下產品: &#x000A;&#x000A;%selectedProduct%&#x000A;&#x000A;這些產品無法使用您選擇的頻道進行安裝，請在安裝設定中修改頻道，或者選擇其他的產品，然後再次部署。&#x000A;&#x000A;若您使用離線安裝，請確保您的文件來自正確的頻道。</sys:String>
+    <sys:String x:Key="MsgProductsError">Office 安裝失敗。Office 部署工具無法安裝這些產品:&#x000A;&#x000A;{0}&#x000A;&#x000A;請在安裝設定中修改安裝模組為 Office Tool Plus，或者選擇其他的產品，然後再次部署。</sys:String>
+    <sys:String x:Key="MsgAddProductError">Office 安裝失敗，以下產品無法同時存在：&#x000A;&#x000A;準備新增的產品:&#x000A;{0}&#x000A;已安裝的產品:&#x000A;{1}&#x000A;若要繼續部署，請將「已安裝的產品」移除，或重新設定「新增產品」，然後再次部署。</sys:String>
+    <sys:String x:Key="MsgChannelError">Office 安裝失敗。您已選擇以下產品: &#x000A;&#x000A;{0}&#x000A;&#x000A;這些產品無法使用您選擇的頻道進行安裝，請在安裝設定中修改頻道，或者選擇其他的產品，然後再次部署。&#x000A;&#x000A;若您使用離線安裝，請確保您的文件來自正確的頻道。</sys:String>
     <!-- Message about Activate Office -->
     <sys:String x:Key="MsgSelectLicensesPath">請選取包含授權的資料夾</sys:String>
     <sys:String x:Key="MsgInstallLicenses">即將安裝 Office 授權金鑰，安裝完成後可能不會在 Office 應用程式中顯示資訊，您必須擁有相關金鑰啟用，是否繼續？ </sys:String>
@@ -426,7 +484,7 @@
     <sys:String x:Key="MsgClearKeys">確定要移除所有金鑰？執行完畢後 Office 需要重新安裝金鑰並重新啟用。</sys:String>
     
     <!-- Message about Toast Bar -->
-    <sys:String x:Key="ToastUpdateDownloading">正在取得更新文件，已完成 #</sys:String>
+    <sys:String x:Key="ToastUpdateDownloading">正在取得更新文件，已完成 {0}</sys:String>
     <sys:String x:Key="ToastUpdateAvailable">Office Tool Plus 已發布新版本，但在 ISO 模式下無法自動更新。建議您將 Office Tool Plus 檔案複製到其他位置（例如桌面），然後再次開啟 Office Tool Plus 更新。</sys:String>
     <sys:String x:Key="ToastInstallationNone">無法載入安裝文件，請重新選取或重新下載</sys:String>
     <sys:String x:Key="ToastInstallationError">安裝文件已損毀，請重新選取或重新下載</sys:String>

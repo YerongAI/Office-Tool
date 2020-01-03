@@ -117,17 +117,17 @@
 
     <!-- Greetings -->
     <!-- Showed when app started. -->
-    <sys:String x:Key="GreetingHi"> %UserName% ,السلام عليكم</sys:String>
+    <sys:String x:Key="GreetingHi"> {0} ,السلام عليكم</sys:String>
     <!-- 06:00 - 11:00 -->
-    <sys:String x:Key="GreetingGoodMorning">صباح الخير, %UserName%</sys:String>
+    <sys:String x:Key="GreetingGoodMorning">صباح الخير, {0}</sys:String>
     <!-- 11:00 - 13:00 -->
-    <sys:String x:Key="GreetingGoodAfternoon1">%UserName%,مساء الخير</sys:String>
+    <sys:String x:Key="GreetingGoodAfternoon1">{0},مساء الخير</sys:String>
     <!-- 13:00 - 18:00 -->
-    <sys:String x:Key="GreetingGoodAfternoon2">%UserName%,مساء الخير</sys:String>
+    <sys:String x:Key="GreetingGoodAfternoon2">{0},مساء الخير</sys:String>
     <!-- 18:00 - 22:00 -->
-    <sys:String x:Key="GreetingGoodEvening">%UserName%,مساء الخير</sys:String>
+    <sys:String x:Key="GreetingGoodEvening">{0},مساء الخير</sys:String>
     <!-- 22:00 - 06:00 (+1) -->
-    <sys:String x:Key="GreetingLateAtNight"> احصل على ليلة هانئة,%UserName% عزيزي</sys:String>
+    <sys:String x:Key="GreetingLateAtNight"> احصل على ليلة هانئة,{0} عزيزي</sys:String>
     <!-- Home -->
     <sys:String x:Key="Homepage">الصفحة الرئيسة</sys:String>
     <sys:String x:Key="Contact">Contact us</sys:String>
@@ -190,11 +190,11 @@
     <sys:String x:Key="DeployAddProduct">اضافة منتج</sys:String>
     <sys:String x:Key="DeployErrorConfig">⚠ The product can't coexist with existing products.</sys:String>
     <sys:String x:Key="DeployErrorModule">⚠ The product requires installation using the Office Tool Plus module.</sys:String>
-    <sys:String x:Key="DeployErrorChannel">⚠ The product can't be installed on the selected channel: %selectedChannel%</sys:String>
+    <sys:String x:Key="DeployErrorChannel">⚠ The product can't be installed on the selected channel: {0}</sys:String>
     <sys:String x:Key="DeployErrorCoexist">The product can't coexist with the following products:</sys:String>
     <!-- Language -->
     <sys:String x:Key="LanguagePack">حزم اللغات</sys:String>
-    <sys:String x:Key="LanguageType">نوع حزمة اللغة %1</sys:String>
+    <sys:String x:Key="LanguageType">نوع حزمة اللغة {0}</sys:String>
     <sys:String x:Key="Full">كامل </sys:String>
     <sys:String x:Key="Partial">جزئي</sys:String>
     <sys:String x:Key="PartialWithoutProofingTools">جزئي دون أدوات التدقيق</sys:String>
@@ -284,7 +284,65 @@
     <sys:String x:Key="ActivateSetKMS">ضع عنوان السيرفر</sys:String>
     <sys:String x:Key="ActivateSetPort">ضع بورت للسيرفر</sys:String>
     <sys:String x:Key="ActivateClearKMS">ازالة عناوين السيرفر (وضع البورت في الوضع الافتراضي)</sys:String>
+    <!-- Content Translation -->
+    <sys:String x:Key="ActivationTitle">Office Activation Processing</sys:String>
+    <sys:String x:Key="SKUID">SKU ID: </sys:String>
+    <sys:String x:Key="LicenseDescription">License Description: </sys:String>
+    <sys:String x:Key="LicenseStatus">License Status: </sys:String>
+    <sys:String x:Key="RemainGrace">Remain Grace: </sys:String>
+    <sys:String x:Key="RemainGraceDay">days</sys:String>
+    <sys:String x:Key="RemainGraceMin">minute(s) before expiring</sys:String>
+    <sys:String x:Key="Licexpiry">Beta Expiration: </sys:String>
+    <sys:String x:Key="ErrorCode">Error Code: </sys:String>
+    <sys:String x:Key="ErrorDescrpition">Error Description: </sys:String>
+    <sys:String x:Key="ErrorUnknown">An unknown error occurred.</sys:String>
+    <sys:String x:Key="ErrorCodeValue">An error code must start with '0x'. Example: 0xC004F009</sys:String>
+    <sys:String x:Key="StatusLicensed"> **---LICENSED---** </sys:String>
+    <sys:String x:Key="StatusUnlicensed"> `---UNLICENSED---` </sys:String>
+    <sys:String x:Key="StatusOOBGrace"> `---OOB_GRACE---` </sys:String>
+    <sys:String x:Key="StatusOOTGrace"> `---OOT_GRACE---` </sys:String>
+    <sys:String x:Key="StatusNonGenuineGrace"> `---NON_GENUINE_GRACE---` </sys:String>
+    <sys:String x:Key="StatusNotifications"> `---NOTIFICATIONS---` </sys:String>
+    <sys:String x:Key="StatusExtendedGrace"> `---EXTENDED GRACE---` </sys:String>
+    <sys:String x:Key="StatusUnknown"> `---UNKNOWN---` </sys:String>
+
+    <sys:String x:Key="AppliedSetting">Successfully applied setting.</sys:String>
+    <sys:String x:Key="NoKMSLics">No Office KMS licenses were found on the system.</sys:String>
+    <sys:String x:Key="NoKeyInstalled">No installed product keys detected.</sys:String>
+    <sys:String x:Key="UninstallKey">Product key uninstall successful.</sys:String>
+    <sys:String x:Key="ActivationSuccess">**Product activation successful**</sys:String>
+    <sys:String x:Key="OfflineActivationSuccess">**Offline product activation successful**</sys:String>
+    <sys:String x:Key="IKeySuccess">**Product key installation successful**</sys:String>
+    <sys:String x:Key="ProductKey">Last 5 characters of installed product key: </sys:String>
+    <sys:String x:Key="UninstallingKey">Uninstalling product key for: </sys:String>
+    <sys:String x:Key="ILicense">Installing Office license: </sys:String>
+    <sys:String x:Key="ILicenseSuccess">Office license installed successfully.</sys:String>
+    <sys:String x:Key="InstallationID">Installation ID:</sys:String>
+    <sys:String x:Key="SKMSEvent">Searching for KMS activation events on machine: </sys:String>
+    <sys:String x:Key="SIAEvent">Searching for Internet activation failure events on machine: </sys:String>
+    <sys:String x:Key="NoKMSEvent">No KMS activation events found on machine: </sys:String>
+    <sys:String x:Key="NoIAEvent">No failure events found on machine: </sys:String>
+    <sys:String x:Key="NoEvents">No events found.</sys:String>
+    <sys:String x:Key="SuccessEvent">Activation success event: </sys:String>
+    <sys:String x:Key="FailureEvent">Activation failure event: </sys:String>
+    <sys:String x:Key="ErrorSPPNotInstalled">Error: The Software Protection Platform service is not installed.</sys:String>
+    <sys:String x:Key="ErrorSPPNotRunning">Error: The Software Protection Platform service is not running.</sys:String>
+    <sys:String x:Key="ProductKeyNotFound">Product key not found</sys:String>
+    <sys:String x:Key="NotFound">Not found.</sys:String>
+    <sys:String x:Key="NotLicenseFound">No licenses found.</sys:String>
+    <sys:String x:Key="InfoOnly"> (for information purposes only as the status is licensed)</sys:String>
+    <sys:String x:Key="NoticeArticle">NOTICE: A KB article has been detected for activation failure: </sys:String>
+    <sys:String x:Key="ArticleLink">[Click here to get more information](https://support.microsoft.com/kb/2870357#Error0x</sys:String>
     
+    <sys:String x:Key="VLActivationType">Activation Type Configuration: </sys:String>
+    <sys:String x:Key="ActRecent">Most recent successful activation client information: </sys:String>
+    <sys:String x:Key="KMSDNS">KMS machine name from DNS: </sys:String>
+    <sys:String x:Key="ADInfoAOName">Activation Object name: </sys:String>
+    <sys:String x:Key="ActivationInterval">Activation Interval: </sys:String>
+    <sys:String x:Key="RenewalInterval">Renewal Interval: </sys:String>
+    <sys:String x:Key="HostCaching">KMS host caching: </sys:String>
+    <sys:String x:Key="HostRegOverride">KMS machine: </sys:String>
+    <!-- Buttons -->
     <sys:String x:Key="ActivateActivate">التفعيل</sys:String>
     <sys:String x:Key="ActivateViewInformation">عرض معلوامات التثبيت</sys:String>
     <sys:String x:Key="ActivateViewLicenses">عرض معلومات الترخيص للتراخيص المثبتة</sys:String>
@@ -343,7 +401,7 @@
     <sys:String x:Key="AppInf">معلومات التطبيق</sys:String>
     <sys:String x:Key="UpdateDate">تحديث الوقت:</sys:String>
     <sys:String x:Key="Creator">Developed by Yerong, based on Office Deployment Tool.</sys:String>
-    <sys:String x:Key="Copyright">Copyright © 2012-%year% 蓝点网 All Rights Reserved.</sys:String>
+    <sys:String x:Key="Copyright">Copyright © 2012-{0} 蓝点网 All Rights Reserved.</sys:String>
     <sys:String x:Key="ServerProvider">الخادم المزود</sys:String>
     <sys:String x:Key="Translator">المترجم</sys:String>
     <sys:String x:Key="BackgroundImageSource">مصدر صورة الخلفية</sys:String>
@@ -374,7 +432,7 @@
     <sys:String x:Key="MsgInstallationLosedTitle">ملف (ملفات) التثبيت المفقودة</sys:String>
     <sys:String x:Key="MsgSelectInstallationFiles"> Office حدد موقع ملفات تثبيت</sys:String>
     <sys:String x:Key="MsgDeleteInstallationFiles">هل تريد حذف ملف (ملفات) التثبيت؟</sys:String>
-    <sys:String x:Key="MsgDeleteLanguageFiles"> ؟ %language% حذف</sys:String>
+    <sys:String x:Key="MsgDeleteLanguageFiles"> ؟ {0} حذف</sys:String>
 
     <sys:String x:Key="MsgWriteInfError">.فشل في حفظ المعلومات</sys:String>
     <sys:String x:Key="MsgCleanOffice">بمجرد البدء في تنظيف الأوفيس ،لايمكن احباط هذه العملية هل تريد تأكيد بدء التنظيف؟</sys:String>
@@ -382,7 +440,7 @@
     <!-- Message about Download -->
     <sys:String x:Key="MsgDownloadVerError">تعاني من الحصول على معلومات الإصدار. تأكد من صحة رقم الإصدار / القناة وأن الشبكة متصلة.</sys:String>
     <sys:String x:Key="MsgSetupConfigError">أداة نشر Office لا تدعم وضع الهيكل الحالي. يرجى تعديل التكوين والمحاولة مرة أخرى.</sys:String>
-    <sys:String x:Key="MsgInstallationFileExist">The file %filename% already exists. Do you want to re-download this file?</sys:String>
+    <sys:String x:Key="MsgInstallationFileExist">The file {0} already exists. Do you want to re-download this file?</sys:String>
     <sys:String x:Key="MsgDownloadSuccessful">تم تنزيل ملفات التثبيت.</sys:String>
     <sys:String x:Key="MsgCreateISOError">لا يمكن العثور على ملفات تثبيت Office في الدليل الجذر لـ Office Tool Plus ، يرجى تنزيل ملفات التثبيت أولاً! أو انقل ملفات التثبيت إلى مسار العمل.</sys:String>
     <!-- Message about Thunder -->
@@ -412,11 +470,11 @@
     <sys:String x:Key="MsgSaveFileSuccessful">تم الحفظ</sys:String>
     <sys:String x:Key="MsgInstallConfigurationQuestion">عرض الكود الخاص بتكوين التفاصيل ، هل التكوين الأساسي أعلاه صحيح؟</sys:String>
     <sys:String x:Key="MsgInstallConfiguration">تنزيل اعدادت الأوفيس</sys:String>
-    <sys:String x:Key="MsgArchitectureError">Office (%architecture%) couldn't be installed because you have the %currentArchitecture% Office installed on your computer:&#x000A;&#x000A;%currentProduct%&#x000A;32 bit and 64 bit versions of Office programs don't get along, so you can only have one type installed at a time. Please try installing the %currentArchitecture% version of Office instead, or uninstall your other %currentArchitecture% Office programs and try this installation again.</sys:String>
+    <sys:String x:Key="MsgArchitectureError">Office ({0}) couldn't be installed because you have the {1} Office installed on your computer:&#x000A;&#x000A;{2}&#x000A;32 bit and 64 bit versions of Office programs don't get along, so you can only have one type installed at a time. Please try installing the {1} version of Office instead, or uninstall your other {1} Office programs and try this installation again.</sys:String>
     <sys:String x:Key="MsgNotificationAboutModule">Note: You choose to install Office using the Office Tool Plus module. In this mode, only the basic settings will be applied and all advanced settings will not take effect. To use advanced settings, use the Office Deployment Tool module. Do you want to continue?</sys:String>
-    <sys:String x:Key="MsgProductsError">Office couldn't be installed because Office Deployment Tool doesn't support installing the product: &#x000A;&#x000A;%product%&#x000A;&#x000A;To install the product, change the module to Office Tool Plus in install settings, or select another product and try your installation again.</sys:String>
-    <sys:String x:Key="MsgAddProductError">Office couldn't be installed, the following products can't coexist:&#x000A;&#x000A;Selected products:&#x000A;%selectedProduct%&#x000A;Installed products:&#x000A;%product%&#x000A;Please uninstall the installed products, or select another product to install.</sys:String>
-    <sys:String x:Key="MsgChannelError">Office couldn't be installed. The following product can't be installed on the selected channel: &#x000A;&#x000A;%selectedProduct%&#x000A;&#x000A;Please change the channel, or select another product and try again. If you are using offline installation, please make sure you've downloaded the Office installation files from the correct channel.</sys:String>
+    <sys:String x:Key="MsgProductsError">Office couldn't be installed because Office Deployment Tool doesn't support installing the product: &#x000A;&#x000A;{0}&#x000A;&#x000A;To install the product, change the module to Office Tool Plus in install settings, or select another product and try your installation again.</sys:String>
+    <sys:String x:Key="MsgAddProductError">Office couldn't be installed, the following products can't coexist:&#x000A;&#x000A;Selected products:&#x000A;{0}&#x000A;Installed products:&#x000A;{1}&#x000A;Please uninstall the installed products, or select another product to install.</sys:String>
+    <sys:String x:Key="MsgChannelError">Office couldn't be installed. The following product can't be installed on the selected channel: &#x000A;&#x000A;{0}&#x000A;&#x000A;Please change the channel, or select another product and try again. If you are using offline installation, please make sure you've downloaded the Office installation files from the correct channel.</sys:String>
     <!-- Message about Activate Office -->
     <sys:String x:Key="MsgSelectLicensesPath">حدد مجلدًا يحتوي على تراخيص.</sys:String>
     <sys:String x:Key="MsgInstallLicenses">بعد تثبيت النسخة ، الأوفيس ربما يحدث به خلل لذلك ربما نحاج لإصلاح الأأوفيس.هل تريد المتابعة ؟</sys:String>
@@ -426,7 +484,7 @@
     <sys:String x:Key="MsgClearKeys">إلغاء تثبيت جميع المفاتيح يعني أنك ستحتاج إلى إعادة تثبيت المفاتيح وتنشيط Office بعد هذه العملية. هل تريد الاستمرار؟</sys:String>
 
     <!-- Message about Toast Bar -->
-    <sys:String x:Key="ToastUpdateDownloading">تنزيل التحديث ، اكتمل #.</sys:String>
+    <sys:String x:Key="ToastUpdateDownloading">تنزيل التحديث ، اكتمل {0}.</sys:String>
     <sys:String x:Key="ToastUpdateAvailable">لمجلد آخر إذا كنت تتمنى التحديث Office Tool Plusإصدار جديد من الأوفيس متوفر ولكن لن يتم التثبيت في وضع الآيزو مود. برجاء نسخ ال .</sys:String>
     <sys:String x:Key="ToastInstallationNone">لا يمكن العثور على أي ملفات تثبيت ، يرجى إعادة التنزيل أو تحديد مجلد آخر</sys:String>
     <sys:String x:Key="ToastInstallationError">بعض ملفات التثبيت مفقودة ، يرجى إعادة التنزيل أو تحديد مجلد آخر</sys:String>

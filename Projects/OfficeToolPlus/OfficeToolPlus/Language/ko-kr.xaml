@@ -117,17 +117,17 @@
 
     <!-- Greetings -->
     <!-- Showed when app started. -->
-    <sys:String x:Key="GreetingHi">좋은 아침. %UserName%</sys:String>
+    <sys:String x:Key="GreetingHi">좋은 아침. {0}</sys:String>
     <!-- 06:00 - 11:00 -->
-    <sys:String x:Key="GreetingGoodMorning">좋은 점심. %UserName%</sys:String>
+    <sys:String x:Key="GreetingGoodMorning">좋은 점심. {0}</sys:String>
     <!-- 11:00 - 13:00 -->
-    <sys:String x:Key="GreetingGoodAfternoon1">좋은 오후. %UserName%</sys:String>
+    <sys:String x:Key="GreetingGoodAfternoon1">좋은 오후. {0}</sys:String>
     <!-- 13:00 - 18:00 -->
-    <sys:String x:Key="GreetingGoodAfternoon2">좋은 오후. %UserName%</sys:String>
+    <sys:String x:Key="GreetingGoodAfternoon2">좋은 오후. {0}</sys:String>
     <!-- 18:00 - 22:00 -->
-    <sys:String x:Key="GreetingGoodEvening">좋은 밤. %UserName%</sys:String>
+    <sys:String x:Key="GreetingGoodEvening">좋은 밤. {0}</sys:String>
     <!-- 22:00 - 06:00 (+1) -->
-    <sys:String x:Key="GreetingLateAtNight">%UserName%님, 밤이 깊어서 잠을 자요.</sys:String>
+    <sys:String x:Key="GreetingLateAtNight">{0}님, 밤이 깊어서 잠을 자요.</sys:String>
     <!-- Home -->
     <sys:String x:Key="Homepage">공식사이트</sys:String>
     <sys:String x:Key="Contact">상담센터</sys:String>
@@ -188,13 +188,13 @@
     <sys:String x:Key="DeployProductID">제품ID:</sys:String>
     <sys:String x:Key="DeployApps">응용프로그램:</sys:String>
     <sys:String x:Key="DeployAddProduct">제품 추가</sys:String>
-    <sys:String x:Key="DeployErrorConfig">⚠ The product can't coexist with existing products.</sys:String>
-    <sys:String x:Key="DeployErrorModule">⚠ The product requires installation using the Office Tool Plus module.</sys:String>
-    <sys:String x:Key="DeployErrorChannel">⚠ The product can't be installed on the selected channel: %selectedChannel%</sys:String>
-    <sys:String x:Key="DeployErrorCoexist">The product can't coexist with the following products:</sys:String>
+    <sys:String x:Key="DeployErrorConfig">⚠이 제품은 이미 존재한 제품과 동시에 존재할 수 없습니다.</sys:String>
+    <sys:String x:Key="DeployErrorModule">⚠이 제품은 Office Tool Plus모듈로 설치해야합니다.</sys:String>
+    <sys:String x:Key="DeployErrorChannel">⚠이 제품은 설택된 채널({0})에 설치할 수 없습니다.</sys:String>
+    <sys:String x:Key="DeployErrorCoexist">이 제품은 아래의 제품과 동시에 존재할 수 없습니다.</sys:String>
     <!-- Language -->
     <sys:String x:Key="LanguagePack">언어 패키지</sys:String>
-    <sys:String x:Key="LanguageType">언어 패키지 유형: %1</sys:String>
+    <sys:String x:Key="LanguageType">언어 패키지 유형: {0}</sys:String>
     <sys:String x:Key="Full">전체</sys:String>
     <sys:String x:Key="Partial">일부</sys:String>
     <sys:String x:Key="PartialWithoutProofingTools">일부(문법 검사 툴 없음)</sys:String>
@@ -284,7 +284,65 @@
     <sys:String x:Key="ActivateSetKMS">서버 주소 설정</sys:String>
     <sys:String x:Key="ActivateSetPort">서버 포트 설정</sys:String>
     <sys:String x:Key="ActivateClearKMS">서버 주소 치우기(포트를 기본값으로 초기화)</sys:String>
+    <!-- Content Translation -->
+    <sys:String x:Key="ActivationTitle">Office Activation Processing</sys:String>
+    <sys:String x:Key="SKUID">SKU ID: </sys:String>
+    <sys:String x:Key="LicenseDescription">License Description: </sys:String>
+    <sys:String x:Key="LicenseStatus">License Status: </sys:String>
+    <sys:String x:Key="RemainGrace">Remain Grace: </sys:String>
+    <sys:String x:Key="RemainGraceDay">days</sys:String>
+    <sys:String x:Key="RemainGraceMin">minute(s) before expiring</sys:String>
+    <sys:String x:Key="Licexpiry">Beta Expiration: </sys:String>
+    <sys:String x:Key="ErrorCode">Error Code: </sys:String>
+    <sys:String x:Key="ErrorDescrpition">Error Description: </sys:String>
+    <sys:String x:Key="ErrorUnknown">An unknown error occurred.</sys:String>
+    <sys:String x:Key="ErrorCodeValue">An error code must start with '0x'. Example: 0xC004F009</sys:String>
+    <sys:String x:Key="StatusLicensed"> **---LICENSED---** </sys:String>
+    <sys:String x:Key="StatusUnlicensed"> `---UNLICENSED---` </sys:String>
+    <sys:String x:Key="StatusOOBGrace"> `---OOB_GRACE---` </sys:String>
+    <sys:String x:Key="StatusOOTGrace"> `---OOT_GRACE---` </sys:String>
+    <sys:String x:Key="StatusNonGenuineGrace"> `---NON_GENUINE_GRACE---` </sys:String>
+    <sys:String x:Key="StatusNotifications"> `---NOTIFICATIONS---` </sys:String>
+    <sys:String x:Key="StatusExtendedGrace"> `---EXTENDED GRACE---` </sys:String>
+    <sys:String x:Key="StatusUnknown"> `---UNKNOWN---` </sys:String>
 
+    <sys:String x:Key="AppliedSetting">Successfully applied setting.</sys:String>
+    <sys:String x:Key="NoKMSLics">No Office KMS licenses were found on the system.</sys:String>
+    <sys:String x:Key="NoKeyInstalled">No installed product keys detected.</sys:String>
+    <sys:String x:Key="UninstallKey">Product key uninstall successful.</sys:String>
+    <sys:String x:Key="ActivationSuccess">**Product activation successful**</sys:String>
+    <sys:String x:Key="OfflineActivationSuccess">**Offline product activation successful**</sys:String>
+    <sys:String x:Key="IKeySuccess">**Product key installation successful**</sys:String>
+    <sys:String x:Key="ProductKey">Last 5 characters of installed product key: </sys:String>
+    <sys:String x:Key="UninstallingKey">Uninstalling product key for: </sys:String>
+    <sys:String x:Key="ILicense">Installing Office license: </sys:String>
+    <sys:String x:Key="ILicenseSuccess">Office license installed successfully.</sys:String>
+    <sys:String x:Key="InstallationID">Installation ID:</sys:String>
+    <sys:String x:Key="SKMSEvent">Searching for KMS activation events on machine: </sys:String>
+    <sys:String x:Key="SIAEvent">Searching for Internet activation failure events on machine: </sys:String>
+    <sys:String x:Key="NoKMSEvent">No KMS activation events found on machine: </sys:String>
+    <sys:String x:Key="NoIAEvent">No failure events found on machine: </sys:String>
+    <sys:String x:Key="NoEvents">No events found.</sys:String>
+    <sys:String x:Key="SuccessEvent">Activation success event: </sys:String>
+    <sys:String x:Key="FailureEvent">Activation failure event: </sys:String>
+    <sys:String x:Key="ErrorSPPNotInstalled">Error: The Software Protection Platform service is not installed.</sys:String>
+    <sys:String x:Key="ErrorSPPNotRunning">Error: The Software Protection Platform service is not running.</sys:String>
+    <sys:String x:Key="ProductKeyNotFound">Product key not found</sys:String>
+    <sys:String x:Key="NotFound">Not found.</sys:String>
+    <sys:String x:Key="NotLicenseFound">No licenses found.</sys:String>
+    <sys:String x:Key="InfoOnly"> (for information purposes only as the status is licensed)</sys:String>
+    <sys:String x:Key="NoticeArticle">NOTICE: A KB article has been detected for activation failure: </sys:String>
+    <sys:String x:Key="ArticleLink">[Click here to get more information](https://support.microsoft.com/kb/2870357#Error0x</sys:String>
+    
+    <sys:String x:Key="VLActivationType">Activation Type Configuration: </sys:String>
+    <sys:String x:Key="ActRecent">Most recent successful activation client information: </sys:String>
+    <sys:String x:Key="KMSDNS">KMS machine name from DNS: </sys:String>
+    <sys:String x:Key="ADInfoAOName">Activation Object name: </sys:String>
+    <sys:String x:Key="ActivationInterval">Activation Interval: </sys:String>
+    <sys:String x:Key="RenewalInterval">Renewal Interval: </sys:String>
+    <sys:String x:Key="HostCaching">KMS host caching: </sys:String>
+    <sys:String x:Key="HostRegOverride">KMS machine: </sys:String>
+    <!-- Buttons -->
     <sys:String x:Key="ActivateActivate">정품인정</sys:String>
     <sys:String x:Key="ActivateViewInformation">정품인정 정보 표시</sys:String>
     <sys:String x:Key="ActivateViewLicenses">설치된 라이선스 정보 표시</sys:String>
@@ -327,13 +385,13 @@
     <sys:String x:Key="DisplaySettings">설정화면</sys:String>
     <sys:String x:Key="SettingsTopmost">창을 가장 위에 유지</sys:String>
     <sys:String x:Key="SettingsRTL">레이아웃을 반전</sys:String>
-    <sys:String x:Key="SettingsStar">Show stars</sys:String>
+    <sys:String x:Key="SettingsStar">별을 표시</sys:String>
     <sys:String x:Key="SettingsFontsize">폰트 크기</sys:String>
     <sys:String x:Key="SettingsBrightness">밝기</sys:String>
     <sys:String x:Key="SettingsTransparency">투명도</sys:String>
-    <sys:String x:Key="SettingsBlurValue">Blur</sys:String>
-    <sys:String x:Key="SettingsStarNumber">Number of Stars</sys:String>
-    <sys:String x:Key="SettingsStarLineLength">Line Length</sys:String>
+    <sys:String x:Key="SettingsBlurValue">블러</sys:String>
+    <sys:String x:Key="SettingsStarNumber">별의 수량</sys:String>
+    <sys:String x:Key="SettingsStarLineLength">선의 길이</sys:String>
     <sys:String x:Key="AdditionalSettings">추가 설정</sys:String>
     <sys:String x:Key="SettingsServer">서버:</sys:String>
     <sys:String x:Key="SettingsNotification">알림 설정</sys:String>
@@ -343,7 +401,7 @@
     <sys:String x:Key="AppInf">프로그램 정보</sys:String>
     <sys:String x:Key="UpdateDate">업데이트 날짜:</sys:String>
     <sys:String x:Key="Creator">Office Deployment Tool 기반으로 개발하여 Yerong님이 개발과 운영합니다.</sys:String>
-    <sys:String x:Key="Copyright">Copyright © 2012-%year% 蓝点网 All Rights Reserved.</sys:String>
+    <sys:String x:Key="Copyright">Copyright © 2012-{0} 蓝点网 All Rights Reserved.</sys:String>
     <sys:String x:Key="ServerProvider">서버 제공자</sys:String>
     <sys:String x:Key="Translator">통역자</sys:String>
     <sys:String x:Key="BackgroundImageSource">백경 이미지 소스</sys:String>
@@ -374,7 +432,7 @@
     <sys:String x:Key="MsgInstallationLosedTitle">설치 포더 없음</sys:String>
     <sys:String x:Key="MsgSelectInstallationFiles">Office설치 파일의 경로를 선택하세요</sys:String>
     <sys:String x:Key="MsgDeleteInstallationFiles">설피 파일을 삭제하겠습니까?</sys:String>
-    <sys:String x:Key="MsgDeleteLanguageFiles">%language% 언어를 제거하겠습니까?</sys:String>
+    <sys:String x:Key="MsgDeleteLanguageFiles">{0} 언어를 제거하겠습니까?</sys:String>
 
     <sys:String x:Key="MsgWriteInfError">저장할 수 없는 데이터.</sys:String>
     <sys:String x:Key="MsgCleanOffice">Office삭제하겠습니까? 시작한다면 취소할 수 없습니다.</sys:String>
@@ -382,7 +440,7 @@
     <!-- Message about Download -->
     <sys:String x:Key="MsgDownloadVerError">버전정보 가져오기 실패하였으니 버전과 채널 정확성을 확인하고 네트워크 연렬 상태 확인하세요.</sys:String>
     <sys:String x:Key="MsgSetupConfigError">Office Deployment Tool이 해당 구조를 지원하지 않습니다. 환경설정을 변경후 재시도하세요.</sys:String>
-    <sys:String x:Key="MsgInstallationFileExist">%filename% 이미 존재하며 다시 다운로드하겠습니까?</sys:String>
+    <sys:String x:Key="MsgInstallationFileExist">{0} 이미 존재하며 다시 다운로드하겠습니까?</sys:String>
     <sys:String x:Key="MsgDownloadSuccessful">설피 파일 다운로드 완료</sys:String>
     <sys:String x:Key="MsgCreateISOError">Office Tool Plus의 root경로에서 Office 설치 파일을 찾을 수 없습니다. 설치 파일을 먼저 다운로드하거나 설치 다운로드된 설치 파일을 이 경로 이동하세요.</sys:String>
     <!--  Message about Thunder -->
@@ -412,11 +470,11 @@
     <sys:String x:Key="MsgSaveFileSuccessful">파일 저장 성공</sys:String>
     <sys:String x:Key="MsgInstallConfigurationQuestion">상세 설정 정보 알아보려 코드를 확인하세요. 위의 기본 설정이 맞습니까?</sys:String>
     <sys:String x:Key="MsgInstallConfiguration">Office설치 설정</sys:String>
-    <sys:String x:Key="MsgArchitectureError">컴퓨터에서 %currentArchitecture% 버전의 Office를 이미 설치되어 있어서 Office (%architecture%)를 설치할 수 없습니다.&#x000A;&#x000A;%currentProduct%&#x000A;32비트와 64비트의 Office가 공존할 수 없어서 하나만 설치할 수 있습니다. %currentArchitecture% 버전의 Office를 설치하거나 %currentArchitecture% 버전의 Office를 제거해서 다시 설치하세요.</sys:String>
+    <sys:String x:Key="MsgArchitectureError">컴퓨터에서 {1} 버전의 Office를 이미 설치되어 있어서 Office ({0})를 설치할 수 없습니다.&#x000A;&#x000A;{2}&#x000A;32비트와 64비트의 Office가 공존할 수 없어서 하나만 설치할 수 있습니다. {1} 버전의 Office를 설치하거나 {1} 버전의 Office를 제거해서 다시 설치하세요.</sys:String>
     <sys:String x:Key="MsgNotificationAboutModule">주의: Office Tool Plus모듈으로 Office를 설치하면 기본설정만 적용해서 고급설정을 활성회하려면 Office Deployment Tool로 설치하세요. 계속하세요?</sys:String>
-    <sys:String x:Key="MsgProductsError">Office Deployment Tool가 선택된 제품&#x000A;&#x000A;%product%&#x000A;&#x000A;(을)를 설치 지원되지 않습니다. 설치설정 화면에서 Office Tool Plus로 바꾸거나 ㄷ다른 제품을 선택해서 재시도하세요.</sys:String>
-    <sys:String x:Key="MsgAddProductError">Office설치 불가합니다.&#x000A;&#x000A;선택된제품:%selectedProduct%&#x000A;&#x000A;설치된제품:%selectedProduct%&#x000A;&#x000A;위의 제품들이 동시에 존재할 수 없습니다. 설치된 제품을 제거하거나 다른 제품을 선택하세요.</sys:String>
-    <sys:String x:Key="MsgChannelError">Office설치 불가합니다. 아라의 제품이 선택된 채널&#x000A;&#x000A;%selectedProduct%&#x000A;&#x000A;에서 설치할 수 없습니다. 채널을 바꾸거나 다른 제품을 선택해서 다시 진행하세요. 오프라인 설치 파일을 사용하면 정확한 채널에서 다운로드되는지 확인하세요.</sys:String>
+    <sys:String x:Key="MsgProductsError">Office Deployment Tool가 선택된 제품&#x000A;&#x000A;{0}&#x000A;&#x000A;(을)를 설치 지원되지 않습니다. 설치설정 화면에서 Office Tool Plus로 바꾸거나 ㄷ다른 제품을 선택해서 재시도하세요.</sys:String>
+    <sys:String x:Key="MsgAddProductError">Office설치 불가합니다.&#x000A;&#x000A;선택된제품:{0}&#x000A;&#x000A;설치된제품:{0}&#x000A;&#x000A;위의 제품들이 동시에 존재할 수 없습니다. 설치된 제품을 제거하거나 다른 제품을 선택하세요.</sys:String>
+    <sys:String x:Key="MsgChannelError">Office설치 불가합니다. 아라의 제품이 선택된 채널&#x000A;&#x000A;{0}&#x000A;&#x000A;에서 설치할 수 없습니다. 채널을 바꾸거나 다른 제품을 선택해서 다시 진행하세요. 오프라인 설치 파일을 사용하면 정확한 채널에서 다운로드되는지 확인하세요.</sys:String>
     <!--  Message about Activate Office  -->
     <sys:String x:Key="MsgSelectLicensesPath">증서를 포함한 한 개의 포더 선택</sys:String>
     <sys:String x:Key="MsgInstallLicenses">Office 라이선스 설치된 후 Office에서 정품인정 정보 표시 된지 않을 수 있지만 Office Tool Plus를 통해 조회 가능하며 정품인정 진행도 할 수있습니다. 계속하겠습니까?</sys:String>
@@ -426,7 +484,7 @@
     <sys:String x:Key="MsgClearKeys">모든 키 제거합니까?</sys:String>
 
     <!--  Message about Toast Bar  -->
-    <sys:String x:Key="ToastUpdateDownloading">입데이트 다운로드 중, # 다운로드 됨.</sys:String>
+    <sys:String x:Key="ToastUpdateDownloading">입데이트 다운로드 중, {0} 다운로드 됨.</sys:String>
     <sys:String x:Key="ToastUpdateAvailable">새 버전이 있는데 ISO모드에서 업데이트할 수 없습니다. 필요한다면 Office Tool Plus를 다른 포더에서  제출해서 다시 진행하세요.</sys:String>
     <sys:String x:Key="ToastInstallationNone">설치 파일 발견되지 않아 다시 선택이나 다운로드하세요.</sys:String>
     <sys:String x:Key="ToastInstallationError">설치 파일 불완전여서 다시 선택이나 다운로드하세요.</sys:String>

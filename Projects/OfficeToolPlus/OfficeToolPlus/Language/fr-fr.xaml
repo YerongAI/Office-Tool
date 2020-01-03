@@ -192,6 +192,10 @@
     <sys:String x:Key="DeployErrorModule">⚠ The product requires installation using the Office Tool Plus module.</sys:String>
     <sys:String x:Key="DeployErrorChannel">⚠ The product can't be installed on the selected channel: {0}</sys:String>
     <sys:String x:Key="DeployErrorCoexist">The product can't coexist with the following products:</sys:String>
+    <sys:String x:Key="DeployErrorConfig">⚠ Le produit ne peut pas coexister avec les produits existants.</sys:String> 
+    <sys:String x:Key="DeployErrorModule">⚠ Le produit nécessite une installation à l'aide du module Office Tool Plus.</sys:String> 
+    <sys:String x:Key="DeployErrorChannel">⚠ Le produit ne peut pas être installé sur la channe sélectionnéel: %selectedChannel%</sys:String> 
+    <sys:String x:Key="DeployErrorCoexist">Le produit ne peut pas coexister avec les produits suivants:</sys:String> 
     <!-- Language -->
     <sys:String x:Key="LanguagePack">Packages de langue</sys:String>
     <sys:String x:Key="LanguageType">Type de package de langue: {0}</sys:String>
@@ -260,6 +264,8 @@
     <sys:String x:Key="DeployViewCode">Afficher le code</sys:String>
     <sys:String x:Key="DeployExportXML">Enregistrer le profil dans un fichier XML</sys:String>
     <sys:String x:Key="DeployImportXML">Sélectionner le fichier XML</sys:String>
+    <sys:String x:Key="DeployExportXML">Exporter un fichier XML</sys:String>
+    <sys:String x:Key="DeployImportXML">Importer un fichier XML</sys:String>
     <!-- Activate Page -->
     <!-- Licenses -->
     <sys:String x:Key="ActivateLicensesManage">Licences gérer</sys:String>
@@ -298,9 +304,23 @@
     <sys:String x:Key="ErrorCodeValue">An error code must start with '0x'. Example: 0xC004F009</sys:String>
     <sys:String x:Key="StatusLicensed"> **---LICENSED---** </sys:String>
     <sys:String x:Key="StatusUnlicensed"> `---UNLICENSED---` </sys:String>
+    <sys:String x:Key="ActivationTitle">Traitement de l'activation d'Office</sys:String>
+    <sys:String x:Key="LicenseDescription">Description de la licence: </sys:String>
+    <sys:String x:Key="LicenseStatus">Statut de licence: </sys:String>
+    <sys:String x:Key="RemainGrace">Rester grâce: </sys:String>
+    <sys:String x:Key="RemainGraceDay">jours</sys:String>
+    <sys:String x:Key="RemainGraceMin">minute(s) avant l'expiration</sys:String>
+    <sys:String x:Key="Licexpiry">Expiration bêta: </sys:String>
+    <sys:String x:Key="ErrorCode">Code d'erreur: </sys:String>
+    <sys:String x:Key="ErrorDescrpition">Description de l'erreur: </sys:String>
+    <sys:String x:Key="ErrorUnknown">Une erreur inconnue s'est produite.</sys:String>
+    <sys:String x:Key="ErrorCodeValue">Un code d'erreur doit commencer par '0x'. Exemple: 0xC004F009</sys:String>
+    <sys:String x:Key="StatusLicensed"> **---AUTORISÉ---** </sys:String>
+    <sys:String x:Key="StatusUnlicensed"> `---SANS LICENCE---` </sys:String>
     <sys:String x:Key="StatusOOBGrace"> `---OOB_GRACE---` </sys:String>
     <sys:String x:Key="StatusOOTGrace"> `---OOT_GRACE---` </sys:String>
     <sys:String x:Key="StatusNonGenuineGrace"> `---NON_GENUINE_GRACE---` </sys:String>
+    <sys:String x:Key="StatusNonGenuineGrace"> `---NON_AUTHENTIQUE_GRÂCE---` </sys:String>
     <sys:String x:Key="StatusNotifications"> `---NOTIFICATIONS---` </sys:String>
     <sys:String x:Key="StatusExtendedGrace"> `---EXTENDED GRACE---` </sys:String>
     <sys:String x:Key="StatusUnknown"> `---UNKNOWN---` </sys:String>
@@ -332,6 +352,36 @@
     <sys:String x:Key="InfoOnly"> (for information purposes only as the status is licensed)</sys:String>
     <sys:String x:Key="NoticeArticle">NOTICE: A KB article has been detected for activation failure: </sys:String>
     <sys:String x:Key="ArticleLink">[Click here to get more information](https://support.microsoft.com/kb/2870357#Error0x</sys:String>
+    <sys:String x:Key="StatusExtendedGrace"> `---GRÂCE PROLONGÉE---` </sys:String>
+    <sys:String x:Key="StatusUnknown"> `---INCONNU---` </sys:String>
+ 
+    <sys:String x:Key="AppliedSetting">Réglage appliqué avec succès.</sys:String>
+    <sys:String x:Key="NoKMSLics">Aucune licence Office KMS n'a été trouvée sur le système.</sys:String>
+    <sys:String x:Key="NoKeyInstalled">Aucune clé de produit installée n'a été détectée.</sys:String>
+    <sys:String x:Key="UninstallKey">La clé du produit désinstalle avec succès.</sys:String>
+    <sys:String x:Key="ActivationSuccess">**Activation réussie du produit**</sys:String>
+    <sys:String x:Key="OfflineActivationSuccess">**L'activation du produit hors ligne réussie**</sys:String>
+    <sys:String x:Key="IKeySuccess">**Installation réussie de clés de produit**</sys:String>
+    <sys:String x:Key="ProductKey">Les 5 derniers caractères de la clé de produit installée: </sys:String>
+    <sys:String x:Key="UninstallingKey">La clé de produit de déminage pour: </sys:String>
+    <sys:String x:Key="ILicense">Installation de la licence Office: </sys:String>
+    <sys:String x:Key="ILicenseSuccess">Licence d'Office installée avec succès.</sys:String>
+    <sys:String x:Key="InstallationID">ID d'installation:</sys:String>
+    <sys:String x:Key="SKMSEvent">Recherche d'événements d'activation KMS sur la machine: </sys:String>
+    <sys:String x:Key="SIAEvent">Recherche d'événements de défaillance d'activation Internet sur la machine: </sys:String>
+    <sys:String x:Key="NoKMSEvent">Aucun événement d'activation KMS trouvé sur la machine: </sys:String>
+    <sys:String x:Key="NoIAEvent">Aucun événement de défaillance trouvé sur la machine: </sys:String>
+    <sys:String x:Key="NoEvents">Aucun événement n'a été trouvé.</sys:String>
+    <sys:String x:Key="SuccessEvent">Événement de succès d'activation: </sys:String>
+    <sys:String x:Key="FailureEvent">Événement d'échec d'activation: </sys:String>
+    <sys:String x:Key="ErrorSPPNotInstalled">Erreur: Le service plateforme de protection logicielle n'est pas installé.</sys:String>
+    <sys:String x:Key="ErrorSPPNotRunning">Erreur: Le service de protection logicielle plate-forme ne fonctionne pas.</sys:String>
+    <sys:String x:Key="ProductKeyNotFound">Clé de produit introuvable</sys:String>
+    <sys:String x:Key="NotFound">Pas trouvé.</sys:String>
+    <sys:String x:Key="NotLicenseFound">Aucune licence trouvée.</sys:String>
+    <sys:String x:Key="InfoOnly"> (à des fins d'information seulement lorsque le statut est autorisé)</sys:String>
+    <sys:String x:Key="NoticeArticle">NOTIFICATION: Un article KB a été détecté pour une défaillance d'activation: </sys:String>
+    <sys:String x:Key="ArticleLink">[Cliquez ici pour obtenir plus d'informations](https://support.microsoft.com/kb/2870357#Error0x</sys:String>
     
     <sys:String x:Key="VLActivationType">Activation Type Configuration: </sys:String>
     <sys:String x:Key="ActRecent">Most recent successful activation client information: </sys:String>
@@ -339,11 +389,21 @@
     <sys:String x:Key="ADInfoAOName">Activation Object name: </sys:String>
     <sys:String x:Key="ActivationInterval">Activation Interval: </sys:String>
     <sys:String x:Key="RenewalInterval">Renewal Interval: </sys:String>
+    <sys:String x:Key="VLActivationType">Configuration de type d'activation: </sys:String>
+    <sys:String x:Key="ActRecent">Informations sur les clients d'activation les plus récentes: </sys:String>
+    <sys:String x:Key="KMSDNS">Nom de la machine KMS de DNS: </sys:String>
+    <sys:String x:Key="ADInfoAOName">Nom de l'objet d'activation: </sys:String>
+    <sys:String x:Key="ActivationInterval">Intervalle d'activation: </sys:String>
+    <sys:String x:Key="RenewalInterval">Intervalle de renouvellement: </sys:String>
     <sys:String x:Key="IntervalMinutes">minutes</sys:String>
     <sys:String x:Key="HostCaching">KMS host caching: </sys:String>
     <sys:String x:Key="HostCachingEnabled">Enabled</sys:String>
     <sys:String x:Key="HostCachingDisabled">Disabled</sys:String>
     <sys:String x:Key="HostRegOverride">KMS machine: </sys:String>
+    <sys:String x:Key="HostCaching">La mise en cache hôte KMS: </sys:String>
+    <sys:String x:Key="HostCachingEnabled">Activé</sys:String>
+    <sys:String x:Key="HostCachingDisabled">Désactivé</sys:String>
+    <sys:String x:Key="HostRegOverride">Machine KMS: </sys:String>
     <!-- Buttons -->
     <sys:String x:Key="ActivateActivate">Activer</sys:String>
     <sys:String x:Key="ActivateViewInformation">Afficher les informations d'activation</sys:String>
@@ -356,6 +416,8 @@
     <sys:String x:Key="ToolboxRODescription">Si votre Office ne peut pas être désinstallé normalement, vous pouvez essayer de forcer la suppression en utilisant des outils/scripts.</sys:String>
     <sys:String x:Key="ToolboxRepairOfficeDocumentIcon">Icône de documents d'Office de réparation</sys:String>
     <sys:String x:Key="ToolboxRepairODIDescription">Si l'icône des documents Office ne s'affiche pas correctement, vous pouvez essayer de réparer le registre. Une fois la réparation terminée, vous devez utiliser la réparation rapide pour office.</sys:String>
+    <sys:String x:Key="ToolboxRepairOfficeDocumentIcon">Icône des documents d'Office de réparation</sys:String>
+    <sys:String x:Key="ToolboxRepairODIDescription">Si l'icône des documents d'Office ne s'affiche pas correctement, vous pouvez essayer de réparer le registre. Une fois la réparation terminée, vous devez utiliser la réparation rapide pour office.</sys:String>
     <sys:String x:Key="ToolboxRepairActivationFailed">Réparer l'activation d'Office</sys:String>
     <sys:String x:Key="ToolboxRepairAFDescription">Si vous obtenez une erreur inconnue lorsque vous activez Office et que vous avez utilisé l'outil KMS, vous pouvez utiliser cette méthode pour réparer le registre.</sys:String>
     <sys:String x:Key="ToolboxRepairVBS">Réparation des associations de fichiers VBS</sys:String>
@@ -390,6 +452,7 @@
     <sys:String x:Key="SettingsStar">Afficher les étoiles</sys:String>
     <sys:String x:Key="SettingsFontsize">Taille de la police</sys:String>
     <sys:String x:Key="SettingsBrightness">Luminosité</sys:String>
+    <sys:String x:Key="SettingsBrightness">Brillant</sys:String>
     <sys:String x:Key="SettingsTransparency">Transparence</sys:String>
     <sys:String x:Key="SettingsBlurValue">Brouiller</sys:String>
     <sys:String x:Key="SettingsStarNumber">Nombre d'étoiles</sys:String>

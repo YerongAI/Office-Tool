@@ -1,51 +1,63 @@
 using Microsoft.Win32;
+using OfficeTool.Export;
+using OfficeTool.Functions;
+using OfficeTool.List;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
-using System.Management;
 using System.Net;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.ServiceProcess;
-using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
+using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 using System.Windows.Shell;
 using System.Windows.Threading;
 using System.Xml;
 using System.Xml.Linq;
+using Zmy.Wpf.CMessageBox;
+using static OfficeTool.CreateXML;
+using static OfficeTool.OfficeConfiguration;
 
-namespace OfficeToolPlus
+namespace OfficeTool
 {
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class OfficeToolPlus : Window
     {
-        public MainWindow()
+        public OfficeToolPlus()
         {
             try
             {
-                InitializeComponent();//初始化所有组件
+                InitializeComponent();
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message, Find("MsgError"));
-                InstallNetFramework();//初始化失败，触发Net安装
+                InstallNetFramework();
             }
         }
 
+        /// <summary>
+        /// 弹出询问安装 Net Framework 的窗口
+        /// </summary>
         private void InstallNetFramework()
         {
             var Result = MessageBox.Show(Find("MsgNetFrameworkError"), Find("MsgError"), MessageBoxButton.YesNo, MessageBoxImage.Question);
@@ -215,7 +227,16 @@ namespace OfficeToolPlus
         {
             if (CMessageBox.Show(Find("MsgResetLicensingStatus"), Find("MsgWarning"), CMessageBoxButton.YesNO, CMessageBoxImage.Question) == CMessageBoxResult.Yes)
             {
-                BackgroundDoWork("files\\activate\\OSPPREARM.EXE", string.Empty);
+                if (File.Exists("files\\activate\\OSPPREARM.EXE"))
+                    BackgroundDoWork("files\\activate\\OSPPREARM.EXE", string.Empty);
+                else
+                {
+                    OfficeConfiguration office = new OfficeConfiguration();
+                    if (office.HasOffice)
+                    {
+                        BackgroundDoWork(office.InstallPath + "\\Office16\\OSPPREARM.EXE", string.Empty);
+                    }
+                }
             }
         }
 
@@ -427,27 +448,7 @@ namespace OfficeToolPlus
             BackgroundDoWork(string.Empty, "dhistorykms");
         }
         #endregion
-
-        #region 设置页面
-        private void PowerControl(string flag)
-        {
-            ManagementClass mcWin32 = new ManagementClass("Win32_OperatingSystem");
-            mcWin32.Get();
-
-            mcWin32.Scope.Options.EnablePrivileges = true;
-            ManagementBaseObject mboShutdownParams = mcWin32.GetMethodParameters("Win32Shutdown");
-
-            //"0" 注销 "1" 关机, "2" 重启 "8" 关闭计算机电源
-            //"0" Log out "1" Shutdown, "2" Reboot "8" Shutdown power
-            mboShutdownParams["Flags"] = flag;
-            mboShutdownParams["Reserved"] = "0";
-            foreach (ManagementObject manObj in mcWin32.GetInstances())
-            {
-                ManagementBaseObject mboShutdown = manObj.InvokeMethod("Win32Shutdown", mboShutdownParams, null);
-            }
-        }
-        #endregion
     }
 }
 
-		//Copyright © 2019 Landiannews |By Yerong | https://otp.landian.vip/
+		//Copyright © 2020 Landiannews |By Yerong | https://otp.landian.vip/

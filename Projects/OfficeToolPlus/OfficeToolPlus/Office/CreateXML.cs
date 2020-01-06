@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace OfficeTool
 {
-    // Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
+    // Copyright © 2020 蓝点网 | By Yerong | https://otp.landian.vip/
     // For more information please visit: https://docs.microsoft.com/en-us/DeployOffice/configuration-options-for-the-office-2016-deployment-tool
 
     class CreateXML
@@ -74,7 +74,7 @@ namespace OfficeTool
             /// <param name="LanguageID">产品的语言</param>
             public void AddProduct(string ProductID, List<string> LanguageID)
             {
-                InstallConfig arguments = new InstallConfig(ProductID, "", LanguageID, "", new List<string>());
+                InstallConfig arguments = new InstallConfig(ProductID, "", LanguageID, new List<string>());
                 ProductConfigList.Add(arguments);
             }
 
@@ -86,19 +86,7 @@ namespace OfficeTool
             /// <param name="ExcludeApps">指定要排除的应用程序 ID</param>
             public void AddProduct(string ProductID, string MAK, List<string> LanguageID, List<string> ExcludeApps)
             {
-                InstallConfig arguments = new InstallConfig(ProductID, MAK, LanguageID, "", ExcludeApps);
-                ProductConfigList.Add(arguments);
-            }
-
-            /// <summary>
-            /// 添加新的产品
-            /// </summary>
-            /// <param name="ProductID">产品 ID</param>
-            /// <param name="LanguageID">产品的语言</param>
-            /// <param name="ExcludeApps">指定要排除的应用程序 ID</param>
-            public void AddProduct(string ProductID, string MAK, List<string> LanguageID, string FallbackLanguage, List<string> ExcludeApps)
-            {
-                InstallConfig arguments = new InstallConfig(ProductID, MAK, LanguageID, FallbackLanguage, ExcludeApps);
+                InstallConfig arguments = new InstallConfig(ProductID, MAK, LanguageID, ExcludeApps);
                 ProductConfigList.Add(arguments);
             }
 
@@ -213,19 +201,9 @@ namespace OfficeTool
                                 // Language
                                 if (LangID != null)
                                 {
-                                    if (ProductConfigList[i].FallbackLanguage != string.Empty)
-                                    {
-                                        XElement LanguageElemtnt = new XElement("Language",
-                                                                   new XAttribute("ID", LangID),
-                                                                   new XAttribute("Fallback", ProductConfigList[i].FallbackLanguage));
-                                        LangElemtnt.Add(LanguageElemtnt);
-                                    }
-                                    else
-                                    {
-                                        XElement LanguageElemtnt = new XElement("Language",
-                                                                   new XAttribute("ID", LangID));
-                                        LangElemtnt.Add(LanguageElemtnt);
-                                    }
+                                    XElement LanguageElemtnt = new XElement("Language",
+                                                               new XAttribute("ID", LangID));
+                                    LangElemtnt.Add(LanguageElemtnt);
                                 }
                             }
                             // Product ID
@@ -350,19 +328,9 @@ namespace OfficeTool
                                 {
                                     if (LangID != null)
                                     {
-                                        if (ProductConfigList[i].FallbackLanguage != string.Empty)
-                                        {
-                                            XElement LanguageElemtnt = new XElement("Language",
-                                                                       new XAttribute("ID", LangID),
-                                                                       new XAttribute("Fallback", ProductConfigList[i].FallbackLanguage));
-                                            LangElemtnt.Add(LanguageElemtnt);
-                                        }
-                                        else
-                                        {
-                                            XElement LanguageElemtnt = new XElement("Language",
-                                                                       new XAttribute("ID", LangID));
-                                            LangElemtnt.Add(LanguageElemtnt);
-                                        }
+                                        XElement LanguageElemtnt = new XElement("Language",
+                                                                   new XAttribute("ID", LangID));
+                                        LangElemtnt.Add(LanguageElemtnt);
                                     }
                                 }
                                 XElement ProductElemtnt = new XElement("Product",
@@ -570,19 +538,17 @@ namespace OfficeTool
 
         public class InstallConfig
         {
-            public InstallConfig(string ProductID, string MAK, List<string> LanguageID, string FallbackLanguage, List<string> ExcludeApps)
+            public InstallConfig(string ProductID, string MAK, List<string> LanguageID, List<string> ExcludeApps)
             {
                 this.ProductID = ProductID;
                 this.MAK = MAK;
                 this.LanguageID = LanguageID;
-                this.FallbackLanguage = FallbackLanguage;
                 this.ExcludeApps = ExcludeApps;
             }
 
             public string ProductID { get; set; }
             public string MAK { get; set; }
             public List<string> LanguageID { get; set; }
-            public string FallbackLanguage { get; set; }
             public List<string> ExcludeApps { get; set; }
         }
 

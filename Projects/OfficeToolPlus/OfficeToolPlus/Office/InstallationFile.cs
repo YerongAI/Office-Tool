@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace OfficeTool
 {
-    // Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
+    // Copyright © 2020 蓝点网 | By Yerong | https://otp.landian.vip/
     /// <summary>
     /// Check Office Installation
     /// </summary>

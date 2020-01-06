@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OfficeTool.Functions
 {
-    //Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/ | 2019/7/26
+    //Copyright © 2020 Landiannews | By Yerong | https://otp.landian.vip/ | 2020/01/06
     class CheckHash
     {
         private readonly string hashValue;

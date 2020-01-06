@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace OfficeTool
 {
-    // Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
+    // Copyright © 2020 蓝点网 | By Yerong | https://otp.landian.vip/
     class OfficeConfiguration
     {
         internal List<InstalledProducts> InstalledProductsList { get; set; } = new List<InstalledProducts>(3);

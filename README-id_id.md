@@ -4,7 +4,7 @@
 
 Office Tool Plus adalah sebuah alat untuk mengatur, mengunduh dan memasang Office.
 
-Office Tool Plus merupakan basis dari Microsoft [Office Deployment Tool](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-2016-deployment-tool). Anda bisa menyusuaikan konfigurasi pemasangan Office dan mengunduh Office untuk memasangnya tanpa perlu Internet.
+Office Tool Plus merupakan dasar dari Microsoft [Office Deployment Tool](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-2016-deployment-tool). Anda bisa menyusuaikan konfigurasi pemasangan Office dan mengunduh Office untuk memasangnya tanpa perlu Internet.
 
 Selain itu, anda bisa mengatur Office yang terpasang, menambahkan paket bahasa atau menyusuaikan pencopotan Office.
 
@@ -40,11 +40,11 @@ Pergi ke halaman Deploy, tambahkan produk yang ingin anda pasang, lalu klik Depl
 
 ## Legitimasi Aplikasi
 
-Office Tool Plus merupakan basis dari Microsoft [Office Deployment Tool](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-2016-deployment-tool). Dan kami tambahkan sejumlah fitur yang dibutuhkan oleh pengguna.
+Office Tool Plus dibuat berdasarkan Microsoft [Office Deployment Tool](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-2016-deployment-tool). Dan kami tambahkan sejumlah fitur yang dibutuhkan untuk pengguna.
 
 ### Tentang Fungsi Aktivasi
 
-Untuk fungsi aktivasi berasal dari Microsoft ospp.vbs (Office Software Protect Platform), semua proses aktivasi dilakukan oleh ospp.vbs. Dan agar pengguna lebih memahami OSPP, kami terjemahkan (zh-cn, zh-tw).
+Fungsi aktivasinya berasal dari Microsoft ospp.vbs (Office Software Protect Platform), semua proses aktivasi dilakukan oleh ospp.vbs. Dan agar pengguna lebih memahami OSPP, kami terjemahkan (zh-cn, zh-tw).
 
 Anda bisa melihat deskripsi OSPP di ````"C:\Program Files\Microsoft Office\Office16\OSPP.HTM"```` (Diperlukan Office yang terpasang).
 
@@ -92,4 +92,4 @@ Setelah itu, aplikasi akan memuat terjemahan anda, apabila anda menambahkan terj
 
 ### Apa yang Lebih
 
-````Untuk setiap penerjemah, kami akan memberikan akses aplikasi sebagai Admin yang bisa memperbolehkan anda untuk mengganti pengumuman dan menguggah gambar latar belakang.```` [kirimkan e-mail](mailto:yerong@coolhub.top) ````ke kita.````
+````Untuk setiap penerjemah, kami akan memberikan akses aplikasi sebagai Admin yang bisa memperbolehkan anda untuk mengganti pengumuman dan menguggah gambar latar belakang.```` [kirimkan e-mail](mailto:yerong@coolhub.top) ````ke kami.````

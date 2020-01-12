@@ -20,19 +20,19 @@
 
 ### 下載 Microsoft .NET Framework 4.6.1
 
-[Web 安裝程式](http://go.microsoft.com/fwlink/?LinkId=780597)
+ - [Web 安裝程式](http://go.microsoft.com/fwlink/?LinkId=780597)
 
-[離線安裝程式](http://go.microsoft.com/fwlink/?LinkId=780601)
+ - [離線安裝程式](http://go.microsoft.com/fwlink/?LinkId=780601)
 
-[Microsoft .Net Framework 4.6.1 語言套件 （離線安裝程式）](http://go.microsoft.com/fwlink/?LinkId=780604)
+ - [Microsoft .Net Framework 4.6.1 語言套件 （離線安裝程式）](http://go.microsoft.com/fwlink/?LinkId=780604)
 
 ## 下載
 
-[官方網站](https://otp.landian.vip/)
+ - [官方網站](https://otp.landian.vip/)
 
-[備用 官方網站](https://otp.cotpear.com/zh-tw/) <sup>[註二]</sup>
+ - [臺灣備用官方網站](https://otp.cotpear.com/zh-tw/) <sup>[註二]</sup>
 
-[備用載點](https://delivery.yuntu.dev/office-tool/) (感謝 [云图小镇](https://www.yuntu.dev/) 提供)
+ - [備用載點](https://delivery.yuntu.dev/office-tool/) （感謝 [云图小镇](https://www.yuntu.dev/) 提供）
 
 [註二] 由於主要官方網站伺服器於中國，在某些時刻連線不穩定，若網站無法開啟，請使用[[備用 官方網站](https://otp.cotpear.com/zh-tw/)]。
 
@@ -55,9 +55,9 @@ Office Tool Plus 使用 微軟 [Office Deployment Tool](https://docs.microsoft.c
 
 啟用授權模組是使用微軟的 ospp.vbs (Office Software Protect Platform) 及相關檔案製作的。所有授權操作皆由 ospp.vbs 執行。
 
-為了使用者能夠更好理解啟用時的相關內容，我們也進行了相關檔案的翻譯。(zh-cn, zh-tw)
+為了使用者能夠更好理解啟用時的相關內容，我們也進行了相關檔案的翻譯。（完整翻譯 zh-cn, zh-tw）
 
-若想查詢相關檔案的操作說明，你可以在 ````"C:\Program Files\Microsoft Office\Office16\OSPP.HTM"```` 找到。(需安裝 Office)
+若想查詢相關檔案的操作說明，你可以在 ````"C:\Program Files\Microsoft Office\Office16\OSPP.HTM"```` 找到。（需安裝 Office）
 
 ## 感謝以下提供者及合作者
 
@@ -96,8 +96,8 @@ Office Tool Plus 使用 微軟 [Office Deployment Tool](https://docs.microsoft.c
 
 4. 選擇並開啟你的語言文件。
 
-若你的本地化(語言)文件並無程式語法錯誤，Office Tool Plus 將會載入你的語言文件。在這之後，程式可能會顯示無法正常連線伺服器，這是正常的。當你正式提交相關文件後，我們將會設定相關配置。
+若你的本地化（語言）文件並無程式語法錯誤，Office Tool Plus 將會載入你的語言文件。在這之後，程式可能會顯示無法正常連線伺服器，這是正常的。當你正式提交相關文件後，我們將會設定相關配置。
 
 ### 本地化之後
 
-若你願意無限期的為 Office Tool Plus 進行當地化的管理，我們將會給予你 Office Tool Plus 的管理程式(Admin Center)。你可以利用此權限，建立新公告、設定背景圖片、修改提示等。
+若你願意無限期的為 Office Tool Plus 進行當地的管理，我們會授予你 Administrator Permission。你可以利用此權限，建立新公告、設定背景圖片、修改說明等。

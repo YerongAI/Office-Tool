@@ -34,7 +34,7 @@
 
  - [備用載點](https://delivery.yuntu.dev/office-tool/) （感謝 [云图小镇](https://www.yuntu.dev/) 提供）
 
-[註二] 由於主要官方網站伺服器於中國，在某些時刻連線不穩定，若網站無法開啟，請使用[[備用 官方網站](https://otp.cotpear.com/zh-tw/)]。
+[註二] 由於主要官方網站伺服器於中國，在某些時刻連線不穩定，若網站無法開啟，請使用[臺灣備用官方網站](https://otp.cotpear.com/zh-tw/)。
 
 ## 微軟相關知識庫
 

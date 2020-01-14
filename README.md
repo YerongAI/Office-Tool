@@ -1,6 +1,6 @@
 ﻿# Office Tool Plus
 
-English | [简体中文](/README-zh_cn.md) | [日本語](/README-ja_jp.md) | [繁體中文](/README-zh_tw.md) | [한국어](/README-ko_kr.md) | [Italiano](/README-it_it.md) | [ไทย/Thai](/README-th_th.md) | [polski](/README-pl_pl.md) | [Brazilian Portuguese](/README-pt_br.md) | [Français](/README-fr_fr.md) | [Deutsch](/README-de_de.md) | [Bahasa Indonesia](/README-id_id.md)
+English｜[简体中文](/README-zh_cn.md)｜[日本語](/README-ja_jp.md)｜[繁體中文](/README-zh_tw.md)｜[한국어](/README-ko_kr.md)｜[Italiano](/README-it_it.md)｜[ไทย/Thai](/README-th_th.md)｜[polski](/README-pl_pl.md)｜[Brazilian Portuguese](/README-pt_br.md)｜[Français](/README-fr_fr.md)｜[Deutsch](/README-de_de.md)｜[Bahasa Indonesia](/README-id_id.md)
 
 Office Tool Plus is a tool for managing, downloading and installing Office.
 

@@ -1,8 +1,8 @@
 # Tentang Pemasangan
 
-Di sini anda bisa mengatur produk Office yang dipasang sekarang dan paket bahasa. Apabila anda belum punya Office yang terpasang, anda bisa melakukan pemasangan baru.
+Di sini anda bisa mengatur produk Office dan paket bahasa yang terpasang sekarang. Apabila anda belum punya Office yang terpasang, anda bisa melakukan pemasangan baru.
 
-Anda bisa menentukan nomor versi dan tanggal rilis pada setiap saluran dalam Informasi Versi. Terakhir, anda bisa menentukan versi pada waktu diunduh atau pemasangan. Apabila tidak ditentukan, umumnya akan dipasangkan versi terakhir.
+Anda bisa menentukan nomor versi dan tanggal rilis pada setiap saluran dalam Informasi Versi. Terakhir, anda bisa menentukan versi pada saat diunduh atau saat pemasangan. Apabila tidak ditentukan, umumnya versi terakhirnya yang akan dipasangkan.
 
 **Catatan: Office hanya bisa dipasang pada partisi sistem. Ini sudah diatur oleh Microsoft.**
 
@@ -42,7 +42,7 @@ Office Deployment Tool merupakan alat resmi dari Microsoft untuk memasang Office
 `Office, Visio, Project 2019 [Volume] Hanya bisa mendukung di Office 2019 Perpetual Enterprise Channel, dan tidak bisa digabungkan dengan produk lain (Seperti Office 365).`
 Apabila anda ingin memasangan Visio walau anda mempunyai Office 365 yang terpasang, Pilih Visio 2016 Retail/Volume atau Visio 2019 Retail (Project pun sama).
 
-Office 2016/2019 [Retail]/365 bisa memilih saluran lain (kecuali Office 2019 Perpetual Enterprise Channel). Saran kami gunakan Monthly Channel, dan pekerja kantoran siapapun tidak peduli tentang fitur baru bisa memilih saluran Semi-Annual. **Apabila anda mengalami masalah dengan saluran Targeted/Insider/Dogfood, pecahkan masalah itu sendirimu.**
+Office 2016/2019 [Retail]/365 bisa memilih saluran lain (kecuali Office 2019 Perpetual Enterprise Channel). Saran kami gunakan Monthly Channel, dan siapapun pekerja kantoran tidak peduli tentang fitur baru yang bisa memilih saluran Semi-Annual. **Apabila anda mengalami masalah dengan saluran Targeted/Insider/Dogfood, pecahkan masalah itu sendirimu.**
 
 ## Pemasangan Baru
 
@@ -95,7 +95,7 @@ Office 365 Home			O365HomePremRetail
 Office 365 Personal		O365HomePremRetail
 ```
 
-Untuk informasi lebih lanjut, silakan kunjungi [Product IDs that are supported by the Office Deployment Tool for Click-to-Run](https://docs.microsoft.com/en-us/office365/troubleshoot/administration/product-ids-supported-office-deployment-click-to-run)
+Untuk informasi lebih lanjut, silakan kunjungi [ID Produk yang didukung oleh Office Deployment Tool untuk Click-to-Run](https://docs.microsoft.com/en-us/office365/troubleshoot/administration/product-ids-supported-office-deployment-click-to-run)
 
 ## Berkas Pemasangan
 
@@ -121,18 +121,18 @@ Klik submenu "Unduh berkas pemasangan" dari Mengelola Berkas Pemasangan untuk me
 
 ---
 
-Sebagai tambahan untuk mengunduh berkas pemasangan menggunakan Office Deployment Tool, Office Tool Plus juga memasukkan Thunder, memperbolehkan pengguna untuk menguduh berkas pemasangan Office secara cepat. Mereka tidak memiliki perbedaan fungsi umumnya, `tetapi hanya Thunder yang mendukung tampilan progress unduhan, pengaturan batas kecepatan dan proxy.` Apabila terdapat masalah dengan unduhan Thunder, silakan untuk beralih ke Office Deployment Tool.
+Sebagai tambahan untuk mengunduh berkas pemasangan menggunakan Office Deployment Tool, Office Tool Plus juga memasukkan Thunder yang memperbolehkan pengguna untuk menguduh berkas pemasangan Office secara cepat. Mereka tidak memiliki perbedaan fungsi umumnya, `tetapi hanya Thunder yang mendukung tampilan kemajuan unduhan, pengaturan batas kecepatan dan proxy.` Apabila terdapat masalah dengan unduhan Thunder, silakan untuk beralih ke Office Deployment Tool.
 
 ### Pengaturan Batas Kecepatan Thunder
 
 Untuk mengatur batas kecepatan unduh ketika menggunakan Thunder, silakan klik angka kecepatan unduh ketika proses unduhan berjalan, dan aturkan batas kecepatannya pada kotak dialog pop-up. Untuk membatalkannya, atur batas kecepatan ke 0.
 
-## Office Configuration
+## Konfigurasi Office
 
 ---
 
 `Pada sisi kanan halaman pemasangan, anda bisa memanggil panel Konfigurasi Office.`
-Office Tool Plus mendukungn modifikasi saluran pembaruan Office dan juga mendukung memodifikasi tampilan pemilik di Office. Sekali diedit, klik [Simpan] untuk memberlakukan pengaturan.
+Office Tool Plus mendukungn modifikasi saluran pembaruan Office dan juga mendukung memodifikasi tampilan pemilik di Office. Setelah diedit, klik [Simpan] untuk menerapkan pengaturan.
 
 Apabia anda memiliki masalah dengan Office, anda bisa memperbaiki Office di sini.
 

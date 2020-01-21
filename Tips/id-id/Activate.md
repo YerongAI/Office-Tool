@@ -20,12 +20,12 @@ Apabila anda gagal mengaktivasi Office dengan alat ini, silakan cek operasian an
 ---
 
 Ketika dipasangnya lisensi, itu bisa diaktifkan dengan kunci yang sesuai.
-Misalnya: Apabila anda ingin Office 2016 Retail -> Office 2016 Volume, hanya perlu memasang Office 2016 Volume license.
+Misalnya: Apabila anda ingin Office 2016 Retail -> Office 2016 Volume, hanya perlu memasang lisensi Office 2016 Volume.
 Setelah pemasangannya, kunci yang lama tidak akan tertimpa. Jadi, kita mempunyai banyak lisensi dalam satu program perangkat lunak.
 
 Apabila anda ingin memasang lisensi di berkas lisensi lokal, tinggal klik tombol [...].
 
-`Catatan: Apabila Office anda yang terpasang merupakan basis dari versi C2R, Office Tool Plus akan coba membaca semua lisensi dan menampilkannya di kotak pilihan masukan. Selain itu hanya Volume licenses bawaan yang akan ditampilkan.`
+`Catatan: Apabila Office anda yang terpasang merupakan versi berbasis C2R, Office Tool Plus akan coba membaca semua lisensi dan menampilkannya di kotak pilihan masukan. Selain itu hanya lisensi Volume bawaan yang akan ditampilkan.`
 
 ## Aktivasi Lisensi
 
@@ -44,7 +44,7 @@ Setelah aktivasinya berhasil, Office akan tetap aktif.
 
 ### Aktivasi Melalui KMS
 
-Pastikan Office anda terpasang dengan versi Volume License. Apabila anda tidak mengetahui ini adalah versi Volume License, silakan pasang lisensi Volume license yang cocok. Misalnya, Apabila anda ingin mengaktivasi Office 2016, Tinggal perlu pasang Office 2016 Volume license. Lalu anda perlu memasukkan alamat server KMS yang valid, `jangan lupa klik tombol [Atur alamat server]`. Ketika semua konfigurasinya sudah tepat, jaringannya normal, dan server KMS-nya normal, Klik tombol [Aktifkan]. Berhasil? Silakan menikmati!
+Pastikan Office anda terpasang dengan versi Volume License. Apabila anda tidak mengetahui ini adalah versi Volume License, silakan pasang lisensi Volume yang cocok. Misalnya, Apabila anda ingin mengaktivasi Office 2016, Tinggal perlu pasang lisensi Office 2016 Volume. Lalu anda perlu memasukkan alamat server KMS yang valid, `jangan lupa klik tombol [Atur alamat server]`. Ketika semua konfigurasinya sudah tepat, jaringannya normal, dan server KMS-nya normal, Klik tombol [Aktifkan]. Berhasil? Silakan menikmati!
 
 ## Cek Server KMS
 
@@ -97,10 +97,10 @@ Atau anda bisa memasang lisensi secara manual. Terakhir, anda bisa mengaktivasik
 ---
 
 Pastikan Office anda terpasang dengan versi Volume License sebelum menggunakan GVLK.
-Apabila anda tidak mengetahui ini adalah versi Volume License, silakan pasang lisensi Volume license yang cocok sebelum menggunakan GVLK.
+Apabila anda tidak mengetahui ini adalah versi Volume License, silakan pasang lisensi Volume yang cocok sebelum menggunakan GVLK.
 Aktivasi Office melalui KMS membutuhkan alamat server KMS, selain itu tidak bisa diaktivasikan.
 
-Untuk informasi lebih lanjut, silakan kunjungi [GVLKs for KMS and Active Directory-based activation of Office 2019 and Office 2016](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/gvlks)
+Untuk informasi lebih lanjut, silakan kunjungi [GVLK untuk KMS & aktivasi Office 2019 dan Office 2016 berbasis direktori aktif](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/gvlks)
 
 ```txt
 Office 2019 GVLK

@@ -13,7 +13,7 @@ Apabila anda gagal mengaktivasi Office dengan alat ini, silakan cek operasian an
 3. Cek Server KMS
 4. Kueri Status Aktivasi
 5. Mengatur Aktivasi Office
-6. Kunci Generik Volume License (GVLK)
+6. Kunci Lisensi Volume Generik  (GVLK)
 
 ## Pasang Lisensi
 
@@ -23,9 +23,9 @@ Ketika dipasangnya lisensi, itu bisa diaktifkan dengan kunci yang sesuai.
 Misalnya: Apabila anda ingin Office 2016 Retail -> Office 2016 Volume, hanya perlu memasang Office 2016 Volume license.
 Setelah pemasangannya, kunci yang lama tidak akan tertimpa. Jadi, kita mempunyai banyak lisensi dalam satu program perangkat lunak.
 
-Apabila anda ingin memasang lisensi di berkas lisensi lokal, tinggal klik tombol click the [...].
+Apabila anda ingin memasang lisensi di berkas lisensi lokal, tinggal klik tombol [...].
 
-`Catatan: Apabila Office anda yang terpasang merupakan basis dari versi C2R, Office Tool Plus akan coba membaca semua lisensi dan menampilkan nya di drop down box. Selain itu hanya Volume licenses bawaan yang akan ditampilkan.`
+`Catatan: Apabila Office anda yang terpasang merupakan basis dari versi C2R, Office Tool Plus akan coba membaca semua lisensi dan menampilkannya di kotak pilihan masukan. Selain itu hanya Volume licenses bawaan yang akan ditampilkan.`
 
 ## Aktivasi Lisensi
 
@@ -92,7 +92,7 @@ Atau anda bisa memasang lisensi secara manual. Terakhir, anda bisa mengaktivasik
 
 **Submenu "Bersihkan aktivasi" berarti semua operasi diatas akan berjalan.**
 
-## Kunci Generik Volume License (GVLK)
+## Kunci Lisensi Volume Generik (GVLK)
 
 ---
 
@@ -142,4 +142,4 @@ Word 2016		WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6
 
 DRNV7-VGMM2-B3G9T-4BF84-VMFTK
 
-Apa bila anda tidak mengetahui apa ini, mohon jangan digunakan. Dan ini tidak bisa digunakan untuk mengaktivasi Office.
+Apa bila anda tidak mengetahui apa ini, mohon jangan digunakan. Dan ini tidak dapat digunakan untuk mengaktivasi Office.

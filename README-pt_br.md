@@ -57,6 +57,7 @@ Você pode ver a descrição do OSPP em ````"C:\Program Files\Microsoft Office\O
 - (en-us) English (United States) / [Moedog](https://prprpr.love)
 - (es-es) Español (España, alfabetización internacional) / Xoseba
 - (fr-fr) Français (France) / Drake4478
+- (id-id) Bahasa Indonesia (Indonesian) / [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17)
 - (it-it) Italiano (Italia) / [garf02](https://github.com/garf02)
 - (ja-jp) 日本語 (日本) / [秋山ヘイワ](https://github.com/akio1321)
 - (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)

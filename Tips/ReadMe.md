@@ -35,6 +35,8 @@ When you submit your translation, we will update it to the Office Tool Plus docu
 ## Thanks to the collaborators
 
 - (en-us) English (United States) / [Moedog](https://prprpr.love)
+- (fr-fr) Français (France) / Drake4478
+- (id-id) Bahasa Indonesia (Indonesian) / [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17)
 - (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)
 - (pl-pl) Polski (Polska) / JakubDriver
 - (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec)

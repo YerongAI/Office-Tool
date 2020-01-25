@@ -23,6 +23,19 @@
 Office 部署工具是微软官方发布的一个用于部署 Office 的工具，其中 Office Tool Plus 几乎支持其所有的参数设定。
 Office Tool Plus 模块是我们自行编写的一个安装 Office 的小模块，虽然功能没有 Office 部署工具的全面，但是也可以确保 Office 可以顺利安装。
 
+### Office Tool Plus 模块中不支持的功能
+
+- 不支持安装完成后添加任务栏快捷方式
+- 不支持记录日志也不支持日志选项设置
+- 不支持设置配置管理器
+- 不支持设置更新截止时间
+- 不支持迁移体系结构
+- 不支持强制更新
+- 不支持移除现有的 MSI 版本的 Office
+- 不支持安装与先前 MSI 版本相同的语言
+
+若要获得完整的安装体验，请务必使用 Office 部署工具。
+
 [Office 部署工具官方网站](https://aka.ms/ODT)
 
 [Office 部署工具的配置选项](https://docs.microsoft.com/zh-cn/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)
@@ -114,7 +127,7 @@ Office 365 个人版	O365HomePremRetail
 
 ---
 
-Office Tool Plus 除了支持使用 Office 部署工具下载安装文件外，还内置了迅雷程序，方便用户快速下载 Office 安装文件。两者在基本功能上没有什么区别，`但仅有迅雷支持显示下载进度，支持设定速度限制以及支持单独设置代理。`如果迅雷下载出现了问题，请将引擎切换为 Office 部署工具。
+Office Tool Plus 除了支持使用 Office 部署工具下载安装文件外，还内置了迅雷程序，使用 HTTP 协议帮助用户快速下载 Office 安装文件。两者在功能上基本没有什么区别，`但仅有迅雷支持显示下载进度，支持设定速度限制以及支持单独设置代理。`如果迅雷下载出现了问题，请将引擎切换为 Office 部署工具。
 
 ### 迅雷下载限速设置
 
@@ -129,4 +142,4 @@ Office Tool Plus 支持对 Office 的更新通道进行修改，也支持修改 
 
 如果您的 Office 无法正常使用，可以在此处尝试修复 Office。
 
-**Note：如果你点击了重新读取，左侧的产品和语言数据会重新载入，一些设置将会被重置为默认值。**
+**Note：如果你点击了重新读取，左侧的产品和语言数据会重新载入，一些设置将会被重置为默认值。当右键点击时，所有信息将会被清空且不再自动读取，适用于创建 ISO 时配置信息。**

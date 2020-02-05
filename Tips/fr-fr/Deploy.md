@@ -137,4 +137,4 @@ Office Tool Plus prend en charge la modification du canal de mise à jour Office
 
 De plus, si vous rencontrez un problème avec Office, vous pouvez essayer de corriger Office ici.
 
-**Note: Si vous cliquez sur [Reload], la liste des produits et packs de langues sur la gauche sera rechargée et certains paramètres seront réinitialisés par défaut.**
+**Note: Si vous cliquez sur [Recharger], la liste des produits et packs de langues sur la gauche sera rechargée et certains paramètres seront réinitialisés par défaut.**

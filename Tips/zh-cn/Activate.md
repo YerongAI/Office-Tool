@@ -6,31 +6,33 @@
 
 ---
 
-1. 安装证书（转换授权）
-2. 激活证书（激活 Office）
+1. 安装许可证（转换授权）
+2. 激活许可证（激活 Office）
 3. 检查 KMS 可用性
 4. 查询激活状态
 5. 清除 Office 激活信息
 6. 常见错误以及解决办法
 7. GVLK 列表
 
-## 安装证书
+## 安装许可证
 
 ---
 
-安装某个证书以后，即可使用对应该证书的密钥进行激活。
+安装某个许可证以后，即可使用对应该许可证的密钥进行激活。
 举个例子：比如要转换 Office 2016 Retail -> Office 2016 Volume，直接安装 Office 2016 Volume 许可证即可完成转换。
-安装完成后，旧的证书并不会被覆盖，因此通过此操作可以做到多证书授权共存。
+安装完成后，旧的许可证并不会被覆盖，因此通过此操作可以做到多许可证共存。
 
-点击旁边的省略按钮可以自定义选择并安装证书。
+点击旁边的省略按钮可以自定义选择并安装许可证。
 
-`注意：只有当计算机上安装了基于 Click to Run 版本的 Office 时，OTP 才会读取 Office 证书并在下拉框中显示。否则 OTP 仅会显示内置的 Volume (批量版) 证书。`
+`注意：只有当计算机上安装了基于 Click-to-Run 版本的 Office 时，Office Tool Plus 才会读取 Office 许可证并在下拉框中显示。否则 Office Tool Plus 仅会显示内置的 Volume (批量版) 许可证。`
 
 ## Office 激活方法以及步骤
 
 ---
 
 `请注意：所有 Office 365 产品仅可通过登录账号激活，Office Tool Plus 仅支持管理激活，不负责激活。`
+
+[点击此处获取更多有关于 OSPP 的信息](https://docs.microsoft.com/zh-cn/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)
 
 ### 密钥在线激活步骤
 
@@ -44,7 +46,7 @@
 
 ### KMS 激活步骤
 
-激活前，请确保您的 Office 是批量版，如果不确定，请安装对应的 批量（Volume）证书，比如你要激活 Office 2016 就安装 Office 2016 Volume 证书，`然后设定一个 KMS 地址`，当一切配置无误、网络正常、服务器正常的情况下，点击激活按钮，Office 将会顺利激活。
+激活前，请确保您的 Office 是批量版，如果不确定，请安装对应的批量（Volume）许可证，比如您要激活 Office 2016 就安装 Office 2016 Volume 许可证，`然后设定一个 KMS 地址`，当一切配置无误、网络正常、服务器正常的情况下，点击激活按钮，Office 将会顺利激活。
 
 `KMS 激活成功后，Office 会默认 7 天与服务器连接一次并自动续期，最大持续激活时间为 180 天。此步骤由 Windows 自行完成，无需人工干涉，也没有任何后台程序驻留。`
 
@@ -88,11 +90,11 @@ Sending activation request (KMS V4) 1 of 1  -> 03612-00206-524-247319-03-1100-14
 
 ### 清除 Office 许可证
 
-在证书管理的按钮菜单中，可以清除所有许可证。
+在许可证管理的按钮菜单中，可以清除所有许可证。
 清除许可证后，第一次打开 Office 应用程序需要修复以重新安装默认的许可证。
 或者您可以手动安装许可证，安装完毕后，可以重新激活 Office。
 
-**清除激活状态会将密钥和证书一并清除。**
+**清除激活状态会将密钥和许可证一并清除。**
 
 ## 常见错误以及解决办法
 
@@ -116,13 +118,11 @@ Sending activation request (KMS V4) 1 of 1  -> 03612-00206-524-247319-03-1100-14
 
 错误提示：软件授权服务报告许可证未安装
 错误原因：这个许可证安装的是默认的密钥
-解决办法：如果您正在尝试激活试用许可（伪 Office 365），此问题无需解决。
-　　　　　否则，您应更换一个有效密钥。
+解决办法：要么激活它，要么卸了这个密钥；如果您的 Office 已经激活了，就不要管这种许可证了。
 
 错误提示：软件授权服务报告未找到产品 SKU
-错误原因：许可证没有安装，或者密钥和证书不对应
-解决办法：安装对应的授权证书，或者更换其他密钥
-　　　　　如果您在安装证书过程中出现此错误，则应该按照下面的解决方法操作👇
+错误原因：许可证没有安装，或者密钥和许可证不对应
+解决办法：安装对应的许可证，或者更换其他密钥
 
 错误提示1：发生未知错误
 错误提示2：软件授权服务报告许可证使用失败
@@ -130,7 +130,6 @@ Sending activation request (KMS V4) 1 of 1  -> 03612-00206-524-247319-03-1100-14
 解决办法：将 Software Protection 服务停止，然后将 C:\Windows\System32\spp\store_test\2.0 下的三个 (.dat) 文件删除（有一个隐藏的）。然后再重新进行一切激活操作
 
 错误提示：An error occurred while making the connection.
-　　　　　错误代码：-2147023838
 错误原因：系统关键服务被禁用
 解决办法：在“服务”中将 Windows Management Instrumentation 服务启用，启用后，再次尝试操作。
 
@@ -139,7 +138,7 @@ Sending activation request (KMS V4) 1 of 1  -> 03612-00206-524-247319-03-1100-14
 ---
 
 使用 GVLK 之前，请确保您的 Office 为批量版
-如您不知是否为批量版，请安装对应的 Volume 证书，然后再使用 GVLK
+如您不知是否为批量版，请安装对应的 Volume 许可证，然后再使用 GVLK
 使用 KMS 激活必须要配置一个 KMS 服务器地址，否则无法激活 Office。
 
 获取更多信息请访问 [用于 Office 2019 和 Office 2016 的 KMS 和基于 Active Directory 激活的 GVLK](https://docs.microsoft.com/zh-cn/DeployOffice/vlactivation/gvlks)
@@ -184,4 +183,4 @@ Word 2016		WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6
 
 DRNV7-VGMM2-B3G9T-4BF84-VMFTK
 
-如果你看不懂上面的是什么意思，那就请不要随便用，反正也不能用来激活 Office。
+这是 Office 365 的默认密钥，无法用来激活 Office。

@@ -3,7 +3,7 @@
 namespace OfficeTool.List
 {
     // Channel Information List
-    // Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
+    // Copyright © 2020 蓝点网 | By Yerong | https://otp.landian.vip/
     // For more information please visit:   https://docs.microsoft.com/en-us/DeployOffice/overview-of-update-channels-for-office-365-proplus
     //                                      https://docs.microsoft.com/en-us/DeployOffice/office2019/update#update-channel-for-office-2019
     class OfficeChannelList
@@ -81,13 +81,14 @@ namespace OfficeTool.List
         /// <summary>
         /// Set the create time of Channel
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="createdTimeUTC"></param>
-        public void SetCreateTime(string name, string createdTimeUTC)
+        /// <param name="name">Channel Name</param>
+        /// <param name="version">Office Version</param>
+        /// <param name="createdTimeUTC">Create Time</param>
+        public void SetCreateTime(string name, string version, string createdTimeUTC)
         {
             foreach (ChannelInf channel in ChannelLists)
             {
-                if (channel.ChannelName == name)
+                if (channel.ChannelName == name && channel.Version == version)
                 {
                     channel.CreatedTimeUTC = createdTimeUTC;
                 }

@@ -3,7 +3,7 @@
 namespace OfficeTool.List
 {
     // Language Information List
-    // Copyright © 2019 Landiannews | By Yerong | https://otp.landian.vip/
+    // Copyright © 2020 蓝点网 | By Yerong | https://otp.landian.vip/
     // For more information please visit: https://docs.microsoft.com/en-us/DeployOffice/overview-of-deploying-languages-in-office-365-proplus#languages-culture-codes-and-companion-proofing-languages
     class LanguageList
     {

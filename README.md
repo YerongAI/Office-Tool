@@ -1,6 +1,6 @@
-﻿# Office Tool Plus
+# Office Tool Plus
 
-English | [简体中文](/README-zh_cn.md) | [日本語](/README-ja_jp.md) | [繁體中文](/README-zh_tw.md) | [한국어](/README-ko_kr.md) | [Italiano](/README-it_it.md) | [ไทย/Thai](/README-th_th.md) | [polski](/README-pl_pl.md) | [Brazilian Portuguese](/README-pt_br.md) | [Français](/README-fr_fr.md) | [Deutsch](/README-de_de.md)
+English｜[简体中文](/README-zh_cn.md)｜[繁體中文](/README-zh_tw.md)｜[日本語](/README-ja_jp.md)｜[한국어](/README-ko_kr.md)｜[Italiano](/README-it_it.md)｜[ไทย/Thai](/README-th_th.md)｜[polski](/README-pl_pl.md)｜[Brazilian Portuguese](/README-pt_br.md)｜[Français](/README-fr_fr.md)｜[Deutsch](/README-de_de.md)｜[Bahasa Indonesia](/README-id_id.md)
 
 Office Tool Plus is a tool for managing, downloading and installing Office.
 
@@ -55,6 +55,7 @@ You can view the description of OSPP in ````"C:\Program Files\Microsoft Office\O
 - (en-us) English (United States) / [Moedog](https://prprpr.love)
 - (es-es) Español (España, alfabetización internacional) / Xoseba
 - (fr-fr) Français (France) / Drake4478
+- (id-id) Bahasa Indonesia (Indonesian) / [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17)
 - (it-it) Italiano (Italia) / [garf02](https://github.com/garf02)
 - (ja-jp) 日本語 (日本) / [秋山ヘイワ](https://github.com/akio1321)
 - (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)

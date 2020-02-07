@@ -1,11 +1,11 @@
 ﻿<Window x:Name="Window" x:Class="Zmy.Wpf.CMessageBox.CMessageBoxWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" WindowStartupLocation="CenterOwner"
-        Foreground="Black" BorderBrush="#FFEB3C00" MaxHeight="600" Width="500" ResizeMode="NoResize" 
+        Foreground="Black" BorderBrush="#FFEB3C00" MaxHeight="600" Width="520" ResizeMode="NoResize" 
         Title="{Binding MessageBoxTitle}" SizeToContent="Height" Loaded="Window_Loaded" MinHeight="230" UseLayoutRounding="True"
         Activated="Window_Activated" Deactivated="Window_Deactivated" Icon="/Office Tool Plus;component/Image/FIRSTRUN 001.ico">
     <WindowChrome.WindowChrome>
-        <WindowChrome GlassFrameThickness="1" CornerRadius="0" CaptionHeight="30"/>
+        <WindowChrome GlassFrameThickness="0,1,0,0" CornerRadius="0" CaptionHeight="35"/>
     </WindowChrome.WindowChrome>
     <Window.Resources>
         <Style TargetType="{x:Type Button}" x:Key="HeaderButtonStyle">
@@ -173,15 +173,19 @@
                 <RowDefinition/>
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
-            <WrapPanel Margin="25,30,25,5" Focusable="False">
-                <Path x:Name="IconPath" Width="25" MaxHeight="25" Stretch="Uniform"/>
-                <TextBlock x:Name="MessageTitle" Text="{Binding MessageBoxTitle}" FontSize="18" Foreground="{Binding BorderBrush, ElementName=Window}" VerticalAlignment="Center" Margin="5,0,0,0"/>
-            </WrapPanel>
-            <ScrollViewer VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" Grid.Row="1" Margin="0,10,0,30">
-                <TextBlock Text="{Binding MessageBoxText}" TextWrapping="Wrap" Margin="25,0"/>
+            <Grid Margin="25,30,25,5" Focusable="False">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Path x:Name="IconPath" MaxHeight="30" Stretch="Uniform"/>
+                <TextBlock x:Name="MessageTitle" Text="{Binding MessageBoxTitle}" Grid.Column="1" Margin="10,0,0,0" FontSize="18" Foreground="{Binding BorderBrush, ElementName=Window}" VerticalAlignment="Center" TextWrapping="Wrap"/>
+            </Grid>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1" Margin="0,10,0,30">
+                <TextBlock Text="{Binding MessageBoxText}" TextWrapping="Wrap" Margin="25,1"/>
             </ScrollViewer>
-            <ScrollViewer VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" Grid.Row="1" Margin="0,10,0,30" CanContentScroll="True">
-                <RichTextBox x:Name="richTextBox" Background="Transparent" Foreground="{Binding Foreground, ElementName=Window}" Margin="25,0" BorderThickness="0" IsReadOnly="True" IsDocumentEnabled="True" Visibility="Collapsed"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1" Margin="0,10,0,30" CanContentScroll="True">
+                <RichTextBox x:Name="richTextBox" Background="Transparent" Foreground="{Binding Foreground, ElementName=Window}" Margin="25,1" BorderThickness="0" IsReadOnly="True" IsDocumentEnabled="True" Visibility="Collapsed"/>
             </ScrollViewer>
             <WrapPanel Grid.Row="2" HorizontalAlignment="Right" ItemHeight="35">
                 <Button Content="{DynamicResource MsgButtonOK}" x:Name="OKButton" Click="OKButton_Click" Style="{StaticResource NormalButtonStyle}" Visibility="{Binding OKButtonVisibility, Mode=OneWay}"/>

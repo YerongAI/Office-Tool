@@ -55,6 +55,7 @@ Vous pouvez consulter la description de l'OSPP dans ````"C:\Program Files\Micros
 - (en-us) Anglais (États-Unis) / [Moedog](https://prprpr.love)
 - (es-es) Espagnol (Espagne, alphabétisation internationale) / Xoseba
 - (fr-fr) Français (France) / Drake4478
+- (id-id) Bahasa Indonesia (Indonesian) / [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17)
 - (it-it) Italien (Italie) / [garf02](https://github.com/garf02)
 - (ja-jp) Japonais (Japon) / [秋山ヘイワ](https://github.com/akio1321)
 - (ko-kr) Anglais (Corée du Sud) / [Jay Jang](http://www.yaeyaya.com)

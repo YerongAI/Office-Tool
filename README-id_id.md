@@ -36,7 +36,7 @@ Windows Server 2008 R2 SP1, Windows Server 2012 atau keatasnya.
 
 ## Mulai Cepat
 
-Pergi ke halaman Deploy, tambahkan produk yang ingin anda pasang, lalu klik Deploy-kan Office untuk memulai pemasangan.
+Pergi ke halaman Pemasangan, tambahkan produk yang ingin anda pasang, lalu klik Pasangkan Office untuk memulai pemasangannya.
 
 ## Legitimasi Aplikasi
 
@@ -44,7 +44,7 @@ Office Tool Plus dibuat berdasarkan Microsoft [Office Deployment Tool](https://d
 
 ### Tentang Fungsi Aktivasi
 
-Fungsi aktivasinya berasal dari Microsoft ospp.vbs (Office Software Protect Platform), semua proses aktivasi dilakukan oleh ospp.vbs. Dan agar pengguna lebih memahami OSPP, kami terjemahkan (zh-cn, zh-tw).
+Fungsi aktivasinya berasal dari Microsoft (Office Software Protect Platform), semua proses aktivasi dilakukan oleh ospp.vbs. Dan agar pengguna lebih memahami OSPP, kami terjemahkan (zh-cn, zh-tw).
 
 Anda bisa melihat deskripsi OSPP di ````"C:\Program Files\Microsoft Office\Office16\OSPP.HTM"```` (Diperlukan Office yang terpasang).
 
@@ -72,7 +72,7 @@ Kami menggiatkan semua orang untuk membantu terjemahan. Berikut ini adalah caran
 
 1. Lakukan "Fork" pada repositori ini.
 
-2. Terjemahkan ````zh-cn.xaml```` ke bahasa asal anda berada ````zh-tw.xaml````
+2. Terjemahkan file terjemahan ````zh-cn.xaml```` ke bahasa asal anda berada seperti ````zh-tw.xaml````
 
 3. Salin ke jalur yang benar, seperti ````OfficeToolPlus/Language/zh-tw.xaml````
 
@@ -92,4 +92,4 @@ Setelah itu, aplikasi akan memuat terjemahan anda, apabila anda menambahkan terj
 
 ### Apa yang Lebih
 
-````Untuk setiap penerjemah, kami akan memberikan akses aplikasi sebagai Admin yang bisa memperbolehkan anda untuk mengganti pengumuman dan menguggah gambar latar belakang.```` [kirimkan e-mail](mailto:yerong@coolhub.top) ````ke kami.````
+````Untuk setiap penerjemah, kami akan memberikan akses aplikasi sebagai Admin yang memperbolehkan anda untuk mengganti pengumuman dan mengunggah gambar latar belakang.```` [kirimkan e-mail](mailto:yerong@coolhub.top) ````ke kami.````

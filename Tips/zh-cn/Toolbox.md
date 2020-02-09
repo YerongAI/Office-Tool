@@ -8,7 +8,7 @@
 
 **仅当 Office 无法正常卸载或者卸载不干净的时候才应该移除 Office!**
 
-Office Tool Plus 支持移除 Office 2007 - 2019， 365 以及从应用商店安装的 Office，如果移除期间出现了一些错误，您可以稍作等待，然后再试几次，如果错误持续，您可以通过错误信息找到问题所在，然后手动解决这些问题。
+Office Tool Plus 支持移除 Office 2003 - 2019， 365 以及从应用商店安装的 Office，如果移除期间出现了一些错误，您可以稍作等待，然后再试几次，如果错误持续，您可以通过错误信息找到问题所在，然后手动解决这些问题。
 
 官方卸载工具从微软官网上获得。获取详细信息请访问 [从 PC 卸载 Office](https://support.office.com/zh-cn/article/%E4%BB%8E-pc-%E5%8D%B8%E8%BD%BD-office-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8)
 

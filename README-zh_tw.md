@@ -107,7 +107,7 @@ Office Tool Plus 使用 微軟 [Office Deployment Tool](https://docs.microsoft.c
 
 本站為 Office Tool 臺灣管理團隊，歡迎閱讀本站所發布的教學文章、臺灣地區通知。也歡迎您加入 Office Tool Plus 臺灣官方 Telegram 頻道！
  - [Cotpear](https://www.cotpear.com)
- - [Office Tool 臺灣管理團隊](https://www.cotpear.com/p/office-tool-taiwan-official-website.html)
+ - [Office Tool 臺灣管理團隊首頁](https://www.cotpear.com/p/office-tool-taiwan-official-website.html)
  - [教學文章](https://www.cotpear.com/search/label/Office)
  - [Telegram 頻道](https://t.me/ot_channel_tw)
  - [關於《藍點網》授予本網之相關說明條款](https://policies.cotpear.com/terms/)

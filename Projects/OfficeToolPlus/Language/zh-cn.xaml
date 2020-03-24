@@ -114,9 +114,6 @@
     <sys:String x:Key="No">否</sys:String>
     <sys:String x:Key="OK">确定</sys:String>
     <sys:String x:Key="Cancel">取消</sys:String>
-    <sys:String x:Key="Retry">重试</sys:String>
-    <sys:String x:Key="Normal">默认</sys:String>
-    <sys:String x:Key="None">无</sys:String>
     <sys:String x:Key="OfficeDeploymentTool">Office 部署工具</sys:String>
     <sys:String x:Key="Version">版本:</sys:String>
     <sys:String x:Key="Architecture">体系结构:</sys:String>
@@ -124,6 +121,10 @@
     <sys:String x:Key="x64">64 位</sys:String>
     <sys:String x:Key="BasicSettings">基础设置</sys:String>
     <sys:String x:Key="AdvancedSettings">高级设置</sys:String>
+    <sys:String x:Key="Retry">重试</sys:String>
+    <sys:String x:Key="Normal">默认</sys:String>
+    <sys:String x:Key="None">无</sys:String>
+    <sys:String x:Key="Query">查询</sys:String>
     <sys:String x:Key="Uninstall">卸载</sys:String>
 
     <!-- Greetings -->
@@ -244,7 +245,6 @@
     <sys:String x:Key="DeployInstalliSlide">安装 iSlide 插件</sys:String>
     <!-- Download Settings -->
     <sys:String x:Key="DownloadSettings">下载设置</sys:String>
-    <sys:String x:Key="DownloadSettingsTip">这些设置仅在 [下载后安装] 和 [仅下载] 模式有效。</sys:String>
     <sys:String x:Key="DownloadEngine">下载引擎:</sys:String>
     <sys:String x:Key="DownloadEngineThunder">迅雷</sys:String>
     <sys:String x:Key="DownloadUseHTTPS">使用 HTTPS 连接</sys:String>
@@ -269,6 +269,8 @@
     <sys:String x:Key="ActivateSelectLicense">选择一个许可证:</sys:String>
     <sys:String x:Key="ActivateInstallLicenses">安装许可证</sys:String>
     <sys:String x:Key="ActivateClearLicenses">清除所有许可证</sys:String>
+    <sys:String x:Key="ActivateRLS">重置指定许可证的状态</sys:String>
+    <sys:String x:Key="ActivateRLSTip">你需要提供许可证的 SKU 值</sys:String>
     <sys:String x:Key="ActivateRLSForAll">重置所有许可证的状态</sys:String>
     <sys:String x:Key="ActivateRLSForAllTip">这将会重置 Office 许可证状态，重置后，需要重新激活 Office。</sys:String>
     <sys:String x:Key="ActivateClearActivation">清除激活状态</sys:String>
@@ -279,6 +281,9 @@
     <sys:String x:Key="ActivateInstallKey">安装密钥</sys:String>
     <sys:String x:Key="ActivateUninstallKey">卸载密钥</sys:String>
     <sys:String x:Key="ActivateUninstallAllKeys">卸载所有密钥</sys:String>
+    <sys:String x:Key="ActivateViewIID">查看安装 ID</sys:String>
+    <sys:String x:Key="ActivateInstallCID">安装确认 ID</sys:String>
+    <sys:String x:Key="ActivateInstallCIDTip">你需要提供确认 ID</sys:String>
     <!-- KMS -->
     <sys:String x:Key="ActivateKMSManage">KMS 管理</sys:String>
     <sys:String x:Key="ActivateKMSAddress">KMS 服务器地址:</sys:String>
@@ -288,16 +293,6 @@
     <sys:String x:Key="ActivateEnableCaching">启用 KMS 主机缓存</sys:String>
     <sys:String x:Key="ActivateDisableCaching">禁用 KMS 主机缓存</sys:String>
     <sys:String x:Key="ActivateClearKMS">清除服务器地址 (重置端口为默认值)</sys:String>
-    <!-- Additional -->
-    <sys:String x:Key="ActivateExtra">其他工具</sys:String>
-    <sys:String x:Key="ActivateOperating">操作</sys:String>
-    <sys:String x:Key="ActivateViewIID">查看安装 ID</sys:String>
-    <sys:String x:Key="ActivateInstallCID">安装确认 ID</sys:String>
-    <sys:String x:Key="ActivateInstallCIDTip">你需要提供确认 ID</sys:String>
-    <sys:String x:Key="ActivateCheckErrorCode">查询错误代码的详细信息</sys:String>
-    <sys:String x:Key="ActivateCheckErrorCodeTip">你需要提供一个错误代码，例如: 0x2</sys:String>
-    <sys:String x:Key="ActivateRLS">重置指定的许可证的状态</sys:String>
-    <sys:String x:Key="ActivateRLSTip">你需要提供许可证的 SKU 值</sys:String>
     <!-- Content Translation -->
     <sys:String x:Key="ActivationTitle">Office 激活处理</sys:String>
     <sys:String x:Key="LicenseDescription">许可证说明: </sys:String>
@@ -371,8 +366,10 @@
     <sys:String x:Key="ToolboxChangeOwner">修改 Office 产品属于者</sys:String>
     <sys:String x:Key="ToolboxChangeOwnerDescription">这个名称在 Office 应用程序的账户页面显示。只有当 Office 使用了正确的许可证激活的时候才会正常显示。&#x000A;&#x000A;指定一个产品的属于者: [ProductID]:[Name]</sys:String>
     <sys:String x:Key="ToolboxChangeOwnerName">名称:</sys:String>
-    <sys:String x:Key="ToolboxCheckVersion">检查 Office 版本号</sys:String>
+    <sys:String x:Key="ToolboxCheckVersion">查询 Office 版本号</sys:String>
     <sys:String x:Key="CheckVersionCreatedTimeUTC">创建时间 (UTC):</sys:String>
+    <sys:String x:Key="QueryErrorCode">查询错误代码信息</sys:String>
+    <sys:String x:Key="QueryErrorCodeDescription">你需要提供一个以 '0x' 开头的错误代码，例如: 0x2 或者 0x80070002</sys:String>
     <sys:String x:Key="ToolboxCheckKMS">检查 KMS 可用性</sys:String>
     <sys:String x:Key="ToolboxCheckKMSDescription">使用逗号或者分行隔开每个 KMS 地址，你可以给地址添加一个端口。当检测结果显示激活成功时，代表服务器可用。</sys:String>
     <sys:String x:Key="CheckKMSConncetionSuccessful">连接成功.</sys:String>

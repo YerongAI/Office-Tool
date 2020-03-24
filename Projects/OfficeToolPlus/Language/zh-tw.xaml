@@ -114,9 +114,6 @@
     <sys:String x:Key="No">否</sys:String>
     <sys:String x:Key="OK">確定</sys:String>
     <sys:String x:Key="Cancel">取消</sys:String>
-    <sys:String x:Key="Retry">重新嘗試</sys:String>
-    <sys:String x:Key="Normal">預設</sys:String>
-    <sys:String x:Key="None">無</sys:String>
     <sys:String x:Key="OfficeDeploymentTool">Office 部署工具</sys:String>
     <sys:String x:Key="Version">版本:</sys:String>
     <sys:String x:Key="Architecture">架構:</sys:String>
@@ -124,6 +121,10 @@
     <sys:String x:Key="x64">64 位元</sys:String>
     <sys:String x:Key="BasicSettings">基本設定</sys:String>
     <sys:String x:Key="AdvancedSettings">進階設定</sys:String>
+    <sys:String x:Key="Retry">重新嘗試</sys:String>
+    <sys:String x:Key="Normal">預設</sys:String>
+    <sys:String x:Key="None">無</sys:String>
+    <sys:String x:Key="Query">查詢</sys:String>
     <sys:String x:Key="Uninstall">解除安裝</sys:String>
     
     <!-- Greetings -->
@@ -244,7 +245,6 @@
     <sys:String x:Key="DeployInstalliSlide">安裝 iSlide 增益集</sys:String>
     <!-- Download Settings -->
     <sys:String x:Key="DownloadSettings">下載設定</sys:String>
-    <sys:String x:Key="DownloadSettingsTip">此設定區的設定僅會在「下載後安裝」和「下載安裝文件」的部署模式中有效。</sys:String>
     <sys:String x:Key="DownloadEngine">下載引擎:</sys:String>
     <sys:String x:Key="DownloadEngineThunder">迅雷</sys:String>
     <sys:String x:Key="DownloadUseHTTPS">使用 HTTPS 連線</sys:String>
@@ -269,8 +269,10 @@
     <sys:String x:Key="ActivateSelectLicense">選取一個授權:</sys:String>
     <sys:String x:Key="ActivateInstallLicenses">安裝授權</sys:String>
     <sys:String x:Key="ActivateClearLicenses">清除全部授權</sys:String>
+    <sys:String x:Key="ActivateRLS">重設指定的授權狀態</sys:String>
+    <sys:String x:Key="ActivateRLSTip">必須輸入該授權 SKU ID 值</sys:String>
     <sys:String x:Key="ActivateRLSForAll">重設授權狀態</sys:String>
-    <sys:String x:Key="ActivateRLSForAllTip">此操作將重設所有 Office 授權狀態，並且操作完成後需要重新啟用 Office。是否要繼續？</sys:String>
+    <sys:String x:Key="ActivateRLSForAllTip">此操作將重設所有 Office 授權狀態，並且操作完成後需要重新啟用 Office</sys:String>
     <sys:String x:Key="ActivateClearActivation">清除啟用狀態</sys:String>
     <!-- Key -->
     <sys:String x:Key="ActivateKeyManage">金鑰管理</sys:String>
@@ -279,6 +281,9 @@
     <sys:String x:Key="ActivateInstallKey">安裝金鑰</sys:String>
     <sys:String x:Key="ActivateUninstallKey">移除金鑰</sys:String>
     <sys:String x:Key="ActivateUninstallAllKeys">移除全部金鑰</sys:String>
+    <sys:String x:Key="ActivateViewIID">檢視安裝識別碼</sys:String>
+    <sys:String x:Key="ActivateInstallCID">安裝確認識別碼</sys:String>
+    <sys:String x:Key="ActivateInstallCIDTip">必須輸入確認識別碼</sys:String>
     <!-- KMS -->
     <sys:String x:Key="ActivateKMSManage">KMS 管理</sys:String>
     <sys:String x:Key="ActivateKMSAddress">KMS 伺服器位址:</sys:String>
@@ -288,16 +293,6 @@
     <sys:String x:Key="ActivateEnableCaching">啟用 KMS 伺服器快取</sys:String>
     <sys:String x:Key="ActivateDisableCaching">停用 KMS 伺服器快取</sys:String>
     <sys:String x:Key="ActivateClearKMS">清除伺服器位址（重設連接埠為預設值）</sys:String>
-    <!-- Additional -->
-    <sys:String x:Key="ActivateExtra">其他工具</sys:String>
-    <sys:String x:Key="ActivateOperating">操作</sys:String>
-    <sys:String x:Key="ActivateViewIID">檢視安裝識別碼</sys:String>
-    <sys:String x:Key="ActivateInstallCID">安裝確認識別碼</sys:String>
-    <sys:String x:Key="ActivateInstallCIDTip">必須輸入確認識別碼</sys:String>
-    <sys:String x:Key="ActivateCheckErrorCode">查詢錯誤代碼的詳細描述</sys:String>
-    <sys:String x:Key="ActivateCheckErrorCodeTip">必須輸入一個錯誤代碼，例如：0x2</sys:String>
-    <sys:String x:Key="ActivateRLS">重設指定的授權狀態</sys:String>
-    <sys:String x:Key="ActivateRLSTip">必須輸入該授權 SKU ID 值</sys:String>
     <!-- Content Translation -->
     <sys:String x:Key="ActivationTitle">Office 啟用處理</sys:String>
     <sys:String x:Key="LicenseDescription">授權描述: </sys:String>
@@ -373,6 +368,8 @@
     <sys:String x:Key="ToolboxChangeOwnerName">名稱:</sys:String>
     <sys:String x:Key="ToolboxCheckVersion">查詢版本編號</sys:String>
     <sys:String x:Key="CheckVersionCreatedTimeUTC">建立時間 (UTC):</sys:String>
+    <sys:String x:Key="QueryErrorCode">查詢錯誤代碼的詳細描述</sys:String>
+    <sys:String x:Key="QueryErrorCodeDescription">你需要提供一个以 '0x' 开头的错误代码，例如: 0x2 或者 0x80070002</sys:String>
     <sys:String x:Key="ToolboxCheckKMS">測試 KMS 可用性</sys:String>
     <sys:String x:Key="ToolboxCheckKMSDescription">使用逗號或以新行隔開每一個 KMS 位址，亦可設定位址連接埠。&#x000A;當測試結果顯示「連線成功」，即代表伺服器可用。（不可用的不會顯示任何資訊）</sys:String>
     <sys:String x:Key="CheckKMSConncetionSuccessful">連線成功！</sys:String>

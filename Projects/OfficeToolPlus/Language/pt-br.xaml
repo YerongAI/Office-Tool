@@ -114,9 +114,6 @@
     <sys:String x:Key="No">Não</sys:String>
     <sys:String x:Key="OK">OK</sys:String>
     <sys:String x:Key="Cancel">Cancelar</sys:String>
-    <sys:String x:Key="Retry">Retry</sys:String>
-    <sys:String x:Key="Normal">Normal</sys:String>
-    <sys:String x:Key="None">None</sys:String>
     <sys:String x:Key="OfficeDeploymentTool">Ferramenta de implantação do Office</sys:String>
     <sys:String x:Key="Version">Versão:</sys:String>
     <sys:String x:Key="Architecture">Arquitetura:</sys:String>
@@ -124,6 +121,10 @@
     <sys:String x:Key="x64">64 Bits</sys:String>
     <sys:String x:Key="BasicSettings">Basic Settings</sys:String>
     <sys:String x:Key="AdvancedSettings">Advanced Settings</sys:String>
+    <sys:String x:Key="Retry">Retry</sys:String>
+    <sys:String x:Key="Normal">Normal</sys:String>
+    <sys:String x:Key="None">None</sys:String>
+    <sys:String x:Key="Query">Query</sys:String>
     <sys:String x:Key="Uninstall">Uninstall</sys:String>
 
     <!-- Greetings -->
@@ -244,7 +245,6 @@
     <sys:String x:Key="DeployInstalliSlide">Install iSlide.</sys:String>
     <!-- Download Settings -->
     <sys:String x:Key="DownloadSettings">Configurações de Download</sys:String>
-    <sys:String x:Key="DownloadSettingsTip">These settings are only effective in [Install after download] and [Download only] modes.</sys:String>
     <sys:String x:Key="DownloadEngine">Engine:</sys:String>
     <sys:String x:Key="DownloadEngineThunder">Thunder</sys:String>
     <sys:String x:Key="DownloadUseHTTPS">Conectar usando HTTPS</sys:String>
@@ -269,6 +269,8 @@
     <sys:String x:Key="ActivateSelectLicense">Selecione uma licença:</sys:String>
     <sys:String x:Key="ActivateInstallLicenses">Instalar Licenças</sys:String>
     <sys:String x:Key="ActivateClearLicenses">Limpar todas as Licenças</sys:String>
+    <sys:String x:Key="ActivateRLS">Reset the licensing status for an Office license</sys:String>
+    <sys:String x:Key="ActivateRLSTip">You need to provide SKU ID value.</sys:String>
     <sys:String x:Key="ActivateRLSForAll">Reset the licensing status for all licenses</sys:String>
     <sys:String x:Key="ActivateRLSForAllTip">Reset the licensing status for all installed Office product keys means you will need to reactivate Office after this operation. Do you want to continue?</sys:String>
     <sys:String x:Key="ActivateClearActivation">Limpar Ativação</sys:String>
@@ -279,6 +281,9 @@
     <sys:String x:Key="ActivateInstallKey">Instalar Chave</sys:String>
     <sys:String x:Key="ActivateUninstallKey">Desinstalar Chave</sys:String>
     <sys:String x:Key="ActivateUninstallAllKeys">Desinstalar todas as chaves</sys:String>
+    <sys:String x:Key="ActivateViewIID">Ver ID de Instalação</sys:String>
+    <sys:String x:Key="ActivateInstallCID">Instalar o ID de confirmação</sys:String>
+    <sys:String x:Key="ActivateInstallCIDTip">You need to provide confirmation ID.</sys:String>
     <!-- KMS -->
     <sys:String x:Key="ActivateKMSManage">Gerenciar KMS</sys:String>
     <sys:String x:Key="ActivateKMSAddress">Endereço KMS</sys:String>
@@ -288,16 +293,6 @@
     <sys:String x:Key="ActivateEnableCaching">Enable host caching</sys:String>
     <sys:String x:Key="ActivateDisableCaching">Disable host caching</sys:String>
     <sys:String x:Key="ActivateClearKMS">Limpar o endereço do servidor (define a porta como padrão)</sys:String>
-    <!-- Additional -->
-    <sys:String x:Key="ActivateExtra">Extra Tools</sys:String>
-    <sys:String x:Key="ActivateOperating">Operating</sys:String>
-    <sys:String x:Key="ActivateViewIID">Ver ID de Instalação</sys:String>
-    <sys:String x:Key="ActivateInstallCID">Instalar o ID de confirmação</sys:String>
-    <sys:String x:Key="ActivateInstallCIDTip">You need to provide confirmation ID.</sys:String>
-    <sys:String x:Key="ActivateCheckErrorCode">Display the description for an error code</sys:String>
-    <sys:String x:Key="ActivateCheckErrorCodeTip">You need to provide an error code like: 0x2</sys:String>
-    <sys:String x:Key="ActivateRLS">Reset the licensing status for an Office license</sys:String>
-    <sys:String x:Key="ActivateRLSTip">You need to provide SKU ID value.</sys:String>
     <!-- Content Translation -->
     <sys:String x:Key="ActivationTitle">Processo de ativação do Office</sys:String>
     <sys:String x:Key="LicenseDescription">Descrição da Licença: </sys:String>
@@ -371,8 +366,10 @@
     <sys:String x:Key="ToolboxChangeOwner">Change Office Product Owner</sys:String>
     <sys:String x:Key="ToolboxChangeOwnerDescription">The name display in Office application account page. Only applied when you activate Office using the right license.&#x000A;&#x000A;Specify a product: [ProductID]:[Name]</sys:String>
     <sys:String x:Key="ToolboxChangeOwnerName">Name:</sys:String>
-    <sys:String x:Key="ToolboxCheckVersion">Check Office Version</sys:String>
+    <sys:String x:Key="ToolboxCheckVersion">Querying Office Version</sys:String>
     <sys:String x:Key="CheckVersionCreatedTimeUTC">Created time (UTC):</sys:String>
+    <sys:String x:Key="QueryErrorCode">Querying Error Code Information</sys:String>
+    <sys:String x:Key="QueryErrorCodeDescription">You need to provide an error code start with '0x'. Example: 0x2 or 0x80070002.</sys:String>
     <sys:String x:Key="ToolboxCheckKMS">Check KMS Status</sys:String>
     <sys:String x:Key="ToolboxCheckKMSDescription">Separate each KMS with comma or newline, you can also add a port. When the activation is displayed successfully, it means that the server is available.</sys:String>
     <sys:String x:Key="CheckKMSConncetionSuccessful">Connection successful.</sys:String>
@@ -413,10 +410,10 @@
     <sys:String x:Key="SettingsTransparency">Transparência</sys:String>
     <sys:String x:Key="SettingsBlurValue">Desfoque</sys:String>
     <!-- About Panel -->
-    <sys:String x:Key="About">Sobre</sys:String>
     <sys:String x:Key="AppInf">Informações do Aplicativo</sys:String>
     <sys:String x:Key="CreatorInfo">Desenvolvido por Yerong, com base na ferramenta de implantação do Office.</sys:String>
     <sys:String x:Key="Copyright">Copyright © 2012-{0} 蓝点网. Todos os direitos reservados.</sys:String>
+    <sys:String x:Key="TrademarkInfo">Microsoft Office is a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.</sys:String>
     <sys:String x:Key="ServerProvider">Provedor do Servidor</sys:String>
     <sys:String x:Key="Translator">Tradução</sys:String>
     <sys:String x:Key="BackgroundImageSource">Origem da imagem de fundo</sys:String>

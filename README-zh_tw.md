@@ -102,3 +102,13 @@ Office Tool Plus 使用 微軟 [Office Deployment Tool](https://docs.microsoft.c
 ### 本地化之後
 
 若你願意無限期的為 Office Tool Plus 進行當地的管理，我們會授予你 Administrator Permission。你可以利用此權限，建立新公告、設定背景圖片、修改說明等。
+
+## 關於繁體中文(台灣) 維護與翻譯者
+
+本站為 Office Tool 臺灣管理團隊，歡迎閱讀本站所發布的教學文章、臺灣地區通知。也歡迎您加入 Office Tool Plus 臺灣官方 Telegram 頻道！
+ - [Cotpear](https://www.cotpear.com)
+ - [Office Tool 臺灣管理團隊](https://www.cotpear.com/p/office-tool-taiwan-official-website.html)
+ - [教學文章](https://www.cotpear.com/search/label/Office)
+ - [Telegram 頻道](https://t.me/ot_channel_tw)
+ - [關於《藍點網》授予本網之相關說明條款](https://policies.cotpear.com/terms/)
+ - [Email 聯絡](customer@cotpear.com)

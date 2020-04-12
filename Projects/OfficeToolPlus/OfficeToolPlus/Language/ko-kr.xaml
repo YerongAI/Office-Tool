@@ -1,379 +1,490 @@
 ﻿<ResourceDictionary    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                       xmlns:sys="clr-namespace:System;assembly=mscorlib">
-    <!--  Country settings, it is used to get information from server.  -->
+                    xmlns:sys="clr-namespace:System;assembly=System.RunTime"
+                    xml:space="preserve">
+    <!-- Country settings, it is used to get information from server. -->
     <sys:String x:Key="Culture">ko-kr</sys:String>
-    <!--  Header  -->
+    <!-- Eula Content -->
+    <sys:String x:Key="EulaTitle">이용약관</sys:String>
+    <sys:String x:Key="EulaContent">이 소프트웨어를 사용하려면 [소프트웨어 라이선스 약권]({0})과 [Microsoft 서비스 계약]({1})을 동의 하셔야합니다.</sys:String>
+    <!-- Header -->
     <sys:String x:Key="ISOMode">-ISO모드</sys:String>
-    <sys:String x:Key="SafeMode">-안전모드</sys:String>
+    <sys:String x:Key="Notifications">알림</sys:String>
+    <sys:String x:Key="Help">도음말</sys:String>
+    <sys:String x:Key="About">소개</sys:String>
+    <sys:String x:Key="Settings">설정</sys:String>
+    <!-- Channels Name -->
+    <sys:String x:Key="PerpetualVL2019">Office 2019 Perpetual Enterprise</sys:String>
+    <sys:String x:Key="Broad">Semi-Annual Channel</sys:String>
+    <sys:String x:Key="Targeted">Semi-Annual Channel (Targeted)</sys:String>
+    <sys:String x:Key="Monthly">Monthly Channel</sys:String>
+    <sys:String x:Key="Insiders">Monthly Channel (Targeted)</sys:String>
+    <sys:String x:Key="InsiderFast">Beta Channel (Insider)</sys:String>
+    <sys:String x:Key="Dogfood">DevMain Channel (Dogfood)</sys:String>
+    <!-- Products Name, you can translate them or delete them. If you delete them, they will show as English. -->
+    <sys:String x:Key="HomeBusiness2019Retail">Office Home and Business 2019</sys:String>
+    <sys:String x:Key="HomeBusinessPipcRetail">Office Home and Business Premium</sys:String>
+    <sys:String x:Key="HomeBusinessRetail">Office Home and Business 2016</sys:String>
+    <sys:String x:Key="HomeStudent2019Retail">Office Home and Student 2019</sys:String>
+    <sys:String x:Key="HomeStudentRetail">Office Home and Student 2016</sys:String>
+    <sys:String x:Key="HomeStudentVNextRetail">Office Home and Student 2016</sys:String>
+    <sys:String x:Key="MondoRetail">Office Mondo 2016 - Retail</sys:String>
+    <sys:String x:Key="MondoVolume">Office Mondo 2016 - Volume</sys:String>
+    <sys:String x:Key="O365BusinessRetail">Office 365 Business</sys:String>
+    <sys:String x:Key="O365HomePremRetail">Office 365 Home Premium</sys:String>
+    <sys:String x:Key="O365ProPlusRetail">Office 365 ProPlus</sys:String>
+    <sys:String x:Key="O365SmallBusPremRetail">Office 365 Small Business Premium</sys:String>
+    <sys:String x:Key="O365EduCloudRetail">Office 365</sys:String>
+    <sys:String x:Key="Personal2019Retail">Office Personal 2019</sys:String>
+    <sys:String x:Key="PersonalPipcRetail">Office Personal Premium</sys:String>
+    <sys:String x:Key="PersonalRetail">Office Personal 2016</sys:String>
+    <sys:String x:Key="Professional2019Retail">Office Professional 2019</sys:String>
+    <sys:String x:Key="ProfessionalPipcRetail">Office Professional Premium</sys:String>
+    <sys:String x:Key="ProfessionalRetail">Office Professional 2016</sys:String>
+    <sys:String x:Key="ProPlus2019Retail">Office Professional Plus 2019 - Retail</sys:String>
+    <sys:String x:Key="ProPlus2019Volume">Office Professional Plus 2019 - Volume</sys:String>
+    <sys:String x:Key="ProPlusRetail">Office Professional Plus 2016 - Retail</sys:String>
+    <sys:String x:Key="ProPlusVolume">Office Professional Plus 2016 - Volume</sys:String>
+    <sys:String x:Key="Standard2019Retail">Office Standard 2019 - Retail</sys:String>
+    <sys:String x:Key="Standard2019Volume">Office Standard 2019 - Volume</sys:String>
+    <sys:String x:Key="StandardRetail">Office Standard 2016 - Retail</sys:String>
+    <sys:String x:Key="StandardVolume">Office Standard 2016 - Volume</sys:String>
+    <sys:String x:Key="ProjectPro2019Retail">Project Professional 2019 - Retail</sys:String>
+    <sys:String x:Key="ProjectPro2019Volume">Project Professional 2019 - Volume</sys:String>
+    <sys:String x:Key="ProjectProRetail">Project Professional 2016 - Retail</sys:String>
+    <sys:String x:Key="ProjectProXVolume">Project Professional 2016 - Volume</sys:String>
+    <sys:String x:Key="ProjectProVolume">Project Professional 2016 - Volume</sys:String>
+    <sys:String x:Key="ProjectStd2019Retail">Project Standard 2019 - Retail</sys:String>
+    <sys:String x:Key="ProjectStd2019Volume">Project Standard 2019 - Volume</sys:String>
+    <sys:String x:Key="ProjectStdRetail">Project Standard 2016 - Retail</sys:String>
+    <sys:String x:Key="ProjectStdXVolume">Project Standard 2016 - Volume</sys:String>
+    <sys:String x:Key="ProjectStdVolume">Project Standard 2016 - Volume</sys:String>
+    <sys:String x:Key="VisioPro2019Retail">Visio Professional 2019 - Retail</sys:String>
+    <sys:String x:Key="VisioPro2019Volume">Visio Professional 2019 - Volume</sys:String>
+    <sys:String x:Key="VisioProRetail">Visio Professional 2016 - Retail</sys:String>
+    <sys:String x:Key="VisioProXVolume">Visio Professional 2016 - Volume</sys:String>
+    <sys:String x:Key="VisioProVolume">Visio Professional 2016 - Volume</sys:String>
+    <sys:String x:Key="VisioStd2019Retail">Visio Standard 2019 - Retail</sys:String>
+    <sys:String x:Key="VisioStd2019Volume">Visio Standard 2019 - Volume</sys:String>
+    <sys:String x:Key="VisioStdRetail">Visio Standard 2016 - Retail</sys:String>
+    <sys:String x:Key="VisioStdXVolume">Visio Standard 2016 - Volume</sys:String>
+    <sys:String x:Key="VisioStdVolume">Visio Standard 2016 - Volume</sys:String>
+    <sys:String x:Key="Access2019Retail">Access 2019 - Retail</sys:String>
+    <sys:String x:Key="Access2019Volume">Access 2019 - Volume</sys:String>
+    <sys:String x:Key="AccessRetail">Access 2016 - Retail</sys:String>
+    <sys:String x:Key="AccessVolume">Access 2016 - Volume</sys:String>
+    <sys:String x:Key="AccessRuntimeRetail">Access Runtime 2016 - Retail</sys:String>
+    <sys:String x:Key="AccessRuntime2019Retail">Access Runtime 2019 - Retail</sys:String>
+    <sys:String x:Key="Excel2019Retail">Excel 2019 - Retail</sys:String>
+    <sys:String x:Key="Excel2019Volume">Excel 2019 - Volume</sys:String>
+    <sys:String x:Key="ExcelRetail">Excel 2016 - Retail</sys:String>
+    <sys:String x:Key="ExcelVolume">Excel 2016 - Volume</sys:String>
+    <sys:String x:Key="OneNoteFreeRetail">OneNote Home and Student 2016 - Retail</sys:String>
+    <sys:String x:Key="OneNoteRetail">OneNote 2016 - Retail</sys:String>
+    <sys:String x:Key="OneNoteVolume">OneNote 2016 - Volume</sys:String>
+    <sys:String x:Key="Outlook2019Retail">Outlook 2019 - Retail</sys:String>
+    <sys:String x:Key="Outlook2019Volume">Outlook 2019 - Volume</sys:String>
+    <sys:String x:Key="OutlookRetail">Outlook 2016 - Retail</sys:String>
+    <sys:String x:Key="OutlookVolume">Outlook 2016 - Volume</sys:String>
+    <sys:String x:Key="PowerPoint2019Retail">PowerPoint 2019 - Retail</sys:String>
+    <sys:String x:Key="PowerPoint2019Volume">PowerPoint 2019 - Volume</sys:String>
+    <sys:String x:Key="PowerPointRetail">PowerPoint 2016 - Retail</sys:String>
+    <sys:String x:Key="PowerPointVolume">PowerPoint 2016 - Volume</sys:String>
+    <sys:String x:Key="Publisher2019Retail">Publisher 2019 - Retail</sys:String>
+    <sys:String x:Key="Publisher2019Volume">Publisher 2019 - Volume</sys:String>
+    <sys:String x:Key="PublisherRetail">Publisher 2016 - Retail</sys:String>
+    <sys:String x:Key="PublisherVolume">Publisher 2016 - Volume</sys:String>
+    <sys:String x:Key="SkypeforBusiness2019Retail">Skype for Business 2019 - Retail</sys:String>
+    <sys:String x:Key="SkypeforBusiness2019Volume">Skype for Business 2019 - Volume</sys:String>
+    <sys:String x:Key="SkypeforBusinessEntry2019Retail">Skype for Business Basic 2019 - Retail</sys:String>
+    <sys:String x:Key="SkypeforBusinessEntryRetail">Skype for Business Basic 2016 - Retail</sys:String>
+    <sys:String x:Key="SkypeforBusinessRetail">Skype for Business 2016 - Retail</sys:String>
+    <sys:String x:Key="SkypeforBusinessVolume">Skype for Business 2016 - Volume</sys:String>
+    <sys:String x:Key="SkypeServiceBypassRetail">Skype for Business 2016</sys:String>
+    <sys:String x:Key="Word2019Retail">Word 2019 - Retail</sys:String>
+    <sys:String x:Key="Word2019Volume">Word 2019 - Volume</sys:String>
+    <sys:String x:Key="WordRetail">Word 2016 - Retail</sys:String>
+    <sys:String x:Key="WordVolume">Word 2016 - Volume</sys:String>
     <!--  Global  -->
-    <sys:String x:Key="TabTip">설명</sys:String>
-    <sys:String x:Key="TabTipError">서버에서 정보를 가져오기 실패</sys:String>
-    <sys:String x:Key="Architecture">구조:</sys:String>
+    <sys:String x:Key="Message">메시지</sys:String>
+    <sys:String x:Key="Notice">주의</sys:String>
+    <sys:String x:Key="Warning">경고</sys:String>
+    <sys:String x:Key="Error">에러</sys:String>
+    <sys:String x:Key="Yes">네</sys:String>
+    <sys:String x:Key="No">아니요</sys:String>
+    <sys:String x:Key="OK">확인</sys:String>
+    <sys:String x:Key="Cancel">취소</sys:String>
+    <sys:String x:Key="OfficeDeploymentTool">Office 배포 도구</sys:String>
     <sys:String x:Key="Version">버전:</sys:String>
-    <sys:String x:Key="NoInf">없음</sys:String>
+    <sys:String x:Key="Architecture">구조:</sys:String>
+    <sys:String x:Key="x86">32비트</sys:String>
+    <sys:String x:Key="x64">64비트</sys:String>
+    <sys:String x:Key="BasicSettings">기본설정</sys:String>
+    <sys:String x:Key="AdvancedSettings">고급설정</sys:String>
+    <sys:String x:Key="Retry">재시도</sys:String>
     <sys:String x:Key="Normal">일반</sys:String>
-    <!--  Left Tabs  -->
-    <sys:String x:Key="Tab0">홈</sys:String>
-    <sys:String x:Key="Tab1">관리</sys:String>
-    <sys:String x:Key="Tab2">다운로드</sys:String>
-    <sys:String x:Key="Tab3">설치</sys:String>
-    <sys:String x:Key="Tab4">정품인증</sys:String>
-    <sys:String x:Key="Tab5">파일전환</sys:String>
-    <sys:String x:Key="Tab6">도구</sys:String>
-    <sys:String x:Key="Tab7">설정</sys:String>
-    <sys:String x:Key="Tab8">소개</sys:String>
-    
-    <!--  Installation File Page  -->
-    <sys:String x:Key="InstallationFilesInf">설치 파일 정보</sys:String>
-    <sys:String x:Key="SelectInstallationPath">파일 선택</sys:String>
-    <sys:String x:Key="DeleteInstallationFiles">파일 삭제</sys:String>
-    <sys:String x:Key="InstallationInf">파일 정보:</sys:String>
+    <sys:String x:Key="None">없음</sys:String>
+    <sys:String x:Key="Query">조회</sys:String>
+    <sys:String x:Key="Uninstall">제거</sys:String>
+
     <!-- Greetings -->
     <!-- Showed when app started. -->
-    <sys:String x:Key="GreetingHi">좋은 아침. %UserName%</sys:String>
+    <sys:String x:Key="GreetingHi">좋은 하루 보내세요. {0}님.</sys:String>
     <!-- 06:00 - 11:00 -->
-    <sys:String x:Key="GreetingGoodMorning">좋은 점심. %UserName%</sys:String>
+    <sys:String x:Key="GreetingGoodMorning">안녕하세요. {0}님.</sys:String>
     <!-- 11:00 - 13:00 -->
-    <sys:String x:Key="GreetingGoodAfternoon1">좋은 오후. %UserName%</sys:String>
+    <sys:String x:Key="GreetingGoodAfternoon1">좋은 오후 보내세요. {0}님.</sys:String>
     <!-- 13:00 - 18:00 -->
-    <sys:String x:Key="GreetingGoodAfternoon2">좋은 오후. %UserName%</sys:String>
+    <sys:String x:Key="GreetingGoodAfternoon2">안녕하세요. {0}님.</sys:String>
     <!-- 18:00 - 22:00 -->
-    <sys:String x:Key="GreetingGoodEvening">좋은 밤. %UserName%</sys:String>
+    <sys:String x:Key="GreetingGoodEvening">좋은 밤 보내세요. {0}</sys:String>
     <!-- 22:00 - 06:00 (+1) -->
-    <sys:String x:Key="GreetingLateAtNight">%UserName%님, 밤이 깊어서 잠을 자요.</sys:String>
-    <!--  Home  -->
-    <sys:String x:Key="Link">린크</sys:String>
-    <sys:String x:Key="OfficialLink">공식린크</sys:String>
-    <sys:String x:Key="ContantLink">연락정보</sys:String>
-    <sys:String x:Key="FriendlyLink">관련린크</sys:String>
+    <sys:String x:Key="GreetingLateAtNight">{0}님, 밤이 깊어서 일찍 쉬세요.</sys:String>
+    <!-- Home -->
+    <sys:String x:Key="Deploy">배포</sys:String>
+    <sys:String x:Key="Activate">정품인정</sys:String>
+    <sys:String x:Key="Toolbox">도구박스</sys:String>
     <sys:String x:Key="Homepage">공식사이트</sys:String>
-    <sys:String x:Key="Help">도움말</sys:String>
-    <sys:String x:Key="Feedback">피드백</sys:String>
-    <sys:String x:Key="Donate">응원기부😊</sys:String>
-    <sys:String x:Key="Link0">Landian</sys:String>
-    <sys:String x:Key="Link1">QQ그룹: 483111912</sys:String>
-    <sys:String x:Key="Link2">위챗 그룹</sys:String>
-    <sys:String x:Key="Link3">Office 선터</sys:String>
-    <sys:String x:Key="Link4">Office 안전선터</sys:String>
-    <sys:String x:Key="Link5">Office 365 알아보기</sys:String>
-    <sys:String x:Key="Announcement">공식메시지</sys:String>
-    <sys:String x:Key="ReacquireAnnouncement">[여기에 클릭하여 다시 시도하기]</sys:String>
-    <sys:String x:Key="SwitchServer">여기에 클릭하여 서버 바꿔서 다시 시도하기</sys:String>
-    <sys:String x:Key="ServerUnavailable">서버에 접속하지 못하여 네트워크 연결 상태를 확인해서 다시 시도하기.</sys:String>
-    <!--  Manage Page  -->
-    <sys:String x:Key="Tab1Launcher">빠른시작</sys:String>
-    <sys:String x:Key="Tab1Uninstall">제거</sys:String>
-    <sys:String x:Key="Tab1BasicInf">기본정보</sys:String>
-    <sys:String x:Key="Tab1ReadInfError">정보 가져오기 에러</sys:String>
-    <sys:String x:Key="Tab1Installed">설치된 슈트나 제품:</sys:String>
-    <sys:String x:Key="Tab1C2RLanguage">Click-to-Run 언어:</sys:String>
-    <sys:String x:Key="Tab1ClientVersion">C2R버전:</sys:String>
-    <sys:String x:Key="Tab1EditConfig">편집정보</sys:String>
-    <sys:String x:Key="Tab1Channel">업데이트 채널:</sys:String>
-    <sys:String x:Key="Tab1ChannelChanged">엡데이트 채널 변경</sys:String>
-    <sys:String x:Key="Tab1UpdateEnabled">Office 업데이트 허용</sys:String>
-    <sys:String x:Key="Tab1Owner">소속:</sys:String>
-    <sys:String x:Key="Tab1RepairOffice">Office 복원</sys:String>
-    <sys:String x:Key="Tab1Save">저장</sys:String>
-    <sys:String x:Key="Tab1Reload">다시 가제져오기</sys:String>
-    <sys:String x:Key="Tab1CustomUninstall">사용자 정의되 제거</sys:String>
-    <sys:String x:Key="Tab1UninstallAll">전체 제거</sys:String>
-    <sys:String x:Key="Tab1RemoveOffice">Office 강제 제거</sys:String>
-    <!--  Download Page  -->
-    <sys:String x:Key="Tab2Status">상태:</sys:String>
-    <sys:String x:Key="Tab2Pending">다운로드 대기</sys:String>
-    <sys:String x:Key="Tab2Downloading">다운로딩</sys:String>
-    <sys:String x:Key="Tab2Pausing">일시정지 중...</sys:String>
-    <sys:String x:Key="Tab2Paused">일시정지 됨</sys:String>
-    <sys:String x:Key="Tab2Error">에러 나타납니다.</sys:String>
-    <sys:String x:Key="Tab2Finish">완료</sys:String>
-    <sys:String x:Key="Tab2StateCancel">취소됨</sys:String>
-    <sys:String x:Key="Tab2Creating">ISO파일을 생성 중...</sys:String>
-    <sys:String x:Key="Tab2CreateFinish">ISO파일을 생성 완료</sys:String>
-    <sys:String x:Key="Tab2Path">경로:</sys:String>
-    <sys:String x:Key="Tab2Start">시작</sys:String>
-    <sys:String x:Key="Tab2Pause">일시정지</sys:String>
-    <sys:String x:Key="Tab2Resume">복원</sys:String>
-    <sys:String x:Key="Tab2Cancel">취소</sys:String>
-    <sys:String x:Key="Tab2CreateISO">ISO파일 생성</sys:String>
-    <sys:String x:Key="Tab2Channel">채널:</sys:String>
-    <sys:String x:Key="Tab2HistoricVersion">이전의 버전(옵션):</sys:String>
-    <sys:String x:Key="Tab2VersionInf">버전정보</sys:String>
-    <sys:String x:Key="Tab2CreatedTimeUTC">생성시간(UTC):</sys:String>
-    <sys:String x:Key="Tab2CheckVersion">버전조회</sys:String>
-    <sys:String x:Key="Tab2ViewVersion">모든 버전 표시</sys:String>
-    <sys:String x:Key="Tab2Language">언어</sys:String>
-    <sys:String x:Key="Tab2SpeedLimit">속도 제한:</sys:String>
-    <sys:String x:Key="Tab2SetSpeedLimit">속도 제한 설정</sys:String>
-    <sys:String x:Key="Tab2DownloadSettings">다운로드 설정</sys:String>
-    <sys:String x:Key="Tab2DownloadMode">모드:</sys:String>
-    <sys:String x:Key="Tab2ModeFull">모든 패키지</sys:String>
-    <sys:String x:Key="Tab2ModeLangPack">언어 패키지</sys:String>
-    <sys:String x:Key="Tab2DownloadWay">다운로드 언진:</sys:String>
-    <sys:String x:Key="Tab2WayThunder">Thunder</sys:String>
-    <sys:String x:Key="Tab2WaySetup">마이크로소프트 공식 프로그램</sys:String>
-    <sys:String x:Key="Tab2UseHTTPS">HTTPS 연결 사용</sys:String>
-    <sys:String x:Key="Tab2ProxyType">대리 유형:</sys:String>
-    <sys:String x:Key="Tab2SettingsServerAddress">서버 주소:</sys:String>
-    <sys:String x:Key="Tab2SettingsUserName">아이디:</sys:String>
-    <sys:String x:Key="Tab2SettingsPassword">비밀번호:</sys:String>
-    <sys:String x:Key="Tab2SettingsThunder">Thunder설정</sys:String>
-    <sys:String x:Key="Tab2SettingsAria2c">Aria2c설정</sys:String>
-    <sys:String x:Key="Tab2SettingsApplyProxy">적용</sys:String>
-    <!--  Install Page  -->
-    <sys:String x:Key="Tab3Products">제품</sys:String>
-    <sys:String x:Key="Tab3ViewCode">코드 보기</sys:String>
-    <sys:String x:Key="Tab3Suites">Office 슈트:</sys:String>
-    <sys:String x:Key="Tab3AdditionalProducts">기타 제품:</sys:String>
-    <sys:String x:Key="Tab3Apps">응용프로그램</sys:String>
-    <sys:String x:Key="Tab3InstallSettings">설치 설정</sys:String>
-    <sys:String x:Key="Tab3InstallWay">설치 유형:</sys:String>
-    <sys:String x:Key="Tab3InstallOnline">온라인 설치</sys:String>
-    <sys:String x:Key="Tab3InstallOffline">오프라인 설치</sys:String>
-    <sys:String x:Key="Tab3InstallationModule">모듈:</sys:String>
-    <sys:String x:Key="Tab3CreateShortcut">설치 완료 후 바탕화면에서 단축키를 생성합니다.</sys:String>
-    <sys:String x:Key="Tab3LanguageSettings">언어 설정</sys:String>
-    <sys:String x:Key="Tab3MainLanguage">주요 언어:</sys:String>
-    <sys:String x:Key="Tab3AdditionalLanguage">추가 언어</sys:String>
-    <sys:String x:Key="Tab3LanguageMatchOS">운영체제와 맞게</sys:String>
-    <sys:String x:Key="Tab3LanguageMatchInstalled">설치된 Office와 맞게</sys:String>
-    <sys:String x:Key="Tab3Advanced">설정 옵션</sys:String>
-    <sys:String x:Key="Tab3OrganizationName">조직 명칭을 제공하여 Office 문서에서 조직 속성을 설치합니다.</sys:String>
-    <sys:String x:Key="Tab3Description">기록 가능하도록 설정 설명을 제공합니다.</sys:String>
-    <sys:String x:Key="Tab3InstallationSettings">설치 설정</sys:String>
-    <sys:String x:Key="Tab3SourcePath">소스 경로:</sys:String>
-    <sys:String x:Key="Tab3DownloadPath">다운로드 경로:</sys:String>
-    <sys:String x:Key="Tab3MigrateArch">이송 구조</sys:String>
-    <sys:String x:Key="Tab3AllowCDNFallback">CDN로 로백</sys:String>
-    <sys:String x:Key="Tab3ForceCloseApps">설치를 억제하는 모든 프로그램을 강제 종료</sys:String>
-    <sys:String x:Key="Tab3PinIconToTaskbar">Win 7, 8, 8.1 운영체제일 경우 타스크바에서 Office 제품의 단축키 아이콘을 추가합니다.</sys:String>
-    <sys:String x:Key="Tab3DisplaySettings">디스플레이 설정</sys:String>
-    <sys:String x:Key="Tab3DisplayLevel">설치 과정중 UI표시 않음</sys:String>
-    <sys:String x:Key="Tab3AcceptEULA">소프트웨어 이용약관 확인</sys:String>
-    <sys:String x:Key="Tab3LogSettings">기록 옵션</sys:String>
-    <sys:String x:Key="Tab3SaveLog">로그 기록 허용</sys:String>
-    <sys:String x:Key="Tab3LogPath">로그 기록 경로:</sys:String>
-    <sys:String x:Key="Tab3UpdateSettings">업데이트 설정</sys:String>
-    <sys:String x:Key="Tab3DisableUpdate">Office 업데이트 사용 금지</sys:String>
-    <sys:String x:Key="Tab3EnableCOM">설정 관리 도구로 업데이트 관리</sys:String>
-    <sys:String x:Key="Tab3UpdatePath">업데이트 소스:</sys:String>
-    <sys:String x:Key="Tab3TargetVersion">타겟버전:</sys:String>
-    <sys:String x:Key="Tab3UpdateDeadline">취신 업데이트 시간:</sys:String>
-    <sys:String x:Key="Tab3UpgradeSettings">업데이트 옵션</sys:String>
-    <sys:String x:Key="Tab3ForceUpgrade">강게 업데이트</sys:String>
-    <sys:String x:Key="Tab3RemoveMSI">기존 MSI버전의 Office 제거</sys:String>
-    <sys:String x:Key="Tab3MatchPreviousMSI">이전 버전의 MSI 언어와 맞게</sys:String>
-    <sys:String x:Key="Tab3Ignore">무시:</sys:String>
-    <sys:String x:Key="Tab3ActivateSettings">정품인증 설정</sys:String>
-    <sys:String x:Key="Tab3AutoActivate">자동으로 정품인정</sys:String>
-    <sys:String x:Key="Tab3SCL">공유 컴퓨터 인정</sys:String>
-    <sys:String x:Key="Tab3SCLCacheOverride">사용자 정의 인정 토큰 로밍</sys:String>
-    <sys:String x:Key="Tab3SCLCOD">인정 토큰 로밍 경로:</sys:String>
-    <!--  Install Page Button  -->
-    <sys:String x:Key="Tab3StartInstall">설치 시작</sys:String>
-    <sys:String x:Key="Tab3SaveAsXML">XML로 설정정보 저장</sys:String>
-    <sys:String x:Key="Tab3SelectXML">XML파일 선택</sys:String>
-    <sys:String x:Key="Tab3CreatePackage">App-V패키지 생성</sys:String>
-    <!--  Activate Page  -->
-    <sys:String x:Key="Tab4LicensesManage">증서관리</sys:String>
-    <sys:String x:Key="Tab4SelectLicense">하나의 증서 선택:</sys:String>
-    <sys:String x:Key="Tab4InstallLicenses">라이선스 설치</sys:String>
-    <sys:String x:Key="Tab4ClearLicenses">모든 라이선스 치우기</sys:String>
-    <sys:String x:Key="Tab4ResetLicensingStatus">라이선스 상태 초기화</sys:String>
-    <sys:String x:Key="Tab4ClearActivation">정품인정 상태 치우기</sys:String>
-    <sys:String x:Key="Tab4KeyManage">키 관리</sys:String>
-    <sys:String x:Key="Tab4KeyOrCID">제품 키나 확인 아이디</sys:String>
-    <sys:String x:Key="Tab4InstallKey">설치 키</sys:String>
-    <sys:String x:Key="Tab4UninstallKey">제거 키</sys:String>
-    <sys:String x:Key="Tab4UninstallAllKeys">모든 키 제거</sys:String>
-    <sys:String x:Key="Tab4ViewIID">설치ID 보기</sys:String>
-    <sys:String x:Key="Tab4InstallCID">설치 확인ID</sys:String>
-    <sys:String x:Key="Tab4KMSManage">KMS관리</sys:String>
-    <sys:String x:Key="Tab4KMSAddress">KMS서버 주소</sys:String>
-    <sys:String x:Key="Tab4KMSPort">포트(선택)</sys:String>
-    <sys:String x:Key="Tab4CheckKMS">KMS사용 가능여부 확인</sys:String>
-    <sys:String x:Key="Tab4SetKMS">서버 주소 설정</sys:String>
-    <sys:String x:Key="Tab4SetPort">서버 포트 설정</sys:String>
-    <sys:String x:Key="Tab4ClearKMS">서버 주소 치우기(포트를 기본값으로 초기화)</sys:String>
-    <sys:String x:Key="Tab4Activate">정품인정</sys:String>
-    <sys:String x:Key="Tab4ViewInformation">정품인정 정보 표시</sys:String>
-    <sys:String x:Key="Tab4ViewLicenses">설치된 라이선스 정보 표시</sys:String>
-    <sys:String x:Key="Tab4ViewFailureHistory">MAK/소매 정품인정 실패 기록 표시</sys:String>
-    <sys:String x:Key="Tab4ViewKMSHistory">KMS크라이언트 정품인정 기록 표시</sys:String>
-    <sys:String x:Key="Tab4Result">결과</sys:String>
-    <!--  Convert Document Page  -->
-    <sys:String x:Key="Tab5SourceFormat">수입 포맷:</sys:String>
-    <sys:String x:Key="Tab5OutputFormat">수출 포맷:</sys:String>
-    <sys:String x:Key="Tab5SelectFile">파일 선택</sys:String>
-    <sys:String x:Key="Tab5Interval">조작간격(ms):</sys:String>
-    <sys:String x:Key="Tab5Timeout">타임아웃(s):</sys:String>
-    <!--  Tool Box Page  -->
-    <sys:String x:Key="ToolBoxRepair">복원</sys:String>
-    <sys:String x:Key="ToolBoxRepairOfficeDocumentIcon">Office문서 아이콘 복원</sys:String>
-    <sys:String x:Key="ToolBoxRepairODIDescription">Office문서의 아이콘이 정상적으로 표시 되지 않는 경우 레지스토리 복원를 시도하세요. 복원 완성후 꼭 Office 자체의 빠른 복원을 진행해야합니다.</sys:String>
-    <sys:String x:Key="ToolBoxRepairActivationFailed">Office정상적으로 정품인정기능 복원</sys:String>
-    <sys:String x:Key="ToolBoxRepairAFDescription">Office 정품인정할 때 알리지지 않는 에러 코드 발생하며 이전에 KMS를 사용했다면 이 방법으로 레지스토리를 복원하세요.</sys:String>
-    <sys:String x:Key="ToolBoxRepairVBS">VBS파일 연결</sys:String>
-    <sys:String x:Key="ToolBoxRepairVBSDescription">Office정품인정할 때 &quot;.vbs&quot; 파일 확장 스크리프트 엔진없다는 에러 발생하면 이 방법으로 레지스토리를 복원하세요.</sys:String>
-    <sys:String x:Key="ToolBoxRepairTemplates">Office 기존 문서 양식을 복원합니다.</sys:String>
-    <sys:String x:Key="ToolBoxRepairTemplatesDescription">문서 생성할 때 "호환 모드"를 표시하면 Office 프로그램의 기존 문서 양식을 재설정하는 것을 시도하세요.</sys:String>
-    <sys:String x:Key="ToolBoxRepairInstallation">Office를 설치하지 못하는 경우 이슈를 처리합니다.</sys:String>
-    <sys:String x:Key="ToolBoxRepairInstallationDescription">Office를 설치할 때 알려지지 않는 문제가 발생하면 이 방법으로 레지스토리 복원하기를 시도할 수 있습니다. 주의: 시스템 파손이 심하는 경우 이 방법이 무효할 수 있어서 계속 설치 실패하면 윈도우 시스템을 재설치 해야합니다.</sys:String>
-    <!--  Settings Page  -->
-    <sys:String x:Key="GeneralSettings">일반 설정</sys:String>
-    <sys:String x:Key="SettingsNone">아무 조치하지 않음</sys:String>
-    <sys:String x:Key="SettingsAD">다운로드 완료 후:</sys:String>
-    <sys:String x:Key="SettingsAI">설치 완료 후:</sys:String>
-    <sys:String x:Key="SettingsSetup">설피 프로그램 시작</sys:String>
-    <sys:String x:Key="SettingsExit">OTP퇴출</sys:String>
-    <sys:String x:Key="SettingsLogOut">로그아웃</sys:String>
-    <sys:String x:Key="SettingsPowerOff">샷다운</sys:String>
-    <sys:String x:Key="SettingsReboot">재시작</sys:String>
+    <sys:String x:Key="Contact">상담센터</sys:String>
+    <sys:String x:Key="Donate">응원기부</sys:String>
+    <sys:String x:Key="JoinGroup">그룹참여</sys:String>
+    <sys:String x:Key="ServerUnavailable">서버에 연결할 수 없으니 인터넷 연결 상태를 확인하세요.</sys:String>
+    <!-- Deploy Page -->
+    <sys:String x:Key="StartDeploy">Office 배포</sys:String>
+    <sys:String x:Key="DeployViewCode">코드 보기</sys:String>
+    <sys:String x:Key="DeployExportXML">XML로 설정정보 저장</sys:String>
+    <sys:String x:Key="DeployImportXML">XML파일 선택</sys:String>
+    <!-- Download Panel -->
+    <sys:String x:Key="DownloadStatus">상태:</sys:String>
+    <sys:String x:Key="DownloadPending">다운로드 대기</sys:String>
+    <sys:String x:Key="DownloadDownloading">다운로딩</sys:String>
+    <sys:String x:Key="DownloadPausing">일시정지 중...</sys:String>
+    <sys:String x:Key="DownloadPaused">일시정지 됨</sys:String>
+    <sys:String x:Key="DownloadCreating">ISO파일을 생성 중...</sys:String>
+    <sys:String x:Key="DownloadPause">일시정지</sys:String>
+    <sys:String x:Key="DownloadResume">복원</sys:String>
+    <!-- Product -->
+    <sys:String x:Key="DeployProducts">제품</sys:String>
+    <sys:String x:Key="DeployProductID">제품ID:</sys:String>
+    <sys:String x:Key="DeployAddProduct">제품 추가</sys:String>
+    <sys:String x:Key="DeployErrorConfig">⚠이 제품은 이미 존재한 제품과 동시에 존재할 수 없습니다.</sys:String>
+    <sys:String x:Key="DeployErrorModule">⚠이 제품은 Office Tool Plus모듈로 설치해야합니다.</sys:String>
+    <sys:String x:Key="DeployErrorChannel">⚠이 제품은 선택된 채널({0})에 설치할 수 없습니다.</sys:String>
+    <sys:String x:Key="DeployErrorDogfood">⚠ DevMain(Dogfood) 채널을 사용하려면 설치 모율을 Office Tool Plus로 바꿔야합니다.</sys:String>
+    <sys:String x:Key="DeployErrorSystem">⚠ 32비트의 시스템에서 64비트의 Office를 설치할 수 없습니다.</sys:String>
+    <!-- Example: ⚠ You can't install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
+    <sys:String x:Key="DeployErrorArch">⚠ 컴퓨터에서 이미 {1}의 Office가 존재하였으니 {0}의 Office를 설치할 수 없습니다.</sys:String>
+    <sys:String x:Key="DeployWillUninstall">⚠ "배포 시작"을 클릭해서 제거 확인하세요.</sys:String>
+    <sys:String x:Key="DeployApps">응용프로그램</sys:String>
+    <!-- Language -->
+    <sys:String x:Key="LanguagePack">언어 패키지</sys:String>
+    <sys:String x:Key="LanguageID">언어 아이디: {0}</sys:String>
+    <sys:String x:Key="LanguageType">언어 패키지 유형: {0}</sys:String>
+    <sys:String x:Key="Full">전체</sys:String>
+    <sys:String x:Key="Partial">일부</sys:String>
+    <sys:String x:Key="PartialWithoutProofingTools">일부(문법 검사 툴 없음)</sys:String>
+    <sys:String x:Key="ProofingTools">문법 검사 툴</sys:String>
+    <sys:String x:Key="DeployAsProof">검사도구로 배포하기</sys:String>
+    <sys:String x:Key="DeployAddLanguagePackage">언어 패키지 추가</sys:String>
+    <!-- Advanced Settings -->
+    <sys:String x:Key="DeployOrganizationName">조직 명칭을 제공하여 Office 문서에서 조직 속성을 설치합니다.</sys:String>
+    <sys:String x:Key="DeployDescription">기록 가능하도록 설정 설명을 제공합니다.</sys:String>
+    <!-- Installation Settings -->
+    <sys:String x:Key="DeployInstallationSettings">설치 설정</sys:String>
+    <sys:String x:Key="DeployDownloadPath">다운로드 경로:</sys:String>
+    <sys:String x:Key="DeployDownloadPathTip">설치 파일 다운로드 소스를 지정합니다. 이 속성을 사용하려면 반드시 버전 번호를 지정 해야합니다.</sys:String>
+    <sys:String x:Key="DeploySourcePath">소스 경로:</sys:String>
+    <sys:String x:Key="DeploySourcePathTip">소스 경로가 비여 있으면 Office CDN를 기본 소스로 사용합니다. 다운로드 모드에서 이 속성이 설치 파일의 저정 경로를 결정합니다.</sys:String>
+    <sys:String x:Key="DeployDisplayLevel">설치 과정중 UI표시 않음</sys:String>
+    <sys:String x:Key="DeployAllowCDNFallback">Office CDN로 롤백해서 언어를 설치하는 기능 허용함</sys:String>
+    <sys:String x:Key="DeployForceCloseApps">실행중인 Office응용프로그램을 닫기.</sys:String>
+    <sys:String x:Key="DeployPinIconToTaskbar">Win 7, 8, 8.1 운영체제일 경우 타스크바에서 Office 제품의 단축키 아이콘을 추가합니다.</sys:String>
+    <!-- Log Settings -->
+    <sys:String x:Key="DeployLogSettings">기록 옵션</sys:String>
+    <sys:String x:Key="DeploySaveLog">로그 기록 허용</sys:String>
+    <sys:String x:Key="DeployLogPath">로그 기록 경로:</sys:String>
+    <!-- Update Settings -->
+    <sys:String x:Key="DeployUpdateSettings">업데이트 설정</sys:String>
+    <sys:String x:Key="DeployEnableUpdate">Office 자동 업데이트 허용</sys:String>
+    <sys:String x:Key="DeployEnableCOM">설정 관리 도구로 업데이트 관리</sys:String>
+    <sys:String x:Key="DeployUpdatePath">업데이트 소스:</sys:String>
+    <sys:String x:Key="DeployTargetVersion">타겟버전:</sys:String>
+    <sys:String x:Key="DeployUpdateDeadline">최신 업데이트 시간:</sys:String>
+    <sys:String x:Key="DeployUpdateChannel">업데이트 채널:</sys:String>
+    <!-- Upgrade Settings -->
+    <sys:String x:Key="DeployUpgradeSettings">업데이트 옵션</sys:String>
+    <sys:String x:Key="DeployMigrateArch">이송 구조</sys:String>
+    <sys:String x:Key="DeployMigrateArchTip">이송 구조가 선택되면 기존된 Office설치가 정의된 구조로 변경합니다.</sys:String>
+    <sys:String x:Key="DeployForceUpgrade">강게 업데이트</sys:String>
+    <sys:String x:Key="DeployRemoveMSI">기존 MSI버전의 Office 제거</sys:String>
+    <sys:String x:Key="DeployIgnoreProduct">이 제품을 무시</sys:String>
+    <sys:String x:Key="DeployMatchPreviousMSI">이전 버전의 MSI 언어와 맞게</sys:String>
+    <!-- Activate Settings -->
+    <sys:String x:Key="DeployActivateSettings">정품인증 설정</sys:String>
+    <sys:String x:Key="DeployAcceptEULA">자동으로 EULA 확인</sys:String>
+    <sys:String x:Key="DeployAcceptEULATip">AcceptEULA를 TRUE로 설정하면 사용자가 "마이크로소프트 소프트웨어 이용약권" 대화창을 볼 수 없스습니다.</sys:String>
+    <sys:String x:Key="DeployProductMAK">MAK설정</sys:String>
+    <sys:String x:Key="DeployAutoActivate">자동으로 정품인정</sys:String>
+    <sys:String x:Key="DeployProductActivation">제품 정품인정</sys:String>
+    <sys:String x:Key="DeployActivateByUser">사용자 기준</sys:String>
+    <sys:String x:Key="DeployActivateBySCL">공유된 컴퓨터</sys:String>
+    <sys:String x:Key="DeployActivateSCLCacheOverride">라이선스 토큰 로밍 허용</sys:String>
+    <sys:String x:Key="DeployBasedDevice">설비 기준</sys:String>
+    <!-- Deploy Settings -->
+    <sys:String x:Key="DeploySettings">배포설정</sys:String>
+    <sys:String x:Key="DeployChannel">채널:</sys:String>
+    <sys:String x:Key="DeployMode">배포모드:</sys:String>
+    <sys:String x:Key="DeployModeIWD">다운로드와 설치 동시 진행</sys:String>
+    <sys:String x:Key="DeployModeIAD">다운로드 완료 후 설치 진행</sys:String>
+    <sys:String x:Key="DeployModeUEI">기존 설치 소스 사용</sys:String>
+    <sys:String x:Key="DeployModeCreateISO">ISO 파일 생성</sys:String>
+    <sys:String x:Key="DeployModeDownload">다운로드만 진행</sys:String>
+    <sys:String x:Key="DeployModeEdit">환경설정만 편집</sys:String>
+    <sys:String x:Key="DeployModule">설치모듈:</sys:String>
+    <sys:String x:Key="DeployCreateShortcut">바탕화면 바로가기 생성</sys:String>
+    <sys:String x:Key="DeployInstalliSlide">iSlide 플러그인 설치</sys:String>
+    <!-- Download Settings -->
+    <sys:String x:Key="DownloadSettings">다운로드 설정</sys:String>
+    <sys:String x:Key="DownloadEngine">다운로드 언진:</sys:String>
+    <sys:String x:Key="DownloadEngineThunder">Thunder</sys:String>
+    <sys:String x:Key="DownloadUseHTTPS">HTTPS 연결 사용</sys:String>
+    <sys:String x:Key="DownloadThunderSettings">Thunder설정</sys:String>
+    <sys:String x:Key="DownloadSpeedLimit">속도 제한</sys:String>
+    <sys:String x:Key="DownloadProxyType">대리 유형:</sys:String>
+    <sys:String x:Key="DownloadServerAddress">서버 주소:</sys:String>
+    <sys:String x:Key="DownloadUserName">아이디:</sys:String>
+    <sys:String x:Key="DownloadPassword">비밀번호:</sys:String>
+    <!-- Installation Manage -->
+    <sys:String x:Key="InstallationFilesManage">설치 파일 관리</sys:String>
+    <sys:String x:Key="SelectInstallation">설치 소스 선택</sys:String>
+    <!-- Activate Page -->
+    <sys:String x:Key="ActivateViewInformation">정품인정 정보 표시</sys:String>
+    <sys:String x:Key="ActivateViewLicenses">설치된 라이선스 정보 표시</sys:String>
+    <sys:String x:Key="ActivateViewFailureHistory">MAK/소매 정품인정 실패 기록 표시</sys:String>
+    <sys:String x:Key="ActivateViewKMSHistory">KMS크라이언트 정품인정 기록 표시</sys:String>
+    <sys:String x:Key="ActivateClearResult">작업 결과 치우기</sys:String>
+    <sys:String x:Key="ActivateResult">작업 결과</sys:String>
+    <!-- Licenses -->
+    <sys:String x:Key="ActivateLicensesManage">증서관리</sys:String>
+    <sys:String x:Key="ActivateSelectLicense">하나의 증서 선택:</sys:String>
+    <sys:String x:Key="ActivateInstallLicenses">라이선스 설치</sys:String>
+    <sys:String x:Key="ActivateClearLicenses">모든 라이선스 치우기</sys:String>
+    <sys:String x:Key="ActivateRLS">지정된 라이선스 상태 초기화</sys:String>
+    <sys:String x:Key="ActivateRLSTip">SKU 아이디 값을 제공 해야합니다.</sys:String>
+    <sys:String x:Key="ActivateRLSForAll">모든 라이선스 상태 초기화</sys:String>
+    <sys:String x:Key="ActivateRLSForAllTip">모든 설치된 Office 제품의 라이선스 상태 초기화 되면 다시 정품인정 해야합니다.</sys:String>
+    <sys:String x:Key="ActivateClearActivation">정품인정 상태 치우기</sys:String>
+    <!-- Key -->
+    <sys:String x:Key="ActivateKeyManage">키 관리</sys:String>
+    <sys:String x:Key="ActivateProductKey">제품 키:</sys:String>
+    <sys:String x:Key="ActivateProductKeyTip">키 전부 입력해서 설치 진행하고 키 마지막 5자리 입력해서 제거 진행합니다.</sys:String>
+    <sys:String x:Key="ActivateInstallKey">설치 키</sys:String>
+    <sys:String x:Key="ActivateUninstallKey">제거 키</sys:String>
+    <sys:String x:Key="ActivateUninstallAllKeys">모든 키 제거</sys:String>
+    <sys:String x:Key="ActivateViewIID">설치ID 보기</sys:String>
+    <sys:String x:Key="ActivateInstallCID">설치 확인ID</sys:String>
+    <sys:String x:Key="ActivateInstallCIDTip">확인 아이디를 제공 해야합니다.</sys:String>
+    <!-- KMS -->
+    <sys:String x:Key="ActivateKMSManage">KMS관리</sys:String>
+    <sys:String x:Key="ActivateKMSHost">KMS서버 주소:</sys:String>
+    <sys:String x:Key="ActivateKMSPort">포트(선택):</sys:String>
+    <sys:String x:Key="ActivateSetKMS">서버 주소 설정</sys:String>
+    <sys:String x:Key="ActivateSetPort">서버 포트 설정</sys:String>
+    <sys:String x:Key="ActivateEnableCaching">호스트 캐싱 허용</sys:String>
+    <sys:String x:Key="ActivateDisableCaching">호스트 캐싱 금지</sys:String>
+    <sys:String x:Key="ActivateClearKMS">서버 주소 치우기(포트를 기본값으로 초기화)</sys:String>
+    <!-- Content Translation -->
+    <sys:String x:Key="ActivationTitle">Office 정품인정 진행중</sys:String>
+    <sys:String x:Key="LicenseDescription">라이선스 설명: </sys:String>
+    <sys:String x:Key="LicenseStatus">라이선스 상태: </sys:String>
+    <sys:String x:Key="RemainGrace">남은 횟수: </sys:String>
+    <sys:String x:Key="RemainGraceDay">일</sys:String>
+    <sys:String x:Key="RemainGraceMin">분 후 만기될겁니다</sys:String>
+    <sys:String x:Key="Licexpiry">베타 민기: </sys:String>
+    <sys:String x:Key="ErrorCode">에러 코드: </sys:String>
+    <sys:String x:Key="ErrorDescrpition">에러 설명: </sys:String>
+    <sys:String x:Key="ErrorUnknown">알려지지 않는 에러가 발생했습니다.</sys:String>
+    <sys:String x:Key="ErrorCodeValue">에러 코드가 '0x'로 시작해야합니다. 예를 보면: 0xC004F009</sys:String>
+    <sys:String x:Key="StatusLicensed"> **---인정됨---** </sys:String>
+    <sys:String x:Key="StatusUnlicensed"> `---인정되지 않음---` </sys:String>
+    <sys:String x:Key="StatusOOBGrace"> `---OOB_유예기간---` </sys:String>
+    <sys:String x:Key="StatusOOTGrace"> `---OOT_유예기간---` </sys:String>
+    <sys:String x:Key="StatusNonGenuineGrace"> `---인정되지않는 유예기간---` </sys:String>
+    <sys:String x:Key="StatusNotifications"> `---알림---` </sys:String>
+    <sys:String x:Key="StatusExtendedGrace"> `---확장된 유예기간---` </sys:String>
+    <sys:String x:Key="StatusUnknown"> `---알려지지 않음---` </sys:String>
+
+    <sys:String x:Key="AppliedSetting">설정 적용 성공.</sys:String>
+    <sys:String x:Key="NoKMSLics">시스템에서 Office KMS 라이선스를 발견되지 않습니다.</sys:String>
+    <sys:String x:Key="NoKeyInstalled">설치된 제품 키 없는 것으로 인식되었습니다.</sys:String>
+    <sys:String x:Key="UninstallKey">제품 키 제거 성공.</sys:String>
+    <sys:String x:Key="ActivationSuccess">**제품 정품인정 성공**</sys:String>
+    <sys:String x:Key="OfflineActivationSuccess">**오프라인 제품 정품인정 성공**</sys:String>
+    <sys:String x:Key="IKeySuccess">**제품 키 설치 성공**</sys:String>
+    <sys:String x:Key="ProductKey">설치된 제품 키의 마지막 5자리: </sys:String>
+    <sys:String x:Key="UninstallingKey">제품 키 제거: </sys:String>
+    <sys:String x:Key="ILicense">Office 라이선스 설치 중: </sys:String>
+    <sys:String x:Key="ILicenseSuccess">Office 라이선스 설치 성공.</sys:String>
+    <sys:String x:Key="InstallationID">설치ID:</sys:String>
+    <sys:String x:Key="SKMSEvent">컴퓨터에서 KMS 정품인정 이벤트를 검색하는 중: </sys:String>
+    <sys:String x:Key="SIAEvent">컴퓨터에서 인터넷 정품인정 실패 이벤트를 검색하는 중: </sys:String>
+    <sys:String x:Key="NoKMSEvent">컴퓨터에서 KMS 정품인정 이벤트 없는 것으로 확인되었습니다: </sys:String>
+    <sys:String x:Key="NoIAEvent">컴퓨터에서 실패 이벤트 없는 것으로 확인되었습니다: </sys:String>
+    <sys:String x:Key="NoEvents">이벤트 없습니다.</sys:String>
+    <sys:String x:Key="SuccessEvent">정품인정 성공 이벤트: </sys:String>
+    <sys:String x:Key="FailureEvent">정품인정 실패 이벤트: </sys:String>
+    <sys:String x:Key="ErrorSPPNotInstalled">에러: Software Protection Platform(소프트웨어 보호 프랫폼) 서비스 설치되지 않습니다.</sys:String>
+    <sys:String x:Key="ErrorSPPNotRunning">에러: Software Protection Platform(소프트웨어 보호 프랫폼) 서비스 실행되지 않습니다.</sys:String>
+    <sys:String x:Key="ProductKeyNotFound">제품 키 없습니다.</sys:String>
+    <sys:String x:Key="NotFound">찾을 수 없습니다.</sys:String>
+    <sys:String x:Key="NotLicenseFound">라이선스 없습니다.</sys:String>
+    <sys:String x:Key="InfoOnly"> (라이선스 설치된 상테에서만 참조 정보입니다)</sys:String>
+    <sys:String x:Key="NoticeArticle">주의: 정품인정 실패에 관한 KB문장을 발견되었습니다: </sys:String>
+    <sys:String x:Key="ArticleLink">[클릭해서 상세정보 참조](https://support.microsoft.com/kb/2870357#Error0x</sys:String>
+    
+    <sys:String x:Key="VLActivationType">정품인정 유형 설정: </sys:String>
+    <sys:String x:Key="ActRecent">가장 최근에 성공한 정품인정 클라이언트 정보: </sys:String>
+    <sys:String x:Key="KMSDNS">DNS에 찾은 KMS컴퓨터 이름: </sys:String>
+    <sys:String x:Key="ADInfoAOName">정품인정 대상 이름: </sys:String>
+    <sys:String x:Key="ActivationInterval">정품인정 간격: </sys:String>
+    <sys:String x:Key="RenewalInterval">갱신 간격: </sys:String>
+    <sys:String x:Key="IntervalMinutes">분</sys:String>
+    <sys:String x:Key="HostCaching">KMS호스트 캐싱: </sys:String>
+    <sys:String x:Key="HostCachingEnabled">허용됨</sys:String>
+    <sys:String x:Key="HostCachingDisabled">허용되지 않음</sys:String>
+    <sys:String x:Key="HostRegOverride">KMS컴퓨터: </sys:String>
+    <!-- Toolbox Page -->
+    <sys:String x:Key="CommonTools">일반도구</sys:String>
+    <sys:String x:Key="ConvertDocuments">파일 전환</sys:String>
+    <sys:String x:Key="RepairTools">복원도구</sys:String>
+    <sys:String x:Key="ToolboxSave">저장</sys:String>
+    <sys:String x:Key="ToolboxStart">시작</sys:String>
+    <sys:String x:Key="ToolboxRepair">수선</sys:String>
+    <!-- Common Tools -->
+    <sys:String x:Key="ToolboxChangeChannel">Office 업데이트 채널 변경</sys:String>
+    <sys:String x:Key="ToolboxChangeChannelDescription">로컬, 네트워크, http 경로 등을 지정할 수 있습니다. 그리고 리스트에서 선택할 수 도 있습니다. 환경설정 저장되면 Office에 가서 업데이트 확인하세요.</sys:String>
+    <sys:String x:Key="ToolboxChangeOwner">Office제품 소유자 변경</sys:String>
+    <sys:String x:Key="ToolboxChangeOwnerDescription">Office 응용프로그램의 계정 페이제에서 표시된 이름입니다. 정확한 라이선스로 정품인정되어야만 표시됩니다. &#x000A;&#x000A;제품 소유자 지정: [ProductID]:[Name]</sys:String>
+    <sys:String x:Key="ToolboxChangeOwnerName">이름:</sys:String>
+    <sys:String x:Key="ToolboxCheckVersion">Office 버전 조회</sys:String>
+    <sys:String x:Key="CheckVersionCreatedTimeUTC">생성시간(UTC):</sys:String>
+    <sys:String x:Key="QueryErrorCode">에러 코드 정보 조회중</sys:String>
+    <sys:String x:Key="QueryErrorCodeDescription">0x2 나 0x80070002와 같은 '0x'로 시작되는 에러코드를 제공 해야합니다.</sys:String>
+    <sys:String x:Key="ToolboxCheckKMS">KMS 상태 확인</sys:String>
+    <sys:String x:Key="ToolboxCheckKMSDescription">각 KMS를 쉼표나 새 줄로 구분하세요. 포트 추가할 수 있습니다. 정품인정 성공 메시지 나오면 서버가 사용가능 한다는 의미입니다.</sys:String>
+    <sys:String x:Key="CheckKMSConncetionSuccessful">연결이 성공되지만 정품인정 테스트가 실패됩니다.</sys:String>
+    <sys:String x:Key="CheckKMSConncetionFailed">연결 실패됩니다.</sys:String>
+    <sys:String x:Key="CheckKMSActivationSuccessful">연결과 정품인정 성공됩니다.</sys:String>
+    <!-- Repair Tools -->
+    <sys:String x:Key="ToolboxRemoveOffice">Office 삭제</sys:String>
+    <sys:String x:Key="ToolboxRODescription">정상적으로 Office를 제거할 수 없으면 삭제으로 시도할 수 있습니다. 다시 시도한 후 삭제할 수 없으면 다른 방법으로 시도하세요.</sys:String>
+    <sys:String x:Key="ToolboxRemoveViaOfficial">공식 툴로 Office를 제거하기</sys:String>
+    <sys:String x:Key="ToolboxRemoveViaOfficeToolPlus">Office Tool Plus로 Office를 삭제하기</sys:String>
+    <sys:String x:Key="ToolboxRemoveUWPOffice">마이크로소프트 소토어 앱 버번의 Office를 삭제하기</sys:String>
+    <sys:String x:Key="ToolboxRemoveOfficeDone">Office 삭제 완료.</sys:String>
+    <sys:String x:Key="ToolboxRepairOfficeDocumentIcon">Office문서 아이콘 복원</sys:String>
+    <sys:String x:Key="ToolboxRepairODIDescription">Office문서의 아이콘이 정상적으로 표시 되지 않는 경우 레지스토리 복원를 시도하세요. 복원 완성후 꼭 Office 자체의 빠른 복원을 진행해야합니다.</sys:String>
+    <sys:String x:Key="ToolboxRepairActivationFailed">Office정상적으로 정품인정기능 복원</sys:String>
+    <sys:String x:Key="ToolboxRepairAFDescription">Office 정품인정할 때 알리지지 않는 에러 코드 발생하며 이전에 KMS를 사용했다면 이 방법으로 레지스토리를 복원하세요.</sys:String>
+    <sys:String x:Key="ToolboxRepairVBS">VBS파일 연결</sys:String>
+    <sys:String x:Key="ToolboxRepairVBSDescription">Office정품인정할 때 &quot;.vbs&quot; 파일 확장 스크리프트 엔진없다는 에러 발생하면 이 방법으로 레지스토리를 복원하세요.</sys:String>
+    <sys:String x:Key="ToolboxRepairTemplates">Office 기존 문서 양식을 복원합니다.</sys:String>
+    <sys:String x:Key="ToolboxRepairTemplatesDescription">문서 생성할 때 "호환 모드"를 표시하면 Office 프로그램의 기존 문서 양식을 재설정하는 것을 시도하세요.</sys:String>
+    <sys:String x:Key="ToolboxRepairInstallation">Office를 설치하지 못하는 경우 이슈를 처리합니다.</sys:String>
+    <sys:String x:Key="ToolboxRepairInstallationDescription">Office를 설치할 때 알려지지 않는 문제가 발생하면 이 방법으로 레지스토리 복원하기를 시도할 수 있습니다. 주의: 시스템 파손이 심하는 경우 이 방법이 무효할 수 있어서 계속 설치 실패하면 윈도우 시스템을 재설치 해야합니다.</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettings">기본 Office 설정으로 복원</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsDescription">애플리케이션 설정, 파일 기록과 최근 저장 경로등 Office 설정을 초기화될겁니다. 주의: 실행 전에 모든 Office 애플리케이션을 닫기 좋습니다.</sys:String>
+    <!-- Convert Document -->
+    <sys:String x:Key="ConvertSourceFormat">수입 포맷:</sys:String>
+    <sys:String x:Key="ConvertOutputFormat">수출 포맷:</sys:String>
+    <sys:String x:Key="ConvertDeleteFile">전환 완료 후 원본 파일을 삭제하세요.</sys:String>
+    <sys:String x:Key="ConvertSelectFile">파일 선택</sys:String>
+    <!-- Settings Panel -->
+    <sys:String x:Key="LanguageSettings">언어:</sys:String>
+    <sys:String x:Key="ThemeSettings">테마:</sys:String>
+    <sys:String x:Key="SaveSettings">설정을 로컬에 저장</sys:String>
     <sys:String x:Key="DisplaySettings">설정화면</sys:String>
     <sys:String x:Key="SettingsTopmost">창을 가장 위에 유지</sys:String>
-    <sys:String x:Key="SettingsRTL">레이아웃을 반전</sys:String>
-    <sys:String x:Key="SettingsTransparency">투명도</sys:String>
     <sys:String x:Key="SettingsFontsize">폰트 크기</sys:String>
     <sys:String x:Key="SettingsBrightness">밝기</sys:String>
-    <sys:String x:Key="AdditionalSettings">추가 설정</sys:String>
-    <sys:String x:Key="SettingsServer">서버:</sys:String>
-    <sys:String x:Key="SettingsNotification">알림 설정</sys:String>
-    <sys:String x:Key="EnableNotification">알림 허용</sys:String>
-    <!--  About Page  -->
+    <sys:String x:Key="SettingsTransparency">투명도</sys:String>
+    <sys:String x:Key="SettingsBlurValue">블러</sys:String>
+    <!-- About Panel -->
     <sys:String x:Key="AppInf">프로그램 정보</sys:String>
-    <sys:String x:Key="UpdateDate">업데이트 날짜:</sys:String>
-    <sys:String x:Key="Creator">Office Deployment Tool 기반으로 개발하여 Yerong님이 개발과 유지보수합니다.</sys:String>
-    <sys:String x:Key="Copyright">Copyright © 2012-2019 Landiannews.com All Rights Reserved.</sys:String>
+    <sys:String x:Key="CreatorInfo">Office Deployment Tool 기반으로 개발하여 Yerong님이 개발과 운영합니다.</sys:String>
+    <sys:String x:Key="Copyright">Copyright © 2012-{0} 蓝点网 All Rights Reserved.</sys:String>
+    <sys:String x:Key="TrademarkInfo">Microsoft Office는 미국 및/또는 기타 국가에서 Microsoft 사의 등록 상표 또는 상표입니다.</sys:String>
     <sys:String x:Key="ServerProvider">서버 제공자</sys:String>
     <sys:String x:Key="Translator">통역자</sys:String>
-    
-    <!--  Message Window string  -->
-    <sys:String x:Key="MsgNormalTitle">메시지 알림</sys:String>
-    <sys:String x:Key="MsgButtonYes">예</sys:String>
-    <sys:String x:Key="MsgButtonNo">아니요</sys:String>
-    <sys:String x:Key="MsgButtonOK">확인</sys:String>
-    <sys:String x:Key="MsgButtonCancel">취소</sys:String>
-    <sys:String x:Key="MsgApplyToAll">다시 묻지 않음</sys:String>
-    <sys:String x:Key="MsgError">에러</sys:String>
-    <sys:String x:Key="MsgWarning">경고</sys:String>
-    
-    <sys:String x:Key="MsgRunning">Office Tool Plus가 이미 실행중입니다.</sys:String>
-    <sys:String x:Key="MsgPermission">Office Tool Plus가 일반 권한으로 시작하여 일부 기능이 사용 불가합니다. 권리자 권한으로 시작하겠습니까?</sys:String>
-    <sys:String x:Key="MsgSafeMode">OTP가 지난 번에 정상적으로 중료되지 않아 안전모드로 시작하겠습니까?</sys:String>
-    <sys:String x:Key="MsgSelf-repairFailed">자아 복원 실패</sys:String>
-    <sys:String x:Key="MsgExitQuestion">프로그램이 동작하는 데 중료 하겠습니까?</sys:String>
-    <sys:String x:Key="MsgADIQuestion">바로 자동 샷다운/재시작할 예정입니다. 확인하면 바로 실행하고 아니면 취소합니다.</sys:String>
-    <sys:String x:Key="MsgNetFrameworkError">프로그램이 정상적으로 로드되지 않습니다. .Net Framework 4.6.1 미설치 때문일 수 있어서 지금 다운로드하고 설치하겠습니까?</sys:String>
-    <sys:String x:Key="MsgUpdateError">업데이트 진행시 에러 발생</sys:String>
-    <sys:String x:Key="MsgCheckHashFailed">해시값 검증 실패</sys:String>
-    <!--  Message about Installation Files  -->
-    <sys:String x:Key="MsgInstallationDownloadSuccessful">설치파일 다운로드 완료</sys:String>
-    <sys:String x:Key="MsgInstallationPathWarning">설치 파일 경로중 비 영문 문자가 포함되어 설치 프로그램 실행에 억제하는 가능성 있어서 포더를 이도하거나 이름을 수정하세요.</sys:String>
-    <sys:String x:Key="MsgInstallationPlural">여러 버전의 설치 파일이 존재하는 경우 최신 버전을 설치합니다. 필요한다면 수동 조정하세요.</sys:String>
-    <sys:String x:Key="MsgInstallationArchitecture32">32비트</sys:String>
-    <sys:String x:Key="MsgInstallationArchitecture64">64비트</sys:String>
-    <sys:String x:Key="MsgInstallationLosedTitle">설치 포더 없음</sys:String>
-    <sys:String x:Key="MsgSelectInstallationFiles">Office설치 파일의 경로를 선택하세요</sys:String>
-    <sys:String x:Key="MsgDeleteInstallationFiles">설피 파일을 삭제하겠습니까?</sys:String>
-    <sys:String x:Key="MsgWriteInfError">저장할 수 없는 데이터.</sys:String>
-    <sys:String x:Key="MsgCleanOffice">Office삭제하겠습니까? 시작한다면 취소할 수 없습니다.</sys:String>
-    <sys:String x:Key="MsgRunScript">스크리프트 진행 일시 중지나 닫기를 피하기 위해서 진행 과정 중에 스크리프트에 대해 조치하지마세요. 계속하겠습니까?</sys:String>
-    <!--  Message about download  -->
-    <sys:String x:Key="MsgDownloadVer3">버전 정확성과 해당하는 채널과 맞는지 확인하세요. 불이치하면는 안 될겁니다.</sys:String>
-    <sys:String x:Key="MsgDownloadVerError">버전정보 가져오기 실패하였으니 버전과 채널 정확성을 확인하고 네트워크 연렬 상태 확인하세요.</sys:String>
-    <sys:String x:Key="MsgSetupDownload">공식 프로그램을 통해 다운로드 시작할 겁니다. 에러 나타나지 않도록 이미 다운로드된 파일을 전부 삭제하세요. 계속하겠습니까?</sys:String>
-    <sys:String x:Key="MsgSetupConfigError">마이크로소프트 공식 프로그램이 해당하는 운영체제나 다운로드 모드 설정을 지원하지 않아 다시 선택하고 시도하세요.</sys:String>
-    <sys:String x:Key="MsgInstallationFileExist">%filename% 이미 존재하며 다시 다운로드하겠습니까?</sys:String>
-    <sys:String x:Key="MsgAria2cDownload">Aria2c로 설치 파일을 다운로드 시작할 겁니다. 에러 나타나지 않도록 이미 다운로드된 파일을 전부 삭제하세요. 계속하겠습니까?</sys:String>
-    <sys:String x:Key="MsgDownloadSuccessful">설피 파일 다운로드 완료</sys:String>
-    <!--  Message about Thunder -->
-    <sys:String x:Key="MsgDownloadErrorTitle">다운로드 에러</sys:String>
-    <sys:String x:Key="MsgThunderStartError">타스크 시작 실패</sys:String>
-    <sys:String x:Key="MsgThunderStopError">타스크 일시중지 실패</sys:String>
-    <sys:String x:Key="MsgThunderCancelError">Thunder 프로세스 닫기 실패</sys:String>
-    <sys:String x:Key="MsgThunderPreparationError">Thuner 다운로드 엔지 초기와 실피하여 다시 한번 시도하세요</sys:String>
-    <sys:String x:Key="MsgThunderErrorUnknown">일려지지 않는 에러</sys:String>
-    <sys:String x:Key="MsgThunderErrorCreate">파일 생성 실패</sys:String>
-    <sys:String x:Key="MsgThunderErrorDelete">파일 삭제 실패</sys:String>
-    <sys:String x:Key="MsgThunderErrorFileHash">파일 전부 내용 검증 실패</sys:String>
-    <sys:String x:Key="MsgThunderErrorPieceHash">파일 블록 검증 실패</sys:String>
-    <sys:String x:Key="MsgThunderErrorRead">파일 읽기 실패</sys:String>
-    <sys:String x:Key="MsgThunderErrorRename">파일 이름 바꾸기 실패</sys:String>
-    <sys:String x:Key="MsgThunderErrorWrite">파일 쓰기 실패</sys:String>
-    <sys:String x:Key="MsgThunderErrorDownInvalid">다운로드 주소 무요</sys:String>
-    <sys:String x:Key="MsgThunderErrorNotIP">HTTP다운로드 사용할 수 있는 IP 없음</sys:String>
-    <sys:String x:Key="MsgThunderErrorIDInvalid">TaskID 무효</sys:String>
-    <sys:String x:Key="MsgThunderErrorProxyAuthTypeFailed">대리 인정 실패</sys:String>
-    <sys:String x:Key="MsgThunderErrorProxyAuthTypeUnknown">일려지지 않는 대리 유형</sys:String>
-    <sys:String x:Key="MsgThunderErrorTimeOut">타스크 시간 초과</sys:String>
-    <sys:String x:Key="MsgThunderErrorCrashed">Thunder 다운로드 엔지 붕쾨</sys:String>
-    <sys:String x:Key="MsgThunderErrorCancel">타스크 취소됨</sys:String>
-    
-    <!--  Message about Install Office  -->
-    <sys:String x:Key="MsgSelectSavePath">저장 위치 선택</sys:String>
-    <sys:String x:Key="MsgSaveFileSuccessful">파일 저장 성공</sys:String>
-    <sys:String x:Key="MsgInstallLanguagePackError">Office제품 없어서 설치진행할 수 없습니다.</sys:String>
-    <sys:String x:Key="MsgProductsToAdd">제품:</sys:String>
-    <sys:String x:Key="MsgExcludedApps">제외된 앱:</sys:String>
-    <sys:String x:Key="MsgInstallConfigurationQuestion">상세 설정 정보 알아보려 코드를 확인하세요. 위의 기본 설정이 맞습니까?</sys:String>
-    <sys:String x:Key="MsgInstallConfiguration">Office설치 설정</sys:String>
-    <sys:String x:Key="MsgArchitectureError">컴퓨터에서 %currentArchitecture% 버전의 Office를 이미 설치되어 있어서 Office (%architecture%)를 설치할 수 없습니다.\n\n%currentProduct%\n32비트와 64비트의 Office가 공존할 수 없어서 하나만 설치할 수 있습니다. %currentArchitecture% 버전의 Office를 설치하거나 %currentArchitecture% 버전의 Office를 제거해서 다시 설치하세요.</sys:String>
-    <sys:String x:Key="MsgNotificationAboutModule">주의: Office Tool Plus모듈으로 Office를 설치하면 기본설정만 적용해서 고급설정을 활성회하려면 Office Deployment Tool로 설치하세요. 계속하세요?</sys:String>
-    <sys:String x:Key="MsgProductsError">Office Deployment Tool가 선택된 제품\n\n%product%\n\n(을)를 설치 지원되지 않습니다. 설치설정 화면에서 Office Tool Plus로 바꾸거나 ㄷ다른 제품을 선택해서 재시도하세요.</sys:String>
-    <!--  Message about Activate Office  -->
-    <sys:String x:Key="MsgSelectLicensesPath">증서를 포함한 한 개의 포더 선택</sys:String>
-    <sys:String x:Key="MsgInstallLicenses">Office 라이선스 설치된 후 Office에서 정품인정 정보 표시 된지 않을 수 있지만 OTP를 통해 조회 가능하며 정품인정 진행도 할 수있습니다. 계속하겠습니까?</sys:String>
-    <sys:String x:Key="MsgClearLicenses">모든 라이선스 제거합니까? 제거한 후 복원을 필요할 가능성 있습니다.</sys:String>
-    <sys:String x:Key="MsgResetLicensingStatus">Office 라이선스 상태를 초기화하여 다시 정품인정 해야합니다.</sys:String>
-    <sys:String x:Key="MsgClearActivation">모든 카와 라이선스를 제거합니까? 제거한 후 증서를 재설치와 Office 정품인정 재 진행 해야합니다.</sys:String>
-    <sys:String x:Key="MsgClearKeys">모든 키 제거합니까?</sys:String>
-    
-    <!--  Message about Toast Bar  -->
-    <sys:String x:Key="ToastUpdateAvailable">새 버전이 있는데 ISO모드에서 업데이트할 수 없습니다. 필요한다면 OTP를 다른 포더에서  제출해서 다시 진행하세요.</sys:String>
-    <sys:String x:Key="ToastInstallationNone">설치 파일 발견되지 않아 다시 선택이나 다운로드하세요.</sys:String>
-    <sys:String x:Key="ToastInstallationError">설치 파일 불완전여서 다시 선택이나 다운로드하세요.</sys:String>
-    <sys:String x:Key="ToastSaveSuccessful">저장 성공</sys:String>
-    <sys:String x:Key="ToastSelectionError">아무 슈트나 제풍을 선택하지 않음</sys:String>
-    <sys:String x:Key="ToastNoInstallationFiles">설치 파일 없음</sys:String>
-    <sys:String x:Key="ToastDownloadError">버전 정보 가져오기 실패하여 다시 시도하거나 마이크로소프트 공식 프로그램으로 진행하세요.</sys:String>
-    <sys:String x:Key="ToastSetProxySuccessfully">대리 설정 성공.</sys:String>
-    <sys:String x:Key="ToastSetProxyFailed">대리 설정 실패.</sys:String>
-    <sys:String x:Key="ToastAllExist">모든 파일이 존재하여 다운로드할 파일 없습니다.</sys:String>
-    <sys:String x:Key="ToastLanguageSelectedNone">최소 한개의 언어를 선택하세요.</sys:String>
-    <sys:String x:Key="ToastAppsError">최소 한개의 응용프로그램을 선택하거나 슈트 아이디를 치워야합니다.</sys:String>
-    <sys:String x:Key="ToastSetupWorking">배치 도구가 실행되고 있어서 완료까지 기다려주세요.</sys:String>
-    <sys:String x:Key="ToastAutomicStartedSetup">자동 배치 도구 시작됨</sys:String>
-    <sys:String x:Key="ToastSetupExitedNormally">자동 배치 도구 정상 중료</sys:String>
-    <sys:String x:Key="ToastSetupExitedWithError">자도 배치 도구 비정상 중료</sys:String>
-    <sys:String x:Key="ToastLicensesInstallError">선택된 경로에서 증서 발견되지 않음</sys:String>
-    <sys:String x:Key="ToastLicensesInstallSuccess">라이선스 설치 완료</sys:String>
-    <sys:String x:Key="ToastInputError">입력 에러</sys:String>
-    <sys:String x:Key="ToastRepairSucceeded">복원 성공</sys:String>
-    <sys:String x:Key="ToastWorkerIsBusy">백그라운드 타스크 실행되고 있어서 완료까지 기다려 다시 시도하세요.</sys:String>
-   
-    <!--  Message about ToolTip, notice that you need to control string length.  -->
-    <sys:String x:Key="ToolTipEmpty">비우기</sys:String>
-    <sys:String x:Key="ToolTipChannelChanged">업데이트 채널 바꾸려면 이 옵션을 선택하세요</sys:String>
-    <sys:String x:Key="ToolTipCreateShortcut">우 클릭해서 바탕화면에서 단축키를 생성한다</sys:String>
-    <sys:String x:Key="ToolTipChannelEdit">메뉴에서 채널 한 개 선택하거나 HTTP소스 경로 한 개 입력하세요</sys:String>
-    <sys:String x:Key="ToolTipSuites">슈트에서 포함되는 응용프로그램</sys:String>
-    <sys:String x:Key="ToolTipProductIDEdit">한 개 이상의 슈트나 제품을 선치하려면 영문 ","를 사용해서 아이디를 불리하세요.</sys:String>
-    <sys:String x:Key="ToolTipProductMAK">제품 키 설정기능은 볼륨 라이선스 제품과 슈트에 사용할 수 있습니다.</sys:String>
-    <sys:String x:Key="ToolTipInstallWay">오프라인 설치 방식을 선택하면 소스 경로 속성은 활성화되고 않으면 활성화되자 않을겁니다.</sys:String>
-    <sys:String x:Key="ToolTipMigrateArch">이송 구조가 선택되면 기존된 Office설치가 정의된 구조로 변경합니다.</sys:String>
-    <sys:String x:Key="ToolTipAllowCDNFallback">소스 경로에 언어 패키지 사용 불가하고 CDN에 롤백 가능하면 배치도구가 Office CDN를 소스로 사용합니다.</sys:String>
-    <sys:String x:Key="ToolTipDiaplayNone">이 옵션을 선택하면 Office설치 시 사용자 화면이 보이지 않아 진척 바, 완료 화면, 에러 메시지 등 모든 사용자 화면이 다 볼 수 없습니다.</sys:String>
-    <sys:String x:Key="ToolTipAcceptEULA">AcceptEULA를 TRUE로 설정하면 사용자가 "마이크로소프트 소프트웨어 이용약권" 대화창을 볼 수 없스습니다. 권리자들이 AcceptEULA를 TRUE로 설정하는 게 권장합니다.</sys:String>
-    <sys:String x:Key="ToolTipResources">소스 경로가 공백하면 Office CDN를 소스로 사용합니다.</sys:String>
-    <sys:String x:Key="ToolTipForceCloseApps">Office 설치를 억제하는 모든 응용프로그램을 강제 종료하여 데이터 잃을 가능성 있습니다.</sys:String>
-    <sys:String x:Key="ToolTipDisableUpdate">Office 자동 업데이트 검사하지 않을겁니다.</sys:String>
-    <sys:String x:Key="ToolTipInstallLicenses">"라이선스 설치"를 클릭해서 바꾸기 시작</sys:String>
-    <sys:String x:Key="ToolTipKey">완전 키를 설치하거나 설치된 키의 마지막 5자리를 입력해서 제거합니다.</sys:String>
-  
-    <!--  Text about Textbox, notice to control the string length.  -->
-    <sys:String x:Key="TextBlockMAK">멀티 정품인정 키(MAK)</sys:String>
-    <sys:String x:Key="TextBlockResources">로컬, 인터넷이나 HTTP경로</sys:String>
-</ResourceDictionary>
+    <sys:String x:Key="BackgroundImageSource">백경 이미지 소스</sys:String>
+    <!-- Notification Panel -->
+    <sys:String x:Key="ClearNotifications">모든 알림 치우기</sys:String>
 
-<!--  재확인 필요 2019-04-22  -->
+    <!-- Text about Textbox, notice to control the string length. -->
+    <sys:String x:Key="TextBlockCommand">>여기에 명령어 입력하기</sys:String>
+    <sys:String x:Key="TextBlockResources">로컬, 인터넷이나 HTTP경로</sys:String>
+
+    <!-- Question Message -->
+    <sys:String x:Key="QuesUpdateReady">업데이트 준비 완료</sys:String>
+    <sys:String x:Key="QuesUpdateNow">몇 초만 걸려는데 지금 재 시작합니까?</sys:String>
+    <sys:String x:Key="QuesExit">프로그램이 동작하는 데 중료 하겠습니까?</sys:String>
+    <sys:String x:Key="QuesInstallation">Office를 설치하겠습니까?</sys:String>
+    <sys:String x:Key="QuesConfiguration">상세 설정 정보 알아보려 코드를 확인하세요. 위의 기본 설정이 맞습니까?</sys:String>
+    <sys:String x:Key="QuesDeleteFiles">{0} 언어를 제거하겠습니까?</sys:String>
+    <sys:String x:Key="QuesInstallLicenses">Office 라이선스 설치된 후 Office에서 정품인정 정보 표시 된지 않을 수 있지만 Office Tool Plus를 통해 조회 가능하며 정품인정 진행도 할 수있습니다. 계속하겠습니까?</sys:String>
+    <sys:String x:Key="QuesClearLicenses">모든 라이선스를 제거하면 라이선스를 다시 설치해야합니다. 계속하겠습니까?</sys:String>
+    <sys:String x:Key="QuesClearActivation">모든 카와 라이선스를 제거합니까? 제거한 후 증서를 재설치와 Office 정품인정 재 진행 해야합니다.</sys:String>
+    <sys:String x:Key="QuesClearKeys">모든 키 제거합니까?</sys:String>
+    <sys:String x:Key="QuesCleanOffice">Office삭제하겠습니까? 시작한다면 취소할 수 없습니다.</sys:String>
+
+    <!-- Info Message -->
+    <sys:String x:Key="InfoPermission">Office Tool Plus가 일반 권한으로 시작하여 일부 기능이 사용 불가합니다.</sys:String>
+    <sys:String x:Key="InfoUpdateAvailable">새 버전이 있는데 ISO모드에서 업데이트할 수 없습니다. 필요한다면 Office Tool Plus를 다른 포더에서  제출해서 다시 진행하세요.</sys:String>
+    <sys:String x:Key="InfoNoConfigured">변경할 작업이 없어서 먼저 설정이나 선택 마치고 계속하세요</sys:String>
+    <sys:String x:Key="InfoAllExist">모든 파일이 존재하여 다운로드할 파일 없습니다.</sys:String>
+    <sys:String x:Key="InfoSetupExited">Office Deployment Tool이 정상적으로 닫습니다.</sys:String>
+  
+  
+    <!-- Example: Installing iSlide, please wait. -->
+    <sys:String x:Key="InfoInstallingApp">{0} 설치 완료까지 기다려주세요</sys:String>
+    <sys:String x:Key="InfoInstallationComplete">설치완료</sys:String>
+    <sys:String x:Key="InfoInstallationFailed">설치 실패하였습니다.</sys:String>
+
+    <!-- Success Message -->
+    <sys:String x:Key="SuccessDownloadInstallation">설치파일 다운로드 완료</sys:String>
+    <sys:String x:Key="SuccessSave">저정완료</sys:String>
+    <sys:String x:Key="SuccessRepair">수선완료</sys:String>
+    
+    <!-- Error Message -->
+    <sys:String x:Key="ErrRunning">Office Tool Plus가 이미 실행중입니다.</sys:String>
+    <sys:String x:Key="ErrReadingInfo">Office 정보 가져올 때 에러 발생합니다.</sys:String>
+    <sys:String x:Key="ErrSavingInfo">Office 정보 저장할 때 에러 발생합니다.</sys:String>
+    <sys:String x:Key="ErrSetProxy">대리 설정 실패.</sys:String>
+    <sys:String x:Key="ErrGetVersion">버전정보 가져올 수 없어서 다시 시도하거나 Office 배포도구를 사용하세요.</sys:String>
+    <sys:String x:Key="ErrCreateISO">Office Tool Plus의 root경로에서 Office 설치 파일을 찾을 수 없습니다. 설치 파일을 먼저 다운로드하거나 설치 다운로드된 설치 파일을 이 경로 이동하세요.</sys:String>
+    <sys:String x:Key="ErrInput">입력 에러</sys:String>
+    <sys:String x:Key="ErrSetupExited">Office Deployment Tool이 에러로 닫습니다.</sys:String>
+
+    <!-- Error Message about Thunder -->
+    <sys:String x:Key="MsgDownloadErrorTitle">다운로드 에러</sys:String>
+    <sys:String x:Key="ThunderErrorStart">타스크 시작 실패</sys:String>
+    <sys:String x:Key="ThunderErrorStop">타스크 일시중지 실패</sys:String>
+    <sys:String x:Key="ThunderErrorExit">Thunder 프로세스 닫기 실패</sys:String>
+    <sys:String x:Key="ThunderErrorPreparation">Thuner 다운로드 엔지 초기와 실피하여 다시 한번 시도하세요</sys:String>
+    <sys:String x:Key="ThunderErrorUnknown">일려지지 않는 에러</sys:String>
+    <sys:String x:Key="ThunderErrorCreate">파일 생성 실패</sys:String>
+    <sys:String x:Key="ThunderErrorDelete">파일 삭제 실패</sys:String>
+    <sys:String x:Key="ThunderErrorFileHash">파일 전부 내용 검증 실패</sys:String>
+    <sys:String x:Key="ThunderErrorPieceHash">파일 블록 검증 실패</sys:String>
+    <sys:String x:Key="ThunderErrorRead">파일 읽기 실패</sys:String>
+    <sys:String x:Key="ThunderErrorRename">파일 이름 바꾸기 실패</sys:String>
+    <sys:String x:Key="ThunderErrorWrite">파일 쓰기 실패</sys:String>
+    <sys:String x:Key="ThunderErrorDownInvalid">다운로드 주소 무요</sys:String>
+    <sys:String x:Key="ThunderErrorNotIP">HTTP다운로드 사용할 수 있는 IP 없음</sys:String>
+    <sys:String x:Key="ThunderErrorIDInvalid">TaskID 무효</sys:String>
+    <sys:String x:Key="ThunderErrorProxyAuthTypeFailed">대리 인정 실패</sys:String>
+    <sys:String x:Key="ThunderErrorProxyAuthTypeUnknown">일려지지 않는 대리 유형</sys:String>
+    <sys:String x:Key="ThunderErrorTimeOut">타스크 시간 초과</sys:String>
+    <sys:String x:Key="ThunderErrorCrashed">Thunder 다운로드 엔지 붕쾨</sys:String>
+    <sys:String x:Key="ThunderErrorCancel">타스크 취소됨</sys:String>
+</ResourceDictionary>

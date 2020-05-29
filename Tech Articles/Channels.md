@@ -10,15 +10,15 @@ For information about Office Click-To-Run, please [visit the website](https://mr
 
 | Branch | FFN | Channel Name | Verified | Last Verification |
 | :---- | :---- | :---- | :---: | :---: |
-Production::LTSC | f2e724c1-748f-4b47-8fb8-8e0d210e9208 | Office 2019 Enterprise Channel | ✔ | 05/28/2020 |
+Production::LTSC | f2e724c1-748f-4b47-8fb8-8e0d210e9208 | Office 2019 Perpetual Enterprise Channel | ✔ | 05/28/2020 |
 Production::DC | 7ffbc6bf-bc32-4f92-8982-f9dd17fd3114 | Semi-annual Channel | ✔ | 05/28/2020 |
 Production::MEC | 55336b82-a18d-4dd6-b5f6-9e5095c314a6 | Monthly Enterprise Channel | ✔ | 05/28/2020 |
 Production::CC | 492350f6-3a01-4f97-b9c0-c7c6ddf67d60 | Monthly Channel | ✔ | 05/28/2020 |
-Insiders::LTSC | 2e148de9-61c8-4051-b103-4af54baffbb4 | Office 2019 Enterprise Channel (Insiders) | ✔ | 05/28/2020 |
+Insiders::LTSC | 2e148de9-61c8-4051-b103-4af54baffbb4 | Office 2019 Perpetual Enterprise Channel (Insiders) | ✔ | 05/28/2020 |
 Insiders::FRDC | b8f9b850-328d-4355-9145-c59439a0c4cf | Semi-annual Channel (Targeted) | ✔ | 05/28/2020 |
 Insiders::CC | 64256afe-f5d9-4f86-8936-8840a6a4f5be | Monthly Channel (Targeted) | ✔ | 05/28/2020 |
 Insiders::DevMain | 5440fd1f-7ecb-4221-8110-145efaa6372f | Beta Channel | ✔ | 05/28/2020 |
-Microsoft::LTSC | 1d2d2ea6-1680-4c56-ac58-a441c8c24ff | Office 2019 Enterprise Channel (Microsoft) | ✔ | 05/28/2020 |
+Microsoft::LTSC | 1d2d2ea6-1680-4c56-ac58-a441c8c24ff | Office 2019 Perpetual Enterprise Channel (Microsoft) | ✔ | 05/28/2020 |
 Microsoft::DC | f4f024c8-d611-4748-a7e0-02b6e754c0fe | Semi-annual Channel (Microsoft) | ✔ | 05/28/2020 |
 Microsoft::FRDC | 9a3b7ff2-58ed-40fd-add5-1e5158059d1c | Semi-annual Channel (Targeted) (Microsoft) | ✔ | 05/28/2020 |
 Microsoft::CC | 5462eee5-1e97-495b-9370-853cd873bb07 | Beta Channel | ✔ | 05/28/2020 |

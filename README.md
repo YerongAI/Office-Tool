@@ -2,7 +2,7 @@
 
 English｜[简体中文](/README-zh_cn.md)｜[繁體中文](/README-zh_tw.md)｜[日本語](/README-ja_jp.md)｜[한국어](/README-ko_kr.md)｜[Italiano](/README-it_it.md)｜[ไทย/Thai](/README-th_th.md)｜[polski](/README-pl_pl.md)｜[Brazilian Portuguese](/README-pt_br.md)｜[Français](/README-fr_fr.md)｜[Deutsch](/README-de_de.md)｜[Bahasa Indonesia](/README-id_id.md)
 
-Office Tool Plus is a tool for deploy Office, Visio and Project. By using Office Tool Plus, you can deploy Office easily.
+Office Tool Plus is a tool for deploying Office, Visio and Project, supports Office 2016, 2019 and 365. By using Office Tool Plus, you can easily deploy Office.
 
 Office Tool Plus is based on Microsoft's [Office Deployment Tool](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-2016-deployment-tool) and [OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office).
 
@@ -28,17 +28,17 @@ For version 7, [Microsoft .NET Framework 4.6.1](http://go.microsoft.com/fwlink/?
 - Install Office that you want.
 - Add product(s), application(s) or language pack(s) to existing Office.
 - Uninstall products or remove applications.
-- Create XML configuration.
+- Create XML configuration file.
 - Create Office ISO file.
 - Install Office licenses (converted edition).
 - Install or uninstall Office product key.
 - Manage KMS activation of Office.
 - Clean licenses and product keys.
 - Supports online activation and phone activation.
-- Supports changing update channels without reinstalling Office.
-- Supports querying version of Office for each channels.
-- Supports to repair and restore Office.
-- Supports to convert Office documents.
+- Change update channels without reinstalling Office.
+- Query version of Office for each channels.
+- Repair and restore Office.
+- Convert Office documents.
 
 and more...
 
@@ -77,13 +77,3 @@ We encourage everyone to help with localization. The following is how to do.
 4. Make a Pull Request.
 
 Or you can send me your files via [E-mail](mailto:yerong@coolhub.top)
-
-### How To Test Your Translation (For V8)
-
-1. Save your translation file to a path, like ```D:\Test\de-de.xaml```.
-
-2. Open application.
-
-3. Press <kbd>Ctrl+P</kbd>, input command  ```/setLangRes D:\Test\de-de.xaml```
-
-4. Press <kbd>Enter</kbd> and Office Tool Plus will load your localization file.

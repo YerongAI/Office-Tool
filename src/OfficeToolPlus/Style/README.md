@@ -16,3 +16,13 @@ Don't change any strings or words like this:
 ## Verify Error Code
 
 An error code like **0xC004E015** or **0x2**, you can check the content by run command ```slui 0x2a 0xC004E015```.
+
+## How To Test Your Translation (For V8)
+
+1. Save your translation file to a path, like ```D:\Test\de-de.xaml```.
+
+2. Open Office Tool Plus.
+
+3. Press <kbd>Ctrl+P</kbd>, input command  ```/setLangRes D:\Test\de-de.xaml```
+
+4. Press <kbd>Enter</kbd> and Office Tool Plus will load your localization file.

@@ -4,7 +4,7 @@
 
 歡迎使用 Office Tool Plus ，這是一個最佳化部署 Office 2016, Office 2019, Office 365, Visio, Project 的實用工具。有了 Office Tool Plus，您可以更輕鬆地部署 Office。
 
-Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-2016-deployment-tool)為基礎，以及 [OSPP](https://docs.microsoft.com/zh-tw/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office) 打造。
+Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-2016-deployment-tool)為基礎，及 [OSPP](https://docs.microsoft.com/zh-tw/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office) 打造。
 
 ## 系統需求
 

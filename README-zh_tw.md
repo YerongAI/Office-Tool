@@ -65,7 +65,7 @@ Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.c
 
 ## 合法性
 
-Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-2016-deployment-tool)、[Microsoft Office Deployment Tool](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-2016-deployment-tool)、[OSPP](https://docs.microsoft.com/zh-tw/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)、遵循 Microsoft 開發文件為基礎打造，因此並不存在有關「破解」、「KMS 破解」、「盜版啟用」等違法功能。
+Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-2016-deployment-tool)、[OSPP](https://docs.microsoft.com/zh-tw/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)、遵循 Microsoft 開發文件為基礎打造，因此並不存在有關「破解」、「KMS 破解」、「盜版啟用」等違法功能。
 
 ## 感謝以下提供者及合作者
 

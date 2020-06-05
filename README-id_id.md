@@ -43,11 +43,11 @@ Untuk versi 7, diperlukan [Microsoft .NET Framework 4.6.1](http://go.microsoft.c
 
 dan masih banyak lagi...
 
-### Quick Start
+### Mulai Cepat
 
 Pergi ke laman Pemasangan, tambahkan produk yang ingin anda pasang, lalu klik Pasangkan Office untuk memulai pemasangannya.
 
-#### Terima kasih kepada Kolaborator
+### Terima kasih kepada Kolaborator
 
 - (ar-ps) العربية (الأراضي الفلسطينية) / Ibrahim
 - (de-de) Deutsch (Deutschland) / [Berny23](https://steamcommunity.com/id/Berny23)

@@ -6,7 +6,7 @@ Office Tool Plus merupakan alat untuk memasang Office, Visio dan Project, menduk
 
 Office Tool Plus merupakan basis dari Microsoft [Office Deployment Tool](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-2016-deployment-tool) and [OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office).
 
-### Persyaratan Sistem
+## Persyaratan Sistem
 
 Windows 7 SP1, Windows 8 dan Windows 10.
 
@@ -43,11 +43,11 @@ Untuk versi 7, diperlukan [Microsoft .NET Framework 4.6.1](http://go.microsoft.c
 
 dan masih banyak lagi...
 
-### Mulai Cepat
+## Mulai Cepat
 
 Pergi ke laman Pemasangan, tambahkan produk yang ingin anda pasang, lalu klik Pasangkan Office untuk memulai pemasangannya.
 
-### Terima kasih kepada Kolaborator
+## Terima kasih kepada Kolaborator
 
 - (ar-ps) العربية (الأراضي الفلسطينية) / Ibrahim
 - (de-de) Deutsch (Deutschland) / [Berny23](https://steamcommunity.com/id/Berny23)
@@ -65,7 +65,7 @@ Pergi ke laman Pemasangan, tambahkan produk yang ingin anda pasang, lalu klik Pa
 - (zh-cn) 简体中文 (中国) / **官方语言 (Bahasa Resmi)**
 - (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://www.cotpear.com)
 
-### Bantuan Dengan Lokalisasi
+## Bantuan Dengan Lokalisasi
 
 Kami menggiatkan semua orang untuk membantu terjemahan. Berikut ini adalah caranya.
 

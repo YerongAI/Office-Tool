@@ -35,7 +35,7 @@ Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.c
  - [下載點](https://download.coolhub.top/)
  - [臺灣備用載點](https://drive.google.com/drive/folders/1G8RP4ZS_npYa7bk7Fb9So7AVRc4Zk3no)<sup>[註二]</sup>
  
-[註二]：由於官方網站伺服器所在地在中國，曾發生連線不穩定。若網站無法開啟，請使用臺灣備用官方網站、下載點。（臺灣備用載點僅會在原官方網站無法連線時更新檔案）
+[註二]：由於官方網站伺服器曾發生連線不穩定。若網站無法開啟，請使用臺灣備用官方網站、下載點。（臺灣備用載點僅會在原官方網站無法連線時更新檔案）
 
 ## 特色功能
 
@@ -65,7 +65,7 @@ Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.c
 
 ## 合法性
 
-Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-2016-deployment-tool)、[Microsoft Office Deployment Tool](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-2016-deployment-tool)、[OSPP](https://docs.microsoft.com/zh-tw/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)、遵循 Microsoft 開發文件為基礎打造，因此並不存在有關「破解」、「KMS 破解」、「盜版啟用」等違法功能。
+Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-2016-deployment-tool)、[OSPP](https://docs.microsoft.com/zh-tw/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)、遵循 Microsoft 開發文件為基礎打造，因此並不存在有關「破解」、「KMS 破解」、「盜版啟用」等違法功能。
 
 ## 感謝以下提供者及合作者
 

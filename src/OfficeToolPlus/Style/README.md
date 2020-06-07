@@ -4,7 +4,7 @@ XAML files are localized files used by Office Tool Plus. We recommend that you u
 
 ## Precautions
 
-Don't change any string or word like this:
+Don't change any strings or words like this:
 
 ```xml
 <!-- Channels Name -->
@@ -13,12 +13,16 @@ Don't change any string or word like this:
 &#x000A;
 ```
 
-## How to Test
+## Verify Error Code
 
-When you finished translation, open Office Tool Plus, press Ctrl + P to open command, and input `/setLangRes [YourFileFullPath]`, finally press Enter.
+An error code like **0xC004E015** or **0x2**, you can check the content by run command ```slui 0x2a 0xC004E015```.
 
-## How to Submit
+## How To Test Your Translation (For V8)
 
-You can use GitHub to submit your translation, or you can send me your file via [E-mail](mailto:yerong@coolhub.top)
+1. Save your translation file to a path, like ```D:\Test\de-de.xaml```.
 
-Thank you!
+2. Open Office Tool Plus.
+
+3. Press <kbd>Ctrl+P</kbd>, input command  ```/setLangRes D:\Test\de-de.xaml```
+
+4. Press <kbd>Enter</kbd> and Office Tool Plus will load your localization file.

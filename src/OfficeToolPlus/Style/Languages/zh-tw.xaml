@@ -17,6 +17,7 @@
     <sys:String x:Key="PerpetualVL2019">Office 2019 永久企業版</sys:String>
     <sys:String x:Key="Broad">半年通道</sys:String>
     <sys:String x:Key="Targeted">半年通道 (已設定目標)</sys:String>
+    <sys:String x:Key="MonthlyEnterprise">企業用每月通道</sys:String>
     <sys:String x:Key="Monthly">每月通道</sys:String>
     <sys:String x:Key="Insiders">每月通道 (已設定目標)</sys:String>
     <sys:String x:Key="InsiderFast">Office 測試人員計畫</sys:String>
@@ -31,6 +32,7 @@
     <sys:String x:Key="Cancel">取消</sys:String>
     <sys:String x:Key="OfficeDeploymentTool">Office 部署工具</sys:String>
     <sys:String x:Key="Version">版本:</sys:String>
+    <sys:String x:Key="Branch">Branch:</sys:String>
     <sys:String x:Key="Architecture">架構:</sys:String>
     <sys:String x:Key="x86">32 位元</sys:String>
     <sys:String x:Key="x64">64 位元</sys:String>
@@ -63,7 +65,9 @@
     <sys:String x:Key="Contact">聯絡我們</sys:String>
     <sys:String x:Key="Donate">捐贈我們</sys:String>
     <sys:String x:Key="JoinGroup">社群群組</sys:String>
-    <sys:String x:Key="ServerUnavailable">與伺服器建立連線時失敗，請確認您的網路連線。</sys:String>
+    <sys:String x:Key="RunAsAdmin">以系統管理員身分執行</sys:String>
+    <sys:String x:Key="CreateShortcut">在桌面建立捷徑</sys:String>
+    <sys:String x:Key="ServerUnavailable">與伺服器建立連線時失敗，請確認您的網路連線</sys:String>
     <!-- Deploy Page -->
     <sys:String x:Key="StartDeploy">開始部署</sys:String>
     <sys:String x:Key="DeployViewCode">檢視代碼</sys:String>
@@ -286,7 +290,7 @@
     <sys:String x:Key="QueryErrorCode">查詢錯誤代碼的詳細描述</sys:String>
     <sys:String x:Key="QueryErrorCodeDescription">您需要輸入一個以 '0x' 為開頭的錯誤代碼，例如: 0x2 或者 0x80070002</sys:String>
     <sys:String x:Key="ToolboxCheckKMS">測試 KMS 可用性</sys:String>
-    <sys:String x:Key="ToolboxCheckKMSDescription">使用逗號或以新行隔開每一個 KMS 位址，亦可設定位址連接埠。&#x000A;當測試結果顯示「連線成功」，即代表伺服器可用。 （不可用的不會顯示任何資訊）</sys:String>
+    <sys:String x:Key="ToolboxCheckKMSDescription">使用逗號或以新行隔開每一個 KMS 位址，亦可設定位址連接埠。&#x000A;當測試結果顯示「連線成功」，即代表伺服器可用。（不可用的不會顯示任何資訊）</sys:String>
     <sys:String x:Key="CheckKMSConncetionSuccessful">連線成功！</sys:String>
     <sys:String x:Key="CheckKMSConncetionFailed">連線失敗！</sys:String>
     <sys:String x:Key="CheckKMSActivationSuccessful">測試啟用功能成功！</sys:String>
@@ -305,10 +309,10 @@
     <sys:String x:Key="ToolboxRepairActivationDescription">如果啟用 Office 授權時出現未知的錯誤代碼，則您可以使用此功能重設啟用設定。</sys:String>
     <sys:String x:Key="ToolboxRepairVBS">修復 VBS 文件關聯</sys:String>
     <sys:String x:Key="ToolboxRepairVBSDescription">如果啟用 Office 時顯示錯誤提示: 「副檔名".vbs" 沒有對應的 Script 引擎。」則您可以嘗試使用此功能修復登錄檔。</sys:String>
+    <sys:String x:Key="ToolboxRepairVariables">修復系統環境變數</sys:String>
+    <sys:String x:Key="ToolboxRepairVariablesDescription">你可以使用此功能重設系統環境變數回預設值。請注意，如果不確定此功能帶來的作用，請勿使用此功能。</sys:String>
     <sys:String x:Key="ToolboxRepairTemplates">還原 Office 預設文件範本</sys:String>
     <sys:String x:Key="ToolboxRepairTemplatesDescription">如果 Office 應用程式在新增文件時顯示 [相容模式]，則您可以嘗試此功能重新設定 Office 應用程式的預設文件範本。</sys:String>
-    <sys:String x:Key="ToolboxRepairInstallation">修復 Office 無法安裝的狀況</sys:String>
-    <sys:String x:Key="ToolboxRepairInstallationDescription">如果您在安裝 Office 時出現未知問題，則您可以使用此功能嘗試修復登錄檔、部分檔案。&#x000A;&#x000A;注意：在某些損壞嚴重的系統上，這項功能可能無法解決您的問題。若您修復後依然無法安裝，則您可能需要重新安裝作業系統。</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettings">還原 Office 至原始設定</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettingsDescription">您可以使用此功能還原 Office 應用程式所有設定、文件列表、最近的儲存位址等，使其復原至系統預設的設定和狀態。請注意，使用此功能時，請先關閉所有 Office 應用程式。</sys:String>
     <!-- Convert Document -->
@@ -340,6 +344,17 @@
     <sys:String x:Key="TextBlockCommand">> 輸入指令</sys:String>
     <sys:String x:Key="TextBlockResources">本機、網際網路、HTTP 路徑</sys:String>
         
+    <!-- Task Message -->
+    <sys:String x:Key="Task_PreparingDownload">正在準備下載 Office，請稍後</sys:String>
+    <sys:String x:Key="Task_DeployClickToRun">正在安裝 Click-to-Run，請稍後</sys:String>
+    <sys:String x:Key="Task_ODT">Office 部署工具執行中，請稍後</sys:String>
+    <sys:String x:Key="Task_OSPP">OSPP 執行中，請稍後</sys:String>
+    <sys:String x:Key="Task_CheckVersion">正在查詢 Office 版本資訊，請稍後</sys:String>
+    <sys:String x:Key="Task_CheckKMS">正在測試 KMS 伺服器，請稍後</sys:String>
+    <sys:String x:Key="Task_CollectLog">正在擷取 Office 安裝記錄檔，請稍後</sys:String>
+    <sys:String x:Key="Task_CleanOffice">正在清除 Office，請稍後</sys:String>
+    <sys:String x:Key="Task_ConvertDocument">正在轉換文件，請稍後</sys:String>
+    
     <!-- Question Message -->
     <sys:String x:Key="QuesUpdateReady">已準備好為您安裝更新</sys:String>
     <sys:String x:Key="QuesUpdateNow">這只需要幾秒鐘的時間，是否要現在重新開啟程式？</sys:String>

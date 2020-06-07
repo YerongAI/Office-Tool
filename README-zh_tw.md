@@ -2,28 +2,29 @@
 
 [⬅ 返回](https://github.com/YerongAI/Office-Tool)
 
-歡迎使用 Office Tool Plus ，這是一個用來管理、下載、安裝 Office 的工具。
+歡迎使用 Office Tool Plus ，這是一個最佳化部署 Office 2016, Office 2019, Office 365, Visio, Project 的實用工具。有了 Office Tool Plus，您可以更輕鬆地部署 Office。
 
-這個應用程式是參考、使用微軟 [Office Deployment Tool](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-2016-deployment-tool) 製作的。將零散的系統指令集結成圖形化介面，讓大眾能快速直覺的部署 Office、客製化安裝 Office。
-
-除了能夠部署 Office 之外，也能修改已安裝 Office 相關設定、移除單項產品、新增語言等。 <sup>[註一]</sup>
-
-[註一] 僅限 `Click To Run`。
+Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-2016-deployment-tool)為基礎，及 [OSPP](https://docs.microsoft.com/zh-tw/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office) 打造。
 
 ## 系統需求
 
  - Windows 7 SP1, Windows 8 和 Windows 10
-
  - Windows Server 2008 R2 SP1, Windows Server 2012 以上版本
 
- - **Microsoft .NET Framework 4.6.1 以上版本**
+### 第八版 (BETA版)
 
-### 下載 Microsoft .NET Framework 4.6.1
+ - [Microsoft .Net Core 3.1 x86](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-desktop-3.1.3-windows-x86-installer)
+ 
+### 第七版
+
+ - Microsoft .NET Framework 4.6.1 以上版本<sup>[註一]</sup>
+
+[註一]：Windows 10 作業系統已內建 NET Framework 4.6.1 以上版本，無須再次安裝
+
+#### 下載 Microsoft .NET Framework 4.6.1
 
  - [Web 安裝程式](http://go.microsoft.com/fwlink/?LinkId=780597)
-
  - [離線安裝程式](http://go.microsoft.com/fwlink/?LinkId=780601)
-
  - [Microsoft .Net Framework 4.6.1 語言套件 （離線安裝程式）](http://go.microsoft.com/fwlink/?LinkId=780604)
 
 ## 下載
@@ -31,33 +32,40 @@
  - [官方網站](https://otp.landian.vip/)
 
  - [臺灣備用官方網站](https://otp.cotpear.com/zh-tw/) <sup>[註二]</sup>
+ - [下載點](https://download.coolhub.top/)
+ - [臺灣備用載點](https://drive.google.com/drive/folders/1G8RP4ZS_npYa7bk7Fb9So7AVRc4Zk3no)<sup>[註二]</sup>
+ 
+[註二]：由於官方網站伺服器曾發生連線不穩定。若網站無法開啟，請使用臺灣備用官方網站、下載點。（臺灣備用載點僅會在原官方網站無法連線時更新檔案）
 
- - [備用載點](https://delivery.yuntu.dev/office-tool/) （感謝 [云图小镇](https://www.yuntu.dev/) 提供）
+## 特色功能
 
-[註二] 由於主要官方網站伺服器於中國，在某些時刻連線不穩定，若網站無法開啟，請使用[臺灣備用官方網站](https://otp.cotpear.com/zh-tw/)。
+- 下載各式頻道的 Office
+- 由您作主，按照您的想法自訂安裝 Office
+- 在已安裝的 Office 中新增產品、應用程式、語言套件
+- 移除一個或多個產品、應用程式、語言套件
+- 建立 XML 設定檔（匯出設定）
+- 建立 Office ISO 文件以供分享、離線安裝、節省流量使用
+- 安裝 Office 授權（可轉換 Office 版本）
+- 安裝/移除 Office 產品金鑰
+- 管理 Office 的 KMS 啟用設定
+- 一鍵清除 Office 的授權和金鑰
+- 線上啟用和電話啟用（離線啟用）
+- 變更 Office 的更新頻道無須重新安裝 Office
+- 查詢各種頻道上的 Office 版本資訊
+- 修復/重設 Office
+- 轉換 Office 文件（常見格式）
 
-## 微軟相關知識庫
-
-- [自訂安裝選項說明](https://docs.microsoft.com/zh-tw/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)
+還有更多功能等待您挖掘！
 
 ## 快速入門
 
 *在開始之前，請先備妥 Office 正版授權（產品金鑰），Office Tool Plus 並沒有免費啟用 Office 的功能。*
 
-首先，請至《部署》功能頁中，新增想要安裝的產品，然後按下「開始部署」即可開始您的安裝。另外，您也可以變更其他安裝設定，讓您的 Office 更符合您心意！
+開啟 Office Tool Plus 的部署功能頁，新增您需要的產品，然後點選「開始部署」即可。
 
 ## 合法性
 
-Office Tool Plus 使用 微軟 [Office Deployment Tool](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-2016-deployment-tool) 參考製作的，
-主要是在 Office Deployment Tool 基礎上再新增了相關功能來更加便利的部署 Office。
-
-### 關於啟用授權模組
-
-啟用授權模組是使用微軟的 ospp.vbs (Office Software Protect Platform) 及相關檔案製作的。所有授權操作皆由 ospp.vbs 執行。
-
-為了使用者能夠更好理解啟用時的相關內容，我們也進行了相關檔案的翻譯。（完整翻譯 zh-cn, zh-tw）
-
-若想查詢相關檔案的操作說明，你可以在 ````"C:\Program Files\Microsoft Office\Office16\OSPP.HTM"```` 找到。（需安裝 Office）
+Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-2016-deployment-tool)、[OSPP](https://docs.microsoft.com/zh-tw/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)、遵循 Microsoft 開發文件為基礎打造，因此並不存在有關「破解」、「KMS 破解」、「盜版啟用」等違法功能。
 
 ## 感謝以下提供者及合作者
 
@@ -71,7 +79,7 @@ Office Tool Plus 使用 微軟 [Office Deployment Tool](https://docs.microsoft.c
 - (ja-jp) 日本語 (日本) / [秋山ヘイワ](https://github.com/akio1321)
 - (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)
 - (pl-pl) Polski (Polska) / JakubDriver
-- (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec)
+- (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec) [Igor Rückert](https://github.com/igorruckert)
 - (tr-tr) Türkçe (Türkiye) / Turan Furkan Topak
 - (vi-vn) Tiêng Việt (Việt Nam) / [phuocding](https://github.com/phuocding)
 - (zh-cn) 简体中文 (中国) / **官方语言 (Official language)**
@@ -99,9 +107,9 @@ Office Tool Plus 使用 微軟 [Office Deployment Tool](https://docs.microsoft.c
 
 若你的本地化（語言）文件並無程式語法錯誤，Office Tool Plus 將會載入你的語言文件。在這之後，程式可能會顯示無法正常連線伺服器，這是正常的。當你正式提交相關文件後，我們將會設定相關配置。
 
-### 本地化之後
+### 如何提供本地化（語言）文件
 
-若你願意無限期的為 Office Tool Plus 進行當地的管理，我們會授予你 Administrator Permission。你可以利用此權限，建立新公告、設定背景圖片、修改說明等。
+您可以透過[電子郵件](mailto:yerong@coolhub.top)、Pull Request 來提供我們更好的翻譯。
 
 ## 關於繁體中文(台灣) 維護與翻譯者
 
@@ -111,4 +119,4 @@ Office Tool Plus 使用 微軟 [Office Deployment Tool](https://docs.microsoft.c
  - [教學文章](https://www.cotpear.com/search/label/Office)
  - [Telegram 頻道](https://t.me/ot_channel_tw)
  - [關於《藍點網》授予本網之相關說明條款](https://policies.cotpear.com/terms/)
- - [Email 聯絡](customer@cotpear.com)
+ - [電子郵件聯絡](customer@cotpear.com)

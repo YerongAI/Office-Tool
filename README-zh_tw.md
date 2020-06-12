@@ -1,6 +1,6 @@
 # Office Tool Plus
 
-[⬅ 返回](https://github.com/YerongAI/Office-Tool)
+[⬅　返回](https://github.com/YerongAI/Office-Tool)
 
 歡迎使用 Office Tool Plus ，這是一個最佳化部署 Office 2016, Office 2019, Office 365, Visio, Project 的實用工具。有了 Office Tool Plus，您可以更輕鬆地部署 Office。
 
@@ -92,8 +92,6 @@ Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.c
 1. Fork this repository.
 
 2. 打開任一你看得懂的語言文件（例如 ````zh-cn.xaml````），並另存新檔成你的語言代碼、對應的路徑，例如 ````OfficeToolPlus/Language/zh-tw.xaml````。
-
-3. Make a Pull Request.
 
 ### 如何測試本地化（語言）文件
 

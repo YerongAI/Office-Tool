@@ -1,22 +1,22 @@
 # Office Licenses Information
 
-For more information about GVLKs, please visit [GVLKs for KMS activation of Office 2019 and Office 2016](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/gvlks).
+For more information about GVLKs, please visit [GVLKs for KMS activation of Office 2019 &amp; Office 2016](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/gvlks).
 
 ## Licenses List
 
-| Product ID | Product Name | Retail | MAK | KMS | GVLK (KMS Only)
+| Product ID | Product Name | Retail | MAK | KMS | Normal Key (GVLK for KMS)
 | :-- | :-- | :--: | :--: | :--: | :-- |
-| O365ProPlusRetail | Microsoft 365 for Enterprise | ✔ | ❌ | ❌ |  |
+| O365ProPlusRetail | Microsoft 365 for Enterprise | ✔ | ❌ | ❌ | DRNV7-VGMM2-B3G9T-4BF84-VMFTK |
 | O365BusinessRetail | Microsoft 365 for Business | ✔ | ❌ | ❌ |  |
 | O365SmallBusPremRetail | Microsoft 365 Small Business Premium | ✔ | ❌ | ❌ |  |
 | O365HomePremRetail | Microsoft 365 Family &amp; Personal | ✔ | ❌ | ❌ |  |
 | O365EduCloudRetail | Microsoft 365 | ✔ | ❌ | ❌ |  |
-| HomeBusiness2019Retail | Office Home and Business 2019 | ✔ | ❌ | ❌ |  |
-| HomeBusinessPipcRetail | Office Home and Business 2016 | ✔ | ❌ | ❌ |  |
-| HomeBusinessRetail | Office Home and Business 2016 | ✔ | ❌ | ❌ |  |
-| HomeStudent2019Retail | Office Home and Student 2019 | ✔ | ❌ | ❌ |  |
-| HomeStudentRetail | Office Home and Student 2016 | ✔ | ❌ | ❌ |  |
-| HomeStudentVNextRetail | Office Home and Student 2016 | ✔ | ❌ | ❌ |  |
+| HomeBusiness2019Retail | Office Home &amp; Business 2019 | ✔ | ❌ | ❌ |  |
+| HomeBusinessPipcRetail | Office Home &amp; Business 2016 | ✔ | ❌ | ❌ |  |
+| HomeBusinessRetail | Office Home &amp; Business 2016 | ✔ | ❌ | ❌ |  |
+| HomeStudent2019Retail | Office Home &amp; Student 2019 | ✔ | ❌ | ❌ |  |
+| HomeStudentRetail | Office Home &amp; Student 2016 | ✔ | ❌ | ❌ |  |
+| HomeStudentVNextRetail | Office Home &amp; Student 2016 | ✔ | ❌ | ❌ |  |
 | MondoRetail | Office Mondo 2016 | ✔ | ✔ | ✔ | DMTCJ-KNRKX-26982-JYCKT-P7KB6 |
 | MondoVolume | Office Mondo 2016 | ❌ | ✔ | ✔ | HFTND-W9MK4-8B7MJ-B6C4G-XQBR2 |
 | Personal2019Retail | Office Personal 2019 | ✔ | ❌ | ❌ |  |
@@ -63,7 +63,7 @@ For more information about GVLKs, please visit [GVLKs for KMS activation of Offi
 | Excel2019Volume | Excel 2019 | ❌ | ✔ | ✔ | TMJWT-YYNMB-3BKTF-644FC-RVXBD |
 | ExcelRetail | Excel 2016 | ✔ | ❌ | ❌ |  |
 | ExcelVolume | Excel 2016 | ❌ | ✔ | ✔ | 9C2PK-NWTVB-JMPW8-BFT28-7FTBF |
-| OneNoteFreeRetail | OneNote Home and Student 2016 | ✔ | ❌ | ❌ |  |
+| OneNoteFreeRetail | OneNote Home &amp; Student 2016 | ✔ | ❌ | ❌ |  |
 | OneNoteRetail | OneNote 2016 | ✔ | ❌ | ❌ |  |
 | OneNoteVolume | OneNote 2016 | ❌ | ✔ | ✔ | DR92N-9HTF2-97XKM-XW2WJ-XW3J6 |
 | Outlook2019Retail | Outlook 2019 | ✔ | ❌ | ❌ |  |

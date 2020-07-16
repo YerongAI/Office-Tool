@@ -6,11 +6,11 @@ For information about Product ID, please visit [the website](https://go.microsof
 
 | Product ID | Product Name | Type | Included Apps | Add-Ons | ODT Supported |
 | :-- | :-- | :--: | :-- | :-- | :--: |
-| O365ProPlusRetail | Microsoft 365 for Enterprise | Suite | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ |
-| O365BusinessRetail | Microsoft 365 for Business | Suite | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | PowerPivot | ✔ |
+| O365ProPlusRetail | Microsoft 365 Apps for Enterprise | Suite | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ |
+| O365BusinessRetail | Microsoft 365 Apps for Business | Suite | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | PowerPivot | ✔ |
 | O365SmallBusPremRetail | Microsoft 365 Small Business Premium | Suite | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | Groove, PowerPivot | ✔ |
 | O365HomePremRetail | Microsoft 365 Family &amp; Personal | Suite | Access, Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | PowerPivot | ✔ |
-| O365EduCloudRetail | Microsoft 365 | Suite | Excel, OneDrive, OneNote, PowerPoint, Word | PowerPivot, PowerView | ❌ |
+| O365EduCloudRetail | Microsoft 365 | Suite | Excel, OneDrive, OneNote, PowerPoint, Word | PowerPivot, PowerView | ✔ |
 | HomeBusiness2019Retail | Office Home &amp; Business 2019 | Suite | Excel, OneDrive, OneNote, Outlook, PowerPoint, Word | PowerPivot | ✔ |
 | HomeBusinessPipcRetail | Office Home &amp; Business 2016 | Suite | Excel, OneDrive, OneNote, Outlook, PowerPoint, Word |  | ❌ |
 | HomeBusinessRetail | Office Home &amp; Business 2016 | Suite | Excel, OneDrive, OneNote, Outlook, PowerPoint, Word |  | ✔ |

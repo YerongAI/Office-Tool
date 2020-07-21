@@ -6,8 +6,8 @@ For more information about GVLKs, please visit [GVLKs for KMS activation of Offi
 
 | Product ID | Product Name | Retail | MAK | KMS | Normal Key (GVLK for KMS)
 | :-- | :-- | :--: | :--: | :--: | :-- |
-| O365ProPlusRetail | Microsoft 365 for Enterprise | ✔ | ❌ | ❌ | DRNV7-VGMM2-B3G9T-4BF84-VMFTK |
-| O365BusinessRetail | Microsoft 365 for Business | ✔ | ❌ | ❌ |  |
+| O365ProPlusRetail | Microsoft 365 Apps for Enterprise | ✔ | ❌ | ❌ | DRNV7-VGMM2-B3G9T-4BF84-VMFTK |
+| O365BusinessRetail | Microsoft 365 Apps for Business | ✔ | ❌ | ❌ |  |
 | O365SmallBusPremRetail | Microsoft 365 Small Business Premium | ✔ | ❌ | ❌ |  |
 | O365HomePremRetail | Microsoft 365 Family &amp; Personal | ✔ | ❌ | ❌ |  |
 | O365EduCloudRetail | Microsoft 365 | ✔ | ❌ | ❌ |  |

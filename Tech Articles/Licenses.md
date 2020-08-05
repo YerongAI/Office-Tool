@@ -89,3 +89,6 @@ For more information about GVLKs, please visit [GVLKs for KMS activation of Offi
 | Word2019Volume | Word 2019 | ❌ | ✔ | ✔ | PBX3G-NWMT6-Q7XBW-PYJGG-WXD33 |
 | WordRetail | Word 2016 | ✔ | ❌ | ❌ |  |
 | WordVolume | Word 2016 | ❌ | ✔ | ✔ | WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6 |
+
+<center>　</center>
+<center>© 2020 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.2</center>

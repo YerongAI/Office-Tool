@@ -17,8 +17,8 @@ For information about Product ID, please visit [the website](https://go.microsof
 | HomeStudent2019Retail | Office Home &amp; Student 2019 | Suite | Excel, OneDrive, OneNote, PowerPoint, Word | PowerPivot | ✔ |
 | HomeStudentRetail | Office Home &amp; Student 2016 | Suite | Excel, OneDrive, OneNote, PowerPoint, Word |  | ✔ |
 | HomeStudentVNextRetail | Office Home &amp; Student 2016 | Suite | Excel, OneDrive, OneNote, PowerPoint, Word |  | ❌ |
-| MondoRetail | Office Mondo 2016 | Suite | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Project, Publisher, Visio, Word | DCF, MondoOnly, OSM, OSMUX, PowerPivot, PowerView | ✔ |
-| MondoVolume | Office Mondo 2016 | Suite | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Project, Publisher, Visio, Word | DCF, MondoOnly, OSM, OSMUX, PowerPivot, PowerView | ❌ |
+| MondoRetail | Office Mondo 2016 | Suite | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Project, Publisher, Visio, Word | DCF, MondoOnly, OSM, OSMUX, PowerPivot, PowerView | ✔ |
+| MondoVolume | Office Mondo 2016 | Suite | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Project, Publisher, Visio, Word | DCF, MondoOnly, OSM, OSMUX, PowerPivot, PowerView | ❌ |
 | Personal2019Retail | Office Personal 2019 | Suite | Excel, OneDrive, Outlook, Word |  | ✔ |
 | PersonalPipcRetail | Office Personal 2016 | Suite | Excel, OneDrive, Outlook, Word |  | ❌ |
 | PersonalRetail | Office Personal 2016 | Suite | Excel, OneDrive, Outlook, Word |  | ✔ |
@@ -91,3 +91,6 @@ For information about Product ID, please visit [the website](https://go.microsof
 | Word2019Volume | Word 2019 | Product | OneDrive |  | ✔ |
 | WordRetail | Word 2016 | Product | OneDrive | OSM | ✔ |
 | WordVolume | Word 2016 | Product | OneDrive | OSM | ❌ |
+
+<center>　</center>
+<center>© 2020 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.2</center>

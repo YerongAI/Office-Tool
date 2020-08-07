@@ -53,7 +53,7 @@ Pergi ke laman Pemasangan, tambahkan produk yang ingin anda pasang, lalu klik Pa
 - (en-us) English (United States) / [Moedog](https://prprpr.love)
 - (es-es) Español (España, alfabetización internacional) / Xoseba
 - (fr-fr) Français (France) / Drake4478
-- (id-id) Bahasa Indonesia (Indonesia) / [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17) 
+- (id-id) Bahasa Indonesia (Indonesia) / [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Jovanzers](https://github.com/jovanzers)
 - (it-it) Italiano (Italia) / [garf02](https://github.com/garf02)
 - (ja-jp) 日本語 (日本) / [秋山ヘイワ](https://github.com/akio1321)
 - (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)
@@ -62,7 +62,7 @@ Pergi ke laman Pemasangan, tambahkan produk yang ingin anda pasang, lalu klik Pa
 - (tr-tr) Türkçe (Türkiye) / Turan Furkan Topak
 - (vi-vn) Tiêng Việt (Việt Nam) / [phuocding](https://github.com/phuocding)
 - (zh-cn) 简体中文 (中国) / **官方语言 (Bahasa Resmi)**
-- (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://www.cotpear.com)
+- (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412)
 
 ## Bantuan Dengan Lokalisasi
 

@@ -10,7 +10,7 @@ Office Tool Plus merupakan basis dari Microsoft [Office Deployment Tool](https:/
 
 Windows 7 SP1, Windows 8 dan Windows 10.
 
-Windows Server 2008 R2 SP1, Windows Server 2012 atau keatasnya.
+Windows Server 2008 R2 SP1, Windows Server 2012 atau lebih tinggi.
 
 Untuk versi 8, diperlukan [Microsoft .Net Core 3.1 x86](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-desktop-3.1.3-windows-x86-installer).
 
@@ -22,13 +22,12 @@ Untuk versi 7, diperlukan [Microsoft .NET Framework 4.6.1](http://go.microsoft.c
 
 [Unduhan Cadangan](https://download.coolhub.top/)
 
-
 ## Fitur
 
 - Mengunduh pemasangan Office di setiap saluran.
 - Memasang Office yang anda inginkan.
-- Menambah produk, applikasi atau paket bahasa ke Office yang sudah ada.
-- mencopot produk atau membuang aplikasi.
+- Menambah produk, aplikasi atau paket bahasa ke Office yang sudah ada.
+- Mencopot produk atau menghapus aplikasi.
 - Membuat berkas konfigurasi XML.
 - Membuat berkas ISO Office.
 - Memasang lisensi Office (edisi yang dikonversi).
@@ -67,7 +66,7 @@ Pergi ke laman Pemasangan, tambahkan produk yang ingin anda pasang, lalu klik Pa
 
 ## Bantuan Dengan Lokalisasi
 
-Kami menggiatkan semua orang untuk membantu terjemahan. Berikut ini adalah caranya.
+Kami mendorong semua orang untuk membantu terjemahan. Berikut ini adalah caranya.
 
 1. Lakukan "Fork" pada repositori ini.
 

@@ -1,20 +1,60 @@
-# Office Tool Plus
+#
 
-[⬅ Kembali](https://github.com/YerongAI/Office-Tool)
+<p align="center">
+<img alt="Office Tool Plus Logo" src="https://otp.landian.vip/static/images/logo.png"/>
+</p>
 
-Office Tool Plus merupakan alat untuk memasang Office, Visio dan Project, mendukung Office 2016, 2019 dan 365. Dengan menggunakan Office Tool Plus, anda dengan mudahnya bisa memasang Office.
+<p align="center">
+<a href="https://www.coolhub.top/" target="_blank"><img alt="Author" src="https://img.shields.io/badge/Author-Yerong-blue?style=flat-square"/></a>
+<img alt="Language" src="https://img.shields.io/badge/Language-C%23-green?style=flat-square"/>
+<a href="https://otp.landian.vip/" target="_blank"><img alt="Release" src="https://img.shields.io/github/v/release/YerongAI/Office-Tool?style=flat-square"/></a>
+<img alt="License" src="https://img.shields.io/github/license/YerongAI/Office-Tool?style=flat-square"/>
+</p>
 
-Office Tool Plus merupakan basis dari Microsoft [Office Deployment Tool](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-2016-deployment-tool) and [OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office).
+> A powerful and useful tool for Office deployments.
+
+Supports custom deployment and activation of the following products:
+
+- Office 2016, 2019 & 365
+- Visio 2016, 2019 & Online Plan 2
+- Project 2016, 2019 & Online Desktop Client
+
+Additional functions:
+
+- Support for all 17 channels of Office, including query, download, and installation.
+- Modifications to existing Office, including additions and deletions of products, applications, language packs, etc.
+- Importing/Exporting XML Profiles.
+- Create ISO files for sharing or offline installation.
+- Installing Office licenses (converted edition).
+- Cleanup of Office licenses and keys.
+- Supports online activation, phone activation (offline activation) and KMS activation.
+- Reset/Forced removal of Office.
+- Changing Office's update channel without reinstalling Office.
+- Batch conversion of Office documents, based on Office API (Version 8 only).
+
+Components:
+
+- **[Office Deployment Tool](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - The main modules of installing Office.
+- **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office Software Protect Platform.
+- **Thunder** - The main engines for downloading Office.
+- **vlmcs** - Components for testing the availability of KMS, *only included in the full version*.
 
 ## Persyaratan Sistem
 
-Windows 7 SP1, Windows 8 dan Windows 10.
+- Windows 7 SP1, Windows 8 dan Windows 10.
+- Windows Server 2008 R2 SP1, Windows Server 2012 atau lebih tinggi.
 
-Windows Server 2008 R2 SP1, Windows Server 2012 atau lebih tinggi.
+### Versi 8
 
-Untuk versi 8, diperlukan [Microsoft .Net Core 3.1 x86](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-desktop-3.1.3-windows-x86-installer).
+- [Microsoft .NET Core 3.1 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-Untuk versi 7, diperlukan [Microsoft .NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780597).
+*Note: This framework should be installed on all systems.*
+
+### Versi 7
+
+- [Microsoft .NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780597)
+
+*Note: A higher version is built into Windows 10 and does not require additional installation.*
 
 ## Unduh Office Tool Plus
 
@@ -22,58 +62,14 @@ Untuk versi 7, diperlukan [Microsoft .NET Framework 4.6.1](http://go.microsoft.c
 
 [Unduhan Cadangan](https://download.coolhub.top/)
 
-## Fitur
-
-- Mengunduh pemasangan Office di setiap saluran.
-- Memasang Office yang anda inginkan.
-- Menambah produk, aplikasi atau paket bahasa ke Office yang sudah ada.
-- Mencopot produk atau menghapus aplikasi.
-- Membuat berkas konfigurasi XML.
-- Membuat berkas ISO Office.
-- Memasang lisensi Office (edisi yang dikonversi).
-- Memasang atau mencopot kunci produk Office.
-- Mengelola aktivasi KMS Office.
-- Membersihkan lisensi dan kunci produk.
-- Mendukung aktivasi secara online dan melalui telepon.
-- Mengganti saluran pembaruan tanpa memasang ulang Office.
-- Mengumpulkan versi Office pada setiap saluran.
-- Memperbaiki dan mengembalikan Office.
-- Mengonversi dokumen Office.
-
-dan masih banyak lagi...
-
 ## Mulai Cepat
 
 Pergi ke laman Pemasangan, tambahkan produk yang ingin anda pasang, lalu klik Pasangkan Office untuk memulai pemasangannya.
 
-## Terima kasih kepada Kolaborator
+After installation, you will need a valid license to activate Office.
 
-- (ar-ps) العربية (الأراضي الفلسطينية) / Ibrahim
-- (de-de) Deutsch (Deutschland) / [Berny23](https://steamcommunity.com/id/Berny23)
-- (en-us) English (United States) / [Moedog](https://prprpr.love)
-- (es-es) Español (España, alfabetización internacional) / Xoseba
-- (fr-fr) Français (France) / Drake4478
-- (id-id) Bahasa Indonesia (Indonesia) / [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Jovanzers](https://github.com/jovanzers)
-- (it-it) Italiano (Italia) / [garf02](https://github.com/garf02)
-- (ja-jp) 日本語 (日本) / [秋山ヘイワ](https://github.com/akio1321)
-- (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)
-- (pl-pl) Polski (Polska) / JakubDriver
-- (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec) [Igor Rückert](https://github.com/igorruckert)
-- (tr-tr) Türkçe (Türkiye) / Turan Furkan Topak
-- (vi-vn) Tiêng Việt (Việt Nam) / [phuocding](https://github.com/phuocding)
-- (zh-cn) 简体中文 (中国) / **官方语言 (Bahasa Resmi)**
-- (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412)
+## About
 
-## Bantuan Dengan Lokalisasi
+© 2016-2020 Yerong. All rights reserved.
 
-Kami mendorong semua orang untuk membantu terjemahan. Berikut ini adalah caranya.
-
-1. Lakukan "Fork" pada repositori ini.
-
-2. Terjemahkan **en-us.xaml** ke bahasa anda sendiri misalnya **de-de.xaml**
-
-3. Salinlah ke jalur yang benar.
-
-4. Lakukan "Pull Request".
-
-Atau anda bisa mengirimkan berkasnya kepadaku melalui [E-mail ini](mailto:yerong@coolhub.top)
+> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)

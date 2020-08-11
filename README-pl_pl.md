@@ -1,79 +1,75 @@
-# Office Tool Plus
+#
 
-[⬅ Back](https://github.com/YerongAI/Office-Tool)
+<p align="center">
+<img alt="Office Tool Plus Logo" src="https://otp.landian.vip/static/images/logo.png"/>
+</p>
 
-Office Tool Plus to narzędzie do wdrażania Office, Visio i Project, obsługuje Office 2016, 2019 i 365. Korzystając z Office Tool Plus, możesz łatwo wdrożyć Office.
+<p align="center">
+<a href="https://www.coolhub.top/" target="_blank"><img alt="Author" src="https://img.shields.io/badge/Author-Yerong-blue?style=flat-square"/></a>
+<img alt="Language" src="https://img.shields.io/badge/Language-C%23-green?style=flat-square"/>
+<a href="https://otp.landian.vip/" target="_blank"><img alt="Release" src="https://img.shields.io/github/v/release/YerongAI/Office-Tool?style=flat-square"/></a>
+<img alt="License" src="https://img.shields.io/github/license/YerongAI/Office-Tool?style=flat-square"/>
+</p>
 
-Office Tool Plus jest oparty na Microsoft Office [narzędzie do wdrażania pakietu Office](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-2016-deployment-tool) i [OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office).
+> A powerful and useful tool for Office deployments.
+
+Supports custom deployment and activation of the following products:
+
+- Office 2016, 2019 & 365
+- Visio 2016, 2019 & Online Plan 2
+- Project 2016, 2019 & Online Desktop Client
+
+Additional functions:
+
+- Support for all 17 channels of Office, including query, download, and installation.
+- Modifications to existing Office, including additions and deletions of products, applications, language packs, etc.
+- Importing/Exporting XML Profiles.
+- Create ISO files for sharing or offline installation.
+- Installing Office licenses (converted edition).
+- Cleanup of Office licenses and keys.
+- Supports online activation, phone activation (offline activation) and KMS activation.
+- Reset/Forced removal of Office.
+- Changing Office's update channel without reinstalling Office.
+- Batch conversion of Office documents, based on Office API (Version 8 only).
+
+Components:
+
+- **[Office Deployment Tool](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - The main modules of installing Office.
+- **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office Software Protect Platform.
+- **Thunder** - The main engines for downloading Office.
+- **vlmcs** - Components for testing the availability of KMS, *only included in the full version*.
 
 ## Wymagania Systemowe
 
-Windows 7 SP1, Windows 8 i Windows 10.
+- Windows 7 SP1, Windows 8 i Windows 10.
+- Windows Server 2008 R2 SP1, Windows Server 2012 lub wyżej.
 
-Windows Server 2008 R2 SP1, Windows Server 2012 lub wyżej.
+### Wersji 8
 
-Dla wersji 8, [Microsoft .Net Core 3.1 x86](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-desktop-3.1.3-windows-x86-installer) jest wymagane.
+- [Microsoft .NET Core 3.1 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-Dla wersji 7, [Microsoft .NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780597) jest wymagane.
+*Note: This framework should be installed on all systems.*
+
+### Wersji 7
+
+- [Microsoft .NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780597)
+
+*Note: A higher version is built into Windows 10 and does not require additional installation.*
 
 ## Pobierz Office Tool Plus
 
-[Oficjalna strona internetowa](https://otp.landian.vip/)
+- [Oficjalna strona internetowa](https://otp.landian.vip/)
 
-[Pobieranie lustrzane](https://download.coolhub.top/)
-
-## Funkcje
-
-- Pobierz instalację pakietu Office w każdym kanale.
-- Zainstaluj pakiet Office, który chcesz.
-- Dodaj produkty, aplikacje lub pakiety językowe do istniejącego pakietu Office.
-- Odinstaluj produkty lub usuń aplikacje.
-- Utwórz plik konfiguracyjny XML.
-- Utwórz plik ISO pakietu Office.
-- Zainstaluj licencje Office (wersja przekonwertowana).
-- Zainstaluj lub odinstaluj klucz produktu Office.
-- Zarządzaj aktywacją KMS pakietu Office.
-- Wyczyść licencje i klucze produktu.
-- Obsługuje aktywację online i aktywację telefoniczną.
-- Zmień kanały aktualizacji bez ponownej instalacji pakietu Office.
-- Wersja zapytania pakietu Office dla każdego kanału.
-- Napraw i przywróć Office.
-- Konwertuj dokumenty Office.
-
-i więcej...
+- [Pobieranie lustrzane](https://download.coolhub.top/)
 
 ## Szybki start
 
 Przejdź do strony Wdróż, dodaj produkt, który chcesz zainstalować, a następnie kliknij Wdróż, aby rozpocząć instalację.
 
-## Dzięki współpracownikom
+After installation, you will need a valid license to activate Office.
 
-- (ar-ps) العربية (الأراضي الفلسطينية) / Ibrahim
-- (de-de) Deutsch (Deutschland) / [Berny23](https://steamcommunity.com/id/Berny23)
-- (en-us) English (United States) / [Moedog](https://prprpr.love)
-- (es-es) Español (España, alfabetización internacional) / Xoseba
-- (fr-fr) Français (France) / Drake4478
-- (id-id) Bahasa Indonesia (Indonesian) / [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Jovanzers](https://github.com/jovanzers)
-- (it-it) Italiano (Italia) / [garf02](https://github.com/garf02)
-- (ja-jp) 日本語 (日本) / [秋山ヘイワ](https://github.com/akio1321)
-- (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)
-- (pl-pl) Polski (Polska) / JakubDriver
-- (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec) [Igor Rückert](https://github.com/igorruckert)
-- (tr-tr) Türkçe (Türkiye) / Turan Furkan Topak
-- (vi-vn) Tiêng Việt (Việt Nam) / [phuocding](https://github.com/phuocding)
-- (zh-cn) 简体中文 (中国) / **官方语言 (Official language)**
-- (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://www.cotpear.com)
+## About
 
-## Pomoc z lokalizacją
+© 2016-2020 Yerong. All rights reserved.
 
-Zachęcamy wszystkich do pomocy w lokalizacji. Oto jak to zrobić.
-
-1. Rozwidlaj to repozytorium
-
-2. Przetłumacz **en-us.xaml** na swój język, a następnie zapisz go jak **pl-pl.xaml**
-
-3. Skopiuj go do właściwej ścieżki.
-
-4. Złóż wniosek Pull.
-
-Lub możesz wysłać mi swoje pliki za pośrednictwem [E-mail](mailto:yerong@coolhub.top)
+> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)

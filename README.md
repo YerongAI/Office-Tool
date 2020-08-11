@@ -1,50 +1,72 @@
-# Office Tool Plus
+#
 
-English｜[简体中文](/README-zh_cn.md)｜[繁體中文](/README-zh_tw.md)｜[日本語](/README-ja_jp.md)｜[한국어](/README-ko_kr.md)｜[Italiano](/README-it_it.md)｜[ไทย/Thai](/README-th_th.md)｜[polski](/README-pl_pl.md)｜[Brazilian Portuguese](/README-pt_br.md)｜[Français](/README-fr_fr.md)｜[Deutsch](/README-de_de.md)｜[Bahasa Indonesia](/README-id_id.md)
+<p align="center">
+<img alt="Office Tool Plus Logo" src="https://otp.landian.vip/static/images/logo.png"/>
+</p>
 
-Office Tool Plus is a tool for deploying Office, Visio and Project, supports Office 2016, 2019 and 365. By using Office Tool Plus, you can easily deploy Office.
+<p align="center">
+<a href="https://www.coolhub.top/" target="_blank"><img alt="Author" src="https://img.shields.io/badge/Author-Yerong-blue?style=flat-square"/></a>
+<img alt="Language" src="https://img.shields.io/badge/Language-C%23-green?style=flat-square"/>
+<a href="https://otp.landian.vip/" target="_blank"><img alt="Release" src="https://img.shields.io/github/v/release/YerongAI/Office-Tool?style=flat-square"/></a>
+<img alt="License" src="https://img.shields.io/github/license/YerongAI/Office-Tool?style=flat-square"/>
+</p>
 
-Office Tool Plus is based on Microsoft's [Office Deployment Tool](https://docs.microsoft.com/en-us/DeployOffice/overview-of-the-office-2016-deployment-tool) and [OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office).
+> A powerful and useful tool for Office deployments.
+
+Supports custom deployment and activation of the following products:
+
+- Office 2016, 2019 & 365
+- Visio 2016, 2019 & Online Plan 2
+- Project 2016, 2019 & Online Desktop Client
+
+Additional functions:
+
+- Support for all 17 channels of Office, including query, download, and installation.
+- Modifications to existing Office, including additions and deletions of products, applications, language packs, etc.
+- Importing/Exporting XML Profiles.
+- Create ISO files for sharing or offline installation.
+- Installing Office licenses (converted edition).
+- Cleanup of Office licenses and keys.
+- Supports online activation, phone activation (offline activation) and KMS activation.
+- Reset/Forced removal of Office.
+- Changing Office's update channel without reinstalling Office.
+- Batch conversion of Office documents, based on Office API (Version 8 only).
+
+Components:
+
+- **[Office Deployment Tool](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - The main modules of installing Office.
+- **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office Software Protect Platform.
+- **Thunder** - The main engines for downloading Office.
+- **vlmcs** - Components for testing the availability of KMS, *only included in the full version*.
 
 ## System Requirements
 
-Windows 7 SP1, Windows 8 and Windows 10.
+- Windows 7 SP1, Windows 8 and Windows 10.
+- Windows Server 2008 R2 SP1, Windows Server 2012 or higher.
 
-Windows Server 2008 R2 SP1, Windows Server 2012 or higher.
+### Version 8
 
-For version 8, [Microsoft .Net Core 3.1 x86](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-desktop-3.1.3-windows-x86-installer) is required.
+- [Microsoft .NET Core 3.1 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-For version 7, [Microsoft .NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780597) is required.
+*Note: This framework should be installed on all systems.*
+
+### Version 7
+
+- [Microsoft .NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780597)
+
+*Note: A higher version is built into Windows 10 and does not require additional installation.*
 
 ## Download Office Tool Plus
 
-[Official website](https://otp.landian.vip/)
+- [Official website](https://otp.landian.vip/)
 
-[Mirror download](https://download.coolhub.top/)
-
-## Features
-
-- Download Office installation in each channels.
-- Install Office that you want.
-- Add product(s), application(s) or language pack(s) to existing Office.
-- Uninstall products or remove applications.
-- Create XML configuration file.
-- Create Office ISO file.
-- Install Office licenses (converted edition).
-- Install or uninstall Office product key.
-- Manage KMS activation of Office.
-- Clean licenses and product keys.
-- Supports online activation and phone activation.
-- Change update channels without reinstalling Office.
-- Query version of Office for each channels.
-- Repair and restore Office.
-- Convert Office documents.
-
-and more...
+- [Download site](https://download.coolhub.top/)
 
 ## Quick Start
 
-Go to Deploy page, add a product that you want to install, then click Deploy to start your installation.
+Go to Deploy page, add a product and language pack that you want to install, then click Deploy to start your installation.
+
+After installation, you will need a valid license to activate Office.
 
 ## Thanks to the collaborators
 
@@ -61,7 +83,7 @@ Go to Deploy page, add a product that you want to install, then click Deploy to 
 - (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec) [Igor Rückert](https://github.com/igorruckert)
 - (tr-tr) Türkçe (Türkiye) / Turan Furkan Topak
 - (vi-vn) Tiêng Việt (Việt Nam) / [phuocding](https://github.com/phuocding)
-- (zh-cn) 简体中文 (中国) / **官方语言 (Official language)**
+- (zh-cn) 简体中文 (中国) / Official language
 - (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412)
 
 ## Help With Localization
@@ -77,3 +99,9 @@ We encourage everyone to help with localization. The following is how to do.
 4. Make a Pull Request.
 
 Or you can send me your files via [E-mail](mailto:yerong@coolhub.top)
+
+## About
+
+© 2016-2020 Yerong. All rights reserved.
+
+> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)

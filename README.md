@@ -73,7 +73,7 @@ After installation, you will need a valid license to activate Office.
 - (ar-ps) العربية (الأراضي الفلسطينية) / Ibrahim
 - (de-de) Deutsch (Deutschland) / [Berny23](https://steamcommunity.com/id/Berny23)
 - (en-us) English (United States) / [Moedog](https://prprpr.love)
-- (es-es) Español (España, alfabetización internacional) / Xoseba
+- (es-es) Español (España) / Xoseba
 - (fr-fr) Français (France) / Drake4478
 - (id-id) Bahasa Indonesia (Indonesian) / [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Jovanzers](https://github.com/jovanzers)
 - (it-it) Italiano (Italia) / [garf02](https://github.com/garf02)

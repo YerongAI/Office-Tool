@@ -10,7 +10,7 @@ Office Tool Plus merupakan basis dari Microsoft [Office Deployment Tool](https:/
 
 Windows 7 SP1, Windows 8 dan Windows 10.
 
-Windows Server 2008 R2 SP1, Windows Server 2012 atau keatasnya.
+Windows Server 2008 R2 SP1, Windows Server 2012 atau lebih tinggi.
 
 Untuk versi 8, diperlukan [Microsoft .Net Core 3.1 x86](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-desktop-3.1.3-windows-x86-installer).
 
@@ -22,13 +22,12 @@ Untuk versi 7, diperlukan [Microsoft .NET Framework 4.6.1](http://go.microsoft.c
 
 [Unduhan Cadangan](https://download.coolhub.top/)
 
-
 ## Fitur
 
 - Mengunduh pemasangan Office di setiap saluran.
 - Memasang Office yang anda inginkan.
-- Menambah produk, applikasi atau paket bahasa ke Office yang sudah ada.
-- mencopot produk atau membuang aplikasi.
+- Menambah produk, aplikasi atau paket bahasa ke Office yang sudah ada.
+- Mencopot produk atau menghapus aplikasi.
 - Membuat berkas konfigurasi XML.
 - Membuat berkas ISO Office.
 - Memasang lisensi Office (edisi yang dikonversi).
@@ -54,7 +53,7 @@ Pergi ke laman Pemasangan, tambahkan produk yang ingin anda pasang, lalu klik Pa
 - (en-us) English (United States) / [Moedog](https://prprpr.love)
 - (es-es) Español (España, alfabetización internacional) / Xoseba
 - (fr-fr) Français (France) / Drake4478
-- (id-id) Bahasa Indonesia (Indonesia) / [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17) 
+- (id-id) Bahasa Indonesia (Indonesia) / [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Jovanzers](https://github.com/jovanzers)
 - (it-it) Italiano (Italia) / [garf02](https://github.com/garf02)
 - (ja-jp) 日本語 (日本) / [秋山ヘイワ](https://github.com/akio1321)
 - (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)
@@ -63,11 +62,11 @@ Pergi ke laman Pemasangan, tambahkan produk yang ingin anda pasang, lalu klik Pa
 - (tr-tr) Türkçe (Türkiye) / Turan Furkan Topak
 - (vi-vn) Tiêng Việt (Việt Nam) / [phuocding](https://github.com/phuocding)
 - (zh-cn) 简体中文 (中国) / **官方语言 (Bahasa Resmi)**
-- (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://www.cotpear.com)
+- (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412)
 
 ## Bantuan Dengan Lokalisasi
 
-Kami menggiatkan semua orang untuk membantu terjemahan. Berikut ini adalah caranya.
+Kami mendorong semua orang untuk membantu terjemahan. Berikut ini adalah caranya.
 
 1. Lakukan "Fork" pada repositori ini.
 

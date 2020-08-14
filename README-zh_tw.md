@@ -13,31 +13,31 @@
 
 > A powerful and useful tool for Office deployments.
 
-支持以下产品的自定义部署与激活：
+支援以下 Office 產品的自訂部署和啟用：
 
 - Office 2016, 2019 & 365
 - Visio 2016, 2019 & Online Plan 2
 - Project 2016, 2019 & Online Desktop Client
 
-除了部署 Office 外，还包含以下功能：
+除了部署 Office 之外，Office Tool Plus 還擁有以下便利功能：
 
-- 支持 Office 的全部 17 个通道，包括查询、下载、安装
-- 对现有 Office 进行修改，包括产品、应用程序、语言包的增删
-- 导入/导出 XML 配置文件
-- 创建 ISO 文件以供分享或离线安装使用
-- 安装 Office 许可证（转换 Office 版本）
-- 一键清理 Office 的许可证以及密钥
-- 支持在线激活、电话激活（离线激活）以及 KMS 激活
-- 重置/强制移除 Office
-- 更改 Office 的更新通道而无需重装 Office
-- 批量转换 Office 文档，基于 Office API（仅限 V8 版本）
+- 支援使用 Office 全部 17 個頻道來進行查詢、下載、安裝操作
+- 支援對現有已安裝 Office 進行產品、應用程式、語言套件的增刪操作
+- 支援匯出/匯入 XML 設定文件
+- 支援建立 ISO 安裝文件以供分享貨離線安裝使用
+- 支援安裝或轉換 Office 授權
+- 支援線上啟用、電話啟用（離線啟用）和 KMS 啟用
+- 支援直接修改現有已安裝的 Office 更新頻道，無須重新安裝 Office
+- 支援大量轉換 Office 文件，基於 Office API（限第八版）
+- 一鍵清除 Office 的授權和金鑰
+- 一鍵重設/強制移除 Office
 
-部分功能基于以下组件：
+部分功能基於以下服務：
 
-- **[Office 部署工具](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - Office 的部署相关程序
-- **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office 的激活相关脚本
-- **迅雷云加速开放平台** - 下载 Office 的主要引擎
-- **vlmcs** - 检测 KMS 可用性的组件，*仅在完整版中包含*
+- **[Office 部署工具](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - Office 部署相關操作
+- **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office 啟用的相關操作
+- **Thunder 雲加速開放平台** - 下載 Office 安裝文件的主要引擎
+- **vlmcs** - 檢測 KMS 可用性的服務，*限完整版提供*
 
 ## 系統需求
 

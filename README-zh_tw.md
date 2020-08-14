@@ -11,7 +11,7 @@
 <img alt="License" src="https://img.shields.io/github/license/YerongAI/Office-Tool?style=flat-square"/>
 </p>
 
-> A powerful and useful tool for Office deployments.
+> 多功能集於一身的 Office 部署工具
 
 支援以下 Office 產品的自訂部署和啟用：
 

@@ -11,33 +11,33 @@
 <img alt="License" src="https://img.shields.io/github/license/YerongAI/Office-Tool?style=flat-square"/>
 </p>
 
-> A powerful and useful tool for Office deployments.
+> Alat yang kuat dan gampang digunakan untuk A powerful and useful tool for Office deployments.
 
-Supports custom deployment and activation of the following products:
+Mendukung untuk memasangan ubahsuai dan mengaktivasi produk berikut:
 
 - Office 2016, 2019 & 365
 - Visio 2016, 2019 & Online Plan 2
 - Project 2016, 2019 & Online Desktop Client
 
-Additional functions:
+Fungsi Tambahan:
 
-- Support for all 17 channels of Office, including query, download, and installation.
-- Modifications to existing Office, including additions and deletions of products, applications, language packs, etc.
-- Importing/Exporting XML Profiles.
-- Create ISO files for sharing or offline installation.
-- Installing Office licenses (converted edition).
-- Cleanup of Office licenses and keys.
-- Supports online activation, phone activation (offline activation) and KMS activation.
-- Reset/Forced removal of Office.
-- Changing Office's update channel without reinstalling Office.
-- Batch conversion of Office documents, based on Office API (Version 8 only).
+- Mendukung semua 17 saluran Office, termasuk kueri, unduhan dan pemasangan.
+- Modifikasi Office yang sudah ada, termasuk menambahkan atau mencopot produk, aplikasi, paket bahasa, dll.
+- Mengekspor/Mengimpor profil XML.
+- Membuat berkas ISO untuk berbagi untuh pemasangan secara luring.
+- Pemasangan lisensi Office (edisi terkonversi)
+- Pembersihan lisensi dan kunci produk Office.
+- Mendukung aktivasi secara daring, aktivasi telepon (aktivasi secara luring) dan aktivasi KMS.
+- Setel ulang/paksa mencopot Office.
+- Mengubah saluran pembaruan Office tanpa perlu memasang kembali Office.
+- Sejumlah konversi dokumen Office, berdasarkan Office API (Hanya di versi 8)
 
-Components:
+Komponen:
 
-- **[Office Deployment Tool](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - The main modules of installing Office.
+- **[Office Deployment Tool](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - Modul utama pemasangan Office.
 - **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office Software Protect Platform.
-- **Thunder** - The main engines for downloading Office.
-- **vlmcs** - Components for testing the availability of KMS, *only included in the full version*.
+- **Thunder** - Mesin utama untuk mengunduh Office.
+- **vlmcs** - Komponen untuk ujicoba KMS yang tersedia, *hanya ada di versi penuh*.
 
 ## Persyaratan Sistem
 
@@ -48,13 +48,13 @@ Components:
 
 - [Microsoft .NET Core 3.1 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-*Note: This framework should be installed on all systems.*
+*Catatan: Framework ini harus terpasang di semua sistem.*
 
 ### Versi 7
 
 - [Microsoft .NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780597)
 
-*Note: A higher version is built into Windows 10 and does not require additional installation.*
+*Catatan: Versi sistem yang lebih tinggi pada Windows 10 dan tidak diperlukan pemasangan tambahan.*
 
 ## Unduh Office Tool Plus
 
@@ -66,10 +66,10 @@ Components:
 
 Pergi ke laman Pemasangan, tambahkan produk yang ingin anda pasang, lalu klik Pasangkan Office untuk memulai pemasangannya.
 
-After installation, you will need a valid license to activate Office.
+Setelah pemasangannya selesai, anda perlu lisensi yang valid untuk mengaktivasi Office.
 
-## About
+## Tentang
 
-© 2016-2020 Yerong. All rights reserved.
+© 2016-2020 Yerong. Semua Hak Cipta Dilindungi.
 
 > Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)

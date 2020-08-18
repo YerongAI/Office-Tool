@@ -11,7 +11,7 @@
 <img alt="License" src="https://img.shields.io/github/license/YerongAI/Office-Tool?style=flat-square"/>
 </p>
 
-> Alat yang kuat dan gampang digunakan untuk A powerful and useful tool for Office deployments.
+> Sebuah alat yang bertenaga dan gampang digunakan untuk pemasangan Office.
 
 Mendukung untuk memasangan ubahsuai dan mengaktivasi produk berikut:
 

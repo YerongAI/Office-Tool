@@ -11,67 +11,67 @@
 <img alt="License" src="https://img.shields.io/github/license/YerongAI/Office-Tool?style=flat-square"/>
 </p>
 
- > 一个强大且实用的 Office 部署工具。
+ > 하나의 유용한 Office 배포도구입니다.
 
-支持以下产品的自定义部署与激活：
+아래 제품들에 대한 사용자 정의된 배포와 정품인정 지원:
 
 - Office 2016, 2019 & 365
 - Visio 2016, 2019 & Online Plan 2
 - Project 2016, 2019 & Online Desktop Client
 
-除了部署 Office 外，还包含以下功能：
+Office 배포 제외의 다른 기능들:
 
-- 支持 Office 的全部 17 个通道，包括查询、下载、安装
-- 对现有 Office 进行修改，包括产品、应用程序、语言包的增删
-- 导入/导出 XML 配置文件
-- 创建 ISO 文件以供分享或离线安装使用
-- 安装 Office 许可证（转换 Office 版本）
-- 一键清理 Office 的许可证以及密钥
-- 支持在线激活、电话激活（离线激活）以及 KMS 激活
-- 重置/强制移除 Office
-- 更改 Office 的更新通道而无需重装 Office
-- 批量转换 Office 文档，基于 Office API（仅限 V8 版本）
+- Office 17개의 전체 채널을 지원, 조회/다운로드/설치 포함
+- 기존 Office 수정, 제품/응용프로그램/언어팩 추가 및 제거
+- XML 환경설정 파일 도입/수출
+- ISO 파일을 만들어 공유하고 오프라인 설치 가능
+- Office 라이선스 설치 (Office 버전 전환)
+- 하나의 키로 Office 라이선스와 키 제거
+- 온라인 정품인정/전환 정품인정(오프라인 정품인정)과 KMS 정품인정
+- Office 강제 제거
+- 재설치 필요 없이 Office 업데이트 채널을 바꾸기
+- 일과로 Office 파일 전환, Office API 기능 사용 (V8버전에서 만)
 
-部分功能基于以下组件：
+일부의 기능들이 다음 도구들오 완성함:
 
-- **[Office 部署工具](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - Office 的部署相关程序
-- **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office 的激活相关脚本
-- **迅雷云加速开放平台** - 下载 Office 的主要引擎
-- **vlmcs** - 检测 KMS 可用性的组件，*仅在完整版中包含*
+- **[Office 배포도구](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - Office 배포에 관한 도구
+- **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office 정품인정 스크립트
+- **Thunder 다운로드 클라우드 프랫폼** - Office 다운로드 기능의 주요 엔진
+- **vlmcs** - KMS 사용 가능성을 검사하는 도구 *전체 버전에서만 존재함*
 
-## 系统要求
+## 시스템 요구사항
 
 - Windows 7 SP1, Windows 8 和 Windows 10.
-- Windows Server 2008 R2 SP1, Windows Server 2012 或者更高版本.
+- Windows Server 2008 R2 SP1, Windows Server 2012나 이상 버전
 
-### 第八版本（V8）
+### V8
 
 - [Microsoft .NET Core 3.1 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-*注：所有系统都要安装这个框架。*
+*주의: 모든 시스템에서도 이 런타이임이 필수합니다.*
 
-### 第七版本（V7）
+### V7
 
 - [Microsoft .NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780597).
 
-*注：Windows 10 系统已内置更高的 .NET Framework 版本，无需额外安装。*
+*주의: Windows 10에서는 보다 높은 버전의 .Net Framework가 이미 존재해서 설치 필요 없음.*
 
-## 下载 Office Tool Plus
+## Office Tool Plus 다운로드
 
-- [官方网站](https://otp.landian.vip/)
+- [공식 사이트](https://otp.landian.vip/)
 
-- [下载站点](https://download.coolhub.top/)
+- [비상 사이트](https://download.coolhub.top/)
 
-## 快速入门
+## 빠른 알아보기
 
-在 Office Tool Plus 的部署页面，添加您需要的产品和语言包，然后开始部署即可。
+Office Tool Plus의 배포 페이지에서 원하는 제품과 언어백을 선택하고 바로 배포할 수 있습니다.
 
-部署完成后，您需要使用有效的许可去激活 Office.
+배포 완성되면 유효한 라이선스를 사용해서 Office 정품인정할 수 있습니다.
 
-更多教程与信息请查阅博客中的文章。
+더 많은 정보는 블로그에 가서 조회 해보세요.
 
-## 关于
+## 추가정보
 
 © 2016-2020 Yerong. All rights reserved.
 
-> 博客 [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)
+> 블로그 [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)

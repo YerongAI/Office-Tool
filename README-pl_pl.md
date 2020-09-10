@@ -11,33 +11,33 @@
 <img alt="License" src="https://img.shields.io/github/license/YerongAI/Office-Tool?style=flat-square"/>
 </p>
 
-> A powerful and useful tool for Office deployments.
+> Potężne i przydatne narzędzie do wdrożeń pakietu Office.
 
-Supports custom deployment and activation of the following products:
+Obsługuje niestandardowe wdrażanie i aktywację następujących produktów:
 
 - Office 2016, 2019 & 365
 - Visio 2016, 2019 & Online Plan 2
 - Project 2016, 2019 & Online Desktop Client
 
-Additional functions:
+Dodatkowe funkcje:
 
-- Support for all 17 channels of Office, including query, download, and installation.
-- Modifications to existing Office, including additions and deletions of products, applications, language packs, etc.
-- Importing/Exporting XML Profiles.
-- Create ISO files for sharing or offline installation.
-- Installing Office licenses (converted edition).
-- Cleanup of Office licenses and keys.
-- Supports online activation, phone activation (offline activation) and KMS activation.
-- Reset/Forced removal of Office.
-- Changing Office's update channel without reinstalling Office.
-- Batch conversion of Office documents, based on Office API (Version 8 only).
+- Obsługa wszystkich 17 kanałów pakietu Office, w tym zapytań, pobierania i instalacji.
+- Modyfikacje istniejącego pakietu Office, w tym dodawanie i usuwanie produktów, aplikacji, pakietów językowych itp.
+- Importowanie / eksportowanie profili XML.
+- Twórz pliki ISO do udostępniania lub instalacji offline.
+- Instalowanie licencji Office (wersja przekonwertowana).
+- Czyszczenie licencji i kluczy pakietu Office.
+- Obsługuje aktywację online, aktywację telefoniczną (aktywacja offline) i aktywację KMS.
+- Reset / wymuszone usunięcie pakietu Office.
+- Zmiana kanału aktualizacji pakietu Office bez ponownej instalacji pakietu Office.
+- Konwersja wsadowa dokumentów Office w oparciu o Office API (tylko wersja 8).
 
-Components:
+Komponenty :
 
-- **[Office Deployment Tool](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - The main modules of installing Office.
-- **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office Software Protect Platform.
-- **Thunder** - The main engines for downloading Office.
-- **vlmcs** - Components for testing the availability of KMS, *only included in the full version*.
+- **[Office Deployment Tool](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - Główne moduły instalacji pakietu Office.
+- **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Platforma ochrony oprogramowania biurowego.
+- **Thunder** - Główne silniki do pobierania pakietu Office.
+- **vlmcs** - Komponenty do testowania dostępności KMS, * zawarte tylko w pełnej wersji *.
 
 ## Wymagania Systemowe
 
@@ -48,13 +48,13 @@ Components:
 
 - [Microsoft .NET Core 3.1 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-*Note: This framework should be installed on all systems.*
+* Uwaga: ta struktura powinna być zainstalowana na wszystkich systemach. *
 
 ### Wersji 7
 
 - [Microsoft .NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780597)
 
-*Note: A higher version is built into Windows 10 and does not require additional installation.*
+* Uwaga: wyższa wersja jest wbudowana w system Windows 10 i nie wymaga dodatkowej instalacji. *
 
 ## Pobierz Office Tool Plus
 
@@ -66,10 +66,10 @@ Components:
 
 Przejdź do strony Wdróż, dodaj produkt, który chcesz zainstalować, a następnie kliknij Wdróż, aby rozpocząć instalację.
 
-After installation, you will need a valid license to activate Office.
+Po instalacji będziesz potrzebować ważnej licencji, aby aktywować pakiet Office.
 
-## About
+## O
 
-© 2016-2020 Yerong. All rights reserved.
+© 2016-2020 Yerong. Wszelkie prawa zastrzeżone.
 
 > Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)

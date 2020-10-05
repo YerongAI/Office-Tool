@@ -70,6 +70,24 @@
 
 更多教程与信息请查阅博客中的文章。
 
+## 感谢语言本地化的贡献者
+
+- (ar-ps) العربية (الأراضي الفلسطينية) / Ibrahim
+- (de-de) Deutsch (Deutschland) / [Berny23](https://steamcommunity.com/id/Berny23)
+- (en-us) English (United States) / [Moedog](https://prprpr.love)
+- (es-es) Español (España) / Xoseba
+- (fr-fr) Français (France) / Drake4478
+- (id-id) Bahasa Indonesia (Indonesian) / [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Jovanzers](https://github.com/jovanzers)
+- (it-it) Italiano (Italia) / [garf02](https://github.com/garf02)
+- (ja-jp) 日本語 (日本) / [秋山ヘイワ](https://github.com/akio1321),kai,河豚
+- (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)
+- (pl-pl) Polski (Polska) / JakubDriver
+- (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec) [Igor Rückert](https://github.com/igorruckert)
+- (tr-tr) Türkçe (Türkiye) / Turan Furkan Topak
+- (vi-vn) Tiêng Việt (Việt Nam) / [phuocding](https://github.com/phuocding)
+- (zh-cn) 简体中文 (中国) / Official language
+- (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412)
+
 ## 关于
 
 © 2016-2020 Yerong. All rights reserved.

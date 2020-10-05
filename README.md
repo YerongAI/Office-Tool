@@ -1,4 +1,4 @@
-﻿#
+#
 
 <p align="center">
 <img alt="Office Tool Plus Logo" src="https://otp.landian.vip/static/images/logo.png"/>
@@ -11,66 +11,62 @@
 <img alt="License" src="https://img.shields.io/github/license/YerongAI/Office-Tool?style=flat-square"/>
 </p>
 
- > 一个强大且实用的 Office 部署工具。
+> A powerful and useful tool for Office deployments.
 
-支持以下产品的自定义部署与激活：
+Supports custom deployment and activation of the following products:
 
 - Office 2016, 2019 & 365
 - Visio 2016, 2019 & Online Plan 2
 - Project 2016, 2019 & Online Desktop Client
 
-除了部署 Office 外，还包含以下功能：
+Additional functions:
 
-- 支持 Office 的全部 17 个通道，包括查询、下载、安装
-- 对现有 Office 进行修改，包括产品、应用程序、语言包的增删
-- 导入/导出 XML 配置文件
-- 创建 ISO 文件以供分享或离线安装使用
-- 安装 Office 许可证（转换 Office 版本）
-- 一键清理 Office 的许可证以及密钥
-- 支持在线激活、电话激活（离线激活）以及 KMS 激活
-- 重置/强制移除 Office
-- 更改 Office 的更新通道而无需重装 Office
-- 批量转换 Office 文档，基于 Office API（仅限 V8 版本）
+- Support for all 17 channels of Office, including query, download, and installation.
+- Modifications to existing Office, including additions and deletions of products, applications, language packs, etc.
+- Importing/Exporting XML Profiles.
+- Create ISO files for sharing or offline installation.
+- Installing Office licenses (converted edition).
+- Cleanup of Office licenses and keys.
+- Supports online activation, phone activation (offline activation) and KMS activation.
+- Reset/Forced removal of Office.
+- Changing Office's update channel without reinstalling Office.
+- Batch conversion of Office documents, based on Office API (Version 8 only).
 
-部分功能基于以下组件：
+Components:
 
-- **[Office 部署工具](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - Office 的部署相关程序
-- **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office 的激活相关脚本
-- **迅雷云加速开放平台** - 下载 Office 的主要引擎
-- **vlmcs** - 检测 KMS 可用性的组件，*仅在完整版中包含*
+- **[Office Deployment Tool](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - The main modules of installing Office.
+- **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office Software Protect Platform.
+- **Thunder** - The main engines for downloading Office.
+- **vlmcs** - Components for testing the availability of KMS, *only included in the full version*.
 
-## 系统要求
+## System Requirements
 
-- Windows 7 SP1, Windows 8 和 Windows 10.
-- Windows Server 2008 R2 SP1, Windows Server 2012 或者更高版本.
+- Windows 7 SP1, Windows 8 and Windows 10.
+- Windows Server 2008 R2 SP1, Windows Server 2012 or higher.
 
-### 第八版本（V8）
+### Version 8
 
 - [Microsoft .NET Core 3.1 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-*注：所有系统都要安装这个框架。*
+*Note: This framework should be installed on all systems.*
 
-### 第七版本（V7）
+### Version 7
 
-- [Microsoft .NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780597).
+- [Microsoft .NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780597)
 
-*注：Windows 10 系统已内置更高的 .NET Framework 版本，无需额外安装。*
+*Note: A higher version is built into Windows 10 and does not require additional installation.*
 
-## 下载 Office Tool Plus
+## Download Office Tool Plus
 
-- [官方网站](https://otp.landian.vip/)
+- [Official website](https://otp.landian.vip/)
 
-- [下载站点](https://download.coolhub.top/)
+- [Download site](https://download.coolhub.top/)
 
-## 快速入门
+## Quick Start
 
-在 Office Tool Plus 的部署页面，添加您需要的产品和语言包，然后开始部署即可。
+Please refer to [Office Tool Plus Quick Start](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)
 
-部署完成后，您需要使用有效的许可去激活 Office.
-
-更多教程与信息请查阅博客中的文章。
-
-## 感谢语言本地化的贡献者
+## Thanks to the collaborators
 
 - (ar-ps) العربية (الأراضي الفلسطينية) / Ibrahim
 - (de-de) Deutsch (Deutschland) / [Berny23](https://steamcommunity.com/id/Berny23)
@@ -88,8 +84,22 @@
 - (zh-cn) 简体中文 (中国) / Official language
 - (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412)
 
-## 关于
+## Help With Localization
+
+We encourage everyone to help with localization. The following is how to do.
+
+1. Fork this repository
+
+2. Translate **en-us.xaml** to your own language then save it like **de-de.xaml**
+
+3. Copy it to the right path.
+
+4. Make a Pull Request.
+
+Or you can send me your files via [E-mail](mailto:yerong@coolhub.top)
+
+## About
 
 © 2016-2020 Yerong. All rights reserved.
 
-> 博客 [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)
+> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)

@@ -64,11 +64,13 @@
 
 ## 快速入门
 
+请参考 [Office Tool Plus 的快速入门](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8)
+
 在 Office Tool Plus 的部署页面，添加您需要的产品和语言包，然后开始部署即可。
 
-部署完成后，您需要使用有效的许可去激活 Office.
+部署完成后，您需要使用有效的许可去激活 Office。
 
-更多教程与信息请查阅博客中的文章。
+更多详细教程可访问 [Yerong の小窝](https://www.coolhub.top/) 获取。
 
 ## 感谢语言本地化的贡献者
 

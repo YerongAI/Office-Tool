@@ -64,9 +64,7 @@ Komponen:
 
 ## Mulai Cepat
 
-Pergi ke laman Pemasangan, tambahkan produk yang ingin anda pasang, lalu klik Pasangkan Office untuk memulai pemasangannya.
-
-Setelah pemasangannya selesai, anda perlu lisensi yang valid untuk mengaktivasi Office.
+Please refer to [Office Tool Plus Quick Start](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)
 
 ## Tentang
 

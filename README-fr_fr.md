@@ -34,12 +34,12 @@ Fonctions supplémentaires:
 
 Components:
 
-- **[Outil de déploiement Office](https://docs.microsoft.com/fr-fr/deployoffice/overview-office-deployment-tool). Vous pouvez personnaliser configurer votre installation Office et télécharger des fichiers d'installation pour installer Office sans Internet.
+- **[Outil de déploiement Office](https://docs.microsoft.com/fr-fr/deployoffice/overview-office-deployment-tool)**. Vous pouvez personnaliser configurer votre installation Office et télécharger des fichiers d'installation pour installer Office sans Internet.
 - **[OSPP](https://docs.microsoft.com/fr-fr/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Plate-forme de protection des logiciels Office.
 - **Thunder** - Les principaux moteurs pour télécharger Office.
 - **vlmcs** - Composants pour tester la disponibilité de KMS, *uniquement inclus dans la version complète*.
 
-##  Configuration requise
+## Configuration requise
 
 Windows 7 SP1, Windows 8 et Windows 10.
 Windows Server 2008 R2 SP1, Windows Server 2012 ou plus élevé.
@@ -68,41 +68,7 @@ Windows Server 2008 R2 SP1, Windows Server 2012 ou plus élevé.
 
 ## Démarrage rapide
 
-Aller à la page de déploiement, ajouter un produit que vous souhaitez installer, puis cliquez sur déployer pour démarrer votre installation.
-
-Après l’installation, vous aurez besoin d’une licence valide pour activer Office.
-
-## Merci aux collaborateurs
-
-- (ar-ps) Arabe (Territoires palestiniens) / Ibrahim
-- (de-de) Allemand (Allemagne) / [Berny23](https://steamcommunity.com/id/Berny23)
-- (en-us) Anglais (États-Unis) / [Moedog](https://prprpr.love)
-- (es-es) Espagnol (Espagne) / Xoseba
-- (fr-fr) Français (France) / Drake4478
-- (id-id) Bahasa Indonésie (Indonésien) / [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Jovanzers](https://github.com/jovanzers)
-- (it-it) Italien (Italie) / [garf02](https://github.com/garf02)
-- (ja-jp) Japonais (Japon) / {Akikano Pass](https://github.com/akio1321)
-- (ko-kr) Anglais (Corée du Sud) / [Jay Jang](http://www.yaeyaya.com)
-- (pl-pl) Polonais (Pologne) / JakubDriver
-- (pt-br) Portugais (Brésil) / [Hélio de Souza](https://tinyurl.com/hdstec) [Igor Rückert](https://github.com/igorruckert)
-- (tr-tr) Turc (Turquie) / Turan Furkan Topak
-- (vi-vn) Tieng Vietnam (Vietnam) / [phuocding](https://github.com/phuocding)
-- (zh-cn) Chinois simplifié (Chine) / ** langue officielle**
-- (zh-tw) Chinois traditionnel (Taïwan) / [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412)
-
-## Aide à la localisation
-
-Nous encourageons tout le monde à aider à la localisation. Ce qui suit est la façon de faire.
-
-1. Fourche ce référentiel
-
-2. Traduire ````zh-cn.xaml```` à votre propre langue, puis l'enregistrer comme ````zh-tw.xaml````
-
-3. Copiez-le sur le droit chemin, comme OfficeToolPlus/Language/zh-tw.xaml
-
-4. Faites une demande de traction.
-
-Ou vous pouvez m’envoyer vos fichiers via [E-mail](mailto:yerong@coolhub.top)
+Please refer to [Office Tool Plus Quick Start](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)
 
 ## À propos
 

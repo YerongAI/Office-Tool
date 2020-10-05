@@ -72,9 +72,7 @@
 
 ## 快速入門
 
-*在開始之前，請先備妥 Office 正版授權（產品金鑰），Office Tool Plus 並沒有免費啟用 Office 的功能。*
-
-開啟 Office Tool Plus 的部署功能頁，新增您需要的產品，然後點選「開始部署」即可。
+點擊閲讀 [Office Tool Plus 的快速入門](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%96%80)
 
 ## 合法性
 

@@ -37,7 +37,7 @@ Komponenty :
 - **[Office Deployment Tool](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - Główne moduły instalacji pakietu Office.
 - **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Platforma ochrony oprogramowania biurowego.
 - **Thunder** - Główne silniki do pobierania pakietu Office.
-- **vlmcs** - Komponenty do testowania dostępności KMS, * zawarte tylko w pełnej wersji *.
+- **vlmcs** - Komponenty do testowania dostępności KMS, *zawarte tylko w pełnej wersji*.
 
 ## Wymagania Systemowe
 
@@ -48,13 +48,13 @@ Komponenty :
 
 - [Microsoft .NET Core 3.1 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-* Uwaga: ta struktura powinna być zainstalowana na wszystkich systemach. *
+*Uwaga: ta struktura powinna być zainstalowana na wszystkich systemach.*
 
 ### Wersji 7
 
 - [Microsoft .NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780597)
 
-* Uwaga: wyższa wersja jest wbudowana w system Windows 10 i nie wymaga dodatkowej instalacji. *
+*Uwaga: wyższa wersja jest wbudowana w system Windows 10 i nie wymaga dodatkowej instalacji.*
 
 ## Pobierz Office Tool Plus
 
@@ -64,9 +64,7 @@ Komponenty :
 
 ## Szybki start
 
-Przejdź do strony Wdróż, dodaj produkt, który chcesz zainstalować, a następnie kliknij Wdróż, aby rozpocząć instalację.
-
-Po instalacji będziesz potrzebować ważnej licencji, aby aktywować pakiet Office.
+Please refer to [Office Tool Plus Quick Start](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)
 
 ## O
 

@@ -64,11 +64,7 @@ Office 배포 제외의 다른 기능들:
 
 ## 빠른 알아보기
 
-Office Tool Plus의 배포 페이지에서 원하는 제품과 언어백을 선택하고 바로 배포할 수 있습니다.
-
-배포 완성되면 유효한 라이선스를 사용해서 Office 정품인정할 수 있습니다.
-
-더 많은 정보는 블로그에 가서 조회 해보세요.
+Please refer to [Office Tool Plus Quick Start](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)
 
 ## 추가정보
 

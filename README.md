@@ -64,9 +64,7 @@ Components:
 
 ## Quick Start
 
-Go to Deploy page, add a product and language pack that you want to install, then click Deploy to start your installation.
-
-After installation, you will need a valid license to activate Office.
+Please refer to [Office Tool Plus Quick Start](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)
 
 ## Thanks to the collaborators
 

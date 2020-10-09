@@ -75,7 +75,7 @@ Please refer to [Office Tool Plus Quick Start](https://github.com/YerongAI/Offic
 - (fr-fr) Français (France) / Drake4478
 - (id-id) Bahasa Indonesia (Indonesian) / [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Jovanzers](https://github.com/jovanzers)
 - (it-it) Italiano (Italia) / [garf02](https://github.com/garf02)
-- (ja-jp) 日本語 (日本) / [秋山ヘイワ](https://github.com/akio1321)
+- (ja-jp) 日本語 (日本) / [秋山ヘイワ](https://github.com/akio1321),kai,河豚
 - (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)
 - (pl-pl) Polski (Polska) / JakubDriver
 - (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec) [Igor Rückert](https://github.com/igorruckert)

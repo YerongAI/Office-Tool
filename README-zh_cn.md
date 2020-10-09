@@ -66,7 +66,29 @@
 
 请参考 [Office Tool Plus 的快速入门](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8)
 
+在 Office Tool Plus 的部署页面，添加您需要的产品和语言包，然后开始部署即可。
+
+部署完成后，您需要使用有效的许可去激活 Office。
+
 更多详细教程可访问 [Yerong の小窝](https://www.coolhub.top/) 获取。
+
+## 感谢语言本地化的贡献者
+
+- (ar-ps) العربية (الأراضي الفلسطينية) / Ibrahim
+- (de-de) Deutsch (Deutschland) / [Berny23](https://steamcommunity.com/id/Berny23)
+- (en-us) English (United States) / [Moedog](https://prprpr.love)
+- (es-es) Español (España) / Xoseba
+- (fr-fr) Français (France) / Drake4478
+- (id-id) Bahasa Indonesia (Indonesian) / [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Jovanzers](https://github.com/jovanzers)
+- (it-it) Italiano (Italia) / [garf02](https://github.com/garf02)
+- (ja-jp) 日本語 (日本) / [秋山ヘイワ](https://github.com/akio1321),kai,河豚
+- (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)
+- (pl-pl) Polski (Polska) / JakubDriver
+- (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec) [Igor Rückert](https://github.com/igorruckert)
+- (tr-tr) Türkçe (Türkiye) / Turan Furkan Topak
+- (vi-vn) Tiêng Việt (Việt Nam) / [phuocding](https://github.com/phuocding)
+- (zh-cn) 简体中文 (中国) / Official language
+- (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412)
 
 ## 关于
 

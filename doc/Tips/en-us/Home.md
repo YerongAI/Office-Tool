@@ -37,50 +37,50 @@ Tip: You can also switch pages using the mouse forward/back button.
 
 ---
 
-通过命令可以直达自己想要的功能，也可以做到批量设置哦！`命令不区分大小写，按照输入顺序执行。`如果路径中含有空格，请使用 "" (英文双引号) 将路径包括起来。
+`Commands are not case-sensitive, executed in the order they entered.` If the path contains spaces, use the double quotes to include the path.
 
-**/setImage [Path]** 手动指定背景图，Path: 背景图路径（支持 JPG，PNG，支持本地路径以及 HTTP 路径）
+**/setImage [Path]** Set the background image. Path to image, support PNG and JPG, support local and HTTP path.
 
-**/clImage** 清除当前背景图
+**/clImage** Reset background image.
 
-**/addProduct [ProductID]** 添加一个或多个产品，ProductID: 产品 ID，例如：O365ProPlusRetail 或 O365ProPlusRetail,VisioProRetail
+**/addProduct [ProductID]** Add one or more pruducts. Example: O365ProPlusRetail or O365ProPlusRetail,VisioProRetail
 
-**/addLang [LanguageID]** 添加一个或多个语言包，Language ID: 语言包 ID，例如：zh-cn 或者 zh-cn,en-us，使用 ja-jp_proof 可以添加 ja-jp 的校对工具，而不是完整的语言包
+**/addLang [LanguageID]** Add one or more language packs, Example: en-us or zh-cn,en-us, using `ja-jp_proof` to add proofing tool for ja-jp.
 
-**/setApps [AppsID]** 设置`要安装`哪些应用程序，使用英文逗号分隔每个应用程序 ID，例如：Word,Excel,PowerPoint，未设置的应用程序将不会被安装
+**/setApps [AppsID]** Set which applications to install. Example: Word,Excel,PowerPoint, otherwise applications will not be installed.
 
-**/setExApps [AppsID]** 设置`不要安装`哪些应用程序，使用方法同 /setApps
+**/setExApps [AppsID]** Set which applications not to install. otherwise applications will be installed.
 
-**/deployArch [index]** 设置体系结构，0 代表 32 位，1 代表 64 位
+**/deployArch [index]** Set architecture for Office, 0 stands for 32-bit, 1 for 64-bit
 
-**/deployChl [index]** 设置通道，0 代表 Office 2019 企业长期版通道，6 代表开发通道
+**/deployChl [index]** Set update channel for installation. 0 stands for the first item of list, example: 0 means `Office 2019 Enterprise Perpetual`, 3 means `Current Channel`.
 
-**/deployMode [index]** 设置部署模式，0 代表下载时安装，5 代表仅配置
+**/deployMode [index]** Set deploy mode, 0 stands for the first item of list, example: 0 means `Install while downloading`, 4 means `Download only`.
 
-**/deployModule [index]** 设置安装模块，0 代表 Office 部署工具，1 代表 Office Tool Plus
+**/deployModule [index]** Set deploy module, 0 stands for Office Deployment Tool, 1 stands for Office Tool Plus.
 
-**/setSources [Path]** 指定安装 Office 时，应从哪里取得 Office 安装文件，如果为空则使用 Office CDN 作为源，在下载模式，这个属性用于定义应将 Office 安装文件储存在哪里
+**/setSources [Path]** Defines the location of the Office installation files. In download mode, defines where to save the files.
 
-**/setVersion [Version]** 指定下载/安装 Office 时，应使用哪个版本的 Office，例如 16.0.12527.20278
+**/setVersion [Version]** Defines which version of Office will be download/installed, example: 16.0.12527.20278
 
-**/refresh** 重新加载部署页面的所有数据
+**/refresh** Reload Office information.
 
-**/loadChannels** 在部署页面中加载额外的通道
+**/loadChannels** Load extra channels in deploy page.
 
-**/loadXML [Path]** 加载一个 XML 文件，支持本地以及 HTTP 路径
+**/loadXML [Path]** Load a XML file, support local or HTTP path.
 
-**/startDeploy** 开始部署
+**/startDeploy** Start deploy.
 
-**/osppILByID [ProductID]** 安装指定产品的 Office 许可证， ProductID: 产品 ID，例如：MondoVolume
+**/osppILByID [ProductID]** Install Office licenses for a product, example: MondoVolume
 
-**/osppinpkey:[value]** 安装指定的 Office 密钥，例如：/osppinpkey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+**/osppinpkey:[value]** Install Office product key. Example: /osppinpkey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
 
-**/osppunpkey:[value]** 卸载指定的 Office 密钥，例如：/osppunpkey:XXXXX
+**/osppunpkey:[value]** Uninstall key for Office product. Example: /osppunpkey:XXXXX
 
-**/osppsethst:[value]** 设置 KMS 主机地址，例如：/osppsethst:kms.example.com
+**/osppsethst:[value]** Set KMS host. Example: /osppsethst:kms.example.com
 
-**/osppsetprt:[value]** 设置 KMS 主机端口，默认 1688，例如：/osppsetprt:1688
+**/osppsetprt:[value]** Set port for KMS host. Example: /osppsetprt:1688
 
-**/osppact** 激活 Office 客户端产品
+**/osppact** Activate Office product.
 
-其它 OSPP 参数使用方法类似，在每个命令前添加 ospp 字眼即可，OSPP 帮助文档可从[微软官方文档](https://docs.microsoft.com/zh-cn/deployoffice/vlactivation/tools-to-manage-volume-activation-of-office)取得。
+For more information, please visit: [Tools to manage volume activation of Office](https://docs.microsoft.com/en-us/deployoffice/vlactivation/tools-to-manage-volume-activation-of-office)

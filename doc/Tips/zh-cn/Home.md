@@ -55,9 +55,9 @@ Tip：使用鼠标的前进/后退按钮也可以切换页面哦！
 
 **/deployArch [index]** 设置体系结构，0 代表 32 位，1 代表 64 位
 
-**/deployChl [index]** 设置通道，0 代表 Office 2019 企业长期版通道，6 代表开发通道
+**/deployChl [index]** 设置通道，0 代表列表中的第一项，如 0 表示 Office 2019 企业长期版通道，3 代表当前通道。
 
-**/deployMode [index]** 设置部署模式，0 代表下载时安装，5 代表仅配置
+**/deployMode [index]** 设置部署模式，0 代表列表中的第一项，如 0 代表下载时安装，5 代表仅配置
 
 **/deployModule [index]** 设置安装模块，0 代表 Office 部署工具，1 代表 Office Tool Plus
 

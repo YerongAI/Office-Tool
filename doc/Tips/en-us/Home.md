@@ -18,7 +18,7 @@ Office Tool Plus is based on [Microsoft's Office Deployment Tool](https://aka.ms
 
 - <kbd>Esc</kbd>: Back Home.
 - <kbd>F1</kbd>: Help.
-- <kbd>F5</kbd>: Refresh and reset Information.
+- <kbd>F5</kbd>: Reload Office information.
 - <kbd>Ctrl + 1</kbd>: Switch to deploy page.
 - <kbd>Ctrl + 2</kbd>: Switch to activate page.
 - <kbd>Ctrl + 3</kbd>: Switch to toolbox page.

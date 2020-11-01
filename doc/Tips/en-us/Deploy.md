@@ -62,21 +62,21 @@ The mode won't start installation, for exporting XML files only.
 
 ---
 
-`Office 2019 Perpetual Enterprise`:
+`Office 2019 Perpetual Enterprise:`
 
 For Office 2019 Volume edition only.
 
-No feature updates.
+**No feature updates.**
 
 **Security updates:** Once a month, on the second Tuesday of the month.
 
-`Current Channel` (Normal):
+`Current Channel (Normal):`
 
 **Feature updates:** As soon as they’re ready (usually once a month), but on no set schedule.
 
 **Security updates:** Once a month, on the second Tuesday of the month.
 
-`Semi-Annual Enterprise Channel`:
+`Semi-Annual Enterprise Channel:`
 
 **Feature updates:** Twice a year (in January and July), on the second Tuesday of the month
 

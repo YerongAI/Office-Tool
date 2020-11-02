@@ -64,7 +64,7 @@ Office 배포 제외의 다른 기능들:
 
 ## 빠른 알아보기
 
-Please refer to [Office Tool Plus Quick Start](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)
+[Office Tool Plus 빠른 시작](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)에 가서 알아보세요.
 
 ## 추가정보
 

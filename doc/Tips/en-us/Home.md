@@ -10,8 +10,6 @@ Office Tool Plus is based on [Microsoft's Office Deployment Tool](https://aka.ms
 
 [Telegram channel](https://t.me/otp_channel)
 
-[WeChat group](https://otp.landian.vip/grouplink/wechat.html)
-
 ### Office Tool Plus Shortcut Keys
 
 ---

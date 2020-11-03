@@ -10,8 +10,6 @@ Office Tool Plus est basé sur [l’outil de déploiement Office de Microsoft](h
 
 [Canal Telegram](https://t.me/otp_channel)
 
-[Groupe WeChat](https://otp.landian.vip/grouplink/wechat.html)
-
 ### Touches de raccourci Office Tool Plus
 
 ---

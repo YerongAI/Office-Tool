@@ -4,13 +4,12 @@
 
 Office Tool Plus è uno strumento potente e utile per le distribuzioni di Office.
 
-Office Tool Plus si basa su [Strumenti di distribuzione di Microsoft Office](https://aka.ms/ODT ) and [OSPP](https://docs.microsoft.com/it-it/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office ).
+Office Tool Plus si basa su [Strumenti di distribuzione di Microsoft Office](https://aka.ms/ODT) and [OSPP](https://docs.microsoft.com/it-it/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office).
 
-[Gruppo Telegram](https://otp.landian.vip/grouplink/telegram.html )
+[Gruppo Telegram](https://otp.landian.vip/grouplink/telegram.html)
 
-[Canale Telegram](https://t.me/otp_channel )
+[Canale Telegram](https://t.me/otp_channel)
 
-[WeChat group](https://otp.landian.vip/grouplink/wechat.html )
 
 ### Office Tool Plus Tasti di Scelta Rapida
 
@@ -83,4 +82,4 @@ Puoi accedere direttamente alle funzioni che desideri tramite i comandi e puoi a
 
 **/osppact** Attiva i prodotti di Office
 
-L'uso di altri parametri OSPP è simile. Basta aggiungere la parola ospp prima di ogni comando. Il file della guida OSPP può essere trovato nel [documento ufficiale Microsoft](https://docs.microsoft.com/it-it/deployoffice/vlactivation/tools-to-manage-volume-activation-of-office )
+L'uso di altri parametri OSPP è simile. Basta aggiungere la parola ospp prima di ogni comando. Il file della guida OSPP può essere trovato nel [documento ufficiale Microsoft](https://docs.microsoft.com/it-it/deployoffice/vlactivation/tools-to-manage-volume-activation-of-office)

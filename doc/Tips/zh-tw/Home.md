@@ -7,8 +7,11 @@ Office Tool Plus 是一款多功能集於一身的 Office 部署工具。
 Office Tool Plus 的部分功能是基於 [Office 部署工具](https://aka.ms/ODT)和 [OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office) 製作，讓您能享受主控權更高的部署 Office 體驗；其內建 Thunder 下載加速模組，協助您更節省時間。亦歡迎您能夠體驗其他 Office Tool Plus 提供的各式小工具、強大的功能，使您能更方便地啟用和管理 Office 哦！
 
 [作者部落格](https://www.coolhub.top/)
+
 [台灣維護管理團隊 Cotpear](https://www.cotpear.com/)
+
 [台灣維護管理團隊主頁](https://www.cotpear.com/p/office-tool-taiwan-official-website.html)
+
 [Telegram 頻道](https://t.me/ot_channel_tw)
 
 ### Office Tool Plus 快捷键

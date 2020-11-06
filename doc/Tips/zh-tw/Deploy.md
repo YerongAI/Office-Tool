@@ -2,7 +2,7 @@
 
 ---
 
-在這裡，您可以管理您目前已安裝的 Office 產品和語言套件。若尚未安裝 Office，亦可以全新安裝 Office。**但由於 Microsoft 軟體限制，Office 僅限安裝在系統硬碟中 (C://)**
+在這裡，您可以管理您目前已安裝的 Office 產品和語言套件。若尚未安裝 Office，亦可以全新安裝 Office。**但由於 Microsoft 軟體限制，Office 僅限安裝在系統硬碟中**
 
 在應用程式功能區中，***Lync*** 代表 ***Skype for Business***，***Groove*** 代表 ***OneDrive for Business***。
 

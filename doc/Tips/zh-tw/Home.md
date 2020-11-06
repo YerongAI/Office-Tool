@@ -1,8 +1,8 @@
 ## 嗨！歡迎使用 Office Tool Plus！
 
-Office Tool Plus 是一款多功能集於一身的 Office 部署工具。
+---
 
------
+Office Tool Plus 是一款多功能集於一身的 Office 部署工具。
 
 Office Tool Plus 的部分功能是基於 [Office 部署工具](https://aka.ms/ODT)和 [OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office) 製作，讓您能享受主控權更高的部署 Office 體驗；其內建 Thunder 下載加速模組，協助您更節省時間。亦歡迎您能夠體驗其他 Office Tool Plus 提供的各式小工具、強大的功能，使您能更方便地啟用和管理 Office 哦！
 
@@ -40,7 +40,6 @@ Office Tool Plus 的部分功能是基於 [Office 部署工具](https://aka.ms/O
 ---
 
 透過 Office Tool Plus 內建的指令，即可直接呼叫自己需要的功能，達到大量設定的功效哦！`指令不區分大小寫，軟體將按照指令先後執行。`如果路徑中包含空格，請使用 "" (半形雙引號)，將路徑包括起來。
-
 
 **/setImage [Path]** 手動指令背景圖片，Path: 背景圖片路徑（支援 JPG，PNG，支援本機路徑和 HTTP 位址）
 

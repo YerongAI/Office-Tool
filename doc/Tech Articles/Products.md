@@ -8,7 +8,7 @@ For information about Product ID, please visit [the website](https://go.microsof
 | :-- | :-- | :--: | :-- | :-- | :--: |
 | O365ProPlusRetail | Microsoft 365 Apps for Enterprise | Suite | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ |
 | O365BusinessRetail | Microsoft 365 Apps for Business | Suite | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | PowerPivot | ✔ |
-| O365SmallBusPremRetail | Microsoft 365 Small Business Premium | Suite | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | Groove, PowerPivot | ✔ |
+| O365SmallBusPremRetail | Microsoft 365 Small Business Premium | Suite | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | PowerPivot | ✔ |
 | O365HomePremRetail | Microsoft 365 Family &amp; Personal | Suite | Access, Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | PowerPivot | ✔ |
 | O365EduCloudRetail | Microsoft 365 | Suite | Excel, OneDrive, OneNote, PowerPoint, Word | PowerPivot, PowerView | ✔ |
 | HomeBusiness2019Retail | Office Home &amp; Business 2019 | Suite | Excel, OneDrive, OneNote, Outlook, PowerPoint, Word | PowerPivot | ✔ |
@@ -60,7 +60,7 @@ For information about Product ID, please visit [the website](https://go.microsof
 | AccessRetail | Access 2016 | Product |  | DCF, OSM | ✔ |
 | AccessRuntime2019Retail | Access Runtime 2019 | Product |  |  | ✔ |
 | AccessRuntimeRetail | Access Runtime 2016 | Product |  |  | ✔ |
-| AccessVolume | Access 2016 | Product |  |  | ❌ |
+| AccessVolume | Access 2016 | Product |  | DCF, OSM  | ❌ |
 | Excel2019Retail | Excel 2019 | Product | OneDrive | DCF, OSM, PowerPivot, PowerView | ✔ |
 | Excel2019Volume | Excel 2019 | Product | OneDrive | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ |
 | ExcelRetail | Excel 2016 | Product | OneDrive | DCF, OSM, PowerPivot, PowerView | ✔ |

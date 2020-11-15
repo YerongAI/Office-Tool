@@ -15,7 +15,8 @@
 
 支持以下产品的自定义部署与激活：
 
-- Office 2016, 2019 & 365
+- Microsoft 365
+- Office 2016, 2019
 - Visio 2016, 2019 & Online Plan 2
 - Project 2016, 2019 & Online Desktop Client
 

@@ -15,7 +15,8 @@
 
 Prend en charge le déploiement personnalisé et l’activation des produits suivants:
 
-- Office 2016, 2019 & 365
+- Microsoft 365
+- Office 2016, 2019
 - Visio 2016, 2019 & Plan en ligne 2
 - Project 2016, 2019 & Client de bureau en ligne
 

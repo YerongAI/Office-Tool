@@ -15,7 +15,8 @@
 
 支援以下 Office 產品的自訂部署和啟用：
 
-- Office 2016, 2019 & 365
+- Microsoft 365
+- Office 2016, 2019
 - Visio 2016, 2019 & Online Plan 2
 - Project 2016, 2019 & Online Desktop Client
 

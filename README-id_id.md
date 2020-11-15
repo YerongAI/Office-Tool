@@ -15,7 +15,8 @@
 
 Mendukung untuk memasangan ubahsuai dan mengaktivasi produk berikut:
 
-- Office 2016, 2019 & 365
+- Microsoft 365
+- Office 2016, 2019
 - Visio 2016, 2019 & Online Plan 2
 - Project 2016, 2019 & Online Desktop Client
 

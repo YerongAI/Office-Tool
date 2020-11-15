@@ -15,7 +15,8 @@
 
 아래 제품들에 대한 사용자 정의된 배포와 정품인정 지원:
 
-- Office 2016, 2019 & 365
+- Microsoft 365
+- Office 2016, 2019
 - Visio 2016, 2019 & Online Plan 2
 - Project 2016, 2019 & Online Desktop Client
 

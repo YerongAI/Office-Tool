@@ -35,8 +35,8 @@ Dodatkowe funkcje:
 
 Komponenty :
 
-- **[Office Deployment Tool](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - Główne moduły instalacji pakietu Office.
-- **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Platforma ochrony oprogramowania biurowego.
+- **[Office Deployment Tool](https://docs.microsoft.com/pl-pl/deployoffice/overview-office-deployment-tool)** - Główne moduły instalacji pakietu Office.
+- **[OSPP](https://docs.microsoft.com/pl-pl/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Platforma ochrony oprogramowania biurowego.
 - **Thunder** - Główne silniki do pobierania pakietu Office.
 - **vlmcs** - Komponenty do testowania dostępności KMS, *zawarte tylko w pełnej wersji*.
 

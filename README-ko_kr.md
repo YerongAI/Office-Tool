@@ -16,7 +16,7 @@
 아래 제품들에 대한 사용자 정의된 배포와 정품인정 지원:
 
 - Microsoft 365
-- Office 2016, 2019
+- Office 2016, 2019, 2021
 - Visio 2016, 2019 & Online Plan 2
 - Project 2016, 2019 & Online Desktop Client
 
@@ -45,17 +45,7 @@ Office 배포 제외의 다른 기능들:
 - Windows 7 SP1, Windows 8 和 Windows 10.
 - Windows Server 2008 R2 SP1, Windows Server 2012나 이상 버전
 
-### V8
-
-- [Microsoft .NET Core 3.1 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-
-*주의: 모든 시스템에서도 이 런타이임이 필수합니다.*
-
-### V7
-
-- [Microsoft .NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780597).
-
-*주의: Windows 10에서는 보다 높은 버전의 .Net Framework가 이미 존재해서 설치 필요 없음.*
+- [Microsoft .NET 5.0 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet/current/runtime)
 
 ## Office Tool Plus 다운로드
 

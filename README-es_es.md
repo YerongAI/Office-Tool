@@ -16,7 +16,7 @@
 Admite la implementación y activación personalizadas de los siguientes productos:
 
 - Microsoft 365
-- Office 2016, 2019
+- Office 2016, 2019, 2021
 - Visio 2016, 2019 y plan en línea 2
 - Proyecto 2016, 2019 y cliente de escritorio en línea
 
@@ -45,21 +45,7 @@ Componentes:
 Windows 7 SP1, Windows 8 y Windows 10.
 Windows Server 2008 R2 SP1, Windows Server 2012 o superior.
 
-### Versión 8
-
-- [Microsoft .NET Core 3.1 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-
-*Nota: Este marco debe instalarse en todos los sistemas.*
-
-### Versión 7
-
-[Instalador web](http://go.microsoft.com/fwlink/?LinkId=780597)
-
-[Instalador sin conexión](http://go.microsoft.com/fwlink/?LinkId=780601)
-
-[Paquetes de idioma para Microsoft .Net Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780604)
-
-*Nota: una versión superior está integrada en Windows 10 y no requiere instalación adicional.*
+- [Microsoft .NET 5.0 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet/current/runtime)
 
 ## Descarga Office Tool Plus
 

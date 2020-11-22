@@ -16,7 +16,7 @@
 支持以下产品的自定义部署与激活：
 
 - Microsoft 365
-- Office 2016, 2019
+- Office 2016, 2019, 2021
 - Visio 2016, 2019 & Online Plan 2
 - Project 2016, 2019 & Online Desktop Client
 
@@ -45,17 +45,7 @@
 - Windows 7 SP1, Windows 8 和 Windows 10.
 - Windows Server 2008 R2 SP1, Windows Server 2012 或者更高版本.
 
-### 第八版本（V8）
-
-- [Microsoft .NET Core 3.1 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-
-*注：所有系统都要安装这个框架。*
-
-### 第七版本（V7）
-
-- [Microsoft .NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780597).
-
-*注：Windows 10 系统已内置更高的 .NET Framework 版本，无需额外安装。*
+- [Microsoft .NET 5.0 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet/current/runtime)
 
 ## 下载 Office Tool Plus
 

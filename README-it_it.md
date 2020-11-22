@@ -16,7 +16,7 @@
 Supporta la distribuzione personalizzata e l'attivazione dei seguenti prodotti:
 
 - Microsoft 365
-- Office 2016, 2019
+- Office 2016, 2019, 2021
 - Visio 2016, 2019 & Online Plan 2
 - Project 2016, 2019 & Online Desktop Client
 
@@ -45,17 +45,7 @@ Componenti:
 - Windows 7 SP1, Windows 8 e Windows 10.
 - Windows Server 2008 R2 SP1, Windows Server 2012 o superiore.
 
-### Versione 8
-
-- [Microsoft .NET Core 3.1 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-
-*Nota: Questo framework deve essere installato su tutti i sistemi.*
-
-### Versione 7
-
-- [Microsoft .NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780597)
-
-*Nota: Una versione successiva è già integrata in Windows 10 e non richiede installazione aggiuntiva.*
+- [Microsoft .NET 5.0 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet/current/runtime)
 
 ## Scarica Office Tool Plus
 

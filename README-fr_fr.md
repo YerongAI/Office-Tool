@@ -16,7 +16,7 @@
 Prend en charge le déploiement personnalisé et l’activation des produits suivants:
 
 - Microsoft 365
-- Office 2016, 2019
+- Office 2016, 2019, 2021
 - Visio 2016, 2019 & Plan en ligne 2
 - Project 2016, 2019 & Client de bureau en ligne
 
@@ -45,21 +45,7 @@ Components:
 Windows 7 SP1, Windows 8 et Windows 10.
 Windows Server 2008 R2 SP1, Windows Server 2012 ou plus élevé.
 
-### Version 8
-
-- [Microsoft .NET Core 3.1 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-
-*Note: Ce framework doit être installé sur tous les systèmes.*
-
-### Version 7
-
-[Installateur Web](http://go.microsoft.com/fwlink/?LinkId=780597)
-
-[Installateur hors ligne](http://go.microsoft.com/fwlink/?LinkId=780601)
-
-[Packs de langues pour Microsoft .Net Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780604)
-
-*Note: Une version supérieure est intégrée à Windows 10 et ne nécessite pas d’installation supplémentaire.*
+- [Microsoft .NET 5.0 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet/current/runtime)
 
 ## Télécharger Office Tool Plus
 

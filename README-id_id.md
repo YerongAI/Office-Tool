@@ -16,7 +16,7 @@
 Mendukung untuk memasangan ubahsuai dan mengaktivasi produk berikut:
 
 - Microsoft 365
-- Office 2016, 2019
+- Office 2016, 2019, 2021
 - Visio 2016, 2019 & Online Plan 2
 - Project 2016, 2019 & Online Desktop Client
 
@@ -45,17 +45,7 @@ Komponen:
 - Windows 7 SP1, Windows 8 dan Windows 10.
 - Windows Server 2008 R2 SP1, Windows Server 2012 atau lebih tinggi.
 
-### Versi 8
-
-- [Microsoft .NET Core 3.1 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-
-*Catatan: Framework ini harus terpasang di semua sistem.*
-
-### Versi 7
-
-- [Microsoft .NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780597)
-
-*Catatan: Versi sistem yang lebih tinggi pada Windows 10 dan tidak diperlukan pemasangan tambahan.*
+- [Microsoft .NET 5.0 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet/current/runtime)
 
 ## Unduh Office Tool Plus
 

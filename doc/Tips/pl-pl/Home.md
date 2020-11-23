@@ -14,16 +14,16 @@ Office Tool Plus jest oparty na [Microsoft Office Deployment Tool](https://aka.m
 
 ---
 
-- <kbd>Esc</kbd>: Powrót do domu.
+- <kbd>Esc</kbd>: Powrót do głównego okna.
 - <kbd>F1</kbd>: Pomoc.
 - <kbd>F5</kbd>: ponowne załadowanie informacji pakietu Office.
 - <kbd>Ctrl + 1</kbd>: Przełącz na stronę wdrażania.
 - <kbd>Ctrl + 2</kbd>: Przełącz, aby aktywować stronę.
 - <kbd>Ctrl + 3</kbd>: Przełącz na stronę przybornika.
 - <kbd>Ctrl + N</kbd>: Wyświetl panel powiadomień.
-- <kbd>Ctrl + T</kbd>: panel ustawień wyświetlania.
+- <kbd>Ctrl + T</kbd>: Panel ustawień wyświetlania.
 - <kbd>Ctrl + B</kbd>: Wyświetl informacje o panelu.
-- <kbd>Ctrl + P</kbd>: Pokaż / Ukryj okno poleceń.
+- <kbd>Ctrl + P</kbd>: Pokaż/Ukryj okno poleceń.
 - <kbd>Ctrl + D</kbd>: Rozpocznij wdrażanie pakietu Office (na stronie wdrażania).
 - <kbd>Ctrl + O</kbd>: Importuj konfigurację XML (na stronie wdrażania).
 - <kbd>Ctrl + S</kbd>: Eksportuj konfigurację XML (na stronie wdrażania).

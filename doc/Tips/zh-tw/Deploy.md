@@ -105,11 +105,9 @@ Office Tool Plus 模組是我們自行編寫的安裝模組。雖然功能沒有
 
 [Office 部署工具官方網站](https://aka.ms/ODT)
 
-[Office 部署工具的設定選項
-](https://docs.microsoft.com/zh-tw/deployoffice/office-deployment-tool-configuration-options)
+[Office 部署工具的設定選項](https://docs.microsoft.com/zh-tw/deployoffice/office-deployment-tool-configuration-options)
 
-[隨選即用的 Office 部署工具支援的產品 ID 清單
-](https://docs.microsoft.com/zh-tw/office365/troubleshoot/installation/product-ids-supported-office-deployment-click-to-run)
+[隨選即用的 Office 部署工具支援的產品 ID 清單](https://docs.microsoft.com/zh-tw/office365/troubleshoot/installation/product-ids-supported-office-deployment-click-to-run)
 
 [Microsoft 365 Apps 更新通道的概觀](https://docs.microsoft.com/zh-tw/deployoffice/overview-update-channels)
 

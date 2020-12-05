@@ -28,7 +28,7 @@ Additional functions:
 - Create ISO files for sharing or offline installation.
 - Installing Office licenses (converted edition).
 - Cleanup of Office licenses and keys.
-- Supports online activation, phone activation (offline activation) and KMS activation.
+- Supports online activation, phone activation (offline activation), and KMS activation.
 - Reset/Forced removal of Office.
 - Changing Office's update channel without reinstalling Office.
 - Batch conversion of Office documents, based on Office API (Version 8 only).
@@ -42,8 +42,8 @@ Components:
 
 ## System Requirements
 
-- Windows 7 SP1, Windows 8 and Windows 10.
-- Windows Server 2008 R2 SP1, Windows Server 2012 or higher.
+- Windows 7 SP1, Windows 8, and Windows 10.
+- Windows Server 2008 R2 SP1, Windows Server 2012, or higher.
 
 - [Microsoft .NET 5.0 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet/current/runtime)
 
@@ -77,7 +77,7 @@ Please refer to [Office Tool Plus Quick Start](https://github.com/YerongAI/Offic
 
 ## Help With Localization
 
-We encourage everyone to help with localization. The following is how to do.
+We encourage everyone to help with localization. The following is how to do it.
 
 1. Fork this repository
 

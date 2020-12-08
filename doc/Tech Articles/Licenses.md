@@ -27,6 +27,7 @@ For more information about GVLKs, please visit [GVLKs for KMS activation of Offi
 | ProfessionalRetail | Office Professional 2016 | ✔ | ❌ | ❌ |  |
 | ProPlus2019Retail | Office Professional Plus 2019 | ✔ | ❌ | ❌ |  |
 | ProPlus2019Volume | Office Professional Plus 2019 | ❌ | ✔ | ✔ | NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP |
+| ProPlus2021Volume | Office Professional Plus 2021 | ❌ | ✔ | ✔ |  |
 | ProPlusRetail | Office Professional Plus 2016 | ✔ | ❌ | ❌ |  |
 | ProPlusVolume | Office Professional Plus 2016 | ❌ | ✔ | ✔ | XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99 |
 | Standard2019Retail | Office Standard 2019 | ✔ | ❌ | ❌ |  |
@@ -35,6 +36,7 @@ For more information about GVLKs, please visit [GVLKs for KMS activation of Offi
 | StandardVolume | Office Standard 2016 | ❌ | ✔ | ✔ | JNRGM-WHDWX-FJJG3-K47QV-DRTFM |
 | ProjectPro2019Retail | Project Professional 2019 | ✔ | ❌ | ❌ |  |
 | ProjectPro2019Volume | Project Professional 2019 | ❌ | ✔ | ✔ | B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B |
+| ProjectPro2021Volume | Project Professional 2021 | ❌ | ✔ | ✔ |  |
 | ProjectProRetail | Project Professional 2016 | ✔ | ❌ | ❌ |  |
 | ProjectProVolume | Project Professional 2016 | ❌ | ✔ | ✔ | YG9NW-3K39V-2T3HJ-93F3Q-G83KT |
 | ProjectProXVolume | Project Professional 2016 | ❌ | ✔ | ✔ | WGT24-HCNMF-FQ7XH-6M8K7-DRTW9 |
@@ -45,6 +47,7 @@ For more information about GVLKs, please visit [GVLKs for KMS activation of Offi
 | ProjectStdXVolume | Project Standard 2016 | ❌ | ✔ | ✔ | D8NRQ-JTYM3-7J2DX-646CT-6836M |
 | VisioPro2019Retail | Visio Professional 2019 | ✔ | ❌ | ❌ |  |
 | VisioPro2019Volume | Visio Professional 2019 | ❌ | ✔ | ✔ | 9BGNQ-K37YR-RQHF2-38RQ3-7VCBB |
+| VisioPro2021Volume | Visio Professional 2021 | ❌ | ✔ | ✔ |  |
 | VisioProRetail | Visio Professional 2016 | ✔ | ❌ | ❌ |  |
 | VisioProVolume | Visio Professional 2016 | ❌ | ✔ | ✔ | PD3PC-RHNGV-FXJ29-8JK7D-RJRJK |
 | VisioProXVolume | Visio Professional 2016 | ❌ | ✔ | ✔ | 69WXN-MBYV6-22PQG-3WGHK-RM6XC |
@@ -91,4 +94,4 @@ For more information about GVLKs, please visit [GVLKs for KMS activation of Offi
 | WordVolume | Word 2016 | ❌ | ✔ | ✔ | WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6 |
 
 <center>　</center>
-<center>© 2020 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.2</center>
+<center>© 2020 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.3</center>

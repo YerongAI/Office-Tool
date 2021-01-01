@@ -45,13 +45,13 @@ Tip：使用鼠标的前进/后退按钮也可以切换页面哦！
 
 **/clImage** 清除当前背景图
 
-**/addProduct [ProductID]** 添加一个或多个产品，ProductID: 产品 ID，例如：O365ProPlusRetail 或 O365ProPlusRetail,VisioProRetail
+**/addProduct [ProductIDs]** 添加一个或多个产品，ProductID: 产品 ID，例如：O365ProPlusRetail 或 O365ProPlusRetail,VisioProRetail
 
-**/addLang [LanguageID]** 添加一个或多个语言包，Language ID: 语言包 ID，例如：zh-cn 或者 zh-cn,en-us，使用 ja-jp_proof 可以添加 ja-jp 的校对工具，而不是完整的语言包
+**/addLang [LanguageIDs]** 添加一个或多个语言包，Language ID: 语言包 ID，例如：zh-cn 或者 zh-cn,en-us，使用 ja-jp_proof 可以添加 ja-jp 的校对工具，而不是完整的语言包
 
-**/setApps [AppsID]** 设置`要安装`哪些应用程序，使用英文逗号分隔每个应用程序 ID，例如：Word,Excel,PowerPoint，未设置的应用程序将不会被安装
+**/setApps [AppIDs]** 设置`要安装`哪些应用程序，使用英文逗号分隔每个应用程序 ID，例如：Word,Excel,PowerPoint，未设置的应用程序将不会被安装
 
-**/setExApps [AppsID]** 设置`不要安装`哪些应用程序，使用方法同 /setApps
+**/setExApps [AppIDs]** 设置`不要安装`哪些应用程序，使用方法同 /setApps
 
 **/deployArch [index]** 设置体系结构，0 代表 32 位，1 代表 64 位
 
@@ -73,7 +73,11 @@ Tip：使用鼠标的前进/后退按钮也可以切换页面哦！
 
 **/startDeploy** 开始部署
 
-**/osppILByID [ProductID]** 安装指定产品的 Office 许可证， ProductID: 产品 ID，例如：MondoVolume
+**/installiSlide** 单独安装 iSlide
+
+**/getProductKey [ProductID]** 获取产品密钥，若是批量产品，返回 GVLK，其他产品则返回默认密钥。ProductID: 产品 ID，例如：ProPlus2019Volume
+
+**/osppILByID [ProductID]** 安装指定产品的 Office 许可证， ProductID: 产品 ID。例如：MondoVolume
 
 **/osppinpkey:[value]** 安装指定的 Office 密钥，例如：/osppinpkey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
 

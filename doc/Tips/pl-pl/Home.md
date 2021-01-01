@@ -41,13 +41,13 @@ Porada: Możesz także przełączać strony za pomocą przycisku myszy do przodu
 
 **/clImage** Resetowanie obrazu tła.
 
-**/addProduct [ProductID]** Dodaj jeden lub więcej produktów. Przykład: O365ProPlusRetail lub O365ProPlusRetail, VisioProRetail
+**/addProduct [ProductIDs]** Dodaj jeden lub więcej produktów. Przykład: O365ProPlusRetail lub O365ProPlusRetail, VisioProRetail
 
-**/addLang [LanguageID]** Dodaj co najmniej jeden pakiet językowy, przykład: en-us lub pl-pl, en-us, używając polecenia `pl-pl_proof`, aby dodać narzędzie sprawdzające dla pl-pl.
+**/addLang [LanguageIDs]** Dodaj co najmniej jeden pakiet językowy, przykład: en-us lub pl-pl, en-us, używając polecenia `pl-pl_proof`, aby dodać narzędzie sprawdzające dla pl-pl.
 
-**/setApps [AppsID]** Ustaw aplikacje do zainstalowania. Przykład: Word, Excel, PowerPoint, w przeciwnym razie aplikacje nie zostaną zainstalowane.
+**/setApps [AppIDs]** Ustaw aplikacje do zainstalowania. Przykład: Word, Excel, PowerPoint, w przeciwnym razie aplikacje nie zostaną zainstalowane.
 
-**/setExApps [AppsID]** Ustaw aplikacje, których nie chcesz instalować. w przeciwnym razie aplikacje zostaną zainstalowane.
+**/setExApps [AppIDs]** Ustaw aplikacje, których nie chcesz instalować. w przeciwnym razie aplikacje zostaną zainstalowane.
 
 **/deployArch [indeks]** Ustaw architekturę dla pakietu Office, 0 oznacza 32-bit, 1 64-bit
 
@@ -68,6 +68,10 @@ Porada: Możesz także przełączać strony za pomocą przycisku myszy do przodu
 **/loadXML [Ścieżka]** Załaduj plik XML, obsługa ścieżki lokalnej lub HTTP.
 
 **/startDeploy** Rozpocznij wdrażanie.
+
+**/installiSlide** Install iSlide.
+
+**getProductKey [ProductID]** Get the product key, return GVLK for volume products, normal key for other products. Example product id: ProPlus2019Volume
 
 **/osppILByID [ProductID]** Zainstaluj licencje pakietu Office dla produktu, na przykład: MondoVolume
 

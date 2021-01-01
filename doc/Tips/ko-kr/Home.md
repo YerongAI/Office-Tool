@@ -45,13 +45,13 @@ Tip: 마우스 이전/이후 버튼으로 페이지 전환할 수 있습니다.
 
 **/clImage** 현재 백경 이미지 치우기
 
-**/addProduct [ProductID]** 하나 이상의 제품을 추가, ProductID: 제품 ID, 예: O365ProPlusRetail,O365ProPlusRetail,VisioProRetail 등
+**/addProduct [ProductIDs]** 하나 이상의 제품을 추가, ProductID: 제품 ID, 예: O365ProPlusRetail,O365ProPlusRetail,VisioProRetail 등
 
-**/addLang [LanguageID]** 하나 이상의 언어 패키지를 추가, LanguageID: 언어 패키지 ID, 예: zh-cn이나 zh-cn,en-us 등, ja-jp_proof를 사용해서 ja-jp 언어 교정 도구(전체 언어 패키지 아님)를 추가하기
+**/addLang [LanguageIDs]** 하나 이상의 언어 패키지를 추가, LanguageID: 언어 패키지 ID, 예: zh-cn이나 zh-cn,en-us 등, ja-jp_proof를 사용해서 ja-jp 언어 교정 도구(전체 언어 패키지 아님)를 추가하기
 
-**/setApps [AppsID]** `설치할` 응용프로그램을 설정, 영문 콤마로 각각 응용프로그램을 분리하세요. 예: Word,Excel,PowerPoint, 미 설정된 응용프로그램을 설치하지 않을겁니다
+**/setApps [AppID]** `설치할` 응용프로그램을 설정, 영문 콤마로 각각 응용프로그램을 분리하세요. 예: Word,Excel,PowerPoint, 미 설정된 응용프로그램을 설치하지 않을겁니다
 
-**/setExApps [AppsID]** `설치하지 않는` 응용프로그램을 설정, 사용 방법은 /setApps와 동일합니다
+**/setExApps [AppID]** `설치하지 않는` 응용프로그램을 설정, 사용 방법은 /setApps와 동일합니다
 
 **/deployArch [index]** 시스템 구조를 설정, 0은 32비트, 1은 64비트
 
@@ -72,6 +72,10 @@ Tip: 마우스 이전/이후 버튼으로 페이지 전환할 수 있습니다.
 **/loadXML [Path]** 하나의 XML 파일을 로드, 로컬과 HTTP 경로를 지원
 
 **/startDeploy** 배포 시작
+
+**/installiSlide** Install iSlide.
+
+**getProductKey [ProductID]** Get the product key, return GVLK for volume products, normal key for other products. Example product id: ProPlus2019Volume
 
 **/osppILByID [ProductID]** 지정된 제풍의 Office 라이선스를 설치, ProductID: 제품 ID, 예: MondoVolume
 

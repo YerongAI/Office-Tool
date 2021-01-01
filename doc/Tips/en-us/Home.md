@@ -41,13 +41,13 @@ Tip: You can also switch pages using the mouse forward/back button.
 
 **/clImage** Reset background image.
 
-**/addProduct [ProductID]** Add one or more pruducts. Example: O365ProPlusRetail or O365ProPlusRetail,VisioProRetail
+**/addProduct [ProductIDs]** Add one or more pruducts. Example: O365ProPlusRetail or O365ProPlusRetail,VisioProRetail
 
-**/addLang [LanguageID]** Add one or more language packs, Example: en-us or zh-cn,en-us, using `ja-jp_proof` to add proofing tool for ja-jp.
+**/addLang [LanguageIDs]** Add one or more language packs, Example: en-us or zh-cn,en-us, using `ja-jp_proof` to add proofing tool for ja-jp.
 
-**/setApps [AppsID]** Set which applications to install. Example: Word,Excel,PowerPoint, otherwise applications will not be installed.
+**/setApps [AppIDs]** Set which applications to install. Example: Word,Excel,PowerPoint, otherwise applications will not be installed.
 
-**/setExApps [AppsID]** Set which applications not to install. otherwise applications will be installed.
+**/setExApps [AppIDs]** Set which applications not to install. otherwise applications will be installed.
 
 **/deployArch [index]** Set architecture for Office, 0 stands for 32-bit, 1 for 64-bit
 
@@ -69,7 +69,11 @@ Tip: You can also switch pages using the mouse forward/back button.
 
 **/startDeploy** Start deploy.
 
-**/osppILByID [ProductID]** Install Office licenses for a product, example: MondoVolume
+**/installiSlide** Install iSlide.
+
+**getProductKey [ProductID]** Get the product key, return GVLK for volume products, normal key for other products. Example product id: ProPlus2019Volume
+
+**/osppILByID [ProductID]** Install Office licenses for a product, example product id: MondoVolume
 
 **/osppinpkey:[value]** Install Office product key. Example: /osppinpkey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
 

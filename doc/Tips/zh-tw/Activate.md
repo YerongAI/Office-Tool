@@ -52,7 +52,7 @@
 香港產品啟動中心(付費電話)            2904 2198
 ```
 
-其他地區的產品啟用中心電話，請參閱「Microsoft 大量授權啟用中心全球電話號碼(https://www.microsoft.com/zh-tw/licensing/existing-customer/activation-centers)」。
+其他地區的產品啟用中心電話，請參閱「[Microsoft 大量授權啟用中心全球電話號碼](https://www.microsoft.com/zh-tw/licensing/existing-customer/activation-centers)」。
 
 #### KMS 啟用步驟激活步骤（需連線 KMS 主機）
 

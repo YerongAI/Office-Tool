@@ -45,13 +45,13 @@ Office Tool Plus 的部分功能是基於 [Office 部署工具](https://aka.ms/O
 
 **/clImage** 清除目前顯示的背景圖片
 
-**/addProduct [ProductIDs]** 新增一個(多個)產品。ProductID: 產品識別碼，例如：O365ProPlusRetail 或 O365ProPlusRetail,VisioProRetail。
+**/addProduct [ProductID]** 新增一個(多個)產品。ProductID: 產品識別碼，例如：O365ProPlusRetail 或 O365ProPlusRetail,VisioProRetail。
 
-**/addLang [LanguageIDs]** 新增一個(多個)語言套件。Language ID: 語言套件識別碼，例如：zh-cn 或者 zh-cn,en-us；若輸入 ja-jp_proof 可以新增 ja-jp 的校訂套件，而不是完整的語言套件。
+**/addLang [LanguageID]** 新增一個(多個)語言套件。Language ID: 語言套件識別碼，例如：zh-cn 或者 zh-cn,en-us；若輸入 ja-jp_proof 可以新增 ja-jp 的校訂套件，而不是完整的語言套件。
 
-**/setApps [AppIDs]** 設定`要安裝`的應用程式。使用半形逗號(,)分隔各個應用程式識別碼。例如：Word,Excel,PowerPoint，未設定的應用程式不會被安裝。
+**/setApps [AppsID]** 設定`要安裝`的應用程式。使用半形逗號(,)分隔各個應用程式識別碼。例如：Word,Excel,PowerPoint，未設定的應用程式不會被安裝。
 
-**/setExApps [AppIDs]** 設定`不要安裝`的應用程式，使用方法同 /setApps。
+**/setExApps [AppsID]** 設定`不要安裝`的應用程式，使用方法同 /setApps。
 
 **/deployArch [index]** 設定安裝架構，0 代表 32 位元，1 代表 64 位元。
 
@@ -72,10 +72,6 @@ Office Tool Plus 的部分功能是基於 [Office 部署工具](https://aka.ms/O
 **/loadXML [Path]** 匯入 XML 設定文件，支援使用本機路徑或 HTTP 位址。
 
 **/startDeploy** 開始部署。
-
-**/installiSlide** 单独安装 iSlide
-
-**/getProductKey [ProductID]** 获取产品密钥，若是批量产品，返回 GVLK，其他产品则返回默认密钥。ProductID: 产品 ID，例如：ProPlus2019Volume
 
 **/osppILByID [ProductID]** 安裝指定的 Office 產品授權文件。ProductID: 產品識別碼，例如：MondoVolume。
 

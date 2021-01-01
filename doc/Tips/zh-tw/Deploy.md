@@ -1,4 +1,4 @@
-## Office Tool Plus 部署 Office 說明
+## 部署 Office 說明
 
 ---
 

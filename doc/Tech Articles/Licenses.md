@@ -94,4 +94,4 @@ For more information about GVLKs, please visit [GVLKs for KMS activation of Offi
 | WordVolume | Word 2016 | ❌ | ✔ | ✔ | WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6 |
 
 <center>　</center>
-<center>© 2020 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.4</center>
+<center>© 2021 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.4</center>

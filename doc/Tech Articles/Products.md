@@ -1,6 +1,6 @@
 # Office Products Information
 
-For information about Product ID, please visit [the website](https://go.microsoft.com/fwlink/p/?LinkID=301891).
+For information about Product ID, please visit [List of Product IDs which are supported by the Office Deployment Tool for Click-to-Run](https://go.microsoft.com/fwlink/p/?LinkID=301891).
 
 ## Products List
 

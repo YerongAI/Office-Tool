@@ -16,9 +16,9 @@
 Prend en charge le déploiement personnalisé et l’activation des produits suivants:
 
 - Microsoft 365
-- Office 2016, 2019, 2021
-- Visio 2016, 2019 & Plan en ligne 2
-- Project 2016, 2019 & Client de bureau en ligne
+- Office 2016, 2019 & 2021
+- Visio 2016, 2019, 2021 & Plan en ligne 2
+- Project 2016, 2019, 2021 & Client de bureau en ligne
 
 Fonctions supplémentaires:
 
@@ -55,10 +55,10 @@ Windows Server 2008 R2 SP1, Windows Server 2012 ou plus élevé.
 
 ## Démarrage rapide
 
-Please refer to [Office Tool Plus Quick Start](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)
+Veuillez vous référer au [Démarrage rapide d'Office Tool Plus](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)
 
 ## À propos
 
-© 2016-2020 Yerong. Tous droits réservés.
+© 2016-2021 Yerong. Tous droits réservés.
 
 > Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)

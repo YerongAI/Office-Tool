@@ -1,8 +1,8 @@
 # Office Update Channels Information
 
-For information of update channels for Microsoft 365 Apps, please visit [the article](https://docs.microsoft.com/en-us/deployoffice/overview-update-channels).
+For information of update channels for Microsoft 365 Apps, please visit [Update channels for Microsoft 365 Apps](https://docs.microsoft.com/en-us/deployoffice/overview-update-channels).
 
-For information of update channel for Office 2019, please visit [the article](https://docs.microsoft.com/en-us/deployoffice/office2019/update#update-channel-for-office-2019).
+For information of update channel for Office 2019, please visit [Update channel for Office 2019](https://docs.microsoft.com/en-us/deployoffice/office2019/update#update-channel-for-office-2019).
 
 For information about Office Click-To-Run, please [visit the website](https://mrodevicemgr.officeapps.live.com/mrodevicemgrsvc/api/v2/C2RReleaseData).
 
@@ -29,4 +29,4 @@ Dogfood::CC | f3260cf1-a92c-4c75-b02e-d64c0a86a968 | Beta Channel | ❌ | 08/05/
 Dogfood::DevMain | ea4a4090-de26-49d7-93c1-91bff9e53fc3 | Beta Channel | ❌ | 08/05/2020 |
 
 <center>　</center>
-<center>© 2020 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.2</center>
+<center>© 2021 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.2</center>

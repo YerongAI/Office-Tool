@@ -47,7 +47,7 @@ Si vous utilisez un fichier ISO, vous devez d’abord le monter, puis sélection
 
 #### Créer un fichier ISO
 
-*Nécessite des fichiers d'installation d'Office stockés dans le répertoire Office Tool Plus.* Sinon, téléchargez d'abord les fichiers d'installation d'Office.
+*Nécessite des fichiers d'installation d'Office stockés dans le répertoire Office Tool Plus.* Sinon, télécharger d'abord les fichiers d'installation d'Office.
 
 `Si vous ajoutez des produits ou des modules linguistiques, Office Tool Plus créera une configuration XML lors de la création du fichier ISO. Lorsque les utilisateurs démarrent Office Tool Plus en mode ISO, Office Tool Plus demandera à l'utilisateur s'il souhaite démarrer l'installation.`
 

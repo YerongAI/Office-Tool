@@ -1,6 +1,6 @@
 # Office Products Information
 
-For information about Product ID, please visit [the website](https://go.microsoft.com/fwlink/p/?LinkID=301891).
+For information about Product ID, please visit [List of Product IDs which are supported by the Office Deployment Tool for Click-to-Run](https://go.microsoft.com/fwlink/p/?LinkID=301891).
 
 ## Products List
 
@@ -94,4 +94,4 @@ For information about Product ID, please visit [the website](https://go.microsof
 | WordVolume | Word 2016 | Product | OneDrive | OSM | ❌ |
 
 <center>　</center>
-<center>© 2020 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.3</center>
+<center>© 2021 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.3</center>

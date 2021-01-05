@@ -17,8 +17,8 @@
 
 - Microsoft 365
 - Office 2016, 2019, 2021
-- Visio 2016, 2019 & Online Plan 2
-- Project 2016, 2019 & Online Desktop Client
+- Visio 2016, 2019, 2021 & Online Plan 2
+- Project 2016, 2019, 2021 & Online Desktop Client
 
 除了部署 Office 之外，Office Tool Plus 還擁有以下便利功能：
 
@@ -78,6 +78,6 @@ Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.c
 
 ## 關於
 
-© 2016-2020 Yerong. All rights reserved.
+© 2016-2021 Yerong. All rights reserved.
 
 > Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)

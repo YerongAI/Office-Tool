@@ -17,8 +17,8 @@ Admite la implementación y activación personalizadas de los siguientes product
 
 - Microsoft 365
 - Office 2016, 2019, 2021
-- Visio 2016, 2019 y plan en línea 2
-- Proyecto 2016, 2019 y cliente de escritorio en línea
+- Visio 2016, 2019, 2021 y plan en línea 2
+- Proyecto 2016, 2019, 2021 y cliente de escritorio en línea
 
 Funciones adicionales:
 
@@ -59,6 +59,6 @@ Consulte [Inicio rápido de Office Tool Plus](https://github.com/YerongAI/Office
 
 ## A proposito
 
-© 2016-2020 Yerong. Todos los derechos reservados.
+© 2016-2021 Yerong. Todos los derechos reservados.
 
 > Blog [@Yerong の 小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)

@@ -10,7 +10,6 @@ Office Tool Plus si basa su [Strumenti di distribuzione di Microsoft Office](htt
 
 [Canale Telegram](https://t.me/otp_channel)
 
-
 ### Office Tool Plus Tasti di Scelta Rapida
 
 ---
@@ -72,7 +71,7 @@ Puoi accedere direttamente alle funzioni che desideri tramite i comandi e puoi a
 
 **/installiSlide** Install iSlide.
 
-**getProductKey [ProductID]** Get the product key, return GVLK for volume products, normal key for other products. Example product id: ProPlus2019Volume
+**/getProductKey [ProductID]** Get the product key, return GVLK for volume products, normal key for other products. Example product id: ProPlus2019Volume
 
 **/osppILByID [ProductID]** Installa la licenza Office del prodotto specificato, Product ID ad esempio: MondoVolume
 

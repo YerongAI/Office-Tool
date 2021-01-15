@@ -71,7 +71,7 @@ Tip: You can also switch pages using the mouse forward/back button.
 
 **/installiSlide** Install iSlide.
 
-**getProductKey [ProductID]** Get the product key, return GVLK for volume products, normal key for other products. Example product id: ProPlus2019Volume
+**/getProductKey [ProductID]** Get the product key, return GVLK for volume products, normal key for other products. Example product id: ProPlus2019Volume
 
 **/osppILByID [ProductID]** Install Office licenses for a product, example product id: MondoVolume
 

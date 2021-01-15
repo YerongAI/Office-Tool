@@ -4,7 +4,7 @@
 
 In the page, you can manage and install Office. **Due to Microsoft's limitations, you can only install Office to your system drive.**
 
-In applications, ***Lync*** stands for ***Skype for Business***，***Groove*** stands for ***OneDrive for Business***
+In applications, ***Lync*** stands for ***Skype for Business***，***Groove*** stands for ***OneDrive for Business***. Bing is a extension for Chrome and Edge etc. For more information, visit [Microsoft Search in Bing and Microsoft 365 Apps for enterprise](https://docs.microsoft.com/en-us/deployoffice/microsoft-search-bing).
 
 To define where to save files in download mode, change the value of  ***Source path*** in ***Installation settings***.
 

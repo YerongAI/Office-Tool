@@ -4,7 +4,7 @@
 
 在这里，您可以管理当前已安装的 Office 产品和语言包。如果没有安装 Office，则可以进行全新安装。**由于微软限制，Office 仅可以安装在系统盘上。**
 
-应用程序中，***Lync*** 代表 ***Skype for Business***，***Groove*** 代表 ***OneDrive for Business***
+应用程序中，***Lync*** 代表 ***Skype for Business***，***Groove*** 代表 ***OneDrive for Business***. Bing 是一个用于 Chrome 和 Edge 的扩展，若要获取更多信息，请访问 [Microsoft 必应搜索和 Microsoft 365 企业应用版](https://docs.microsoft.com/zh-cn/deployoffice/microsoft-search-bing).
 
 若要在下载模式中自定义 Office 安装文件保存路径，请修改 ***安装设置*** 中的 ***源路径*** 属性。
 

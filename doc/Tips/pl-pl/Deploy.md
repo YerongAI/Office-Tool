@@ -4,7 +4,7 @@
 
 Na tej stronie możesz zarządzać pakietem Office i instalować go. **Ze względu na ograniczenia firmy Microsoft możesz zainstalować pakiet Office tylko na dysku systemowym.**
 
-W aplikacjach ***Lync*** to skrót od ***Skype for Business***，***Groove*** to skrót od ***OneDrive dla firm***
+W aplikacjach ***Lync*** to skrót od ***Skype for Business***，***Groove*** to skrót od ***OneDrive dla firm***. Bing is a extension for Chrome and Edge etc. For more information, visit [Microsoft Search in Bing and Microsoft 365 Apps for enterprise](https://docs.microsoft.com/pl-pl/deployoffice/microsoft-search-bing).
 
 Aby zdefiniować miejsce zapisywania plików w trybie pobierania, zmień wartość ***Ścieżka źródłowa*** w ***Ustawienia instalacji***.
 

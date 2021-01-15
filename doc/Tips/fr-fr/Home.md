@@ -71,7 +71,7 @@ Conseil: Vous pouvez également changer de page à l’aide du bouton avant/arri
 
 **/installiSlide** Installer iSlide.
 
-**getProductKey [ProductID]** Obtener la clé du produit, renvoyer GVLK pour les produits en volume, clé normale pour d’autres produits. Exemple d’id produit: ProPlus2019Volume
+**/getProductKey [ProductID]** Obtener la clé du produit, renvoyer GVLK pour les produits en volume, clé normale pour d’autres produits. Exemple d’id produit: ProPlus2019Volume
 
 **/osppILByID [ProductID]** Installer des licences Office pour un produit, par exemple: MondoVolume
 

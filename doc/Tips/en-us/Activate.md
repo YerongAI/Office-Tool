@@ -27,7 +27,7 @@ If you want to clean up keys together, click *Clear activation*.
 ---
 
 1. Office Tool Plus will read the license and display them in the drop-down list only if a Click-to-Run based version of Office is installed.
-2. Installing new licenses wont overwrite the old licenses, the licenses can coexistent.
+2. Installing new licenses won't overwrite the old licenses, the licenses can coexistent.
 3. Microsoft 365 products can only be activated by logging in to your account.
 
 ### Activate Licenses

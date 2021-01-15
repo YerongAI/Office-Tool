@@ -4,7 +4,7 @@
 
 Office Tool Plus 是一款多功能集於一身的 Office 部署工具。
 
-Office Tool Plus 的部分功能是基於 [Office 部署工具](https://aka.ms/ODT)和 [OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office) 製作，讓您能享受主控權更高的部署 Office 體驗；其內建 Thunder 下載加速模組，協助您更節省時間。亦歡迎您能夠體驗其他 Office Tool Plus 提供的各式小工具、強大的功能，使您能更方便地啟用和管理 Office 哦！
+Office Tool Plus 的部分功能是基於 [Office 部署工具](https://aka.ms/ODT)和 [OSPP](https://docs.microsoft.com/zh-tw/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office) 製作，讓您能享受主控權更高的部署 Office 體驗；其內建 Thunder 下載加速模組，協助您更節省時間。亦歡迎您能夠體驗其他 Office Tool Plus 提供的各式小工具、強大的功能，使您能更方便地啟用和管理 Office 哦！
 
 [作者部落格](https://www.coolhub.top/)
 
@@ -73,6 +73,10 @@ Office Tool Plus 的部分功能是基於 [Office 部署工具](https://aka.ms/O
 
 **/startDeploy** 開始部署。
 
+**/installiSlide** 单独安装 iSlide
+
+**/getProductKey [ProductID]** 获取产品密钥，若是批量产品，返回 GVLK，其他产品则返回默认密钥。ProductID: 产品 ID，例如：ProPlus2019Volume
+
 **/osppILByID [ProductID]** 安裝指定的 Office 產品授權文件。ProductID: 產品識別碼，例如：MondoVolume。
 
 **/osppinpkey:[value]** 安裝指定的 Office 金鑰。例如：/osppinpkey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX。
@@ -85,6 +89,6 @@ Office Tool Plus 的部分功能是基於 [Office 部署工具](https://aka.ms/O
 
 **/osppact** 啟用 Office 客戶端產品。
 
-還有更多的 OSPP 指令，請參考 [Microsoft OSPP 技術文件](https://docs.microsoft.com/zh-cn/deployoffice/vlactivation/tools-to-manage-volume-activation-of-office)，在 Microsoft 技術文件中提到的指令前加上 ospp，即可適用在 Office Tool Plus。
+還有更多的 OSPP 指令，請參考 [Microsoft OSPP 技術文件](https://docs.microsoft.com/zh-tw/deployoffice/vlactivation/tools-to-manage-volume-activation-of-office)，在 Microsoft 技術文件中提到的指令前加上 ospp，即可適用在 Office Tool Plus。
 
 謝謝您的閱讀，祝您使用愉快。

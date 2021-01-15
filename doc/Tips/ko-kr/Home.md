@@ -75,7 +75,7 @@ Tip: 마우스 이전/이후 버튼으로 페이지 전환할 수 있습니다.
 
 **/installiSlide** Install iSlide.
 
-**getProductKey [ProductID]** Get the product key, return GVLK for volume products, normal key for other products. Example product id: ProPlus2019Volume
+**/getProductKey [ProductID]** Get the product key, return GVLK for volume products, normal key for other products. Example product id: ProPlus2019Volume
 
 **/osppILByID [ProductID]** 지정된 제풍의 Office 라이선스를 설치, ProductID: 제품 ID, 예: MondoVolume
 

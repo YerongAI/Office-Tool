@@ -1,6 +1,14 @@
 # Office Products Information
 
-For information about Product ID, please visit [List of Product IDs which are supported by the Office Deployment Tool for Click-to-Run](https://go.microsoft.com/fwlink/p/?LinkID=301891).
+Click to view [List of Product IDs which are supported by the Office Deployment Tool for Click-to-Run](https://go.microsoft.com/fwlink/p/?LinkID=301891).
+
+Click to learn more about [PowerPivot](https://support.microsoft.com/en-us/office/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed) and [PowerView](https://support.microsoft.com/en-us/office/power-view-overview-and-learning-5380e429-3ee0-4be2-97b7-64d7930020b6).
+
+DCF stand for [Database Compare](https://support.microsoft.com/en-us/office/overview-of-database-compare-58479a8d-e4c8-4325-a670-d9a2e5f1ef5c) and [Spreadsheet Compare](https://support.microsoft.com/en-us/office/overview-of-spreadsheet-compare-13fafa61-62aa-451b-8674-242ce5f2c986).
+
+OSM and OSMUX stand for [Telemetry Dashboard](https://docs.microsoft.com/en-us/deployoffice/compat/compatibility-and-telemetry-in-office) and **Telemetry Log for Office**.
+
+MondoOnly stand for Office Lime application, some test components will also be released.
 
 ## Products List
 
@@ -94,4 +102,4 @@ For information about Product ID, please visit [List of Product IDs which are su
 | WordVolume | Word 2016 | Product | OneDrive | OSM | ❌ |
 
 <center>　</center>
-<center>© 2021 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.4</center>
+<center>© 2021 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.5</center>

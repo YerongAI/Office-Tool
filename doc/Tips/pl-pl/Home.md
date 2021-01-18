@@ -69,9 +69,9 @@ Porada: Możesz także przełączać strony za pomocą przycisku myszy do przodu
 
 **/startDeploy** Rozpocznij wdrażanie.
 
-**/installiSlide** Install iSlide.
+**/installiSlide** Zainstaluj iSlide.
 
-**/getProductKey [ProductID]** Get the product key, return GVLK for volume products, normal key for other products. Example product id: ProPlus2019Volume
+**/getProductKey [ProductID]** Uzyskaj klucz produktu, zwróć GVLK dla produktów zbiorczych, normalny klucz dla innych produktów. Przykładowy identyfikator produktu: ProPlus2019Volume
 
 **/osppILByID [ProductID]** Zainstaluj licencje pakietu Office dla produktu, na przykład: MondoVolume
 

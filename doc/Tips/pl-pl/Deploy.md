@@ -4,7 +4,7 @@
 
 Na tej stronie możesz zarządzać pakietem Office i instalować go. **Ze względu na ograniczenia firmy Microsoft możesz zainstalować pakiet Office tylko na dysku systemowym.**
 
-W aplikacjach ***Lync*** to skrót od ***Skype for Business***，***Groove*** to skrót od ***OneDrive dla firm***. Bing is a extension for Chrome and Edge etc. For more information, visit [Microsoft Search in Bing and Microsoft 365 Apps for enterprise](https://docs.microsoft.com/pl-pl/deployoffice/microsoft-search-bing).
+W aplikacjach ***Lync*** to skrót od ***Skype for Business***，***Groove*** to skrót od ***OneDrive dla firm***. Bing to rozszerzenie dla Chrome i Edge itp. Aby uzyskać więcej informacji, odwiedź [Microsoft Search in Bing and Microsoft 365 Apps for Enterprise](https://docs.microsoft.com/pl-pl/deployoffice/microsoft-search-bing).
 
 Aby zdefiniować miejsce zapisywania plików w trybie pobierania, zmień wartość ***Ścieżka źródłowa*** w ***Ustawienia instalacji***.
 
@@ -49,7 +49,7 @@ Jeśli używasz pliku ISO, musisz go najpierw zamontować, a następnie wybrać 
 
 *Wymaga plików instalacyjnych pakietu Office przechowywanych w katalogu Office Tool Plus.* Jeśli nie, najpierw pobierz pliki instalacyjne pakietu Office.
 
-`Jeśli dodasz produkty lub pakiety językowe, Office Tool Plus utworzy konfigurację XML podczas tworzenia pliku ISO. Gdy użytkownicy uruchamiają Office Tool Plus w trybie ISO, Office Tool Plus zapyta użytkownika, czy chcą rozpocząć instalację. ”
+`Jeśli dodasz produkty lub pakiety językowe, Office Tool Plus utworzy konfigurację XML podczas tworzenia pliku ISO. Gdy użytkownicy uruchamiają Office Tool Plus w trybie ISO, Office Tool Plus zapyta użytkownika, czy chcą rozpocząć instalację.
 
 #### Tylko pobierz
 

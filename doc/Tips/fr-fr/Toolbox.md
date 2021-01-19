@@ -4,7 +4,7 @@
 
 Vous pouvez facilement résoudre certains problèmes en utilisant ces outils, mais nous ne pouvons pas garantir qu’ils sont 100% efficaces.
 
-### À propos de Modifier le canal de mise à jour Office
+### À propos de modifier le canal de mise à jour d'Office
 
 ---
 

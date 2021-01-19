@@ -1,0 +1,919 @@
+{
+    "categories": [
+        {
+            "name": "L_MicrosoftOfficePublisher",
+            "displayName": "Microsoft Publisher 2016"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
+            "name": "L_PubOptions",
+            "displayName": "Publisher 选项"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_Advanced",
+            "displayName": "高级"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "name": "L_ComplexScripts",
+            "displayName": "复杂脚本"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_General",
+            "displayName": "常规"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_Proofing",
+            "displayName": "校对"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_OptionsCustomizeRibbon",
+            "displayName": "自定义功能区"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_Save",
+            "displayName": "保存"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
+            "name": "L_Miscellaneous",
+            "displayName": "杂项"
+        }
+    ],
+    "policies": [
+        {
+            "parentCategory": {
+                "ref": "L_OptionsCustomizeRibbon"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisplayDeveloperTab",
+            "displayName": "在功能区显示“开发工具”选项卡",
+            "explainText": "此策略设置可控制是否在功能区显示“开发工具”选项卡。\n\n如果启用此策略设置，将在功能区显示“开发工具”选项卡。\n\n如果禁用此策略设置，将不在功能区显示“开发工具”选项卡。\n\n如果未配置此策略设置，将不在功能区显示“开发工具”选项卡，但其可见性可以通过应用程序选项对话框中的设置进行更改。",
+            "tags": [
+                "L_OptionsCustomizeRibbon",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "developertools"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_General"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_ShowTheNewTemplateGalleryWhenStartingPublisher",
+            "displayName": "启动 Publisher 时显示新模板库",
+            "explainText": "选中/取消选中对应的用户界面选项。",
+            "tags": [
+                "L_General",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "usestartupdlg"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_TurnOffDragPreview",
+            "displayName": "禁用拖动预览",
+            "explainText": "通过此策略设置，您可以确定在拖动对象时，Publisher 显示对象的半透明拖动预览还是简单轮廓。\n\n如果启用此策略设置，则在拖动对象时仅显示对象的轮廓。由于此功能的资源要求，这是对较旧计算机的建议设置。\n\n如果禁用或未配置此策略设置，则在拖动对象时显示对象的半透明拖动预览。",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "uselegacydrag"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "max display",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 50,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_SetMaximumNumberOfMRUItemsToDisplaySpinID"
+                    }
+                ]
+            },
+            "name": "L_SetMaximumNumberOfMRUItemsToDisplay",
+            "displayName": "“最近使用的出版物”列表中的出版物数",
+            "explainText": "此策略设置指定当用户在 Backage 视图中在“文件”选项卡上单击“打开”时出现的“最近使用的出版物”列表中显示的条目数。\n\n如果启用此策略设置，您可以将条目数指定为介于 0 到 50 之间。如果将数字设置为 0，则所有固定和取消固定的条目都将隐藏。\n\n如果禁用或未配置此策略设置，“最近使用的出版物”列表中最多显示 25 个项目。\n\n注意: 如果想要彻底阻止项目添加到“最近使用的出版物”列表，您可以启用 Windows 策略设置“不保留最近打开的文档的历史记录”。",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\file mru"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "max display",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 20,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_SetNumberOfPlacesInTheRecentPlacesListSpinID"
+                    }
+                ]
+            },
+            "name": "L_SetNumberOfPlacesInTheRecentPlacesList",
+            "displayName": "“最近使用的文件夹”列表中的文件夹数",
+            "explainText": "此策略设置指定当用户在 Backage 视图中在“文件”选项卡上单击“打开”或“另存为”时出现的“最近使用的文件夹”列表中显示的已取消固定的条目数。\n\n如果启用此策略设置，您可以将取消固定的条目数指定为介于 0 到 20 之间。如果将数字设置为 0，则所有固定和取消固定的条目都将隐藏。\n\n如果禁用或未配置此策略设置，“最近使用的文件夹”列表中最多显示 5 个取消固定的条目。\n\n注意: 如果想要彻底阻止条目添加到“最近使用的文件夹”列表，您可以启用 Windows 策略设置“不保留最近打开的文档的历史记录”。",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\place mru"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_UseXPSEnhancedPrintPath",
+            "displayName": "使用 XPS 增强的打印路径",
+            "explainText": "通过此策略设置，您可以在可用时使用 XPS 增强的打印路径。\n\n如果启用或未配置此策略设置，将使用 XPS 打印路径。\n\n如果禁用此策略设置，则不使用 XPS 打印路径。",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "enablexpsprintpathprinting"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AutomaticallysubstitutefontformissingEAchars",
+            "displayName": "自动替换缺少的中文字符的字体",
+            "explainText": "选中/取消选中对应的用户界面选项。",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "usefontlinking"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "1"
+                                },
+                                "displayName": "从左向右"
+                            },
+                            {
+                                "value": {
+                                    "string": "256"
+                                },
+                                "displayName": "从右向左"
+                            }
+                        ],
+                        "valueName": "defaulttextflow",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDefaultTextFlowDirectionDropID"
+                    }
+                ]
+            },
+            "name": "L_SetDefaultTextFlowDirection",
+            "displayName": "设置默认文字排列方向",
+            "explainText": "通过此策略设置，您可以设置从右到左(RTL)和从左到右(LTR)之间的默认文字排列。\n\n如果启用此策略设置，则可选择文字是以 RTL 还是 LTR 排列。\n\n如果禁用或未配置此策略设置，则使用默认文字排列设置。",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AutomaticallySwitchKeyboard",
+            "displayName": "自动切换键盘以匹配周围文字的语言",
+            "explainText": "选中/取消选中对应的用户界面选项。",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "autokeybd"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AllowTextToBeDraggedAndDropped",
+            "displayName": "允许拖放式文字编辑",
+            "explainText": "选中/取消选中对应的用户界面选项。",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "textdragndrop"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Whenselectingautomaticallyselectentireword",
+            "displayName": "选定时自动选定整个单词",
+            "explainText": "选中/取消选中对应的用户界面选项。",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "autowordsel"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Whenformattingautomaticallyformatentireword",
+            "displayName": "设置格式时自动设置整个单词的格式",
+            "explainText": "选中/取消选中对应的用户界面选项。",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "autowordformat"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_UseChinesefontsizes",
+            "displayName": "使用中文字号",
+            "explainText": "选中/取消选中对应的用户界面选项。",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "prcfontsizes"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AutomaticallyHyphenateInNewTextBoxes",
+            "displayName": "自动为新文本框断字",
+            "explainText": "选中/取消选中“自动为新文本框断字”选项。",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "defautohyph"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_ShowScreenTipsonobjects",
+            "displayName": "显示对象的屏幕提示",
+            "explainText": "选中/取消选中对应的用户界面选项。",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "showobjecttooltips"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Enableincrementalpublishtoweb",
+            "displayName": "启用增量 Web 发布",
+            "explainText": "选中/取消选中对应的用户界面选项。",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\internet",
+            "valueName": "incrementalupload"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Sendentirepublicationasasingle",
+            "displayName": "将整个出版物发送为单个 JPEG 图像",
+            "explainText": "选中/取消选中对应的用户界面选项。",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\internet",
+            "valueName": "emailasimg"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Promptuserwhenreapplyingastyle",
+            "displayName": "重新应用样式时提示用户",
+            "explainText": "选中/取消选中对应的用户界面选项。",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "prompttoupdatestyle"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Save"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "autorecoversaveinterval",
+                        "required": true,
+                        "requiredSpecified": true,
+                        "expandable": false,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "分钟(介于 1-120 之间):",
+                        "id": "L_SaveAutoRecoverinfoeveryID"
+                    }
+                ]
+            },
+            "name": "L_SaveAutoRecoverinfoevery",
+            "displayName": "保存自动恢复信息间隔，每(分钟)",
+            "explainText": "通过此策略设置，您可以指定保存自动恢复间隔(分钟)。\n\n如果启用此策略设置，则可指定保存自动恢复间隔(分钟)(有效范围: 1-120)。\n\n如果禁用或不配置此策略设置，将使用用户界面中指定的间隔。",
+            "tags": [
+                "L_Save",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Save"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Allowbackgroundsaves",
+            "displayName": "允许后台保存",
+            "explainText": "选中/取消选中对应的用户界面选项。",
+            "tags": [
+                "L_Save",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "backgroundsave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Proofing"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "键入时检查拼写"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "隐藏拼写错误"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "两者"
+                            }
+                        ],
+                        "valueName": "publisherspellingoptions",
+                        "inputType": "dropdownList",
+                        "id": "L_CheckspellingasyoutypeDropID"
+                    }
+                ]
+            },
+            "name": "L_Checkspellingasyoutype",
+            "displayName": "键入时检查拼写",
+            "explainText": "通过此策略设置，您可以配置拼写错误的选项。\n\n如果启用此策略设置，您可以选择以下选项之一:\n-  键入时检查拼写: 选中此选项。\n-  隐藏拼写错误: 选中此选项，但是取消选中“键入时拼写”\n- 两者: 同时选中“键入时检查拼写”和“隐藏拼写错误”。\n\n如果禁用或未配置此策略设置，则选中“键入时检查拼写”。",
+            "tags": [
+                "L_Proofing",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\shared tools\\proofing tools\\1.0\\office"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Promptusertosetupprinter",
+            "displayName": "提示用户设置打印机",
+            "explainText": "设置后，如果发现新打印机，Publisher 将提示用户启动打印机设置向导。",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "showprintersetup"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "0"
+                                },
+                                "displayName": "从左向右"
+                            },
+                            {
+                                "value": {
+                                    "string": "1"
+                                },
+                                "displayName": "从右向左"
+                            }
+                        ],
+                        "valueName": "defaultrtl",
+                        "inputType": "dropdownList",
+                        "caption": "默认 Publisher 方向",
+                        "id": "L_defaultpublisherdirection3"
+                    }
+                ]
+            },
+            "name": "L_DefaultPublisherdirection",
+            "displayName": "默认 Publisher 方向",
+            "explainText": "指定默认版式方向。",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_UseSequenceChecking",
+            "displayName": "使用顺序检查",
+            "explainText": "选中/取消选中对应的用户界面选项。",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "seqcheck"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Usetypeandreplace",
+            "displayName": "使用“键入并替换”",
+            "explainText": "选中/取消选中对应的用户界面选项。",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "typereplace"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AdddoublequotesinHebrewalphabetnumbering",
+            "displayName": "在希伯来语字母编号中添加双引号",
+            "explainText":"选中: 为希伯来语编号添加双引号('')。| 未选中: 不为希伯来语编号添加双引号('')。",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "dubquohebalpnum"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableOfficeStartPublisher",
+            "displayName": "禁用 Publisher 的 Office 开始屏幕",
+            "explainText": "此策略设置控制启动 Publisher 时 Office 开始屏幕是否显示。\n\n如果启用此策略设置，则当启动 Publisher 时，用户不会看到 Office 开始屏幕。\n\n如果禁用或不配置此策略设置，则当启动 Publisher 时，用户会看到 Office 开始屏幕。\n\n注意: 如果设置了“Microsoft Office 2016”>“杂项”>“为所有 Office 应用程序禁用 Office 开始屏幕”，则此策略设置将被替代。",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "disableboottoofficestart"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "personaltemplates",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "个人模板路径",
+                        "id": "L_PersonalTemplatesPath"
+                    }
+                ]
+            },
+            "name": "L_PersonalTemplatesPath",
+            "displayName": "Publisher 的个人模板路径",
+            "explainText": "此策略设置指定用户的个人模板的位置。\n\n如果启用此策略设置，用户将在 Office 开始屏幕上和“文件”|“新建”中看到他们保存在自定义模板选项卡中的指定位置的任何模板，并且在保存模板时，其默认文件夹将更改为指定位置。\n\n如果禁用或未配置此策略设置，用户不会在 Office 开始屏幕上和“文件”|“新建”中看到他们保存在自定义模板选项卡中的模板，并且在保存模板时，其默认文件夹将是文档保存位置。",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "特色"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "内置"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "自定义"
+                            }
+                        ],
+                        "valueName": "officestartdefaulttab",
+                        "inputType": "dropdownList",
+                        "caption": "默认选项卡",
+                        "id": "L_DefaultBuiltInTab"
+                    }
+                ]
+            },
+            "name": "L_DefaultBuiltInTab",
+            "displayName": "要在 Publisher 的 Office 开始屏幕上和“文件|新建”中显示的默认选项卡",
+            "explainText": "此策略设置控制在 Publisher 的 Office 开始屏幕上和“文件|新建”中显示为默认选项卡的内容。\n\n如果启用此策略设置，您可以选择两个选项之一成为 Office 开始屏幕上和“文件|新建”中的默认选项卡:\n\n* 内置 – 用户将在 Publisher 的 Office 开始屏幕上和“文件|新建”中看到内置模板选项卡作为默认选项卡。\n\n* 自定义 – 当自定义模板(这可能包括自定义 XML 编程的模板、工作组模板路径中的模板、个人模板路径中的模板或 SharePoint 模板)存在时，用户将在 Publisher 的 Office 开始屏幕上和“文件|新建”中看到这些模板选项卡为默认选项卡。\n\n如果禁用或不配置此策略设置，用户将在 Publisher 的 Office 开始屏幕上和“文件|新建”中看到特色模板选项卡作为默认选项卡",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        }
+    ]
+}

@@ -1471,7 +1471,7 @@
             },
             "name": "L_OpenOfficedocumentsasreadwritewhilebrowsing",
             "displayName": "Open Office documents as read/write while browsing",
-            "explainText": "This policy setting controls whether users can edit and save Office 2016 documents on Web servers that they have opened using Internet Explorer.\n      \nIf enable this policy setting, when users browse to an Office 2016 document on a Web server using Internet Explorer the appropriate application opens the file in read/write mode.\n\nIf you disable or do not configure this policy setting, when users browse to an Office 2016 document on a Web server using Internet Explorer, the appropriate application opens the file in read-only mode.",
+            "explainText": "This policy setting controls whether users can edit and save Office 2016 documents on Web servers that they have opened using Internet Explorer.\n\nIf enable this policy setting, when users browse to an Office 2016 document on a Web server using Internet Explorer the appropriate application opens the file in read/write mode.\n\nIf you disable or do not configure this policy setting, when users browse to an Office 2016 document on a Web server using Internet Explorer, the appropriate application opens the file in read-only mode.",
             "tags": [
                 "L_Files",
                 "L_ToolsOptionsGeneralWebOptions",
@@ -2917,7 +2917,7 @@
             },
             "name": "L_SelectDigitalSignatureInvalidHashingAlgorithm",
             "displayName": "Configure invalid hashing algorithm",
-            "explainText": "This policy setting allows you to configure whether Office displays a digital signature as invalid when it contains specific hash algorithms.\n\nIf you enable this policy setting, you can specify the weakest hash algorithm that Office treats as invalid. If you enable this policy setting, you can specify any of the following algorithms:\n- MD5\n- SHA1\n- SHA256\n- SHA384\n\nIf you don’t configure this policy setting, Office won’t treat digital signatures as invalid because of the hashing algorithm.\n\nFor example, if you set MD5 as the invalid hashing algorithm Office treats MD5 signatures as invalid.\n      ",
+            "explainText": "This policy setting allows you to configure whether Office displays a digital signature as invalid when it contains specific hash algorithms.\n\nIf you enable this policy setting, you can specify the weakest hash algorithm that Office treats as invalid. If you enable this policy setting, you can specify any of the following algorithms:\n- MD5\n- SHA1\n- SHA256\n- SHA384\n\nIf you don’t configure this policy setting, Office won’t treat digital signatures as invalid because of the hashing algorithm.\n\nFor example, if you set MD5 as the invalid hashing algorithm Office treats MD5 signatures as invalid.",
             "tags": [
                 "L_DigSig",
                 "L_SecuritySettings",
@@ -3371,7 +3371,7 @@
             },
             "name": "L_SpecifyIssuerFilter",
             "displayName": "Specify filtering for certificate issuers",
-            "explainText": "This policy setting allows you to configure Office to only allow certificates from a specific issuer when creating a digital signature.\n      \nIf you enable this policy setting, Office only displays certificates that contain the string you set in the policy. This setting is case-sensitive.\n\nFor example, a setting of \"MyCA\" would match an issuer of \"MyCA 1\"and \"MyCA 2\", but not \"MYCA 3\".\n\nIf you disable or don’t configure this setting, then signing certificates from any issuer can be used.",
+            "explainText": "This policy setting allows you to configure Office to only allow certificates from a specific issuer when creating a digital signature.\n\nIf you enable this policy setting, Office only displays certificates that contain the string you set in the policy. This setting is case-sensitive.\n\nFor example, a setting of \"MyCA\" would match an issuer of \"MyCA 1\"and \"MyCA 2\", but not \"MYCA 3\".\n\nIf you disable or don’t configure this setting, then signing certificates from any issuer can be used.",
             "tags": [
                 "L_DigSig",
                 "L_SecuritySettings",
@@ -5188,7 +5188,7 @@
             },
             "name": "L_Encryptiontypeforpasswordprotectedofficeopen",
             "displayName": "Encryption type for password protected Office Open XML files",
-            "explainText": "This policy setting allows you to specify an encryption type for Office Open XML files.\n      \nIf you enable this policy setting, you can specify the type of encryption that Office applications use to encrypt password-protected files in the Office Open XML file formats used by Excel, PowerPoint, and Word. The chosen encryption type must have a corresponding cryptographic service provider (CSP) installed on the computer that encrypts the file.  See the HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\Defaults\\Provider\\ registry key for a list of CSPs installed on the local computer. Specify the encryption type to use by entering it in the provided text box in the following form:\n\n<Encryption Provider>,<Encryption Algorithm>,<Encryption Key Length>\n\nFor example: Microsoft Enhanced Cryptographic Provider v1.0,RC4,128\n\nIf you disable or do not configure this policy setting, the default CSP is used.  The default cryptographic service provider (CSP) is Microsoft Enhanced RSA and AES Cryptographic Provider, AES-128, 128-bit.\n\nNote: This policy setting does not take effect unless the registry key  \nHKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\<office application name>\\Security\\Crypto\\CompatMode is set to 0. By default the CompatMode registry key is set to 1.\n",
+            "explainText": "This policy setting allows you to specify an encryption type for Office Open XML files.\n\nIf you enable this policy setting, you can specify the type of encryption that Office applications use to encrypt password-protected files in the Office Open XML file formats used by Excel, PowerPoint, and Word. The chosen encryption type must have a corresponding cryptographic service provider (CSP) installed on the computer that encrypts the file. See the HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\Defaults\\Provider\\ registry key for a list of CSPs installed on the local computer. Specify the encryption type to use by entering it in the provided text box in the following form:\n\n<Encryption Provider>,<Encryption Algorithm>,<Encryption Key Length>\n\nFor example: Microsoft Enhanced Cryptographic Provider v1.0,RC4,128\n\nIf you disable or do not configure this policy setting, the default CSP is used.  The default cryptographic service provider (CSP) is Microsoft Enhanced RSA and AES Cryptographic Provider, AES-128, 128-bit.\n\nNote: This policy setting does not take effect unless the registry key HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\<office application name>\\Security\\Crypto\\CompatMode is set to 0. By default the CompatMode registry key is set to 1.",
             "tags": [
                 "L_SecuritySettings",
                 "L_MicrosoftOfficeSystem"
@@ -5218,7 +5218,7 @@
             },
             "name": "L_Encryptiontypeforpasswordprotectedoffice972003",
             "displayName": "Encryption type for password protected Office 97-2003 files",
-            "explainText": "This policy setting enables you to specify an encryption type for password-protected Office 97-2003 files.\n      \nIf you enable this policy setting, you can specify the type of encryption that Office applications will use to encrypt password-protected files in the older Office 97-2003 file formats. The chosen encryption type must have a corresponding cryptographic service provider (CSP) installed on the computer that encrypts the file.  See the HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\Defaults\\Provider\\ registry key for a list of CSPs installed on the local computer. Specify the encryption type to use by entering it in the provided text box in the following form:\n\n<Encryption Provider>,<Encryption Algorithm>,<Encryption Key Length>.\nFor example, Microsoft Enhanced Cryptographic Provider v1.0,RC4,128\n\nIf you do not configure this policy setting, Excel, PowerPoint, and Word use Office 97/2000 Compatible encryption, a proprietary encryption method, to encrypt password-protected Office 97-2003 files.",
+            "explainText": "This policy setting enables you to specify an encryption type for password-protected Office 97-2003 files.\n\nIf you enable this policy setting, you can specify the type of encryption that Office applications will use to encrypt password-protected files in the older Office 97-2003 file formats. The chosen encryption type must have a corresponding cryptographic service provider (CSP) installed on the computer that encrypts the file.  See the HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\Defaults\\Provider\\ registry key for a list of CSPs installed on the local computer. Specify the encryption type to use by entering it in the provided text box in the following form:\n\n<Encryption Provider>,<Encryption Algorithm>,<Encryption Key Length>.\nFor example, Microsoft Enhanced Cryptographic Provider v1.0,RC4,128\n\nIf you do not configure this policy setting, Excel, PowerPoint, and Word use Office 97/2000 Compatible encryption, a proprietary encryption method, to encrypt password-protected Office 97-2003 files.",
             "tags": [
                 "L_SecuritySettings",
                 "L_MicrosoftOfficeSystem"
@@ -5245,7 +5245,7 @@
             },
             "name": "L_disablevbaforofficeapplications319",
             "displayName": "Disable VBA for Office applications",
-            "explainText": "This policy setting allows you to prevent Excel 2016, SharePoint Designer 2016, Outlook 2016, PowerPoint 2016, Publisher 2016, and Word 2016 from using Visual Basic for Applications (VBA), whether or not the VBA feature is installed on user computers. Changing this policy setting will not install or remove the VBA files from the user computers. For more information about configuring security settings, see the 2016 Office Resource Kit.\n\nIf you enable this policy setting, VBA is disabled on 2016 Office applications on user computers.\n\nIf you disable or do not configure this policy setting, VBA is enabled for 2016 Office applications on user computers.\n",
+            "explainText": "This policy setting allows you to prevent Excel 2016, SharePoint Designer 2016, Outlook 2016, PowerPoint 2016, Publisher 2016, and Word 2016 from using Visual Basic for Applications (VBA), whether or not the VBA feature is installed on user computers. Changing this policy setting will not install or remove the VBA files from the user computers. For more information about configuring security settings, see the 2016 Office Resource Kit.\n\nIf you enable this policy setting, VBA is disabled on 2016 Office applications on user computers.\n\nIf you disable or do not configure this policy setting, VBA is enabled for 2016 Office applications on user computers.",
             "tags": [
                 "L_SecuritySettings",
                 "L_MicrosoftOfficeSystem"
@@ -17674,7 +17674,7 @@
             },
             "name": "L_TurnOffContactTabCalendar",
             "displayName": "Remove Calendar Line",
-            "explainText": "\nThis policy setting enables you to remove the Calendar line on the Contact Tab, which is on the Contact Card.\n\nIf you enable this policy setting, you can remove the Calendar line.\n\nIf you disable or do not configure this policy setting, the Calendar line appears on the Contact Tab.\n",
+            "explainText": "This policy setting enables you to remove the Calendar line on the Contact Tab, which is on the Contact Card.\n\nIf you enable this policy setting, you can remove the Calendar line.\n\nIf you disable or do not configure this policy setting, the Calendar line appears on the Contact Tab.",
             "tags": [
                 "L_ContactTab",
                 "L_ContactCard",
@@ -17703,7 +17703,7 @@
             },
             "name": "L_TurnOffContactTabLocation",
             "displayName": "Remove Location Line",
-            "explainText": "\nThis policy setting enables you to remove the Location line on the Contact Tab, which is on the Contact Card.\n\nIf you enable this policy setting, you can remove the Location line.\n\nIf you disable or do not configure this policy setting, the Location line appears on the Contact Tab.\n",
+            "explainText": "This policy setting enables you to remove the Location line on the Contact Tab, which is on the Contact Card.\n\nIf you enable this policy setting, you can remove the Location line.\n\nIf you disable or do not configure this policy setting, the Location line appears on the Contact Tab.",
             "tags": [
                 "L_ContactTab",
                 "L_ContactCard",
@@ -18399,7 +18399,7 @@
             },
             "name": "L_SetDocumentSynchronizationTimeout",
             "displayName": "Set document synchronization timeout",
-            "explainText": "This policy setting specifies the server timeout value in milliseconds for document synchronization. This policy setting does not apply when synchronizing documents on SharePoint servers. \n\nIf you enable this policy setting, you may specify the server timeout value in milliseconds for document synchronization.\n\nIf you disable or do not configure this policy setting, the server timeout will default to the Windows timeout value.\n",
+            "explainText": "This policy setting specifies the server timeout value in milliseconds for document synchronization. This policy setting does not apply when synchronizing documents on SharePoint servers. \n\nIf you enable this policy setting, you may specify the server timeout value in milliseconds for document synchronization.\n\nIf you disable or do not configure this policy setting, the server timeout will default to the Windows timeout value.",
             "tags": [
                 "L_Coauthoring",
                 "L_CollaborationSettings",
@@ -19309,7 +19309,7 @@
             },
             "name": "L_EnforcePDFcompliancewithISO190051PDFA",
             "displayName": "Enforce PDF compliance with ISO 19005-1 (PDF/A)",
-            "explainText": "Allows enforcement of ISO 19005-1 compliance in PDF output. The values for his setting are as follows:\n      \nDefault: Options UI defaults to not ISO compliant. User may override.\n\nEncourage: Options UI defaults to ISO compliance. User may override.\n\nPrevent: Not ISO compliant. No user override.\n\nEnforce: ISO compliant. No user override.\n\nSee Office Help for more details on the tradeoffs of choosing ISO 19005 compliance.",
+            "explainText": "Allows enforcement of ISO 19005-1 compliance in PDF output. The values for his setting are as follows:\n\nDefault: Options UI defaults to not ISO compliant. User may override.\n\nEncourage: Options UI defaults to ISO compliance. User may override.\n\nPrevent: Not ISO compliant. No user override.\n\nEnforce: ISO compliant. No user override.\n\nSee Office Help for more details on the tradeoffs of choosing ISO 19005 compliance.",
             "tags": [
                 "L_PDFandXPS",
                 "L_MicrosoftOfficeSystem"
@@ -20501,7 +20501,7 @@
             },
             "name": "L_RetryIntervalLimit",
             "displayName": "Set subscription refresh retry interval",
-            "explainText": "This policy setting allows you to specify the maximum number of minutes the system must wait before retrying the operation execution of a failed operation.\n\nIf you enable this policy setting, you may specify the maximum interval in minutes before a retrying the operation execution of a failed operation.\n\nIf you disable or do not configure this policy setting, then a default value of 360 minutes will be used.\n",
+            "explainText": "This policy setting allows you to specify the maximum number of minutes the system must wait before retrying the operation execution of a failed operation.\n\nIf you enable this policy setting, you may specify the maximum interval in minutes before a retrying the operation execution of a failed operation.\n\nIf you disable or do not configure this policy setting, then a default value of 360 minutes will be used.",
             "tags": [
                 "L_Synchronization",
                 "L_BusinessData",
@@ -22125,7 +22125,7 @@
             },
             "name": "L_SignInOptions",
             "displayName": "Block signing into Office",
-            "explainText": "This policy setting controls whether users can provide credentials to Office using either their Microsoft Account or the user ID assigned by your organization for accessing Office 365.\nIf you enable this policy setting, you can specify one of the following options:\n\n- If you select \"Both IDs allowed\", users can sign in and access Office content by using either ID\n- If you select \"Microsoft Account only\", users can sign in only by using their Microsoft Account.\n- If you select \"Organization only\", users can sign in only by using the user ID assigned by your organization for accessing Office 365.\n- If you select \"None allowed\", users cannot sign in by using either ID.\n\nIf you disable or do not configure this policy setting, users can sign in by using either ID.\n\nNote: This policy does not apply to licensing.  A user can license their product using any applicable ID if they have a valid license associated with that account.  Providing credentials for licensing purposes when that ID type has been disabled, however, will not affect the signed in state of Office.\n      ",
+            "explainText": "This policy setting controls whether users can provide credentials to Office using either their Microsoft Account or the user ID assigned by your organization for accessing Office 365.\nIf you enable this policy setting, you can specify one of the following options:\n\n- If you select \"Both IDs allowed\", users can sign in and access Office content by using either ID\n- If you select \"Microsoft Account only\", users can sign in only by using their Microsoft Account.\n- If you select \"Organization only\", users can sign in only by using the user ID assigned by your organization for accessing Office 365.\n- If you select \"None allowed\", users cannot sign in by using either ID.\n\nIf you disable or do not configure this policy setting, users can sign in by using either ID.\n\nNote: This policy does not apply to licensing.  A user can license their product using any applicable ID if they have a valid license associated with that account.  Providing credentials for licensing purposes when that ID type has been disabled, however, will not affect the signed in state of Office.",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"
@@ -22320,7 +22320,7 @@
             },
             "name": "L_federatedSearchForHelp",
             "displayName": "Federated search for help",
-            "explainText": "This policy setting allows you to determine the sources of content that Office users in your organization can access through Office Help (F1).\n\n          If you enable or do not configure this policy setting, users who utilize Office Help see content from both Office and the Internet.\n\n          If you disable this setting, Office users’ search results through Help are limited to Office content.\n      ",
+            "explainText": "This policy setting allows you to determine the sources of content that Office users in your organization can access through Office Help (F1).\n\nIf you enable or do not configure this policy setting, users who utilize Office Help see content from both Office and the Internet.\n\nIf you disable this setting, Office users’ search results through Help are limited to Office content.",
             "tags": [
                 "L_Help",
                 "L_MicrosoftOfficeSystem"
@@ -22348,7 +22348,7 @@
             },
             "name": "L_AutoOrgIDGetKey",
             "displayName": "Automatically activate Office with federated organization credentials",
-            "explainText":"This policy setting activates Office on users’ computers without prompting them to sign in to their Office 365 accounts.\n\nIf you enable or do not configure this policy setting, and a user is already signed in with federated organization credentials, Office automatically activates when the user first starts an Office application. If either multiple or no organization credentials are found, the user is prompted to sign in.\n\nIf you disable this policy setting, Office might prompt the user to sign in with their organization's credentials if Office is not installed directly by the user from his or her Office 365 account homepage.\n",
+            "explainText":"This policy setting activates Office on users’ computers without prompting them to sign in to their Office 365 accounts.\n\nIf you enable or do not configure this policy setting, and a user is already signed in with federated organization credentials, Office automatically activates when the user first starts an Office application. If either multiple or no organization credentials are found, the user is prompted to sign in.\n\nIf you disable this policy setting, Office might prompt the user to sign in with their organization's credentials if Office is not installed directly by the user from his or her Office 365 account homepage.",
             "tags": [
                 "L_SubscriptionActivation",
                 "L_MicrosoftOfficeSystem"

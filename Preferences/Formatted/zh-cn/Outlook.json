@@ -7724,7 +7724,7 @@
             },
             "name": "L_DisableRpcTransportFallback",
             "displayName": "禁用协议之间的连接回退",
-            "explainText": "通过此策略设置，您可以控制当 Outlook 试图连接到 Microsoft Exchange Server 时的连接传输回退行为。\n \n如果您正在使用 Outlook Anywhere (RPC over HTTP)连接到 Microsoft Exchange Server，则此策略设置适用。“Microsoft Exchange 代理服务器设置”对话框(通过控制面板或帐户设置访问)上有两个 Outlook 配置文件设置，可配置默认的连接传输回退行为。\n \n- 在快速网络中，首先使用 HTTP 连接，然后使用 TCP/IP 连接\n- 在低速网络中，首先使用 HTTP 连接，然后使用 TCP/IP 连接\n \n例如，如果您使用快速网络，并且在“Microsoft Exchange 代理服务器设置”对话框中启用“在快速网络中，首先使用 HTTP 连接，然后使用 TCP/IP 连接”设置，则 Outlook 首先试图使用 HTTP 连接到 Exchange Server。如果 Outlook 无法使用 HTTP 进行连接，则将尝试使用 TCP/IP 进行连接。\n \n如果启用此策略设置，并且 Outlook 试图与 Microsoft Exchange Server 连接失败，则不管“Microsoft Exchange 代理服务器设置”对话框中指定的内容如何，Outlook 都不会回退到 TCP/IP 协议。\n\n如果禁用或不配置此策略设置，Outlook 与 Microsoft Exchange Server 的连接尝试可以从 TCP/IP 回退到 HTTP，或者从 HTTP 回退到 TCP/IP，具体取决于“Microsoft Exchange 代理服务器设置”对话框中指定的设置。\n",
+            "explainText": "通过此策略设置，您可以控制当 Outlook 试图连接到 Microsoft Exchange Server 时的连接传输回退行为。\n \n如果您正在使用 Outlook Anywhere (RPC over HTTP)连接到 Microsoft Exchange Server，则此策略设置适用。“Microsoft Exchange 代理服务器设置”对话框(通过控制面板或帐户设置访问)上有两个 Outlook 配置文件设置，可配置默认的连接传输回退行为。\n \n- 在快速网络中，首先使用 HTTP 连接，然后使用 TCP/IP 连接\n- 在低速网络中，首先使用 HTTP 连接，然后使用 TCP/IP 连接\n \n例如，如果您使用快速网络，并且在“Microsoft Exchange 代理服务器设置”对话框中启用“在快速网络中，首先使用 HTTP 连接，然后使用 TCP/IP 连接”设置，则 Outlook 首先试图使用 HTTP 连接到 Exchange Server。如果 Outlook 无法使用 HTTP 进行连接，则将尝试使用 TCP/IP 进行连接。\n \n如果启用此策略设置，并且 Outlook 试图与 Microsoft Exchange Server 连接失败，则不管“Microsoft Exchange 代理服务器设置”对话框中指定的内容如何，Outlook 都不会回退到 TCP/IP 协议。\n\n如果禁用或不配置此策略设置，Outlook 与 Microsoft Exchange Server 的连接尝试可以从 TCP/IP 回退到 HTTP，或者从 HTTP 回退到 TCP/IP，具体取决于“Microsoft Exchange 代理服务器设置”对话框中指定的设置。",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -8046,7 +8046,7 @@
             },
             "name": "L_AuthenticationwithExchangeServer",
             "displayName": "使用 Exchange Server 进行验证",
-            "explainText": "此策略设置可控制 Outlook 用于与 Microsoft Exchange Server 进行身份验证的身份验证方法。注意 - Exchange Server 支持使用 Kerberos 身份验证协议和 NTLM 进行身份验证。Kerberos 协议是更安全的身份验证方法，在 Windows 2000 Server 及更高版本上受支持。NTLM 身份验证在 Windows 2000 以前的环境中受支持。\n      \n如果您启用此策略设置，您可以从用于控制 Outlook 与 Microsoft Exchange Server 进行身份验证的方式的三个不同选项中选择:\n\n- Kerberos/NTLM 密码验证。Outlook 尝试使用 Kerberos 身份验证协议进行身份验证。如果此尝试失败，Outlook 尝试使用 NTLM 进行身份验证。此选项为默认配置。\n\n- Kerberos 密码验证。Outlook 仅尝试使用 Kerberos 协议进行身份验证。\n\n- NTLM 密码验证。Outlook 仅尝试使用 NTLM 进行身份验证。\n\n如果您禁用或不配置此策略设置，Outlook 将尝试使用 Kerberos 身份验证协议进行身份验证。如果不能(由于没有 Windows 2000 或更高版本域控制器)，它将使用 NTLM 进行身份验证。",
+            "explainText": "此策略设置可控制 Outlook 用于与 Microsoft Exchange Server 进行身份验证的身份验证方法。注意 - Exchange Server 支持使用 Kerberos 身份验证协议和 NTLM 进行身份验证。Kerberos 协议是更安全的身份验证方法，在 Windows 2000 Server 及更高版本上受支持。NTLM 身份验证在 Windows 2000 以前的环境中受支持。\n\n如果您启用此策略设置，您可以从用于控制 Outlook 与 Microsoft Exchange Server 进行身份验证的方式的三个不同选项中选择:\n\n- Kerberos/NTLM 密码验证。Outlook 尝试使用 Kerberos 身份验证协议进行身份验证。如果此尝试失败，Outlook 尝试使用 NTLM 进行身份验证。此选项为默认配置。\n\n- Kerberos 密码验证。Outlook 仅尝试使用 Kerberos 协议进行身份验证。\n\n- NTLM 密码验证。Outlook 仅尝试使用 NTLM 进行身份验证。\n\n如果您禁用或不配置此策略设置，Outlook 将尝试使用 Kerberos 身份验证协议进行身份验证。如果不能(由于没有 Windows 2000 或更高版本域控制器)，它将使用 NTLM 进行身份验证。",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -10710,7 +10710,7 @@
             },
             "name": "L_DisablePreviewPlace",
             "displayName": "禁用“预览位置”。",
-            "explainText": "\n        此策略设置决定是否允许使用“预览位置”功能。如果启用此设置，将阻止使用“预览位置”功能。\n        用户将不再能够预览 Outlook 中即将推出的更改并提供反馈。\n\\t注意: 此策略设置仅适用于订阅版本的 Office，例如 Office 365 专业增强版。\n      ",
+            "explainText": "此策略设置决定是否允许使用“预览位置”功能。如果启用此设置，将阻止使用“预览位置”功能。\n        用户将不再能够预览 Outlook 中即将推出的更改并提供反馈。\n\\t注意: 此策略设置仅适用于订阅版本的 Office，例如 Office 365 专业增强版。",
             "tags": [
                 "L_Other",
                 "L_OutlookOptions",
@@ -10739,7 +10739,7 @@
             },
             "name": "L_DisableOnlineModeAuthDiagnostics",
             "displayName": "禁用 Get Diagnostics 的联机模式。",
-            "explainText": "\n         通过此策略设置，可确定是否允许 Get Diagnostics 的联机模式。如果启用此设置，将阻止 Get Diagnostics 功能向我们的服务发送身份验证和诊断日志。\n         用户现在将进入脱机模式。我们将收集所有日志，并将其存储在用户的“下载”文件夹中。此用户可与支持部门联系，确定是否要向我们发送日志。\n      ",
+            "explainText": " 通过此策略设置，可确定是否允许 Get Diagnostics 的联机模式。如果启用此设置，将阻止 Get Diagnostics 功能向我们的服务发送身份验证和诊断日志。\n         用户现在将进入脱机模式。我们将收集所有日志，并将其存储在用户的“下载”文件夹中。此用户可与支持部门联系，确定是否要向我们发送日志。",
             "tags": [
                 "L_Other",
                 "L_OutlookOptions",
@@ -10768,7 +10768,7 @@
             },
             "name": "L_EnableEndEarly",
             "displayName": "提早结束约会和会议",
-            "explainText": "\n        通过此策略设置，可通过在用户创建约会或会议时指定分钟数，控制是否将约会和会议的结束时间提前。\n\n        如果启用此策略设置，当用户创建约会或会议时，约会和会议的结束时间将提前特定的分钟数。\n\n        若要指定将约会和会议缩短多少分钟，可使用“将短时间约会和会议的结束时间提前指定的分钟数”和“将长时间约会和会议的结束时间提前指定的分钟数”策略设置。 \n\n        如果不允许这些策略设置以分钟为单位指定时间，则用户可转到“文件”>“选项”>“日历”，以分钟为单位指定时间。如果用户尚未指定时间，将使用默认值: 短时间会议 5 分钟，长时间会议 10 分钟。\n\n        如果禁用此策略设置，则不能将约会和会议配置为提前结束，并会在“文件”>“选项”>“日历”下禁用相应选项，用户不能启用它。\n\n        如果不配置此策略设置，则不会将约会和会议配置为提前结束，但用户可以转到“文件”>“选项”>“日历”以允许约会和会议提前结束。\n\n        注意: 此策略设置仅适用于订阅版本的 Office，例如 Office 365 专业增强版。\n      ",
+            "explainText": "通过此策略设置，可通过在用户创建约会或会议时指定分钟数，控制是否将约会和会议的结束时间提前。\n\n如果启用此策略设置，当用户创建约会或会议时，约会和会议的结束时间将提前特定的分钟数。\n\n若要指定将约会和会议缩短多少分钟，可使用“将短时间约会和会议的结束时间提前指定的分钟数”和“将长时间约会和会议的结束时间提前指定的分钟数”策略设置。 \n\n如果不允许这些策略设置以分钟为单位指定时间，则用户可转到“文件”>“选项”>“日历”，以分钟为单位指定时间。如果用户尚未指定时间，将使用默认值: 短时间会议 5 分钟，长时间会议 10 分钟。\n\n如果禁用此策略设置，则不能将约会和会议配置为提前结束，并会在“文件”>“选项”>“日历”下禁用相应选项，用户不能启用它。\n\n如果不配置此策略设置，则不会将约会和会议配置为提前结束，但用户可以转到“文件”>“选项”>“日历”以允许约会和会议提前结束。\n\n注意: 此策略设置仅适用于订阅版本的 Office，例如 Office 365 专业增强版。",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10802,7 +10802,7 @@
             },
             "name": "L_EndEarlyShort",
             "displayName": "指定分钟数，将短时间约会和会议的结束时间提前",
-            "explainText": "\n        此策略设置，可以指定在用户创建约会或会议时，将短时间约会或会议的结束时间提前多少分钟。短时间约会或会议即持续时间不到一小时的约会或会议。\n\n        如果启用此策略设置，可以指定在用户创建约会或会议时要将约会或会议结束时间提前的分钟数。用户无法通过转到“文件”>“选项”>“日历”来更改此值。\n\n        注意: 应还启用“提前结束约会和会议”策略设置\n\n        如果禁用或不配置此策略设置，则使用默认值 5 分钟或用户转到“文件”>“选项”>“日历”指定的任何值。\n\n        注意: 此策略设置仅适用于订阅版本的 Office，例如 Office 365 专业增强版。\n      ",
+            "explainText": "此策略设置，可以指定在用户创建约会或会议时，将短时间约会或会议的结束时间提前多少分钟。短时间约会或会议即持续时间不到一小时的约会或会议。\n\n如果启用此策略设置，可以指定在用户创建约会或会议时要将约会或会议结束时间提前的分钟数。用户无法通过转到“文件”>“选项”>“日历”来更改此值。\n\n注意: 应还启用“提前结束约会和会议”策略设置\n\n如果禁用或不配置此策略设置，则使用默认值 5 分钟或用户转到“文件”>“选项”>“日历”指定的任何值。\n\n注意: 此策略设置仅适用于订阅版本的 Office，例如 Office 365 专业增强版。",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10835,7 +10835,7 @@
             },
             "name": "L_EndEarlyLong",
             "displayName": "指定分钟数，将长时间约会和会议的结束时间提前",
-            "explainText": "\n        此策略设置，可以指定在用户创建约会或会议时，将长时间约会或会议的结束时间提前多少分钟。长时间约会或会议即持续时间在一小时或以上的约会或会议。\n\n        如果启用此策略设置，可以指定在用户创建约会或会议时要将约会或会议结束时间提前的分钟数。用户无法通过转到“文件”>“选项”>“日历”来更改此值。\n\n        注意: 应还启用“提前结束约会和会议”策略设置\n\n        如果禁用或不配置此策略设置，则使用默认值 10 分钟或用户转到“文件”>“选项”>“日历”指定的任何值。\n\n        注意: 此策略设置仅适用于订阅版本的 Office，例如 Office 365 专业增强版。\n      ",
+            "explainText": "此策略设置，可以指定在用户创建约会或会议时，将长时间约会或会议的结束时间提前多少分钟。长时间约会或会议即持续时间在一小时或以上的约会或会议。\n\n如果启用此策略设置，可以指定在用户创建约会或会议时要将约会或会议结束时间提前的分钟数。用户无法通过转到“文件”>“选项”>“日历”来更改此值。\n\n注意: 应还启用“提前结束约会和会议”策略设置\n\n如果禁用或不配置此策略设置，则使用默认值 10 分钟或用户转到“文件”>“选项”>“日历”指定的任何值。\n\n注意: 此策略设置仅适用于订阅版本的 Office，例如 Office 365 专业增强版。",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10893,7 +10893,7 @@
             },
             "name": "L_RestUpdatesForCalendar",
             "displayName": "日历的 REST 更新",
-            "explainText": "此策略确定 Outlook 能否使用 REST 来更新日历。\n\n        如果启用此策略，Outlook 将使用 REST 更新受支持的 Office 365 和 Outlook.com 日历。\n\n        如果禁用此策略，Outlook 将不使用 REST 来更新任何日历。",
+            "explainText": "此策略确定 Outlook 能否使用 REST 来更新日历。\n\n如果启用此策略，Outlook 将使用 REST 更新受支持的 Office 365 和 Outlook.com 日历。\n\n如果禁用此策略，Outlook 将不使用 REST 来更新任何日历。",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10923,7 +10923,7 @@
             },
             "name": "L_PreferProvidedEmailInAutoDiscoverAuthPrompts",
             "displayName": "在自动发现身份验证提示中首选所提供的帐户电子邮件。",
-            "explainText": "如果已设置，则此策略设置会管理在与自动发现相关的身份验证提示中显示的电子邮件。\n\n        默认 (0): 首选帐户 UPN (若可用)。\n\n        如果启用此设置，则自动发现身份验证提示将首选所提供的帐户电子邮件(可为 SMTP 或 UPN，具体取决于配置了哪一个)。",
+            "explainText": "如果已设置，则此策略设置会管理在与自动发现相关的身份验证提示中显示的电子邮件。\n\n默认 (0): 首选帐户 UPN (若可用)。\n\n如果启用此设置，则自动发现身份验证提示将首选所提供的帐户电子邮件(可为 SMTP 或 UPN，具体取决于配置了哪一个)。",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",

@@ -15,7 +15,8 @@ To define where to save files in download mode, change the value of  ***Source p
 1. Deploy Mode
 2. Office Update Channel
 3. Deploy Module
-4. More Information
+4. Office Applications Preferences
+5. More Information
 
 ### Deploy Mode
 
@@ -49,7 +50,9 @@ If you are using an ISO file, you need to mount it first and then select the CAB
 
 *Requires Office installation files stored in the Office Tool Plus directory.* If not, please download Office installation files first.
 
-`If you add products or language packs, Office Tool Plus will create XML configuration when creating ISO file. When users start Office Tool Plus in ISO mode, Office Tool Plus will ask the user if they want to start the installation.`
+You can create an ISO file with default settings. To do so, configure Office installation, such as adding products and languages, then click "Start deploy" to begin creating ISO file.
+
+If you do not configuration, the user will need to configure it as if it were used normally.
 
 #### Download only
 
@@ -100,8 +103,21 @@ The Office Deployment Tool is an official Microsoft tool for deploying Office.
 - Not support of force update.
 - Not support of remove existing MSI versions of Office
 - Not support of install the same language as the previous MSI version.
+- Not support of Office applications preferences.
 
 Note: **For a complete installation experience, be sure to use the Office Deployment Tool.**
+
+### Office Applications Preferences
+
+---
+
+`Application preferences are data provided by Microsoft, these texts are machine translated and may contain some grammatical errors.`
+
+The function allow you defines application preferences for Office Apps, including VBA Macro notifications, default file locations, and default file format.
+
+You can apply new application preferences to client computers that already have Office installed. Click "Applying preferences for Office applications" in the "View XML code" submenu.
+
+The app preferences are applied to all existing users of the device and any new users added to the device in the future. If you apply application preferences when Office apps are running, the preferences will be applied when Office is next restarted.
 
 ### More Information
 

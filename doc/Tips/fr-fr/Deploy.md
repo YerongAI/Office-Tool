@@ -15,7 +15,8 @@ Vous pouvez interroger le numéro de version et la date de sortie sur chaque can
 1. Mode de déploiement
 2. Canal de mise à jour Office
 3. Module de déploiement
-4. Plus d’informations
+4. Office Applications Preferences
+5. Plus d’informations
 
 ### Module d'installation
 
@@ -49,7 +50,9 @@ Si vous utilisez un fichier ISO, vous devez d’abord le monter, puis sélection
 
 *Nécessite des fichiers d'installation d'Office stockés dans le répertoire Office Tool Plus.* Sinon, télécharger d'abord les fichiers d'installation d'Office.
 
-`Si vous ajoutez des produits ou des modules linguistiques, Office Tool Plus créera une configuration XML lors de la création du fichier ISO. Lorsque les utilisateurs démarrent Office Tool Plus en mode ISO, Office Tool Plus demandera à l'utilisateur s'il souhaite démarrer l'installation.`
+You can create an ISO file with default settings. To do so, configure Office installation, such as adding products and languages, then click "Start deploy" to begin creating ISO file.
+
+If you do not configuration, the user will need to configure it as if it were used normally.
 
 #### Télécharger uniquement
 
@@ -100,8 +103,21 @@ L’outil de déploiement Office est un outil Microsoft officiel pour le déploi
 - Pas de prise en charge de la mise à jour de la force.
 - Non prise en charge de la suppression des versions MSI existantes d’Office
 - Pas de prise en charge de l’installation de la même langue que la version précédente MSI.
+- Not support of Office applications preferences.
 
 Note: **Pour une expérience d’installation complète, assurez-vous d’utiliser l’outil de déploiement Office.**
+
+### Office Applications Preferences
+
+---
+
+`Application preferences are data provided by Microsoft, these texts are machine translated and may contain some grammatical errors.`
+
+The function allow you defines application preferences for Office Apps, including VBA Macro notifications, default file locations, and default file format.
+
+You can apply new application preferences to client computers that already have Office installed. Click "Applying preferences for Office applications" in the "View XML code" submenu.
+
+The app preferences are applied to all existing users of the device and any new users added to the device in the future. If you apply application preferences when Office apps are running, the preferences will be applied when Office is next restarted.
 
 ### Plus d’informations
 

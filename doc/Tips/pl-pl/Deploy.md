@@ -15,7 +15,8 @@ Aby zdefiniować miejsce zapisywania plików w trybie pobierania, zmień wartoś
 1. Tryb wdrażania
 2. Kanał aktualizacji pakietu Office
 3. Wdróż moduł
-4. Więcej informacji
+4. Office Applications Preferences
+5. Więcej informacji
 
 ### Tryb wdrażania
 
@@ -49,7 +50,9 @@ Jeśli używasz pliku ISO, musisz go najpierw zamontować, a następnie wybrać 
 
 *Wymaga plików instalacyjnych pakietu Office przechowywanych w katalogu Office Tool Plus.* Jeśli nie, najpierw pobierz pliki instalacyjne pakietu Office.
 
-`Jeśli dodasz produkty lub pakiety językowe, Office Tool Plus utworzy konfigurację XML podczas tworzenia pliku ISO. Gdy użytkownicy uruchamiają Office Tool Plus w trybie ISO, Office Tool Plus zapyta użytkownika, czy chcą rozpocząć instalację.
+You can create an ISO file with default settings. To do so, configure Office installation, such as adding products and languages, then click "Start deploy" to begin creating ISO file.
+
+If you do not configuration, the user will need to configure it as if it were used normally.
 
 #### Tylko pobierz
 
@@ -100,8 +103,21 @@ Narzędzie do wdrażania pakietu Office to oficjalne narzędzie firmy Microsoft 
 - Brak obsługi wymuszonej aktualizacji.
 - Brak obsługi usuwania istniejących wersji MSI pakietu Office
 - Brak obsługi instalacji w tym samym języku, co w poprzedniej wersji MSI.
+- Not support of Office applications preferences.
 
 Uwaga: **Aby uzyskać pełną instalację, użyj narzędzia do wdrażania pakietu Office.**
+
+### Office Applications Preferences
+
+---
+
+`Application preferences are data provided by Microsoft, these texts are machine translated and may contain some grammatical errors.`
+
+The function allow you defines application preferences for Office Apps, including VBA Macro notifications, default file locations, and default file format.
+
+You can apply new application preferences to client computers that already have Office installed. Click "Applying preferences for Office applications" in the "View XML code" submenu.
+
+The app preferences are applied to all existing users of the device and any new users added to the device in the future. If you apply application preferences when Office apps are running, the preferences will be applied when Office is next restarted.
 
 ### Więcej informacji
 

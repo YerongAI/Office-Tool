@@ -76,6 +76,7 @@
     <!-- Deploy Page -->
     <sys:String x:Key="StartDeploy">開始部署</sys:String>
     <sys:String x:Key="DeployViewCode">檢視代碼</sys:String>
+    <sys:String x:Key="DeployApplySettings">套用 Office 喜好設定</sys:String>
     <sys:String x:Key="DeployExportXML">匯出設定 (.xml)</sys:String>
     <sys:String x:Key="DeployImportXML">匯入設定 (.xml)</sys:String>
     <sys:String x:Key="DeployImportXMLFromWeb">從網路位址匯入設定 (.xml)</sys:String>
@@ -93,9 +94,9 @@
     <sys:String x:Key="DeployProductID">產品識別碼:</sys:String>
     <sys:String x:Key="DeployAddProduct">新增產品</sys:String>
     <sys:String x:Key="DeployErrorConfig">⚠ 此產品無法與現有的產品共存</sys:String>
-    <sys:String x:Key="DeployErrorModule">⚠ 此產品必須使用 Office Tool Plus 模組安裝</sys:String>
+    <sys:String x:Key="DeployErrorModule">⚠ 此產品必須使用 Office Tool Plus 模組安裝，請至右側欄修改設定</sys:String>
     <sys:String x:Key="DeployErrorChannel">⚠ 此產品無法使用「{0}」安裝</sys:String>
-    <sys:String x:Key="DeployErrorUnsupportedChannel">⚠ 使用「{0}」時必須使用 Office Tool Plus 模組安裝</sys:String>
+    <sys:String x:Key="DeployErrorUnsupportedChannel">⚠ 使用「{0}」時必須使用 Office Tool Plus 模組安裝，請至右側欄修改設定</sys:String>
     <sys:String x:Key="DeployErrorSystem">⚠ 無法在 32 位元系統中安裝 64 位元 Office</sys:String>
     <!-- Example: ⚠ You can't install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
     <sys:String x:Key="DeployErrorArch">⚠ 無法安裝 {0}的 Office，因為此電腦已安裝 {1}的 Office</sys:String>
@@ -120,10 +121,12 @@
     <sys:String x:Key="DeployDescription">提供此設定的說明以用於紀錄目的:</sys:String>
     <!-- Installation Settings -->
     <sys:String x:Key="DeployInstallationSettings">安裝設定</sys:String>
+    <sys:String x:Key="DeployVersionTip">如不指定版本，則使用可用的最新版本</sys:String>
+    <sys:String x:Key="DeployGetHistoricalVersions">取得可用的舊版本 Office</sys:String>
     <sys:String x:Key="DeployDownloadPath">下載路徑:</sys:String>
     <sys:String x:Key="DeployDownloadPathTip">定義應從何處下載安裝檔案; 定義此項時，亦需定義版本編號</sys:String>
     <sys:String x:Key="DeploySourcePath">來源位址:</sys:String>
-    <sys:String x:Key="DeploySourcePathTip">如不定義此項，來源將使用 Office 伺服器; 在下載模式中，此項用於定義安裝檔案儲存路徑</sys:String>
+    <sys:String x:Key="DeploySourcePathTip">如不定義此項，來源將使用 Office CDN 伺服器; 在下載模式中，此項用於定義安裝檔案儲存路徑</sys:String>
     <sys:String x:Key="DeployDisplayLevel">安裝時不顯示使用者介面</sys:String>
     <sys:String x:Key="DeployAllowCDNFallback">允許安裝時從 Microsoft 伺服器下載遺失的語言套件</sys:String>
     <sys:String x:Key="DeployForceCloseApps">強制結束正在執行的 Office 應用程式</sys:String>
@@ -135,8 +138,9 @@
     <!-- Update Settings -->
     <sys:String x:Key="DeployUpdateSettings">更新設定</sys:String>
     <sys:String x:Key="DeployEnableUpdate">啟用 Office 自動更新</sys:String>
-    <sys:String x:Key="DeployEnableCOM">使用預設管理器管理更新</sys:String>
+    <sys:String x:Key="DeployEnableCOM">使用 Microsoft Endpoint Configuration Manager 管理更新</sys:String>
     <sys:String x:Key="DeployUpdatePath">更新來源:</sys:String>
+    <sys:String x:Key="DeployUpdatePathTip">如不定義路徑，來源將使用 Office CDN 伺服器</sys:String>
     <sys:String x:Key="DeployTargetVersion">目標版本:</sys:String>
     <sys:String x:Key="DeployUpdateDeadline">更新截止時間:</sys:String>
     <sys:String x:Key="DeployUpdateChannel">更新頻道:</sys:String>
@@ -161,7 +165,8 @@
     <sys:String x:Key="DeployBasedDevice">以裝置為基礎</sys:String>
     <!-- App Preferences -->
     <sys:String x:Key="DeployPreferences">應用程式喜好設定</sys:String>
-    <sys:String x:Key="DeployPreferencesFilter">搜尋應用程式喜好設定</sys:String>
+    <sys:String x:Key="DeployPreferencesSearch">搜尋應用程式喜好設定</sys:String>
+    <sys:String x:Key="DeployPreferencesEnable">啟用</sys:String>
     <sys:String x:Key="DeployPreferencesApply">套用</sys:String>
     <sys:String x:Key="DeployPreferencesReset">重設</sys:String>
     <sys:String x:Key="DeployPreferencesResetAll">重設全部喜好設定</sys:String>
@@ -227,7 +232,7 @@
     <sys:String x:Key="ActivateSetPort">套用伺服器連接埠</sys:String>
     <sys:String x:Key="ActivateEnableCaching">啟用 KMS 伺服器快取</sys:String>
     <sys:String x:Key="ActivateDisableCaching">停用 KMS 伺服器快取</sys:String>
-    <sys:String x:Key="ActivateClearKMS">清除伺服器位址 (重設連接埠為預設值)</sys:String>
+    <sys:String x:Key="ActivateResetKMS">清除伺服器位址 (重設連接埠為預設值)</sys:String>
     <!-- Content Translation -->
     <sys:String x:Key="ActivationTitle">Office 啟用處理</sys:String>
     <sys:String x:Key="LicenseDescription">授權描述: </sys:String>
@@ -260,8 +265,6 @@
     <sys:String x:Key="ILicense">正在安裝授權: </sys:String>
     <sys:String x:Key="ILicenseSuccess">已成功安裝 Office 授權。</sys:String>
     <sys:String x:Key="InstallationID">安裝識別碼:</sys:String>
-    <sys:String x:Key="SKMSEvent">正在搜尋本機的 KMS 啟用事件: </sys:String>
-    <sys:String x:Key="SIAEvent">正在搜尋本機的網際網路啟用事件: </sys:String>
     <sys:String x:Key="NoKMSEvent">在本機中找不到 KMS 啟用事件: </sys:String>
     <sys:String x:Key="NoIAEvent">在本機中找不到啟用失敗事件: </sys:String>
     <sys:String x:Key="NoEvents">找不到任何事件。</sys:String>
@@ -300,9 +303,9 @@
     <sys:String x:Key="QueryErrorCode">查詢錯誤碼的詳細描述</sys:String>
     <sys:String x:Key="QueryErrorCodeDescription">您需要輸入一個以 '0x' 為開頭的錯誤碼，例如: 0x2 或者 0x80070002</sys:String>
     <sys:String x:Key="ToolboxCheckKMS">測試 KMS 可用性</sys:String>
-    <sys:String x:Key="ToolboxCheckKMSDescription">使用逗號或以換行隔開每一個 KMS 位址，亦可設定位址連接埠。&#x000A;當測試結果顯示「連線成功」，即代表伺服器可用。(不可用的不會顯示任何資訊)</sys:String>
-    <sys:String x:Key="CheckKMSConncetionSuccessful">連線成功!</sys:String>
-    <sys:String x:Key="CheckKMSConncetionFailed">連線失敗!</sys:String>
+    <sys:String x:Key="ToolboxCheckKMSDescription">使用逗號或以換行隔開每一個 KMS 位址，亦可設定位址連接埠。</sys:String>
+    <sys:String x:Key="CheckKMSConnectionSuccessful">連線成功!</sys:String>
+    <sys:String x:Key="CheckKMSConnectionFailed">連線失敗!</sys:String>
     <sys:String x:Key="CheckKMSActivationSuccessful">測試啟用功能成功!</sys:String>
     <sys:String x:Key="ToolboxCollectLog">收集 Office 安裝記錄</sys:String>
     <sys:String x:Key="ToolboxCollectLogDescription">如果您在安裝 Office 時發生錯誤，則您可以使用此功能收集安裝記錄，並分享給您的管理員請求分析與解決問題。</sys:String>
@@ -342,8 +345,10 @@
     <sys:String x:Key="SaveSettings">儲存個人偏好設定</sys:String>
     <sys:String x:Key="DisplaySettings">介面設定</sys:String>
     <sys:String x:Key="SettingsTopmost">視窗最上層顯示</sys:String>
+    <sys:String x:Key="SettingsTransparencyEffect">啟用視窗透明化</sys:String>
+    <sys:String x:Key="SettingsTransparencyEffectTip">此功能僅在 Windows 10 上可用</sys:String>
     <sys:String x:Key="SettingsTransparency">透明度</sys:String>
-    <sys:String x:Key="SettingsBlurValue">模糊度</sys:String>
+    <sys:String x:Key="SettingsBlurValue">背景圖片模糊度</sys:String>
     <sys:String x:Key="SettingsChooseBGI">選擇背景圖片</sys:String>
     <!-- About Panel -->
     <sys:String x:Key="AppInf">程式資訊</sys:String>
@@ -362,10 +367,13 @@
     <sys:String x:Key="TextBlockResources">本機、網際網路、HTTP 路徑</sys:String>
         
     <!-- Task Message -->
+    <sys:String x:Key="Task_DownloadingContent">Getting content, please wait.</sys:String>
     <sys:String x:Key="Task_PreparingDownload">正在準備下載 Office，請稍候</sys:String>
     <sys:String x:Key="Task_DeployClickToRun">正在準備 Click-to-Run，請稍候</sys:String>
     <sys:String x:Key="Task_ODT">Office 部署工具執行中，請稍候</sys:String>
     <sys:String x:Key="Task_OSPP">OSPP 執行中，請稍候</sys:String>
+    <sys:String x:Key="Task_SearchKMSAEvent">正在搜尋本機的 KMS 啟用事件: {0}</sys:String>
+    <sys:String x:Key="Task_SearchIAFEvent">正在搜尋本機的網際網路啟用事件: {0}</sys:String>
     <sys:String x:Key="Task_CheckVersion">正在查詢 Office 版本資訊，請稍候</sys:String>
     <sys:String x:Key="Task_CheckKMS">正在測試 KMS 伺服器，請稍候</sys:String>
     <sys:String x:Key="Task_CollectLog">正在擷取 Office 安裝記錄檔，請稍候</sys:String>
@@ -375,8 +383,9 @@
     <sys:String x:Key="Task_InstallingApp">正在安裝 {0}，請稍候</sys:String>
 
     <!-- Question Message -->
-    <sys:String x:Key="QuesUpdateReady">已準備好為您安裝更新</sys:String>
-    <sys:String x:Key="QuesUpdateNow">這只需要幾秒鐘的時間，是否要現在重新開啟程式?</sys:String>
+    <sys:String x:Key="QuesUpdateTitle">Office Tool Plus 更新</sys:String>
+    <sys:String x:Key="QuesUpdateAvailable">有更新可用，現在開啟下載網頁嗎？</sys:String>
+    <sys:String x:Key="QuesUpdateNow">更新已就緒，現在重啟程式嗎？這僅需要幾秒鐘的時間。 </sys:String>
     <sys:String x:Key="QuesExit">程式正在執行動作，是否結束?</sys:String>
     <sys:String x:Key="QuesOneClickInstallation">您已選擇安裝 {0}。&#x000A;若您需要選擇其他應用程式或語言套件，請使用「其他安裝選項」。&#x000A;&#x000A;按一下「是」即下載安裝文件後再安裝；按一下「否」即安裝時下載安裝文件，或者關閉視窗以取消安裝操作。</sys:String>
     <sys:String x:Key="QuesInstallation">準備好要安裝 Office 了嗎?</sys:String>

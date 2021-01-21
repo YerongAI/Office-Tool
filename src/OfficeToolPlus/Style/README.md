@@ -23,6 +23,8 @@ An error code like **0xC004E015** or **0x2**, you can check the content by run c
 
 2. Open Office Tool Plus.
 
-3. Press <kbd>Ctrl+P</kbd>, input command  ```/setLangRes D:\Test\de-de.xaml```
+3. Press <kbd>Ctrl+P</kbd>, type command  ```/LoadDict D:\Test\de-de.xaml```
 
-4. Press <kbd>Enter</kbd> and Office Tool Plus will load your localization file.
+4. Press <kbd>Enter</kbd> and Office Tool Plus will load the dictionary.
+
+5. To remove your dictionary, type command and run ```/ClDict```.

@@ -76,6 +76,7 @@
     <!-- Deploy Page -->
     <sys:String x:Key="StartDeploy">Start deploy</sys:String>
     <sys:String x:Key="DeployViewCode">View XML code</sys:String>
+    <sys:String x:Key="DeployApplySettings">Applying preferences for Office applications</sys:String>
     <sys:String x:Key="DeployExportXML">Export XML file</sys:String>
     <sys:String x:Key="DeployImportXML">Import XML file</sys:String>
     <sys:String x:Key="DeployImportXMLFromWeb">Import XML file from Web</sys:String>
@@ -93,13 +94,13 @@
     <sys:String x:Key="DeployProductID">Product ID:</sys:String>
     <sys:String x:Key="DeployAddProduct">Add product</sys:String>
     <sys:String x:Key="DeployErrorConfig">⚠ The product can not coexist with existing products.</sys:String>
-    <sys:String x:Key="DeployErrorModule">⚠ The product requires installation using the Office Tool Plus module.</sys:String>
+    <sys:String x:Key="DeployErrorModule">⚠ To install this product, change the installation module to Office Tool Plus.</sys:String>
     <sys:String x:Key="DeployErrorChannel">⚠ The product can not be installed on the selected channel: {0}</sys:String>
-    <sys:String x:Key="DeployErrorUnsupportedChannel">⚠ If you want to use {0}, you must use Office Tool Plus module to install Office.</sys:String>
+    <sys:String x:Key="DeployErrorUnsupportedChannel">⚠ If you want to use {0}, change the installation module to Office Tool Plus.</sys:String>
     <sys:String x:Key="DeployErrorSystem">⚠ You can not install 64-bit of Office on a non-64-bit system.</sys:String>
     <!-- Example: ⚠ You can not install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
     <sys:String x:Key="DeployErrorArch">⚠ You can not install {0} of Office, because you have the {1} of Office installed on your computer.</sys:String>
-    <sys:String x:Key="DeployWillUninstall">⚠ To confirm the uninstallation, click Start deploy.</sys:String>
+    <sys:String x:Key="DeployWillUninstall">⚠ To confirm the uninstallation, click "Start deploy".</sys:String>
     <sys:String x:Key="DeployApps">Applications</sys:String>
     <!-- Language -->
     <sys:String x:Key="LanguagePack">Languages</sys:String>
@@ -120,10 +121,12 @@
     <sys:String x:Key="DeployDescription">Provide a description of configuration for documentation.</sys:String>
     <!-- Installation Settings -->
     <sys:String x:Key="DeployInstallationSettings">Installation settings</sys:String>
+    <sys:String x:Key="DeployVersionTip">Defaults to the latest version available if not specified.</sys:String>
+    <sys:String x:Key="DeployGetHistoricalVersions">Get available historical versions of Office.</sys:String>
     <sys:String x:Key="DeployDownloadPath">Download path:</sys:String>
     <sys:String x:Key="DeployDownloadPathTip">Defines where the installation files are downloaded from, you must specify a version when using download path.</sys:String>
     <sys:String x:Key="DeploySourcePath">Source path:</sys:String>
-    <sys:String x:Key="DeploySourcePathTip">If the source path is blank, the Office CDN is used by default as the source. In download mode, defines where to save the files.</sys:String>
+    <sys:String x:Key="DeploySourcePathTip">If the source path is empty, the Office CDN is used by default as the source. In download mode, defines where to save the files.</sys:String>
     <sys:String x:Key="DeployDisplayLevel">No interface displayed during installation.</sys:String>
     <sys:String x:Key="DeployAllowCDNFallback">Allow installer to fallback to Office CDN for missing languages.</sys:String>
     <sys:String x:Key="DeployForceCloseApps">Close all running Office applications.</sys:String>
@@ -135,8 +138,9 @@
     <!-- Update Settings -->
     <sys:String x:Key="DeployUpdateSettings">Update settings</sys:String>
     <sys:String x:Key="DeployEnableUpdate">Enable Office automatic update.</sys:String>
-    <sys:String x:Key="DeployEnableCOM">Manage updates using Configuration Manager.</sys:String>
+    <sys:String x:Key="DeployEnableCOM">Manage updates using Microsoft Endpoint Configuration Manager.</sys:String>
     <sys:String x:Key="DeployUpdatePath">Update source:</sys:String>
+    <sys:String x:Key="DeployUpdatePathTip">If the path is empty, the Office CDN is used by default as the source.</sys:String>
     <sys:String x:Key="DeployTargetVersion">Target version:</sys:String>
     <sys:String x:Key="DeployUpdateDeadline">Update deadline:</sys:String>
     <sys:String x:Key="DeployUpdateChannel">Update channel:</sys:String>
@@ -161,14 +165,15 @@
     <sys:String x:Key="DeployBasedDevice">Device based.</sys:String>
     <!-- App Preferences -->
     <sys:String x:Key="DeployPreferences">Application preferences</sys:String>
-    <sys:String x:Key="DeployPreferencesFilter">Type to search application preferences</sys:String>
+    <sys:String x:Key="DeployPreferencesSearch">Type to search application preferences</sys:String>
+    <sys:String x:Key="DeployPreferencesEnable">Enable</sys:String>
     <sys:String x:Key="DeployPreferencesApply">Apply</sys:String>
     <sys:String x:Key="DeployPreferencesReset">Reset</sys:String>
     <sys:String x:Key="DeployPreferencesResetAll">Reset all settings</sys:String>
     <!-- Deploy Settings -->
     <sys:String x:Key="DeploySettings">Deploy settings</sys:String>
     <sys:String x:Key="DeployChannel">Channel:</sys:String>
-    <sys:String x:Key="DeployMode">Deploy mode:</sys:String>
+    <sys:String x:Key="DeployMode">Deployment mode:</sys:String>
     <sys:String x:Key="DeployModeIWD">Install while downloading</sys:String>
     <sys:String x:Key="DeployModeIAD">Install after download</sys:String>
     <sys:String x:Key="DeployModeUEI">Use an existing installation source</sys:String>
@@ -227,7 +232,7 @@
     <sys:String x:Key="ActivateSetPort">Set KMS port</sys:String>
     <sys:String x:Key="ActivateEnableCaching">Enable host caching</sys:String>
     <sys:String x:Key="ActivateDisableCaching">Disable host caching</sys:String>
-    <sys:String x:Key="ActivateClearKMS">Remove KMS host (reset port to default)</sys:String>
+    <sys:String x:Key="ActivateResetKMS">Remove KMS host (reset port to default)</sys:String>
     <!-- Content Translation -->
     <sys:String x:Key="ActivationTitle">Office Activation Processing</sys:String>
     <sys:String x:Key="LicenseDescription">License Description: </sys:String>
@@ -260,8 +265,6 @@
     <sys:String x:Key="ILicense">Installing Office license: </sys:String>
     <sys:String x:Key="ILicenseSuccess">Office license installed successfully.</sys:String>
     <sys:String x:Key="InstallationID">Installation ID:</sys:String>
-    <sys:String x:Key="SKMSEvent">Searching for KMS activation events on machine: </sys:String>
-    <sys:String x:Key="SIAEvent">Searching for Internet activation failure events on machine: </sys:String>
     <sys:String x:Key="NoKMSEvent">No KMS activation events found on machine: </sys:String>
     <sys:String x:Key="NoIAEvent">No failure events found on machine: </sys:String>
     <sys:String x:Key="NoEvents">No events found.</sys:String>
@@ -295,17 +298,17 @@
     <sys:String x:Key="ToolboxChangeOwner">Change Office product owner</sys:String>
     <sys:String x:Key="ToolboxChangeOwnerDescription">The name is displayed on the account page of Office application only if Office uses the correct license.&#x000A;&#x000A;To change the owner of a specified product, use this format: [Product ID]:[Name]</sys:String>
     <sys:String x:Key="ToolboxChangeOwnerName">Name:</sys:String>
-    <sys:String x:Key="ToolboxCheckVersion">Querying Office version</sys:String>
+    <sys:String x:Key="ToolboxCheckVersion">Query Office version</sys:String>
     <sys:String x:Key="CheckVersionCreatedTimeUTC">Created time (UTC):</sys:String>
-    <sys:String x:Key="QueryErrorCode">Querying error code information</sys:String>
+    <sys:String x:Key="QueryErrorCode">Query error code information</sys:String>
     <sys:String x:Key="QueryErrorCodeDescription">Error code usually start with '0x'. Example: 0x2 or 0x80070002.</sys:String>
     <sys:String x:Key="ToolboxCheckKMS">Check KMS status</sys:String>
-    <sys:String x:Key="ToolboxCheckKMSDescription">Separate each KMS with comma or newline, you can also add a port. When the activation is displayed successfully, it means that the server is available.</sys:String>
-    <sys:String x:Key="CheckKMSConncetionSuccessful">Connection succeeded, but activation test failed.</sys:String>
-    <sys:String x:Key="CheckKMSConncetionFailed">Connection failed!</sys:String>
-    <sys:String x:Key="CheckKMSActivationSuccessful">Connection succeeded; activation test succeeded.</sys:String>
+    <sys:String x:Key="ToolboxCheckKMSDescription">Separate each KMS with comma or newline, you can also add a port.</sys:String>
+    <sys:String x:Key="CheckKMSConnectionSuccessful">Connection succeeded, but activation test failed.</sys:String>
+    <sys:String x:Key="CheckKMSConnectionFailed">Connection failed!</sys:String>
+    <sys:String x:Key="CheckKMSActivationSuccessful">Connection succeeded, activation test succeeded.</sys:String>
     <sys:String x:Key="ToolboxCollectLog">Collect Office installer logs</sys:String>
-    <sys:String x:Key="ToolboxCollectLogDescription">Collect logs to analyze and solve unknown problem.</sys:String>
+    <sys:String x:Key="ToolboxCollectLogDescription">Collect logs to analyze and solve problems.</sys:String>
     <!-- Repair Tools -->
     <sys:String x:Key="ToolboxRemoveOffice">Remove Office</sys:String>
     <sys:String x:Key="ToolboxRODescription">This will remove Office related components, files, and registries. If the cleanup fails, try a few more times, or do it another way.&#x000A;&#x000A;Note: This feature should only be used if Office can not be removed properly.</sys:String>
@@ -314,7 +317,7 @@
     <sys:String x:Key="ToolboxRemoveUWPOffice">Remove Microsoft Store app installation of Office</sys:String>
     <sys:String x:Key="ToolboxRemoveOfficeDone">End of removing Office.</sys:String>
     <sys:String x:Key="ToolboxRepairOfficeDocumentIcon">Repair Office documents icon</sys:String>
-    <sys:String x:Key="ToolboxRepairODIDescription">This will reset the Office document association. Once this is done, you will also need to use Office's Quick Fix.</sys:String>
+    <sys:String x:Key="ToolboxRepairODIDescription">This will reset the Office document association. Once this is done, you will also need to use Office's quick fix.</sys:String>
     <sys:String x:Key="ToolboxRepairActivation">Repair Office activation</sys:String>
     <sys:String x:Key="ToolboxRepairActivationDescription">This will reset the configuration of Software Protection service and rebuild the activation file on Windows Insider. Applies to "Unknown error occurred" or "license consumption failed (0xC004E015)" when activating Office.</sys:String>
     <sys:String x:Key="ToolboxRepairVBS">Repair VBS file associations</sys:String>
@@ -324,7 +327,7 @@
     <sys:String x:Key="ToolboxRepairTemplates">Restore Word default document template</sys:String>
     <sys:String x:Key="ToolboxRepairTemplatesDescription">This will rebuild Word's default template for Word to display [Compatible Mode] when a new document is created.</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettings">Restore Office settings to original defaults</sys:String>
-    <sys:String x:Key="ToolboxResetOfficeSettingsDescription">This will reset your Office settings, including application settings, local file history, and recent save paths. Note: Please close all Office applications before proceeding.</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsDescription">This will reset your Office settings, including application settings, local file history, and recent save paths.&#x000A;Please close all Office applications before proceeding.</sys:String>
     <!-- Convert Document -->
     <sys:String x:Key="ConvertSourceFormat">Input format:</sys:String>
     <sys:String x:Key="ConvertOutputFormat">Output format:</sys:String>
@@ -342,8 +345,10 @@
     <sys:String x:Key="SaveSettings">Save settings to local.</sys:String>
     <sys:String x:Key="DisplaySettings">Display settings</sys:String>
     <sys:String x:Key="SettingsTopmost">Always on top</sys:String>
+    <sys:String x:Key="SettingsTransparencyEffect">Enable window transparency effect</sys:String>
+    <sys:String x:Key="SettingsTransparencyEffectTip">Only available in Windows 10.</sys:String>
     <sys:String x:Key="SettingsTransparency">Transparency</sys:String>
-    <sys:String x:Key="SettingsBlurValue">Blur</sys:String>
+    <sys:String x:Key="SettingsBlurValue">Background image blur</sys:String>
     <sys:String x:Key="SettingsChooseBGI">Choose background image</sys:String>
     <!-- About Panel -->
     <sys:String x:Key="AppInf">App information</sys:String>
@@ -362,10 +367,13 @@
     <sys:String x:Key="TextBlockResources">Local, network, or HTTP path.</sys:String>
     
     <!-- Task Message -->
+    <sys:String x:Key="Task_DownloadingContent">Getting content, please wait.</sys:String>
     <sys:String x:Key="Task_PreparingDownload">Preparing to download Office.</sys:String>
-    <sys:String x:Key="Task_DeployClickToRun">Preparing Click-to-Run</sys:String>
+    <sys:String x:Key="Task_DeployClickToRun">Preparing Click-to-Run.</sys:String>
     <sys:String x:Key="Task_ODT">Office Deployment Tool is running now, please wait.</sys:String>
     <sys:String x:Key="Task_OSPP">OSPP is running now, please wait.</sys:String>
+    <sys:String x:Key="Task_SearchKMSAEvent">Searching for KMS activation events on machine: {0}</sys:String>
+    <sys:String x:Key="Task_SearchIAFEvent">Searching for Internet activation failure events on machine: {0}</sys:String>
     <sys:String x:Key="Task_CheckVersion">Querying Office version information.</sys:String>
     <sys:String x:Key="Task_CheckKMS">Testing KMS host(s).</sys:String>
     <sys:String x:Key="Task_CollectLog">Collecting Office installer logs.</sys:String>
@@ -375,8 +383,9 @@
     <sys:String x:Key="Task_InstallingApp">Installing {0}, please wait.</sys:String>
 
     <!-- Question Message -->
-    <sys:String x:Key="QuesUpdateReady">Update is ready</sys:String>
-    <sys:String x:Key="QuesUpdateNow">It only takes a few seconds, restart application now?</sys:String>
+    <sys:String x:Key="QuesUpdateTitle">Office Tool Plus Update</sys:String>
+    <sys:String x:Key="QuesUpdateAvailable">Update is available, open download page now?</sys:String>
+    <sys:String x:Key="QuesUpdateNow">Update is ready, restart application now? It only takes a few seconds.</sys:String>
     <sys:String x:Key="QuesExit">Office Tool Plus is working now. Do you want to quit anyway?</sys:String>
     <sys:String x:Key="QuesOneClickInstallation">You chose to install {0}.&#x000A;If you need to select applications or languages, use other installation options.&#x000A;&#x000A;Click "Yes" to install after download, "No" to install during download, or close the window to cancel.</sys:String>
     <sys:String x:Key="QuesInstallation">Ready to install Office?</sys:String>

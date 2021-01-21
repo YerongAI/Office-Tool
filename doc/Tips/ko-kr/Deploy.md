@@ -2,9 +2,9 @@
 
 ---
 
-이미 설치된 Office 제품과 언어 패키지를 관리 할 수 있습니다. Office 미 설치하면 새로 설치 진행할겁니다. **마이크로소프트사의 제한에 따라 Office가 시스템 파티션에서만 설치할 수 있습니다.** 
+이미 설치된 Office 제품과 언어 패키지를 관리 할 수 있습니다. Office 미 설치하면 새로 설치 진행할겁니다. **마이크로소프트사의 제한에 따라 Office가 시스템 파티션에서만 설치할 수 있습니다.**
 
-응용프로그램들 중에서 ***Lync*** 는 ***Skype for Business***, ***Groove*** 는 ***OneDrive for Business*** 입니다.
+응용프로그램들 중에서 ***Lync*** 는 ***Skype for Business***, ***Groove*** 는 ***OneDrive for Business*** 입니다. Bing is a extension for Chrome and Edge etc. For more information, visit [Microsoft Search in Bing and Microsoft 365 Apps for enterprise](https://docs.microsoft.com/ko-kr/deployoffice/microsoft-search-bing).
 
 다운로드 모드에서 사용자 정의한 Office 설치 파일 저장 경로를 시정하려면 ***설치 설정*** 에서 ***소스 경로*** 를 수정하면됩니다.
 
@@ -15,7 +15,8 @@
 1. 배포 모드 가이드
 2. 채널 가이드
 3. 설치 모듈 가이드
-4. 더 많은 정보
+4. Office Applications Preferences
+5. 더 많은 정보
 
 ### 배포 모드 가이드
 
@@ -41,9 +42,11 @@
 
 Office 설치 파일이 다운로드 완료된 상태하고 Office 설치 파일과 Office Tool Plus가 동일 경로에 있어야 ISO 파일을 생성할 수 있습니다.
 
-`ISO 파일 생성하기 전에 Office 설치 환경설정 진행했으면 ISO 파일 생성하는 동시에 Configuration.xml 파일을 같이 생성됩니다. ISO 모든에서 Office Tool Plus를 시작할 때 사용자한테 Office 설치를 즉시 시작하냐고 확인할겁니다.`
+You can create an ISO file with default settings. To do so, configure Office installation, such as adding products and languages, then click "Start deploy" to begin creating ISO file.
 
-#### 다운로드만 
+If you do not configuration, the user will need to configure it as if it were used normally.
+
+#### 다운로드만
 
 이 모드에서는 Office 설치 파일 다운로드하기만 하고 Office 배포하지 않을겁니다.
 `이 모드에서 최소 한개의 언어 패키지를 선택해야합니다. 않으면 일부 파일이 다운로드되지 않을겁니다.`
@@ -61,7 +64,7 @@ Office 설치 파일이 다운로드 완료된 상태하고 Office 설치 파일
 Office 2019 볼륨 버전 전용 채널입니다.
 
 **기능 업데이트:** 없음
- 
+
 **보안 업데이트:** 한 달에 한번씩, 매월 2번째 화요일
 
 `현재 채널(기본값):`
@@ -74,7 +77,7 @@ Office 2019 볼륨 버전 전용 채널입니다.
 
 **기능 업데이트:** 매년 두번씩(1월과 7월), 매월 2번째 화요일
 
-**보안 업데이트:** 한 달에 한번씩, 매월 2번째 
+**보안 업데이트:** 한 달에 한번씩, 매월 2번째
 
 주의: 저희는 모든 사용자가 미리보기 채널을 사용하지 않을 것을 권장합니다. 상세한 정보를 알아보려면 마지막의 린크에 따라 마이크로소프트사의 공식 설명서를 참고하세요.
 
@@ -95,8 +98,21 @@ Office Tool Plus 모듈은 저희 개발된 설치 모듈입니다. 기능상에
 - 강제 업데이트 지원되지 않음
 - 기존 MSI 버전의 Office 제거 지원되지 않음
 - 기존 MSI 버전의 Office와 동일한 언어 설치 지원되지 않음
+- Not support of Office applications preferences.
 
-주의: **전체 설치 기능을 원하면 Office 배포 툴을 사용하세요.***
+주의: **전체 설치 기능을 원하면 Office 배포 툴을 사용하세요.**
+
+### Office Applications Preferences
+
+---
+
+`Application preferences are data provided by Microsoft, these texts are machine translated and may contain some grammatical errors.`
+
+The function allow you defines application preferences for Office Apps, including VBA Macro notifications, default file locations, and default file format.
+
+You can apply new application preferences to client computers that already have Office installed. Click "Applying preferences for Office applications" in the "View XML code" submenu.
+
+The app preferences are applied to all existing users of the device and any new users added to the device in the future. If you apply application preferences when Office apps are running, the preferences will be applied when Office is next restarted.
 
 ### 더 많은 정보를 찾고 싶다면 아래 사이트에 참고하세요
 

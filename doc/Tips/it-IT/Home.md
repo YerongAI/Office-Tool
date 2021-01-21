@@ -10,7 +10,6 @@ Office Tool Plus si basa su [Strumenti di distribuzione di Microsoft Office](htt
 
 [Canale Telegram](https://t.me/otp_channel)
 
-
 ### Office Tool Plus Tasti di Scelta Rapida
 
 ---
@@ -42,13 +41,13 @@ Puoi accedere direttamente alle funzioni che desideri tramite i comandi e puoi a
 
 **/clImage** Cancella l'immagine di sfondo corrente
 
-**/addProduct [ProductID]** Aggiunge uno o più prodotti, ID prodotto esempio: O365ProPlusRetail, VisioProRetail
+**/addProduct [ProductIDs]** Aggiunge uno o più prodotti, ID prodotto esempio: O365ProPlusRetail, VisioProRetail
 
-**/addLang [LanguageID]** Aggiunge uno o più pacchetti lingua, ID pacchetto lingua esempio: it-it per aggiungere un pacchetto lingua completo, it-it_proof per aggiungere gli strumenti di correzione
+**/addLang [LanguageIDs]** Aggiunge uno o più pacchetti lingua, ID pacchetto lingua esempio: it-it per aggiungere un pacchetto lingua completo, it-it_proof per aggiungere gli strumenti di correzione
 
-**/setApps [AppsID]** Imposta quali applicazioni installare, usa le virgole per separare ogni ID applicazione, ad esempio: Word, Excel, PowerPoint, le applicazioni che non sono impostate non verranno installate
+**/setApps [AppIDs]** Imposta quali applicazioni installare, usa le virgole per separare ogni ID applicazione, ad esempio: Word, Excel, PowerPoint, le applicazioni che non sono impostate non verranno installate
 
-**/setExApps [AppsID]** Imposta le applicazioni da non installare, usare lo stesso metodo di /setApps
+**/setExApps [AppIDs]** Imposta le applicazioni da non installare, usare lo stesso metodo di /setApps
 
 **/deployArch [index]** Imposta l'architettura, 0 significa 32 bit, 1 significa 64 bit
 
@@ -69,6 +68,10 @@ Puoi accedere direttamente alle funzioni che desideri tramite i comandi e puoi a
 **/loadXML [Path]** Carica un file XML, supporta percorsi locali e HTTP
 
 **/startDeploy** Avvia la distribuzione
+
+**/installiSlide** Install iSlide.
+
+**/getProductKey [ProductID]** Get the product key, return GVLK for volume products, normal key for other products. Example product id: ProPlus2019Volume
 
 **/osppILByID [ProductID]** Installa la licenza Office del prodotto specificato, Product ID ad esempio: MondoVolume
 

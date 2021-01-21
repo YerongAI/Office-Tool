@@ -76,6 +76,7 @@
     <!-- Deploy Page -->
     <sys:String x:Key="StartDeploy">Iniciar implementación</sys:String>
     <sys:String x:Key="DeployViewCode">Ver código</sys:String>
+    <sys:String x:Key="DeployApplySettings">Applying preferences for Office applications</sys:String>
     <sys:String x:Key="DeployExportXML">Exportar archivo XML</sys:String>
     <sys:String x:Key="DeployImportXML">Importar archivo XML</sys:String>
     <sys:String x:Key="DeployImportXMLFromWeb">Importar archivo XML desde Web</sys:String>
@@ -120,6 +121,8 @@
     <sys:String x:Key="DeployDescription">Proporcione una descripción de esta configuración para fines de documentación.</sys:String>
     <!-- Installation Settings -->
     <sys:String x:Key="DeployInstallationSettings">Configuración de instalación</sys:String>
+    <sys:String x:Key="DeployVersionTip">Defaults to the latest version available if not specified.</sys:String>
+    <sys:String x:Key="DeployGetHistoricalVersions">Get available historical versions of Office.</sys:String>
     <sys:String x:Key="DeployDownloadPath">Ruta de descarga:</sys:String>
     <sys:String x:Key="DeployDownloadPathTip">Define desde dónde se descargan los archivos de instalación, debe especificar una versión cuando utilice la ruta de descarga.</sys:String>
     <sys:String x:Key="DeploySourcePath">Carpeta de origen:</sys:String>
@@ -135,8 +138,9 @@
     <!-- Update Settings -->
     <sys:String x:Key="DeployUpdateSettings">Establecer actualización</sys:String>
     <sys:String x:Key="DeployEnableUpdate">Habilitar la actualización automática de Office.</sys:String>
-    <sys:String x:Key="DeployEnableCOM">Administrar actualizaciones con Administrador de configuración</sys:String>
+    <sys:String x:Key="DeployEnableCOM">Manage updates using Microsoft Endpoint Configuration Manager.</sys:String>
     <sys:String x:Key="DeployUpdatePath">Fuente de actualización:</sys:String>
+    <sys:String x:Key="DeployUpdatePathTip">If the path is empty, the Office CDN is used by default as the source.</sys:String>
     <sys:String x:Key="DeployTargetVersion">Versión de destino:</sys:String>
     <sys:String x:Key="DeployUpdateDeadline">Actualizar fecha límite:</sys:String>
     <sys:String x:Key="DeployUpdateChannel">Actualizar canal:</sys:String>
@@ -161,7 +165,8 @@
     <sys:String x:Key="DeployBasedDevice">Basado en el dispositivo.</sys:String>
     <!-- App Preferences -->
     <sys:String x:Key="DeployPreferences">Preferencias de la aplicación</sys:String>
-    <sys:String x:Key="DeployPreferencesFilter">Escribir para buscar las preferencias de la aplicación</sys:String>
+    <sys:String x:Key="DeployPreferencesSearch">Escribir para buscar las preferencias de la aplicación</sys:String>
+    <sys:String x:Key="DeployPreferencesEnable">Enable</sys:String>
     <sys:String x:Key="DeployPreferencesApply">Aplicar</sys:String>
     <sys:String x:Key="DeployPreferencesReset">Reiniciar</sys:String>
     <sys:String x:Key="DeployPreferencesResetAll">Restablecer todos los ajustes</sys:String>
@@ -227,7 +232,7 @@
     <sys:String x:Key="ActivateSetPort">Establecer puerto KMS</sys:String>
     <sys:String x:Key="ActivateEnableCaching">Habilitar el almacenamiento en caché del host</sys:String>
     <sys:String x:Key="ActivateDisableCaching">Deshabilitar el almacenamiento en caché del host</sys:String>
-    <sys:String x:Key="ActivateClearKMS">Eliminar el host KMS (restablecer el puerto a los valores predeterminados)</sys:String>
+    <sys:String x:Key="ActivateResetKMS">Eliminar el host KMS (restablecer el puerto a los valores predeterminados)</sys:String>
     <!-- Content Translation -->
     <sys:String x:Key="ActivationTitle">Procesando activación de Office</sys:String>
     <sys:String x:Key="LicenseDescription">Descripción de la licencia: </sys:String>
@@ -260,8 +265,6 @@
     <sys:String x:Key="ILicense">Instalación de la licencia de Office: </sys:String>
     <sys:String x:Key="ILicenseSuccess">Licencia de Office instalada correctamente.</sys:String>
     <sys:String x:Key="InstallationID">ID de instalación:</sys:String>
-    <sys:String x:Key="SKMSEvent">Buscando eventos de activación del KMS en la máquina: </sys:String>
-    <sys:String x:Key="SIAEvent">Buscando eventos de fallo en la activación por Internet en la máquina: </sys:String>
     <sys:String x:Key="NoKMSEvent">No se encontraron eventos de activación del KMS en la máquina: </sys:String>
     <sys:String x:Key="NoIAEvent">No se encontraron eventos de fallo en la máquina: </sys:String>
     <sys:String x:Key="NoEvents">No se encontraron eventos.</sys:String>
@@ -301,8 +304,8 @@
     <sys:String x:Key="QueryErrorCodeDescription">El código de error generalmente comienza con '0x'. Ejemplo: 0x2 o 0x80070002.</sys:String>
     <sys:String x:Key="ToolboxCheckKMS">Verificar estado de KMS</sys:String>
     <sys:String x:Key="ToolboxCheckKMSDescription">Separar cada KMS con coma o nueva línea, también puede agregar un puerto. Cuando la activación se muestra correctamente, significa que el servidor está disponible.</sys:String>
-    <sys:String x:Key="CheckKMSConncetionSuccessful">La conexión se realizó correctamente, pero la prueba de activación falló.</sys:String>
-    <sys:String x:Key="CheckKMSConncetionFailed">¡La conexión falló!</sys:String>
+    <sys:String x:Key="CheckKMSConnectionSuccessful">La conexión se realizó correctamente, pero la prueba de activación falló.</sys:String>
+    <sys:String x:Key="CheckKMSConnectionFailed">¡La conexión falló!</sys:String>
     <sys:String x:Key="CheckKMSActivationSuccessful">Conexión exitosa, prueba de activación exitosa.</sys:String>
     <sys:String x:Key="ToolboxCollectLog">Recopilar registros del instalador de Office</sys:String>
     <sys:String x:Key="ToolboxCollectLogDescription">Recopilar registros para analizar y resolver problemas desconocidos.</sys:String>
@@ -342,8 +345,10 @@
     <sys:String x:Key="SaveSettings">Guardar configuración en local.</sys:String>
     <sys:String x:Key="DisplaySettings">Configuración de pantalla</sys:String>
     <sys:String x:Key="SettingsTopmost">Siempre visible</sys:String>
+    <sys:String x:Key="SettingsTransparencyEffect">Enable window transparency effect</sys:String>
+    <sys:String x:Key="SettingsTransparencyEffectTip">Only available in Windows 10.</sys:String>
     <sys:String x:Key="SettingsTransparency">Transparencia</sys:String>
-    <sys:String x:Key="SettingsBlurValue">Desenfoque</sys:String>
+    <sys:String x:Key="SettingsBlurValue">Background image blur</sys:String>
     <sys:String x:Key="SettingsChooseBGI">Elegir la imagen de fondo</sys:String>
     <!-- About Panel -->
     <sys:String x:Key="AppInf">Información del programa</sys:String>
@@ -362,10 +367,13 @@
     <sys:String x:Key="TextBlockResources">Ruta local, de red o HTTP.</sys:String>
 
     <!-- Task Message -->
+    <sys:String x:Key="Task_DownloadingContent">Getting content, please wait.</sys:String>
     <sys:String x:Key="Task_PreparingDownload">Preparándose para descargar Office.</sys:String>
-    <sys:String x:Key="Task_DeployClickToRun">Preparando Click-to-Run </sys:String>
+    <sys:String x:Key="Task_DeployClickToRun">Preparando Click-to-Run.</sys:String>
     <sys:String x:Key="Task_ODT">La Herramienta de Implementación de Office se está ejecutando ahora, espere.</sys:String>
     <sys:String x:Key="Task_OSPP">OSPP se está ejecutando ahora, espere.</sys:String>
+    <sys:String x:Key="Task_SearchKMSAEvent">Buscando eventos de activación del KMS en la máquina: {0}</sys:String>
+    <sys:String x:Key="Task_SearchIAFEvent">Buscando eventos de fallo en la activación por Internet en la máquina: {0}</sys:String>
     <sys:String x:Key="Task_CheckVersion">Consultando información de la versión de Office.</sys:String>
     <sys:String x:Key="Task_CheckKMS">Prueba de host(s) KMS.</sys:String>
     <sys:String x:Key="Task_CollectLog">Recopilación de registros del instalador de Office.</sys:String>
@@ -375,8 +383,9 @@
     <sys:String x:Key="Task_InstallingApp">Instalando {0}, por favor espere.</sys:String>
 
     <!-- Question Message -->
-    <sys:String x:Key="QuesUpdateReady">La actualización está lista</sys:String>
-    <sys:String x:Key="QuesUpdateNow">Esto sólo tarda unos segundos, ¿reiniciar la aplicación ahora?</sys:String>
+    <sys:String x:Key="QuesUpdateTitle">Office Tool Plus Update</sys:String>
+    <sys:String x:Key="QuesUpdateAvailable">Update is available, open download page now?</sys:String>
+    <sys:String x:Key="QuesUpdateNow">Update is ready, restart application now? It only takes a few seconds.</sys:String>
     <sys:String x:Key="QuesExit">Office Tool Plus está ejecutándose, ¿desea salir?</sys:String>
     <sys:String x:Key="QuesOneClickInstallation">Elegiste instalar {0}.&#x000A;Si necesita seleccionar aplicaciones o idiomas, use otras opciones de instalación.&#x000A;&#x000A;Haga clic en "Sí" para instalar después de la descarga, "No" para instalar durante la descarga o cierre la ventana para cancelar.</sys:String>
     <sys:String x:Key="QuesInstallation">¿Preparado para instalar Office?</sys:String>

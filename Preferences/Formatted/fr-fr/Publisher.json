@@ -1,0 +1,919 @@
+{
+    "categories": [
+        {
+            "name": "L_MicrosoftOfficePublisher",
+            "displayName": "Microsoft Publisher 2016"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
+            "name": "L_PubOptions",
+            "displayName": "Options Publisher"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_Advanced",
+            "displayName": "Options avancées"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "name": "L_ComplexScripts",
+            "displayName": "Scripts complexes"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_General",
+            "displayName": "Général"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_Proofing",
+            "displayName": "Vérification"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_OptionsCustomizeRibbon",
+            "displayName": "Personnaliser le ruban"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_Save",
+            "displayName": "Enregistrer"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
+            "name": "L_Miscellaneous",
+            "displayName": "Divers"
+        }
+    ],
+    "policies": [
+        {
+            "parentCategory": {
+                "ref": "L_OptionsCustomizeRibbon"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisplayDeveloperTab",
+            "displayName": "Afficher l’onglet Développeur dans le ruban",
+            "explainText": "Ce paramètre de stratégie détermine si l’onglet Développeur s’affiche dans le ruban.\n\nSi vous activez ce paramètre de stratégie, l’onglet Développeur s’affiche dans le ruban.\n\nSi vous désactivez ce paramètre de stratégie, l’onglet Développeur ne s’affiche pas dans le ruban.\n\nSi vous ne configurez pas ce paramètre de stratégie, l’onglet Développeur ne s’affiche pas dans le ruban, mais sa visibilité peut être modifiée via un paramètre de la boîte de dialogue Options de l’application.",
+            "tags": [
+                "L_OptionsCustomizeRibbon",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "developertools"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_General"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_ShowTheNewTemplateGalleryWhenStartingPublisher",
+            "displayName": "Afficher la galerie des nouveaux modèles au démarrage de Publisher",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_General",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "usestartupdlg"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_TurnOffDragPreview",
+            "displayName": "Désactiver l’aperçu de glisser-déposer",
+            "explainText": "Ce paramètre de stratégie vous permet de déterminer si Publisher affiche un aperçu de glisser-déposer semi-transparent ou uniquement le contour de l’objet lors de son glissement.\n\nSi vous activez ce paramètre de stratégie, seul le contour de l’objet s’affiche pendant son déplacement. Ce paramètre est recommandé pour les ordinateurs plus anciens en raison des ressources nécessaires pour cette fonctionnalité.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, un aperçu par glisser-déposer semi-transparent de l’objet s’affiche lors de son déplacement.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "uselegacydrag"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "max display",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 50,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_SetMaximumNumberOfMRUItemsToDisplaySpinID"
+                    }
+                ]
+            },
+            "name": "L_SetMaximumNumberOfMRUItemsToDisplay",
+            "displayName": "Nombre de publications dans la liste Publications récentes",
+            "explainText": "Ce paramètre de stratégie indique le nombre d’entrées affichées dans la liste Publications récentes qui apparaît quand les utilisateurs cliquent sur Ouvrir, sous l’onglet Fichier en mode Backstage.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un nombre d’entrées compris entre 0 et 50. Si vous définissez le nombre sur 0, toutes les entrées épinglées et détachées sont masquées.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, 25 éléments au maximum sont affichés dans la liste Publications récentes.\n\nRemarque : si vous voulez empêcher l’ajout d’éléments à la liste Publications récentes, vous pouvez activer le paramètre de stratégie Windows « Ne pas conserver d’historique des documents récemment ouverts ».",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\file mru"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "max display",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 20,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_SetNumberOfPlacesInTheRecentPlacesListSpinID"
+                    }
+                ]
+            },
+            "name": "L_SetNumberOfPlacesInTheRecentPlacesList",
+            "displayName": "Nombre de dossiers dans la liste Dossiers récents",
+            "explainText": "Ce paramètre de stratégie vous permet de définir le nombre d’entrées détachées qui sont affichées dans la liste Dossiers récents qui apparaît quand les utilisateurs cliquent sur Ouvrir ou sur Enregistrer sous, sous l’onglet Fichier en mode Backstage.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un nombre d’entrées détachées compris entre 0 et 20. Si vous définissez le nombre sur 0, toutes les entrées épinglées et détachées sont masquées.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, 5 éléments détachés au maximum sont affichés dans la liste Dossiers récents.\n\nRemarque : si vous voulez empêcher l’ajout d’éléments à la liste Dossiers récents, vous pouvez activer le paramètre de stratégie Windows « Ne pas conserver d’historique des documents récemment ouverts ».",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\place mru"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_UseXPSEnhancedPrintPath",
+            "displayName": "Utiliser l’option d’impression optimisée pour les fichiers XPS",
+            "explainText":"Ce paramètre de stratégie vous permet d’utiliser l’option d'impression optimisée pour les fichiers XPS lorsqu'elle est disponible.\n\nSi vous activez ou ne configurez pas ce paramètre de stratégie, l’option d'impression des fichiers XPS est utilisée.\n\nSi vous désactivez ce paramètre de stratégie, l’option d'impression des fichiers XPS n’est pas utilisée.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "enablexpsprintpathprinting"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AutomaticallysubstitutefontformissingEAchars",
+            "displayName": "Substituer automatiquement la police pour les caractères des langues de l’Asie de l’Est manquants",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "usefontlinking"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "1"
+                                },
+                                "displayName": "De gauche à droite"
+                            },
+                            {
+                                "value": {
+                                    "string": "256"
+                                },
+                                "displayName": "De droite à gauche"
+                            }
+                        ],
+                        "valueName": "defaulttextflow",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDefaultTextFlowDirectionDropID"
+                    }
+                ]
+            },
+            "name": "L_SetDefaultTextFlowDirection",
+            "displayName": "Définir le sens de l’enchaînement par défaut",
+            "explainText": "Ce paramètre de stratégie vous permet de définir l’enchaînement par défaut sur De droite à gauche ou De gauche à droite.\n\nSi vous activez ce paramètre de stratégie, vous pouvez choisir l’enchaînement du texte de droite à gauche ou de gauche à droite.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, le paramètre d’enchaînement par défaut est utilisé.",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AutomaticallySwitchKeyboard",
+            "displayName": "Changer automatiquement le clavier pour correspondre à la langue du texte environnant",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "autokeybd"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AllowTextToBeDraggedAndDropped",
+            "displayName": "Autoriser le glissement et le déplacement d’un texte",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "textdragndrop"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Whenselectingautomaticallyselectentireword",
+            "displayName": "Lors d’une sélection, sélectionner automatiquement le mot entier",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "autowordsel"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Whenformattingautomaticallyformatentireword",
+            "displayName": "Utiliser la mise en forme automatique des mots",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "autowordformat"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_UseChinesefontsizes",
+            "displayName": "Utiliser des tailles de police chinoise",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "prcfontsizes"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AutomaticallyHyphenateInNewTextBoxes",
+            "displayName": "Coupure automatique dans les nouvelles zones de texte",
+            "explainText": "Active/désactive l’option Coupure automatique dans les nouvelles zones de texte.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "defautohyph"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_ShowScreenTipsonobjects",
+            "displayName": "Afficher les info-bulles des objets",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "showobjecttooltips"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Enableincrementalpublishtoweb",
+            "displayName": "Activer la publication incrémentielle sur le web",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\internet",
+            "valueName": "incrementalupload"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Sendentirepublicationasasingle",
+            "displayName": "Envoyer toute la publication sous la forme d’une seule image JPEG",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\internet",
+            "valueName": "emailasimg"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Promptuserwhenreapplyingastyle",
+            "displayName": "Inviter l’utilisateur à confirmer la réapplication d’un style",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "prompttoupdatestyle"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Save"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "autorecoversaveinterval",
+                        "required": true,
+                        "requiredSpecified": true,
+                        "expandable": false,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Minutes (plage 1-120) :",
+                        "id": "L_SaveAutoRecoverinfoeveryID"
+                    }
+                ]
+            },
+            "name": "L_SaveAutoRecoverinfoevery",
+            "displayName": "Enregistrer les informations de récupération automatique toutes les (minutes)",
+            "explainText": "Ce paramètre de stratégie permet de spécifier l’intervalle de l’enregistrement de récupération automatique (en minutes).\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier l’intervalle de l’enregistrement de récupération automatique en minutes (plage valide : 1 à 120).\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’intervalle spécifié dans l’interface utilisateur est utilisé.",
+            "tags": [
+                "L_Save",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Save"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Allowbackgroundsaves",
+            "displayName": "Autoriser les enregistrements en arrière-plan",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Save",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "backgroundsave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Proofing"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Vérifier l’orthographe au cours de la frappe"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Masquer les fautes d’orthographe"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Les deux"
+                            }
+                        ],
+                        "valueName": "publisherspellingoptions",
+                        "inputType": "dropdownList",
+                        "id": "L_CheckspellingasyoutypeDropID"
+                    }
+                ]
+            },
+            "name": "L_Checkspellingasyoutype",
+            "displayName": "Vérifier l’orthographe au cours de la frappe",
+            "explainText":"Ce paramètre de stratégie vous permet de configurer les options de la vérification orthographique.\n\nSi vous activez ce paramètre de stratégie, vous avez le choix entre les options suivantes :\n-Vérifier l’orthographe au cours de la frappe. Cette option est sélectionnée.\n-Masquer les fautes d’orthographe. Cette option est sélectionnée, mais l'option « Vérifier l’orthographe au cours de la frappe » n’est pas sélectionnée.\n-Les options « Vérifier l’orthographe au cours de la frappe » et « Masquer les fautes d’orthographe » sont toutes deux sélectionnées.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option « Vérifier l’orthographe au cours de la frappe» est sélectionnée.",
+            "tags": [
+                "L_Proofing",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\shared tools\\proofing tools\\1.0\\office"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Promptusertosetupprinter",
+            "displayName": "Inviter l’utilisateur à configurer une imprimante",
+            "explainText": "Si cette option est activée, Publisher invite l’utilisateur à démarrer l’Assistant Configuration de l’imprimante lorsque le système détecte une nouvelle imprimante.",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "showprintersetup"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "0"
+                                },
+                                "displayName": "De gauche à droite"
+                            },
+                            {
+                                "value": {
+                                    "string": "1"
+                                },
+                                "displayName": "De droite à gauche"
+                            }
+                        ],
+                        "valueName": "defaultrtl",
+                        "inputType": "dropdownList",
+                        "caption": "Sens par défaut de Publisher",
+                        "id": "L_defaultpublisherdirection3"
+                    }
+                ]
+            },
+            "name": "L_DefaultPublisherdirection",
+            "displayName": "Sens par défaut de Publisher",
+            "explainText": "Indique le sens par défaut de la disposition.",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_UseSequenceChecking",
+            "displayName": "Utiliser la vérification de séquence",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "seqcheck"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Usetypeandreplace",
+            "displayName": "Utiliser la saisie et le remplacement",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "typereplace"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AdddoublequotesinHebrewalphabetnumbering",
+            "displayName": "Ajouter des guillemets doubles pour la numérotation dans l’alphabet hébreu",
+            "explainText": "Activé : ajoute des guillemets doubles (\") pour la numérotation en hébreu. | Désactivé : n’ajoute pas de guillemets doubles (\") pour la numérotation en hébreu.",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "dubquohebalpnum"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableOfficeStartPublisher",
+            "displayName": "Désactiver l’écran de démarrage d’Office pour Publisher",
+            "explainText": "Ce paramètre de stratégie contrôle l’affichage de l’écran de démarrage d’Office au démarrage de Publisher.\n\nSi vous l’activez, les utilisateurs ne voient pas l’écran de démarrage d’Office au démarrage de Publisher.\n\nSi vous le désactivez ou ne le configurez pas, les utilisateurs voient l’écran de démarrage d’Office au démarrage de Publisher.\n\nRemarque : ce paramètre de stratégie est remplacé par le paramètre « Microsoft Office 2016 > Divers > Désactiver l’écran de démarrage d’Office pour toutes les applications Office » si ce dernier est défini.",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "disableboottoofficestart"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "personaltemplates",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Chemin d’accès aux modèles personnels",
+                        "id": "L_PersonalTemplatesPath"
+                    }
+                ]
+            },
+            "name": "L_PersonalTemplatesPath",
+            "displayName": "Chemin d’accès aux modèles personnels pour Publisher",
+            "explainText": "Ce paramètre de stratégie spécifie l’emplacement des modèles personnels d’un utilisateur.\n\nSi vous activez ce paramètre de stratégie, les utilisateurs verront les modèles enregistrés dans l’emplacement spécifié sous l’onglet modèles personnalisés de l’écran de démarrage d’Office et dans Fichier | Nouveau. En outre, lors de l’enregistrement d’un modèle, leur dossier par défaut deviendra l’emplacement spécifié.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, les utilisateurs ne verront pas les modèles enregistrés sous l’onglet modèles personnalisés de l’écran de démarrage d’Office et dans Fichier | Nouveau. En outre, lors de l’enregistrement d’un modèle, leur dossier par défaut sera leur emplacement d’enregistrement de documents.",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Proposés"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Intégrés"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Personnalisés"
+                            }
+                        ],
+                        "valueName": "officestartdefaulttab",
+                        "inputType": "dropdownList",
+                        "caption": "Onglet par défaut",
+                        "id": "L_DefaultBuiltInTab"
+                    }
+                ]
+            },
+            "name": "L_DefaultBuiltInTab",
+            "displayName": "Onglet par défaut à afficher dans Publisher sur l’écran de démarrage d’Office et dans Fichier | Nouveau",
+            "explainText": "Ce paramètre de stratégie contrôle l’affichage de l’onglet par défaut dans Publisher sur l’écran de démarrage d’Office et dans Fichier | Nouveau.\n\nSi vous l’activez, vous pouvez choisir l’une de ces deux options comme onglet par défaut sur l’écran de démarrage d’Office et dans Fichier | Nouveau :\n\n* Intégrés – Les utilisateurs voient l’onglet Modèles intégrés comme onglet par défaut dans Publisher sur l’écran de démarrage d’Office et dans Fichier | Nouveau.\n\n* Personnalisés – Les utilisateurs voient l’onglet Modèles personnalisés comme onglet par défaut dans Publisher sur l’écran de démarrage d’Office et dans Fichier | Nouveau lorsque des modèles existent (il peut s’agir de modèles programmés XML personnalisés, de modèles figurant dans le chemin d’accès des modèles du groupe de travail, de modèles figurant dans le chemin d’accès des modèles personnels, ou de modèles SharePoint).\n\nSi vous le désactivez ou ne le configurez pas, les utilisateurs voient l’onglet Modèles proposé comme onglet par défaut dans Publisher sur l’écran de démarrage d’Office et dans Fichier | Nouveau",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        }
+    ]
+}

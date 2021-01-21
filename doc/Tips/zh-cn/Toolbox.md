@@ -19,11 +19,3 @@ Office 2019 企业长期版通道是 Office 2019 批量版的专属通道，不�
 Office Tool Plus 支持移除全部版本的 Office，如果移除期间出现了一些错误，您可以通过错误信息找到问题所在，然后手动解决问题。
 
 获取详细信息请访问[从 PC 卸载 Office](https://support.office.com/zh-cn/article/从-pc-卸载-office-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8)
-
-### 文档转换说明
-
----
-
-文档转换需要计算机上安装最新版的 Office。如果您没有安装，则无法正常使用此功能！
-
-文档转换由 Office 应用程序完成，具体转换结果可能视 Office 版本以及 Office 应用程序设置而不同。

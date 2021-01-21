@@ -14,16 +14,16 @@ Office Tool Plus jest oparty na [Microsoft Office Deployment Tool](https://aka.m
 
 ---
 
-- <kbd>Esc</kbd>: Powrót do domu.
+- <kbd>Esc</kbd>: Powrót do głównego okna.
 - <kbd>F1</kbd>: Pomoc.
 - <kbd>F5</kbd>: ponowne załadowanie informacji pakietu Office.
 - <kbd>Ctrl + 1</kbd>: Przełącz na stronę wdrażania.
 - <kbd>Ctrl + 2</kbd>: Przełącz, aby aktywować stronę.
 - <kbd>Ctrl + 3</kbd>: Przełącz na stronę przybornika.
 - <kbd>Ctrl + N</kbd>: Wyświetl panel powiadomień.
-- <kbd>Ctrl + T</kbd>: panel ustawień wyświetlania.
+- <kbd>Ctrl + T</kbd>: Panel ustawień wyświetlania.
 - <kbd>Ctrl + B</kbd>: Wyświetl informacje o panelu.
-- <kbd>Ctrl + P</kbd>: Pokaż / Ukryj okno poleceń.
+- <kbd>Ctrl + P</kbd>: Pokaż/Ukryj okno poleceń.
 - <kbd>Ctrl + D</kbd>: Rozpocznij wdrażanie pakietu Office (na stronie wdrażania).
 - <kbd>Ctrl + O</kbd>: Importuj konfigurację XML (na stronie wdrażania).
 - <kbd>Ctrl + S</kbd>: Eksportuj konfigurację XML (na stronie wdrażania).
@@ -41,13 +41,13 @@ Porada: Możesz także przełączać strony za pomocą przycisku myszy do przodu
 
 **/clImage** Resetowanie obrazu tła.
 
-**/addProduct [ProductID]** Dodaj jeden lub więcej produktów. Przykład: O365ProPlusRetail lub O365ProPlusRetail, VisioProRetail
+**/addProduct [ProductIDs]** Dodaj jeden lub więcej produktów. Przykład: O365ProPlusRetail lub O365ProPlusRetail, VisioProRetail
 
-**/addLang [LanguageID]** Dodaj co najmniej jeden pakiet językowy, przykład: en-us lub pl-pl, en-us, używając polecenia `pl-pl_proof`, aby dodać narzędzie sprawdzające dla pl-pl.
+**/addLang [LanguageIDs]** Dodaj co najmniej jeden pakiet językowy, przykład: en-us lub pl-pl, en-us, używając polecenia `pl-pl_proof`, aby dodać narzędzie sprawdzające dla pl-pl.
 
-**/setApps [AppsID]** Ustaw aplikacje do zainstalowania. Przykład: Word, Excel, PowerPoint, w przeciwnym razie aplikacje nie zostaną zainstalowane.
+**/setApps [AppIDs]** Ustaw aplikacje do zainstalowania. Przykład: Word, Excel, PowerPoint, w przeciwnym razie aplikacje nie zostaną zainstalowane.
 
-**/setExApps [AppsID]** Ustaw aplikacje, których nie chcesz instalować. w przeciwnym razie aplikacje zostaną zainstalowane.
+**/setExApps [AppIDs]** Ustaw aplikacje, których nie chcesz instalować. w przeciwnym razie aplikacje zostaną zainstalowane.
 
 **/deployArch [indeks]** Ustaw architekturę dla pakietu Office, 0 oznacza 32-bit, 1 64-bit
 
@@ -68,6 +68,10 @@ Porada: Możesz także przełączać strony za pomocą przycisku myszy do przodu
 **/loadXML [Ścieżka]** Załaduj plik XML, obsługa ścieżki lokalnej lub HTTP.
 
 **/startDeploy** Rozpocznij wdrażanie.
+
+**/installiSlide** Zainstaluj iSlide.
+
+**/getProductKey [ProductID]** Uzyskaj klucz produktu, zwróć GVLK dla produktów zbiorczych, normalny klucz dla innych produktów. Przykładowy identyfikator produktu: ProPlus2019Volume
 
 **/osppILByID [ProductID]** Zainstaluj licencje pakietu Office dla produktu, na przykład: MondoVolume
 

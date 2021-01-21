@@ -16,9 +16,9 @@
 Obsługuje niestandardowe wdrażanie i aktywację następujących produktów:
 
 - Microsoft 365
-- Office 2016, 2019
-- Visio 2016, 2019 & Online Plan 2
-- Project 2016, 2019 & Online Desktop Client
+- Office 2016, 2019, 2021
+- Visio 2016, 2019, 2021 & Online Plan 2
+- Project 2016, 2019, 2021 & Online Desktop Client
 
 Dodatkowe funkcje:
 
@@ -45,17 +45,7 @@ Komponenty :
 - Windows 7 SP1, Windows 8 i Windows 10.
 - Windows Server 2008 R2 SP1, Windows Server 2012 lub wyżej.
 
-### Wersji 8
-
-- [Microsoft .NET Core 3.1 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-
-*Uwaga: ta struktura powinna być zainstalowana na wszystkich systemach.*
-
-### Wersji 7
-
-- [Microsoft .NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780597)
-
-*Uwaga: wyższa wersja jest wbudowana w system Windows 10 i nie wymaga dodatkowej instalacji.*
+- [Microsoft .NET 5.0 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet/current/runtime)
 
 ## Pobierz Office Tool Plus
 
@@ -65,10 +55,10 @@ Komponenty :
 
 ## Szybki start
 
-Please refer to [Office Tool Plus Quick Start](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)
+Należy zapoznać się [Office Tool Plus Quick Start](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)
 
 ## O
 
-© 2016-2020 Yerong. Wszelkie prawa zastrzeżone.
+© 2016-2021 Yerong. Wszelkie prawa zastrzeżone.
 
 > Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)

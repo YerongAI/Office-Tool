@@ -41,13 +41,13 @@ Conseil: Vous pouvez également changer de page à l’aide du bouton avant/arri
 
 **/clImage** Réinitialiser l’image d’arrière-plan.
 
-**/addProduct [ProductID]** Add one or more pruducts. Example: O365ProPlusRetail or O365ProPlusRetail,VisioProRetail
+**/addProduct [ProductIDs]** Ajouter un ou plusieurs produits. Exemple: O365ProPlusRetail or O365ProPlusRetail,VisioProRetail
 
-**/addLang [LanguageID]** Add one or more language packs, Example: en-us or zh-cn,en-us, using `ja-jp_proof` to add proofing tool for ja-jp.
+**/addLang [LanguageIDs]** Ajouter un ou plusieurs modules linguistiques, Exemple: en-us ou zh-cn,en-us, using `ja-jp_proof` pour ajouter un outil de vérification pour ja-jp.
 
-**/setApps [AppsID]** Set which applications to install. Example: Word,Excel,PowerPoint, otherwise applications will not be installed.
+**/setApps [AppIDs]** Définisser les applications à installer. Exemple: Word,Excel,PowerPoint, sinon les applications ne seront pas installées.
 
-**/setExApps [AppsID]** Définisser les applications à ne pas installer. sinon des applications seront installées.
+**/setExApps [AppIDs]** Définisser les applications à ne pas installer. sinon des applications seront installées.
 
 **/deployArch [index]** Définir l’architecture pour Office, 0 signifie 32 bits, 1 pour 64 bits
 
@@ -57,9 +57,9 @@ Conseil: Vous pouvez également changer de page à l’aide du bouton avant/arri
 
 **/deployModule [index]** Définir le module de déploiement, 0 stands pour l’outil de déploiement Office, 1 est pour Office Tool Plus.
 
-**/setSources [Path]** Définit l’emplacement des fichiers d’installation Office. En mode téléchargement, définit où enregistrer les fichiers.
+**/setSources [Path]** Définir l’emplacement des fichiers d’installation Office. En mode téléchargement, définit où enregistrer les fichiers.
 
-**/setVersion [Version]** Définit la version d’Office qui sera téléchargée/installée, par exemple: 16.0.12527.20278
+**/setVersion [Version]** Définir la version d’Office qui sera téléchargée/installée, par exemple: 16.0.12527.20278
 
 **/refresh** Recharger les informations Office.
 
@@ -68,6 +68,10 @@ Conseil: Vous pouvez également changer de page à l’aide du bouton avant/arri
 **/loadXML [Path]** Charger un fichier XML, prenez en charge le chemin d’accès local ou HTTP.
 
 **/startDeploy** Démarrer le déploiement.
+
+**/installiSlide** Installer iSlide.
+
+**/getProductKey [ProductID]** Obtener la clé du produit, renvoyer GVLK pour les produits en volume, clé normale pour d’autres produits. Exemple d’id produit: ProPlus2019Volume
 
 **/osppILByID [ProductID]** Installer des licences Office pour un produit, par exemple: MondoVolume
 

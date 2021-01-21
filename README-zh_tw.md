@@ -16,9 +16,9 @@
 支援以下 Office 產品的自訂部署和啟用：
 
 - Microsoft 365
-- Office 2016, 2019
-- Visio 2016, 2019 & Online Plan 2
-- Project 2016, 2019 & Online Desktop Client
+- Office 2016, 2019, 2021
+- Visio 2016, 2019, 2021 & Online Plan 2
+- Project 2016, 2019, 2021 & Online Desktop Client
 
 除了部署 Office 之外，Office Tool Plus 還擁有以下便利功能：
 
@@ -45,21 +45,7 @@
 - Windows 7 SP1, Windows 8 和 Windows 10
 - Windows Server 2008 R2 SP1, Windows Server 2012 以上版本
 
-### 第八版
-
-- [Microsoft .NET Core 3.1 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-
-### 第七版
-
-- Microsoft .NET Framework 4.6.1 以上版本<sup>[註一]</sup>
-
-[註一]：Windows 10 作業系統已內建 NET Framework 4.6.1 以上版本，無須再次安裝
-
-#### 下載 Microsoft .NET Framework 4.6.1
-
-- [Web 安裝程式](http://go.microsoft.com/fwlink/?LinkId=780597)
-- [離線安裝程式](http://go.microsoft.com/fwlink/?LinkId=780601)
-- [Microsoft .Net Framework 4.6.1 語言套件 （離線安裝程式）](http://go.microsoft.com/fwlink/?LinkId=780604)
+- [Microsoft .NET 5.0 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet/current/runtime)
 
 ## 下載
 
@@ -92,6 +78,6 @@ Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.c
 
 ## 關於
 
-© 2016-2020 Yerong. All rights reserved.
+© 2016-2021 Yerong. All rights reserved.
 
 > Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)

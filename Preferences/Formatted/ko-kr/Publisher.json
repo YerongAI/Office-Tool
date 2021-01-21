@@ -1,0 +1,919 @@
+{
+    "categories": [
+        {
+            "name": "L_MicrosoftOfficePublisher",
+            "displayName": "Microsoft Publisher 2016"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
+            "name": "L_PubOptions",
+            "displayName": "Publisher 옵션"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_Advanced",
+            "displayName": "고급"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "name": "L_ComplexScripts",
+            "displayName": "양방향 텍스트"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_General",
+            "displayName": "일반"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_Proofing",
+            "displayName": "언어 교정"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_OptionsCustomizeRibbon",
+            "displayName": "리본 사용자 지정"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_Save",
+            "displayName": "저장"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
+            "name": "L_Miscellaneous",
+            "displayName": "기타"
+        }
+    ],
+    "policies": [
+        {
+            "parentCategory": {
+                "ref": "L_OptionsCustomizeRibbon"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisplayDeveloperTab",
+            "displayName": "리본 메뉴에 개발 도구 탭 표시",
+            "explainText": "이 정책 설정은 리본 메뉴에 개발 도구 탭이 표시되는지 여부를 제어합니다.\n\n이 정책 설정을 사용하면 리본 메뉴에 개발 도구 탭이 표시됩니다.\n\n이 정책 설정을 사용하지 않으면 리본 메뉴에 개발 도구 탭이 표시되지 않습니다.\n\n이 정책 설정을 구성하지 않으면 리본 메뉴에 개발 도구 탭이 표시되지 않지만 응용 프로그램의 옵션 대화 상자에서 표시 설정을 변경할 수 있습니다.",
+            "tags": [
+                "L_OptionsCustomizeRibbon",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "developertools"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_General"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_ShowTheNewTemplateGalleryWhenStartingPublisher",
+            "displayName": "Publisher 시작 시 새 서식 파일 갤러리 표시",
+            "explainText": "해당 UI 옵션을 선택하거나 선택 취소합니다.",
+            "tags": [
+                "L_General",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "usestartupdlg"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_TurnOffDragPreview",
+            "displayName": "끌어서 미리 보기 해제",
+            "explainText": "이 정책 설정을 통해 Publisher에서 개체를 끌 때 반투명 끌어서 미리 보기를 표시할 것인지 아니면 개체의 간단한 윤곽선을 표시할 것인지를 결정할 수 있습니다.\n\n이 정책 설정을 사용하면 개체를 끌 때 개체의 윤곽선만 표시됩니다. 이 기능의 리소스 요구 사항으로 인해 오래된 컴퓨터에서는 이 방법을 사용하는 것이 좋습니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 개체를 끌 때 개체의 반투명 끌어서 미리 보기가 표시됩니다.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "uselegacydrag"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "max display",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 50,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_SetMaximumNumberOfMRUItemsToDisplaySpinID"
+                    }
+                ]
+            },
+            "name": "L_SetMaximumNumberOfMRUItemsToDisplay",
+            "displayName": "최근에 사용한 발행물 목록의 발행물 수",
+            "explainText": "이 정책 설정은 사용자가 Backstage 보기의 [파일] 탭에서 [열기]를 클릭하면 나타나는 [최근에 사용한 발행물] 목록에 표시되는 항목의 수를 지정합니다.\n\n이 정책 설정을 사용하면 항목의 수를 0과 50 사이에서 지정할 수 있습니다. 숫자를 0으로 설정하면 고정된 항목과 고정 해제된 항목이 모두 표시되지 않습니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 [최근에 사용한 발행물] 목록에 최대 25개의 항목이 표시됩니다.\n\n참고: [최근에 사용한 발행물] 목록에 항목을 완전히 추가하지 못하도록 설정하려면 \"최근에 열었던 문서 목록 보관 안 함\" Windows 정책 설정을 사용하면 됩니다.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\file mru"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "max display",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 20,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_SetNumberOfPlacesInTheRecentPlacesListSpinID"
+                    }
+                ]
+            },
+            "name": "L_SetNumberOfPlacesInTheRecentPlacesList",
+            "displayName": "최근 폴더 목록의 폴더 수",
+            "explainText": "이 정책 설정은 사용자가 Backstage 보기의 [파일] 탭에서 [열기] 또는 [다른 이름으로 저장]을 클릭하면 나타나는 [최근 폴더] 목록에 표시되는 고정 해제된 항목의 수를 지정합니다.\n\n이 정책 설정을 사용하면 고정 해제된 항목의 수를 0과 20 사이에서 지정할 수 있습니다. 숫자를 0으로 설정하면 고정된 항목과 고정 해제된 항목이 모두 표시되지 않습니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 [최근 폴더] 목록에 최대 5개의 고정 해제된 항목이 표시됩니다.\n\n참고: [최근 폴더] 목록에 항목을 완전히 추가하지 못하도록 설정하려면 \"최근에 열었던 문서 목록 보관 안 함\" Windows 정책 설정을 사용하면 됩니다.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\place mru"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_UseXPSEnhancedPrintPath",
+            "displayName": "XPS 고급 인쇄 경로 사용",
+            "explainText": "이 정책 설정을 통해 가능한 경우 XPS 고급 인쇄 경로를 사용할 수 있습니다.\n\n이 정책 설정을 사용하거나 구성하지 않으면 XPS 인쇄 경로가 사용됩니다.\n\n이 정책 설정을 사용하지 않으면 XPS 인쇄 경로가 사용되지 않습니다.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "enablexpsprintpathprinting"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AutomaticallysubstitutefontformissingEAchars",
+            "displayName": "누락된 한글 문자 글꼴 자동 대체",
+            "explainText": "해당 UI 옵션을 선택하거나 선택 취소합니다.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "usefontlinking"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "1"
+                                },
+                                "displayName": "왼쪽에서 오른쪽"
+                            },
+                            {
+                                "value": {
+                                    "string": "256"
+                                },
+                                "displayName": "오른쪽에서 왼쪽"
+                            }
+                        ],
+                        "valueName": "defaulttextflow",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDefaultTextFlowDirectionDropID"
+                    }
+                ]
+            },
+            "name": "L_SetDefaultTextFlowDirection",
+            "displayName": "기본 텍스트 방향 설정",
+            "explainText": "이 정책 설정을 통해 기본 텍스트 방향을 RTL(오른쪽에서 왼쪽) 및 LTR(왼쪽에서 오른쪽)으로 설정할 수 있습니다.\n\n이 정책 설정을 사용하면 텍스트 방향을 RTL 또는 LTR로 선택할 수 있습니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 기본 텍스트 방향이 사용됩니다.",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AutomaticallySwitchKeyboard",
+            "displayName": "주변 텍스트의 언어에 맞게 키보드를 자동으로 전환",
+            "explainText": "해당 UI 옵션을 선택하거나 선택 취소합니다.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "autokeybd"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AllowTextToBeDraggedAndDropped",
+            "displayName": "텍스트 끌어서 놓기 허용",
+            "explainText": "해당 UI 옵션을 선택하거나 선택 취소합니다.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "textdragndrop"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Whenselectingautomaticallyselectentireword",
+            "displayName": "선택 시, 자동으로 단어 전체 선택",
+            "explainText": "해당 UI 옵션을 선택하거나 선택 취소합니다.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "autowordsel"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Whenformattingautomaticallyformatentireword",
+            "displayName": "서식을 적용할 때 자동으로 전체 단어 서식 적용",
+            "explainText": "해당 UI 옵션을 선택하거나 선택 취소합니다.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "autowordformat"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_UseChinesefontsizes",
+            "displayName": "중국어 글꼴 크기 사용",
+            "explainText": "해당 UI 옵션을 선택하거나 선택 취소합니다.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "prcfontsizes"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AutomaticallyHyphenateInNewTextBoxes",
+            "displayName": "새 텍스트 상자에서 자동으로 하이픈 넣기",
+            "explainText": "\"새 텍스트 상자에서 자동으로 하이픈 넣기\" 옵션을 선택하거나 선택 취소합니다.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "defautohyph"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_ShowScreenTipsonobjects",
+            "displayName": "개체에 화면 설명 표시",
+            "explainText": "해당 UI 옵션을 선택하거나 선택 취소합니다.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "showobjecttooltips"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Enableincrementalpublishtoweb",
+            "displayName": "웹에 증분 게시 사용",
+            "explainText": "해당 UI 옵션을 선택하거나 선택 취소합니다.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\internet",
+            "valueName": "incrementalupload"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Sendentirepublicationasasingle",
+            "displayName": "전체 발행물을 단일 JPEG 이미지로 보내기",
+            "explainText": "해당 UI 옵션을 선택하거나 선택 취소합니다.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\internet",
+            "valueName": "emailasimg"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Promptuserwhenreapplyingastyle",
+            "displayName": "스타일을 다시 적용할 때 사용자에게 확인",
+            "explainText": "해당 UI 옵션을 선택하거나 선택 취소합니다.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "prompttoupdatestyle"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Save"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "autorecoversaveinterval",
+                        "required": true,
+                        "requiredSpecified": true,
+                        "expandable": false,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "분(범위 1-120):",
+                        "id": "L_SaveAutoRecoverinfoeveryID"
+                    }
+                ]
+            },
+            "name": "L_SaveAutoRecoverinfoevery",
+            "displayName": "자동 복구 정보 저장 간격(분)",
+            "explainText": "이 정책 설정을 통해 자동 복구 저장 간격을 분 단위로 지정할 수 있습니다.\n\n이 정책 설정을 사용하면 자동 복구 저장 간격을 분 단위로 지정할 수 있습니다(유효한 범위: 1-120).\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 UI에 지정된 간격이 사용됩니다.",
+            "tags": [
+                "L_Save",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Save"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Allowbackgroundsaves",
+            "displayName": "다른 작업하면서 저장하기",
+            "explainText": "해당 UI 옵션을 선택하거나 선택 취소합니다.",
+            "tags": [
+                "L_Save",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "backgroundsave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Proofing"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "입력할 때 자동으로 맞춤법 검사"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "맞춤법 오류 숨기기"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "모두"
+                            }
+                        ],
+                        "valueName": "publisherspellingoptions",
+                        "inputType": "dropdownList",
+                        "id": "L_CheckspellingasyoutypeDropID"
+                    }
+                ]
+            },
+            "name": "L_Checkspellingasyoutype",
+            "displayName": "입력할 때 자동으로 맞춤법 검사",
+            "explainText": "이 정책 설정을 통해 맞춤법 오류에 대한 옵션을 구성할 수 있습니다.\n\n이 정책 설정을 사용하면 다음 옵션 중 하나를 선택할 수 있습니다.\n-  입력할 때 자동으로 맞춤법 검사: 이 옵션을 선택합니다.\n-  맞춤법 오류 숨기기: 이 옵션을 선택하고 \"입력할 때 자동으로 맞춤법 검사\"를 선택 취소합니다.\n- 모두: \"입력할 때 자동으로 맞춤법 검사\" 및 \"맞춤법 오류 숨기기\"를 모두 선택합니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 \"입력할 때 자동으로 맞춤법 검사\" 옵션이 선택됩니다.",
+            "tags": [
+                "L_Proofing",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\shared tools\\proofing tools\\1.0\\office"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Promptusertosetupprinter",
+            "displayName": "사용자에게 프린터 설정을 확인합니다.",
+            "explainText": "이 옵션을 설정하면 Publisher에 새 프린터가 검색되면 프린터 설정 마법사를 시작하라는 메시지가 표시됩니다.",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "showprintersetup"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "0"
+                                },
+                                "displayName": "왼쪽에서 오른쪽"
+                            },
+                            {
+                                "value": {
+                                    "string": "1"
+                                },
+                                "displayName": "오른쪽에서 왼쪽"
+                            }
+                        ],
+                        "valueName": "defaultrtl",
+                        "inputType": "dropdownList",
+                        "caption": "기본 Publisher 방향",
+                        "id": "L_defaultpublisherdirection3"
+                    }
+                ]
+            },
+            "name": "L_DefaultPublisherdirection",
+            "displayName": "기본 Publisher 방향",
+            "explainText": "기본 레이아웃 방향을 지정합니다.",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_UseSequenceChecking",
+            "displayName": "순서 확인 사용",
+            "explainText": "해당 UI 옵션을 선택하거나 선택 취소합니다.",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "seqcheck"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Usetypeandreplace",
+            "displayName": "입력 및 바꾸기 사용",
+            "explainText": "해당 UI 옵션을 선택하거나 선택 취소합니다.",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "typereplace"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AdddoublequotesinHebrewalphabetnumbering",
+            "displayName": "히브리어 알파벳 번호 매기기에 큰따옴표 추가",
+            "explainText": "선택: 히브리어 번호 매기기에 큰따옴표(\")를 추가합니다. | 선택 취소: 히브리어 번호 매기기에 큰따옴표(\")를 추가하지 않습니다.",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "dubquohebalpnum"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableOfficeStartPublisher",
+            "displayName": "Publisher에서 Office 시작 화면 사용 안 함",
+            "explainText": "이 정책 설정은 Publisher를 시작할 때 Office 시작 화면을 표시할지 여부를 제어합니다.\n\n이 정책 설정을 사용하면 Publisher를 시작할 때 Office 시작 화면이 사용자에게 표시되지 않습니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 Publisher를 시작할 때 Office 시작 화면이 사용자에게 표시됩니다.\n\n참고: \"Microsoft Office 2016 > 기타 > 모든 Office 응용 프로그램에서 Office 시작 화면 사용 안 함\" 정책 설정을 사용할 경우 해당 정책 설정으로 이 정책 설정이 재정의됩니다.",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "disableboottoofficestart"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "personaltemplates",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "개인 서식 파일 경로",
+                        "id": "L_PersonalTemplatesPath"
+                    }
+                ]
+            },
+            "name": "L_PersonalTemplatesPath",
+            "displayName": "Publisher의 개인 서식 파일 경로",
+            "explainText": "이 정책 설정은 사용자 개인 서식 파일의 위치를 지정합니다.\n\n이 정책 설정을 사용하면 Office 시작 화면과 [파일] | [새로 만들기]에서 [사용자 지정 서식 파일] 탭의 지정된 위치에 사용자가 저장한 서식 파일이 표시되고 서식 파일을 저장할 때 기본 폴더가 지정된 위치로 변경됩니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 Office 시작 화면과 [파일] | [새로 만들기]에서 [사용자 지정 서식 파일] 탭에 사용자가 저장한 서식 파일이 표시되지 않으며 서식 파일을 저장할 때 기본 폴더에 문서가 저장됩니다.",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "주요 서식 파일"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "제공된 서식"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "사용자 지정"
+                            }
+                        ],
+                        "valueName": "officestartdefaulttab",
+                        "inputType": "dropdownList",
+                        "caption": "기본 탭",
+                        "id": "L_DefaultBuiltInTab"
+                    }
+                ]
+            },
+            "name": "L_DefaultBuiltInTab",
+            "displayName": "Publisher에서 Office 시작 화면과 [파일] | [새로 만들기]에 표시할 기본 탭",
+            "explainText": "이 정책 설정은 Publisher에서 Office 시작 화면과 [파일] | [새로 만들기]에 기본 탭으로 표시할 탭을 제어합니다.\n\n이 정책 설정을 사용하면 두 가지 옵션 중 하나를 선택하여 Office 시작 화면과 [파일] | [새로 만들기]에 기본 탭으로 표시할 수 있습니다.\n\n* 기본 제공 – Publisher에서 Office 시작 화면과 [파일] | [새로 만들기]에 [기본 제공 서식 파일] 탭이 기본 탭으로 표시됩니다.\n\n* 사용자 지정 – 서식 파일이 있을 경우 Publisher에서 Office 시작 화면과 [파일] | [새로 만들기]에 [사용자 지정 서식 파일] 탭이 기본 탭으로 표시됩니다. 이러한 서식 파일에는 사용자 지정 XML 프로그래밍 서식 파일, 작업 그룹 서식 파일 경로의 서식 파일, 개인 서식 파일 경로의 서식 파일 또는 SharePoint 서식 파일이 포함됩니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않을 경우 Publisher에서 Office 시작 화면과 [파일] | [새로 만들기]에 [주요 서식 파일] 탭이 기본 탭으로 표시됩니다.",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        }
+    ]
+}

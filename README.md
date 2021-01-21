@@ -16,9 +16,9 @@
 Supports custom deployment and activation of the following products:
 
 - Microsoft 365
-- Office 2016, 2019
-- Visio 2016, 2019 & Online Plan 2
-- Project 2016, 2019 & Online Desktop Client
+- Office 2016, 2019, 2021
+- Visio 2016, 2019, 2021 & Online Plan 2
+- Project 2016, 2019, 2021 & Online Desktop Client
 
 Additional functions:
 
@@ -28,7 +28,7 @@ Additional functions:
 - Create ISO files for sharing or offline installation.
 - Installing Office licenses (converted edition).
 - Cleanup of Office licenses and keys.
-- Supports online activation, phone activation (offline activation) and KMS activation.
+- Supports online activation, phone activation (offline activation), and KMS activation.
 - Reset/Forced removal of Office.
 - Changing Office's update channel without reinstalling Office.
 - Batch conversion of Office documents, based on Office API (Version 8 only).
@@ -42,20 +42,10 @@ Components:
 
 ## System Requirements
 
-- Windows 7 SP1, Windows 8 and Windows 10.
-- Windows Server 2008 R2 SP1, Windows Server 2012 or higher.
+- Windows 7 SP1, Windows 8, and Windows 10.
+- Windows Server 2008 R2 SP1, Windows Server 2012, or higher.
 
-### Version 8
-
-- [Microsoft .NET Core 3.1 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-
-*Note: This framework should be installed on all systems.*
-
-### Version 7
-
-- [Microsoft .NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=780597)
-
-*Note: A higher version is built into Windows 10 and does not require additional installation.*
+- [Microsoft .NET 5.0 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet/current/runtime)
 
 ## Download Office Tool Plus
 
@@ -69,25 +59,26 @@ Please refer to [Office Tool Plus Quick Start](https://github.com/YerongAI/Offic
 
 ## Thanks to the collaborators
 
-- (ar-ps) العربية (الأراضي الفلسطينية) / Ibrahim
-- (de-de) Deutsch (Deutschland) / [Berny23](https://steamcommunity.com/id/Berny23)
-- (en-us) English (United States) / [Moedog](https://prprpr.love)
-- (es-es) Español (España) / Xoseba
-- (fr-fr) Français (France) / Drake4478
-- (id-id) Bahasa Indonesia (Indonesian) / [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Jovanzers](https://github.com/jovanzers)
-- (it-it) Italiano (Italia) / [garf02](https://github.com/garf02)
-- (ja-jp) 日本語 (日本) / [秋山ヘイワ](https://github.com/akio1321), kai, 河豚
-- (ko-kr) 한국어(대한민국) / [Jay Jang](http://www.yaeyaya.com)
-- (pl-pl) Polski (Polska) / JakubDriver
-- (pt-br) Português (Brasil) / [Hélio de Souza](https://tinyurl.com/hdstec) [Igor Rückert](https://github.com/igorruckert)
-- (tr-tr) Türkçe (Türkiye) / Turan Furkan Topak
-- (vi-vn) Tiêng Việt (Việt Nam) / [phuocding](https://github.com/phuocding)
-- (zh-cn) 简体中文 (中国) / Official language
-- (zh-tw) 繁體中文 (台灣) / [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412)
+| Culture | Name | Collaborators |
+| :-- | :-- | :-- |
+(de-de) | Deutsch (Deutschland) | [Berny23](https://steamcommunity.com/id/Berny23)
+(en-us) | English (United States) | [Me](https://github.com/YerongAI) and [Moedog](https://prprpr.love)
+(es-es) | Español (España) | Xoseba
+(fr-fr) | Français (France) | Drake4478
+(id-id) | Bahasa Indonesia (Indonesian) | [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Jovanzers](https://github.com/jovanzers)
+(it-it) | Italiano (Italia) | [garf02](https://github.com/garf02)
+(ja-jp) | 日本語 (日本) | [秋山ヘイワ](https://github.com/akio1321), kai, 河豚
+(ko-kr) | 한국어(대한민국) | [Jay Jang](http://www.yaeyaya.com)
+(pl-pl) | Polski (Polska) | JakubDriver
+(pt-br) | Português (Brasil) | [Hélio de Souza](https://tinyurl.com/hdstec), [Igor Rückert](https://github.com/igorruckert)
+(vi-vn) | Tiêng Việt (Việt Nam) | [phuocding](https://github.com/phuocding)
+(ru-ru) | русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov)
+(zh-cn) | 简体中文 (中国) | Official language
+(zh-tw) | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412)
 
 ## Help With Localization
 
-We encourage everyone to help with localization. The following is how to do.
+We encourage everyone to help with localization. The following is how to do it.
 
 1. Fork this repository
 
@@ -101,6 +92,6 @@ Or you can send me your files via [E-mail](mailto:yerong@coolhub.top)
 
 ## About
 
-© 2016-2020 Yerong. All rights reserved.
+© 2016-2021 Yerong. All rights reserved.
 
 > Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)

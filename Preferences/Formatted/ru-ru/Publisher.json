@@ -1,0 +1,919 @@
+{
+    "categories": [
+        {
+            "name": "L_MicrosoftOfficePublisher",
+            "displayName": "Microsoft Publisher 2016"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
+            "name": "L_PubOptions",
+            "displayName": "Параметры Publisher"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_Advanced",
+            "displayName": "Дополнительно"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "name": "L_ComplexScripts",
+            "displayName": "Сложные знаки"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_General",
+            "displayName": "Общие"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_Proofing",
+            "displayName": "Правописание"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_OptionsCustomizeRibbon",
+            "displayName": "Настройка ленты"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_Save",
+            "displayName": "Сохранить"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
+            "name": "L_Miscellaneous",
+            "displayName": "Прочие"
+        }
+    ],
+    "policies": [
+        {
+            "parentCategory": {
+                "ref": "L_OptionsCustomizeRibbon"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisplayDeveloperTab",
+            "displayName": "Показывать вкладку \"Разработчик\" на ленте",
+            "explainText": "Данный параметр политики определяет, будет ли вкладка \"Разработчик\" отображаться на ленте.\n\nЕсли этот параметр политики включен, вкладка \"Разработчик\" будет отображаться на ленте.\n\nЕсли этот параметр политики отключен, вкладка \"Разработчик\" не будет отображаться на ленте.\n\nЕсли этот параметр политики не настроен, вкладка \"Разработчик\" не будет отображаться на ленте, но режим ее отображения может быть изменен в диалоговом окне \"Параметры\" приложения.",
+            "tags": [
+                "L_OptionsCustomizeRibbon",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "developertools"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_General"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_ShowTheNewTemplateGalleryWhenStartingPublisher",
+            "displayName": "Показывать коллекцию шаблонов публикаций при запуске Publisher",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_General",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "usestartupdlg"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_TurnOffDragPreview",
+            "displayName": "Отключить отображение перетаскиваемого объекта",
+            "explainText": "Данный параметр политики позволяет определить режим отображения перетаскиваемого объекта в приложении Publisher: полупрозрачное изображение или простой контур.\n\nЕсли этот параметр политики включен, при перетаскивании объекта отображается только его контур. Этот вариант рекомендуется для старых компьютеров, поскольку требует меньше ресурсов.\n\nЕсли этот параметр политики отключен или не настроен, при перетаскивании объекта отображается его полупрозрачное изображение.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "uselegacydrag"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "max display",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 50,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_SetMaximumNumberOfMRUItemsToDisplaySpinID"
+                    }
+                ]
+            },
+            "name": "L_SetMaximumNumberOfMRUItemsToDisplay",
+            "displayName": "Число элементов списка \"Последние публикации\"",
+            "explainText": "Этот параметр политики определяет, сколько элементов списка \"Последние публикации\" отображается при нажатии кнопки \"Открыть\" на вкладке \"Файл\" в представлении Backstage.\n\nЕсли этот параметр политики включен, вы можете ввести число элементов от 0 до 50. Если задать значение 0, будут скрыты все закрепленные и незакрепленные элементы.\n\nЕсли этот параметр политики отключен или не настроен, в списке \"Последние публикации\" отображается не более 25 элементов.\n\nПримечание. Чтобы полностью запретить добавление элементов в список \"Последние публикации\", включите параметр политики Windows \"Не хранить сведения о недавно открывашихся документах\".",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\file mru"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "max display",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 20,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_SetNumberOfPlacesInTheRecentPlacesListSpinID"
+                    }
+                ]
+            },
+            "name": "L_SetNumberOfPlacesInTheRecentPlacesList",
+            "displayName": "Число папок в списке \"Последние папки\"",
+            "explainText": "Этот параметр политики определяет, сколько незакрепленных элементов отображается в списке последних папок, когда пользователи нажимают кнопку \"Открыть\" или \"Сохранить как\" на вкладке \"Файл\" в представлении Backstage.\n\nЕсли этот параметр политики включен, можно задать число незакрепленных элементов от 0 до 20. Если установить число 0, все закрепленные и незакрепленные элементы будут скрыты.\n\nЕсли этот параметр политики отключен или не настроен, по умолчанию в списке последних папок будет отображаться не более 5 элементов.\n\nПримечание. Если вы хотите запретить добавление элементов в список последних папок, включите параметр политики \"Не хранить сведения о недавно открывавшихся документах\" Windows.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\place mru"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_UseXPSEnhancedPrintPath",
+            "displayName": "Использовать улучшенный путь печати XPS",
+            "explainText": "Данный параметр политики позволяет по возможности использовать улучшенный путь печати XPS.\n\nЕсли этот параметр политики включен или не настроен, будет использоваться путь печати XPS.\n\nЕсли этот параметр политики отключен, путь печати XPS не используется.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "enablexpsprintpathprinting"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AutomaticallysubstitutefontformissingEAchars",
+            "displayName": "Автоматически подставлять шрифт для отсутствующих знаков восточноазиатских языков",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "usefontlinking"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "1"
+                                },
+                                "displayName": "Слева направо"
+                            },
+                            {
+                                "value": {
+                                    "string": "256"
+                                },
+                                "displayName": "Справа налево"
+                            }
+                        ],
+                        "valueName": "defaulttextflow",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDefaultTextFlowDirectionDropID"
+                    }
+                ]
+            },
+            "name": "L_SetDefaultTextFlowDirection",
+            "displayName": "Задать направление текста по умолчанию",
+            "explainText": "Данный параметр политики позволяет задать направление текста по умолчанию: справа налево или слева направо.\n\nЕсли этот параметр политики включен, можно выбрать направление текста.\n\nЕсли этот параметр отключен или не настроен, используется направление текста по умолчанию.",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AutomaticallySwitchKeyboard",
+            "displayName": "Автоматически переключать раскладку клавиатуры в соответствии с языком окружающего текста",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "autokeybd"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AllowTextToBeDraggedAndDropped",
+            "displayName": "Разрешить перетаскивание текста",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "textdragndrop"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Whenselectingautomaticallyselectentireword",
+            "displayName": "Автоматически выделять слова",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "autowordsel"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Whenformattingautomaticallyformatentireword",
+            "displayName": "Автоматически форматировать слово целиком",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "autowordformat"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_UseChinesefontsizes",
+            "displayName": "Использовать размеры шрифтов китайского языка",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "prcfontsizes"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AutomaticallyHyphenateInNewTextBoxes",
+            "displayName": "Автоматически расставлять переносы в новых надписях",
+            "explainText":"Устанавливает или снимает флажок ''Автоматически расставлять переносы в новых надписях''.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "defautohyph"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_ShowScreenTipsonobjects",
+            "displayName": "Показывать всплывающие подсказки на объектах",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "showobjecttooltips"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Enableincrementalpublishtoweb",
+            "displayName": "Включить добавочную публикацию в Интернете",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\internet",
+            "valueName": "incrementalupload"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Sendentirepublicationasasingle",
+            "displayName": "Отправить всю публикацию одним файлом в формате JPEG",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\internet",
+            "valueName": "emailasimg"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Promptuserwhenreapplyingastyle",
+            "displayName": "Запрашивать пользователя при повторном применении стиля",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "prompttoupdatestyle"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Save"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "autorecoversaveinterval",
+                        "required": true,
+                        "requiredSpecified": true,
+                        "expandable": false,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Минуты (1-120):",
+                        "id": "L_SaveAutoRecoverinfoeveryID"
+                    }
+                ]
+            },
+            "name": "L_SaveAutoRecoverinfoevery",
+            "displayName": "Автосохранение каждые (мин.)",
+            "explainText": "Данный параметр политики позволяет указать интервал автосохранения в минутах.\n\nЕсли этот параметр политики включен, можно указать интервал автосохранения в минутах. Допустимые значения: от 1 до 120 минут.\n\nЕсли этот параметр политики отключен или не настроен, будет использоваться интервал, заданный через пользовательский интерфейс.",
+            "tags": [
+                "L_Save",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Save"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Allowbackgroundsaves",
+            "displayName": "Разрешить сохранение в фоновом режиме",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Save",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "backgroundsave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Proofing"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Автоматически проверять орфографию"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Скрывать орфографические ошибки"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Все"
+                            }
+                        ],
+                        "valueName": "publisherspellingoptions",
+                        "inputType": "dropdownList",
+                        "id": "L_CheckspellingasyoutypeDropID"
+                    }
+                ]
+            },
+            "name": "L_Checkspellingasyoutype",
+            "displayName": "Автоматически проверять орфографию",
+            "explainText": "Данный параметр политики позволяет настроить параметры проверки орфографии.\n\nЕсли этот параметр политики включен, можно выбрать один из следующих параметров:\n- Автоматически проверять орфографию. Этот флажок установлен.\n- Скрывать орфографические ошибки. Этот флажок установлен, но флажок \"Автоматически проверять орфографию\" снят.\n- Все. Флажки \"Автоматически проверять орфографию\" и \"Скрывать орфографические ошибки\" установлены.\n\nЕсли этот параметр политики отключен или не настроен, флажок \"Автоматически проверять орфографию\" установлен.",
+            "tags": [
+                "L_Proofing",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\shared tools\\proofing tools\\1.0\\office"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Promptusertosetupprinter",
+            "displayName": "Предложить пользователю настроить принтер",
+            "explainText": "Если этот параметр установлен, при обнаружении нового принтера приложение Publisher предложит пользователю запустить мастер настройки принтера.",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "showprintersetup"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "0"
+                                },
+                                "displayName": "Слева направо"
+                            },
+                            {
+                                "value": {
+                                    "string": "1"
+                                },
+                                "displayName": "Справа налево"
+                            }
+                        ],
+                        "valueName": "defaultrtl",
+                        "inputType": "dropdownList",
+                        "caption": "Направление по умолчанию для Publisher",
+                        "id": "L_defaultpublisherdirection3"
+                    }
+                ]
+            },
+            "name": "L_DefaultPublisherdirection",
+            "displayName": "Направление по умолчанию для Publisher",
+            "explainText": "Указывает ориентацию макета, используемую по умолчанию.",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_UseSequenceChecking",
+            "displayName": "Использовать проверку",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "seqcheck"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Usetypeandreplace",
+            "displayName": "Заменять при вводе",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "typereplace"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AdddoublequotesinHebrewalphabetnumbering",
+            "displayName": "Добавлять кавычки при нумерации с использованием букв иврита",
+            "explainText":"Флажок установлен. Добавляет кавычки ('') при нумерации с использованием букв иврита. | Флажок снят. Не добавляет кавычки ('') при нумерации с использованием букв иврита.",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "dubquohebalpnum"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableOfficeStartPublisher",
+            "displayName": "Отключить начальный экран Office в приложении Publisher",
+            "explainText": "Этот параметр политики позволяет включить или отключить начальный экран Office при загрузке Publisher.\n\nЕсли этот параметр политики включен, начальный экран Office не отображается при загрузке Publisher.\n\nЕсли этот параметр политики отключен или не настроен, начальный экран Office отображается при загрузке Publisher.\n\nПримечание. Этот параметр политики переопределяется параметром \"Microsoft Office 2016\" > \"Разное\" > \"Отключить начальный экран Office для всех приложений Office\", если он установлен.",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "disableboottoofficestart"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "personaltemplates",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Путь к личным шаблонам",
+                        "id": "L_PersonalTemplatesPath"
+                    }
+                ]
+            },
+            "name": "L_PersonalTemplatesPath",
+            "displayName": "Путь к личным шаблонам в приложении Publisher",
+            "explainText": "Этот параметр политики определяет расположение личных шаблонов пользователя.\n\nЕсли он включен, пользователи будут видеть все шаблоны, сохраненные в указанной папке, на вкладке \"Настраиваемые шаблоны\" на экране запуска Office и в меню \"Файл\" | \"Создать\", а при сохранении шаблона папка по умолчанию изменится на указанную.\n\nЕсли отключить или не настраивать этот параметр политики, пользователи не увидят сохраненные шаблоны на вкладке \"Настраиваемые шаблоны\" на экране запуска Office и в меню \"Файл\" | \"Создать\", а при сохранении шаблона папкой по умолчанию будет папка, в которой сохранен документ.",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Избранные"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Встроенные"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Настраиваемые"
+                            }
+                        ],
+                        "valueName": "officestartdefaulttab",
+                        "inputType": "dropdownList",
+                        "caption": "Вкладка по умолчанию",
+                        "id": "L_DefaultBuiltInTab"
+                    }
+                ]
+            },
+            "name": "L_DefaultBuiltInTab",
+            "displayName": "Вкладка по умолчанию для отображения на начальном экране Office и на вкладке \"Файл\" | \"Создать\" в приложении Publisher",
+            "explainText": "Этот параметр политики определяет вкладку, которая отображается по умолчанию в приложении Publisher на начальном экране Office и на вкладке \"Файл\" | \"Создать\".\n\nЕсли этот параметр политики включен, вы можете выбрать одну или две вкладки, которые нужно отображать по умолчанию на начальном экране Office и на вкладке \"Файл\" | \"Создать\":\n\n* встроенные: по умолчанию на начальном экране Office, а также на вкладке \"Файл\" | \"Создать\" в приложении Publisher отображается вкладка \"Встроенные шаблоны\";\n\n* настраиваемые: по умолчанию на начальном экране Office, а также на вкладке \"Файл\" | \"Создать\", в приложении Publisher отображается вкладка \"Настраиваемые шаблоны\", если такие шаблоны существуют (эти шаблоны могут включать в себя настраиваемые программируемые шаблоны XML, шаблоны групп \"Путь к шаблонам рабочей группы\", \"Путь к личным шаблонам\" или шаблоны SharePoint).\n\nЕсли этот параметр политики отключен или не настроен, по умолчанию на начальном экране Office, а также на вкладке \"Файл\" | \"Создать\" в приложении Publisher отображается вкладка \"Избранные шаблоны\".",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        }
+    ]
+}

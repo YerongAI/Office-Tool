@@ -71,7 +71,6 @@ Fare riferimento a [Office Tool Plus Quick Start](https://github.com/YerongAI/Of
 (ko-kr) | 한국어(대한민국) | [Jay Jang](http://www.yaeyaya.com)
 (pl-pl) | Polski (Polska) | JakubDriver
 (pt-br) | Português (Brasil) | [Hélio de Souza](https://tinyurl.com/hdstec), [Igor Rückert](https://github.com/igorruckert)
-(vi-vn) | Tiêng Việt (Việt Nam) | [phuocding](https://github.com/phuocding)
 (ru-ru) | русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov)
 (zh-cn) | 简体中文 (中国) | Official language
 (zh-tw) | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412)

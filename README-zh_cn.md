@@ -38,7 +38,7 @@
 - **[Office 部署工具](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - Office 的部署相关程序
 - **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office 的激活相关脚本
 - **迅雷云加速开放平台** - 下载 Office 的主要引擎
-- **vlmcs** - 检测 KMS 可用性的组件，*仅在完整版中包含*
+- **[vlmcs](https://github.com/Wind4/vlmcsd)** - 检测 KMS 可用性的组件
 
 ## 系统要求
 
@@ -52,6 +52,8 @@
 - [官方网站](https://otp.landian.vip/)
 
 - [下载站点](https://download.coolhub.top/)
+
+- [OneDrive for Business](https://coolhub-my.sharepoint.com/:f:/g/personal/yerong_coolhub_onmicrosoft_com/Ev9IUbXAw01JgwrAgsIFB8YBzJebdZZpmsR9hZFAZZVDgg?e=AkSdZU)
 
 ## 快速入门
 

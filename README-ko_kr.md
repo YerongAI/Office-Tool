@@ -38,7 +38,7 @@ Office 배포 제외의 다른 기능들:
 - **[Office 배포도구](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - Office 배포에 관한 도구
 - **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office 정품인정 스크립트
 - **Thunder 다운로드 클라우드 프랫폼** - Office 다운로드 기능의 주요 엔진
-- **vlmcs** - KMS 사용 가능성을 검사하는 도구 *전체 버전에서만 존재함*
+- **[vlmcs](https://github.com/Wind4/vlmcsd)** - KMS 사용 가능성을 검사하는 도구
 
 ## 시스템 요구사항
 
@@ -52,6 +52,8 @@ Office 배포 제외의 다른 기능들:
 - [공식 사이트](https://otp.landian.vip/)
 
 - [비상 사이트](https://download.coolhub.top/)
+
+- [OneDrive for Business](https://coolhub-my.sharepoint.com/:f:/g/personal/yerong_coolhub_onmicrosoft_com/Ev9IUbXAw01JgwrAgsIFB8YBzJebdZZpmsR9hZFAZZVDgg?e=AkSdZU)
 
 ## 빠른 알아보기
 

@@ -38,7 +38,7 @@ Components:
 - **[Outil de déploiement Office](https://docs.microsoft.com/fr-fr/deployoffice/overview-office-deployment-tool)**. Vous pouvez personnaliser configurer votre installation Office et télécharger des fichiers d'installation pour installer Office sans Internet.
 - **[OSPP](https://docs.microsoft.com/fr-fr/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Plate-forme de protection des logiciels Office.
 - **Thunder** - Les principaux moteurs pour télécharger Office.
-- **vlmcs** - Composants pour tester la disponibilité de KMS, *uniquement inclus dans la version complète*.
+- **[vlmcs](https://github.com/Wind4/vlmcsd)** - Composants pour tester la disponibilité de KMS.
 
 ## Configuration requise
 
@@ -49,9 +49,11 @@ Windows Server 2008 R2 SP1, Windows Server 2012 ou plus élevé.
 
 ## Télécharger Office Tool Plus
 
-[Site officiel](https://otp.landian.vip/)
+- [Site officiel](https://otp.landian.vip/)
 
-[Site de téléchargement](https://download.coolhub.top/)
+- [Site de téléchargement](https://download.coolhub.top/)
+
+- [OneDrive for Business](https://coolhub-my.sharepoint.com/:f:/g/personal/yerong_coolhub_onmicrosoft_com/Ev9IUbXAw01JgwrAgsIFB8YBzJebdZZpmsR9hZFAZZVDgg?e=AkSdZU)
 
 ## Démarrage rapide
 

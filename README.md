@@ -38,7 +38,7 @@ Components:
 - **[Office Deployment Tool](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - The main modules of installing Office.
 - **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office Software Protect Platform.
 - **Thunder** - The main engines for downloading Office.
-- **vlmcs** - Components for testing the availability of KMS, *only included in the full version*.
+- **[vlmcs](https://github.com/Wind4/vlmcsd)** - Components for testing the availability of KMS.
 
 ## System Requirements
 
@@ -53,13 +53,15 @@ Components:
 
 - [Download site](https://download.coolhub.top/)
 
+- [OneDrive for Business](https://coolhub-my.sharepoint.com/:f:/g/personal/yerong_coolhub_onmicrosoft_com/Ev9IUbXAw01JgwrAgsIFB8YBzJebdZZpmsR9hZFAZZVDgg?e=AkSdZU)
+
 ## Quick Start
 
 Please refer to [Office Tool Plus Quick Start](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)
 
-## Thanks to the collaborators
+## Thanks to the Translators
 
-| Culture | Name | Collaborators |
+| Culture | Name | Translators |
 | :-- | :-- | :-- |
 (de-de) | Deutsch (Deutschland) | [Berny23](https://steamcommunity.com/id/Berny23)
 (en-us) | English (United States) | [Me](https://github.com/YerongAI) and [Moedog](https://prprpr.love)

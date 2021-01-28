@@ -38,7 +38,7 @@
 - **[Office 部署工具](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - Office 部署相關操作
 - **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office 啟用的相關操作
 - **Thunder 雲加速開放平台** - 下載 Office 安裝文件的主要引擎
-- **vlmcs** - 檢測 KMS 可用性的服務，*限完整版提供*
+- **[vlmcs](https://github.com/Wind4/vlmcsd)** - 檢測 KMS 可用性的服務
 
 ## 系統需求
 
@@ -53,6 +53,7 @@
 
 - [臺灣備用官方網站](https://otp.cotpear.com/zh-tw/) <sup>[註二]</sup>
 - [下載點](https://download.coolhub.top/)
+- [OneDrive for Business](https://coolhub-my.sharepoint.com/:f:/g/personal/yerong_coolhub_onmicrosoft_com/Ev9IUbXAw01JgwrAgsIFB8YBzJebdZZpmsR9hZFAZZVDgg?e=AkSdZU)
 - [臺灣備用載點](https://drive.google.com/drive/folders/1G8RP4ZS_npYa7bk7Fb9So7AVRc4Zk3no)<sup>[註二]</sup>
 
 [註二]：由於官方網站伺服器曾發生連線不穩定。若網站無法開啟，請使用臺灣備用官方網站、下載點。（臺灣備用載點僅會在原官方網站無法連線時更新檔案）

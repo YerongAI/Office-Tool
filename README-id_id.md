@@ -38,7 +38,7 @@ Komponen:
 - **[Office Deployment Tool](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - Modul utama pemasangan Office.
 - **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office Software Protect Platform.
 - **Thunder** - Mesin utama untuk mengunduh Office.
-- **vlmcs** - Komponen untuk ujicoba KMS yang tersedia, *hanya ada di versi penuh*.
+- **[vlmcs](https://github.com/Wind4/vlmcsd)** - Komponen untuk ujicoba KMS yang tersedia.
 
 ## Persyaratan Sistem
 
@@ -49,9 +49,11 @@ Komponen:
 
 ## Unduh Office Tool Plus
 
-[Situs Resmi](https://otp.landian.vip/)
+- [Situs Resmi](https://otp.landian.vip/)
 
-[Unduhan Cadangan](https://download.coolhub.top/)
+- [Unduhan Cadangan](https://download.coolhub.top/)
+
+- [OneDrive for Business](https://coolhub-my.sharepoint.com/:f:/g/personal/yerong_coolhub_onmicrosoft_com/Ev9IUbXAw01JgwrAgsIFB8YBzJebdZZpmsR9hZFAZZVDgg?e=AkSdZU)
 
 ## Mulai Cepat
 

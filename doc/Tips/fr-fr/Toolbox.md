@@ -10,7 +10,7 @@ Vous pouvez facilement résoudre certains problèmes en utilisant ces outils, ma
 
 Vous ne pouvez pas modifier le canal de mise à jour pour Office 2019 Volume Edition, il est verrouillé.
 
-### À propos de Supprimer Office
+### À propos de supprimer Office
 
 ---
 

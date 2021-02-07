@@ -53,7 +53,7 @@ Conseil: Vous pouvez également changer de page à l’aide du bouton avant/arri
 
 **/deployChl [index]** Définisser le canal de mise à jour pour l’installation. 0 signifie le premier élément de liste, par exemple: 0 signifie `Office 2019 Entreprise perpétuelle`, 3 signifie `Chaîne actuelle`.
 
-**/deployMode [index]** Définir le mode de déploiement, 0 signifie le premier élément de liste, par exemple : 0 signifie `Installer pendant le téléchargement`, 4 signifie `Télécharger uniquement`.
+**/deployMode [index]** Définir le mode de déploiement, 0 signifie le premier élément de liste, par exemple: 0 signifie `Installer pendant le téléchargement`, 4 signifie `Télécharger uniquement`.
 
 **/deployModule [index]** Définir le module de déploiement, 0 stands pour l’outil de déploiement Office, 1 est pour Office Tool Plus.
 

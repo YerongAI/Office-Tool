@@ -18,7 +18,7 @@ Office 2019 언터프라이즈 장기 채널은 Office 2019 볼륨의 전용 채
 
 Ofice Tool Plus가 모든 버전의 Office 제거 기능을 제공합니다. 제거 시 에러가 생긴다면 스스로 에러 정보에 따라 원인을 찾고 수동적으로 해결할 수 있습니다.
 
-상세 정보는  [PC에서 Office를 제거하기](https://support.office.com/zh-cn/article/从-pc-卸载-office-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8)에 참고하세요.
+상세 정보는  [PC에서 Office를 제거하기](https://support.microsoft.com/ko-kr/office/pc%ec%97%90%ec%84%9c-office-%ec%a0%9c%ea%b1%b0-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8)에 참고하세요.
 
 ### 파일 전환하기에 관한 설명
 

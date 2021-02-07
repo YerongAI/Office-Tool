@@ -11,7 +11,7 @@
 <img alt="License" src="https://img.shields.io/github/license/YerongAI/Office-Tool?style=flat-square"/>
 </p>
 
-> Sebuah alat yang bertenaga dan gampang digunakan untuk pemasangan Office.
+> Merupakan alat yang berguna dan bertenaga dalam memasangkan Office.
 
 Mendukung untuk memasangan ubahsuai dan mengaktivasi produk berikut:
 
@@ -57,7 +57,7 @@ Komponen:
 
 ## Mulai Cepat
 
-Please refer to [Office Tool Plus Quick Start](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)
+Baca lebih lanjut ke [Mulai Cepat Office Tool Plus](https://github.com/YerongAI/Office-Tool/wiki/Mulai-Cepat-Office-Tool-Plus)
 
 ## Tentang
 

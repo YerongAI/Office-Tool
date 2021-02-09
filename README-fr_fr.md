@@ -31,7 +31,7 @@ Fonctions supplémentaires:
 - Prend en charge l’activation en ligne, l’activation par téléphone (activation hors connexion) et l’activation kms.
 - Réinitialiser/Suppression forcée d’Office.
 - Modification du canal de mise à jour d’Office sans réinstaller Office.
-- Conversion par lots de documents Office, basée sur l’API Office (version 8 uniquement).
+- Conversion par lots de documents Office, basée sur l’API Office.
 
 Components:
 

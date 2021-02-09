@@ -31,7 +31,7 @@ Office 배포 제외의 다른 기능들:
 - 온라인 정품인정/전환 정품인정(오프라인 정품인정)과 KMS 정품인정
 - Office 강제 제거
 - 재설치 필요 없이 Office 업데이트 채널을 바꾸기
-- 일과로 Office 파일 전환, Office API 기능 사용 (V8버전에서 만)
+- 일과로 Office 파일 전환, Office API 기능 사용
 
 일부의 기능들이 다음 도구들오 완성함:
 
@@ -61,6 +61,6 @@ Office 배포 제외의 다른 기능들:
 
 ## 추가정보
 
-© 2016-2021 Yerong. All rights reserved.
+© 2016-2021 Yerong. All Rights Reserved.
 
 > 블로그 [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)

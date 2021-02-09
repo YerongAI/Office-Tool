@@ -31,7 +31,7 @@ Fungsi Tambahan:
 - Mendukung aktivasi secara daring, aktivasi telepon (aktivasi secara luring) dan aktivasi KMS.
 - Setel ulang/paksa mencopot Office.
 - Mengubah saluran pembaruan Office tanpa perlu memasang kembali Office.
-- Sejumlah konversi dokumen Office, berdasarkan Office API (Hanya di versi 8)
+- Sejumlah konversi dokumen Office, berdasarkan Office API
 
 Komponen:
 

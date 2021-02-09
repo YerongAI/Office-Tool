@@ -31,7 +31,7 @@ Funzioni aggiuntive:
 - Supporta attivazione online, telefonica (attivazione offline) e attivazione KMS.
 - Reimpostazione/rimozione forzata di Office.
 - Modifica del canale di aggiornamento di Office senza dover reinstallare Office.
-- Conversione in batch di documenti di Office, basata sulle API di Office (solo Versione 8).
+- Conversione in batch di documenti di Office, basata sulle API di Office.
 
 Componenti:
 
@@ -75,6 +75,6 @@ Opuure invia i file tramite [E-mail](mailto:yerong@coolhub.top)
 
 ## Informazioni
 
-© 2016-2021 Yerong. All rights reserved.
+© 2016-2021 Yerong. All Rights Reserved.
 
 > Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)

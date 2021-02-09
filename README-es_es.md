@@ -31,7 +31,7 @@ Funciones adicionales:
 - Soporta activación online, activación telefónica (activación offline) y activación kms.
 - Reinicio / Eliminación forzada de Office.
 - Se cambió el canal de actualización de Office sin reinstalar Office.
-- Conversión por lotes de documentos de Office, basada en la API de Office (solo versión 8).
+- Conversión por lotes de documentos de Office, basada en la API de Office.
 
 Componentes:
 

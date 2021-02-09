@@ -29,7 +29,7 @@
 - 支援安裝或轉換 Office 授權
 - 支援線上啟用、電話啟用（離線啟用）和 KMS 啟用
 - 支援直接修改現有已安裝的 Office 更新頻道，無須重新安裝 Office
-- 支援大量轉換 Office 文件，基於 Office API（限第八版）
+- 支援大量轉換 Office 文件，基於 Office API
 - 一鍵清除 Office 的授權和金鑰
 - 一鍵重設/強制移除 Office
 
@@ -79,6 +79,6 @@ Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.c
 
 ## 關於
 
-© 2016-2021 Yerong. All rights reserved.
+© 2016-2021 Yerong. All Rights Reserved.
 
 > Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)

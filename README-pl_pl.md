@@ -31,7 +31,7 @@ Dodatkowe funkcje:
 - Obsługuje aktywację online, aktywację telefoniczną (aktywacja offline) i aktywację KMS.
 - Reset / wymuszone usunięcie pakietu Office.
 - Zmiana kanału aktualizacji pakietu Office bez ponownej instalacji pakietu Office.
-- Konwersja wsadowa dokumentów Office w oparciu o Office API (tylko wersja 8).
+- Konwersja wsadowa dokumentów Office w oparciu o Office API.
 
 Komponenty :
 

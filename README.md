@@ -20,18 +20,20 @@ Supports custom deployment and activation of the following products:
 - Visio 2016, 2019, 2021 & Online Plan 2
 - Project 2016, 2019, 2021 & Online Desktop Client
 
-Additional functions:
+Functions and Features:
 
 - Support for all 17 channels of Office, including query, download, and installation.
-- Modifications to existing Office, including additions and deletions of products, applications, language packs, etc.
-- Importing/Exporting XML Profiles.
-- Create ISO files for sharing or offline installation.
-- Installing Office licenses (converted edition).
-- Cleanup of Office licenses and keys.
-- Supports online activation, phone activation (offline activation), and KMS activation.
-- Reset/Forced removal of Office.
-- Changing Office's update channel without reinstalling Office.
-- Batch conversion of Office documents, based on Office API (Version 8 only).
+- Additions and deletions of products, applications, languages.
+- Import XML config from local or HTTP path.
+- Export XML config to local path.
+- Create ISO files for offline installation.
+- Install Office licenses (converted edition).
+- Clear Office licenses and keys.
+- Supports online activation, phone activation (offline activation) and KMS activation.
+- Force removal of Office, supports all versions of Office.
+- Change Office's update channel without reinstalling Office.
+- Batch conversion of Office documents.
+- Customized theme, support save settings.
 
 Components:
 
@@ -93,6 +95,6 @@ Or you can send me your files via [E-mail](mailto:yerong@coolhub.top)
 
 ## About
 
-© 2016-2021 Yerong. All rights reserved.
+© 2016-2021 Yerong. All Rights Reserved.
 
 > Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)

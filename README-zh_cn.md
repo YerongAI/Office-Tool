@@ -20,18 +20,21 @@
 - Visio 2016, 2019, 2021 & Online Plan 2
 - Project 2016, 2019, 2021 & Online Desktop Client
 
-除了部署 Office 外，还包含以下功能：
+功能与特性：
 
 - 支持 Office 的全部 17 个通道，包括查询、下载、安装
-- 对现有 Office 进行修改，包括产品、应用程序、语言包的增删
-- 导入/导出 XML 配置文件
-- 创建 ISO 文件以供分享或离线安装使用
+- 对现有的产品、应用程序、语言包进行增删操作
+- 从本地/网络位置导入 XML 配置
+- 导出 XML 配置到本地
+- 创建 Office ISO 文件供离线安装使用
 - 安装 Office 许可证（转换 Office 版本）
-- 一键清理 Office 的许可证以及密钥
+- 清理 Office 的许可证以及密钥
 - 支持在线激活、电话激活（离线激活）以及 KMS 激活
-- 重置/强制移除 Office
-- 更改 Office 的更新通道而无需重装 Office
-- 批量转换 Office 文档，基于 Office API（仅限 V8 版本）
+- 强制移除 Office，支持所有版本的 Office
+- 重置 Office 为默认设置
+- 更改 Office 的更新通道
+- 批量转换 Office 文档
+- 自定义主题，支持保存程序设置
 
 部分功能基于以下组件：
 
@@ -63,6 +66,6 @@
 
 ## 关于
 
-© 2016-2021 Yerong. All rights reserved.
+© 2016-2021 Yerong. All Rights Reserved.
 
 > 博客 [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)

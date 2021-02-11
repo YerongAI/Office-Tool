@@ -57,7 +57,7 @@
 
 ## Быстрое начало
 
-Пожалуйста, перейдите по ссылке [Office-Tool-Plus-Быстрый-Старт](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)
+Пожалуйста, перейдите по ссылке [Office-Tool-Plus-Быстрый-Старт](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-%D0%91%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9-%D0%A1%D1%82%D0%B0%D1%80%D1%82)
 
 ## Помощь с переводом
 

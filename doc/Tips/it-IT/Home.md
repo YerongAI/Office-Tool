@@ -24,10 +24,6 @@ Office Tool Plus si basa su [Strumenti di distribuzione di Microsoft Office](htt
 - <kbd>Ctrl + T</kbd>: Visualizza pannello impostazioni.
 - <kbd>Ctrl + B</kbd>: Visualizza pannello informazioni.
 - <kbd>Ctrl + P</kbd>: Mostra/Nascondi casella di comando.
-- <kbd>Ctrl + D</kbd>: Avvia distribuzione di Office (Sulla pagina distribuzione).
-- <kbd>Ctrl + O</kbd>: Importa configurazione XML (Sulla pagina distribuzione).
-- <kbd>Ctrl + S</kbd>: Esporta configurazione XML (Sulla pagina distribuzione).
-- <kbd>Ctrl + E</kbd>: Visualizza codici XML (Sulla pagina distribuzione).
 
 Suggerimento: È inoltre possibile passare da una pagina all'altra utilizzando il pulsante avanti/indietro del mouse.
 
@@ -71,7 +67,7 @@ Puoi accedere direttamente alle funzioni che desideri tramite i comandi e puoi a
 
 **/installiSlide** Install iSlide.
 
-**/getProductKey [ProductID]** Get the product key, return GVLK for volume products, normal key for other products. Example product id: ProPlus2019Volume
+**/getKey [ProductID]** Get the product key, return GVLK for volume products, normal key for other products. Example product id: ProPlus2019Volume
 
 **/osppILByID [ProductID]** Installa la licenza Office del prodotto specificato, Product ID ad esempio: MondoVolume
 

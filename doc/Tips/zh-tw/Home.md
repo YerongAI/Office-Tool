@@ -1,4 +1,4 @@
-## 嗨！歡迎使用 Office Tool Plus！
+## 嗨！歡迎使用 Office Tool Plus
 
 ---
 
@@ -28,10 +28,6 @@ Office Tool Plus 的部分功能是基於 [Office 部署工具](https://aka.ms/O
 - <kbd>Ctrl + T</kbd>: 開啟設定畫面
 - <kbd>Ctrl + B</kbd>: 開啟關於畫面
 - <kbd>Ctrl + P</kbd>: 開啟/關閉命令列
-- <kbd>Ctrl + D</kbd>: 開始部署 Office (僅限部署頁面)
-- <kbd>Ctrl + O</kbd>: 匯入 XML 設定文件 (僅限部署頁面)
-- <kbd>Ctrl + S</kbd>: 匯出 XML 設定文件 (僅限部署頁面)
-- <kbd>Ctrl + E</kbd>: 顯示 XML 設定代碼 (僅限部署頁面)
 
 小密技：使用滑鼠的向前、向後按鈕亦可切換功能頁哦！
 
@@ -75,7 +71,7 @@ Office Tool Plus 的部分功能是基於 [Office 部署工具](https://aka.ms/O
 
 **/installiSlide** 单独安装 iSlide
 
-**/getProductKey [ProductID]** 获取产品密钥，若是批量产品，返回 GVLK，其他产品则返回默认密钥。ProductID: 产品 ID，例如：ProPlus2019Volume
+**/getKey [ProductID]** 获取产品密钥，若是批量产品，返回 GVLK，其他产品则返回默认密钥。ProductID: 产品 ID，例如：ProPlus2019Volume
 
 **/osppILByID [ProductID]** 安裝指定的 Office 產品授權文件。ProductID: 產品識別碼，例如：MondoVolume。
 

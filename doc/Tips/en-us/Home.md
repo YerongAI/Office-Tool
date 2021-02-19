@@ -24,10 +24,6 @@ Office Tool Plus is based on [Microsoft's Office Deployment Tool](https://aka.ms
 - <kbd>Ctrl + T</kbd>: Display settings panel.
 - <kbd>Ctrl + B</kbd>: Display about panel.
 - <kbd>Ctrl + P</kbd>: Show/Hide command box.
-- <kbd>Ctrl + D</kbd>: Start deploy Office (On deploy page).
-- <kbd>Ctrl + O</kbd>: Import XML confuguration (On deploy page).
-- <kbd>Ctrl + S</kbd>: Export XML confuguration (On deploy page).
-- <kbd>Ctrl + E</kbd>: Show XML codes (On deploy page).
 
 Tip: You can also switch pages using the mouse forward/back button.
 
@@ -71,7 +67,7 @@ Tip: You can also switch pages using the mouse forward/back button.
 
 **/installiSlide** Install iSlide.
 
-**/getProductKey [ProductID]** Get the product key, return GVLK for volume products, normal key for other products. Example product id: ProPlus2019Volume
+**/getKey [ProductID]** Get the product key, return GVLK for volume products, normal key for other products. Example product id: ProPlus2019Volume
 
 **/osppILByID [ProductID]** Install Office licenses for a product, example product id: MondoVolume
 

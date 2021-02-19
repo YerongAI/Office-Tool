@@ -28,10 +28,6 @@ Office Tool Plus 基于 [Office 部署工具](https://aka.ms/ODT)和 [OSPP](http
 - <kbd>Ctrl + T</kbd>: 显示设置页面
 - <kbd>Ctrl + B</kbd>: 显示关于页面
 - <kbd>Ctrl + P</kbd>: 显示/隐藏命令行
-- <kbd>Ctrl + D</kbd>: 开始部署 Office (仅限部署页面)
-- <kbd>Ctrl + O</kbd>: 导入 XML 配置文件 (仅限部署页面)
-- <kbd>Ctrl + S</kbd>: 导出 XML 配置文件 (仅限部署页面)
-- <kbd>Ctrl + E</kbd>: 显示 XML 配置代码 (仅限部署页面)
 
 Tip：使用鼠标的前进/后退按钮也可以切换页面哦！
 
@@ -75,7 +71,7 @@ Tip：使用鼠标的前进/后退按钮也可以切换页面哦！
 
 **/installiSlide** 单独安装 iSlide
 
-**/getProductKey [ProductID]** 获取产品密钥，若是批量产品，返回 GVLK，其他产品则返回默认密钥。ProductID: 产品 ID，例如：ProPlus2019Volume
+**/getKey [ProductID]** 获取产品密钥，若是批量产品，返回 GVLK，其他产品则返回默认密钥。ProductID: 产品 ID，例如：ProPlus2019Volume
 
 **/osppILByID [ProductID]** 安装指定产品的 Office 许可证， ProductID: 产品 ID。例如：MondoVolume
 

@@ -24,10 +24,6 @@ Office Tool Plus est basé sur [l’outil de déploiement Office de Microsoft](h
 - <kbd>Ctrl + T</kbd>: Afficher le panneau des paramètres.
 - <kbd>Ctrl + B</kbd>: Afficher à propos du panneau.
 - <kbd>Ctrl + P</kbd>: Afficher/Cacher la zone de commande.
-- <kbd>Ctrl + D</kbd>: Démarrer le déploiement d’Office (page de déploiement).
-- <kbd>Ctrl + O</kbd>: Importer une confuguration XML (Sur la page de déploiement).
-- <kbd>Ctrl + S</kbd>: Exporter une confuguration XML (Sur la page de déploiement).
-- <kbd>Ctrl + E</kbd>: Afficher les codes XML (Sur la page de déploiement).
 
 Conseil: Vous pouvez également changer de page à l’aide du bouton avant/arrière de la souris.
 
@@ -71,7 +67,7 @@ Conseil: Vous pouvez également changer de page à l’aide du bouton avant/arri
 
 **/installiSlide** Installer iSlide.
 
-**/getProductKey [ProductID]** Obtener la clé du produit, renvoyer GVLK pour les produits en volume, clé normale pour d’autres produits. Exemple d’id produit: ProPlus2019Volume
+**/getKey [ProductID]** Obtener la clé du produit, renvoyer GVLK pour les produits en volume, clé normale pour d’autres produits. Exemple d’id produit: ProPlus2019Volume
 
 **/osppILByID [ProductID]** Installer des licences Office pour un produit, par exemple: MondoVolume
 

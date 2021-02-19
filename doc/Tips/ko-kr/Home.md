@@ -1,4 +1,4 @@
-## 안녕하세요. Office Tool Plus를 사용해주셔서 감사합니다.
+## 안녕하세요. Office Tool Plus를 사용해주셔서 감사합니다
 
 ---
 
@@ -28,10 +28,6 @@ Office Tool Plus는 [Office 배포 툴](https://aka.ms/ODT)과 [OSPP](https://do
 - <kbd>Ctrl + T</kbd>: 설정 페이지 표시
 - <kbd>Ctrl + B</kbd>: 소개 페이지 표시
 - <kbd>Ctrl + P</kbd>: 명령창 표시/숨기
-- <kbd>Ctrl + D</kbd>: Office 배포 시작(배포 페이지에서만)
-- <kbd>Ctrl + O</kbd>: XML 환경설정 파일 도입(배포 페이지에서만)
-- <kbd>Ctrl + S</kbd>: XML 환경설정 파일 수출(배포 페이지에서만)
-- <kbd>Ctrl + E</kbd>: XML 환경설정 코드 표시(배포 페이지에서만)
 
 Tip: 마우스 이전/이후 버튼으로 페이지 전환할 수 있습니다.
 
@@ -75,7 +71,7 @@ Tip: 마우스 이전/이후 버튼으로 페이지 전환할 수 있습니다.
 
 **/installiSlide** Install iSlide.
 
-**/getProductKey [ProductID]** Get the product key, return GVLK for volume products, normal key for other products. Example product id: ProPlus2019Volume
+**/getKey [ProductID]** Get the product key, return GVLK for volume products, normal key for other products. Example product id: ProPlus2019Volume
 
 **/osppILByID [ProductID]** 지정된 제풍의 Office 라이선스를 설치, ProductID: 제품 ID, 예: MondoVolume
 

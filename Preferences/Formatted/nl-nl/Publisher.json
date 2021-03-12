@@ -1,0 +1,919 @@
+{
+    "categories": [
+        {
+            "name": "L_MicrosoftOfficePublisher",
+            "displayName": "Microsoft Publisher 2016"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
+            "name": "L_PubOptions",
+            "displayName": "Opties voor Publisher"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_Advanced",
+            "displayName": "Geavanceerd"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "name": "L_ComplexScripts",
+            "displayName": "Complexe schrifttypen"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_General",
+            "displayName": "Algemeen"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_Proofing",
+            "displayName": "Controle"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_OptionsCustomizeRibbon",
+            "displayName": "Lint aanpassen"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_Save",
+            "displayName": "Opslaan"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
+            "name": "L_Miscellaneous",
+            "displayName": "Diversen"
+        }
+    ],
+    "policies": [
+        {
+            "parentCategory": {
+                "ref": "L_OptionsCustomizeRibbon"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisplayDeveloperTab",
+            "displayName": "Tabblad Ontwikkelaars op het lint weergeven",
+            "explainText": "Met deze beleidsinstelling wordt bepaald of het tabblad Ontwikkelaars wordt weergegeven op het lint.\n\nAls u deze beleidsinstelling inschakelt, wordt het tabblad Ontwikkelaars weergegeven op het lint.\n\nAls u deze beleidsinstelling uitschakelt, wordt het tabblad Ontwikkelaars niet weergegeven op het lint.\n\nAls u deze beleidsinstelling niet configureert, wordt het tabblad Ontwikkelaars niet weergegeven op het lint, maar de zichtbaarheid ervan kan worden gewijzigd via een instelling in het dialoogvenster Opties van de toepassing.",
+            "tags": [
+                "L_OptionsCustomizeRibbon",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "developertools"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_General"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_ShowTheNewTemplateGalleryWhenStartingPublisher",
+            "displayName": "Toon de galerie met nieuwe sjablonen bij het starten van Publisher",
+            "explainText": "Schakelt de bijbehorende gebruikersinterface-optie in/uit.",
+            "tags": [
+                "L_General",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "usestartupdlg"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_TurnOffDragPreview",
+            "displayName": "Sleepvoorbeeld uitschakelen",
+            "explainText": "Met deze beleidsinstelling kunt u bepalen of in Publisher een semi-transparant sleepvoorbeeld of een eenvoudige omtrek van een object wordt weergegeven wanneer het object wordt gesleept.\n\nAls u deze beleidsinstelling inschakelt, wordt alleen de omtrek van het object weergegeven tijdens het slepen. Dit is de aanbevolen instelling voor oudere computers vanwege de resourcevereisten van deze functie.\n\nAls u deze beleidsinstelling uitschakelt of niet configureert, wordt er een semi-transparant voorbeeld van het object weergegeven terwijl het wordt versleept.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "uselegacydrag"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "max display",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 50,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_SetMaximumNumberOfMRUItemsToDisplaySpinID"
+                    }
+                ]
+            },
+            "name": "L_SetMaximumNumberOfMRUItemsToDisplay",
+            "displayName": "Aantal publicaties in de lijst met recente publicaties",
+            "explainText":"Met deze beleidsinstelling geeft u het aantal items op dat wordt weergegeven in de lijst met recente publicaties die verschijnt wanneer gebruikers op het tabblad Bestand in de backstageweergave op Openen klikken.  \n\nAls u deze beleidsinstelling inschakelt, kunt u het aantal vermeldingen opgeven tussen 0 en 50. Als u het getal instelt op 0, worden alle vastgemaakte en niet-vastgemaakte items verborgen.\n\nAls u deze beleidsinstelling uitschakelt of niet configureert, worden er maximaal 25 items weergegeven in de lijst met recente publicaties.\n\nOpmerking: als u helemaal wilt voorkomen dat items worden toegevoegd aan de lijst met recente publicaties, kunt u de Windows-beleidsinstelling 'Geschiedenis van recentelijk geopende documenten niet bijhouden' inschakelen.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\file mru"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "max display",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 20,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_SetNumberOfPlacesInTheRecentPlacesListSpinID"
+                    }
+                ]
+            },
+            "name": "L_SetNumberOfPlacesInTheRecentPlacesList",
+            "displayName": "Aantal mappen in de lijst met recente mappen",
+            "explainText":"Met deze beleidsinstelling geeft u het aantal niet-vastgemaakte vermeldingen op dat wordt weergegeven in de lijst met recent gebruikte mappen die wordt weergegeven wanneer gebruikers in de backstageweergave op het tabblad Bestand op Openen of Opslaan als klikken.\n\nAls u deze beleidsinstelling inschakelt, kunt u 0–20 opgeven voor het aantal niet-vastgemaakte vermeldingen. Als u het getal instelt op 0, worden alle vastgemaakte en niet-vastgemaakte items verborgen.\n\nAls u deze beleidsinstelling uitschakelt of niet configureert, worden maximaal 5 niet-vastgemaakte items weergegeven in de lijst met recente mappen.\n\nOpmerking: als u helemaal wilt voorkomen dat er items worden toegevoegd aan de lijst met recente mappen, kunt u de Windows-beleidsinstelling 'Geschiedenis van recentelijk geopende documenten niet bijhouden' inschakelen.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\place mru"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_UseXPSEnhancedPrintPath",
+            "displayName": "Met XPS verbeterd afdrukpad gebruiken",
+            "explainText": "Met deze beleidsinstelling kunt u het met XPS verbeterde afdrukpad gebruiken wanneer dat beschikbaar is. \n\nAls u deze beleidsinstelling inschakelt of niet configureert, wordt het XPS-afdrukpad gebruikt.\n\nAls u deze beleidsinstelling uitschakelt, wordt het XPS-afdrukpad niet gebruikt.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "enablexpsprintpathprinting"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AutomaticallysubstitutefontformissingEAchars",
+            "displayName": "Automatisch het lettertype vervangen voor ontbrekende Oost-Aziatische tekens",
+            "explainText": "Schakelt de bijbehorende gebruikersinterface-optie in/uit.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "usefontlinking"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "1"
+                                },
+                                "displayName": "Van links naar rechts"
+                            },
+                            {
+                                "value": {
+                                    "string": "256"
+                                },
+                                "displayName": "Van rechts naar links"
+                            }
+                        ],
+                        "valueName": "defaulttextflow",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDefaultTextFlowDirectionDropID"
+                    }
+                ]
+            },
+            "name": "L_SetDefaultTextFlowDirection",
+            "displayName": "Standaardtekstrichting instellen",
+            "explainText": "Met deze beleidsinstelling kunt u de standaardtekstdoorloop instellen op rechts-naar-links (RTL) of links-naar-rechts (LTR). \n\nAls u deze beleidsinstelling inschakelt, kunt u kiezen of tekst van van links naar rechts of andersom loopt.\n\nAls u deze beleidsinstelling uitschakelt of niet configureert, wordt de standaardinstelling voor tekstdoorloop gebruikt.",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AutomaticallySwitchKeyboard",
+            "displayName": "Automatisch een andere toetsenbordindeling kiezen in de taal van de omringende tekst",
+            "explainText": "Schakelt de bijbehorende gebruikersinterface-optie in/uit.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "autokeybd"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AllowTextToBeDraggedAndDropped",
+            "displayName": "Slepen en neerzetten van tekst toestaan",
+            "explainText": "Schakelt de bijbehorende gebruikersinterface-optie in/uit.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "textdragndrop"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Whenselectingautomaticallyselectentireword",
+            "displayName": "Bij selecteren automatisch heel woord selecteren",
+            "explainText": "Schakelt de bijbehorende gebruikersinterface-optie in/uit.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "autowordsel"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Whenformattingautomaticallyformatentireword",
+            "displayName": "Automatisch hele woorden opmaken",
+            "explainText": "Schakelt de bijbehorende gebruikersinterface-optie in/uit.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "autowordformat"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_UseChinesefontsizes",
+            "displayName": "Chinese tekengrootten gebruiken",
+            "explainText": "Schakelt de bijbehorende gebruikersinterface-optie in/uit.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "prcfontsizes"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AutomaticallyHyphenateInNewTextBoxes",
+            "displayName": "Automatische woordafbreking in nieuwe tekstvakken",
+            "explainText":"Hiermee wordt de optie 'Automatische woordafbreking in nieuwe tekstvakken' in- of uitgeschakeld.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "defautohyph"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_ShowScreenTipsonobjects",
+            "displayName": "Scherminfo op objecten weergeven",
+            "explainText": "Schakelt de bijbehorende gebruikersinterface-optie in/uit.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "showobjecttooltips"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Enableincrementalpublishtoweb",
+            "displayName": "Incrementele publicatie naar web inschakelen",
+            "explainText": "Schakelt de bijbehorende gebruikersinterface-optie in/uit.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\internet",
+            "valueName": "incrementalupload"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Sendentirepublicationasasingle",
+            "displayName": "Hele publicatie verzenden als één JPEG-afbeelding",
+            "explainText": "Schakelt de bijbehorende gebruikersinterface-optie in/uit.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\internet",
+            "valueName": "emailasimg"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Promptuserwhenreapplyingastyle",
+            "displayName": "Gebruiker vragen bij het opnieuw toepassen van een stijl",
+            "explainText": "Schakelt de bijbehorende gebruikersinterface-optie in/uit.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "prompttoupdatestyle"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Save"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "autorecoversaveinterval",
+                        "required": true,
+                        "requiredSpecified": true,
+                        "expandable": false,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Minuten (bereik 1-120):",
+                        "id": "L_SaveAutoRecoverinfoeveryID"
+                    }
+                ]
+            },
+            "name": "L_SaveAutoRecoverinfoevery",
+            "displayName": "AutoHerstel-info opslaan elke (minuten)",
+            "explainText": "Met deze beleidsinstelling kunt u het interval voor het opslaan van AutoHerstel-info opgeven in minuten.\n\nAls u deze beleidsinstelling inschakelt, kunt u het interval voor het opslaan van AutoHerstel-info opgeven in minuten (geldig bereik: 1-120).\n\nAls u deze beleidsinstelling uitschakelt of niet configureert, wordt het interval gebruikt dat is opgegeven in de gebruikersinterface.\n",
+            "tags": [
+                "L_Save",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Save"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Allowbackgroundsaves",
+            "displayName": "Opslaan op achtergrond toestaan",
+            "explainText": "Schakelt de bijbehorende gebruikersinterface-optie in/uit.",
+            "tags": [
+                "L_Save",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "backgroundsave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Proofing"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "spelling controleren tijdens typen"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Spelfouten verbergen"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Beide"
+                            }
+                        ],
+                        "valueName": "publisherspellingoptions",
+                        "inputType": "dropdownList",
+                        "id": "L_CheckspellingasyoutypeDropID"
+                    }
+                ]
+            },
+            "name": "L_Checkspellingasyoutype",
+            "displayName": "spelling controleren tijdens typen",
+            "explainText":"Met deze beleidsinstelling kunt u opties voor spelfouten configureren.\n\nAls u deze beleidsinstelling inschakelt, kunt u een van de volgende opties kiezen:\n-  Spelling controleren tijdens typen: deze optie is ingeschakeld.\n-  Spelfouten verbergen: deze optie is ingeschakeld, maar 'Spelling controleren tijdens typen' is uitgeschakeld.\n-  Beide: 'Spelling controleren tijdens typen' en 'Spelfouten verbergen' zijn beide ingeschakeld.\n\nAls u deze beleidsinstelling uitschakelt of niet configureert, wordt de optie 'Spelling controleren tijdens typen' ingeschakeld.",
+            "tags": [
+                "L_Proofing",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\shared tools\\proofing tools\\1.0\\office"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Promptusertosetupprinter",
+            "displayName": "Gebruiker vragen om printer in te stellen",
+            "explainText": "Als deze instelling is ingeschakeld, wordt de gebruiker gevraagd om de wizard Printer instellen te starten wanneer er een nieuwe printer wordt gevonden.",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "showprintersetup"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "0"
+                                },
+                                "displayName": "Van links naar rechts"
+                            },
+                            {
+                                "value": {
+                                    "string": "1"
+                                },
+                                "displayName": "Van rechts naar links"
+                            }
+                        ],
+                        "valueName": "defaultrtl",
+                        "inputType": "dropdownList",
+                        "caption": "Standaardrichting van Publisher",
+                        "id": "L_defaultpublisherdirection3"
+                    }
+                ]
+            },
+            "name": "L_DefaultPublisherdirection",
+            "displayName": "Standaardrichting van Publisher",
+            "explainText": "Hiermee geeft u de standaardrichting voor de indeling op.",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_UseSequenceChecking",
+            "displayName": "Volgorde controleren",
+            "explainText": "Schakelt de bijbehorende gebruikersinterface-optie in/uit.",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "seqcheck"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Usetypeandreplace",
+            "displayName": "Typen en vervangen gebruiken",
+            "explainText": "Schakelt de bijbehorende gebruikersinterface-optie in/uit.",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "typereplace"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AdddoublequotesinHebrewalphabetnumbering",
+            "displayName": "Dubbele aanhalingstekens toevoegen in nummering met het Hebreeuwse alfabet",
+            "explainText": "Ingeschakeld: Hiermee voegt u dubbele aanhalingstekens (\") toe aan Hebreeuwse nummering. | Uitgeschakeld: Hiermee worden geen dubbele aanhalingstekens (\") toegevoegd aan Hebreeuwse nummering.",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "dubquohebalpnum"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableOfficeStartPublisher",
+            "displayName": "Het Office-startscherm voor Publisher uitschakelen",
+            "explainText":"Met deze beleidsinstelling wordt bepaald of het Office-startscherm wordt weergegeven bij het starten van Publisher.\n\nAls u deze beleidsinstelling inschakelt, zien gebruikers het Office-startscherm niet wanneer ze Publisher starten.\n\nAls u deze beleidsinstelling uitschakelt of niet configureert, zien gebruikers het Office-startscherm wanneer ze Publisher starten.\n\nOpmerking: deze beleidsinstelling wordt overschreven door de beleidsinstelling 'Microsoft Office 2016 > Diversen > het Office-startscherm voor alle Office-toepassingen uitschakelen' als die beleidsinstelling is ingesteld.",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "disableboottoofficestart"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "personaltemplates",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Pad voor persoonlijke sjablonen",
+                        "id": "L_PersonalTemplatesPath"
+                    }
+                ]
+            },
+            "name": "L_PersonalTemplatesPath",
+            "displayName": "Pad voor persoonlijke sjablonen voor Publisher",
+            "explainText": "Met deze beleidsinstelling geeft u de locatie op van de persoonlijke sjablonen van een gebruiker. \n\nAls u deze beleidsinstelling inschakelt, krijgen gebruikers sjablonen te zien die ze hebben opgeslagen op de opgegeven locatie op het tabblad Aangepaste sjablonen op het Office-startscherm en in Bestand | Nieuw, en wanneer ze een sjabloon opslaan, wordt de opgegeven locatie gebruikt in plaats van de standaardmap. \n\nAls u deze beleidsinstelling uitschakelt of niet configureert, kunnen gebruikers geen sjablonen die ze hebben opgeslagen zien op het tabblad Aangepaste sjablonen op het Office-startscherm en in Bestand | Nieuw, en wordt bij het opslaan van een sjabloon hun standaardmap voor het opslaan van documenten gebruikt.",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Aanbevolen"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Ingebouwd"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Aangepast"
+                            }
+                        ],
+                        "valueName": "officestartdefaulttab",
+                        "inputType": "dropdownList",
+                        "caption": "Standaardtabblad",
+                        "id": "L_DefaultBuiltInTab"
+                    }
+                ]
+            },
+            "name": "L_DefaultBuiltInTab",
+            "displayName": "Standaardtabblad om weer te geven in Publisher op het Office-startscherm en in Bestand | Nieuw",
+            "explainText": "Met deze beleidsinstelling wordt bepaald wat wordt weergegeven als standaardtabblad in Publisher op het Office-startscherm en in Bestand | Nieuw. \n\nAls u deze beleidsinstelling inschakelt, kunt u kiezen uit twee opties om het standaardtabblad te worden in het Office-startscherm en in Bestand | Nieuw:\n\n* Ingebouwd: gebruikers zien het tabblad Ingebouwde sjablonen als standaardtabblad in Publisher op het Office-startscherm en in Bestand | Nieuw.\n\n* Aangepast:  gebruikers zien het tabblad Aangepaste sjablonen als standaardtabblad in Publisher op het Office-startscherm en in Bestand | Nieuw wanneer er sjablonen zijn (dit kunnen aangepaste XML-sjablonen zijn, sjablonen in het pad met werkgroepsjablonen, sjablonen in het pad met persoonlijke sjablonen of SharePoint-sjablonen).\n\nAls u deze beleidsinstelling uitschakelt of niet configureert, zien gebruikers het tabblad Aanbevolen sjablonen als het standaardtabblad in Publisher op het Office-startscherm en in Bestand | Nieuw",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        }
+    ]
+}

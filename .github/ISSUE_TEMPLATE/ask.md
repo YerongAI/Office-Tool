@@ -1,6 +1,7 @@
 ---
 name: ASK
-about: If you have any questions about this project (without bug), use this template. / 如果你对于此项目有任何问题(不包含错误)，请使用此模板
+about: If you have any questions about this project (without bug), use this template.
+  / 如果你对于此项目有任何问题(不包含错误)，请使用此模板
 title: "[ASK]"
 labels: help wanted
 assignees: ''

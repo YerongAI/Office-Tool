@@ -15,7 +15,8 @@
 1. 배포 모드 가이드
 2. 채널 가이드
 3. 설치 모듈 가이드
-4. 더 많은 정보
+4. Office Applications Preferences
+5. 더 많은 정보
 
 ### 배포 모드 가이드
 
@@ -41,7 +42,9 @@
 
 Office 설치 파일이 다운로드 완료된 상태하고 Office 설치 파일과 Office Tool Plus가 동일 경로에 있어야 ISO 파일을 생성할 수 있습니다.
 
-`ISO 파일 생성하기 전에 Office 설치 환경설정 진행했으면 ISO 파일 생성하는 동시에 Configuration.xml 파일을 같이 생성됩니다. ISO 모든에서 Office Tool Plus를 시작할 때 사용자한테 Office 설치를 즉시 시작하냐고 확인할겁니다.`
+You can create an ISO file with default settings. To do so, configure Office installation, such as adding products and languages, then click "Start deploy" to begin creating ISO file.
+
+If you do not configuration, the user will need to configure it as if it were used normally.
 
 #### 다운로드만
 
@@ -95,8 +98,21 @@ Office Tool Plus 모듈은 저희 개발된 설치 모듈입니다. 기능상에
 - 강제 업데이트 지원되지 않음
 - 기존 MSI 버전의 Office 제거 지원되지 않음
 - 기존 MSI 버전의 Office와 동일한 언어 설치 지원되지 않음
+- Not support of Office applications preferences.
 
-주의: **전체 설치 기능을 원하면 Office 배포 툴을 사용하세요.***
+주의: **전체 설치 기능을 원하면 Office 배포 툴을 사용하세요.**
+
+### Office Applications Preferences
+
+---
+
+`Application preferences are data provided by Microsoft, these texts are machine translated and may contain some grammatical errors.`
+
+The function allow you defines application preferences for Office Apps, including VBA Macro notifications, default file locations, and default file format.
+
+You can apply new application preferences to client computers that already have Office installed. Click "Applying preferences for Office applications" in the "View XML code" submenu.
+
+The app preferences are applied to all existing users of the device and any new users added to the device in the future. If you apply application preferences when Office apps are running, the preferences will be applied when Office is next restarted.
 
 ### 더 많은 정보를 찾고 싶다면 아래 사이트에 참고하세요
 

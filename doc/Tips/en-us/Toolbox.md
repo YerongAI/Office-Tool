@@ -16,4 +16,4 @@ You can not change update channel for Office 2019 Volume edition, it's locked.
 
 Office Tool Plus support to remove Office 2003 - 2019 (included Office 365).
 
-For more information, see [Uninstall Office from a PC](https://support.microsoft.com/en-us/office/uninstall-office-from-a-pc-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8?ui=en-us&rs=en-us&ad=us)
+For more information, see [Uninstall Office from a PC](https://support.microsoft.com/en-us/office/uninstall-office-from-a-pc-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8)

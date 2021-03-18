@@ -15,7 +15,8 @@ Aby zdefiniować miejsce zapisywania plików w trybie pobierania, zmień wartoś
 1. Tryb wdrażania
 2. Kanał aktualizacji pakietu Office
 3. Wdróż moduł
-4. Więcej informacji
+4. Preferencje aplikacji Office
+5. Więcej informacji
 
 ### Tryb wdrażania
 
@@ -49,7 +50,9 @@ Jeśli używasz pliku ISO, musisz go najpierw zamontować, a następnie wybrać 
 
 *Wymaga plików instalacyjnych pakietu Office przechowywanych w katalogu Office Tool Plus.* Jeśli nie, najpierw pobierz pliki instalacyjne pakietu Office.
 
-`Jeśli dodasz produkty lub pakiety językowe, Office Tool Plus utworzy konfigurację XML podczas tworzenia pliku ISO. Gdy użytkownicy uruchamiają Office Tool Plus w trybie ISO, Office Tool Plus zapyta użytkownika, czy chcą rozpocząć instalację.
+Możesz utworzyć plik ISO z domyślnymi ustawieniami. Aby to zrobić, skonfiguruj instalację pakietu Office, na przykład dodając produkty i języki, a następnie kliknij „Rozpocznij wdrażanie”, aby rozpocząć tworzenie pliku ISO.
+
+Jeśli nie dokonasz konfiguracji, użytkownik będzie musiał skonfigurować ją tak, jakby była normalnie używana.
 
 #### Tylko pobierz
 
@@ -94,14 +97,27 @@ Narzędzie do wdrażania pakietu Office to oficjalne narzędzie firmy Microsoft 
 #### Funkcje nieobsługiwane w module Office Tool Plus
 
 - Brak obsługi opcji dziennika
-- Brak obsługi programu Configuration Manager
+- Brak obsługi programu Manager konfiguracji
 - Brak obsługi terminu aktualizacji
 - Brak obsługi migracji architektury
 - Brak obsługi wymuszonej aktualizacji.
 - Brak obsługi usuwania istniejących wersji MSI pakietu Office
 - Brak obsługi instalacji w tym samym języku, co w poprzedniej wersji MSI.
+- Nie obsługuje preferencji aplikacji pakietu Office.
 
 Uwaga: **Aby uzyskać pełną instalację, użyj narzędzia do wdrażania pakietu Office.**
+
+### Preferencje aplikacji Office
+
+---
+
+`Preferencje aplikacji to dane dostarczane przez firmę Microsoft. Teksty te są tłumaczone maszynowo i mogą zawierać błędy gramatyczne.`
+
+Ta funkcja umożliwia definiowanie preferencji aplikacji dla aplikacji Office, w tym powiadomień makr VBA, domyślnych lokalizacji plików i domyślnego formatu plików.
+
+Możesz zastosować nowe preferencje aplikacji do komputerów klienckich, na których jest już zainstalowany pakiet Office. Kliknij opcję „Stosowanie preferencji dla aplikacji pakietu Office” w podmenu „Wyświetl kod XML”.
+
+Preferencje aplikacji są stosowane do wszystkich istniejących użytkowników urządzenia i wszystkich nowych użytkowników dodanych do urządzenia w przyszłości. Jeśli zastosujesz preferencje aplikacji, gdy są uruchomione aplikacje pakietu Office, zostaną one zastosowane po następnym ponownym uruchomieniu pakietu Office.
 
 ### Więcej informacji
 

@@ -1,0 +1,919 @@
+{
+    "categories": [
+        {
+            "name": "L_MicrosoftOfficePublisher",
+            "displayName": "Microsoft Publisher 2016"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
+            "name": "L_PubOptions",
+            "displayName": "Publisher-Optionen"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_Advanced",
+            "displayName": "Erweitert"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "name": "L_ComplexScripts",
+            "displayName": "Komplexe Schriftzeichen"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_General",
+            "displayName": "Allgemein"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_Proofing",
+            "displayName": "Dokumentprüfung"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_OptionsCustomizeRibbon",
+            "displayName": "Menüband anpassen"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PubOptions"
+            },
+            "name": "L_Save",
+            "displayName": "Speichern"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
+            "name": "L_Miscellaneous",
+            "displayName": "Verschiedenes"
+        }
+    ],
+    "policies": [
+        {
+            "parentCategory": {
+                "ref": "L_OptionsCustomizeRibbon"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisplayDeveloperTab",
+            "displayName": "Registerkarte \"Entwicklertools\" im Menüband anzeigen",
+            "explainText": "Diese Richtlinieneinstellung steuert, ob die Registerkarte \"Entwicklertools\" im Menüband angezeigt wird.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die Registerkarte \"Entwicklertools\" im Menüband angezeigt.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, wird die Registerkarte \"Entwicklertools\" nicht im Menüband angezeigt.\n\nWenn Sie diese Richtlinieneinstellung nicht konfigurieren, wird die Registerkarte \"Entwicklertools\" nicht im Menüband angezeigt. Ihre Sichtbarkeit kann aber mithilfe einer Einstellung im Dialogfeld \"Optionen\" der Anwendung geändert werden.",
+            "tags": [
+                "L_OptionsCustomizeRibbon",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "developertools"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_General"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_ShowTheNewTemplateGalleryWhenStartingPublisher",
+            "displayName": "Beim Starten von Publisher den Vorlagenkatalog anzeigen",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_General",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "usestartupdlg"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_TurnOffDragPreview",
+            "displayName": "Vorschau beim Ziehen deaktivieren",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen zu bestimmen, ob in Publisher eine halb transparente Vorschau beim Ziehen oder ein einfacher Umriss des Objekts angezeigt wird, wenn es gezogen wird.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird beim Ziehen eines Objekts nur dessen Umriss angezeigt. Wegen der Ressourcenanforderungen dieses Features, ist dies ist die empfohlene Einstellung für ältere Computer.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird eine halb transparente Vorschau beim Ziehen für das Objekt angezeigt, während es gezogen wird.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "uselegacydrag"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "max display",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 50,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_SetMaximumNumberOfMRUItemsToDisplaySpinID"
+                    }
+                ]
+            },
+            "name": "L_SetMaximumNumberOfMRUItemsToDisplay",
+            "displayName": "Anzahl der Publikationen in der Liste \"Zuletzt verwendete Publikationen\"",
+            "explainText": "Diese Richtlinieneinstellung gibt die Anzahl der Einträge in der Liste \"Zuletzt verwendete Publikationen\" an, die in der Backstage-Ansicht angezeigt wird, wenn Benutzer auf der Registerkarte \"Datei\" auf \"Öffnen\" klicken.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, können Sie die Anzahl der Einträge auf einen Wert zwischen 0 und 50 festlegen. Wenn Sie die Anzahl auf 0 festlegen, werden alle angehefteten und nicht angehefteten Einträge ausgeblendet.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden in der Liste \"Zuletzt verwendete Publikationen\" maximal 25 Einträge angezeigt.\n\nHinweis: Wenn Sie das Hinzufügen von Einträgen zur Liste \"Zuletzt verwendete Publikationen\" grundsätzlich verhindern möchten, können Sie die Windows-Richtlinieneinstellung \"Liste der zuletzt geöffneten Dokumente nicht beibehalten\" aktivieren.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\file mru"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "max display",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 20,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_SetNumberOfPlacesInTheRecentPlacesListSpinID"
+                    }
+                ]
+            },
+            "name": "L_SetNumberOfPlacesInTheRecentPlacesList",
+            "displayName": "Anzahl der Ordner in der Liste \"Zuletzt verwendete Ordner\"",
+            "explainText": "Diese Richtlinieneinstellung gibt die Anzahl der nicht angehefteten Einträge an, die in der Liste \"Zuletzt verwendete Ordner\" in der Backstage-Ansicht angezeigt werden, wenn Benutzer auf der Registerkarte \"Datei\" auf \"Öffnen\" oder auf \"Speichern unter\" klicken.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, können Sie die Anzahl der nicht angehefteten Einträge auf einen Wert zwischen 0 und 20 festlegen. Wenn Sie diese Zahl auf 0 festlegen, werden alle angehefteten und nicht angehefteten Einträge ausgeblendet.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden maximal 5 nicht angeheftete Einträge in der Liste \"Zuletzt verwendete Ordner\" angezeigt.\n\nHinweis: Wenn Sie das Hinzufügen von Einträgen zur Liste \"Zuletzt verwendete Ordner\" grundsätzlich verhindern möchten, können Sie die Windows-Richtlinieneinstellung \"Liste der zuletzt geöffneten Dokumente nicht beibehalten\" aktivieren.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\place mru"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_UseXPSEnhancedPrintPath",
+            "displayName": "Erweiterten XPS-Druckpfad verwenden",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen die Verwendung des erweiterten XPS-Druckpfads, falls verfügbar.\n\nWenn Sie diese Richtlinieneinstellung aktivieren oder nicht konfigurieren, wird der XPS-Druckpfad verwendet.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, wird der XPS-Druckpfad nicht verwendet.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "enablexpsprintpathprinting"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AutomaticallysubstitutefontformissingEAchars",
+            "displayName": "Schriftart bei fehlenden ostasiatischen Schriftzeichen automatisch ersetzen",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "usefontlinking"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "1"
+                                },
+                                "displayName": "Von links nach rechts"
+                            },
+                            {
+                                "value": {
+                                    "string": "256"
+                                },
+                                "displayName": "Von rechts nach links"
+                            }
+                        ],
+                        "valueName": "defaulttextflow",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDefaultTextFlowDirectionDropID"
+                    }
+                ]
+            },
+            "name": "L_SetDefaultTextFlowDirection",
+            "displayName": "Standardrichtung für Textfluss festlegen",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Festlegen des Standardtextflusses zwischen \"Von rechts nach links\" und \"Von links nach rechts\".\n\nWenn Sie diese Richtlinieneinstellung aktivieren, können Sie auswählen, ob Text von rechts nach links oder von links nach rechts fließt.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die Standardeinstellung für den Textfluss verwendet.",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AutomaticallySwitchKeyboard",
+            "displayName": "Tastatur automatisch auf Sprache des umgebenden Texts umschalten",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "autokeybd"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AllowTextToBeDraggedAndDropped",
+            "displayName": "Textbearbeitung durch Drag & Drop zulassen",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "textdragndrop"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Whenselectingautomaticallyselectentireword",
+            "displayName": "Beim Markieren automatisch ganzes Wort markieren",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "autowordsel"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Whenformattingautomaticallyformatentireword",
+            "displayName": "Automatisch ganzes Wort formatieren",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "autowordformat"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_UseChinesefontsizes",
+            "displayName": "Chinesische Schriftgrade verwenden",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "prcfontsizes"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AutomaticallyHyphenateInNewTextBoxes",
+            "displayName": "Automatische Silbentrennung in neuen Textfeldern",
+            "explainText": "Aktiviert/deaktiviert die Option \"Automatische Silbentrennung in neuen Textfeldern\".",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "defautohyph"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_ShowScreenTipsonobjects",
+            "displayName": "QuickInfo auf Objekten anzeigen",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "showobjecttooltips"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Enableincrementalpublishtoweb",
+            "displayName": "Inkrementelles Publizieren im Web aktivieren",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\internet",
+            "valueName": "incrementalupload"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Sendentirepublicationasasingle",
+            "displayName": "Die gesamte Publikation als ein JPEG-Bild versenden",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\internet",
+            "valueName": "emailasimg"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Promptuserwhenreapplyingastyle",
+            "displayName": "Benutzeraufforderung bei der erneuten Anwendung einer Formatvorlage",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "prompttoupdatestyle"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Save"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "autorecoversaveinterval",
+                        "required": true,
+                        "requiredSpecified": true,
+                        "expandable": false,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Minuten (Bereich 1-120):",
+                        "id": "L_SaveAutoRecoverinfoeveryID"
+                    }
+                ]
+            },
+            "name": "L_SaveAutoRecoverinfoevery",
+            "displayName": "AutoWiederherstellen-Info speichern alle (Minuten)",
+            "explainText": "Mithilfe dieser Richtlinieneinstellung können Sie das AutoWiederherstellen-Intervall in Minuten angeben.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, können Sie das AutoWiederherstellen-Intervall in Minuten angeben (gültiger Bereich: 1 - 120).\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird das in der Benutzeroberfläche angegebene Intervall verwendet.",
+            "tags": [
+                "L_Save",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Save"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Allowbackgroundsaves",
+            "displayName": "Speicherung im Hintergrund zulassen",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Save",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "backgroundsave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Proofing"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Rechtschreibung während der Eingabe prüfen"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Rechtschreibfehler ausblenden"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Beides"
+                            }
+                        ],
+                        "valueName": "publisherspellingoptions",
+                        "inputType": "dropdownList",
+                        "id": "L_CheckspellingasyoutypeDropID"
+                    }
+                ]
+            },
+            "name": "L_Checkspellingasyoutype",
+            "displayName": "Rechtschreibung während der Eingabe prüfen",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen die Konfiguration von Optionen für Rechtschreibfehler.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, können Sie eine der folgenden Optionen auswählen:\n- \"Rechtschreibung während der Eingabe prüfen\": Diese Option ist aktiviert.\n- \"Rechtschreibfehler ausblenden\": Diese Option ist aktiviert, aber \"Rechtschreibung während der Eingabe prüfen\" ist deaktiviert.\n- \"Beides\": \"Rechtschreibung während der Eingabe prüfen\" und \"Rechtschreibfehler ausblenden\" sind beide aktiviert.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, ist die Option \"Rechtschreibung während der Eingabe prüfen\" aktiviert.",
+            "tags": [
+                "L_Proofing",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\shared tools\\proofing tools\\1.0\\office"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Promptusertosetupprinter",
+            "displayName": "Benutzer zum Einrichten des Druckers auffordern",
+            "explainText": "Wenn dies festgelegt ist, wird der Benutzer von Publisher gefragt, ob der Druckereinrichtungs-Assistent gestartet werden soll, wenn ein neuer Drucker gefunden wird.",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "showprintersetup"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "0"
+                                },
+                                "displayName": "Von links nach rechts"
+                            },
+                            {
+                                "value": {
+                                    "string": "1"
+                                },
+                                "displayName": "Von rechts nach links"
+                            }
+                        ],
+                        "valueName": "defaultrtl",
+                        "inputType": "dropdownList",
+                        "caption": "Publisher-Standardrichtung",
+                        "id": "L_defaultpublisherdirection3"
+                    }
+                ]
+            },
+            "name": "L_DefaultPublisherdirection",
+            "displayName": "Publisher-Standardrichtung",
+            "explainText": "Gibt die standardmäßige Layoutausrichtung an.",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_UseSequenceChecking",
+            "displayName": "Sequenzüberprüfung verwenden",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "seqcheck"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ComplexScripts"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_Usetypeandreplace",
+            "displayName":"Eingeben und ersetzen' verwenden",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_ComplexScripts",
+                "L_Advanced",
+                "L_PubOptions",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "typereplace"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "string": "1"
+            },
+            "disabledValue": {
+                "string": "0"
+            },
+            "name": "L_AdddoublequotesinHebrewalphabetnumbering",
+            "displayName": "Anführungszeichen für hebräische alphabetische Nummerierung hinzufügen",
+            "explainText": "Aktiviert: Fügt hebräischer Nummerierung doppelte Anführungszeichen (\") hinzu. | Deaktiviert: Fügt hebräischer Nummerierung keine doppelten Anführungszeichen (\") hinzu.",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "dubquohebalpnum"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableOfficeStartPublisher",
+            "displayName": "Den Office Startbildschirm für Publisher deaktivieren",
+            "explainText": "Diese Richtlinieneinstellung steuert, ob der Office-Startbildschirm für Publisher beim Starten angezeigt wird.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, sehen Benutzer den Office-Startbildschirm beim Starten von Publisher nicht.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird Benutzern der Office-Startbildschirm beim Starten von Publisher angezeigt.\n\nHinweis: Diese Richtlinieneinstellung wird durch die Richtlinieneinstellung \"Microsoft Office 2016 > Verschiedenes > Den Office-Startbildschirm für alle Office-Anwendungen deaktivieren\" außer Kraft gesetzt, wenn diese Richtlinieneinstellung festgelegt ist.",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
+            "valueName": "disableboottoofficestart"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "personaltemplates",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Pfad zu \"Persönliche Vorlagen\"",
+                        "id": "L_PersonalTemplatesPath"
+                    }
+                ]
+            },
+            "name": "L_PersonalTemplatesPath",
+            "displayName": "Pfad zu Persönliche Vorlagen für Publisher",
+            "explainText": "Diese Richtlinieneinstellung gibt den Speicherort der persönlichen Vorlagen eines Benutzers an.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, sehen Benutzer alle Vorlagen, die sie am angegebenen Speicherort gespeichert haben, auf der Registerkarte \"Benutzerdefinierte Vorlagen\" auf dem Office-Startbildschirm und im Bereich \"Datei\" | \"Neu\", und beim Speichern einer Vorlage wird zum angegebenen Speicherort als Standardordner gewechselt.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden Benutzern die Vorlagen, die sie am angegebenen Speicherort gespeichert haben, auf der Registerkarte \"Benutzerdefinierte Vorlagen\" auf dem Office-Startbildschirm und im Bereich \"Datei\" | \"Neu\" nicht angezeigt, und beim Speichern einer Vorlage wird der Speicherort zum Speichern von Dokumenten als Standardordner verwendet.",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Miscellaneous"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Empfohlen"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Integriert"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Benutzerdefiniert"
+                            }
+                        ],
+                        "valueName": "officestartdefaulttab",
+                        "inputType": "dropdownList",
+                        "caption": "Standard-Registerkarte",
+                        "id": "L_DefaultBuiltInTab"
+                    }
+                ]
+            },
+            "name": "L_DefaultBuiltInTab",
+            "displayName": "Standardregisterkarte zur Anzeige in Publisher auf dem Office-Startbildschirm und im Bereich \"Datei\" | \"Neu\"",
+            "explainText": "Diese Richtlinieneinstellung steuert, was in Publisher auf dem Office-Startbildschirm und im Bereich \"Datei\"| \"Neu\" als Standardregisterkarte angezeigt wird.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, können Sie eine von zwei Optionen für die Standardregisterkarte auf dem Office-Startbildschirm und im Bereich \"Datei\" | \"Neu\" auswählen:\n\n* Integriert – Benutzern wird in Publisher die Registerkarte mit integrierten Vorlagen als Standardregisterkarte auf dem Office-Startbildschirm und im Bereich \"Datei\" | \"Neu\" angezeigt.\n\n* Benutzerdefiniert – Benutzern wird in Publisher die Registerkarte mit benutzerdefinierten Vorlagen als Standardregisterkarte auf dem Office-Startbildschirm und im Bereich \"Datei\" | \"Neu\" angezeigt, falls Vorlagen vorhanden sind (dies kann benutzerdefinierte programmierte XML-Vorlagen, Vorlagen im Vorlagenpfad der Arbeitsgruppe, Vorlagen im Pfad für persönliche Vorlagen oder SharePoint-Vorlagen umfassen).\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird Benutzern in Publisher die Registerkarte \"Empfohlene Vorlagen\" als Standardregisterkarte auf dem Office-Startbildschirm und im Bereich \"Datei\" | \"Neu\" angezeigt",
+            "tags": [
+                "L_Miscellaneous",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\preferences"
+        }
+    ]
+}

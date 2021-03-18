@@ -15,7 +15,8 @@ Vous pouvez interroger le numéro de version et la date de sortie sur chaque can
 1. Mode de déploiement
 2. Canal de mise à jour Office
 3. Module de déploiement
-4. Plus d’informations
+4. Préférences des applications Office
+5. Plus d’informations
 
 ### Module d'installation
 
@@ -49,7 +50,9 @@ Si vous utilisez un fichier ISO, vous devez d’abord le monter, puis sélection
 
 *Nécessite des fichiers d'installation d'Office stockés dans le répertoire Office Tool Plus.* Sinon, télécharger d'abord les fichiers d'installation d'Office.
 
-`Si vous ajoutez des produits ou des modules linguistiques, Office Tool Plus créera une configuration XML lors de la création du fichier ISO. Lorsque les utilisateurs démarrent Office Tool Plus en mode ISO, Office Tool Plus demandera à l'utilisateur s'il souhaite démarrer l'installation.`
+Vous pouvez créer un fichier ISO avec les paramètres par défaut. Pour ce faire, configurez l'installation d'Office, comme l'ajout de produits et de langues, puis cliquez sur «Démarrer le déploiement» pour commencer à créer le fichier ISO.
+
+Si vous ne configurez pas, l'utilisateur devra le configurer comme s'il était utilisé normalement.
 
 #### Télécharger uniquement
 
@@ -69,19 +72,19 @@ Pour l'édition de volume d'Office 2019 uniquement.
 
 **Aucune mise à jour de fonctionnalité.**
 
-**Mises à jour de sécurité :** Une fois par mois, le deuxième mardi du mois.
+**Mises à jour de sécurité:** Une fois par mois, le deuxième mardi du mois.
 
 `Canal actuel (Normal):`
 
 **Mises à jour de fonctionnalités:** Dès qu’elles sont prêtes (habituellement une fois par mois), mais sans calendrier fixe.
 
-**Mises à jour de sécurité :** Une fois par mois, le deuxième mardi du mois.
+**Mises à jour de sécurité:** Une fois par mois, le deuxième mardi du mois.
 
 `Canal d'entreprise semi-annuel:`
 
-**Mises à jour des fonctionnalités :** Deux fois par an (en janvier et juillet), le deuxième mardi du mois
+**Mises à jour des fonctionnalités:** Deux fois par an (en janvier et juillet), le deuxième mardi du mois
 
-**Mises à jour de sécurité :** Une fois par mois, le deuxième mardi du mois.
+**Mises à jour de sécurité:** Une fois par mois, le deuxième mardi du mois.
 
 Note: Nous ne recommandons pas d’utiliser le canal bêta.
 
@@ -94,14 +97,27 @@ L’outil de déploiement Office est un outil Microsoft officiel pour le déploi
 #### Fonctionnalités non prises en charge dans le module Outil Office Plus
 
 - Non prise en charge des options de journal
-- Ne pas prendre en charge le Gestionnaire de configuration
+- Ne pas prendre en charge le gestionnaire de configuration
 - Non prise en charge de la date limite de mise à jour
 - Non prise en charge de l’architecture de migration
 - Pas de prise en charge de la mise à jour de la force.
 - Non prise en charge de la suppression des versions MSI existantes d’Office
 - Pas de prise en charge de l’installation de la même langue que la version précédente MSI.
+- Ne prend pas en charge les préférences des applications Office.
 
 Note: **Pour une expérience d’installation complète, assurez-vous d’utiliser l’outil de déploiement Office.**
+
+### Préférences des applications Office
+
+---
+
+`Les préférences de l'application sont des données fournies par Microsoft, ces textes sont traduits automatiquement et peuvent contenir des erreurs grammaticales.`
+
+La fonction vous permet de définir les préférences d'application pour les applications Office, y compris les notifications de macro VBA, les emplacements de fichier par défaut et le format de fichier par défaut.
+
+Vous pouvez appliquer de nouvelles préférences d'application aux ordinateurs clients sur lesquels Office est déjà installé. Cliquez sur "Application des préférences pour les applications Office" dans le sous-menu "Afficher le code XML".
+
+Les préférences de l'application sont appliquées à tous les utilisateurs existants de l'appareil et à tous les nouveaux utilisateurs ajoutés à l'appareil à l'avenir. Si vous appliquez les préférences d'application lorsque les applications Office sont en cours d'exécution, les préférences seront appliquées lors du prochain redémarrage d'Office.
 
 ### Plus d’informations
 

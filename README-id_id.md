@@ -11,7 +11,7 @@
 <img alt="License" src="https://img.shields.io/github/license/YerongAI/Office-Tool?style=flat-square"/>
 </p>
 
-> Sebuah alat yang bertenaga dan gampang digunakan untuk pemasangan Office.
+> Merupakan alat yang berguna dan bertenaga dalam memasangkan Office.
 
 Mendukung untuk memasangan ubahsuai dan mengaktivasi produk berikut:
 
@@ -31,14 +31,14 @@ Fungsi Tambahan:
 - Mendukung aktivasi secara daring, aktivasi telepon (aktivasi secara luring) dan aktivasi KMS.
 - Setel ulang/paksa mencopot Office.
 - Mengubah saluran pembaruan Office tanpa perlu memasang kembali Office.
-- Sejumlah konversi dokumen Office, berdasarkan Office API (Hanya di versi 8)
+- Sejumlah konversi dokumen Office, berdasarkan Office API
 
 Komponen:
 
 - **[Office Deployment Tool](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - Modul utama pemasangan Office.
 - **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office Software Protect Platform.
 - **Thunder** - Mesin utama untuk mengunduh Office.
-- **vlmcs** - Komponen untuk ujicoba KMS yang tersedia, *hanya ada di versi penuh*.
+- **[vlmcs](https://github.com/Wind4/vlmcsd)** - Komponen untuk ujicoba KMS yang tersedia.
 
 ## Persyaratan Sistem
 
@@ -49,13 +49,15 @@ Komponen:
 
 ## Unduh Office Tool Plus
 
-[Situs Resmi](https://otp.landian.vip/)
+- [Situs Resmi](https://otp.landian.vip/)
 
-[Unduhan Cadangan](https://download.coolhub.top/)
+- [Unduhan Cadangan](https://download.coolhub.top/)
+
+- [OneDrive for Business](https://coolhub-my.sharepoint.com/:f:/g/personal/yerong_coolhub_onmicrosoft_com/Ev9IUbXAw01JgwrAgsIFB8YBzJebdZZpmsR9hZFAZZVDgg?e=AkSdZU)
 
 ## Mulai Cepat
 
-Please refer to [Office Tool Plus Quick Start](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)
+Baca lebih lanjut ke [Mulai Cepat Office Tool Plus](https://github.com/YerongAI/Office-Tool/wiki/Mulai-Cepat-Office-Tool-Plus)
 
 ## Tentang
 

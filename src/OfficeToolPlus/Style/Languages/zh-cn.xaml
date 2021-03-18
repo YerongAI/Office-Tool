@@ -1,7 +1,6 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:sys="clr-namespace:System;assembly=System.RunTime"
-                    xml:space="preserve">
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=System.RunTime" xml:space="preserve">
     <!-- Country settings, it is used to get information from server. -->
     <sys:String x:Key="Culture">zh-cn</sys:String>
     <!-- Eula Content -->
@@ -26,10 +25,10 @@
     <sys:String x:Key="Notice">注意</sys:String>
     <sys:String x:Key="Warning">警告</sys:String>
     <sys:String x:Key="Error">错误</sys:String>
-    <sys:String x:Key="Yes">是</sys:String>
-    <sys:String x:Key="No">否</sys:String>
-    <sys:String x:Key="OK">确定</sys:String>
-    <sys:String x:Key="Cancel">取消</sys:String>
+    <sys:String x:Key="Yes">是(_Y)</sys:String>
+    <sys:String x:Key="No">否(_N)</sys:String>
+    <sys:String x:Key="OK">确定(_O)</sys:String>
+    <sys:String x:Key="Cancel">取消(_C)</sys:String>
     <sys:String x:Key="OfficeDeploymentTool">Office 部署工具</sys:String>
     <sys:String x:Key="Version">版本:</sys:String>
     <sys:String x:Key="Branch">分支:</sys:String>
@@ -38,11 +37,11 @@
     <sys:String x:Key="x64">64 位</sys:String>
     <sys:String x:Key="BasicSettings">基础设置</sys:String>
     <sys:String x:Key="AdvancedSettings">高级设置</sys:String>
-    <sys:String x:Key="Retry">重试</sys:String>
+    <sys:String x:Key="Retry">重试(_R)</sys:String>
     <sys:String x:Key="Normal">默认</sys:String>
     <sys:String x:Key="None">无</sys:String>
     <sys:String x:Key="Query">查询</sys:String>
-    <sys:String x:Key="Uninstall">卸载</sys:String>
+    <sys:String x:Key="Uninstall">卸载(_U)</sys:String>
 
     <!-- Greetings -->
     <!-- Showed when app started. -->
@@ -74,12 +73,12 @@
     <sys:String x:Key="CreateShortcut">创建桌面快捷方式</sys:String>
     <sys:String x:Key="ServerUnavailable">无法连接到服务器，请检查网络连接</sys:String>
     <!-- Deploy Page -->
-    <sys:String x:Key="StartDeploy">开始部署</sys:String>
-    <sys:String x:Key="DeployViewCode">查看 XML 代码</sys:String>
+    <sys:String x:Key="StartDeploy">开始部署(_D)</sys:String>
+    <sys:String x:Key="DeployViewCode">查看 XML 代码(_V)</sys:String>
     <sys:String x:Key="DeployApplySettings">将首选项应用于 Office 应用程序</sys:String>
-    <sys:String x:Key="DeployExportXML">导出 XML 文件</sys:String>
-    <sys:String x:Key="DeployImportXML">导入 XML 文件</sys:String>
-    <sys:String x:Key="DeployImportXMLFromWeb">从网络位置导入 XML 文件</sys:String>
+    <sys:String x:Key="DeployExportConfig">导出配置</sys:String>
+    <sys:String x:Key="DeployImportConfig">导入配置</sys:String>
+    <sys:String x:Key="DeployImportConfigFromWeb">从网络位置导入配置</sys:String>
     <!-- Download Panel -->
     <sys:String x:Key="DownloadStatus">当前状态:</sys:String>
     <sys:String x:Key="DownloadPending">等待下载</sys:String>
@@ -92,7 +91,7 @@
     <!-- Product -->
     <sys:String x:Key="DeployProducts">产品</sys:String>
     <sys:String x:Key="DeployProductID">产品 ID:</sys:String>
-    <sys:String x:Key="DeployAddProduct">添加产品</sys:String>
+    <sys:String x:Key="DeployAddProduct">添加产品(_P)</sys:String>
     <sys:String x:Key="DeployErrorConfig">⚠ 此产品无法与现有产品共存</sys:String>
     <sys:String x:Key="DeployErrorModule">⚠ 若要安装此产品，请将安装模块更改为 Office Tool Plus</sys:String>
     <sys:String x:Key="DeployErrorChannel">⚠ 此产品无法安装在选定的通道上: {0}</sys:String>
@@ -115,7 +114,7 @@
     <sys:String x:Key="LangPartialWithoutProofingToolsTip">语言包包含部分 Office 应用程序的显示语言，但不包含校对工具</sys:String>
     <sys:String x:Key="LangProofingToolsTip">语言包仅包含拼写检查器</sys:String>
     <sys:String x:Key="DeployAsProof">仅部署校对工具</sys:String>
-    <sys:String x:Key="DeployAddLanguagePackage">添加语言</sys:String>
+    <sys:String x:Key="DeployAddLanguage">添加语言(_L)</sys:String>
     <!-- Advanced Settings -->
     <sys:String x:Key="DeployOrganizationName">提供组织名称以在 Office 文档上设置公司属性。</sys:String>
     <sys:String x:Key="DeployDescription">提供此配置的说明以用于记录目的。</sys:String>
@@ -165,7 +164,8 @@
     <sys:String x:Key="DeployBasedDevice">基于设备</sys:String>
     <!-- App Preferences -->
     <sys:String x:Key="DeployPreferences">应用程序首选项</sys:String>
-    <sys:String x:Key="DeployPreferencesFilter">搜索应用程序首选项</sys:String>
+    <sys:String x:Key="DeployPreferencesSearch">搜索应用程序首选项</sys:String>
+    <sys:String x:Key="DeployPreferencesEnable">启用</sys:String>
     <sys:String x:Key="DeployPreferencesApply">应用</sys:String>
     <sys:String x:Key="DeployPreferencesReset">重置</sys:String>
     <sys:String x:Key="DeployPreferencesResetAll">重置所有设置</sys:String>
@@ -186,6 +186,8 @@
     <sys:String x:Key="DownloadSettings">下载设置</sys:String>
     <sys:String x:Key="DownloadEngine">下载引擎:</sys:String>
     <sys:String x:Key="DownloadEngineThunder">迅雷</sys:String>
+    <sys:String x:Key="DownloadAgent">系统标识:</sys:String>
+    <sys:String x:Key="DownloadAgentTip">默认情况下，Office Tool Plus 会检测当前系统的版本，如果你需要为其他版本的 Windows 下载 Office 安装包，请配置此项</sys:String>
     <sys:String x:Key="DownloadUseHTTPS">使用 HTTPS 连接</sys:String>
     <sys:String x:Key="DownloadThunderSettings">迅雷设置</sys:String>
     <sys:String x:Key="DownloadSpeedLimit">迅雷限速:</sys:String>
@@ -196,6 +198,7 @@
     <!-- Installation Manage -->
     <sys:String x:Key="InstallationFilesManage">安装文件管理</sys:String>
     <!-- Activate Page -->
+    <sys:String x:Key="ActivateButton">激活(_A)</sys:String>
     <sys:String x:Key="ActivateViewInformation">查看激活信息</sys:String>
     <sys:String x:Key="ActivateViewLicenses">查看许可证信息</sys:String>
     <sys:String x:Key="ActivateViewFailureHistory">查看 MAK/零售激活失败历史记录</sys:String>
@@ -293,10 +296,11 @@
     <sys:String x:Key="ToolboxRepair">修复</sys:String>
     <!-- Common Tools -->
     <sys:String x:Key="ToolboxChangeChannel">修改 Office 更新通道</sys:String>
-    <sys:String x:Key="ToolboxChangeChannelDescription">支持选择其它通道或者自定义 HTTP、本地路径。保存设置后，请在 Office 应用程序内检查更新</sys:String>
+    <sys:String x:Key="ToolboxChangeChannelDescription">支持选择其它通道或者自定义 HTTP、本地路径&#x000A;&#x000A;保存设置后，请在 Office 应用程序内检查更新</sys:String>
     <sys:String x:Key="ToolboxChangeOwner">修改 Office 产品属于者</sys:String>
-    <sys:String x:Key="ToolboxChangeOwnerDescription">仅当 Office 使用了正确的许可证时才会在应用程序的账户页面显示名称&#x000A;&#x000A;若要修改指定产品的属于者，请使用此格式: [ProductID]:[Name]</sys:String>
+    <sys:String x:Key="ToolboxChangeOwnerDescription">仅当 Office 使用了正确的许可证时才会在应用程序的账户页面显示名称&#x000A;&#x000A;若要修改指定产品的属于者，请使用此格式: ProductID:Name</sys:String>
     <sys:String x:Key="ToolboxChangeOwnerName">名称:</sys:String>
+    <sys:String x:Key="ToolboxChangeOwnerNameTip">小明 或者 ProPlus2019Volume:小明</sys:String>
     <sys:String x:Key="ToolboxCheckVersion">查询 Office 版本号</sys:String>
     <sys:String x:Key="CheckVersionCreatedTimeUTC">创建时间 (UTC):</sys:String>
     <sys:String x:Key="QueryErrorCode">查询错误代码信息</sys:String>
@@ -341,6 +345,10 @@
     <!-- Settings Panel -->
     <sys:String x:Key="LanguageSettings">语言:</sys:String>
     <sys:String x:Key="ThemeSettings">主题:</sys:String>
+    <sys:String x:Key="AutoShutdownSettings">部署完成后:</sys:String>
+    <sys:String x:Key="SettingsSignOut">注销</sys:String>
+    <sys:String x:Key="SettingsShutdown">关机</sys:String>
+    <sys:String x:Key="SettingsRestart">重启</sys:String>
     <sys:String x:Key="SaveSettings">保存设置到本地</sys:String>
     <sys:String x:Key="DisplaySettings">界面设置</sys:String>
     <sys:String x:Key="SettingsTopmost">保持窗口最前</sys:String>
@@ -353,7 +361,7 @@
     <sys:String x:Key="AppInf">程序信息</sys:String>
     <sys:String x:Key="Homepage">官方网站:</sys:String>
     <sys:String x:Key="CreatorInfo">由 Yerong 开发以及维护，基于 Office 部署工具打造</sys:String>
-    <sys:String x:Key="Copyright">Copyright © 2016-{0} Yerong All rights reserved.</sys:String>
+    <sys:String x:Key="Copyright">Copyright © 2016-{0} Yerong All Rights Reserved.</sys:String>
     <sys:String x:Key="TrademarkInfo">Microsoft Office 是 Microsoft Corporation 在美国和/或其他国家/地区的注册商标或商标</sys:String>
     <sys:String x:Key="ServerProvider">服务器提供者</sys:String>
     <sys:String x:Key="Translator">翻译人员</sys:String>
@@ -395,6 +403,7 @@
     <sys:String x:Key="QuesClearActivation">确认卸载所有密钥以及许可证吗？操作完成后，需要重新安装许可证并激活 Office</sys:String>
     <sys:String x:Key="QuesClearKeys">确认卸载所有密钥吗？操作完成后，需要重新安装密钥并激活 Office</sys:String>
     <sys:String x:Key="QuesCleanOffice">确定清除 Office？一旦开始后将无法取消</sys:String>
+    <sys:String x:Key="QuesAutoShutdown">你的电脑将在一分钟后注销/关机/重启。点击“是”立即执行，或者点击“否”取消操作。</sys:String>
 
     <!-- Info Message -->
     <sys:String x:Key="InfoPermission">Office Tool Plus 是以普通权限启动的，一些功能将不可用</sys:String>

@@ -31,14 +31,14 @@ Dodatkowe funkcje:
 - Obsługuje aktywację online, aktywację telefoniczną (aktywacja offline) i aktywację KMS.
 - Reset / wymuszone usunięcie pakietu Office.
 - Zmiana kanału aktualizacji pakietu Office bez ponownej instalacji pakietu Office.
-- Konwersja wsadowa dokumentów Office w oparciu o Office API (tylko wersja 8).
+- Konwersja wsadowa dokumentów Office w oparciu o Office API.
 
 Komponenty :
 
 - **[Office Deployment Tool](https://docs.microsoft.com/pl-pl/deployoffice/overview-office-deployment-tool)** - Główne moduły instalacji pakietu Office.
 - **[OSPP](https://docs.microsoft.com/pl-pl/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Platforma ochrony oprogramowania biurowego.
 - **Thunder** - Główne silniki do pobierania pakietu Office.
-- **vlmcs** - Komponenty do testowania dostępności KMS, *zawarte tylko w pełnej wersji*.
+- **[vlmcs](https://github.com/Wind4/vlmcsd)** - Komponenty do testowania dostępności KMS.
 
 ## Wymagania Systemowe
 
@@ -52,6 +52,8 @@ Komponenty :
 - [Oficjalna strona internetowa](https://otp.landian.vip/)
 
 - [Pobieranie lustrzane](https://download.coolhub.top/)
+
+- [OneDrive for Business](https://coolhub-my.sharepoint.com/:f:/g/personal/yerong_coolhub_onmicrosoft_com/Ev9IUbXAw01JgwrAgsIFB8YBzJebdZZpmsR9hZFAZZVDgg?e=AkSdZU)
 
 ## Szybki start
 

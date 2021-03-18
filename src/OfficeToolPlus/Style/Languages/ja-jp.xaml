@@ -1,7 +1,6 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:sys="clr-namespace:System;assembly=System.RunTime"
-                    xml:space="preserve">
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=System.RunTime" xml:space="preserve">
     <!-- Country settings, it is used to get information from server. -->
     <sys:String x:Key="Culture">ja-jp</sys:String>
     <!-- Eula Content -->
@@ -26,10 +25,10 @@
     <sys:String x:Key="Notice">通知</sys:String>
     <sys:String x:Key="Warning">警告</sys:String>
     <sys:String x:Key="Error">エラー</sys:String>
-    <sys:String x:Key="Yes">はい</sys:String>
-    <sys:String x:Key="No">いいえ</sys:String>
-    <sys:String x:Key="OK">OK</sys:String>
-    <sys:String x:Key="Cancel">取り消す</sys:String>
+    <sys:String x:Key="Yes">はい(_Y)</sys:String>
+    <sys:String x:Key="No">いいえ(_N)</sys:String>
+    <sys:String x:Key="OK">_OK</sys:String>
+    <sys:String x:Key="Cancel">取り消す(_C)</sys:String>
     <sys:String x:Key="OfficeDeploymentTool">Office展開ツール</sys:String>
     <sys:String x:Key="Version">バージョン:</sys:String>
     <sys:String x:Key="Branch">ブランチ:</sys:String>
@@ -38,11 +37,11 @@
     <sys:String x:Key="x64">64ビット</sys:String>
     <sys:String x:Key="BasicSettings">基本設定</sys:String>
     <sys:String x:Key="AdvancedSettings">詳細設定</sys:String>
-    <sys:String x:Key="Retry">リトライ</sys:String>
+    <sys:String x:Key="Retry">リトライ(_R)</sys:String>
     <sys:String x:Key="Normal">通常</sys:String>
     <sys:String x:Key="None">なし</sys:String>
     <sys:String x:Key="Query">クエリ</sys:String>
-    <sys:String x:Key="Uninstall">アンインストール</sys:String>
+    <sys:String x:Key="Uninstall">アンインストール(_U)</sys:String>
 
     <!-- Greetings -->
     <!-- Showed when app started. -->
@@ -67,19 +66,19 @@
     <sys:String x:Key="O365PPRDescription">Outlook、OneDrive for Business、Word、Excel、PowerPointなどが含まれます。</sys:String>
     <sys:String x:Key="O365HPRDescription">Outlook、Word、Excel、PowerPointなどが含まれます。</sys:String>
     <sys:String x:Key="PP2019RDescription">Outlook、Word、Excel、PowerPointなどが含まれます。</sys:String>
-    <sys:String x:Key="HS2019Description">Includes Word, Excel, PowerPoint.</sys:String>
+    <sys:String x:Key="HS2019Description">Word、Excel、PowerPointなどが含まれます。</sys:String>
     <sys:String x:Key="OtherInstallOptions">他のインストールオプション</sys:String>
     <sys:String x:Key="OIODescription">別の製品または言語を選択してください</sys:String>
     <sys:String x:Key="RunAsAdmin">管理者として実行</sys:String>
     <sys:String x:Key="CreateShortcut">デスクトップショートカットを作成する</sys:String>
     <sys:String x:Key="ServerUnavailable">サーバーが利用できません。ネットワーク接続を確認してください。</sys:String>
     <!-- Deploy Page -->
-    <sys:String x:Key="StartDeploy">展開を開始</sys:String>
-    <sys:String x:Key="DeployViewCode">コードを見る</sys:String>
-    <sys:String x:Key="DeployApplySettings">Applying preferences for Office applications</sys:String>
-    <sys:String x:Key="DeployExportXML">XMLとして保存</sys:String>
-    <sys:String x:Key="DeployImportXML">XMLを選択</sys:String>
-    <sys:String x:Key="DeployImportXMLFromWeb">WebからXMLファイルをインポートする</sys:String>
+    <sys:String x:Key="StartDeploy">展開を開始(_D)</sys:String>
+    <sys:String x:Key="DeployViewCode">コードを見る(_V)</sys:String>
+    <sys:String x:Key="DeployApplySettings">Officeアプリケーションに設定を適用する</sys:String>
+    <sys:String x:Key="DeployExportConfig">XML構成ファイルをエクスポート</sys:String>
+    <sys:String x:Key="DeployImportConfig">XML構成ファイルをインポート</sys:String>
+    <sys:String x:Key="DeployImportConfigFromWeb">WebからXML構成ファイルをインポートする</sys:String>
     <!-- Download Panel -->
     <sys:String x:Key="DownloadStatus">現在の状態:</sys:String>
     <sys:String x:Key="DownloadPending">ダウンロードを待っています</sys:String>
@@ -92,7 +91,7 @@
     <!-- Product -->
     <sys:String x:Key="DeployProducts">製品</sys:String>
     <sys:String x:Key="DeployProductID">製品のID:</sys:String>
-    <sys:String x:Key="DeployAddProduct">製品を追加</sys:String>
+    <sys:String x:Key="DeployAddProduct">製品を追加(_P)</sys:String>
     <sys:String x:Key="DeployErrorConfig">⚠ この製品は既存の製品と共存できません</sys:String>
     <sys:String x:Key="DeployErrorModule">⚠ この製品は、「Office Tool Plus」モジュールを使用してインストールする必要があります</sys:String>
     <sys:String x:Key="DeployErrorChannel">⚠ 選択したチャンネルに製品をインストールできません: {0}</sys:String>
@@ -115,14 +114,14 @@
     <sys:String x:Key="LangPartialWithoutProofingToolsTip">言語パックには、一部のOfficeアプリケーションの表示言語が含まれていますが、校正ツールは含まれていません。</sys:String>
     <sys:String x:Key="LangProofingToolsTip">言語パックにはスペルチェッカーのみが含まれています。</sys:String>
     <sys:String x:Key="DeployAsProof">校正ツールのみを展開します。</sys:String>
-    <sys:String x:Key="DeployAddLanguagePackage">言語パッケージを追加</sys:String>
+    <sys:String x:Key="DeployAddLanguage">言語パッケージを追加(_L)</sys:String>
     <!-- Advanced Settings -->
     <sys:String x:Key="DeployOrganizationName">組織名を入力して、Officeドキュメントに会社のプロパティを設定します。</sys:String>
     <sys:String x:Key="DeployDescription">文書化の目的でこの構成の説明を入力してください。</sys:String>
     <!-- Installation Settings -->
     <sys:String x:Key="DeployInstallationSettings">インストール設定</sys:String>
-    <sys:String x:Key="DeployVersionTip">Defaults to the latest version available if not specified.</sys:String>
-    <sys:String x:Key="DeployGetHistoricalVersions">Get available historical versions of Office.</sys:String>
+    <sys:String x:Key="DeployVersionTip">指定されていない場合、デフォルトで使用可能な最新バージョンになります。</sys:String>
+    <sys:String x:Key="DeployGetHistoricalVersions">Officeの利用可能な履歴バージョンを入手します。</sys:String>
     <sys:String x:Key="DeployDownloadPath">ダウンロードパス:</sys:String>
     <sys:String x:Key="DeployDownloadPathTip">インストールファイルのダウンロード元を定義します。ダウンロードパスを使用する場合は、バージョンを指定する必要があります。</sys:String>
     <sys:String x:Key="DeploySourcePath">ソースパス:</sys:String>
@@ -138,9 +137,9 @@
     <!-- Update Settings -->
     <sys:String x:Key="DeployUpdateSettings">設定を更新する</sys:String>
     <sys:String x:Key="DeployEnableUpdate">Officeの自動更新を有効にします。</sys:String>
-    <sys:String x:Key="DeployEnableCOM">Manage updates using Microsoft Endpoint Configuration Manager.</sys:String>
+    <sys:String x:Key="DeployEnableCOM">「Microsoft Endpoint Configuration Manager」を使用して更新を管理します。</sys:String>
     <sys:String x:Key="DeployUpdatePath">更新のソース:</sys:String>
-    <sys:String x:Key="DeployUpdatePathTip">If the path is empty, the Office CDN is used by default as the source.</sys:String>
+    <sys:String x:Key="DeployUpdatePathTip">パスが空の場合、OfficeCDNがデフォルトでソースとして使用されます。</sys:String>
     <sys:String x:Key="DeployTargetVersion">対象バージョン:</sys:String>
     <sys:String x:Key="DeployUpdateDeadline">更新期限:</sys:String>
     <sys:String x:Key="DeployUpdateChannel">更新チャンネル:</sys:String>
@@ -165,7 +164,8 @@
     <sys:String x:Key="DeployBasedDevice">デバイスベース</sys:String>
     <!-- App Preferences -->
     <sys:String x:Key="DeployPreferences">アプリケーション設定</sys:String>
-    <sys:String x:Key="DeployPreferencesFilter">入力してアプリケーションの設定を検索する</sys:String>
+    <sys:String x:Key="DeployPreferencesSearch">入力してアプリケーションの設定を検索する</sys:String>
+    <sys:String x:Key="DeployPreferencesEnable">有効にする</sys:String>
     <sys:String x:Key="DeployPreferencesApply">適用する</sys:String>
     <sys:String x:Key="DeployPreferencesReset">リセット</sys:String>
     <sys:String x:Key="DeployPreferencesResetAll">すべてリセット</sys:String>
@@ -186,6 +186,8 @@
     <sys:String x:Key="DownloadSettings">ダウンロード設定</sys:String>
     <sys:String x:Key="DownloadEngine">ダウンロード方法:</sys:String>
     <sys:String x:Key="DownloadEngineThunder">サンダー「Thunder」</sys:String>
+    <sys:String x:Key="DownloadAgent">Agent:</sys:String>
+    <sys:String x:Key="DownloadAgentTip">By default, Office Tool Plus detects the current system version. Configure it if you need to download Office installations for other versions of Windows.</sys:String>
     <sys:String x:Key="DownloadUseHTTPS">HTTPSを使って接続する</sys:String>
     <sys:String x:Key="DownloadThunderSettings">サンダー「Thunder」設定</sys:String>
     <sys:String x:Key="DownloadSpeedLimit">速度制限:</sys:String>
@@ -196,6 +198,7 @@
     <!-- Installation Manage -->
     <sys:String x:Key="InstallationFilesManage">インストールファイルの管理</sys:String>
     <!-- Activate Page -->
+    <sys:String x:Key="ActivateButton">アクティベート(_A)</sys:String>
     <sys:String x:Key="ActivateViewInformation">情報を見る</sys:String>
     <sys:String x:Key="ActivateViewLicenses">ライセンスの表示</sys:String>
     <sys:String x:Key="ActivateViewFailureHistory">失敗履歴を表示する</sys:String>
@@ -206,7 +209,7 @@
     <sys:String x:Key="ActivateLicensesManage">ライセンス管理</sys:String>
     <sys:String x:Key="ActivateSelectLicense">ライセンスを選択:</sys:String>
     <sys:String x:Key="ActivateInstallLicenses">ライセンスをインストール</sys:String>
-    <sys:String x:Key="ActivateInstallOtherLicenses">Install other licenses</sys:String>
+    <sys:String x:Key="ActivateInstallOtherLicenses">他のライセンスをインストールする</sys:String>
     <sys:String x:Key="ActivateClearLicenses">ライセンスを削除する</sys:String>
     <sys:String x:Key="ActivateRLS">Officeライセンスのライセンスステータスをリセットする</sys:String>
     <sys:String x:Key="ActivateRLSTip">SKU ID値を提供する必要があります</sys:String>
@@ -293,10 +296,11 @@
     <sys:String x:Key="ToolboxRepair">修復</sys:String>
     <!-- Common Tools -->
     <sys:String x:Key="ToolboxChangeChannel">Office更新チャネルを変更する</sys:String>
-    <sys:String x:Key="ToolboxChangeChannelDescription">他のチャンネルの選択またはHTTPローカルパスのカスタマイズのサポート。設定を保存した後、Officeアプリケーションで更新を確認します。</sys:String>
+    <sys:String x:Key="ToolboxChangeChannelDescription">他のチャンネルの選択またはHTTPローカルパスのカスタマイズのサポート。&#x000A;&#x000A;設定を保存した後、Officeアプリケーションで更新を確認します。</sys:String>
     <sys:String x:Key="ToolboxChangeOwner">Office製品所有者を変更する</sys:String>
-    <sys:String x:Key="ToolboxChangeOwnerDescription">名前がOfficeアプリケーションのアカウントページに表示されるのは、Officeが正しいライセンスを使用している場合のみです。&#x000A;&#x000A;指定された製品の所有者を変更するには、次の形式を使用します：[ProductID]：[Name]</sys:String>
+    <sys:String x:Key="ToolboxChangeOwnerDescription">名前がOfficeアプリケーションのアカウントページに表示されるのは、Officeが正しいライセンスを使用している場合のみです。&#x000A;&#x000A;指定された製品の所有者を変更するには、次の形式を使用します：ProductID:Name</sys:String>
     <sys:String x:Key="ToolboxChangeOwnerName">所有者名:</sys:String>
+    <sys:String x:Key="ToolboxChangeOwnerNameTip">James もしかしたら ProPlus2019Volume:James</sys:String>
     <sys:String x:Key="ToolboxCheckVersion">Officeバージョンのクエリ</sys:String>
     <sys:String x:Key="CheckVersionCreatedTimeUTC">作成時間(UTC):</sys:String>
     <sys:String x:Key="QueryErrorCode">エラーコード情報のクエリ</sys:String>
@@ -341,19 +345,23 @@
     <!-- Settings Panel -->
     <sys:String x:Key="LanguageSettings">言語：</sys:String>
     <sys:String x:Key="ThemeSettings">テーマ：</sys:String>
+    <sys:String x:Key="AutoShutdownSettings">After deployment:</sys:String>
+    <sys:String x:Key="SettingsSignOut">Sign out</sys:String>
+    <sys:String x:Key="SettingsShutdown">Shut down</sys:String>
+    <sys:String x:Key="SettingsRestart">Restart</sys:String>
     <sys:String x:Key="SaveSettings">設定をローカルに保存します。</sys:String>
     <sys:String x:Key="DisplaySettings">ディスプレイの設定</sys:String>
     <sys:String x:Key="SettingsTopmost">ウィンドウを上に保つ</sys:String>
-    <sys:String x:Key="SettingsTransparencyEffect">Enable window transparency effect</sys:String>
-    <sys:String x:Key="SettingsTransparencyEffectTip">Only available in Windows 10.</sys:String>
+    <sys:String x:Key="SettingsTransparencyEffect">ウィンドウの透明効果を有効にする</sys:String>
+    <sys:String x:Key="SettingsTransparencyEffectTip">Windows10でのみ使用できます。</sys:String>
     <sys:String x:Key="SettingsTransparency">透明度</sys:String>
-    <sys:String x:Key="SettingsBlurValue">Background image blur</sys:String>
+    <sys:String x:Key="SettingsBlurValue">背景画像のぼかし</sys:String>
     <sys:String x:Key="SettingsChooseBGI">背景画像を選択</sys:String>
     <!-- About Panel -->
     <sys:String x:Key="AppInf">アプリケーション情報</sys:String>
     <sys:String x:Key="Homepage">公式サイト:</sys:String>
     <sys:String x:Key="CreatorInfo">Yerongが開発・維持する，「Office 展開ツール」に基づいて。</sys:String>
-    <sys:String x:Key="Copyright">Copyright © 2016-{0} Yerong All rights reserved.</sys:String>
+    <sys:String x:Key="Copyright">Copyright © 2016-{0} Yerong All Rights Reserved.</sys:String>
     <sys:String x:Key="TrademarkInfo">Microsoft Officeは、Microsoft Corporationの米国およびその他の国における登録商標または商標です。</sys:String>
     <sys:String x:Key="ServerProvider">サーバープロバイダー</sys:String>
     <sys:String x:Key="Translator">翻訳者</sys:String>
@@ -366,7 +374,7 @@
     <sys:String x:Key="TextBlockResources">ローカル、ネットワーク、またはHTTPパス</sys:String>
 
     <!-- Task Message -->
-    <sys:String x:Key="Task_DownloadingContent">Getting content, please wait.</sys:String>
+    <sys:String x:Key="Task_DownloadingContent">コンテンツを取得して、お待ちください。</sys:String>
     <sys:String x:Key="Task_PreparingDownload">Officeをダウンロードする準備をしています。</sys:String>
     <sys:String x:Key="Task_DeployClickToRun">「Click-to-Run」のインストール。</sys:String>
     <sys:String x:Key="Task_ODT">Office展開ツールを実行しています。しばらくお待ちください。</sys:String>
@@ -382,9 +390,9 @@
     <sys:String x:Key="Task_InstallingApp">{0}をインストールしています。お待ちください。</sys:String>
 
     <!-- Question Message -->
-    <sys:String x:Key="QuesUpdateTitle">Office Tool Plus Update</sys:String>
-    <sys:String x:Key="QuesUpdateAvailable">Update is available, open download page now?</sys:String>
-    <sys:String x:Key="QuesUpdateNow">Update is ready, restart application now? It only takes a few seconds.</sys:String>
+    <sys:String x:Key="QuesUpdateTitle">Office ToolPlusの更新</sys:String>
+    <sys:String x:Key="QuesUpdateAvailable">アップデートが利用可能です。今すぐダウンロードページを開きますか？</sys:String>
+    <sys:String x:Key="QuesUpdateNow">アップデートの準備ができました。今すぐアプリケーションを再起動しますか？ ほんの数秒しかかかりません。</sys:String>
     <sys:String x:Key="QuesExit">「Office Tool Plus」 は起動中ですが停止しますか？</sys:String>
     <sys:String x:Key="QuesOneClickInstallation">{0}をインストールしますか？&#x000A;アプリケーションまたは言語を選択する必要がある場合は、「他のインストールオプション」を使用してください。&#x000A;&#x000A;ダウンロード後にインストールする場合は「はい」をクリックし、ダウンロード中にインストールする場合は「いいえ」をクリックするか、ウィンドウを閉じてキャンセルします。</sys:String>
     <sys:String x:Key="QuesInstallation">Officeのインストール構成</sys:String>
@@ -395,6 +403,7 @@
     <sys:String x:Key="QuesClearActivation">すべてのキーとライセンスをアンインストールしてよろしいですか？ 操作が完了したら、ライセンスを再インストールしてOfficeをライセンス認証する必要があります。</sys:String>
     <sys:String x:Key="QuesClearKeys">すべてのキーをアンインストールしてよろしいですか？</sys:String>
     <sys:String x:Key="QuesCleanOffice">Officeをクリアしてもよろしいですか？一度始めると、キャンセルすることはできません。</sys:String>
+    <sys:String x:Key="QuesAutoShutdown">Your PC will sign out/shutdown/restart in one minute. Click "Yes" to operate immediately, or "No" to cancel the operation.</sys:String>
 
     <!-- Info Message -->
     <sys:String x:Key="InfoPermission">「Office Tool Plus」は通常の権限で起動されますが、一部の機能は使用できなくなります。</sys:String>

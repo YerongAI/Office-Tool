@@ -8,19 +8,19 @@ Jeśli masz ważną licencję firmy Microsoft, zaloguj się do swojego konta, a 
 
 ---
 
-1. Czyste licencje
+1. Usuń licencje
 2. Zainstaluj licencje
 3. Aktywuj licencje
 
-### Czyste licencje
+### Usuń licencje
 
 ---
 
 `Jeśli pakiet Office był już wcześniej zainstalowany, zaleca się wyczyszczenie poprzednich informacji aktywacyjnych .`
 
-W podmenu *Zainstaluj licencje*, kliknij *Wyczyść licencje*.
+W podmenu *Zainstaluj licencje*, kliknij *Usuń licencje*.
 
-Jeśli chcesz razem wyczyścić klucze, kliknij *Wyczyść aktywację*.
+Jeśli chcesz wyczyścić klucze razem, kliknij *Usuń aktywację*.
 
 ### Zainstaluj licencje
 

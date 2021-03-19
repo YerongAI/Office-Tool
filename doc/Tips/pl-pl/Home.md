@@ -16,18 +16,14 @@ Office Tool Plus jest oparty na [Microsoft Office Deployment Tool](https://aka.m
 
 - <kbd>Esc</kbd>: Powrót do głównego okna.
 - <kbd>F1</kbd>: Pomoc.
-- <kbd>F5</kbd>: ponowne załadowanie informacji pakietu Office.
-- <kbd>Ctrl + 1</kbd>: Przełącz na stronę wdrażania.
-- <kbd>Ctrl + 2</kbd>: Przełącz, aby aktywować stronę.
-- <kbd>Ctrl + 3</kbd>: Przełącz na stronę przybornika.
+- <kbd>F5</kbd>: Załaduj ponownie informacje pakietu Office.
+- <kbd>Ctrl + 1</kbd>: Przejdź do strony wdrażania.
+- <kbd>Ctrl + 2</kbd>: Przejdź do strony aktywacji.
+- <kbd>Ctrl + 3</kbd>: Przejdź do strony przybornika.
 - <kbd>Ctrl + N</kbd>: Wyświetl panel powiadomień.
-- <kbd>Ctrl + T</kbd>: Panel ustawień wyświetlania.
-- <kbd>Ctrl + B</kbd>: Wyświetl informacje o panelu.
+- <kbd>Ctrl + T</kbd>: Pokaż podstawowe ustawienia.
+- <kbd>Ctrl + B</kbd>: Wyświetl informacje o aplikacji.
 - <kbd>Ctrl + P</kbd>: Pokaż/Ukryj okno poleceń.
-- <kbd>Ctrl + D</kbd>: Rozpocznij wdrażanie pakietu Office (na stronie wdrażania).
-- <kbd>Ctrl + O</kbd>: Importuj konfigurację XML (na stronie wdrażania).
-- <kbd>Ctrl + S</kbd>: Eksportuj konfigurację XML (na stronie wdrażania).
-- <kbd>Ctrl + E</kbd>: Pokaż kody XML (na stronie wdrażania).
 
 Porada: Możesz także przełączać strony za pomocą przycisku myszy do przodu/do tyłu.
 
@@ -71,7 +67,7 @@ Porada: Możesz także przełączać strony za pomocą przycisku myszy do przodu
 
 **/installiSlide** Zainstaluj iSlide.
 
-**/getProductKey [ProductID]** Uzyskaj klucz produktu, zwróć GVLK dla produktów zbiorczych, normalny klucz dla innych produktów. Przykładowy identyfikator produktu: ProPlus2019Volume
+**/getKey [ProductID]** Uzyskaj klucz produktu, zwróć GVLK dla produktów zbiorczych, normalny klucz dla innych produktów. Przykładowy identyfikator produktu: ProPlus2019Volume
 
 **/osppILByID [ProductID]** Zainstaluj licencje pakietu Office dla produktu, na przykład: MondoVolume
 

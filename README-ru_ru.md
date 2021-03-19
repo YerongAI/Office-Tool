@@ -31,14 +31,14 @@
 - Поддерживает онлайн-активацию, активацию по телефону (офлайн-активация) и KMS-активацию.
 - Сброс/Принудительное удаление Офиса.
 - Изменение канала обновления Офиса без переустановки Офиса.
-- Пакетное преобразование документов Офиса на основе Офиса API (только 8 версия).
+- Пакетное преобразование документов Офиса на основе Офиса API.
 
 Компоненты:
 
 - **[Office Deployment Tool](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - Основной модуль установки Офиса.
 - **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office Software Protect Platform.
 - **Thunder** - Основной модуль загрузки Офиса.
-- **vlmcs** - Компоненты для тестирования доступности KMS, *включены только в полную версию*.
+- **[vlmcs](https://github.com/Wind4/vlmcsd)** - Компоненты для тестирования доступности KMS.
 
 ## Системные требования
 
@@ -53,28 +53,11 @@
 
 - [Сайт загрузок](https://download.coolhub.top/)
 
+- [OneDrive for Business](https://coolhub-my.sharepoint.com/:f:/g/personal/yerong_coolhub_onmicrosoft_com/Ev9IUbXAw01JgwrAgsIFB8YBzJebdZZpmsR9hZFAZZVDgg?e=AkSdZU)
+
 ## Быстрое начало
 
-Пожалуйста, перейдите по ссылке [Office Tool Plus Quick Start](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)
-
-## Спасибо участникам, внёсшим свой вклад в программу
-
-| Culture | Name | Collaborators |
-| :-- | :-- | :-- |
-(de-de) | Deutsch (Deutschland) | [Berny23](https://steamcommunity.com/id/Berny23)
-(en-us) | English (United States) | [Me](https://github.com/YerongAI) и [Moedog](https://prprpr.love)
-(es-es) | Español (España) | Xoseba
-(fr-fr) | Français (France) | Drake4478
-(id-id) | Bahasa Indonesia (Indonesian) | [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Jovanzers](https://github.com/jovanzers)
-(it-it) | Italiano (Italia) | [garf02](https://github.com/garf02)
-(ja-jp) | 日本語 (日本) | [秋山ヘイワ](https://github.com/akio1321), kai, 河豚
-(ko-kr) | 한국어(대한민국) | [Jay Jang](http://www.yaeyaya.com)
-(pl-pl) | Polski (Polska) | JakubDriver
-(pt-br) | Português (Brasil) | [Hélio de Souza](https://tinyurl.com/hdstec), [Igor Rückert](https://github.com/igorruckert)
-(vi-vn) | Tiêng Việt (Việt Nam) | [phuocding](https://github.com/phuocding)
-(ru-ru) | русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov)
-(zh-cn) | 简体中文 (中国) | Official language
-(zh-tw) | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412)
+Пожалуйста, перейдите по ссылке [Office-Tool-Plus-Быстрый-Старт](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-%D0%91%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9-%D0%A1%D1%82%D0%B0%D1%80%D1%82)
 
 ## Помощь с переводом
 
@@ -92,6 +75,6 @@
 
 ## О разработке
 
-© 2016-2021 Yerong. All rights reserved.
+© 2016-2021 Yerong. All Rights Reserved.
 
 > Blog [@Yerong の小窝](https://www.coolhub.top/) В· GitHub [@YerongAI](https://github.com/YerongAI) В· Telegram [@Office Tool Plus](https://t.me/otp_channel)

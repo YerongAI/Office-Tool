@@ -8,19 +8,19 @@ Si vous avez une licence valide de Microsoft, connectez-vous à votre compte et 
 
 ---
 
-1. Effacer les Licences
+1. Supprimer les licences
 2. Installer des licences
 3. Activer les licences
 
-### Effacer de la licence
+### Supprimer les licences
 
 ---
 
 `Si vous avez déjà installé Office, il est recommandé de nettoyer les informations d’activation précédentes.`
 
-Dans le sous-groupe de *Installer les licences*, cliquez sur *Effacer les Licences*.
+Dans le sous-groupe de *Installer les licences*, cliquez sur *Supprimer les Licences*.
 
-Si vous souhaitez nettoyer les clés ensemble, cliquez sur *Effacer l'activation*.
+Si vous souhaitez nettoyer les clés ensemble, cliquez sur *Supprimer l'activation*.
 
 #### Installer des licences
 
@@ -42,9 +42,9 @@ Si l’ID SKU du produit n’est pas trouvé, essayez d’abord d’installer de
 
 #### Activation hors ligne (Activation par téléphone)
 
-Installez votre clé de produit, dans le sous-menu de *Clé d'installation* cliquez sur *Afficher l'ID d'installation*, lorsque vous obtenez l'ID de confirmation, installez-la.
+Installer votre clé de produit, dans le sous-menu de *Clé d'installation* cliquez sur *Afficher l'ID d'installation*, lorsque vous obtenez l'ID de confirmation, installez-la.
 
-Si l’ID SKU du produit n’est pas trouvé, essayez d’abord d’installer des licences.
+Si l’ID SKU du produit n’est pas trouvé, essayer d’abord d’installer des licences.
 
 #### Activation KMS (hôte KMS requis)
 

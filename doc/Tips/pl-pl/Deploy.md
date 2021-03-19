@@ -14,8 +14,8 @@ Aby zdefiniować miejsce zapisywania plików w trybie pobierania, zmień wartoś
 
 1. Tryb wdrażania
 2. Kanał aktualizacji pakietu Office
-3. Wdróż moduł
-4. Office Applications Preferences
+3. Moduł wdrożeniowy
+4. Preferencje aplikacji pakietu Office
 5. Więcej informacji
 
 ### Tryb wdrażania
@@ -50,9 +50,9 @@ Jeśli używasz pliku ISO, musisz go najpierw zamontować, a następnie wybrać 
 
 *Wymaga plików instalacyjnych pakietu Office przechowywanych w katalogu Office Tool Plus.* Jeśli nie, najpierw pobierz pliki instalacyjne pakietu Office.
 
-You can create an ISO file with default settings. To do so, configure Office installation, such as adding products and languages, then click "Start deploy" to begin creating ISO file.
+Możesz utworzyć plik ISO z domyślnymi ustawieniami. Aby to zrobić, skonfiguruj instalację pakietu Office, na przykład dodając produkty i języki, a następnie kliknij „Rozpocznij wdrażanie”, aby rozpocząć tworzenie pliku ISO.
 
-If you do not configuration, the user will need to configure it as if it were used normally.
+Jeśli nie dokonasz konfiguracji, użytkownik będzie musiał skonfigurować ją tak, jakby była normalnie używana.
 
 #### Tylko pobierz
 
@@ -88,7 +88,7 @@ Tylko dla wersji Office 2019 Volume.
 
 Uwaga: nie zalecamy korzystania z kanału beta.
 
-### Wdrażanie modułu
+### Moduł wdrożeniowy
 
 ---
 
@@ -97,27 +97,27 @@ Narzędzie do wdrażania pakietu Office to oficjalne narzędzie firmy Microsoft 
 #### Funkcje nieobsługiwane w module Office Tool Plus
 
 - Brak obsługi opcji dziennika
-- Brak obsługi programu Configuration Manager
+- Brak obsługi programu Manager konfiguracji
 - Brak obsługi terminu aktualizacji
 - Brak obsługi migracji architektury
 - Brak obsługi wymuszonej aktualizacji.
 - Brak obsługi usuwania istniejących wersji MSI pakietu Office
 - Brak obsługi instalacji w tym samym języku, co w poprzedniej wersji MSI.
-- Not support of Office applications preferences.
+- Nie obsługuje preferencji aplikacji pakietu Office.
 
 Uwaga: **Aby uzyskać pełną instalację, użyj narzędzia do wdrażania pakietu Office.**
 
-### Office Applications Preferences
+### Preferencje aplikacji pakietu Office
 
 ---
 
-`Application preferences are data provided by Microsoft, these texts are machine translated and may contain some grammatical errors.`
+`Preferencje aplikacji to dane dostarczane przez firmę Microsoft. Teksty te są tłumaczone maszynowo i mogą zawierać błędy gramatyczne.`
 
-The function allow you defines application preferences for Office Apps, including VBA Macro notifications, default file locations, and default file format.
+Ta funkcja umożliwia definiowanie preferencji aplikacji dla aplikacji Office, w tym powiadomień makr VBA, domyślnych lokalizacji plików i domyślnego formatu plików.
 
-You can apply new application preferences to client computers that already have Office installed. Click "Applying preferences for Office applications" in the "View XML code" submenu.
+Możesz zastosować nowe preferencje aplikacji do komputerów klienckich, na których jest już zainstalowany pakiet Office. Kliknij opcję „Stosowanie preferencji dla aplikacji pakietu Office” w podmenu „Wyświetl kod XML”.
 
-The app preferences are applied to all existing users of the device and any new users added to the device in the future. If you apply application preferences when Office apps are running, the preferences will be applied when Office is next restarted.
+Preferencje aplikacji są stosowane do wszystkich istniejących użytkowników urządzenia i wszystkich nowych użytkowników dodanych do urządzenia w przyszłości. Jeśli zastosujesz preferencje aplikacji, gdy są uruchomione aplikacje pakietu Office, zostaną one zastosowane po następnym ponownym uruchomieniu pakietu Office.
 
 ### Więcej informacji
 

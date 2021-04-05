@@ -44,13 +44,11 @@
 
 - Windows 7 SP1, Windows 8 和 Windows 10
 - Windows Server 2008 R2 SP1, Windows Server 2012 以上版本
-
 - [Microsoft .NET 5.0 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet/current/runtime)
 
 ## 下載
 
 - [官方網站](https://otp.landian.vip/)
-
 - [下載點](https://download.coolhub.top/)
 - [OneDrive for Business](https://coolhub-my.sharepoint.com/:f:/g/personal/yerong_coolhub_onmicrosoft_com/Ev9IUbXAw01JgwrAgsIFB8YBzJebdZZpmsR9hZFAZZVDgg?e=AkSdZU)
 
@@ -66,8 +64,7 @@ Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.c
 
 - [TurboHK](https://www./github.com/TurboHK)
 
-##教學文章（由台灣團隊管理）
-- 教學文章(https://www.cotpear.com/search/label/Office)
+- [教學文章（由台灣團隊管理）](https://www.cotpear.com/search/label/Office)
 
 ## 關於
 

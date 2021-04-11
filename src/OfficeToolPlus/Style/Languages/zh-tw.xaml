@@ -14,6 +14,7 @@
     <sys:String x:Key="Settings">設定</sys:String>
     <!-- Channels Name, if you don't want to translate them, please keep in English. -->
     <sys:String x:Key="PerpetualVL2019">Office 2019 永久企業版</sys:String>
+    <sys:String x:Key="PerpetualVL2021">Office 2021 永久企業版</sys:String>
     <sys:String x:Key="SemiAnnual">半年企業通道</sys:String>
     <sys:String x:Key="MonthlyEnterprise">企業用每月通道</sys:String>
     <sys:String x:Key="Current">目前通道</sys:String>
@@ -120,6 +121,8 @@
     <sys:String x:Key="DeployDescription">提供此設定的說明以用於紀錄目的:</sys:String>
     <!-- Installation Settings -->
     <sys:String x:Key="DeployInstallationSettings">安裝設定</sys:String>
+    <sys:String x:Key="DeployFallbackLanguage">备用语言:</sys:String>
+    <sys:String x:Key="DeployFallbackLanguageTip">当 Office 的语言设置为匹配系统语言时，你可以指定一个备用语言以便 Office 不支持系统语言或安装程序在本地源中找不到目标语言包时以安装</sys:String>
     <sys:String x:Key="DeployVersionTip">如不指定版本，則使用可用的最新版本</sys:String>
     <sys:String x:Key="DeployGetHistoricalVersions">取得可用的舊版本 Office</sys:String>
     <sys:String x:Key="DeployDownloadPath">下載路徑:</sys:String>
@@ -186,8 +189,8 @@
     <sys:String x:Key="DownloadSettings">下載設定</sys:String>
     <sys:String x:Key="DownloadEngine">下載引擎:</sys:String>
     <sys:String x:Key="DownloadEngineThunder">迅雷</sys:String>
-    <sys:String x:Key="DownloadAgent">系统标识:</sys:String>
-    <sys:String x:Key="DownloadAgentTip">默认情况下，Office Tool Plus 会检测当前系统的版本，如果你需要为其他版本的 Windows 下载 Office 安装包，请配置此项</sys:String>
+    <sys:String x:Key="DownloadAgent">系統標識:</sys:String>
+    <sys:String x:Key="DownloadAgentTip">若選擇「預設」選項，Office Tool Plus 會自動檢查目前系統的版本，如果您需要為其他版本的 Windows 系統下載 Office 安裝文件，請設定此項</sys:String>
     <sys:String x:Key="DownloadUseHTTPS">使用 HTTPS 連線</sys:String>
     <sys:String x:Key="DownloadThunderSettings">迅雷設定</sys:String>
     <sys:String x:Key="DownloadSpeedLimit">迅雷限速:</sys:String>
@@ -345,52 +348,52 @@
     <!-- File Types -->
     <!-- Common -->
     <sys:String x:Key="TypeOfPDF">PDF</sys:String>
-    <sys:String x:Key="TypeOfXPS">XPS 文档</sys:String>
-    <sys:String x:Key="TypeOfTXT">纯文本</sys:String>
-    <sys:String x:Key="TypeOfMHTML">单个文件网页</sys:String>
-    <sys:String x:Key="TypeOfHTML">网页</sys:String>
+    <sys:String x:Key="TypeOfXPS">XPS 文件</sys:String>
+    <sys:String x:Key="TypeOfTXT">純文字</sys:String>
+    <sys:String x:Key="TypeOfMHTML">單個檔案網頁</sys:String>
+    <sys:String x:Key="TypeOfHTML">網頁</sys:String>
     <sys:String x:Key="TypeOfRTF">RTF 格式</sys:String>
     <!-- Image -->
-    <sys:String x:Key="TypeOfGIF">动态 GIF 格式</sys:String>
-    <sys:String x:Key="TypeOfJPG">JPEG 文件交换格式</sys:String>
-    <sys:String x:Key="TypeOfPNG">PNG 可移植网络图形格式</sys:String>
-    <sys:String x:Key="TypeOfTIF">TIFF Tag 图像文件格式</sys:String>
-    <sys:String x:Key="TypeOfBMP">设备无关位图</sys:String>
+    <sys:String x:Key="TypeOfGIF">動畫 GIF 格式</sys:String>
+    <sys:String x:Key="TypeOfJPG">JPEG 檔案交換格式</sys:String>
+    <sys:String x:Key="TypeOfPNG">PNG 可攜式網路圖形格式</sys:String>
+    <sys:String x:Key="TypeOfTIF">TIF 格式檔</sys:String>
+    <sys:String x:Key="TypeOfBMP">與裝置無關點陣圖</sys:String>
     <!-- Video -->
-    <sys:String x:Key="TypeOfMP4">MPEG-4 视频</sys:String>
-    <sys:String x:Key="TypeOfWMV">Windows Media 视频</sys:String>
+    <sys:String x:Key="TypeOfMP4">Mpeg-4 視訊</sys:String>
+    <sys:String x:Key="TypeOfWMV">Windows 媒體視訊檔案</sys:String>
     <!-- Word -->
-    <sys:String x:Key="WordDOCX">Word 文档</sys:String>
-    <sys:String x:Key="WordDOCM">启用宏的 Word 文档</sys:String>
-    <sys:String x:Key="WordDOC">Word 97-2003 文档</sys:String>
-    <sys:String x:Key="WordDOTX">Word 模板</sys:String>
-    <sys:String x:Key="WordDOTM">启用宏的 Word 模板</sys:String>
-    <sys:String x:Key="WordDOT">Word 97-2003 模板</sys:String>
+    <sys:String x:Key="WordDOCX">Word 文件</sys:String>
+    <sys:String x:Key="WordDOCM">Word 啟用巨集的文件</sys:String>
+    <sys:String x:Key="WordDOC">Word 97-2003 文件</sys:String>
+    <sys:String x:Key="WordDOTX">Word 範本</sys:String>
+    <sys:String x:Key="WordDOTM">Word 啟用巨集的範本</sys:String>
+    <sys:String x:Key="WordDOT">Word 97-2003 範本</sys:String>
     <!-- PowerPoint -->
-    <sys:String x:Key="PowerPointPPTX">PowerPoint 演示文稿</sys:String>
-    <sys:String x:Key="PowerPointPPTM">启用宏的 PowerPoint 演示文稿</sys:String>
-    <sys:String x:Key="PowerPointPPT">PowerPoint 97-2003 演示文稿</sys:String>
-    <sys:String x:Key="PowerPointPOTX">PowerPoint 模板</sys:String>
-    <sys:String x:Key="PowerPointPOTM">启用宏的 PowerPoint 模板</sys:String>
-    <sys:String x:Key="PowerPointPOT">PowerPoint 97-2003 模板</sys:String>
-    <sys:String x:Key="PowerPointPPSX">PowerPoint 放映</sys:String>
-    <sys:String x:Key="PowerPointPPSM">启用宏的 PowerPoint 放映</sys:String>
-    <sys:String x:Key="PowerPointPPS">PowerPoint 97-2003 放映</sys:String>
+    <sys:String x:Key="PowerPointPPTX">PowerPoint 簡報</sys:String>
+    <sys:String x:Key="PowerPointPPTM">PowerPoint 啟用巨集的簡報</sys:String>
+    <sys:String x:Key="PowerPointPPT">PowerPoint 97-2003 簡報</sys:String>
+    <sys:String x:Key="PowerPointPOTX">PowerPoint 範本</sys:String>
+    <sys:String x:Key="PowerPointPOTM">PowerPoint 啟用巨集的範本</sys:String>
+    <sys:String x:Key="PowerPointPOT">PowerPoint 97-2003 範本</sys:String>
+    <sys:String x:Key="PowerPointPPSX">PowerPoint 播放檔</sys:String>
+    <sys:String x:Key="PowerPointPPSM">PowerPoint 啟用巨集的播放檔</sys:String>
+    <sys:String x:Key="PowerPointPPS">PowerPoint 97-2003 播放檔</sys:String>
     <!-- Excel -->
-    <sys:String x:Key="ExcelXLSX">Excel 工作簿</sys:String>
-    <sys:String x:Key="ExcelXLSM">启用宏的 Excel 工作簿</sys:String>
-    <sys:String x:Key="ExcelXLS">Excel 97-2003 工作簿</sys:String>
-    <sys:String x:Key="ExcelCSV">CSV UTF-8 (逗号分隔)</sys:String>
-    <sys:String x:Key="ExcelXLTX">Excel 模板</sys:String>
-    <sys:String x:Key="ExcelXLTM">启用宏的 Excel 模板</sys:String>
-    <sys:String x:Key="ExcelXLT">Excel 97-2003 模板</sys:String>
+    <sys:String x:Key="ExcelXLSX">Excel 活頁簿</sys:String>
+    <sys:String x:Key="ExcelXLSM">Excel 啟用巨集的活頁簿</sys:String>
+    <sys:String x:Key="ExcelXLS">Excel 97-2003 活頁簿</sys:String>
+    <sys:String x:Key="ExcelCSV">CSV UTF-8 (逗點分隔)</sys:String>
+    <sys:String x:Key="ExcelXLTX">Excel 範本</sys:String>
+    <sys:String x:Key="ExcelXLTM">Excel 啟用巨集的範本</sys:String>
+    <sys:String x:Key="ExcelXLT">Excel 97-2003 範本</sys:String>
     <!-- Settings Panel -->
     <sys:String x:Key="LanguageSettings">語言:</sys:String>
     <sys:String x:Key="ThemeSettings">主題:</sys:String>
-    <sys:String x:Key="AutoShutdownSettings">部署完成后:</sys:String>
-    <sys:String x:Key="SettingsSignOut">注销</sys:String>
-    <sys:String x:Key="SettingsShutdown">关机</sys:String>
-    <sys:String x:Key="SettingsRestart">重启</sys:String>
+    <sys:String x:Key="AutoShutdownSettings">部署完成後執行:</sys:String>
+    <sys:String x:Key="SettingsSignOut">登出</sys:String>
+    <sys:String x:Key="SettingsShutdown">關機</sys:String>
+    <sys:String x:Key="SettingsRestart">重新啟動</sys:String>
     <sys:String x:Key="SaveSettings">儲存個人偏好設定</sys:String>
     <sys:String x:Key="DisplaySettings">介面設定</sys:String>
     <sys:String x:Key="SettingsTopmost">視窗最上層顯示</sys:String>
@@ -416,7 +419,7 @@
     <sys:String x:Key="TextBlockResources">本機、網際網路、HTTP 路徑</sys:String>
 
     <!-- Task Message -->
-    <sys:String x:Key="Task_DownloadingContent">取得資訊中，請稍後。</sys:String>
+    <sys:String x:Key="Task_DownloadingContent">取得資訊中，請稍候。</sys:String>
     <sys:String x:Key="Task_PreparingDownload">正在準備下載 Office，請稍候</sys:String>
     <sys:String x:Key="Task_DeployClickToRun">正在準備 Click-to-Run，請稍候</sys:String>
     <sys:String x:Key="Task_ODT">Office 部署工具執行中，請稍候</sys:String>
@@ -426,7 +429,7 @@
     <sys:String x:Key="Task_CheckVersion">正在查詢 Office 版本資訊，請稍候</sys:String>
     <sys:String x:Key="Task_CheckKMS">正在測試 KMS 伺服器，請稍候</sys:String>
     <sys:String x:Key="Task_CollectLog">正在擷取 Office 安裝記錄檔，請稍候</sys:String>
-    <sys:String x:Key="Task_CleanOffice">正在清除 Office，請稍候</sys:String>
+    <sys:String x:Key="Task_RemoveOffice">正在移除 Office，請稍候</sys:String>
     <sys:String x:Key="Task_ConvertDocument">正在轉換文件，請稍候</sys:String>
     <!-- Example: Installing iSlide, please wait. -->
     <sys:String x:Key="Task_InstallingApp">正在安裝 {0}，請稍候</sys:String>
@@ -445,7 +448,7 @@
     <sys:String x:Key="QuesClearActivation">此操作將會移除所有產品金鑰和授權，並且操作完成後需要重新安裝授權和啟用 Office。是否繼續?</sys:String>
     <sys:String x:Key="QuesClearKeys">此操作將會移除所有產品金鑰，並且操作完成後需要重新安裝金鑰和啟用 Office。是否繼續?</sys:String>
     <sys:String x:Key="QuesCleanOffice">此操作將會清除 Office，並且無法取消。是否繼續?</sys:String>
-    <sys:String x:Key="QuesAutoShutdown">你的电脑将在一分钟后注销/关机/重启。点击“是”立即执行，或者点击“否”取消操作。</sys:String>
+    <sys:String x:Key="QuesAutoShutdown">您即將在 1 分鐘後登出/關機/重新啟動。按一下「是」立即執行，或是按一下「否」取消操作。</sys:String>
 
     <!-- Info Message -->
     <sys:String x:Key="InfoPermission">目前 Office Tool Plus 並不是以系統管理員身分執行，某些功能將無法使用。</sys:String>

@@ -96,7 +96,6 @@ Narzędzie do wdrażania pakietu Office to oficjalne narzędzie firmy Microsoft 
 
 #### Funkcje nieobsługiwane w module Office Tool Plus
 
-- Brak obsługi opcji dziennika
 - Brak obsługi programu Manager konfiguracji
 - Brak obsługi terminu aktualizacji
 - Brak obsługi migracji architektury

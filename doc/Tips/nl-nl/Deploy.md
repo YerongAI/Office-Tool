@@ -96,7 +96,6 @@ De Office Deployment Tool is een officiële Microsoft-tool voor het implementere
 
 #### Functies niet ondersteund in de Office Tool Plus Module
 
-- Geen ondersteuning van log opties
 - Geen ondersteuning van Configuratie Manager
 - Geen ondersteuning van update deadline
 - Geen ondersteuning van migratie architectuur

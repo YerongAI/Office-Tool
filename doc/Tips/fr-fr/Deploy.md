@@ -96,7 +96,6 @@ L’outil de déploiement Office est un outil Microsoft officiel pour le déploi
 
 #### Fonctionnalités non prises en charge dans le module Outil Office Plus
 
-- Non prise en charge des options de journal
 - Ne pas prendre en charge le gestionnaire de configuration
 - Non prise en charge de la date limite de mise à jour
 - Non prise en charge de l’architecture de migration

@@ -76,7 +76,7 @@ ko-kr | 한국어(대한민국) | [Jay Jang](http://www.yaeyaya.com)
 nl-nl | Nederlands (Nederland) | Kajoe
 pl-pl | Polski (Polska) | JakubDriver
 pt-br | Português (Brasil) | [Hélio de Souza](https://tinyurl.com/hdstec), [Igor Rückert](https://github.com/igorruckert)
-ru-ru | русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov)
+ru-ru | Русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov)
 zh-cn | 简体中文 (中国) | Official language
 zh-hk | 繁體中文 (香港) | TurboHK
 zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412)

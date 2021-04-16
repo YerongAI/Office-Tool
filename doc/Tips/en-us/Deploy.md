@@ -128,7 +128,6 @@ The Office Deployment Tool is an official Microsoft tool for deploying Office.
 
 #### Features Not Supported in Office Tool Plus Module
 
-- Not support of log options
 - Not support of Configuration Manager
 - Not support of update deadline
 - Not support of migrate architecture

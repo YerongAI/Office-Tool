@@ -19,7 +19,7 @@
       <ExcludeApp ID="Teams" />
       <ExcludeApp ID="Word" />
     </Product>
-    <Product ID="VisioProXVolume" PIDKEY="9BGNQ-K37YR-RQHF2-38RQ3-7VCBB">
+    <Product ID="VisioProXVolume" PIDKEY="9BGNQ-K37YR-RQHF2-38RQ3-7VCBB" MSICondition="VisPro,VisProR">
       <Language ID="MatchOS" Fallback="en-us" />
       <Language ID="MatchInstalled" TargetProduct="All" />
       <Language ID="MatchPreviousMSI" />
@@ -28,7 +28,7 @@
       <ExcludeApp ID="Groove" />
       <ExcludeApp ID="OneDrive" />
     </Product>
-    <Product ID="ProjectProXVolume" PIDKEY="WGT24-HCNMF-FQ7XH-6M8K7-DRTW9">
+    <Product ID="ProjectProXVolume" PIDKEY="WGT24-HCNMF-FQ7XH-6M8K7-DRTW9" MSICondition="PrjStd,PrjStdR">
       <Language ID="MatchOS" Fallback="en-us" />
       <Language ID="MatchInstalled" TargetProduct="All" />
       <Language ID="MatchPreviousMSI" />
@@ -37,7 +37,6 @@
     </Product>
   </Add>
   <Display Level="None" AcceptEULA="TRUE" />
-  <Logging Level="Standard" Path="%temp%" />
   <Property Name="PinIconsToTaskbar" Value="FALSE" />
   <Property Name="AUTOACTIVATE" Value="1" />
   <Property Name="FORCEAPPSHUTDOWN" Value="TRUE" />
@@ -49,15 +48,19 @@
   <Updates Enabled="TRUE" UpdatePath="C:\Office" UpdateChannel="Broad" TargetVersion="16.0.11111.11111" DeadLine="12/31/9999 08:00" />
   <RemoveMSI>
     <IgnoreProduct ID="VisPro" />
+    <IgnoreProduct ID="VisProR" />
     <IgnoreProduct ID="VisStd" />
+    <IgnoreProduct ID="VisStdR" />
     <IgnoreProduct ID="PrjPro" />
+    <IgnoreProduct ID="PrjProR" />
     <IgnoreProduct ID="PrjStd" />
-    <IgnoreProduct ID="SPD" />
+    <IgnoreProduct ID="PrjStdR" />
     <IgnoreProduct ID="InfoPath" />
     <IgnoreProduct ID="InfoPathR" />
+    <IgnoreProduct ID="SPD" />
   </RemoveMSI>
   <AppSettings>
-    <Setup Name="Company" Value="Landian Office 365" />
+    <Setup Name="Company" Value="Yerong の小窝" />
     <!-- No App Preferences -->
   </AppSettings>
 </Configuration>

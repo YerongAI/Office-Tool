@@ -96,21 +96,9 @@ The mode won't start installation, download files only. Before start download, m
 
 The mode allowed you to install, modify and uninstall Office.
 
-If you are installing Office on a new machine, we recommand you to checked 
+If you are installing Office on a new machine, we recommand you to checked "Install after download".
 
 If you have a bad Internet connection, this will take a lot of time.
-
-### Install after download
-
-*Download all files.*
-
-We recommend you to use it when install Office on a new machine.
-
-### Use an existing installation source
-
-To use it, you need to choose any of the CAB files. If not, we will fallback to *Install while downloading*.
-
-If you are using an ISO file, you need to mount it first and then select the CAB file.
 
 ### Create ISO file
 

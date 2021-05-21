@@ -14,8 +14,8 @@ Aby zdefiniować miejsce zapisywania plików w trybie pobierania, zmień wartoś
 
 1. Tryb wdrażania
 2. Kanał aktualizacji pakietu Office
-3. Wdróż moduł
-4. Preferencje aplikacji Office
+3. Moduł wdrożeniowy
+4. Preferencje aplikacji pakietu Office
 5. Więcej informacji
 
 ### Tryb wdrażania
@@ -88,7 +88,7 @@ Tylko dla wersji Office 2019 Volume.
 
 Uwaga: nie zalecamy korzystania z kanału beta.
 
-### Wdrażanie modułu
+### Moduł wdrożeniowy
 
 ---
 
@@ -96,7 +96,6 @@ Narzędzie do wdrażania pakietu Office to oficjalne narzędzie firmy Microsoft 
 
 #### Funkcje nieobsługiwane w module Office Tool Plus
 
-- Brak obsługi opcji dziennika
 - Brak obsługi programu Manager konfiguracji
 - Brak obsługi terminu aktualizacji
 - Brak obsługi migracji architektury
@@ -107,7 +106,7 @@ Narzędzie do wdrażania pakietu Office to oficjalne narzędzie firmy Microsoft 
 
 Uwaga: **Aby uzyskać pełną instalację, użyj narzędzia do wdrażania pakietu Office.**
 
-### Preferencje aplikacji Office
+### Preferencje aplikacji pakietu Office
 
 ---
 

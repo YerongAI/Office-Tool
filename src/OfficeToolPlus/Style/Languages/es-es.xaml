@@ -8,12 +8,12 @@
     <sys:String x:Key="EulaContent">Al utilizar este software, debe aceptar los [Términos de Licencia de Software]({0}) y los [Contrato de Servicios de Microsoft]({1}).</sys:String>
     <!-- Header -->
     <sys:String x:Key="ISOMode">- Modo ISO</sys:String>
-    <sys:String x:Key="Notifications">Notificaciones</sys:String>
     <sys:String x:Key="Help">Ayuda</sys:String>
     <sys:String x:Key="About">Acerca de</sys:String>
     <sys:String x:Key="Settings">Configuración</sys:String>
     <!-- Channels Name, if you don't want to translate them, please keep in English. -->
     <sys:String x:Key="PerpetualVL2019">Office 2019 Empresa Perpetual</sys:String>
+    <sys:String x:Key="PerpetualVL2021">Office 2021 Empresa Perpetual</sys:String>
     <sys:String x:Key="SemiAnnual">Canal Empresarial Semianual</sys:String>
     <sys:String x:Key="MonthlyEnterprise">Canal Empresarial Mensual</sys:String>
     <sys:String x:Key="Current">Canal Actual</sys:String>
@@ -69,7 +69,6 @@
     <sys:String x:Key="HS2019Description">Incluye Word, Excel, PowerPoint.</sys:String>
     <sys:String x:Key="OtherInstallOptions">Otras opciones de instalación.</sys:String>
     <sys:String x:Key="OIODescription">Elegir otros productos o idiomas.</sys:String>
-    <sys:String x:Key="RunAsAdmin">Ejecutar como Administrador/a</sys:String>
     <sys:String x:Key="CreateShortcut">Crear un acceso directo en el escritorio</sys:String>
     <sys:String x:Key="ServerUnavailable">No se puede conectar al servidor, verifique su conexión a Internet.</sys:String>
     <!-- Deploy Page -->
@@ -103,7 +102,7 @@
     <sys:String x:Key="DeployApps">Aplicaciones</sys:String>
     <!-- Language -->
     <sys:String x:Key="LanguagePack">Paquetes de idiomas</sys:String>
-    <sys:String x:Key="LanguageID">ID de idioma: {0}</sys:String>
+    <sys:String x:Key="LanguageID">ID de idioma:</sys:String>
     <sys:String x:Key="LanguageType">Tipo de paquete de idioma: {0}</sys:String>
     <sys:String x:Key="Full">Completo</sys:String>
     <sys:String x:Key="Partial">Parcial</sys:String>
@@ -120,6 +119,8 @@
     <sys:String x:Key="DeployDescription">Proporcione una descripción de esta configuración para fines de documentación.</sys:String>
     <!-- Installation Settings -->
     <sys:String x:Key="DeployInstallationSettings">Configuración de instalación</sys:String>
+    <sys:String x:Key="DeployFallbackLanguage">Fallback language:</sys:String>
+    <sys:String x:Key="DeployFallbackLanguageTip">When the language is set to match system language, you can specify a fallback language to install when a matched language isn't supported by Office or can't be found in the local source.</sys:String>
     <sys:String x:Key="DeployVersionTip">Defaults to the latest version available if not specified.</sys:String>
     <sys:String x:Key="DeployGetHistoricalVersions">Get available historical versions of Office.</sys:String>
     <sys:String x:Key="DeployDownloadPath">Ruta de descarga:</sys:String>
@@ -130,10 +131,6 @@
     <sys:String x:Key="DeployAllowCDNFallback">Permitir que el instalador recurra a CDN de Office para idiomas faltantes.</sys:String>
     <sys:String x:Key="DeployForceCloseApps">Cerrar la ejecución de aplicaciones de Office.</sys:String>
     <sys:String x:Key="DeployPinIconToTaskbar">Anclar iconos a la barra de tareas en Windows 7, 8, 8.1</sys:String>
-    <!-- Log Settings -->
-    <sys:String x:Key="DeployLogSettings">Opciones de registro LOG</sys:String>
-    <sys:String x:Key="DeploySaveLog">Habilitar registro LOG</sys:String>
-    <sys:String x:Key="DeployLogPath">Ruta:</sys:String>
     <!-- Update Settings -->
     <sys:String x:Key="DeployUpdateSettings">Establecer actualización</sys:String>
     <sys:String x:Key="DeployEnableUpdate">Habilitar la actualización automática de Office.</sys:String>
@@ -173,20 +170,18 @@
     <sys:String x:Key="DeploySettings">Implementar configuración</sys:String>
     <sys:String x:Key="DeployChannel">Canal:</sys:String>
     <sys:String x:Key="DeployMode">Modo de implementación:</sys:String>
-    <sys:String x:Key="DeployModeIWD">Instalar mientras se descarga</sys:String>
-    <sys:String x:Key="DeployModeIAD">Instalar después de la descarga</sys:String>
-    <sys:String x:Key="DeployModeUEI">Usar una fuente de instalación existente</sys:String>
-    <sys:String x:Key="DeployModeCreateISO">Crear fichero ISO</sys:String>
-    <sys:String x:Key="DeployModeDownload">Sólo descarga</sys:String>
     <sys:String x:Key="DeployModeEdit">Editar sólo configuración</sys:String>
+    <sys:String x:Key="DeployModeDownload">Sólo descarga</sys:String>
+    <sys:String x:Key="DeployModeCreateISO">Crear fichero ISO</sys:String>
     <sys:String x:Key="DeployModule">Módulo de instalación:</sys:String>
+    <sys:String x:Key="DeployModeIAD">Instalar después de la descarga</sys:String>
     <sys:String x:Key="DeployCreateShortcut">Crear accesos directos a escritorio.</sys:String>
     <sys:String x:Key="DeployInstalliSlide">Instalar iSlide.</sys:String>
     <!-- Download Page -->
     <sys:String x:Key="DownloadSettings">Descargar configuración</sys:String>
     <sys:String x:Key="DownloadEngine">Motor:</sys:String>
     <sys:String x:Key="DownloadEngineThunder">Thunder</sys:String>
-    <sys:String x:Key="DownloadAgent">Agent:</sys:String>
+    <sys:String x:Key="DownloadAgent">User agent:</sys:String>
     <sys:String x:Key="DownloadAgentTip">By default, Office Tool Plus detects the current system version. Configure it if you need to download Office installations for other versions of Windows.</sys:String>
     <sys:String x:Key="DownloadUseHTTPS">Conectarse usando HTTPS</sys:String>
     <sys:String x:Key="DownloadThunderSettings">Configuración de Thunder</sys:String>
@@ -197,6 +192,7 @@
     <sys:String x:Key="DownloadPassword">Contraseña:</sys:String>
     <!-- Installation Manage -->
     <sys:String x:Key="InstallationFilesManage">Administrar archivos de instalación</sys:String>
+    <sys:String x:Key="InstallationSelectFile">Select file</sys:String>
     <!-- Activate Page -->
     <sys:String x:Key="ActivateButton">_Activar</sys:String>
     <sys:String x:Key="ActivateViewInformation">Ver información de activación</sys:String>
@@ -296,7 +292,7 @@
     <sys:String x:Key="ToolboxRepair">Reparar</sys:String>
     <!-- Common Tools -->
     <sys:String x:Key="ToolboxChangeChannel">Cambiar canal de actualización de Office</sys:String>
-    <sys:String x:Key="ToolboxChangeChannelDescription">Soporte para seleccionar otros canales o personalizar HTTP, rutas locales.&#x000A;&#x000A;Después de guardar su configuración, busque actualizaciones en la aplicación de Office.</sys:String>
+    <sys:String x:Key="ToolboxChangeChannelDescription">Después de guardar su configuración, busque actualizaciones en la aplicación de Office.</sys:String>
     <sys:String x:Key="ToolboxChangeOwner">Cambiar propietario del producto de Office</sys:String>
     <sys:String x:Key="ToolboxChangeOwnerDescription">El nombre se muestra en la página de la cuenta de la aplicación de Office sólo si Office usa la licencia correcta.&#x000A;&#x000A;Para cambiar el propietario de un producto específico, use este formato: [ID del producto]:Nombre</sys:String>
     <sys:String x:Key="ToolboxChangeOwnerName">Nombre:</sys:String>
@@ -306,9 +302,9 @@
     <sys:String x:Key="QueryErrorCode">Consultar información del código de error.</sys:String>
     <sys:String x:Key="QueryErrorCodeDescription">El código de error generalmente comienza con '0x'. Ejemplo: 0x2 o 0x80070002.</sys:String>
     <sys:String x:Key="ToolboxCheckKMS">Verificar estado de KMS</sys:String>
-    <sys:String x:Key="ToolboxCheckKMSDescription">Separar cada KMS con coma o nueva línea, también puede agregar un puerto. Cuando la activación se muestra correctamente, significa que el servidor está disponible.</sys:String>
-    <sys:String x:Key="CheckKMSConnectionSuccessful">La conexión se realizó correctamente, pero la prueba de activación falló.</sys:String>
+    <sys:String x:Key="ToolboxCheckKMSDescription">Separar cada KMS con coma o nueva línea, también puede agregar un puerto. Cuando la activación se muestra correctamente, significa que el servidor está disponible.&#x000A;To test if activation is working, use the version that includes vlmcs.</sys:String>
     <sys:String x:Key="CheckKMSConnectionFailed">¡La conexión falló!</sys:String>
+    <sys:String x:Key="CheckKMSConnectionSuccessful">La conexión se realizó correctamente.</sys:String>
     <sys:String x:Key="CheckKMSActivationSuccessful">Conexión exitosa, prueba de activación exitosa.</sys:String>
     <sys:String x:Key="ToolboxCollectLog">Recopilar registros del instalador de Office</sys:String>
     <sys:String x:Key="ToolboxCollectLogDescription">Recopilar registros para analizar y resolver problemas desconocidos.</sys:String>
@@ -342,6 +338,48 @@
     <sys:String x:Key="ConvertFileName">Nombre del archivo</sys:String>
     <sys:String x:Key="ConvertNewFormat">Nuevo Formato</sys:String>
     <sys:String x:Key="ConvertPath">Ruta</sys:String>
+    <!-- File Types -->
+    <!-- Common -->
+    <sys:String x:Key="TypeOfPDF">PDF</sys:String>
+    <sys:String x:Key="TypeOfXPS">XPS Document</sys:String>
+    <sys:String x:Key="TypeOfTXT">Plain Text</sys:String>
+    <sys:String x:Key="TypeOfMHTML">Single File Web Page</sys:String>
+    <sys:String x:Key="TypeOfHTML">Web Page</sys:String>
+    <sys:String x:Key="TypeOfRTF">Rich Text Format</sys:String>
+    <!-- Image -->
+    <sys:String x:Key="TypeOfGIF">Animated GIF Format</sys:String>
+    <sys:String x:Key="TypeOfJPG">JPEG File Interchange Format</sys:String>
+    <sys:String x:Key="TypeOfPNG">PNG Portable Network Graphics Format</sys:String>
+    <sys:String x:Key="TypeOfTIF">TIFF Tag Image File Format</sys:String>
+    <sys:String x:Key="TypeOfBMP">Device Independent Bitmap</sys:String>
+    <!-- Video -->
+    <sys:String x:Key="TypeOfMP4">MPEG-4 Video</sys:String>
+    <sys:String x:Key="TypeOfWMV">Windows Media Video</sys:String>
+    <!-- Word -->
+    <sys:String x:Key="WordDOCX">Word Document</sys:String>
+    <sys:String x:Key="WordDOCM">Word Macro-Enabled Document</sys:String>
+    <sys:String x:Key="WordDOC">Word 97-2003 Document</sys:String>
+    <sys:String x:Key="WordDOTX">Word Template</sys:String>
+    <sys:String x:Key="WordDOTM">Word Macro-Enabled Template</sys:String>
+    <sys:String x:Key="WordDOT">Word 97-2003 Template</sys:String>
+    <!-- PowerPoint -->
+    <sys:String x:Key="PowerPointPPTX">PowerPoint Presentation</sys:String>
+    <sys:String x:Key="PowerPointPPTM">PowerPoint Macro-Enabled Presentation</sys:String>
+    <sys:String x:Key="PowerPointPPT">PowerPoint 97-2003 Presentation</sys:String>
+    <sys:String x:Key="PowerPointPOTX">PowerPoint Template</sys:String>
+    <sys:String x:Key="PowerPointPOTM">PowerPoint Macro-Enabled Template</sys:String>
+    <sys:String x:Key="PowerPointPOT">PowerPoint 97-2003 Template</sys:String>
+    <sys:String x:Key="PowerPointPPSX">PowerPoint Show</sys:String>
+    <sys:String x:Key="PowerPointPPSM">PowerPoint Macro-Enabled Show</sys:String>
+    <sys:String x:Key="PowerPointPPS">PowerPoint 97-2003 Show</sys:String>
+    <!-- Excel -->
+    <sys:String x:Key="ExcelXLSX">Excel Workbook</sys:String>
+    <sys:String x:Key="ExcelXLSM">Excel Macro-Enabled Workbook</sys:String>
+    <sys:String x:Key="ExcelXLS">Excel 97-2003 Workbook</sys:String>
+    <sys:String x:Key="ExcelCSV">CSV UTF-8 (Comma delimited)</sys:String>
+    <sys:String x:Key="ExcelXLTX">Excel Template</sys:String>
+    <sys:String x:Key="ExcelXLTM">Excel Macro-Enabled Template</sys:String>
+    <sys:String x:Key="ExcelXLT">Excel 97-2003 Template</sys:String>
     <!-- Settings Panel -->
     <sys:String x:Key="LanguageSettings">Idioma:</sys:String>
     <sys:String x:Key="ThemeSettings">Tema:</sys:String>
@@ -357,6 +395,7 @@
     <sys:String x:Key="SettingsTransparency">Transparencia</sys:String>
     <sys:String x:Key="SettingsBlurValue">Background image blur</sys:String>
     <sys:String x:Key="SettingsChooseBGI">Elegir la imagen de fondo</sys:String>
+    <sys:String x:Key="SettingsAdvanced">Enable advanced features.</sys:String>
     <!-- About Panel -->
     <sys:String x:Key="AppInf">Información del programa</sys:String>
     <sys:String x:Key="Homepage">Página principal:</sys:String>
@@ -366,8 +405,6 @@
     <sys:String x:Key="ServerProvider">Proveedor del servidor</sys:String>
     <sys:String x:Key="Translator">Traductores</sys:String>
     <sys:String x:Key="BackgroundImageSource">Fuente de la imagen de fondo</sys:String>
-    <!-- Notification Panel -->
-    <sys:String x:Key="ClearNotifications">Borrar todas las notificaciones</sys:String>
 
     <!-- Text about Textbox, notice to control the string length. -->
     <sys:String x:Key="TextBlockCommand">> Escriba el comando aquí.</sys:String>
@@ -384,7 +421,7 @@
     <sys:String x:Key="Task_CheckVersion">Consultando información de la versión de Office.</sys:String>
     <sys:String x:Key="Task_CheckKMS">Prueba de host(s) KMS.</sys:String>
     <sys:String x:Key="Task_CollectLog">Recopilación de registros del instalador de Office.</sys:String>
-    <sys:String x:Key="Task_CleanOffice">Limpiando Office.</sys:String>
+    <sys:String x:Key="Task_RemoveOffice">Limpiando Office.</sys:String>
     <sys:String x:Key="Task_ConvertDocument">Conversión de documentos de Office.</sys:String>
     <!-- Example: Installing iSlide, please wait. -->
     <sys:String x:Key="Task_InstallingApp">Instalando {0}, por favor espere.</sys:String>
@@ -410,12 +447,14 @@
     <sys:String x:Key="InfoUpdate">Está utilizando la última versión de Office Tool Plus.</sys:String>
     <sys:String x:Key="InfoNoConfigured">No se detectaron cambios.</sys:String>
     <sys:String x:Key="InfoAllExist">No es necesario descargar el archivo, todos los archivos ya existen.</sys:String>
+    <sys:String x:Key="InfoDownloading">Office is being downloaded.</sys:String>
     <sys:String x:Key="InfoSetupExited">La herramienta de implementación de Office salió normalmente.</sys:String>
     <sys:String x:Key="InfoInstallationComplete">La instalación se ha completado.</sys:String>
     <sys:String x:Key="InfoInstallationFailed">Falló la instalación.</sys:String>
 
     <!-- Success Message -->
-    <sys:String x:Key="SuccessDownloadInstallation">Los archivos de instalación han sido descargados.</sys:String>
+    <sys:String x:Key="SuccessAddDownloadTask">Successfully add download tasks.</sys:String>
+    <sys:String x:Key="SuccessDownloadInstallation">Installation files downloaded successfully.</sys:String>
     <sys:String x:Key="SuccessSave">Guardado exitosamente.</sys:String>
     <sys:String x:Key="SuccessRepair">La reparación fue exitosa.</sys:String>
 

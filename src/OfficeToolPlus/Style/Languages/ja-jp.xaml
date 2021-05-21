@@ -8,12 +8,12 @@
     <sys:String x:Key="EulaContent">このソフトウェアを使用するには、[ソフトウェアライセンス条項]（{0}）および[Microsoft サービス規約]（{1}）に同意する必要があります。</sys:String>
     <!-- Header -->
     <sys:String x:Key="ISOMode">- ISO モード</sys:String>
-    <sys:String x:Key="Notifications">お知らせ</sys:String>
     <sys:String x:Key="Help">ヘルプ情報</sys:String>
     <sys:String x:Key="About">について</sys:String>
     <sys:String x:Key="Settings">設定</sys:String>
     <!-- Channels Name, if you don't want to translate them, please keep in English. -->
     <sys:String x:Key="PerpetualVL2019">Office 2019 長期エンタープライズ版チャンネル</sys:String>
+    <sys:String x:Key="PerpetualVL2021">Office 2021 長期エンタープライズ版チャンネル</sys:String>
     <sys:String x:Key="SemiAnnual">半年エンタープライズチャンネル</sys:String>
     <sys:String x:Key="MonthlyEnterprise">月間エンタープライズチャンネル</sys:String>
     <sys:String x:Key="Current">現在のチャンネル</sys:String>
@@ -69,7 +69,6 @@
     <sys:String x:Key="HS2019Description">Word、Excel、PowerPointなどが含まれます。</sys:String>
     <sys:String x:Key="OtherInstallOptions">他のインストールオプション</sys:String>
     <sys:String x:Key="OIODescription">別の製品または言語を選択してください</sys:String>
-    <sys:String x:Key="RunAsAdmin">管理者として実行</sys:String>
     <sys:String x:Key="CreateShortcut">デスクトップショートカットを作成する</sys:String>
     <sys:String x:Key="ServerUnavailable">サーバーが利用できません。ネットワーク接続を確認してください。</sys:String>
     <!-- Deploy Page -->
@@ -103,7 +102,7 @@
     <sys:String x:Key="DeployApps">アプリケーション</sys:String>
     <!-- Language -->
     <sys:String x:Key="LanguagePack">言語パッケージ</sys:String>
-    <sys:String x:Key="LanguageID">言語ID: {0}</sys:String>
+    <sys:String x:Key="LanguageID">言語ID:</sys:String>
     <sys:String x:Key="LanguageType">言語パッケージの種類: {0}</sys:String>
     <sys:String x:Key="Full">完全パッケージ</sys:String>
     <sys:String x:Key="Partial">部分パッケージ</sys:String>
@@ -120,6 +119,8 @@
     <sys:String x:Key="DeployDescription">文書化の目的でこの構成の説明を入力してください。</sys:String>
     <!-- Installation Settings -->
     <sys:String x:Key="DeployInstallationSettings">インストール設定</sys:String>
+    <sys:String x:Key="DeployFallbackLanguage">代替言語：</sys:String>
+    <sys:String x:Key="DeployFallbackLanguageTip">言語がシステム言語と一致するように設定されている場合、一致する言語がOfficeでサポートされていないか、ローカルソースで見つからない場合に、インストールするフォールバック言語を指定できます。</sys:String>
     <sys:String x:Key="DeployVersionTip">指定されていない場合、デフォルトで使用可能な最新バージョンになります。</sys:String>
     <sys:String x:Key="DeployGetHistoricalVersions">Officeの利用可能な履歴バージョンを入手します。</sys:String>
     <sys:String x:Key="DeployDownloadPath">ダウンロードパス:</sys:String>
@@ -130,10 +131,6 @@
     <sys:String x:Key="DeployAllowCDNFallback">インストーラーが欠落している言語のOffice CDNにフォールバックできるようにします。</sys:String>
     <sys:String x:Key="DeployForceCloseApps">実行中のOfficeアプリケーションをシャットダウンします。</sys:String>
     <sys:String x:Key="DeployPinIconToTaskbar">アイコンをタスクバーに固定する</sys:String>
-    <!-- Log Settings -->
-    <sys:String x:Key="DeployLogSettings">ログオプション</sys:String>
-    <sys:String x:Key="DeploySaveLog">ログを保存</sys:String>
-    <sys:String x:Key="DeployLogPath">ログパス:</sys:String>
     <!-- Update Settings -->
     <sys:String x:Key="DeployUpdateSettings">設定を更新する</sys:String>
     <sys:String x:Key="DeployEnableUpdate">Officeの自動更新を有効にします。</sys:String>
@@ -173,21 +170,20 @@
     <sys:String x:Key="DeploySettings">インストールの設定</sys:String>
     <sys:String x:Key="DeployChannel">チャンネル:</sys:String>
     <sys:String x:Key="DeployMode">配置モード:</sys:String>
-    <sys:String x:Key="DeployModeIWD">ダウンロード中にインストール</sys:String>
-    <sys:String x:Key="DeployModeIAD">ダウンロード後にインストール</sys:String>
-    <sys:String x:Key="DeployModeUEI">既存のインストールソースを使用する</sys:String>
-    <sys:String x:Key="DeployModeCreateISO">ISOファイルを作成</sys:String>
-    <sys:String x:Key="DeployModeDownload">ダウンロードのみ</sys:String>
     <sys:String x:Key="DeployModeEdit">構成のみを編集</sys:String>
+    <sys:String x:Key="DeployModeDownload">ダウンロードのみ</sys:String>
+    <sys:String x:Key="DeployModeCreateISO">ISOファイルを作成</sys:String>
     <sys:String x:Key="DeployModule">インストールモジュール:</sys:String>
+    <sys:String x:Key="DeployModeIAD">ダウンロード後にインストール</sys:String>
     <sys:String x:Key="DeployCreateShortcut">デスクトップショートカットを作成する</sys:String>
     <sys:String x:Key="DeployInstalliSlide">iSlide「PowerPointプラグイン」のインストール</sys:String>
     <!-- Download Settings -->
     <sys:String x:Key="DownloadSettings">ダウンロード設定</sys:String>
+    <sys:String x:Key="DownloadSettingTip">Applies only when downloading Office.</sys:String>
     <sys:String x:Key="DownloadEngine">ダウンロード方法:</sys:String>
     <sys:String x:Key="DownloadEngineThunder">サンダー「Thunder」</sys:String>
-    <sys:String x:Key="DownloadAgent">Agent:</sys:String>
-    <sys:String x:Key="DownloadAgentTip">By default, Office Tool Plus detects the current system version. Configure it if you need to download Office installations for other versions of Windows.</sys:String>
+    <sys:String x:Key="DownloadAgent">エージェント:</sys:String>
+    <sys:String x:Key="DownloadAgentTip">既定では、「Office Tool Plus」は現在のシステムバージョンを検出します。 他のバージョンのWindows用のOfficeインストールをダウンロードする必要がある場合は、これを構成します。</sys:String>
     <sys:String x:Key="DownloadUseHTTPS">HTTPSを使って接続する</sys:String>
     <sys:String x:Key="DownloadThunderSettings">サンダー「Thunder」設定</sys:String>
     <sys:String x:Key="DownloadSpeedLimit">速度制限:</sys:String>
@@ -197,6 +193,7 @@
     <sys:String x:Key="DownloadPassword">パスワード:</sys:String>
     <!-- Installation Manage -->
     <sys:String x:Key="InstallationFilesManage">インストールファイルの管理</sys:String>
+    <sys:String x:Key="InstallationSelectFile">Select file</sys:String>
     <!-- Activate Page -->
     <sys:String x:Key="ActivateButton">アクティベート(_A)</sys:String>
     <sys:String x:Key="ActivateViewInformation">情報を見る</sys:String>
@@ -296,19 +293,19 @@
     <sys:String x:Key="ToolboxRepair">修復</sys:String>
     <!-- Common Tools -->
     <sys:String x:Key="ToolboxChangeChannel">Office更新チャネルを変更する</sys:String>
-    <sys:String x:Key="ToolboxChangeChannelDescription">他のチャンネルの選択またはHTTPローカルパスのカスタマイズのサポート。&#x000A;&#x000A;設定を保存した後、Officeアプリケーションで更新を確認します。</sys:String>
+    <sys:String x:Key="ToolboxChangeChannelDescription">設定を保存した後、Officeアプリケーションで更新を確認します。</sys:String>
     <sys:String x:Key="ToolboxChangeOwner">Office製品所有者を変更する</sys:String>
     <sys:String x:Key="ToolboxChangeOwnerDescription">名前がOfficeアプリケーションのアカウントページに表示されるのは、Officeが正しいライセンスを使用している場合のみです。&#x000A;&#x000A;指定された製品の所有者を変更するには、次の形式を使用します：ProductID:Name</sys:String>
     <sys:String x:Key="ToolboxChangeOwnerName">所有者名:</sys:String>
-    <sys:String x:Key="ToolboxChangeOwnerNameTip">James もしかしたら ProPlus2019Volume:James</sys:String>
+    <sys:String x:Key="ToolboxChangeOwnerNameTip">吉田 もしかしたら ProPlus2019Volume:吉田</sys:String>
     <sys:String x:Key="ToolboxCheckVersion">Officeバージョンのクエリ</sys:String>
     <sys:String x:Key="CheckVersionCreatedTimeUTC">作成時間(UTC):</sys:String>
     <sys:String x:Key="QueryErrorCode">エラーコード情報のクエリ</sys:String>
     <sys:String x:Key="QueryErrorCodeDescription">エラーコードは「0x」で始まる必要があります。 例：0xC004F009、0x2</sys:String>
     <sys:String x:Key="ToolboxCheckKMS">KMSステータスを確認する</sys:String>
-    <sys:String x:Key="ToolboxCheckKMSDescription">各KMSをコンマまたは改行で区切ります。ポートを追加することもできます。アクティベーションが正常に表示されると、サーバーが使用可能であることを意味します。</sys:String>
-    <sys:String x:Key="CheckKMSConnectionSuccessful">接続は成功しましたが、アクティブ化テストは失敗しました。</sys:String>
+    <sys:String x:Key="ToolboxCheckKMSDescription">各KMSをコンマまたは改行で区切ります。ポートを追加することもできます。アクティベーションが正常に表示されると、サーバーが使用可能であることを意味します。&#x000A;To test if activation is working, use the version that includes vlmcs.</sys:String>
     <sys:String x:Key="CheckKMSConnectionFailed">接続に失敗しました！</sys:String>
+    <sys:String x:Key="CheckKMSConnectionSuccessful">接続は成功し。</sys:String>
     <sys:String x:Key="CheckKMSActivationSuccessful">接続に成功し、アクティブ化テストに成功しました。</sys:String>
     <sys:String x:Key="ToolboxCollectLog">Officeインストールログを収集する</sys:String>
     <sys:String x:Key="ToolboxCollectLogDescription">ログを収集して、未知の問題を分析および解決します。</sys:String>
@@ -342,13 +339,55 @@
     <sys:String x:Key="ConvertFileName">ファイル名</sys:String>
     <sys:String x:Key="ConvertNewFormat">新しいフォーマット</sys:String>
     <sys:String x:Key="ConvertPath">パス</sys:String>
+    <!-- File Types -->
+    <!-- Common -->
+    <sys:String x:Key="TypeOfPDF">PDF</sys:String>
+    <sys:String x:Key="TypeOfXPS">XPS 文書</sys:String>
+    <sys:String x:Key="TypeOfTXT">テキスト文書</sys:String>
+    <sys:String x:Key="TypeOfMHTML">単ーファイル Web ページ</sys:String>
+    <sys:String x:Key="TypeOfHTML">Web ページ</sys:String>
+    <sys:String x:Key="TypeOfRTF">リッチ テキスト形式(RTF)</sys:String>
+    <!-- Image -->
+    <sys:String x:Key="TypeOfGIF">アニメーション GIF 形式</sys:String>
+    <sys:String x:Key="TypeOfJPG">JPEG ファイル交換形式</sys:String>
+    <sys:String x:Key="TypeOfPNG">PNG ポータブル ネットワーク グラフィックス形式</sys:String>
+    <sys:String x:Key="TypeOfTIF">TIFF 形式</sys:String>
+    <sys:String x:Key="TypeOfBMP">デバイスに依存しないビットマップ</sys:String>
+    <!-- Video -->
+    <sys:String x:Key="TypeOfMP4">MPEG-4 ビデオ</sys:String>
+    <sys:String x:Key="TypeOfWMV">Windows Media ビデオ</sys:String>
+    <!-- Word -->
+    <sys:String x:Key="WordDOCX">Word 文書</sys:String>
+    <sys:String x:Key="WordDOCM">Word マクロ有効文書</sys:String>
+    <sys:String x:Key="WordDOC">Word 97-2003 文書</sys:String>
+    <sys:String x:Key="WordDOTX">Word テンプレート</sys:String>
+    <sys:String x:Key="WordDOTM">Word マクロ有効テンプレート</sys:String>
+    <sys:String x:Key="WordDOT">Word 97-2003 テンプレート</sys:String>
+    <!-- PowerPoint -->
+    <sys:String x:Key="PowerPointPPTX">PowerPoint プレゼンテーション</sys:String>
+    <sys:String x:Key="PowerPointPPTM">PowerPoint マクロ有効 プレゼンテーション</sys:String>
+    <sys:String x:Key="PowerPointPPT">PowerPoint 97-2003 プレゼンテーション</sys:String>
+    <sys:String x:Key="PowerPointPOTX">PowerPoint テンプレート</sys:String>
+    <sys:String x:Key="PowerPointPOTM">PowerPoint マクロ有効 テンプレート</sys:String>
+    <sys:String x:Key="PowerPointPOT">PowerPoint 97-2003 テンプレート</sys:String>
+    <sys:String x:Key="PowerPointPPSX">PowerPoint スライドショー</sys:String>
+    <sys:String x:Key="PowerPointPPSM">PowerPoint マクロ有効 スライドショー</sys:String>
+    <sys:String x:Key="PowerPointPPS">PowerPoint 97-2003 スライドショー</sys:String>
+    <!-- Excel -->
+    <sys:String x:Key="ExcelXLSX">Excel ブック</sys:String>
+    <sys:String x:Key="ExcelXLSM">Excel マクロ有効 ブック</sys:String>
+    <sys:String x:Key="ExcelXLS">Excel 97-2003 ブック</sys:String>
+    <sys:String x:Key="ExcelCSV">CSV UTF-8 (コンマ区切り)</sys:String>
+    <sys:String x:Key="ExcelXLTX">Excel テンプレート</sys:String>
+    <sys:String x:Key="ExcelXLTM">Excel マクロ有効 テンプレート</sys:String>
+    <sys:String x:Key="ExcelXLT">Excel 97-2003 テンプレート</sys:String>
     <!-- Settings Panel -->
     <sys:String x:Key="LanguageSettings">言語：</sys:String>
     <sys:String x:Key="ThemeSettings">テーマ：</sys:String>
-    <sys:String x:Key="AutoShutdownSettings">After deployment:</sys:String>
-    <sys:String x:Key="SettingsSignOut">Sign out</sys:String>
-    <sys:String x:Key="SettingsShutdown">Shut down</sys:String>
-    <sys:String x:Key="SettingsRestart">Restart</sys:String>
+    <sys:String x:Key="AutoShutdownSettings">デプロイが完了した後:</sys:String>
+    <sys:String x:Key="SettingsSignOut">サインアウト</sys:String>
+    <sys:String x:Key="SettingsShutdown">シャットダウン</sys:String>
+    <sys:String x:Key="SettingsRestart">再起動します</sys:String>
     <sys:String x:Key="SaveSettings">設定をローカルに保存します。</sys:String>
     <sys:String x:Key="DisplaySettings">ディスプレイの設定</sys:String>
     <sys:String x:Key="SettingsTopmost">ウィンドウを上に保つ</sys:String>
@@ -357,6 +396,7 @@
     <sys:String x:Key="SettingsTransparency">透明度</sys:String>
     <sys:String x:Key="SettingsBlurValue">背景画像のぼかし</sys:String>
     <sys:String x:Key="SettingsChooseBGI">背景画像を選択</sys:String>
+    <sys:String x:Key="SettingsAdvanced">Enable advanced features.</sys:String>
     <!-- About Panel -->
     <sys:String x:Key="AppInf">アプリケーション情報</sys:String>
     <sys:String x:Key="Homepage">公式サイト:</sys:String>
@@ -366,8 +406,6 @@
     <sys:String x:Key="ServerProvider">サーバープロバイダー</sys:String>
     <sys:String x:Key="Translator">翻訳者</sys:String>
     <sys:String x:Key="BackgroundImageSource">背景画像ソース</sys:String>
-    <!-- Notification Panel -->
-    <sys:String x:Key="ClearNotifications">すべての通知をクリア</sys:String>
 
     <!-- Text about Textbox, notice to control the string length. -->
     <sys:String x:Key="TextBlockCommand">> ここにコマンドを入力します</sys:String>
@@ -384,7 +422,7 @@
     <sys:String x:Key="Task_CheckVersion">Officeバージョン情報のクエリ。</sys:String>
     <sys:String x:Key="Task_CheckKMS">KMSホストのテスト。</sys:String>
     <sys:String x:Key="Task_CollectLog">Officeインストーラーログの収集。</sys:String>
-    <sys:String x:Key="Task_CleanOffice">「Office」をクリアする。</sys:String>
+    <sys:String x:Key="Task_RemoveOffice">「Office」をクリアする。</sys:String>
     <sys:String x:Key="Task_ConvertDocument">Officeドキュメントを変換しています。</sys:String>
     <!-- Example: Installing iSlide, please wait. -->
     <sys:String x:Key="Task_InstallingApp">{0}をインストールしています。お待ちください。</sys:String>
@@ -403,19 +441,21 @@
     <sys:String x:Key="QuesClearActivation">すべてのキーとライセンスをアンインストールしてよろしいですか？ 操作が完了したら、ライセンスを再インストールしてOfficeをライセンス認証する必要があります。</sys:String>
     <sys:String x:Key="QuesClearKeys">すべてのキーをアンインストールしてよろしいですか？</sys:String>
     <sys:String x:Key="QuesCleanOffice">Officeをクリアしてもよろしいですか？一度始めると、キャンセルすることはできません。</sys:String>
-    <sys:String x:Key="QuesAutoShutdown">Your PC will sign out/shutdown/restart in one minute. Click "Yes" to operate immediately, or "No" to cancel the operation.</sys:String>
+    <sys:String x:Key="QuesAutoShutdown">コンピュータは1分以内にサインアウト/シャットダウン/再起動します。 「はい」をクリックしてすぐに操作するか、「いいえ」をクリックして操作をキャンセルします。</sys:String>
 
     <!-- Info Message -->
     <sys:String x:Key="InfoPermission">「Office Tool Plus」は通常の権限で起動されますが、一部の機能は使用できなくなります。</sys:String>
-    <sys:String x:Key="InfoUpdate">最新バージョンのOffice Tool Plusを使用しています。</sys:String>
+    <sys:String x:Key="InfoUpdate">最新バージョンの「Office Tool Plus」を使用しています。</sys:String>
     <sys:String x:Key="InfoNoConfigured">変更は検出されませんでした。</sys:String>
     <sys:String x:Key="InfoAllExist">ダウンロードするファイルはありません。すべてのファイルが存在します。</sys:String>
+    <sys:String x:Key="InfoDownloading">Office is being downloaded.</sys:String>
     <sys:String x:Key="InfoSetupExited">「Office 展開ツール」は正常に終了しました。</sys:String>
     <sys:String x:Key="InfoInstallationComplete">インストールが完了しました。</sys:String>
     <sys:String x:Key="InfoInstallationFailed">インストールに失敗しました。</sys:String>
 
     <!-- Success Message -->
-    <sys:String x:Key="SuccessDownloadInstallation">インストールファイルをダウンロードしました</sys:String>
+    <sys:String x:Key="SuccessAddDownloadTask">Successfully add download tasks.</sys:String>
+    <sys:String x:Key="SuccessDownloadInstallation">Installation files downloaded successfully.</sys:String>
     <sys:String x:Key="SuccessSave">保存しました。</sys:String>
     <sys:String x:Key="SuccessRepair">修理は成功しました</sys:String>
 

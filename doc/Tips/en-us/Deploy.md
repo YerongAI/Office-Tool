@@ -4,7 +4,9 @@
 
 In the page, you can manage and install Office. **Due to Microsoft's limitations, you can only install Office to your system drive.**
 
-In applications, ***Lync*** stands for ***Skype for Business***，***Groove*** stands for ***OneDrive for Business***. Bing is a extension for Chrome and Edge etc. For more information, visit [Microsoft Search in Bing and Microsoft 365 Apps for enterprise](https://docs.microsoft.com/en-us/deployoffice/microsoft-search-bing).
+In applications, ***Lync*** stands for ***Skype for Business***，***Groove*** stands for ***OneDrive for Business***.
+
+Bing is a extension for Chrome and Edge etc. For more information, visit [Microsoft Search in Bing and Microsoft 365 Apps for enterprise](https://docs.microsoft.com/en-us/deployoffice/microsoft-search-bing).
 
 To define where to save files in download mode, change the value of  ***Source path*** in ***Installation settings***.
 
@@ -12,11 +14,67 @@ To define where to save files in download mode, change the value of  ***Source p
 
 ---
 
-1. Deploy Mode
-2. Office Update Channel
-3. Deploy Module
-4. Office Applications Preferences
-5. More Information
+1. Products
+2. Languages
+3. Update Channel
+4. Deploy Mode
+5. Deploy Module
+6. Applications Preferences
+7. More Information
+
+### Products
+
+---
+
+Defines which products to download or install. The first product determines the context for the Microsoft Office First Run Experience.
+
+### Languages
+
+---
+
+When no language is added, the Office language will be set to match system language.
+
+In download mode, the language pack will not be downloaded if no language is added.
+
+If you define multiple languages, the first language determines the Shell UI culture, including shortcuts, right-click context menus, and tooltips.
+
+If you decide that you want to change the Shell UI language after an initial installation, you have to uninstall and reinstall Office.
+
+### Update Channel
+
+---
+
+`Office 2019 Perpetual Enterprise:`
+
+For Office 2019 Volume products only.
+
+**No feature updates.**
+
+**Security updates:** Once a month, on the second Tuesday of the month.
+
+`Office 2021 Perpetual Enterprise (upcoming):`
+
+For Office 2021 Volume products only.
+
+**You must use Office Tool Plus module to install Office 2021 products at this time.**
+
+**No feature updates.**
+
+**Security updates:** Once a month, on the second Tuesday of the month.
+
+`Current Channel (Normal):`
+
+**Feature updates:** As soon as they’re ready (usually once a month), but on no set schedule.
+
+**Security updates:** Once a month, on the second Tuesday of the month.
+
+`Semi-Annual Enterprise Channel:`
+
+**Feature updates:** Twice a year (in January and July), on the second Tuesday of the month
+
+**Security updates:** Once a month, on the second Tuesday of the month.
+
+Note: We do not recommend using the beta channel.
 
 ### Deploy Mode
 
@@ -62,32 +120,6 @@ The mode won't start installation, download files only. Before start download, m
 
 The mode won't start installation, for exporting XML files only.
 
-### Office Update Channel
-
----
-
-`Office 2019 Perpetual Enterprise:`
-
-For Office 2019 Volume edition only.
-
-**No feature updates.**
-
-**Security updates:** Once a month, on the second Tuesday of the month.
-
-`Current Channel (Normal):`
-
-**Feature updates:** As soon as they’re ready (usually once a month), but on no set schedule.
-
-**Security updates:** Once a month, on the second Tuesday of the month.
-
-`Semi-Annual Enterprise Channel:`
-
-**Feature updates:** Twice a year (in January and July), on the second Tuesday of the month
-
-**Security updates:** Once a month, on the second Tuesday of the month.
-
-Note: We do not recommend using the beta channel.
-
 ### Deploy Module
 
 ---
@@ -96,7 +128,6 @@ The Office Deployment Tool is an official Microsoft tool for deploying Office.
 
 #### Features Not Supported in Office Tool Plus Module
 
-- Not support of log options
 - Not support of Configuration Manager
 - Not support of update deadline
 - Not support of migrate architecture
@@ -107,7 +138,7 @@ The Office Deployment Tool is an official Microsoft tool for deploying Office.
 
 Note: **For a complete installation experience, be sure to use the Office Deployment Tool.**
 
-### Office Applications Preferences
+### Applications Preferences
 
 ---
 

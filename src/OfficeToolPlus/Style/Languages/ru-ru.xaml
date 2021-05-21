@@ -8,12 +8,12 @@
     <sys:String x:Key="EulaContent">Для использования этой программы вы должны принять [лицензионное соглашение]({0}) and [правила служб Microsoft Services]({1}).</sys:String>
     <!-- Header -->
     <sys:String x:Key="ISOMode">- режим ISO</sys:String>
-    <sys:String x:Key="Notifications">Уведомления</sys:String>
     <sys:String x:Key="Help">Помощь</sys:String>
     <sys:String x:Key="About">О программе</sys:String>
     <sys:String x:Key="Settings">Настройки</sys:String>
     <!-- Channels Name, if you do not want to translate them, please keep in English. -->
     <sys:String x:Key="PerpetualVL2019">Office 2019 бессрочный (корпоративный)</sys:String>
+    <sys:String x:Key="PerpetualVL2021">Office 2021 бессрочный (корпоративный)</sys:String>
     <sys:String x:Key="SemiAnnual">Полугодовой канал (корпоративный)</sys:String>
     <sys:String x:Key="MonthlyEnterprise">Ежемесячный канал (корпоративный)</sys:String>
     <sys:String x:Key="Current">Актуальный канал</sys:String>
@@ -69,7 +69,6 @@
     <sys:String x:Key="HS2019Description">Включает Word, Excel, PowerPoint.</sys:String>
     <sys:String x:Key="OtherInstallOptions">Другие варианты установки</sys:String>
     <sys:String x:Key="OIODescription">Выбрать другие продукты или языки.</sys:String>
-    <sys:String x:Key="RunAsAdmin">Запустить с правами администратора</sys:String>
     <sys:String x:Key="CreateShortcut">Создать ярлык на рабочий стол</sys:String>
     <sys:String x:Key="ServerUnavailable">Нет соединения с Интернетом, проверьте соединение.</sys:String>
     <!-- Deploy Page -->
@@ -94,7 +93,7 @@
     <sys:String x:Key="DeployAddProduct">Добавить продукт</sys:String>
     <sys:String x:Key="DeployErrorConfig">⚠ Продукт не совместим с существующим вариантом.</sys:String>
     <sys:String x:Key="DeployErrorModule">⚠ Для установки выберите модуль установки Office Tool Plus.</sys:String>
-    <sys:String x:Key="DeployErrorChannel">⚠ Продукт не может быть установлени с выбранного канала: {0}</sys:String>
+    <sys:String x:Key="DeployErrorChannel">⚠ Продукт не может быть установлен с выбранного канала: {0}</sys:String>
     <sys:String x:Key="DeployErrorUnsupportedChannel">⚠ Если хотите использовать {0}, то измените модуль установки на Office Tool Plus.</sys:String>
     <sys:String x:Key="DeployErrorSystem">⚠ Вы не можете установить 64-битный продукт Office на не 64-битную систему.</sys:String>
     <!-- Example: ⚠ You can not install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
@@ -103,7 +102,7 @@
     <sys:String x:Key="DeployApps">Приложения</sys:String>
     <!-- Language -->
     <sys:String x:Key="LanguagePack">Языки</sys:String>
-    <sys:String x:Key="LanguageID">ID языка: {0}</sys:String>
+    <sys:String x:Key="LanguageID">ID языка:</sys:String>
     <sys:String x:Key="LanguageType">Тип языка: {0}</sys:String>
     <sys:String x:Key="Full">Полный</sys:String>
     <sys:String x:Key="Partial">Частичный</sys:String>
@@ -120,6 +119,8 @@
     <sys:String x:Key="DeployDescription">Предоставьте описание конфигурации для документации.</sys:String>
     <!-- Installation Settings -->
     <sys:String x:Key="DeployInstallationSettings">Параметры установки</sys:String>
+    <sys:String x:Key="DeployFallbackLanguage">Резервный язык:</sys:String>
+    <sys:String x:Key="DeployFallbackLanguageTip">Если язык настроен на соответствие системному языку, то вы можете указать резервный язык для установки, если системный язык не поддерживается Office или не может быть найден в локальном источнике.</sys:String>
     <sys:String x:Key="DeployVersionTip">По умолчанию используется последняя доступная версия, если не указано иное.</sys:String>
     <sys:String x:Key="DeployGetHistoricalVersions">Получить список доступных версий Office из истории.</sys:String>
     <sys:String x:Key="DeployDownloadPath">Путь загрузки:</sys:String>
@@ -130,10 +131,6 @@
     <sys:String x:Key="DeployAllowCDNFallback">Разрешить использовать Office CDN для отсутствующих языков при установке.</sys:String>
     <sys:String x:Key="DeployForceCloseApps">Закрыть запущенные программы Office.</sys:String>
     <sys:String x:Key="DeployPinIconToTaskbar">Закрепить иконки на панели задач Windows 7, 8 и 8.1.</sys:String>
-    <!-- Log Settings -->
-    <sys:String x:Key="DeployLogSettings">Настройки журналирования</sys:String>
-    <sys:String x:Key="DeploySaveLog">Включить журналирование.</sys:String>
-    <sys:String x:Key="DeployLogPath">Путь журнала:</sys:String>
     <!-- Update Settings -->
     <sys:String x:Key="DeployUpdateSettings">Настройки обновления</sys:String>
     <sys:String x:Key="DeployEnableUpdate">Включить автоматическое обновление Office.</sys:String>
@@ -173,20 +170,19 @@
     <sys:String x:Key="DeploySettings">Настройки развёртывания</sys:String>
     <sys:String x:Key="DeployChannel">Название канала:</sys:String>
     <sys:String x:Key="DeployMode">Метод развёртывания:</sys:String>
-    <sys:String x:Key="DeployModeIWD">Установка при загрузке</sys:String>
-    <sys:String x:Key="DeployModeIAD">Установка после загрузки</sys:String>
-    <sys:String x:Key="DeployModeUEI">Использовать существующий источник установки</sys:String>
-    <sys:String x:Key="DeployModeCreateISO">Создать ISO файл</sys:String>
-    <sys:String x:Key="DeployModeDownload">Только скачать</sys:String>
     <sys:String x:Key="DeployModeEdit">Только изменить настройки</sys:String>
+    <sys:String x:Key="DeployModeDownload">Только скачать</sys:String>
+    <sys:String x:Key="DeployModeCreateISO">Создать ISO файл</sys:String>
     <sys:String x:Key="DeployModule">Модуль установки:</sys:String>
+    <sys:String x:Key="DeployModeIAD">Установка после загрузки</sys:String>
     <sys:String x:Key="DeployCreateShortcut">Создать ярлыки на рабочем столе.</sys:String>
     <sys:String x:Key="DeployInstalliSlide">Установка методом iSlide.</sys:String>
     <!-- Download Settings -->
     <sys:String x:Key="DownloadSettings">Настройки скачивания</sys:String>
+    <sys:String x:Key="DownloadSettingTip">Applies only when downloading Office.</sys:String>
     <sys:String x:Key="DownloadEngine">Модуль:</sys:String>
     <sys:String x:Key="DownloadEngineThunder">Thunder</sys:String>
-    <sys:String x:Key="DownloadAgent">Агент:</sys:String>
+    <sys:String x:Key="DownloadAgent">User Agent:</sys:String>
     <sys:String x:Key="DownloadAgentTip">По умолчанию, Office Tool Plus определяет текущую версию системы. Настройте это, если вам нужно загрузить Office для других версий Windows.</sys:String>
     <sys:String x:Key="DownloadUseHTTPS">Использовать HTTPS.</sys:String>
     <sys:String x:Key="DownloadThunderSettings">Настройки Thunder</sys:String>
@@ -197,6 +193,7 @@
     <sys:String x:Key="DownloadPassword">Пароль:</sys:String>
     <!-- Installation Manage -->
     <sys:String x:Key="InstallationFilesManage">Управление загруженными файлами</sys:String>
+    <sys:String x:Key="InstallationSelectFile">Select file</sys:String>
     <!-- Activate Page -->
     <sys:String x:Key="ActivateButton">Активировать</sys:String>
     <sys:String x:Key="ActivateViewInformation">Отображение информации об активации</sys:String>
@@ -257,12 +254,12 @@
 
     <sys:String x:Key="AppliedSetting">Настройка успешно применена.</sys:String>
     <sys:String x:Key="NoKMSLics">Не обнаружено KMS лицензий Office в системе.</sys:String>
-    <sys:String x:Key="NoKeyInstalled">Не обнаружено устанленных ключей продуктов.</sys:String>
+    <sys:String x:Key="NoKeyInstalled">Не обнаружено установленных ключей продуктов.</sys:String>
     <sys:String x:Key="UninstallKey">Ключ продукта успешно удалён.</sys:String>
     <sys:String x:Key="ActivationSuccess">**Продукт успешно активирован**</sys:String>
     <sys:String x:Key="OfflineActivationSuccess">**Продукт успешно активирован (оффлайн)**</sys:String>
     <sys:String x:Key="IKeySuccess">**Ключ продукта успешно установлен**</sys:String>
-    <sys:String x:Key="ProductKey">Последние 5 символов установленого ключа: </sys:String>
+    <sys:String x:Key="ProductKey">Последние 5 символов установленного ключа: </sys:String>
     <sys:String x:Key="UninstallingKey">Удаление ключа для: </sys:String>
     <sys:String x:Key="ILicense">Установка лицензии Office: </sys:String>
     <sys:String x:Key="ILicenseSuccess">Лицензия Office успешно установлена.</sys:String>
@@ -296,9 +293,9 @@
     <sys:String x:Key="ToolboxRepair">Восстановить</sys:String>
     <!-- Common Tools -->
     <sys:String x:Key="ToolboxChangeChannel">Изменение канала обновления для Office</sys:String>
-    <sys:String x:Key="ToolboxChangeChannelDescription">Поддерживается выбор канала, указанный HTTP, локальный путь.&#x000A;&#x000A;После сохранения настроек проверь правильность обновления Office.</sys:String>
+    <sys:String x:Key="ToolboxChangeChannelDescription">После сохранения настроек проверь правильность обновления Office.</sys:String>
     <sys:String x:Key="ToolboxChangeOwner">Изменение владельца Office</sys:String>
-    <sys:String x:Key="ToolboxChangeOwnerDescription">Имя отображается на странице учетной записи приложений Office, если Office использует правильную лицензию.&#x000A;&#x000A;Чтобы изменить владельца опредённого продукта используйте этот формат: [ID продукта]:Имя</sys:String>
+    <sys:String x:Key="ToolboxChangeOwnerDescription">Имя отображается на странице учетной записи приложений Office, если Office использует правильную лицензию.&#x000A;&#x000A;Чтобы изменить владельца определённого продукта используйте этот формат: [ID продукта]:Имя</sys:String>
     <sys:String x:Key="ToolboxChangeOwnerName">Имя:</sys:String>
     <sys:String x:Key="ToolboxChangeOwnerNameTip">James или ProPlus2019Volume:James</sys:String>
     <sys:String x:Key="ToolboxCheckVersion">Запрос версий Office</sys:String>
@@ -306,9 +303,9 @@
     <sys:String x:Key="QueryErrorCode">Проверка кода ошибки</sys:String>
     <sys:String x:Key="QueryErrorCodeDescription">Используй начало кода '0x'. Пример: 0x2 или 0x80070002.</sys:String>
     <sys:String x:Key="ToolboxCheckKMS">Проверить статус KMS</sys:String>
-    <sys:String x:Key="ToolboxCheckKMSDescription">Разделите каждый KMS запятой или новой строкой, можете указать порт.</sys:String>
-    <sys:String x:Key="CheckKMSConnectionSuccessful">Соединение успешное, но тест активации провален.</sys:String>
+    <sys:String x:Key="ToolboxCheckKMSDescription">Разделите каждый KMS запятой или новой строкой, можете указать порт.&#x000A;To test if activation is working, use the version that includes vlmcs.</sys:String>
     <sys:String x:Key="CheckKMSConnectionFailed">Ошибка соединения!</sys:String>
+    <sys:String x:Key="CheckKMSConnectionSuccessful">Соединение успешное.</sys:String>
     <sys:String x:Key="CheckKMSActivationSuccessful">Соединение успешное, тест активации успешно пройден.</sys:String>
     <sys:String x:Key="ToolboxCollectLog">Сбор установочных журналов Office</sys:String>
     <sys:String x:Key="ToolboxCollectLogDescription">Используется для анализа и решения проблем.</sys:String>
@@ -319,7 +316,7 @@
     <sys:String x:Key="ToolboxRemoveViaOfficeToolPlus">Удалить инструментами Office Tool Plus</sys:String>
     <sys:String x:Key="ToolboxRemoveUWPOffice">Удаление установленного приложения Office из Microsoft Store </sys:String>
     <sys:String x:Key="ToolboxRemoveOfficeDone">Окончание удаления Office.</sys:String>
-    <sys:String x:Key="ToolboxRepairOfficeDocumentIcon">Восстановление иконов Office</sys:String>
+    <sys:String x:Key="ToolboxRepairOfficeDocumentIcon">Восстановление иконок Office</sys:String>
     <sys:String x:Key="ToolboxRepairODIDescription">Это сбросит привязку документов Office. Как только это будет сделано, вам нужно будет использовать быстрое исправление Office.</sys:String>
     <sys:String x:Key="ToolboxRepairActivation">Восстановление активации Office</sys:String>
     <sys:String x:Key="ToolboxRepairActivationDescription">Это приведет к сбросу конфигурации службы защиты программного обеспечения и восстановлению файла активации в Windows Insider. Применяется к «Произошла неизвестная ошибка» или «Сбой использования лицензии (0xC004E015)» при активации Office.</sys:String>
@@ -399,6 +396,7 @@
     <sys:String x:Key="SettingsTransparency">Прозрачность</sys:String>
     <sys:String x:Key="SettingsBlurValue">Размытие фонового изображения</sys:String>
     <sys:String x:Key="SettingsChooseBGI">Выбрать фоновое изображение</sys:String>
+    <sys:String x:Key="SettingsAdvanced">Enable advanced features.</sys:String>
     <!-- About Panel -->
     <sys:String x:Key="AppInf">Информация о приложении</sys:String>
     <sys:String x:Key="Homepage">Домашняя страница:</sys:String>
@@ -408,8 +406,6 @@
     <sys:String x:Key="ServerProvider">Поставщики серверов</sys:String>
     <sys:String x:Key="Translator">Переводчики</sys:String>
     <sys:String x:Key="BackgroundImageSource">Источник фонового изображения</sys:String>
-    <!-- Notification Panel -->
-    <sys:String x:Key="ClearNotifications">Очистить все уведомления</sys:String>
 
     <!-- Text about Textbox, notice to control the string length. -->
     <sys:String x:Key="TextBlockCommand">> Введите команду здесь.</sys:String>
@@ -426,7 +422,7 @@
     <sys:String x:Key="Task_CheckVersion">Запрос версий продуктов Office.</sys:String>
     <sys:String x:Key="Task_CheckKMS">Тестирование KMS хоста(-ов).</sys:String>
     <sys:String x:Key="Task_CollectLog">Сбор установочных журналов Office.</sys:String>
-    <sys:String x:Key="Task_CleanOffice">Очистка от Office.</sys:String>
+    <sys:String x:Key="Task_RemoveOffice">Очистка от Office.</sys:String>
     <sys:String x:Key="Task_ConvertDocument">Конвертация документов.</sys:String>
     <!-- Example: Installing iSlide, please wait. -->
     <sys:String x:Key="Task_InstallingApp">Установка {0}, нужно подождать.</sys:String>
@@ -445,19 +441,21 @@
     <sys:String x:Key="QuesClearActivation">Удаление всех ключей и лицензий означает, что вам нужно будет переустановить лицензии и активировать Office после этой операции. Вы хотите продолжить?</sys:String>
     <sys:String x:Key="QuesClearKeys">Удалить все ключи означает, что вам нужно будет переустановить ключи и активировать Office после этой операции. Вы хотите продолжить?</sys:String>
     <sys:String x:Key="QuesCleanOffice">Вы согласны с очисткой от Office? После запуска эту операцию нельзя прервать.</sys:String>
-    <sys:String x:Key="QuesAutoShutdown">Ваш ПК будет перезагружен или выключен, либо будет выполнен выход из системы в течение минуты. Нажмите "Да" для выполения сразу, либо "Нет" для отмены операции.</sys:String>
+    <sys:String x:Key="QuesAutoShutdown">Ваш ПК будет перезагружен или выключен, либо будет выполнен выход из системы в течение минуты. Нажмите "Да" для выполнения сразу, либо "Нет" для отмены операции.</sys:String>
 
     <!-- Info Message -->
     <sys:String x:Key="InfoPermission">Office Tool Plus запущен со стандартными правами, часть операций недоступна.</sys:String>
     <sys:String x:Key="InfoUpdate">Вы используете последнюю версию Office Tool Plus.</sys:String>
     <sys:String x:Key="InfoNoConfigured">Изменения не обнаружены</sys:String>
     <sys:String x:Key="InfoAllExist">Скачивание не требуется, все файлы существуют.</sys:String>
+    <sys:String x:Key="InfoDownloading">Office is being downloaded.</sys:String>
     <sys:String x:Key="InfoSetupExited">Работа Office Deployment Tool завершена нормально.</sys:String>
     <sys:String x:Key="InfoInstallationComplete">Установка завершена.</sys:String>
     <sys:String x:Key="InfoInstallationFailed">Установка окончилась провалом.</sys:String>
 
     <!-- Success Message -->
-    <sys:String x:Key="SuccessDownloadInstallation">Установочные файлы загружены.</sys:String>
+    <sys:String x:Key="SuccessAddDownloadTask">Successfully add download tasks.</sys:String>
+    <sys:String x:Key="SuccessDownloadInstallation">Installation files downloaded successfully.</sys:String>
     <sys:String x:Key="SuccessSave">Успешно сохранено.</sys:String>
     <sys:String x:Key="SuccessRepair">Восстановление успешно.</sys:String>
 

@@ -1,4 +1,4 @@
-## Deploy Office
+# Deploy Office
 
 ---
 
@@ -10,7 +10,7 @@ Bing is a extension for Chrome and Edge etc. For more information, visit [Micros
 
 To define where to save files in download mode, change the value of  ***Source path*** in ***Installation settings***.
 
-### Contents
+## Contents
 
 ---
 
@@ -22,13 +22,13 @@ To define where to save files in download mode, change the value of  ***Source p
 6. Applications Preferences
 7. More Information
 
-### Products
+## Products
 
 ---
 
 Defines which products to download or install. The first product determines the context for the Microsoft Office First Run Experience.
 
-### Languages
+## Languages
 
 ---
 
@@ -40,7 +40,7 @@ If you define multiple languages, the first language determines the Shell UI cul
 
 If you decide that you want to change the Shell UI language after an initial installation, you have to uninstall and reinstall Office.
 
-### Update Channel
+## Update Channel
 
 ---
 
@@ -52,11 +52,9 @@ For Office 2019 Volume products only.
 
 **Security updates:** Once a month, on the second Tuesday of the month.
 
-`Office 2021 Perpetual Enterprise (upcoming):`
+`Office 2021 Perpetual Enterprise:`
 
 For Office 2021 Volume products only.
-
-**You must use Office Tool Plus module to install Office 2021 products at this time.**
 
 **No feature updates.**
 
@@ -76,7 +74,7 @@ For Office 2021 Volume products only.
 
 Note: We do not recommend using the beta channel.
 
-### Deploy Mode
+## Deploy Mode
 
 ---
 
@@ -84,27 +82,37 @@ Fresh install is means to install Office on a machine which have never install b
 
 On the other hand, you can add products, or language packs to your exist Office installation. Add or remove applications from Office suite.
 
-#### Install while downloading
+### Edit config
+
+The mode won't start installation, for exporting XML files only.
+
+### Download only
+
+The mode won't start installation, download files only. Before start download, make sure you add a language pack at least.
+
+### Install
 
 *Download required files only. Fewer data used.*
 
-We recommend you to use it when changing a exist Office installation.
+The mode allowed you to install, modify and uninstall Office.
+
+If you are installing Office on a new machine, we recommand you to checked 
 
 If you have a bad Internet connection, this will take a lot of time.
 
-#### Install after download
+### Install after download
 
 *Download all files.*
 
 We recommend you to use it when install Office on a new machine.
 
-#### Use an existing installation source
+### Use an existing installation source
 
 To use it, you need to choose any of the CAB files. If not, we will fallback to *Install while downloading*.
 
 If you are using an ISO file, you need to mount it first and then select the CAB file.
 
-#### Create ISO file
+### Create ISO file
 
 *Requires Office installation files stored in the Office Tool Plus directory.* If not, please download Office installation files first.
 
@@ -112,21 +120,13 @@ You can create an ISO file with default settings. To do so, configure Office ins
 
 If you do not configuration, the user will need to configure it as if it were used normally.
 
-#### Download only
-
-The mode won't start installation, download files only. Before start download, make sure you add a language pack at least.
-
-#### Edit config only
-
-The mode won't start installation, for exporting XML files only.
-
-### Deploy Module
+## Deploy Module
 
 ---
 
 The Office Deployment Tool is an official Microsoft tool for deploying Office.
 
-#### Features Not Supported in Office Tool Plus Module
+### Features Not Supported in Office Tool Plus Module
 
 - Not support of Configuration Manager
 - Not support of update deadline
@@ -138,7 +138,7 @@ The Office Deployment Tool is an official Microsoft tool for deploying Office.
 
 Note: **For a complete installation experience, be sure to use the Office Deployment Tool.**
 
-### Applications Preferences
+## Applications Preferences
 
 ---
 
@@ -150,7 +150,7 @@ You can apply new application preferences to client computers that already have 
 
 The app preferences are applied to all existing users of the device and any new users added to the device in the future. If you apply application preferences when Office apps are running, the preferences will be applied when Office is next restarted.
 
-### More Information
+## More Information
 
 ---
 

@@ -1,4 +1,4 @@
-## 嗨！欢迎使用 Office Tool Plus
+# 欢迎使用 Office Tool Plus
 
 ---
 
@@ -14,24 +14,19 @@ Office Tool Plus 基于 [Office 部署工具](https://aka.ms/ODT)和 [OSPP](http
 
 [微信公众号（可加微信群）](https://otp.landian.vip/grouplink/wechat.html)
 
-### Office Tool Plus 快捷键
+## Office Tool Plus 快捷键
 
 ---
 
 - <kbd>Esc</kbd>: 返回到主页
 - <kbd>F1</kbd>: 显示帮助
-- <kbd>F5</kbd>: 刷新信息/重置配置
+- <kbd>F5</kbd>: 刷新信息/重置配置（仅部署页面）
 - <kbd>Ctrl + 1</kbd>: 切换到部署页面
 - <kbd>Ctrl + 2</kbd>: 切换到激活页面
 - <kbd>Ctrl + 3</kbd>: 切换到工具箱页面
-- <kbd>Ctrl + N</kbd>: 显示通知页面
-- <kbd>Ctrl + T</kbd>: 显示设置页面
-- <kbd>Ctrl + B</kbd>: 显示关于页面
-- <kbd>Ctrl + P</kbd>: 显示/隐藏命令行
+- <kbd>Ctrl + 3</kbd>: 切换到文档转换页面
 
-Tip：使用鼠标的前进/后退按钮也可以切换页面哦！
-
-### Office Tool Plus 命令 (使用 Ctrl + P)
+## Office Tool Plus 命令 (使用 Ctrl + P)
 
 ---
 
@@ -40,36 +35,6 @@ Tip：使用鼠标的前进/后退按钮也可以切换页面哦！
 **/setImage [Path]** 手动指定背景图，Path: 背景图路径（支持 JPG，PNG，支持本地路径以及 HTTP 路径）
 
 **/clImage** 清除当前背景图
-
-**/addProduct [ProductIDs]** 添加一个或多个产品，ProductID: 产品 ID，例如：O365ProPlusRetail 或 O365ProPlusRetail,VisioProRetail
-
-**/addLang [LanguageIDs]** 添加一个或多个语言包，Language ID: 语言包 ID，例如：zh-cn 或者 zh-cn,en-us，使用 ja-jp_proof 可以添加 ja-jp 的校对工具，而不是完整的语言包
-
-**/setApps [AppIDs]** 设置`要安装`哪些应用程序，使用英文逗号分隔每个应用程序 ID，例如：Word,Excel,PowerPoint，未设置的应用程序将不会被安装
-
-**/setExApps [AppIDs]** 设置`不要安装`哪些应用程序，使用方法同 /setApps
-
-**/deployArch [index]** 设置体系结构，0 代表 32 位，1 代表 64 位
-
-**/deployChl [index]** 设置通道，0 代表列表中的第一项，如 0 表示 Office 2019 企业长期版通道，3 代表当前通道。
-
-**/deployMode [index]** 设置部署模式，0 代表列表中的第一项，如 0 代表下载时安装，5 代表仅配置
-
-**/deployModule [index]** 设置安装模块，0 代表 Office 部署工具，1 代表 Office Tool Plus
-
-**/setSources [Path]** 指定安装 Office 时，应从哪里取得 Office 安装文件，如果为空则使用 Office CDN 作为源，在下载模式，这个属性用于定义应将 Office 安装文件储存在哪里
-
-**/setVersion [Version]** 指定下载/安装 Office 时，应使用哪个版本的 Office，例如 16.0.12527.20278
-
-**/refresh** 重新加载部署页面的所有数据
-
-**/loadChannels** 在部署页面中加载额外的通道
-
-**/loadXML [Path]** 加载一个 XML 文件，支持本地以及 HTTP 路径
-
-**/startDeploy** 开始部署
-
-**/installiSlide** 单独安装 iSlide
 
 **/getKey [ProductID]** 获取产品密钥，若是批量产品，返回 GVLK，其他产品则返回默认密钥。ProductID: 产品 ID，例如：ProPlus2019Volume
 

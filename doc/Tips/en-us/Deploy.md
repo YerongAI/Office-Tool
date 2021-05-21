@@ -78,10 +78,6 @@ Note: We do not recommend using the beta channel.
 
 ---
 
-Fresh install is means to install Office on a machine which have never install before.
-
-On the other hand, you can add products, or language packs to your exist Office installation. Add or remove applications from Office suite.
-
 ### Edit config
 
 The mode won't start installation, for exporting XML files only.
@@ -92,11 +88,9 @@ The mode won't start installation, download files only. Before start download, m
 
 ### Install
 
-*Download required files only. Fewer data used.*
-
 The mode allowed you to install, modify and uninstall Office.
 
-If you are installing Office on a new machine, we recommand you to checked "Install after download".
+For fresh install, we recommand you to checked "Install after download".
 
 If you have a bad Internet connection, this will take a lot of time.
 

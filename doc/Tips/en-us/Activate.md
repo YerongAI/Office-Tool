@@ -1,10 +1,10 @@
-## Activate Office
+# Activate Office
 
 ---
 
 If you have valid license from Microsoft, login to your account and Office will automatically activate.
 
-### Content
+## Content
 
 ---
 
@@ -12,7 +12,7 @@ If you have valid license from Microsoft, login to your account and Office will 
 2. Install Licenses
 3. Activate Licenses
 
-### Clean Licenses
+## Clean Licenses
 
 ---
 
@@ -22,7 +22,7 @@ In the submenu of *Install licenses*, click *Clear licenses*.
 
 If you want to clean up keys together, click *Clear activation*.
 
-### Install Licenses
+## Install Licenses
 
 ---
 
@@ -30,23 +30,23 @@ If you want to clean up keys together, click *Clear activation*.
 2. Installing new licenses won't overwrite the old licenses, the licenses can coexistent.
 3. Microsoft 365 products can only be activated by logging in to your account.
 
-### Activate Licenses
+## Activate Licenses
 
 ---
 
-#### Online Activation (Key Required)
+### Online Activation (Key Required)
 
 Install your product key, then click *Activate*.
 
 If product SKU ID is not found, try to install licenses first.
 
-#### Offline Activation (Phone Activation)
+### Offline Activation (Phone Activation)
 
 Install your product key, in the submenu of *Install key* click *View installation ID*, when you get the confirmation ID, install it.
 
 If product SKU ID is not found, try to install licenses first.
 
-#### KMS Activation (KMS Host Required)
+### KMS Activation (KMS Host Required)
 
 Install a volume license, such as Office 2019 Volume, then set a KMS host, finally click *Activate*.
 

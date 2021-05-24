@@ -21,6 +21,8 @@ Office Tool Plus is based on [Microsoft's Office Deployment Tool](https://aka.ms
 - <kbd>Ctrl + 2</kbd>: Switch to activate page.
 - <kbd>Ctrl + 3</kbd>: Switch to toolbox page.
 - <kbd>Ctrl + 4</kbd>: Switch to convert documents page.
+- <kbd>Ctrl + T</kbd>: Display settings panel.
+- <kbd>Ctrl + B</kbd>: Display about panel.
 
 ## Office Tool Plus In-application Commands
 

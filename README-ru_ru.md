@@ -33,45 +33,10 @@
 - Изменение канала обновления Офиса без переустановки Офиса.
 - Пакетное преобразование документов Офиса на основе Офиса API.
 
-Компоненты:
+## Download and quick start
 
-- **[Office Deployment Tool](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - Основной модуль установки Офиса.
-- **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office Software Protect Platform.
-- **Thunder** - Основной модуль загрузки Офиса.
-- **[vlmcs](https://github.com/Wind4/vlmcsd)** - Компоненты для тестирования доступности KMS.
-
-## Системные требования
-
-- Windows 7 SP1, Windows 8, и Windows 10.
-- Windows Server 2008 R2 SP1, Windows Server 2012, или выше.
-
-- [Microsoft .NET 5.0 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet/current/runtime)
-
-## Загрузка Office Tool Plus
-
-- [Официальный сайт](https://otp.landian.vip/)
-
-- [Сайт загрузок](https://download.coolhub.top/)
-
-- [OneDrive for Business](https://coolhub-my.sharepoint.com/:f:/g/personal/yerong_coolhub_onmicrosoft_com/Ev9IUbXAw01JgwrAgsIFB8YBzJebdZZpmsR9hZFAZZVDgg?e=AkSdZU)
-
-## Быстрое начало
-
-Пожалуйста, перейдите по ссылке [Office-Tool-Plus-Быстрый-Старт](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-%D0%91%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9-%D0%A1%D1%82%D0%B0%D1%80%D1%82)
-
-## Помощь с переводом
-
-Мы призываем всех помочь с локализацией. Ниже описано, как это сделать.
-
-1. Выполните заимствование репозитория через функцию *Fork*
-
-2. Переведи **en-us.xaml** на свой язык и сохрани по образцу **de-de.xaml**
-
-3. Скопируй/загрузи это по правильному пути в своей копии репозитория
-
-4. Создай запрос на перетаскивание репозитория - *Pull Request*.
-
-Либо отправь мне свой перевод на [E-mail](mailto:yerong@coolhub.top)
+- [Download](https://help.coolhub.top/start/download.html).
+- [Quick start](https://help.coolhub.top/).
 
 ## О разработке
 

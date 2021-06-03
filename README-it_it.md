@@ -33,45 +33,10 @@ Funzioni aggiuntive:
 - Modifica del canale di aggiornamento di Office senza dover reinstallare Office.
 - Conversione in batch di documenti di Office, basata sulle API di Office.
 
-Componenti:
+## Download and quick start
 
-- **[Strumento di distribuzione di Office](https://docs.microsoft.com/it-it/deployoffice/overview-office-deployment-tool )** - I principali moduli di installazione di Office
-- **[OSPP](https://docs.microsoft.com/it-it/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office )** - Office Software Protect Platform.
-- **Thunder** - Il motote principale per scaricare Office.
-- **[vlmcs](https://github.com/Wind4/vlmcsd)** - Componenti per testare la disponibilità di KMS.
-
-## Requisiti di Sistema
-
-- Windows 7 SP1, Windows 8 e Windows 10.
-- Windows Server 2008 R2 SP1, Windows Server 2012 o superiore.
-
-- [Microsoft .NET 5.0 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet/current/runtime)
-
-## Scarica Office Tool Plus
-
-- [Sito web Ufficiale](https://otp.landian.vip/)
-
-- [Sito web per Scaricare](https://download.coolhub.top/)
-
-- [OneDrive for Business](https://coolhub-my.sharepoint.com/:f:/g/personal/yerong_coolhub_onmicrosoft_com/Ev9IUbXAw01JgwrAgsIFB8YBzJebdZZpmsR9hZFAZZVDgg?e=AkSdZU)
-
-## Avvio Veloce
-
-Fare riferimento a [Office Tool Plus Quick Start](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)
-
-## Aiuto per la Traduzione
-
-Incoraggiamo tutti ad aiutarci con la traduzione. Leggi come farlo.
-
-1. Fork di questo repository
-
-2. Tradurre **en-us.xaml** nella tua lingua e quindi salvalo come **it-it.xaml**
-
-3. Copialo nel giusto percorso.
-
-4. Crea una Richiesta Pull.
-
-Opuure invia i file tramite [E-mail](mailto:yerong@coolhub.top)
+- [Download](https://help.coolhub.top/start/download.html).
+- [Quick start](https://help.coolhub.top/).
 
 ## Informazioni
 

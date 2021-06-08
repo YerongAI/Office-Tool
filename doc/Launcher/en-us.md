@@ -10,7 +10,7 @@ My Digital Life
 > Official thread on MDL.
 
 Office
-> Microsoft Office homepage
+> Microsoft Office homepage.
 
 Access
 > Build a professional app quickly to manage data.

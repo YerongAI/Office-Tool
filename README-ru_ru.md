@@ -33,10 +33,10 @@
 - Изменение канала обновления Офиса без переустановки Офиса.
 - Пакетное преобразование документов Офиса на основе Офиса API.
 
-## Download and quick start
+## Скачивание и быстрый старт
 
-- [Download](https://help.coolhub.top/start/download.html).
-- [Quick start](https://help.coolhub.top/).
+- [Скачать](https://help.coolhub.top/start/download.html).
+- [Быстрый старт](https://help.coolhub.top/).
 
 ## О разработке
 

@@ -1,4 +1,4 @@
-# V8.2.2.5
+# V8.2.2.6
 
 `S'il vous plaît` [re-télécharger Office Tool Plus](http://otp.landian.vip/) `pour de meilleures expériences si vous utilisez la version 8.0 ou 8.1.`
 

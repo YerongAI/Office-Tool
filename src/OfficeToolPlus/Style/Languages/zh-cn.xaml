@@ -186,6 +186,7 @@
     <sys:String x:Key="DownloadAgent">UA:</sys:String>
     <sys:String x:Key="DownloadAgentTip">默认情况下，Office Tool Plus 会检测当前系统的版本，如果你需要为其他版本的 Windows 下载 Office 安装包，请配置此项</sys:String>
     <sys:String x:Key="DownloadUseHTTPS">使用 HTTPS 连接</sys:String>
+    <sys:String x:Key="DownloadVerifyInstallations">下载后校验 Office 安装文件</sys:String>
     <sys:String x:Key="DownloadThunderSettings">迅雷设置</sys:String>
     <sys:String x:Key="DownloadSpeedLimit">迅雷限速:</sys:String>
     <sys:String x:Key="DownloadProxyType">代理类型:</sys:String>
@@ -195,6 +196,7 @@
     <!-- Installation Manage -->
     <sys:String x:Key="InstallationFilesManage">安装文件管理</sys:String>
     <sys:String x:Key="InstallationSelectFile">选择文件</sys:String>
+    <sys:String x:Key="InstallationVerifyFiles">校验文件</sys:String>
     <!-- Activate Page -->
     <sys:String x:Key="ActivateButton">激活(_A)</sys:String>
     <sys:String x:Key="ActivateViewInformation">查看激活信息</sys:String>
@@ -417,6 +419,7 @@
     <sys:String x:Key="TextBlockResources">本地、网络或 HTTP 路径</sys:String>
 
     <!-- Task Message -->
+    <sys:String x:Key="Task_VerifyFiles">正在校验文件，请稍等</sys:String>
     <sys:String x:Key="Task_DownloadingContent">正在获取内容，请稍等</sys:String>
     <sys:String x:Key="Task_PreparingDownload">准备下载 Office</sys:String>
     <sys:String x:Key="Task_DeployClickToRun">正在准备 Click-to-Run</sys:String>
@@ -438,6 +441,7 @@
     <sys:String x:Key="QuesUpdateNow">更新已经准备好，是否现在重启程序？这只需要几秒钟的时间。</sys:String>
     <sys:String x:Key="QuesExit">程序正在执行操作，确认退出？</sys:String>
     <sys:String x:Key="QuesOneClickInstallation">你选择安装 {0}。&#x000A;如果你需要选择应用程序或语言包，请使用“其他安装选项”。&#x000A;&#x000A;点击“是”下载后再安装，点击“否”下载时安装，或者关闭窗口以取消安装。</sys:String>
+    <sys:String x:Key="QuesVerifyInstallation">是否需要校验 Office 安装文件以检查可能存在的错误？</sys:String>
     <sys:String x:Key="QuesInstallation">准备好安装 Office 了吗？</sys:String>
     <sys:String x:Key="QuesConfiguration">如要了解详细配置请查看代码，以上基本配置是否正确？</sys:String>
     <sys:String x:Key="QuesDeleteFiles">确定要删除 {0} 吗？</sys:String>
@@ -454,6 +458,7 @@
     <sys:String x:Key="InfoUpdate">您使用的是最新版本的 Office Tool Plus</sys:String>
     <sys:String x:Key="InfoNoConfigured">请先进行配置再继续操作</sys:String>
     <sys:String x:Key="InfoAllExist">没有需要下载的文件，所有文件均存在</sys:String>
+    <sys:String x:Key="InfoFinishVerifying">安装文件校验完成，没有发现任何错误</sys:String>
     <sys:String x:Key="InfoDownloading">Office 正在下载</sys:String>
     <sys:String x:Key="InfoSetupExited">Office 部署工具已正常退出</sys:String>
     <sys:String x:Key="InfoInstallationComplete">安装完成</sys:String>
@@ -469,12 +474,16 @@
     <sys:String x:Key="ErrCreateTempPath">无法创建临时文件夹，请确认系统环境变量是否设置正确！</sys:String>
     <sys:String x:Key="ErrRunning">Office Tool Plus 已经在运行中</sys:String>
     <sys:String x:Key="ErrFileMissing">文件丢失:</sys:String>
-    <sys:String x:Key="ErrInstallationMismatch">版本不匹配，文件: {0}，实际版本: {1}, 体系结构: {2}</sys:String>
+    <sys:String x:Key="ErrExtracting">提取文件时发生错误。</sys:String>
+    <sys:String x:Key="ErrInstallationHash">哈希值不匹配，文件: {0}&#x000A;哈希值: {1}&#x000A;实际的哈希值: {2}</sys:String>
+    <sys:String x:Key="ErrInstallationVersion">版本不匹配，文件: {0}&#x000A;版本: {1}&#x000A;实际的版本: {2}</sys:String>
+    <sys:String x:Key="ErrInstallationMismatch">版本不匹配，文件: {0}&#x000A;实际版本: {1}&#x000A;体系结构: {2}</sys:String>
+    <sys:String x:Key="ErrVerifyingInstallation">检查 Office 安装文件时发现错误，请查看「安装文件管理」获取错误的详细信息。</sys:String>
     <sys:String x:Key="ErrReadingInfo">读取 Office 信息时发生错误</sys:String>
     <sys:String x:Key="ErrSavingInfo">保存数据时发生错误！</sys:String>
     <sys:String x:Key="ErrSetProxy">设置代理失败！</sys:String>
-    <sys:String x:Key="ErrGetVersion">无法获取版本信息，请再试一次。或者改用 Office 部署工具作为下载引擎</sys:String>
-    <sys:String x:Key="ErrCreateISO">无法在 Office Tool Plus 文件夹中找到 Office 安装文件，请先下载 Office 安装文件，或者移动 Office 安装文件到工作目录中！</sys:String>
+    <sys:String x:Key="ErrGetVersion">无法获取 Office 版本，请再试一次，或者改用 Office 部署工具作为下载引擎。</sys:String>
+    <sys:String x:Key="ErrCreateISO">无法在 Office Tool Plus 文件夹中找到 Office 安装文件，请先下载 Office 安装文件，或者移动 Office 安装文件到工作目录中。</sys:String>
     <sys:String x:Key="ErrInput">输入错误</sys:String>
     <!-- Example: The product requires a newer version of Office. ID: ProPlus2021Retail. -->
     <sys:String x:Key="ErrInvalidProductID">此产品需要更高的 Office 版本才能安装。ID: {0}.</sys:String>

@@ -79,7 +79,6 @@
     <sys:String x:Key="DeployImportConfig">XML構成ファイルをインポート</sys:String>
     <sys:String x:Key="DeployImportConfigFromWeb">WebからXML構成ファイルをインポートする</sys:String>
     <!-- Download Panel -->
-    <sys:String x:Key="DownloadStatus">現在の状態:</sys:String>
     <sys:String x:Key="DownloadPending">ダウンロードを待っています</sys:String>
     <sys:String x:Key="DownloadDownloading">ダウンロード中</sys:String>
     <sys:String x:Key="DownloadPausing">一時停止中</sys:String>
@@ -87,6 +86,7 @@
     <sys:String x:Key="DownloadCreating">ISOファイルの作成中…</sys:String>
     <sys:String x:Key="DownloadPause">中断</sys:String>
     <sys:String x:Key="DownloadResume">続ける</sys:String>
+    <sys:String x:Key="DownloadCancel">取り消す</sys:String>
     <!-- Product -->
     <sys:String x:Key="DeployProducts">製品</sys:String>
     <sys:String x:Key="DeployProductID">製品のID:</sys:String>
@@ -172,7 +172,7 @@
     <sys:String x:Key="DeployMode">配置モード:</sys:String>
     <sys:String x:Key="DeployModeEdit">構成のみを編集</sys:String>
     <sys:String x:Key="DeployModeDownload">ダウンロードのみ</sys:String>
-    <sys:String x:Key="DeployModeInstall">Install</sys:String>
+    <sys:String x:Key="DeployModeInstall">インストール</sys:String>
     <sys:String x:Key="DeployModeCreateISO">ISOファイルを作成</sys:String>
     <sys:String x:Key="DeployModule">インストールモジュール:</sys:String>
     <sys:String x:Key="DeployModeIAD">ダウンロード後にインストール</sys:String>
@@ -180,12 +180,13 @@
     <sys:String x:Key="DeployInstalliSlide">iSlide「PowerPointプラグイン」のインストール</sys:String>
     <!-- Download Settings -->
     <sys:String x:Key="DownloadSettings">ダウンロード設定</sys:String>
-    <sys:String x:Key="DownloadSettingTip">Applies only when downloading Office.</sys:String>
+    <sys:String x:Key="DownloadSettingTip">Officeをダウンロードする場合にのみ適用されます。</sys:String>
     <sys:String x:Key="DownloadEngine">ダウンロード方法:</sys:String>
     <sys:String x:Key="DownloadEngineThunder">サンダー「Thunder」</sys:String>
     <sys:String x:Key="DownloadAgent">エージェント:</sys:String>
     <sys:String x:Key="DownloadAgentTip">既定では、「Office Tool Plus」は現在のシステムバージョンを検出します。 他のバージョンのWindows用のOfficeインストールをダウンロードする必要がある場合は、これを構成します。</sys:String>
     <sys:String x:Key="DownloadUseHTTPS">HTTPSを使って接続する</sys:String>
+    <sys:String x:Key="DownloadVerifyInstallations">Verify Office installations files after download.</sys:String>
     <sys:String x:Key="DownloadThunderSettings">サンダー「Thunder」設定</sys:String>
     <sys:String x:Key="DownloadSpeedLimit">速度制限:</sys:String>
     <sys:String x:Key="DownloadProxyType">プロキシタイプ:</sys:String>
@@ -194,7 +195,8 @@
     <sys:String x:Key="DownloadPassword">パスワード:</sys:String>
     <!-- Installation Manage -->
     <sys:String x:Key="InstallationFilesManage">インストールファイルの管理</sys:String>
-    <sys:String x:Key="InstallationSelectFile">Select file</sys:String>
+      <sys:String x:Key="InstallationSelectFile">ファイルを選択</sys:String>
+    <sys:String x:Key="InstallationVerifyFiles">Verify files</sys:String>
     <!-- Activate Page -->
     <sys:String x:Key="ActivateButton">アクティベート(_A)</sys:String>
     <sys:String x:Key="ActivateViewInformation">情報を見る</sys:String>
@@ -304,7 +306,7 @@
     <sys:String x:Key="QueryErrorCode">エラーコード情報のクエリ</sys:String>
     <sys:String x:Key="QueryErrorCodeDescription">エラーコードは「0x」で始まる必要があります。 例：0xC004F009、0x2</sys:String>
     <sys:String x:Key="ToolboxCheckKMS">KMSステータスを確認する</sys:String>
-    <sys:String x:Key="ToolboxCheckKMSDescription">各KMSをコンマまたは改行で区切ります。ポートを追加することもできます。アクティベーションが正常に表示されると、サーバーが使用可能であることを意味します。&#x000A;To test if activation is working, use the version that includes vlmcs.</sys:String>
+    <sys:String x:Key="ToolboxCheckKMSDescription">各KMSをコンマまたは改行で区切ります。ポートを追加することもできます。アクティベーションが正常に表示されると、サーバーが使用可能であることを意味します。&#x000A;アクティベーションが機能しているかどうかをテストするには、vlmcsを含むバージョンを使用します。</sys:String>
     <sys:String x:Key="CheckKMSConnectionFailed">接続に失敗しました！</sys:String>
     <sys:String x:Key="CheckKMSConnectionSuccessful">接続は成功し。</sys:String>
     <sys:String x:Key="CheckKMSActivationSuccessful">接続に成功し、アクティブ化テストに成功しました。</sys:String>
@@ -397,7 +399,11 @@
     <sys:String x:Key="SettingsTransparency">透明度</sys:String>
     <sys:String x:Key="SettingsBlurValue">背景画像のぼかし</sys:String>
     <sys:String x:Key="SettingsChooseBGI">背景画像を選択</sys:String>
-    <sys:String x:Key="SettingsAdvanced">Enable advanced features.</sys:String>
+    <sys:String x:Key="SettingsLanguageName">Language display name:</sys:String>
+    <sys:String x:Key="SettingsNativeName">Native name</sys:String>
+    <sys:String x:Key="SettingsEnglishName">English name</sys:String>
+    <sys:String x:Key="SettingsLocalizedName">Localized name</sys:String>
+    <sys:String x:Key="SettingsAdvanced">高度な機能を有効にする</sys:String>
     <!-- About Panel -->
     <sys:String x:Key="AppInf">アプリケーション情報</sys:String>
     <sys:String x:Key="Homepage">公式サイト:</sys:String>
@@ -413,6 +419,7 @@
     <sys:String x:Key="TextBlockResources">ローカル、ネットワーク、またはHTTPパス</sys:String>
 
     <!-- Task Message -->
+    <sys:String x:Key="Task_VerifyFiles">Verifying files, please wait.</sys:String>
     <sys:String x:Key="Task_DownloadingContent">コンテンツを取得して、お待ちください。</sys:String>
     <sys:String x:Key="Task_PreparingDownload">Officeをダウンロードする準備をしています。</sys:String>
     <sys:String x:Key="Task_DeployClickToRun">「Click-to-Run」のインストール。</sys:String>
@@ -434,6 +441,7 @@
     <sys:String x:Key="QuesUpdateNow">アップデートの準備ができました。今すぐアプリケーションを再起動しますか？ ほんの数秒しかかかりません。</sys:String>
     <sys:String x:Key="QuesExit">「Office Tool Plus」 は起動中ですが停止しますか？</sys:String>
     <sys:String x:Key="QuesOneClickInstallation">{0}をインストールしますか？&#x000A;アプリケーションまたは言語を選択する必要がある場合は、「他のインストールオプション」を使用してください。&#x000A;&#x000A;ダウンロード後にインストールする場合は「はい」をクリックし、ダウンロード中にインストールする場合は「いいえ」をクリックするか、ウィンドウを閉じてキャンセルします。</sys:String>
+    <sys:String x:Key="QuesVerifyInstallation">Do you want to verify the Office installation files to find possible errors?</sys:String>
     <sys:String x:Key="QuesInstallation">Officeのインストール構成</sys:String>
     <sys:String x:Key="QuesConfiguration">詳細な設定については、コードを確認してください。上記の基本設定は正しいですか？</sys:String>
     <sys:String x:Key="QuesDeleteFiles">{0}を削除?</sys:String>
@@ -446,31 +454,39 @@
 
     <!-- Info Message -->
     <sys:String x:Key="InfoPermission">「Office Tool Plus」は通常の権限で起動されますが、一部の機能は使用できなくなります。</sys:String>
+    <sys:String x:Key="InfoRestart">You need to restart application to take effect.</sys:String>
     <sys:String x:Key="InfoUpdate">最新バージョンの「Office Tool Plus」を使用しています。</sys:String>
     <sys:String x:Key="InfoNoConfigured">変更は検出されませんでした。</sys:String>
     <sys:String x:Key="InfoAllExist">ダウンロードするファイルはありません。すべてのファイルが存在します。</sys:String>
-    <sys:String x:Key="InfoDownloading">Office is being downloaded.</sys:String>
+    <sys:String x:Key="InfoFinishVerifying">The installation file was verified and no errors were found.</sys:String>
+    <sys:String x:Key="InfoDownloading">Officeがダウンロードされています。</sys:String>
     <sys:String x:Key="InfoSetupExited">「Office 展開ツール」は正常に終了しました。</sys:String>
     <sys:String x:Key="InfoInstallationComplete">インストールが完了しました。</sys:String>
     <sys:String x:Key="InfoInstallationFailed">インストールに失敗しました。</sys:String>
 
     <!-- Success Message -->
-    <sys:String x:Key="SuccessAddDownloadTask">Successfully add download tasks.</sys:String>
-    <sys:String x:Key="SuccessDownloadInstallation">Installation files downloaded successfully.</sys:String>
+    <sys:String x:Key="SuccessAddDownloadTask">ダウンロードタスクを正常に追加します。</sys:String>
+    <sys:String x:Key="SuccessDownloadInstallation">インストールファイルが正常にダウンロードされました。</sys:String>
     <sys:String x:Key="SuccessSave">保存しました。</sys:String>
     <sys:String x:Key="SuccessRepair">修理は成功しました</sys:String>
 
     <!-- Error Message -->
-    <sys:String x:Key="ErrCreateTempPath">Unable to create temporary path. Please check system variables and try again.</sys:String>
+    <sys:String x:Key="ErrCreateTempPath">一時パスを作成できません。 システム変数を確認して、再試行してください。</sys:String>
     <sys:String x:Key="ErrRunning">「Office Tool Plus」は現在実行中</sys:String>
-    <sys:String x:Key="ErrFileMissing">File missing:</sys:String>
-    <sys:String x:Key="ErrInstallationMismatch">Version mismatch, file: {0}, actual version: {1}, architecture: {2}.</sys:String>
+    <sys:String x:Key="ErrFileMissing">ファイルがありません：</sys:String>
+    <sys:String x:Key="ErrExtracting">Error occurred when extracting files.</sys:String>
+    <sys:String x:Key="ErrInstallationHash">Hash check failure. File: {0}&#x000A;Hash: {1}&#x000A;Actual hash: {2}</sys:String>
+    <sys:String x:Key="ErrInstallationVersion">Version check failure. File: {0}&#x000A;Version: {1}&#x000A;Client version: {2}</sys:String>
+    <sys:String x:Key="ErrInstallationMismatch">バージョンの不一致，ファイル: {0}&#x000A;実際のバージョン: {1}&#x000A;アーキテクチャ: {2}</sys:String>
+    <sys:String x:Key="ErrVerifyingInstallation">Errors are found when checking the Office installation files, please see "Installation files management" for details of the errors.</sys:String>
     <sys:String x:Key="ErrReadingInfo">Office情報の読み取りエラー。</sys:String>
     <sys:String x:Key="ErrSavingInfo">データを保存できませんでした！</sys:String>
     <sys:String x:Key="ErrSetProxy">プロキシの設定に失敗しました</sys:String>
     <sys:String x:Key="ErrGetVersion">バージョン情報を取得できません。もう一度試すか、エンジンを「Office 展開ツール」に切り替えてください。</sys:String>
     <sys:String x:Key="ErrCreateISO">Officeインストーラーが「Office Tool Plus」のルートに見つかりませんでした。 最初にインストールファイルをダウンロードするかインストールファイルを作業パスに移動してください。</sys:String>
     <sys:String x:Key="ErrInput">入力エラー</sys:String>
+    <!-- Example: The product requires a newer version of Office. ID: ProPlus2021Retail. -->
+    <sys:String x:Key="ErrInvalidProductID">The product requires a newer version of Office. ID: {0}.</sys:String>
     <sys:String x:Key="ErrSetupExited">「Office 展開ツール」の終了中にエラーが発生しました。</sys:String>
     <sys:String x:Key="ErrAppNotFound">コンピュータで {0} が見つかりませんでした。最新バージョンのOfficeがインストールされているかどうかを確認してください。</sys:String>
 

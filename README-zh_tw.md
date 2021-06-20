@@ -33,34 +33,10 @@
 - 一鍵清除 Office 的授權和金鑰
 - 一鍵重設/強制移除 Office
 
-部分功能基於以下服務：
+## 下载 & 快速入门
 
-- **[Office 部署工具](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - Office 部署相關操作
-- **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office 啟用的相關操作
-- **Thunder 雲加速開放平台** - 下載 Office 安裝文件的主要引擎
-- **[vlmcs](https://github.com/Wind4/vlmcsd)** - 檢測 KMS 可用性的服務
-
-## 系統需求
-
-- Windows 7 SP1, Windows 8 和 Windows 10
-- Windows Server 2008 R2 SP1, Windows Server 2012 以上版本
-
-- [Microsoft .NET 5.0 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet/current/runtime)
-
-## 下載
-
-- [官方網站](https://otp.landian.vip/)
-
-- [臺灣備用官方網站](https://otp.cotpear.com/zh-tw/) <sup>[註二]</sup>
-- [下載點](https://download.coolhub.top/)
-- [OneDrive for Business](https://coolhub-my.sharepoint.com/:f:/g/personal/yerong_coolhub_onmicrosoft_com/Ev9IUbXAw01JgwrAgsIFB8YBzJebdZZpmsR9hZFAZZVDgg?e=AkSdZU)
-- [臺灣備用載點](https://drive.google.com/drive/folders/1G8RP4ZS_npYa7bk7Fb9So7AVRc4Zk3no)<sup>[註二]</sup>
-
-[註二]：由於官方網站伺服器曾發生連線不穩定。若網站無法開啟，請使用臺灣備用官方網站、下載點。（臺灣備用載點僅會在原官方網站無法連線時更新檔案）
-
-## 快速入門
-
-點擊閲讀 [Office Tool Plus 的快速入門](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%96%80)
+- [下载](https://help.coolhub.top/start/download.html)
+- [快速入门](https://help.coolhub.top/)
 
 ## 合法性
 

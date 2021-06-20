@@ -33,31 +33,10 @@ Fungsi Tambahan:
 - Mengubah saluran pembaruan Office tanpa perlu memasang kembali Office.
 - Sejumlah konversi dokumen Office, berdasarkan Office API
 
-Komponen:
+## Download and quick start
 
-- **[Office Deployment Tool](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - Modul utama pemasangan Office.
-- **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office Software Protect Platform.
-- **Thunder** - Mesin utama untuk mengunduh Office.
-- **[vlmcs](https://github.com/Wind4/vlmcsd)** - Komponen untuk ujicoba KMS yang tersedia.
-
-## Persyaratan Sistem
-
-- Windows 7 SP1, Windows 8 dan Windows 10.
-- Windows Server 2008 R2 SP1, Windows Server 2012 atau lebih tinggi.
-
-- [Microsoft .NET 5.0 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet/current/runtime)
-
-## Unduh Office Tool Plus
-
-- [Situs Resmi](https://otp.landian.vip/)
-
-- [Unduhan Cadangan](https://download.coolhub.top/)
-
-- [OneDrive for Business](https://coolhub-my.sharepoint.com/:f:/g/personal/yerong_coolhub_onmicrosoft_com/Ev9IUbXAw01JgwrAgsIFB8YBzJebdZZpmsR9hZFAZZVDgg?e=AkSdZU)
-
-## Mulai Cepat
-
-Baca lebih lanjut ke [Mulai Cepat Office Tool Plus](https://github.com/YerongAI/Office-Tool/wiki/Mulai-Cepat-Office-Tool-Plus)
+- [Download](https://help.coolhub.top/start/download.html).
+- [Quick start](https://help.coolhub.top/).
 
 ## Tentang
 

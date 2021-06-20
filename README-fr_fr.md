@@ -33,31 +33,10 @@ Fonctions supplémentaires:
 - Modification du canal de mise à jour d’Office sans réinstaller Office.
 - Conversion par lots de documents Office, basée sur l’API Office.
 
-Components:
+## Download and quick start
 
-- **[Outil de déploiement Office](https://docs.microsoft.com/fr-fr/deployoffice/overview-office-deployment-tool)**. Vous pouvez personnaliser configurer votre installation Office et télécharger des fichiers d'installation pour installer Office sans Internet.
-- **[OSPP](https://docs.microsoft.com/fr-fr/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Plate-forme de protection des logiciels Office.
-- **Thunder** - Les principaux moteurs pour télécharger Office.
-- **[vlmcs](https://github.com/Wind4/vlmcsd)** - Composants pour tester la disponibilité de KMS.
-
-## Configuration requise
-
-Windows 7 SP1, Windows 8 et Windows 10.
-Windows Server 2008 R2 SP1, Windows Server 2012 ou plus élevé.
-
-- [Microsoft .NET 5.0 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet/current/runtime)
-
-## Télécharger Office Tool Plus
-
-- [Site officiel](https://otp.landian.vip/)
-
-- [Site de téléchargement](https://download.coolhub.top/)
-
-- [OneDrive for Business](https://coolhub-my.sharepoint.com/:f:/g/personal/yerong_coolhub_onmicrosoft_com/Ev9IUbXAw01JgwrAgsIFB8YBzJebdZZpmsR9hZFAZZVDgg?e=AkSdZU)
-
-## Démarrage rapide
-
-Veuillez vous référer au [Démarrage rapide d'Office Tool Plus](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)
+- [Download](https://help.coolhub.top/start/download.html).
+- [Quick start](https://help.coolhub.top/).
 
 ## À propos
 

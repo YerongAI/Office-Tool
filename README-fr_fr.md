@@ -33,10 +33,10 @@ Fonctions supplémentaires:
 - Modification du canal de mise à jour d’Office sans réinstaller Office.
 - Conversion par lots de documents Office, basée sur l’API Office.
 
-## Download and quick start
+## Télécharger et démarrage rapide
 
-- [Download](https://help.coolhub.top/start/download.html).
-- [Quick start](https://help.coolhub.top/).
+[Télécharger](https://help.coolhub.top/start/download.html)
+[Démarrage rapide](https://help.coolhub.top/)
 
 ## À propos
 

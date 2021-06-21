@@ -40,41 +40,6 @@ Funktionen und Features:
 - [Download](https://help.coolhub.top/start/download.html)
 - [Schnellstart](https://help.coolhub.top/)
 
-## Danke an die Übersetzer
-
-| Ländercode | Name | Übersetzer |
-| :-- | :-- | :-- |
-de-de | Deutsch (Deutschland) | [Berny23](https://steamcommunity.com/id/Berny23)
-en-us | English (United States) | [Me](https://github.com/YerongAI) and [Moedog](https://prprpr.love)
-es-es | Español (España) | Xoseba
-fr-fr | Français (France) | Drake4478
-id-id | Bahasa Indonesia (Indonesian) | [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Jovanzers](https://github.com/jovanzers)
-it-it | Italiano (Italia) | [garf02](https://github.com/garf02)
-ja-jp | 日本語 (日本) | [秋山ヘイワ](https://github.com/akio1321), kai, 河豚
-ko-kr | 한국어(대한민국) | [Jay Jang](http://www.yaeyaya.com)
-nl-nl | Nederlands (Nederland) | Kajoe
-pl-pl | Polski (Polska) | JakubDriver
-pt-br | Português (Brasil) | [Hélio de Souza](https://tinyurl.com/hdstec), [Igor Rückert](https://github.com/igorruckert)
-ru-ru | Русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov)
-zh-cn | 简体中文 (中国) | Official language
-zh-hk | 繁體中文 (香港) | TurboHK
-zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412)
-
-## Helfen Sie bei der Lokalisierung
-
-Wir ermutigen jeden, bei der Lokalisierung zu helfen. Im Folgenden erfahren Sie, wie Sie das tun können.
-
-1. Forken Sie dieses Repository
-
-2. Übersetzen Sie **en-us.xaml** in Ihre eigene Sprache und speichern Sie die Datei mit einem Namen wie **de-de.xaml**
-
-3. Kopieren Sie sie ins richtige Verzeichnis
-
-4. Erstellen Sie eine Pull-Request
-
-Alternativ können Sie mir Ihre Dateien auch per [E-Mail](mailto:yerong@coolhub.top)
-schicken.
-
 ## Über Office Tool Plus
 
 © 2016-2021 Yerong. Alle Rechte vorbehalten.

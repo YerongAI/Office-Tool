@@ -52,8 +52,7 @@ Teams
 > Ruang kerja tim berbasis obrolan yang dapat disesuaikan di Office 365.
 
 To Do
-> 
-Lacak tugas Anda di satu tempat dengan kecerdasan yang membantu Anda mengumpulkan, memprioritaskan, dan menyelesaikan lebih banyak hal bersama-sama.
+> Lacak tugas Anda di satu tempat dengan kecerdasan yang membantu Anda mengumpulkan, memprioritaskan, dan menyelesaikan lebih banyak hal bersama-sama.
 
 Visio
 > Membuat diagram profesional dan serbaguna yang menyederhanakan informasi kompleks.

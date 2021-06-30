@@ -28,7 +28,8 @@ For more information about GVLKs, please visit [GVLKs for KMS activation of Offi
 | HomeStudent2021Retail | Office Home &amp; Student 2021 | ✔ | ❌ | ❌ | PB2D6-G4NJR-4CD7B-DF7RH-9BXFH |
 | HomeStudentRetail | Office Home &amp; Student 2016 | ✔ | ❌ | ❌ | RGNMP-V32H3-QBWXM-BF7XR-DJ3QD |
 | HomeStudentVNextRetail | Office Home &amp; Student 2016 | ✔ | ❌ | ❌ | T2NP2-GM3V4-VYBYW-HT963-B99M9 |
-| MondoRetail | Office Mondo 2016 | ✔ | ✔ | ✔ | DMTCJ-KNRKX-26982-JYCKT-P7KB6 |
+| MondoRetail_KMS | Office Mondo 2016 | ❌ | ❌ | ✔ | DMTCJ-KNRKX-26982-JYCKT-P7KB6 |
+| MondoRetail | Office Mondo 2016 | ✔ | ❌ | ❌ | 2N6B3-BXW6B-W2XBT-VVQ64-7H7DH |
 | MondoVolume | Office Mondo 2016 | ❌ | ✔ | ✔ | HFTND-W9MK4-8B7MJ-B6C4G-XQBR2 |
 | O365BusinessRetail | Microsoft 365 Apps for Business | ✔ | ❌ | ❌ | NCHRJ-3VPGW-X73DM-6B36K-3RQ6B |
 | O365EduCloudRetail | Microsoft 365 | ✔ | ❌ | ❌ | 8843N-BCXXD-Q84H8-R4Q37-T3CPT |

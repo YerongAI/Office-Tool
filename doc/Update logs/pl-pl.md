@@ -2,6 +2,6 @@
 
 `Proszę` [pobierz ponownie Office Tool Plus](http://otp.landian.vip/) `dla lepszych doświadczeń, jeśli używasz wersji 8.0 lub 8.1.`
 
-1. Support to check for Office updates automatically after changing the update channel.
-2. Fixed an issue that *Insufficient memory to continue the execution of the program.*.
-3. Support to turn off background image.
+1. Obsługa automatycznego sprawdzania aktualizacji pakietu Office po zmianie kanału aktualizacji.
+2. Naprawiono problem polegający na *Braku pamięci, aby kontynuować wykonywanie programu.*.
+3. Wsparcie, aby wyłączyć obraz tła. 

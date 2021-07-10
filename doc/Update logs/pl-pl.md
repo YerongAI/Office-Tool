@@ -6,7 +6,7 @@
 2. Support to fix Office issue "There's a problem with your Office license".
 3. Wsparcie, aby wyłączyć obraz tła.
 4. Naprawiono problem polegający na *Braku pamięci, aby kontynuować wykonywanie programu.*
-5. Fixed an issue where the Office Tool Plus module could not download/install Office using the internal channel.
-6. Fixed an issue where the version number of the Office installation could not be loaded.
-7. Fixed an issue where licenses were not automatically reload after deploying Office.
-8. Fixed an issue where the Office Tool Plus installation module could not uninstall Office.
+5. Naprawiono problem polegający na tym, że moduł Office Tool Plus nie mógł pobrać/zainstalować pakietu Office za pomocą kanału wewnętrznego.
+6. Naprawiono problem polegający na tym, że nie można było załadować numeru wersji instalacji pakietu Office.
+7. Naprawiono problem polegający na tym, że licencje nie były automatycznie ponownie ładowane po wdrożeniu pakietu Office.
+8. Naprawiono problem polegający na tym, że moduł instalacyjny Office Tool Plus nie mógł odinstalować pakietu Office.

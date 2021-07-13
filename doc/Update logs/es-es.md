@@ -1,6 +1,6 @@
 # V8.2.3.2
 
-`Please` [re-download Office Tool Plus](http://otp.landian.vip/) `para una mejor experiencia si está utilizando la versión 8.0 u 8.1.`
+`Por favor` [volver a descargar Office Tool Plus](http://otp.landian.vip/) `para una mejor experiencia si está utilizando la versión 8.0 u 8.1.`
 
 1. Soporte para comprobar las actualizaciones de Office automáticamente después de cambiar el canal de actualización.
 2. Soporte para solucionar el problema de Office: "Hay un problema con su licencia de Office".

@@ -1,6 +1,6 @@
 V8.2.4.0
 
-`Proszę` [pobierz ponownie Office Tool Plus](http://otp.landian.vip/) `dla lepszych doświadczeń, jeśli używasz wersji 8.0 lub 8.1.`
+`Alsjeblieft` [download Office Tool Plus opnieuw](http://otp.landian.vip/) `voor betere ervaringen als je versie 8.0 of 8.1 gebruikt.`
 
 1. Support to deploy Office using in-application commands. See details [here](https://help.coolhub.top/others/#office-tool-plus-in-application-commands).
 2. Support to read the language property of the Remove element when exporting configuration.

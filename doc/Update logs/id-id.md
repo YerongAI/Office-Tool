@@ -1,12 +1,9 @@
-# V8.2.3.2
+V8.2.4.0
 
 `Silakan` [Mengunduh kembali Office Tool Plus](http://otp.landian.vip/) `untuk pengalaman yang lebih baik apabila anda menggunakan versi 8.0 atau 8.1.`
 
-1. Mendukung untuk memeriksa pembaruan Office Support secara otomatis setelah mengganti pembaruan saluran.
-2. Support to fix Office issue "There's a problem with your Office license".
-3. Mendukung untuk mematikan gamabr latar belakang.
-4. Memperbaiki masalah ketika *Insufficient memory to continue the execution of the program.* (Memori tidak cukup untuk melanjutkan eksekusi program).
-5. Fixed an issue where the Office Tool Plus module could not download/install Office using the internal channel.
-6. Fixed an issue where the version number of the Office installation could not be loaded.
-7. Fixed an issue where licenses were not automatically reload after deploying Office.
-8. Fixed an issue where the Office Tool Plus installation module could not uninstall Office.
+1. Support to deploy Office using in-application commands. See details [here](https://help.coolhub.top/others/#office-tool-plus-in-application-commands).
+2. Support to read the language property of the Remove element when exporting configuration.
+3. Fixed an issue that *Insufficient memory to continue the execution of the program.*
+4. Fixed an issue that Office licenses loaded abnormally in some cases.
+5. Other issues fixed and performance improvement.

@@ -1,12 +1,9 @@
-# V8.2.3.2
+V8.2.4.0
 
 `Alsjeblieft` [download Office Tool Plus opnieuw](http://otp.landian.vip/) `voor betere ervaringen als je versie 8.0 of 8.1 gebruikt.`
 
-1. Ondersteuning om automatisch te controleren op Office-updates na het wijzigen van het updatekanaal.
-2. Ondersteuning om Office-probleem op te lossen "Er is een probleem met uw Office-licentie".
-3. Ondersteuning om achtergrondafbeelding uit te schakelen.
-4. Probleem opgelost van *Onvoldoende geheugen om de uitvoering van het programma voort te zetten.*
-5. Probleem opgelost waarbij de Office Tool Plus-module Office niet kon downloaden/installeren via het interne kanaal.
-6. Probleem opgelost waarbij het versienummer van de Office-installatie niet kon worden geladen.
-7. Probleem opgelost waarbij licenties niet automatisch opnieuw werden geladen na de implementatie van Office.
-8. Probleem opgelost waarbij de installatiemodule van Office Tool Plus Office niet kon verwijderen.
+1. Support to deploy Office using in-application commands. See details [here](https://help.coolhub.top/others/#office-tool-plus-in-application-commands).
+2. Support to read the language property of the Remove element when exporting configuration.
+3. Fixed an issue that *Insufficient memory to continue the execution of the program.*
+4. Fixed an issue that Office licenses loaded abnormally in some cases.
+5. Other issues fixed and performance improvement.

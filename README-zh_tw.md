@@ -33,10 +33,11 @@
 - 一鍵清除 Office 的授權和金鑰
 - 一鍵重設/強制移除 Office
 
-## 下载 & 快速入门
+## 下載 & 快速入門
 
-- [下载](https://help.coolhub.top/start/download.html)
-- [快速入门](https://help.coolhub.top/)
+- [下載](https://help.coolhub.top/start/download.html)
+- [快速入門(簡體)](https://help.coolhub.top/)
+- [教學文章(繁體)](https://www.cotpear.com/topics/office-tool-plus/?utm_source=github.com/office-tool)
 
 ## 合法性
 

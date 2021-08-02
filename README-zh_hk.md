@@ -33,10 +33,10 @@
 - 一鍵清除 Office 的授權和金鑰
 - 一鍵重設/強制移除 Office
 
-## 下载 & 快速入门
+## 下載 & 快速入門
 
-- [下载](https://help.coolhub.top/start/download.html)
-- [快速入门](https://help.coolhub.top/)
+- [下載](https://help.coolhub.top/start/download.html)
+- [快速入門(台灣繁體)](https://help.coolhub.top/zh-tw/)
 
 ## 合法性
 
@@ -46,7 +46,9 @@ Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.c
 
 - [TurboHK](https://www./github.com/TurboHK)
 
-- [教學文章（由台灣團隊管理）](https://www.cotpear.com/search/label/Office)
+- [教學文章 (由台灣團隊管理)](https://www.cotpear.com/search/label/Office)
+
+- [Office Tool Plus 臺灣官方 Telegram 頻道](https://t.me/ot_channel_tw)
 
 ## 關於
 

@@ -36,7 +36,7 @@
 ## 下載 & 快速入門
 
 - [下載](https://help.coolhub.top/start/download.html)
-- [快速入門(簡體)](https://help.coolhub.top/)
+- [快速入門(繁體)](https://help.coolhub.top/zh-tw/)
 - [教學文章(繁體)](https://www.cotpear.com/topics/office-tool-plus/?utm_source=github.com/office-tool)
 
 ## 合法性
@@ -52,10 +52,10 @@ Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.c
 - [教學文章](https://www.cotpear.com/search/label/Office)
 - [Telegram 頻道](https://t.me/ot_channel_tw)
 - [關於《藍點網》授予本網之相關說明條款](https://policies.cotpear.com/terms/)
-- [電子郵件聯絡](customer@cotpear.com)
+- [電子郵件聯絡](support@cotpear.com)
 
 ## 關於
 
 © 2016-2021 Yerong. All Rights Reserved.
 
-> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)
+> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/ot_channel_tw)

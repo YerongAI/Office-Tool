@@ -1,9 +1,8 @@
-V8.2.4.0
+V8.2.4.3
 
 `Per favore` [Ri-scarica. Office Tool Plus](http://otp.landian.vip/) `per un'esperienza migliore se si utilizza la versione 8.0 o 8.1.`
 
-1. Support to deploy Office using in-application commands. See details [here](https://help.coolhub.top/others/#office-tool-plus-in-application-commands).
-2. Support to read the language property of the Remove element when exporting configuration.
-3. Fixed an issue that *Insufficient memory to continue the execution of the program.*
-4. Fixed an issue that Office licenses loaded abnormally in some cases.
-5. Other issues fixed and performance improvement.
+1. Fix "The method or operation is not implemented." caused by the user not logged in.
+2. Fix an problem that automatic update does not work properly.
+3. Allow users to turn off hardware acceleration to fix the problem of "UCEERR_RENDERTHREADFAILURE (0x88980406)".
+4. Fix an problem that the shortcut key **Ctrl + Shift + D** cannot execute.

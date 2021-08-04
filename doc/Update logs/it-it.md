@@ -1,8 +1,8 @@
 V8.2.4.3
 
-`Per favore` [Ri-scarica. Office Tool Plus](http://otp.landian.vip/) `per un'esperienza migliore se si utilizza la versione 8.0 o 8.1.`
+`Per favore` [Ri-scarica. Office Tool Plus](http://otp.landian.vip/)` per un'esperienza migliore se si utilizza la versione 8.0 o 8.1.`
 
-1. Fix "The method or operation is not implemented." caused by the user not logged in.
-2. Fix an problem that automatic update does not work properly.
-3. Allow users to turn off hardware acceleration to fix the problem of "UCEERR_RENDERTHREADFAILURE (0x88980406)".
-4. Fix an problem that the shortcut key **Ctrl + Shift + D** cannot execute.
+1. Risolto "Il metodo o il funzionamento non è implementato." causato dall'utente non connesso.
+2. Risolto un problema con l'aggiornamento automatico che non funziona correttamente.
+3. Agli utenti è consentito disattivare l'accelerazione hardware per risolvere il problema di "UCEERR_RENDERTHREADFAILURE (0x88980406)".
+4. Risolto un problema con il tasto di scelta rapida **Ctrl + Shift + D** che non esegue.

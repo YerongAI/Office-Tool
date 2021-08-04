@@ -20,23 +20,23 @@ Supporta la distribuzione personalizzata e l'attivazione dei seguenti prodotti:
 - Visio 2016, 2019, 2021 & Online Plan 2
 - Project 2016, 2019, 2021 & Online Desktop Client
 
-Funzioni aggiuntive:
+Funzioni e caratteristiche::
 
 - Supporto per tutti i 17 canali di Office, inclusi query, download e installazione.
 - Modifiche a Office esistente, incluse aggiunte ed eliminazioni di prodotti, applicazioni, language pack, ecc.
-- Importazione/Exportazione Profili XML.
-- Creazione file ISO per condivisione oppure per installazione offline.
+- Importazione/Esportazione profili XML.
+- Creazione file ISO per la condivisione o per l'installazione offline.
 - Installazione licenze di Office (edizione convertita).
-- Pulizia delle licenze e chiavi di Office.
+- Cancellazione delle licenze e chiavi di Office.
 - Supporta attivazione online, telefonica (attivazione offline) e attivazione KMS.
 - Reimpostazione/rimozione forzata di Office.
 - Modifica del canale di aggiornamento di Office senza dover reinstallare Office.
-- Conversione in batch di documenti di Office, basata sulle API di Office.
+- Conversione in batch di documenti Office, basata sulle API di Office.
 
-## Download and quick start
+## Scaricamento e lezione rapida
 
-- [Download](https://help.coolhub.top/start/download.html).
-- [Quick start](https://help.coolhub.top/).
+- [Scarica](https://help.coolhub.top/start/download.html)
+- [Lezione rapida](https://help.coolhub.top/)
 
 ## Informazioni
 

@@ -33,12 +33,12 @@ Dodatkowe funkcje:
 - Zmiana kanału aktualizacji pakietu Office bez ponownej instalacji pakietu Office.
 - Konwersja wsadowa dokumentów Office w oparciu o Office API.
 
-## Download and quick start
+## Pobierz i szybki start
 
-- [Download](https://help.coolhub.top/start/download.html).
-- [Quick start](https://help.coolhub.top/).
+- [Pobierz](https://help.coolhub.top/start/download.html).
+- [Szybki start](https://help.coolhub.top/).
 
-## O
+## O...
 
 © 2016-2021 Yerong. Wszelkie prawa zastrzeżone.
 

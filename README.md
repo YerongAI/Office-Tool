@@ -44,33 +44,40 @@ Functions and Features:
 
 | Culture | Name | Translators |
 | :-- | :-- | :-- |
-de-de | Deutsch (Deutschland) | [Berny23](https://steamcommunity.com/id/Berny23)
-en-us | English (United States) | [Me](https://github.com/YerongAI) and [Moedog](https://prprpr.love)
-es-es | Español (España) | Xoseba
-fr-fr | Français (France) | Drake4478
-id-id | Bahasa Indonesia (Indonesia) | [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Jovanzers](https://github.com/jovanzers)
-it-it | Italiano (Italia) | [garf02](https://github.com/garf02)
-ja-jp | 日本語 (日本) | [秋山ヘイワ](https://github.com/akio1321), kai, 河豚
-ko-kr | 한국어(대한민국) | [Jay Jang](http://www.yaeyaya.com)
-nl-nl | Nederlands (Nederland) | Kajoe
-pl-pl | Polski (Polska) | JakubDriver
-pt-br | Português (Brasil) | [Hélio de Souza](https://tinyurl.com/hdstec), [Igor Rückert](https://github.com/igorruckert)
-ru-ru | Русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov)
-zh-cn | 简体中文 (中国) | Official language
-zh-hk | 繁體中文 (香港) | TurboHK
-zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412)
+| de-de | Deutsch (Deutschland) | [Berny23](https://steamcommunity.com/id/Berny23) |
+| en-us | English (United States) | [Me](https://github.com/YerongAI) and [Moedog](https://prprpr.love) |
+| es-es | Español (España) | Xoseba |
+| fr-fr | Français (France) | Drake4478 |
+| id-id | Bahasa Indonesia (Indonesia) | [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Jovanzers](https://github.com/jovanzers) |
+| it-it | Italiano (Italia) | [garf02](https://github.com/garf02) |
+| ja-jp | 日本語 (日本) | [秋山ヘイワ](https://github.com/akio1321), kai, 河豚 |
+| ko-kr | 한국어(대한민국) | [Jay Jang](http://www.yaeyaya.com) |
+| nl-nl | Nederlands (Nederland) | Kajoe |
+| pl-pl | Polski (Polska) | JakubDriver |
+| pt-br | Português (Brasil) | [Hélio de Souza](https://tinyurl.com/hdstec), [Igor Rückert](https://github.com/igorruckert) |
+| ru-ru | Русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov) |
+| zh-hk | 繁體中文 (香港) | TurboHK |
+| zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412) |
 
 ## Help With Localization
 
 We encourage everyone to help with localization. The following is how to do it.
 
-1. Fork this repository
+1. Fork this repository.
 
-2. Translate **en-us.xaml** to your own language then save it like **de-de.xaml**
+2. Translate **en-us.xaml** to your own language then save it like **de-de.xaml**.
 
 3. Copy it to the right path.
 
 4. Make a Pull Request.
+
+There is the files you can translate with:
+
+``` batch
+src\OfficeToolPlus\Style\Languages
+src\OfficeToolPlus\Style\ProductsName
+doc\Update logs
+```
 
 Or you can send me your files via [E-mail](mailto:yerong@coolhub.top)
 

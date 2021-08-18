@@ -42,4 +42,4 @@
 
 © 2016-2021 Yerong. All Rights Reserved.
 
-> Blog [@Yerong の小窝](https://www.coolhub.top/) В· GitHub [@YerongAI](https://github.com/YerongAI) В· Telegram [@Office Tool Plus](https://t.me/otp_channel)
+> Blog [@Yerong の小窝](https://www.coolhub.top/) В· GitHub [@YerongAI](https://github.com/YerongAI) В· Telegram [@Office Tool Plus](https://t.me/otp_channel) В· [E-mail](mailto:yerong@coolhub.top)

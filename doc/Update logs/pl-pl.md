@@ -1,9 +1,8 @@
-V8.2.4.0
+V8.2.4.3
 
-`Proszę` [pobierz ponownie Office Tool Plus](http://otp.landian.vip/) `dla lepszych doświadczeń, jeśli używasz wersji 8.0 lub 8.1.`
+`Proszę [pobierz ponownie Office Tool Plus](http://otp.landian.vip/) dla lepszych doświadczeń, jeśli używasz wersji 8.0 lub 8.1.`
 
-1. Support to deploy Office using in-application commands. See details [here](https://help.coolhub.top/others/#office-tool-plus-in-application-commands).
-2. Support to read the language property of the Remove element when exporting configuration.
-3. Fixed an issue that *Insufficient memory to continue the execution of the program.*
-4. Fixed an issue that Office licenses loaded abnormally in some cases.
-5. Other issues fixed and performance improvement.
+1. Naprawiono „Metoda lub operacja nie jest zaimplementowana”. spowodowane przez niezalogowanego użytkownika.
+2. Naprawiono problem polegający na tym, że automatyczna aktualizacja nie działała poprawnie.
+3. Zezwól użytkownikom na wyłączenie akceleracji sprzętowej, aby rozwiązać problem „UCEERR_RENDERTHREADFAILURE (0x88980406)”.
+4. Naprawiono problem, którego nie można wykonać za pomocą klawisza skrótu **Ctrl + Shift + D**.

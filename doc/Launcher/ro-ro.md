@@ -30,9 +30,6 @@ OneNote
 Outlook
 > E-mail de clasă business printr-o experiență Outlook bogată și familiară.
 
-Planner
-> Un mod simplu, vizual de a organiza munca în echipă.
-
 PowerPoint
 > Proiectați prezentări profesionale.
 
@@ -41,9 +38,6 @@ Project
 
 Publisher
 > Creați publicații influente la nivel profesional.
-
-Skype
-> Păstrați legătura cu oamenii din întreaga lume prin apeluri vocale și video, Skype și mesaje instantanee pentru conferințe.
 
 Sway
 > Creați și partajați rapoarte interactive, prezentări și povești personale.
@@ -59,6 +53,3 @@ Visio
 
 Word
 > Scoate la iveală cea mai bună scriere a ta.
-
-Yammer
-> Conectați-vă cu colegii și colegii de clasă, împărtășiți informații și organizați-vă în jurul proiectelor.

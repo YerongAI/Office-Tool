@@ -30,9 +30,6 @@ OneNote
 Outlook
 > Business-class email through a rich and familiar Outlook experience.
 
-Planner
-> A simple, visual way to organize teamwork.
-
 PowerPoint
 > Design professional presentations.
 
@@ -41,9 +38,6 @@ Project
 
 Publisher
 > Create influential professional-level publications.
-
-Skype
-> Keep in touch with people around the world through voice and video calls, Skype and instant conference messaging.
 
 Sway
 > Create and share interactive reports, presentations, and personal stories.
@@ -59,6 +53,3 @@ Visio
 
 Word
 > Bring out your best writing.
-
-Yammer
-> Connect with colleagues and classmates, share information, and organize around projects.

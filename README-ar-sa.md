@@ -5,10 +5,10 @@
 </p>
 
 <p align="center">
-<a href="https://www.coolhub.top/" target="_blank"><img alt="برمجة" src="https://img.shields.io/badge/Author-Yerong-blue?style=flat-square"/></a>
-<img alt="لغة البرمجة" src="https://img.shields.io/badge/Language-C%23-green?style=flat-square"/>
-<a href="https://otp.landian.vip/" target="_blank"><img alt="اصدار" src="https://img.shields.io/github/v/release/YerongAI/Office-Tool?style=flat-square"/></a>
-<img alt="رخصة" src="https://img.shields.io/github/license/YerongAI/Office-Tool?style=flat-square"/>
+<a href="https://www.coolhub.top/" target="_blank"><img alt="Author" src="https://img.shields.io/badge/Author-Yerong-blue?style=flat-square"/></a>
+<img alt="Language" src="https://img.shields.io/badge/Language-C%23-green?style=flat-square"/>
+<a href="https://otp.landian.vip/" target="_blank"><img alt="release" src="https://img.shields.io/github/v/release/YerongAI/Office-Tool?style=flat-square"/></a>
+<img alt="license" src="https://img.shields.io/github/license/YerongAI/Office-Tool?style=flat-square"/>
 </p>
 
 > اداة قوية ومفيدة لتثبيت الاوفيس

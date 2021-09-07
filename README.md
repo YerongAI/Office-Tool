@@ -82,7 +82,7 @@ doc\Update logs
 doc\Launcher
 ```
 
-## About 
+## About
 
 © 2016-2021 Yerong. All Rights Reserved.
 

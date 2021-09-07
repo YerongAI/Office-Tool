@@ -44,6 +44,7 @@ Functions and Features:
 
 | Culture | Name | Translators |
 | :-- | :-- | :-- |
+| ar-sa | العربية (المملكة العربية السعودية) | [Yarani](https://github.com/Yarani) |
 | de-de | Deutsch (Deutschland) | [Berny23](https://steamcommunity.com/id/Berny23) |
 | en-us | English (United States) | [Me](https://github.com/YerongAI) and [Moedog](https://prprpr.love) |
 | es-es | Español (España) | Xoseba |

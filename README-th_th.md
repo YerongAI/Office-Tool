@@ -39,49 +39,6 @@
 - [ดาวน์โหลด](https://help.coolhub.top/start/download.html).
 - [เริ่มต้นอย่างรวดเร็ว](https://help.coolhub.top/).
 
-## ขอบคุณทีมแปลภาษา
-
-| คำย่อของภาษา | ชื่อภาษา | ลายนามผู้แปลภาษา |
-| :-- | :-- | :-- |
-| ar-sa | العربية (المملكة العربية السعودية) | [Yarani](https://github.com/Yarani) |
-| de-de | Deutsch (Deutschland) | [Berny23](https://steamcommunity.com/id/Berny23) |
-| en-us | English (United States) | [Me](https://github.com/YerongAI) and [Moedog](https://prprpr.love) |
-| es-es | Español (España) | Xoseba |
-| fr-fr | Français (France) | Drake4478 |
-| id-id | Bahasa Indonesia (Indonesia) | [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Jovanzers](https://github.com/jovanzers) |
-| it-it | Italiano (Italia) | [garf02](https://github.com/garf02) |
-| ja-jp | 日本語 (日本) | [秋山ヘイワ](https://github.com/akio1321), kai, 河豚 |
-| ko-kr | 한국어(대한민국) | [Jay Jang](http://www.yaeyaya.com) |
-| nl-nl | Nederlands (Nederland) | Kajoe |
-| pl-pl | Polski (Polska) | JakubDriver |
-| pt-br | Português (Brasil) | [Hélio de Souza](https://tinyurl.com/hdstec), [Igor Rückert](https://github.com/igorruckert) |
-| ro-ro | Română (România) | ianymaty |
-| ru-ru | Русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov) |
-| th-th | ไทย (ไทย) | [OllyMaster](https://github.com/OllyMaster), Charon |
-| zh-hk | 繁體中文 (香港) | TurboHK |
-| zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412) |
-
-## ช่วยเหลือในการแปลภาษาท้องถิ่นของคุณ
-
-เราเปิดโอกาสให้ทุกคนสามารถทำการแปลภาษาโปรแกรมของเราให้สามารถใช้งานในท้องถิ่นของคุณได้ ต่อไปนี้เป็นวิธีการทำ
-
-1. แยกส่วนไปเก็บที่ GitHub ของคุณ
-
-2. ทำการแปลภาษาในไฟล์ที่ชื่อว่า **en-us.xaml** และเปลี่ยนชื่อให้เป็นชื่อย่อของภาษาท้องถิ่นของคุณ เช่น **th-th.xaml**.
-
-3. คัดลอกไปยังเส้นทางที่ถูกต้อง
-
-4. สร้างการร้องขอร่วมแปลภาษาจากผู้พัฒนา
-
-นี่คือไฟล์ที่ใช้สำหรับการแปลภาษาท้องถิ่นของคุณ:
-
-``` batch
-src\OfficeToolPlus\Style\Languages
-src\OfficeToolPlus\Style\ProductsName
-doc\Update logs
-doc\Launcher
-```
-
 ## เกี่ยวกับเรา
 
 © 2016-2021 Yerong. สงวนลิขสิทธิ์

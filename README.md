@@ -58,7 +58,7 @@ Functions and Features:
 | pt-br | Português (Brasil) | [Hélio de Souza](https://tinyurl.com/hdstec), [Igor Rückert](https://github.com/igorruckert) |
 | ro-ro | Română (România) | ianymaty |
 | ru-ru | Русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov) |
-| th-th | ไทย (ไทย) | [OllyMaster] (https://github.com/OllyMaster), Charon |
+| th-th | ไทย (ไทย) | [OllyMaster](https://github.com/OllyMaster), Charon |
 | zh-hk | 繁體中文 (香港) | TurboHK |
 | zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412) |
 

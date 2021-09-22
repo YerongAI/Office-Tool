@@ -1,15 +1,11 @@
-V8.2.5.0
+V8.2.6.3
 
 `Please` [re-download Office Tool Plus](http://otp.landian.vip/) `for better experiences if you are using 8.0 or 8.1 version.`
 
-1. New language: Romania (ro-ro).
-2. New langauge: Arabic (ar-sa).
-3. New language: Thai (th-th).
-4. Support to save download settings (deploy page).
-5. Update Markdown component. 
-6. Update deploy detection logic.
-7. Update OSPP context.
-8. Update the Office 2021 products information.
-9. Update the normal license to Office Mondo 2016 - Volume.
-10. Fixed an issue that can not reset the Office product owner.
-11. Other issues fixed and performance improvement.
+1. Support to show remaining time when downloading Office.
+2. Update Office products information, added Office LTSC 2021 SPLA product.
+3. Update Office language information, added en-gb, fr-ca and es-mx.
+4. Optimized Office configuration information layout.
+5. Optimized RTL language layout.
+6. Added **Reset** button on deploy page, support to reset all configurations.
+7. Fixed an issue where "Repair Office license issue" does not work properly.

@@ -30,9 +30,6 @@ OneNote
 Outlook
 > Zakelijke e-mail via een rijke en vertrouwde Outlook-ervaring.
 
-Planner
-> Een eenvoudige, visuele manier om teamwerk te organiseren.
-
 PowerPoint
 > Professionele presentaties ontwerpen.
 
@@ -41,9 +38,6 @@ Project
 
 Publisher
 > Maak invloedrijke publicaties op professioneel niveau.
-
-Skype
-> Houd contact met mensen over de hele wereld via spraak- en videogesprekken, Skype en chatberichten.
 
 Sway
 > Maak en deel interactieve rapporten, presentaties en persoonlijke verhalen.
@@ -59,6 +53,3 @@ Visio
 
 Word
 > Haal je beste schrijfwerk naar boven.
-
-Yammer
-> Maak contact met collega's en klasgenoten, deel informatie en organiseer rond projecten.

@@ -82,7 +82,7 @@ MondoOnly stand for Office Lime application, some test components will also be r
 | ProjectStdXVolume | Project Standard 2016 | Product |  | OSM | ✔ |
 | ProPlus2019Retail | Office Professional Plus 2019 | Suite | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ |
 | ProPlus2019Volume | Office Professional Plus 2019 | Suite | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ |
-| ProPlus2021Retail | Office Professional Plus 2021 | Suite | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word |  | ✔ |
+| ProPlus2021Retail | Office Professional Plus 2021 | Suite | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word |  | ✔ |
 | ProPlus2021Volume | Office Professional Plus 2021 | Suite | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ |
 | ProPlusRetail | Office Professional Plus 2016 | Suite | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ |
 | ProPlusVolume | Office Professional Plus 2016 | Suite | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ❌ |
@@ -105,7 +105,7 @@ MondoOnly stand for Office Lime application, some test components will also be r
 | Standard2019Retail | Office Standard 2019 | Suite | Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | OSM, OSMUX, PowerPivot | ✔ |
 | Standard2019Volume | Office Standard 2019 | Suite | Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | OSM, OSMUX, PowerPivot | ✔ |
 | Standard2021Retail | Office Standard 2021 | Suite | Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word |  | ✔ |
-| Standard2021Volume | Office Standard 2021 | Suite | Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word |  | ✔ |
+| Standard2021Volume | Office Standard 2021 | Suite | Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word |  | ✔ |
 | StandardRetail | Office Standard 2016 | Suite | Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | OSM, OSMUX | ✔ |
 | StandardVolume | Office Standard 2016 | Suite | Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | OSM, OSMUX | ❌ |
 | VisioPro2019Retail | Visio Professional 2019 | Product | Groove, OneDrive |  | ✔ |

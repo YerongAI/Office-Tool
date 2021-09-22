@@ -1,16 +1,16 @@
 # Launcher
 
 GitHub Wiki
-> Click to view Office Tool Plus Quick Start.
+> اضغط لمعلومات اكثر عن البرنامج
 
-Telegram
-> Join our official group and chat with us.
+تليجرام
+> انضم لمجموعتنا الرسمية وتحاور معنا
 
 My Digital Life
 > Official thread on MDL.
 
 Office
-> Microsoft Office homepage.
+> صفحة مايكروسوفت اوفيس
 
 Access
 > Build a professional app quickly to manage data.

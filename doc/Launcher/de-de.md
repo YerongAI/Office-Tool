@@ -30,9 +30,6 @@ OneNote
 Outlook
 > Business-Class-E-Mails dank einer umfangreichen und vertrauten Outlook-Oberfläche.
 
-Planner
-> Eine einfache, visuelle Art, die Teamarbeit zu organisieren.
-
 PowerPoint
 > Gestalten Sie professionelle Präsentationen.
 
@@ -41,9 +38,6 @@ Project
 
 Publisher
 > Erstellen Sie eindrucksvolle Publikationen auf professionellem Niveau.
-
-Skype
-> Bleiben Sie über Sprach- und Videoanrufe, Skype und Instant-Konferenznachrichten mit Menschen auf der ganzen Welt in Kontakt.
 
 Sway
 > Erstellen und teilen Sie interaktive Berichte, Präsentationen und persönliche Geschichten.
@@ -59,8 +53,5 @@ Visio
 
 Word
 > Zeigen Sie Ihr volles Können beim Schreiben.
-
-Yammer
-> Verbinden Sie sich mit Kollegen und Klassenkameraden, tauschen Sie Informationen aus und organisieren Sie sich rund um Projekte.
 
 <!-- © 2021 | German translation by Berny23 | v4.4 | https://steamcommunity.com/id/Berny23 | https://sourceforge.net/u/berny23 | https://github.com/Berny23 -->

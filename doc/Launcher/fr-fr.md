@@ -30,9 +30,6 @@ OneNote
 Outlook
 > E-mail de classe affaires grâce à une expérience Outlook riche et familière.
 
-Planner
-> Une façon simple et visuelle d’organiser le travail d’équipe.
-
 PowerPoint
 > Concevoir des présentations professionnelles.
 
@@ -41,9 +38,6 @@ Project
 
 Publisher
 > Créer des publications influentes de niveau professionnel.
-
-Skype
-> Restez en contact avec les gens du monde entier par le biais d’appels vocaux et vidéo, de Skype et de la messagerie de conférence instantanée.
 
 Sway
 > Créez et partagez des rapports interactifs, des présentations et des histoires personnelles.
@@ -59,6 +53,3 @@ Visio
 
 Word
 > Faites ressortir votre meilleure écriture.
-
-Yammer
-> Connectez-vous avec vos collègues et vos camarades de classe, partagez des informations et organisez-vous autour de projets.

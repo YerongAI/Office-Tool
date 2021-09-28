@@ -44,6 +44,7 @@ Functions and Features:
 
 | Culture | Name | Translators |
 | :-- | :-- | :-- |
+| ar-sa | العربية (المملكة العربية السعودية) | [Yarani](https://github.com/Yarani) |
 | de-de | Deutsch (Deutschland) | [Berny23](https://steamcommunity.com/id/Berny23) |
 | en-us | English (United States) | [Me](https://github.com/YerongAI) and [Moedog](https://prprpr.love) |
 | es-es | Español (España) | Xoseba |
@@ -55,7 +56,9 @@ Functions and Features:
 | nl-nl | Nederlands (Nederland) | Kajoe |
 | pl-pl | Polski (Polska) | JakubDriver |
 | pt-br | Português (Brasil) | [Hélio de Souza](https://tinyurl.com/hdstec), [Igor Rückert](https://github.com/igorruckert) |
+| ro-ro | Română (România) | ianymaty |
 | ru-ru | Русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov) |
+| th-th | ไทย (ไทย) | [OllyMaster](https://github.com/OllyMaster), Charon |
 | zh-hk | 繁體中文 (香港) | TurboHK |
 | zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412) |
 
@@ -77,6 +80,7 @@ There is the files you can translate with:
 src\OfficeToolPlus\Style\Languages
 src\OfficeToolPlus\Style\ProductsName
 doc\Update logs
+doc\Launcher
 ```
 
 ## About

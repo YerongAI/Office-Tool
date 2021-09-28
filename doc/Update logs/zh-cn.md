@@ -1,8 +1,11 @@
-V8.2.4.3
+V8.2.6.3
 
 `如果你正在使用 8.0 或 8.1 版本，建议`[重新下载 8.2 版本](https://otp.landian.vip/)`以获得更好的体验。`
 
-1. 修复由于用户未登录导致的「The method or operation is not implemented.」。
-2. 修复自动更新工作不正常的问题。
-3. 允许用户关闭硬件加速以解决「UCEERR_RENDERTHREADFAILURE (0x88980406)」的问题。
-4. 修复了无法使用快捷键 Ctrl + Shift + D 的问题。
+1. 迅雷下载支持显示剩余时间。
+2. 更新 Office LTSC 产品信息，支持新增的 Office LTSC SPLA 产品。
+3. 更新 Office 语言信息，支持新的语言：英语（英国）「en-gb」，法语（加拿大）「fr-ca」，西班牙语（墨西哥）「es-mx」。
+4. 优化部署 Office 提示文本排版。
+5. 优化默认情况下的 RTL 语言排版。
+6. 部署页面添加「重置」按钮。
+7. 修复了「修复 Office 许可证问题」无法正确工作的问题。

@@ -30,9 +30,6 @@ OneNote
 Outlook
 > Surel kelas-bisnis melalui pengalaman Outlook yang kaya dan familiar.
 
-Planner
-> Cara visual yang sederhana untuk mengatur kerja tim.
-
 PowerPoint
 > Desain presentasi profesional.
 
@@ -41,9 +38,6 @@ Project
 
 Publisher
 > Buat publikasi tingkat profesional yang berpengaruh.
-
-Skype
-> Tetap terhubung dengan orang-orang di seluruh dunia melalui panggilan suara dan video Skype, serta pesan konferensi instan.
 
 Sway
 > Membuat dan membagikan laporan interaktif, presentasi, dan kisah pribadi.
@@ -59,6 +53,3 @@ Visio
 
 Word
 > Keluarkan tulisan terbaik Anda.
-
-Yammer
-> Terhubung dengan kolega dan teman sekelas, berbagi informasi, dan mengatur proyek.

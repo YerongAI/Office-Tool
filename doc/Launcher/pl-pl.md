@@ -30,9 +30,6 @@ OneNote
 Outlook
 > Poczta e-mail klasy biznesowej za pośrednictwem bogatego i znajomego środowiska programu Outlook.
 
-Planner
-> Prosty, wizualny sposób organizowania pracy zespołowej.
-
 PowerPoint
 > Projektuj profesjonalne prezentacje.
 
@@ -41,9 +38,6 @@ Project
 
 Publisher
 > Twórz wpływowe publikacje na profesjonalnym poziomie.
-
-Skype
-> Utrzymuj kontakt z ludźmi z całego świata za pomocą połączeń głosowych i wideo, Skype'a i wiadomości konferencyjnych.
 
 Sway
 > Twórz i udostępniaj interaktywne raporty, prezentacje i osobiste historie.
@@ -59,6 +53,3 @@ Visio
 
 Word
 > Wydobądź swoje najlepsze pisanie.
-
-Yammer
-> Połącz się ze współpracownikami i kolegami z klasy, udostępniaj informacje i organizuj projekty.

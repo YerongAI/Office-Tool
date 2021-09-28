@@ -1,8 +1,11 @@
-V8.2.4.3
+V8.2.6.3
 
-`Proszę [pobierz ponownie Office Tool Plus](http://otp.landian.vip/) dla lepszych doświadczeń, jeśli używasz wersji 8.0 lub 8.1.`
+`Proszę` [pobierz ponownie Office Tool Plus](http://otp.landian.vip/) `dla lepszych doświadczeń, jeśli używasz wersji 8.0 lub 8.1.`
 
-1. Naprawiono „Metoda lub operacja nie jest zaimplementowana”. spowodowane przez niezalogowanego użytkownika.
-2. Naprawiono problem polegający na tym, że automatyczna aktualizacja nie działała poprawnie.
-3. Zezwól użytkownikom na wyłączenie akceleracji sprzętowej, aby rozwiązać problem „UCEERR_RENDERTHREADFAILURE (0x88980406)”.
-4. Naprawiono problem, którego nie można wykonać za pomocą klawisza skrótu **Ctrl + Shift + D**.
+1. Wsparcie, aby pokazać pozostały czas podczas pobierania pakietu Office.
+2. Zaktualizuj informacje o produktach pakietu Office, dodano produkt Office LTSC 2021 SPLA.
+3. Zaktualizuj informacje o języku Office, dodano en-gb, fr-ca i es-mx.
+4. Zoptymalizowany układ informacji o konfiguracji pakietu Office.
+5. Zoptymalizowany układ języka RTL.
+6. Dodano przycisk **Reset** na stronie wdrażania, obsługa resetowania wszystkich konfiguracji.
+7. Naprawiono problem polegający na tym, że „Napraw problem z licencją pakietu Office” nie działa poprawnie.

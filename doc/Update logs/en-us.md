@@ -1,6 +1,6 @@
-V8.2.6.3
+V8.2.6.4
 
-`Please` [re-download Office Tool Plus](http://otp.landian.vip/) `for better experiences if you are using 8.0 or 8.1 version.`
+Please [re-download Office Tool Plus](http://otp.landian.vip/) for better experiences if you are using 8.0 or 8.1 version.
 
 1. Support to show remaining time when downloading Office.
 2. Update Office products information, added Office LTSC 2021 SPLA product.

@@ -1,4 +1,4 @@
-﻿#
+#
 
 <p align="center">
 <img alt="Office Tool Plus Logo" src="https://otp.landian.vip/static/images/logo.png"/>
@@ -18,7 +18,7 @@ Admite la implementación y activación personalizadas de los siguientes product
 - Microsoft 365
 - Office 2016, 2019, 2021
 - Visio 2016, 2019, 2021 y plan en línea 2
-- Proyecto 2016, 2019, 2021 y cliente de escritorio en línea
+- Project 2016, 2019, 2021 y cliente de escritorio en línea
 
 Funciones adicionales:
 
@@ -33,12 +33,12 @@ Funciones adicionales:
 - Se cambió el canal de actualización de Office sin reinstalar Office.
 - Conversión por lotes de documentos de Office, basada en la API de Office.
 
-## Download and quick start
+## Descarga e inicio rápido
 
 - [Download](https://help.coolhub.top/start/download.html).
 - [Quick start](https://help.coolhub.top/).
 
-## A proposito
+## A propósito
 
 © 2016-2021 Yerong. Todos los derechos reservados.
 

@@ -81,8 +81,8 @@
     <sys:String x:Key="DeployImportConfigFromWeb">WebからXML構成ファイルをインポートする</sys:String>
     <!-- Download Panel -->
     <sys:String x:Key="DownloadPending">ダウンロードを待っています</sys:String>
-    <sys:String x:Key="DownloadDownloading">Downloading, {0} Completed.</sys:String>
-    <sys:String x:Key="DownloadDownloadingTime">Downloading, time remaining: {0}</sys:String>
+    <sys:String x:Key="DownloadDownloading">ダウンロード、 {0} 完了</sys:String>
+    <sys:String x:Key="DownloadDownloadingTime">ダウンロード、残り {0} </sys:String>
     <sys:String x:Key="DownloadPausing">一時停止中</sys:String>
     <sys:String x:Key="DownloadPaused">一時停止</sys:String>
     <sys:String x:Key="DownloadCreating">ISOファイルの作成中…</sys:String>
@@ -177,7 +177,7 @@
     <sys:String x:Key="DeployModeInstall">インストール</sys:String>
     <sys:String x:Key="DeployModeCreateISO">ISOファイルを作成</sys:String>
     <sys:String x:Key="DeployModule">インストールモジュール:</sys:String>
-    <sys:String x:Key="DeployModeIAD">ダウンロード後にインストール</sys:String>
+    <sys:String x:Key="DeployModeIAD">まずダウンロードしてからデプロイします</sys:String>
     <sys:String x:Key="DeployCreateShortcut">デスクトップショートカットを作成する</sys:String>
     <sys:String x:Key="DeployInstalliSlide">iSlide「PowerPoint プラグイン」のインストール</sys:String>
     <!-- Download Settings -->
@@ -406,7 +406,7 @@
     <sys:String x:Key="SettingsBackgroundLocal">ローカル画像</sys:String>
     <sys:String x:Key="SettingsChooseBGI">背景画像を選択</sys:String>
     <sys:String x:Key="SettingsTransparencyEffectTip">Windows10でのみ使用できます。</sys:String>
-    <sys:String x:Key="SettingsOpacity">Opacity</sys:String>
+    <sys:String x:Key="SettingsOpacity">不透明度</sys:String>
     <sys:String x:Key="SettingsBlurValue">背景画像のぼかし</sys:String>
     <sys:String x:Key="SettingsLanguageName">言語名の形式:</sys:String>
     <sys:String x:Key="SettingsNativeName">ネイティブ名</sys:String>
@@ -429,6 +429,7 @@
     <sys:String x:Key="TextBlockResources">ローカル、ネットワーク、またはHTTPパス</sys:String>
 
     <!-- Task Message -->
+    <sys:String x:Key="Task_DownloadUpdate">更新プログラムのダウンロード、{0}完了 ({1} of {2}).</sys:String>
     <sys:String x:Key="Task_VerifyFiles">ファイルを確認中。しばらくお待ちください。</sys:String>
     <sys:String x:Key="Task_DownloadingContent">コンテンツを取得して、お待ちください。</sys:String>
     <sys:String x:Key="Task_PreparingDownload">Officeをダウンロードする準備をしています。</sys:String>
@@ -447,10 +448,11 @@
 
     <!-- Question Message -->
     <sys:String x:Key="QuesUpdateTitle">「Office Tool Plus」の更新</sys:String>
-    <sys:String x:Key="QuesUpdateAvailable">アップデートが利用可能です。今すぐダウンロードページを開きますか？</sys:String>
+    <sys:String x:Key="QuesUpdateAvailable">アップデートが利用可能です、今すぐダウンロードしますか?</sys:String>
     <sys:String x:Key="QuesUpdateNow">アップデートの準備ができました。今すぐアプリケーションを再起動しますか？ ほんの数秒しかかかりません。</sys:String>
     <sys:String x:Key="QuesExit">「Office Tool Plus」は起動中ですが停止しますか？</sys:String>
-    <sys:String x:Key="QuesOneClickInstallation">{0}をインストールしますか？&#x000A;アプリケーションまたは言語を選択する必要がある場合は、「他のインストールオプション」を使用してください。&#x000A;&#x000A;ダウンロード後にインストールする場合は「はい」をクリックし、ダウンロード中にインストールする場合は「いいえ」をクリックするか、ウィンドウを閉じてキャンセルします。</sys:String>
+    <sys:String x:Key="QuesOneClickInstallation">{0}をインストールしますか？&#x000A;アプリケーションまたは言語を選択する必要がある場合は、「他のインストールオプション」を使用してください。&#x000A;&#x000A;ダウンロード後にインストールする場合は[はい]をクリックし、ダウンロード中にインストールする場合は[いいえ]をクリックするか、ウィンドウを閉じてキャンセルします。</sys:String>
+    <sys:String x:Key="QuesSelectOfficeVersionToDownload">{0}に Office バージョンを指定しましたが、別のバージョンが取得されます。&#x000A;&#x000A;[はい]をクリックすると、Officeのバージョン{1}ダウンロードされます。&#x000A;[いいえ]をクリックすると、Officeのバージョン{2}ダウンロードされます。</sys:String>
     <sys:String x:Key="QuesVerifyInstallation">潜在的なエラーを探すためにOfficeインストールファイルを確認しますか？</sys:String>
     <sys:String x:Key="QuesInstallation">Officeのインストール構成</sys:String>
     <sys:String x:Key="QuesConfiguration">詳細な設定については、コードを確認してください。上記の基本設定は正しいですか？</sys:String>
@@ -460,7 +462,7 @@
     <sys:String x:Key="QuesClearActivation">すべてのキーとライセンスをアンインストールしてよろしいですか？ 操作が完了したら、ライセンスを再インストールしてOfficeをライセンス認証する必要があります。</sys:String>
     <sys:String x:Key="QuesClearKeys">すべてのキーをアンインストールしてよろしいですか？</sys:String>
     <sys:String x:Key="QuesCleanOffice">Officeをクリアしてもよろしいですか？一度始めると、キャンセルすることはできません。</sys:String>
-    <sys:String x:Key="QuesAutoShutdown">コンピュータは1分以内にサインアウト/シャットダウン/再起動します。 「はい」をクリックしてすぐに操作するか、「いいえ」をクリックして操作をキャンセルします。</sys:String>
+    <sys:String x:Key="QuesAutoShutdown">コンピュータは1分以内にサインアウト/シャットダウン/再起動します。 [はい]をクリックしてすぐに操作するか、[いいえ]をクリックして操作をキャンセルします。</sys:String>
 
     <!-- Info Message -->
     <sys:String x:Key="InfoPermission">「Office Tool Plus」は通常の権限で起動されますが、一部の機能は使用できなくなります。</sys:String>

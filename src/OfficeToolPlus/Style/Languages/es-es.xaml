@@ -81,8 +81,8 @@
     <sys:String x:Key="DeployImportConfigFromWeb">Importar archivo XML desde Web</sys:String>
     <!-- Download Panel -->
     <sys:String x:Key="DownloadPending">Esperando</sys:String>
-    <sys:String x:Key="DownloadDownloading">Downloading, {0} Completed.</sys:String>
-    <sys:String x:Key="DownloadDownloadingTime">Downloading, time remaining: {0}</sys:String>
+    <sys:String x:Key="DownloadDownloading">Descargando, {0} completado.</sys:String>
+    <sys:String x:Key="DownloadDownloadingTime">Descargando, tiempo restante: {0}</sys:String>
     <sys:String x:Key="DownloadPausing">Pausa</sys:String>
     <sys:String x:Key="DownloadPaused">En pausa</sys:String>
     <sys:String x:Key="DownloadCreating">Creación de archivos ISO</sys:String>
@@ -126,7 +126,7 @@
     <sys:String x:Key="DeployVersionTip">Si no se especifica, se utiliza por defecto la última versión disponible.</sys:String>
     <sys:String x:Key="DeployGetHistoricalVersions">Obtener el historial de las versiones de Office disponibles.</sys:String>
     <sys:String x:Key="DeployDownloadPath">Ruta de descarga:</sys:String>
-    <sys:String x:Key="DeployDownloadPathTip">Define desde dónde se descargan los archivos de instalación, debe especificar una versión cuando utilice la ruta de descarga.</sys:String>
+    <sys:String x:Key="DeployDownloadPathTip">Defina desde dónde se descargan los archivos de instalación, debe especificar una versión cuando utilice la ruta de descarga.</sys:String>
     <sys:String x:Key="DeploySourcePath">Carpeta de origen:</sys:String>
     <sys:String x:Key="DeploySourcePathTip">Si la ruta de origen está en blanco, el CDN de Office se usa de manera predeterminada como origen. En el modo de descarga, definir dónde guardar los archivos.</sys:String>
     <sys:String x:Key="DeployDisplayLevel">No se muestra ninguna interfaz durante la instalación</sys:String>
@@ -177,7 +177,7 @@
     <sys:String x:Key="DeployModeInstall">Instalar</sys:String>
     <sys:String x:Key="DeployModeCreateISO">Crear fichero ISO</sys:String>
     <sys:String x:Key="DeployModule">Módulo de instalación:</sys:String>
-    <sys:String x:Key="DeployModeIAD">Instalar después de la descarga</sys:String>
+    <sys:String x:Key="DeployModeIAD">Download first, then deploy.</sys:String>
     <sys:String x:Key="DeployCreateShortcut">Crear accesos directos a escritorio.</sys:String>
     <sys:String x:Key="DeployInstalliSlide">Instalar iSlide.</sys:String>
     <!-- Download Page -->
@@ -399,14 +399,14 @@
     <sys:String x:Key="DisplaySettings">Configuración de pantalla</sys:String>
     <sys:String x:Key="SettingsTopmost">Siempre visible.</sys:String>
     <sys:String x:Key="SettingsBackground">Fondo</sys:String>
-    <sys:String x:Key="SettingsBackgroundOff">Off</sys:String>
+    <sys:String x:Key="SettingsBackgroundOff">Apagado</sys:String>
     <sys:String x:Key="SettingsBackgroundBlur">Desenfoque</sys:String>
     <sys:String x:Key="SettingsBackgroundAcrylic">Acrílico</sys:String>
     <sys:String x:Key="SettingsBackgroundBing">Fondo de pantalla Bing</sys:String>
     <sys:String x:Key="SettingsBackgroundLocal">Imagen local</sys:String>
     <sys:String x:Key="SettingsChooseBGI">Elegir la imagen de fondo</sys:String>
     <sys:String x:Key="SettingsTransparencyEffectTip">Sólo disponible en Windows 10.</sys:String>
-    <sys:String x:Key="SettingsOpacity">Opacity</sys:String>
+    <sys:String x:Key="SettingsOpacity">Opacidad</sys:String>
     <sys:String x:Key="SettingsBlurValue">Desenfoque de la imagen de fondo</sys:String>
     <sys:String x:Key="SettingsLanguageName">Idioma a mostrar:</sys:String>
     <sys:String x:Key="SettingsNativeName">Nativo</sys:String>
@@ -429,6 +429,7 @@
     <sys:String x:Key="TextBlockResources">Ruta local, de red o HTTP.</sys:String>
 
     <!-- Task Message -->
+    <sys:String x:Key="Task_DownloadUpdate">Downloading updates, {0} completed ({1} of {2}).</sys:String>
     <sys:String x:Key="Task_VerifyFiles">Verificar archivos, por favor espere.</sys:String>
     <sys:String x:Key="Task_DownloadingContent">Obteniendo contenido, por favor espere.</sys:String>
     <sys:String x:Key="Task_PreparingDownload">Preparándose para descargar Office.</sys:String>
@@ -447,10 +448,11 @@
 
     <!-- Question Message -->
     <sys:String x:Key="QuesUpdateTitle">Actualización de Office Tool Plus</sys:String>
-    <sys:String x:Key="QuesUpdateAvailable">La actualización está disponible, ¿abrir la página de descarga ahora?</sys:String>
+    <sys:String x:Key="QuesUpdateAvailable">Update is available, download now?</sys:String>
     <sys:String x:Key="QuesUpdateNow">La actualización está lista, ¿reiniciar la aplicación ahora?. Sólo tarda unos segundos.</sys:String>
     <sys:String x:Key="QuesExit">Office Tool Plus está ejecutándose, ¿desea salir?</sys:String>
-    <sys:String x:Key="QuesOneClickInstallation">Elegiste instalar {0}.&#x000A;Si necesita seleccionar aplicaciones o idiomas, use otras opciones de instalación.&#x000A;&#x000A;Haga clic en "Sí" para instalar después de la descarga, "No" para instalar durante la descarga o cierre la ventana para cancelar.</sys:String>
+    <sys:String x:Key="QuesOneClickInstallation">Eligió instalar {0}.&#x000A; Si necesita seleccionar aplicaciones o idiomas, use otras opciones de instalación.&#x000A;&#x000A; Haga clic en "Sí" para instalar después de la descarga, "No" para instalar durante la descarga o cierre la ventana para cancelar.</sys:String>
+    <sys:String x:Key="QuesSelectOfficeVersionToDownload">You have specified Office version to {0}, but we get a different version. &#x000A;&#x000A;Clicking "Yes" will download version {1} of Office.&#x000A;Clicking "No" will download version {2} of Office.</sys:String>
     <sys:String x:Key="QuesVerifyInstallation">¿Desea verificar los archivos de instalación de Office para encontrar posibles errores?</sys:String>
     <sys:String x:Key="QuesInstallation">¿Preparado para instalar Office?</sys:String>
     <sys:String x:Key="QuesConfiguration">Muestra el código para configurar los detalles, ¿es correcta la configuración básica?</sys:String>
@@ -464,7 +466,7 @@
 
     <!-- Info Message -->
     <sys:String x:Key="InfoPermission">Office Tool Plus se ejecuta con privilegios normales, algunas características no están disponibles.</sys:String>
-    <sys:String x:Key="InfoRestart">You need to restart application to take effect.</sys:String>
+    <sys:String x:Key="InfoRestart">Es necesario reiniciar la aplicación para que surta efecto.</sys:String>
     <sys:String x:Key="InfoUpdate">Está utilizando la última versión de Office Tool Plus.</sys:String>
     <sys:String x:Key="InfoNoConfigured">No se detectaron cambios.</sys:String>
     <sys:String x:Key="InfoAllExist">No es necesario descargar el archivo, todos los archivos ya existen.</sys:String>

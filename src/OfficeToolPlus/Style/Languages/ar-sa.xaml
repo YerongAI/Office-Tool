@@ -81,8 +81,8 @@
     <sys:String x:Key="DeployImportConfigFromWeb">جلب الاعدادات من الويب</sys:String>
     <!-- Download Panel -->
     <sys:String x:Key="DownloadPending">قيد الانتظار</sys:String>
-    <sys:String x:Key="DownloadDownloading">Downloading, {0} Completed.</sys:String>
-    <sys:String x:Key="DownloadDownloadingTime">Downloading, time remaining: {0}</sys:String>
+    <sys:String x:Key="DownloadDownloading">جاري التحميل، اكتمل {0}</sys:String>
+    <sys:String x:Key="DownloadDownloadingTime">جاري التحميل، الوقت المتبقي {0}</sys:String>
     <sys:String x:Key="DownloadPausing">ايقاف</sys:String>
     <sys:String x:Key="DownloadPaused">موقف</sys:String>
     <sys:String x:Key="DownloadCreating">ISO جاري انشاء ملف</sys:String>
@@ -177,7 +177,7 @@
     <sys:String x:Key="DeployModeInstall">تثبيت</sys:String>
     <sys:String x:Key="DeployModeCreateISO">ISO انشاء ملف</sys:String>
     <sys:String x:Key="DeployModule">اسلوب التثبيت:</sys:String>
-    <sys:String x:Key="DeployModeIAD">تثبيت عقب التحميل</sys:String>
+    <sys:String x:Key="DeployModeIAD">Download first, then deploy.</sys:String>
     <sys:String x:Key="DeployCreateShortcut">انشاء اختصار لسطح المكتب</sys:String>
     <sys:String x:Key="DeployInstalliSlide">iSlide تثبيت</sys:String>
     <!-- Download Settings -->
@@ -245,7 +245,7 @@
     <sys:String x:Key="RemainGraceDay">ايام</sys:String>
     <sys:String x:Key="RemainGraceMin">دقائق قبل الانتهاء</sys:String>
     <sys:String x:Key="Licexpiry">انتهاء النسخة التجريبية: </sys:String>
-    <sys:String x:Key="ErrorCode">Error Code:&#x200e; </sys:String>
+    <sys:String x:Key="ErrorCode">رقم الخطأ: </sys:String>
     <sys:String x:Key="ErrorDescrpition">وصف الخطأ: </sys:String>
     <sys:String x:Key="ErrorUnknown">.حدث خطأ غير معلوم</sys:String>
     <sys:String x:Key="StatusLicensed"> **---مفعل---** </sys:String>
@@ -277,7 +277,7 @@
     <sys:String x:Key="ProductKeyNotFound">مفتاح المنتج غير موجود</sys:String>
     <sys:String x:Key="NotFound">غير موجود</sys:String>
     <sys:String x:Key="NotLicenseFound">لا يوجد تراخيص</sys:String>
-    <sys:String x:Key="InfoOnly"> (for information purposes only as the status is licensed)&#x200e;</sys:String>
+    <sys:String x:Key="InfoOnly"> (للغرض المعلوماتي فقط، اذ ان الحالة مرخصة)</sys:String>
 
     <sys:String x:Key="VLActivationType">اعداد نوع التنشيط: </sys:String>
     <sys:String x:Key="ActRecent">اخر عملية تنشيط ناجحة: </sys:String>
@@ -405,8 +405,8 @@
     <sys:String x:Key="SettingsBackgroundBing">Bing خلفية من</sys:String>
     <sys:String x:Key="SettingsBackgroundLocal">صورة من الجهاز</sys:String>
     <sys:String x:Key="SettingsChooseBGI">اختر ملف</sys:String>
-    <sys:String x:Key="SettingsTransparencyEffectTip">Windows 10 متاح فقط على ويندوز</sys:String>
-    <sys:String x:Key="SettingsOpacity">Opacity</sys:String>
+    <sys:String x:Key="SettingsTransparencyEffectTip">10 متاح فقط على ويندوز</sys:String>
+    <sys:String x:Key="SettingsOpacity">درجة العتامة</sys:String>
     <sys:String x:Key="SettingsBlurValue">طمس الخلفية</sys:String>
     <sys:String x:Key="SettingsLanguageName">تسمية اللغة:</sys:String>
     <sys:String x:Key="SettingsNativeName">التسمية الاصلية</sys:String>
@@ -429,6 +429,7 @@
     <sys:String x:Key="TextBlockResources">Local, network, or HTTP path.</sys:String>
 
     <!-- Task Message -->
+    <sys:String x:Key="Task_DownloadUpdate">Downloading updates, {0} completed ({1} of {2}).</sys:String>
     <sys:String x:Key="Task_VerifyFiles">.جاري التحقق من صحة الملفات، انتظر من فضلك</sys:String>
     <sys:String x:Key="Task_DownloadingContent">.جاري الحصول على المحتوى، انتظر من فضلك</sys:String>
     <sys:String x:Key="Task_PreparingDownload">.الاستعداد لتحميل الاوفيس</sys:String>
@@ -440,17 +441,18 @@
     <sys:String x:Key="Task_CheckVersion">الاستعلام عن اصدار الاوفيس</sys:String>
     <sys:String x:Key="Task_CheckKMS">Testing KMS host(s)&#x200e;.</sys:String>
     <sys:String x:Key="Task_CollectLog">جاري تجميع سجلات المثبت</sys:String>
-    <sys:String x:Key="Task_RemoveOffice">جاري ازالة الاوفس</sys:String>
+    <sys:String x:Key="Task_RemoveOffice">جاري ازالة الاوفيس</sys:String>
     <sys:String x:Key="Task_ConvertDocument">جاري تحويل الملفات</sys:String>
     <!-- Example: Installing iSlide, please wait. -->
     <sys:String x:Key="Task_InstallingApp">جاري تثبيت {0}، يرجى الانتظار</sys:String>
 
     <!-- Question Message -->
     <sys:String x:Key="QuesUpdateTitle">Office Tool Plus تحديث</sys:String>
-    <sys:String x:Key="QuesUpdateAvailable">يوجد تحديث، فتح صفحة التحميل الان؟</sys:String>
+    <sys:String x:Key="QuesUpdateAvailable">Update is available, download now?</sys:String>
     <sys:String x:Key="QuesUpdateNow">.التحديث جاهز، اعادة تشغيل البرنامج؟ سيأخذ الامر بضع ثواني</sys:String>
     <sys:String x:Key="QuesExit">البرنامج قيد التشغيل. هل تود الخروج على اي حال؟</sys:String>
     <sys:String x:Key="QuesOneClickInstallation"> {0} لقد اخترت تثبيت.&#x000A;اذا اردت اختيار برامج او لغات، استخدم اعدادات تثبيت اخرى.&#x000A;&#x000A;.اضغط "نعم" للتثبيت عقب التحميل، "لا" للتثبيت اثناء التحميل، او اغلق النافذة للالغاء</sys:String>
+    <sys:String x:Key="QuesSelectOfficeVersionToDownload">You have specified Office version to {0}, but we get a different version. &#x000A;&#x000A;Clicking "Yes" will download version {1} of Office.&#x000A;Clicking "No" will download version {2} of Office.</sys:String>
     <sys:String x:Key="QuesVerifyInstallation">هل تريد التحقق من ملفات تثبيت الاوفيس وصولا لاي اخطاء محتملة؟</sys:String>
     <sys:String x:Key="QuesInstallation">جاهز لتثبيت الاوفيس؟</sys:String>
     <sys:String x:Key="QuesConfiguration">اظهار الكود للتفاصيل، هل الاعدادات بعاليه صحيحة؟ </sys:String>

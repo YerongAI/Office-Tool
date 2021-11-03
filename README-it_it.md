@@ -36,7 +36,8 @@ Funzioni e caratteristiche::
 ## Scaricamento e lezione rapida
 
 - [Scarica](https://help.coolhub.top/start/download.html)
-- [Lezione rapida](https://help.coolhub.top/)
+- [Lezione rapida](https://github.com/YerongAI/Office-Tool/wiki).
+- [Documentation](https://help.coolhub.top/).
 
 ## Informazioni
 

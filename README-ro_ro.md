@@ -38,7 +38,8 @@ Funcții și caracteristici:
 ## Descărcare și pornire rapidă
 
 - [Descarcă](https://help.coolhub.top/start/download.html).
-- [Pornire rapidă](https://help.coolhub.top/).
+- [Pornire rapidă](https://github.com/YerongAI/Office-Tool/wiki).
+- [Documentation](https://help.coolhub.top/).
 
 ## Despre
 

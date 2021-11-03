@@ -38,7 +38,8 @@ Funktionen und Features:
 ## Download und Schnellstart
 
 - [Download](https://help.coolhub.top/start/download.html)
-- [Schnellstart](https://help.coolhub.top/)
+- [Schnellstart](https://github.com/YerongAI/Office-Tool/wiki).
+- [Dokumentation](https://help.coolhub.top/).
 
 ## Über Office Tool Plus
 
@@ -46,4 +47,4 @@ Funktionen und Features:
 
 > Blog: [@Yerong の小窝](https://www.coolhub.top/) · GitHub: [@YerongAI](https://github.com/YerongAI) · Telegram: [@Office Tool Plus](https://t.me/otp_channel) · [E-Mail](mailto:yerong@coolhub.top)
 
-<!-- © 2021 | German translation by Berny23 | v4.7 | https://steamcommunity.com/id/Berny23 | https://sourceforge.net/u/berny23 | https://github.com/Berny23 -->
+<!-- © 2021 | German translation by Berny23 | v4.10 | https://steamcommunity.com/id/Berny23 | https://sourceforge.net/u/berny23 | https://github.com/Berny23 -->

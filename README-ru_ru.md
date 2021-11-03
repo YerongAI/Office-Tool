@@ -36,7 +36,8 @@
 ## Скачивание и быстрый старт
 
 - [Скачать](https://help.coolhub.top/start/download.html).
-- [Быстрый старт](https://help.coolhub.top/).
+- [Быстрый старт](https://github.com/YerongAI/Office-Tool/wiki).
+- [Documentation](https://help.coolhub.top/).
 
 ## О разработке
 

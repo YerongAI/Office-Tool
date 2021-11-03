@@ -33,10 +33,11 @@ Office 배포 제외의 다른 기능들:
 - 재설치 필요 없이 Office 업데이트 채널을 바꾸기
 - 일과로 Office 파일 전환, Office API 기능 사용
 
-## Download and quick start
+## 다운로드와 빠른시작
 
-- [Download](https://help.coolhub.top/start/download.html).
-- [Quick start](https://help.coolhub.top/).
+- [다운로드](https://help.coolhub.top/start/download.html).
+- [빠른시작](https://github.com/YerongAI/Office-Tool/wiki).
+- [Documentation](https://help.coolhub.top/).
 
 ## 추가정보
 

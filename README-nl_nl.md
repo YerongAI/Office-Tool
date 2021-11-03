@@ -38,7 +38,8 @@ Functies en kenmerken:
 ## Downloaden en snelstart
 
 - [Download](https://help.coolhub.top/start/download.html).
-- [Snelstart](https://help.coolhub.top/).
+- [Snelstart](https://github.com/YerongAI/Office-Tool/wiki).
+- [Documentation](https://help.coolhub.top/).
 
 ## Over
 

@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-**Office Tool Plus Version, e.g. 8.1.0.0 (20/12/2020):**
+**Office Tool Plus Version, e.g. 8.1.0.0:**
 > Write down here
 
 **Operating System, e.g. Windows 10 20H2 or Windows 7 SP1:**

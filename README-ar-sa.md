@@ -38,7 +38,8 @@
 ## التحميل والبدء السريع
 
 - [تحميل](https://help.coolhub.top/start/download.html).
-- [البدء السريع](https://help.coolhub.top/).
+- [البدء السريع](https://github.com/YerongAI/Office-Tool/wiki).
+- [Documentation](https://help.coolhub.top/).
 
 ## عنا
 

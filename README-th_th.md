@@ -36,8 +36,10 @@
 - การตั้งค่าขั้นสูงช่วยให้คุณใช้ฟีเจอร์ขั้นสูงได้ เช่น ช่องทางภายในของ Office
 
 ## ดาวน์โหลด และ เริ่มต้นอย่างรวดเร็ว
+
 - [ดาวน์โหลด](https://help.coolhub.top/start/download.html).
-- [เริ่มต้นอย่างรวดเร็ว](https://help.coolhub.top/).
+- [เริ่มต้นอย่างรวดเร็ว](https://github.com/YerongAI/Office-Tool/wiki).
+- [Documentation](https://help.coolhub.top/).
 
 ## เกี่ยวกับเรา
 

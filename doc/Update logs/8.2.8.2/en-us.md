@@ -8,4 +8,5 @@ V8.2.8.2
 6. Fixed an issue about misaligned icons in high DPI (165% scaling).
 7. Accessibility improvements.
 8. Removed the outdated official uninstallation tool.
-9. Other issues fixed.
+9. Update preferences data, support to read more types of preference. Finished what Microsoft hasn't finished yet. :)
+10. Other issues fixed.

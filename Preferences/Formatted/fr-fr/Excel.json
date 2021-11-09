@@ -183,8 +183,8 @@
             "parentCategory": {
                 "ref": "L_MicrosoftOfficeExcel"
             },
-            "name": "L_IntelligentServices",
-            "displayName": "Services intelligents"
+            "name": "L_PowerBI",
+            "displayName": "Power BI"
         }
     ],
     "policies": [
@@ -236,7 +236,7 @@
             },
             "name": "L_DisplayDeveloperTab",
             "displayName": "Afficher l’onglet Développeur dans le ruban",
-            "explainText": "Ce paramètre de stratégie contrôle si l’onglet Développeur doit s’afficher ou non dans le ruban.\\r\n\\r\nSi vous activez ce paramètre de stratégie, l’onglet Développeur s’affiche dans le ruban.\\r\n\\r\nSi vous désactivez ce paramètre de stratégie, l’onglet Développeur n’est pas affiché dans le ruban.\\r\n\\r\nSi vous ne configurez pas ce paramètre de stratégie, l’onglet Développeur ne s’affiche pas dans le ruban, mais sa visibilité peut être modifiée via un paramètre de la boîte de dialogue Options de l’application.",
+            "explainText": "Ce paramètre de stratégie contrôle si l’onglet Développeur doit s’afficher ou non dans le ruban.\\r\\n\\r\\nSi vous activez ce paramètre de stratégie, l’onglet Développeur s’affiche dans le ruban.\\r\\n\\r\\nSi vous désactivez ce paramètre de stratégie, l’onglet Développeur n’est pas affiché dans le ruban.\\r\\n\\r\\nSi vous ne configurez pas ce paramètre de stratégie, l’onglet Développeur ne s’affiche pas dans le ruban, mais sa visibilité peut être modifiée via un paramètre de la boîte de dialogue Options de l’application.",
             "tags": [
                 "L_OptionsCustomizeRibbon",
                 "L_ExcelOptions",
@@ -398,6 +398,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Formulas"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_R1C1referencestyle",
+            "displayName": "Style de référence L1C1",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Formulas",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "frefa1_4_1"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_AutocorrectOptions"
             },
             "supportedOn": {
@@ -509,7 +538,7 @@
             },
             "name": "L_Defaultfilelocation",
             "displayName": "Emplacement de fichier par défaut",
-            "explainText":"Ce paramètre de stratégie vous permet de spécifier le dossier utilisé par Excel lors de l’ouverture ou de l’enregistrement d'un fichier. Ce paramètre figure sous l’onglet Fichier | Options | Enregistrer | Options d’enregistrement de classeur.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier ce dossier.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, le dossier par défaut est utilisé.",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier le dossier utilisé par Excel lors de l’ouverture ou de l’enregistrement d'un fichier. Ce paramètre figure sous l’onglet Fichier | Options | Enregistrer | Options d’enregistrement de classeur.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier ce dossier.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, le dossier par défaut est utilisé.",
             "tags": [
                 "L_Save",
                 "L_ExcelOptions",
@@ -603,6 +632,35 @@
             ],
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\excel\\options"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Save"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Promptforworkbookproperties",
+            "displayName": "Afficher la fenêtre des propriétés",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Save",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fpromptsuminfo_65_1"
         },
         {
             "parentCategory": {
@@ -748,7 +806,7 @@
             },
             "name": "L_DisableAutoRepublish",
             "displayName": "Désactiver la republication automatique",
-            "explainText": "Ce paramètre de stratégie permet aux administrateurs de désactiver la fonction de republication automatique dans Excel. Si les utilisateurs choisissent de publier les données Excel dans une page web statique et activent la fonction de republication automatique, Excel enregistre une copie des données dans la page web chaque fois que l’utilisateur enregistre le classeur. Par défaut, une boîte de dialogue est affichée à chaque enregistrement d’un classeur publié si la republication automatique est activée. Dans cette boîte de dialogue, l’utilisateur peut désactiver temporairement ou définitivement la republication automatique, ou sélectionner Ne plus afficher ce message pour empêcher l’affichage de la boîte de dialogue à chaque enregistrement. Si l’utilisateur sélectionne Ne plus afficher ce message, Excel continue à republier automatiquement les données après chaque enregistrement, sans en informer l’utilisateur.\n\nSi vous activez ce paramètre de stratégie, la fonction de republication automatique est désactivée, et les utilisateurs d’Excel doivent publier manuellement les données sur le web.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, les utilisateurs peuvent activer la fonction de republication automatique pour republier automatiquement les classeurs enregistrés comme page web type.",
+            "explainText": "Ce paramètre de stratégie permet aux administrateurs de désactiver la fonction de republication automatique dans Excel. Si les utilisateurs choisissent de publier les données Excel dans une page web statique et activent la fonction de republication automatique, Excel enregistre une copie des données dans la page web chaque fois que l’utilisateur enregistre le classeur. Par défaut, une boîte de dialogue est affichée à chaque enregistrement d’un classeur publié si la republication automatique est activée. Dans cette boîte de dialogue, l’utilisateur peut désactiver temporairement ou définitivement la republication automatique, ou sélectionner Ne plus afficher ce message pour empêcher l’affichage de la boîte de dialogue à chaque enregistrement. Si l’utilisateur sélectionne Ne plus afficher ce message, Excel continue à republier automatiquement les données après chaque enregistrement, sans en informer l’utilisateur.\n\n      Si vous activez ce paramètre de stratégie, la fonction de republication automatique est désactivée, et les utilisateurs d’Excel doivent publier manuellement les données sur le web.\n\n      Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les utilisateurs peuvent activer la fonction de republication automatique pour republier automatiquement les classeurs enregistrés comme page web type.",
             "tags": [
                 "L_Save",
                 "L_ExcelOptions",
@@ -995,6 +1053,70 @@
         },
         {
             "parentCategory": {
+                "ref": "L_ProtectedView"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Bloquer les fichiers"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Ouvrir les fichiers en mode protégé"
+                            }
+                        ],
+                        "valueName": "openinprotectedview",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsDropID"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "disableeditfrompv",
+                        "key": "software\\microsoft\\office\\16.0\\excel\\security\\filevalidation",
+                        "inputType": "checkBox",
+                        "caption": "Activé : autoriser la modification.  Désactivé : ne pas autoriser la modification.",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsStr3"
+                    }
+                ]
+            },
+            "name": "L_SetDocumentBehaviorIfFileValidationFails",
+            "displayName": "Définir le comportement des documents en cas d’échec de la validation de fichier",
+            "explainText": "Ce paramètre de stratégie contrôle la façon dont Office gère les documents en cas d’échec de la validation de fichier.\n\nSi vous activez ce paramètre de stratégie, vous pouvez configurer les options suivantes pour les fichiers pour lesquels la validation de fichier échoue : \n\n- Bloquer complètement les fichiers. Les utilisateurs ne peuvent pas ouvrir les fichiers.\n- Ouvrir les fichiers en mode protégé et interdire la modification. Les utilisateurs ne peuvent pas modifier les fichiers. Office gère les fichiers de la même façon si vous ne configurez pas ce paramètre de stratégie\n\n- Ouvrir les fichiers en mode protégé et autoriser la modification. Les utilisateurs peuvent modifier les fichiers. Office gère les fichiers de la même façon si vous ne configurez pas ce paramètre de stratégie.\n\nSi vous désactivez ce paramètre de stratégie, Office suit le comportement « Ouvrir les fichiers en mode protégé et interdire la modification ».\n\nSi vous ne configurez pas ce paramètre de stratégie, Office suit le comportement « Ouvrir les fichiers en mode protégé et autoriser la modification ».",
+            "tags": [
+                "L_ProtectedView",
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security\\filevalidation"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_ExternalContent"
             },
             "supportedOn": {
@@ -1012,7 +1134,7 @@
             },
             "name": "L_DisableDDEServerLookup",
             "displayName": "Ne pas autoriser la recherche de serveur DDE (échange dynamique de données) dans Excel",
-            "explainText": "Ce paramètre de stratégie vous permet de contrôler si la recherche de serveur DDE (échange dynamique de données) est autorisée.\n\nPar défaut, la recherche de serveur DDE est activée, mais les utilisateurs peuvent la désactiver en accédant à Fichier > Options > Centre de gestion de la confidentialité > Paramètres du Centre de gestion de la confidentialité > Contenu externe.\n\nSi vous activez ce paramètre de stratégie, la recherche de serveur DDE n’est pas autorisée, et les utilisateurs ne peuvent pas l’activer dans le Centre de gestion de la confidentialité.\n\nRemarque : si vous utilisez le lancement de serveur DDE (non recommandé), n’activez pas ce paramètre de stratégie, car le lancement de serveur DDE nécessite l’activation de la recherche de serveur DDE.\n\nSi vous désactivez ou omettez de configurer ce paramètre de stratégie, la recherche de serveur DDE est activée, mais les utilisateurs peuvent la désactiver dans le Centre de gestion de la confidentialité.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions par abonnement d’Office, telles qu’Office 365 ProPlus.",
+            "explainText": "Ce paramètre de stratégie vous permet de contrôler si la recherche de serveur DDE (échange dynamique de données) est autorisée.\n\nPar défaut, la recherche de serveur DDE est activée, mais les utilisateurs peuvent la désactiver en accédant à Fichier > Options > Centre de gestion de la confidentialité > Paramètres du Centre de gestion de la confidentialité > Contenu externe.\n\nSi vous activez ce paramètre de stratégie, la recherche de serveur DDE n’est pas autorisée, et les utilisateurs ne peuvent pas l’activer dans le Centre de gestion de la confidentialité.\n\nRemarque : si vous utilisez le lancement de serveur DDE (non recommandé), n’activez pas ce paramètre de stratégie, car le lancement de serveur DDE nécessite l’activation de la recherche de serveur DDE.\n\nSi vous désactivez ou omettez de configurer ce paramètre de stratégie, la recherche de serveur DDE est activée, mais les utilisateurs peuvent la désactiver dans le Centre de gestion de la confidentialité.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions par abonnement d’Office, telles qu’Applications Microsoft 365 pour les entreprises.",
             "tags": [
                 "L_ExternalContent",
                 "L_TrustCenter",
@@ -1043,7 +1165,7 @@
             },
             "name": "L_DisableDDEServerLaunch",
             "displayName": "Ne pas autoriser le lancement de serveur DDE (échange dynamique de données) dans Excel",
-            "explainText": "Ce paramètre de stratégie vous permet de contrôler si le lancement de serveur DDE (échange dynamique de données) est autorisé.\n\nPar défaut, le lancement de serveur DDE est désactivé, mais les utilisateurs peuvent l’activer en accédant à Fichier > Options > Centre de gestion de la confidentialité > Paramètres du Centre de gestion de la confidentialité > Contenu externe.\n\nPour des raisons de sécurité, il n’est pas recommandé d’activer le lancement de serveur DDE.\n\nRemarque : pour que le lancement de serveur DDE fonctionne, la recherche de serveur DDE doit être activée. Vérifiez que le paramètre de stratégie « Ne pas autoriser la recherche de serveur DDE » n’est pas activé, car son activation désactive la recherche de serveur DDE.\n\nSi vous activez ce paramètre de stratégie, le lancement de serveur DDE n’est pas autorisé et les utilisateurs ne peuvent pas l’activer dans le Centre de gestion de la confidentialité.\n\nSi vous désactivez ce paramètre de stratégie, le lancement de serveur DDE est autorisé et les utilisateurs ne peuvent pas le désactiver dans le Centre de gestion de la confidentialité (non recommandé pour des raisons de sécurité).\n\nSi vous omettez de configurer ce paramètre de stratégie, le lancement de serveur DDE est désactivé, mais les utilisateurs peuvent l’activer dans le Centre de gestion de la confidentialité.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions par abonnement d’Office, telles qu’Office 365 ProPlus.",
+            "explainText": "Ce paramètre de stratégie vous permet de contrôler si le lancement de serveur DDE (échange dynamique de données) est autorisé.\n\nPar défaut, le lancement de serveur DDE est désactivé, mais les utilisateurs peuvent l’activer en accédant à Fichier > Options > Centre de gestion de la confidentialité > Paramètres du Centre de gestion de la confidentialité > Contenu externe.\n\nPour des raisons de sécurité, il n’est pas recommandé d’activer le lancement de serveur DDE.\n\nRemarque : pour que le lancement de serveur DDE fonctionne, la recherche de serveur DDE doit être activée. Vérifiez que le paramètre de stratégie « Ne pas autoriser la recherche de serveur DDE » n’est pas activé, car son activation désactive la recherche de serveur DDE.\n\nSi vous activez ce paramètre de stratégie, le lancement de serveur DDE n’est pas autorisé et les utilisateurs ne peuvent pas l’activer dans le Centre de gestion de la confidentialité.\n\nSi vous désactivez ce paramètre de stratégie, le lancement de serveur DDE est autorisé et les utilisateurs ne peuvent pas le désactiver dans le Centre de gestion de la confidentialité (non recommandé pour des raisons de sécurité).\n\nSi vous omettez de configurer ce paramètre de stratégie, le lancement de serveur DDE est désactivé, mais les utilisateurs peuvent l’activer dans le Centre de gestion de la confidentialité.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions par abonnement d’Office, telles qu’Applications Microsoft 365 pour les entreprises.",
             "tags": [
                 "L_ExternalContent",
                 "L_TrustCenter",
@@ -1074,7 +1196,7 @@
             },
             "name": "L_EnableBlockUnsecureQueryFiles",
             "displayName": "Toujours empêcher l’ouverture des fichiers Microsoft Query non approuvés",
-            "explainText": "Ce paramètre de stratégie contrôle si l’ouverture des fichiers Microsoft Query (.iqy, .oqy, .dqy et .rqy) situés dans un emplacement non approuvé est bloquée.\n\nSi vous activez ce paramètre de stratégie, les fichiers Microsoft Query situés dans un emplacement non approuvé ne peuvent pas être ouverts. Les utilisateurs ne pourront pas modifier ce paramètre sous Fichier > Options > Centre de gestion de la confidentialité > Paramètres du Centre de gestion de la confidentialité > Contenu externe.\n\nSi vous désactivez ou omettez de configurer ce paramètre de stratégie, l’ouverture des fichiers Microsoft Query situés dans un emplacement non approuvé n’est pas bloquée, sauf si les utilisateurs ont modifié ce paramètre dans le Centre de gestion de la confidentialité.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions par abonnement d’Office, telles qu’Office 365 ProPlus.",
+            "explainText": "Ce paramètre de stratégie contrôle si l’ouverture des fichiers Microsoft Query (.iqy, .oqy, .dqy et .rqy) situés dans un emplacement non approuvé est bloquée.\n\nSi vous activez ce paramètre de stratégie, les fichiers Microsoft Query situés dans un emplacement non approuvé ne peuvent pas être ouverts. Les utilisateurs ne pourront pas modifier ce paramètre sous Fichier > Options > Centre de gestion de la confidentialité > Paramètres du Centre de gestion de la confidentialité > Contenu externe.\n\nSi vous désactivez ou omettez de configurer ce paramètre de stratégie, l’ouverture des fichiers Microsoft Query situés dans un emplacement non approuvé n’est pas bloquée, sauf si les utilisateurs ont modifié ce paramètre dans le Centre de gestion de la confidentialité.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions par abonnement d’Office, telles qu’Applications Microsoft 365 pour les entreprises.",
             "tags": [
                 "L_ExternalContent",
                 "L_TrustCenter",
@@ -1105,7 +1227,7 @@
             },
             "name": "L_EnableForeignTextFileProtectedView",
             "displayName": "Toujours ouvrir les fichiers texte non approuvés en mode protégé",
-            "explainText": "Ce paramètre de stratégie contrôle si les fichiers texte (.csv, .dif et .sylk) ouverts à partir d’un emplacement non approuvé le sont toujours en mode protégé.\n\nSi vous activez ce paramètre de stratégie, les fichiers texte ouverts à partir d’un emplacement non approuvé le sont toujours en mode protégé. Les utilisateurs ne pourront pas modifier ce paramètre sous Fichier > Options > Centre de gestion de la confidentialité > Paramètres du Centre de gestion de la confidentialité > Mode protégé.\n\nSi vous désactivez ou omettez de configurer ce paramètre de stratégie, les fichiers texte ouverts à partir d’un emplacement non approuvé ne le sont pas en mode protégé, sauf si les utilisateurs ont modifié ce paramètre dans le Centre de gestion de la confidentialité.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions par abonnement d’Office, telles qu’Office 365 ProPlus.",
+            "explainText": "Ce paramètre de stratégie contrôle si les fichiers texte (.csv, .dif et .sylk) ouverts à partir d’un emplacement non approuvé le sont toujours en mode protégé.\n\nSi vous activez ce paramètre de stratégie, les fichiers texte ouverts à partir d’un emplacement non approuvé le sont toujours en mode protégé. Les utilisateurs ne pourront pas modifier ce paramètre sous Fichier > Options > Centre de gestion de la confidentialité > Paramètres du Centre de gestion de la confidentialité > Mode protégé.\n\nSi vous désactivez ou omettez de configurer ce paramètre de stratégie, les fichiers texte ouverts à partir d’un emplacement non approuvé ne le sont pas en mode protégé, sauf si les utilisateurs ont modifié ce paramètre dans le Centre de gestion de la confidentialité.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions par abonnement d’Office, telles qu’Applications Microsoft 365 pour les entreprises.",
             "tags": [
                 "L_ProtectedView",
                 "L_TrustCenter",
@@ -1136,7 +1258,7 @@
             },
             "name": "L_EnableDataBaseFileProtectedView",
             "displayName": "Toujours ouvrir les fichiers de base de données non approuvés en mode protégé",
-            "explainText": "Ce paramètre de stratégie contrôle si les fichiers de base de données (.dbf) ouverts à partir d’un emplacement non approuvé le sont toujours en mode protégé.\n\nSi vous activez ce paramètre de stratégie, les fichiers de base de données ouverts à partir d’un emplacement non approuvé le sont toujours en mode protégé. Les utilisateurs ne pourront pas modifier ce paramètre sous Fichier > Options > Centre de gestion de la confidentialité > Paramètres du Centre de gestion de la confidentialité > Mode protégé.\n\nSi vous désactivez ou omettez de configurer ce paramètre de stratégie, les fichiers de base de données ouverts à partir d’un emplacement non approuvé ne le sont pas en mode protégé, sauf si les utilisateurs ont modifié ce paramètre dans le Centre de gestion de la confidentialité.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions par abonnement d’Office, telles qu’Office 365 ProPlus.",
+            "explainText": "Ce paramètre de stratégie contrôle si les fichiers de base de données (.dbf) ouverts à partir d’un emplacement non approuvé le sont toujours en mode protégé.\n\nSi vous activez ce paramètre de stratégie, les fichiers de base de données ouverts à partir d’un emplacement non approuvé le sont toujours en mode protégé. Les utilisateurs ne pourront pas modifier ce paramètre sous Fichier > Options > Centre de gestion de la confidentialité > Paramètres du Centre de gestion de la confidentialité > Mode protégé.\n\nSi vous désactivez ou omettez de configurer ce paramètre de stratégie, les fichiers de base de données ouverts à partir d’un emplacement non approuvé ne le sont pas en mode protégé, sauf si les utilisateurs ont modifié ce paramètre dans le Centre de gestion de la confidentialité.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions par abonnement d’Office, telles qu’Applications Microsoft 365 pour les entreprises.",
             "tags": [
                 "L_ProtectedView",
                 "L_TrustCenter",
@@ -1773,6 +1895,66 @@
                     "value": 0
                 }
             },
+            "name": "L_XL4KillSwitchPolicy",
+            "displayName": "Empêcher Excel d’exécuter des macros XLM",
+            "explainText": "Ce paramètre de stratégie empêche Excel d’exécuter des macros Excel 4.0 (XLM).\n\nSi vous activez ce paramètre de stratégie, les macros XLM ne peuvent pas être exécutées dans Excel.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, les macros XLM peuvent être exécutées dans Excel.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security",
+            "valueName": "xl4macrooff"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_StoremacroinPersonalMacroWorkbookbydefault",
+            "displayName": "Enregistrer la macro dans le classeur de macros personnelles par défaut",
+            "explainText": "Ce paramètre de stratégie contrôle l’emplacement d’enregistrement par défaut des macros dans Excel.\n\n      Si ce paramètre de stratégie est activé, Excel enregistre les macros dans le classeur de macros personnelles des utilisateurs.\n\n      Si vous désactivez ou ne configurez pas ce paramètre de stratégie, Excel enregistre les macros dans le classeur actif dans lequel elles sont créées.\n\n      Remarque : dans l’interface utilisateur (IU), la liste déroulante Enregistrer la macro dans de la boîte de dialogue Enregistrer une macro (Macros | Enregistrer une macro) permet aux utilisateurs d’enregistrer la nouvelle macro dans le classeur actuel, un nouveau classeur ou un classeur de macros personnelles (Personal.xlsb), un classeur masqué ouvert à chaque démarrage d’Excel.\n\n      Par défaut, Excel affiche la boîte de dialogue Enregistrer la macro dans avec la valeur Ce classeur déjà sélectionnée dans la liste déroulante. Si un utilisateur enregistre une macro dans le classeur actif, puis transmet celui-ci à d’autres utilisateurs, la macro est transmise avec le classeur. Si vous activez ce paramètre de stratégie, Excel affiche la boîte de dialogue Enregistrer la macro dans, avec la valeur Classeur de macros personnelles déjà sélectionnée. Les utilisateurs peuvent toujours sélectionner l’une des deux autres options dans le menu déroulant.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fglobalsheet_37_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_TrustaccesstoVisualBasicProject",
             "displayName": "Accès approuvé au projet Visual Basic",
             "explainText": "Ce paramètre de stratégie contrôle l’accès des clients Automation, tels que Microsoft Visual Studio 2005 Tools pour Microsoft Office (VSTO), au système de projet Visual Basic pour Applications dans les applications spécifiées. Dans Excel, PowerPoint et Word, l’accès au système de projet Visual Basic pour Applications est requis pour les projets VSTO même si ceux-ci n’utilisent pas Visual Basic pour Applications. La prise en charge de la conception des contrôles dans les projets Visual Basic et C# est liée au système de projet Visual Basic pour Applications dans Word et Excel.\n\nSi vous activez ce paramètre de stratégie, VSTO et les autres clients Automation peuvent accéder au système de projet Visual Basic pour Applications dans les applications spécifiées. L’option Accès approuvé au modèle d’objet du projet VBA dans la section Paramètres des macros du Centre de gestion de la confidentialité ne permet pas aux utilisateurs de modifier ce comportement.\n\nSi vous désactivez ce paramètre de stratégie, VSTO ne peut pas accéder par programme aux projets VBA. Par ailleurs, la case à cocher Accès approuvé au modèle d’objet du projet VBA est désactivée, et les utilisateurs ne peuvent pas modifier cette configuration. Remarque : la désactivation de ce paramètre de stratégie empêche l’interaction correcte des projets VSTO avec le système de projet VBA dans l’application sélectionnée.\n\nSi vous ne configurez pas ce paramètre de stratégie, les clients Automation ne peuvent pas accéder par programme aux projets VBA. Les utilisateurs peuvent activer l’accès en sélectionnant l’option Accès approuvé au modèle d’objet du projet VBA dans la section Paramètres des macros du Centre de gestion de la confidentialité. Toutefois, cette configuration permet aux macros insérées dans les documents ouverts par l’utilisateur d’accéder aux principaux objets, méthodes et propriétés Visual Basic. Ceci constitue un risque potentiel pour la sécurité.",
@@ -1865,7 +2047,7 @@
             },
             "name": "L_DisableTrustBarNotificationforunsigned",
             "displayName": "Désactiver la notification de la barre de confidentialité pour les compléments d’applications non signés et les bloquer",
-            "explainText": "Ce paramètre de stratégie détermine si l’application Office 2016 spécifiée envoie une notification à l’utilisateur lors du chargement des compléments d’applications non signés, ou si elle désactive ces compléments en mode silencieux sans envoyer de notification. Ce paramètre s’applique uniquement si vous activez le paramètre de stratégie « Exiger la signature des compléments d’applications par un éditeur approuvé », qui empêche la modification de ce paramètre de stratégie par l’utilisateur. \nQuand vous activez ce paramètre de stratégie, les applications désactivent automatiquement les compléments non signés sans vous en informer.\n \nQuand vous désactivez ce paramètre de stratégie, si la configuration de l’application exige la signature des compléments par un éditeur approuvé, les compléments non signés chargés par l’application sont désactivés et l’application affiche la barre de confidentialité en haut de la fenêtre active. La barre de confidentialité contient un message d’information relatif au complément non signé.\n\nSi vous ne configurez pas ce paramètre de stratégie, cela revient à le désactiver. En plus, vous pouvez configurer cette condition dans la catégorie Compléments du Centre de gestion de la confidentialité pour l’application.",
+            "explainText": "Ce paramètre de stratégie détermine si l’application Office 2016 spécifiée envoie une notification à l’utilisateur lors du chargement des compléments d’applications non signés, ou si elle désactive ces compléments en mode silencieux sans envoyer de notification. Ce paramètre s’applique uniquement si vous activez le paramètre de stratégie « Exiger la signature des compléments d’applications par un éditeur approuvé », qui empêche la modification de ce paramètre de stratégie par l’utilisateur.       \nQuand vous activez ce paramètre de stratégie, les applications désactivent automatiquement les compléments non signés sans vous en informer.\n \nQuand vous désactivez ce paramètre de stratégie, si la configuration de l’application exige la signature des compléments par un éditeur approuvé, les compléments non signés chargés par l’application sont désactivés et l’application affiche la barre de confidentialité en haut de la fenêtre active. La barre de confidentialité contient un message d’information relatif au complément non signé.\n\nSi vous ne configurez pas ce paramètre de stratégie, cela revient à le désactiver. En plus, vous pouvez configurer cette condition dans la catégorie Compléments du Centre de gestion de la confidentialité pour l’application.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1925,7 +2107,7 @@
             },
             "name": "L_BlockMacroExecutionFromInternet",
             "displayName": "Bloquer l’exécution des macros dans les fichiers Office provenant d’Internet",
-            "explainText": "Ce paramètre de stratégie vous permet de bloquer l’exécution des macros dans les fichiers Office provenant d’Internet.\n\nSi vous activez ce paramètre de stratégie, l’exécution des macros est bloquée, même si l’option « Activer toutes les macros » est sélectionnée dans la section Paramètres des macros du Centre de gestion de la confidentialité. Par ailleurs, au lieu de laisser les utilisateurs choisir s’il convient de sélectionner l’option « Activer le contenu », ceux-ci reçoivent une notification indiquant que l’exécution des macros est bloquée. Si le fichier Office est enregistré dans un emplacement approuvé ou s’il a été approuvé précédemment par l’utilisateur, l’exécution des macros est autorisée.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les paramètres configurés dans la section Paramètres des macros du Centre de gestion de la confidentialité déterminent si les macros peuvent être exécutées dans les fichiers Office provenant d’Internet.",
+            "explainText": "        Ce paramètre de stratégie vous permet de bloquer l’exécution des macros dans les fichiers Office provenant d’Internet.\n\n        Si vous activez ce paramètre de stratégie, l’exécution des macros est bloquée, même si l’option « Activer toutes les macros » est sélectionnée dans la section Paramètres des macros du Centre de gestion de la confidentialité. Par ailleurs, au lieu de laisser les utilisateurs choisir s’il convient de sélectionner l’option « Activer le contenu », ceux-ci reçoivent une notification indiquant que l’exécution des macros est bloquée. Si le fichier Office est enregistré dans un emplacement approuvé ou s’il a été approuvé précédemment par l’utilisateur, l’exécution des macros est autorisée.\n\n        Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les paramètres configurés dans la section Paramètres des macros du Centre de gestion de la confidentialité déterminent si les macros peuvent être exécutées dans les fichiers Office provenant d’Internet.\n      ",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -4145,7 +4327,7 @@
             },
             "name": "L_MicrosoftExcelmenuorHelpkey",
             "displayName": "Touche d’accès au menu ou à l’aide de Microsoft Excel",
-            "explainText":"Ce paramètre de stratégie vous permet de définir la valeur ASCII de la touche choisie (par exemple, '/'=47).",
+            "explainText": "Ce paramètre de stratégie vous permet de définir la valeur ASCII de la touche choisie (par exemple, '/'=47).",
             "tags": [
                 "L_Advanced",
                 "L_ExcelOptions",
@@ -4153,6 +4335,267 @@
             ],
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\excel\\options"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Transitionnavigationkeys",
+            "displayName": "Touches alternatives de déplacement",
+            "explainText": "L’activation de cette stratégie sélectionne l’option utilisateur avancée (compatibilité Lotus) Touches alternatives de déplacement.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fisi_33_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Ignoreotherapplications",
+            "displayName": "Ignorer les autres applications",
+            "explainText": "Ce paramètre de stratégie contrôle l’échange de données entre Excel et d’autres applications qui utilisent l’échange dynamique de données (DDE).\n\n      Si vous activez ce paramètre de stratégie, Excel ne permet pas l’échange de données avec les autres applications qui utilisent l’échange dynamique de données. Par ailleurs, l’option Ignorer les autres applications qui utilisent l’échange dynamique de données, sous Options Excel | Général, est activée, et les utilisateurs ne peuvent pas modifier cette configuration. L’activation de ce paramètre de stratégie peut provoquer des interruptions lors de l’utilisation de la fonctionnalité d’échange dynamique de données dans Excel pour mettre à jour les informations des classeurs. Dans ce cas, utilisez une autre méthode pour mettre à jour les informations fournies par d’autres applications.\n\n      Si vous désactivez ou ne configurez pas ce paramètre de stratégie, Excel peut utiliser le protocole d’échange dynamique de données pour échanger des messages et des données avec d’autres applications. Par exemple, une cellule d’un classeur Excel peut être liée de façon dynamique à une valeur fournie par une autre application (telle que des informations météorologiques ou boursières). En cas de modification de la valeur fournie par l’autre application, Excel peut mettre à jour automatiquement la valeur dans le classeur. Remarque : les utilisateurs peuvent modifier ce comportement en sélectionnant l’option Ignorer les autres applications qui utilisent l’échange dynamique de données, sous Options Excel | Général.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fddeenabled_6_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ZoomonrollwithIntelliMouse",
+            "displayName": "Zoom avec la roulette IntelliMouse",
+            "explainText": "Ce paramètre de stratégie définit l’option « Zoom avec la roulette IntelliMouse » disponible sous l’onglet Fichier | Options | Options avancées| Options d’édition.\n\nSi vous activez ce paramètre de stratégie, l’utilisation de la roulette de la souris modifie le niveau de zoom de la feuille de calcul.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’utilisation de la roulette de la souris fait défiler la feuille de calcul. Il s’agit du comportement par défaut.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "frollzoom_98_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Shownames",
+            "displayName": "Afficher les noms",
+            "explainText": "L’activation de ce paramètre sélectionne l’option utilisateur avancée (Affichage) « Afficher les noms des éléments ».",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fshowchartnames_96_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Showvalues",
+            "displayName": "Afficher les valeurs",
+            "explainText": "L’activation de ce paramètre sélectionne l’option utilisateur avancée (Affichage) « Afficher les valeurs des points de données ».",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fshowcharttipvalues_97_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Editdirectlyincell",
+            "displayName": "Modifier directement dans la cellule",
+            "explainText": "Ce paramètre de stratégie définit l’option « Modification directe » sous l’onglet Fichier | Options | Options avancées | Options d’édition.\n\nSi vous activez ou ne configurez pas ce paramètre de stratégie, Excel autorise la modification directe dans la cellule. Il s’agit du comportement par défaut.\n\nSi vous désactivez ce paramètre de stratégie, Excel n’autorise pas la modification directe dans la cellule.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fnoincell_66_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_EnableFillHandleAndCellDragAndDrop",
+            "displayName": "Activer la poignée de recopie et le glisser-déplacer des cellules",
+            "explainText": "Ce paramètre de stratégie définit l’option Glisser-déplacer de la cellule située sous l’onglet Fichier | Options | Avancées | Options d’édition.\n\nSi vous activez ou ne configurez pas ce paramètre de stratégie, Excel active le glissement-déplacement de la cellule. Il s’agit du comportement par défaut.\n\nSi vous désactivez ce paramètre de stratégie, Excel désactive le glissement-déplacement de la cellule.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fdisabledman_36_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Alertbeforeoverwritingcells",
+            "displayName": "Alerte avant remplacement",
+            "explainText": "Ce paramètre de stratégie définit l’option « Alerte avant remplacement » sous l’onglet Fichier | Options | Options avancées | Options d’édition.\n\nSi vous activez ou ne configurez pas ce paramètre de stratégie, Excel affiche un avertissement lorsque des cellules sont sur le point d’être remplacées. Il s’agit du comportement par défaut.\n\nSi vous désactivez ce paramètre de stratégie, Excel n’affiche aucun avertissement lorsque des cellules sont sur le point d’être remplacées.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fnodragwarning_76_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_MoveselectionafterEnter",
+            "displayName": "Déplacer la sélection après validation",
+            "explainText": "L’activation de cette stratégie sélectionne l’option utilisateur avancée (Options d’édition) « Déplacer la sélection après validation ».",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fentermove_75_1"
         },
         {
             "parentCategory": {
@@ -4262,6 +4705,93 @@
                     "value": 0
                 }
             },
+            "name": "L_CutAndCopyObjectsWithCells",
+            "displayName": "Couper et copier les objets avec les cellules",
+            "explainText": "Ce paramètre de stratégie définit l’option Couper, copier et trier les objets avec les cellules située sous l’onglet Fichier | Options | Avancées | Options de collage.\n\nSi vous activez ou ne configurez pas ce paramètre de stratégie, Excel coupe, copie et trie les objets avec les cellules.\n\nSi vous désactivez ce paramètre de stratégie, Excel ne couper ni ne colle les objets avec les cellules.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fobjwcellmove_71_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Asktoupdateautomaticlinks",
+            "displayName": "Demander la mise à jour des liens dynamiques",
+            "explainText": "Ce paramètre de stratégie contrôle l’affichage d’une invite par Excel pour la mise à jour automatique des liens ou l’exécution en arrière-plan de la mise à jour sans invite.\n\nSi vous activez ou ne configurez pas ce paramètre de stratégie, Excel invite les utilisateurs à mettre à jour les liens automatiquement. Par ailleurs, l’option « Demander la mise à jour des liens dynamiques », disponible sous Options Excel | Options avancées | Général, est sélectionnée.\n\nSi vous désactivez ce paramètre de stratégie, Excel met à jour les liens automatiquement sans avertir ou informer les utilisateurs, ce qui peut constituer un risque pour l’intégrité de certaines informations contenues dans le classeur.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fupdateext_78_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_EnableAutoCompleteforcellvalues",
+            "displayName": "Saisie semi-automatique des valeurs de cellule",
+            "explainText": "Ce paramètre de stratégie définit l’option « Saisie semi-automatique des valeurs de cellule » sous l’onglet Fichier | Options | Options avancées | Options d’édition.\n\nSi vous activez ou ne configurez pas ce paramètre de stratégie, Excel autorise la saisie semi-automatique des valeurs de cellule. Il s’agit du comportement par défaut.\n\nSi vous désactivez ce paramètre de stratégie, Excel désactive la fonction de saisie semi-automatique.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fautocomplete_128_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_ExtendDataRangeFormatsAndFormulas",
             "displayName": "Étendre les formules et formats de plage de données",
             "explainText": "Ce paramètre de stratégie définit l’option Étendre les formules et formats de plage de données située sous l’onglet Fichier | Options | Avancées | Options d’édition.\n\nSi vous activez ou ne configurez pas ce paramètre de stratégie, Excel permet à l’utilisateur de mettre automatiquement en forme les nouveaux éléments ajoutés à la fin d’une liste afin que leur format corresponde au reste de la liste. Il s’agit du comportement par défaut.\n\nSi vous désactivez ce paramètre de stratégie, Excel ne met pas automatiquement en forme les nouveaux éléments ajoutés à la fin d’une liste.",
@@ -4283,6 +4813,35 @@
             },
             "enabledValue": {
                 "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Enableautomaticpercententry",
+            "displayName": "Activer la saisie automatique de pourcentage",
+            "explainText": "L’activation de cette stratégie sélectionne l’option utilisateur avancée (Options d’édition) « Activer la saisie automatique de pourcentage ».",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fdisableautopercent_99_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
                     "value": 1
                 }
             },
@@ -4293,7 +4852,7 @@
             },
             "name": "L_ShowPasteOptionsButtonWhenContentIsPasted",
             "displayName": "Afficher le bouton Options de collage lorsqu’un contenu est collé",
-            "explainText":"Ce paramètre de stratégie définit l'option « Afficher les boutons d'options de collage lorsqu'un contenu est collé » situé sous l'onglet Fichier | Options | Avancées | Couper, copier et coller.\n\nSi vous activez ce paramètre de stratégie ou si vous ne le configurez pas, Excel affiche les boutons d'options de collage après l'insertion de cellules, de lignes ou de colonnes contenant une mise en forme. Il s'agit du comportement par défaut.\n\nSi vous désactivez ce paramètre de stratégie, Excel n'affiche pas les boutons d'options de collage lors d'un collage.",
+            "explainText": "Ce paramètre de stratégie définit l'option « Afficher les boutons d'options de collage lorsqu'un contenu est collé » situé sous l'onglet Fichier | Options | Avancées | Couper, copier et coller.\n\nSi vous activez ce paramètre de stratégie ou si vous ne le configurez pas, Excel affiche les boutons d'options de collage après l'insertion de cellules, de lignes ou de colonnes contenant une mise en forme. Il s'agit du comportement par défaut.\n\nSi vous désactivez ce paramètre de stratégie, Excel n'affiche pas les boutons d'options de collage lors d'un collage.",
             "tags": [
                 "L_Advanced",
                 "L_ExcelOptions",
@@ -4302,6 +4861,122 @@
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\common\\general",
             "valueName": "pasteoptions"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_ShowInsertOptionsbuttons",
+            "displayName": "Afficher les boutons d’options d’insertion",
+            "explainText": "Ce paramètre de stratégie définit l’option « Afficher les boutons d’options d’insertion » sous l’onglet Fichier | Options | Options avancées | options Couper, copier et coller.\n\nSi vous activez ou ne configurez pas ce paramètre de stratégie, Excel affiche le bouton Options d’insertion après l’insertion de cellules, de lignes ou de colonnes contenant une mise en forme. Il s’agit du comportement par défaut.\n\nSi vous désactivez ce paramètre de stratégie, Excel n’affiche pas le bouton Options d’insertion en cas d’insertion .",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "enableinsertcellsooui_102_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ShowFormulabarinNormalView",
+            "displayName": "Afficher la barre de formule en mode Normal",
+            "explainText": "L’activation de ce paramètre sélectionne l’option utilisateur avancée (Affichage) « Afficher la barre de formule ».",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "ffmlaf_1_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ShowFormulabarinFullView",
+            "displayName": "Afficher la barre de formule en mode Plein écran",
+            "explainText": "Activé : affiche la barre de formule lorsque la commande Plein écran du menu Affichage est activée. | Désactivé : n’affiche pas la barre de formule lorsque la commande Plein écran du menu Affichage est activée.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "ffmlafull_68_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Functiontooltips",
+            "displayName": "Info-bulles de fonctions",
+            "explainText": "L’activation de ce paramètre sélectionne l’option utilisateur avancée (Affichage) « Afficher les info-bulles des fonctions ».",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fshowfuntips_101_1"
         },
         {
             "parentCategory": {
@@ -4679,7 +5354,7 @@
             },
             "name": "L_AutomaticallyFlashFill",
             "displayName": "Remplissage instantané automatique",
-            "explainText":"Ce paramètre de stratégie contrôle l'option « Remplissage instantané automatique » située sous l'onglet Fichier | Options | Avancées | Options d'édition.\n\nSi vous activez ce paramètre de stratégie ou si vous ne le configurez pas, Excel active le remplissage instantané automatique. Il s'agit du comportement par défaut.\n\nSi vous désactivez ce paramètre de stratégie, Excel désactive la fonctionnalité Remplissage instantané automatique.",
+            "explainText": "Ce paramètre de stratégie contrôle l'option « Remplissage instantané automatique » située sous l'onglet Fichier | Options | Avancées | Options d'édition.\n\nSi vous activez ce paramètre de stratégie ou si vous ne le configurez pas, Excel active le remplissage instantané automatique. Il s'agit du comportement par défaut.\n\nSi vous désactivez ce paramètre de stratégie, Excel désactive la fonctionnalité Remplissage instantané automatique.",
             "tags": [
                 "L_Advanced",
                 "L_ExcelOptions",
@@ -4708,7 +5383,7 @@
             },
             "name": "L_ChartRefTrackingEnabled",
             "displayName": "Autoriser la mise en forme et les étiquettes à suivre les points de données",
-            "explainText":"Ce paramètre de stratégie définit le comportement de la mise en forme et des étiquettes de données personnalisées en réaction aux modifications apportées aux données dans un graphique.\n\nSi vous activez ce paramètre de stratégie ou si vous ne le configurez pas, la mise en forme et les étiquettes de données personnalisées suivent les points de données lors de leur déplacement ou de leur modification dans l'un des graphiques du classeur créés par l'utilisateur.\n\nSi vous désactivez ce paramètre de stratégie, la mise en forme et les étiquettes de données personnalisées ne suivent pas les points de données, mais les index des points de données.",
+            "explainText": "Ce paramètre de stratégie définit le comportement de la mise en forme et des étiquettes de données personnalisées en réaction aux modifications apportées aux données dans un graphique.\n\nSi vous activez ce paramètre de stratégie ou si vous ne le configurez pas, la mise en forme et les étiquettes de données personnalisées suivent les points de données lors de leur déplacement ou de leur modification dans l'un des graphiques du classeur créés par l'utilisateur.\n\nSi vous désactivez ce paramètre de stratégie, la mise en forme et les étiquettes de données personnalisées ne suivent pas les points de données, mais les index des points de données.",
             "tags": [
                 "L_Advanced",
                 "L_ExcelOptions",
@@ -4918,7 +5593,7 @@
         },
         {
             "parentCategory": {
-                "ref": "L_IntelligentServices"
+                "ref": "L_PowerBI"
             },
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
@@ -4933,16 +5608,16 @@
                     "value": 0
                 }
             },
-            "name": "L_Insights",
-            "displayName": "Supprimer le bouton Idées du ruban",
-            "explainText":"Ce paramètre de stratégie permet d’empêcher les utilisateurs d’accéder à Idées dans Excel, un service intelligent proposant des suggestions et des analyses basées sur vos données. Par défaut, un bouton Idées apparaît dans le groupe « Idées » de l’onglet « Accueil » du ruban.\n\nSi vous activez ce paramètre de stratégie, le bouton Idées est supprimé du ruban et les utilisateurs ne peuvent pas l'y ajouter manuellement. Les utilisateurs ne pourront donc pas accéder à Idées.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, le bouton Idées s'affiche sur le ruban et les utilisateurs peuvent accéder à Idées.",
+            "name": "L_DisableFromPowerBIDatasetOrganizationName",
+            "displayName": "Désactiver l’affichage du nom de l’organisation dans les boutons pour créer des tableaux croisés dynamiques à partir de jeux de données Power BI",
+            "explainText": "Ce paramètre de stratégie vous permet d’empêcher l’affichage du nom de l’organisation dans les boutons du ruban Excel utilisés pour créer des tableaux croisés dynamiques à partir de jeux de données Power BI. Par défaut, le nom de l’organisation s’affiche dans le ruban s’il est disponible dans Graph.\n\n       Si vous activez ce paramètre de stratégie, le nom de l’organisation ne s’affiche pas.\n\n        Si vous désactivez ou ne configurez pas ce paramètre de stratégie, le nom de l’organisation s’affiche.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions avec abonnement d’Office, telles que Microsoft 365 Apps for enterprise.",
             "tags": [
-                "L_IntelligentServices",
+                "L_PowerBI",
                 "L_MicrosoftOfficeExcel"
             ],
             "application": "excel16",
-            "key": "software\\microsoft\\office\\16.0\\excel\\intelligent services",
-            "valueName": "insights"
+            "key": "software\\microsoft\\office\\16.0\\excel\\power bi",
+            "valueName": "disablefrompowerbidatasetorganizationname"
         }
     ]
 }

@@ -1537,8 +1537,8 @@
                 ]
             },
             "name": "L_Locationofunfilednotessection",
-            "displayName":"Speicherort des Abschnitts 'Nicht abgelegte Notizen'",
-            "explainText":"Der Speicherort, in dem OneNote den Abschnitt 'Nicht abgelegte Notizen' speichert.",
+            "displayName": "Speicherort des Abschnitts 'Nicht abgelegte Notizen'",
+            "explainText": "Der Speicherort, in dem OneNote den Abschnitt 'Nicht abgelegte Notizen' speichert.",
             "tags": [
                 "L_Save",
                 "L_OneNoteOptions",
@@ -1958,7 +1958,7 @@
             },
             "name": "L_DaysOfAllVersions",
             "displayName": "Anzahl Tage, die alle Versionsverlaufselemente vor der Bereinigung geschützt werden",
-            "explainText": "Mithilfe dieser Richtlinieneinstellung können Sie einen Zeitraum angeben, während dessen OneNote umfassende Versionsverlaufsseiten unterhält. Nach dem angegebenen Zeitraum unterhält OneNote einfachere Versionsverlaufsseiten, die weniger Speicherplatz beanspruchen.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, behält OneNote die umfassenden Versionsverlaufsseiten für den angegebenen Zeitraum bei und wechselt dann nach dem Verstreichen dieses Zeitraums zu einfachen Versionsverlaufsseiten.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, unterhält OneNote 2 Tage lang umfassende Versionsverlaufsseiten und wechselt nach dem Ablauf dieses Zeitraums zu einfachen Versionsverlaufsseiten.",
+            "explainText": "Mithilfe dieser Richtlinieneinstellung können Sie einen Zeitraum angeben, während dessen OneNote umfassende Versionsverlaufsseiten unterhält. Nach dem angegebenen Zeitraum unterhält OneNote einfachere Versionsverlaufsseiten, die weniger Speicherplatz beanspruchen.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, behält OneNote die umfassenden Versionsverlaufsseiten für den angegebenen Zeitraum bei und wechselt dann nach dem Verstreichen dieses Zeitraums zu einfachen Versionsverlaufsseiten.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, unterhält OneNote 2 Tage lang umfassende Versionsverlaufsseiten und wechselt nach dem Ablauf dieses Zeitraums zu einfachen Versionsverlaufsseiten.\n      ",
             "tags": [
                 "L_VersionsAndRecyleBin",
                 "L_OneNoteOptions",
@@ -2388,6 +2388,99 @@
             "name": "L_SharePointsyncinterval",
             "displayName": "SharePoint-Synchronisierungsintervall für in SharePoint gespeicherte Notizbücher",
             "explainText": "Begrenzt, wie oft von OneNote Änderungen an einem Abschnitt von einer SharePoint-Website abgerufen werden. Geben Sie das Synchronisierungsintervall in Sekunden ein.",
+            "tags": [
+                "L_Other",
+                "L_OneNoteOptions",
+                "L_MicrosoftOfficeOneNote"
+            ],
+            "application": "onent16",
+            "key": "software\\microsoft\\office\\16.0\\onenote\\options\\save"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "sharepointbackgroundsyncintervalmultiplier",
+                        "minValue": 1,
+                        "minValueSpecified": true,
+                        "maxValue": 10,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_empty16"
+                    }
+                ]
+            },
+            "name": "L_SharePointbackgroundsyncintervalmultiplier",
+            "displayName": "Multiplikator für Hintergrund-Synchronisierungsintervall für in SharePoint gespeicherte Notizbücher",
+            "explainText": "Anhand dieser Richtlinieneinstellung können Sie das Intervall zwischen Hintergrundabfragen einer SharePoint-Website zu Änderungen an Notizbüchern vergrößern.\n\nWird diese Richtlinieneinstellung aktiviert, stellt OneNote weniger häufig Abfragen zu Änderungen an ganzen Notizbüchern an SharePoint. Die Intervalle werden mit dem eingegebenen Wert, einer positiven ganzen Zahl zwischen 1 und 10, multipliziert. Größere Intervalle verlangsamen die Synchronisierung von Notizbüchern, verringern jedoch die Serverlast.\n\nWird diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert, synchronisiert OneNote Notizbücher anhand der Standardrate (Multiplikator von 1).\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Volumenlizenzen von Office 2016, die Windows Installer (MSI) verwenden, wie Office Professional Plus 2016 und Office Standard 2016.",
+            "tags": [
+                "L_Other",
+                "L_OneNoteOptions",
+                "L_MicrosoftOfficeOneNote"
+            ],
+            "application": "onent16",
+            "key": "software\\microsoft\\office\\16.0\\onenote\\options\\save"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "sharepointlivesyncintervalmultiplier",
+                        "minValue": 1,
+                        "minValueSpecified": true,
+                        "maxValue": 10,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_empty17"
+                    }
+                ]
+            },
+            "name": "L_SharePointlivesyncintervalmultiplier",
+            "displayName": "Multiplikator für Vordergrund-Synchronisierungsintervall für den in SharePoint aktuell angezeigten Abschnitt",
+            "explainText": "Anhand dieser Richtlinieneinstellung können Sie das Intervall zwischen Vordergrundabfragen einer SharePoint-Website zu Änderungen am aktuell angezeigten Abschnitt vergrößern.\n\nWird diese Richtlinieneinstellung aktivieren, stellt OneNote weniger häufig Abfragen zu Änderungen am aktuell angezeigten Abschnitt an SharePoint. Die Intervalle werden mit dem eingegebenen Wert, einer positiven ganzen Zahl zwischen 1 und 10, multipliziert. Größere Intervalle verlangsamen die Synchronisierung des Abschnitts, verringern jedoch die Serverlast.\n\nWird diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert, synchronisiert OneNote den aktuell angezeigten Abschnitt anhand der Standardrate (Multiplikator von 1).\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Volumenlizenzen von Office 2016, die Windows Installer (MSI) verwenden, wie Office Professional Plus 2016 und Office Standard 2016.",
+            "tags": [
+                "L_Other",
+                "L_OneNoteOptions",
+                "L_MicrosoftOfficeOneNote"
+            ],
+            "application": "onent16",
+            "key": "software\\microsoft\\office\\16.0\\onenote\\options\\save"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "sharepointpresenceintervalmultiplier",
+                        "minValue": 1,
+                        "minValueSpecified": true,
+                        "maxValue": 10,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_empty18"
+                    }
+                ]
+            },
+            "name": "L_SharePointpresenceintervalmultiplier",
+            "displayName": "Multiplikator für Anwesenheit-Synchronisierungsintervall für in SharePoint gespeicherte Notizbücher",
+            "explainText": "Anhand dieser Richtlinieneinstellung können Sie das Intervall zwischen den Abfragen an SharePoint vergrößern, um aktive Benutzer von Notizbüchern zu ermitteln. OneNote synchronisiert Notizbücher mit einer schnelleren Rate, wenn andere Benutzer mit einem Notizbuch interagieren.\n\nWird diese Richtlinieneinstellung aktiviert, stellt OneNote weniger häufig Abfragen an SharePoint, um festzustellen, ob andere Benutzer derzeit mit einem Notizbuch interagieren. Die Intervalle werden mit dem eingegebenen Wert, einer positiven ganzen Zahl zwischen 1 und 10, multipliziert. Größere Intervalle verlangsamen die Erkennung von gleichzeitigen Benutzern in einem Notizbuch, verringern jedoch die Serverlast.\n\nWird diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert, stellt OneNote Abfragen nach aktiven Benutzern von Notizbüchern anhand der Standardrate (Multiplikator von 1).\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Volumenlizenzen von Office 2016, die Windows Installer (MSI) verwenden, wie Office Professional Plus 2016 und Office Standard 2016.",
             "tags": [
                 "L_Other",
                 "L_OneNoteOptions",

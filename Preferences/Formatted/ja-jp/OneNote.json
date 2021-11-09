@@ -1958,7 +1958,7 @@
             },
             "name": "L_DaysOfAllVersions",
             "displayName": "すべてのバージョン履歴項目を排除操作から除外する日数",
-            "explainText": "このポリシー設定では、OneNote が包括的なバージョン履歴ページを保存する期間を指定します。指定した期間が経過すると、OneNote は、使用領域の少ない、より基本的なバージョン履歴ページを保存します。\n\nこのポリシー設定を有効にした場合、OneNote は、包括的なバージョン履歴ページを指定した日数の間保存し、その期間が経過すると、基本的なバージョン履歴ページを保存します。\n\nこのポリシー設定を無効にするか、未構成にした場合、OneNote は包括的なバージョン履歴ページを 2 日間保存し、その期間が経過すると、基本的なバージョン履歴ページを保存します。",
+            "explainText": "このポリシー設定では、OneNote が包括的なバージョン履歴ページを保存する期間を指定します。指定した期間が経過すると、OneNote は、使用領域の少ない、より基本的なバージョン履歴ページを保存します。\n\nこのポリシー設定を有効にした場合、OneNote は、包括的なバージョン履歴ページを指定した日数の間保存し、その期間が経過すると、基本的なバージョン履歴ページを保存します。\n\nこのポリシー設定を無効にするか、未構成にした場合、OneNote は包括的なバージョン履歴ページを 2 日間保存し、その期間が経過すると、基本的なバージョン履歴ページを保存します。\n      ",
             "tags": [
                 "L_VersionsAndRecyleBin",
                 "L_OneNoteOptions",
@@ -2388,6 +2388,99 @@
             "name": "L_SharePointsyncinterval",
             "displayName": "SharePoint に保存されているノートブックの SharePoint 同期間隔",
             "explainText": "セクションの変更を確認するために OneNote から SharePoint サイトに対して行うポーリングの回数を制限します。同期間隔を秒単位で入力してください。",
+            "tags": [
+                "L_Other",
+                "L_OneNoteOptions",
+                "L_MicrosoftOfficeOneNote"
+            ],
+            "application": "onent16",
+            "key": "software\\microsoft\\office\\16.0\\onenote\\options\\save"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "sharepointbackgroundsyncintervalmultiplier",
+                        "minValue": 1,
+                        "minValueSpecified": true,
+                        "maxValue": 10,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_empty16"
+                    }
+                ]
+            },
+            "name": "L_SharePointbackgroundsyncintervalmultiplier",
+            "displayName": "SharePoint に保存されているノートブックのバックグラウンド同期間隔の乗数",
+            "explainText": "このポリシー設定では、ノートブックに対する変更について、SharePoint サイトのバックグラウンドのポーリングの間隔を長くすることができます。\n\nこのポリシー設定を有効にすると、ノートブック全体に対する変更について、SharePoint によるポーリング頻度が低くなります。間隔には、1 から 10 までの正の整数である入力値が乗算されます。間隔を大きくするとノートブックの同期が遅くなりますが、サーバーの負荷は軽減されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、ノートブックは既定のレート (乗数の値 1) で同期されます。\n\nメモ: このポリシー設定は、Windows インストーラー (MSI) を使用する Office Professional Plus 2016 や Office Standard 2016 などの Office 2016 のボリューム ライセンス版にのみ適用されます。",
+            "tags": [
+                "L_Other",
+                "L_OneNoteOptions",
+                "L_MicrosoftOfficeOneNote"
+            ],
+            "application": "onent16",
+            "key": "software\\microsoft\\office\\16.0\\onenote\\options\\save"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "sharepointlivesyncintervalmultiplier",
+                        "minValue": 1,
+                        "minValueSpecified": true,
+                        "maxValue": 10,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_empty17"
+                    }
+                ]
+            },
+            "name": "L_SharePointlivesyncintervalmultiplier",
+            "displayName": "SharePoint に保存されている、現在表示されているセクションのフォアグラウンド同期間隔の乗数",
+            "explainText": "このポリシー設定では、現在表示されているセクションの変更について、SharePoint サイトのフォアグラウンドのポーリングの間隔を長くすることができます。\n\nこのポリシー設定を有効にすると、現在表示されているセクションの変更について、SharePoint によるポーリング頻度が低くなります。間隔には、1 から 10 までの正の整数である入力値が乗算されます。間隔を大きくするとセクションの同期が遅くなりますが、サーバーの負荷は軽減されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、現在表示されているセクションは既定のレート (乗数の値 1) で同期されます。\n\nメモ: このポリシー設定は、Windows インストーラー (MSI) を使用する Office Professional Plus 2016 や Office Standard 2016 などの Office 2016 のボリューム ライセンス版にのみ適用されます。",
+            "tags": [
+                "L_Other",
+                "L_OneNoteOptions",
+                "L_MicrosoftOfficeOneNote"
+            ],
+            "application": "onent16",
+            "key": "software\\microsoft\\office\\16.0\\onenote\\options\\save"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "sharepointpresenceintervalmultiplier",
+                        "minValue": 1,
+                        "minValueSpecified": true,
+                        "maxValue": 10,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_empty18"
+                    }
+                ]
+            },
+            "name": "L_SharePointpresenceintervalmultiplier",
+            "displayName": "SharePoint に保存されているノートブックのプレゼンス同期間隔の乗数",
+            "explainText": "このポリシー設定を使用すると、SharePoint にポーリングする間隔を延長して、ノートブックのアクティブ ユーザーを決定できます。OneNote は、他のユーザーがノートブックと対話しているときに、より早くノートブックの同期を実行します。\n\nこのポリシー設定を有効にすると、SharePoint によるポーリング頻度が低くなり、他のユーザーがノートブックと対話しているかどうかが判断されなくなります。間隔には、1 から 10 までの正の整数である入力値が乗算されます。間隔を大きくすると、ノートブックの同時ユーザーの検出速度が低下しますが、サーバーの負荷は軽減されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、OneNote はノートブックのアクティブ ユーザーについて、既定のレート (乗数値 1) でポーリングを行います。\n\nメモ: このポリシー設定は、Windows インストーラー (MSI) を使用する Office Professional Plus 2016 や Office Standard 2016 などの Office 2016 のボリューム ライセンス版にのみ適用されます。",
             "tags": [
                 "L_Other",
                 "L_OneNoteOptions",

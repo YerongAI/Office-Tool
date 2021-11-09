@@ -347,35 +347,6 @@
                     "value": 0
                 }
             },
-            "name": "L_Openattachmentsforfullscreenreading",
-            "displayName": "以閱讀檢視開啟電子郵件附件",
-            "explainText": "核取/取消核取相對應的 UI 選項。",
-            "tags": [
-                "L_OptionsGeneral",
-                "L_WordOptions",
-                "L_MicrosoftOfficeWord"
-            ],
-            "application": "word16",
-            "key": "software\\microsoft\\office\\16.0\\word\\options",
-            "valueName": "allowautoreadingmode"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_OptionsGeneral"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
             "name": "L_AllowSelectionFloaties",
             "displayName": "選取時顯示迷你工具列",
             "explainText": "停用此原則設定將會造成選取文字時不會顯示迷你工具列。預設在選取時啟用迷你工具列，而且可以透過 [Word 選項] 對話方塊中的設定變更迷你工具列的可見性。",
@@ -874,6 +845,348 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Trackchangesandcompare"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "無"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "依作者"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "粉紅色"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "淺藍"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "淺黃"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "淺紫"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "淺橙"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "淺綠"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "灰色"
+                            }
+                        ],
+                        "valueName": "revmodeinscellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "插入儲存格的色彩:",
+                        "id": "L_TablecomparecolorsPart1"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "無"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "依作者"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "粉紅色"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "淺藍"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "淺黃"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "淺紫"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "淺橙"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "淺綠"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "灰色"
+                            }
+                        ],
+                        "valueName": "revmodedelcellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "刪除儲存格的色彩:",
+                        "id": "L_TablecomparecolorsPart2"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "無"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "依作者"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "粉紅色"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "淺藍"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "淺黃"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "淺紫"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "淺橙"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "淺綠"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "灰色"
+                            }
+                        ],
+                        "valueName": "revmodemergecellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "合併儲存格的色彩:",
+                        "id": "L_TablecomparecolorsPart3"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "無"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "依作者"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "粉紅色"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "淺藍"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "淺黃"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "淺紫"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "淺橙"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "淺綠"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "灰色"
+                            }
+                        ],
+                        "valueName": "revmodesplitcellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "分割儲存格的色彩:",
+                        "id": "L_TablecomparecolorsPart4"
+                    }
+                ]
+            },
+            "name": "L_Tablecomparecolors",
+            "displayName": "表格比較色彩",
+            "explainText": "這個選項決定用來顯示比較表格結果的色彩。選取 [無] 會追蹤變更，但不會在結果文件中標示色彩 (會列在檢閱窗格中)。",
+            "tags": [
+                "L_Trackchangesandcompare",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Proofing"
             },
             "supportedOn": {
@@ -1042,6 +1355,837 @@
         },
         {
             "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_CorrectTWoINitialCApitals",
+            "displayName": "更正前兩個英文字母大寫的錯誤",
+            "explainText": "核取/取消核取相對應的 UI 選項。",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ftwoinitialcaps_24_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Capitalizefirstletterofsentence",
+            "displayName": "英文句子第一個字母大寫",
+            "explainText": "核取/取消核取相對應的 UI 選項。",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "finitialcap_32_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Capitalizenamesofdays",
+            "displayName": "英文日期第一個字母大寫",
+            "explainText": "核取/取消核取相對應的 UI 選項。",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcapdaynames_48_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_CorrectaccidentalusageofcAPSLOCKkey",
+            "displayName": "更正意外按下 Caps Lock 鍵的錯誤",
+            "explainText": "此原則設定可讓您設定 [Word 選項] | [校訂] | [自動校正 選項...] | [自動校正] 中的 [更正意外按下 Caps Lock 鍵的錯誤] 選項。\n\n如果啟用此原則設定，將會設定 [更正意外按下 Caps Lock 鍵的錯誤]。\n\n如果停用或未設定此原則設定，則不會設定 [更正意外按下 Caps Lock 鍵的錯誤]。",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcapslock_40_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Replacetextasyoutype",
+            "displayName": "自動取代字串",
+            "explainText": "核取/取消核取相對應的 UI 選項。",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcorrecttyping_16_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Correctkeyboardsetting",
+            "displayName": "更正鍵盤設定",
+            "explainText": "此原則設定可讓您設定 [Word 選項] | [校訂] | [自動校正選項...] | [自動校正] 中的 [更正鍵盤設定] 選項。\n\n如果啟用此原則設定，將會設定 [更正鍵盤設定]。\n\n如果停用或未設定此原則設定，則不會設定 [更正鍵盤設定]。",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcorrectkeyboard_64_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Firstlineindent",
+            "displayName": "首行縮排",
+            "explainText": "核取/取消核取群組 [輸入時取代] 內的選項 [將段落起始處的空白取代為首行縮排]。在啟用某些編輯語言之前，此選項在 Word 中可能為隱藏狀態。",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ffirstindent_344_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Straightquoteswithsmartquotes",
+            "displayName": "將一般引號取代為智慧引號",
+            "explainText": "核取/取消核取相對應的 UI 選項。",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fsmartquote_8_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ordinals1stwithsuperscript",
+            "displayName": "將序數文字 (1st) 改成上標",
+            "explainText": "核取/取消核取相對應的 UI 選項。",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fnumsupscript_104_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Fractions12withfractioncharacter",
+            "displayName": "將分數文字 (1/2) 取代為分數符號",
+            "explainText": "核取/取消核取相對應的 UI 選項。",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ffraction_96_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Symbolcharacterswithsymbols",
+            "displayName": "將特定文字 (--) 取代為特殊符號",
+            "explainText": "核取/取消核取 [將連字號 (--) 取代成破折號 (—)] 選項。",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "femdash_112_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Boldand_italic_withrealformatting",
+            "displayName": "將以星號 (*) 和底線 () 圍起來的文字改成粗體和斜體的格式",
+            "explainText": "此原則設定可讓您設定 [將以星號 (*) 和底線 () 圍起來的文字改成粗體和斜體的格式] 選項。\n\n如果啟用此原則設定，您會在 [檔案] | [選項] | [校訂] | [自動校正選項... | [自動套用格式] 中，設定 [將以星號 (*) 和底線 () 圍起來的文字改成粗體和斜體的格式] 選項。\n\n如果停用或未設定此原則設定，則不會設定該選項。",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fbolditalic_120_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Dashlikecharacters",
+            "displayName": "類似虛線的字元",
+            "explainText": "核取/取消核取 [有底線的長母音] 選項。可能只有在啟用某些編輯語言時，才能在 Word 中看到此選項。",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fdbdashes_136_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Headings",
+            "displayName": "標題",
+            "explainText": "核取/取消核取 [內建標題樣式] 選項。",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fheading_280_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_BorderLines",
+            "displayName": "框線",
+            "explainText": "核取/取消核取 [框線] 選項。",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fbotbord_328_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Tables",
+            "displayName": "表格",
+            "explainText": "核取/取消核取相對應的 UI 選項。",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ftable_392_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DateStyle",
+            "displayName": "日期樣式",
+            "explainText": "核取/取消核取 [日期樣式] 選項。可能只有在啟用某些編輯語言時，才能在 Word 中看到此選項。",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fdate_376_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Automaticbulletedlists",
+            "displayName": "自動項目符號",
+            "explainText": "核取/取消核取相對應的 UI 選項。",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fbulletlist_296_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Automaticnumberedlists",
+            "displayName": "自動編號",
+            "explainText": "核取/取消核取相對應的 UI 選項。",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fnumberedlist_312_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ClosingStyleToLetterClosings",
+            "displayName": "信件結語樣式",
+            "explainText": "此原則設定可讓您設定 [Word 選項] | [校訂] | [自動校正選項...] | [輸入時自動套用格式] 中的 [信件結語樣式] 選項。\n\n如果啟用此原則設定，將會設定 [信件結語樣式]。\n\n如果停用或未設定此原則設定，則將不會設定 [信件結語樣式]。",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fclosing_360_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Autospace",
+            "displayName": "自動加空白",
+            "explainText": "此原則設定可讓您設定 [依照您的輸入自動設定] 群組的 [刪除中英文間不必要的空白] 選項。可能只有在啟用某些編輯語言時，才能在 Word 中看到此選項。\n\n如果啟用此原則設定，將會設定 [刪除中英文間不必要的空白]。\n\n如果停用或未設定此原則設定，則將不會設定 [刪除中英文間不必要的空白]。",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fsbdbspace_152_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchparentheses",
+            "displayName": "括弧須相符",
+            "explainText": "此原則設定可讓您設定 [Word 選項] | [校訂] | [自動校正選項...] | [輸入時自動套用格式] | [依照您的輸入自動設定] 中的 [將左右括號正確地組合在一起] 選項。 可能只有在啟用某些編輯語言時，才能在 Word 中看到此選項。\n\n如果啟用此原則設定，將會設定 [將左右括號正確地組合在一起]。\n\n如果停用或未設定此原則設定，則將不會設定 [將左右括號正確地組合在一起]。",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fautopair_144_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Formatbeginningoflistitemliketheonebeforeit",
+            "displayName": "將清單項目的開頭依其前一項目的設定加以格式化",
+            "explainText": "核取/取消核取相對應的 UI 選項。",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fleadinemph_176_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Setleftindentontabsandbackspace",
+            "displayName": "在 Tab 和 Backspace 上設定左縮排",
+            "explainText": "核取/取消核取相對應的 UI 選項。",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ftabindent_128_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Definestylesbasedonyourformatting",
+            "displayName": "根據自訂格式定義樣式",
+            "explainText": "核取/取消核取相對應的 UI 選項。",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fautostyledef_184_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_InsertClosingPhraseToMatchMemoStyle",
+            "displayName": "插入結語以符合備忘錄樣式",
+            "explainText": "核取/取消核取 [插入結語以符合備忘錄樣式] 選項。可能只有在啟用某些編輯語言時，才能在 Word 中看到此選項。",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "finsertover_424_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_InsertClosingPhraseToMatchJapaneseSalutation",
+            "displayName": "插入符合敬語的結語",
+            "explainText": "核取/取消核取 [插入符合敬語的結語] 選項。可能只有在啟用某些編輯語言時，才能在 Word 中看到此選項。",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "finsertclosing_408_1"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_OptionsCustomizeRibbon"
             },
             "supportedOn": {
@@ -1155,6 +2299,122 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "nomargpageview"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Documentproperties",
+            "displayName": "列印文件摘要資訊",
+            "explainText": "此原則設定可讓您控制 [檔案] 索引標籤 | [選項] | [顯示] | [列印] 選項中的 [列印文件摘要資訊]。\n\n如果啟用此原則設定，Word 會針對每份列印的文件，額外列印一頁該文件的摘要資訊，包括文件的作者、檔案名稱、建立日期等。\n\n如果停用或未設定此原則設定，則不會列印額外的頁面。",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "summary_1_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Drawingobjects",
+            "displayName": "列印 Word 建立的繪圖",
+            "explainText": "此原則設定可讓您設定 [檔案] 索引標籤 | [選項] | [顯示] | [列印] 選項底下的 [列印 Word 建立的繪圖] 設定。\n\n如果啟用此原則設定，Word 將會列印圖形及浮動文字方塊。\n\n如果停用或未設定此原則設定，Word 將不會列印圖形或浮動文字方塊，而是會在每個圖形及浮動文字方塊的位置列印一個空白方塊。",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "disabledrawnobj_14_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Updatefields",
+            "displayName": "列印之前更新功能變數",
+            "explainText": "此原則設定可讓您設定 [檔案] 索引標籤 | [選項] | [顯示] | [列印] 選項底下的 [列印之前更新功能變數] 設定。\n\n如果啟用此原則設定，Word 會在列印文件之前先更新文件中的功能變數。\n\n如果停用或未設定此原則設定，Word 便不會在列印文件之前先更新文件中的功能變數。",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "refresh_5_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Updatelinks",
+            "displayName": "列印之前更新連結資料",
+            "explainText": "此原則設定可控制 [檔案] 索引標籤 | [選項] | [顯示] | [列印] 選項底下的 [列印之前更新連結資料] 設定。\n\n如果啟用此原則設定，Word 會在列印文件之前先更新文件中的連結資料。連結至 Excel 試算表的內嵌 Excel 圖表，便是 Word 中連結資料的例子之一。\n\n如果停用或未設定此原則設定，Word 便不會在列印文件之前先更新文件中的連結資料。",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "updatelinks_13_1"
         },
         {
             "parentCategory": {
@@ -3113,6 +4373,35 @@
                     "value": 0
                 }
             },
+            "name": "L_Draftoutput",
+            "displayName": "使用草稿品質",
+            "explainText": "核取/取消核取相對應的 UI 選項。",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "draftoutput_2_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_Backgroundprinting",
             "displayName": "幕後列印",
             "explainText": "核取/取消核取相對應的 UI 選項。",
@@ -3124,6 +4413,93 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "backgroundprint"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Reverseprintorder",
+            "displayName": "反序列印",
+            "explainText": "核取/取消核取相對應的 UI 選項。",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "reverseprint_6_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Frontofsheet",
+            "displayName": "雙面列印時列印在紙張正面",
+            "explainText": "核取/取消核取相對應的 UI 選項。",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "fprorder1_21_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Backofthesheet",
+            "displayName": "雙面列印時列印在紙張背面",
+            "explainText": "核取/取消核取相對應的 UI 選項。",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "fprorder2_22_1"
         },
         {
             "parentCategory": {
@@ -4156,7 +5532,7 @@
                         "expandableSpecified": false,
                         "maxLengthSpecified": false,
                         "inputType": "textBox",
-                        "caption": "CNG 加密演算法: ",
+                        "caption": "CNG 加密演算法:",
                         "id": "L_SetCNGCipherAlgorithmID"
                     }
                 ]
@@ -4467,7 +5843,7 @@
                         "expandableSpecified": false,
                         "maxLengthSpecified": false,
                         "inputType": "textBox",
-                        "caption": "亂數產生器: ",
+                        "caption": "亂數產生器:",
                         "id": "L_SpecifyCNGRandomNumberGeneratorAlgorithmID"
                     }
                 ]
@@ -4593,7 +5969,7 @@
                         "maxValue": 20000,
                         "maxValueSpecified": true,
                         "inputType": "decimalTextBox",
-                        "caption": "數目上限: ",
+                        "caption": "數目上限:",
                         "id": "L_SetMaximumNumberOfTrustedDocumentsSpinID"
                     }
                 ]
@@ -4626,7 +6002,7 @@
                         "maxValue": 20000,
                         "maxValueSpecified": true,
                         "inputType": "decimalTextBox",
-                        "caption": "保留的數目上限: ",
+                        "caption": "保留的數目上限:",
                         "id": "L_SetMaximumNumberOfTrustRecordsToPreserveSpinID"
                     }
                 ]
@@ -4662,7 +6038,7 @@
             },
             "name": "L_BlockMacroExecutionFromInternet",
             "displayName": "封鎖在 Office 檔案中執行來自網際網路的巨集",
-            "explainText": "此原則設定可讓您封鎖在 Office 檔案中執行來自網際網路的巨集。\n\n如果您啟用這個原則設定，即使已選取 [信任中心]  [巨集設定] 區段中的 [啟用所有巨集]，仍將封鎖執行巨集。此外，使用者會收到已封鎖執行巨集的通知，而無法 [啟用內容]。如果 Office 檔案已儲存至信任的位置，或是使用者先前已選擇信任，將允許執行巨集。\n\n若您停用或不設定此原則設定，將使用 [信任中心] [巨集設定] 區段中的設定決定是否在 Office 檔案中執行來自網際網路的巨集。",
+            "explainText": "        此原則設定可讓您封鎖在 Office 檔案中執行來自網際網路的巨集。\n\n        如果您啟用這個原則設定，即使已選取 [信任中心]  [巨集設定] 區段中的 [啟用所有巨集]，仍將封鎖執行巨集。此外，使用者會收到已封鎖執行巨集的通知，而無法 [啟用內容]。如果 Office 檔案已儲存至信任的位置，或是使用者先前已選擇信任，將允許執行巨集。\n\n        若您停用或不設定此原則設定，將使用 [信任中心] [巨集設定] 區段中的設定決定是否在 Office 檔案中執行來自網際網路的巨集。\n      ",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -4806,7 +6182,7 @@
             },
             "name": "L_RequirethatApplicationExtensionsaresigned",
             "displayName": "應用程式增益集必須經過信任的發行者簽署",
-            "explainText": "此原則設定可控制此應用程式的增益集是否必須經由信任的發行者數位簽署。\n\n如果您啟用此原則設定，則該應用程式在載入每個增益集前，會先檢查其數位簽章。如果增益集沒有數位簽章，或簽章並非來自信任的發行者，則該應用程式會停用增益集並通知使用者。如果您要求所有的增益集都必須經過信任的發行者簽署，即必須將這些憑證新增至 [受信任的發行者] 清單。如需取得及分配憑證的詳細資料，請參閱 http: //go.microsoft.com/fwlink/?LinkId=294922。Office 2016 將信任發行者的憑證儲存在 Internet Explorer 信任發行者存放區中。在舊版 Microsoft Office 中，信任發行者的憑證資訊 (尤其是憑證指紋) 是儲存在一個特別的 Office 信任發行者存放區。Office 2016 仍可從 Office 信任發行者存放區讀取信任的發行者憑證資訊，但不會將資訊寫入這個存放區。因此，如果您在舊版 Office 上建立了信任發行者清單，然後升級到 Office 2016，系統仍可辨識您的信任發行者清單。不過您新增至清單的任何信任發行者憑證，都將儲存在 Internet Explorer 信任發行者存放區中。有關信任發行者的詳細資訊，請參閱 Office Resource Kit。\n\n如果您停用或未設定此原則設定，該應用程式就不會在開啟應用程式增益集前檢查其數位簽章。若載入危險的增益集，就可能會危害使用者的電腦或資料安全性。",
+            "explainText": "此原則設定可控制此應用程式的增益集是否必須經由信任的發行者數位簽署。\n\n如果您啟用此原則設定，則該應用程式在載入每個增益集前，會先檢查其數位簽章。如果增益集沒有數位簽章，或簽章並非來自信任的發行者，則該應用程式會停用增益集並通知使用者。如果您要求所有的增益集都必須經過信任的發行者簽署，即必須將這些憑證新增至 [受信任的發行者] 清單。如需取得及分配憑證的詳細資料，請參閱 http://go.microsoft.com/fwlink/?LinkId=294922。Office 2016 將信任發行者的憑證儲存在 Internet Explorer 信任發行者存放區中。在舊版 Microsoft Office 中，信任發行者的憑證資訊 (尤其是憑證指紋) 是儲存在一個特別的 Office 信任發行者存放區。Office 2016 仍可從 Office 信任發行者存放區讀取信任的發行者憑證資訊，但不會將資訊寫入這個存放區。因此，如果您在舊版 Office 上建立了信任發行者清單，然後升級到 Office 2016，系統仍可辨識您的信任發行者清單。不過您新增至清單的任何信任發行者憑證，都將儲存在 Internet Explorer 信任發行者存放區中。有關信任發行者的詳細資訊，請參閱 Office Resource Kit。\n\n如果您停用或未設定此原則設定，該應用程式就不會在開啟應用程式增益集前檢查其數位簽章。若載入危險的增益集，就可能會危害使用者的電腦或資料安全性。",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -6290,6 +7666,70 @@
         },
         {
             "parentCategory": {
+                "ref": "L_ProtectedView"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "封鎖檔案"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "在受保護檢視中開啟"
+                            }
+                        ],
+                        "valueName": "openinprotectedview",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsDropID"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "disableeditfrompv",
+                        "key": "software\\microsoft\\office\\16.0\\word\\security\\filevalidation",
+                        "inputType": "checkBox",
+                        "caption": "核取: 允許編輯。取消核取: 不允許編輯。",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsStr3"
+                    }
+                ]
+            },
+            "name": "L_SetDocumentBehaviorIfFileValidationFails",
+            "displayName": "設定檔案驗證失敗時的文件行為",
+            "explainText": "此原則設定可控制 Office 在文件無法通過檔案驗證時處理文件的方式。\n\n如果啟用此原則設定，即可針對無法通過驗證的檔案設定下列選項:\n\n- 完全封鎖檔案。使用者無法開啟檔案。\n- 在受保護檢視中開啟檔案並禁止編輯。使用者無法編輯檔案。這也是停用此原則設定時 Office 處理檔案的方式。\n- 在受保護檢視中開啟檔案並允許編輯。使用者可以編輯檔案。這也是未設定此原則設定時 Office 處理檔案的方式。\n\n如果停用此原則設定，Office 將採用「在受保護檢視中開啟檔案並禁止編輯」行為。\n\n如果未設定此原則設定，Office 將採用「在受保護檢視中開啟檔案並允許編輯」行為。",
+            "tags": [
+                "L_ProtectedView",
+                "L_TrustCenter",
+                "L_Security",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\security\\filevalidation"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -6403,6 +7843,510 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "showmarkupopensave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchcase",
+            "displayName": "大小寫須相符",
+            "explainText": "此原則設定允許您核取或取消核取 [日文尋找] 對話方塊內的對應 UI 選項。[日文尋找] 對話方塊可從 [常用] 索引標籤 | [編輯] | [尋找] | [到...] | [搜尋選項] | [選項...] 之下的 [尋找] 對話方塊來存取，也可在 [常用] 索引標籤 | [編輯] | [尋找] | [< 向下箭號 >] | [選項...] | [類似音符 (日文)] | [選項] 之下的功能窗格下找到。在啟用某些編輯語言之前，[類似音符 (日文)] 對話方塊及 [選項...] 按鈕在 Word 中可能為隱藏狀態。\n\n如果啟用此原則設定，將核取在此原則設定的標題中指定的對應 UI 選項。\n\n如果停用或未設定此原則設定，將取消核取對應的 UI 選項。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqcase_0_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchfullhalfwidthform",
+            "displayName": "全形/半形須相符",
+            "explainText": "此原則設定允許您核取或取消核取 [日文尋找] 對話方塊內的對應 UI 選項。[日文尋找] 對話方塊可從 [常用] 索引標籤 | [編輯] | [尋找] | [到...] | [搜尋選項] | [選項...] 之下的 [尋找] 對話方塊來存取，也可在 [常用] 索引標籤 | [編輯] | [尋找] | [< 向下箭號 >] | [選項...] | [類似音符 (日文)] | [選項] 之下的功能窗格下找到。在啟用某些編輯語言之前，[類似音符 (日文)] 對話方塊及 [選項...] 按鈕在 Word 中可能為隱藏狀態。\n\n如果啟用此原則設定，將核取在此原則設定的標題中指定的對應 UI 選項。\n\n如果停用或未設定此原則設定，將取消核取對應的 UI 選項。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqbyte_1_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchhiraganakatakana",
+            "displayName": "平假名/片假名須相符",
+            "explainText": "此原則設定允許您核取或取消核取 [日文尋找] 對話方塊內的對應 UI 選項。[日文尋找] 對話方塊可從 [常用] 索引標籤 | [編輯] | [尋找] | [到...] | [搜尋選項] | [選項...] 之下的 [尋找] 對話方塊來存取，也可在 [常用] 索引標籤 | [編輯] | [尋找] | [< 向下箭號 >] | [選項...] | [類似音符 (日文)] | [選項] 之下的功能窗格下找到。在啟用某些編輯語言之前，[類似音符 (日文)] 對話方塊及 [選項...] 按鈕在 Word 中可能為隱藏狀態。\n\n如果啟用此原則設定，將核取在此原則設定的標題中指定的對應 UI 選項。\n\n如果停用或未設定此原則設定，將取消核取對應的 UI 選項。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqhira_kata_3_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchcontractionsyoonsokuon",
+            "displayName": "縮約音須相符 (yo-on, sokuon)",
+            "explainText": "此原則設定允許您核取或取消核取 [日文尋找] 對話方塊內的對應 UI 選項。[日文尋找] 對話方塊可從 [常用] 索引標籤 | [編輯] | [尋找] | [到...] | [搜尋選項] | [選項...] 之下的 [尋找] 對話方塊來存取，也可在 [常用] 索引標籤 | [編輯] | [尋找] | [< 向下箭號 >] | [選項...] | [類似音符 (日文)] | [選項] 之下的功能窗格下找到。在啟用某些編輯語言之前，[類似音符 (日文)] 對話方塊及 [選項...] 按鈕在 Word 中可能為隱藏狀態。\n\n如果啟用此原則設定，將核取在此原則設定的標題中指定的對應 UI 選項。\n\n如果停用或未設定此原則設定，將取消核取對應的 UI 選項。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqsmallkana_4_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchminusdashchoon",
+            "displayName": "減號/虛線/長元音須相符",
+            "explainText": "此原則設定允許您核取或取消核取 [日文尋找] 對話方塊內的對應 UI 選項。[日文尋找] 對話方塊可從 [常用] 索引標籤 | [編輯] | [尋找] | [到...] | [搜尋選項] | [選項...] 之下的 [尋找] 對話方塊來存取，也可在 [常用] 索引標籤 | [編輯] | [尋找] | [< 向下箭號 >] | [選項...] | [類似音符 (日文)] | [選項] 之下的功能窗格下找到。在啟用某些編輯語言之前，[類似音符 (日文)] 對話方塊及 [選項...] 按鈕在 Word 中可能為隱藏狀態。\n\n如果啟用此原則設定，將核取在此原則設定的標題中指定的對應 UI 選項。\n\n如果停用或未設定此原則設定，將取消核取對應的 UI 選項。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqminus_2_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchrepeatcharactermarks",
+            "displayName":"'重複字元' 標記須相符",
+            "explainText": "此原則設定允許您核取或取消核取 [日文尋找] 對話方塊內的對應 UI 選項。[日文尋找] 對話方塊可從 [常用] 索引標籤 | [編輯] | [尋找] | [到...] | [搜尋選項] | [選項...] 之下的 [尋找] 對話方塊來存取，也可在 [常用] 索引標籤 | [編輯] | [尋找] | [< 向下箭號 >] | [選項...] | [類似音符 (日文)] | [選項] 之下的功能窗格下找到。在啟用某些編輯語言之前，[類似音符 (日文)] 對話方塊及 [選項...] 按鈕在 Word 中可能為隱藏狀態。\n\n如果啟用此原則設定，將核取在此原則設定的標題中指定的對應 UI 選項。\n\n如果停用或未設定此原則設定，將取消核取對應的 UI 選項。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqrepsymbol_5_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchvariantformkanjiitaiji",
+            "displayName": "變形漢字 (itaiji) 須相符",
+            "explainText": "此原則設定允許您核取或取消核取 [日文尋找] 對話方塊內的對應 UI 選項。[日文尋找] 對話方塊可從 [常用] 索引標籤 | [編輯] | [尋找] | [到...] | [搜尋選項] | [選項...] 之下的 [尋找] 對話方塊來存取，也可在 [常用] 索引標籤 | [編輯] | [尋找] | [< 向下箭號 >] | [選項...] | [類似音符 (日文)] | [選項] 之下的功能窗格下找到。在啟用某些編輯語言之前，[類似音符 (日文)] 對話方塊及 [選項...] 按鈕在 Word 中可能為隱藏狀態。\n\n如果啟用此原則設定，將核取在此原則設定的標題中指定的對應 UI 選項。\n\n如果停用或未設定此原則設定，將取消核取對應的 UI 選項。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqkanji_16_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matcholdkanaforms",
+            "displayName": "舊假名形式須相符",
+            "explainText": "此原則設定允許您核取或取消核取 [日文尋找] 對話方塊內的對應 UI 選項。[日文尋找] 對話方塊可從 [常用] 索引標籤 | [編輯] | [尋找] | [到...] | [搜尋選項] | [選項...] 之下的 [尋找] 對話方塊來存取，也可在 [常用] 索引標籤 | [編輯] | [尋找] | [< 向下箭號 >] | [選項...] | [類似音符 (日文)] | [選項] 之下的功能窗格下找到。在啟用某些編輯語言之前，[類似音符 (日文)] 對話方塊及 [選項...] 按鈕在 Word 中可能為隱藏狀態。\n\n如果啟用此原則設定，將核取在此原則設定的標題中指定的對應 UI 選項。\n\n如果停用或未設定此原則設定，將取消核取對應的 UI 選項。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqoldkana_6_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchchoonusedforvowels",
+            "displayName": "元音所用 cho-on 須相符",
+            "explainText": "此原則設定允許您核取或取消核取 [日文尋找] 對話方塊內的對應 UI 選項。[日文尋找] 對話方塊可從 [常用] 索引標籤 | [編輯] | [尋找] | [到...] | [搜尋選項] | [選項...] 之下的 [尋找] 對話方塊來存取，也可在 [常用] 索引標籤 | [編輯] | [尋找] | [< 向下箭號 >] | [選項...] | [類似音符 (日文)] | [選項] 之下的功能窗格下找到。在啟用某些編輯語言之前，[類似音符 (日文)] 對話方塊及 [選項...] 按鈕在 Word 中可能為隱藏狀態。\n\n如果啟用此原則設定，將核取在此原則設定的標題中指定的對應 UI 選項。\n\n如果停用或未設定此原則設定，將取消核取對應的 UI 選項。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqlongvowel_7_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchdiziduzu",
+            "displayName": "di/zi, du/zu 須相符",
+            "explainText": "此原則設定允許您核取或取消核取 [日文尋找] 對話方塊內的對應 UI 選項。[日文尋找] 對話方塊可從 [常用] 索引標籤 | [編輯] | [尋找] | [到...] | [搜尋選項] | [選項...] 之下的 [尋找] 對話方塊來存取，也可在 [常用] 索引標籤 | [編輯] | [尋找] | [< 向下箭號 >] | [選項...] | [類似音符 (日文)] | [選項] 之下的功能窗格下找到。在啟用某些編輯語言之前，[類似音符 (日文)] 對話方塊及 [選項...] 按鈕在 Word 中可能為隱藏狀態。\n\n如果啟用此原則設定，將核取在此原則設定的標題中指定的對應 UI 選項。\n\n如果停用或未設定此原則設定，將取消核取對應的 UI 選項。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqd_z_8_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchbavahafa",
+            "displayName": "ba/va, ha/fa 須相符",
+            "explainText": "此原則設定允許您核取或取消核取 [日文尋找] 對話方塊內的對應 UI 選項。[日文尋找] 對話方塊可從 [常用] 索引標籤 | [編輯] | [尋找] | [到...] | [搜尋選項] | [選項...] 之下的 [尋找] 對話方塊來存取，也可在 [常用] 索引標籤 | [編輯] | [尋找] | [< 向下箭號 >] | [選項...] | [類似音符 (日文)] | [選項] 之下的功能窗格下找到。在啟用某些編輯語言之前，[類似音符 (日文)] 對話方塊及 [選項...] 按鈕在 Word 中可能為隱藏狀態。\n\n如果啟用此原則設定，將核取在此原則設定的標題中指定的對應 UI 選項。\n\n如果停用或未設定此原則設定，將取消核取對應的 UI 選項。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqb_v_9_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchtsithichidhizi",
+            "displayName": "tsi/thi/chi, dhi/zi 須相符",
+            "explainText": "此原則設定允許您核取或取消核取 [日文尋找] 對話方塊內的對應 UI 選項。[日文尋找] 對話方塊可從 [常用] 索引標籤 | [編輯] | [尋找] | [到...] | [搜尋選項] | [選項...] 之下的 [尋找] 對話方塊來存取，也可在 [常用] 索引標籤 | [編輯] | [尋找] | [< 向下箭號 >] | [選項...] | [類似音符 (日文)] | [選項] 之下的功能窗格下找到。在啟用某些編輯語言之前，[類似音符 (日文)] 對話方塊及 [選項...] 按鈕在 Word 中可能為隱藏狀態。\n\n如果啟用此原則設定，將核取在此原則設定的標題中指定的對應 UI 選項。\n\n如果停用或未設定此原則設定，將取消核取對應的 UI 選項。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqt_c_10_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchhyuiyubyuvyu",
+            "displayName": "hyu/iyu, byu/vyu 須相符",
+            "explainText": "此原則設定允許您核取或取消核取 [日文尋找] 對話方塊內的對應 UI 選項。[日文尋找] 對話方塊可從 [常用] 索引標籤 | [編輯] | [尋找] | [到...] | [搜尋選項] | [選項...] 之下的 [尋找] 對話方塊來存取，也可在 [常用] 索引標籤 | [編輯] | [尋找] | [< 向下箭號 >] | [選項...] | [類似音符 (日文)] | [選項] 之下的功能窗格下找到。在啟用某些編輯語言之前，[類似音符 (日文)] 對話方塊及 [選項...] 按鈕在 Word 中可能為隱藏狀態。\n\n如果啟用此原則設定，將核取在此原則設定的標題中指定的對應 UI 選項。\n\n如果停用或未設定此原則設定，將取消核取對應的 UI 選項。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqf_h_15_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchseshezeje",
+            "displayName": "se/she, ze/je 須相符",
+            "explainText": "此原則設定允許您核取或取消核取 [日文尋找] 對話方塊內的對應 UI 選項。[日文尋找] 對話方塊可從 [常用] 索引標籤 | [編輯] | [尋找] | [到...] | [搜尋選項] | [選項...] 之下的 [尋找] 對話方塊來存取，也可在 [常用] 索引標籤 | [編輯] | [尋找] | [< 向下箭號 >] | [選項...] | [類似音符 (日文)] | [選項] 之下的功能窗格下找到。在啟用某些編輯語言之前，[類似音符 (日文)] 對話方塊及 [選項...] 按鈕在 Word 中可能為隱藏狀態。\n\n如果啟用此原則設定，將核取在此原則設定的標題中指定的對應 UI 選項。\n\n如果停用或未設定此原則設定，將取消核取對應的 UI 選項。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqs_sh_13_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchiaiyapianopiyano",
+            "displayName": "ia/iya (piano/piyano) 須相符",
+            "explainText": "此原則設定允許您核取或取消核取 [日文尋找] 對話方塊內的對應 UI 選項。[日文尋找] 對話方塊可從 [常用] 索引標籤 | [編輯] | [尋找] | [到...] | [搜尋選項] | [選項...] 之下的 [尋找] 對話方塊來存取，也可在 [常用] 索引標籤 | [編輯] | [尋找] | [< 向下箭號 >] | [選項...] | [類似音符 (日文)] | [選項] 之下的功能窗格下找到。在啟用某些編輯語言之前，[類似音符 (日文)] 對話方塊及 [選項...] 按鈕在 Word 中可能為隱藏狀態。\n\n如果啟用此原則設定，將核取在此原則設定的標題中指定的對應 UI 選項。\n\n如果停用或未設定此原則設定，將取消核取對應的 UI 選項。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqy_a_12_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchkikutekisutotekusuto",
+            "displayName": "ki/ku (tekisuto/tekusuto) 須相符",
+            "explainText": "此原則設定允許您核取或取消核取 [日文尋找] 對話方塊內的對應 UI 選項。[日文尋找] 對話方塊可從 [常用] 索引標籤 | [編輯] | [尋找] | [到...] | [搜尋選項] | [選項...] 之下的 [尋找] 對話方塊來存取，也可在 [常用] 索引標籤 | [編輯] | [尋找] | [< 向下箭號 >] | [選項...] | [類似音符 (日文)] | [選項] 之下的功能窗格下找到。在啟用某些編輯語言之前，[類似音符 (日文)] 對話方塊及 [選項...] 按鈕在 Word 中可能為隱藏狀態。\n\n如果啟用此原則設定，將核取在此原則設定的標題中指定的對應 UI 選項。\n\n如果停用或未設定此原則設定，將取消核取對應的 UI 選項。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqki_ku_14_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ignorepunctuationcharacters",
+            "displayName": "略過標點符號",
+            "explainText": "此原則設定允許您核取或取消核取 [日文尋找] 對話方塊內的對應 UI 選項。[日文尋找] 對話方塊可從 [常用] 索引標籤 | [編輯] | [尋找] | [到...] | [搜尋選項] | [選項...] 之下的 [尋找] 對話方塊來存取，也可在 [常用] 索引標籤 | [編輯] | [尋找] | [< 向下箭號 >] | [選項...] | [類似音符 (日文)] | [選項] 之下的功能窗格下找到。在啟用某些編輯語言之前，[類似音符 (日文)] 對話方塊及 [選項...] 按鈕在 Word 中可能為隱藏狀態。\n\n如果啟用此原則設定，將核取在此原則設定的標題中指定的對應 UI 選項。\n\n如果停用或未設定此原則設定，將取消核取對應的 UI 選項。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "fignorepunct_18_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ignorewhitespacecharacters",
+            "displayName": "略過空白字元",
+            "explainText": "此原則設定允許您核取或取消核取 [日文尋找] 對話方塊內的對應 UI 選項。[日文尋找] 對話方塊可從 [常用] 索引標籤 | [編輯] | [尋找] | [到...] | [搜尋選項] | [選項...] 之下的 [尋找] 對話方塊來存取，也可在 [常用] 索引標籤 | [編輯] | [尋找] | [< 向下箭號 >] | [選項...] | [類似音符 (日文)] | [選項] 之下的功能窗格下找到。在啟用某些編輯語言之前，[類似音符 (日文)] 對話方塊及 [選項...] 按鈕在 Word 中可能為隱藏狀態。\n\n如果啟用此原則設定，將核取在此原則設定的標題中指定的對應 UI 選項。\n\n如果停用或未設定此原則設定，將取消核取對應的 UI 選項。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "fignorespace_19_1"
         },
         {
             "parentCategory": {
@@ -6935,7 +8879,7 @@
             },
             "name": "L_AlertIfNotDefault",
             "displayName": "如果 Word 不是其副檔名的預設應用程式，則提示使用者",
-            "explainText": "此原則設定可指定當任何與 Word 相關聯的檔案類型副檔名不再與 Word 相關聯時，是否要提示使用者變更其副檔名關聯。\n\n如果啟用此原則設定，則當這些檔案類型是與其他應用程式相關聯時，使用者在啟動程式時並不會收到提示。如果此原則為 [啟用]，則 [檔案] -> [選項] -> [一般] -> [啟動選項] -> [進一步資料…] 下方的核取方塊會停用並取消勾選。\n\n如果停用或未設定此原則設定，則當這些檔案類型是與其他應用程式相關聯時，使用者在啟動程式時會收到提示。使用者可以勾選提示中所顯示的核取方塊，或者勾選 [檔案] -> [選項] -> [一般] -> [啟動選項] -> [進一步資料…] 下方的核取方塊，以變更該功能的行為。\n        如果未設定或停用此原則，則根據預設會啟用並勾選該核取方塊。",
+            "explainText": "        此原則設定可指定當任何與 Word 相關聯的檔案類型副檔名不再與 Word 相關聯時，是否要提示使用者變更其副檔名關聯。\n\n        如果啟用此原則設定，則當這些檔案類型是與其他應用程式相關聯時，使用者在啟動程式時並不會收到提示。如果此原則為 [啟用]，則 [檔案] -> [選項] -> [一般] -> [啟動選項] -> [進一步資料…] 下方的核取方塊會停用並取消勾選。\n\n        如果停用或未設定此原則設定，則當這些檔案類型是與其他應用程式相關聯時，使用者在啟動程式時會收到提示。使用者可以勾選提示中所顯示的核取方塊，或者勾選 [檔案] -> [選項] -> [一般] -> [啟動選項] -> [進一步資料…] 下方的核取方塊，以變更該功能的行為。\n        如果未設定或停用此原則，則根據預設會啟用並勾選該核取方塊。",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7172,7 +9116,7 @@
             },
             "name": "L_OnlineVideos",
             "displayName": "允許在 Word 中播放線上影片",
-            "explainText": "此原則設定可以控制是否能夠在 Word 中播放線上影片。\n\n若啟用或未設定此原則，則使用者將能夠在 Word 中播放線上影片。\n\n若停用此原則設定，則您將無法在 Word 中播放線上影片。",
+            "explainText": "此原則設定可以控制是否能夠在 Word 中播放線上影片。\n\n若啟用或未設定此原則，則使用者將能夠在 Word 中播放線上影片。\n\n若停用此原則設定，則您將無法在 Word 中播放線上影片。\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7201,7 +9145,7 @@
             },
             "name": "L_LinkedInResumeAssistant",
             "displayName": "允許 LinkedIn 履歷表小幫手功能",
-            "explainText": "此原則設定會控制 Word 中是否要顯示 LinkedIn 履歷表小幫手。\n\n如果啟用或不設定此原則，使用者將能夠使用 LinkedIn 履歷表小幫手。\n\n如果停用此原則設定，將無法使用 LinkedIn 履歷表小幫手。\n\n重要: 此原則設定僅適用於使用隨選即用安裝的 Office 365 用戶端，包括 Office 365 專業增強版、Office 365 商務版、Visio Pro for Office 365 及 Project Pro for Office 365。它不適用於使用 Windows Installer (MSI) 的 Office 產品。",
+            "explainText": "此原則設定可控制在 Word 中是否要顯示 LinkedIn 履歷表小幫手。\n\n如果啟用或不設定此原則，使用者將能夠使用 LinkedIn 履歷表小幫手。\n\n如果停用此原則設定，則將無法使用 LinkedIn 履歷表小幫手。\n\n注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版，以及 Project 和 Visio 的訂閱版本。\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7230,7 +9174,7 @@
             },
             "name": "L_DigitalPrint",
             "displayName": "不要顯示將文件轉換成 Sway 網頁的選項",
-            "explainText": "此原則設定控制是否要向使用者顯示將 Word 文件轉換成 Sway 網頁的 [檔案] 功能表選項。預設會向使用者顯示此選項。\n\n如果啟用此原則設定，則會向使用者隱藏將 Word 文件轉換成 Sway 網頁的 [檔案] 功能表選項。\n\n如果停用或不設定此原則設定，會向使用者顯示將 Word 文件轉換成 Sway 網頁的 [檔案] 功能表選項。\n\n注意: 此原則設定只適用於訂閱版本的 Office，例如 Office 365 專業增強版。",
+            "explainText": "此原則設定可控制是否要向使用者顯示將 Word 文件轉換成 Sway 網頁的 [檔案] 功能表選項。根據預設，系統會向使用者顯示此選項。\n\n如果啟用此原則設定，系統會向使用者隱藏將 Word 文件轉換成 Sway 網頁的 [檔案] 功能表選項。\n\n如果停用或不設定此原則設定，則系統會向使用者顯示將 Word 文件轉換成 Sway 網頁的 [檔案] 功能表選項。\n\n注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版。\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7259,7 +9203,7 @@
             },
             "name": "L_DisableWarningOnIncludeFieldsUpdate",
             "displayName": "在 Word 中更新 IncludePicture 與 IncludeText 欄位前，不要求權限",
-            "explainText": "此原則設定可讓您控制 Word 是否在更新文件中 IncludePicture 與 IncludeText 欄位前提示使用者安全性訊息。\n\n根據預設，在更新那些欄位前會提示使用者安全性訊息。但是，提示可能會影響合併 Word 文件的自動化工作流程。\n\n重要資訊: 包含 IncludePicture 和 IncludeText 參照的欄位可能會導致資料外流或遭網路釣魚利用。包含這些參照的欄位可被修改而指向外部網站的內容。若需要認證才能存取圖片或文字，則更新欄位的流程將會向要求使用者登入。雖然對受信任的來源而言這是合法的策略，但若文件不是來自受信任的來源，則很容易受到網路釣魚的攻擊。\n\n若啟用此原則設定，則在更新那些欄位前將不會提示使用者安全性訊息。因為潛在安全性風險，所以不建議啟用此原則設定。\n\n若停用或未設定此原則設定，則在更新那些欄位前將會提示使用者安全性訊息。",
+            "explainText": "此原則設定可讓您控制 Word 是否在更新文件中 IncludePicture 與 IncludeText 欄位前提示使用者安全性訊息。\n\n根據預設，在更新那些欄位前會提示使用者安全性訊息。但是，提示可能會影響合併 Word 文件的自動化工作流程。\n\n重要資訊: 包含 IncludePicture 和 IncludeText 參照的欄位可能會導致資料外流或遭網路釣魚利用。包含這些參照的欄位可被修改而指向外部網站的內容。若需要認證才能存取圖片或文字，則更新欄位的流程將會向要求使用者登入。雖然對受信任的來源而言這是合法的策略，但若文件不是來自受信任的來源，則很容易受到網路釣魚的攻擊。\n\n若啟用此原則設定，則在更新那些欄位前將不會提示使用者安全性訊息。因為潛在安全性風險，所以不建議啟用此原則設定。\n\n若停用或未設定此原則設定，則在更新那些欄位前將會提示使用者安全性訊息。\n      ",
             "tags": [
                 "L_Security",
                 "L_WordOptions",
@@ -7288,7 +9232,7 @@
             },
             "name": "L_Acronyms",
             "displayName": "從功能區移除 [縮略字] 命令",
-            "explainText": "此原則設定可讓您從功能區移除 [縮略字] 命令。[縮略字] 命令會出現在 [參考] 索引標籤上。\n\n若啟用此原則設定，會從功能區移除 [縮略字] 命令。使用者將無法手動新增 [縮略字] 命令至功能區。因此使用者將無法使用 [縮略字] 功能。\n\n若停用或未設定此原則設定，則 [縮略字] 命令會出現在功能區上。\n\n注意: 此原則設定只適用於 Office 的訂閱版本，例如 Office 365 專業增強版。",
+            "explainText": "此原則設定可讓您從功能區移除 [縮略字] 命令。[縮略字] 命令會出現在 [參考資料] 索引標籤上。\n\n如果啟用此原則設定，系統會從功能區移除 [縮略字] 命令。使用者將無法手動將 [縮略字] 命令新增到功能區。因此使用者將無法使用 [縮略字] 功能。\n\n如果停用或未設定此原則設定，則 [縮略字] 命令會出現在功能區上。\n\n注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版。\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7297,6 +9241,107 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "acronyms"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_EmailOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DoNotCompressInlinedImagesInOutlook",
+            "displayName": "不要壓縮在 Outlook 中插入的內嵌影像",
+            "explainText": "此原則設定可讓您停用 Outlook 中內嵌影像上的壓縮。\n\n如果啟用此原則設定，Outlook 就不會壓縮郵件中的內嵌影像。\n\n如果停用或未設定此原則設定，則內嵌影像將會被壓縮。\n\n注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版。\n      ",
+            "tags": [
+                "L_EmailOptions",
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\common\\mailsettings",
+            "valueName": "outlookdonotcompressimages"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_EmailOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "高畫質"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "330 ppi"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "220 ppi"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "150 ppi"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "96 ppi"
+                            }
+                        ],
+                        "valueName": "oulookimagedpiindex",
+                        "inputType": "dropdownList",
+                        "caption": "Outlook 的預設內嵌影像壓縮品質:",
+                        "id": "L_DefaultCompressionQualityForInlinedImagesInOutlookPart"
+                    }
+                ]
+            },
+            "name": "L_DefaultCompressionQualityForInlinedImagesInOutlook",
+            "displayName": "指定在 Outlook 中所插入內嵌影像的預設壓縮品質",
+            "explainText": "此原則設定可讓您指定 Outlook 中內嵌影像上的預設壓縮品質。\n\n如果啟用此原則設定，Outlook 會根據指定的品質壓縮郵件中的內嵌影像。\n\n如果停用或未設定此原則設定，則會以預設品質 (220 dpi) 壓縮內嵌影像。\n\n注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版。\n    ",
+            "tags": [
+                "L_EmailOptions",
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\common\\mailsettings"
         }
     ]
 }

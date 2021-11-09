@@ -65,7 +65,7 @@
                 "ref": "L_PjGeneral"
             },
             "name": "L_PjGeneralOptions",
-            "displayName":"'Project1' の全般オプション"
+            "displayName": "'Project1' の全般オプション"
         },
         {
             "parentCategory": {
@@ -86,14 +86,14 @@
                 "ref": "L_PjEdit"
             },
             "name": "L_PjViewOptions",
-            "displayName":"'Project1' の時間単位の表示形式"
+            "displayName": "'Project1' の時間単位の表示形式"
         },
         {
             "parentCategory": {
                 "ref": "L_PjEdit"
             },
             "name": "L_PjHyperLinkAppear",
-            "displayName":"'Project1' のハイパーリンクの表示"
+            "displayName": "'Project1' のハイパーリンクの表示"
         },
         {
             "parentCategory": {
@@ -121,7 +121,7 @@
                 "ref": "L_PjSchedule"
             },
             "name": "L_PjSchedDoc",
-            "displayName":"'Project1' のスケジュール オプション"
+            "displayName": "'Project1' のスケジュール オプション"
         },
         {
             "parentCategory": {
@@ -142,7 +142,7 @@
                 "ref": "L_PjCalculation"
             },
             "name": "L_PjCalcProjectFile",
-            "displayName":"'Project1' の計算オプション"
+            "displayName": "'Project1' の計算オプション"
         },
         {
             "parentCategory": {
@@ -205,7 +205,7 @@
                 "ref": "L_PjInterface"
             },
             "name": "L_PjPGSettingsForProject1",
-            "displayName":"'Project1' のプロジェクト ガイド設定"
+            "displayName": "'Project1' のプロジェクト ガイド設定"
         },
         {
             "parentCategory": {
@@ -5328,6 +5328,118 @@
         },
         {
             "parentCategory": {
+                "ref": "L_PjPGSettingsForProject1"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Microsoft Project の既定のページを使用する"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "ユーザー設定のページを使用する"
+                            }
+                        ],
+                        "valueName": "usedefaultstartpage",
+                        "inputType": "dropdownList",
+                        "caption": "プロジェクト ガイドの機能およびレイアウト ページ",
+                        "id": "L_pjusedefaultstartpage34"
+                    },
+                    {
+                        "valueName": "gbuidefaultstartpageurl",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "URL: ",
+                        "id": "L_PjGBUIDefaultPageURL"
+                    }
+                ]
+            },
+            "name": "L_PjUseDefaultStartPage",
+            "displayName": "プロジェクト ガイドの機能およびレイアウト ページ",
+            "explainText": "作業ウィンドウに、既定のプロジェクト ガイドを表示するか、組織で作成されたユーザー設定のプロジェクト ガイドを表示するかを選択します。\n\nこの設定を有効にした場合、プロジェクト ガイドを開いたときに、指定したプロジェクト ガイドが表示されます。\n\nこの設定を無効にするか、未構成にした場合、ユーザーの既定の設定が使用されます。",
+            "tags": [
+                "L_PjPGSettingsForProject1",
+                "L_PjInterface",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\options\\interface"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PjPGSettingsForProject1"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Microsoft Project の既定のコンテンツを使用する"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "ユーザー設定のコンテンツを使用する"
+                            }
+                        ],
+                        "valueName": "usedefaultxmlschema",
+                        "inputType": "dropdownList",
+                        "caption": "プロジェクト ガイドのコンテンツ",
+                        "id": "L_pjusedefaultxmlschema35"
+                    },
+                    {
+                        "valueName": "gbuixmlschemapath",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "独自コンテンツ用の XML ファイル:",
+                        "id": "L_PjGBUIXMLSchemaPath"
+                    }
+                ]
+            },
+            "name": "L_PjUseDefaultXMLSchema",
+            "displayName": "プロジェクト ガイドのコンテンツ",
+            "explainText": "作業ウィンドウに、Project に組み込まれた既定のプロジェクト ガイドのコンテンツを表示するか、組織で作成されたユーザー設定のコンテンツを表示するかを指定します。\n\nこの設定を有効にした場合、プロジェクト ガイドのコンテンツは指定した場所から読み込まれます。\n\nこの設定を無効にするか、未構成にした場合、ユーザーの既定の設定が使用されます。",
+            "tags": [
+                "L_PjPGSettingsForProject1",
+                "L_PjInterface",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\options\\interface"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -5883,6 +5995,1346 @@
             "application": "proj16",
             "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations",
             "valueName": "alllocationsdisabled"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "パス:",
+                        "id": "L_Pathcolon"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "日付:",
+                        "id": "L_Datecolon"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "説明:",
+                        "id": "L_Descriptioncolon"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "サブ フォルダーも使用できるようにする:",
+                        "id": "L_Allowsubfolders"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc01",
+            "displayName": "信頼できる場所 #1",
+            "explainText": "このポリシー設定では、このアプリケーションでファイルを開くための信頼できる発行元として扱われる場所を指定できます。信頼できる場所のファイルは、ファイル検証、アクティブ コンテンツのチェックおよび保護されたビューを使用しません。この場所のファイルに組み込まれているマクロおよびコードは、ユーザーへの警告なしに実行されます。場所を変更または追加する場合は、新しい場所が安全であり、ドキュメントやファイルを追加するためのユーザー権限が適切に設定されていることを確認してください。\n\nこのポリシー設定を有効にした場合、フォルダーの場所、パス、およびアプリケーションがマクロ実行ファイルを警告なしに開く日付を指定できます。[サブ フォルダーも使用できるようにする] オプションをオンにすると、指定したフォルダーにあるすべてのサブ フォルダーも信頼されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、信頼できる場所は指定されません。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "パス:",
+                        "id": "L_pathcolon12"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "日付:",
+                        "id": "L_datecolon13"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "説明:",
+                        "id": "L_descriptioncolon14"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "サブ フォルダーも使用できるようにする:",
+                        "id": "L_allowsubfolders15"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc02",
+            "displayName": "信頼できる場所 #2",
+            "explainText": "このポリシー設定では、このアプリケーションでファイルを開くための信頼できる発行元として扱われる場所を指定できます。信頼できる場所のファイルは、ファイル検証、アクティブ コンテンツのチェックおよび保護されたビューを使用しません。この場所のファイルに組み込まれているマクロおよびコードは、ユーザーへの警告なしに実行されます。場所を変更または追加する場合は、新しい場所が安全であり、ドキュメントやファイルを追加するためのユーザー権限が適切に設定されていることを確認してください。\n\nこのポリシー設定を有効にした場合、フォルダーの場所、パス、およびアプリケーションがマクロ実行ファイルを警告なしに開く日付を指定できます。[サブ フォルダーも使用できるようにする] オプションをオンにすると、指定したフォルダーにあるすべてのサブ フォルダーも信頼されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、信頼できる場所は指定されません。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location2"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "パス:",
+                        "id": "L_pathcolon16"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "日付:",
+                        "id": "L_datecolon17"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "説明:",
+                        "id": "L_descriptioncolon18"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "サブ フォルダーも使用できるようにする:",
+                        "id": "L_allowsubfolders19"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc03",
+            "displayName": "信頼できる場所 #3",
+            "explainText": "このポリシー設定では、このアプリケーションでファイルを開くための信頼できる発行元として扱われる場所を指定できます。信頼できる場所のファイルは、ファイル検証、アクティブ コンテンツのチェックおよび保護されたビューを使用しません。この場所のファイルに組み込まれているマクロおよびコードは、ユーザーへの警告なしに実行されます。場所を変更または追加する場合は、新しい場所が安全であり、ドキュメントやファイルを追加するためのユーザー権限が適切に設定されていることを確認してください。\n\nこのポリシー設定を有効にした場合、フォルダーの場所、パス、およびアプリケーションがマクロ実行ファイルを警告なしに開く日付を指定できます。[サブ フォルダーも使用できるようにする] オプションをオンにすると、指定したフォルダーにあるすべてのサブ フォルダーも信頼されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、信頼できる場所は指定されません。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location3"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "パス:",
+                        "id": "L_pathcolon20"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "日付:",
+                        "id": "L_datecolon21"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "説明:",
+                        "id": "L_descriptioncolon22"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "サブ フォルダーも使用できるようにする:",
+                        "id": "L_allowsubfolders23"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc04",
+            "displayName": "信頼できる場所 #4",
+            "explainText": "このポリシー設定では、このアプリケーションでファイルを開くための信頼できる発行元として扱われる場所を指定できます。信頼できる場所のファイルは、ファイル検証、アクティブ コンテンツのチェックおよび保護されたビューを使用しません。この場所のファイルに組み込まれているマクロおよびコードは、ユーザーへの警告なしに実行されます。場所を変更または追加する場合は、新しい場所が安全であり、ドキュメントやファイルを追加するためのユーザー権限が適切に設定されていることを確認してください。\n\nこのポリシー設定を有効にした場合、フォルダーの場所、パス、およびアプリケーションがマクロ実行ファイルを警告なしに開く日付を指定できます。[サブ フォルダーも使用できるようにする] オプションをオンにすると、指定したフォルダーにあるすべてのサブ フォルダーも信頼されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、信頼できる場所は指定されません。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location4"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "パス:",
+                        "id": "L_pathcolon24"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "日付:",
+                        "id": "L_datecolon25"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "説明:",
+                        "id": "L_descriptioncolon26"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "サブ フォルダーも使用できるようにする:",
+                        "id": "L_allowsubfolders27"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc05",
+            "displayName": "信頼できる場所 #5",
+            "explainText": "このポリシー設定では、このアプリケーションでファイルを開くための信頼できる発行元として扱われる場所を指定できます。信頼できる場所のファイルは、ファイル検証、アクティブ コンテンツのチェックおよび保護されたビューを使用しません。この場所のファイルに組み込まれているマクロおよびコードは、ユーザーへの警告なしに実行されます。場所を変更または追加する場合は、新しい場所が安全であり、ドキュメントやファイルを追加するためのユーザー権限が適切に設定されていることを確認してください。\n\nこのポリシー設定を有効にした場合、フォルダーの場所、パス、およびアプリケーションがマクロ実行ファイルを警告なしに開く日付を指定できます。[サブ フォルダーも使用できるようにする] オプションをオンにすると、指定したフォルダーにあるすべてのサブ フォルダーも信頼されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、信頼できる場所は指定されません。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location5"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "パス:",
+                        "id": "L_pathcolon28"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "日付:",
+                        "id": "L_datecolon29"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "説明:",
+                        "id": "L_descriptioncolon30"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "サブ フォルダーも使用できるようにする:",
+                        "id": "L_allowsubfolders31"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc06",
+            "displayName": "信頼できる場所 #6",
+            "explainText": "このポリシー設定では、このアプリケーションでファイルを開くための信頼できる発行元として扱われる場所を指定できます。信頼できる場所のファイルは、ファイル検証、アクティブ コンテンツのチェックおよび保護されたビューを使用しません。この場所のファイルに組み込まれているマクロおよびコードは、ユーザーへの警告なしに実行されます。場所を変更または追加する場合は、新しい場所が安全であり、ドキュメントやファイルを追加するためのユーザー権限が適切に設定されていることを確認してください。\n\nこのポリシー設定を有効にした場合、フォルダーの場所、パス、およびアプリケーションがマクロ実行ファイルを警告なしに開く日付を指定できます。[サブ フォルダーも使用できるようにする] オプションをオンにすると、指定したフォルダーにあるすべてのサブ フォルダーも信頼されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、信頼できる場所は指定されません。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location6"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "パス:",
+                        "id": "L_pathcolon32"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "日付:",
+                        "id": "L_datecolon33"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "説明:",
+                        "id": "L_descriptioncolon34"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "サブ フォルダーも使用できるようにする:",
+                        "id": "L_allowsubfolders35"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc07",
+            "displayName": "信頼できる場所 #7",
+            "explainText": "このポリシー設定では、このアプリケーションでファイルを開くための信頼できる発行元として扱われる場所を指定できます。信頼できる場所のファイルは、ファイル検証、アクティブ コンテンツのチェックおよび保護されたビューを使用しません。この場所のファイルに組み込まれているマクロおよびコードは、ユーザーへの警告なしに実行されます。場所を変更または追加する場合は、新しい場所が安全であり、ドキュメントやファイルを追加するためのユーザー権限が適切に設定されていることを確認してください。\n\nこのポリシー設定を有効にした場合、フォルダーの場所、パス、およびアプリケーションがマクロ実行ファイルを警告なしに開く日付を指定できます。[サブ フォルダーも使用できるようにする] オプションをオンにすると、指定したフォルダーにあるすべてのサブ フォルダーも信頼されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、信頼できる場所は指定されません。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location7"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "パス:",
+                        "id": "L_pathcolon36"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "日付:",
+                        "id": "L_datecolon37"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "説明:",
+                        "id": "L_descriptioncolon38"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "サブ フォルダーも使用できるようにする:",
+                        "id": "L_allowsubfolders39"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc08",
+            "displayName": "信頼できる場所 #8",
+            "explainText": "このポリシー設定では、このアプリケーションでファイルを開くための信頼できる発行元として扱われる場所を指定できます。信頼できる場所のファイルは、ファイル検証、アクティブ コンテンツのチェックおよび保護されたビューを使用しません。この場所のファイルに組み込まれているマクロおよびコードは、ユーザーへの警告なしに実行されます。場所を変更または追加する場合は、新しい場所が安全であり、ドキュメントやファイルを追加するためのユーザー権限が適切に設定されていることを確認してください。\n\nこのポリシー設定を有効にした場合、フォルダーの場所、パス、およびアプリケーションがマクロ実行ファイルを警告なしに開く日付を指定できます。[サブ フォルダーも使用できるようにする] オプションをオンにすると、指定したフォルダーにあるすべてのサブ フォルダーも信頼されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、信頼できる場所は指定されません。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location8"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "パス:",
+                        "id": "L_pathcolon40"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "日付:",
+                        "id": "L_datecolon41"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "説明:",
+                        "id": "L_descriptioncolon42"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "サブ フォルダーも使用できるようにする:",
+                        "id": "L_allowsubfolders43"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc09",
+            "displayName": "信頼できる場所 #9",
+            "explainText": "このポリシー設定では、このアプリケーションでファイルを開くための信頼できる発行元として扱われる場所を指定できます。信頼できる場所のファイルは、ファイル検証、アクティブ コンテンツのチェックおよび保護されたビューを使用しません。この場所のファイルに組み込まれているマクロおよびコードは、ユーザーへの警告なしに実行されます。場所を変更または追加する場合は、新しい場所が安全であり、ドキュメントやファイルを追加するためのユーザー権限が適切に設定されていることを確認してください。\n\nこのポリシー設定を有効にした場合、フォルダーの場所、パス、およびアプリケーションがマクロ実行ファイルを警告なしに開く日付を指定できます。[サブ フォルダーも使用できるようにする] オプションをオンにすると、指定したフォルダーにあるすべてのサブ フォルダーも信頼されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、信頼できる場所は指定されません。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location9"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "パス:",
+                        "id": "L_pathcolon44"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "日付:",
+                        "id": "L_datecolon45"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "説明:",
+                        "id": "L_descriptioncolon46"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "サブ フォルダーも使用できるようにする:",
+                        "id": "L_allowsubfolders47"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc10",
+            "displayName": "信頼できる場所 #10",
+            "explainText": "このポリシー設定では、このアプリケーションでファイルを開くための信頼できる発行元として扱われる場所を指定できます。信頼できる場所のファイルは、ファイル検証、アクティブ コンテンツのチェックおよび保護されたビューを使用しません。この場所のファイルに組み込まれているマクロおよびコードは、ユーザーへの警告なしに実行されます。場所を変更または追加する場合は、新しい場所が安全であり、ドキュメントやファイルを追加するためのユーザー権限が適切に設定されていることを確認してください。\n\nこのポリシー設定を有効にした場合、フォルダーの場所、パス、およびアプリケーションがマクロ実行ファイルを警告なしに開く日付を指定できます。[サブ フォルダーも使用できるようにする] オプションをオンにすると、指定したフォルダーにあるすべてのサブ フォルダーも信頼されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、信頼できる場所は指定されません。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location10"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "パス:",
+                        "id": "L_pathcolon48"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "日付:",
+                        "id": "L_datecolon49"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "説明:",
+                        "id": "L_descriptioncolon50"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "サブ フォルダーも使用できるようにする:",
+                        "id": "L_allowsubfolders51"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc11",
+            "displayName": "信頼できる場所 #11",
+            "explainText": "このポリシー設定では、このアプリケーションでファイルを開くための信頼できる発行元として扱われる場所を指定できます。信頼できる場所のファイルは、ファイル検証、アクティブ コンテンツのチェックおよび保護されたビューを使用しません。この場所のファイルに組み込まれているマクロおよびコードは、ユーザーへの警告なしに実行されます。場所を変更または追加する場合は、新しい場所が安全であり、ドキュメントやファイルを追加するためのユーザー権限が適切に設定されていることを確認してください。\n\nこのポリシー設定を有効にした場合、フォルダーの場所、パス、およびアプリケーションがマクロ実行ファイルを警告なしに開く日付を指定できます。[サブ フォルダーも使用できるようにする] オプションをオンにすると、指定したフォルダーにあるすべてのサブ フォルダーも信頼されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、信頼できる場所は指定されません。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location11"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "パス:",
+                        "id": "L_pathcolon52"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "日付:",
+                        "id": "L_datecolon53"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "説明:",
+                        "id": "L_descriptioncolon54"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "サブ フォルダーも使用できるようにする:",
+                        "id": "L_allowsubfolders55"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc12",
+            "displayName": "信頼できる場所 #12",
+            "explainText": "このポリシー設定では、このアプリケーションでファイルを開くための信頼できる発行元として扱われる場所を指定できます。信頼できる場所のファイルは、ファイル検証、アクティブ コンテンツのチェックおよび保護されたビューを使用しません。この場所のファイルに組み込まれているマクロおよびコードは、ユーザーへの警告なしに実行されます。場所を変更または追加する場合は、新しい場所が安全であり、ドキュメントやファイルを追加するためのユーザー権限が適切に設定されていることを確認してください。\n\nこのポリシー設定を有効にした場合、フォルダーの場所、パス、およびアプリケーションがマクロ実行ファイルを警告なしに開く日付を指定できます。[サブ フォルダーも使用できるようにする] オプションをオンにすると、指定したフォルダーにあるすべてのサブ フォルダーも信頼されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、信頼できる場所は指定されません。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location12"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "パス:",
+                        "id": "L_pathcolon56"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "日付:",
+                        "id": "L_datecolon57"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "説明:",
+                        "id": "L_descriptioncolon58"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "サブ フォルダーも使用できるようにする:",
+                        "id": "L_allowsubfolders59"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc13",
+            "displayName": "信頼できる場所 #13",
+            "explainText": "このポリシー設定では、このアプリケーションでファイルを開くための信頼できる発行元として扱われる場所を指定できます。信頼できる場所のファイルは、ファイル検証、アクティブ コンテンツのチェックおよび保護されたビューを使用しません。この場所のファイルに組み込まれているマクロおよびコードは、ユーザーへの警告なしに実行されます。場所を変更または追加する場合は、新しい場所が安全であり、ドキュメントやファイルを追加するためのユーザー権限が適切に設定されていることを確認してください。\n\nこのポリシー設定を有効にした場合、フォルダーの場所、パス、およびアプリケーションがマクロ実行ファイルを警告なしに開く日付を指定できます。[サブ フォルダーも使用できるようにする] オプションをオンにすると、指定したフォルダーにあるすべてのサブ フォルダーも信頼されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、信頼できる場所は指定されません。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location13"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "パス:",
+                        "id": "L_pathcolon60"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "日付:",
+                        "id": "L_datecolon61"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "説明:",
+                        "id": "L_descriptioncolon62"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "サブ フォルダーも使用できるようにする:",
+                        "id": "L_allowsubfolders63"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc14",
+            "displayName": "信頼できる場所 #14",
+            "explainText": "このポリシー設定では、このアプリケーションでファイルを開くための信頼できる発行元として扱われる場所を指定できます。信頼できる場所のファイルは、ファイル検証、アクティブ コンテンツのチェックおよび保護されたビューを使用しません。この場所のファイルに組み込まれているマクロおよびコードは、ユーザーへの警告なしに実行されます。場所を変更または追加する場合は、新しい場所が安全であり、ドキュメントやファイルを追加するためのユーザー権限が適切に設定されていることを確認してください。\n\nこのポリシー設定を有効にした場合、フォルダーの場所、パス、およびアプリケーションがマクロ実行ファイルを警告なしに開く日付を指定できます。[サブ フォルダーも使用できるようにする] オプションをオンにすると、指定したフォルダーにあるすべてのサブ フォルダーも信頼されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、信頼できる場所は指定されません。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location14"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "パス:",
+                        "id": "L_pathcolon64"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "日付:",
+                        "id": "L_datecolon65"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "説明:",
+                        "id": "L_descriptioncolon66"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "サブ フォルダーも使用できるようにする:",
+                        "id": "L_allowsubfolders67"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc15",
+            "displayName": "信頼できる場所 #15",
+            "explainText": "このポリシー設定では、このアプリケーションでファイルを開くための信頼できる発行元として扱われる場所を指定できます。信頼できる場所のファイルは、ファイル検証、アクティブ コンテンツのチェックおよび保護されたビューを使用しません。この場所のファイルに組み込まれているマクロおよびコードは、ユーザーへの警告なしに実行されます。場所を変更または追加する場合は、新しい場所が安全であり、ドキュメントやファイルを追加するためのユーザー権限が適切に設定されていることを確認してください。\n\nこのポリシー設定を有効にした場合、フォルダーの場所、パス、およびアプリケーションがマクロ実行ファイルを警告なしに開く日付を指定できます。[サブ フォルダーも使用できるようにする] オプションをオンにすると、指定したフォルダーにあるすべてのサブ フォルダーも信頼されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、信頼できる場所は指定されません。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location15"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "パス:",
+                        "id": "L_pathcolon68"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "日付:",
+                        "id": "L_datecolon69"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "説明:",
+                        "id": "L_descriptioncolon70"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "サブ フォルダーも使用できるようにする:",
+                        "id": "L_allowsubfolders71"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc16",
+            "displayName": "信頼できる場所 #16",
+            "explainText": "このポリシー設定では、このアプリケーションでファイルを開くための信頼できる発行元として扱われる場所を指定できます。信頼できる場所のファイルは、ファイル検証、アクティブ コンテンツのチェックおよび保護されたビューを使用しません。この場所のファイルに組み込まれているマクロおよびコードは、ユーザーへの警告なしに実行されます。場所を変更または追加する場合は、新しい場所が安全であり、ドキュメントやファイルを追加するためのユーザー権限が適切に設定されていることを確認してください。\n\nこのポリシー設定を有効にした場合、フォルダーの場所、パス、およびアプリケーションがマクロ実行ファイルを警告なしに開く日付を指定できます。[サブ フォルダーも使用できるようにする] オプションをオンにすると、指定したフォルダーにあるすべてのサブ フォルダーも信頼されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、信頼できる場所は指定されません。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location16"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "パス:",
+                        "id": "L_pathcolon72"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "日付:",
+                        "id": "L_datecolon73"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "説明:",
+                        "id": "L_descriptioncolon74"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "サブ フォルダーも使用できるようにする:",
+                        "id": "L_allowsubfolders75"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc17",
+            "displayName": "信頼できる場所 #17",
+            "explainText": "このポリシー設定では、このアプリケーションでファイルを開くための信頼できる発行元として扱われる場所を指定できます。信頼できる場所のファイルは、ファイル検証、アクティブ コンテンツのチェックおよび保護されたビューを使用しません。この場所のファイルに組み込まれているマクロおよびコードは、ユーザーへの警告なしに実行されます。場所を変更または追加する場合は、新しい場所が安全であり、ドキュメントやファイルを追加するためのユーザー権限が適切に設定されていることを確認してください。\n\nこのポリシー設定を有効にした場合、フォルダーの場所、パス、およびアプリケーションがマクロ実行ファイルを警告なしに開く日付を指定できます。[サブ フォルダーも使用できるようにする] オプションをオンにすると、指定したフォルダーにあるすべてのサブ フォルダーも信頼されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、信頼できる場所は指定されません。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location17"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "パス:",
+                        "id": "L_pathcolon76"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "日付:",
+                        "id": "L_datecolon77"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "説明:",
+                        "id": "L_descriptioncolon78"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "サブ フォルダーも使用できるようにする:",
+                        "id": "L_allowsubfolders79"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc18",
+            "displayName": "信頼できる場所 #18",
+            "explainText": "このポリシー設定では、このアプリケーションでファイルを開くための信頼できる発行元として扱われる場所を指定できます。信頼できる場所のファイルは、ファイル検証、アクティブ コンテンツのチェックおよび保護されたビューを使用しません。この場所のファイルに組み込まれているマクロおよびコードは、ユーザーへの警告なしに実行されます。場所を変更または追加する場合は、新しい場所が安全であり、ドキュメントやファイルを追加するためのユーザー権限が適切に設定されていることを確認してください。\n\nこのポリシー設定を有効にした場合、フォルダーの場所、パス、およびアプリケーションがマクロ実行ファイルを警告なしに開く日付を指定できます。[サブ フォルダーも使用できるようにする] オプションをオンにすると、指定したフォルダーにあるすべてのサブ フォルダーも信頼されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、信頼できる場所は指定されません。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location18"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "パス:",
+                        "id": "L_pathcolon80"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "日付:",
+                        "id": "L_datecolon81"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "説明:",
+                        "id": "L_descriptioncolon82"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "サブ フォルダーも使用できるようにする:",
+                        "id": "L_allowsubfolders83"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc19",
+            "displayName": "信頼できる場所 #19",
+            "explainText": "このポリシー設定では、このアプリケーションでファイルを開くための信頼できる発行元として扱われる場所を指定できます。信頼できる場所のファイルは、ファイル検証、アクティブ コンテンツのチェックおよび保護されたビューを使用しません。この場所のファイルに組み込まれているマクロおよびコードは、ユーザーへの警告なしに実行されます。場所を変更または追加する場合は、新しい場所が安全であり、ドキュメントやファイルを追加するためのユーザー権限が適切に設定されていることを確認してください。\n\nこのポリシー設定を有効にした場合、フォルダーの場所、パス、およびアプリケーションがマクロ実行ファイルを警告なしに開く日付を指定できます。[サブ フォルダーも使用できるようにする] オプションをオンにすると、指定したフォルダーにあるすべてのサブ フォルダーも信頼されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、信頼できる場所は指定されません。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location19"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "パス:",
+                        "id": "L_pathcolon84"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "日付:",
+                        "id": "L_datecolon85"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "説明:",
+                        "id": "L_descriptioncolon86"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "サブ フォルダーも使用できるようにする:",
+                        "id": "L_allowsubfolders87"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc20",
+            "displayName": "信頼できる場所 #20",
+            "explainText": "このポリシー設定では、このアプリケーションでファイルを開くための信頼できる発行元として扱われる場所を指定できます。信頼できる場所のファイルは、ファイル検証、アクティブ コンテンツのチェックおよび保護されたビューを使用しません。この場所のファイルに組み込まれているマクロおよびコードは、ユーザーへの警告なしに実行されます。場所を変更または追加する場合は、新しい場所が安全であり、ドキュメントやファイルを追加するためのユーザー権限が適切に設定されていることを確認してください。\n\nこのポリシー設定を有効にした場合、フォルダーの場所、パス、およびアプリケーションがマクロ実行ファイルを警告なしに開く日付を指定できます。[サブ フォルダーも使用できるようにする] オプションをオンにすると、指定したフォルダーにあるすべてのサブ フォルダーも信頼されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、信頼できる場所は指定されません。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location20"
         },
         {
             "parentCategory": {

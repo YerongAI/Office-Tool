@@ -1132,6 +1132,120 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Открыть следующий элемент"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Вернуться к текущей папке"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Открыть предыдущий элемент"
+                            }
+                        ],
+                        "valueName": "aftermove",
+                        "inputType": "dropdownList",
+                        "caption": "После перемещения или удаления открытого элемента:",
+                        "id": "L_aftermovingordeletinganopenitem0"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "closeorig",
+                        "inputType": "checkBox",
+                        "caption": "Закрывать исходное сообщение при ответе или пересылке",
+                        "id": "L_Closeoriginalmessagewhenreplyorforward"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "savesent",
+                        "inputType": "checkBox",
+                        "caption": "Сохранять копии сообщений в папке \"Отправленные\"",
+                        "id": "L_SavecopiesofmessagesinSentItemsfolder"
+                    },
+                    {
+                        "valueName": "autosavetime",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 99,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "Автосохранение неотправленных сообщений каждые xx минут (0=не сохранять):",
+                        "id": "L_Autosaveunsenteveryxxminutes0NoAutoSave"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "autoformatplaintext",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\options\\mail",
+                        "inputType": "checkBox",
+                        "caption": "Автоматическая очистка текстовых сообщений",
+                        "id": "L_Automaticallycleanupplaintextmessages"
+                    }
+                ]
+            },
+            "name": "L_Messagehandling",
+            "displayName": "Обработка сообщений",
+            "explainText": "Этот параметр используется для определения различных параметров обработки сообщений электронной почты.",
+            "tags": [
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Emailoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -1549,6 +1663,53 @@
         },
         {
             "parentCategory": {
+                "ref": "L_DesktopAlert"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "corner",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 3,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "Угол (0-3)",
+                        "id": "L_Corner03"
+                    },
+                    {
+                        "valueName": "xoffset",
+                        "minValueSpecified": false,
+                        "maxValueSpecified": false,
+                        "id": "L_XOffsetdefault44"
+                    },
+                    {
+                        "valueName": "yoffset",
+                        "minValueSpecified": false,
+                        "maxValueSpecified": false,
+                        "id": "L_YOffsetdefault42"
+                    }
+                ]
+            },
+            "name": "L_SpecifydefaultlocationofDesktopAlert",
+            "displayName": "Укажите расположение оповещения на рабочем столе по умолчанию",
+            "explainText": "Заданное по умолчанию расположение оповещений на рабочем столе можно изменить. В поле \"Угол\" выберите значение, соответствующее квадранту на экране пользователя: 0 = верхний левый угол, 1 = верхний правый угол, 2 = нижний левый угол, 3 = нижний правый угол (по умолчанию). В поле \"Смещение по X\" введите число, соответствующее расстоянию по горизонтали от выбранного угла экрана (значение по умолчанию: 44). В поле \"Смещение по Y\" введите число, соответствующее расстоянию по горизонтали от выбранного угла экрана (значение по умолчанию: 42).",
+            "tags": [
+                "L_DesktopAlert",
+                "L_AdvancedEmailoptions",
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\common\\desktopalerts"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_AdvancedEmailoptions"
             },
             "supportedOn": {
@@ -1613,6 +1774,194 @@
         },
         {
             "parentCategory": {
+                "ref": "L_AdvancedEmailoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Высокая"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Обычный"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Низкая"
+                            }
+                        ],
+                        "valueName": "importance",
+                        "inputType": "dropdownList",
+                        "caption": "Присвоить важность:",
+                        "id": "L_Setimportance"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Обычный"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Личные"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Частное"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "ДСП"
+                            }
+                        ],
+                        "valueName": "sensitivity",
+                        "inputType": "dropdownList",
+                        "caption": "Пометка:",
+                        "id": "L_Setsensitivity"
+                    },
+                    {
+                        "valueName": "numdaysexpire",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 3652,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "Срок действия сообщений (дн.):",
+                        "id": "L_Messagesexpireafterdays"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowcommasinrecip",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить запятые как разделитель адресов",
+                        "id": "L_Allowcommasasaddressseparator"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "autonamecheck",
+                        "inputType": "checkBox",
+                        "caption": "Автоматически проверять имена",
+                        "id": "L_Automaticnamechecking"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "deletewhenrespond",
+                        "inputType": "checkBox",
+                        "caption": "Удалять приглашения на собрания после ответа",
+                        "id": "L_DeletemeetingrequestfromInboxwhenresponding"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "showautosug",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
+                        "inputType": "checkBox",
+                        "caption": "Предлагать имена при заполнении полей \"Кому\", \"Копия\" и \"СК\"",
+                        "id": "L_SuggestnameswhilecompletingToCcandBccfields"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "adhocreviewbehavior",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\options\\mail",
+                        "inputType": "checkBox",
+                        "caption": "Добавлять свойства к вложениям, чтобы разрешить ответ с изменениями",
+                        "id": "L_AddpropertiestoattachmentstoenableReplywithChanges"
+                    }
+                ]
+            },
+            "name": "L_Whensendingamessage",
+            "displayName": "При отправке сообщения",
+            "explainText": "Задает значения соответствующих параметров пользовательского интерфейса.",
+            "tags": [
+                "L_AdvancedEmailoptions",
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Trackingoptions"
             },
             "supportedOn": {
@@ -1641,6 +1990,143 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\flagging",
             "valueName": "disablesenderflags"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Emailoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Не включать исходное сообщение"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Вложить исходное сообщение"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Включить текст исходного сообщения"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Включить и сдвинуть текст исходного сообщения"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1000
+                                    }
+                                },
+                                "displayName": "Помечать каждую строку исходного сообщения"
+                            }
+                        ],
+                        "valueName": "replystyle",
+                        "inputType": "dropdownList",
+                        "caption": "При ответе на сообщение:",
+                        "id": "L_Whenreplyingtoamessage"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Вложить исходное сообщение"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Включить текст исходного сообщения"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Включить и сдвинуть текст исходного сообщения"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1000
+                                    }
+                                },
+                                "displayName": "Помечать каждую строку исходного сообщения"
+                            }
+                        ],
+                        "valueName": "forwardstyle",
+                        "inputType": "dropdownList",
+                        "caption": "При пересылке сообщения:",
+                        "id": "L_Whenforwardingamessage"
+                    },
+                    {
+                        "valueName": "prefixtext",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Вставлять перед каждой строкой:",
+                        "id": "L_Prefixeachlinewith"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "markcomments",
+                        "key": "software\\microsoft\\office\\16.0\\common\\mailsettings",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить пометку примечаний пользователя",
+                        "id": "L_Allowuserscommentstobemarked"
+                    }
+                ]
+            },
+            "name": "L_Onrepliesandforwards",
+            "displayName": "При ответах и пересылках",
+            "explainText": "Задает значения соответствующих параметров пользовательского интерфейса.",
+            "tags": [
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
         },
         {
             "parentCategory": {
@@ -2615,6 +3101,829 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 480
+                                    }
+                                },
+                                "displayName": "08:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "00:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 30
+                                    }
+                                },
+                                "displayName": "00:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 60
+                                    }
+                                },
+                                "displayName": "01:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 90
+                                    }
+                                },
+                                "displayName": "01:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 120
+                                    }
+                                },
+                                "displayName": "02:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 150
+                                    }
+                                },
+                                "displayName": "02:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 180
+                                    }
+                                },
+                                "displayName": "03:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 210
+                                    }
+                                },
+                                "displayName": "03:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 240
+                                    }
+                                },
+                                "displayName": "04:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 270
+                                    }
+                                },
+                                "displayName": "04:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 300
+                                    }
+                                },
+                                "displayName": "05:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 330
+                                    }
+                                },
+                                "displayName": "05:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 360
+                                    }
+                                },
+                                "displayName": "06:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 390
+                                    }
+                                },
+                                "displayName": "06:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 420
+                                    }
+                                },
+                                "displayName": "07:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 450
+                                    }
+                                },
+                                "displayName": "07:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 480
+                                    }
+                                },
+                                "displayName": "08:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 510
+                                    }
+                                },
+                                "displayName": "08:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 540
+                                    }
+                                },
+                                "displayName": "09:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 570
+                                    }
+                                },
+                                "displayName": "09:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 600
+                                    }
+                                },
+                                "displayName": "10:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 630
+                                    }
+                                },
+                                "displayName": "10:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 660
+                                    }
+                                },
+                                "displayName": "11:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 690
+                                    }
+                                },
+                                "displayName": "11:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 720
+                                    }
+                                },
+                                "displayName": "12:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 750
+                                    }
+                                },
+                                "displayName": "12:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 780
+                                    }
+                                },
+                                "displayName": "13:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 810
+                                    }
+                                },
+                                "displayName": "13:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 840
+                                    }
+                                },
+                                "displayName": "14:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 870
+                                    }
+                                },
+                                "displayName": "14:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 900
+                                    }
+                                },
+                                "displayName": "15:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 930
+                                    }
+                                },
+                                "displayName": "15:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 960
+                                    }
+                                },
+                                "displayName": "16:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 990
+                                    }
+                                },
+                                "displayName": "16:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1020
+                                    }
+                                },
+                                "displayName": "17:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1050
+                                    }
+                                },
+                                "displayName": "17:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1080
+                                    }
+                                },
+                                "displayName": "18:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1110
+                                    }
+                                },
+                                "displayName": "18:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1140
+                                    }
+                                },
+                                "displayName": "19:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1170
+                                    }
+                                },
+                                "displayName": "19:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1200
+                                    }
+                                },
+                                "displayName": "20:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1230
+                                    }
+                                },
+                                "displayName": "20:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1260
+                                    }
+                                },
+                                "displayName": "21:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1290
+                                    }
+                                },
+                                "displayName": "21:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1320
+                                    }
+                                },
+                                "displayName": "22:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1350
+                                    }
+                                },
+                                "displayName": "22:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1380
+                                    }
+                                },
+                                "displayName": "23:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1410
+                                    }
+                                },
+                                "displayName": "23:30"
+                            }
+                        ],
+                        "valueName": "caldefstart",
+                        "inputType": "dropdownList",
+                        "caption": "Время начала:",
+                        "id": "L_Starttime"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1020
+                                    }
+                                },
+                                "displayName": "17:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "00:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 30
+                                    }
+                                },
+                                "displayName": "00:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 60
+                                    }
+                                },
+                                "displayName": "01:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 90
+                                    }
+                                },
+                                "displayName": "01:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 120
+                                    }
+                                },
+                                "displayName": "02:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 150
+                                    }
+                                },
+                                "displayName": "02:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 180
+                                    }
+                                },
+                                "displayName": "03:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 210
+                                    }
+                                },
+                                "displayName": "03:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 240
+                                    }
+                                },
+                                "displayName": "04:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 270
+                                    }
+                                },
+                                "displayName": "04:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 300
+                                    }
+                                },
+                                "displayName": "05:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 330
+                                    }
+                                },
+                                "displayName": "05:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 360
+                                    }
+                                },
+                                "displayName": "06:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 390
+                                    }
+                                },
+                                "displayName": "06:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 420
+                                    }
+                                },
+                                "displayName": "07:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 450
+                                    }
+                                },
+                                "displayName": "07:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 480
+                                    }
+                                },
+                                "displayName": "08:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 510
+                                    }
+                                },
+                                "displayName": "08:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 540
+                                    }
+                                },
+                                "displayName": "09:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 570
+                                    }
+                                },
+                                "displayName": "09:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 600
+                                    }
+                                },
+                                "displayName": "10:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 630
+                                    }
+                                },
+                                "displayName": "10:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 660
+                                    }
+                                },
+                                "displayName": "11:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 690
+                                    }
+                                },
+                                "displayName": "11:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 720
+                                    }
+                                },
+                                "displayName": "12:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 750
+                                    }
+                                },
+                                "displayName": "12:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 780
+                                    }
+                                },
+                                "displayName": "13:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 810
+                                    }
+                                },
+                                "displayName": "13:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 840
+                                    }
+                                },
+                                "displayName": "14:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 870
+                                    }
+                                },
+                                "displayName": "14:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 900
+                                    }
+                                },
+                                "displayName": "15:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 930
+                                    }
+                                },
+                                "displayName": "15:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 960
+                                    }
+                                },
+                                "displayName": "16:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 990
+                                    }
+                                },
+                                "displayName": "16:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1020
+                                    }
+                                },
+                                "displayName": "17:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1050
+                                    }
+                                },
+                                "displayName": "17:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1080
+                                    }
+                                },
+                                "displayName": "18:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1110
+                                    }
+                                },
+                                "displayName": "18:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1140
+                                    }
+                                },
+                                "displayName": "19:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1170
+                                    }
+                                },
+                                "displayName": "19:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1200
+                                    }
+                                },
+                                "displayName": "20:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1230
+                                    }
+                                },
+                                "displayName": "20:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1260
+                                    }
+                                },
+                                "displayName": "21:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1290
+                                    }
+                                },
+                                "displayName": "21:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1320
+                                    }
+                                },
+                                "displayName": "22:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1350
+                                    }
+                                },
+                                "displayName": "22:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1380
+                                    }
+                                },
+                                "displayName": "23:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1410
+                                    }
+                                },
+                                "displayName": "23:30"
+                            }
+                        ],
+                        "valueName": "caldefend",
+                        "inputType": "dropdownList",
+                        "caption": "Время окончания:",
+                        "id": "L_EndTime"
+                    }
+                ]
+            },
+            "name": "L_Workinghours",
+            "displayName": "Рабочие часы",
+            "explainText": "Задает значение соответствующего параметра пользовательского интерфейса.",
+            "tags": [
+                "L_Calendaroptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Calendaroptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -2880,6 +4189,65 @@
         },
         {
             "parentCategory": {
+                "ref": "L_FreeBusyOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "fbpublishrange",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 12,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "Число месяцев для публикации сведений о доступности:",
+                        "id": "L_MonthsofFreeBusyinformationpublished"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "lock fb range",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar\\internet free/busy",
+                        "inputType": "checkBox",
+                        "caption": "Запретить пользователям изменять месяцы, за которые публикуются данные о доступности",
+                        "id": "L_PreventusersfromchangingMonthsofFreeBusyinformation1"
+                    },
+                    {
+                        "valueName": "fbupdatesecs",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 86400,
+                        "maxValueSpecified": true,
+                        "id": "L_FreeBusyupdatedontheservereveryxxxseconds"
+                    }
+                ]
+            },
+            "name": "L_options9",
+            "displayName": "Параметры доступности",
+            "explainText": "Задает значение параметра \"Публиковать данные о доступности из календаря в течение [] месяцев\".",
+            "tags": [
+                "L_FreeBusyOptions",
+                "L_Calendaroptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_RecurrenceOptions"
             },
             "supportedOn": {
@@ -2945,6 +4313,36 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Contactoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DetermineOrderOfSourcesForPhotos",
+            "displayName": "Определить порядок источников для фотографий",
+            "explainText": "Данный параметр политики определяет порядок источников для фотографий, отображаемых в Outlook.\n\nЕсли этот параметр политики включен, Outlook будет сначала искать фотографии пользователей в адресной книге Outlook и Active Directory. Если они отсутствуют, Outlook покажет фотографию контакта (при наличии).\n\nЕсли этот параметр политики отключен или не настроен, Outlook будет сначала искать фотографии пользователей в адресных книгах контактов. Если они отсутствуют, Outlook выполнит поиск в адресной книге Outlook и Active Directory (при наличии).",
+            "tags": [
+                "L_Contactoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook",
+            "valueName": "preferadphotos"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -3000,6 +4398,193 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
             "valueName": "showcontactfieldobsolete"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Contactoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "E"
+                                },
+                                "displayName": "Имя (Отчество) Фамилия"
+                            },
+                            {
+                                "value": {
+                                    "string": "H"
+                                },
+                                "displayName": "Фамилия Имя"
+                            },
+                            {
+                                "value": {
+                                    "string": "S"
+                                },
+                                "displayName": "Имя Фамилия1 Фамилия2"
+                            }
+                        ],
+                        "valueName": "nameparserstyle",
+                        "inputType": "dropdownList",
+                        "caption": "По полному имени:",
+                        "id": "L_DefaultFullNameorder"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32791
+                                    }
+                                },
+                                "displayName": "Фамилия Имя"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32823
+                                    }
+                                },
+                                "displayName": "Имя Фамилия"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 14870
+                                    }
+                                },
+                                "displayName": "Организация"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32793
+                                    }
+                                },
+                                "displayName": "Фамилия, Имя (Организация)"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32792
+                                    }
+                                },
+                                "displayName": "Организация (Фамилия, Имя)"
+                            }
+                        ],
+                        "valueName": "fileasorder",
+                        "inputType": "dropdownList",
+                        "caption": "Как хранить:",
+                        "id": "L_DefaultFileAsorder"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "confirmduplicates",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\contact",
+                        "inputType": "checkBox",
+                        "caption": "Проверять наличие повторяющихся контактов",
+                        "id": "L_Checkforduplicatecontacts"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "indextabson",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\contact",
+                        "inputType": "checkBox",
+                        "caption": "Отображать дополнительный указатель контактов",
+                        "id": "L_ShowanadditionalContactsIndex"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Арабский"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "кириллица"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 15
+                                    }
+                                },
+                                "displayName": "Греческий"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 16
+                                    }
+                                },
+                                "displayName": "Иврит"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 28
+                                    }
+                                },
+                                "displayName": "Тайский"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 30
+                                    }
+                                },
+                                "displayName": "Вьетнамский"
+                            }
+                        ],
+                        "valueName": "indextabsscript",
+                        "inputType": "dropdownList",
+                        "caption": "Дополнительный указатель контактов:",
+                        "id": "L_AdditionalContactsIndex"
+                    }
+                ]
+            },
+            "name": "L_Selectthedefaultsettingforhowtofilenewcontacts",
+            "displayName": "Выберите способ группировки новых контактов, который будет использоваться по умолчанию",
+            "explainText": "Задает значение соответствующего параметра пользовательского интерфейса.",
+            "tags": [
+                "L_Contactoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\contact"
         },
         {
             "parentCategory": {
@@ -3400,6 +4985,34 @@
         },
         {
             "parentCategory": {
+                "ref": "L_OutlookOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_WindowsVista"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_InternetAndNetworkPathsIntoHyperlinks",
+            "displayName": "Адреса Интернета и сетевые пути в гиперссылки",
+            "explainText": "Этот параметр политики определяет, будет ли Outlook автоматически преобразовывать текст, представляющий адреса Интернета и сетевые пути, в гиперссылки. Этот параметр можно также настроить, установив флажок \"адреса Интернета и сетевые пути гиперссылками\" в приложении Outlook на вкладке \"Файл\" | \"Параметры\" | \"Почта\" | \"Параметры редактора...\" | \"Правописание\" | \"Параметры автозамены...\" | вкладка \"Автоформат\".\n\nЕсли этот параметр политики включен или не настроен, Outlook автоматически преобразовывает текст, представляющий адреса Интернета и сетевые пути, в гиперссылки. Это поведение Outlook по умолчанию.\n\nЕсли этот параметр политики отключен, Outlook не преобразовывает текст, представляющий адреса Интернета и сетевые пути, в гиперссылки.",
+            "tags": [
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\autoformat",
+            "valueName": "pgrfafo_25_1"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_ComposeMessages"
             },
             "supportedOn": {
@@ -3458,6 +5071,55 @@
             "name": "L_OutlookRichTextoptions",
             "displayName": "Параметры сообщений в формате Outlook RTF",
             "explainText": "Данный параметр политики управляет способом отправки из Outlook сообщений в формате RTF получателям в Интернете.\n\nЕсли этот параметр политики включен, можно выбрать следующие варианты обработки сообщений в формате RTF, предназначенных для получателей в Интернете.\n* Преобразовать в обычный текст. Сообщение Outlook преобразуется в обычный текст с кодировкой по умолчанию. Все форматирование сообщения будет потеряно.\n\nЕсли этот параметр политики отключен или не настроен, Outlook автоматически преобразует сообщения в формате RTF, отправляемые по Интернету, в формат HTML, что позволяет сохранить форматирование сообщения и обеспечить доставку вложений.",
+            "tags": [
+                "L_InternetFormatting",
+                "L_MailFormat",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\mail"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_InternetFormatting"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "plainwraplen",
+                        "minValue": 30,
+                        "minValueSpecified": true,
+                        "maxValue": 132,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "Автоматический перенос текста через <x> знаков.",
+                        "id": "L_Automaticallywraptextatxcharacters"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "message plain format mime",
+                        "inputType": "checkBox",
+                        "caption": "Кодировать вложения в формате UUENCODE",
+                        "id": "L_EncodeattachmentsinUUENCODEformatwhensending1"
+                    }
+                ]
+            },
+            "name": "L_Plaintextoptions",
+            "displayName": "Параметры обычных текстовых сообщений",
+            "explainText": "Данный параметр политики управляет форматированием сообщений в формате обычного текста при их отправке из Outlook.\n\nЕсли этот параметр политики включен, текст автоматически приводится в формат сообщений для Интернета, а вложения кодируются в формате UUENCODE.\n\nЕсли этот параметр политики отключен, в Outlook используется стандартный формат MIME для кодирования вложений в сообщениях с форматом обычного текста Outlook. Пользователи не смогут изменять выбранную конфигурацию.\n\nЕсли этот параметр политики не настроен, поведение Outlook соответствует тому, как будто параметр отключен, но пользователи могут изменить параметры отправки сообщений в формате обычного текста; для этого необходимо перейти в подменю \"Параметры\" меню \"Инструменты\", выбрать вкладку \"Формат электронной почты\", нажать кнопку \"Формат для Интернета\" и указать параметры в области \"Параметры обычных текстовых сообщений\".",
             "tags": [
                 "L_InternetFormatting",
                 "L_MailFormat",
@@ -4079,6 +5741,35 @@
                     "value": 0
                 }
             },
+            "name": "L_HidePhotoLink",
+            "displayName": "Скрыть ссылку на фотографию",
+            "explainText": "Данный параметр политики настраивает ссылку на личный сайт пользователя (при обнаружении), на который может быть отправлена фотография пользователя. Эта ссылка находится на вкладке \"Файл\".\n\nЕсли этот параметр политики включен, ссылка не отображается.\n\nЕсли этот параметр политики отключен или не настроен, ссылка отображается.",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options",
+            "valueName": "hidephotolink"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_AllowSelectionFloaties",
             "displayName": "Показывать мини-панель инструментов при выделении",
             "explainText": "В случае отключения этого параметра политики перестанет отображаться мини-панель инструментов при выделении текста. По умолчанию мини-панель инструментов отображается при выделении. Режим ее отображения можно изменить в диалоговом окне \"Параметры редактора\".",
@@ -4620,6 +6311,84 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
             "valueName": "archiveignorelastmodifiedtime"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Righttoleft"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Слева направо"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Справа налево"
+                            }
+                        ],
+                        "valueName": "calendar direction",
+                        "inputType": "dropdownList",
+                        "caption": "Задать направление макета:",
+                        "id": "L_Setlayoutdirection"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Контекстная"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Слева направо"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Справа налево"
+                            }
+                        ],
+                        "valueName": "text direction",
+                        "inputType": "dropdownList",
+                        "caption": "Задать глобальное направление текста:",
+                        "id": "L_Setglobaltextdirection"
+                    }
+                ]
+            },
+            "name": "L_LayoutOptions",
+            "displayName": "Параметры разметки",
+            "explainText": "Задает значение соответствующего параметра пользовательского интерфейса.",
+            "tags": [
+                "L_Righttoleft",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
         },
         {
             "parentCategory": {
@@ -6383,6 +8152,36 @@
                     "value": 0
                 }
             },
+            "name": "L_ConfigureCachedExchangeMode",
+            "displayName": "Использовать режим кэширования данных Exchange для новых и существующих профилей Outlook",
+            "explainText": "По умолчанию пользователи могут выбрать между настройкой режима кэширования данных Exchange и использованием режима работы в сети. Если этот параметр включен, в новых и существующих профилях Outlook будет использоваться режим кэширования данных Exchange. Если этот параметр отключен, создаваемые и существующие профили Outlook будут использовать режим работы в сети.",
+            "tags": [
+                "L_CachedExchangeMode",
+                "L_Exchangesettings",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\cached mode",
+            "valueName": "enable"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_CachedExchangeMode"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_InCachedExchangemakeSendReceiveF9nulloperation",
             "displayName": "Не выполнять синхронизацию в режиме кэширования Exchange при нажатии кнопки отправки и получения либо клавиши F9",
             "explainText": "По умолчанию при нажатии кнопки отправки и получения либо при нажатии клавиши F9 в учетных записях режима кэширования данных Exchange приложение Outlook выполняет синхронизацию с сервером Exchange. Если этот параметр включен, нажатие кнопки отправки и получения, а также нажатие клавиши F9 будет вызывать синхронизацию с Exchange лишь в том случае, если синхронизируется одна папка. Пользователи смогут и далее выполнять синхронизацию текущей папки с помощью комбинации клавиш SHIFT+F9.",
@@ -6453,6 +8252,39 @@
             "name": "L_Entersecondstowaittodownloadchangesfromserver",
             "displayName": "Введите интервал ожидания перед скачиванием изменений с сервера (в секундах)",
             "explainText": "Указывает интервал ожидания перед скачиванием изменений с сервера Exchange (в секундах).",
+            "tags": [
+                "L_CachedExchangeMode",
+                "L_Exchangesettings",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\cached mode"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_CachedExchangeMode"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "maximum",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 86400,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "Введите интервал ожидания перед синхронизацией (в секундах; по умолчанию 60 сек.)",
+                        "id": "L_EntersecondstowaitbeforesyncDefault60sec"
+                    }
+                ]
+            },
+            "name": "L_Entermaximumsecondstowaittosyncchanges",
+            "displayName": "Введите максимальный интервал ожидания перед синхронизацией изменений (в секундах)",
+            "explainText": "Указывает максимальный интервал ожидания перед синхронизацией изменений с сервером Exchange (в секундах).",
             "tags": [
                 "L_CachedExchangeMode",
                 "L_Exchangesettings",
@@ -6655,7 +8487,7 @@
                 }
             },
             "name": "L_DownloadPublicFolderFavorites",
-            "displayName":"Загружать общедоступную папку ''Избранное''",
+            "displayName": "Загружать общедоступную папку ''Избранное''",
             "explainText": "Флажок установлен. Устанавливает флажок \"Загружать общедоступную папку ''Избранное''\" на вкладке \"Дополнительно\" в диалоговом окне \"Microsoft Exchange Server\" (кнопка \"Другие настройки\" в диалоговом окне \"Учетные записи электронной почты\") и включает этот параметр. Также включается синхронизация избранных общедоступных папок в режиме кэширования данных Exchange. | Флажок снят. Снимает флажок \"Загружать общедоступную папку ''Избранное''\" на вкладке \"Дополнительно\" в диалоговом окне \"Microsoft Exchange Server\" (кнопка \"Другие настройки\" в диалоговом окне \"Учетные записи электронной почты\") и отключает этот параметр. Также отключается синхронизация избранных общедоступных папок в режиме кэширования данных Exchange.",
             "tags": [
                 "L_CachedExchangeMode",
@@ -7029,6 +8861,35 @@
             ],
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\cached mode"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AccountSettingsEmail"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_PreventSavingCredentialsForBasicAuthenticationPolicy",
+            "displayName": "Запретить сохранение учетных данных при политике обычной проверки подлинности",
+            "explainText": "Данный параметр политики позволяет отключить в Outlook сохранение учетных данных пользователя при использовании обычной проверки подлинности.\n\nЕсли этот параметр политики включен, приложение Outlook не будет сохранять учетные данные пользователя при использовании обычной проверки подлинности.\n\nЕсли этот параметр политики отключен или не настроен, приложение Outlook разрешает пользователю сохранять учетные данные при использовании обычной проверки подлинности на сервере. Такие учетные данные сохраняются в качестве универсальных и доступны любому процессу, который выполняется на компьютере с правами соответствующего пользователя.",
+            "tags": [
+                "L_AccountSettingsEmail",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\rpc",
+            "valueName": "disablebasicauthsavedcreds"
         },
         {
             "parentCategory": {
@@ -7464,37 +9325,6 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "disablecrossaccountcopy",
-                        "requiredSpecified": false,
-                        "expandableSpecified": false,
-                        "maxLength": 100,
-                        "maxLengthSpecified": true,
-                        "inputType": "textBox",
-                        "id": "L_PreventCopyingOrMovingItemsBetweenAccountsID"
-                    }
-                ]
-            },
-            "name": "L_PreventCopyingOrMovingItemsBetweenAccounts",
-            "displayName": "Запретить копирование и перемещение элементов между учетными записями",
-            "explainText": "Данный параметр политики позволяет запретить копирование или перемещение элементов в другие учетные записи или PST-файлы.\n\nЕсли этот параметр политики включен, перемещение и копирование элементов в другие учетные записи или PST-файлы запрещается. Введите один из следующих элементов информации:\n\n- \"Contoso.com\". Запрещается копирование и перемещение элементов из учетной записи, соответствующей указанному домену.\n- \"*\". Запрещается копирование из всех учетных записей и PST-файлов.\n- \"SharePoint\". Запрещается копирование и перемещение элементов из PST-файла SharePoint.\n\nЕсли этот параметр политики отключен или не настроен, копирование и перемещение элементов между учетными записями и PST-файлами разрешается.",
-            "tags": [
-                "L_Exchangesettings",
-                "L_ToolsAccounts",
-                "L_MicrosoftOfficeOutlook"
-            ],
-            "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\outlook"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Exchangesettings"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -7507,7 +9337,7 @@
             },
             "name": "L_AutomaticallyConfigureProfileBasedOnActive",
             "displayName": "Автоматическая настройка профиля на основе основного SMTP-адреса Active Directory",
-            "explainText": "Автоматически настраивать только первый профиль на базе основного SMTP-адреса Active Directory\n\nЭтот параметр политики определяет, могут ли пользователи, входящие в домен в среде Active Directory, менять основной SMTP-адрес, используемый при настройке учетных записей в Outlook.\n\nЕсли этот параметр включен, пользователи могут создать новый профиль путем ввода его имени. Профиль создается без помощи мастера создания учетной записи, а окна пользовательского интерфейса при этом не появляются.\n\nПосле успешного создания первого профиля этот ключ игнорируется.",
+            "explainText": "Этот параметр политики определяет, будет ли основной SMTP-адрес пользователя Active Directory автоматически использоваться при создании нового профиля.\n\nЕсли этот параметр политики включен, при создании пользователем нового профиля будет использоваться основной SMTP-адрес пользователя для профиля. Пользователь может только ввести имя профиля. Мастер, используемый для настройки определенных параметров профиля, не отображается пользователю при создании профиля.\n\nПримечание. Если необходимо, чтобы только первый новый профиль использовал основной SMTP-адрес Active Directory, и позволял пользователю указывать другой SMTP-адрес при создании других профилей, следует использовать параметр политики «Автоматическая настройка профиля на основе основного SMTP-адреса Active Directory (однократно)» вместо этого.\n\nЕсли этот параметр политики отключен или не настроен, при создании пользователем нового профиля будет отображаться мастер, используемый для настройки определенных параметров профиля, и пользователь может указать любой SMTP-адрес при создании профиля.",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -7535,8 +9365,8 @@
                 }
             },
             "name": "L_AutomaticallyConfigureProfileBasedOnActiveOnce",
-            "displayName": "Автоматически настраивать только первый профиль на базе основного SMTP-адреса Active Directory",
-            "explainText": "Автоматически однократно настраивать профиль на базе основного SMTP-адреса Active Directory\n\nЭтот параметр политики определяет, могут ли пользователи, входящие в домен в среде Active Directory, менять основной SMTP-адрес, используемый при настройке учетных записей Outlook.\n\nЕсли этот параметр включен, пользователи могут создать новый профиль путем ввода его имени. Профиль создается без помощи мастера создания учетной записи, а окна пользовательского интерфейса при этом не появляются.\n\nПосле успешного создания первого профиля этот ключ игнорируется.",
+            "displayName": "Автоматическая настройка профиля на основе основного SMTP-адреса Active Directory (однократно)",
+            "explainText": "Этот параметр политики определяет, может ли пользователь создавать дополнительные профили и указывать другой SMTP-адрес после автоматического создания первого профиля с использованием основного SMTP-адреса пользователя в Active Directory.\n\nЕсли этот параметр политики включен, то при первом создании пользователем нового профиля для профиля будет использоваться его основной SMTP-адрес Active Directory. Пользователь может только ввести имя профиля. Мастер, используемый для настройки определенных параметров профиля, не отображается пользователю при создании профиля.\n\nПосле автоматического создания первого профиля пользователь может вручную создать дополнительные профили. Мастер, используемый для настройки определенных параметров профиля, отображается для пользователя, и пользователь может указать любой SMTP-адрес при создании профиля.\n\nПримечание. Если необходимо использовать основной SMTP-адрес пользователя Active Directory всегда при создании нового профиля, следует использовать параметр политики «Автоматическая настройка профиля на основе основного SMTP-адреса Active Directory (однократно)» вместо этого. Если последний параметр политики включен, он имеет приоритет над этим параметром политики.\n\nЕсли этот параметр политики отключен или не настроен, при создании пользователем нового профиля будет отображаться мастер, используемый для настройки определенных параметров профиля, и пользователь может указать любой SMTP-адрес при создании профиля.",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -7605,6 +9435,35 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\folders",
             "valueName": "disableeditpermissions"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Predefined"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableEditDefaultUserPermissions",
+            "displayName": "Ограничение разрешений, которые могут быть назначены элементам \"По умолчанию\", \"Анонимные\" и \"Моя организация\" в почтовых папках и календарях.",
+            "explainText": "Этот параметр политики позволяет ограничить разрешения, которые можно назначать элементам \"По умолчанию\", \"Анонимные\" и \"Моя организация\" в почтовых папках и календарях.\n\nЕсли этот параметр политики включен, пользователи могут назначать только следующие разрешения элементам \"По умолчанию\", \"Анонимные\" и \"Моя организация\".\n\n- Нет папок почты\n- Нет или основные сведения о доступности в календарях\n\nПользователи не смогут назначать любые другие разрешения элементам \"По умолчанию\", \"Анонимные\" и \"Моя организация\". Все разрешения по-прежнему будут доступны для назначения другим пользователям в почтовых папках и календарях.\n\nЕсли этот параметр политики отключен или не настроен, пользователи могут назначать любые разрешения по умолчанию, анонимным или моим организациям в почтовых папках и календарях.",
+            "tags": [
+                "L_Predefined",
+                "L_Disableitemsinuserinterface",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\folders",
+            "valueName": "disableeditdefaultuserpermissions"
         },
         {
             "parentCategory": {
@@ -8099,7 +9958,7 @@
                         "minValueSpecified": true,
                         "maxValueSpecified": false,
                         "inputType": "decimalTextBox",
-                        "caption": "Число учетных записей: ",
+                        "caption": "Число учетных записей:",
                         "id": "L_SetMaximumNumberOfExchangeAccountsSpinID"
                     }
                 ]
@@ -8363,7 +10222,7 @@
                         "maxValue": 59,
                         "maxValueSpecified": true,
                         "inputType": "decimalTextBox",
-                        "caption": "Интервал синхронизации (в минутах): ",
+                        "caption": "Интервал синхронизации (в минутах):",
                         "id": "L_EASSyncFrequencyIntervalSpinID"
                     }
                 ]
@@ -8485,7 +10344,7 @@
             },
             "name": "L_DisableWebCalIntegration",
             "displayName": "Не включать интеграцию с интернет-календарями в Outlook",
-            "explainText": "Данный параметр политики позволяет указать, следует ли включать в Outlook интеграцию с интернет-календарями. Средства работы с интернет-календарями в Outlook позволяют пользователям публиковать календари в Интернете (с помощью протокола webcal: //) и подписываться на календари, опубликованные другими пользователями. Когда пользователь подписывается на интернет-календарь, Outlook периодически опрашивает календарь и загружает все публикуемые изменения.\n\nЕсли этот параметр политики включен, все функции поддержки интернет-календарей в Outlook будут отключены.\n\nЕсли этот параметр политики отключен или не настроен, Outlook разрешает пользователям подписываться на интернет-календари.",
+            "explainText": "Данный параметр политики позволяет указать, следует ли включать в Outlook интеграцию с интернет-календарями. Средства работы с интернет-календарями в Outlook позволяют пользователям публиковать календари в Интернете (с помощью протокола webcal://) и подписываться на календари, опубликованные другими пользователями. Когда пользователь подписывается на интернет-календарь, Outlook периодически опрашивает календарь и загружает все публикуемые изменения.\n\nЕсли этот параметр политики включен, все функции поддержки интернет-календарей в Outlook будут отключены.\n\nЕсли этот параметр политики отключен или не настроен, Outlook разрешает пользователям подписываться на интернет-календари.",
             "tags": [
                 "L_WebCalSubscriptions",
                 "L_ToolsAccounts",
@@ -9294,6 +11153,59 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\shutdown",
             "valueName": "allowshutdownwithexternalreferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Shutdown"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Поставщик MAPI не поддерживает"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Все поставщики MAPI поддерживают"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Никогда"
+                            }
+                        ],
+                        "valueName": "fastshutdownbehavior",
+                        "inputType": "dropdownList",
+                        "id": "L_ConfigureFastShutdownBehaviorDropID"
+                    }
+                ]
+            },
+            "name": "L_ConfigureFastShutdownBehavior",
+            "displayName": "Настройка быстрого завершения работы",
+            "explainText": "Данный параметр политики управляет быстрым завершением работы Outlook.\n\nЕсли этот параметр политики включен, можно выбрать один из следующих параметров:\n\n- Поставщик MAPI не поддерживает. Outlook почти всегда использует быстрое завершение работы, за исключением случаев, когда поставщик MAPI явно не поддерживает эту возможность.\n- Все поставщики MAPI поддерживают. Outlook использует быстрое завершение работы, только если все поставщики MAPI поддерживают эту возможность.\n- Никогда. Outlook никогда не использует быстрое завершение работы.\n\nЕсли этот параметр политики отключен или не настроен, поведение определяется параметром \"Поставщик MAPI не поддерживает\".",
+            "tags": [
+                "L_Shutdown",
+                "L_Miscellaneous",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\shutdown"
         },
         {
             "parentCategory": {
@@ -10368,48 +12280,6 @@
         },
         {
             "parentCategory": {
-                "ref": "L_OutlookSocialConnector"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "trustedproviderslist",
-                        "required": true,
-                        "requiredSpecified": true,
-                        "expandableSpecified": false,
-                        "maxLengthSpecified": false,
-                        "inputType": "textBox",
-                        "caption": "Разделять идентификаторы программ точками с запятой",
-                        "id": "L_SpecifyListOfSocialNetworkProvidersToLoadID"
-                    }
-                ]
-            },
-            "name": "L_SpecifyListOfSocialNetworkProvidersToLoad",
-            "displayName": "Указать список загружаемых поставщиков социальных сетей",
-            "explainText": "Данный параметр политики определяет список поставщиков социальных сетей, загружаемых в Outlook Social Connector.\n\nЕсли этот параметр политики включен, можно ввести список программных идентификаторов поставщиков социальных сетей, которые будут загружаться в Outlook Social Connector. Для разделения элементов списка необходимо использовать точку с запятой. Следует учесть, что при включении этого параметра политики в Outlook Social Connector будут загружаться только поставщики социальных сетей, указанные в данном списке. Другие поставщики социальных сетей загружаться не будут.\n\nЕсли этот параметр политики отключен или не настроен, в Outlook Social Connector могут загружаться любые указанные пользователем поставщики.",
-            "tags": [
-                "L_OutlookSocialConnector",
-                "L_MicrosoftOfficeOutlook"
-            ],
-            "application": "outlk16",
-            "key": "software\\microsoft\\office\\outlook\\socialconnector",
-            "valueName": "providersecuritymode"
-        },
-        {
-            "parentCategory": {
                 "ref": "L_Exchangesettings"
             },
             "supportedOn": {
@@ -10467,8 +12337,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "activationalertthreshold"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10500,8 +12369,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "activationretrylimit"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10533,8 +12401,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "alertinterval"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10566,8 +12433,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "memoryalertthreshold"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10599,8 +12465,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "restartmanagerretrylimit"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10710,7 +12575,7 @@
             },
             "name": "L_DisablePreviewPlace",
             "displayName": "Выключить список предварительных версий возможностей.",
-            "explainText": "Этот параметр политики определяет, разрешен ли просмотр списка предварительных версий возможностей. Если вы включите этот параметр, он будет недоступен.\n        Пользователи больше не смогут использовать эту возможность и предоставлять отзывы о предстоящих изменениях в Outlook.\n\\tПримечание. Этот параметр политики применяется только к версиям Office, предоставляемым по подписке, например Office 365 профессиональный плюс.",
+            "explainText": "        Этот параметр политики определяет, разрешен ли просмотр списка предварительных версий возможностей. Если вы включите этот параметр, эта функция будет недоступна.\n        Пользователи больше не смогут использовать эту функцию и предоставлять отзывы о предстоящих изменениях в Outlook.\n\\tПримечание. Этот параметр политики применяется только к версиям Office, предоставляемым по подписке, таким как Приложения Microsoft 365 для предприятий.\n      ",
             "tags": [
                 "L_Other",
                 "L_OutlookOptions",
@@ -10739,7 +12604,7 @@
             },
             "name": "L_DisableOnlineModeAuthDiagnostics",
             "displayName": "Отключить режим работы в сети для получения данных диагностики.",
-            "explainText": " Этот параметр политики определяет, разрешено ли использовать режим работы в сети для получения данных диагностики. Если его отключить, функция получения данных диагностики не сможет отправлять журналы проверки подлинности и диагностики в нашу службу.\n         Пользователи будут работать в автономном режиме. Все журналы будут собираться и сохраняться в папке скачанных файлов пользователя. Этот пользователь сможет обратиться в службу поддержки и решить, следует ли отправлять туда журналы. ",
+            "explainText": "         Этот параметр политики определяет, разрешено ли использовать режим работы в сети для получения данных диагностики. Если его отключить, функция получения данных диагностики не сможет отправлять журналы проверки подлинности и диагностики в нашу службу.\n         Пользователи будут работать в автономном режиме. Все журналы будут собираться и сохраняться в папке скачанных файлов пользователя. Этот пользователь сможет обратиться в службу поддержки и решить, следует ли отправлять туда журналы.\n      ",
             "tags": [
                 "L_Other",
                 "L_OutlookOptions",
@@ -10768,7 +12633,7 @@
             },
             "name": "L_EnableEndEarly",
             "displayName": "Заканчивать встречи и собрания раньше",
-            "explainText": "Этот параметр политики управляет тем, будет ли время окончания создаваемых встреч и собраний сокращаться на заданное число минут.\n\nЕсли этот параметр политики включен, создаваемые встречи и собрания будут заканчиваться раньше на указанное число минут.\n\nКоличество минут можно задать с помощью параметров \"Сокращать короткие встречи и собрания на указанное число минут\" и \"Сокращать длинные встречи и собрания на указанное число минут\".\n\nЕсли не задать время в минутах с помощью параметров политики, пользователи смогут выбирать его в меню \"Файл\" > \"Параметры\" > \"Календарь\". Если пользователь не укажет время, короткие собрания и встречи будут сокращаться на 5 минут, а длинные — на 10.\n\nЕсли этот параметр политики отключен, для встреч и собраний нельзя будет настроить раннее окончание, а соответствующий параметр в разделе \"Файл\" > \"Параметры\" > \"Календарь\" будет отключен.\n\nЕсли этот параметр политики не задан, для встреч и собраний не будет настроено раннее окончание, но пользователь сможет включить его в меню \"Файл\" > \"Параметры\" > \"Календарь\".\n\nПримечание. Этот параметр политики применяется только к версиям Office, предоставляемым по подписке, таким как Office 365 профессиональный плюс.",
+            "explainText": "        Этот параметр политики определяет, будут ли встречи и собрания, создаваемые пользователями, сокращаться на заданное число минут.\n\n        Если этот параметр политики включен, создаваемые встречи и собрания будут сокращаться на заданное число минут.\n\n        Количество минут можно задать с помощью параметров политики \"Сокращать короткие встречи и собрания на указанное число минут\" и \"Сокращать длинные встречи и собрания на указанное число минут\".\n\n        Если не задать время в минутах с помощью этих параметров политики, пользователи смогут указать его в разделе \"Файл\" > \"Параметры\" > \"Календарь\". Если пользователь не укажет время, короткие собрания и встречи по умолчанию будут сокращаться на 5 минут, а длинные — на 10.\n\n        Если этот параметр политики отключен, для встреч и собраний нельзя будет настроить раннее окончание, соответствующий параметр в разделе \"Файл\" > \"Параметры\" > \"Календарь\" будет отключен и пользователь не сможет его включить.\n\n        Если этот параметр политики не настроен, для встреч и собраний не будет настроено раннее окончание, но пользователь сможет включить его в разделе \"Файл\" > \"Параметры\" > \"Календарь\".\n\n        Примечание. Этот параметр политики применяется только к версиям Office, предоставляемым по подписке, таким как Приложения Microsoft 365 для предприятий.\n      ",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10778,6 +12643,55 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar",
             "valueName": "endeventsearly"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Calendaroptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "None"
+                                },
+                                "displayName": "Нет"
+                            },
+                            {
+                                "value": {
+                                    "string": "End_Early"
+                                },
+                                "displayName": "Завершить раньше"
+                            },
+                            {
+                                "value": {
+                                    "string": "Start_Late"
+                                },
+                                "displayName": "Начать позже"
+                            }
+                        ],
+                        "valueName": "shortenevents",
+                        "inputType": "dropdownList",
+                        "caption": "Выберите тип коротких событий",
+                        "id": "L_SelecttheShortenEventsType"
+                    }
+                ]
+            },
+            "name": "L_ShortenEventsType",
+            "displayName": "Короткие встречи и собрания",
+            "explainText": "        Этот параметр политики позволяет сокращать заданную по умолчанию продолжительность встреч и собраний на указанное число минут. Если этот параметр включен, можно выбрать один из следующих вариантов: \"Завершить раньше\", \"Начать позже\", \"Нет\".\n        Если выбрано \"Завершить раньше\", собрания и встречи будут завершаться на указанное число минут раньше.\n        Если выбрано \"Начать позже\", собрания и встречи будут начинаться на указанное число минут позже.\n        Если выбрано \"Нет\", заданная по умолчанию длительность собраний сокращаться не будет.\n        Во всех случаях настройки этого параметра будут отключены в диалоговом окне параметров Outlook.\n        Если не настроить этот параметр, пользователи могут изменить эти настройки, выбрав \"Файл\" > \"Параметры\" > \"Календарь\".\n\n        Примечание. Этот параметр политики применяется только к версиям Office для подписчиков, например к Приложениям Microsoft 365 для предприятий.",
+            "tags": [
+                "L_Calendaroptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
         },
         {
             "parentCategory": {
@@ -10802,7 +12716,7 @@
             },
             "name": "L_EndEarlyShort",
             "displayName": "Сокращать короткие встречи и собрания на указанное число минут",
-            "explainText": "Этот параметр политики позволяет указать, на сколько минут нужно сокращать короткие встречи или собрания, создаваемые пользователями. Встречи и собрания считаются короткими, если длятся менее часа.\n\nЕсли этот параметр политики включен, укажите количество минут, на которое нужно сокращать создаваемые короткие встречи и собрания. Пользователь не сможет изменить это значение в меню \"Файл\" > \"Параметры\" > \"Календарь\".\n\nПримечание. Необходимо также включить параметр политики \"Заканчивать встречи и собрания раньше\".\n\nЕсли отключить или не настроить этот параметр политики, будет использоваться стандартное значение (5 минут) или значение, заданное пользователем в разделе \"Файл\" > \"Параметры\" > \"Календарь\".\n\nПримечание. Этот параметр политики применяется только к версиям Office, предоставляемым по подписке, таким как Office 365 профессиональный плюс.",
+            "explainText": "        Этот параметр политики позволяет указать, на сколько минут нужно сокращать короткие встречи или собрания, создаваемые пользователями. Встречи и собрания считаются короткими, если длятся менее часа.\n\n        Если этот параметр политики включен, укажите количество минут, на которое нужно сокращать создаваемые короткие встречи и собрания. Пользователь не сможет изменить это значение в разделе \"Файл\" > \"Параметры\" > \"Календарь\".\n\n        Примечание. Необходимо также включить параметр политики \"Заканчивать встречи и собрания раньше\".\n\n        Если этот параметр политики отключен или не настроен, будет использоваться стандартное значение (5 минут) или значение, заданное пользователем в разделе \"Файл\" > \"Параметры\" > \"Календарь\".\n\n        Примечание. Этот параметр политики применяется только к версиям Office, предоставляемым по подписке, таким как Приложения Microsoft 365 для предприятий.\n      ",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10835,7 +12749,7 @@
             },
             "name": "L_EndEarlyLong",
             "displayName": "Сокращать длинные встречи и собрания на указанное число минут",
-            "explainText": "Этот параметр политики позволяет указать, на сколько минут нужно сокращать длинные встречи или собрания, создаваемые пользователями. Встречи и собрания считаются длинными, если продолжаются по крайней мере час.\n\nЕсли этот параметр политики включен, укажите количество минут, на которое нужно сокращать создаваемые длинные встречи и собрания. Пользователь не сможет изменить это значение в меню \"Файл\" > \"Параметры\" > \"Календарь\".\n\nПримечание. Необходимо также включить параметр политики \"Заканчивать встречи и собрания раньше\".\n\nЕсли отключить или не настроить этот параметр политики, будет использоваться стандартное значение (10 минут) или значение, заданное пользователем в разделе \"Файл\" > \"Параметры\" > \"Календарь\".\n\nПримечание. Этот параметр политики применяется только к версиям Office, предоставляемым по подписке, таким как Office 365 профессиональный плюс.",
+            "explainText": "        Этот параметр политики позволяет указать, на сколько минут нужно сокращать длинные встречи или собрания, создаваемые пользователями. Встречи и собрания считаются длинными, если длятся не менее часа.\n\n        Если этот параметр политики включен, укажите количество минут, на которое нужно сокращать создаваемые длинные встречи и собрания. Пользователь не сможет изменить это значение в разделе \"Файл\" > \"Параметры\" > \"Календарь\".\n\n        Примечание. Необходимо также включить параметр политики \"Заканчивать встречи и собрания раньше\".\n\n        Если этот параметр политики отключен или не настроен, будет использоваться стандартное значение (10 минут) или значение, заданное пользователем в разделе \"Файл\" > \"Параметры\" > \"Календарь\".\n\n        Примечание. Этот параметр политики применяется только к версиям Office, предоставляемым по подписке, таким как Приложения Microsoft 365 для предприятий.\n      ",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10863,8 +12777,8 @@
                 }
             },
             "name": "L_OnSendAddinsEnabled",
-            "displayName": "Отключить отправку, если не удается загрузить веб-расширения.",
-            "explainText": "Если этот параметр политики включен, Outlook будет блокировать отправку электронной почты и приглашений на собрания, пока веб-надстройки не загрузятся из Exchange.",
+            "displayName": "Блокировать отправку, если веб-надстройки не могут быть загружены",
+            "explainText": "Данный параметр политики позволяет определять, должен ли Outlook блокировать отправку писем и приглашений на собрания, пока веб-надстройки загружаются из Exchange.\n\nЕсли этот параметр политики включен, в Outlook не будет разрешено отправлять сообщения электронной почты и приглашения на собрания, пока веб-надстройки загружаются из Exchange.\n\nЕсли этот параметр политики отключен или не настроен, Outlook будет отправлять сообщения электронной почты и приглашения на собрания, даже если последние веб-надстройки еще не были загружены из Exchange.\n\nДополнительные сведения об использовании этого параметра см. в статье https://go.microsoft.com/fwlink/p/?linkid=2161562",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -10893,7 +12807,7 @@
             },
             "name": "L_RestUpdatesForCalendar",
             "displayName": "Обновление календарей с использованием REST",
-            "explainText": "Этот параметр политики определяет, может ли Outlook использовать REST для обновления календарей.\n\nЕсли этот параметр политики включен, Outlook будет использовать REST для обновления поддерживаемых календарей Office 365 и Outlook.com.\n\nЕсли этот параметр политики отключен, Outlook не будет использовать REST для обновления календарей.",
+            "explainText": "Этот параметр политики определяет, может ли Outlook использовать REST для обновления календарей.\n\n        Если этот параметр политики включен, Outlook будет использовать REST для обновления поддерживаемых календарей Office 365 и Outlook.com.\n\n        Если этот параметр политики отключен, Outlook не будет использовать REST для обновления календарей.",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10923,7 +12837,7 @@
             },
             "name": "L_PreferProvidedEmailInAutoDiscoverAuthPrompts",
             "displayName": "Предпочитать указанный электронный адрес учетной записи в запросах проверки подлинности для автообнаружения.",
-            "explainText": "Этот параметр политики, если он установлен, определяет, какой электронный адрес отображается в запросах проверки подлинности, связанных с автообнаружением.\n\nПо умолчанию (0): предпочтение отдается имени участника-пользователя учетной записи (если оно доступно).\n\nЕсли этот параметр включен, при запросах проверки подлинности автообнаружения предпочтение отдается указанному электронному адресу учетной записи (это может быть имя пользователя SMTP или имя участника-пользователя в зависимости от того, что из этого настроено).",
+            "explainText": "Этот параметр политики, если он установлен, определяет, какой электронный адрес отображается в запросах проверки подлинности, связанных с автообнаружением.\n\n        По умолчанию (0): предпочтение отдается имени участника-пользователя учетной записи (если оно доступно).\n\n        Если этот параметр включен, при запросах проверки подлинности автообнаружения предпочтение отдается указанному электронному адресу учетной записи (это может быть имя пользователя SMTP или имя участника-пользователя в зависимости от того, что из этого настроено).",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -11249,6 +13163,180 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\autodiscover",
             "valueName": "enableoffice365configservice"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Cryptography"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_AllowPrivateKeyCheck",
+            "displayName": "Проверять наличие закрытого ключа у пользователя, когда он отправляет зашифрованное письмо, одним из получателей которого является сам",
+            "explainText": "Этот параметр политики определяет, будет ли Outlook проверять наличие закрытого ключа у пользователя при отправке зашифрованного письма, если одним из получателей письма является сам пользователь. Пользователь может быть включен в список получателей как непосредственно, так и в качестве участника списка рассылки.\n\nЕсли включить этот параметр политики, Outlook будет проверять наличие закрытого ключа у пользователя.\n\nЕсли выключить этот параметр, Outlook не будет проверять наличие закрытого ключа у пользователя.\n\nЕсли не настраивать этот параметр политики, Outlook будет проверять наличие закрытого ключа у пользователя.",
+            "tags": [
+                "L_Cryptography",
+                "L_Security",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\security",
+            "valueName": "allowprivatekeycheck"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableAdminNotifications",
+            "displayName": "Выключить уведомления для администраторов клиентов Outlook",
+            "explainText": "Этот параметр политики определяет, могут ли администраторы клиентов получать уведомления поддержки в Outlook.\n\nПо умолчанию (0): администраторы клиентов, вошедшие в систему, получают обновления статуса со сведениями о потенциальных проблемах и исправлениях, которые затрагивают их клиенты.\n\nЕсли включить этот параметр, администраторы клиентов, вошедшие систему, не будут получать обновления статуса со сведениями о потенциальных проблемах и исправлениях, которые затрагивают их клиенты.",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\general",
+            "valueName": "disableadminnotifications"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableCrashNotificationOnRestart",
+            "displayName": "Отключить уведомление о сбое Outlook при его перезапуске.",
+            "explainText": "Этот параметр политики определяет, разрешено ли уведомление о сбое Outlook при перезапуске. Активация этого параметра заблокирует уведомление о сбое Outlook при перезапуске.",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\general",
+            "valueName": "disablecrashnotificationonrestart"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Delegates"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DelegateSentItemsStyle",
+            "displayName": "Сохранение сообщений, отправленных из общего почтового ящика, в папку \"Отправленные\"",
+            "explainText": "Этот параметр политики определяет возможность сохранения сообщений, отправляемых из общего почтового ящика, в папку \"Отправленные\" общего почтового ящика.\n\nСообщения, отправленные из общего почтового ящика, не сохраняются по умолчанию в папку \"Отправленные\" общего почтового ящика.\n\nЕсли этот параметр политики включен, сообщения, отправляемые из общего почтового ящика, будут сохраняться в папке \"Отправленные\" общего почтового ящика.\n\nЕсли этот параметр политики выключен или не настроен, сообщения, отправляемые из общего почтового ящика, не будут сохраняться в папке \"Отправленные\" общего почтового ящика.",
+            "tags": [
+                "L_Delegates",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
+            "valueName": "delegatesentitemsstyle"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Exchangesettings"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_AlwaysUseMSOAuthForAutodiscover",
+            "displayName": "Автообнаружение всегда поддерживает современную проверку подлинности",
+            "explainText": "Этот параметр политики определяет, может ли служба автообнаружения всегда использовать современную проверку подлинности независимо от методов проверки подлинности, которые поддерживаются основным типом подключения к почтовым ящикам.\n\nСлужба автообнаружения по умолчанию использует методы проверки подлинности, которые поддерживаются в основном типе подключения к почтовому ящику. Современная проверка подлинности не всегда будет одним из поддерживаемых методов проверки подлинности для некоторых типов подключений.\n\nЕсли включить этот параметр политики, служба автообнаружения всегда будет использовать современную проверку подлинности независимо от методов проверки подлинности, которые поддерживаются основным типом подключения к почтовым ящикам. Включение этого параметра политики может привести к дополнительным запросам пароля пользователю, если современная проверка подлинности используется, но не поддерживается для данного типа подключения.\n\nЕсли этот параметр политики выключен или не настроен, служба автообнаружения будет использовать только методы проверки подлинности, которые поддерживаются в основном типе подключения к почтовым ящикам.",
+            "tags": [
+                "L_Exchangesettings",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\exchange",
+            "valueName": "alwaysusemsoauthforautodiscover"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_RecommendOutlookExtension",
+            "displayName": "Рекомендовать расширение Microsoft Outlook",
+            "explainText": "Этот параметр политики определяет, будут ли пользователи Windows 10 приложения Outlook и веб-приложения Outlook видеть рекомендацию по установке нового расширения Microsoft Outlook для Microsoft Edge. Если пользователь решит щелкнуть рекомендацию, он попадет на страницу расширения Microsoft Outlook, где он сможет выбрать установку этот веб-сайт для повышения производительности. Пользователи могут отклонить рекомендацию и увидят ее только дважды. Если пользователи решат установить расширение, они смогут получить доступ к своей почте, календарю, контактам и задачам с помощью значка в Microsoft Edge, не открывая другую вкладку браузера. Расширение представляет собой \"мини-версию\" Outlook в Интернете, которая работает как всплывающее меню в один щелчок из заголовка браузера.\n\nВ будущем корпорация Майкрософт может выпустить версию этого расширения для браузера Chrome. Корпорация Майкрософт будет соблюдать эту политику и в будущем при продвижении расширений Chrome.\n\nЕсли этот параметр политики включен или не настроен, рекомендация будет представлена пользователю.\n\nЕсли этот параметр политики отключен, рекомендация не будет представлена пользователю.\n\nПримечание. Этот параметр политики применяется только к версиям Office с подпиской, таким как приложения Microsoft 365 для предприятий и веб-приложение Outlook.\n\nДля получения дополнительных сведений см. https://go.microsoft.com/fwlink/?linkid=2165458",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\general",
+            "valueName": "recommendoutlookextension"
         }
     ]
 }

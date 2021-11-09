@@ -347,35 +347,6 @@
                     "value": 0
                 }
             },
-            "name": "L_Openattachmentsforfullscreenreading",
-            "displayName": "電子メールの添付ファイルを閲覧表示で開く",
-            "explainText": "対応する UI オプションをオンまたはオフにします。",
-            "tags": [
-                "L_OptionsGeneral",
-                "L_WordOptions",
-                "L_MicrosoftOfficeWord"
-            ],
-            "application": "word16",
-            "key": "software\\microsoft\\office\\16.0\\word\\options",
-            "valueName": "allowautoreadingmode"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_OptionsGeneral"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
             "name": "L_AllowSelectionFloaties",
             "displayName": "選択時にミニ ツール バーを表示する",
             "explainText": "このポリシー設定を無効にすると、テキストの選択時にミニ ツール バーが表示されなくなります。既定では、選択時にミニ ツール バーが表示され、[Word のオプション] ダイアログ ボックスで表示/非表示を切り替えることができます。",
@@ -874,6 +845,348 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Trackchangesandcompare"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "なし"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "校閲者別"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "ピンク"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "薄い青"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "薄い黄"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "薄い紫"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "薄いオレンジ"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "薄い緑"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "灰色"
+                            }
+                        ],
+                        "valueName": "revmodeinscellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "挿入されたセルの色:",
+                        "id": "L_TablecomparecolorsPart1"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "なし"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "校閲者別"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "ピンク"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "薄い青"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "薄い黄"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "薄い紫"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "薄いオレンジ"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "薄い緑"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "灰色"
+                            }
+                        ],
+                        "valueName": "revmodedelcellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "削除されたセルの色:",
+                        "id": "L_TablecomparecolorsPart2"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "なし"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "校閲者別"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "ピンク"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "薄い青"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "薄い黄"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "薄い紫"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "薄いオレンジ"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "薄い緑"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "灰色"
+                            }
+                        ],
+                        "valueName": "revmodemergecellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "結合されたセルの色:",
+                        "id": "L_TablecomparecolorsPart3"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "なし"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "校閲者別"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "ピンク"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "薄い青"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "薄い黄"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "薄い紫"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "薄いオレンジ"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "薄い緑"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "灰色"
+                            }
+                        ],
+                        "valueName": "revmodesplitcellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "分割されたセルの色:",
+                        "id": "L_TablecomparecolorsPart4"
+                    }
+                ]
+            },
+            "name": "L_Tablecomparecolors",
+            "displayName": "表の比較に使用する色",
+            "explainText": "このオプションでは、表の比較結果を表示する色を指定します。[なし] を選択すると、変更履歴は記録されますが、比較後の文書の [変更履歴] ウィンドウに色なしで表示されます。",
+            "tags": [
+                "L_Trackchangesandcompare",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Proofing"
             },
             "supportedOn": {
@@ -1042,6 +1355,837 @@
         },
         {
             "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_CorrectTWoINitialCApitals",
+            "displayName": "2 文字目を小文字にする [THe ... → The ...]",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ftwoinitialcaps_24_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Capitalizefirstletterofsentence",
+            "displayName": "文の先頭文字を大文字にする [the ... → The ...]",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "finitialcap_32_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Capitalizenamesofdays",
+            "displayName": "曜日の先頭文字を大文字にする [monday → Monday]",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcapdaynames_48_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_CorrectaccidentalusageofcAPSLOCKkey",
+            "displayName": "CapsLock キーの押し間違いを修正する [tHE ... → The ...]",
+            "explainText": "このポリシー設定では、[Word のオプション] | [文章校正] | [オートコレクトのオプション...] | [オートコレクト] の [CapsLock キーの押し間違いを修正する] を設定できます。\n\nこのポリシー設定を有効にした場合、[CapsLock キーの押し間違いを修正する] が設定されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、[CapsLock キーの押し間違いを修正する] は設定されません。",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcapslock_40_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Replacetextasyoutype",
+            "displayName": "入力中に自動修正する",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcorrecttyping_16_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Correctkeyboardsetting",
+            "displayName": "キーボードの設定を修正する",
+            "explainText": "このポリシー設定では、[Word のオプション] | [文章校正] | [オートコレクトのオプション...] | [オートコレクト] の [キーボードの設定を修正する] を設定できます。\n\nこのポリシー設定を有効にした場合、[キーボードの設定を修正する] が設定されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、[キーボードの設定を修正する] は設定されません。",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcorrectkeyboard_64_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Firstlineindent",
+            "displayName": "1 行目のインデント",
+            "explainText": "[入力中に自動で変更する項目] グループの [行の始まりのスペースを字下げに変更する] オプションをオンまたはオフにします。このオプションは、特定の編集言語を有効にしないと Word で表示されない場合があります。",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ffirstindent_344_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Straightquoteswithsmartquotes",
+            "displayName": "左右の区別がない引用符を、区別がある引用符に変更する",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fsmartquote_8_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ordinals1stwithsuperscript",
+            "displayName": "序数 (1st, 2nd, 3rd, ...) を上付き文字に変更する",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fnumsupscript_104_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Fractions12withfractioncharacter",
+            "displayName": "分数 (1/2, 1/4, 3/4) を分数文字 (組み文字) に変更する",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ffraction_96_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Symbolcharacterswithsymbols",
+            "displayName": "特定の文字列 (-- など) を特殊記号に変更する",
+            "explainText": "[ハイフン (--) をダッシュ (-) に変更する] オプションをオンまたはオフにします。",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "femdash_112_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Boldand_italic_withrealformatting",
+            "displayName": "'*'、'_' で囲んだ文字列を '太字'、'斜体' に書式設定する",
+            "explainText": "このポリシー設定では、['*'、 '_' で囲んだ文字列を '太字'、'斜体' に書式設定する] オプションを設定できます。\n\nこのポリシー設定を有効にした場合は、[ファイル] | [オプション] | [文章校正] | [オートコレクトのオプション...] | [一括オートフォーマット] の ['*'、 '_' で囲んだ文字列を '太字'、'斜体' に書式設定する] オプションが設定されます。\n\nこのポリシー設定を無効にするか、未構成にした場合は、このオプションは設定されません。",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fbolditalic_120_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Dashlikecharacters",
+            "displayName": "長音とダッシュ",
+            "explainText": "[長音とダッシュを正しく使い分ける] オプションをオンまたはオフにします。このオプションは、特定の編集言語を有効にしないと Word で表示されない場合があります。",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fdbdashes_136_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Headings",
+            "displayName": "見出し",
+            "explainText": "[既定の見出しスタイル] オプションをオンまたはオフにします。",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fheading_280_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_BorderLines",
+            "displayName": "罫線",
+            "explainText": "[罫線] オプションをオンまたはオフにします。",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fbotbord_328_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Tables",
+            "displayName": "表",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ftable_392_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DateStyle",
+            "displayName": "日付スタイル",
+            "explainText": "[日付スタイル] オプションをオンまたはオフにします。このオプションは、特定の編集言語を有効にしないと Word で表示されない場合があります。",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fdate_376_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Automaticbulletedlists",
+            "displayName": "箇条書き (行頭文字)",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fbulletlist_296_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Automaticnumberedlists",
+            "displayName": "箇条書き (段落番号)",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fnumberedlist_312_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ClosingStyleToLetterClosings",
+            "displayName": "結語のスタイル",
+            "explainText": "このポリシー設定では、[Word のオプション] | [文章校正] | [オートコレクトのオプション...] | [入力オートフォーマット] にある [結語のスタイル] オプションを設定できます。\n\nこのポリシー設定を有効にした場合、[結語のスタイル] が設定されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、[結語のスタイル] は設定されません。",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fclosing_360_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Autospace",
+            "displayName": "自動スペース調整",
+            "explainText": "このポリシー設定では、[入力中に自動で行う処理] グループの [日本語と英数字の間の不要なスペースを削除する] オプションを設定できます。このオプションは、特定の編集言語を有効にしないと Word で表示されない場合があります。\n\nこのポリシー設定を有効にした場合、[日本語と英数字の間の不要なスペースを削除する] が設定されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、[日本語と英数字の間の不要なスペースを削除する] は設定されません。",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fsbdbspace_152_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchparentheses",
+            "displayName": "かっこを正しく組み合わせる",
+            "explainText": "このポリシー設定では、[Word のオプション] | [文章校正] | [オートコレクトのオプション...] | [入力オートフォーマット] | [入力中に自動で行う処理] の [かっこを正しく組み合わせる] オプションを設定できます。\n\nこのポリシー設定を有効にした場合、[かっこを正しく組み合わせる] が設定されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、[かっこを正しく組み合わせる] は設定されません。",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fautopair_144_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Formatbeginningoflistitemliketheonebeforeit",
+            "displayName": "リストの始まりの書式を前のリストと同じにする",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fleadinemph_176_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Setleftindentontabsandbackspace",
+            "displayName": "タブとバックスペースの左インデント",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ftabindent_128_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Definestylesbasedonyourformatting",
+            "displayName": "設定した書式を新規スタイルとして登録する",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fautostyledef_184_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_InsertClosingPhraseToMatchMemoStyle",
+            "displayName": "'記' などに対応する '以上' を挿入する",
+            "explainText": "['記' などに対応する '以上' を挿入する] オプションをオンまたはオフにします。このオプションは、特定の編集言語を有効にしないと Word で表示されない場合があります。",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "finsertover_424_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_InsertClosingPhraseToMatchJapaneseSalutation",
+            "displayName": "頭語に対応する結語を挿入する",
+            "explainText": "[頭語に対応する結語を挿入する] オプションをオンまたはオフにします。このオプションは、特定の編集言語を有効にしないと Word で表示されない場合があります。",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "finsertclosing_408_1"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_OptionsCustomizeRibbon"
             },
             "supportedOn": {
@@ -1155,6 +2299,122 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "nomargpageview"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Documentproperties",
+            "displayName": "文書プロパティを印刷する",
+            "explainText": "このポリシー設定では、[ファイル] タブ | [オプション] | [表示] | [印刷] オプションにある [文書プロパティを印刷する] 設定を制御できます。\n\nこのポリシー設定を有効にした場合、印刷される各文書に対して、文書の作成者、ファイル名、作成日など、印刷する文書のプロパティが追加のページに印刷されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、追加ページは印刷されません。",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "summary_1_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Drawingobjects",
+            "displayName": "Word で作成した描画オブジェクトを印刷する",
+            "explainText": "このポリシー設定では、[ファイル] タブ | [オプション] | [表示] | [印刷] オプションにある [Word で作成した描画オブジェクトを印刷する] 設定を構成できます。\n\nこのポリシー設定を有効にした場合、グラフィックとテキスト ボックスが印刷されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、グラフィックやテキスト ボックスは印刷されません。その代わり、各グラフィックとテキスト ボックスの位置に空白のボックスが印刷されます。",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "disabledrawnobj_14_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Updatefields",
+            "displayName": "印刷前にフィールドを更新する",
+            "explainText": "このポリシー設定では、[ファイル] タブ | [オプション] | [表示] | [印刷] オプションにある [印刷前にフィールドを更新する] 設定を構成できます。\n\nこのポリシー設定を有効にすると、文書を印刷する前に、文書内のフィールドが更新されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、文書を印刷する前に文書内のフィールドは更新されません。",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "refresh_5_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Updatelinks",
+            "displayName": "印刷前にリンクされているデータを更新する",
+            "explainText": "このポリシー設定では、[ファイル] タブ | [オプション] | [表示] | [印刷] オプションにある [印刷前にリンクされているデータを更新する] 設定を制御します。\n\nこのポリシー設定を有効にした場合、文書を印刷する前に、文書内のリンクされたデータが更新されます。Word でのリンクされたデータの例には、Excel スプレッドシートにリンクされた埋め込み Excel グラフがあります。\n\nこのポリシー設定を無効にするか、未構成にした場合、文書を印刷する前に文書内のリンクされたデータは更新されません。",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "updatelinks_13_1"
         },
         {
             "parentCategory": {
@@ -1440,7 +2700,7 @@
             },
             "name": "L_SaveAutoRecoverinfo",
             "displayName": "自動回復用データを保存する",
-            "explainText":"このポリシー設定を有効にした場合、Word がファイルの自動回復用データを保存し終わるまで待機する間隔を分単位で指定できます。Word がファイルの自動回復用データを保存しないようにするには、このポリシーを有効にして、値を '0' に設定します。\n\nこのポリシー設定を無効にするか、または未構成にした場合、このポリシーの設定内容は、Word がファイルの自動回復用データを保存し終わるまで待機する間隔に反映されません。既定では、Word はファイルの自動回復用データを 10 分ごとに保存します。",
+            "explainText": "このポリシー設定を有効にした場合、Word がファイルの自動回復用データを保存し終わるまで待機する間隔を分単位で指定できます。Word がファイルの自動回復用データを保存しないようにするには、このポリシーを有効にして、値を '0' に設定します。\n\nこのポリシー設定を無効にするか、または未構成にした場合、このポリシーの設定内容は、Word がファイルの自動回復用データを保存し終わるまで待機する間隔に反映されません。既定では、Word はファイルの自動回復用データを 10 分ごとに保存します。",
             "tags": [
                 "L_Save",
                 "L_WordOptions",
@@ -3113,6 +4373,35 @@
                     "value": 0
                 }
             },
+            "name": "L_Draftoutput",
+            "displayName": "下書き印刷する",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "draftoutput_2_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_Backgroundprinting",
             "displayName": "バックグラウンドで印刷する",
             "explainText": "対応する UI オプションをオンまたはオフにします。",
@@ -3124,6 +4413,93 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "backgroundprint"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Reverseprintorder",
+            "displayName": "ページの印刷順序を逆にする",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "reverseprint_6_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Frontofsheet",
+            "displayName": "両面印刷時に表面から印刷する",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "fprorder1_21_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Backofthesheet",
+            "displayName": "両面印刷時に裏面から印刷する",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "fprorder2_22_1"
         },
         {
             "parentCategory": {
@@ -4662,7 +6038,7 @@
             },
             "name": "L_BlockMacroExecutionFromInternet",
             "displayName": "インターネットから取得した Office ファイル内のマクロの実行をブロックします",
-            "explainText": "このポリシー設定では、インターネットから取得された Office ファイル内のマクロの実行をブロックできます。\n\nこのポリシー設定を有効にした場合、セキュリティ センターの [マクロの設定] セクションで [すべてのマクロを有効にする] がオンになっている場合でも、マクロの実行はブロックされます。また、[コンテンツの有効化] の選択肢が表示されないで、マクロの実行がブロックされたことを示す通知が表示されます。Office ファイルが信頼できる場所に保存されている場合、または以前にユーザーが信頼した場合は、マクロを実行できます。\n\nこのポリシーを無効にした場合、または構成していない場合は、セキュリティ センターの [マクロの設定] セクションで構成された設定で、インターネットから取得された Office ファイル内のマクロが実行されるかどうかが決まります。\n        ",
+            "explainText": "        このポリシー設定では、インターネットから取得された Office ファイル内のマクロの実行をブロックできます。\n\n        このポリシー設定を有効にした場合、セキュリティ センターの [マクロの設定] セクションで [すべてのマクロを有効にする] がオンになっている場合でも、マクロの実行はブロックされます。また、[コンテンツの有効化] の選択肢が表示されないで、マクロの実行がブロックされたことを示す通知が表示されます。Office ファイルが信頼できる場所に保存されている場合、または以前にユーザーが信頼した場合は、マクロを実行できます。\n\n        このポリシーを無効にした場合、または構成していない場合は、セキュリティ センターの [マクロの設定] セクションで構成された設定で、インターネットから取得された Office ファイル内のマクロが実行されるかどうかが決まります。\n        ",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -6290,6 +7666,70 @@
         },
         {
             "parentCategory": {
+                "ref": "L_ProtectedView"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "ファイルをブロックする"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "ファイルを保護ビューで開く"
+                            }
+                        ],
+                        "valueName": "openinprotectedview",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsDropID"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "disableeditfrompv",
+                        "key": "software\\microsoft\\office\\16.0\\word\\security\\filevalidation",
+                        "inputType": "checkBox",
+                        "caption": "オンにした場合、編集を許可します。オフにした場合、編集を許可しません。",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsStr3"
+                    }
+                ]
+            },
+            "name": "L_SetDocumentBehaviorIfFileValidationFails",
+            "displayName": "ファイル検証に失敗した場合のドキュメントの処理の設定",
+            "explainText": "このポリシー設定では、ファイル検証に失敗した場合のドキュメントの処理方法を指定します。\n\nこのポリシー設定を有効にした場合、ファイル検証に失敗したファイルに対する次のオプションを構成できます。\n\n- ファイルを完全にブロックする: ユーザーはファイルを開くことができません。\n- ファイルを保護ビューで開く (編集不可): ユーザーはファイルを編集できません。このポリシー設定を無効にした場合も、この方法でファイルが処理されます。\n- ファイルを保護ビューで開く (編集可): ユーザーはファイルを編集することができます。このポリシー設定を構成しなかった場合も、この方法でファイルが処理されます。\n\nこのポリシー設定を無効にした場合、[ファイルを保護ビューで開く (編集不可)] の処理が適用されます。\n\nこのポリシー設定を構成しなかった場合、[ファイルを保護ビューで開く (編集可)] の処理が適用されます。",
+            "tags": [
+                "L_ProtectedView",
+                "L_TrustCenter",
+                "L_Security",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\security\\filevalidation"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -6403,6 +7843,510 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "showmarkupopensave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchcase",
+            "displayName": "大文字/小文字 [A/a]",
+            "explainText": "このポリシー設定では、[あいまい検索] ダイアログ ボックスの対応する UI オプションをオンまたはオフにすることができます。[あいまい検索] ダイアログ ボックスは、[ホーム] タブ | [編集] | [検索] | [ジャンプ...] | [検索オプション] | [オプション...] から [検索] ダイアログ ボックスを表示してアクセスできます。また、ナビゲーション ウィンドウの [ホーム] タブ | [編集] | [検索] | < 下矢印 > | [オプション...] | [あいまい検索 (日)] | [オプション...] から表示することもできます。[あいまい検索 (日)] チェック ボックスおよび [オプション...] ボタンは、特定の編集言語を有効にしないと Word で表示されない場合があります。\n\nこのポリシー設定を有効にした場合、このポリシーの設定のタイトルで指定されたように、対応する UI オプションをオンにします。\n\nこのポリシー設定を無効にするか、または未構成にした場合、対応する UI オプションはオフになります。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqcase_0_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchfullhalfwidthform",
+            "displayName": "全角文字/半角文字 [Ａ/A]",
+            "explainText": "このポリシー設定では、[あいまい検索] ダイアログ ボックスの対応する UI オプションをオンまたはオフにすることができます。[あいまい検索] ダイアログ ボックスは、[ホーム] タブ | [編集] | [検索] | [ジャンプ...] | [検索オプション] | [オプション...] から [検索] ダイアログ ボックスを表示してアクセスできます。また、ナビゲーション ウィンドウの [ホーム] タブ | [編集] | [検索] | < 下矢印 > | [オプション...] | [あいまい検索 (日)] | [オプション...] から表示することもできます。[あいまい検索 (日)] チェック ボックスおよび [オプション...] ボタンは、特定の編集言語を有効にしないと Word で表示されない場合があります。\n\nこのポリシー設定を有効にした場合、このポリシーの設定のタイトルで指定されたように、対応する UI オプションをオンにします。\n\nこのポリシー設定を無効にするか、または未構成にした場合、対応する UI オプションはオフになります。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqbyte_1_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchhiraganakatakana",
+            "displayName": "ひらがな/カタカナ [あ/ア]",
+            "explainText": "このポリシー設定では、[あいまい検索] ダイアログ ボックスの対応する UI オプションをオンまたはオフにすることができます。[あいまい検索] ダイアログ ボックスは、[ホーム] タブ | [編集] | [検索] | [ジャンプ...] | [検索オプション] | [オプション...] から [検索] ダイアログ ボックスを表示してアクセスできます。また、ナビゲーション ウィンドウの [ホーム] タブ | [編集] | [検索] | < 下矢印 > | [オプション...] | [あいまい検索 (日)] | [オプション...] から表示することもできます。[あいまい検索 (日)] チェック ボックスおよび [オプション...] ボタンは、特定の編集言語を有効にしないと Word で表示されない場合があります。\n\nこのポリシー設定を有効にした場合、このポリシーの設定のタイトルで指定されたように、対応する UI オプションをオンにします。\n\nこのポリシー設定を無効にするか、または未構成にした場合、対応する UI オプションはオフになります。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqhira_kata_3_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchcontractionsyoonsokuon",
+            "displayName": "拗音、促音 [ぁぃぅぇぉ...]",
+            "explainText": "このポリシー設定では、[あいまい検索] ダイアログ ボックスの対応する UI オプションをオンまたはオフにすることができます。[あいまい検索] ダイアログ ボックスは、[ホーム] タブ | [編集] | [検索] | [ジャンプ...] | [検索オプション] | [オプション...] から [検索] ダイアログ ボックスを表示してアクセスできます。また、ナビゲーション ウィンドウの [ホーム] タブ | [編集] | [検索] | < 下矢印 > | [オプション...] | [あいまい検索 (日)] | [オプション...] から表示することもできます。[あいまい検索 (日)] チェック ボックスおよび [オプション...] ボタンは、特定の編集言語を有効にしないと Word で表示されない場合があります。\n\nこのポリシー設定を有効にした場合、このポリシーの設定のタイトルで指定されたように、対応する UI オプションをオンにします。\n\nこのポリシー設定を無効にするか、または未構成にした場合、対応する UI オプションはオフになります。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqsmallkana_4_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchminusdashchoon",
+            "displayName": "マイナス/長音/ダッシュ [－/ー/-]",
+            "explainText": "このポリシー設定では、[あいまい検索] ダイアログ ボックスの対応する UI オプションをオンまたはオフにすることができます。[あいまい検索] ダイアログ ボックスは、[ホーム] タブ | [編集] | [検索] | [ジャンプ...] | [検索オプション] | [オプション...] から [検索] ダイアログ ボックスを表示してアクセスできます。また、ナビゲーション ウィンドウの [ホーム] タブ | [編集] | [検索] | < 下矢印 > | [オプション...] | [あいまい検索 (日)] | [オプション...] から表示することもできます。[あいまい検索 (日)] チェック ボックスおよび [オプション...] ボタンは、特定の編集言語を有効にしないと Word で表示されない場合があります。\n\nこのポリシー設定を有効にした場合、このポリシーの設定のタイトルで指定されたように、対応する UI オプションをオンにします。\n\nこのポリシー設定を無効にするか、または未構成にした場合、対応する UI オプションはオフになります。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqminus_2_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchrepeatcharactermarks",
+            "displayName": "繰り返し記号 [ヽヾゝゞ々]",
+            "explainText": "このポリシー設定では、[あいまい検索] ダイアログ ボックスの対応する UI オプションをオンまたはオフにすることができます。[あいまい検索] ダイアログ ボックスは、[ホーム] タブ | [編集] | [検索] | [ジャンプ...] | [検索オプション] | [オプション...] から [検索] ダイアログ ボックスを表示してアクセスできます。また、ナビゲーション ウィンドウの [ホーム] タブ | [編集] | [検索] | < 下矢印 > | [オプション...] | [あいまい検索 (日)] | [オプション...] から表示することもできます。[あいまい検索 (日)] チェック ボックスおよび [オプション...] ボタンは、特定の編集言語を有効にしないと Word で表示されない場合があります。\n\nこのポリシー設定を有効にした場合、このポリシーの設定のタイトルで指定されたように、対応する UI オプションをオンにします。\n\nこのポリシー設定を無効にするか、または未構成にした場合、対応する UI オプションはオフになります。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqrepsymbol_5_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchvariantformkanjiitaiji",
+            "displayName": "漢字表記のゆれ(異体字)",
+            "explainText": "このポリシー設定では、[あいまい検索] ダイアログ ボックスの対応する UI オプションをオンまたはオフにすることができます。[あいまい検索] ダイアログ ボックスは、[ホーム] タブ | [編集] | [検索] | [ジャンプ...] | [検索オプション] | [オプション...] から [検索] ダイアログ ボックスを表示してアクセスできます。また、ナビゲーション ウィンドウの [ホーム] タブ | [編集] | [検索] | < 下矢印 > | [オプション...] | [あいまい検索 (日)] | [オプション...] から表示することもできます。[あいまい検索 (日)] チェック ボックスおよび [オプション...] ボタンは、特定の編集言語を有効にしないと Word で表示されない場合があります。\n\nこのポリシー設定を有効にした場合、このポリシーの設定のタイトルで指定されたように、対応する UI オプションをオンにします。\n\nこのポリシー設定を無効にするか、または未構成にした場合、対応する UI オプションはオフになります。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqkanji_16_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matcholdkanaforms",
+            "displayName": "かなの新字体/旧字体",
+            "explainText": "このポリシー設定では、[あいまい検索] ダイアログ ボックスの対応する UI オプションをオンまたはオフにすることができます。[あいまい検索] ダイアログ ボックスは、[ホーム] タブ | [編集] | [検索] | [ジャンプ...] | [検索オプション] | [オプション...] から [検索] ダイアログ ボックスを表示してアクセスできます。また、ナビゲーション ウィンドウの [ホーム] タブ | [編集] | [検索] | < 下矢印 > | [オプション...] | [あいまい検索 (日)] | [オプション...] から表示することもできます。[あいまい検索 (日)] チェック ボックスおよび [オプション...] ボタンは、特定の編集言語を有効にしないと Word で表示されない場合があります。\n\nこのポリシー設定を有効にした場合、このポリシーの設定のタイトルで指定されたように、対応する UI オプションをオンにします。\n\nこのポリシー設定を無効にするか、または未構成にした場合、対応する UI オプションはオフになります。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqoldkana_6_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchchoonusedforvowels",
+            "displayName": "長音 [ー](母音でのばす音)",
+            "explainText": "このポリシー設定では、[あいまい検索] ダイアログ ボックスの対応する UI オプションをオンまたはオフにすることができます。[あいまい検索] ダイアログ ボックスは、[ホーム] タブ | [編集] | [検索] | [ジャンプ...] | [検索オプション] | [オプション...] から [検索] ダイアログ ボックスを表示してアクセスできます。また、ナビゲーション ウィンドウの [ホーム] タブ | [編集] | [検索] | < 下矢印 > | [オプション...] | [あいまい検索 (日)] | [オプション...] から表示することもできます。[あいまい検索 (日)] チェック ボックスおよび [オプション...] ボタンは、特定の編集言語を有効にしないと Word で表示されない場合があります。\n\nこのポリシー設定を有効にした場合、このポリシーの設定のタイトルで指定されたように、対応する UI オプションをオンにします。\n\nこのポリシー設定を無効にするか、または未構成にした場合、対応する UI オプションはオフになります。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqlongvowel_7_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchdiziduzu",
+            "displayName": "ヂ/ジ、ヅ/ズ",
+            "explainText": "このポリシー設定では、[あいまい検索] ダイアログ ボックスの対応する UI オプションをオンまたはオフにすることができます。[あいまい検索] ダイアログ ボックスは、[ホーム] タブ | [編集] | [検索] | [ジャンプ...] | [検索オプション] | [オプション...] から [検索] ダイアログ ボックスを表示してアクセスできます。また、ナビゲーション ウィンドウの [ホーム] タブ | [編集] | [検索] | < 下矢印 > | [オプション...] | [あいまい検索 (日)] | [オプション...] から表示することもできます。[あいまい検索 (日)] チェック ボックスおよび [オプション...] ボタンは、特定の編集言語を有効にしないと Word で表示されない場合があります。\n\nこのポリシー設定を有効にした場合、このポリシーの設定のタイトルで指定されたように、対応する UI オプションをオンにします。\n\nこのポリシー設定を無効にするか、または未構成にした場合、対応する UI オプションはオフになります。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqd_z_8_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchbavahafa",
+            "displayName": "バ/ヴァ、ハ/ファ",
+            "explainText": "このポリシー設定では、[あいまい検索] ダイアログ ボックスの対応する UI オプションをオンまたはオフにすることができます。[あいまい検索] ダイアログ ボックスは、[ホーム] タブ | [編集] | [検索] | [ジャンプ...] | [検索オプション] | [オプション...] から [検索] ダイアログ ボックスを表示してアクセスできます。また、ナビゲーション ウィンドウの [ホーム] タブ | [編集] | [検索] | < 下矢印 > | [オプション...] | [あいまい検索 (日)] | [オプション...] から表示することもできます。[あいまい検索 (日)] チェック ボックスおよび [オプション...] ボタンは、特定の編集言語を有効にしないと Word で表示されない場合があります。\n\nこのポリシー設定を有効にした場合、このポリシーの設定のタイトルで指定されたように、対応する UI オプションをオンにします。\n\nこのポリシー設定を無効にするか、または未構成にした場合、対応する UI オプションはオフになります。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqb_v_9_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchtsithichidhizi",
+            "displayName": "ツィ/ティ/チ、ディ/ジ",
+            "explainText": "このポリシー設定では、[あいまい検索] ダイアログ ボックスの対応する UI オプションをオンまたはオフにすることができます。[あいまい検索] ダイアログ ボックスは、[ホーム] タブ | [編集] | [検索] | [ジャンプ...] | [検索オプション] | [オプション...] から [検索] ダイアログ ボックスを表示してアクセスできます。また、ナビゲーション ウィンドウの [ホーム] タブ | [編集] | [検索] | < 下矢印 > | [オプション...] | [あいまい検索 (日)] | [オプション...] から表示することもできます。[あいまい検索 (日)] チェック ボックスおよび [オプション...] ボタンは、特定の編集言語を有効にしないと Word で表示されない場合があります。\n\nこのポリシー設定を有効にした場合、このポリシーの設定のタイトルで指定されたように、対応する UI オプションをオンにします。\n\nこのポリシー設定を無効にするか、または未構成にした場合、対応する UI オプションはオフになります。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqt_c_10_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchhyuiyubyuvyu",
+            "displayName": "ヒュ/フュ、ビュ/ヴュ",
+            "explainText": "このポリシー設定では、[あいまい検索] ダイアログ ボックスの対応する UI オプションをオンまたはオフにすることができます。[あいまい検索] ダイアログ ボックスは、[ホーム] タブ | [編集] | [検索] | [ジャンプ...] | [検索オプション] | [オプション...] から [検索] ダイアログ ボックスを表示してアクセスできます。また、ナビゲーション ウィンドウの [ホーム] タブ | [編集] | [検索] | < 下矢印 > | [オプション...] | [あいまい検索 (日)] | [オプション...] から表示することもできます。[あいまい検索 (日)] チェック ボックスおよび [オプション...] ボタンは、特定の編集言語を有効にしないと Word で表示されない場合があります。\n\nこのポリシー設定を有効にした場合、このポリシーの設定のタイトルで指定されたように、対応する UI オプションをオンにします。\n\nこのポリシー設定を無効にするか、または未構成にした場合、対応する UI オプションはオフになります。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqf_h_15_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchseshezeje",
+            "displayName": "セ/シェ、ゼ/ジェ",
+            "explainText": "このポリシー設定では、[あいまい検索] ダイアログ ボックスの対応する UI オプションをオンまたはオフにすることができます。[あいまい検索] ダイアログ ボックスは、[ホーム] タブ | [編集] | [検索] | [ジャンプ...] | [検索オプション] | [オプション...] から [検索] ダイアログ ボックスを表示してアクセスできます。また、ナビゲーション ウィンドウの [ホーム] タブ | [編集] | [検索] | < 下矢印 > | [オプション...] | [あいまい検索 (日)] | [オプション...] から表示することもできます。[あいまい検索 (日)] チェック ボックスおよび [オプション...] ボタンは、特定の編集言語を有効にしないと Word で表示されない場合があります。\n\nこのポリシー設定を有効にした場合、このポリシーの設定のタイトルで指定されたように、対応する UI オプションをオンにします。\n\nこのポリシー設定を無効にするか、または未構成にした場合、対応する UI オプションはオフになります。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqs_sh_13_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchiaiyapianopiyano",
+            "displayName": "イ段、エ段に続くア/ヤ",
+            "explainText": "このポリシー設定では、[あいまい検索] ダイアログ ボックスの対応する UI オプションをオンまたはオフにすることができます。[あいまい検索] ダイアログ ボックスは、[ホーム] タブ | [編集] | [検索] | [ジャンプ...] | [検索オプション] | [オプション...] から [検索] ダイアログ ボックスを表示してアクセスできます。また、ナビゲーション ウィンドウの [ホーム] タブ | [編集] | [検索] | < 下矢印 > | [オプション...] | [あいまい検索 (日)] | [オプション...] から表示することもできます。[あいまい検索 (日)] チェック ボックスおよび [オプション...] ボタンは、特定の編集言語を有効にしないと Word で表示されない場合があります。\n\nこのポリシー設定を有効にした場合、このポリシーの設定のタイトルで指定されたように、対応する UI オプションをオンにします。\n\nこのポリシー設定を無効にするか、または未構成にした場合、対応する UI オプションはオフになります。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqy_a_12_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchkikutekisutotekusuto",
+            "displayName": "サ行の前のキ/ク",
+            "explainText": "このポリシー設定では、[あいまい検索] ダイアログ ボックスの対応する UI オプションをオンまたはオフにすることができます。[あいまい検索] ダイアログ ボックスは、[ホーム] タブ | [編集] | [検索] | [ジャンプ...] | [検索オプション] | [オプション...] から [検索] ダイアログ ボックスを表示してアクセスできます。また、ナビゲーション ウィンドウの [ホーム] タブ | [編集] | [検索] | < 下矢印 > | [オプション...] | [あいまい検索 (日)] | [オプション...] から表示することもできます。[あいまい検索 (日)] チェック ボックスおよび [オプション...] ボタンは、特定の編集言語を有効にしないと Word で表示されない場合があります。\n\nこのポリシー設定を有効にした場合、このポリシーの設定のタイトルで指定されたように、対応する UI オプションをオンにします。\n\nこのポリシー設定を無効にするか、または未構成にした場合、対応する UI オプションはオフになります。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqki_ku_14_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ignorepunctuationcharacters",
+            "displayName": "句読点を無視する",
+            "explainText": "このポリシー設定では、[あいまい検索] ダイアログ ボックスの対応する UI オプションをオンまたはオフにすることができます。[あいまい検索] ダイアログ ボックスは、[ホーム] タブ | [編集] | [検索] | [ジャンプ...] | [検索オプション] | [オプション...] から [検索] ダイアログ ボックスを表示してアクセスできます。また、ナビゲーション ウィンドウの [ホーム] タブ | [編集] | [検索] | < 下矢印 > | [オプション...] | [あいまい検索 (日)] | [オプション...] から表示することもできます。[あいまい検索 (日)] チェック ボックスおよび [オプション...] ボタンは、特定の編集言語を有効にしないと Word で表示されない場合があります。\n\nこのポリシー設定を有効にした場合、このポリシーの設定のタイトルで指定されたように、対応する UI オプションをオンにします。\n\nこのポリシー設定を無効にするか、または未構成にした場合、対応する UI オプションはオフになります。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "fignorepunct_18_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ignorewhitespacecharacters",
+            "displayName": "空白文字を無視する",
+            "explainText": "このポリシー設定では、[あいまい検索] ダイアログ ボックスの対応する UI オプションをオンまたはオフにすることができます。[あいまい検索] ダイアログ ボックスは、[ホーム] タブ | [編集] | [検索] | [ジャンプ...] | [検索オプション] | [オプション...] から [検索] ダイアログ ボックスを表示してアクセスできます。また、ナビゲーション ウィンドウの [ホーム] タブ | [編集] | [検索] | < 下矢印 > | [オプション...] | [あいまい検索 (日)] | [オプション...] から表示することもできます。[あいまい検索 (日)] チェック ボックスおよび [オプション...] ボタンは、特定の編集言語を有効にしないと Word で表示されない場合があります。\n\nこのポリシー設定を有効にした場合、このポリシーの設定のタイトルで指定されたように、対応する UI オプションをオンにします。\n\nこのポリシー設定を無効にするか、または未構成にした場合、対応する UI オプションはオフになります。",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "fignorespace_19_1"
         },
         {
             "parentCategory": {
@@ -6935,7 +8879,7 @@
             },
             "name": "L_AlertIfNotDefault",
             "displayName": "Word がそのファイル拡張子の既定のアプリケーションでない場合、ユーザーにメッセージを表示する",
-            "explainText": "このポリシー設定では、Word と関連付けられたファイルの種類の拡張子があった後で、Word と関連付けられなくなった場合に、ユーザーにファイル拡張子の関連付けを変更するためのメッセージを表示するかどうかを指定します。\n\nこのポリシー設定を有効にした場合、これらのいずれかの種類のファイルが他のアプリケーションと関連付けられているときに、プログラムの開始時のメッセージはユーザーに表示されません。ポリシーが有効な場合、[ファイル]->[オプション]->[全般] -> [起動時の設定]-> [詳細] は無効になり、オフになっています。\n\nこのポリシー設定を無効にするか、未構成にした場合、これらのいずれかの種類のファイルが他のアプリケーションと関連付けられているときに、プログラムの開始時のメッセージがユーザーに表示されます。ユーザーはメッセージに表示されるチェック ボックスをオンにする、または [ファイル]->[オプション]->[全般] -> [起動時の設定]-> [詳細] のチェック ボックスをオンにすることで、この機能の動作を変更できます。\n        このポリシー設定が未構成か無効の場合、チェック ボックスは有効であり、既定の設定でオンになっています。",
+            "explainText": "        このポリシー設定では、Word と関連付けられたファイルの種類の拡張子があった後で、Word と関連付けられなくなった場合に、ユーザーにファイル拡張子の関連付けを変更するためのメッセージを表示するかどうかを指定します。\n\n        このポリシー設定を有効にした場合、これらのいずれかの種類のファイルが他のアプリケーションと関連付けられているときに、プログラムの開始時のメッセージはユーザーに表示されません。ポリシーが有効な場合、[ファイル]->[オプション]->[全般] -> [起動時の設定]-> [詳細] は無効になり、オフになっています。\n\n        このポリシー設定を無効にするか、未構成にした場合、これらのいずれかの種類のファイルが他のアプリケーションと関連付けられているときに、プログラムの開始時のメッセージがユーザーに表示されます。ユーザーはメッセージに表示されるチェック ボックスをオンにする、または [ファイル]->[オプション]->[全般] -> [起動時の設定]-> [詳細] のチェック ボックスをオンにすることで、この機能の動作を変更できます。\n        このポリシー設定が未構成か無効の場合、チェック ボックスは有効であり、既定の設定でオンになっています。",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7172,7 +9116,7 @@
             },
             "name": "L_OnlineVideos",
             "displayName": "Word 内でのオンライン ビデオの再生を許可する",
-            "explainText": "このポリシー設定では、Word 内でオンライン ビデオを再生できるかどうかを制御します。\n\nこのポリシーを有効にするか構成しない場合、ユーザーは Word 内でオンライン ビデオを再生することができます。\n\nこのポリシー設定を無効にすると、Word 内でオンライン ビデオを再生することはできなくなります。",
+            "explainText": "このポリシー設定では、Word 内でオンライン ビデオを再生できるかどうかを制御します。\n\nこのポリシーを有効にするか構成しない場合、ユーザーは Word 内でオンライン ビデオを再生することができます。\n\nこのポリシー設定を無効にすると、Word 内でオンライン ビデオを再生することはできなくなります。\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7201,7 +9145,7 @@
             },
             "name": "L_LinkedInResumeAssistant",
             "displayName": "LinkedIn 履歴書アシスタント機能を許可",
-            "explainText": "このポリシー設定は、Word で LinkedIn 履歴書アシスタントを表示するかどうかを制御します。\n\nこのポリシーを有効にした場合、またはポリシーを構成しなかった場合、ユーザーは LinkedIn 履歴書アシスタントを使用できません。\n\nこのポリシー設定を無効にした場合、LinkedIn 履歴書アシスタントは使用できません。\n\n重要: このポリシー設定は、クイック実行でインストールされた Office 365 クライアント (Office 365 ProPlus、Office 365 Business、Visio Pro for Office 365、Project Pro for Office 365) にのみ適用されます。Windows インストーラー (MSI) を使用する Office 製品には適用されません。",
+            "explainText": "このポリシー設定は、Word で LinkedIn 履歴書アシスタントを表示するかどうかを制御します。\n\nこのポリシーを有効にした場合、またはポリシーを構成しなかった場合、ユーザーは LinkedIn 履歴書アシスタントを使用できます。\n\nこのポリシー設定を無効にした場合、LinkedIn 履歴書アシスタントは使用できません。\n\n注: このポリシー設定は、Microsoft 365 Apps for enterprise などのサブスクリプション版の Office と、サブスクリプション版の Project および Visio にのみ適用されます。\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7230,7 +9174,7 @@
             },
             "name": "L_DigitalPrint",
             "displayName": "文書を Sway の Web ページに変換するオプションを表示しない",
-            "explainText": "このポリシー設定では、Word 文書を Sway の Web ページに変換する [ファイル] メニューのオプションがユーザーに表示されるかどうかを制御します。既定では、このオプションはユーザーに表示されます。\n\nこのポリシー設定を有効にした場合、Word 文書を Sway の Web ページに変換する [ファイル] メニューのオプションは、ユーザーに表示されません。\n\nこのポリシー設定を無効にするか構成しない場合は、Word 文書を Sway の Web ページに変換する [ファイル] メニューのオプションが、ユーザーに表示されます。\n\n注: このポリシー設定は、Office 365 ProPlus などのサブスクリプション版の Office にのみ適用されます。",
+            "explainText": "このポリシー設定では、Word 文書を Sway の Web ページに変換する [ファイル] メニューのオプションがユーザーに表示されるかどうかを制御します。既定では、このオプションはユーザーに表示されます。\n\nこのポリシー設定を有効にした場合、Word 文書を Sway の Web ページに変換する [ファイル] メニューのオプションは、ユーザーに表示されません。\n\nこのポリシー設定を無効にするか構成しない場合は、Word 文書を Sway の Web ページに変換する [ファイル] メニューのオプションが、ユーザーに表示されます。\n\n注: このポリシー設定は、Microsoft 365 Apps for enterprise などのサブスクリプション版の Office にのみ適用されます。\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7259,7 +9203,7 @@
             },
             "name": "L_DisableWarningOnIncludeFieldsUpdate",
             "displayName": "Word で IncludePicture と IncludeText フィールドを更新する前にアクセス許可を要求しない",
-            "explainText": "このポリシー設定では、文書内の IncludePicture と IncludeText フィールドを更新する前に、Word がユーザーにセキュリティ メッセージを表示するかどうかを制御できます。\n\n既定では、それらのフィールドの更新前に、ユーザーにセキュリティ メッセージが表示されます。ただし、このメッセージは Word 文書を結合する自動ワークフローに影響する場合があります。\n\n重要: IncludePicture と IncludeText 参照が含まれているフィールドは、データ流出やフィッシングでの悪用に使用できます。これらの参照を含むフィールドは、コンテンツの外部 Web サイトをポイントするように変更できます。画像またはテキストへのアクセスに資格情報が必要な場合は、フィールドを更新する処理によってユーザーからのサインインが要求されます。これは信頼できるソースの場合は正当なシナリオですが、文書が信頼できるソースからのものでない場合は、フィッシングに対して脆弱です。\n\nこのポリシー設定を有効にすると、それらのフィールドの更新前に、ユーザーにセキュリティ メッセージは表示されません。セキュリティに影響する可能性があるため、このポリシー設定を有効にすることは推奨されません。\n\nこのポリシー設定を無効にするか構成しない場合、それらのフィールドの更新前に、ユーザーにセキュリティ メッセージが表示されます。",
+            "explainText": "このポリシー設定では、文書内の IncludePicture と IncludeText フィールドを更新する前に、Word がユーザーにセキュリティ メッセージを表示するかどうかを制御できます。\n\n既定では、それらのフィールドの更新前に、ユーザーにセキュリティ メッセージが表示されます。ただし、このメッセージは Word 文書を結合する自動ワークフローに影響する場合があります。\n\n重要: IncludePicture と IncludeText 参照が含まれているフィールドは、データ流出やフィッシングでの悪用に使用できます。これらの参照を含むフィールドは、コンテンツの外部 Web サイトをポイントするように変更できます。画像またはテキストへのアクセスに資格情報が必要な場合は、フィールドを更新する処理によってユーザーからのサインインが要求されます。これは信頼できるソースの場合は正当なシナリオですが、文書が信頼できるソースからのものでない場合は、フィッシングに対して脆弱です。\n\nこのポリシー設定を有効にすると、それらのフィールドの更新前に、ユーザーにセキュリティ メッセージは表示されません。セキュリティに影響する可能性があるため、このポリシー設定を有効にすることは推奨されません。\n\nこのポリシー設定を無効にするか構成しない場合、それらのフィールドの更新前に、ユーザーにセキュリティ メッセージが表示されます。\n      ",
             "tags": [
                 "L_Security",
                 "L_WordOptions",
@@ -7288,7 +9232,7 @@
             },
             "name": "L_Acronyms",
             "displayName": "リボンから [頭字語] コマンドを削除する",
-            "explainText": "このポリシー設定では、リボンから [頭字語] コマンドを削除できます。[頭字語] コマンドは [参考資料] タブに表示されます。\n\nこのポリシー設定を有効にすると、リボンから [頭字語] コマンドが削除されます。ユーザーは、手動で [頭字語] コマンドをリボンに追加することはできません。そのため、ユーザーは頭字語機能を使用できなくなります。\n\nこのポリシー設定を無効にするか構成しない場合は、[頭字語] コマンドがリボンに表示されます。\n\n注: このポリシー設定は、Office 365 ProPlus などのサブスクリプション版の Office にのみ適用されます。",
+            "explainText": "このポリシー設定では、リボンから [頭字語] コマンドを削除できます。[頭字語] コマンドは [参考資料] タブに表示されます。\n\nこのポリシー設定を有効にすると、リボンから [頭字語] コマンドが削除されます。ユーザーは、手動で [頭字語] コマンドをリボンに追加することはできません。そのため、ユーザーは頭字語機能を使用できなくなります。\n\nこのポリシー設定を無効にするか構成しない場合は、[頭字語] コマンドがリボンに表示されます。\n\n注: このポリシー設定は、Microsoft 365 Apps for enterprise などのサブスクリプション版の Office にのみ適用されます。\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7297,6 +9241,107 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "acronyms"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_EmailOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DoNotCompressInlinedImagesInOutlook",
+            "displayName": "Outlook で挿入されたインライン イメージを圧縮しない",
+            "explainText": "このポリシー設定では、Outlook でのインライン イメージの圧縮を無効にできます。\n\nこのポリシー設定を有効にすると、Outlook でメッセージ内のインライン イメージは圧縮されません。\n\nこのポリシー設定を無効にするか構成しない場合、インライン イメージは圧縮されます。\n\n注: このポリシー設定は、Microsoft 365 Apps for enterprise などのサブスクリプション版の Office にのみ適用されます。\n      ",
+            "tags": [
+                "L_EmailOptions",
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\common\\mailsettings",
+            "valueName": "outlookdonotcompressimages"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_EmailOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "高品質"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "330 ppi"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "220 ppi"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "150 ppi"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "96 ppi"
+                            }
+                        ],
+                        "valueName": "oulookimagedpiindex",
+                        "inputType": "dropdownList",
+                        "caption": "Outlook でのインライン イメージの既定の圧縮品質:",
+                        "id": "L_DefaultCompressionQualityForInlinedImagesInOutlookPart"
+                    }
+                ]
+            },
+            "name": "L_DefaultCompressionQualityForInlinedImagesInOutlook",
+            "displayName": "Outlook で挿入されたインライン イメージに対して実行する圧縮の既定の品質を指定する",
+            "explainText": "このポリシー設定では、Outlook でインライン イメージに対して実行される圧縮の既定の品質を指定できます。\n\nこのポリシー設定を有効にすると、指定された品質に従って Outlook でメッセージ内のインライン イメージが圧縮されます。\n\nこのポリシー設定を無効にするか構成しない場合、インライン イメージは既定の品質 (220 dpi) で圧縮されます。\n\n注: このポリシー設定は、Microsoft 365 Apps for enterprise などのサブスクリプション版の Office にのみ適用されます。\n    ",
+            "tags": [
+                "L_EmailOptions",
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\common\\mailsettings"
         }
     ]
 }

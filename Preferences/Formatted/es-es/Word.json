@@ -347,35 +347,6 @@
                     "value": 0
                 }
             },
-            "name": "L_Openattachmentsforfullscreenreading",
-            "displayName": "Abrir datos adjuntos de correo electrónico en vista Lectura",
-            "explainText": "Activa o desactiva la opción correspondiente de la interfaz de usuario.",
-            "tags": [
-                "L_OptionsGeneral",
-                "L_WordOptions",
-                "L_MicrosoftOfficeWord"
-            ],
-            "application": "word16",
-            "key": "software\\microsoft\\office\\16.0\\word\\options",
-            "valueName": "allowautoreadingmode"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_OptionsGeneral"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
             "name": "L_AllowSelectionFloaties",
             "displayName": "Mostrar minibarra de herramientas al seleccionar",
             "explainText": "Si deshabilita esta configuración de directiva, la minibarra de herramientas no se mostrará al seleccionar texto. De forma predeterminada, la minibarra de herramientas al seleccionar está habilitada y se puede cambiar su visibilidad en el cuadro de diálogo Opciones de Word.",
@@ -874,6 +845,348 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Trackchangesandcompare"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Ninguno"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Por autor"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Rosa"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Azul claro"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "Amarillo claro"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "Púrpura claro"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "Anaranjado claro"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Verde claro"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "Gris"
+                            }
+                        ],
+                        "valueName": "revmodeinscellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "Color para las celdas insertadas:",
+                        "id": "L_TablecomparecolorsPart1"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Ninguno"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Por autor"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Rosa"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Azul claro"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "Amarillo claro"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "Púrpura claro"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "Anaranjado claro"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Verde claro"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "Gris"
+                            }
+                        ],
+                        "valueName": "revmodedelcellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "Color para las celdas eliminadas:",
+                        "id": "L_TablecomparecolorsPart2"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Ninguno"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Por autor"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Rosa"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Azul claro"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "Amarillo claro"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "Púrpura claro"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "Anaranjado claro"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Verde claro"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "Gris"
+                            }
+                        ],
+                        "valueName": "revmodemergecellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "Color para las celdas combinadas:",
+                        "id": "L_TablecomparecolorsPart3"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Ninguno"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Por autor"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Rosa"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Azul claro"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "Amarillo claro"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "Púrpura claro"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "Anaranjado claro"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Verde claro"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "Gris"
+                            }
+                        ],
+                        "valueName": "revmodesplitcellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "Color para las celdas divididas:",
+                        "id": "L_TablecomparecolorsPart4"
+                    }
+                ]
+            },
+            "name": "L_Tablecomparecolors",
+            "displayName": "Colores de comparación de tabla",
+            "explainText": "Esta opción determina los colores usados para mostrar los resultados de las tablas comparadas. Si selecciona ''ninguno'', se realizará un seguimiento de los cambios, pero estos no aparecerán coloreados en el documento resultante (se enumerarán en el panel de revisión).",
+            "tags": [
+                "L_Trackchangesandcompare",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Proofing"
             },
             "supportedOn": {
@@ -1042,6 +1355,837 @@
         },
         {
             "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_CorrectTWoINitialCApitals",
+            "displayName": "Corregir DOs MAyúsculas SEguidas",
+            "explainText": "Activa o desactiva la opción correspondiente de la interfaz de usuario.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ftwoinitialcaps_24_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Capitalizefirstletterofsentence",
+            "displayName": "Poner en mayúscula la primera letra de una oración",
+            "explainText": "Activa o desactiva la opción correspondiente de la interfaz de usuario.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "finitialcap_32_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Capitalizenamesofdays",
+            "displayName": "Poner en mayúscula los nombres de días",
+            "explainText": "Activa o desactiva la opción correspondiente de la interfaz de usuario.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcapdaynames_48_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_CorrectaccidentalusageofcAPSLOCKkey",
+            "displayName": "Corregir el uso accidental de bLOQ mAYÚS",
+            "explainText": "Esta configuración de directiva le permite establecer la opción \"Corregir el uso accidental de BLOQ MAYÚS\" en Opciones de Word | Revisión | \"Opciones de Autocorrección...\" | Autocorrección.\n\nSi la habilita, se establecerá la opción \"Corregir el uso accidental de BLOQ MAYÚS\".\n\nSi la desactiva o no la configura, la opción no se establecerá.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcapslock_40_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Replacetextasyoutype",
+            "displayName": "Reemplazar texto mientras escribe",
+            "explainText": "Activa o desactiva la opción correspondiente de la interfaz de usuario.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcorrecttyping_16_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Correctkeyboardsetting",
+            "displayName": "Configuración de teclado correcta",
+            "explainText": "Esta configuración de directiva le permite establecer la opción \"Corregir configuración de teclado\" en Opciones de Word | Revisión | \"Opciones de Autocorrección...\" | Autocorrección.\n\nSi la habilita, se establecerá la opción \"Corregir configuración de teclado\".\n\nSi la desactiva o no la configura, no se establecerá la opción \"Corregir configuración de teclado\".",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcorrectkeyboard_64_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Firstlineindent",
+            "displayName": "Sangría de primera línea",
+            "explainText": "Activa o desactiva la opción \"Espacios al principio del párrafo con sangría en la primera línea\" en el grupo \"Reemplazar mientras escribe\". Es posible que esta opción esté oculta en Word hasta que se habiliten determinados idiomas.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ffirstindent_344_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Straightquoteswithsmartquotes",
+            "displayName": "Comillas rectas con comillas tipográficas",
+            "explainText": "Activa o desactiva la opción correspondiente de la interfaz de usuario.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fsmartquote_8_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ordinals1stwithsuperscript",
+            "displayName": "Ordinales (1º) por superíndice",
+            "explainText": "Activa o desactiva la opción correspondiente de la interfaz de usuario.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fnumsupscript_104_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Fractions12withfractioncharacter",
+            "displayName": "Fracciones (1/2) por carácter de fracción",
+            "explainText": "Activa o desactiva la opción correspondiente de la interfaz de usuario.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ffraction_96_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Symbolcharacterswithsymbols",
+            "displayName": "Caracteres de símbolo (--) con símbolos",
+            "explainText": "Activa o desactiva la opción ''Guiones (--) por guión largo (-)''.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "femdash_112_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Boldand_italic_withrealformatting",
+            "displayName": "*Negrita* y _cursiva_ por formato real",
+            "explainText": "Esta configuración de directiva permite definir la opción ''*Negrita* y _cursiva_ por formato real''.\n\nSi habilita esta configuración de directiva, se establecerá la opción \"*Negrita* y _cursiva_ por formato real\" en Archivo | Opciones | Revisión | Opciones de autocorrección... | Autoformato.\n\nSi deshabilita esta configuración de directiva o no la define, la opción no se establecerá.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fbolditalic_120_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Dashlikecharacters",
+            "displayName": "Caracteres como guiones",
+            "explainText": "Activa yo desactiva la opción ''Sonidos de vocales largos con guión''. Puede que esta opción esté oculta en Word hasta que se habiliten determinados idiomas de edición.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fdbdashes_136_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Headings",
+            "displayName": "Títulos",
+            "explainText": "Activa o desactiva la opción ''Estilos de títulos integrados''.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fheading_280_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_BorderLines",
+            "displayName": "Líneas de borde",
+            "explainText": "Activa o desactiva la opción \"Líneas de borde\".",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fbotbord_328_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Tables",
+            "displayName": "Tablas",
+            "explainText": "Activa o desactiva la opción correspondiente de la interfaz de usuario.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ftable_392_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DateStyle",
+            "displayName": "Estilo de fecha",
+            "explainText": "Activa o desactiva la opción ''Estilo de fecha''. Puede que esta opción esté oculta en Word hasta que se habiliten determinados idiomas de edición.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fdate_376_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Automaticbulletedlists",
+            "displayName": "Listas automáticas con viñetas",
+            "explainText": "Activa o desactiva la opción correspondiente de la interfaz de usuario.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fbulletlist_296_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Automaticnumberedlists",
+            "displayName": "Listas automáticas con números",
+            "explainText": "Activa o desactiva la opción correspondiente de la interfaz de usuario.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fnumberedlist_312_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ClosingStyleToLetterClosings",
+            "displayName": "Estilo de despedidas para despedidas de cartas",
+            "explainText": "Esta configuración de directiva le permite establecer la opción \"Estilo de despedidas para despedidas de cartas\" que se encuentra en Opciones de Word | Revisión | Opciones de Autocorrección... | Autoformato mientras escribe.\n\nSi habilita esta configuración de directiva, se establecerá la opción \"Estilo de despedidas para despedidas de cartas\".\n\nSi la deshabilita o no la configura, la opción no se establecerá.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fclosing_360_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Autospace",
+            "displayName": "Autoespacio",
+            "explainText": "Esta configuración de directiva le permite establecer la opción \"Eliminar espacios innecesarios entre texto asiático y occidental\" en el grupo \"Automáticamente mientras escribe\". Es posible que esta opción esté oculta en Word hasta que se habiliten determinados idiomas.\n\nSi habilita esta configuración de directiva, se establecerá la opción \"Eliminar espacios innecesarios entre texto asiático y occidental\".\n\nSi la deshabilita o no la configura, la opción no se establecerá.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fsbdbspace_152_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchparentheses",
+            "displayName": "Paréntesis",
+            "explainText": "Esta configuración de directiva le permite establecer la opción \"Hacer coincidir los paréntesis de apertura y de cierre\" que se encuentra en Opciones de Word | Revisión | Opciones de Autocorrección... | Autoformato mientras escribe. Es posible que esta opción esté oculta en Word hasta que se habiliten determinados idiomas.\n\nSi habilita esta configuración de directiva, se establecerá la opción \"Hacer coincidir los paréntesis de apertura y de cierre\".\n\nSi la deshabilita o no la configura, la opción no se establecerá.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fautopair_144_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Formatbeginningoflistitemliketheonebeforeit",
+            "displayName": "Dar al primer elemento de las listas el formato del anterior",
+            "explainText": "Activa o desactiva la opción correspondiente de la interfaz de usuario.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fleadinemph_176_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Setleftindentontabsandbackspace",
+            "displayName": "Establecer sangría izquierda con tabulaciones y retroceso",
+            "explainText": "Activa o desactiva la opción correspondiente de la interfaz de usuario.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ftabindent_128_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Definestylesbasedonyourformatting",
+            "displayName": "Definir estilos basándose en el formato personal",
+            "explainText": "Activa o desactiva la opción correspondiente de la interfaz de usuario.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fautostyledef_184_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_InsertClosingPhraseToMatchMemoStyle",
+            "displayName": "Insertar la frase de despedida para que coincida con el estilo de memorando",
+            "explainText": "Activa o desactiva la opción ''Insertar la frase de despedida para que coincida con el estilo de memorando''. Puede que esta opción esté oculta en Word hasta que se habiliten determinados idiomas de edición.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "finsertover_424_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_InsertClosingPhraseToMatchJapaneseSalutation",
+            "displayName": "Insertar la frase de despedida para que coincida con el saludo japonés",
+            "explainText": "Activa o desactiva la opción ''Insertar la frase de despedida para que coincida con el saludo japonés''. Puede que esta opción esté oculta en Word hasta que se habiliten determinados idiomas de edición.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "finsertclosing_408_1"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_OptionsCustomizeRibbon"
             },
             "supportedOn": {
@@ -1155,6 +2299,122 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "nomargpageview"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Documentproperties",
+            "displayName": "Imprimir propiedades del documento",
+            "explainText": "Esta configuración de directiva permite controlar la opción \"Imprimir propiedades del documento\" ubicada en la pestaña Archivo | Opciones | Mostrar | Opciones de impresión.\n\nSi deshabilita esta configuración de directiva, Word imprimirá una página adicional con las propiedades del documento impreso, incluidos el autor del documento, el nombre del archivo, la fecha de creación, etc., para cada documento impreso.\n\nSi deshabilita o no establece esta configuración de directiva, no se imprimirá ninguna página adicional.",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "summary_1_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Drawingobjects",
+            "displayName": "Imprimir dibujos creados en Word",
+            "explainText": "Esta configuración de directiva le permite configurar la opción \"Imprimir dibujos creados en Word\" ubicada en la pestaña Archivo | Opciones | Mostrar | Opciones de impresión.\n\nSi habilita esta configuración de directiva, Word imprimirá los gráficos y los cuadros de texto flotantes.\n\nSi deshabilita o no establece esta configuración de directiva, Word no imprimirá los gráficos o cuadros de texto flotantes. Word imprimirá un cuadro en blanco en lugar de cada gráfico y cuadro de texto flotante.",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "disabledrawnobj_14_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Updatefields",
+            "displayName": "Actualizar campos antes de imprimir",
+            "explainText": "Esta configuración de directiva le permite configurar la opción \"Actualizar campos antes de imprimir\" ubicada en la pestaña Archivo | Opciones | Mostrar | Opciones de impresión.\n\nSi habilita esta configuración de directiva, Word actualizará los campos del documento antes de imprimirlo.\n\nSi deshabilita o no establece esta configuración de directiva, Word no actualizará los campos del documento antes de imprimirlo.",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "refresh_5_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Updatelinks",
+            "displayName": "Actualizar datos vinculados antes de imprimir",
+            "explainText": "Esta configuración de directiva controla la opción \"Actualizar datos vinculados antes de imprimir\" ubicada en la pestaña Archivo | Opciones | Mostrar | Opciones de impresión.\n\nSi habilita esta configuración de directiva, Word actualizará los datos vinculados del documento antes de imprimirlo.\n\nSi deshabilita o no establece esta configuración de directiva, Word no actualizará los datos vinculados del documento antes de imprimirlo.",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "updatelinks_13_1"
         },
         {
             "parentCategory": {
@@ -1407,7 +2667,7 @@
             },
             "name": "L_CompatModeOnSaveAs",
             "displayName": "Guardar como formato XML abierto en modo de compatibilidad",
-            "explainText": "Esta configuración de directiva le permite ocultar la casilla \"Mantener compatibilidad con versiones anteriores de Word\". En el caso de cualquier formato de archivo que esté en modo de compatibilidad, aparecerá una casilla \"Mantener compatibilidad con versiones anteriores de Word\" en el cuadro de diálogo Guardar como al guardar en cualquiera de los formatos de archivo Office Open XML. Esta casilla permite a los usuarios conservar la fidelidad de los documentos que se abren en modo de compatibilidad al guardarse en cualquiera de los formatos Office Open XML. Al activar esta casilla se evitará la conversión a la versión de Word en que se esté guardando el archivo.\\r\n\\r\nLa conversión maximiza la fidelidad con la versión de Word en que se está guardando el archivo y es recomendable para los usuarios que desean que sus documentos de Word sean compatibles con esta versión de Word. No obstante, la conversión puede afectar a la fidelidad y la compatibilidad de algunas características cuando el archivo se abre en una versión anterior de Word.\\r\n\\r\nSi habilita esta configuración de directiva, se ocultará la casilla \"Mantener compatibilidad con versiones anteriores de Word\". El comportamiento de Guardar como en cualquiera de los formatos de archivo Office Open XML siempre mantendrá compatibilidad con versiones anteriores de Word. Se impedirá que el archivo que esté en modo de compatibilidad se convierta a la versión de Word en que se guarda el archivo. \\r\n\\r\nSi deshabilita o no establece esta configuración de directiva, se mostrará la casilla \"Mantener compatibilidad con versiones anteriores de Word\" en el cuadro de diálogo Guardar como. A menos que el usuario la active, un archivo en formato Office Open XML se convertirá cuando se guarde el documento. De manera predeterminada, se seguirá mostrando a los usuarios un cuadro de diálogo final al guardar para confirmar si desean guardar el archivo sin activar la casilla \"Mantener compatibilidad con versiones anteriores de Word\".",
+            "explainText": "Esta configuración de directiva le permite ocultar la casilla \"Mantener compatibilidad con versiones anteriores de Word\".  En el caso de cualquier formato de archivo que esté en modo de compatibilidad, aparecerá una casilla \"Mantener compatibilidad con versiones anteriores de Word\" en el cuadro de diálogo Guardar como al guardar en cualquiera de los formatos de archivo Office Open XML. Esta casilla permite a los usuarios conservar la fidelidad de los documentos que se abren en modo de compatibilidad al guardarse en cualquiera de los formatos Office Open XML. Al activar esta casilla se evitará la conversión a la versión de Word en que se esté guardando el archivo.\\r\\n\\r\\nLa conversión maximiza la fidelidad con la versión de Word en que se está guardando el archivo y es recomendable para los usuarios que desean que sus documentos de Word sean compatibles con esta versión de Word. No obstante, la conversión puede afectar a la fidelidad y la compatibilidad de algunas características cuando el archivo se abre en una versión anterior de Word.\\r\\n\\r\\nSi habilita esta configuración de directiva, se ocultará la casilla \"Mantener compatibilidad con versiones anteriores de Word\". El comportamiento de Guardar como en cualquiera de los formatos de archivo Office Open XML siempre mantendrá compatibilidad con versiones anteriores de Word. Se impedirá que el archivo que esté en modo de compatibilidad se convierta a la versión de Word en que se guarda el archivo. \\r\\n\\r\\nSi deshabilita o no establece esta configuración de directiva, se mostrará la casilla \"Mantener compatibilidad con versiones anteriores de Word\" en el cuadro de diálogo Guardar como. A menos que el usuario la active, un archivo en formato Office Open XML se convertirá cuando se guarde el documento. De manera predeterminada, se seguirá mostrando a los usuarios un cuadro de diálogo final al guardar para confirmar si desean guardar el archivo sin activar la casilla \"Mantener compatibilidad con versiones anteriores de Word\".",
             "tags": [
                 "L_Save",
                 "L_WordOptions",
@@ -2829,7 +4089,7 @@
                                         "value": 24
                                     }
                                 },
-                                "displayName":"0,25''"
+                                "displayName": "0,25''"
                             },
                             {
                                 "value": {
@@ -2837,7 +4097,7 @@
                                         "value": 48
                                     }
                                 },
-                                "displayName":"0,5''"
+                                "displayName": "0,5''"
                             },
                             {
                                 "value": {
@@ -2845,7 +4105,7 @@
                                         "value": 72
                                     }
                                 },
-                                "displayName":"0,75''"
+                                "displayName": "0,75''"
                             },
                             {
                                 "value": {
@@ -2861,7 +4121,7 @@
                                         "value": 120
                                     }
                                 },
-                                "displayName":"1,25''"
+                                "displayName": "1,25''"
                             },
                             {
                                 "value": {
@@ -2869,7 +4129,7 @@
                                         "value": 144
                                     }
                                 },
-                                "displayName":"1,5''"
+                                "displayName": "1,5''"
                             },
                             {
                                 "value": {
@@ -2877,7 +4137,7 @@
                                         "value": 168
                                     }
                                 },
-                                "displayName":"1,75''"
+                                "displayName": "1,75''"
                             },
                             {
                                 "value": {
@@ -2893,7 +4153,7 @@
                                         "value": 216
                                     }
                                 },
-                                "displayName":"2,25''"
+                                "displayName": "2,25''"
                             },
                             {
                                 "value": {
@@ -2901,7 +4161,7 @@
                                         "value": 240
                                     }
                                 },
-                                "displayName":"2,5''"
+                                "displayName": "2,5''"
                             }
                         ],
                         "valueName": "selbar",
@@ -3113,6 +4373,35 @@
                     "value": 0
                 }
             },
+            "name": "L_Draftoutput",
+            "displayName": "Usar calidad de borrador",
+            "explainText": "Activa o desactiva la opción correspondiente de la interfaz de usuario.",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "draftoutput_2_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_Backgroundprinting",
             "displayName": "Imprimir en segundo plano",
             "explainText": "Activa o desactiva la opción correspondiente de la interfaz de usuario.",
@@ -3124,6 +4413,93 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "backgroundprint"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Reverseprintorder",
+            "displayName": "Imprimir páginas en orden inverso",
+            "explainText": "Activa o desactiva la opción correspondiente de la interfaz de usuario.",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "reverseprint_6_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Frontofsheet",
+            "displayName": "Imprimir en el anverso de la hoja para una impresión a doble cara",
+            "explainText": "Activa o desactiva la opción correspondiente de la interfaz de usuario.",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "fprorder1_21_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Backofthesheet",
+            "displayName": "Imprimir en el reverso de la hoja para una impresión a doble cara",
+            "explainText": "Activa o desactiva la opción correspondiente de la interfaz de usuario.",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "fprorder2_22_1"
         },
         {
             "parentCategory": {
@@ -4072,7 +5448,7 @@
             },
             "name": "L_AllowaccenteduppercaseinFrench",
             "displayName": "Permitir mayúsculas acentuadas en francés",
-            "explainText":"Activa o desactiva la opción ''Permitir mayúsculas acentuadas en francés''.",
+            "explainText": "Activa o desactiva la opción ''Permitir mayúsculas acentuadas en francés''.",
             "tags": [
                 "L_Advanced",
                 "L_WordOptions",
@@ -4662,7 +6038,7 @@
             },
             "name": "L_BlockMacroExecutionFromInternet",
             "displayName": "Bloquear la ejecución de macros en archivos de Office procedentes de Internet",
-            "explainText": "Esta configuración de directiva permite bloquear la ejecución de las macros en archivos de Office que provengan de Internet.\n\nSi habilita esta configuración de directiva, se bloquea la ejecución de las macros aunque la opción \"Habilitar todas las macros\" esté seleccionada en la sección Configuración de macros del Centro de confianza. Además, en lugar de tener la opción \"Habilitar contenido\", los usuarios recibirán una notificación de que se ha bloqueado la ejecución de las macros. Si el archivo de Office se guarda en una ubicación de confianza o el usuario lo había marcado previamente como de confianza, se podrán ejecutar las macros.\n\nSi deshabilita o no establece esta configuración de directiva, la configuración establecida en la sección Configuración de macros del Centro de confianza determinará si se ejecutan las macros en archivos de Office procedentes de Internet.",
+            "explainText": "        Esta configuración de directiva permite bloquear la ejecución de las macros en archivos de Office que provengan de Internet.\n\n        Si habilita esta configuración de directiva, se bloquea la ejecución de las macros aunque la opción \"Habilitar todas las macros\" esté seleccionada en la sección Configuración de macros del Centro de confianza. Además, en lugar de tener la opción \"Habilitar contenido\", los usuarios recibirán una notificación de que se ha bloqueado la ejecución de las macros. Si el archivo de Office se guarda en una ubicación de confianza o el usuario lo había marcado previamente como de confianza, se podrán ejecutar las macros.\n\n        Si deshabilita o no establece esta configuración de directiva, la configuración establecida en la sección Configuración de macros del Centro de confianza determinará si se ejecutan las macros en archivos de Office procedentes de Internet.\n      ",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -4746,7 +6122,7 @@
             },
             "name": "L_TrustaccesstoVisualBasicProject",
             "displayName": "Confiar en el acceso a proyectos de Visual Basic",
-            "explainText": "Esta configuración de directiva controla si los clientes de automatización, como Microsoft Visual Studio 2005 Tools para Microsoft Office (VSTO), pueden tener acceso al sistema de proyectos de Visual Basic para Aplicaciones en las aplicaciones especificadas. Los proyectos de VSTO requieren acceso al sistema de proyectos de Visual Basic para Aplicaciones en Excel, PowerPoint y Word, aunque los proyectos no usen Visual Basic para Aplicaciones. La compatibilidad en tiempo de diseño de los controles de proyectos de Visual Basic y C# depende del sistema de proyectos de Visual Basic para Aplicaciones en Word y Excel.\\r\n\\r\nSi habilita esta configuración de directiva, VSTO y otros clientes de automatización pueden tener acceso al sistema de proyectos de Visual Basic para Aplicaciones en las aplicaciones especificadas. Los usuarios no podrán cambiar este comportamiento mediante la opción de la interfaz de usuario \"Confiar en el acceso al modelo de objetos de proyectos de VBA\" de la sección Configuración de macros del Centro de confianza.\\r\n\\r\nSi deshabilita esta configuración de directiva, VSTO no tiene acceso mediante programación a los proyectos de VBA. Además, la casilla \"Confiar en el acceso al modelo de objetos de proyectos de VBA\" se desactiva y los usuarios no pueden cambiarla. Nota: si se deshabilita esta configuración de directiva, se impide a los proyectos de VSTO interactuar correctamente con el sistema de proyectos de VBA de la aplicación seleccionada.\\r\n\\r\nSi no establece esta configuración de directiva, los clientes de automatización no tendrán acceso mediante programación a los proyectos de VBA. Los usuarios pueden habilitar esta opción si activan \"Confiar en el acceso al modelo de objetos de proyectos de VBA\" en la sección \"Configuración de macros\" del Centro de confianza. No obstante, al hacer esto se permite a las macros de los documentos abiertos por el usuario tener acceso a los objetos, métodos y propiedades principales de Visual Basic, lo cual representa un posible riesgo de seguridad.",
+            "explainText": "Esta configuración de directiva controla si los clientes de automatización, como Microsoft Visual Studio 2005 Tools para Microsoft Office (VSTO), pueden tener acceso al sistema de proyectos de Visual Basic para Aplicaciones en las aplicaciones especificadas. Los proyectos de VSTO requieren acceso al sistema de proyectos de Visual Basic para Aplicaciones en Excel, PowerPoint y Word, aunque los proyectos no usen Visual Basic para Aplicaciones. La compatibilidad en tiempo de diseño de los controles de proyectos de Visual Basic y C# depende del sistema de proyectos de Visual Basic para Aplicaciones en Word y Excel.\\r\\n\\r\\nSi habilita esta configuración de directiva, VSTO y otros clientes de automatización pueden tener acceso al sistema de proyectos de Visual Basic para Aplicaciones en las aplicaciones especificadas. Los usuarios no podrán cambiar este comportamiento mediante la opción de la interfaz de usuario \"Confiar en el acceso al modelo de objetos de proyectos de VBA\" de la sección Configuración de macros del Centro de confianza.\\r\\n\\r\\nSi deshabilita esta configuración de directiva, VSTO no tiene acceso mediante programación a los proyectos de VBA. Además, la casilla \"Confiar en el acceso al modelo de objetos de proyectos de VBA\" se desactiva y los usuarios no pueden cambiarla. Nota: si se deshabilita esta configuración de directiva, se impide a los proyectos de VSTO interactuar correctamente con el sistema de proyectos de VBA de la aplicación seleccionada.\\r\\n\\r\\nSi no establece esta configuración de directiva, los clientes de automatización no tendrán acceso mediante programación a los proyectos de VBA. Los usuarios pueden habilitar esta opción si activan \"Confiar en el acceso al modelo de objetos de proyectos de VBA\" en la sección \"Configuración de macros\" del Centro de confianza. No obstante, al hacer esto se permite a las macros de los documentos abiertos por el usuario tener acceso a los objetos, métodos y propiedades principales de Visual Basic, lo cual representa un posible riesgo de seguridad.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -6290,6 +7666,70 @@
         },
         {
             "parentCategory": {
+                "ref": "L_ProtectedView"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Bloquear archivos"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Abrir en Vista protegida"
+                            }
+                        ],
+                        "valueName": "openinprotectedview",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsDropID"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "disableeditfrompv",
+                        "key": "software\\microsoft\\office\\16.0\\word\\security\\filevalidation",
+                        "inputType": "checkBox",
+                        "caption": "Activado: permitir edición.  No activado: no permitir edición.",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsStr3"
+                    }
+                ]
+            },
+            "name": "L_SetDocumentBehaviorIfFileValidationFails",
+            "displayName": "Establecer el comportamiento de los documentos si se producen errores durante la validación del archivo",
+            "explainText": "Esta clave de directiva controla la administración de los documentos de Office cuando se produce un error en la validación de archivos.\n\nSi habilitas esta configuración de directiva, puedes configurar las siguientes opciones para los archivos con error durante la validación: \n\n- Bloquear completamente archivos. Los usuarios no podrán abrir los archivos.\n- Abrir archivos en Vista protegida y no permitir la edición. Los usuarios no pueden editar los archivos. Esta es también la manera en que Office administra los archivos si deshabilitas esta configuración de directiva.\n- Abrir archivos en Vista protegida y permitir la edición. Los usuarios pueden editar los archivos. Esta es también la manera en que Office administra los archivos si no estableces esta configuración de directiva.\n\nSi deshabilitas esta configuración de directiva, Office aplica el comportamiento \"Abrir archivos en Vista protegida y no permitir la edición\".\n\nSi no estableces esta configuración de directiva, Office aplica el comportamiento \"Abrir archivos en Vista protegida y permitir la edición\".",
+            "tags": [
+                "L_ProtectedView",
+                "L_TrustCenter",
+                "L_Security",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\security\\filevalidation"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -6406,6 +7846,510 @@
         },
         {
             "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchcase",
+            "displayName": "Coincidir mayúsculas y minúsculas",
+            "explainText": "Esta configuración de directiva le permite activar o desactivar la opción de la interfaz de usuario correspondiente en el cuadro de diálogo \"Búsqueda en japonés\". Se puede obtener acceso a este cuadro de diálogo desde el cuadro de diálogo Buscar, en la pestaña Inicio | Edición | Buscar | Ir a... | Opciones de búsqueda | Opciones... Además, se puede buscar en el panel de navegación, en la pestaña Inicio | Edición | Buscar | < flecha hacia abajo > | Opciones... | Suena como (japonés) | Opciones. La casilla \"Suena como (japonés)\" y el botón \"Opciones...\" pueden estar ocultos en Word hasta que se habiliten determinados idiomas de edición.\\r\\n\\r\\nSi habilita esta configuración de directiva, activará la opción de la interfaz de usuario correspondiente según lo especificado en el título de esta configuración de directiva.\\r\\n\\r\\nSi la deshabilita o no la configura, se desactivará la opción de la interfaz de usuario correspondiente.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqcase_0_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchfullhalfwidthform",
+            "displayName": "Formato completo y formato medio",
+            "explainText": "Esta configuración de directiva le permite activar o desactivar la opción de la interfaz de usuario correspondiente en el cuadro de diálogo \"Búsqueda en japonés\". Se puede obtener acceso a este cuadro de diálogo desde el cuadro de diálogo Buscar, en la pestaña Inicio | Edición | Buscar | Ir a... | Opciones de búsqueda | Opciones... Además, se puede buscar en el panel de navegación, en la pestaña Inicio | Edición | Buscar | < flecha hacia abajo > | Opciones... | Suena como (japonés) | Opciones. La casilla \"Suena como (japonés)\" y el botón \"Opciones...\" pueden estar ocultos en Word hasta que se habiliten determinados idiomas de edición.\\r\\n\\r\\nSi habilita esta configuración de directiva, activará la opción de la interfaz de usuario correspondiente según lo especificado en el título de esta configuración de directiva.\\r\\n\\r\\nSi la deshabilita o no la configura, se desactivará la opción de la interfaz de usuario correspondiente.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqbyte_1_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchhiraganakatakana",
+            "displayName": "Hiragana o katakana",
+            "explainText": "Esta configuración de directiva le permite activar o desactivar la opción de la interfaz de usuario correspondiente en el cuadro de diálogo \"Búsqueda en japonés\". Se puede obtener acceso a este cuadro de diálogo desde el cuadro de diálogo Buscar, en la pestaña Inicio | Edición | Buscar | Ir a... | Opciones de búsqueda | Opciones... Además, se puede buscar en el panel de navegación, en la pestaña Inicio | Edición | Buscar | < flecha hacia abajo > | Opciones... | Suena como (japonés) | Opciones. La casilla \"Suena como (japonés)\" y el botón \"Opciones...\" pueden estar ocultos en Word hasta que se habiliten determinados idiomas de edición.\\r\\n\\r\\nSi habilita esta configuración de directiva, activará la opción de la interfaz de usuario correspondiente según lo especificado en el título de esta configuración de directiva.\\r\\n\\r\\nSi la deshabilita o no la configura, se desactivará la opción de la interfaz de usuario correspondiente.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqhira_kata_3_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchcontractionsyoonsokuon",
+            "displayName": "Contracciones (yo-on, sokuon)",
+            "explainText": "Esta configuración de directiva le permite activar o desactivar la opción de la interfaz de usuario correspondiente en el cuadro de diálogo \"Búsqueda en japonés\". Se puede obtener acceso a este cuadro de diálogo desde el cuadro de diálogo Buscar, en la pestaña Inicio | Edición | Buscar | Ir a... | Opciones de búsqueda | Opciones... Además, se puede buscar en el panel de navegación, en la pestaña Inicio | Edición | Buscar | < flecha hacia abajo > | Opciones... | Suena como (japonés) | Opciones. La casilla \"Suena como (japonés)\" y el botón \"Opciones...\" pueden estar ocultos en Word hasta que se habiliten determinados idiomas de edición.\\r\\n\\r\\nSi habilita esta configuración de directiva, activará la opción de la interfaz de usuario correspondiente según lo especificado en el título de esta configuración de directiva.\\r\\n\\r\\nSi la deshabilita o no la configura, se desactivará la opción de la interfaz de usuario correspondiente.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqsmallkana_4_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchminusdashchoon",
+            "displayName": "Guión, raya y cho-on",
+            "explainText": "Esta configuración de directiva le permite activar o desactivar la opción de la interfaz de usuario correspondiente en el cuadro de diálogo \"Búsqueda en japonés\". Se puede obtener acceso a este cuadro de diálogo desde el cuadro de diálogo Buscar, en la pestaña Inicio | Edición | Buscar | Ir a... | Opciones de búsqueda | Opciones... Además, se puede buscar en el panel de navegación, en la pestaña Inicio | Edición | Buscar | < flecha hacia abajo > | Opciones... | Suena como (japonés) | Opciones. La casilla \"Suena como (japonés)\" y el botón \"Opciones...\" pueden estar ocultos en Word hasta que se habiliten determinados idiomas de edición.\\r\\n\\r\\nSi habilita esta configuración de directiva, activará la opción de la interfaz de usuario correspondiente según lo especificado en el título de esta configuración de directiva.\\r\\n\\r\\nSi la deshabilita o no la configura, se desactivará la opción de la interfaz de usuario correspondiente.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqminus_2_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchrepeatcharactermarks",
+            "displayName": "Marcas de 'repetir carácter'",
+            "explainText": "Esta configuración de directiva le permite activar o desactivar la opción de la interfaz de usuario correspondiente en el cuadro de diálogo \"Búsqueda en japonés\". Se puede obtener acceso a este cuadro de diálogo desde el cuadro de diálogo Buscar, en la pestaña Inicio | Edición | Buscar | Ir a... | Opciones de búsqueda | Opciones... Además, se puede buscar en el panel de navegación, en la pestaña Inicio | Edición | Buscar | < flecha hacia abajo > | Opciones... | Suena como (japonés) | Opciones. La casilla \"Suena como (japonés)\" y el botón \"Opciones...\" pueden estar ocultos en Word hasta que se habiliten determinados idiomas de edición.\\r\\n\\r\\nSi habilita esta configuración de directiva, activará la opción de la interfaz de usuario correspondiente según lo especificado en el título de esta configuración de directiva.\\r\\n\\r\\nSi la deshabilita o no la configura, se desactivará la opción de la interfaz de usuario correspondiente.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqrepsymbol_5_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchvariantformkanjiitaiji",
+            "displayName": "Kanji en formato variante (itaiji)",
+            "explainText": "Esta configuración de directiva le permite activar o desactivar la opción de la interfaz de usuario correspondiente en el cuadro de diálogo \"Búsqueda en japonés\". Se puede obtener acceso a este cuadro de diálogo desde el cuadro de diálogo Buscar, en la pestaña Inicio | Edición | Buscar | Ir a... | Opciones de búsqueda | Opciones... Además, se puede buscar en el panel de navegación, en la pestaña Inicio | Edición | Buscar | < flecha hacia abajo > | Opciones... | Suena como (japonés) | Opciones. La casilla \"Suena como (japonés)\" y el botón \"Opciones...\" pueden estar ocultos en Word hasta que se habiliten determinados idiomas de edición.\\r\\n\\r\\nSi habilita esta configuración de directiva, activará la opción de la interfaz de usuario correspondiente según lo especificado en el título de esta configuración de directiva.\\r\\n\\r\\nSi la deshabilita o no la configura, se desactivará la opción de la interfaz de usuario correspondiente.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqkanji_16_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matcholdkanaforms",
+            "displayName": "Formas kana antiguas",
+            "explainText": "Esta configuración de directiva le permite activar o desactivar la opción de la interfaz de usuario correspondiente en el cuadro de diálogo \"Búsqueda en japonés\". Se puede obtener acceso a este cuadro de diálogo desde el cuadro de diálogo Buscar, en la pestaña Inicio | Edición | Buscar | Ir a... | Opciones de búsqueda | Opciones... Además, se puede buscar en el panel de navegación, en la pestaña Inicio | Edición | Buscar | < flecha hacia abajo > | Opciones... | Suena como (japonés) | Opciones. La casilla \"Suena como (japonés)\" y el botón \"Opciones...\" pueden estar ocultos en Word hasta que se habiliten determinados idiomas de edición.\\r\\n\\r\\nSi habilita esta configuración de directiva, activará la opción de la interfaz de usuario correspondiente según lo especificado en el título de esta configuración de directiva.\\r\\n\\r\\nSi la deshabilita o no la configura, se desactivará la opción de la interfaz de usuario correspondiente.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqoldkana_6_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchchoonusedforvowels",
+            "displayName": "Cho-on usado para las vocales",
+            "explainText": "Esta configuración de directiva le permite activar o desactivar la opción de la interfaz de usuario correspondiente en el cuadro de diálogo \"Búsqueda en japonés\". Se puede obtener acceso a este cuadro de diálogo desde el cuadro de diálogo Buscar, en la pestaña Inicio | Edición | Buscar | Ir a... | Opciones de búsqueda | Opciones... Además, se puede buscar en el panel de navegación, en la pestaña Inicio | Edición | Buscar | < flecha hacia abajo > | Opciones... | Suena como (japonés) | Opciones. La casilla \"Suena como (japonés)\" y el botón \"Opciones...\" pueden estar ocultos en Word hasta que se habiliten determinados idiomas de edición.\\r\\n\\r\\nSi habilita esta configuración de directiva, activará la opción de la interfaz de usuario correspondiente según lo especificado en el título de esta configuración de directiva.\\r\\n\\r\\nSi la deshabilita o no la configura, se desactivará la opción de la interfaz de usuario correspondiente.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqlongvowel_7_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchdiziduzu",
+            "displayName": "Di/zi, du/zu",
+            "explainText": "Esta configuración de directiva le permite activar o desactivar la opción de la interfaz de usuario correspondiente en el cuadro de diálogo \"Búsqueda en japonés\". Se puede obtener acceso a este cuadro de diálogo desde el cuadro de diálogo Buscar, en la pestaña Inicio | Edición | Buscar | Ir a... | Opciones de búsqueda | Opciones... Además, se puede buscar en el panel de navegación, en la pestaña Inicio | Edición | Buscar | < flecha hacia abajo > | Opciones... | Suena como (japonés) | Opciones. La casilla \"Suena como (japonés)\" y el botón \"Opciones...\" pueden estar ocultos en Word hasta que se habiliten determinados idiomas de edición.\\r\\n\\r\\nSi habilita esta configuración de directiva, activará la opción de la interfaz de usuario correspondiente según lo especificado en el título de esta configuración de directiva.\\r\\n\\r\\nSi la deshabilita o no la configura, se desactivará la opción de la interfaz de usuario correspondiente.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqd_z_8_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchbavahafa",
+            "displayName": "Ba/va, ha/fa",
+            "explainText": "Esta configuración de directiva le permite activar o desactivar la opción de la interfaz de usuario correspondiente en el cuadro de diálogo \"Búsqueda en japonés\". Se puede obtener acceso a este cuadro de diálogo desde el cuadro de diálogo Buscar, en la pestaña Inicio | Edición | Buscar | Ir a... | Opciones de búsqueda | Opciones... Además, se puede buscar en el panel de navegación, en la pestaña Inicio | Edición | Buscar | < flecha hacia abajo > | Opciones... | Suena como (japonés) | Opciones. La casilla \"Suena como (japonés)\" y el botón \"Opciones...\" pueden estar ocultos en Word hasta que se habiliten determinados idiomas de edición.\\r\\n\\r\\nSi habilita esta configuración de directiva, activará la opción de la interfaz de usuario correspondiente según lo especificado en el título de esta configuración de directiva.\\r\\n\\r\\nSi la deshabilita o no la configura, se desactivará la opción de la interfaz de usuario correspondiente.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqb_v_9_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchtsithichidhizi",
+            "displayName": "Tsi/thi/chi, dhi/zi",
+            "explainText": "Esta configuración de directiva le permite activar o desactivar la opción de la interfaz de usuario correspondiente en el cuadro de diálogo \"Búsqueda en japonés\". Se puede obtener acceso a este cuadro de diálogo desde el cuadro de diálogo Buscar, en la pestaña Inicio | Edición | Buscar | Ir a... | Opciones de búsqueda | Opciones... Además, se puede buscar en el panel de navegación, en la pestaña Inicio | Edición | Buscar | < flecha hacia abajo > | Opciones... | Suena como (japonés) | Opciones. La casilla \"Suena como (japonés)\" y el botón \"Opciones...\" pueden estar ocultos en Word hasta que se habiliten determinados idiomas de edición.\\r\\n\\r\\nSi habilita esta configuración de directiva, activará la opción de la interfaz de usuario correspondiente según lo especificado en el título de esta configuración de directiva.\\r\\n\\r\\nSi la deshabilita o no la configura, se desactivará la opción de la interfaz de usuario correspondiente.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqt_c_10_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchhyuiyubyuvyu",
+            "displayName": "Hyu/iyu, byu/vyu",
+            "explainText": "Esta configuración de directiva le permite activar o desactivar la opción de la interfaz de usuario correspondiente en el cuadro de diálogo \"Búsqueda en japonés\". Se puede obtener acceso a este cuadro de diálogo desde el cuadro de diálogo Buscar, en la pestaña Inicio | Edición | Buscar | Ir a... | Opciones de búsqueda | Opciones... Además, se puede buscar en el panel de navegación, en la pestaña Inicio | Edición | Buscar | < flecha hacia abajo > | Opciones... | Suena como (japonés) | Opciones. La casilla \"Suena como (japonés)\" y el botón \"Opciones...\" pueden estar ocultos en Word hasta que se habiliten determinados idiomas de edición.\\r\\n\\r\\nSi habilita esta configuración de directiva, activará la opción de la interfaz de usuario correspondiente según lo especificado en el título de esta configuración de directiva.\\r\\n\\r\\nSi la deshabilita o no la configura, se desactivará la opción de la interfaz de usuario correspondiente.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqf_h_15_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchseshezeje",
+            "displayName": "Se/she, ze/je",
+            "explainText": "Esta configuración de directiva le permite activar o desactivar la opción de la interfaz de usuario correspondiente en el cuadro de diálogo \"Búsqueda en japonés\". Se puede obtener acceso a este cuadro de diálogo desde el cuadro de diálogo Buscar, en la pestaña Inicio | Edición | Buscar | Ir a... | Opciones de búsqueda | Opciones... Además, se puede buscar en el panel de navegación, en la pestaña Inicio | Edición | Buscar | < flecha hacia abajo > | Opciones... | Suena como (japonés) | Opciones. La casilla \"Suena como (japonés)\" y el botón \"Opciones...\" pueden estar ocultos en Word hasta que se habiliten determinados idiomas de edición.\\r\\n\\r\\nSi habilita esta configuración de directiva, activará la opción de la interfaz de usuario correspondiente según lo especificado en el título de esta configuración de directiva.\\r\\n\\r\\nSi la deshabilita o no la configura, se desactivará la opción de la interfaz de usuario correspondiente.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqs_sh_13_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchiaiyapianopiyano",
+            "displayName": "Ia/iya (piano/piyano)",
+            "explainText": "Esta configuración de directiva le permite activar o desactivar la opción de la interfaz de usuario correspondiente en el cuadro de diálogo \"Búsqueda en japonés\". Se puede obtener acceso a este cuadro de diálogo desde el cuadro de diálogo Buscar, en la pestaña Inicio | Edición | Buscar | Ir a... | Opciones de búsqueda | Opciones... Además, se puede buscar en el panel de navegación, en la pestaña Inicio | Edición | Buscar | < flecha hacia abajo > | Opciones... | Suena como (japonés) | Opciones. La casilla \"Suena como (japonés)\" y el botón \"Opciones...\" pueden estar ocultos en Word hasta que se habiliten determinados idiomas de edición.\\r\\n\\r\\nSi habilita esta configuración de directiva, activará la opción de la interfaz de usuario correspondiente según lo especificado en el título de esta configuración de directiva.\\r\\n\\r\\nSi la deshabilita o no la configura, se desactivará la opción de la interfaz de usuario correspondiente.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqy_a_12_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchkikutekisutotekusuto",
+            "displayName": "Ki/ku (tekisuto/tekusuto)",
+            "explainText": "Esta configuración de directiva le permite activar o desactivar la opción de la interfaz de usuario correspondiente en el cuadro de diálogo \"Búsqueda en japonés\". Se puede obtener acceso a este cuadro de diálogo desde el cuadro de diálogo Buscar, en la pestaña Inicio | Edición | Buscar | Ir a... | Opciones de búsqueda | Opciones... Además, se puede buscar en el panel de navegación, en la pestaña Inicio | Edición | Buscar | < flecha hacia abajo > | Opciones... | Suena como (japonés) | Opciones. La casilla \"Suena como (japonés)\" y el botón \"Opciones...\" pueden estar ocultos en Word hasta que se habiliten determinados idiomas de edición.\\r\\n\\r\\nSi habilita esta configuración de directiva, activará la opción de la interfaz de usuario correspondiente según lo especificado en el título de esta configuración de directiva.\\r\\n\\r\\nSi la deshabilita o no la configura, se desactivará la opción de la interfaz de usuario correspondiente.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqki_ku_14_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ignorepunctuationcharacters",
+            "displayName": "Omitir puntuación",
+            "explainText": "Esta configuración de directiva le permite activar o desactivar la opción de la interfaz de usuario correspondiente en el cuadro de diálogo \"Búsqueda en japonés\". Se puede obtener acceso a este cuadro de diálogo desde el cuadro de diálogo Buscar, en la pestaña Inicio | Edición | Buscar | Ir a... | Opciones de búsqueda | Opciones... Además, se puede buscar en el panel de navegación, en la pestaña Inicio | Edición | Buscar | < flecha hacia abajo > | Opciones... | Suena como (japonés) | Opciones. La casilla \"Suena como (japonés)\" y el botón \"Opciones...\" pueden estar ocultos en Word hasta que se habiliten determinados idiomas de edición.\\r\\n\\r\\nSi habilita esta configuración de directiva, activará la opción de la interfaz de usuario correspondiente según lo especificado en el título de esta configuración de directiva.\\r\\n\\r\\nSi la deshabilita o no la configura, se desactivará la opción de la interfaz de usuario correspondiente.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "fignorepunct_18_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ignorewhitespacecharacters",
+            "displayName": "Omitir espacios en blanco",
+            "explainText": "Esta configuración de directiva le permite activar o desactivar la opción de la interfaz de usuario correspondiente en el cuadro de diálogo \"Búsqueda en japonés\". Se puede obtener acceso a este cuadro de diálogo desde el cuadro de diálogo Buscar, en la pestaña Inicio | Edición | Buscar | Ir a... | Opciones de búsqueda | Opciones... Además, se puede buscar en el panel de navegación, en la pestaña Inicio | Edición | Buscar | < flecha hacia abajo > | Opciones... | Suena como (japonés) | Opciones. La casilla \"Suena como (japonés)\" y el botón \"Opciones...\" pueden estar ocultos en Word hasta que se habiliten determinados idiomas de edición.\\r\\n\\r\\nSi habilita esta configuración de directiva, activará la opción de la interfaz de usuario correspondiente según lo especificado en el título de esta configuración de directiva.\\r\\n\\r\\nSi la deshabilita o no la configura, se desactivará la opción de la interfaz de usuario correspondiente.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "fignorespace_19_1"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_ReviewSetLanguage"
             },
             "supportedOn": {
@@ -6470,7 +8414,7 @@
             },
             "name": "L_Translationdirection",
             "displayName": "Dirección de la traducción",
-            "explainText": "Esta configuración de directiva le permite establecer la dirección de la traducción predeterminada para los textos en chino.\\r\n\\r\nSi habilita esta configuración de directiva, la opción seleccionada activará la casilla correspondiente en el cuadro de diálogo \"Conversión al chino\". Este cuadro de diálogo se encuentra en la pestaña Revisar | botón \"Convertir con opciones\". Puede que esto esté visible solamente cuando el chino esté habilitado como idioma de edición. \\r\n\\r\nSi deshabilita o no establece esta configuración de directiva, puede establecerse cualquier dirección de la traducción.",
+            "explainText": "Esta configuración de directiva le permite establecer la dirección de la traducción predeterminada para los textos en chino.\\r\\n\\r\\nSi habilita esta configuración de directiva, la opción seleccionada activará la casilla correspondiente en el cuadro de diálogo \"Conversión al chino\". Este cuadro de diálogo se encuentra en la pestaña Revisar | botón \"Convertir con opciones\". Puede que esto esté visible solamente cuando el chino esté habilitado como idioma de edición. \\r\\n\\r\\nSi deshabilita o no establece esta configuración de directiva, puede establecerse cualquier dirección de la traducción.",
             "tags": [
                 "L_ReviewChineseTranslation",
                 "L_ReviewTab",
@@ -6935,7 +8879,7 @@
             },
             "name": "L_AlertIfNotDefault",
             "displayName": "Preguntar al usuario si Word no es la aplicación predeterminada para sus extensiones de archivo",
-            "explainText": "Esta configuración de directiva especifica si se debe pedir a los usuarios que cambien la asociación de extensiones de archivo cuando alguna de las extensiones de tipo de archivo que estaban asociadas con Word dejen de estarlo.\n\nSi habilita esta configuración de directiva, nunca se preguntará a los usuarios cuando alguno de estos tipos de archivo estén asociados a otras aplicaciones al iniciarse un programa. Si la directiva está Habilitada, la casilla que se encuentra en “Archivo->Opciones-> General -> Opciones de inicio-> Más información…” está Deshabilitada y no marcada.\n\nSi deshabilita o no establece esta configuración de directiva, al iniciarse un programa se preguntará a los usuarios cuando alguno de estos tipos de archivo esté asociado a otras aplicaciones. Los usuarios pueden cambiar el comportamiento de la característica marcando la casilla que se muestra en la notificación o la casilla que se muestra en “Archivo->Opciones-> General -> Opciones de inicio-> Más información…”\n        Si esta directiva está No configurada o deshabilitada, la casilla está Habilitada y Marcada de forma predeterminada.",
+            "explainText": "        Esta configuración de directiva especifica si se debe pedir a los usuarios que cambien la asociación de extensiones de archivo cuando alguna de las extensiones de tipo de archivo que estaban asociadas con Word dejen de estarlo.\n\n        Si habilita esta configuración de directiva, nunca se preguntará a los usuarios cuando alguno de estos tipos de archivo estén asociados a otras aplicaciones al iniciarse un programa. Si la directiva está Habilitada, la casilla que se encuentra en “Archivo->Opciones-> General -> Opciones de inicio-> Más información…” está Deshabilitada y no marcada.\n\n        Si deshabilita o no establece esta configuración de directiva, al iniciarse un programa se preguntará a los usuarios cuando alguno de estos tipos de archivo esté asociado a otras aplicaciones. Los usuarios pueden cambiar el comportamiento de la característica marcando la casilla que se muestra en la notificación o la casilla que se muestra en “Archivo->Opciones-> General -> Opciones de inicio-> Más información…”\n        Si esta directiva está No configurada o deshabilitada, la casilla está Habilitada y Marcada de forma predeterminada.",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7172,7 +9116,7 @@
             },
             "name": "L_OnlineVideos",
             "displayName": "Permitir la reproducción de vídeos en Word",
-            "explainText": "Esta configuración de directiva controla si se pueden reproducir vídeos en línea en Word.\n\nSi habilitas esta directiva o no la configuras, los usuarios podrán reproducir vídeos en línea en Word.\n\nSi deshabilita esta configuración de directiva, no podrá reproducir vídeos en línea en Word.",
+            "explainText": "Esta configuración de directiva controla si se pueden reproducir vídeos en línea en Word.\n\nSi habilitas esta directiva o no la configuras, los usuarios podrán reproducir vídeos en línea en Word.\n\nSi deshabilita esta configuración de directiva, no podrá reproducir vídeos en línea en Word.\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7201,7 +9145,7 @@
             },
             "name": "L_LinkedInResumeAssistant",
             "displayName": "Permitir característica Asistente para currículum vítae de LinkedIn",
-            "explainText": "Esta configuración de directiva controla si aparece o no en Word el Asistente para currículum vítae de LinkedIn.\n\nSi habilita o no configura esta directiva, los usuarios podrán usar el Asistente para currículum vítae de LinkedIn.\n\nSi deshabilita esta configuración de directiva, el Asistente para currículum vítae de LinkedIn no estará disponible.\n\nImportante: Esta configuración de directiva solo se aplica a los clientes de Office 365 que se han instalado mediante Hacer clic en ejecutar, incluidos Office 365 ProPlus, Office 365 Empresa, Visio Pro para Office 365 y Project Pro para Office 365. No se aplica a los productos de Office que usan Windows Installer (MSI).",
+            "explainText": "Esta opción de directiva controla si aparece o no en Word el Asistente para currículum vítae de LinkedIn.\n\nSi habilita o no configura esta directiva, los usuarios podrán usar el Asistente para currículum vítae de LinkedIn.\n\nSi deshabilita esta opción de directiva, el Asistente para currículum vítae de LinkedIn no estará disponible.\n\nNota: Esta opción de directiva solo se aplica a las versiones de suscripción de Office, como Aplicaciones de Microsoft 365 para empresas, y a las versiones de suscripción de Project y Visio.\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7230,7 +9174,7 @@
             },
             "name": "L_DigitalPrint",
             "displayName": "No mostrar la opción para transformar un documento a una página web de balanceo",
-            "explainText": "Mediante esta configuración de directiva se controla si la opción de menú Archivo para transformar un documento de Word en una página web de Sway se muestra o no al usuario. De forma predeterminada, se muestra.\n\nSi habilita esta configuración de directiva, el usuario no podrá ver la opción de menú Archivo para transformar un documento de Word en una página web de Sway.\n\nSi deshabilita o no configura esta configuración de directiva, la opción de menú Archivo para transformar un documento de Word en una página web de Sway se mostrará al usuario.\n\nNota: Esta configuración de directiva solo se aplica a las versiones de suscripción de Office, como Office 365 ProPlus.",
+            "explainText": "Mediante esta opción de directiva se controla si la opción de menú Archivo para transformar un documento de Word en una página web de Sway se muestra o no al usuario. De forma predeterminada, se muestra.\n\nSi habilita esta opción de directiva, el usuario no podrá ver la opción de menú Archivo para transformar un documento de Word en una página web de Sway.\n\nSi deshabilita o no configura esta opción de directiva, la opción de menú Archivo para transformar un documento de Word en una página web de Sway se mostrará al usuario.\n\nNota: Esta opción de directiva solo se aplica a las versiones de suscripción de Office, como Aplicaciones de Microsoft 365 para empresas.\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7259,7 +9203,7 @@
             },
             "name": "L_DisableWarningOnIncludeFieldsUpdate",
             "displayName": "No pedir permiso antes de actualizar los campos IncludePicture e IncludeText en Word",
-            "explainText": "Esta configuración de directiva le permite controlar si Word mostrará al usuario un mensaje de seguridad antes de actualizar los campos IncludePicture e IncludeText en el documento.\n\nDe forma predeterminada, se muestra un mensaje de seguridad al usuario antes de actualizar esos campos, pero el mensaje puede afectar a los flujos de trabajo automatizados que combinan documentos de Word.\n\nImportante: Los campos que contienen las referencias IncludePicture e IncludeText pueden usarse para filtrar datos o aprovechar vulnerabilidades de seguridad de suplantación de identidad (phishing). Un campo que contenga estas referencias se puede modificar para apuntar a contenido en sitios web externos. Si se necesitan credenciales para acceder a la imagen o texto, el proceso de actualizar el campo solicitará un inicio de sesión del usuario. Aunque este es un escenario legítimo para fuentes de confianza, es vulnerable a ataques de suplantación de identidad (phishing) si el documento no proviene de un origen de confianza.\n\nSi habilita esta configuración de directiva, no se mostrará un mensaje de seguridad al usuario antes de actualizar esos campos. No le recomendamos que habilite esta configuración de directiva debido a las posibles implicaciones de seguridad.\n\nSi deshabilita o no establece esta configuración de directiva, se mostrará un mensaje de seguridad al usuario antes de actualizar esos campos.",
+            "explainText": "Esta configuración de directiva le permite controlar si Word mostrará al usuario un mensaje de seguridad antes de actualizar los campos IncludePicture e IncludeText en el documento.\n\nDe forma predeterminada, se muestra un mensaje de seguridad al usuario antes de actualizar esos campos, pero el mensaje puede afectar a los flujos de trabajo automatizados que combinan documentos de Word.\n\nImportante: Los campos que contienen las referencias IncludePicture e IncludeText pueden usarse para filtrar datos o aprovechar vulnerabilidades de seguridad de suplantación de identidad (phishing). Un campo que contenga estas referencias se puede modificar para apuntar a contenido en sitios web externos. Si se necesitan credenciales para acceder a la imagen o texto, el proceso de actualizar el campo solicitará un inicio de sesión del usuario. Aunque este es un escenario legítimo para fuentes de confianza, es vulnerable a ataques de suplantación de identidad (phishing) si el documento no proviene de un origen de confianza.\n\nSi habilita esta configuración de directiva, no se mostrará un mensaje de seguridad al usuario antes de actualizar esos campos. No le recomendamos que habilite esta configuración de directiva debido a las posibles implicaciones de seguridad.\n\nSi deshabilita o no establece esta configuración de directiva, se mostrará un mensaje de seguridad al usuario antes de actualizar esos campos.\n      ",
             "tags": [
                 "L_Security",
                 "L_WordOptions",
@@ -7288,7 +9232,7 @@
             },
             "name": "L_Acronyms",
             "displayName": "Quitar el comando Acrónimos de la cinta de opciones",
-            "explainText": "Esta configuración de directiva le permite quitar el comando Acrónimos de la cinta de opciones. Este comando aparece en la pestaña Referencias.\n\nSi habilita esta opción de directiva, se quitará el comando Acrónimos de la cinta de opciones. Los usuarios no podrán agregar este comando a la cinta de forma manual. Por lo tanto, los usuarios no podrán usar la característica Acrónimos.\n\nSi deshabilita o no configura esta opción de directiva, el comando Acrónimos aparecerá en la cinta de opciones.\n\nNota: Esta opción de directiva solo se aplica a las versiones de suscripción de Office, como Office 365 ProPlus.",
+            "explainText": "Esta opción de directiva le permite quitar el comando Acrónimos de la cinta de opciones. Este comando aparece en la pestaña Referencias.\n\nSi habilita esta opción de directiva, se quitará el comando Acrónimos de la cinta de opciones. Los usuarios no podrán agregar este comando a la cinta de forma manual. Por lo tanto, los usuarios no podrán usar la característica Acrónimos.\n\nSi deshabilita o no configura esta opción de directiva, el comando Acrónimos aparecerá en la cinta de opciones.\n\nNota: Esta opción de directiva solo se aplica a las versiones de suscripción de Office, como Aplicaciones de Microsoft 365 para empresas.\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7297,6 +9241,107 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "acronyms"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_EmailOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DoNotCompressInlinedImagesInOutlook",
+            "displayName": "No comprimir las imágenes insertadas en Outlook",
+            "explainText": "Esta opción de directiva le permite deshabilitar la compresión en imágenes insertadas en Outlook.\n\nSi habilita esta opción de directiva, Outlook no comprimirá las imágenes insertadas en el mensaje.\n\nSi deshabilita o no configura esta opción de directiva, se comprimirán las imágenes insertadas.\n\nNota: Esta opción de directiva solo se aplica a las versiones de suscripción de Office, como Aplicaciones de Microsoft 365 para empresas.\n      ",
+            "tags": [
+                "L_EmailOptions",
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\common\\mailsettings",
+            "valueName": "outlookdonotcompressimages"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_EmailOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Alta fidelidad"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "330 ppp"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "220 ppp"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "150 ppp"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "96 ppp"
+                            }
+                        ],
+                        "valueName": "oulookimagedpiindex",
+                        "inputType": "dropdownList",
+                        "caption": "Calidad de compresión de imágenes incorporadas predeterminada para Outlook:",
+                        "id": "L_DefaultCompressionQualityForInlinedImagesInOutlookPart"
+                    }
+                ]
+            },
+            "name": "L_DefaultCompressionQualityForInlinedImagesInOutlook",
+            "displayName": "Especificar la calidad predeterminada de la compresión realizada en imágenes incorporadas en Outlook",
+            "explainText": "Esta opción de directiva le permite especificar la calidad predeterminada de la compresión aplicada a las imágenes insertadas en Outlook.\n\nSi habilita esta opción de directiva, Outlook comprimirá las imágenes insertadas en el mensaje de acuerdo con la calidad especificada.\n\nSi deshabilita o no configura esta opción de directiva, las imágenes insertadas se comprimirán con la calidad predeterminada (220 dpi).\n\nNota: Esta opción de directiva solo se aplica a las versiones de suscripción de Office, como Aplicaciones de Microsoft 365 para empresas.\n    ",
+            "tags": [
+                "L_EmailOptions",
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\common\\mailsettings"
         }
     ]
 }

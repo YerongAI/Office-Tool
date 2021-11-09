@@ -183,8 +183,8 @@
             "parentCategory": {
                 "ref": "L_MicrosoftOfficeExcel"
             },
-            "name": "L_IntelligentServices",
-            "displayName": "インテリジェント サービス"
+            "name": "L_PowerBI",
+            "displayName": "Power BI"
         }
     ],
     "policies": [
@@ -395,6 +395,35 @@
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\common\\toolbars\\excel",
             "valueName": "allowselectionfloaties"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Formulas"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_R1C1referencestyle",
+            "displayName": "R1C1 参照形式を使用する",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_Formulas",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "frefa1_4_1"
         },
         {
             "parentCategory": {
@@ -621,6 +650,35 @@
                     "value": 0
                 }
             },
+            "name": "L_Promptforworkbookproperties",
+            "displayName": "保存時にプロパティを確認する",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_Save",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fpromptsuminfo_65_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Save"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_SaveAutoRecoverinfo",
             "displayName": "自動回復用データを保存する",
             "explainText": "このポリシーを有効にすると、N 分間隔で自動回復用データを保存するためのユーザー オプションが設定されます。",
@@ -748,7 +806,7 @@
             },
             "name": "L_DisableAutoRepublish",
             "displayName": "自動再発行を無効にする",
-            "explainText": "このポリシー設定では、管理者は Excel で自動再発行機能を無効にすることができます。ユーザーが静的な Web ページに Excel データを発行し、自動再発行機能を有効にしている場合、Excel ではユーザーがブックを保存するたびにデータのコピーが Web ページに保存されます。既定では、自動再発行が有効になっている場合、ユーザーが発行したブックを保存するたびにメッセージ ダイアログが表示されます。このダイアログから、一時的または永久的に自動再発行を無効にしたり、[今後このメッセージを表示しない] をオンにして保存のたびにダイアログが表示されないようにしたりすることができます。ユーザーが [今後このメッセージを表示しない] をオンにすると、Excel ではユーザーに通知することなく保存のたびに自動的にデータの再発行が続行されます。\n\nこのポリシー設定を有効にした場合、自動再発行機能が無効になるため、ユーザーは手動で Web にデータを発行する必要があります。\n\nこのポリシー設定を無効にするか、未構成にした場合、ユーザーは自動再発行機能を使用して、Web ページとして保存したブックを自動的に再発行できます。",
+            "explainText": "このポリシー設定では、管理者は Excel で自動再発行機能を無効にすることができます。ユーザーが静的な Web ページに Excel データを発行し、自動再発行機能を有効にしている場合、Excel ではユーザーがブックを保存するたびにデータのコピーが Web ページに保存されます。既定では、自動再発行が有効になっている場合、ユーザーが発行したブックを保存するたびにメッセージ ダイアログが表示されます。このダイアログから、一時的または永久的に自動再発行を無効にしたり、[今後このメッセージを表示しない] をオンにして保存のたびにダイアログが表示されないようにしたりすることができます。ユーザーが [今後このメッセージを表示しない] をオンにすると、Excel ではユーザーに通知することなく保存のたびに自動的にデータの再発行が続行されます。\n\n      このポリシー設定を有効にした場合、自動再発行機能が無効になるため、ユーザーは手動で Web にデータを発行する必要があります。\n\n      このポリシー設定を無効にするか、未構成にした場合、ユーザーは自動再発行機能を使用して、Web ページとして保存したブックを自動的に再発行できます。",
             "tags": [
                 "L_Save",
                 "L_ExcelOptions",
@@ -995,6 +1053,70 @@
         },
         {
             "parentCategory": {
+                "ref": "L_ProtectedView"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "ファイルをブロックする"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "ファイルを保護ビューで開く"
+                            }
+                        ],
+                        "valueName": "openinprotectedview",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsDropID"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "disableeditfrompv",
+                        "key": "software\\microsoft\\office\\16.0\\excel\\security\\filevalidation",
+                        "inputType": "checkBox",
+                        "caption": "オンにした場合、編集を許可します。オフにした場合、編集を許可しません。",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsStr3"
+                    }
+                ]
+            },
+            "name": "L_SetDocumentBehaviorIfFileValidationFails",
+            "displayName": "ファイル検証に失敗した場合のドキュメントの処理の設定",
+            "explainText": "このポリシー設定では、ファイル検証が失敗した場合のドキュメントの処理方法を指定できます。\n\nこのポリシー設定を有効にした場合、ファイル検証に失敗したファイルに対する次のオプションを構成できます。\n\n- ファイルを完全にブロックする: ユーザーはファイルを開くことができません。\n- ファイルを保護ビューで開く (編集不可): ユーザーはファイルを編集できません。このポリシー設定を無効にした場合も、この方法でファイルが処理されます。\n- ファイルを保護ビューで開く (編集可): ユーザーはファイルを編集することができます。このポリシー設定を構成しなかった場合も、この方法でファイルが処理されます。\n\nこのポリシー設定を無効にした場合、[ファイルを保護ビューで開く (編集不可)] の処理が適用されます。\n\nこのポリシー設定を構成しなかった場合、[ファイルを保護ビューで開く (編集可)] の処理が適用されます。",
+            "tags": [
+                "L_ProtectedView",
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security\\filevalidation"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_ExternalContent"
             },
             "supportedOn": {
@@ -1012,7 +1134,7 @@
             },
             "name": "L_DisableDDEServerLookup",
             "displayName": "Excel で動的データ交換 (DDE) サーバーの参照を許可しない",
-            "explainText": "このポリシー設定を使用すると、動的データ交換 (DDE) サーバーの参照を許可するかどうかを制御できます。\n\n既定では、DDE サーバーの参照が有効になっていますが、ユーザーは [ファイル]、[オプション]、[トラスト センター]、[トラスト センターの設定]、[外部コンテンツ] の順にアクセスして、DDE サーバーの参照を無効にすることができます。\n\nこのポリシー設定を有効にすると、DDE サーバーの参照は許可されず、ユーザーは [トラスト センター] で DDE サーバーの参照を有効にすることはできません。\n\n注: 動的データ交換 (DDE) サーバーの起動を使用する場合 (非推奨)、このポリシー設定を有効にしないでください。DDE サーバーの起動には DDE サーバーの参照が有効になっている必要があるためです。\n\nこのポリシー設定を無効にするか構成しない場合、DDE サーバーの参照は有効になりますが、ユーザーは [トラスト センター] で DDE サーバーの参照を無効にできます。\n\n注: このポリシー設定は、Office 365 ProPlus などのバージョンの Office サブスクリプションにのみ適用されます。",
+            "explainText": "このポリシー設定を使用すると、動的データ交換 (DDE) サーバーの参照を許可するかどうかを制御できます。\n\n既定では、DDE サーバーの参照が有効になっていますが、ユーザーは [ファイル]、[オプション]、[トラスト センター]、[トラスト センターの設定]、[外部コンテンツ] の順にアクセスして、DDE サーバーの参照を無効にすることができます。\n\nこのポリシー設定を有効にすると、DDE サーバーの参照は許可されず、ユーザーはトラスト センターで DDE サーバーの参照を有効にすることはできません。\n\n注: 動的データ交換 (DDE) サーバーの起動を使用する場合 (非推奨)、このポリシー設定を有効にしないでください。DDE サーバーの起動には DDE サーバーの参照が有効になっている必要があるためです。\n\nこのポリシー設定を無効にするか構成しない場合、DDE サーバーの参照は有効になりますが、ユーザーはトラスト センターで DDE サーバーの参照を無効にできます。\n\n注: このポリシー設定は、Microsoft 365 Apps for enterprise などのサブスクリプション版の Office にのみ適用されます。",
             "tags": [
                 "L_ExternalContent",
                 "L_TrustCenter",
@@ -1043,7 +1165,7 @@
             },
             "name": "L_DisableDDEServerLaunch",
             "displayName": "Excel で動的データ交換 (DDE) サーバーの起動を許可しない",
-            "explainText": "このポリシー設定を使用すると、動的データ交換 (DDE) サーバーの起動を許可するかどうかを制御できます。\n\n既定では、DDE サーバーの起動は無効になっていますが、ユーザーは [ファイル]、[オプション]、[トラスト センター]、[トラスト センターの設定]、[外部コンテンツ] の順にアクセスして、DDE サーバーの起動を有効にすることができます。\n\nセキュリティ上の理由から、DDE サーバーの起動を有効にすることはお勧めしません。\n\n注: 動的データ交換 (DDE) サーバーの起動を実行するには、DDE サーバーの参照を有効にする必要があります。[動的データ交換 (DDE) サーバーの参照を許可しない] ポリシー設定が有効になっていないことを確認してください。このポリシー設定を有効にすると、DDE サーバーの参照が無効になります。\n\nこのポリシー設定を有効にすると、DDE サーバーの起動は許可されず、ユーザーは [トラスト センター] で DDE サーバーの起動を有効にすることはできません。\n\nこのポリシー設定を無効にすると、DDE サーバーの起動が許可され、ユーザーは [トラスト センター] で DDE サーバーの起動を無効にすることができません。セキュリティ上の理由により、この方法はお勧めしません。\n\nこのポリシー設定を構成しない場合、DDE サーバーの起動は無効になりますが、ユーザーは [トラスト センター] で DDE サーバーの起動を有効にすることができます。\n\n注: このポリシー設定は、Office 365 ProPlus などのバージョンの Office サブスクリプションにのみ適用されます。",
+            "explainText": "このポリシー設定を使用すると、動的データ交換 (DDE) サーバーの起動を許可するかどうかを制御できます。\n\n既定では、DDE サーバーの起動は無効になっていますが、ユーザーは [ファイル]、[オプション]、[トラスト センター]、[トラスト センターの設定]、[外部コンテンツ] の順にアクセスして、DDE サーバーの起動を有効にすることができます。\n\nセキュリティ上の理由から、DDE サーバーの起動を有効にすることはお勧めしません。\n\n注: 動的データ交換 (DDE) サーバーの起動を実行するには、DDE サーバーの参照を有効にする必要があります。[動的データ交換 (DDE) サーバーの参照を許可しない] ポリシー設定が有効になっていないことを確認してください。このポリシー設定を有効にすると、DDE サーバーの参照が無効になります。\n\nこのポリシー設定を有効にすると、DDE サーバーの起動は許可されず、ユーザーはトラスト センターで DDE サーバーの起動を有効にすることはできません。\n\nこのポリシー設定を無効にすると、DDE サーバーの起動が許可され、ユーザーはトラスト センターで DDE サーバーの起動を無効にすることができません。セキュリティ上の理由により、この方法はお勧めしません。\n\nこのポリシー設定を構成しない場合、DDE サーバーの起動は無効になりますが、ユーザーはトラスト センターで DDE サーバーの起動を有効にすることができます。\n\n注: このポリシー設定は、Microsoft 365 Apps for enterprise などのサブスクリプション版の Office にのみ適用されます。",
             "tags": [
                 "L_ExternalContent",
                 "L_TrustCenter",
@@ -1074,7 +1196,7 @@
             },
             "name": "L_EnableBlockUnsecureQueryFiles",
             "displayName": "信頼されていない Microsoft クエリ ファイルを開くことを常に許可しない",
-            "explainText": "このポリシー設定を使用すると、信頼されていない場所にある Microsoft Query ファイル (.iqy、.oqy、.dqy、.rqy) を開けないようにするかどうかを制御できます。\n\nこのポリシー設定を有効にすると、信頼されていない場所にある Microsoft Query ファイルを開くことができなくなります。ユーザーは、[ファイル]、[オプション]、[トラスト センター]、[トラスト センターの設定]、[外部コンテンツ] でこの設定を変更することはできません。\n\nこのポリシー設定を無効にするか構成しない場合、ユーザーが [トラスト センター] でこの設定を変更していない限り、信頼されていない場所にある Microsoft Query ファイルを開くことができます。\n\n注: このポリシー設定は、Office 365 ProPlus などのバージョンの Office サブスクリプションにのみ適用されます。",
+            "explainText": "このポリシー設定を使用すると、信頼されていない場所にある Microsoft Query ファイル (.iqy、.oqy、.dqy、.rqy) を開けないようにするかどうかを制御できます。\n\nこのポリシー設定を有効にすると、信頼されていない場所にある Microsoft Query ファイルを開くことができなくなります。ユーザーは、[ファイル]、[オプション]、[トラスト センター]、[トラスト センターの設定]、[外部コンテンツ] でこの設定を変更することはできません。\n\nこのポリシー設定を無効にするか構成しない場合、ユーザーがトラスト センターでこの設定を変更していない限り、信頼されていない場所にある Microsoft Query ファイルを開くことができます。\n\n注: このポリシー設定は、Microsoft 365 Apps for enterprise などのサブスクリプション版の Office にのみ適用されます。",
             "tags": [
                 "L_ExternalContent",
                 "L_TrustCenter",
@@ -1105,7 +1227,7 @@
             },
             "name": "L_EnableForeignTextFileProtectedView",
             "displayName": "信頼されていないテキストベースのファイルを保護ビューで常に開く",
-            "explainText": "このポリシー設定を使用すると、信頼されていない場所から開かれたテキストベースのファイル (.csv、.dif、.sylk) を常に保護ビューで開くかどうかを制御できます。\n\nこのポリシー設定を有効にすると、信頼されていない場所から開かれたテキストベースのファイルは常に保護ビューで開きます。ユーザーは、[ファイル]、[オプション]、[トラスト センター]、[トラスト センターの設定]、[保護ビュー] でこの設定を変更することはできません。\n\nこのポリシー設定を無効にするか構成しない場合、ユーザーが [トラスト センター] でこの設定を変更していない限り、信頼されていない場所から開かれたテキストベースのファイルは保護ビューでは表示されません。\n\n注: このポリシー設定は、Office 365 ProPlus などのバージョンの Office サブスクリプションにのみ適用されます。",
+            "explainText": "このポリシー設定を使用すると、信頼されていない場所から開かれたテキストベースのファイル (.csv、.dif、.sylk) を常に保護ビューで表示するかどうかを制御できます。\n\nこのポリシー設定を有効にすると、信頼されていない場所から開かれたテキストベースのファイルは常に保護ビューで表示されます。ユーザーは、[ファイル]、[オプション]、[トラスト センター]、[トラスト センターの設定]、[保護ビュー] でこの設定を変更することはできません。\n\nこのポリシー設定を無効にするか構成しない場合、ユーザーがトラスト センターでこの設定を変更していない限り、信頼されていない場所から開かれたテキストベースのファイルは保護ビューでは表示されません。\n\n注: このポリシー設定は、Microsoft 365 Apps for enterprise などのサブスクリプション版の Office にのみ適用されます。",
             "tags": [
                 "L_ProtectedView",
                 "L_TrustCenter",
@@ -1136,7 +1258,7 @@
             },
             "name": "L_EnableDataBaseFileProtectedView",
             "displayName": "信頼されていないデータベース ファイルを保護ビューで常に開く",
-            "explainText": "このポリシー設定を使用すると、信頼されていない場所から開かれたデータベース ファイル (.dbf) を常に保護ビューで開くかどうかを制御できます。\n\nこのポリシー設定を有効にすると、信頼されていない場所から開かれたデータベース ファイルは常に保護ビューで開きます。ユーザーは、[ファイル]、[オプション]、[トラスト センター]、[トラスト センターの設定]、[保護ビュー] でこの設定を変更することはできません。\n\nこのポリシー設定を無効にするか構成しない場合、信頼されていない場所から開かれたデータベース ファイルは、ユーザーが [トラスト センター] でこの設定を変更していない限り、保護ビューで表示されません。\n\n注: このポリシー設定は、Office 365 ProPlus などのバージョンの Office サブスクリプションにのみ適用されます。",
+            "explainText": "このポリシー設定を使用すると、信頼されていない場所から開かれたデータベース ファイル (.dbf) を常に保護ビューで表示するかどうかを制御できます。\n\nこのポリシー設定を有効にすると、信頼されていない場所から開かれたデータベース ファイルは常に保護ビューで表示されます。ユーザーは、[ファイル]、[オプション]、[トラスト センター]、[トラスト センターの設定]、[保護ビュー] でこの設定を変更することはできません。\n\nこのポリシー設定を無効にするか構成しない場合、ユーザーがトラスト センターでこの設定を変更していない限り、信頼されていない場所から開かれたデータベース ファイルは保護ビューで表示されません。\n\n注: このポリシー設定は、Microsoft 365 Apps for enterprise などのサブスクリプション版の Office にのみ適用されます。",
             "tags": [
                 "L_ProtectedView",
                 "L_TrustCenter",
@@ -1773,6 +1895,66 @@
                     "value": 0
                 }
             },
+            "name": "L_XL4KillSwitchPolicy",
+            "displayName": "Excel で XLM マクロが実行されないようにする",
+            "explainText": "このポリシー設定を有効にすると、Excel で Excel 4.0 (XLM) マクロが実行されなくなります。\n\nこのポリシー設定を有効にすると、Excel で XLM マクロを実行できません。\n\nこのポリシー設定を無効にするか、構成しない場合、Excel で XLM マクロを実行できます。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security",
+            "valueName": "xl4macrooff"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_StoremacroinPersonalMacroWorkbookbydefault",
+            "displayName": "既定でマクロを個人用マクロ ブックに保存する",
+            "explainText": "このポリシー設定では、Excel でマクロを格納するための既定の場所を指定します。\n\n      このポリシー設定を有効にした場合、Excel ではユーザーの個人用マクロ ブックにマクロが格納されます。\n\n      このポリシー設定を無効にするか、未構成にした場合、Excel では作成元の作業中のブックにマクロが格納されます。\n\n      注意: ユーザー インターフェイス (UI) では、[マクロの記録] ダイアログ ボックス ([マクロ] | [マクロの記録]) にある [マクロの保存先] ボックスを使用して、新しいマクロを現在のブック、新しいブック、または各ユーザーの個人用マクロ ブック (Personal.xlsb) に格納するかどうかを選択できます。個人用マクロ ブックとは、Excel を起動するたびに開く非表示のブックのことです。\n\n      [マクロの保存先] ボックスでは、既定では [作業中のブック] があらかじめ選択されます。ユーザーが作業中のブックにマクロを保存してから、他のユーザーにそのブックを配布した場合、マクロはブックと共に配布されます。このポリシー設定を有効にした場合、[マクロの保存先] ボックスでは [個人用マクロ ブック] があらかじめ選択されます。この場合でも、ドロップダウン メニューにある他の 2 つのオプションのいずれかを選択することもできます。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fglobalsheet_37_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_TrustaccesstoVisualBasicProject",
             "displayName": "Visual Basic プロジェクトへのアクセスを信頼する",
             "explainText": "このポリシー設定では、Microsoft Visual Studio 2005 Tools for Microsoft Office (VSTO) などのオートメーション クライアントから、指定したアプリケーションの Visual Basic for Applications プロジェクト システムへのアクセスを許可するかどうかを指定します。VSTO プロジェクトでは、Visual Basic for Applications を使用しない場合でも、Excel、PowerPoint、および Word の Visual Basic for Applications プロジェクト システムへのアクセスが必要になります。Visual Basic プロジェクトと C# プロジェクトのコントロールのデザイン タイム サポートは、Word および Excel の Visual Basic for Applications プロジェクト システムによって異なります。\n\nこのポリシー設定を有効にした場合、VSTO などのオートメーション クライアントから、指定したアプリケーションの Visual Basic for Applications プロジェクト システムへのアクセスが可能になります。ユーザーは、セキュリティ センターの [マクロの設定] セクションにある [VBA プロジェクト オブジェクト モデルへのアクセスを信頼する] ユーザー インターフェイス オプションを使用してこの動作を変更できなくなります。\n\nこのポリシー設定を無効にした場合、VSTO から VBA プロジェクトへのプログラムによるアクセスができなくなります。また、[VBA プロジェクト オブジェクト モデルへのアクセスを信頼する] チェック ボックスがオフになり、ユーザーはこの設定を変更できません。注意: このポリシー設定を無効にすると、VSTO プロジェクトと、指定したアプリケーションの VBA プロジェクト システムのやり取りが正常に行われなくなります。\n\nこのポリシー設定を未構成にした場合、オートメーション クライアントから VBA プロジェクトへのプログラムによるアクセスができなくなります。ユーザーは、セキュリティ センターの [マクロの設定] セクションにある [VBA プロジェクト オブジェクト モデルへのアクセスを信頼する] をオンにすることによって、このアクセスを有効にすることができます。ただし、この場合、ユーザーが開いたドキュメント内のマクロから、Visual Basic の主要なオブジェクト、メソッド、およびプロパティへのアクセスが可能になるため、セキュリティ上の危険が生じる可能性があります。",
@@ -1925,7 +2107,7 @@
             },
             "name": "L_BlockMacroExecutionFromInternet",
             "displayName": "インターネットから取得した Office ファイル内のマクロの実行をブロックします",
-            "explainText": "このポリシー設定では、インターネットから取得された Office ファイル内のマクロの実行をブロックできます。\n\nこのポリシー設定を有効にした場合、セキュリティ センターの [マクロの設定] セクションで [すべてのマクロを有効にする] がオンになっている場合でも、マクロの実行はブロックされます。また、[コンテンツの有効化] の選択肢が表示されないで、マクロの実行がブロックされたことを示す通知が表示されます。Office ファイルが信頼できる場所に保存されている場合、または以前にユーザーが信頼した場合は、マクロを実行できます。\n\nこのポリシーを無効にした場合、または構成していない場合は、セキュリティ センターの [マクロの設定] セクションで構成された設定で、インターネットから取得された Office ファイル内のマクロが実行されるかどうかが決まります。",
+            "explainText": "        このポリシー設定では、インターネットから取得された Office ファイル内のマクロの実行をブロックできます。\n\n        このポリシー設定を有効にした場合、セキュリティ センターの [マクロの設定] セクションで [すべてのマクロを有効にする] がオンになっている場合でも、マクロの実行はブロックされます。また、[コンテンツの有効化] の選択肢が表示されないで、マクロの実行がブロックされたことを示す通知が表示されます。Office ファイルが信頼できる場所に保存されている場合、または以前にユーザーが信頼した場合は、マクロを実行できます。\n\n        このポリシーを無効にした場合、または構成していない場合は、セキュリティ センターの [マクロの設定] セクションで構成された設定で、インターネットから取得された Office ファイル内のマクロが実行されるかどうかが決まります。\n      ",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -4145,7 +4327,7 @@
             },
             "name": "L_MicrosoftExcelmenuorHelpkey",
             "displayName": "代替キー指定",
-            "explainText":"このポリシー設定では選択用キーの ASCII 値 (たとえば '/' の場合は「47」) を設定できます。",
+            "explainText": "このポリシー設定では選択用キーの ASCII 値 (たとえば '/' の場合は「47」) を設定できます。",
             "tags": [
                 "L_Advanced",
                 "L_ExcelOptions",
@@ -4153,6 +4335,267 @@
             ],
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\excel\\options"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Transitionnavigationkeys",
+            "displayName": "Lotus 1-2-3 形式のキー操作",
+            "explainText": "このポリシーを有効にすると、[詳細設定] の [Lotus との互換性] にあるユーザー オプション [Lotus 1-2-3 形式のキー操作] チェック ボックスがオンになります。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fisi_33_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Ignoreotherapplications",
+            "displayName": "他のアプリケーションを無視する",
+            "explainText": "このポリシー設定では、Excel で Dynamic Data Exchange (DDE) を使用する他のアプリケーションとデータを交換できるかどうかを指定します。\n\n      このポリシー設定を有効にした場合、Excel では DDE を使用する他のアプリケーションとデータを交換できません。また、[Excel のオプション] | [全般] の下にある [Dynamic Data Exchange (DDE) を使用する他のアプリケーションを無視する] ユーザー インターフェイス オプションが選択されます。ユーザーはこの設定を変更できません。このポリシー設定を有効にすると、ユーザーが Excel で DDE 機能を利用してブックの情報を更新するときに混乱する可能性があります。この場合、他のアプリケーションから提供される情報を更新するには、他の方法を使用する必要があります。\n\n      このポリシー設定を無効にするか、未構成にした場合、Excel では Dynamic Data Exchange (DDE) プロトコルを使用して、他のアプリケーションとメッセージおよびデータを交換できます。たとえば、Excel ブックのセルを、別のアプリケーションから提供される値 (天気や株価情報など) に動的にリンクできます。他のアプリケーションから提供される値が変わると、Excel ブックの値が自動的に更新されます。注意: ユーザーは、[Excel のオプション] | [全般] の下にある [Dynamic Data Exchange (DDE) を使用する他のアプリケーションを無視する] ユーザー インターフェイス オプションを選択して、この動作を変更できます。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fddeenabled_6_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ZoomonrollwithIntelliMouse",
+            "displayName": "IntelliMouse のホイールで倍率を変更する",
+            "explainText": "このポリシー設定では、[ファイル] タブ | [オプション] | [詳細設定] | [編集] オプションにある [IntelliMouse のホイールで倍率を変更する] オプションを設定します。\n\nこのポリシー設定を有効にした場合、IntelliMouse のホイールを回転させるとワークシートのズーム レベルが変更されます。\n\nこのポリシー設定を無効にするか、未構成にした場合、IntelliMouse のホイールを回転させると、ワークシートがスクロールします。これが既定の動作です。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "frollzoom_98_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Shownames",
+            "displayName": "名前を表示する",
+            "explainText": "この設定を有効にすると、[詳細設定] の [表示] にある [ポイントしたときにグラフ要素名を表示する] ユーザー オプションが選択されます。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fshowchartnames_96_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Showvalues",
+            "displayName": "値を表示する",
+            "explainText": "この設定を有効にすると、[詳細設定] の [表示] にある [ポイントしたときにデータ要素の値を表示する] ユーザー オプションが設定されます。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fshowcharttipvalues_97_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Editdirectlyincell",
+            "displayName": "セル内で編集する",
+            "explainText": "このポリシー設定では、[ファイル] タブ | [オプション] | [詳細設定] | [編集] オプションにある [セルに直接入力する] オプションを設定します。\n\nこのポリシー設定を有効にするか、未構成にした場合、セルの値を直接編集できます。これが既定の動作です。\n\nこのポリシー設定を無効にした場合、セルの値を直接編集できません。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fnoincell_66_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_EnableFillHandleAndCellDragAndDrop",
+            "displayName": "フィル ハンドルおよびセルのドラッグ アンド ドロップを使用する",
+            "explainText": "このポリシー設定では、[ファイル] タブ | [オプション] | [詳細設定] | [編集設定] にある [フィル ハンドルおよびセルのドラッグ アンド ドロップを使用する] オプションを設定します。\n\nこのポリシー設定を有効にするか、未構成にした場合、フィル ハンドルおよびセルのドラッグ アンド ドロップが使用可能です。これが既定の動作です。\n\nこのポリシー設定を無効にした場合、フィル ハンドルおよびセルのドラッグ アンド ドロップは使用できません。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fdisabledman_36_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Alertbeforeoverwritingcells",
+            "displayName": "セルを上書きする前にメッセージを表示する",
+            "explainText": "このポリシー設定では、[ファイル] タブ | [オプション] | [詳細設定] | [編集設定] にある [セルを上書きする前にメッセージを表示する] ユーザー オプションを設定します。\n\nこのポリシー設定を有効にするか、未構成にした場合、セルを上書きしようとすると警告が表示されます。これが既定の動作です。\n\nこのポリシー設定を無効にした場合、セルを上書きしようとしても警告は表示されません。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fnodragwarning_76_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_MoveselectionafterEnter",
+            "displayName": "Enter キーを押した後にセルを移動する",
+            "explainText": "このポリシーを有効にすると、[詳細設定] の [編集設定] にある [Enter キーを押した後にセルを移動する] ユーザー オプションが設定されます。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fentermove_75_1"
         },
         {
             "parentCategory": {
@@ -4262,6 +4705,93 @@
                     "value": 0
                 }
             },
+            "name": "L_CutAndCopyObjectsWithCells",
+            "displayName": "オブジェクトをセルと共に切り取り、コピーを行う",
+            "explainText": "このポリシー設定では、[ファイル] タブ | [オプション] | [詳細設定] | [切り取り、コピー、貼り付け] にある [挿入したオブジェクトをセルと共に切り取り、コピー、並べ替えを行う] ユーザー オプションを設定します。\n\nこのポリシー設定を有効にするか、未構成にした場合、セルに挿入されたオブジェクトの切り取り、コピー、並び替えはセルと一緒に実行されます。\n\nこのポリシー設定を無効にした場合、セルに挿入されたオブジェクトの切り取り、コピー、並び替えはセルと一緒に実行されません。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fobjwcellmove_71_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Asktoupdateautomaticlinks",
+            "displayName": "リンクの自動更新前にメッセージを表示する",
+            "explainText": "このポリシー設定では、Excel でリンクを自動的に更新するかどうかを確認するメッセージを表示するか、または確認せずにバックグラウンドで更新を実行するかを指定します。\n\nこのポリシー設定を有効にするか、未構成にした場合、リンクを自動的に更新するかどうかを確認するメッセージが表示されます。また、[ファイル] タブ | [詳細設定] | [全般] にある [リンクの自動更新前にメッセージを表示する] ユーザー インターフェイス オプションが選択されます。\n\nこのポリシー設定を無効にした場合、ユーザーへの確認や通知なしで自動的にリンクが更新されます。このため、ブックの情報の整合性が損なわれることがあります。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fupdateext_78_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_EnableAutoCompleteforcellvalues",
+            "displayName": "オートコンプリートを使用する",
+            "explainText": "このポリシー設定では、[ファイル] タブ | [オプション] | [詳細設定] | [編集設定] にある [オートコンプリートを使用する] オプションを設定します。\n\nこのポリシー設定を有効にするか、未構成にした場合、オートコンプリートが使用できます。これが既定の動作です。\n\nこのポリシー設定を無効にした場合、オートコンプリート機能がオフになります。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fautocomplete_128_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_ExtendDataRangeFormatsAndFormulas",
             "displayName": "データ範囲の形式および数式を拡張する",
             "explainText": "このポリシー設定では、[ファイル] タブ | [オプション] | [詳細設定] | [編集設定] にある [データ範囲の形式および数式を拡張する] オプションを設定します。\n\nこのポリシー設定を有効にするか、未構成にした場合、ユーザーは、リストの末尾に新しく追加したアイテムにリストの他の部分と同じ書式を自動的に設定することができます。これが既定の動作です。\n\nこのポリシー設定を無効にした場合、リストの末尾に新しく追加されたアイテムの書式設定は自動的に行われません。",
@@ -4273,6 +4803,35 @@
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\excel\\options",
             "valueName": "extendlist"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Enableautomaticpercententry",
+            "displayName": "パーセンテージを自動で入力する",
+            "explainText": "このポリシーを有効にすると、[詳細設定] の [編集設定] にある [パーセンテージを自動で入力する] ユーザー オプションが設定されます。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fdisableautopercent_99_1"
         },
         {
             "parentCategory": {
@@ -4302,6 +4861,122 @@
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\common\\general",
             "valueName": "pasteoptions"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_ShowInsertOptionsbuttons",
+            "displayName": "[挿入オプション] ボタンを表示する",
+            "explainText": "このポリシー設定では、[ファイル] タブ | [オプション] | [詳細設定] | [切り取り、コピー、貼り付け] にある [[挿入オプション] ボタンを表示する] オプションを設定します。\n\nこのポリシー設定を有効にするか、未構成にした場合、書式が設定されたセル、行、列の挿入後に [挿入オプション] ボタンが表示されます。これが既定の動作です。\n\nこのポリシー設定を無効にした場合、挿入時に [挿入オプション] ボタンは表示されません。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "enableinsertcellsooui_102_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ShowFormulabarinNormalView",
+            "displayName": "標準表示で数式バーを表示する",
+            "explainText": "この設定を有効にすると、[詳細設定] の [表示] にある [数式バーを表示する] ユーザー オプションが選択されます。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "ffmlaf_1_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ShowFormulabarinFullView",
+            "displayName": "全画面表示で数式バーを表示する",
+            "explainText": "オンにした場合、[表示] メニューで全画面表示に切り替えたときに数式バーが表示されます。オフにした場合、数式バーは表示されません。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "ffmlafull_68_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Functiontooltips",
+            "displayName": "関数のボタン名",
+            "explainText": "この設定を有効にすると、[詳細設定] の [表示] にある [関数のヒントを表示する] ユーザー オプションが設定されます。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fshowfuntips_101_1"
         },
         {
             "parentCategory": {
@@ -4918,7 +5593,7 @@
         },
         {
             "parentCategory": {
-                "ref": "L_IntelligentServices"
+                "ref": "L_PowerBI"
             },
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
@@ -4933,16 +5608,16 @@
                     "value": 0
                 }
             },
-            "name": "L_Insights",
-            "displayName": "[アイデア] ボタンをリボンから削除する",
-            "explainText": "このポリシー設定では、ユーザーのデータに基づいて提案と分析を提供するインテリジェント サービスであるアイデアを、ユーザーに Excel で利用させないようにすることができます。既定では、リボンの [ホーム] タブの [アイデア] グループにアイデアのボタンが表示されます。\n\nこのポリシー設定を有効にすると、アイデアのボタンがリボンから削除され、ユーザーはボタンをリボンに手動で追加できません。ユーザーはアイデアを利用できなくなります。\n\nこのポリシー設定を無効にするか構成しない場合は、アイデアのボタンがリボンに表示されて、ユーザーはアイデアを利用できます。",
+            "name": "L_DisableFromPowerBIDatasetOrganizationName",
+            "displayName": "Power BI データセットからピボットテーブルを作成するためにボタンで組織名の表示を無効にする",
+            "explainText": "    このポリシー設定を使用すると、Power BI データセットからピボットテーブルを作成するために使用される Excel リボンのボタンに組織名が表示されないようにすることができます。既定では、Graph から利用できる場合、組織名がリボンに表示されます。\n\n       このポリシー設定を有効にすると、組織名は表示されません。\n\n      このポリシー設定を無効にするか構成しない場合、組織名が表示されます。\n\n     注: このポリシー設定は、Microsoft 365 Apps for enterprise などの Office のサブスクリプション版にのみ適用されます。",
             "tags": [
-                "L_IntelligentServices",
+                "L_PowerBI",
                 "L_MicrosoftOfficeExcel"
             ],
             "application": "excel16",
-            "key": "software\\microsoft\\office\\16.0\\excel\\intelligent services",
-            "valueName": "insights"
+            "key": "software\\microsoft\\office\\16.0\\excel\\power bi",
+            "valueName": "disablefrompowerbidatasetorganizationname"
         }
     ]
 }

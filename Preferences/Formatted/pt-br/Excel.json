@@ -183,8 +183,8 @@
             "parentCategory": {
                 "ref": "L_MicrosoftOfficeExcel"
             },
-            "name": "L_IntelligentServices",
-            "displayName": "Serviços Inteligentes"
+            "name": "L_PowerBI",
+            "displayName": "Power BI"
         }
     ],
     "policies": [
@@ -398,6 +398,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Formulas"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_R1C1referencestyle",
+            "displayName": "Estilo de referência L1C1",
+            "explainText": "Marca/Desmarca a opção correspondente da interface do usuário.",
+            "tags": [
+                "L_Formulas",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "frefa1_4_1"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_AutocorrectOptions"
             },
             "supportedOn": {
@@ -509,7 +538,7 @@
             },
             "name": "L_Defaultfilelocation",
             "displayName": "Local do arquivo padrão",
-            "explainText": "Essa configuração de política permite especificar a pasta usada pelo Excel ao abrir ou salvar um arquivo. Essa configuração está\ndisponível na guia Arquivo | Opções | Salvar | Opções de salvar pasta de trabalho.\n\nSe você habilitar essa configuração de política, poderá especificar essa pasta.\n\nSe você desabilitar ou não definir essa configuração de política, a pasta padrão será usada.",
+            "explainText": "Essa configuração de política permite especificar a pasta usada pelo Excel ao abrir ou salvar um arquivo.  Essa configuração está\ndisponível na guia Arquivo | Opções | Salvar | Opções de salvar pasta de trabalho.\n\nSe você habilitar essa configuração de política, poderá especificar essa pasta.\n\nSe você desabilitar ou não definir essa configuração de política, a pasta padrão será usada.",
             "tags": [
                 "L_Save",
                 "L_ExcelOptions",
@@ -603,6 +632,35 @@
             ],
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\excel\\options"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Save"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Promptforworkbookproperties",
+            "displayName": "Solicitar propriedades da pasta de trabalho",
+            "explainText": "Marca/Desmarca a opção correspondente da interface do usuário.",
+            "tags": [
+                "L_Save",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fpromptsuminfo_65_1"
         },
         {
             "parentCategory": {
@@ -919,7 +977,7 @@
             },
             "name": "L_DoNotOpenFilesInUnsafeLocationsInProtectedView",
             "displayName": "Não abrir arquivos em locais não seguros no Modo de Exibição Protegido",
-            "explainText": "Essa configuração de política permite determinar se os arquivos localizados em locais não seguros serão abertos no Modo de\nExibição Protegido. Se você não tiver especificado locais não seguros, apenas as pastas \"Arquivos de Programas Baixados\" e\n\"Arquivos de Internet Temporários\" serão consideradas locais não seguros.\n\nSe você habilitar essa configuração de política, os arquivos localizados em locais não seguros não serão abertos no Modo de\nExibição Protegido.\n\nSe você desabilitar ou não definir essa configuração de política, os arquivos localizados em locais não seguros serão abertos no\nModo de Exibição Protegido.",
+            "explainText": "Essa configuração de política permite determinar se os arquivos localizados em locais não seguros serão abertos no Modo de\nExibição Protegido.  Se você não tiver especificado locais não seguros, apenas as pastas \"Arquivos de Programas Baixados\" e\n\"Arquivos de Internet Temporários\" serão consideradas locais não seguros.\n\nSe você habilitar essa configuração de política, os arquivos localizados em locais não seguros não serão abertos no Modo de\nExibição Protegido.\n\nSe você desabilitar ou não definir essa configuração de política, os arquivos localizados em locais não seguros serão abertos no\nModo de Exibição Protegido.",
             "tags": [
                 "L_ProtectedView",
                 "L_TrustCenter",
@@ -995,6 +1053,70 @@
         },
         {
             "parentCategory": {
+                "ref": "L_ProtectedView"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Bloquear arquivos"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Abrir no Modo de Exibição Protegido"
+                            }
+                        ],
+                        "valueName": "openinprotectedview",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsDropID"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "disableeditfrompv",
+                        "key": "software\\microsoft\\office\\16.0\\excel\\security\\filevalidation",
+                        "inputType": "checkBox",
+                        "caption": "Marcada: Permitir edição. Desmarcada: Não permitir edição.",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsStr3"
+                    }
+                ]
+            },
+            "name": "L_SetDocumentBehaviorIfFileValidationFails",
+            "displayName": "Definir comportamento de documentos se a validação de arquivos falhar",
+            "explainText": "Esta configuração de política controla como o Office lida com os documentos quando eles não são aprovados na validação de arquivos.\n\nSe você habilitar esta configuração de política, poderá definir as seguintes opções para os arquivos que não são aprovados na validação de arquivos:\n\n- Bloquear arquivos completamente. Os usuários não podem abrir os arquivos.\n- Abrir arquivos no Modo de Exibição Protegido e não permitir a edição. Os usuários não podem editar os arquivos. Esta também é a forma como o Office lida com os arquivos se você desabilita esta configuração de política.\n- Abrir arquivos no Modo de Exibição Protegido e permitir a edição. Os usuários podem editar os arquivos. Esta também é a forma como o Office lida com os arquivos se você não define esta configuração de política.\n\nSe você desabilitar esta configuração de política, o Office seguirá o comportamento \"Abrir arquivos no Modo de Exibição Protegido e não permitir a edição\".\n\nSe você não definir esta configuração de política, o Office seguirá o comportamento \"Abrir arquivos no Modo de Exibição Protegido e permitir a edição\".",
+            "tags": [
+                "L_ProtectedView",
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security\\filevalidation"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_ExternalContent"
             },
             "supportedOn": {
@@ -1012,7 +1134,7 @@
             },
             "name": "L_DisableDDEServerLookup",
             "displayName": "Não permitir a pesquisa no servidor de DDE (Troca Dinâmica de Dados) no Excel",
-            "explainText": "Esta configuração de política permite que você controle se a pesquisa no servidor de DDE (Troca Dinâmica de Dados) é permitida.\n\nPor padrão, a pesquisa no servidor de DDE está ativada, mas os usuários podem desativá-la indo para Arquivo > Opções > Central de Confiabilidade > Configurações da Central de Confiabilidade > Conteúdo Externo.\n\n\\Se você habilitar essa configuração de política, a pesquisa no servidor de DDE não será permitida, e os usuários não poderão ativar a pesquisa no servidor de DDE na Central de Confiabilidade.\n\nObservação: se você estiver usando a inicialização do servidor de DDE (Troca Dinâmica de Dados), o que não é recomendado, não habilite essa configuração de política, pois essa inicialização requer que a pesquisa no servidor de DDE esteja ativada.\n\nSe você desabilitar ou não definir essa configuração de política, a pesquisa no servidor de DDE será ativada, mas os usuários poderão desativar a pesquisa no servidor de DDE na Central de Confiabilidade.\n\nObservação: essa configuração de política aplica-se somente a versões de assinatura do Office, como o Office 365 ProPlus.",
+            "explainText": "Esta configuração de política permite que você controle se a pesquisa no servidor de DDE (Troca Dinâmica de Dados) é permitida.\n\nPor padrão, a pesquisa no servidor de DDE está ativada, mas os usuários podem desativá-la em Arquivo > Opções > Central de Confiabilidade > Configurações da Central de Confiabilidade > Conteúdo Externo.\n\n\\Se você habilitar esta configuração de política, a pesquisa no servidor de DDE não será permitida, e os usuários não poderão ativar a pesquisa no servidor de DDE na Central de Confiabilidade.\n\nObservação: se você estiver usando a inicialização do servidor de DDE (Troca Dinâmica de Dados), o que não é recomendado, não habilite essa configuração de política, pois essa inicialização requer que a pesquisa no servidor de DDE esteja ativada.\n\nSe você desabilitar ou não definir esta configuração de política, a pesquisa no servidor de DDE será ativada, mas os usuários poderão desativar a pesquisa no servidor de DDE na Central de Confiabilidade.\n\nObservação: esta configuração de política aplica-se somente a versões de assinatura do Office, como o Microsoft 365 Apps para Grandes Empresas.",
             "tags": [
                 "L_ExternalContent",
                 "L_TrustCenter",
@@ -1043,7 +1165,7 @@
             },
             "name": "L_DisableDDEServerLaunch",
             "displayName": "Não permitir a inicialização do servidor de DDE (Troca Dinâmica de Dados) no Excel",
-            "explainText": "Esta configuração de política permite que você controle se a inicialização do servidor de DDE (Troca Dinâmica de Dados) é permitida.\n\nPor padrão, a inicialização do servidor de DDE está desativada, mas os usuários podem ativá-la indo para Arquivo > Opções > Central de Confiabilidade > Configurações da Central de Confiabilidade > Conteúdo Externo.\n\nPor motivos de segurança, não é recomendável ativar a inicialização do servidor de DDE.\n\nObservação: para que a inicialização do servidor de DDE funcione, a pesquisa no servidor de DDE (Troca Dinâmica de Dados) deve ser ativada. Verifique se a configuração de política \"Não permitir pesquisa no servidor de DDE (Troca Dinâmica de Dados)\" está desabilitada, pois a habilitação dessa configuração de política desativa a pesquisa no servidor de DDE.\n\nSe você habilitar essa configuração de política, a inicialização do servidor de DDE não será permitida, e os usuários não poderão ativar a inicialização do servidor de DDE na Central de Confiabilidade.\n\nSe você desabilitar essa configuração de política, a inicialização do servidor de DDE será permitida, e os usuários não poderão desativar a inicialização do servidor de DDE na Central de Confiabilidade. Por motivos de segurança, isso não é recomendado.\n\nSe você não definir essa configuração de política, a inicialização do servidor de DDE será desativada, mas os usuários poderão ativar a inicialização do servidor de DDE na Central de Confiabilidade.\n\nObservação: essa configuração de política aplica-se somente a versões de assinatura do Office, como o Office 365 ProPlus.",
+            "explainText": "Esta configuração de política permite que você controle se a inicialização do servidor de DDE (Troca Dinâmica de Dados) é permitida.\n\nPor padrão, a inicialização do servidor de DDE está desativada, mas os usuários podem ativá-la em Arquivo > Opções > Central de Confiabilidade > Configurações da Central de Confiabilidade > Conteúdo Externo.\n\nPor motivos de segurança, não é recomendável ativar a inicialização do servidor de DDE.\n\nObservação: para que a inicialização do servidor de DDE funcione, a pesquisa no servidor de DDE (Troca Dinâmica de Dados) deve ser ativada. Verifique se a configuração de política \"Não permitir pesquisa no servidor de DDE (Troca Dinâmica de Dados)\" está desabilitada, pois a habilitação dessa configuração de política desativa a pesquisa no servidor de DDE.\n\nSe você habilitar esta configuração de política, a inicialização do servidor de DDE não será permitida, e os usuários não poderão ativar a inicialização do servidor de DDE na Central de Confiabilidade.\n\nSe você desabilitar essa configuração de política, a inicialização do servidor de DDE será permitida, e os usuários não poderão desativar a inicialização do servidor de DDE na Central de Confiabilidade. Por motivos de segurança, isso não é recomendado.\n\nSe você não definir esta configuração de política, a inicialização do servidor de DDE será desativada, mas os usuários poderão ativar a inicialização do servidor de DDE na Central de Confiabilidade.\n\nObservação: esta configuração de política aplica-se somente a versões de assinatura do Office, como o Microsoft 365 Apps para Grandes Empresas.",
             "tags": [
                 "L_ExternalContent",
                 "L_TrustCenter",
@@ -1074,7 +1196,7 @@
             },
             "name": "L_EnableBlockUnsecureQueryFiles",
             "displayName": "Sempre impedir a abertura de arquivos não confiáveis do Microsoft Query",
-            "explainText": "Esta configuração de política controla se a abertura de arquivos do Microsoft Query (.iqy, oqy, .dqy e .rqy) em um local não confiável será impedida.\n\nSe você habilitar essa configuração de política, a abertura de arquivos do Microsoft Query em um local não confiável será impedida. Os usuários não poderão alterar essa configuração em Arquivo > Opções > Central de Confiabilidade > Configurações da Central de Confiabilidade > Conteúdo Externo.\n\nSe você desabilitar ou não definir essa configuração de política, a abertura de arquivos do Microsoft Query em um local não confiável não será impedida, a menos que os usuários tenham alterado essa configuração na Central de Confiabilidade.\n\nObservação: esta configuração de política aplica-se somente a versões de assinatura do Office, como o Office 365 ProPlus.",
+            "explainText": "Esta configuração de política controla se a abertura de arquivos do Microsoft Query (.iqy, oqy, .dqy e .rqy) em um local não confiável será impedida.\n\nSe você habilitar esta configuração de política, a abertura de arquivos do Microsoft Query em um local não confiável será impedida. Os usuários não poderão alterar essa configuração em Arquivo > Opções > Central de Confiabilidade > Configurações da Central de Confiabilidade > Conteúdo Externo.\n\nSe você desabilitar ou não definir esta configuração de política, a abertura de arquivos do Microsoft Query em um local não confiável não será impedida, a menos que os usuários tenham alterado essa configuração na Central de Confiabilidade.\n\nObservação: esta configuração de política aplica-se somente a versões de assinatura do Office, como o Microsoft 365 Apps para Grandes Empresas.",
             "tags": [
                 "L_ExternalContent",
                 "L_TrustCenter",
@@ -1105,7 +1227,7 @@
             },
             "name": "L_EnableForeignTextFileProtectedView",
             "displayName": "Sempre abrir arquivos baseados em texto não confiáveis no Modo de Exibição Protegido",
-            "explainText": "Esta configuração de política controla se os arquivos baseados em texto (.csv, .dif, and .sylk) abertos de um local não confiável são sempre abertos no Modo de Exibição Protegido.\n\nSe você habilitar essa configuração de política, os arquivos baseados em texto abertos de um local não confiável serão sempre abertos no Modo de Exibição Protegido. Os usuários não poderão alterar essa configuração em Arquivo > Opções > Central de Confiabilidade > Configurações da Central de Confiabilidade > Modo de Exibição Protegido.\n\nSe você desabilitar ou não definir esta configuração de política, os arquivos baseados em texto abertos de um local não confiável não serão abertos no Modo de Exibição Protegido, a menos que os usuários tenham alterado essa configuração na Central de Confiabilidade.\n\nObservação: esta configuração de política aplica-se somente a versões de assinatura do Office, como o Office 365 ProPlus.",
+            "explainText": "Esta configuração de política controla se os arquivos baseados em texto (.csv, .dif, e .sylk) abertos de um local não confiável são sempre abertos no Modo de Exibição Protegido.\n\nSe você habilitar essa configuração de política, os arquivos baseados em texto abertos de um local não confiável serão sempre abertos no Modo de Exibição Protegido. Os usuários não poderão alterar essa configuração em Arquivo > Opções > Central de Confiabilidade > Configurações da Central de Confiabilidade > Modo de Exibição Protegido.\n\nSe você desabilitar ou não definir esta configuração de política, os arquivos baseados em texto abertos de um local não confiável não serão abertos no Modo de Exibição Protegido, a menos que os usuários tenham alterado essa configuração na Central de Confiabilidade.\n\nObservação: esta configuração de política aplica-se somente a versões de assinatura do Office, como o Microsoft 365 Apps para Grandes Empresas.",
             "tags": [
                 "L_ProtectedView",
                 "L_TrustCenter",
@@ -1136,7 +1258,7 @@
             },
             "name": "L_EnableDataBaseFileProtectedView",
             "displayName": "Sempre abrir arquivos de banco de dados não confiáveis no Modo de Exibição Protegido",
-            "explainText": "Esta configuração de política controla se os arquivos de banco de dados (.dbf) abertos de um local não confiável são sempre abertos no Modo de Exibição Protegido.\n\nSe você habilitar essa configuração de política, os arquivos de banco de dados abertos de um local não confiável serão sempre abertos no Modo de Exibição Protegido. Os usuários não poderão alterar essa configuração em Arquivo > Opções > Central de Confiabilidade > Configurações da Central de Confiabilidade > Modo de Exibição Protegido.\n\nSe você desabilitar ou não definir esta configuração de política, os arquivos de banco de dados abertos de um local não confiável não serão abertos no Modo de Exibição Protegido, a menos que os usuários tenham alterado essa configuração na Central de Confiabilidade.\n\nObservação: esta configuração de política aplica-se somente a versões de assinatura do Office, como o Office 365 ProPlus.",
+            "explainText": "Esta configuração de política controla se os arquivos de banco de dados (.dbf) abertos de um local não confiável são sempre abertos no Modo de Exibição Protegido.\n\nSe você habilitar essa configuração de política, os arquivos de banco de dados abertos de um local não confiável serão sempre abertos no Modo de Exibição Protegido. Os usuários não poderão alterar essa configuração em Arquivo > Opções > Central de Confiabilidade > Configurações da Central de Confiabilidade > Modo de Exibição Protegido.\n\nSe você desabilitar ou não definir esta configuração de política, os arquivos de banco de dados abertos de um local não confiável não serão abertos no Modo de Exibição Protegido, a menos que os usuários tenham alterado essa configuração na Central de Confiabilidade.\n\nObservação: esta configuração de política aplica-se somente a versões de assinatura do Office, como o Microsoft 365 Apps para Grandes Empresas.",
             "tags": [
                 "L_ProtectedView",
                 "L_TrustCenter",
@@ -1167,7 +1289,7 @@
             },
             "name": "L_TurnOffFileValidation",
             "displayName": "Desativar validação de arquivos",
-            "explainText": "Essa configuração de política permite desativar o recurso de validação de arquivos.\n\nSe você habilitar essa configuração de política, a validação de arquivos será desativada.\n\nSe você desabilitar ou não definir essa configuração de política, a validação de arquivos será ativada. Antes de serem abertos, os\nDocumentos Binários do Office (97-2003) são verificados para determinar se eles estão em conformidade com o esquema de formato\nde arquivo.",
+            "explainText": "Essa configuração de política permite desativar o recurso de validação de arquivos.\n\nSe você habilitar essa configuração de política, a validação de arquivos será desativada.\n\nSe você desabilitar ou não definir essa configuração de política, a validação de arquivos será ativada.  Antes de serem abertos, os\nDocumentos Binários do Office (97-2003) são verificados para determinar se eles estão em conformidade com o esquema de formato\nde arquivo.",
             "tags": [
                 "L_Security",
                 "L_ExcelOptions",
@@ -1381,7 +1503,7 @@
             },
             "name": "L_SetCNGCipherKeyLength",
             "displayName": "Definir comprimento da chave de criptografia CNG",
-            "explainText": "Essa configuração de política permite definir o número de bits a ser usado ao criar a chave de criptografia. Esse número será\narredondado para um múltiplo de 8.\n\nSe você habilitar essa configuração de política, os bits de chave especificados serão usados.\n\nSe você desabilitar ou não definir essa configuração de política, o valor padrão será usado.",
+            "explainText": "Essa configuração de política permite definir o número de bits a ser usado ao criar a chave de criptografia.  Esse número será\narredondado para um múltiplo de 8.\n\nSe você habilitar essa configuração de política, os bits de chave especificados serão usados.\n\nSe você desabilitar ou não definir essa configuração de política, o valor padrão será usado.",
             "tags": [
                 "L_Cryptography",
                 "L_Security",
@@ -1679,7 +1801,7 @@
             },
             "name": "L_TurnOffTrustedDocumentsOnTheNetwork",
             "displayName": "Desativar Documentos Confiáveis na rede",
-            "explainText": "Essa configuração de política permite desativar o recurso de documentos confiáveis para documentos abertos a partir da rede.\n\nSe você habilitar essa configuração de política, os usuários sempre verão notificações de segurança para conteúdo ativo, como\nmacros, controles ActiveX, conexões de dados etc., referentes a documentos abertos a partir da rede.\n\nSe você desabilitar ou não definir essa configuração de política, o recurso de documentos confiáveis possibilitará que os usuários\nsempre permitam conteúdo ativo em documentos, como macros, controles ActiveX, conexões de dados etc. Dessa maneira, eles não\nreceberão um prompt da próxima vez em que abrirem os documentos. Documentos confiáveis estão isentos de notificações de\nsegurança.",
+            "explainText": "Essa configuração de política permite desativar o recurso de documentos confiáveis para documentos abertos a partir da rede.\n\nSe você habilitar essa configuração de política, os usuários sempre verão notificações de segurança para conteúdo ativo, como\nmacros, controles ActiveX, conexões de dados etc., referentes a documentos abertos a partir da rede.\n\nSe você desabilitar ou não definir essa configuração de política, o recurso de documentos confiáveis possibilitará que os usuários\nsempre permitam conteúdo ativo em documentos, como macros, controles ActiveX, conexões de dados etc. Dessa maneira, eles não\nreceberão um prompt da próxima vez em que abrirem os documentos.  Documentos confiáveis estão isentos de notificações de\nsegurança.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1773,6 +1895,66 @@
                     "value": 0
                 }
             },
+            "name": "L_XL4KillSwitchPolicy",
+            "displayName": "Impedir que o Excel execute macros XLM",
+            "explainText": "Esta configuração de política impedirá que o Excel execute macros do Excel 4.0 (XLM).\n\nSe você habilitar essa configuração de política, as macros XLM não poderão ser executadas no Excel.\n\nSe você desabilitar ou não definir essa configuração de política, as macros XLM poderão ser executadas no Excel.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security",
+            "valueName": "xl4macrooff"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_StoremacroinPersonalMacroWorkbookbydefault",
+            "displayName": "Armazenar macro em Pasta de Trabalho Pessoal de Macros por padrão",
+            "explainText": "Esta configuração de política controla o local padrão para armazenamento de macros no Excel.\n   \n   Se essa configuração de política for habilitada, o Excel armazenará as macros na pasta de trabalho pessoal de macros dos usuários.\n   \n   Se você desabilitar ou não definir essa configuração de política, o Excel armazenará as macros na pasta de trabalho ativa em que elas foram criadas.\n   \n   Observação: na interface do usuário, a caixa de listagem suspensa \"Armazenar macro em\" na caixa de diálogo Gravar Macro (Macros | Gravar Macro) possibilita que os usuários optem por armazenar a nova macro na pasta de trabalho atual, em uma nova pasta de trabalho ou em sua pasta de trabalho pessoal de macros (Personal.xlsb), uma pasta de trabalho oculta que é aberta sempre que o Excel é iniciado.\n   \n   Por padrão, o Excel exibe a caixa \"Armazenar macro em\" com \"Esta Pasta de Trabalho\" já selecionada na lista suspensa. Se o usuário salvar uma macro na pasta de trabalho ativa e, em seguida, distribuir a pasta de trabalho a outros usuários, a macro será distribuída juntamente com a pasta de trabalho. Se você habilitar essa configuração de política, o Excel exibirá a caixa \"Armazenar macro em\" com \"Pasta de Trabalho Pessoal de Macros\" já selecionada. Os usuários ainda poderão selecionar uma das outras duas opções no menu suspenso.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fglobalsheet_37_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_TrustaccesstoVisualBasicProject",
             "displayName": "Confiar no acesso ao Projeto do Visual Basic",
             "explainText": "Essa configuração de política controla se clientes de automação, como o Microsoft Visual Studio 2005 Tools for Microsoft Office\n(VSTO), podem acessar o sistema de projetos do Visual Basic for Applications (VBA) nos aplicativos especificados. Projetos do VSTO\nexigem acesso ao sistema de projetos do VBA nos aplicativos Excel, PowerPoint e Word, mesmo que os projetos não utilizem VBA. O\nsuporte de controles em tempo de design em projetos do Visual Basic e C# depende do sistema de projetos do VBA no Word e no\nExcel.\n\nSe você habilitar essa configuração de política, o VSTO e outros clientes de automação poderão acessar o sistema de projetos do\nVisual Basic for Applications nos aplicativos especificados. Os usuários não poderão alterar esse comportamento por meio da opção\nde interface do usuário \"Confiar no acesso ao modelo de objeto do projeto do VBA\", na seção Configurações de Macro da Central de Confiabilidade.\n\nSe você desabilitar essa configuração de política, o VSTO não terá acesso programático a projetos do VBA. Além disso, a caixa de\nseleção \"Confiar no acesso ao modelo de objeto do projeto do VBA\" ficará desmarcada, e os usuários não poderão alterá-la.\nObservação: desabilitar essa configuração de política impede que projetos do VSTO interajam adequadamente com o sistema de\nprojetos do VBA no aplicativo selecionado.\n\nSe você não definir essa configuração de política, os clientes de automação não terão acesso programático a projetos do VBA. Os\nusuários podem habilitar isso marcando \"Confiar no acesso ao modelo de objeto do projeto do VBA\" na seção \"Configurações de\nMacro\" da Central de Confiabilidade. No entanto, isso permite que as macros em qualquer documento aberto pelo usuário acessem os\nprincipais objetos, métodos e propriedades do Visual Basic, o que representa um possível risco à segurança.",
@@ -1835,7 +2017,7 @@
             },
             "name": "L_RequirethatApplicationExtensionsaresigned",
             "displayName": "Exigir que suplementos de aplicativo sejam assinados por um Fornecedor Confiável",
-            "explainText": "Esta configuração de política controla se os suplementos dos aplicativos especificados do Office 2016 devem ser digitalmente assinados por um fornecedor confiável.\n \nSe você habilitar esta configuração de política, este aplicativo verificará a assinatura digital de cada suplemento antes de carregá-lo. Se um suplemento não tiver uma assinatura digital, ou se a assinatura não for proveniente de um fornecedor confiável, o aplicativo desabilitará esse suplemento e notificará o usuário. Os certificados deverão ser adicionados à lista de Fornecedores Confiáveis se você exigir que todos os suplementos sejam assinados por um fornecedor confiável. Para obter informações detalhadas sobre como obter e distribuir certificados, consulte http://go.microsoft.com/fwlink/?LinkId=294922. O Office 2016 armazena certificados para fornecedores confiáveis no repositório de fornecedores confiáveis do Internet Explorer. Versões anteriores do Microsoft Office armazenavam informações de certificados de fornecedores confiáveis (especificamente, a impressão digital) em um repositório de fornecedores confiáveis especial do Office. O Office 2016 ainda lê informações de certificados de fornecedores confiáveis no repositório de fornecedores confiáveis do Office, mas não grava informações nesse repositório. Portanto, se você tiver criado uma lista de fornecedores confiáveis em uma versão anterior do Office e atualizar para o Office 2016, essa lista ainda será reconhecida. Porém, todos os certificados de fornecedores confiáveis que forem adicionados à lista serão armazenados no repositório de fornecedores confiáveis do Internet Explorer. Para saber mais sobre fornecedores confiáveis, consulte o Office Resource Kit.\n\nSe você desabilitar ou não definir esta configuração de política, os aplicativos do Office 2016 não verificarão a assinatura digital nos suplementos antes de abri-los. Se um suplemento perigoso for carregado, ele poderá prejudicar os computadores dos usuários ou comprometer a segurança dos dados.",
+            "explainText": "Esta configuração de política controla se os suplementos dos aplicativos especificados do Office 2016 devem ser digitalmente assinados por um fornecedor confiável.\n \nSe você habilitar esta configuração de política, este aplicativo verificará a assinatura digital de cada suplemento antes de carregá-lo. Se um suplemento não tiver uma assinatura digital, ou se a assinatura não for proveniente de um fornecedor confiável, o aplicativo desabilitará esse suplemento e notificará o usuário. Os certificados deverão ser adicionados à lista de Fornecedores Confiáveis se você exigir que todos os suplementos sejam assinados por um fornecedor confiável. Para obter informações detalhadas sobre como obter e distribuir certificados, consulte http://go.microsoft.com/fwlink/?LinkId=294922. O Office 2016 armazena certificados para fornecedores confiáveis no repositório de fornecedores confiáveis do Internet Explorer. Versões anteriores do Microsoft Office armazenavam informações de certificados de fornecedores confiáveis (especificamente, a impressão digital) em um repositório de fornecedores confiáveis especial do Office.  O Office 2016 ainda lê informações de certificados de fornecedores confiáveis no repositório de fornecedores confiáveis do Office, mas não grava informações nesse repositório. Portanto, se você tiver criado uma lista de fornecedores confiáveis em uma versão anterior do Office e atualizar para o Office 2016, essa lista ainda será reconhecida. Porém, todos os certificados de fornecedores confiáveis que forem adicionados à lista serão armazenados no repositório de fornecedores confiáveis do Internet Explorer. Para saber mais sobre fornecedores confiáveis, consulte o Office Resource Kit.\n\nSe você desabilitar ou não definir esta configuração de política, os aplicativos do Office 2016 não verificarão a assinatura digital nos suplementos antes de abri-los. Se um suplemento perigoso for carregado, ele poderá prejudicar os computadores dos usuários ou comprometer a segurança dos dados.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1865,7 +2047,7 @@
             },
             "name": "L_DisableTrustBarNotificationforunsigned",
             "displayName": "Desabilitar Notificação da Barra de Confiabilidade para suplementos de aplicativos não assinados e bloqueá-los",
-            "explainText": "Esta configuração de política controla se os aplicativos especificados do Office 2016 notificarão os usuários quando suplementos de aplicativo não assinados forem carregados ou se desabilitarão esses suplementos silenciosamente sem notificação. Esta configuração de política somente será aplicada se você habilitar a configuração de política \"Exigir que suplementos de aplicativos sejam assinados por um Fornecedor Confiável\", que impede que os usuários alterem essa configuração de política. \nSe você habilitar esta configuração de política, os aplicativos desabilitarão automaticamente suplementos não assinados sem informar os usuários.\n \nSe você desabilitar essa configuração de política, se um aplicativo estiver configurado para exigir que todos os suplementos sejam assinados por um fornecedor confiável, todos os suplementos não assinados que esse aplicativo carregar serão desabilitados, e o aplicativo exibirá a Barra de Confiabilidade no topo da janela ativa. A Barra de Confiabilidade contém uma mensagem que informa os usuários sobre o suplemento não assinado.\n\nSe você não definir esta configuração de política, o comportamento de desabilitação será aplicado. Além disso, os usuários poderão configurar esse requisito por conta própria, na categoria \"Suplementos\" da Central de Confiabilidade do aplicativo em questão.",
+            "explainText": "Esta configuração de política controla se os aplicativos especificados do Office 2016 notificarão os usuários quando suplementos de aplicativo não assinados forem carregados ou se desabilitarão esses suplementos silenciosamente sem notificação. Esta configuração de política somente será aplicada se você habilitar a configuração de política \"Exigir que suplementos de aplicativos sejam assinados por um Fornecedor Confiável\", que impede que os usuários alterem essa configuração de política.       \nSe você habilitar esta configuração de política, os aplicativos desabilitarão automaticamente suplementos não assinados sem informar os usuários.\n \nSe você desabilitar essa configuração de política, se um aplicativo estiver configurado para exigir que todos os suplementos sejam assinados por um fornecedor confiável, todos os suplementos não assinados que esse aplicativo carregar serão desabilitados, e o aplicativo exibirá a Barra de Confiabilidade no topo da janela ativa. A Barra de Confiabilidade contém uma mensagem que informa os usuários sobre o suplemento não assinado.\n\nSe você não definir esta configuração de política, o comportamento de desabilitação será aplicado. Além disso, os usuários poderão configurar esse requisito por conta própria, na categoria \"Suplementos\" da Central de Confiabilidade do aplicativo em questão.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1925,7 +2107,7 @@
             },
             "name": "L_BlockMacroExecutionFromInternet",
             "displayName": "Bloquear macros impedindo sua execução em arquivos do Office da Internet",
-            "explainText": "Esta configuração de política permite que você bloqueie as macros impedindo-as de serem executadas em arquivos do Office que vêm da Internet.\n\nSe você habilitar essa configuração de política, as macros terão a execução bloqueada, mesmo se a opção \"Habilitar todas as macros\" estiver selecionada na seção de configurações de Macro da Central de Confiabilidade. Além disso, em vez de ter a opção para \"Habilitar conteúdo\", os usuários receberão uma notificação de que as macros têm a execução bloqueada. Se o arquivo do Office é salvo em um local confiável ou anteriormente considerado confiável pelo usuário, as macros poderão ser executadas.\n\nSe você desabilita ou não define esta configuração de política, as configurações definidas na seção de configurações de Macro da Central de Confiabilidade é que determinam se as macros podem ser executadas em arquivos do Office que vêm da Internet.",
+            "explainText": "        Esta configuração de política permite que você bloqueie as macros impedindo-as de serem executadas em arquivos do Office que vêm da Internet.\n\n        Se você habilitar essa configuração de política, as macros terão a execução bloqueada, mesmo se a opção \"Habilitar todas as macros\" estiver selecionada na seção de configurações de Macro da Central de Confiabilidade. Além disso, em vez de ter a opção para \"Habilitar conteúdo\", os usuários receberão uma notificação de que as macros têm a execução bloqueada. Se o arquivo do Office é salvo em um local confiável ou anteriormente considerado confiável pelo usuário, as macros poderão ser executadas.\n\n        Se você desabilita ou não define esta configuração de política, as configurações definidas na seção de configurações de Macro da Central de Confiabilidade é que determinam se as macros podem ser executadas em arquivos do Office que vêm da Internet.\n      ",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1980,7 +2162,7 @@
             },
             "name": "L_SetDefaultFileBlockBehavior",
             "displayName": "Definir comportamento padrão de bloqueio de arquivo",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir ou editar arquivos do Excel.\n\nSe você habilitar essa configuração de política, poderá definir uma destas opções:\n- Arquivos bloqueados não são abertos\n- Arquivos bloqueados são abertos no Modo de Exibição Protegido e não podem ser editados\n- Arquivos bloqueados são abertos no Modo de Exibição Protegido e podem ser editados\n\nSe você desabilitar ou não definir essa configuração de política, o comportamento será o mesmo que a configuração \"Arquivos\nbloqueados não são abertos\". Os usuários não poderão abrir arquivos bloqueados.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir ou editar arquivos do Excel.\n\nSe você habilitar essa configuração de política, poderá definir uma destas opções:\n- Arquivos bloqueados não são abertos\n- Arquivos bloqueados são abertos no Modo de Exibição Protegido e não podem ser editados\n- Arquivos bloqueados são abertos no Modo de Exibição Protegido e podem ser editados\n\nSe você desabilitar ou não definir essa configuração de política, o comportamento será o mesmo que a configuração \"Arquivos\nbloqueados não são abertos\".  Os usuários não poderão abrir arquivos bloqueados.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2060,7 +2242,7 @@
             },
             "name": "L_Excel2007AndLaterWorkbooksandTemplates",
             "displayName": "Pastas de trabalho e modelos do Excel 2007 e versões posteriores",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir. Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir.  Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2140,7 +2322,7 @@
             },
             "name": "L_Excel2007AndLaterMacroEnabledWorkbooksAndTemplates",
             "displayName": "Pastas de trabalho e modelos habilitados para macro do Excel 2007 e versões posteriores",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir. Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir.  Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2196,7 +2378,7 @@
             },
             "name": "L_Excel2007AndLaterAddInFiles",
             "displayName": "Arquivos de suplemento do Excel 2007 e versões posteriores",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir. Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir.  Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2276,7 +2458,7 @@
             },
             "name": "L_Excel2007AndLaterBinaryWorkbooks",
             "displayName": "Pastas de trabalho binárias do Excel 2007 e versões posteriores",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir. Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir.  Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2356,7 +2538,7 @@
             },
             "name": "L_OpenDocumentSpreadsheetFiles",
             "displayName": "Arquivos de planilha OpenDocument",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir. Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir.  Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2412,7 +2594,7 @@
             },
             "name": "L_Excel972003AddInFiles",
             "displayName": "Arquivos de suplemento do Excel 97-2003",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir. Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir.  Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2492,7 +2674,7 @@
             },
             "name": "L_Excel972003WorkbooksAndTemplates",
             "displayName": "Pastas de trabalho e modelos do Excel 97-2003",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir. Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir.  Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2564,7 +2746,7 @@
             },
             "name": "L_Excel9597WorkbooksAndTemplates",
             "displayName": "Pastas de trabalho e modelos do Excel 95-97",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir. Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir.  Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2644,7 +2826,7 @@
             },
             "name": "L_Excel95Workbooks",
             "displayName": "Pasta de trabalho do Excel 95",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir. Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir.  Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2781,7 +2963,7 @@
                         ],
                         "valueName": "xl4worksheets",
                         "inputType": "dropdownList",
-                        "caption": "Configuração de bloqueio de arquivo: ",
+                        "caption": "Configuração de bloqueio de arquivo:",
                         "id": "L_Excel4WorksheetsDropID"
                     }
                 ]
@@ -2925,7 +3107,7 @@
                         ],
                         "valueName": "xl2worksheets",
                         "inputType": "dropdownList",
-                        "caption": "Configuração de bloqueio de arquivo: ",
+                        "caption": "Configuração de bloqueio de arquivo:",
                         "id": "L_Excel2WorksheetsDropID"
                     }
                 ]
@@ -3069,7 +3251,7 @@
                         ],
                         "valueName": "xl3macros",
                         "inputType": "dropdownList",
-                        "caption": "Configuração de bloqueio de arquivo: ",
+                        "caption": "Configuração de bloqueio de arquivo:",
                         "id": "L_Excel3MacrosheetsAndAddInFilesDropID"
                     }
                 ]
@@ -3221,14 +3403,14 @@
                         ],
                         "valueName": "htmlandxmlssfiles",
                         "inputType": "dropdownList",
-                        "caption": "Configuração de bloqueio de arquivo: ",
+                        "caption": "Configuração de bloqueio de arquivo:",
                         "id": "L_WebPagesAndExcel2003XMLSpreadsheetsDropID"
                     }
                 ]
             },
             "name": "L_WebPagesAndExcel2003XMLSpreadsheets",
             "displayName": "Páginas da Web e planilhas XML do Excel 2003",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir. Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir.  Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3277,14 +3459,14 @@
                         ],
                         "valueName": "xmlfiles",
                         "inputType": "dropdownList",
-                        "caption": "Configuração de bloqueio de arquivo: ",
+                        "caption": "Configuração de bloqueio de arquivo:",
                         "id": "L_XMLFilesDropID"
                     }
                 ]
             },
             "name": "L_XMLFiles",
             "displayName": "Arquivos XML",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir. Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir.  Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3333,14 +3515,14 @@
                         ],
                         "valueName": "textfiles",
                         "inputType": "dropdownList",
-                        "caption": "Configuração de bloqueio de arquivo: ",
+                        "caption": "Configuração de bloqueio de arquivo:",
                         "id": "L_TextFilesDropID"
                     }
                 ]
             },
             "name": "L_TextFiles",
             "displayName": "Arquivos de texto",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir. Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir.  Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3381,14 +3563,14 @@
                         ],
                         "valueName": "xllfiles",
                         "inputType": "dropdownList",
-                        "caption": "Configuração de bloqueio de arquivo: ",
+                        "caption": "Configuração de bloqueio de arquivo:",
                         "id": "L_ExcelAddInFilesDropID"
                     }
                 ]
             },
             "name": "L_ExcelAddInFiles",
             "displayName": "Arquivos de suplemento do Excel",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir. Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir.  Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3429,14 +3611,14 @@
                         ],
                         "valueName": "dbasefiles",
                         "inputType": "dropdownList",
-                        "caption": "Configuração de bloqueio de arquivo: ",
+                        "caption": "Configuração de bloqueio de arquivo:",
                         "id": "L_DBaseIIIANDIVFilesDropID"
                     }
                 ]
             },
             "name": "L_DBaseIIIANDIVFiles",
             "displayName": "Arquivos dBase III / IV",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir. Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir.  Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3509,14 +3691,14 @@
                         ],
                         "valueName": "officequeries",
                         "inputType": "dropdownList",
-                        "caption": "Configuração de bloqueio de arquivo: ",
+                        "caption": "Configuração de bloqueio de arquivo:",
                         "id": "L_MicrosoftOfficeQueryFilesDropID"
                     }
                 ]
             },
             "name": "L_MicrosoftOfficeQueryFiles",
             "displayName": "Arquivos de consulta do Microsoft Office",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir. Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir.  Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3557,14 +3739,14 @@
                         ],
                         "valueName": "officedataconnections",
                         "inputType": "dropdownList",
-                        "caption": "Configuração de bloqueio de arquivo: ",
+                        "caption": "Configuração de bloqueio de arquivo:",
                         "id": "L_OfficeDataConnectionFilesDropID"
                     }
                 ]
             },
             "name": "L_OfficeDataConnectionFiles",
             "displayName": "Arquivos de conexão de dados do Microsoft Office",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir. Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir.  Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3605,14 +3787,14 @@
                         ],
                         "valueName": "officedatasources",
                         "inputType": "dropdownList",
-                        "caption": "Configuração de bloqueio de arquivo: ",
+                        "caption": "Configuração de bloqueio de arquivo:",
                         "id": "L_OtherDataSourceFilesDropID"
                     }
                 ]
             },
             "name": "L_OtherDataSourceFiles",
             "displayName": "Outros arquivos de fonte de dados",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir. Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir.  Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3653,14 +3835,14 @@
                         ],
                         "valueName": "offlinecubefiles",
                         "inputType": "dropdownList",
-                        "caption": "Configuração de bloqueio de arquivo: ",
+                        "caption": "Configuração de bloqueio de arquivo:",
                         "id": "L_OfflineCubeFilesDropID"
                     }
                 ]
             },
             "name": "L_OfflineCubeFiles",
             "displayName": "Arquivos de cubo offline",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir. Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir.  Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3709,14 +3891,14 @@
                         ],
                         "valueName": "difandsylkfiles",
                         "inputType": "dropdownList",
-                        "caption": "Configuração de bloqueio de arquivo: ",
+                        "caption": "Configuração de bloqueio de arquivo:",
                         "id": "L_DifAndSylkFilesDropID"
                     }
                 ]
             },
             "name": "L_DifAndSylkFiles",
             "displayName": "Arquivos Dif e Sylk",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir. Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir.  Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3781,14 +3963,14 @@
                         ],
                         "valueName": "converters",
                         "inputType": "dropdownList",
-                        "caption": "Configuração de bloqueio de arquivo: ",
+                        "caption": "Configuração de bloqueio de arquivo:",
                         "id": "L_LegacyConvertersForExcelDropID"
                     }
                 ]
             },
             "name": "L_LegacyConvertersForExcel",
             "displayName": "Conversores legados para o Excel",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir. Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir.  Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3861,14 +4043,14 @@
                         ],
                         "valueName": "ooxmlconverters",
                         "inputType": "dropdownList",
-                        "caption": "Configuração de bloqueio de arquivo: ",
+                        "caption": "Configuração de bloqueio de arquivo:",
                         "id": "L_MicrosoftOfficeOpenXMLConvertersForExcelDropID"
                     }
                 ]
             },
             "name": "L_MicrosoftOfficeOpenXMLConvertersForExcel",
             "displayName": "Conversores Microsoft Office Open XML para Excel",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir. Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir, editar ou salvar arquivos do Excel com o formato especificado pelo título dessa configuração de política.\n\nSe você habilitar essa configuração de política, poderá especificar se os usuários podem abrir, exibir, editar ou salvar arquivos.\n\nAs opções que podem ser selecionadas estão indicadas a seguir.  Observação: nem todas as opções podem estar disponíveis para\nessa configuração de política.\n\n- Não bloquear: o tipo de arquivo não será bloqueado.\n\n- Salvar bloqueado: o salvamento do tipo de arquivo será bloqueado.\n\n- Abrir/Salvar bloqueados, usar política de abertura: a abertura e o salvamento do tipo de arquivo serão bloqueados. O arquivo será aberto com base na configuração de política definida na chave \"comportamento padrão de bloqueio de arquivo\".\n\n- Bloquear: a abertura e o salvamento do tipo de arquivo serão bloqueados, e o arquivo não poderá ser aberto.\n\n- Abrir no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar o tipo de arquivo não será habilitada.\n\n- Permitir edição e abertura no Modo de Exibição Protegido: a abertura e o salvamento do tipo de arquivo serão bloqueados, e a opção de editar será habilitada.\n\nSe você desabilitar ou não definir essa configuração de política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3929,7 +4111,7 @@
             },
             "name": "L_DisableTrustedLoc",
             "displayName": "Desabilitar todos os locais confiáveis",
-            "explainText": "Esta configuração de política permite que os administradores desabilitem todos os locais confiáveis nos aplicativos especificados. Os locais confiáveis especificados na Central de Confiabilidade são usados para definir locais de arquivos supostamente seguros. Conteúdo, códigos e suplementos podem ser carregados a partir de locais confiáveis com segurança mínima e sem solicitar a permissão dos usuários. Se um arquivo perigoso for aberto a partir de um local confiável, ele não estará sujeito a medidas de segurança padrão e poderá danificar os computadores ou os dados dos usuários.\n\nSe você habilitar esta configuração de política, todos os locais confiáveis (especificados na Central de Confiabilidade) nos aplicativos especificados serão ignorados, incluindo os locais confiáveis estabelecidos pelo Office 2016 durante a instalação, implantados para os usuários com o uso da Política de Grupo ou adicionados pelos próprios usuários. Os usuários receberão um aviso novamente ao abrirem arquivos a partir de locais confiáveis.\n\nSe você desabilitar ou não definir esta configuração de política, todos os locais confiáveis (especificados na Central de Confiabilidade) nos aplicativos especificados serão considerados seguros.",
+            "explainText": "Esta configuração de política permite que os administradores desabilitem todos os locais confiáveis nos aplicativos especificados. Os locais confiáveis especificados na Central de Confiabilidade são usados para definir locais de arquivos supostamente seguros. Conteúdo, códigos e suplementos podem ser carregados a partir de locais confiáveis com segurança mínima e sem solicitar a permissão dos usuários. Se um arquivo perigoso for aberto a partir de um local confiável, ele não estará sujeito a medidas de segurança padrão e poderá danificar os computadores ou os dados dos usuários.\n\nSe você habilitar esta configuração de política, todos os locais confiáveis (especificados na Central de Confiabilidade) nos aplicativos especificados serão ignorados, incluindo os locais confiáveis estabelecidos pelo Office 2016 durante a instalação, implantados para os usuários com o uso da Política de Grupo ou adicionados pelos próprios usuários.  Os usuários receberão um aviso novamente ao abrirem arquivos a partir de locais confiáveis.\n\nSe você desabilitar ou não definir esta configuração de política, todos os locais confiáveis (especificados na Central de Confiabilidade) nos aplicativos especificados serão considerados seguros.",
             "tags": [
                 "L_TrustedLocations",
                 "L_TrustCenter",
@@ -4112,7 +4294,7 @@
             },
             "name": "L_LoadpicturesfromWebpagesnotcreatedinExcel",
             "displayName": "Carregar imagens de páginas da Web que não foram criadas em Excel",
-            "explainText": "Essa configuração de política controla se o Excel carrega elementos gráficos ao abrir páginas da Web que não foram criadas no\nExcel. Ela configura a opção \"Carregar imagens de páginas da Web que não foram criadas em Excel\", na guia Arquivo | Opções |\nAvançado | Geral | Opções da Web... | guia Geral.\n\nSe você habilitar ou não definir essa configuração de política, o Excel carregará todos os elementos gráficos inclusos nas páginas, independentemente de eles terem sido ou não originalmente criados no Excel.\n\nSe você desabilitar essa configuração de política, o Excel não carregará imagens de páginas da Web que não tiverem sido criadas\nno Excel.",
+            "explainText": "Essa configuração de política controla se o Excel carrega elementos gráficos ao abrir páginas da Web que não foram criadas no\nExcel.  Ela configura a opção \"Carregar imagens de páginas da Web que não foram criadas em Excel\", na guia Arquivo | Opções |\nAvançado | Geral | Opções da Web... | guia Geral.\n\nSe você habilitar ou não definir essa configuração de política, o Excel carregará todos os elementos gráficos inclusos nas páginas, independentemente de eles terem sido ou não originalmente criados no Excel.\n\nSe você desabilitar essa configuração de política, o Excel não carregará imagens de páginas da Web que não tiverem sido criadas\nno Excel.",
             "tags": [
                 "L_General",
                 "L_WebOptions",
@@ -4153,6 +4335,267 @@
             ],
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\excel\\options"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Transitionnavigationkeys",
+            "displayName": "Teclas de navegação de transição",
+            "explainText": "Habilitar essa política marca a opção de usuário Avançado (compatibilidade com o Lotus) nomeada ''Teclas de navegação de transição''.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fisi_33_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Ignoreotherapplications",
+            "displayName": "Ignorar outros aplicativos",
+            "explainText": "Esta configuração de política controla se o Excel pode ou não trocar dados com outros aplicativos que usem a DDE (Troca Dinâmica de Dados).\n   \n   Se você habilitar essa configuração de política, o Excel não permitirá a troca de dados com outros aplicativos que usem a DDE. Além disso, a opção de interface do usuário \"Ignorar outros aplicativos que usem Troca Dinâmica de Dados (DDE)\" em Opções do Excel | Geral está selecionada e os usuários não podem mudar isso. Habilitar essa configuração de política pode causar danos aos usuários que contam com a funcionalidade DDE no Excel para atualizar informações nas pastas de trabalho. Esses usuários terão que usar algum outro método para atualizar as informações fornecidas por outros aplicativos.\n   \n   Se você desabilitar ou não definir essa configuração de política, o Excel poderá usar o protocolo DDE (Troca Dinâmica de Dados) para trocar mensagens e dados com outros aplicativos. Por exemplo, uma célula da pasta de trabalho do Excel pode ser dinamicamente vinculada a um valor fornecido por outro aplicativo, como informações sobre clima ou preço de ações. Quando o valor fornecido por outro aplicativo é alterado, o Excel pode atualizar automaticamente o valor na pasta de trabalho. Observação: os usuários podem alterar esse comportamento selecionando a opção de interface do usuário \"Ignorar outros aplicativos que usem Troca Dinâmica de Dados (DDE)\" em Opções do Excel | Geral.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fddeenabled_6_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ZoomonrollwithIntelliMouse",
+            "displayName": "Aplicar zoom ao rolar com o IntelliMouse",
+            "explainText": "Essa configuração de política define a opção \"Aplicar zoom ao rolar com o IntelliMouse\", disponível na guia Arquivo | Opções |\nAvançado | Opções de edição\n\nSe você habilitar essa configuração de política, rolar a roda do mouse irá alterar o nível de zoom da planilha.\n\nSe você desabilitar ou não definir essa configuração de política, rolar a roda do mouse movimentará a planilha. Esse é o\ncomportamento padrão.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "frollzoom_98_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Shownames",
+            "displayName": "Mostrar nomes",
+            "explainText": "Habilitar essa configuração seleciona a opção de usuário Avançado (Exibição) para ''Mostrar nomes de elementos dos gráficos ao focalizar''.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fshowchartnames_96_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Showvalues",
+            "displayName": "Mostrar valores",
+            "explainText": "Habilitar essa configuração seleciona a opção de usuário Avançado (Exibição) para ''Mostrar valores de ponto de dados ao focalizar''.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fshowcharttipvalues_97_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Editdirectlyincell",
+            "displayName": "Editar diretamente na célula",
+            "explainText": "Essa configuração de política define a opção \"Editar diretamente na célula\", disponível na guia Arquivo | Opções | Avançado |\nOpções de Edição.\n\nSe você habilitar ou não definir essa configuração de política, o Excel permitirá a edição diretamente na célula. Esse é o\ncomportamento padrão.\n\nSe você desabilitar essa configuração de política, o Excel não permitirá que a edição seja feita diretamente na célula.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fnoincell_66_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_EnableFillHandleAndCellDragAndDrop",
+            "displayName": "Habilitar alça de preenchimento e arrastar-e-soltar célula",
+            "explainText": "Essa configuração de política define a opção \"Habilitar alça de preenchimento e arrastar e soltar célula\", na guia Arquivo | Opções |\nAvançado | Opções de Edição.\n\nSe você habilitar ou não configurar essa definição de política, o Excel habilitará a alça de preenchimento e o recurso de arrastar e\nsoltar célula.  Esse é o comportamento padrão.\n\nSe você desabilitar essa configuração de política, o Excel desabilitará a alça de preenchimento, e o recurso de arrastar e soltar não\nserá permitido.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fdisabledman_36_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Alertbeforeoverwritingcells",
+            "displayName": "Alertar antes de sobrescrever células",
+            "explainText": "Essa configuração de política define a opção \"Alertar antes de substituir células\", disponível na guia Arquivo | Opções | Avançado |\nOpções de Edição.\n\nSe você habilitar ou não definir essa configuração de política, o Excel fornecerá um aviso se as células estiverem prestes a serem\nsubstituídas. Esse é o comportamento padrão.\n\nSe você desabilitar essa configuração de política, o Excel omitirá o aviso de que as células estão prestes a serem substituídas.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fnodragwarning_76_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_MoveselectionafterEnter",
+            "displayName": "Mover seleção após Enter",
+            "explainText": "Habilitar essa política seleciona a opção de usuário Avançado (Opções de Edição) para ''Depois de pressionar Enter, mover seleção''.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fentermove_75_1"
         },
         {
             "parentCategory": {
@@ -4262,6 +4705,93 @@
                     "value": 0
                 }
             },
+            "name": "L_CutAndCopyObjectsWithCells",
+            "displayName": "Recortar e copiar objetos com células",
+            "explainText": "Essa configuração de política define a opção \"Recortar, copiar e classificar objetos inseridos com as células pai\", na guia Arquivo |\nOpções | Avançado | Opções de recorte, cópia e colagem.\n\nSe você habilitar ou não definir essa configuração de política, o Excel recortará, copiará e classificará objetos inseridos com suas\ncélulas pai.\n\nSe você desabilitar essa configuração de política, o Excel não recortará nem copiará objetos inseridos com suas células pai.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fobjwcellmove_71_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Asktoupdateautomaticlinks",
+            "displayName": "Solicitar a atualização de vínculos automáticos",
+            "explainText": "Esta configuração de política controla se o Excel deve ou não solicitar aos usuários a atualização de vínculos automáticos, ou se as atualizações serão realizadas em segundo plano sem nenhum aviso.\n\nSe você habilitar ou não definir essa configuração de política, o Excel solicitará que os usuários atualizem os vínculos automáticos.\nAlém disso, a opção de interface do usuário \"Confirmar atualização de vínculos automáticos\" na guia Arquivo | Avançado | Geral é\nselecionada.\n\nSe você desabilitar essa configuração de política, o Excel atualizará os vínculos automáticos sem solicitar ou informar os usuários, o\nque pode comprometer a integridade de algumas informações da pasta de trabalho.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fupdateext_78_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_EnableAutoCompleteforcellvalues",
+            "displayName": "Habilitar Preenchimento Automático para valores de células",
+            "explainText": "Essa configuração de política define a opção \"Habilitar Preenchimento Automático para valores de células\", disponível na guia Arquivo | Opções | Avançado | Opções de Edição.\n\nSe você habilitar ou não definir essa configuração de política, o Excel permitirá o recurso de Preenchimento Automático para valores de célula. Esse é o comportamento padrão.\n\nSe você desabilitar essa configuração de política, o Excel desativará o recurso de Preenchimento Automático.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fautocomplete_128_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_ExtendDataRangeFormatsAndFormulas",
             "displayName": "Estender fórmulas e formatos de intervalo de dados",
             "explainText": "Essa configuração de política define a opção \"Estender fórmulas e formatos de intervalo de dados\", na guia Arquivo | Opções |\nAvançado | Opções de Edição.\n\nSe você habilitar ou não definir essa configuração de política, o Excel permitirá que o usuário formate automaticamente novos itens\nadicionados ao final de uma lista, de forma que eles correspondam ao formato do restante da lista. Esse é o comportamento padrão.\n\nSe você desabilitar essa configuração de política, o Excel não formatará automaticamente novos itens adicionados ao final de uma\nlista.",
@@ -4273,6 +4803,35 @@
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\excel\\options",
             "valueName": "extendlist"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Enableautomaticpercententry",
+            "displayName": "Habilitar entrada de porcentagem automática",
+            "explainText": "Habilitar essa política seleciona a opção de usuário Avançado (Opções de edição) para ''Habilitar entrada de porcentagem automática''.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fdisableautopercent_99_1"
         },
         {
             "parentCategory": {
@@ -4302,6 +4861,122 @@
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\common\\general",
             "valueName": "pasteoptions"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_ShowInsertOptionsbuttons",
+            "displayName": "Mostrar botões de Opções de Inserção",
+            "explainText": "Essa configuração de política define a opção \"Mostrar botões Opções de Inserção\", disponível na guia Arquivo | Opções |\nAvançado | Opções de recorte, cópia e colagem.\n\nSe você habilitar ou não definir essa configuração de política, o Excel mostrará o botão Opções de Inserção depois de inserir células,\nlinhas ou colunas que contêm formatação. Esse é o comportamento padrão.\n\nSe você desabilitar essa configuração de política, o Excel não exibirá os botões Opções de Inserção em inserções.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "enableinsertcellsooui_102_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ShowFormulabarinNormalView",
+            "displayName": "Mostrar Barra de fórmulas em Tela Normal",
+            "explainText": "Habilitar essa configuração seleciona a opção de usuário Avançado (Exibição) para ''Mostrar barra de fórmulas''.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "ffmlaf_1_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ShowFormulabarinFullView",
+            "displayName": "Mostrar Barra de fórmulas em Tela Inteira",
+            "explainText": "Marcado: exibe a barra Fórmula quando o comando Tela Inteira no menu Exibir está definido. | Desmarcado: não exibe a barra Fórmula quando o comando Tela Inteira no menu Exibir está definido.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "ffmlafull_68_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Functiontooltips",
+            "displayName": "Dicas de ferramentas de função",
+            "explainText": "Habilitar essa configuração seleciona a opção de usuário Avançado (Exibição) para ''Mostrar Dicas de Tela de função''.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fshowfuntips_101_1"
         },
         {
             "parentCategory": {
@@ -4598,7 +5273,7 @@
             },
             "name": "L_DoNotCacheNetworkFilesLocally",
             "displayName": "Não armazenar arquivos de rede localmente no cache",
-            "explainText": "Essa configuração de política permite que você configure se os arquivos de rede são localmente armazenados em cache durante a\nedição de planilhas armazenadas em compartilhamentos de rede.\n\nSe você habilitar essa configuração de política, um arquivo localizado em um compartilhamento de rede poderá não ser salvo se a\nconexão de rede tiver sido perdida a qualquer momento durante a edição do arquivo e este último contiver uma tabela dinâmica, um\ncódigo VBE ou um objeto OLE inserido.\n\nSe você desabilitar ou não definir essa configuração de política, os arquivos de rede serão localmente armazenados em cache\ndurante a edição de planilhas armazenadas em compartilhamentos de rede. Isso pode ajudar a evitar a perda de dados causada\ndurante falhas de rede.",
+            "explainText": "Essa configuração de política permite que você configure se os arquivos de rede são localmente armazenados em cache durante a\nedição de planilhas armazenadas em compartilhamentos de rede.\n\nSe você habilitar essa configuração de política, um arquivo localizado em um compartilhamento de rede poderá não ser salvo se a\nconexão de rede tiver sido perdida a qualquer momento durante a edição do arquivo e este último contiver uma tabela dinâmica, um\ncódigo VBE ou um objeto OLE inserido.\n\nSe você desabilitar ou não definir essa configuração de política, os arquivos de rede serão localmente armazenados em cache\ndurante a edição de planilhas armazenadas em compartilhamentos de rede.  Isso pode ajudar a evitar a perda de dados causada\ndurante falhas de rede.",
             "tags": [
                 "L_miscellaneous168",
                 "L_MicrosoftOfficeExcel"
@@ -4918,7 +5593,7 @@
         },
         {
             "parentCategory": {
-                "ref": "L_IntelligentServices"
+                "ref": "L_PowerBI"
             },
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
@@ -4933,16 +5608,16 @@
                     "value": 0
                 }
             },
-            "name": "L_Insights",
-            "displayName": "Botão da Faixa de Opções \"Remover Ideias\"",
-            "explainText": "Esta configuração de política permite impedir que os usuários acessem o recurso Ideias no Excel, um serviço inteligente que fornece sugestões e análises baseadas em seus dados. Por padrão, um botão para o recurso Ideias é exibido no grupo \"Ideias\" na guia \"Página Inicial\" na faixa de opções.\n\nSe você habilitar essa configuração de política, o botão deste recurso será removido da faixa de opções e os usuários não poderão adicionar o botão à faixa de opções manualmente. Os usuários não poderão acessar o recurso Ideias.\n\nSe desabilitar ou não definir esta configuração de política, o botão deste recurso será exibido na faixa de opções e os usuários poderão acessá-lo.",
+            "name": "L_DisableFromPowerBIDatasetOrganizationName",
+            "displayName": "Desabilitar a exibição do nome da organização nos botões para criar tabelas dinâmicas a partir de conjuntos de dados do Power BI",
+            "explainText": "        Essa configuração de política permite impedir a exibição do nome da organização nos botões da faixa de opções do Excel usada para criar tabelas dinâmicas a partir de conjuntos de dados do Power BI. Por padrão, o nome da organização será mostrado na faixa de opções se ele estiver disponível no gráfico.\n\n Se você habilitar essa configuração de política, o nome da organização não será exibido.\n\n Se desabilitar ou não definir essa configuração de política, o nome da organização será exibido.\n\n Observação: essa configuração de política aplica-se somente às versões de assinatura do Office, como os aplicativos do Microsoft 365 para empresas.",
             "tags": [
-                "L_IntelligentServices",
+                "L_PowerBI",
                 "L_MicrosoftOfficeExcel"
             ],
             "application": "excel16",
-            "key": "software\\microsoft\\office\\16.0\\excel\\intelligent services",
-            "valueName": "insights"
+            "key": "software\\microsoft\\office\\16.0\\excel\\power bi",
+            "valueName": "disablefrompowerbidatasetorganizationname"
         }
     ]
 }

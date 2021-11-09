@@ -208,35 +208,6 @@
             },
             "enabledValue": {
                 "decimal": {
-                    "value": 0
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "name": "L_StopCheckingTableAltTextAccessibilityInformation",
-            "displayName": "表の代替テキストのアクセシビリティ情報をチェックしない",
-            "explainText": "このポリシー設定では、表に代替テキストが含まれているかどうかを確認するアクセシビリティ チェックをオフにできます。\n\nこのポリシー設定を有効にした場合、表に代替テキストが含まれているかどうかが、アクセシビリティ チェックで確認されなくなります。\n\nこのポリシー設定を無効にするか、未構成にした場合、表で代替テキストの有無がチェックされ、問題があればアクセシビリティ チェックに表示されます。",
-            "tags": [
-                "L_CheckAccessibility",
-                "L_FileTab",
-                "L_MicrosoftOfficePowerPoint"
-            ],
-            "application": "ppt16",
-            "key": "software\\microsoft\\office\\16.0\\powerpoint\\accchecker",
-            "valueName": "tablealttext"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_CheckAccessibility"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
                     "value": 1
                 }
             },
@@ -1306,6 +1277,70 @@
         },
         {
             "parentCategory": {
+                "ref": "L_ProtectedView"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "ファイルをブロックする"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "ファイルを保護ビューで開く"
+                            }
+                        ],
+                        "valueName": "openinprotectedview",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsDropID"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "disableeditfrompv",
+                        "key": "software\\microsoft\\office\\16.0\\powerpoint\\security\\filevalidation",
+                        "inputType": "checkBox",
+                        "caption": "オンにした場合、編集を許可します。オフにした場合、編集を許可しません。",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsStr3"
+                    }
+                ]
+            },
+            "name": "L_SetDocumentBehaviorIfFileValidationFails",
+            "displayName": "ファイル検証に失敗した場合のドキュメントの処理の設定",
+            "explainText": "このポリシー設定では、ファイル検証に失敗した場合のドキュメントの処理方法を指定します。\n\nこのポリシー設定を有効にした場合、ファイル検証に失敗したファイルに対する次のオプションを構成できます。\n\n- ファイルを完全にブロックする: ユーザーはファイルを開くことができません。\n- ファイルを保護ビューで開く (編集不可): ユーザーはファイルを編集できません。このポリシー設定を無効にした場合も、この方法でファイルが処理されます。\n- ファイルを保護ビューで開く (編集可): ユーザーはファイルを編集することができます。このポリシー設定を構成しなかった場合も、この方法でファイルが処理されます。\n\nこのポリシー設定を無効にした場合、[ファイルを保護ビューで開く (編集不可)] の処理が適用されます。\n\nこのポリシー設定を構成しなかった場合、[ファイルを保護ビューで開く (編集可)] の処理が適用されます。",
+            "tags": [
+                "L_ProtectedView",
+                "L_TrustCenter",
+                "L_Security",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint\\security\\filevalidation"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -1895,7 +1930,7 @@
             },
             "name": "L_BlockMacroExecutionFromInternet",
             "displayName": "インターネットから取得した Office ファイル内のマクロの実行をブロックします",
-            "explainText": "このポリシー設定では、インターネットから取得された Office ファイル内のマクロの実行をブロックできます。\n\nこのポリシー設定を有効にした場合、セキュリティ センターの [マクロの設定] セクションで [すべてのマクロを有効にする] がオンになっている場合でも、マクロの実行はブロックされます。また、[コンテンツの有効化] の選択肢が表示されないで、マクロの実行がブロックされたことを示す通知が表示されます。Office ファイルが信頼できる場所に保存されている場合、または以前にユーザーが信頼した場合は、マクロを実行できます。\n\nこのポリシーを無効にした場合、または構成していない場合は、セキュリティ センターの [マクロの設定] セクションで構成された設定で、インターネットから取得された Office ファイル内のマクロが実行されるかどうかが決まります。\n        ",
+            "explainText": "        このポリシー設定では、インターネットから取得された Office ファイル内のマクロの実行をブロックできます。\n\n        このポリシー設定を有効にした場合、セキュリティ センターの [マクロの設定] セクションで [すべてのマクロを有効にする] がオンになっている場合でも、マクロの実行はブロックされます。また、[コンテンツの有効化] の選択肢が表示されないで、マクロの実行がブロックされたことを示す通知が表示されます。Office ファイルが信頼できる場所に保存されている場合、または以前にユーザーが信頼した場合は、マクロを実行できます。\n\n        このポリシーを無効にした場合、または構成していない場合は、セキュリティ センターの [マクロの設定] セクションで構成された設定で、インターネットから取得された Office ファイル内のマクロが実行されるかどうかが決まります。\n        ",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -2984,6 +3019,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Security"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DownloadImages",
+            "displayName": "リンク画像の自動ダウンロードの禁止を解除する",
+            "explainText": "このポリシー設定では、PowerPoint で外部ソースから自動的にリンクをダウンロードするかどうかを指定します。\n\nこのポリシー設定を有効にした場合、リモートの場所に保存されたイメージが PowerPoint に読み込まれます。\n\nこのポリシー設定を無効にするか、未構成にした場合、PowerPoint でプレゼンテーションを開くときに、プレゼンテーション自体が信頼できる場所 (セキュリティ センターで構成) に保存されていない限り、別のコンピューター上のリンクされたイメージは表示されません。",
+            "tags": [
+                "L_Security",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint\\security",
+            "valueName": "downloadimages"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Coauthoring"
             },
             "supportedOn": {
@@ -3010,6 +3074,35 @@
             "application": "ppt16",
             "key": "software\\microsoft\\office\\16.0\\powerpoint\\coauthoring",
             "valueName": "disablecoauthoring"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Coauthoring"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_TurnOffRevisionTracking",
+            "displayName": "変更履歴をオフにする",
+            "explainText": "このポリシー設定を使用すると、PowerPoint での変更の履歴をオフにすることができます。\n\n既定では、変更履歴がサポートされているプレゼンテーションでの変更履歴はオンです\n\nこのポリシー設定を有効にした場合、プレゼンテーションに加えられた変更は追跡または表示されません。\n\nこのポリシー設定を無効にした場合、またはポリシー設定を構成しない場合、プレゼンテーションに加えられた変更の履歴は追跡され、表示されます。",
+            "tags": [
+                "L_Coauthoring",
+                "L_CollaborationSettings",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint\\coauthoring",
+            "valueName": "disablerevisiontracking"
         },
         {
             "parentCategory": {
@@ -3377,6 +3470,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Predefined"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_EnableRecordingRibbonTab",
+            "displayName": "記録リボン タブを有効にする",
+            "explainText": "このポリシー設定では、PowerPoint の記録リボン タブの初期設定を制御できます。既定では、タブは表示されません。\n\nこのポリシー設定を有効にすると、記録リボン タブが表示されます。ただし、ユーザーは UI で機能を手動で無効にできます。\n\nこのポリシー設定を無効にした場合、または構成しない場合は、記録リボン タブは表示されません。ユーザーは、UI で機能を手動で有効にできます。\n    ",
+            "tags": [
+                "L_Predefined",
+                "L_Disableitemsinuserinterface",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint",
+            "valueName": "enablerecordingribbontab"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_OptionsGeneral"
             },
             "supportedOn": {
@@ -3479,9 +3601,38 @@
                     "value": 0
                 }
             },
+            "name": "L_DisableQuickStarter",
+            "displayName": "クイックスターターをオフにする",
+            "explainText": "このポリシー設定では、ユーザーがクイックスターターを使用できるかどうかを制御します。既定では、機能に対する言語と地域の要件をユーザーが満たしている場合、ユーザーはクイックスターターを使用できます。\n\nこのポリシー設定を有効にすると、ユーザーはクイックスターターを使用できなくなります。\n\nこのポリシー設定を無効にするか構成しない場合、機能に対する言語と地域の要件をユーザーが満たしていると、ユーザーはクイックスターターを使用できます。\n\n注: このポリシー設定は、Microsoft 365 Apps for enterprise などのサブスクリプション版の Office にのみ適用されます。\n    ",
+            "tags": [
+                "L_OptionsGeneral",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint",
+            "valueName": "disablequickstarter"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_OptionsGeneral"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_DisableIncrementalDownload",
             "displayName": "すべてのコンテンツがダウンロードされるまで、クラウドベースのプレゼンテーションをユーザーに表示しない",
-            "explainText": "このポリシー設定では、PowerPoint ですべてのコンテンツがダウンロードされるまでは、ユーザーへのプレゼンテーションの表示を行わないかどうかを制御できます。このポリシー設定は、個人用 OneDrive、OneDrive for Business、または SharePoint Online などのクラウドベースの場所から開いたプレゼンテーションに適用されます。\n\n既定では、ユーザーが PowerPoint でクラウドベースのプレゼンテーションを開いた場合、画像やビデオなどの他のコンテンツのダウンロードが継続している間も、ユーザーはプレゼンテーションを参照できます。ただし、プレゼンテーションのコンテンツ全体がダウンロードされるまでは、編集やプレゼンテーションなどの一部の機能が制限されていたり、利用できなくなっていたりします。\n\nこのポリシー設定を有効にした場合は、クラウドベースのプレゼンテーションを開くと、PowerPoint でプレゼンテーションのコンテンツ全体がダウンロードされるまでは、ユーザーにプレゼンテーションが表示されません。\n\nプレゼンテーションが表示されたときにプレゼンテーションのコンテンツ全体が利用できて完全に編集できる状態になっていないと機能しないアドインまたは自動プロセスがある場合は、このポリシー設定を有効にすることをお勧めします。\n\nこの設定を無効にした場合、または構成しない場合は、PowerPoint でクラウドベースのファイルがすぐに開かれるので、他のコンテンツのダウンロード中もユーザーがプレゼンテーションを参照し始めることができます。\n\n注: このポリシー設定は、Office 365 ProPlus などのサブスクリプション版の Office にのみ適用されます。\n    ",
+            "explainText": "このポリシー設定では、PowerPoint ですべてのコンテンツがダウンロードされるまでは、ユーザーへのプレゼンテーションの表示を行わないかどうかを制御できます。このポリシー設定は、個人用 OneDrive、OneDrive for Business、または SharePoint Online などのクラウドベースの場所から開いたプレゼンテーションに適用されます。\n\n既定では、ユーザーが PowerPoint でクラウドベースのプレゼンテーションを開いた場合、画像やビデオなどの他のコンテンツのダウンロードが継続している間も、ユーザーはプレゼンテーションを参照できます。ただし、プレゼンテーションのコンテンツ全体がダウンロードされるまでは、編集やプレゼンテーションなどの一部の機能が制限されていたり、利用できなくなっていたりします。\n\nこのポリシー設定を有効にした場合は、クラウドベースのプレゼンテーションを開くと、PowerPoint でプレゼンテーションのコンテンツ全体がダウンロードされるまでは、ユーザーにプレゼンテーションが表示されません。\n\nプレゼンテーションが表示されたときにプレゼンテーションのコンテンツ全体が利用できて完全に編集できる状態になっていないと機能しないアドインまたは自動プロセスがある場合は、このポリシー設定を有効にすることをお勧めします。\n\nこの設定を無効にした場合、または構成しない場合は、PowerPoint でクラウドベースのファイルがすぐに開かれるので、他のコンテンツのダウンロード中もユーザーがプレゼンテーションを参照し始めることができます。\n\n注: このポリシー設定は、Microsoft 365 Apps for enterprise などのサブスクリプション版の Office にのみ適用されます。\n    ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_PowerPointOptions",
@@ -3510,7 +3661,7 @@
             },
             "name": "L_DisableLiveSubtitles",
             "displayName": "リアルタイムの字幕の使用を許可しない",
-            "explainText": "このポリシー設定では、ユーザーがプレゼンテーション中のリアルタイムの字幕を有効にできるかどうかを制御します。既定では、リアルタイムの字幕は無効になっていますが、ユーザーは有効にすることができます。\n\nこのポリシー設定を有効にすると、ユーザーはプレゼンテーション中のリアルタイムの字幕を有効にできません。\n\nこのポリシー設定を無効にするか構成しない場合、ユーザーはリアルタイムの字幕を有効にできます。\n\n注: このポリシー設定は、Office 365 ProPlus などのサブスクリプション版の Office にのみ適用されます。\n    ",
+            "explainText": "このポリシー設定では、ユーザーがプレゼンテーション中のリアルタイムの字幕を有効にできるかどうかを制御します。既定では、リアルタイムの字幕は無効になっていますが、ユーザーは有効にすることができます。\n\nこのポリシー設定を有効にすると、ユーザーはプレゼンテーション中のリアルタイムの字幕を有効にできません。\n\nこのポリシー設定を無効にするか構成しない場合、ユーザーはリアルタイムの字幕を有効にできます。\n\n注: このポリシー設定は、Microsoft 365 Apps for enterprise などのサブスクリプション版の Office にのみ適用されます。\n    ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_PowerPointOptions",
@@ -3519,6 +3670,35 @@
             "application": "ppt16",
             "key": "software\\microsoft\\office\\16.0\\powerpoint",
             "valueName": "disablelivesubtitles"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_OptionsGeneral"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_EnableModernCommentsCreateNew",
+            "displayName": "PowerPoint で最新コメントを使用する",
+            "explainText": "このポリシー設定では、PowerPoint で最新コメントを使用するかどうかを制御します。最新コメントに関する詳細と、どのような場合にこの設定を有効にするかについては、https://go.microsoft.com/fwlink/p/?linkid=2116065 をご覧ください。\n\nこのポリシー設定を有効にすると、ユーザーが新しいファイルまたはコメントのないファイルにコメントを追加したときに、追加された新しいコメントが最新コメントになります。ユーザーが最新コメントをサポートしていないバージョンの PowerPoint を使用している場合、PowerPoint for the web を使用して最新コメントを含むファイルの最新コメントを表示するよう指示する通知がユーザーに表示されます。\n\nこのポリシー設定を無効にすると、新しいファイルまたは最近コメントがない既存のファイルについては、以前のコメント操作がユーザーに引き続き表示されます。最新コメントをサポートしているバージョンの PowerPoint を使用している場合、ユーザーは最新コメントが既にあるファイルを読むことができます。\n\nこのポリシー設定を構成しない場合の結果については、https://go.microsoft.com/fwlink/p/?linkid=2116065 をご覧ください。\n\n注: このポリシー設定は、Microsoft 365 Apps for enterprise などのサブスクリプション版の Office にのみ適用されます。\n    ",
+            "tags": [
+                "L_OptionsGeneral",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint",
+            "valueName": "enablemoderncommentscreatenew"
         }
     ]
 }

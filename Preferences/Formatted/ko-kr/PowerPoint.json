@@ -208,35 +208,6 @@
             },
             "enabledValue": {
                 "decimal": {
-                    "value": 0
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "name": "L_StopCheckingTableAltTextAccessibilityInformation",
-            "displayName": "표 대체 텍스트 접근성 정보 확인 중지",
-            "explainText": "이 정책 설정은 접근성 검사 기능이 대체 텍스트를 포함하고 있는 표를 확인하지 않도록 합니다.\n\n이 정책 설정을 사용하면 접근성 검사 기능이 대체 텍스트가 포함된 표를 확인하지 않습니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 표에서 대체 텍스트를 확인하며 모든 문제가 접근성 검사에 표시됩니다.",
-            "tags": [
-                "L_CheckAccessibility",
-                "L_FileTab",
-                "L_MicrosoftOfficePowerPoint"
-            ],
-            "application": "ppt16",
-            "key": "software\\microsoft\\office\\16.0\\powerpoint\\accchecker",
-            "valueName": "tablealttext"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_CheckAccessibility"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
                     "value": 1
                 }
             },
@@ -1306,6 +1277,70 @@
         },
         {
             "parentCategory": {
+                "ref": "L_ProtectedView"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "파일 차단"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "제한된 보기에서 열기"
+                            }
+                        ],
+                        "valueName": "openinprotectedview",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsDropID"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "disableeditfrompv",
+                        "key": "software\\microsoft\\office\\16.0\\powerpoint\\security\\filevalidation",
+                        "inputType": "checkBox",
+                        "caption": "선택: 편집을 허용합니다.  선택 취소: 편집을 허용하지 않습니다.",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsStr3"
+                    }
+                ]
+            },
+            "name": "L_SetDocumentBehaviorIfFileValidationFails",
+            "displayName": "파일 유효성 검사가 실패할 경우의 문서 동작 설정",
+            "explainText": "이 정책 설정은 파일 유효성 검사가 실패할 때 Office가 문서를 어떻게 처리할지 제어합니다.\n\n이 정책 설정을 사용하면 유효성 검사에 실패한 파일에 대해 다음 옵션을 구성할 수 있습니다.\n\n- 파일 완전 차단. 사용자는 파일을 열 수 없습니다.\n- 제한된 보기에서 열고 편집 허용 안 함. 사용자는 파일을 편집할 수 없습니다. 이 정책 설정을 사용하지 않으면 이 옵션이 Office에서 파일을 처리하는 방식이 됩니다.\n- 제한된 보기에서 열고 편집 허용. 사용자는 파일을 편집할 수 있습니다. 이 정책 설정을 구성하지 않으면 이 옵션이 Office에서 파일을 처리하는 방식이 됩니다.\n\n이 정책 설정을 사용하지 않으면 Office가 \"제한된 보기에서 열고 편집 허용 안 함\" 동작을 따릅니다.\n\n이 정책 설정을 구성하지 않으면 Office가 \"제한된 보기에서 열고 편집 허용\" 동작을 따릅니다.",
+            "tags": [
+                "L_ProtectedView",
+                "L_TrustCenter",
+                "L_Security",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint\\security\\filevalidation"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -1895,7 +1930,7 @@
             },
             "name": "L_BlockMacroExecutionFromInternet",
             "displayName": "인터넷이 출처인 Office 파일에서 매크로를 실행하지 않도록 차단",
-            "explainText": "이 정책 설정을 사용하면 인터넷이 출처인 Office 파일에서 매크로가 실행되지 않도록 차단할 수 있습니다.\n\n이 정책 설정을 활성화하면 보안 센터의 매크로 설정 섹션에서 \"모든 매크로 포함\"을 선택해도 매크로가 실행되지 않습니다. 또한 \"콘텐츠 사용\" 옵션이 제공되는 대신, 매크로 실행을 차단한다는 알림이 표시됩니다. Office 파일을 신뢰할 수 있는 위치에 저장했거나 이전에 사용자가 해당 파일을 신뢰한다고 설정한 경우 매크로를 실행할 수 있습니다.\n\n이 정책을 비활성화하거나 구성하지 않으면 보안 센터의 매크로 설정 섹션에 구성한 설정에 따라 인터넷이 출처인 Office 파일에서 매크로를 실행할지 여부를 제어합니다.",
+            "explainText": "        이 정책 설정을 사용하면 인터넷이 출처인 Office 파일에서 매크로가 실행되지 않도록 차단할 수 있습니다.\n\n        이 정책 설정을 활성화하면 보안 센터의 매크로 설정 섹션에서 \"모든 매크로 포함\"을 선택해도 매크로가 실행되지 않습니다. 또한 \"콘텐츠 사용\" 옵션이 제공되는 대신, 매크로 실행을 차단한다는 알림이 표시됩니다. Office 파일을 신뢰할 수 있는 위치에 저장했거나 이전에 사용자가 해당 파일을 신뢰한다고 설정한 경우 매크로를 실행할 수 있습니다.\n\n        이 정책을 비활성화하거나 구성하지 않으면 보안 센터의 매크로 설정 섹션에 구성한 설정에 따라 인터넷이 출처인 Office 파일에서 매크로를 실행할지 여부를 제어합니다.\n      ",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -2081,7 +2116,7 @@
             },
             "name": "L_DisableTrustBarNotificationforunsigned",
             "displayName": "서명되지 않은 응용 프로그램 추가 기능에 대한 보안 표시줄 알림을 사용하지 않고 차단",
-            "explainText": "이 정책 설정은 지정된 Office 응용 프로그램에서 서명되지 않은 응용 프로그램 추가 기능이 로드될 때 사용자에게 알림을 표시할지, 아니면 알림 없이 해당 추가 기능을 자동으로 비활성화할지를 제어합니다. 이 정책 설정은 사용자가 이 정책 설정을 변경하지 못하게 하는 \"응용 프로그램 추가 기능에 신뢰할 수 있는 게시자의 서명 필요\" 정책 설정을 사용하도록 설정한 경우에만 적용됩니다.\n\n이 정책 설정을 사용하면 응용 프로그램에서 서명되지 않은 추가 기능을 사용자에게 알리지 않고 자동으로 비활성화합니다.\n \n이 정책 설정을 사용하지 않도록 설정했으며 모든 추가 기능에 신뢰할 수 있는 게시자가 서명하도록 이 응용 프로그램이 구성되어 있으면 응용 프로그램이 로드하는 서명되지 않은 추가 기능은 모두 사용되지 않으며, 응용 프로그램의 활성 창 위쪽에 보안 표시줄 알림이 표시됩니다. 보안 표시줄 알림에는 서명되지 않은 추가 기능에 대한 정보가 포함된 메시지가 있습니다.\n\n이 정책 설정을 구성하지 않으면 사용 안 함 동작이 적용되며 기본적으로 사용자는 응용 프로그램 보안 센터의 \"추가 기능\" 범주에서 이 요구 사항을 직접 구성할 수 있습니다.",
+            "explainText": "이 정책 설정은 지정된 Office 응용 프로그램에서 서명되지 않은 응용 프로그램 추가 기능이 로드될 때 사용자에게 알림을 표시할지, 아니면 알림 없이 해당 추가 기능을 자동으로 비활성화할지를 제어합니다. 이 정책 설정은 사용자가 이 정책 설정을 변경하지 못하게 하는 \"응용 프로그램 추가 기능에 신뢰할 수 있는 게시자의 서명 필요\" 정책 설정을 사용하도록 설정한 경우에만 적용됩니다.\n\n이 정책 설정을 사용하면 응용 프로그램에서 서명되지 않은 추가 기능을 사용자에게 알리지 않고 자동으로 비활성화합니다.\n \n이 정책 설정을 사용하지 않도록 설정했으며 모든 추가 기능에 신뢰할 수 있는 게시자가 서명하도록 이 응용 프로그램이 구성되어 있으면 응용 프로그램이 로드하는 서명되지 않은 추가 기능은 모두 사용되지 않으며, 응용 프로그램의 활성 창 위쪽에 보안 표시줄 알림이 표시됩니다. 보안 표시줄 알림에는 서명되지 않은 추가 기능에 대한 정보가 포함된 메시지가 있습니다.\n\n\n\n이 정책 설정을 구성하지 않으면 사용 안 함 동작이 적용되며 기본적으로 사용자는 응용 프로그램 보안 센터의 \"추가 기능\" 범주에서 이 요구 사항을 직접 구성할 수 있습니다.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -2984,6 +3019,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Security"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DownloadImages",
+            "displayName": "연결된 이미지의 자동 다운로드 차단 해제",
+            "explainText": "이 정책 설정은 PowerPoint에서 외부 원본의 링크를 자동으로 다운로드할지 여부를 결정합니다.\n\n이 정책 설정을 사용하면 PowerPoint에서 원격 위치에 저장된 이미지를 로드합니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 PowerPoint에서 프레젠테이션을 열 때 다른 위치에 저장된 연결된 이미지를 표시하지 않습니다. 단, 프레젠테이션 자체가 보안 센터에서 구성한 신뢰할 수 있는 위치에 저장되어 있는 경우는 예외입니다.",
+            "tags": [
+                "L_Security",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint\\security",
+            "valueName": "downloadimages"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Coauthoring"
             },
             "supportedOn": {
@@ -3010,6 +3074,35 @@
             "application": "ppt16",
             "key": "software\\microsoft\\office\\16.0\\powerpoint\\coauthoring",
             "valueName": "disablecoauthoring"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Coauthoring"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_TurnOffRevisionTracking",
+            "displayName": "수정 내용 추적 해제",
+            "explainText": "이 정책 설정을 사용하면 PowerPoint에서 수정 내용 추적을 해제할 수 있습니다.\n\n기본적으로 수정 내용 추적이 지원되는 프레젠테이션에서는 수정 내용 추적이 켜집니다.\n\n이 정책 설정을 사용하도록 설정하면 프레젠테이션의 수정 내용이 추적되거나 표시되지 않습니다.\n\n이 정책 설정을 사용하지 않도록 설정하거나 구성하지 않으면 프레젠테이션의 수정 내용이 추적 및 표시됩니다.",
+            "tags": [
+                "L_Coauthoring",
+                "L_CollaborationSettings",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint\\coauthoring",
+            "valueName": "disablerevisiontracking"
         },
         {
             "parentCategory": {
@@ -3377,6 +3470,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Predefined"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_EnableRecordingRibbonTab",
+            "displayName": "녹음/녹화 리본 탭 켜기",
+            "explainText": "이 정책 설정을 사용하면 PowerPoint에서 초기 녹음/녹화 리본 탭을 제어할 수 있습니다. 기본적으로 이 탭은 표시되지 않습니다.\n\n이 정책 설정을 사용하도록 설정하면 녹음/녹화 탭이 표시됩니다. 그러나 사용자가 UI에서 기능을 수동으로 끌 수 있습니다.\n\n이 정책 설정을 사용하지 않도록 설정하거나 구성하지 않는 경우 녹음/녹화 탭이 표시되지 않습니다. 사용자가 UI에서 기능을 수동으로 켤 수 있습니다.\n    ",
+            "tags": [
+                "L_Predefined",
+                "L_Disableitemsinuserinterface",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint",
+            "valueName": "enablerecordingribbontab"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_OptionsGeneral"
             },
             "supportedOn": {
@@ -3479,9 +3601,38 @@
                     "value": 0
                 }
             },
+            "name": "L_DisableQuickStarter",
+            "displayName": "빠른 시작 끄기",
+            "explainText": "이 정책 설정은 사용자가 빠른 시작을 사용할 수 있는지 여부를 제어합니다. 기본적으로 빠른 시작은 사용자가 이 기능에 대한 언어 및 지역 요구 사항을 충족하는 경우에 사용할 수 있습니다.\n\n이 정책 설정을 사용하도록 설정하면 사용자가 빠른 시작을 사용할 수 없습니다.\n\n이 정책 설정을 사용하지 않도록 설정하거나 구성하지 않으면 사용자는 기능에 대한 언어 및 지역 요구 사항을 충족하는 경우 빠른 시작을 사용할 수 있습니다.\n\n참고: 이 정책 설정은 엔터프라이즈용 Microsoft 365 앱과 같은 Office 구독 버전에만 적용됩니다.\n    ",
+            "tags": [
+                "L_OptionsGeneral",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint",
+            "valueName": "disablequickstarter"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_OptionsGeneral"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_DisableIncrementalDownload",
             "displayName": "모든 콘텐츠가 다운로드될 때까지 기다린 후 사용자에게 클라우드 기반 프레젠테이션 표시",
-            "explainText": "이 정책 설정을 사용하면 PowerPoint가 사용자에게 프레젠테이션을 표시하기 전에 모든 콘텐츠가 다운로드될 때까지 기다릴 것인지 여부를 제어할 수 있습니다. 이 정책 설정은 OneDrive Personal, 비즈니스용 OneDrive 또는 SharePoint Online과 같은 클라우드 기반 위치에서 연 프레젠테이션에 적용됩니다.\n\n기본적으로 사용자가 클라우드 기반 프레젠테이션을 PowerPoint에서 열면 사용자는 이미지나 비디오 등의 다른 콘텐츠가 다운로드되고 있을 때 프레젠테이션을 볼 수 있습니다. 하지만 편집 및 프레젠테이션과 같은 일부 기능은 프레젠테이션의 전체 콘텐츠가 다운로드될 때까지 제한되거나 사용할 수 없습니다.\n\n이 정책 설정을 사용하도록 설정하면 PowerPoint는 클라우드 기반 프레젠테이션을 열 때 프레젠테이션의 전체 콘텐츠가 다운로드될 때까지 기다린 후에 사용자에게 프레젠테이션을 표시합니다.\n\n프레젠테이션 표시 직후에 프레젠테이션의 전체 콘텐츠를 사용 가능하며 완전히 편집할 수 있어야 하는 추가 기능 또는 자동화된 프로세스가 있는 경우 이 정책 설정을 사용하도록 설정할 수 있습니다.\n\n이 설정을 사용하지 않도록 설정하거나 구성하지 않으면 PowerPoint가 클라우드 기반 파일을 더 빠르게 열기 때문에 사용자는 다른 콘텐츠가 다운로드되는 동안 프레젠테이션을 보기 시작할 수 있습니다.\n\n참고: 이 정책 설정을 Office 365 ProPlus와 같은 구독 버전의 Office에만 적용됩니다.\n    ",
+            "explainText": "이 정책 설정을 사용하면 PowerPoint가 사용자에게 프레젠테이션을 표시하기 전에 모든 콘텐츠가 다운로드될 때까지 기다릴 것인지 여부를 제어할 수 있습니다. 이 정책 설정은 OneDrive Personal, 비즈니스용 OneDrive 또는 SharePoint Online과 같은 클라우드 기반 위치에서 연 프레젠테이션에 적용됩니다.\n\n기본적으로 사용자가 클라우드 기반 프레젠테이션을 PowerPoint에서 열면 사용자는 이미지나 비디오 등의 다른 콘텐츠가 다운로드되고 있을 때 프레젠테이션을 볼 수 있습니다. 하지만 편집 및 프레젠테이션과 같은 일부 기능은 프레젠테이션의 전체 콘텐츠가 다운로드될 때까지 제한되거나 사용할 수 없습니다.\n\n이 정책 설정을 사용하도록 설정하면 PowerPoint는 클라우드 기반 프레젠테이션을 열 때 프레젠테이션의 전체 콘텐츠가 다운로드될 때까지 기다린 후에 사용자에게 프레젠테이션을 표시합니다.\n\n프레젠테이션 표시 직후에 프레젠테이션의 전체 콘텐츠를 사용 가능하며 완전히 편집할 수 있어야 하는 추가 기능 또는 자동화된 프로세스가 있는 경우 이 정책 설정을 사용하도록 설정할 수 있습니다.\n\n이 설정을 사용하지 않도록 설정하거나 구성하지 않으면 PowerPoint가 클라우드 기반 파일을 더 빠르게 열기 때문에 사용자는 다른 콘텐츠가 다운로드되는 동안 프레젠테이션을 보기 시작할 수 있습니다.\n\n참고: 이 정책 설정은 엔터프라이즈용 Microsoft 365 앱과 같은 Office 구독 버전에만 적용됩니다.\n    ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_PowerPointOptions",
@@ -3510,7 +3661,7 @@
             },
             "name": "L_DisableLiveSubtitles",
             "displayName": "라이브 자막 사용 허용 안 함",
-            "explainText": "이 정책 설정은 사용자가 프레젠테이션 도중 라이브 자막을 켤 수 있는지 여부를 제어합니다. 기본적으로 라이브 자막은 꺼져 있지만 사용자가 켤 수 있습니다.\n\n이 정책 설정을 사용하도록 설정하면 사용자가 프레젠테이션 도중 라이브 자막을 켤 수 있습니다.\n\n이 정책 설정을 사용하지 않도록 설정하거나 구성하지 않으면 사용자가 라이브 자막을 켤 수 있습니다.\n\n참고: 이 정책 설정은 Office 365 ProPlus와 같은 Office 구독 버전에만 적용됩니다.\n    ",
+            "explainText": "이 정책 설정은 사용자가 프레젠테이션 도중 라이브 자막을 켤 수 있는지 여부를 제어합니다. 기본적으로 라이브 자막은 꺼져 있지만 사용자가 켤 수 있습니다.\n\n이 정책 설정을 사용하도록 설정하면 사용자가 프레젠테이션 도중 라이브 자막을 켤 수 있습니다.\n\n이 정책 설정을 사용하지 않도록 설정하거나 구성하지 않으면 사용자가 라이브 자막을 켤 수 있습니다.\n\n참고: 이 정책 설정은 엔터프라이즈용 Microsoft 365 앱과 같은 Office 구독 버전에만 적용됩니다.\n    ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_PowerPointOptions",
@@ -3519,6 +3670,35 @@
             "application": "ppt16",
             "key": "software\\microsoft\\office\\16.0\\powerpoint",
             "valueName": "disablelivesubtitles"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_OptionsGeneral"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_EnableModernCommentsCreateNew",
+            "displayName": "PowerPoint에 최신 댓글 사용",
+            "explainText": "이 정책 설정은 PowerPoint에서 최신 댓글을 사용할지 여부를 제어합니다. 최신 댓글과 이 설정을 활성화하는 시기에 대한 정보는 https://go.microsoft.com/fwlink/p/?linkid=2116065를 참조하세요.\n\n이 정책 설정을 사용하도록 설정하는 경우, 새 파일이나 댓글이 없는 파일에 댓글을 추가할 때, 추가되는 댓글이 최신 댓글이 됩니다. 최신 댓글을 지원하지 않는 PowerPoint 버전을 사용하는 경우, 파일의 최신 댓글을 보려면 웹용 PowerPoint를 사용하라는 알림이 표시됩니다.\n\n이 정책 설정을 사용하지 않도록 설정하는 경우, 최신 댓글이 없는 새 파일과 기존 파일에 대해 이전 댓글 작성 환경이 계속 표시됩니다. 최신 댓글을 지원하는 PowerPoint 버전을 사용하는 경우 최신 댓글이 포함된 파일을 계속 읽을 수 있습니다.\n\n이 정책 설정을 구성하지 않는 경우 발생하는 사항에 대한 정보는 https://go.microsoft.com/fwlink/p/?linkid=2116065를 참조하세요.\n\n참고: 이 정책 설정은 엔터프라이즈용 Microsoft 365 앱과 같은 Office의 구독 버전에만 적용됩니다.\n    ",
+            "tags": [
+                "L_OptionsGeneral",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint",
+            "valueName": "enablemoderncommentscreatenew"
         }
     ]
 }

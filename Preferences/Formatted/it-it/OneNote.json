@@ -418,7 +418,7 @@
                         "expandableSpecified": false,
                         "maxLengthSpecified": false,
                         "inputType": "textBox",
-                        "caption": "Tipo di carattere: ",
+                        "caption": "Tipo di carattere:",
                         "id": "L_Font"
                     }
                 ]
@@ -449,7 +449,7 @@
                         "expandableSpecified": false,
                         "maxLengthSpecified": false,
                         "inputType": "textBox",
-                        "caption": "Dimensione carattere: ",
+                        "caption": "Dimensione carattere:",
                         "id": "L_FontSize"
                     }
                 ]
@@ -1958,7 +1958,7 @@
             },
             "name": "L_DaysOfAllVersions",
             "displayName": "Giorni per cui tutti gli elementi della cronologia delle versioni non verranno eliminati",
-            "explainText": "Questa impostazione di criterio consente di specificare un periodo di tempo durante il quale OneNote mantiene pagine della cronologia delle versioni complete. Trascorso il periodo di tempo specificato, OneNote manterrà pagine della cronologia delle versioni di base che utilizzano minore spazio di archiviazione.\n\nSe si abilita questa impostazione di criterio, OneNote manterrà pagine della cronologia delle versioni complete per tutta la durata periodo di tempo specificato, trascorso il quale manterrà pagine della cronologia delle versioni di base.\n\nSe si disabilita o non si configura questa impostazione di criterio, OneNote mantiene pagine della cronologia delle versioni complete per due giorni e successivamente mantiene pagine della cronologia delle versioni di base.",
+            "explainText": "Questa impostazione di criterio consente di specificare un periodo di tempo durante il quale OneNote mantiene pagine della cronologia delle versioni complete. Trascorso il periodo di tempo specificato, OneNote manterrà pagine della cronologia delle versioni di base che utilizzano minore spazio di archiviazione.\n\nSe si abilita questa impostazione di criterio, OneNote manterrà pagine della cronologia delle versioni complete per tutta la durata periodo di tempo specificato, trascorso il quale manterrà pagine della cronologia delle versioni di base.\n\nSe si disabilita o non si configura questa impostazione di criterio, OneNote mantiene pagine della cronologia delle versioni complete per due giorni e successivamente mantiene pagine della cronologia delle versioni di base.\n      ",
             "tags": [
                 "L_VersionsAndRecyleBin",
                 "L_OneNoteOptions",
@@ -2388,6 +2388,99 @@
             "name": "L_SharePointsyncinterval",
             "displayName": "Intervallo di sincronizzazione per i blocchi appunti memorizzati in SharePoint",
             "explainText": "Consente di limitare il numero di polling eseguiti in un sito di SharePoint per verificare la presenze di modifiche. Immettere l'intervallo di sincronizzazione in secondi.",
+            "tags": [
+                "L_Other",
+                "L_OneNoteOptions",
+                "L_MicrosoftOfficeOneNote"
+            ],
+            "application": "onent16",
+            "key": "software\\microsoft\\office\\16.0\\onenote\\options\\save"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "sharepointbackgroundsyncintervalmultiplier",
+                        "minValue": 1,
+                        "minValueSpecified": true,
+                        "maxValue": 10,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_empty16"
+                    }
+                ]
+            },
+            "name": "L_SharePointbackgroundsyncintervalmultiplier",
+            "displayName": "Moltiplicatore per l’intervallo di sincronizzazione in background per i blocchi appunti archiviati in SharePoint",
+            "explainText": "Questa impostazione dei criteri consente di aumentare l'intervallo tra i sondaggi in background di un sito di SharePoint per le modifiche ai blocchi appunti.\n\nSe si abilita questa impostazione dei criteri, OneNote effettuerà i sondaggi di SharePoint meno frequentemente per le modifiche agli interi blocchi appunti. Gli intervalli vengono moltiplicati per il valore immesso: un valore intero positivo compreso tra 1 e 10. Gli intervalli più ampi rallenteranno la sincronizzazione delle sezioni ma riducono il carico del server.\n\nSe si disabilita o non si configura questa impostazione dei criteri, OneNote sincronizzerà i blocchi appunti in base alla frequenza predefinita (valore moltiplicatore 1).\n\nNota: questa impostazione dei criteri si applica solo alle versioni con contratto multilicenza di Office 2016 che usano Windows Installer (MSI), ad esempio Office Professional Plus 2016 e Office Standard 2016.",
+            "tags": [
+                "L_Other",
+                "L_OneNoteOptions",
+                "L_MicrosoftOfficeOneNote"
+            ],
+            "application": "onent16",
+            "key": "software\\microsoft\\office\\16.0\\onenote\\options\\save"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "sharepointlivesyncintervalmultiplier",
+                        "minValue": 1,
+                        "minValueSpecified": true,
+                        "maxValue": 10,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_empty17"
+                    }
+                ]
+            },
+            "name": "L_SharePointlivesyncintervalmultiplier",
+            "displayName": "Moltiplicatore per l'intervallo di sincronizzazione in primo piano per la sezione attualmente visualizzata archiviata in SharePoint",
+            "explainText": "Questa impostazione dei criteri consente di aumentare l'intervallo tra i sondaggi in primo piano di un sito di SharePoint per le modifiche alla sezione attualmente visualizzata.\n\nSe si abilita questa impostazione dei criteri, OneNote effettuerà i sondaggi di SharePoint meno frequentemente per le modifiche alla sezione visualizzata. Gli intervalli vengono moltiplicati per il valore immesso: un valore intero positivo compreso tra 1 e 10. Gli intervalli più ampi rallenteranno la sincronizzazione delle sezioni ma riducono il carico del server.\n\nSe si disabilita o non si configura questa impostazione dei criteri, OneNote sincronizzerà la sezione attualmente visualizzata in base alla frequenza predefinita (valore moltiplicatore 1).\n\nNota: questa impostazione dei criteri si applica solo alle versioni con contratto multilicenza di Office 2016 che usano Windows Installer (MSI), ad esempio Office Professional Plus 2016 e Office Standard 2016.",
+            "tags": [
+                "L_Other",
+                "L_OneNoteOptions",
+                "L_MicrosoftOfficeOneNote"
+            ],
+            "application": "onent16",
+            "key": "software\\microsoft\\office\\16.0\\onenote\\options\\save"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "sharepointpresenceintervalmultiplier",
+                        "minValue": 1,
+                        "minValueSpecified": true,
+                        "maxValue": 10,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_empty18"
+                    }
+                ]
+            },
+            "name": "L_SharePointpresenceintervalmultiplier",
+            "displayName": "Moltiplicatore per l’intervallo di sincronizzazione della presenza per i blocchi appunti archiviati in SharePoint",
+            "explainText": "Questa impostazione dei criteri consente di aumentare l'intervallo tra i sondaggi di SharePoint per determinare gli utenti attivi dei blocchi appunti. OneNote sincronizzerà i blocchi appunti con una frequenza maggiore quando altri utenti interagiscono con un blocco appunti.\n\nSe si abilita questa impostazione dei criteri, OneNote effettuerà i sondaggi di SharePoint meno frequentemente per determinare se esistono altri utenti che interagiscono con i blocchi appunti. Gli intervalli vengono moltiplicati per il valore immesso: un valore intero positivo compreso tra 1 e 10. Gli intervalli più ampi rallenteranno il rilevamento di utenti simultanei nei blocchi appunti, ma riducono il carico del server.\n\nSe si disabilita o non si configura questa impostazione dei criteri, OneNote eseguirà i sondaggi degli utenti attivi dei blocchi appunti in base alla frequenza predefinita (valore moltiplicatore 1).\n\nNota: questa impostazione dei criteri si applica solo alle versioni con contratto multilicenza di Office 2016 che usano Windows Installer (MSI), ad esempio Office Professional Plus 2016 e Office standard 2016.",
             "tags": [
                 "L_Other",
                 "L_OneNoteOptions",

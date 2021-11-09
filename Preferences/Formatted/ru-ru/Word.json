@@ -347,35 +347,6 @@
                     "value": 0
                 }
             },
-            "name": "L_Openattachmentsforfullscreenreading",
-            "displayName": "Открывать вложения электронной почты в режиме чтения",
-            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
-            "tags": [
-                "L_OptionsGeneral",
-                "L_WordOptions",
-                "L_MicrosoftOfficeWord"
-            ],
-            "application": "word16",
-            "key": "software\\microsoft\\office\\16.0\\word\\options",
-            "valueName": "allowautoreadingmode"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_OptionsGeneral"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
             "name": "L_AllowSelectionFloaties",
             "displayName": "Показывать мини-панель инструментов при выделении",
             "explainText": "В случае отключения этого параметра политики перестанет отображаться мини-панель инструментов при выделении текста. По умолчанию мини-панель инструментов отображается при выделении. Режим ее отображения можно изменить в диалоговом окне \"Параметры Word\".",
@@ -874,6 +845,348 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Trackchangesandcompare"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Нет"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Авторский"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Розовый"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Светло-синий"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "Светло-желтый"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "Светло-фиолетовый"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "Светло-оранжевый"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Светло-зеленый"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "Серый"
+                            }
+                        ],
+                        "valueName": "revmodeinscellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "Цвет для вставленных ячеек:",
+                        "id": "L_TablecomparecolorsPart1"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Нет"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Авторский"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Розовый"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Светло-синий"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "Светло-желтый"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "Светло-фиолетовый"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "Светло-оранжевый"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Светло-зеленый"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "Серый"
+                            }
+                        ],
+                        "valueName": "revmodedelcellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "Цвет для удаленных ячеек:",
+                        "id": "L_TablecomparecolorsPart2"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Нет"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Авторский"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Розовый"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Светло-синий"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "Светло-желтый"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "Светло-фиолетовый"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "Светло-оранжевый"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Светло-зеленый"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "Серый"
+                            }
+                        ],
+                        "valueName": "revmodemergecellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "Цвет для объединенных ячеек:",
+                        "id": "L_TablecomparecolorsPart3"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Нет"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Авторский"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Розовый"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Светло-синий"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "Светло-желтый"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "Светло-фиолетовый"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "Светло-оранжевый"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Светло-зеленый"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "Серый"
+                            }
+                        ],
+                        "valueName": "revmodesplitcellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "Цвет для разбитых ячеек:",
+                        "id": "L_TablecomparecolorsPart4"
+                    }
+                ]
+            },
+            "name": "L_Tablecomparecolors",
+            "displayName": "Цвета для сравнения таблиц",
+            "explainText": "Этот параметр определяет цвета, использующиеся при отображении результатов сравнения таблиц. Если выбран вариант ''Нет'', изменения будут отслежены, но не будут выделены цветом в конечном документе (они будут перечислены на панели рецензирования).",
+            "tags": [
+                "L_Trackchangesandcompare",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Proofing"
             },
             "supportedOn": {
@@ -1042,6 +1355,837 @@
         },
         {
             "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_CorrectTWoINitialCApitals",
+            "displayName": "Исправлять ДВе ПРописные буквы в начале слова",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ftwoinitialcaps_24_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Capitalizefirstletterofsentence",
+            "displayName": "Делать первые буквы предложений прописными",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "finitialcap_32_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Capitalizenamesofdays",
+            "displayName": "Писать названия дней с прописной буквы",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcapdaynames_48_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_CorrectaccidentalusageofcAPSLOCKkey",
+            "displayName": "Устранять последствия случайного нажатия cAPS LOCK",
+            "explainText": "Данный параметр политики задает состояние флажка \"Устранять последствия случайного нажатия cAPS LOCK\" (Параметры Word | Правописание | Параметры автозамены... | Автозамена).\n\nЕсли этот параметр политики включен, флажок \"Устранять последствия случайного нажатия cAPS LOCK\" будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, флажок \"Устранять последствия случайного нажатия cAPS LOCK\" будет снят.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcapslock_40_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Replacetextasyoutype",
+            "displayName": "Заменять при вводе",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcorrecttyping_16_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Correctkeyboardsetting",
+            "displayName": "Исправлять раскладку клавиатуры",
+            "explainText": "Данный параметр политики задает состояние флажка \"Исправлять раскладку клавиатуры\" (Параметры Word | Правописание | Параметры автозамены... | Автозамена).\n\nЕсли этот параметр политики включен, флажок \"Исправлять раскладку клавиатуры\" будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, флажок \"Исправлять раскладку клавиатуры\" будет снят.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcorrectkeyboard_64_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Firstlineindent",
+            "displayName": "Отступ первой строки",
+            "explainText": "Устанавливает или снимает флажок \"пробелы в начале абзаца отступом первой строки\" в группе \"Заменять при вводе\". Этот флажок виден в Word только при использовании определенных языков редактирования.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ffirstindent_344_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Straightquoteswithsmartquotes",
+            "displayName": "Прямые кавычки парными",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fsmartquote_8_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ordinals1stwithsuperscript",
+            "displayName": "Английские порядковые (1st) надстрочными знаками",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fnumsupscript_104_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Fractions12withfractioncharacter",
+            "displayName": "Дроби (1/2) соответствующими знаками",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ffraction_96_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Symbolcharacterswithsymbols",
+            "displayName": "Составные знаки (--) одиночными",
+            "explainText": "Устанавливает или снимает флажок ''дефисы (--) на тире (-)''.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "femdash_112_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Boldand_italic_withrealformatting",
+            "displayName": "*Полужирный* и _курсив_",
+            "explainText": "Данный параметр политики позволяет задать состояние флажка \"*полужирный* и _курсив_\".\n\nЕсли этот параметр политики включен, флажок \"*полужирный* и _курсив_\" (Файл | Параметры | Правописание | Параметры автозамены... | Автоформат) будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, данный флажок не будет установлен.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fbolditalic_120_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Dashlikecharacters",
+            "displayName": "Дефисы и тире",
+            "explainText": "Устанавливает или снимает флажок \"длинные гласные звуки черточками\". Этот флажок виден в Word только при использовании определенных языков редактирования.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fdbdashes_136_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Headings",
+            "displayName": "Заголовки",
+            "explainText": "Устанавливает или снимает флажок ''встроенные стили заголовков''.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fheading_280_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_BorderLines",
+            "displayName": "Линии границ",
+            "explainText": "Устанавливает или снимает флажок \"линии границ\".",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fbotbord_328_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Tables",
+            "displayName": "Таблицы",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ftable_392_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DateStyle",
+            "displayName": "Стиль даты",
+            "explainText": "Устанавливает или снимает флажок \"стиль даты\". Этот флажок виден в Word только при использовании определенных языков редактирования.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fdate_376_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Automaticbulletedlists",
+            "displayName": "Стили маркированных списков",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fbulletlist_296_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Automaticnumberedlists",
+            "displayName": "Стили нумерованных списков",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fnumberedlist_312_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ClosingStyleToLetterClosings",
+            "displayName": "Стиль заключения к заключениям писем",
+            "explainText": "Данный параметр политики задает состояние флажка \"стиль заключения к заключениям писем\" (Параметры Word | Правописание | Параметры автозамены... | Автоформат при вводе).\n\nЕсли этот параметр политики включен, флажок \"стиль заключения к заключениям писем\" будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, флажок \"стиль заключения к заключениям писем\" будет снят.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fclosing_360_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Autospace",
+            "displayName": "Автоматическое определение интервалов",
+            "explainText": "Данный параметр политики задает состояние флажка \"удалять лишние пробелы между восточноазиатскими и латинскими буквами\" в группе \"Автоматически при вводе\". Этот флажок виден в Word только при использовании определенных языков редактирования.\n\nЕсли этот параметр политики включен, флажок \"удалять лишние пробелы между восточноазиатскими и латинскими буквами\" будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, флажок \"удалять лишние пробелы между восточноазиатскими и латинскими буквами\" будет снят.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fsbdbspace_152_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchparentheses",
+            "displayName": "Добавлять недостающие скобки",
+            "explainText": "Данный параметр политики задает состояние флажка \"добавлять недостающие скобки\" (Параметры Word | Правописание | Параметры автозамены... | Автоформат при вводе | Автоматически при вводе). Этот флажок виден в Word только при использовании определенных языков редактирования.\n\nЕсли этот параметр политики включен, флажок \"добавлять недостающие скобки\" будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, флажок \"добавлять недостающие скобки\" будет снят.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fautopair_144_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Formatbeginningoflistitemliketheonebeforeit",
+            "displayName": "Повторять форматирование начала элемента списка",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fleadinemph_176_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Setleftindentontabsandbackspace",
+            "displayName": "Отступ с помощью TAB и BACKSPACE",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ftabindent_128_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Definestylesbasedonyourformatting",
+            "displayName": "Определять стили",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fautostyledef_184_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_InsertClosingPhraseToMatchMemoStyle",
+            "displayName": "Добавлять заключение, соответствующее стилю записки",
+            "explainText": "Устанавливает или снимает флажок \"добавлять заключение, соответствующее стилю записки\". Этот флажок виден в Word только при использовании определенных языков редактирования.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "finsertover_424_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_InsertClosingPhraseToMatchJapaneseSalutation",
+            "displayName": "Добавлять заключение, соответствующее приветствию",
+            "explainText": "Устанавливает или снимает флажок \"добавлять заключение, соответствующее приветствию\". Этот флажок виден в Word только при использовании определенных языков редактирования.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "finsertclosing_408_1"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_OptionsCustomizeRibbon"
             },
             "supportedOn": {
@@ -1155,6 +2299,122 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "nomargpageview"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Documentproperties",
+            "displayName": "Печатать свойства документа",
+            "explainText": "Данный параметр политики задает состояние флажка \"Печатать свойства документа\" (вкладка \"Файл\" | Параметры | Экран | Параметры печати).\n\nЕсли этот параметр политики включен, Word будет печатать дополнительную страницу, содержащую свойства напечатанного документа (автор документа, имя файла, дата создания и т.п.), для каждого печатаемого документа.\n\nЕсли этот параметр политики отключен или не настроен, дополнительная страница печататься не будет.",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "summary_1_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Drawingobjects",
+            "displayName": "Печатать рисунки, созданные в Word",
+            "explainText": "Данный параметр политики задает состояние флажка \"Печатать рисунки, созданные в Word\" (вкладка \"Файл\" | Параметры | Экран | Параметры печати).\n\nЕсли этот параметр политики включен, Word будет печатать рисунки и плавающие надписи.\n\nЕсли этот параметр политики отключен или не настроен, Word не будет печатать ни рисунки, ни плавающие надписи. На месте каждого рисунка или плавающей надписи будет напечатана пустая рамка.",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "disabledrawnobj_14_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Updatefields",
+            "displayName": "Обновлять поля перед печатью",
+            "explainText": "Данный параметр политики задает состояние флажка \"Обновлять поля перед печатью\" (вкладка \"Файл\" | Параметры | Экран | Параметры печати).\n\nЕсли этот параметр политики включен, Word будет обновлять поля в документе перед печатью этого документа.\n\nЕсли этот параметр политики отключен или не настроен, Word не будет обновлять поля в документе перед печатью этого документа.",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "refresh_5_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Updatelinks",
+            "displayName": "Обновлять связанные данные перед печатью",
+            "explainText": "Данный параметр политики задает состояние флажка \"Обновлять связанные данные перед печатью\" (вкладка \"Файл\" | Параметры | Экран | Параметры печати).\n\nЕсли этот параметр политики включен, Word будет обновлять связанные данные в документе перед печатью этого документа. Примером связанных данных в документе Word является внедренная диаграмма Excel, связанная с электронной таблицей Excel.\n\nЕсли этот параметр политики отключен или не настроен, Word не будет обновлять связанные данные в документе перед печатью этого документа.",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "updatelinks_13_1"
         },
         {
             "parentCategory": {
@@ -3113,6 +4373,35 @@
                     "value": 0
                 }
             },
+            "name": "L_Draftoutput",
+            "displayName": "Использовать черновое качество",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "draftoutput_2_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_Backgroundprinting",
             "displayName": "Фоновая печать",
             "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
@@ -3124,6 +4413,93 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "backgroundprint"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Reverseprintorder",
+            "displayName": "Печать в обратном порядке",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "reverseprint_6_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Frontofsheet",
+            "displayName": "Печатать на лицевой стороне листа при двусторонней печати",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "fprorder1_21_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Backofthesheet",
+            "displayName": "Печатать на обратной стороне листа при двусторонней печати",
+            "explainText": "Устанавливает или снимает соответствующий флажок в пользовательском интерфейсе.",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "fprorder2_22_1"
         },
         {
             "parentCategory": {
@@ -4072,7 +5448,7 @@
             },
             "name": "L_AllowaccenteduppercaseinFrench",
             "displayName": "Разрешить прописные с надстрочными знаками (французский)",
-            "explainText":"Устанавливает или снимает флажок ''Прописные с надстрочными знаками''.",
+            "explainText": "Устанавливает или снимает флажок ''Прописные с надстрочными знаками''.",
             "tags": [
                 "L_Advanced",
                 "L_WordOptions",
@@ -4662,7 +6038,7 @@
             },
             "name": "L_BlockMacroExecutionFromInternet",
             "displayName": "Блокирование запуска макросов в файлах Microsoft Office, полученных через Интернет",
-            "explainText": "Этот параметр политики позволяет блокировать запуск макросов в файлах Office, полученных через Интернет.\n\nЕсли включить этот параметр политики, макросы будут блокироваться, даже если в разделе \"Параметры макросов\" в центре управления безопасностью выбран параметр \"Включить все макросы\". При этом вместо кнопки \"Включить содержимое\" на экране будет отображаться уведомление о блокировании запуска макросов. Если файл Office хранится в надежном расположении или пользователь ранее пометил его как надежный, макросы будут запускаться.\n\nЕсли отключить или не настраивать этот параметр политики, блокировка и запуск макросов в файлах Office из Интернета, будут определяться параметрами, установленными в разделе \"Параметры макросов\" в центре управления безопасностью.",
+            "explainText": "        Этот параметр политики позволяет блокировать запуск макросов в файлах Office, полученных через Интернет.\n\n        Если включить этот параметр политики, макросы будут блокироваться, даже если в разделе \"Параметры макросов\" в центре управления безопасностью выбран параметр \"Включить все макросы\". При этом вместо кнопки \"Включить содержимое\" на экране будет отображаться уведомление о блокировании запуска макросов. Если файл Office хранится в надежном расположении или пользователь ранее пометил его как надежный, макросы будут запускаться.\n\n        Если отключить или не настраивать этот параметр политики, блокировка и запуск макросов в файлах Office из Интернета, будут определяться параметрами, установленными в разделе \"Параметры макросов\" в центре управления безопасностью.\n      ",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -4746,7 +6122,7 @@
             },
             "name": "L_TrustaccesstoVisualBasicProject",
             "displayName": "Доверять доступ к проекту Visual Basic",
-            "explainText": "Данный параметр политики определяет, могут ли клиенты автоматизации, такие как набор средств Microsoft Visual Studio 2005 для Microsoft Office (VSTO), получать доступ к системе проектов Visual Basic for Applications в указанных приложениях. Проекты VSTO требуют доступа к системе проектов Visual Basic for Applications в Excel, PowerPoint и Word, хотя сами проекты не используют Visual Basic for Applications. Поддержка элементов управления во время разработки в проектах как на Visual Basic, так и на C# зависит от системы проектов Visual Basic for Applications в Word и Excel.\n\nЕсли этот параметр политики включен, VSTO и другие клиенты автоматизации имеют доступ к системе проектов Visual Basic for Applications в указанных приложениях. Пользователи не смогут изменить это поведение с помощью параметра интерфейса \"Доверять доступ к объектной модели проектов VBA\" в разделе \"Параметры макросов\" центра управления безопасностью.\n\nЕсли этот параметр политики отключен, VSTO не имеет программного доступа к проектам VBA. Кроме того, будет снят флажок \"Доверять доступ к объектной модели проектов VBA\", и пользователи не могут изменить эту настройку. Примечание. Отключение этого параметра политики не препятствует правильному взаимодействию проектов VSTO с системой проектов VBA в выбранном приложении.\n\nЕсли этот параметр политики не настроен, клиенты автоматизации не имеют программного доступа к проектам VBA. Пользователи могут включить этот режим, установив флажок \"Доверять доступ к объектной модели проектов VBA\" в разделе \"Параметры макросов\" центра управления безопасностью. Однако это разрешит макросам во всех открываемых пользователем документах доступ к основным объектам, свойствам и методам Visual Basic, что представляет собой потенциальную угрозу безопасности.",
+            "explainText": "Данный параметр политики определяет, могут ли клиенты автоматизации, такие как набор средств Microsoft Visual Studio 2005 для Microsoft Office (VSTO), получать доступ к системе проектов Visual Basic for Applications в указанных приложениях. Проекты VSTO требуют доступа к системе проектов Visual Basic for Applications в Excel, PowerPoint и Word, хотя сами проекты не используют Visual Basic for Applications. Поддержка элементов управления во время разработки в проектах как на Visual Basic, так и на C# зависит от системы проектов Visual Basic for Applications в Word и Excel.\n\nЕсли этот параметр политики включен, VSTO и другие клиенты автоматизации имеют доступ к системе проектов Visual Basic for Applications в указанных приложениях. Пользователи не смогут изменить это поведение с помощью параметра интерфейса \"Доверять доступ к объектной модели проектов VBA\" в разделе \"Параметры макросов\" центра управления безопасностью.\n\nЕсли этот параметр политики отключен, VSTO не имеет программного доступа к проектам VBA. Кроме того, будет снят флажок \"Доверять доступ к объектной модели проектов VBA\", и пользователи не могут изменить эту настройку.  Примечание. Отключение этого параметра политики не препятствует правильному взаимодействию проектов VSTO с системой проектов VBA в выбранном приложении.\n\nЕсли этот параметр политики не настроен, клиенты автоматизации не имеют программного доступа к проектам VBA. Пользователи могут включить этот режим, установив флажок \"Доверять доступ к объектной модели проектов VBA\" в разделе \"Параметры макросов\" центра управления безопасностью. Однако это разрешит макросам во всех открываемых пользователем документах доступ к основным объектам, свойствам и методам Visual Basic, что представляет собой потенциальную угрозу безопасности.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -6290,6 +7666,70 @@
         },
         {
             "parentCategory": {
+                "ref": "L_ProtectedView"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Блокировать файлы"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Открыть в режиме защищенного просмотра"
+                            }
+                        ],
+                        "valueName": "openinprotectedview",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsDropID"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "disableeditfrompv",
+                        "key": "software\\microsoft\\office\\16.0\\word\\security\\filevalidation",
+                        "inputType": "checkBox",
+                        "caption": "Флажок установлен. Изменение разрешено. Флажок снят. Изменение не разрешено.",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsStr3"
+                    }
+                ]
+            },
+            "name": "L_SetDocumentBehaviorIfFileValidationFails",
+            "displayName": "Задать поведение документов, не прошедших проверку файлов",
+            "explainText": "Этот параметр политики управляет поведением Office при обработке документов, не прошедших проверку файлов.\n\nЕсли этот параметр политики включен, вы можете настроить следующие варианты для файлов, не прошедших проверку.\n\n\n- Полностью блокировать файлы. Пользователи не могут открывать файлы.\n- Открывать файлы в режиме защищенного просмотра без возможности редактирования. Пользователи не могут редактировать файлы. То же самое происходит, если этот параметр политики отключен.\n- Открывать файлы в режиме защищенного просмотра с возможностью редактирования. Пользователи могут редактировать файлы. То же самое происходит, если этот параметр политики не настроен.\n\nЕсли этот параметр политики отключен, будет использоваться значение \"Открывать файлы в режиме защищенного просмотра без возможности редактирования\".\n\nЕсли этот параметр политики не настроен, будет использоваться значение \"Открывать файлы в режиме защищенного просмотра с возможностью редактирования\".",
+            "tags": [
+                "L_ProtectedView",
+                "L_TrustCenter",
+                "L_Security",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\security\\filevalidation"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -6403,6 +7843,510 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "showmarkupopensave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchcase",
+            "displayName": "Учитывать регистр",
+            "explainText": "Данный параметр политики позволяет установить или снять соответствующий флажок в диалоговом окне \"Поиск (японский)\". Диалоговое окно \"Поиск (японский)\" можно открыть из диалогового окна \"Найти\" (вкладка \"Главная\" | Редактирование | Найти | Перейти... | Параметры поиска | Параметры...). Это окно также можно открыть с панели навигации (вкладка \"Главная\" | Редактирование | Найти | < СТРЕЛКА ВНИЗ > | Параметры... | Произносится как (японский) | Параметры). Флажок \"Произносится как (японский)\" и кнопка \"Параметры...\" видны в Word только при использовании определенных языков редактирования.\n\nЕсли этот параметр политики включен, соответствующий флажок будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, соответствующий флажок будет снят.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqcase_0_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchfullhalfwidthform",
+            "displayName": "Учитывать ширину знаков",
+            "explainText": "Данный параметр политики позволяет установить или снять соответствующий флажок в диалоговом окне \"Поиск (японский)\". Диалоговое окно \"Поиск (японский)\" можно открыть из диалогового окна \"Найти\" (вкладка \"Главная\" | Редактирование | Найти | Перейти... | Параметры поиска | Параметры...). Это окно также можно открыть с панели навигации (вкладка \"Главная\" | Редактирование | Найти | < СТРЕЛКА ВНИЗ > | Параметры... | Произносится как (японский) | Параметры). Флажок \"Произносится как (японский)\" и кнопка \"Параметры...\" видны в Word только при использовании определенных языков редактирования.\n\nЕсли этот параметр политики включен, соответствующий флажок будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, соответствующий флажок будет снят.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqbyte_1_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchhiraganakatakana",
+            "displayName": "Учитывать хирагану и катакану",
+            "explainText": "Данный параметр политики позволяет установить или снять соответствующий флажок в диалоговом окне \"Поиск (японский)\". Диалоговое окно \"Поиск (японский)\" можно открыть из диалогового окна \"Найти\" (вкладка \"Главная\" | Редактирование | Найти | Перейти... | Параметры поиска | Параметры...). Это окно также можно открыть с панели навигации (вкладка \"Главная\" | Редактирование | Найти | < СТРЕЛКА ВНИЗ > | Параметры... | Произносится как (японский) | Параметры). Флажок \"Произносится как (японский)\" и кнопка \"Параметры...\" видны в Word только при использовании определенных языков редактирования.\n\nЕсли этот параметр политики включен, соответствующий флажок будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, соответствующий флажок будет снят.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqhira_kata_3_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchcontractionsyoonsokuon",
+            "displayName": "Сокращения (ё-он, сокуон)",
+            "explainText": "Данный параметр политики позволяет установить или снять соответствующий флажок в диалоговом окне \"Поиск (японский)\". Диалоговое окно \"Поиск (японский)\" можно открыть из диалогового окна \"Найти\" (вкладка \"Главная\" | Редактирование | Найти | Перейти... | Параметры поиска | Параметры...). Это окно также можно открыть с панели навигации (вкладка \"Главная\" | Редактирование | Найти | < СТРЕЛКА ВНИЗ > | Параметры... | Произносится как (японский) | Параметры). Флажок \"Произносится как (японский)\" и кнопка \"Параметры...\" видны в Word только при использовании определенных языков редактирования.\n\nЕсли этот параметр политики включен, соответствующий флажок будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, соответствующий флажок будет снят.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqsmallkana_4_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchminusdashchoon",
+            "displayName": "Минус, тире и тё-он",
+            "explainText": "Данный параметр политики позволяет установить или снять соответствующий флажок в диалоговом окне \"Поиск (японский)\". Диалоговое окно \"Поиск (японский)\" можно открыть из диалогового окна \"Найти\" (вкладка \"Главная\" | Редактирование | Найти | Перейти... | Параметры поиска | Параметры...). Это окно также можно открыть с панели навигации (вкладка \"Главная\" | Редактирование | Найти | < СТРЕЛКА ВНИЗ > | Параметры... | Произносится как (японский) | Параметры). Флажок \"Произносится как (японский)\" и кнопка \"Параметры...\" видны в Word только при использовании определенных языков редактирования.\n\nЕсли этот параметр политики включен, соответствующий флажок будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, соответствующий флажок будет снят.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqminus_2_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchrepeatcharactermarks",
+            "displayName": "Метки повторения знаков",
+            "explainText": "Данный параметр политики позволяет установить или снять соответствующий флажок в диалоговом окне \"Поиск (японский)\". Диалоговое окно \"Поиск (японский)\" можно открыть из диалогового окна \"Найти\" (вкладка \"Главная\" | Редактирование | Найти | Перейти... | Параметры поиска | Параметры...). Это окно также можно открыть с панели навигации (вкладка \"Главная\" | Редактирование | Найти | < СТРЕЛКА ВНИЗ > | Параметры... | Произносится как (японский) | Параметры). Флажок \"Произносится как (японский)\" и кнопка \"Параметры...\" видны в Word только при использовании определенных языков редактирования.\n\nЕсли этот параметр политики включен, соответствующий флажок будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, соответствующий флажок будет снят.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqrepsymbol_5_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchvariantformkanjiitaiji",
+            "displayName": "Варианты кандзи (итайдзи)",
+            "explainText": "Данный параметр политики позволяет установить или снять соответствующий флажок в диалоговом окне \"Поиск (японский)\". Диалоговое окно \"Поиск (японский)\" можно открыть из диалогового окна \"Найти\" (вкладка \"Главная\" | Редактирование | Найти | Перейти... | Параметры поиска | Параметры...). Это окно также можно открыть с панели навигации (вкладка \"Главная\" | Редактирование | Найти | < СТРЕЛКА ВНИЗ > | Параметры... | Произносится как (японский) | Параметры). Флажок \"Произносится как (японский)\" и кнопка \"Параметры...\" видны в Word только при использовании определенных языков редактирования.\n\nЕсли этот параметр политики включен, соответствующий флажок будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, соответствующий флажок будет снят.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqkanji_16_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matcholdkanaforms",
+            "displayName": "Старые формы кана",
+            "explainText": "Данный параметр политики позволяет установить или снять соответствующий флажок в диалоговом окне \"Поиск (японский)\". Диалоговое окно \"Поиск (японский)\" можно открыть из диалогового окна \"Найти\" (вкладка \"Главная\" | Редактирование | Найти | Перейти... | Параметры поиска | Параметры...). Это окно также можно открыть с панели навигации (вкладка \"Главная\" | Редактирование | Найти | < СТРЕЛКА ВНИЗ > | Параметры... | Произносится как (японский) | Параметры). Флажок \"Произносится как (японский)\" и кнопка \"Параметры...\" видны в Word только при использовании определенных языков редактирования.\n\nЕсли этот параметр политики включен, соответствующий флажок будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, соответствующий флажок будет снят.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqoldkana_6_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchchoonusedforvowels",
+            "displayName": "Тё-он для гласных",
+            "explainText": "Данный параметр политики позволяет установить или снять соответствующий флажок в диалоговом окне \"Поиск (японский)\". Диалоговое окно \"Поиск (японский)\" можно открыть из диалогового окна \"Найти\" (вкладка \"Главная\" | Редактирование | Найти | Перейти... | Параметры поиска | Параметры...). Это окно также можно открыть с панели навигации (вкладка \"Главная\" | Редактирование | Найти | < СТРЕЛКА ВНИЗ > | Параметры... | Произносится как (японский) | Параметры). Флажок \"Произносится как (японский)\" и кнопка \"Параметры...\" видны в Word только при использовании определенных языков редактирования.\n\nЕсли этот параметр политики включен, соответствующий флажок будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, соответствующий флажок будет снят.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqlongvowel_7_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchdiziduzu",
+            "displayName": "di/zi, du/zu",
+            "explainText": "Данный параметр политики позволяет установить или снять соответствующий флажок в диалоговом окне \"Поиск (японский)\". Диалоговое окно \"Поиск (японский)\" можно открыть из диалогового окна \"Найти\" (вкладка \"Главная\" | Редактирование | Найти | Перейти... | Параметры поиска | Параметры...). Это окно также можно открыть с панели навигации (вкладка \"Главная\" | Редактирование | Найти | < СТРЕЛКА ВНИЗ > | Параметры... | Произносится как (японский) | Параметры). Флажок \"Произносится как (японский)\" и кнопка \"Параметры...\" видны в Word только при использовании определенных языков редактирования.\n\nЕсли этот параметр политики включен, соответствующий флажок будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, соответствующий флажок будет снят.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqd_z_8_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchbavahafa",
+            "displayName": "ba/va, ha/fa",
+            "explainText": "Данный параметр политики позволяет установить или снять соответствующий флажок в диалоговом окне \"Поиск (японский)\". Диалоговое окно \"Поиск (японский)\" можно открыть из диалогового окна \"Найти\" (вкладка \"Главная\" | Редактирование | Найти | Перейти... | Параметры поиска | Параметры...). Это окно также можно открыть с панели навигации (вкладка \"Главная\" | Редактирование | Найти | < СТРЕЛКА ВНИЗ > | Параметры... | Произносится как (японский) | Параметры). Флажок \"Произносится как (японский)\" и кнопка \"Параметры...\" видны в Word только при использовании определенных языков редактирования.\n\nЕсли этот параметр политики включен, соответствующий флажок будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, соответствующий флажок будет снят.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqb_v_9_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchtsithichidhizi",
+            "displayName": "tsi/thi/chi, dhi/zi",
+            "explainText": "Данный параметр политики позволяет установить или снять соответствующий флажок в диалоговом окне \"Поиск (японский)\". Диалоговое окно \"Поиск (японский)\" можно открыть из диалогового окна \"Найти\" (вкладка \"Главная\" | Редактирование | Найти | Перейти... | Параметры поиска | Параметры...). Это окно также можно открыть с панели навигации (вкладка \"Главная\" | Редактирование | Найти | < СТРЕЛКА ВНИЗ > | Параметры... | Произносится как (японский) | Параметры). Флажок \"Произносится как (японский)\" и кнопка \"Параметры...\" видны в Word только при использовании определенных языков редактирования.\n\nЕсли этот параметр политики включен, соответствующий флажок будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, соответствующий флажок будет снят.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqt_c_10_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchhyuiyubyuvyu",
+            "displayName": "hyu/iyu, byu/vyu",
+            "explainText": "Данный параметр политики позволяет установить или снять соответствующий флажок в диалоговом окне \"Поиск (японский)\". Диалоговое окно \"Поиск (японский)\" можно открыть из диалогового окна \"Найти\" (вкладка \"Главная\" | Редактирование | Найти | Перейти... | Параметры поиска | Параметры...). Это окно также можно открыть с панели навигации (вкладка \"Главная\" | Редактирование | Найти | < СТРЕЛКА ВНИЗ > | Параметры... | Произносится как (японский) | Параметры). Флажок \"Произносится как (японский)\" и кнопка \"Параметры...\" видны в Word только при использовании определенных языков редактирования.\n\nЕсли этот параметр политики включен, соответствующий флажок будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, соответствующий флажок будет снят.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqf_h_15_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchseshezeje",
+            "displayName": "se/she, ze/je",
+            "explainText": "Данный параметр политики позволяет установить или снять соответствующий флажок в диалоговом окне \"Поиск (японский)\". Диалоговое окно \"Поиск (японский)\" можно открыть из диалогового окна \"Найти\" (вкладка \"Главная\" | Редактирование | Найти | Перейти... | Параметры поиска | Параметры...). Это окно также можно открыть с панели навигации (вкладка \"Главная\" | Редактирование | Найти | < СТРЕЛКА ВНИЗ > | Параметры... | Произносится как (японский) | Параметры). Флажок \"Произносится как (японский)\" и кнопка \"Параметры...\" видны в Word только при использовании определенных языков редактирования.\n\nЕсли этот параметр политики включен, соответствующий флажок будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, соответствующий флажок будет снят.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqs_sh_13_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchiaiyapianopiyano",
+            "displayName": "ia/iya (piano/piyano)",
+            "explainText": "Данный параметр политики позволяет установить или снять соответствующий флажок в диалоговом окне \"Поиск (японский)\". Диалоговое окно \"Поиск (японский)\" можно открыть из диалогового окна \"Найти\" (вкладка \"Главная\" | Редактирование | Найти | Перейти... | Параметры поиска | Параметры...). Это окно также можно открыть с панели навигации (вкладка \"Главная\" | Редактирование | Найти | < СТРЕЛКА ВНИЗ > | Параметры... | Произносится как (японский) | Параметры). Флажок \"Произносится как (японский)\" и кнопка \"Параметры...\" видны в Word только при использовании определенных языков редактирования.\n\nЕсли этот параметр политики включен, соответствующий флажок будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, соответствующий флажок будет снят.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqy_a_12_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchkikutekisutotekusuto",
+            "displayName": "ki/ku (tekisuto/tekusuto)",
+            "explainText": "Данный параметр политики позволяет установить или снять соответствующий флажок в диалоговом окне \"Поиск (японский)\". Диалоговое окно \"Поиск (японский)\" можно открыть из диалогового окна \"Найти\" (вкладка \"Главная\" | Редактирование | Найти | Перейти... | Параметры поиска | Параметры...). Это окно также можно открыть с панели навигации (вкладка \"Главная\" | Редактирование | Найти | < СТРЕЛКА ВНИЗ > | Параметры... | Произносится как (японский) | Параметры). Флажок \"Произносится как (японский)\" и кнопка \"Параметры...\" видны в Word только при использовании определенных языков редактирования.\n\nЕсли этот параметр политики включен, соответствующий флажок будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, соответствующий флажок будет снят.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqki_ku_14_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ignorepunctuationcharacters",
+            "displayName": "Не учитывать знаки препинания",
+            "explainText": "Данный параметр политики позволяет установить или снять соответствующий флажок в диалоговом окне \"Поиск (японский)\". Диалоговое окно \"Поиск (японский)\" можно открыть из диалогового окна \"Найти\" (вкладка \"Главная\" | Редактирование | Найти | Перейти... | Параметры поиска | Параметры...). Это окно также можно открыть с панели навигации (вкладка \"Главная\" | Редактирование | Найти | < СТРЕЛКА ВНИЗ > | Параметры... | Произносится как (японский) | Параметры). Флажок \"Произносится как (японский)\" и кнопка \"Параметры...\" видны в Word только при использовании определенных языков редактирования.\n\nЕсли этот параметр политики включен, соответствующий флажок будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, соответствующий флажок будет снят.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "fignorepunct_18_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ignorewhitespacecharacters",
+            "displayName": "Не учитывать пробелы",
+            "explainText": "Данный параметр политики позволяет установить или снять соответствующий флажок в диалоговом окне \"Поиск (японский)\". Диалоговое окно \"Поиск (японский)\" можно открыть из диалогового окна \"Найти\" (вкладка \"Главная\" | Редактирование | Найти | Перейти... | Параметры поиска | Параметры...). Это окно также можно открыть с панели навигации (вкладка \"Главная\" | Редактирование | Найти | < СТРЕЛКА ВНИЗ > | Параметры... | Произносится как (японский) | Параметры). Флажок \"Произносится как (японский)\" и кнопка \"Параметры...\" видны в Word только при использовании определенных языков редактирования.\n\nЕсли этот параметр политики включен, соответствующий флажок будет установлен.\n\nЕсли этот параметр политики отключен или не настроен, соответствующий флажок будет снят.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "fignorespace_19_1"
         },
         {
             "parentCategory": {
@@ -6935,7 +8879,7 @@
             },
             "name": "L_AlertIfNotDefault",
             "displayName": "Отображать запрос, если Word не является приложением по умолчанию для соответствующих расширений файлов",
-            "explainText": "Этот параметр политики определяет, нужно ли отображать запрос на изменение сопоставления расширения файла, если какое-либо любой из расширений типов файлов, связанное с Word, больше не сопоставлено с Word.\n\nЕсли этот параметр политики включен, запрос о сопоставлении этих типов файлов с другими приложениями не отображается при запуске программы. Если политика включена, флажок в поле \"Файл->Параметры-> Общие-> Параметры запуска-> Подробнее …\" отключен и не установлен.\n\nЕсли отключить или не настраивать этот параметр политики и если какой-либо из этих типов файлов сопоставлен с другими приложениями, будет отображаться запрос. Пользователи могут изменять поведение компонента, устанавливая флажок в запросе или устанавливая флажок в разделе \"Файл->Параметры- > Общие -> Параметры запуска- > Подробнее...\".\n        Если политика не настроена или отключена, флажок будет включен и установлен по умолчанию.",
+            "explainText": "        Этот параметр политики определяет, нужно ли отображать запрос на изменение сопоставления расширения файла, если какое-либо любой из расширений типов файлов, связанное с Word, больше не сопоставлено с Word.\n\nЕсли этот параметр политики включен, запрос о сопоставлении этих типов файлов с другими приложениями не отображается при запуске программы. Если политика включена, флажок в поле \"Файл->Параметры-> Общие-> Параметры запуска-> Подробнее …\" отключен и не установлен.\n\nЕсли отключить или не настраивать этот параметр политики и если какой-либо из этих типов файлов сопоставлен с другими приложениями, будет отображаться запрос. Пользователи могут изменять поведение компонента, устанавливая флажок в запросе или устанавливая флажок в разделе \"Файл->Параметры- > Общие -> Параметры запуска- > Подробнее...\".\n        Если политика не настроена или отключена, флажок будет включен и установлен по умолчанию.",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7172,7 +9116,7 @@
             },
             "name": "L_OnlineVideos",
             "displayName": "Разрешить воспроизведение видео из Интернета в Word",
-            "explainText": "Этот параметр политики определяет, можно ли воспроизводить видео из Интернета в Word.\n\nЕсли включить или не настроить эту политику, пользователи смогут воспроизводить видео из Интернета в Word.\n\nЕсли отключить этот параметр политики, воспроизведение видео из Интернета в Word будет невозможным.",
+            "explainText": "Этот параметр политики определяет, можно ли воспроизводить видео из Интернета в Word.\n\nЕсли включить или не настроить эту политику, пользователи смогут воспроизводить видео из Интернета в Word.\n\nЕсли отключить этот параметр политики, воспроизведение видео из Интернета в Word будет невозможным.\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7201,7 +9145,7 @@
             },
             "name": "L_LinkedInResumeAssistant",
             "displayName": "Разрешить использование компонента LinkedIn Resume Assistant",
-            "explainText": "Этот параметр политики определяет доступность компонента LinkedIn Resume Assistant в Word.\n\nЕсли этот параметр политики включен или не настроен, компонент LinkedIn Resume Assistant доступен пользователям.\n\nЕсли этот параметр политики отключен, компонент LinkedIn Resume Assistant недоступен.\n\nВнимание! Этот параметр политики применяется только к клиентам Office 365, установленным с помощью технологии \"нажми и работай\", включая Office 365 профессиональный плюс, Office 365 бизнес, Visio Pro для Office 365 и Project Pro для Office 365. Он не применяется к продуктам Office, установленным с помощью установщика Windows (MSI).",
+            "explainText": "Этот параметр политики определяет доступность помощника по составлению резюме LinkedIn в Word.\n\nЕсли этот параметр политики включен или не настроен, помощник по составлению резюме будет LinkedIn доступен пользователям.\n\nЕсли этот параметр политики отключен, помощник по составлению резюме LinkedIn будет недоступен.\n\nПримечание. Этот параметр политики применяется только к версиям Office, предоставляемым по подписке, таким как Приложения Microsoft 365 для предприятий, а также к предоставляемым по подписке версиям Project и Visio.\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7230,7 +9174,7 @@
             },
             "name": "L_DigitalPrint",
             "displayName": "Не отображать пункт меню для преобразования документа в веб-страницу Sway",
-            "explainText": "Этот параметр политики определяет, отображается ли для пользователя пункт меню \"Файл\", который позволяет преобразовать документ Word в веб-страницу Sway. По умолчанию указанный пункт меню отображается.\n\nКогда этот параметр включен, пункт меню \"Файл\" для преобразования документа Word в веб-страницу Sway скрыт от пользователя.\n\nЕсли вы отключите этот параметр политики или оставите его ненастроенным, пункт меню \"Файл\" для преобразования документа Word в веб-страницу Sway отображается для пользователя.\n\nПримечание. Этот параметр политики действует только в версиях Office, доступных по подписке, например Office 365 ProPlus.",
+            "explainText": "Этот параметр политики определяет, отображается ли пользователю пункт меню \"Файл\" для преобразования документа Word в веб-страницу Sway. По умолчанию указанный пункт меню отображается пользователю.\n\nЕсли этот параметр политики включен, пункт меню \"Файл\" для преобразования документа Word в веб-страницу Sway скрыт от пользователя.\n\nЕсли этот параметр политики отключен или не настроен, пункт меню \"Файл\" для преобразования документа Word в веб-страницу Sway отображается пользователю.\n\nПримечание. Этот параметр политики применяется только к версиям Office, предоставляемым по подписке, таким как Приложения Microsoft 365 для предприятий.\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7259,7 +9203,7 @@
             },
             "name": "L_DisableWarningOnIncludeFieldsUpdate",
             "displayName": "Не спрашивать разрешения перед обновлением полей IncludePicture и IncludeText в Word",
-            "explainText": "Этот параметр политики позволяет указать, будет ли для пользователя отображаться сообщение системы безопасности перед обновлением полей IncludePicture и IncludeText.\n\nПо умолчанию перед обновлением этих полей для пользователя выводится соответствующее сообщение. Однако это может привести к запуску автоматизированных рабочих процессов, объединяющих документы Word.\n\nВнимание! Поля со ссылками IncludePicture и IncludeText могут использоваться для кражи данных или фишинга. Поле, содержащее такие ссылки, можно изменить, чтобы оно указывало на внешние веб-сайты для содержимого. Если для доступа к изображению или тексту необходимы учетные данные, для обновления поля потребуется вход пользователя. Этот сценарий допустим, если документ поступил из надежного источника, но в противном случае уязвим для фишинга.\n\nЕсли этот параметр политики включен, перед обновлением этих полей пользователь не увидит сообщение системы безопасности. Не рекомендуется включать этот параметр политики из соображений безопасности.\n\nЕсли этот параметр отключен или не настроен, перед обновлением этих полей пользователь увидит сообщение системы безопасности.",
+            "explainText": "Этот параметр политики позволяет указать, будет ли для пользователя отображаться сообщение системы безопасности перед обновлением полей IncludePicture и IncludeText.\n\nПо умолчанию перед обновлением этих полей для пользователя выводится соответствующее сообщение. Однако это может привести к запуску автоматизированных рабочих процессов, объединяющих документы Word.\n\nВнимание! Поля со ссылками IncludePicture и IncludeText могут использоваться для кражи данных или фишинга. Поле, содержащее такие ссылки, можно изменить, чтобы оно указывало на внешние веб-сайты для содержимого. Если для доступа к изображению или тексту необходимы учетные данные, для обновления поля потребуется вход пользователя. Этот сценарий допустим, если документ поступил из надежного источника, но в противном случае уязвим для фишинга.\n\nЕсли этот параметр политики включен, перед обновлением этих полей пользователь не увидит сообщение системы безопасности. Не рекомендуется включать этот параметр политики из соображений безопасности.\n\nЕсли этот параметр отключен или не настроен, перед обновлением этих полей пользователь увидит сообщение системы безопасности.\n      ",
             "tags": [
                 "L_Security",
                 "L_WordOptions",
@@ -7288,7 +9232,7 @@
             },
             "name": "L_Acronyms",
             "displayName": "Удалить команду \"Акронимы\" с ленты ",
-            "explainText": "Этот параметр политики позволяет удалить команду \"Акронимы\" с ленты. Команда \"Акронимы\" отображается на вкладке \"Ссылки\".\n\nЕсли этот параметр политики включен, команда \"Акронимы\" удаляется с ленты. Пользователи не смогут добавить команду \"Акронимы\" на ленту вручную. Поэтому пользователи не смогут использовать функцию \"Акронимы\".\n\nЕсли этот параметр политики отключен или не настроен, команда «Акронимы» отображается на ленте появляется.\n\nПримечание. Этот параметр политики применяется только к версиям Office с подпиской, таким как Office 365 профессиональный плюс.",
+            "explainText": "Этот параметр политики позволяет удалить команду \"Акронимы\" с ленты. Команда \"Акронимы\" отображается на вкладке \"Ссылки\".\n\nЕсли этот параметр политики включен, команда \"Акронимы\" удаляется с ленты. Пользователи не смогут добавить команду \"Акронимы\" на ленту вручную. Поэтому пользователи не смогут использовать функцию \"Акронимы\".\n\nЕсли этот параметр политики отключен или не настроен, команда \"Акронимы\" отображается на ленте.\n\nПримечание. Этот параметр политики применяется только к версиям Office, предоставляемым по подписке, таким как Приложения Microsoft 365 для предприятий.\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7297,6 +9241,107 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "acronyms"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_EmailOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DoNotCompressInlinedImagesInOutlook",
+            "displayName": "Не сжимать встроенные рисунки, вставленные в Outlook",
+            "explainText": "Этот параметр политики позволяет отключить сжатие для встроенных изображений в Outlook.\n\nЕсли этот параметр политики включен, приложение Outlook не будет сжимать встроенные изображения в сообщении.\n\nЕсли этот параметр политики отключен или не настроен, встроенные изображения будут сжиматься.\n\nПримечание. Этот параметр политики применяется только к версиям Office, предоставляемым по подписке, таким как Приложения Microsoft 365 для предприятий.\n      ",
+            "tags": [
+                "L_EmailOptions",
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\common\\mailsettings",
+            "valueName": "outlookdonotcompressimages"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_EmailOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Высокое качество"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "330 пикселей на дюйм"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "220 пикселей на дюйм"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "150 пикселей на дюйм"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "96 пикселей на дюйм"
+                            }
+                        ],
+                        "valueName": "oulookimagedpiindex",
+                        "inputType": "dropdownList",
+                        "caption": "Качество сжатия встроенных рисунков по умолчанию для Outlook:",
+                        "id": "L_DefaultCompressionQualityForInlinedImagesInOutlookPart"
+                    }
+                ]
+            },
+            "name": "L_DefaultCompressionQualityForInlinedImagesInOutlook",
+            "displayName": "Укажите качество сжатия по умолчанию для встроенных рисунков, вставленных в Outlook",
+            "explainText": "Этот параметр политики позволяет указать используемое по умолчанию качество сжатия встроенных изображений в Outlook.\n\nЕсли этот параметр политики включен, Outlook будет сжимать встроенные изображения в сообщении с указанным качеством.\n\nЕсли этот параметр политики отключен или не настроен, встроенные изображения будут сжиматься с качеством по умолчанию (220 точек на дюйм).\n\nПримечание. Этот параметр политики применяется только к версиям Office, предоставляемым по подписке, таким как Приложения Microsoft 365 для предприятий.\n    ",
+            "tags": [
+                "L_EmailOptions",
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\common\\mailsettings"
         }
     ]
 }

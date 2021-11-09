@@ -748,6 +748,64 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "0"
+                                },
+                                "displayName": "Deixar o Visio escolher o idioma"
+                            },
+                            {
+                                "value": {
+                                    "string": "1"
+                                },
+                                "displayName": "Solicitar idioma"
+                            },
+                            {
+                                "value": {
+                                    "string": "2"
+                                },
+                                "displayName": "Usar o seguinte idioma"
+                            }
+                        ],
+                        "valueName": "fileconversionmode",
+                        "inputType": "dropdownList",
+                        "caption": "Idioma para conversão de arquivo",
+                        "id": "L_languageforfileconversion5"
+                    },
+                    {
+                        "valueName": "fileconversionlanguage",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Usar idioma:",
+                        "id": "L_Uselanguage"
+                    }
+                ]
+            },
+            "name": "L_languageforfileconversion4",
+            "displayName": "Idioma para conversão de arquivo",
+            "explainText": "Essa configuração de política especifica como o Visio determina o idioma a ser usado ao converter de ou para uma versão anterior do\nVisio.\n\nSe você habilitar essa configuração de política, poderá selecionar uma destas opções:\n\n- Deixar o Visio escolher o idioma\n- Solicitar idioma\n- Usar o seguinte idioma: é necessário especificar a LCID (ID de Localidade da Microsoft) numérica para esse idioma.\n\nSe você desabilitar ou não definir essa configuração de política, o Visio decidirá que idioma usar.",
+            "tags": [
+                "L_SaveOpen",
+                "L_Advanced",
+                "L_VisioOptions",
+                "L_MicrosoftVisio"
+            ],
+            "application": "visio16",
+            "key": "software\\microsoft\\office\\16.0\\visio\\application"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_SaveOpen"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "string": "1"
             },
@@ -1129,7 +1187,7 @@
             },
             "name": "L_BlockMacroExecutionFromInternet",
             "displayName": "Bloquear macros impedindo sua execução em arquivos do Office da Internet",
-            "explainText": "Esta configuração de política permite que você bloqueie as macros impedindo-as de serem executadas em arquivos do Office que vêm da Internet.\n\nSe você habilitar essa configuração de política, as macros terão a execução bloqueada, mesmo se a opção \"Habilitar todas as macros\" estiver selecionada na seção de configurações de Macro da Central de Confiabilidade. Além disso, em vez de ter a opção para \"Habilitar conteúdo\", os usuários receberão uma notificação de que as macros têm a execução bloqueada. Se o arquivo do Office é salvo em um local confiável ou anteriormente considerado confiável pelo usuário, as macros poderão ser executadas.\n\nSe você desabilita ou não define esta configuração de política, as configurações definidas na seção de configurações de Macro da Central de Confiabilidade é que determinam se as macros podem ser executadas em arquivos do Office que vêm da Internet.",
+            "explainText": "        Esta configuração de política permite que você bloqueie as macros impedindo-as de serem executadas em arquivos do Office que vêm da Internet.\n\n        Se você habilitar essa configuração de política, as macros terão a execução bloqueada, mesmo se a opção \"Habilitar todas as macros\" estiver selecionada na seção de configurações de Macro da Central de Confiabilidade. Além disso, em vez de ter a opção para \"Habilitar conteúdo\", os usuários receberão uma notificação de que as macros têm a execução bloqueada. Se o arquivo do Office é salvo em um local confiável ou anteriormente considerado confiável pelo usuário, as macros poderão ser executadas.\n\n        Se você desabilita ou não define esta configuração de política, as configurações definidas na seção de configurações de Macro da Central de Confiabilidade é que determinam se as macros podem ser executadas em arquivos do Office que vêm da Internet.\n      ",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1159,7 +1217,7 @@
             },
             "name": "L_TurnOffTrustedDocumentsOnTheNetwork",
             "displayName": "Desativar Documentos Confiáveis na rede",
-            "explainText": "Essa configuração de política permite desativar o recurso de documentos confiáveis para documentos abertos a partir da rede.\n\nSe você habilitar essa configuração de política, os usuários sempre verão notificações de segurança para conteúdo ativo, como\nmacros, controles ActiveX, conexões de dados etc., referentes a documentos abertos a partir da rede.\n\nSe você desabilitar ou não definir essa configuração de política, o recurso de documentos confiáveis possibilitará que os usuários\nsempre permitam conteúdo ativo em documentos, como macros, controles ActiveX, conexões de dados etc. Dessa maneira, eles não\nreceberão um prompt da próxima vez em que abrirem os documentos. Documentos confiáveis estão isentos de notificações de\nsegurança.",
+            "explainText": "Essa configuração de política permite desativar o recurso de documentos confiáveis para documentos abertos a partir da rede.\n\nSe você habilitar essa configuração de política, os usuários sempre verão notificações de segurança para conteúdo ativo, como\nmacros, controles ActiveX, conexões de dados etc., referentes a documentos abertos a partir da rede.\n\nSe você desabilitar ou não definir essa configuração de política, o recurso de documentos confiáveis possibilitará que os usuários\nsempre permitam conteúdo ativo em documentos, como macros, controles ActiveX, conexões de dados etc. Dessa maneira, eles não\nreceberão um prompt da próxima vez em que abrirem os documentos.  Documentos confiáveis estão isentos de notificações de\nsegurança.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1313,12 +1371,63 @@
                         "valueName": "vbawarnings",
                         "inputType": "dropdownList",
                         "id": "L_Empty"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "vbadigsigtrustedpublishers",
+                        "key": "software\\microsoft\\office\\16.0\\visio\\security",
+                        "inputType": "checkBox",
+                        "caption": "Exigir que as macros sejam assinadas por um fornecedor confiável",
+                        "id": "L_VBADigSigTrustedPublishersStr"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "vbarequirelmtrustedpublisher",
+                        "key": "software\\microsoft\\office\\16.0\\visio\\security",
+                        "inputType": "checkBox",
+                        "caption": "Bloquear certificados de fornecedores confiáveis que são instalados apenas no repositório de certificados do usuário atual",
+                        "id": "L_VBAOnlyAllowLMTrustedPublisherStr"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "vbarequiredigsigwithcodesigningeku",
+                        "key": "software\\microsoft\\office\\16.0\\visio\\security",
+                        "inputType": "checkBox",
+                        "caption": "Exigir Uso Estendido de Chave (EKU) para certificados de fornecedores confiáveis",
+                        "id": "L_VBAOnlyAllowDigSigWithCodeSigningEKUStr"
                     }
                 ]
             },
             "name": "L_VBAWarningsPolicy",
             "displayName": "Configurações de Notificação para Macros VBA",
-            "explainText": "Essa configuração de política controla como os aplicativos especificados avisam os usuários quando macros VBA (Visual Basic for Applications) estão presentes.\n\nSe você habilitar essa configuração de política, poderá escolher uma das quatro opções a seguir para determinar como os aplicativos especificados avisarão o usuário sobre macros:\n\nDesabilitar tudo com notificação: o aplicativo exibe a Barra de Confiabilidade para todas as macros, assinadas ou não. Essa opção impõe a configuração padrão no Office.\n\nDesabilitar tudo, exceto as macros digitalmente assinadas: o aplicativo exibe a Barra de Confiabilidade para macros digitalmente assinadas, permitindo que os usuários as habilitem ou as deixem desabilitadas. As macros não assinadas serão desabilitadas, e os usuários não serão notificados.\n\n- Desabilitar tudo sem notificação: o aplicativo desabilita todas as macros, estejam ou não assinadas, e não notifica os usuários.\n\n- Habilitar todas as macros (não recomendado): todas as macros são habilitadas, estejam ou não assinadas. Essa opção pode reduzir significativamente a segurança, ao permitir que códigos perigosos sejam executados sem serem detectados.\n\nSe você desabilitar essa configuração de política, a configuração padrão será \"Desabilitar tudo com notificação\".\n\nSe você não definir essa configuração de política, quando os usuários abrirem arquivos nos aplicativos especificados que contêm macros VBA, esses aplicativos abrirão os arquivos com as macros desabilitadas e exibirão a Barra de Confiabilidade com um aviso de que macros estão presentes e foram desabilitadas. Os usuários podem inspecionar e editar os arquivos, se apropriado, mas apenas poderão usar a funcionalidade desabilitada se a habilitarem clicando em \"Habilitar Conteúdo\", na Barra de Confiabilidade. Se o usuário clicar em \"Habilitar Conteúdo\", o documento será adicionado como confiável.\n\nImportante: se a opção \"Desabilitar tudo, exceto as macros digitalmente assinadas\" for selecionada, os usuários não poderão abrir bancos de dados do Access não assinados.\n\nAlém disso, observe que o Microsoft Office armazena certificados para fornecedores confiáveis no repositório de fornecedores confiáveis do Internet Explorer. Versões anteriores do Microsoft Office armazenavam informações de certificados de fornecedores confiáveis (especificamente, a impressão digital) em um repositório de fornecedores confiáveis especial do Office. O Microsoft Office ainda lê informações de certificados de fornecedores confiáveis a partir do repositório de fornecedores confiáveis do Office, mas não grava informações nesse repositório.\n\nPortanto, se você tiver criado uma lista de fornecedores confiáveis em uma versão anterior do Microsoft Office e atualizar o Office, sua lista de fornecedores confiáveis ainda será reconhecida. Porém, todos os certificados de fornecedores confiáveis que forem adicionados à lista serão armazenados no repositório de fornecedores confiáveis do Internet Explorer.",
+            "explainText": "Esta configuração de política controla como os aplicativos especificados informam os usuários quando macros VBA (Visual Basic for Applications) estão presentes.\n\nSe você habilitar essa configuração de política, poderá escolher entre quatro opções para determinar como os aplicativos especificados alertarão o usuário sobre as macros:\n \n– Desabilitar tudo com notificação: o aplicativo exibe a Barra de Confiabilidade para todas as macros, assinadas ou não. Essa opção impõe a configuração padrão no Office.\n \n– Desabilitar todas, exceto as macros assinadas digitalmente: o aplicativo exibe a Barra de Confiabilidade para macros assinadas digitalmente, permitindo que os usuários as habilitem ou as deixem desabilitadas. Todas as macros não assinadas serão desabilitadas e os usuários não serão notificados.\n \n– Desabilitar tudo sem notificação: o aplicativo desabilita todas as macros, assinadas ou não, e não notifica os usuários.\n \n– Habilitar todas as macros (não recomendado): todas as macros são habilitadas, assinadas ou não. Essa opção pode reduzir significativamente a segurança, permitindo que códigos perigosos sejam executados sem serem detectados.\n \nSe você desabilitar essa configuração de política, \"Desabilitar tudo com notificação\" será a configuração padrão.\n \nSe você não definir essa configuração de política, quando os usuários abrirem arquivos nos aplicativos especificados que contêm macros VBA, esses aplicativos abrirão os arquivos com as macros desabilitadas e exibirão a Barra de Confiabilidade com um aviso de que as macros estão presentes e foram desabilitadas. Os usuários podem inspecionar e editar os arquivos, se apropriado, mas não podem usar nenhuma funcionalidade desabilitada até habilitá-la clicando em \"Habilitar Conteúdo\" na Barra de Confiabilidade. Se o usuário clicar em \"Habilitar Conteúdo\", o documento será adicionado como confiável.\n\nSe você selecionar \"Desabilitar todas, exceto as macros assinadas digitalmente\", recomendamos que você também marque a caixa de seleção \"Exigir que as macros sejam assinadas por um fornecedor confiável\" para ajudar a melhorar a segurança.\n\nSe você selecionar a caixa de seleção \"Exigir que as macros sejam assinadas por um fornecedor confiável\", os usuários que abrirem arquivos com macros assinadas digitalmente, mas não por um Fornecedor Confiável, receberão uma notificação de que as macros estão impedidas de serem executadas. E há duas caixas de seleção adicionais que recomendamos que você selecione para ajudar a melhorar a segurança.\n\n– Bloquear certificados de fornecedores confiáveis instalados no repositório de certificados do usuário atual\n\n– Exigir Uso Estendido de Chave (EKU) para certificados de fornecedores confiáveis\n\nObservação: essas duas caixas de seleção se aplicam apenas se você tiver selecionado a opção \"Exigir que macros sejam assinadas por um fornecedor confiável\".\n\nSe você selecionar a caixa de seleção \"Bloquear certificados de fornecedores confiáveis instalados no repositório de certificados do computador local\", as macros não serão executadas se o certificado do fornecedor confiável estiver instalado no repositório de certificados do usuário atual. O certificado deve estar instalado no repositório de certificados do computador local para que a macro seja executada. Somente contas com acesso de administrador ao computador podem instalar um certificado no repositório de certificados do computador local.\n\nSe você selecionar a caixa de seleção \"Exigir Uso Estendido de Chave (EKU) para certificados de fornecedores confiáveis\", a EKU deverá incluir \"Assinatura de Código\" como um dos usos do certificado.\n\nImportante: se a opção \"Desativar todas, exceto as macros assinadas digitalmente\" estiver selecionada, os usuários não poderão abrir bancos de dados do Access não assinados.\n \nAlém disso, observe que o Microsoft Office armazena certificados de fornecedores confiáveis no repositório Fornecedores Confiáveis do Internet Explorer. As versões anteriores do Microsoft Office armazenavam informações de certificado de fornecedor confiável (especificamente, a impressão digital do certificado) em um repositório Fornecedores Confiáveis especial do Office. O Microsoft Office ainda lê informações de certificado de fornecedor confiável do repositório Fornecedores Confiáveis do Office, mas não grava informações nesse repositório.\n \n Portanto, se você criou uma lista de fornecedores confiáveis em uma versão anterior do Microsoft Office e atualiza para o Office, sua lista de fornecedores confiáveis ainda será reconhecida. No entanto, todos os certificados de fornecedor confiável adicionados à lista serão armazenados no repositório Fornecedores Confiáveis do Internet Explorer.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1347,7 +1456,7 @@
             },
             "name": "L_RequirethatApplicationExtensionsaresigned",
             "displayName": "Exigir que suplementos de aplicativo sejam assinados por um Fornecedor Confiável",
-            "explainText": "Esta configuração de política controla se os suplementos deste aplicativo devem ser digitalmente assinados por um fornecedor confiável.\n \nSe você habilitar esta configuração de política, este aplicativo verificará a assinatura digital de cada suplemento antes de carregá-lo. Se um suplemento não tiver uma assinatura digital, ou se a assinatura não for proveniente de um fornecedor confiável, o aplicativo desabilitará esse suplemento e notificará o usuário. Os certificados deverão ser adicionados à lista de Fornecedores Confiáveis se você exigir que todos os suplementos sejam assinados por um fornecedor confiável. Para obter informações detalhadas sobre como obter e distribuir certificados, consulte http://go.microsoft.com/fwlink/?LinkId=294922. O Office 2016 armazena certificados para fornecedores confiáveis no repositório de fornecedores confiáveis do Internet Explorer. Versões anteriores do Microsoft Office armazenavam informações de certificados de fornecedores confiáveis (especificamente, a impressão digital) em um repositório de fornecedores confiáveis especial do Office. O Office 2016 ainda lê informações de certificados de fornecedores confiáveis no repositório de fornecedores confiáveis do Office, mas não grava informações nesse repositório. Portanto, se você tiver criado uma lista de fornecedores confiáveis em uma versão anterior do Office e atualizar para o Office 2016, essa lista ainda será reconhecida. Porém, todos os certificados de fornecedores confiáveis que forem adicionados à lista serão armazenados no repositório de fornecedores confiáveis do Internet Explorer. Para saber mais sobre fornecedores confiáveis, consulte o Office Resource Kit.\n\nSe você desabilitar ou não definir esta configuração de política, este aplicativo não verificará a assinatura digital nos suplementos antes de abri-los. Se um suplemento perigoso for carregado, ele poderá prejudicar os computadores dos usuários ou comprometer a segurança dos dados.",
+            "explainText": "Esta configuração de política controla se os suplementos deste aplicativo devem ser digitalmente assinados por um fornecedor confiável.\n \nSe você habilitar esta configuração de política, este aplicativo verificará a assinatura digital de cada suplemento antes de carregá-lo. Se um suplemento não tiver uma assinatura digital, ou se a assinatura não for proveniente de um fornecedor confiável, o aplicativo desabilitará esse suplemento e notificará o usuário. Os certificados deverão ser adicionados à lista de Fornecedores Confiáveis se você exigir que todos os suplementos sejam assinados por um fornecedor confiável. Para obter informações detalhadas sobre como obter e distribuir certificados, consulte http://go.microsoft.com/fwlink/?LinkId=294922. O Office 2016 armazena certificados para fornecedores confiáveis no repositório de fornecedores confiáveis do Internet Explorer. Versões anteriores do Microsoft Office armazenavam informações de certificados de fornecedores confiáveis (especificamente, a impressão digital) em um repositório de fornecedores confiáveis especial do Office.  O Office 2016 ainda lê informações de certificados de fornecedores confiáveis no repositório de fornecedores confiáveis do Office, mas não grava informações nesse repositório. Portanto, se você tiver criado uma lista de fornecedores confiáveis em uma versão anterior do Office e atualizar para o Office 2016, essa lista ainda será reconhecida. Porém, todos os certificados de fornecedores confiáveis que forem adicionados à lista serão armazenados no repositório de fornecedores confiáveis do Internet Explorer. Para saber mais sobre fornecedores confiáveis, consulte o Office Resource Kit.\n\nSe você desabilitar ou não definir esta configuração de política, este aplicativo não verificará a assinatura digital nos suplementos antes de abri-los. Se um suplemento perigoso for carregado, ele poderá prejudicar os computadores dos usuários ou comprometer a segurança dos dados.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1437,7 +1546,7 @@
             },
             "name": "L_DisableTrustedLoc",
             "displayName": "Desabilitar todos os locais confiáveis",
-            "explainText": "Esta configuração de política permite que os administradores desabilitem todos os locais confiáveis nas versões 2016 dos aplicativos especificados. Os locais confiáveis especificados na Central de Confiabilidade são usados para definir locais de arquivo que são considerados seguros. Conteúdo, código e suplementos podem ser carregados a partir de locais confiáveis com o mínimo de segurança, sem solicitar a permissão do usuário. Se um arquivo perigoso for aberto a partir de um local confiável, ele não estará sujeito a medidas de segurança padrão e poderá prejudicar os computadores ou os dados dos usuários.\n \nSe você habilitar esta configuração de política, todos os locais confiáveis (especificados na Central de Confiabilidade) nas versões 2016 dos aplicativos especificados serão ignorados, incluindo os locais confiáveis estabelecidos pelo Office durante a instalação, implantados para os usuários com o uso da Política de Grupo ou adicionados pelos próprios usuários. Os usuários receberão um aviso novamente ao abrirem arquivos a partir de locais confiáveis.\n\nSe você desabilitar ou não definir esta configuração de política, todos os locais confiáveis (especificados na Central de Confiabilidade) nas versões 2016 dos aplicativos especificados serão considerados seguros.",
+            "explainText": "Esta configuração de política permite que os administradores desabilitem todos os locais confiáveis nas versões 2016 dos aplicativos especificados. Os locais confiáveis especificados na Central de Confiabilidade são usados para definir locais de arquivo que são considerados seguros. Conteúdo, código e suplementos podem ser carregados a partir de locais confiáveis com o mínimo de segurança, sem solicitar a permissão do usuário. Se um arquivo perigoso for aberto a partir de um local confiável, ele não estará sujeito a medidas de segurança padrão e poderá prejudicar os computadores ou os dados dos usuários.\n \nSe você habilitar esta configuração de política, todos os locais confiáveis (especificados na Central de Confiabilidade) nas versões 2016 dos aplicativos especificados serão ignorados, incluindo os locais confiáveis estabelecidos pelo Office durante a instalação, implantados para os usuários com o uso da Política de Grupo ou adicionados pelos próprios usuários.  Os usuários receberão um aviso novamente ao abrirem arquivos a partir de locais confiáveis.\n\nSe você desabilitar ou não definir esta configuração de política, todos os locais confiáveis (especificados na Central de Confiabilidade) nas versões 2016 dos aplicativos especificados serão considerados seguros.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1493,7 +1602,7 @@
             },
             "name": "L_Visio2003Files",
             "displayName": "Desenhos Binários, Modelos e Estênceis do Visio 2003-2010",
-            "explainText": "Essa configuração de política permite a você determinar se os usuários podem abrir ou salvar arquivos do Visio com o formato especificado pelo título desta configuração de política.\n\nSe você desabilitar esta configuração de política, poderá especificar se os usuários podem abrir ou salvar arquivos.\n\nAbaixo, estão as opções que podem ser selecionadas. Observação: Nem todas as opções podem estar disponíveis para esta configuração de política.\n\n-Não bloquear: o tipo de arquivo não será bloqueado.\n\n-Salvar bloqueado: salvamento do tipo de arquivo será bloqueado.\n\n-Abrir/Salvar bloqueado: abertura e salvamento do tipo de arquivo serão bloqueados.\n\nSe você desabilitar ou não configurar esta política, o tipo de arquivo não será bloqueado.",
+            "explainText": "Essa configuração de política permite a você determinar se os usuários podem abrir ou salvar arquivos do Visio com o formato especificado pelo título desta configuração de política.\n\nSe você desabilitar esta configuração de política, poderá especificar se os usuários podem abrir ou salvar arquivos.\n\nAbaixo, estão as opções que podem ser selecionadas.  Observação: Nem todas as opções podem estar disponíveis para esta configuração de política.\n\n-Não bloquear: o tipo de arquivo não será bloqueado.\n\n-Salvar bloqueado: salvamento do tipo de arquivo será bloqueado.\n\n-Abrir/Salvar bloqueado: abertura e salvamento do tipo de arquivo serão bloqueados.\n\nSe você desabilitar ou não configurar esta política, o tipo de arquivo não será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -1541,7 +1650,7 @@
             },
             "name": "L_Visio2000Files",
             "displayName": "Desenhos Binários, Modelos e Estênceis do Visio 2000-2002",
-            "explainText": "Essa configuração de política permite a você determinar se os usuários podem abrir ou salvar arquivos do Visio com o formato especificado pelo título desta configuração de política.\n\nSe você desabilitar esta configuração de política, poderá especificar se os usuários podem abrir ou salvar arquivos.\n\nAbaixo, estão as opções que podem ser selecionadas. Observação: Nem todas as opções podem estar disponíveis para esta configuração de política.\n\n-Não bloquear: o tipo de arquivo não será bloqueado.\n\n-Salvar bloqueado: salvamento do tipo de arquivo será bloqueado.\n\n-Abrir/Salvar bloqueado: abertura e salvamento do tipo de arquivo serão bloqueados.\n\nSe você desabilitar ou não configurar esta política, o tipo de arquivo será bloqueado.",
+            "explainText": "Essa configuração de política permite a você determinar se os usuários podem abrir ou salvar arquivos do Visio com o formato especificado pelo título desta configuração de política.\n\nSe você desabilitar esta configuração de política, poderá especificar se os usuários podem abrir ou salvar arquivos.\n\nAbaixo, estão as opções que podem ser selecionadas.  Observação: Nem todas as opções podem estar disponíveis para esta configuração de política.\n\n-Não bloquear: o tipo de arquivo não será bloqueado.\n\n-Salvar bloqueado: salvamento do tipo de arquivo será bloqueado.\n\n-Abrir/Salvar bloqueado: abertura e salvamento do tipo de arquivo serão bloqueados.\n\nSe você desabilitar ou não configurar esta política, o tipo de arquivo será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -1589,7 +1698,7 @@
             },
             "name": "L_Visio50AndEarlierFiles",
             "displayName": "Desenhos Binários, Modelos e Estênceis do Visio 5.0 ou versões anteriores",
-            "explainText": "Essa configuração de política permite a você determinar se os usuários podem abrir ou salvar arquivos do Visio com o formato especificado pelo título desta configuração de política.\n\nSe você desabilitar esta configuração de política, poderá especificar se os usuários podem abrir ou salvar arquivos.\n\nAbaixo, estão as opções que podem ser selecionadas. Observação: Nem todas as opções podem estar disponíveis para esta configuração de política.\n\n-Não bloquear: o tipo de arquivo não será bloqueado.\n\n-Salvar bloqueado: salvamento do tipo de arquivo será bloqueado.\n\n-Abrir/Salvar bloqueado: abertura e salvamento do tipo de arquivo serão bloqueados.\n\nSe você desabilitar ou não configurar esta política, o tipo de arquivo será bloqueado.",
+            "explainText": "Essa configuração de política permite a você determinar se os usuários podem abrir ou salvar arquivos do Visio com o formato especificado pelo título desta configuração de política.\n\nSe você desabilitar esta configuração de política, poderá especificar se os usuários podem abrir ou salvar arquivos.\n\nAbaixo, estão as opções que podem ser selecionadas.  Observação: Nem todas as opções podem estar disponíveis para esta configuração de política.\n\n-Não bloquear: o tipo de arquivo não será bloqueado.\n\n-Salvar bloqueado: salvamento do tipo de arquivo será bloqueado.\n\n-Abrir/Salvar bloqueado: abertura e salvamento do tipo de arquivo serão bloqueados.\n\nSe você desabilitar ou não configurar esta política, o tipo de arquivo será bloqueado.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2066,6 +2175,156 @@
         },
         {
             "parentCategory": {
+                "ref": "L_AutoCorrectOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Straightquoteswithsmartquotes",
+            "displayName": "Aspas normais por aspas inglesas",
+            "explainText": "Marca/Desmarca a opção correspondente da interface do usuário.",
+            "tags": [
+                "L_AutoCorrectOptions",
+                "L_Proofing",
+                "L_VisioOptions",
+                "L_MicrosoftVisio"
+            ],
+            "application": "visio16",
+            "key": "software\\microsoft\\office\\16.0\\visio\\autoformat as you type",
+            "valueName": "smartquotes"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrectOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Fractionswithfractioncharacter",
+            "displayName": "Frações por caractere de fração",
+            "explainText": "Marca/Desmarca a opção correspondente da interface do usuário.",
+            "tags": [
+                "L_AutoCorrectOptions",
+                "L_Proofing",
+                "L_VisioOptions",
+                "L_MicrosoftVisio"
+            ],
+            "application": "visio16",
+            "key": "software\\microsoft\\office\\16.0\\visio\\autoformat as you type",
+            "valueName": "fractions"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrectOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ordinalswithsuperscript",
+            "displayName": "Ordinais com sobrescrito",
+            "explainText": "Marca/Desmarca a opção correspondente da interface do usuário.",
+            "tags": [
+                "L_AutoCorrectOptions",
+                "L_Proofing",
+                "L_VisioOptions",
+                "L_MicrosoftVisio"
+            ],
+            "application": "visio16",
+            "key": "software\\microsoft\\office\\16.0\\visio\\autoformat as you type",
+            "valueName": "ordinals"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrectOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Hyphenswithdash",
+            "displayName": "Hífens por traço",
+            "explainText": "Marca/Desmarca a opção correspondente da interface do usuário.",
+            "tags": [
+                "L_AutoCorrectOptions",
+                "L_Proofing",
+                "L_VisioOptions",
+                "L_MicrosoftVisio"
+            ],
+            "application": "visio16",
+            "key": "software\\microsoft\\office\\16.0\\visio\\autoformat as you type",
+            "valueName": "dashes"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrectOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Smileyfacesandarrowswithspecialsymbols",
+            "displayName": "Smileys e setas por símbolos especiais",
+            "explainText": "Marca/Desmarca a opção correspondente da interface do usuário.",
+            "tags": [
+                "L_AutoCorrectOptions",
+                "L_Proofing",
+                "L_VisioOptions",
+                "L_MicrosoftVisio"
+            ],
+            "application": "visio16",
+            "key": "software\\microsoft\\office\\16.0\\visio\\autoformat as you type",
+            "valueName": "smileys"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Miscellaneous"
             },
             "supportedOn": {
@@ -2079,13 +2338,13 @@
                         "expandableSpecified": false,
                         "maxLengthSpecified": false,
                         "inputType": "textBox",
-                        "caption":"Mensagem de email para comandos 'Enviar para'",
+                        "caption": "Mensagem de email para comandos 'Enviar para'",
                         "id": "L_emailmessageforsendtocommands101"
                     }
                 ]
             },
             "name": "L_EmailmessageforSendtocommands",
-            "displayName":"Mensagem de email para comandos 'Enviar para'",
+            "displayName": "Mensagem de email para comandos 'Enviar para'",
             "explainText": "Comando no submenu Enviar para do menu Arquivo.",
             "tags": [
                 "L_Miscellaneous",

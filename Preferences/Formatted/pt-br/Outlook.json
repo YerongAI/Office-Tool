@@ -1132,6 +1132,120 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Abrir o próximo item"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Retornar à pasta atual"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Abrir o item anterior"
+                            }
+                        ],
+                        "valueName": "aftermove",
+                        "inputType": "dropdownList",
+                        "caption": "Depois de mover ou excluir um item aberto:",
+                        "id": "L_aftermovingordeletinganopenitem0"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "closeorig",
+                        "inputType": "checkBox",
+                        "caption": "Fechar mensagem original ao responder ou encaminhar",
+                        "id": "L_Closeoriginalmessagewhenreplyorforward"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "savesent",
+                        "inputType": "checkBox",
+                        "caption": "Salvar cópias de mensagens na pasta Itens Enviados",
+                        "id": "L_SavecopiesofmessagesinSentItemsfolder"
+                    },
+                    {
+                        "valueName": "autosavetime",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 99,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "Salvar automaticamente não enviados a cada xx minutos (0=Sem Salvamento Automático):",
+                        "id": "L_Autosaveunsenteveryxxminutes0NoAutoSave"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "autoformatplaintext",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\options\\mail",
+                        "inputType": "checkBox",
+                        "caption": "Limpar automaticamente mensagens de texto sem formatação",
+                        "id": "L_Automaticallycleanupplaintextmessages"
+                    }
+                ]
+            },
+            "name": "L_Messagehandling",
+            "displayName": "Manipulação de mensagens",
+            "explainText": "Você pode usar essa configuração para especificar várias opções de como lidar com mensagens de email.",
+            "tags": [
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Emailoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -1295,7 +1409,7 @@
             },
             "name": "L_DisableMailTips",
             "displayName": "Desabilitar Dicas de Email",
-            "explainText": "Esta configuração de política determina se os usuários podem exibir Dicas de Email.\n\\t  \nSe você habilitar esta configuração de política, Dicas de Email não aparecerão no Outlook.\\t\\t\\t\nSe você desabilitar ou não definir esta configuração de política, Dicas de Email aparecerão no Outlook.",
+            "explainText": "Esta configuração de política determina se os usuários podem exibir Dicas de Email.\n\\t  \nSe você habilitar esta configuração de política, Dicas de Email não aparecerão no Outlook.\n\\t\\t\\t\\t\\t\nSe você desabilitar ou não definir esta configuração de política, Dicas de Email aparecerão no Outlook.",
             "tags": [
                 "L_Emailoptions",
                 "L_Preferences",
@@ -1549,6 +1663,53 @@
         },
         {
             "parentCategory": {
+                "ref": "L_DesktopAlert"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "corner",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 3,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "Canto (0-3)",
+                        "id": "L_Corner03"
+                    },
+                    {
+                        "valueName": "xoffset",
+                        "minValueSpecified": false,
+                        "maxValueSpecified": false,
+                        "id": "L_XOffsetdefault44"
+                    },
+                    {
+                        "valueName": "yoffset",
+                        "minValueSpecified": false,
+                        "maxValueSpecified": false,
+                        "id": "L_YOffsetdefault42"
+                    }
+                ]
+            },
+            "name": "L_SpecifydefaultlocationofDesktopAlert",
+            "displayName": "Especificar local padrão de Alerta da Área de Trabalho",
+            "explainText": "Você pode alterar o local padrão do Alerta da Área de Trabalho. No campo Canto, selecione um número correspondente a um quadrante da tela do usuário: 0 = canto superior esquerdo, 1 = canto superior direito, 2 = canto inferior esquerdo, 3 = canto inferior direito (o padrão). No campo Deslocamento X, insira um número que represente a distância horizontal a partir do canto especificado (o padrão é 44). No campo Deslocamento Y, insira um número que represente a distância vertical a partir do canto especificado (o padrão é 42).",
+            "tags": [
+                "L_DesktopAlert",
+                "L_AdvancedEmailoptions",
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\common\\desktopalerts"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_AdvancedEmailoptions"
             },
             "supportedOn": {
@@ -1613,6 +1774,194 @@
         },
         {
             "parentCategory": {
+                "ref": "L_AdvancedEmailoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Alto"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Normal"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Baixa"
+                            }
+                        ],
+                        "valueName": "importance",
+                        "inputType": "dropdownList",
+                        "caption": "Definir importância:",
+                        "id": "L_Setimportance"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Normal"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Pessoal"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Privado"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Confidencial"
+                            }
+                        ],
+                        "valueName": "sensitivity",
+                        "inputType": "dropdownList",
+                        "caption": "Definir confidencialidade:",
+                        "id": "L_Setsensitivity"
+                    },
+                    {
+                        "valueName": "numdaysexpire",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 3652,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "As mensagens expiram depois de (dias):",
+                        "id": "L_Messagesexpireafterdays"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowcommasinrecip",
+                        "inputType": "checkBox",
+                        "caption": "Permitir vírgulas como separador de endereço",
+                        "id": "L_Allowcommasasaddressseparator"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "autonamecheck",
+                        "inputType": "checkBox",
+                        "caption": "Verificação automática de nomes",
+                        "id": "L_Automaticnamechecking"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "deletewhenrespond",
+                        "inputType": "checkBox",
+                        "caption": "Excluir solicitação de reunião da Caixa de Entrada ao responder",
+                        "id": "L_DeletemeetingrequestfromInboxwhenresponding"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "showautosug",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
+                        "inputType": "checkBox",
+                        "caption": "Sugerir nomes ao completar os campos Para, Cc e Cco",
+                        "id": "L_SuggestnameswhilecompletingToCcandBccfields"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "adhocreviewbehavior",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\options\\mail",
+                        "inputType": "checkBox",
+                        "caption": "Adicionar propriedades a anexos para habilitar Responder com Alterações",
+                        "id": "L_AddpropertiestoattachmentstoenableReplywithChanges"
+                    }
+                ]
+            },
+            "name": "L_Whensendingamessage",
+            "displayName": "Ao enviar uma mensagem",
+            "explainText": "Define os valores nas opções correspondentes da interface do usuário.",
+            "tags": [
+                "L_AdvancedEmailoptions",
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Trackingoptions"
             },
             "supportedOn": {
@@ -1641,6 +1990,143 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\flagging",
             "valueName": "disablesenderflags"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Emailoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Não incluir a mensagem original"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Anexar mensagem original"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Incluir texto da mensagem original"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Incluir e recuar texto da mensagem original"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1000
+                                    }
+                                },
+                                "displayName": "Prefixar cada linha da mensagem original"
+                            }
+                        ],
+                        "valueName": "replystyle",
+                        "inputType": "dropdownList",
+                        "caption": "Ao responder a uma mensagem:",
+                        "id": "L_Whenreplyingtoamessage"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Anexar mensagem original"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Incluir texto da mensagem original"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Incluir e recuar texto da mensagem original"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1000
+                                    }
+                                },
+                                "displayName": "Prefixar cada linha da mensagem original"
+                            }
+                        ],
+                        "valueName": "forwardstyle",
+                        "inputType": "dropdownList",
+                        "caption": "Ao encaminhar uma mensagem:",
+                        "id": "L_Whenforwardingamessage"
+                    },
+                    {
+                        "valueName": "prefixtext",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Prefixar cada linha com:",
+                        "id": "L_Prefixeachlinewith"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "markcomments",
+                        "key": "software\\microsoft\\office\\16.0\\common\\mailsettings",
+                        "inputType": "checkBox",
+                        "caption": "Permitir que os comentários do usuário sejam marcados",
+                        "id": "L_Allowuserscommentstobemarked"
+                    }
+                ]
+            },
+            "name": "L_Onrepliesandforwards",
+            "displayName": "Ao responder e encaminhar",
+            "explainText": "Define os valores nas opções correspondentes da interface do usuário.",
+            "tags": [
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
         },
         {
             "parentCategory": {
@@ -2615,6 +3101,829 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 480
+                                    }
+                                },
+                                "displayName": "08:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "12:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 30
+                                    }
+                                },
+                                "displayName": "12:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 60
+                                    }
+                                },
+                                "displayName": "01:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 90
+                                    }
+                                },
+                                "displayName": "01:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 120
+                                    }
+                                },
+                                "displayName": "02:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 150
+                                    }
+                                },
+                                "displayName": "02:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 180
+                                    }
+                                },
+                                "displayName": "03:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 210
+                                    }
+                                },
+                                "displayName": "03:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 240
+                                    }
+                                },
+                                "displayName": "04:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 270
+                                    }
+                                },
+                                "displayName": "04:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 300
+                                    }
+                                },
+                                "displayName": "05:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 330
+                                    }
+                                },
+                                "displayName": "05:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 360
+                                    }
+                                },
+                                "displayName": "06:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 390
+                                    }
+                                },
+                                "displayName": "06:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 420
+                                    }
+                                },
+                                "displayName": "07:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 450
+                                    }
+                                },
+                                "displayName": "07:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 480
+                                    }
+                                },
+                                "displayName": "08:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 510
+                                    }
+                                },
+                                "displayName": "08:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 540
+                                    }
+                                },
+                                "displayName": "09:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 570
+                                    }
+                                },
+                                "displayName": "09:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 600
+                                    }
+                                },
+                                "displayName": "10:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 630
+                                    }
+                                },
+                                "displayName": "10:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 660
+                                    }
+                                },
+                                "displayName": "11:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 690
+                                    }
+                                },
+                                "displayName": "11:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 720
+                                    }
+                                },
+                                "displayName": "24:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 750
+                                    }
+                                },
+                                "displayName": "24:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 780
+                                    }
+                                },
+                                "displayName": "13:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 810
+                                    }
+                                },
+                                "displayName": "13:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 840
+                                    }
+                                },
+                                "displayName": "14:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 870
+                                    }
+                                },
+                                "displayName": "14:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 900
+                                    }
+                                },
+                                "displayName": "15:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 930
+                                    }
+                                },
+                                "displayName": "15:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 960
+                                    }
+                                },
+                                "displayName": "16:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 990
+                                    }
+                                },
+                                "displayName": "16:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1020
+                                    }
+                                },
+                                "displayName": "17:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1050
+                                    }
+                                },
+                                "displayName": "17:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1080
+                                    }
+                                },
+                                "displayName": "18:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1110
+                                    }
+                                },
+                                "displayName": "18:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1140
+                                    }
+                                },
+                                "displayName": "19:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1170
+                                    }
+                                },
+                                "displayName": "19:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1200
+                                    }
+                                },
+                                "displayName": "20:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1230
+                                    }
+                                },
+                                "displayName": "20:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1260
+                                    }
+                                },
+                                "displayName": "21:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1290
+                                    }
+                                },
+                                "displayName": "21:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1320
+                                    }
+                                },
+                                "displayName": "22:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1350
+                                    }
+                                },
+                                "displayName": "22:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1380
+                                    }
+                                },
+                                "displayName": "23:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1410
+                                    }
+                                },
+                                "displayName": "23:30"
+                            }
+                        ],
+                        "valueName": "caldefstart",
+                        "inputType": "dropdownList",
+                        "caption": "Hora de início:",
+                        "id": "L_Starttime"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1020
+                                    }
+                                },
+                                "displayName": "17:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "12:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 30
+                                    }
+                                },
+                                "displayName": "12:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 60
+                                    }
+                                },
+                                "displayName": "01:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 90
+                                    }
+                                },
+                                "displayName": "01:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 120
+                                    }
+                                },
+                                "displayName": "02:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 150
+                                    }
+                                },
+                                "displayName": "02:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 180
+                                    }
+                                },
+                                "displayName": "03:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 210
+                                    }
+                                },
+                                "displayName": "03:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 240
+                                    }
+                                },
+                                "displayName": "04:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 270
+                                    }
+                                },
+                                "displayName": "04:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 300
+                                    }
+                                },
+                                "displayName": "05:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 330
+                                    }
+                                },
+                                "displayName": "05:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 360
+                                    }
+                                },
+                                "displayName": "06:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 390
+                                    }
+                                },
+                                "displayName": "06:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 420
+                                    }
+                                },
+                                "displayName": "07:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 450
+                                    }
+                                },
+                                "displayName": "07:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 480
+                                    }
+                                },
+                                "displayName": "08:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 510
+                                    }
+                                },
+                                "displayName": "08:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 540
+                                    }
+                                },
+                                "displayName": "09:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 570
+                                    }
+                                },
+                                "displayName": "09:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 600
+                                    }
+                                },
+                                "displayName": "10:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 630
+                                    }
+                                },
+                                "displayName": "10:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 660
+                                    }
+                                },
+                                "displayName": "11:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 690
+                                    }
+                                },
+                                "displayName": "11:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 720
+                                    }
+                                },
+                                "displayName": "24:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 750
+                                    }
+                                },
+                                "displayName": "24:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 780
+                                    }
+                                },
+                                "displayName": "13:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 810
+                                    }
+                                },
+                                "displayName": "13:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 840
+                                    }
+                                },
+                                "displayName": "14:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 870
+                                    }
+                                },
+                                "displayName": "14:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 900
+                                    }
+                                },
+                                "displayName": "15:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 930
+                                    }
+                                },
+                                "displayName": "15:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 960
+                                    }
+                                },
+                                "displayName": "16:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 990
+                                    }
+                                },
+                                "displayName": "16:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1020
+                                    }
+                                },
+                                "displayName": "17:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1050
+                                    }
+                                },
+                                "displayName": "17:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1080
+                                    }
+                                },
+                                "displayName": "18:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1110
+                                    }
+                                },
+                                "displayName": "18:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1140
+                                    }
+                                },
+                                "displayName": "19:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1170
+                                    }
+                                },
+                                "displayName": "19:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1200
+                                    }
+                                },
+                                "displayName": "20:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1230
+                                    }
+                                },
+                                "displayName": "20:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1260
+                                    }
+                                },
+                                "displayName": "21:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1290
+                                    }
+                                },
+                                "displayName": "21:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1320
+                                    }
+                                },
+                                "displayName": "22:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1350
+                                    }
+                                },
+                                "displayName": "22:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1380
+                                    }
+                                },
+                                "displayName": "23:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1410
+                                    }
+                                },
+                                "displayName": "23:30"
+                            }
+                        ],
+                        "valueName": "caldefend",
+                        "inputType": "dropdownList",
+                        "caption": "Hora de Término:",
+                        "id": "L_EndTime"
+                    }
+                ]
+            },
+            "name": "L_Workinghours",
+            "displayName": "Horário de trabalho",
+            "explainText": "Define o valor na opção correspondente da interface do usuário.",
+            "tags": [
+                "L_Calendaroptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Calendaroptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -2880,6 +4189,65 @@
         },
         {
             "parentCategory": {
+                "ref": "L_FreeBusyOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "fbpublishrange",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 12,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "Informações de Meses de Disponibilidade publicadas:",
+                        "id": "L_MonthsofFreeBusyinformationpublished"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "lock fb range",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar\\internet free/busy",
+                        "inputType": "checkBox",
+                        "caption": "Impedir que os usuários alterem informações de Meses de Disponibilidade que estão sendo publicadas",
+                        "id": "L_PreventusersfromchangingMonthsofFreeBusyinformation1"
+                    },
+                    {
+                        "valueName": "fbupdatesecs",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 86400,
+                        "maxValueSpecified": true,
+                        "id": "L_FreeBusyupdatedontheservereveryxxxseconds"
+                    }
+                ]
+            },
+            "name": "L_options9",
+            "displayName": "Opções de disponibilidade",
+            "explainText": "Define o valor na opção \"Publicar [] mês(es) de informações de disponibilidade do Calendário no servidor\".",
+            "tags": [
+                "L_FreeBusyOptions",
+                "L_Calendaroptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_RecurrenceOptions"
             },
             "supportedOn": {
@@ -2945,6 +4313,36 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Contactoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DetermineOrderOfSourcesForPhotos",
+            "displayName": "Determinar a ordem de fontes de fotos",
+            "explainText": "Esta configuração de política controla a ordem de fontes de fotos exibidas no Outlook.\n\nSe você habilitar esta configuração de política, o Outlook procurará primeiro a foto do usuário no OAB/AD. Se não estiver disponível, o Outlook mostrará uma foto do Contato, caso esteja disponível.\n\nSe você desabilitar ou não configurar esta política, o Outlook procurará primeiro a foto do usuário nos Catálogos de Endereços do Contato. Se não estiver disponível, o Outlook examinará o OAB/AD, se disponível.",
+            "tags": [
+                "L_Contactoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook",
+            "valueName": "preferadphotos"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -3000,6 +4398,193 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
             "valueName": "showcontactfieldobsolete"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Contactoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "E"
+                                },
+                                "displayName": "Nome (Meio) Sobrenome"
+                            },
+                            {
+                                "value": {
+                                    "string": "H"
+                                },
+                                "displayName": "Sobrenome Nome"
+                            },
+                            {
+                                "value": {
+                                    "string": "S"
+                                },
+                                "displayName": "Nome Sobrenome1 Sobrenome2"
+                            }
+                        ],
+                        "valueName": "nameparserstyle",
+                        "inputType": "dropdownList",
+                        "caption": "Ordem padrão de Nome Completo:",
+                        "id": "L_DefaultFullNameorder"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32791
+                                    }
+                                },
+                                "displayName": "Sobrenome Nome"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32823
+                                    }
+                                },
+                                "displayName": "Nome Sobrenome"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 14870
+                                    }
+                                },
+                                "displayName": "Empresa"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32793
+                                    }
+                                },
+                                "displayName": "Sobrenome, Nome (Empresa)"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32792
+                                    }
+                                },
+                                "displayName": "Empresa (Sobrenome, Nome)"
+                            }
+                        ],
+                        "valueName": "fileasorder",
+                        "inputType": "dropdownList",
+                        "caption": "Ordem padrão de Arquivar como:",
+                        "id": "L_DefaultFileAsorder"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "confirmduplicates",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\contact",
+                        "inputType": "checkBox",
+                        "caption": "Verificar se há contatos duplicados",
+                        "id": "L_Checkforduplicatecontacts"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "indextabson",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\contact",
+                        "inputType": "checkBox",
+                        "caption": "Mostrar um Índice de Contatos adicional",
+                        "id": "L_ShowanadditionalContactsIndex"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Árabe"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Cirílico"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 15
+                                    }
+                                },
+                                "displayName": "Grego"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 16
+                                    }
+                                },
+                                "displayName": "Hebraico"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 28
+                                    }
+                                },
+                                "displayName": "Tailandês"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 30
+                                    }
+                                },
+                                "displayName": "Vietnamita"
+                            }
+                        ],
+                        "valueName": "indextabsscript",
+                        "inputType": "dropdownList",
+                        "caption": "Índice de Contatos Adicional:",
+                        "id": "L_AdditionalContactsIndex"
+                    }
+                ]
+            },
+            "name": "L_Selectthedefaultsettingforhowtofilenewcontacts",
+            "displayName": "Selecionar a configuração padrão para como arquivar novos contatos",
+            "explainText": "Define o valor na opção correspondente da interface do usuário.",
+            "tags": [
+                "L_Contactoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\contact"
         },
         {
             "parentCategory": {
@@ -3077,7 +4662,7 @@
                         ],
                         "valueName": "junkmailprotection",
                         "inputType": "dropdownList",
-                        "caption": "Selecionar nível: ",
+                        "caption": "Selecionar nível:",
                         "id": "L_Selectlevel"
                     }
                 ]
@@ -3400,6 +4985,34 @@
         },
         {
             "parentCategory": {
+                "ref": "L_OutlookOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_WindowsVista"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_InternetAndNetworkPathsIntoHyperlinks",
+            "displayName": "Caminhos de Internet e de rede em hiperlinks",
+            "explainText": "Esta configuração de política especifica se o Outlook automaticamente converte texto que representa caminhos de Internet e de rede em hiperlinks. Esta opção também pode ser configurada marcando a caixa de seleção \"Caminhos de Internet e de rede por hiperlinks\" disponível no Outlook em Arquivo | Opções | Email | Opções do Editor... | Revisão de Texto | Opções de AutoCorreção... | guia Formatação Automática na interface do usuário.\n\nSe você habilitar ou não definir esta configuração de política, o texto no Outlook que representa caminhos de Internet e de rede serão automaticamente convertidos em hiperlinks. Esse é o comportamento padrão do Outlook.\n\nSe você desabilitar esta configuração de política, o texto no Outlook que representa caminhos de Internet e de rede não serão automaticamente convertidos em hiperlinks.",
+            "tags": [
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\autoformat",
+            "valueName": "pgrfafo_25_1"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_ComposeMessages"
             },
             "supportedOn": {
@@ -3450,7 +5063,7 @@
                         ],
                         "valueName": "message rtf format",
                         "inputType": "dropdownList",
-                        "caption": "Usar este formato: ",
+                        "caption": "Usar este formato:",
                         "id": "L_WhensendingOutlookRichTextmessagestoInternetrecipients2"
                     }
                 ]
@@ -3458,6 +5071,55 @@
             "name": "L_OutlookRichTextoptions",
             "displayName": "Opções de Rich Text do Outlook",
             "explainText": "Essa configuração de política controla como o Outlook envia mensagens RTF (Rich Text Format) a destinatários na Internet.\n\nSe você habilitar essa configuração de política, poderá escolher o seguinte para lidar com as mensagens RTF endereçadas a destinatários na Internet:\n* Converter no formato de Texto sem Formatação - O Outlook converte a mensagem no formato de texto sem formatação, no conjunto de caracteres padrão. Toda a formatação da mensagem será perdida.\n\nSe você desabilitar ou não definir essa configuração de política, o Outlook converterá automaticamente no formato HTML as mensagens formatadas em RTF que forem enviadas via Internet, de modo que a formatação dessas mensagens seja mantida e os anexos sejam recebidos.",
+            "tags": [
+                "L_InternetFormatting",
+                "L_MailFormat",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\mail"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_InternetFormatting"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "plainwraplen",
+                        "minValue": 30,
+                        "minValueSpecified": true,
+                        "maxValue": 132,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "Dispor texto automaticamente com <x> caracteres.",
+                        "id": "L_Automaticallywraptextatxcharacters"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "message plain format mime",
+                        "inputType": "checkBox",
+                        "caption": "Codificar anexos no formato UUENCODE",
+                        "id": "L_EncodeattachmentsinUUENCODEformatwhensending1"
+                    }
+                ]
+            },
+            "name": "L_Plaintextoptions",
+            "displayName": "Opções de texto sem formatação",
+            "explainText": "Essa configuração de política permite controlar como as mensagens de texto sem formatação são formatadas ao serem enviadas do Outlook.\n\nSe você habilitar essa configuração de política, o texto será automaticamente disposto em mensagens de email da Internet, e os anexos serão codificados no formato UUENCODE.\n\nSe você desabilitar essa configuração de política, o Outlook usará o formato MIME padrão para codificar anexos em mensagens de texto sem formatação do Outlook. Os usuários não poderão alterar essa configuração.\n\nSe você não definir essa configuração de política, o comportamento será equivalente ao de definir a política como Desabilitada, mas os usuários poderão modificar as opções de texto sem formatação no Outlook quando necessário, clicando em Ferramentas, na guia Formato de Email, em Formato da Internet e alterando os valores em \"Opções de texto sem formatação\".",
             "tags": [
                 "L_InternetFormatting",
                 "L_MailFormat",
@@ -3505,7 +5167,7 @@
                         ],
                         "valueName": "editorpreference",
                         "inputType": "dropdownList",
-                        "caption": "Usar o seguinte formato para mensagens de email: ",
+                        "caption": "Usar o seguinte formato para mensagens de email:",
                         "id": "L_UsethefollowingFormatEditorforemailmessages"
                     }
                 ]
@@ -3583,7 +5245,7 @@
                         ],
                         "valueName": "autodetect_ignoreeuro",
                         "inputType": "dropdownList",
-                        "caption": "A seleção automática deve: ",
+                        "caption": "A seleção automática deve:",
                         "id": "L_Whenpreferredencodingdoesnotsupporteuro2"
                     }
                 ]
@@ -3932,7 +5594,7 @@
                         ],
                         "valueName": "default_codepageout",
                         "inputType": "dropdownList",
-                        "caption": "Usar esta codificação para mensagens de saída: ",
+                        "caption": "Usar esta codificação para mensagens de saída:",
                         "id": "L_Usethisencodingforoutgoingmessages"
                     }
                 ]
@@ -3987,7 +5649,7 @@
                         ],
                         "valueName": "themefont",
                         "inputType": "dropdownList",
-                        "caption": "Opções de fontes de papel de carta: ",
+                        "caption": "Opções de fontes de papel de carta:",
                         "id": "L_Stationeryfontoptions"
                     }
                 ]
@@ -4061,6 +5723,35 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\webext",
             "valueName": "storebuttoninribbonhometaballowed"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_HidePhotoLink",
+            "displayName": "Ocultar link de fotos",
+            "explainText": "Essa configuração de política define o link com o Meu Site do usuário (quando detectado), onde a foto desse usuário pode ser\ncarregada.  Esse link está disponível na guia Arquivo.\n\nSe você habilitar essa configuração de política, o link não ficará visível.\n\nSe você desabilitar ou não definir essa configuração de política, o link ficará visível.",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options",
+            "valueName": "hidephotolink"
         },
         {
             "parentCategory": {
@@ -4623,6 +6314,84 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Righttoleft"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Da esquerda para a direita"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Da direita para a esquerda"
+                            }
+                        ],
+                        "valueName": "calendar direction",
+                        "inputType": "dropdownList",
+                        "caption": "Definir direção do layout:",
+                        "id": "L_Setlayoutdirection"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Com base no contexto"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Da esquerda para a direita"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Da direita para a esquerda"
+                            }
+                        ],
+                        "valueName": "text direction",
+                        "inputType": "dropdownList",
+                        "caption": "Definir direção de texto global:",
+                        "id": "L_Setglobaltextdirection"
+                    }
+                ]
+            },
+            "name": "L_LayoutOptions",
+            "displayName": "Opções de Layout",
+            "explainText": "Define o valor na opção correspondente da interface do usuário.",
+            "tags": [
+                "L_Righttoleft",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_OutofOfficeAssistant"
             },
             "supportedOn": {
@@ -4808,7 +6577,7 @@
                         ],
                         "valueName": "promptsimplemapisend",
                         "inputType": "dropdownList",
-                        "caption": "Comportamento de proteção: ",
+                        "caption": "Comportamento de proteção:",
                         "id": "L_SimpleMapi_Setting"
                     }
                 ]
@@ -4863,7 +6632,7 @@
                         ],
                         "valueName": "promptsimplemapinameresolve",
                         "inputType": "dropdownList",
-                        "caption": "Comportamento de proteção: ",
+                        "caption": "Comportamento de proteção:",
                         "id": "L_SimpleMapi_Setting"
                     }
                 ]
@@ -4918,7 +6687,7 @@
                         ],
                         "valueName": "promptsimplemapiopenmessage",
                         "inputType": "dropdownList",
-                        "caption": "Comportamento de proteção: ",
+                        "caption": "Comportamento de proteção:",
                         "id": "L_SimpleMapi_Setting"
                     }
                 ]
@@ -4954,7 +6723,7 @@
             },
             "name": "L_UseProtectedViewForAttachmentsReceivedFromInternalSenders",
             "displayName": "Usar Modo de Exibição Protegido para anexos recebidos de remetentes internos",
-            "explainText": "Essa configuração de política permite determinar se os anexos recebidos dos remetentes na sua organização são abertos no Modo\nde Exibição Protegido. Ela somente se aplica a contas do Outlook configuradas para usar um servidor Exchange.\n\nSe você habilitar essa configuração de política, os anexos recebidos de remetentes na sua organização serão abertos no Modo de\nExibição Protegido.\n\nSe você desabilitar ou não definir essa configuração de política, os anexos recebidos dos remetentes na sua organização não serão\nabertos no Modo de Exibição Protegido.",
+            "explainText": "Essa configuração de política permite determinar se os anexos recebidos dos remetentes na sua organização são abertos no Modo\nde Exibição Protegido.  Ela somente se aplica a contas do Outlook configuradas para usar um servidor Exchange.\n\nSe você habilitar essa configuração de política, os anexos recebidos de remetentes na sua organização serão abertos no Modo de\nExibição Protegido.\n\nSe você desabilitar ou não definir essa configuração de política, os anexos recebidos dos remetentes na sua organização não serão\nabertos no Modo de Exibição Protegido.",
             "tags": [
                 "L_Security",
                 "L_MicrosoftOfficeOutlook"
@@ -5115,7 +6884,7 @@
                         "expandableSpecified": false,
                         "maxLengthSpecified": false,
                         "inputType": "textBox",
-                        "caption": "DN de emissão X.509 que restringe a escolha de autoridades de certificação: ",
+                        "caption": "DN de emissão X.509 que restringe a escolha de autoridades de certificação:",
                         "id": "L_X509issueDNthatrestrictschoiceofcertifyingauthorities"
                     }
                 ]
@@ -5145,14 +6914,14 @@
                         "minValueSpecified": false,
                         "maxValueSpecified": false,
                         "inputType": "decimalTextBox",
-                        "caption": "Tamanho mínimo da chave (em bits): ",
+                        "caption": "Tamanho mínimo da chave (em bits):",
                         "id": "L_Minimumkeysizeinbits"
                     }
                 ]
             },
             "name": "L_Minimumencryptionsettings",
             "displayName": "Configurações mínimas de criptografia",
-            "explainText": "Essa configuração de política permite definir o comprimento mínimo da chave para uma mensagem de email criptografada.\n\nSe você habilitar essa configuração de política, poderá definir o comprimento máximo da chave para uma mensagem de email\ncriptografada. O Outlook exibirá uma caixa de diálogo de aviso se o usuário tentar enviar uma mensagem usando uma chave de\ncriptografia abaixo do valor de chave de criptografia definido. O usuário ainda pode optar por ignorar o aviso e enviar a mensagem\nusando a chave de criptografia originalmente escolhida.\n\nSe você desabilitar ou não definir essa configuração de política, uma caixa de diálogo de aviso não será exibida ao usuário se ele\ntentar enviar uma mensagem usando criptografia. O usuário ainda pode optar por ignorar o aviso e enviar a mensagem usando a\nchave de criptografia originalmente escolhida.",
+            "explainText": "Essa configuração de política permite definir o comprimento mínimo da chave para uma mensagem de email criptografada.\n\nSe você habilitar essa configuração de política, poderá definir o comprimento máximo da chave para uma mensagem de email\ncriptografada. O Outlook exibirá uma caixa de diálogo de aviso se o usuário tentar enviar uma mensagem usando uma chave de\ncriptografia abaixo do valor de chave de criptografia definido. O usuário ainda pode optar por ignorar o aviso e enviar a mensagem\nusando a chave de criptografia originalmente escolhida.\n\nSe você desabilitar ou não definir essa configuração de política, uma caixa de diálogo de aviso não será exibida ao usuário se ele\ntentar enviar uma mensagem usando criptografia.  O usuário ainda pode optar por ignorar o aviso e enviar a mensagem usando a\nchave de criptografia originalmente escolhida.",
             "tags": [
                 "L_Cryptography",
                 "L_Security",
@@ -5199,13 +6968,13 @@
                         ],
                         "valueName": "externalsmime",
                         "inputType": "dropdownList",
-                        "caption": "Comportamento para lidar com mensagens S/MIME: ",
+                        "caption": "Comportamento para lidar com mensagens S/MIME:",
                         "id": "L_BehaviorforhandlingSMIMEmessages"
                     }
                 ]
             },
             "name": "L_SMIMEinteroperabilitywithexternalclients",
-            "displayName": "Interoperabilidade S/MIME com clientes externos: ",
+            "displayName": "Interoperabilidade S/MIME com clientes externos:",
             "explainText": "Essa configuração de política controla se o Outlook decodifica mensagens criptografadas por conta própria ou se as transmite a um programa externo para processamento.\n\nSe você habilitar essa configuração de política, poderá optar por uma destas três opções para configurar clientes S/MIME externos:\n\n- Tratar internamente. O Outlook descriptografa todas as mensagens S/MIME por conta própria.\n- Tratar externamente. O Outlook transmite todas as mensagens S/MIME ao programa externo configurado.\n- Tratar se possível. O Outlook tenta descriptografar todas as mensagens S/MIME por conta própria. Se não conseguir descriptografar uma mensagem, ele a transmitirá ao programa externo configurado. Essa opção é a configuração padrão.\n\nSe você desabilitar ou não definir essa configuração de política, o comportamento será equivalente a habilitar essa configuração e selecionar Tratar se possível.",
             "tags": [
                 "L_Cryptography",
@@ -5314,7 +7083,7 @@
                         ],
                         "valueName": "msgformats",
                         "inputType": "dropdownList",
-                        "caption": "Oferecer suporte para os seguintes formatos de mensagem: ",
+                        "caption": "Oferecer suporte para os seguintes formatos de mensagem:",
                         "id": "L_Supportthefollowingmessageformats"
                     }
                 ]
@@ -5345,7 +7114,7 @@
                         "expandableSpecified": false,
                         "maxLengthSpecified": false,
                         "inputType": "textBox",
-                        "caption": "Inserir texto da mensagem de erro (no máximo 255 caracteres): ",
+                        "caption": "Inserir texto da mensagem de erro (no máximo 255 caracteres):",
                         "id": "L_Entererrormessagetextmax255characters"
                     }
                 ]
@@ -5409,7 +7178,7 @@
             },
             "name": "L_RuninFIPScompliantmode",
             "displayName": "Executar no modo compatível com o FIPS",
-            "explainText": "Essa configuração de política controla se o Outlook deve usar algoritmos compatíveis com o FIPS ao assinar e criptografar mensagens. O Outlook pode ser executado em um modo compatível com o FIPS (Federal Information Processing Standards), um conjunto de padrões publicado pelo NIST (National Institute of Standards and Technology) para uso por entidades governamentais não militares e por órgãos governamentais dos Estados Unidos.\n\nSe você habilitar essa configuração de política, o Outlook será executado em um modo compatível com o padrão FIPS 140-1 para módulos criptográficos. Esse modo requer o uso do algoritmo SHA-1 para assinatura e 3DES para criptografia.\n\nSe você desabilitar ou não definir essa configuração de política, o Outlook não será executado em um modo compatível com o FIPS. As organizações que fazem negócios com o governo dos Estados Unidos, mas não executam o Outlook no modo compatível com o FIPS, correm o risco de violar as regras do governo norte-americano com relação à manipulação de informações confidenciais.\n\nPara obter mais informações sobre o FIPS, consulte \"FIPS - General Information\", em http: //www.itl.nist.gov/fipspubs/geninfo.htm (site em inglês)",
+            "explainText": "Essa configuração de política controla se o Outlook deve usar algoritmos compatíveis com o FIPS ao assinar e criptografar mensagens. O Outlook pode ser executado em um modo compatível com o FIPS (Federal Information Processing Standards), um conjunto de padrões publicado pelo NIST (National Institute of Standards and Technology) para uso por entidades governamentais não militares e por órgãos governamentais dos Estados Unidos.\n\nSe você habilitar essa configuração de política, o Outlook será executado em um modo compatível com o padrão FIPS 140-1 para módulos criptográficos. Esse modo requer o uso do algoritmo SHA-1 para assinatura e 3DES para criptografia.\n\nSe você desabilitar ou não definir essa configuração de política, o Outlook não será executado em um modo compatível com o FIPS. As organizações que fazem negócios com o governo dos Estados Unidos, mas não executam o Outlook no modo compatível com o FIPS, correm o risco de violar as regras do governo norte-americano com relação à manipulação de informações confidenciais.\n\nPara obter mais informações sobre o FIPS, consulte \"FIPS - General Information\", em http://www.itl.nist.gov/fipspubs/geninfo.htm (site em inglês)",
             "tags": [
                 "L_Cryptography",
                 "L_Security",
@@ -6383,6 +8152,36 @@
                     "value": 0
                 }
             },
+            "name": "L_ConfigureCachedExchangeMode",
+            "displayName": "Usar Modo Cache do Exchange para perfis do Outlook novos e existentes",
+            "explainText": "Por padrão, os usuários podem optar por configurar o Modo Cache do Exchange ou usar o modo Online. Ao habilitar essa configuração, perfis do Outlook novos e existentes são configurados para usarem o Modo Cache do Exchange. A desabilitação dessa configuração define o uso do modo Online para os perfis do Outlook novos e existentes.",
+            "tags": [
+                "L_CachedExchangeMode",
+                "L_Exchangesettings",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\cached mode",
+            "valueName": "enable"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_CachedExchangeMode"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_InCachedExchangemakeSendReceiveF9nulloperation",
             "displayName": "Não sincronizar no modo Cache do Exchange quando os usuários clicarem em Enviar/Receber ou pressionarem F9",
             "explainText": "Por padrão, quando os usuários clicam em Enviar/Receber ou pressionam F9 para contas do Modo Cache do Exchange, o Outlook sincroniza com o Exchange Server. Quando essa configuração está habilitada, clicar em Enviar/Receber e pressionar F9 apenas sincronizará com o Exchange se uma pasta estiver sendo sincronizada. Os usuários podem continuar a usar Shift-F9 para sincronizar a pasta atual.",
@@ -6453,6 +8252,39 @@
             "name": "L_Entersecondstowaittodownloadchangesfromserver",
             "displayName": "Inserir segundos de espera para baixar alterações do servidor",
             "explainText": "Especifica o número de segundos de espera antes de baixar alterações do Exchange Server.",
+            "tags": [
+                "L_CachedExchangeMode",
+                "L_Exchangesettings",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\cached mode"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_CachedExchangeMode"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "maximum",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 86400,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "Inserir segundos de espera antes da sincronização (padrão de 60 segundos)",
+                        "id": "L_EntersecondstowaitbeforesyncDefault60sec"
+                    }
+                ]
+            },
+            "name": "L_Entermaximumsecondstowaittosyncchanges",
+            "displayName": "Inserir máximo de segundos de espera para sincronizar alterações",
+            "explainText": "Especifica o número máximo de segundos de espera antes de sincronizar alterações com o Exchange Server.",
             "tags": [
                 "L_CachedExchangeMode",
                 "L_Exchangesettings",
@@ -7032,6 +8864,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_AccountSettingsEmail"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_PreventSavingCredentialsForBasicAuthenticationPolicy",
+            "displayName": "Impedir o salvamento de credenciais para a política de Autenticação Básica",
+            "explainText": "Essa configuração de política permite impedir que o Outlook salve credenciais do usuário usando a Autenticação Básica.\n\nSe você habilitar essa configuração de política, o Outlook não salvará as credenciais do usuário usando a Autenticação Básica.\n\nSe você desabilitar ou não definir essa configuração de política, o Outlook permitirá que o usuário salve credenciais ao usar a\nAutenticação Básica com base em um servidor. Essas credenciais são armazenadas como genéricas e podem ser recuperadas por\nqualquer processo em execução com os direitos desse usuário no computador.",
+            "tags": [
+                "L_AccountSettingsEmail",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\rpc",
+            "valueName": "disablebasicauthsavedcreds"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Exchangesettings"
             },
             "supportedOn": {
@@ -7464,37 +9325,6 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "disablecrossaccountcopy",
-                        "requiredSpecified": false,
-                        "expandableSpecified": false,
-                        "maxLength": 100,
-                        "maxLengthSpecified": true,
-                        "inputType": "textBox",
-                        "id": "L_PreventCopyingOrMovingItemsBetweenAccountsID"
-                    }
-                ]
-            },
-            "name": "L_PreventCopyingOrMovingItemsBetweenAccounts",
-            "displayName": "Impedir cópia ou movimentação de itens entre contas",
-            "explainText": "Essa configuração de política permite impedir que itens sejam copiados ou movidos para outras contas ou PSTs.\n\nSe você habilitar essa configuração de política, os itens não poderão ser movidos ou copiados para outras contas ou PSTs. Insira um\ndos detalhes a seguir:\n\n- \"Contoso.com\": impede a cópia ou a movimentação a partir da conta correspondente ao domínio listado\n- \"*\":  impede a cópia a partir de todas as contas e PSTs\n- \"SharePoint\": impede cópias ou movimentações a partir do PST do SharePoint\n\nSe você desabilitar ou não definir essa configuração de política, a cópia ou movimentação de itens entre contas ou PSTs será\npermitida.",
-            "tags": [
-                "L_Exchangesettings",
-                "L_ToolsAccounts",
-                "L_MicrosoftOfficeOutlook"
-            ],
-            "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\outlook"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Exchangesettings"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -7507,7 +9337,7 @@
             },
             "name": "L_AutomaticallyConfigureProfileBasedOnActive",
             "displayName": "Configurar o perfil automaticamente com base no endereço SMTP Primário do Active Directory",
-            "explainText": "Configurar somente o primeiro perfil automaticamente com base no endereço SMTP primário do Active Directory\n\nEssa configuração de política controla se os usuários que ingressam em um domínio em um ambiente do Active Directory podem alterar o endereço SMTP primário usado na configuração de suas contas do Outlook.\n\nSe essa configuração de política for habilitada, os usuários poderão criar um novo perfil inserindo um nome de perfil. Esse perfil é criado sem o uso do assistente de nova conta. Nenhuma interface do usuário é exibida enquanto o perfil é criado.\n\nEsta chave será ignorada após a criação bem-sucedida do primeiro perfil.",
+            "explainText": "Esta configuração de política controla se o endereço SMTP Primário do Active Directory do usuário será usado automaticamente quando um novo perfil for criado.\n\nSe você habilitar essa configuração de política, quando um usuário criar um novo perfil, o endereço SMTP Primário do Active Directory do usuário será usado para o perfil. O usuário só pode inserir um nome de perfil. O assistente utilizado para definir as configurações específicas do perfil não é exibido ao usuário quando o perfil é criado.\n\nObservação: se quiser que o endereço SMTP Primário do Active Directory do usuário seja sempre utilizado ao criar um novo perfil, use a configuração de política \"Configurar automaticamente o perfil com base na configuração do endereço SMTP Primário do Active Directory\". Se essa configuração de política estiver habilitada, ela terá precedência sobre a configuração de política.\n\n Se você desabilitar ou não definir essa configuração de política, quando um usuário criar um novo perfil, o assistente utilizado para definir as configurações específicas do perfil é exibido ao usuário, que pode especificar qualquer endereço SMTP ao criar o perfil.",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -7535,8 +9365,8 @@
                 }
             },
             "name": "L_AutomaticallyConfigureProfileBasedOnActiveOnce",
-            "displayName": "Configurar somente o primeiro perfil automaticamente com base no endereço SMTP primário do Active Directory",
-            "explainText": "Configurar o perfil automaticamente com base no endereço SMTP Primário do Active Directory\n\nEssa configuração de política controla se os usuários que ingressam em um domínio em um ambiente do Active Directory podem alterar o endereço SMTP primário usado na configuração de suas contas do Outlook.\n\nSe essa configuração de política for habilitada, os usuários poderão criar um novo perfil inserindo um nome de perfil. Esse perfil é criado sem o uso do assistente de Nova Conta. Nenhuma interface do usuário é exibida enquanto o perfil é criado.\n\nEsta chave será ignorada após a criação bem-sucedida do primeiro perfil.",
+            "displayName": "Configurar o perfil automaticamente com base no endereço SMTP Primário do Active Directory (somente uma vez)",
+            "explainText": "Esta configuração de política controla se um usuário pode criar perfis adicionais e especificar um endereço SMTP diferente, depois que o primeiro perfil for criado automaticamente usando o endereço SMTP Primário do Active Directory do usuário,\n\n Se você habilitar essa configuração de política, quando o usuário criar um novo perfil pela primeira vez, o endereço SMTP Primário do Active Directory do usuário será usado no perfil. O usuário só pode inserir um nome de perfil. O assistente utilizado para definir as configurações específicas do perfil não é exibido ao usuário quando o perfil é criado.\n\n Depois que o primeiro perfil é criado automaticamente, o usuário pode criar manualmente perfis adicionais. O assistente utilizado para definir as configurações específicas do perfil é exibido ao usuário, que pode especificar qualquer endereço SMTP à medida que o perfil é criado.\n\nObservação: se quiser que o endereço SMTP Primário do Active Directory do usuário seja sempre utilizado ao criar um novo perfil, use a configuração de política \"Configurar automaticamente o perfil com base na configuração do endereço SMTP Primário do Active Directory\". Se essa configuração de política estiver habilitada, ela terá precedência sobre a configuração de política.\n\n Se você desabilitar ou não definir essa configuração de política, quando um usuário criar um novo perfil, o assistente utilizado para definir as configurações específicas do perfil é exibido ao usuário, que pode especificar qualquer endereço SMTP ao criar o perfil.",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -7605,6 +9435,35 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\folders",
             "valueName": "disableeditpermissions"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Predefined"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableEditDefaultUserPermissions",
+            "displayName": "Limitar quais permissões podem ser atribuídas para Padrão, Anônimo ou Minha Organização nas pastas de email e calendários",
+            "explainText": "Esta configuração de política permite que você limite as permissões que podem ser atribuídas para Padrão, Anônimo ou Minha Organização nas pastas de email e calendários.\n\nSe você habilitar esta configuração de política, os usuários poderão atribuir apenas as seguintes permissões para Padrão, Anônimo ou Minha Organização.\n\n- Nenhuma nas pastas de correio\n- Nenhuma ou informações básicas de disponibilidade em calendários\n\nOs usuários não poderão atribuir nenhuma outra permissão para Padrão, Anônimo ou Minha Organização. Todas as permissões ainda estarão disponíveis para serem atribuídas a outros usuários em pastas de email e calendários.\n\nSe você desabilitar ou não definir esta configuração de política, os usuários poderão atribuir quaisquer permissões para Padrão, Anônimo ou Minha Organização nas pastas de email e calendários.",
+            "tags": [
+                "L_Predefined",
+                "L_Disableitemsinuserinterface",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\folders",
+            "valueName": "disableeditdefaultuserpermissions"
         },
         {
             "parentCategory": {
@@ -8398,7 +10257,7 @@
             },
             "name": "L_Overridepublishedsyncinteral",
             "displayName": "Substituir intervalo de sincronização publicado",
-            "explainText": "Por padrão, o Outlook segue o intervalo de sincronização especificado pelo editor de Calendários da Internet, e as inscrições nesses calendários não serão sincronizadas com uma frequência maior do que a permitida pelo editor. Essa configuração permite que você impeça os usuários de substituírem o intervalo de sincronização publicado por editores de Calendários da Internet.",
+            "explainText": "Por padrão, o Outlook segue o intervalo de sincronização especificado pelo editor de Calendários da Internet, e as inscrições nesses calendários não serão sincronizadas com uma frequência maior do que a permitida pelo editor.  Essa configuração permite que você impeça os usuários de substituírem o intervalo de sincronização publicado por editores de Calendários da Internet.",
             "tags": [
                 "L_WebCalSubscriptions",
                 "L_ToolsAccounts",
@@ -8576,7 +10435,7 @@
             },
             "name": "L_DisableSharepointintegrationinOutlook",
             "displayName": "Não permitir a integração entre o Sharepoint e o Outlook",
-            "explainText": "Essa configuração de política permite impedir o acesso ao Microsoft SharePoint Foundation com o Outlook.\n\nSe você habilitar essa configuração de política, os perfis de usuários não poderão carregar novos itens ou sincronizar alterações com\na lista do SharePoint a partir do servidor; no entanto, os perfis de usuário que tiverem listas preexistentes do SharePoint manterão seus\ndados locais. Além disso, novas listas do SharePoint não podem ser conectadas quando essa configuração de política está habilitada.\nIsso pode ser ativado e desativado para restaurar a sincronização com listas existentes. Observe que os usuários não receberão uma mensagem se a sincronização tiver sido impedida.\n\nSe você desabilitar ou não definir essa configuração de política, o acesso ao Microsoft SharePoint Foundation será permitido com o\nOutlook.",
+            "explainText": "Essa configuração de política permite impedir o acesso ao Microsoft SharePoint Foundation com o Outlook.\n\nSe você habilitar essa configuração de política, os perfis de usuários não poderão carregar novos itens ou sincronizar alterações com\na lista do SharePoint a partir do servidor; no entanto, os perfis de usuário que tiverem listas preexistentes do SharePoint manterão seus\ndados locais. Além disso, novas listas do SharePoint não podem ser conectadas quando essa configuração de política está habilitada.\nIsso pode ser ativado e desativado para restaurar a sincronização com listas existentes.  Observe que os usuários não receberão uma mensagem se a sincronização tiver sido impedida.\n\nSe você desabilitar ou não definir essa configuração de política, o acesso ao Microsoft SharePoint Foundation será permitido com o\nOutlook.",
             "tags": [
                 "L_SharePointIntegration",
                 "L_ToolsAccounts",
@@ -8663,7 +10522,7 @@
             },
             "name": "L_LogSharePointsyncRequestsandResponses",
             "displayName": "Registrar em log solicitações de sincronização e respostas do SharePoint",
-            "explainText": "Essa configuração de política permite controlar se solicitações e respostas de sincronização entre o Outlook e o SharePoint são\nregistradas em log. Arquivos de log podem ajudar a diagnosticar problemas com interações entre o Outlook e o SharePoint. Cada\narquivo de log é vinculado a um ou mais arquivos XML (também no diretório TEMP) contendo informações detalhadas sobre erros e\nrespostas do servidor. O nome do arquivo XML baseia-se no arquivo de log correspondente; você pode obter todos os arquivos de\ndiagnóstico relacionados copiando todos os arquivos *-wss-*.* do diretório TEMP.\n\nSe você habilitar essa configuração de política, o Outlook registrará a maioria das solicitações e respostas de sincronização em um\narquivo de log armazenado no diretório TEMP do usuário. Um arquivo de log é criado por sessão (até sete no total), com o uso da\nconvenção de nomenclatura: 0-wss-sync-log.HTM, 1-wss-sync-log.HTM etc.\n\nSe você desabilitar ou não definir essa configuração de política, as solicitações e respostas de sincronização entre o Outlook e o\nSharePoint não serão registradas em log.",
+            "explainText": "Essa configuração de política permite controlar se solicitações e respostas de sincronização entre o Outlook e o SharePoint são\nregistradas em log.  Arquivos de log podem ajudar a diagnosticar problemas com interações entre o Outlook e o SharePoint. Cada\narquivo de log é vinculado a um ou mais arquivos XML (também no diretório TEMP) contendo informações detalhadas sobre erros e\nrespostas do servidor. O nome do arquivo XML baseia-se no arquivo de log correspondente; você pode obter todos os arquivos de\ndiagnóstico relacionados copiando todos os arquivos *-wss-*.* do diretório TEMP.\n\nSe você habilitar essa configuração de política, o Outlook registrará a maioria das solicitações e respostas de sincronização em um\narquivo de log armazenado no diretório TEMP do usuário. Um arquivo de log é criado por sessão (até sete no total), com o uso da\nconvenção de nomenclatura: 0-wss-sync-log.HTM, 1-wss-sync-log.HTM etc.\n\nSe você desabilitar ou não definir essa configuração de política, as solicitações e respostas de sincronização entre o Outlook e o\nSharePoint não serão registradas em log.",
             "tags": [
                 "L_SharePointIntegration",
                 "L_ToolsAccounts",
@@ -9302,6 +11161,59 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "O provedor MAPI não oferece suporte"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Todos os provedores MAPI oferecem suporte"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Nunca"
+                            }
+                        ],
+                        "valueName": "fastshutdownbehavior",
+                        "inputType": "dropdownList",
+                        "id": "L_ConfigureFastShutdownBehaviorDropID"
+                    }
+                ]
+            },
+            "name": "L_ConfigureFastShutdownBehavior",
+            "displayName": "Configurar comportamento de desligamento rápido",
+            "explainText": "Essa configuração de política controla o comportamento de \"desligamento rápido\" do Outlook.\n\nSe você habilitar essa configuração de política, poderá selecionar uma dessas opções:\n\n- O provedor MAPI não oferece suporte: o Outlook sempre deve usar o Desligamento Rápido, a não ser que um provedor MAPI\nexplicitamente não ofereça suporte para esse recurso.\n- Todos os provedores MAPI oferecem suporte: o Outlook apenas usará o Desligamento Rápido se todos os provedores MAPI\noferecerem suporte para esse recurso.\n- Nunca: o Outlook nunca usa o Desligamento Rápido\n\nSe você desabilitar ou não definir essa configuração de política, o comportamento será igual à opção \"O provedor MAPI não oferece\nsuporte\".",
+            "tags": [
+                "L_Shutdown",
+                "L_Miscellaneous",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\shutdown"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Shutdown"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -9521,7 +11433,7 @@
             },
             "name": "L_DoNotSendMeetingForwardNotifications",
             "displayName": "Não enviar notificações de encaminhamento de reunião",
-            "explainText": "Essa configuração de política impede que o Outlook envie notificações de encaminhamento de reunião. Isso não afeta se o\nExchange envia ou não notificações de encaminhamento de reunião.\n\nSe você habilitar essa configuração de política, o Outlook não enviará notificações de encaminhamento de reunião.\n\nSe você desabilitar ou não definir essa configuração de política, o Outlook enviará notificações de encaminhamento de reunião.",
+            "explainText": "Essa configuração de política impede que o Outlook envie notificações de encaminhamento de reunião.  Isso não afeta se o\nExchange envia ou não notificações de encaminhamento de reunião.\n\nSe você habilitar essa configuração de política, o Outlook não enviará notificações de encaminhamento de reunião.\n\nSe você desabilitar ou não definir essa configuração de política, o Outlook enviará notificações de encaminhamento de reunião.",
             "tags": [
                 "L_PSTSettings",
                 "L_Miscellaneous",
@@ -10358,55 +12270,13 @@
             },
             "name": "L_BlockSpecificSocialNetworkproviders",
             "displayName": "Bloquear provedores de redes sociais específicos",
-            "explainText": "Essa configuração de política permite especificar a lista de provedores de redes sociais que nunca serão carregados pelo\nConector Social do Outlook.\n\nSe você habilitar essa configuração de política, os provedores de redes sociais adicionados à lista nunca serão carregados pelo\nConector Social do Outlook. Essa lista precisa ser delimitada por pontos-e-vírgulas.\n\nSe você desabilitar ou não definir essa configuração de política, o Conector Social do Outlook poderá carregar qualquer provedor\nespecificado pelo usuário.",
+            "explainText": "Essa configuração de política permite especificar a lista de provedores de redes sociais que nunca serão carregados pelo\nConector Social do Outlook.\n\nSe você habilitar essa configuração de política, os provedores de redes sociais adicionados à lista nunca serão carregados pelo\nConector Social do Outlook.  Essa lista precisa ser delimitada por pontos-e-vírgulas.\n\nSe você desabilitar ou não definir essa configuração de política, o Conector Social do Outlook poderá carregar qualquer provedor\nespecificado pelo usuário.",
             "tags": [
                 "L_OutlookSocialConnector",
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
             "key": "software\\microsoft\\office\\outlook\\socialconnector"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_OutlookSocialConnector"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "trustedproviderslist",
-                        "required": true,
-                        "requiredSpecified": true,
-                        "expandableSpecified": false,
-                        "maxLengthSpecified": false,
-                        "inputType": "textBox",
-                        "caption": "Separar ProgIDs com pontos-e-vírgulas",
-                        "id": "L_SpecifyListOfSocialNetworkProvidersToLoadID"
-                    }
-                ]
-            },
-            "name": "L_SpecifyListOfSocialNetworkProvidersToLoad",
-            "displayName": "Especificar lista de provedores de redes sociais a serem carregados",
-            "explainText": "Essa configuração de política determina a lista de provedores de redes sociais que são carregados pelo Conector Social do Outlook.\n\nSe você habilitar essa configuração de política, poderá inserir uma lista de progIDs de provedores de redes sociais que serão\ncarregados pelo Conector Social do Outlook. Essa lista precisa ser delimitada por pontos-e-vírgulas. Observe que, se você habilitar\nessa configuração de política, apenas os provedores de redes sociais que estiverem nessa lista serão carregados pelo\nConector Social do Outlook. Nenhum outro provedor de rede social será carregado.\n\nSe você desabilitar ou não definir essa configuração de política, o Conector Social do Outlook poderá carregar qualquer provedor\nespecificado pelo usuário.",
-            "tags": [
-                "L_OutlookSocialConnector",
-                "L_MicrosoftOfficeOutlook"
-            ],
-            "application": "outlk16",
-            "key": "software\\microsoft\\office\\outlook\\socialconnector",
-            "valueName": "providersecuritymode"
         },
         {
             "parentCategory": {
@@ -10467,8 +12337,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "activationalertthreshold"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10500,8 +12369,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "activationretrylimit"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10533,8 +12401,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "alertinterval"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10566,8 +12433,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "memoryalertthreshold"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10599,8 +12465,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "restartmanagerretrylimit"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10710,7 +12575,7 @@
             },
             "name": "L_DisablePreviewPlace",
             "displayName": "Desabilite o Local de Visualização.",
-            "explainText": "Essa configuração de política determina se o recurso Local de Visualização é permitido. A ativação dessa configuração fará com que o recurso Local de Visualização não esteja disponível.\n        Os usuários não poderão visualizar e fazer comentários sobre as alterações futuras no Outlook.\n\\tObservação: esta configuração de política só se aplica às versões de assinatura do Office, como o Office 365 ProPlus.",
+            "explainText": "        Essa configuração de política determina se o recurso Local de Visualização é permitido. A ativação dessa configuração fará com que o recurso Local de Visualização não esteja disponível.\n        Os usuários não poderão visualizar e fazer comentários sobre as alterações futuras no Outlook.\n\\tObservação: esta configuração de política só se aplica a versões de assinatura do Office, como o Microsoft 365 Apps para Grandes Empresas.\n      ",
             "tags": [
                 "L_Other",
                 "L_OutlookOptions",
@@ -10739,7 +12604,7 @@
             },
             "name": "L_DisableOnlineModeAuthDiagnostics",
             "displayName": "Desabilite o modo online para Obter Diagnósticos.",
-            "explainText": " Esta configuração de política determina se o modo online para o recurso Obter Diagnóstico é permitido. Habilitar esta configuração impedirá o recurso Obter Diagnóstico de enviar logs de diagnóstico e autenticação para nosso serviço.\n         Agora, os usuários passarão pelo modo offline. Coletaremos todos os logs e os armazenaremos na pasta Downloads do usuário. Esse usuário pode contatar o suporte e decidir se deseja nos enviar os logs. ",
+            "explainText": "         Esta configuração de política determina se o modo online para o recurso Obter Diagnóstico é permitido. Habilitar esta configuração impedirá o recurso Obter Diagnóstico de enviar logs de diagnóstico e autenticação para nosso serviço.\n         Agora, os usuários passarão pelo modo offline. Coletaremos todos os logs e os armazenaremos na pasta Downloads do usuário. Esse usuário pode contatar o suporte e decidir se deseja nos enviar os logs.\n      ",
             "tags": [
                 "L_Other",
                 "L_OutlookOptions",
@@ -10768,7 +12633,7 @@
             },
             "name": "L_EnableEndEarly",
             "displayName": "Terminar compromissos e reuniões antecipadamente",
-            "explainText": "Esta configuração de política permite controlar se o tempo de término de compromissos e reuniões será reduzido em um número específico de minutos quando um usuário criar um compromisso ou reunião.\n\nSe você habilitar esta configuração de política, o tempo de término de compromissos e reuniões será reduzido em um número específico de minutos quando um usuário criar um compromisso ou reunião.\n\nPara especificar em quantos minutos os compromissos e reuniões serão reduzidos, você pode usar as configurações de política \"Reduzir o tempo de término de reuniões e compromissos curtos em um número específico de minutos\" e \"Reduzir o tempo de término de reuniões e compromissos longos em um número específico de minutos\".\n\nSe você não ativar estas configurações de política para especificar um tempo em minutos, os usuários poderão especificar um tempo em minutos acessando Arquivo > Opções > Calendário. Se o usuário não tiver especificado um tempo, serão usados os valores padrão de 5 minutos para reuniões curtas e 10 minutos para reuniões longas.\n\nSe você desabilitar esta configuração de política, não será possível configurar os compromissos e reuniões para terminar antes, e a opção ficará desativada em Arquivo > Opções > Calendário e não poderá ser ativada pelo usuário.\n\nSe você não definir esta configuração de política, os compromissos e reuniões não serão configurados para terminar antes, mas o usuário poderá ativar o término antecipado de compromissos e reuniões em Arquivo > Opções > Calendário.\n\nObservação: esta configuração de política se aplica apenas às versões de assinatura do Office, como o Office 365 ProPlus.",
+            "explainText": "        Esta configuração de política permite controlar se o tempo de término de compromissos e reuniões será reduzido em um número específico de minutos quando um usuário criar um compromisso ou reunião.\n\n        Se você habilitar esta configuração de política, o tempo de término de compromissos e reuniões será reduzido em um número específico de minutos quando um usuário criar um compromisso ou reunião.\n\n        Para especificar em quantos minutos os compromissos e reuniões serão reduzidos, você pode usar as configurações de política \"Reduzir o tempo de término de reuniões e compromissos curtos em um número específico de minutos\" e \"Reduzir o tempo de término de reuniões e compromissos longos em um número específico de minutos\".\n\n        Se você não ativar essas configurações de política para especificar um tempo em minutos, os usuários poderão especificar um tempo em minutos acessando Arquivo > Opções > Calendário. Se o usuário não tiver especificado um tempo, serão usados os valores padrão de 5 minutos para reuniões curtas e 10 minutos para reuniões longas.\n\n        Se você desabilitar esta configuração de política, não será possível configurar os compromissos e reuniões para terminar antes, e a opção ficará desativada em Arquivo > Opções > Calendário e não poderá ser ativada pelo usuário.\n\n        Se você não definir esta configuração de política, os compromissos e reuniões não serão configurados para terminar antes, mas o usuário poderá ativar o término antecipado de compromissos e reuniões em Arquivo > Opções > Calendário.\n\n        Observação: esta configuração de política se aplica apenas a versões de assinatura do Office, como o Microsoft 365 Apps para Grandes Empresas.\n      ",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10778,6 +12643,55 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar",
             "valueName": "endeventsearly"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Calendaroptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "None"
+                                },
+                                "displayName": "Nenhum"
+                            },
+                            {
+                                "value": {
+                                    "string": "End_Early"
+                                },
+                                "displayName": "Finalizar Antecipadamente"
+                            },
+                            {
+                                "value": {
+                                    "string": "Start_Late"
+                                },
+                                "displayName": "Começar Atrasado"
+                            }
+                        ],
+                        "valueName": "shortenevents",
+                        "inputType": "dropdownList",
+                        "caption": "Selecionar o Tipo de Eventos Encurtados",
+                        "id": "L_SelecttheShortenEventsType"
+                    }
+                ]
+            },
+            "name": "L_ShortenEventsType",
+            "displayName": "Encurtar compromissos e reuniões",
+            "explainText": "        Esta configuração da política permite reduzir a duração padrão dos compromissos e reuniões por um número específico de minutos. Se você habilitar esta configuração de política, poderá escolher entre as seguintes opções: Terminar Cedo, Começar Tarde, Nenhuma.\n        Se você selecionar Terminar Cedo, as reuniões e compromissos terminarão mais cedo de acordo com o número especificado de minutos.\n        Se você selecionar Iniciar Tarde, as reuniões e compromissos começarão mais tarde de acordo com o número especificado de minutos.\n        Se você selecionar Nenhum, a duração padrão da reunião não será encurtada.\n        Em todos os casos, as configurações para este recurso serão desativadas na caixa de diálogo Opções do Outlook.\n        Se você não definir esta configuração de política, os usuários poderão modificar estas configurações indo para Arquivo > Opções > Calendário.\n\n        Observação: Esta política só se aplica a versões de assinatura do Office, como Microsoft 365 Apps para empresas.",
+            "tags": [
+                "L_Calendaroptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
         },
         {
             "parentCategory": {
@@ -10802,7 +12716,7 @@
             },
             "name": "L_EndEarlyShort",
             "displayName": "Reduzir o tempo de término de reuniões e compromissos curtos em um número específico de minutos",
-            "explainText": "Esta configuração de política permite especificar em quantos minutos reduzir o tempo de término de uma reunião ou um compromisso curto quando um usuário criar um compromisso ou reunião. Uma reunião ou um compromisso curto é aquele que dura menos de uma hora.\n\nSe você habilitar esta configuração de política, especifique o número de minutos em que o tempo de término de uma reunião ou de um compromisso curto será reduzido quando um usuário criar um compromisso ou reunião. O usuário não poderá alterar esse valor acessando Arquivo > Opções > Calendário.\n\nObservação: ative também a configuração de política \"Terminar compromissos e reuniões antecipadamente\".\n\nSe você desabilitar ou não definir esta configuração de política, será usado o valor padrão de 5 minutos ou o valor que o usuário especificar em Arquivo > Opções > Calendário.\n\nObservação: esta configuração de política se aplica apenas às versões de assinatura do Office, como o Office 365 ProPlus.",
+            "explainText": "        Esta configuração de política permite especificar em quantos minutos reduzir o tempo de término de uma reunião ou compromisso curto quando um usuário criar um compromisso ou reunião. Uma reunião ou um compromisso curto é aquele que dura menos de uma hora.\n\n        Se você habilitar esta configuração de política, especifique o número de minutos em que o tempo de término de uma reunião ou de um compromisso curto será reduzido quando um usuário criar um compromisso ou reunião. O usuário não poderá alterar esse valor acessando Arquivo > Opções > Calendário.\n\n        Observação: ative também a configuração de política \"Terminar compromissos e reuniões antecipadamente\".\n\n        Se você desabilitar ou não definir esta configuração de política, será usado o valor padrão de 5 minutos ou o valor que o usuário especificar em Arquivo > Opções > Calendário.\n\n        Observação: esta configuração de política se aplica apenas a versões de assinatura do Office, como o Microsoft 365 Apps para Grandes Empresas.\n      ",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10835,7 +12749,7 @@
             },
             "name": "L_EndEarlyLong",
             "displayName": "Reduzir o tempo de término de reuniões e compromissos longos em um número específico de minutos",
-            "explainText": "Esta configuração de política permite especificar em quantos minutos reduzir o tempo de término de uma reunião ou um compromisso longo quando um usuário criar um compromisso ou reunião. Uma reunião ou um compromisso longo é aquele que dura uma hora ou mais.\n\nSe você habilitar esta configuração de política, especifique o número de minutos em que o tempo de término de uma reunião ou de um compromisso longo será reduzido quando um usuário criar um compromisso ou reunião. O usuário não poderá alterar esse valor acessando Arquivo > Opções > Calendário.\n\nObservação: ative também a configuração de política \"Terminar compromissos e reuniões antecipadamente\"\n\nSe você desabilitar ou não definir esta configuração de política, será usado o valor padrão de 10 minutos ou o valor que o usuário especificar em Arquivo > Opções > Calendário.\n\nObservação: esta configuração de política se aplica apenas às versões de assinatura do Office, como o Office 365 ProPlus.",
+            "explainText": "        Esta configuração de política permite especificar em quantos minutos reduzir o tempo de término de uma reunião ou compromisso longo quando um usuário criar um compromisso ou reunião. Uma reunião ou um compromisso longo é aquele que dura uma hora ou mais.\n\n        Se você habilitar esta configuração de política, especifique o número de minutos em que o tempo de término de uma reunião ou de um compromisso longo será reduzido quando um usuário criar um compromisso ou reunião. O usuário não poderá alterar esse valor acessando Arquivo > Opções > Calendário.\n\n        Observação: ative também a configuração de política \"Terminar compromissos e reuniões antecipadamente\"\n\n        Se você desabilitar ou não definir esta configuração de política, será usado o valor padrão de 10 minutos ou o valor que o usuário especificar em Arquivo > Opções > Calendário.\n\n        Observação: esta configuração de política se aplica apenas às versões de assinatura do Office, como o Microsoft 365 Apps para Grandes Empresas.\n      ",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10863,8 +12777,8 @@
                 }
             },
             "name": "L_OnSendAddinsEnabled",
-            "displayName": "Desabilite o envio quando não for possível carregar extensões da Web.",
-            "explainText": "Se você habilitar esta configuração de política, o Outlook não permitirá que emails e solicitações de reunião sejam enviados até que suplementos da Web sejam carregados do Exchange.",
+            "displayName": "Bloquear envio quando os complementos da Web não puderem carregar",
+            "explainText": "Esta configuração de política permite que você controle se o Outlook deve bloquear o envio de emails e solicitações de reunião até que os suplementos Web sejam carregados do Exchange.\n\nSe você habilitar essa configuração de política, o Outlook não permitirá que solicitações de email e de reunião sejam enviadas até que suplementos Web sejam carregados do Exchange.\n\nSe você desabilitar ou não definir esta configuração de política, o Outlook permitirá que emails e solicitações de reunião sejam enviados, mesmo se os suplementos Web mais recentes ainda não tiverem sido carregados do Exchange.\n\nPara obter mais informações sobre quando usar esta configuração, confira https://go.microsoft.com/fwlink/p/?linkid=2161562",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -10893,7 +12807,7 @@
             },
             "name": "L_RestUpdatesForCalendar",
             "displayName": "Atualizações REST de calendários",
-            "explainText": "Esta política determina se o Outlook pode usar o REST para atualizar calendários.\n\nSe você habilitar essa política, o Outlook usará o REST para atualizar os calendários do Office 365 e do Outlook.com com suporte.\n\nSe você desabilitar essa política, o Outlook não usará o REST para atualizar calendários.",
+            "explainText": "Esta política determina se o Outlook pode usar o REST para atualizar calendários.\n\n        Se você habilitar essa política, o Outlook usará o REST para atualizar os calendários do Office 365 e do Outlook.com com suporte.\n\n        Se você desabilitar essa política, o Outlook não usará o REST para atualizar calendários.",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10923,7 +12837,7 @@
             },
             "name": "L_PreferProvidedEmailInAutoDiscoverAuthPrompts",
             "displayName": "Optar pelo email de conta fornecido nos prompts de autenticação da Descoberta Automática.",
-            "explainText": "Se definida, essa configuração de política controlará o email exibido nos prompts de autenticação relacionados à Descoberta Automática.\n\nPadrão (0): opta pelo UPN da conta, quando disponível.\n\nSe você habilitar essa configuração, os prompts de autenticação da Descoberta Automática optarão pelo email de conta fornecido (que pode ser SMTP ou UPN, dependendo de qual foi configurado).",
+            "explainText": "Se definida, essa configuração de política controlará o email exibido nos prompts de autenticação relacionados à Descoberta Automática.\n\n        Padrão (0): opta pelo UPN da conta, quando disponível.\n\n        Se você habilitar essa configuração, os prompts de autenticação da Descoberta Automática optarão pelo email de conta fornecido (que pode ser SMTP ou UPN, dependendo de qual foi configurado).",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -11249,6 +13163,180 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\autodiscover",
             "valueName": "enableoffice365configservice"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Cryptography"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_AllowPrivateKeyCheck",
+            "displayName": "Verificar a chave privada do usuário quando ele enviar um email criptografado que inclui o usuário como um destinatário",
+            "explainText": "Esta configuração de política controla se o Outlook verificará a chave privada do usuário quando o usuário enviar um email criptografado e o usuário estiver incluído como destinatário do email. O usuário pode ser incluído diretamente como destinatário ou como membro de uma lista de distribuição.\n\nSe você habilitar esta configuração de política, o Outlook verificará a chave privada do usuário.\n\nSe você desabilitar esta configuração de política, o Outlook não verificará a chave privada do usuário.\n\nSe você não definir esta configuração de política, o Outlook verificará a chave privada do usuário.",
+            "tags": [
+                "L_Cryptography",
+                "L_Security",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\security",
+            "valueName": "allowprivatekeycheck"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableAdminNotifications",
+            "displayName": "Desabilitar notificações de administração de locatários do Outlook",
+            "explainText": "Esta configuração de política determina se os administradores de locatário podem receber notificações de suporte no Outlook.\n\nPadrão (0): os administradores de locatários que estão conectados receberão atualizações de status sobre possíveis problemas e correções que afetem o locatário.\n\nSe você habilitar esta configuração, os administradores de locatário que estão conectados não receberão atualizações de status sobre possíveis problemas e correções que afetem o locatário.",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\general",
+            "valueName": "disableadminnotifications"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableCrashNotificationOnRestart",
+            "displayName": "Desabilitar a notificação de falhas do Outlook quando o Outlook for reiniciado.",
+            "explainText": "Esta configuração de política determina se a notificação de falha do Outlook na reinicialização é permitida. Habilitar essa configuração bloqueará a notificação de pane do Outlook na reinicialização.",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\general",
+            "valueName": "disablecrashnotificationonrestart"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Delegates"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DelegateSentItemsStyle",
+            "displayName": "Salvar mensagens enviadas a partir de uma caixa de correio compartilhada para a pasta Itens Enviados",
+            "explainText": "Esta configuração de política controla se as mensagens enviadas de uma caixa de correio compartilhada são salvas na pasta Itens Enviados da caixa de correio compartilhada.\n\nPor padrão, as mensagens enviadas de uma caixa de correio compartilhada não são salvas na pasta Itens enviados da caixa de correio compartilhada.\n\nSe você habilitar esta configuração de política, as mensagens enviadas de uma caixa de correio compartilhada serão salvas na pasta Itens Enviados da caixa de correio compartilhada.\n\nSe você desabilitar ou não definir esta configuração de política, as mensagens enviadas de uma caixa de correio compartilhada não serão salvas na pasta Itens Enviados da caixa de correio compartilhada.",
+            "tags": [
+                "L_Delegates",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
+            "valueName": "delegatesentitemsstyle"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Exchangesettings"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_AlwaysUseMSOAuthForAutodiscover",
+            "displayName": "A descoberta automática sempre é capaz de usar autenticação moderna",
+            "explainText": "Esta configuração de política controla se a Descoberta Automática sempre será capaz de usar autenticação moderna, independentemente dos métodos de autenticação com suporte pelo tipo de conexão da caixa de correio principal.\n\nPor padrão, a Descoberta Automática usa apenas os métodos de autenticação compatíveis com o tipo de conexão da caixa de correio principal. A autenticação moderna nem sempre será um dos métodos de autenticação suportados para alguns tipos de conexão.\n\nSe você habilitar esta configuração de política, a Descoberta Automática sempre será capaz de usar autenticação moderna, independentemente dos métodos de autenticação com suporte pelo tipo de conexão de caixa de correio primária. Habilitar esta configuração de política pode resultar em solicitações adicionais para que os usuários forneçam suas senhas, quando a autenticação moderna for usada, mas não será compatível com o tipo de conexão.\n\nSe você desabilitar ou não definir esta configuração de política, a Descoberta Automática usará apenas métodos de autenticação com suporte pelo tipo de conexão da caixa de correio principal.",
+            "tags": [
+                "L_Exchangesettings",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\exchange",
+            "valueName": "alwaysusemsoauthforautodiscover"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_RecommendOutlookExtension",
+            "displayName": "Recomendar a Extensão do Microsoft Outlook",
+            "explainText": "A configuração de política controla se os usuários do Windows 10 do aplicativo Outlook e do aplicativo Outlook Web verão uma recomendação para instalar a nova extensão do Microsoft Outlook para Microsoft Edge. Se um usuário escolher clicar na recomendação, ele será levado à página de extensão do Microsoft Outlook, onde poderá escolher instalar este complemento de produtividade baseado na web. Os usuários podem dispensar a recomendação e só verão a recomendação duas vezes. Se seus usuários optarem por instalar a extensão, eles poderão acessar seus emails, calendário, contatos e tarefas a partir de um ícone no Microsoft Edge sem exigir que abram outra guia do navegador. A extensão é uma versão “mini” do Outlook na web que opera como um menu desdobrável de um clique no cabeçalho do navegador.\n\nNo futuro, a Microsoft pode lançar uma versão desta extensão para o navegador Chrome. A Microsoft também respeitará esta política para futuras promoções de uma extensão do Chrome.\n\nSe você habilitar ou não definir esta configuração de política, a recomendação será apresentada ao usuário.\n\nSe você desabilitar esta configuração de política, a recomendação não será apresentada ao usuário.\n\nObservação: esta configuração de política só se aplica a versões de assinatura do Office, como Microsoft 365 Apps para empresa e Outlook web app.\n\nPara obter mais informações, confira https://go.microsoft.com/fwlink/?linkid=2165458",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\general",
+            "valueName": "recommendoutlookextension"
         }
     ]
 }

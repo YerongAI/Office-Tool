@@ -1958,7 +1958,7 @@
             },
             "name": "L_DaysOfAllVersions",
             "displayName": "모든 버전 기록 항목이 정리로부터 \"안전\"한 기간(일)",
-            "explainText": "이 정책 설정을 통해 OneNote에서 포괄적인 버전 기록 페이지를 유지 관리하는 기간을 지정할 수 있습니다. 지정된 시간이 지나면 OneNote는 저장소 공간을 적게 사용하는 보다 기본적인 버전 기록 페이지를 유지 관리합니다.\n\n이 정책 설정을 사용하면 OneNote에서는 지정한 기간 동안 포괄적인 버전 기록 페이지를 관리한 다음 해당 기간이 만료되면 기본적인 버전 기록 페이지를 유지 관리합니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 OneNote에서는 2일 동안 포괄적인 버전 기록 페이지를 유지 관리한 다음 해당 기간이 만료되면 기본적인 버전 기록 페이지를 유지 관리합니다.",
+            "explainText": "이 정책 설정을 통해 OneNote에서 포괄적인 버전 기록 페이지를 유지 관리하는 기간을 지정할 수 있습니다. 지정된 시간이 지나면 OneNote는 저장소 공간을 적게 사용하는 보다 기본적인 버전 기록 페이지를 유지 관리합니다.\n\n이 정책 설정을 사용하면 OneNote에서는 지정한 기간 동안 포괄적인 버전 기록 페이지를 관리한 다음 해당 기간이 만료되면 기본적인 버전 기록 페이지를 유지 관리합니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 OneNote에서는 2일 동안 포괄적인 버전 기록 페이지를 유지 관리한 다음 해당 기간이 만료되면 기본적인 버전 기록 페이지를 유지 관리합니다.\n      ",
             "tags": [
                 "L_VersionsAndRecyleBin",
                 "L_OneNoteOptions",
@@ -2388,6 +2388,99 @@
             "name": "L_SharePointsyncinterval",
             "displayName": "SharePoint에 저장된 전자 필기장의 SharePoint 동기화 간격",
             "explainText": "OneNote에서 구역 변경 내용을 적용하기 위해 SharePoint 사이트를 폴링하는 횟수를 제한합니다. 동기화 간격을 초 단위로 입력하십시오.",
+            "tags": [
+                "L_Other",
+                "L_OneNoteOptions",
+                "L_MicrosoftOfficeOneNote"
+            ],
+            "application": "onent16",
+            "key": "software\\microsoft\\office\\16.0\\onenote\\options\\save"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "sharepointbackgroundsyncintervalmultiplier",
+                        "minValue": 1,
+                        "minValueSpecified": true,
+                        "maxValue": 10,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_empty16"
+                    }
+                ]
+            },
+            "name": "L_SharePointbackgroundsyncintervalmultiplier",
+            "displayName": "SharePoint에 저장된 전자 필기장의 바탕 화면 배경 승수기 동기화 간격",
+            "explainText": "이 정책 설정을 통해 전자 필기장의 변경 사항에 대한 SharePoint 사이트의 배경 설문 조사 간격을 늘릴 수 있습니다.\n\n이 정책 설정을 사용하도록 설정하면 OneNote는 전체 전자 필기장의 변경 사항에 대해 SharePoint 설문 조사 빈도수를 낮춥니다. 간격은 입력된 값(1에서 10 사이의 양의 정수 값)으로 곱해집니다. 간격이 클수록 전자 필기장의 동기화가 느려지지만 서버 부하는 줄입니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 OneNote는 전자 필기장을 기본 속도(1의 승수 값)로 동기화합니다.\n\n 참고: 이 정책 설정은 Office Professional Plus 2016 및 Office Standard 2016과 같은 Windows Installer(MSI)를 사용하는 Office 2016의 볼륨 라이선스 버전에만 적용됩니다.",
+            "tags": [
+                "L_Other",
+                "L_OneNoteOptions",
+                "L_MicrosoftOfficeOneNote"
+            ],
+            "application": "onent16",
+            "key": "software\\microsoft\\office\\16.0\\onenote\\options\\save"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "sharepointlivesyncintervalmultiplier",
+                        "minValue": 1,
+                        "minValueSpecified": true,
+                        "maxValue": 10,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_empty17"
+                    }
+                ]
+            },
+            "name": "L_SharePointlivesyncintervalmultiplier",
+            "displayName": "SharePoint에 저장된 현재 본 섹션의 바탕 화면 배경 승수기 동기화 간격",
+            "explainText": "이 정책 설정을 통해 현재 표시되는 섹션의 변경 사항에 대한 SharePoint 사이트의 전경 설문 조사 간격을 늘릴 수 있습니다.\n\n이 정책 설정을 사용하도록 설정하면 OneNote는 현재 표시되는 섹션의 변경 사항에 대한 SharePoint 설문 조사의 빈도수를 낮춥니다. 간격은 입력된 값으로(1에서 10 사이의 양의 정수) 곱해집니다. 간격이 클수록 섹션 동기화가 느려지지만 서버부하는 줄어듭니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면, OneNote는 현재 표시되는 섹션을 기본 속도(1의 승수 값)로 동기화합니다.\n\n참고: 이 정책 설정은 Office Professional Plus 2016 및 Office Standard 2016과 같은 Windows Installer(MSI)를 사용하는 Office 2016의 볼륨 라이선스 버전에만 적용됩니다.",
+            "tags": [
+                "L_Other",
+                "L_OneNoteOptions",
+                "L_MicrosoftOfficeOneNote"
+            ],
+            "application": "onent16",
+            "key": "software\\microsoft\\office\\16.0\\onenote\\options\\save"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "sharepointpresenceintervalmultiplier",
+                        "minValue": 1,
+                        "minValueSpecified": true,
+                        "maxValue": 10,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_empty18"
+                    }
+                ]
+            },
+            "name": "L_SharePointpresenceintervalmultiplier",
+            "displayName": "SharePoint에 저장된 전자 필기장의 현재 상태 승수기 동기화 간격",
+            "explainText": "이 정책 설정을 사용하여 SharePoint에 대한 설문 조사 간의 간격을 늘려 전자 필기장의 활성 사용자를 결정할 수 있습니다. 다른 사용자가 전자 필기장을 사용하는 경우 OneNote는 전자 필기장을 더욱 빠른 속도로 동기화합니다.\n\n이 정책 설정을 사용하도록 설정하면 OneNote는 SharePoint 설문 조사 빈도수를 낮추어 다른 사용자가 현재 전자 필기장과 상호 작용을 하고 있는지 결정합니다. 간격은 입력된 값으로(1에서 10 사이의 양의 정수) 곱해집니다. 간격을 더 크게 늘리면 전자 필기장의 동시 사용자의 검색을 느리게 할 수 있지만 서버 부하를 줄입니다.\n\n이 정책 설정을 사용하지 않도록 설정하거나 구성하지 않으면 OneNote는 기본 속도(1의 승수 값)로 전자 필기장의 활성 사용자에 대해 설문 조사를 합니다.\n\n참고: 이 정책 설정은 Office Professional Plus 2016 및 Office Standard 2016과 같은 Windows Installer(MSI)를 사용하는 Office 2016의 볼륨 라이선스 버전에만 적용됩니다.",
             "tags": [
                 "L_Other",
                 "L_OneNoteOptions",

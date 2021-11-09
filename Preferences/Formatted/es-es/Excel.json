@@ -183,8 +183,8 @@
             "parentCategory": {
                 "ref": "L_MicrosoftOfficeExcel"
             },
-            "name": "L_IntelligentServices",
-            "displayName": "Servicios inteligentes"
+            "name": "L_PowerBI",
+            "displayName": "Power BI"
         }
     ],
     "policies": [
@@ -358,7 +358,7 @@
             },
             "name": "L_Font",
             "displayName": "Fuente",
-            "explainText":"Especifica el nombre y el tamaño de la fuente ''Fuente estándar''.",
+            "explainText": "Especifica el nombre y el tamaño de la fuente ''Fuente estándar''.",
             "tags": [
                 "L_OptionsGeneral",
                 "L_ExcelOptions",
@@ -398,6 +398,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Formulas"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_R1C1referencestyle",
+            "displayName": "Estilo de referencia L1C1",
+            "explainText": "Activa o desactiva la opción correspondiente de la interfaz de usuario.",
+            "tags": [
+                "L_Formulas",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "frefa1_4_1"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_AutocorrectOptions"
             },
             "supportedOn": {
@@ -415,7 +444,7 @@
             },
             "name": "L_Includenewrowsandcolumnsinlist",
             "displayName": "Incluir nuevas filas y columnas en la tabla",
-            "explainText":"Si habilita esta configuración al trabajar en celdas adyacentes a una tabla (lo que se conoce como ''lista'' en versiones anteriores de Excel), la fila o columna adyacente pasa a formar parte de la tabla.",
+            "explainText": "Si habilita esta configuración al trabajar en celdas adyacentes a una tabla (lo que se conoce como ''lista'' en versiones anteriores de Excel), la fila o columna adyacente pasa a formar parte de la tabla.",
             "tags": [
                 "L_AutocorrectOptions",
                 "L_Proofing",
@@ -445,7 +474,7 @@
             },
             "name": "L_Internetandnetworkpathsashyperlinks",
             "displayName": "Rutas de red e Internet por hipervínculos",
-            "explainText": "Esta configuración de directiva determina si Excel crea automáticamente hipervínculos cuando los usuarios escriben información de ruta de acceso URL o UNC.\\r\n      \\r\nSi habilita esta configuración de directiva, cuando los usuarios escriben una cadena de caracteres que Excel reconoce como una ruta de acceso de Localizador uniforme de recursos (URL) o Convención de nomenclatura universal (UNC) a un recurso de Internet o una red local, Excel la transformará automáticamente en un hipervínculo. Al hacer clic en el hipervínculo, se abrirá en el explorador web predeterminado o en la aplicación adecuada.\\r\n      \\r\nSi deshabilita esta configuración de directiva, Excel no transformará las direcciones URL ni las rutas de acceso UNC en hipervínculos.\\r\n      \\r\nSi no establece esta configuración de directiva, Excel transformará automáticamente las direcciones URL y las rutas de acceso UNC en hipervínculos y los usuarios podrán cambiar este comportamiento si activan o desactivan la casilla \"Rutas de red e Internet por hipervínculos\" ubicada en pestaña Archivo | Ayuda | Opciones | Revisión | Opciones de autocorrección... | pestaña Autoformato mientras escribe | Reemplazar mientras escribe.",
+            "explainText": "Esta configuración de directiva determina si Excel crea automáticamente hipervínculos cuando los usuarios escriben información de ruta de acceso URL o UNC.\\r\\n      \\r\\nSi habilita esta configuración de directiva, cuando los usuarios escriben una cadena de caracteres que Excel reconoce como una ruta de acceso de Localizador uniforme de recursos (URL) o Convención de nomenclatura universal (UNC) a un recurso de Internet o una red local, Excel la transformará automáticamente en un hipervínculo. Al hacer clic en el hipervínculo, se abrirá en el explorador web predeterminado o en la aplicación adecuada.\\r\\n      \\r\\nSi deshabilita esta configuración de directiva, Excel no transformará las direcciones URL ni las rutas de acceso UNC en hipervínculos.\\r\\n      \\r\\nSi no establece esta configuración de directiva, Excel transformará automáticamente las direcciones URL y las rutas de acceso UNC en hipervínculos y los usuarios podrán cambiar este comportamiento si activan o desactivan la casilla \"Rutas de red e Internet por hipervínculos\" ubicada en pestaña Archivo | Ayuda | Opciones | Revisión | Opciones de autocorrección... | pestaña Autoformato mientras escribe | Reemplazar mientras escribe.",
             "tags": [
                 "L_AutocorrectOptions",
                 "L_Proofing",
@@ -621,9 +650,38 @@
                     "value": 0
                 }
             },
+            "name": "L_Promptforworkbookproperties",
+            "displayName": "Solicitar información de propiedades de libro",
+            "explainText": "Activa o desactiva la opción correspondiente de la interfaz de usuario.",
+            "tags": [
+                "L_Save",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fpromptsuminfo_65_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Save"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_SaveAutoRecoverinfo",
             "displayName": "Guardar información de autorrecuperación",
-            "explainText":"Si habilita esta directiva, se selecciona la opción de usuario para ''Guardar información de Autorrecuperación cada N minutos''.",
+            "explainText": "Si habilita esta directiva, se selecciona la opción de usuario para ''Guardar información de Autorrecuperación cada N minutos''.",
             "tags": [
                 "L_Save",
                 "L_ExcelOptions",
@@ -748,7 +806,7 @@
             },
             "name": "L_DisableAutoRepublish",
             "displayName": "Deshabilitar Volver a publicar automáticamente",
-            "explainText": "Esta configuración de directiva permite a los administradores deshabilitar la característica Volver a publicar automáticamente en Excel. Si los usuarios deciden publicar datos de Excel en una página web estática y habilitan la característica Volver a publicar automáticamente, Excel guarda una copia de los datos en la página web cada vez que el usuario guarda el libro. De forma predeterminada, se muestra un cuadro de diálogo de mensaje cada vez que el usuario guarda un libro publicado cuando la característica Volver a publicar automáticamente está habilitada. Desde este cuadro de diálogo, el usuario puede deshabilitar Volver a publicar automáticamente temporal o permanentemente, o bien seleccionar \"No mostrar de nuevo este mensaje\" para impedir que el cuadro de diálogo aparezca después de cada operación de guardado. Si el usuario selecciona \"No mostrar de nuevo este mensaje\", Excel continuará volviendo a publicar automáticamente los datos después de cada operación de guardado sin informar al usuario.\n\nSi habilita esta configuración de directiva, la característica Volver a publicar automáticamente se desactiva y los usuarios de Excel tendrán que publicar los datos en la página web manualmente.\n\nSi deshabilita o no establece esta configuración de directiva, los usuarios pueden habilitar la característica Volver a publicar automáticamente para que vuelva a publicar automáticamente los libros guardados con el tipo Página web.",
+            "explainText": "Esta configuración de directiva permite a los administradores deshabilitar la característica Volver a publicar automáticamente en Excel. Si los usuarios deciden publicar datos de Excel en una página web estática y habilitan la característica Volver a publicar automáticamente, Excel guarda una copia de los datos en la página web cada vez que el usuario guarda el libro. De forma predeterminada, se muestra un cuadro de diálogo de mensaje cada vez que el usuario guarda un libro publicado cuando la característica Volver a publicar automáticamente está habilitada. Desde este cuadro de diálogo, el usuario puede deshabilitar Volver a publicar automáticamente temporal o permanentemente, o bien seleccionar \"No mostrar de nuevo este mensaje\" para impedir que el cuadro de diálogo aparezca después de cada operación de guardado. Si el usuario selecciona \"No mostrar de nuevo este mensaje\", Excel continuará volviendo a publicar automáticamente los datos después de cada operación de guardado sin informar al usuario.\n\n      Si habilita esta configuración de directiva, la característica Volver a publicar automáticamente se desactiva y los usuarios de Excel tendrán que publicar los datos en la página web manualmente.\n\n      Si deshabilita o no establece esta configuración de directiva, los usuarios pueden habilitar la característica Volver a publicar automáticamente para que vuelva a publicar automáticamente los libros guardados con el tipo Página web.",
             "tags": [
                 "L_Save",
                 "L_ExcelOptions",
@@ -995,6 +1053,70 @@
         },
         {
             "parentCategory": {
+                "ref": "L_ProtectedView"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Bloquear archivos"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Abrir en Vista protegida"
+                            }
+                        ],
+                        "valueName": "openinprotectedview",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsDropID"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "disableeditfrompv",
+                        "key": "software\\microsoft\\office\\16.0\\excel\\security\\filevalidation",
+                        "inputType": "checkBox",
+                        "caption": "Activado: permitir edición.  No activado: no permitir edición.",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsStr3"
+                    }
+                ]
+            },
+            "name": "L_SetDocumentBehaviorIfFileValidationFails",
+            "displayName": "Establecer el comportamiento del documento en caso de error en la validación de documento",
+            "explainText": "Esta clave de directiva controla la administración de los documentos de Office cuando se produce un error en la validación de archivos.\n\nSi habilitas esta configuración de directiva, puedes configurar las siguientes opciones para los archivos con error durante la validación: \n\n- Bloquear completamente archivos. Los usuarios no podrán abrir los archivos.\n- Abrir archivos en Vista protegida y no permitir la edición. Los usuarios no pueden editar los archivos. Esta es también la manera en que Office administra los archivos si deshabilitas esta configuración de directiva.\n- Abrir archivos en Vista protegida y permitir la edición. Los usuarios pueden editar los archivos. Esta es también la manera en que Office administra los archivos si no estableces esta configuración de directiva.\n\nSi deshabilitas esta configuración de directiva, Office aplica el comportamiento \"Abrir archivos en Vista protegida y no permitir la edición\".\n\nSi no estableces esta configuración de directiva, Office aplica el comportamiento \"Abrir archivos en Vista protegida y permitir la edición\".",
+            "tags": [
+                "L_ProtectedView",
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security\\filevalidation"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_ExternalContent"
             },
             "supportedOn": {
@@ -1012,7 +1134,7 @@
             },
             "name": "L_DisableDDEServerLookup",
             "displayName": "No permitir la búsqueda en el servidor de Intercambio dinámico de datos (DDE) en Excel",
-            "explainText": "Esta configuración de directiva le permite controlar si se permite la búsqueda en el servidor de Intercambio dinámico de datos (DDE).\n\nDe forma predeterminada, la búsqueda de servidores DDE está activada, pero los usuarios pueden desactivar la búsqueda de servidores DDE en Archivo > Opciones > Centro de confianza > Configuración del Centro de confianza > Contenido externo.\n\nSi habilita esta configuración de directiva, no se permitirá la búsqueda de servidores DDE y los usuarios no podrán activar la búsqueda de servidores DDE en el Centro de confianza.\n\nNota: Si está utilizando el inicio de servidor de intercambio dinámico de datos (DDE), lo que no se recomienda, no habilite esta configuración de directiva, ya que el inicio de servidor DDE requiere que la búsqueda de servidor DDE esté activada.\n\nSi deshabilita o no establece esta configuración de directiva, la búsqueda de servidores DDE estará activada, pero los usuarios podrán desactivar la búsqueda de servidores DDE en el Centro de confianza.\n\nNota: Esta configuración de directiva solo se aplica a las versiones de suscripción de Office, como Office 365 ProPlus.",
+            "explainText": "Esta opción de directiva le permite controlar si se permite la búsqueda en el servidor de Intercambio dinámico de datos (DDE).\n\nDe forma predeterminada, la búsqueda de servidores DDE está activada, pero los usuarios pueden desactivar la búsqueda de servidores DDE en Archivo > Opciones > Centro de confianza > Configuración del Centro de confianza > Contenido externo.\n\nSi habilita esta opción de directiva, no se permitirá la búsqueda de servidores DDE y los usuarios no podrán activar la búsqueda de servidores DDE en el Centro de confianza.\n\nNota: Si está utilizando el inicio de servidor de intercambio dinámico de datos (DDE), lo que no se recomienda, no habilite esta opción de directiva, ya que el inicio de servidor DDE requiere que la búsqueda de servidor DDE esté activada.\n\nSi deshabilita o no configura esta opción de directiva, la búsqueda de servidores DDE estará activada, pero los usuarios podrán desactivar la búsqueda de servidores DDE en el Centro de confianza.\n\nNota: Esta opción de directiva solo se aplica a las versiones de suscripción de Office, como Aplicaciones de Microsoft 365 para empresas.",
             "tags": [
                 "L_ExternalContent",
                 "L_TrustCenter",
@@ -1043,7 +1165,7 @@
             },
             "name": "L_DisableDDEServerLaunch",
             "displayName": "No permitir el inicio de servidor de Intercambio dinámico de datos (DDE) en Excel",
-            "explainText": "Esta configuración de directiva le permite controlar si se permite el inicio de servidor de Intercambio dinámico de datos (DDE).\n\nDe forma predeterminada, el inicio de servidor DDE está desactivado, pero los usuarios pueden activarlo en Archivo > Opciones > Centro de confianza > Configuración del Centro de confianza > Contenido externo.\n\nPor razones de seguridad, no se recomienda activar el inicio de servidor DDE.\n\nNota: Para que el inicio de servidor DDE funcione, se debe activar la búsqueda de servidor de Intercambio dinámico de datos (DDE). Asegúrese de que la configuración de directiva “No permitir la búsqueda de servidor de Intercambio dinámico de datos (DDE)” no está habilitada, ya que habilitar dicha configuración de la directiva desactiva la búsqueda de servidor DDE.\n\nSi habilita esta configuración de directiva, no se permitirá el inicio de servidor DDE y los usuarios no podrán activar el inicio de servidor DDE en el Centro de confianza.\n\nSi deshabilita esta configuración de directiva, el inicio de servidor de DDE estará permitido y los usuarios no podrán desactivar el inicio de servidor DDE en el Centro de confianza. Por razones de seguridad, no se recomienda esto.\n\nSi no establece esta configuración de Directiva, el inicio de servidor DDE estará desactivado, pero los usuarios podrán activar el inicio de servidor DDE en el Centro de confianza.\n\nNota: Esta configuración de directiva solo se aplica a las versiones de suscripción de Office, como Office 365 ProPlus.",
+            "explainText": "Esta opción de directiva le permite controlar si se permite el inicio de servidor de Intercambio dinámico de datos (DDE).\n\nDe forma predeterminada, el inicio de servidor DDE está desactivado, pero los usuarios pueden activarlo en Archivo > Opciones > Centro de confianza > Configuración del Centro de confianza > Contenido externo.\n\nPor razones de seguridad, no se recomienda activar el inicio de servidor DDE.\n\nNota: Para que el inicio de servidor DDE funcione, se debe activar la búsqueda de servidor de Intercambio dinámico de datos (DDE). Asegúrese de que la opción de directiva “No permitir la búsqueda de servidor de Intercambio dinámico de datos (DDE)” no está habilitada, ya que habilitar dicha configuración de la directiva desactiva la búsqueda de servidor DDE.\n\nSi habilita esta opción de directiva, no se permitirá el inicio de servidor DDE y los usuarios no podrán activar el inicio de servidor DDE en el Centro de confianza.\n\nSi deshabilita esta opción de directiva, el inicio de servidor de DDE estará permitido y los usuarios no podrán desactivar el inicio de servidor DDE en el Centro de confianza. Por razones de seguridad, no se recomienda esto.\n\nSi deshabilita esta opción de directiva, el inicio de servidor DDE estará desactivado, pero los usuarios podrán activar el inicio de servidor DDE en el Centro de confianza.\n\nNota: Esta opción de directiva solo se aplica a las versiones de suscripción de Office, como Aplicaciones de Microsoft 365 para empresas.",
             "tags": [
                 "L_ExternalContent",
                 "L_TrustCenter",
@@ -1074,7 +1196,7 @@
             },
             "name": "L_EnableBlockUnsecureQueryFiles",
             "displayName": "Impedir siempre que se abran archivos de Microsoft Query que no son de confianza",
-            "explainText": "Esta configuración de directiva controla si se pueden abrir los archivos de Microsoft Query (.iqy, .oqy, .dqy y .rqy) en una ubicación que no es de confianza.\n\nSi habilita esta configuración de directiva, evitará que se abran los archivos de Microsoft Query en una ubicación que no es de confianza. Los usuarios no podrán cambiar esta configuración en Archivo  >  Opciones > Centro de confianza > Configuración del Centro de confianza > Contenido externo.\n\nSi deshabilita o no establece esta configuración de Directiva, los archivos de Microsoft Query en una ubicación que no es de confianza no se podrán abrir, a menos que los usuarios hayan cambiado esta configuración en el centro de confianza.\n\nNota: Esta configuración de directiva solo se aplica a las versiones de suscripción de Office, como Office 365 ProPlus.",
+            "explainText": "Esta opción de directiva controla si se pueden abrir los archivos de Microsoft Query (.iqy, .oqy, .dqy y .rqy) en una ubicación que no es de confianza.\n\nSi habilita esta opción de directiva, evitará que se abran los archivos de Microsoft Query en una ubicación que no es de confianza. Los usuarios no podrán cambiar esta configuración en Archivo > Opciones > Centro de confianza > Configuración del Centro de confianza > Contenido externo.\n\nSi deshabilita o no configura esta opción de directiva, los archivos de Microsoft Query en una ubicación que no es de confianza no se podrán abrir, a menos que los usuarios hayan cambiado esta configuración en el centro de confianza.\n\nNota: Esta opción de directiva solo se aplica a las versiones de suscripción de Office, como Aplicaciones de Microsoft 365 para empresas.",
             "tags": [
                 "L_ExternalContent",
                 "L_TrustCenter",
@@ -1105,7 +1227,7 @@
             },
             "name": "L_EnableForeignTextFileProtectedView",
             "displayName": "Abrir siempre los archivos basados en texto que no son de confianza en la Vista protegida",
-            "explainText": "Esta configuración de directiva controla si los archivos basados en texto (.csv, .dif y .sylk) abiertos desde una ubicación que no es de confianza siempre se abren en la Vista protegida.\n\nSi habilita esta configuración de directiva, los archivos basados en texto que se abren desde una ubicación que no es de confianza siempre se abren en la Vista protegida. Los usuarios no podrán cambiar esta configuración en Archivo > Opciones > Centro de confianza > Configuración del Centro de confianza > Vista protegida.\n\nSi deshabilita o no establece esta configuración de directiva, los archivos basados en texto abiertos desde una ubicación que no es de confianza no se abrirán en la Vista protegida a menos que los usuarios hayan cambiado esta configuración en el Centro de confianza.\n\nNota: Esta configuración de directiva solo se aplica a las versiones de suscripción de Office, como Office 365 ProPlus.",
+            "explainText": "Esta opción de directiva controla si los archivos basados en texto (.csv, .dif y .sylk) abiertos desde una ubicación que no es de confianza siempre se abren en la Vista protegida.\n\nSi habilita esta opción de directiva, los archivos basados en texto que se abren desde una ubicación que no es de confianza siempre se abren en la Vista protegida. Los usuarios no podrán cambiar esta configuración en Archivo > Opciones > Centro de confianza > Configuración del Centro de confianza > Vista protegida.\n\nSi deshabilita o no configura esta opción de directiva, los archivos basados en texto abiertos desde una ubicación que no es de confianza no se abrirán en la Vista protegida a menos que los usuarios hayan cambiado esta configuración en el Centro de confianza.\n\nNota: Esta opción de directiva solo se aplica a las versiones de suscripción de Office, como Aplicaciones de Microsoft 365 para empresas.",
             "tags": [
                 "L_ProtectedView",
                 "L_TrustCenter",
@@ -1136,7 +1258,7 @@
             },
             "name": "L_EnableDataBaseFileProtectedView",
             "displayName": "Abrir siempre los archivos de base de datos que no son de confianza en la Vista protegida",
-            "explainText": "Esta configuración de directiva controla si los archivos de base de datos (.dbf) abiertos desde una ubicación que no es de confianza se abren siempre en la Vista protegida.\n\nSi habilita esta configuración de directiva, los archivos de base de datos abiertos desde una ubicación que no es de confianza siempre se abren en la Vista protegida. Los usuarios no podrán cambiar esta configuración en  Archivo > Opciones > Centro de confianza > Configuración del Centro de confianza > Vista protegida.\n\nSi deshabilita o no establece esta configuración de directiva, los archivos de base de datos abiertos desde una ubicación que no es de confianza no se abrirán en la Vista protegida a menos que los usuarios hayan cambiado esta configuración en el Centro de confianza.\n\nNota: Esta configuración de directiva solo se aplica a las versiones de suscripción de Office, como Office 365 ProPlus.",
+            "explainText": "Esta opción de directiva controla si los archivos de base de datos (.dbf) abiertos desde una ubicación que no es de confianza se abren siempre en la Vista protegida.\n\nSi habilita esta opción de directiva, los archivos de base de datos abiertos desde una ubicación que no es de confianza siempre se abren en la Vista protegida. Los usuarios no podrán cambiar esta configuración en Archivo > Opciones > Centro de confianza > Configuración del Centro de confianza > Vista protegida.\n\nSi deshabilita o no configura esta opción de directiva, los archivos de base de datos abiertos desde una ubicación que no es de confianza no se abrirán en la Vista protegida a menos que los usuarios hayan cambiado esta configuración en el Centro de confianza.\n\nNota: Esta opción de directiva solo se aplica a las versiones de suscripción de Office, como Aplicaciones de Microsoft 365 para empresas.",
             "tags": [
                 "L_ProtectedView",
                 "L_TrustCenter",
@@ -1773,9 +1895,69 @@
                     "value": 0
                 }
             },
+            "name": "L_XL4KillSwitchPolicy",
+            "displayName": "Impedir que Excel ejecute macros XLM",
+            "explainText": "Esta configuración de directiva impedirá que Excel ejecute macros de Excel 4.0 (XLM).\n\nSi habilita esta configuración de directiva, las macros XLM no se podrán ejecutar en Excel.\n\nSi deshabilita o no configura esta configuración de directiva, las macros XLM se podrán ejecutar en Excel.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security",
+            "valueName": "xl4macrooff"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_StoremacroinPersonalMacroWorkbookbydefault",
+            "displayName": "Almacenar macro en libro de macros personal de forma predeterminada",
+            "explainText": "Esta configuración de directiva controla la ubicación predeterminada para almacenar macros en Excel.\n\n      Si habilita esta configuración de directiva, Excel almacena las macros en el libro de macros personal de los usuarios.\n\n      Si deshabilita o no establece esta configuración de directiva, Excel almacena las macros en el libro activo desde el que se crean.\n\n      Nota: en la interfaz de usuario (UI), el cuadro de lista desplegable \"Guardar macro en\" del cuadro de diálogo Grabar macro (Macros | Grabar macro) permite a los usuarios elegir si desean almacenar la macro nueva en el libro actual, en un libro nuevo o en su libro de macros personal (Personal.xlsb), un libro oculto que se abre cada vez que se inicia Excel.\n\n      De forma predeterminada, Excel muestra el cuadro \"Guardar macro en\" con la opción \"Este libro\" ya seleccionada en la lista desplegable. Si un usuario guarda una macro en el libro activo y, a continuación, distribuye el libro a otros usuarios, la macro se distribuye junto con el libro. Si habilita esta configuración de directiva, Excel muestra el cuadro \"Guardar macro en\" con la opción \"Libro de macros personal\" ya seleccionada. Si lo desean, los usuarios pueden seleccionar una de las otras dos opciones en el menú desplegable.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fglobalsheet_37_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_TrustaccesstoVisualBasicProject",
             "displayName": "Confiar en el acceso a proyectos de Visual Basic",
-            "explainText": "Esta configuración de directiva controla si los clientes de automatización, como Microsoft Visual Studio 2005 Tools para Microsoft Office (VSTO), pueden tener acceso al sistema de proyectos de Visual Basic para Aplicaciones en las aplicaciones especificadas. Los proyectos de VSTO requieren acceso al sistema de proyectos de Visual Basic para Aplicaciones en Excel, PowerPoint y Word, aunque los proyectos no usen Visual Basic para Aplicaciones. La compatibilidad en tiempo de diseño de los controles de proyectos de Visual Basic y C# depende del sistema de proyectos de Visual Basic para Aplicaciones en Word y Excel.\\r\n\\r\nSi habilita esta configuración de directiva, VSTO y otros clientes de automatización pueden tener acceso al sistema de proyectos de Visual Basic para Aplicaciones en las aplicaciones especificadas. Los usuarios no podrán cambiar este comportamiento mediante la opción de la interfaz de usuario \"Confiar en el acceso al modelo de objetos de proyectos de VBA\" de la sección Configuración de macros del Centro de confianza.\\r\n\\r\nSi deshabilita esta configuración de directiva, VSTO no tiene acceso mediante programación a los proyectos de VBA. Además, la casilla \"Confiar en el acceso al modelo de objetos de proyectos de VBA\" se desactiva y los usuarios no pueden cambiarla. Nota: si se deshabilita esta configuración de directiva, se impide a los proyectos de VSTO interactuar correctamente con el sistema de proyectos de VBA de la aplicación seleccionada.\\r\n\\r\nSi no establece esta configuración de directiva, los clientes de automatización no tendrán acceso mediante programación a los proyectos de VBA. Los usuarios pueden habilitar esta opción si activan \"Confiar en el acceso al modelo de objetos de proyectos de VBA\" en la sección \"Configuración de macros\" del Centro de confianza. No obstante, al hacer esto se permite a las macros de los documentos abiertos por el usuario tener acceso a los objetos, métodos y propiedades principales de Visual Basic, lo cual representa un posible riesgo de seguridad.",
+            "explainText": "Esta configuración de directiva controla si los clientes de automatización, como Microsoft Visual Studio 2005 Tools para Microsoft Office (VSTO), pueden tener acceso al sistema de proyectos de Visual Basic para Aplicaciones en las aplicaciones especificadas. Los proyectos de VSTO requieren acceso al sistema de proyectos de Visual Basic para Aplicaciones en Excel, PowerPoint y Word, aunque los proyectos no usen Visual Basic para Aplicaciones. La compatibilidad en tiempo de diseño de los controles de proyectos de Visual Basic y C# depende del sistema de proyectos de Visual Basic para Aplicaciones en Word y Excel.\\r\\n\\r\\nSi habilita esta configuración de directiva, VSTO y otros clientes de automatización pueden tener acceso al sistema de proyectos de Visual Basic para Aplicaciones en las aplicaciones especificadas. Los usuarios no podrán cambiar este comportamiento mediante la opción de la interfaz de usuario \"Confiar en el acceso al modelo de objetos de proyectos de VBA\" de la sección Configuración de macros del Centro de confianza.\\r\\n\\r\\nSi deshabilita esta configuración de directiva, VSTO no tiene acceso mediante programación a los proyectos de VBA. Además, la casilla \"Confiar en el acceso al modelo de objetos de proyectos de VBA\" se desactiva y los usuarios no pueden cambiarla. Nota: si se deshabilita esta configuración de directiva, se impide a los proyectos de VSTO interactuar correctamente con el sistema de proyectos de VBA de la aplicación seleccionada.\\r\\n\\r\\nSi no establece esta configuración de directiva, los clientes de automatización no tendrán acceso mediante programación a los proyectos de VBA. Los usuarios pueden habilitar esta opción si activan \"Confiar en el acceso al modelo de objetos de proyectos de VBA\" en la sección \"Configuración de macros\" del Centro de confianza. No obstante, al hacer esto se permite a las macros de los documentos abiertos por el usuario tener acceso a los objetos, métodos y propiedades principales de Visual Basic, lo cual representa un posible riesgo de seguridad.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1865,7 +2047,7 @@
             },
             "name": "L_DisableTrustBarNotificationforunsigned",
             "displayName": "Deshabilitar la notificación de la barra de confianza para complementos de aplicaciones sin firmar y bloquearlos",
-            "explainText": "Esta configuración de directiva controla si las aplicaciones de Office 2016 especificadas notifican a los usuarios cuando se cargan complementos de la aplicación sin firmar o si dichos complementos se deshabilitan silenciosamente sin notificación. Esta configuración de directiva se aplica únicamente si habilita \"Solicitar que un editor de confianza firme los complementos de aplicaciones\", lo que impide que los usuarios cambien esta configuración de directiva. \nSi habilita esta configuración de directiva, las aplicaciones automáticamente deshabilitan los complementos no firmados sin informar a los usuarios.\n \nSi deshabilita esta configuración de directiva, si se configura una aplicación para requerir que todos los complementos estén firmados por un editor de confianza, los complementos sin firmar que cargue la aplicación se deshabilitarán y la aplicación mostrará la barra de confianza en la parte superior de la ventana activa. La barra de confianza contiene un mensaje que informa a los usuarios sobre el complemento sin firmar.\n\nSi no establece esta configuración de directiva, se aplica el comportamiento de deshabilitación y, además, los usuarios pueden configurar este requisito en la categoría \"Complementos\" del Centro de confianza de la aplicación.",
+            "explainText": "Esta configuración de directiva controla si las aplicaciones de Office 2016 especificadas notifican a los usuarios cuando se cargan complementos de la aplicación sin firmar o si dichos complementos se deshabilitan silenciosamente sin notificación. Esta configuración de directiva se aplica únicamente si habilita \"Solicitar que un editor de confianza firme los complementos de aplicaciones\", lo que impide que los usuarios cambien esta configuración de directiva.       \nSi habilita esta configuración de directiva, las aplicaciones automáticamente deshabilitan los complementos no firmados sin informar a los usuarios.\n \nSi deshabilita esta configuración de directiva, si se configura una aplicación para requerir que todos los complementos estén firmados por un editor de confianza, los complementos sin firmar que cargue la aplicación se deshabilitarán y la aplicación mostrará la barra de confianza en la parte superior de la ventana activa. La barra de confianza contiene un mensaje que informa a los usuarios sobre el complemento sin firmar.\n\nSi no establece esta configuración de directiva, se aplica el comportamiento de deshabilitación y, además, los usuarios pueden configurar este requisito en la categoría \"Complementos\" del Centro de confianza de la aplicación.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1925,7 +2107,7 @@
             },
             "name": "L_BlockMacroExecutionFromInternet",
             "displayName": "Bloquear la ejecución de macros en archivos de Office procedentes de Internet",
-            "explainText": "Esta configuración de directiva permite bloquear la ejecución de las macros en archivos de Office que provengan de Internet.\n\nSi habilita esta configuración de directiva, se bloquea la ejecución de las macros aunque la opción \"Habilitar todas las macros\" esté seleccionada en la sección Configuración de macros del Centro de confianza. Además, en lugar de tener la opción \"Habilitar contenido\", los usuarios recibirán una notificación de que se ha bloqueado la ejecución de las macros. Si el archivo de Office se guarda en una ubicación de confianza o el usuario lo había marcado previamente como de confianza, se podrán ejecutar las macros.\n\nSi deshabilita o no establece esta configuración de directiva, la configuración establecida en la sección Configuración de macros del Centro de confianza determinará si se ejecutan las macros en archivos de Office procedentes de Internet.",
+            "explainText": "        Esta configuración de directiva permite bloquear la ejecución de las macros en archivos de Office que provengan de Internet.\n\n        Si habilita esta configuración de directiva, se bloquea la ejecución de las macros aunque la opción \"Habilitar todas las macros\" esté seleccionada en la sección Configuración de macros del Centro de confianza. Además, en lugar de tener la opción \"Habilitar contenido\", los usuarios recibirán una notificación de que se ha bloqueado la ejecución de las macros. Si el archivo de Office se guarda en una ubicación de confianza o el usuario lo había marcado previamente como de confianza, se podrán ejecutar las macros.\n\n        Si deshabilita o no establece esta configuración de directiva, la configuración establecida en la sección Configuración de macros del Centro de confianza determinará si se ejecutan las macros en archivos de Office procedentes de Internet.\n      ",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -2716,7 +2898,7 @@
             },
             "name": "L_Excel4Workbooks",
             "displayName": "Libros de Excel 4",
-            "explainText": "Esta configuración de directiva permite determinar si los usuarios pueden abrir, ver, modificar o guardar archivos de Excel con el formato especificado en el título de esta configuración de directiva.\n\nSi habilitas esta configuración de directiva, podrás especificar si los usuarios pueden abrir, ver, modificar o guardar archivos.\n\nA continuación se muestran las opciones que se pueden seleccionar. Nota: es posible que no todas las opciones estén disponibles para esta configuración de directiva.\n\n- No bloquear: el tipo de archivo no se bloqueará.\n\n- Guardar bloqueado: se bloquearán las operaciones de guardado para el tipo de archivo.\n\n- Abrir o guardar bloqueado, usar directiva abierta: se bloquearán la apertura y el guardado del tipo de archivo especificado. El archivo se abrirá según la configuración de directiva especificada en la clave \"comportamiento de bloqueo de archivos predeterminado\".\n\n- Bloquear: se bloquearán la apertura y el guardado del tipo de archivo, y no se abrirá el archivo.\n\n- Abrir en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y no se habilitará la opción de edición del tipo de archivo.\n\n- Permitir la edición y apertura en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y se habilitará la opción de edición.\n\nSi deshabilita esta configuración de directiva o no la define, no se bloqueará el tipo de archivo.",
+            "explainText": "Esta configuración de directiva permite determinar si los usuarios pueden abrir, ver, modificar o guardar archivos de Excel con el formato especificado en el título de esta configuración de directiva.\n\nSi habilitas esta configuración de directiva, podrás especificar si los usuarios pueden abrir, ver, modificar o guardar archivos.\n\nA continuación se muestran las opciones que se pueden seleccionar.  Nota: es posible que no todas las opciones estén disponibles para esta configuración de directiva.\n\n- No bloquear: el tipo de archivo no se bloqueará.\n\n- Guardar bloqueado: se bloquearán las operaciones de guardado para el tipo de archivo.\n\n- Abrir o guardar bloqueado, usar directiva abierta: se bloquearán la apertura y el guardado del tipo de archivo especificado. El archivo se abrirá según la configuración de directiva especificada en la clave \"comportamiento de bloqueo de archivos predeterminado\".\n\n- Bloquear: se bloquearán la apertura y el guardado del tipo de archivo, y no se abrirá el archivo.\n\n- Abrir en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y no se habilitará la opción de edición del tipo de archivo.\n\n- Permitir la edición y apertura en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y se habilitará la opción de edición.\n\nSi deshabilita esta configuración de directiva o no la define, no se bloqueará el tipo de archivo.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2788,7 +2970,7 @@
             },
             "name": "L_Excel4Worksheets",
             "displayName": "Hojas de cálculo de Excel 4",
-            "explainText": "Esta configuración de directiva permite determinar si los usuarios pueden abrir, ver, modificar o guardar archivos de Excel con el formato especificado en el título de esta configuración de directiva.\n\nSi habilitas esta configuración de directiva, podrás especificar si los usuarios pueden abrir, ver, modificar o guardar archivos.\n\nA continuación se muestran las opciones que se pueden seleccionar. Nota: es posible que no todas las opciones estén disponibles para esta configuración de directiva.\n\n- No bloquear: el tipo de archivo no se bloqueará.\n\n- Guardar bloqueado: se bloquearán las operaciones de guardado para el tipo de archivo.\n\n- Abrir o guardar bloqueado, usar directiva abierta: se bloquearán la apertura y el guardado del tipo de archivo especificado. El archivo se abrirá según la configuración de directiva especificada en la clave \"comportamiento de bloqueo de archivos predeterminado\".\n\n- Bloquear: se bloquearán la apertura y el guardado del tipo de archivo, y no se abrirá el archivo.\n\n- Abrir en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y no se habilitará la opción de edición del tipo de archivo.\n\n- Permitir la edición y apertura en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y se habilitará la opción de edición.\n\nSi deshabilita esta configuración de directiva o no la define, no se bloqueará el tipo de archivo.",
+            "explainText": "Esta configuración de directiva permite determinar si los usuarios pueden abrir, ver, modificar o guardar archivos de Excel con el formato especificado en el título de esta configuración de directiva.\n\nSi habilitas esta configuración de directiva, podrás especificar si los usuarios pueden abrir, ver, modificar o guardar archivos.\n\nA continuación se muestran las opciones que se pueden seleccionar.  Nota: es posible que no todas las opciones estén disponibles para esta configuración de directiva.\n\n- No bloquear: el tipo de archivo no se bloqueará.\n\n- Guardar bloqueado: se bloquearán las operaciones de guardado para el tipo de archivo.\n\n- Abrir o guardar bloqueado, usar directiva abierta: se bloquearán la apertura y el guardado del tipo de archivo especificado. El archivo se abrirá según la configuración de directiva especificada en la clave \"comportamiento de bloqueo de archivos predeterminado\".\n\n- Bloquear: se bloquearán la apertura y el guardado del tipo de archivo, y no se abrirá el archivo.\n\n- Abrir en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y no se habilitará la opción de edición del tipo de archivo.\n\n- Permitir la edición y apertura en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y se habilitará la opción de edición.\n\nSi deshabilita esta configuración de directiva o no la define, no se bloqueará el tipo de archivo.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2860,7 +3042,7 @@
             },
             "name": "L_Excel3Worksheets",
             "displayName": "Hojas de cálculo de Excel 3",
-            "explainText": "Esta configuración de directiva permite determinar si los usuarios pueden abrir, ver, modificar o guardar archivos de Excel con el formato especificado en el título de esta configuración de directiva.\n\nSi habilitas esta configuración de directiva, podrás especificar si los usuarios pueden abrir, ver, modificar o guardar archivos.\n\nA continuación se muestran las opciones que se pueden seleccionar. Nota: es posible que no todas las opciones estén disponibles para esta configuración de directiva.\n\n- No bloquear: el tipo de archivo no se bloqueará.\n\n- Guardar bloqueado: se bloquearán las operaciones de guardado para el tipo de archivo.\n\n- Abrir o guardar bloqueado, usar directiva abierta: se bloquearán la apertura y el guardado del tipo de archivo especificado. El archivo se abrirá según la configuración de directiva especificada en la clave \"comportamiento de bloqueo de archivos predeterminado\".\n\n- Bloquear: se bloquearán la apertura y el guardado del tipo de archivo, y no se abrirá el archivo.\n\n- Abrir en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y no se habilitará la opción de edición del tipo de archivo.\n\n- Permitir la edición y apertura en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y se habilitará la opción de edición.\n\nSi deshabilita esta configuración de directiva o no la define, no se bloqueará el tipo de archivo.",
+            "explainText": "Esta configuración de directiva permite determinar si los usuarios pueden abrir, ver, modificar o guardar archivos de Excel con el formato especificado en el título de esta configuración de directiva.\n\nSi habilitas esta configuración de directiva, podrás especificar si los usuarios pueden abrir, ver, modificar o guardar archivos.\n\nA continuación se muestran las opciones que se pueden seleccionar.  Nota: es posible que no todas las opciones estén disponibles para esta configuración de directiva.\n\n- No bloquear: el tipo de archivo no se bloqueará.\n\n- Guardar bloqueado: se bloquearán las operaciones de guardado para el tipo de archivo.\n\n- Abrir o guardar bloqueado, usar directiva abierta: se bloquearán la apertura y el guardado del tipo de archivo especificado. El archivo se abrirá según la configuración de directiva especificada en la clave \"comportamiento de bloqueo de archivos predeterminado\".\n\n- Bloquear: se bloquearán la apertura y el guardado del tipo de archivo, y no se abrirá el archivo.\n\n- Abrir en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y no se habilitará la opción de edición del tipo de archivo.\n\n- Permitir la edición y apertura en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y se habilitará la opción de edición.\n\nSi deshabilita esta configuración de directiva o no la define, no se bloqueará el tipo de archivo.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2932,7 +3114,7 @@
             },
             "name": "L_Excel2Worksheets",
             "displayName": "Hojas de cálculo de Excel 2",
-            "explainText": "Esta configuración de directiva permite determinar si los usuarios pueden abrir, ver, modificar o guardar archivos de Excel con el formato especificado en el título de esta configuración de directiva.\n\nSi habilitas esta configuración de directiva, podrás especificar si los usuarios pueden abrir, ver, modificar o guardar archivos.\n\nA continuación se muestran las opciones que se pueden seleccionar. Nota: es posible que no todas las opciones estén disponibles para esta configuración de directiva.\n\n- No bloquear: el tipo de archivo no se bloqueará.\n\n- Guardar bloqueado: se bloquearán las operaciones de guardado para el tipo de archivo.\n\n- Abrir o guardar bloqueado, usar directiva abierta: se bloquearán la apertura y el guardado del tipo de archivo especificado. El archivo se abrirá según la configuración de directiva especificada en la clave \"comportamiento de bloqueo de archivos predeterminado\".\n\n- Bloquear: se bloquearán la apertura y el guardado del tipo de archivo, y no se abrirá el archivo.\n\n- Abrir en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y no se habilitará la opción de edición del tipo de archivo.\n\n- Permitir la edición y apertura en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y se habilitará la opción de edición.\n\nSi deshabilita esta configuración de directiva o no la define, no se bloqueará el tipo de archivo.",
+            "explainText": "Esta configuración de directiva permite determinar si los usuarios pueden abrir, ver, modificar o guardar archivos de Excel con el formato especificado en el título de esta configuración de directiva.\n\nSi habilitas esta configuración de directiva, podrás especificar si los usuarios pueden abrir, ver, modificar o guardar archivos.\n\nA continuación se muestran las opciones que se pueden seleccionar.  Nota: es posible que no todas las opciones estén disponibles para esta configuración de directiva.\n\n- No bloquear: el tipo de archivo no se bloqueará.\n\n- Guardar bloqueado: se bloquearán las operaciones de guardado para el tipo de archivo.\n\n- Abrir o guardar bloqueado, usar directiva abierta: se bloquearán la apertura y el guardado del tipo de archivo especificado. El archivo se abrirá según la configuración de directiva especificada en la clave \"comportamiento de bloqueo de archivos predeterminado\".\n\n- Bloquear: se bloquearán la apertura y el guardado del tipo de archivo, y no se abrirá el archivo.\n\n- Abrir en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y no se habilitará la opción de edición del tipo de archivo.\n\n- Permitir la edición y apertura en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y se habilitará la opción de edición.\n\nSi deshabilita esta configuración de directiva o no la define, no se bloqueará el tipo de archivo.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3004,7 +3186,7 @@
             },
             "name": "L_Excel4MacrosheetsAndAddInFiles",
             "displayName": "Archivos de complementos y hojas de macros de Excel 4",
-            "explainText": "Esta configuración de directiva permite determinar si los usuarios pueden abrir, ver, modificar o guardar archivos de Excel con el formato especificado en el título de esta configuración de directiva.\n\nSi habilitas esta configuración de directiva, podrás especificar si los usuarios pueden abrir, ver, modificar o guardar archivos.\n\nA continuación se muestran las opciones que se pueden seleccionar. Nota: es posible que no todas las opciones estén disponibles para esta configuración de directiva.\n\n- No bloquear: el tipo de archivo no se bloqueará.\n\n- Guardar bloqueado: se bloquearán las operaciones de guardado para el tipo de archivo.\n\n- Abrir o guardar bloqueado, usar directiva abierta: se bloquearán la apertura y el guardado del tipo de archivo especificado. El archivo se abrirá según la configuración de directiva especificada en la clave \"comportamiento de bloqueo de archivos predeterminado\".\n\n- Bloquear: se bloquearán la apertura y el guardado del tipo de archivo, y no se abrirá el archivo.\n\n- Abrir en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y no se habilitará la opción de edición del tipo de archivo.\n\n- Permitir la edición y apertura en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y se habilitará la opción de edición.\n\nSi deshabilita esta configuración de directiva o no la define, no se bloqueará el tipo de archivo.",
+            "explainText": "Esta configuración de directiva permite determinar si los usuarios pueden abrir, ver, modificar o guardar archivos de Excel con el formato especificado en el título de esta configuración de directiva.\n\nSi habilitas esta configuración de directiva, podrás especificar si los usuarios pueden abrir, ver, modificar o guardar archivos.\n\nA continuación se muestran las opciones que se pueden seleccionar.  Nota: es posible que no todas las opciones estén disponibles para esta configuración de directiva.\n\n- No bloquear: el tipo de archivo no se bloqueará.\n\n- Guardar bloqueado: se bloquearán las operaciones de guardado para el tipo de archivo.\n\n- Abrir o guardar bloqueado, usar directiva abierta: se bloquearán la apertura y el guardado del tipo de archivo especificado. El archivo se abrirá según la configuración de directiva especificada en la clave \"comportamiento de bloqueo de archivos predeterminado\".\n\n- Bloquear: se bloquearán la apertura y el guardado del tipo de archivo, y no se abrirá el archivo.\n\n- Abrir en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y no se habilitará la opción de edición del tipo de archivo.\n\n- Permitir la edición y apertura en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y se habilitará la opción de edición.\n\nSi deshabilita esta configuración de directiva o no la define, no se bloqueará el tipo de archivo.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3076,7 +3258,7 @@
             },
             "name": "L_Excel3MacrosheetsAndAddInFiles",
             "displayName": "Archivos de complementos y hojas de macros de Excel 3",
-            "explainText": "Esta configuración de directiva permite determinar si los usuarios pueden abrir, ver, modificar o guardar archivos de Excel con el formato especificado en el título de esta configuración de directiva.\n\nSi habilitas esta configuración de directiva, podrás especificar si los usuarios pueden abrir, ver, modificar o guardar archivos.\n\nA continuación se muestran las opciones que se pueden seleccionar. Nota: es posible que no todas las opciones estén disponibles para esta configuración de directiva.\n\n- No bloquear: el tipo de archivo no se bloqueará.\n\n- Guardar bloqueado: se bloquearán las operaciones de guardado para el tipo de archivo.\n\n- Abrir o guardar bloqueado, usar directiva abierta: se bloquearán la apertura y el guardado del tipo de archivo especificado. El archivo se abrirá según la configuración de directiva especificada en la clave \"comportamiento de bloqueo de archivos predeterminado\".\n\n- Bloquear: se bloquearán la apertura y el guardado del tipo de archivo, y no se abrirá el archivo.\n\n- Abrir en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y no se habilitará la opción de edición del tipo de archivo.\n\n- Permitir la edición y apertura en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y se habilitará la opción de edición.\n\nSi deshabilita esta configuración de directiva o no la define, no se bloqueará el tipo de archivo.",
+            "explainText": "Esta configuración de directiva permite determinar si los usuarios pueden abrir, ver, modificar o guardar archivos de Excel con el formato especificado en el título de esta configuración de directiva.\n\nSi habilitas esta configuración de directiva, podrás especificar si los usuarios pueden abrir, ver, modificar o guardar archivos.\n\nA continuación se muestran las opciones que se pueden seleccionar.  Nota: es posible que no todas las opciones estén disponibles para esta configuración de directiva.\n\n- No bloquear: el tipo de archivo no se bloqueará.\n\n- Guardar bloqueado: se bloquearán las operaciones de guardado para el tipo de archivo.\n\n- Abrir o guardar bloqueado, usar directiva abierta: se bloquearán la apertura y el guardado del tipo de archivo especificado. El archivo se abrirá según la configuración de directiva especificada en la clave \"comportamiento de bloqueo de archivos predeterminado\".\n\n- Bloquear: se bloquearán la apertura y el guardado del tipo de archivo, y no se abrirá el archivo.\n\n- Abrir en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y no se habilitará la opción de edición del tipo de archivo.\n\n- Permitir la edición y apertura en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y se habilitará la opción de edición.\n\nSi deshabilita esta configuración de directiva o no la define, no se bloqueará el tipo de archivo.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3148,7 +3330,7 @@
             },
             "name": "L_Excel2MacrosheetsAndAddInFiles",
             "displayName": "Archivos de complementos y hojas de macros de Excel 2",
-            "explainText": "Esta configuración de directiva permite determinar si los usuarios pueden abrir, ver, modificar o guardar archivos de Excel con el formato especificado en el título de esta configuración de directiva.\n\nSi habilitas esta configuración de directiva, podrás especificar si los usuarios pueden abrir, ver, modificar o guardar archivos.\n\nA continuación se muestran las opciones que se pueden seleccionar. Nota: es posible que no todas las opciones estén disponibles para esta configuración de directiva.\n\n- No bloquear: el tipo de archivo no se bloqueará.\n\n- Guardar bloqueado: se bloquearán las operaciones de guardado para el tipo de archivo.\n\n- Abrir o guardar bloqueado, usar directiva abierta: se bloquearán la apertura y el guardado del tipo de archivo especificado. El archivo se abrirá según la configuración de directiva especificada en la clave \"comportamiento de bloqueo de archivos predeterminado\".\n\n- Bloquear: se bloquearán la apertura y el guardado del tipo de archivo, y no se abrirá el archivo.\n\n- Abrir en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y no se habilitará la opción de edición del tipo de archivo.\n\n- Permitir la edición y apertura en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y se habilitará la opción de edición.\n\nSi deshabilita esta configuración de directiva o no la define, no se bloqueará el tipo de archivo.",
+            "explainText": "Esta configuración de directiva permite determinar si los usuarios pueden abrir, ver, modificar o guardar archivos de Excel con el formato especificado en el título de esta configuración de directiva.\n\nSi habilitas esta configuración de directiva, podrás especificar si los usuarios pueden abrir, ver, modificar o guardar archivos.\n\nA continuación se muestran las opciones que se pueden seleccionar.  Nota: es posible que no todas las opciones estén disponibles para esta configuración de directiva.\n\n- No bloquear: el tipo de archivo no se bloqueará.\n\n- Guardar bloqueado: se bloquearán las operaciones de guardado para el tipo de archivo.\n\n- Abrir o guardar bloqueado, usar directiva abierta: se bloquearán la apertura y el guardado del tipo de archivo especificado. El archivo se abrirá según la configuración de directiva especificada en la clave \"comportamiento de bloqueo de archivos predeterminado\".\n\n- Bloquear: se bloquearán la apertura y el guardado del tipo de archivo, y no se abrirá el archivo.\n\n- Abrir en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y no se habilitará la opción de edición del tipo de archivo.\n\n- Permitir la edición y apertura en Vista protegida: se bloquearán la apertura y el guardado del tipo de archivo, y se habilitará la opción de edición.\n\nSi deshabilita esta configuración de directiva o no la define, no se bloqueará el tipo de archivo.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -4009,7 +4191,7 @@
             },
             "name": "L_Defaultdirection",
             "displayName": "Dirección predeterminada de la hoja",
-            "explainText":"Esta configuración controla la dirección predeterminada de la hoja, que es ''De izquierda a derecha'' o ''De derecha a izquierda''.",
+            "explainText": "Esta configuración controla la dirección predeterminada de la hoja, que es ''De izquierda a derecha'' o ''De derecha a izquierda''.",
             "tags": [
                 "L_Advanced",
                 "L_ExcelOptions",
@@ -4083,7 +4265,7 @@
             },
             "name": "L_Showcontrolcharacters",
             "displayName": "Mostrar caracteres de control",
-            "explainText":"Al habilitar esta directiva se selecciona la opción de usuario para ''Mostrar caracteres de control''. Esta opción aparece en la categoría Avanzadas cuando se habilitan determinados idiomas.",
+            "explainText": "Al habilitar esta directiva se selecciona la opción de usuario para ''Mostrar caracteres de control''. Esta opción aparece en la categoría Avanzadas cuando se habilitan determinados idiomas.",
             "tags": [
                 "L_Advanced",
                 "L_ExcelOptions",
@@ -4145,7 +4327,7 @@
             },
             "name": "L_MicrosoftExcelmenuorHelpkey",
             "displayName": "Menú de Microsoft Excel o tecla de ayuda",
-            "explainText":"Esta configuración de directiva permite establecer el valor ASCII para la tecla elegida (por ejemplo: '/'=47).",
+            "explainText": "Esta configuración de directiva permite establecer el valor ASCII para la tecla elegida (por ejemplo: '/'=47).",
             "tags": [
                 "L_Advanced",
                 "L_ExcelOptions",
@@ -4153,6 +4335,267 @@
             ],
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\excel\\options"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Transitionnavigationkeys",
+            "displayName": "Teclas de desplazamiento para transición",
+            "explainText": "Al habilitar esta directiva se activa la opción de usuario de Avanzadas (Compatibilidad con Lotus) denominada \"Teclas de desplazamiento para transición\".",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fisi_33_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Ignoreotherapplications",
+            "displayName": "Omitir otras aplicaciones",
+            "explainText": "Esta configuración de directiva controla si Excel puede intercambiar datos con otras aplicaciones que usan Intercambio dinámico de datos (DDE).\n\n      Si habilita esta configuración de directiva, Excel no permite intercambiar datos con otras aplicaciones que usan DDE. Además, la opción de la interfaz de usuario \"Omitir otras aplicaciones que usen Intercambio dinámico de datos (DDE)\", ubicada en Opciones de Excel | General, está activada y los usuarios no pueden cambiarla. Si se habilita esta configuración de directiva, los usuarios que dependen de las funciones de DDE en Excel para actualizar información de libros pueden experimentar trastornos. Estos usuarios tendrán que usar otro método para actualizar la información proporcionada por otras aplicaciones.\n\n      Si deshabilita o no establece esta configuración de directiva, Excel puede usar el protocolo Intercambio dinámico de datos (DDE) para intercambiar mensajes y datos con otras aplicaciones. Por ejemplo, una celda de un libro de Excel puede vincularse de forma dinámica a un valor proporcionado por otra aplicación, como, por ejemplo, información meteorológica o bursátil. Cuando el valor proporcionado por la otra aplicación cambia, Excel puede actualizar automáticamente dicho valor en el libro. Nota: los usuarios pueden cambiar este comportamiento si seleccionan la opción de la interfaz de usuario \"Omitir otras aplicaciones que usen Intercambio dinámico de datos (DDE)\", ubicada en Opciones de Excel | General.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fddeenabled_6_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ZoomonrollwithIntelliMouse",
+            "displayName": "Hacer zoom al usar la rueda de IntelliMouse",
+            "explainText": "Esta configuración de directiva establece la opción ''Hacer zoom al usar la rueda de IntelliMouse'', ubicada en pestaña Archivo | Opciones | Avanzadas | Opciones de edición\n\nSi habilita esta configuración de directiva, al mover la rueda del mouse se cambiará el nivel de zoom de la hoja de cálculo.\n\nSi deshabilita o no establece esta configuración de directiva, al mover la rueda del mouse podrá desplazarse por la hoja de cálculo. Este es el comportamiento predeterminado.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "frollzoom_98_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Shownames",
+            "displayName": "Mostrar nombres",
+            "explainText": "Al habilitar esta configuración se selecciona la opción de usuario de Avanzadas (Mostrar) para \"Mostrar nombres de elementos de gráfico al activar\".",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fshowchartnames_96_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Showvalues",
+            "displayName": "Mostrar valores",
+            "explainText": "Al habilitar esta configuración se selecciona la opción de usuario de Avanzadas (Mostrar) para \"Mostrar valores de punto de datos al activar\".",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fshowcharttipvalues_97_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Editdirectlyincell",
+            "displayName": "Modificar en celda",
+            "explainText": "Esta configuración de directiva establece la opción \"Modificar en celda\" ubicada en pestaña Archivo | Opciones | Avanzadas | Opciones de edición.\n\nSi habilita o no establece esta configuración de directiva, Excel permitirá realizar modificaciones directamente en la celda. Este es el comportamiento predeterminado.\n\nSi deshabilita esta configuración de directiva, Excel no permitirá que las modificaciones se realicen directamente en la celda.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fnoincell_66_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_EnableFillHandleAndCellDragAndDrop",
+            "displayName": "Permitir arrastrar y colocar el controlador de relleno y las celdas",
+            "explainText": "Esta configuración de directiva establece la opción \"Permitir arrastrar y colocar el controlador de relleno y las celdas\" en la pestaña Archivo | Opciones | Avanzadas | Opciones de edición.\n\nSi habilita o no define esta configuración de directiva, Excel habilitará el controlador de relleno y permitirá arrastrar y colocar. Este comportamiento es el predeterminado.\n\nSi deshabilita esta configuración de directiva, Excel deshabilitará el controlador de relleno y no permitirá arrastrar y colocar.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fdisabledman_36_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Alertbeforeoverwritingcells",
+            "displayName": "Mensaje de alerta antes de sobrescribir celdas",
+            "explainText": "Esta configuración de directiva establece la opción \"Mensaje de alerta antes de reemplazar celdas\" ubicada en pestaña Archivo | Opciones | Avanzadas | Opciones de edición.\n\nSi habilita o no establece esta configuración de directiva, Excel mostrará una advertencia cuando las celdas estén a punto de sobrescribirse. Este es el comportamiento predeterminado.\n\nSi deshabilita esta configuración de directiva, Excel suprimirá la advertencia que indica que las celdas van a sobrescribirse.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fnodragwarning_76_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_MoveselectionafterEnter",
+            "displayName": "Mover selección después de Entrar",
+            "explainText": "Al habilitar esta directiva se selecciona la opción de usuario de Avanzadas (Opciones de edición) para \"Después de presionar Entrar, mover selección\".",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fentermove_75_1"
         },
         {
             "parentCategory": {
@@ -4262,6 +4705,93 @@
                     "value": 0
                 }
             },
+            "name": "L_CutAndCopyObjectsWithCells",
+            "displayName": "Cortar y copiar objetos con celdas",
+            "explainText": "Esta configuración de directiva establece la opción \"Cortar, copiar y ordenar objetos junto con celdas principales\" en la pestaña Archivo | Opciones | Avanzadas | Opciones de cortar, copiar y pegar.\n\nSi habilita o no define esta configuración de directiva, Excel cortará, copiará y ordenará los objetos insertados junto con celdas principales.\n\nSi deshabilita esta configuración de directiva, Excel no cortará ni copiará los objetos insertados junto con celdas principales.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fobjwcellmove_71_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Asktoupdateautomaticlinks",
+            "displayName": "Consultar al actualizar vínculos automáticos",
+            "explainText": "Esta configuración de directiva controla si Excel pregunta a los usuarios si desean actualizar los vínculos automáticos o si las actualizaciones se realizan en segundo plano, sin preguntar.\n\n      Si habilita o no establece esta configuración de directiva, Excel preguntará a los usuarios si desean actualizar los vínculos automáticos. Además, la opción de la interfaz de usuario \"Consultar al actualizar vínculos automáticos\", ubicada en pestaña Archivo | Avanzadas | General, está activada.\n\n      Si deshabilita esta configuración de directiva, Excel actualiza los vínculos automáticos sin preguntar ni informar a los usuarios, lo cual podría poner en peligro la integridad de parte de la información del libro.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fupdateext_78_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_EnableAutoCompleteforcellvalues",
+            "displayName": "Habilitar Autocompletar para valores de celda",
+            "explainText": "Esta configuración de directiva establece la opción \"Habilitar Autocompletar para valores de celda\" ubicada en pestaña Archivo | Opciones | Avanzadas | Opciones de edición.\n\nSi habilita o no establece esta configuración de directiva, Excel permitirá Autocompletar para valores de celda. Este es el comportamiento predeterminado.\n\nSi deshabilita esta configuración de directiva, Excel desactivará la característica Autocompletar.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fautocomplete_128_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_ExtendDataRangeFormatsAndFormulas",
             "displayName": "Extender formatos de rangos de datos y fórmulas",
             "explainText": "Esta configuración de directiva establece la opción \"Extender formatos de rangos de datos y fórmulas\" en la pestaña Archivo | Opciones | Avanzadas | Opciones de edición.\n\nSi habilita o no define esta configuración de directiva, Excel permitirá dar formato automáticamente a los elementos nuevos agregados al final de una lista para que coincida con el formato del resto de la lista. Este comportamiento es el predeterminado.\n\nSi deshabilita esta configuración de directiva, Excel no dará formato automáticamente a los nuevos elementos agregados al final de una lista.",
@@ -4273,6 +4803,35 @@
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\excel\\options",
             "valueName": "extendlist"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Enableautomaticpercententry",
+            "displayName": "Habilitar la inserción automática de porcentajes",
+            "explainText": "Al habilitar esta directiva se selecciona la opción de usuario de Avanzadas (Opciones de edición) para \"Habilitar la inserción automática de porcentajes\".",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fdisableautopercent_99_1"
         },
         {
             "parentCategory": {
@@ -4302,6 +4861,122 @@
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\common\\general",
             "valueName": "pasteoptions"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_ShowInsertOptionsbuttons",
+            "displayName": "Mostrar botones de opciones de inserción",
+            "explainText": "Esta configuración de directiva establece la opción \"Mostrar botones de opciones de inserción\" ubicada en pestaña Archivo | Opciones | Avanzadas | Opciones de cortar, copiar y pegar.\n\nSi habilita o no establece esta configuración de directiva, Excel mostrará el botón de opciones de inserción después de insertar celdas, filas o columnas que contienen formato. Este es el comportamiento predeterminado.\n\nSi deshabilita esta configuración de directiva, Excel no mostrará los botones de opciones de inserción al insertar.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "enableinsertcellsooui_102_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ShowFormulabarinNormalView",
+            "displayName": "Mostrar barra de fórmulas en vista normal",
+            "explainText": "Al habilitar esta configuración se selecciona la opción de usuario de Avanzadas (Mostrar) para \"Mostrar barra de fórmulas\".",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "ffmlaf_1_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ShowFormulabarinFullView",
+            "displayName": "Mostrar barra de fórmulas en vista completa",
+            "explainText": "Activada: muestra la barra de fórmulas cuando se establece el comando Pantalla completa en el menú Vista. | Desactivada: no muestra la barra de fórmulas cuando se establece el comando Pantalla completa en el menú Ver.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "ffmlafull_68_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Functiontooltips",
+            "displayName": "Información sobre herramientas de funciones",
+            "explainText": "Al habilitar esta configuración se selecciona la opción de usuario de Avanzadas (Mostrar) para \"Mostrar información en pantalla de funciones\".",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fshowfuntips_101_1"
         },
         {
             "parentCategory": {
@@ -4918,7 +5593,7 @@
         },
         {
             "parentCategory": {
-                "ref": "L_IntelligentServices"
+                "ref": "L_PowerBI"
             },
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
@@ -4933,16 +5608,16 @@
                     "value": 0
                 }
             },
-            "name": "L_Insights",
-            "displayName": "Botón Quitar ideas de la cinta",
-            "explainText": "Esta configuración de directiva le permite impedir que los usuarios tengan acceso a Ideas en Excel, un servicio inteligente que proporciona sugerencias y análisis basados en sus datos. De forma predeterminada, aparece un botón para Ideas en el grupo \"Ideas\" de la pestaña \"Inicio\" en la cinta.\n\nSi habilita esta configuración de directiva, el botón para Ideas se quitará de la cinta y los usuarios no podrán agregar el botón a la cinta de forma manual. Los usuarios no podrán acceder a Ideas.\n\nSi deshabilita o no establece esta configuración de directiva, el botón para Ideas aparecerá en la cinta y los usuarios podrán acceder a Ideas.",
+            "name": "L_DisableFromPowerBIDatasetOrganizationName",
+            "displayName": "Deshabilitar la visualización del nombre de la organización en los botones para crear tablas dinámicas a partir de los conjuntos de datos de Power BI",
+            "explainText": "        Esta configuración de directiva impide que el nombre de la organización se muestre en los botones de la cinta de opciones de Excel que se usa para crear tablas dinámicas a partir de los conjuntos de datos de Power BI.  Si está disponible en Graph, el nombre de la organización se mostrará en la cinta de opciones de forma predeterminada.\n\n        Si habilita esta configuración de directiva, el nombre de la organización no se mostrará.\n\n        Si deshabilita o no establece esta configuración de directiva, se mostrará el nombre de la organización.\n\n        Nota: esta configuración de directiva solo se aplica a las versiones de la suscripción de Office, como las aplicaciones de Microsoft 365 para empresas.",
             "tags": [
-                "L_IntelligentServices",
+                "L_PowerBI",
                 "L_MicrosoftOfficeExcel"
             ],
             "application": "excel16",
-            "key": "software\\microsoft\\office\\16.0\\excel\\intelligent services",
-            "valueName": "insights"
+            "key": "software\\microsoft\\office\\16.0\\excel\\power bi",
+            "valueName": "disablefrompowerbidatasetorganizationname"
         }
     ]
 }

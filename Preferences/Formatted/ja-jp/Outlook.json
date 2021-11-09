@@ -1132,6 +1132,120 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "次のアイテム"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "現在のフォルダーに戻る"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "前のアイテム"
+                            }
+                        ],
+                        "valueName": "aftermove",
+                        "inputType": "dropdownList",
+                        "caption": "移動/削除後に開くアイテム:",
+                        "id": "L_aftermovingordeletinganopenitem0"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "closeorig",
+                        "inputType": "checkBox",
+                        "caption": "返信/転送時に元のメッセージを閉じる",
+                        "id": "L_Closeoriginalmessagewhenreplyorforward"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "savesent",
+                        "inputType": "checkBox",
+                        "caption": "送信済みアイテム フォルダーにメッセージのコピーを保存する",
+                        "id": "L_SavecopiesofmessagesinSentItemsfolder"
+                    },
+                    {
+                        "valueName": "autosavetime",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 99,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "次の時間 (分) ごとに未送信メッセージを自動保存する (0= 自動保存しない):",
+                        "id": "L_Autosaveunsenteveryxxminutes0NoAutoSave"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "autoformatplaintext",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\options\\mail",
+                        "inputType": "checkBox",
+                        "caption": "テキスト形式のメッセージを自動的にクリーンアップする",
+                        "id": "L_Automaticallycleanupplaintextmessages"
+                    }
+                ]
+            },
+            "name": "L_Messagehandling",
+            "displayName": "メッセージの取り扱い",
+            "explainText": "この設定では、電子メール メッセージの処理に関するさまざまなオプションを指定できます。",
+            "tags": [
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Emailoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -1295,7 +1409,7 @@
             },
             "name": "L_DisableMailTips",
             "displayName": "メールのヒントを無効にする",
-            "explainText": "このポリシー設定では、メールのヒントを表示するかどうかを指定します。\n\\t  \nこのポリシー設定を有効にした場合、メールのヒントは Outlook に表示されません。\\t\\t\\t\nこのポリシーを無効にするか、未構成にした場合、メールのヒントが Outlook に表示されます。",
+            "explainText": "このポリシー設定では、メールのヒントを表示するかどうかを指定します。\n\\t  \nこのポリシー設定を有効にした場合、メールのヒントは Outlook に表示されません。\n\\t\\t\\t\\t\\t\nこのポリシーを無効にするか、未構成にした場合、メールのヒントが Outlook に表示されます。",
             "tags": [
                 "L_Emailoptions",
                 "L_Preferences",
@@ -1549,6 +1663,53 @@
         },
         {
             "parentCategory": {
+                "ref": "L_DesktopAlert"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "corner",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 3,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "コーナー (0-3)",
+                        "id": "L_Corner03"
+                    },
+                    {
+                        "valueName": "xoffset",
+                        "minValueSpecified": false,
+                        "maxValueSpecified": false,
+                        "id": "L_XOffsetdefault44"
+                    },
+                    {
+                        "valueName": "yoffset",
+                        "minValueSpecified": false,
+                        "maxValueSpecified": false,
+                        "id": "L_YOffsetdefault42"
+                    }
+                ]
+            },
+            "name": "L_SpecifydefaultlocationofDesktopAlert",
+            "displayName": "デスクトップ通知の既定の場所を指定する",
+            "explainText": "デスクトップ通知の既定の位置を変更できます。ユーザーの画面の各部を表す数値を [コーナー] ボックスで選択します。数値は、0 = 左上、1 = 右上、2 = 左下、3 = 右下 (既定値) です。[X オフセット] ボックスには、指定したコーナーからの横方向の距離を表す数値を入力します (既定値は 44)。[Y オフセット] ボックスには、指定したコーナーからの縦方向の距離を表す数値を入力します (既定値は 42)。",
+            "tags": [
+                "L_DesktopAlert",
+                "L_AdvancedEmailoptions",
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\common\\desktopalerts"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_AdvancedEmailoptions"
             },
             "supportedOn": {
@@ -1613,6 +1774,194 @@
         },
         {
             "parentCategory": {
+                "ref": "L_AdvancedEmailoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "高"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "標準"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "低"
+                            }
+                        ],
+                        "valueName": "importance",
+                        "inputType": "dropdownList",
+                        "caption": "重要度:",
+                        "id": "L_Setimportance"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "標準"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "個人用"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "親展"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "社外秘"
+                            }
+                        ],
+                        "valueName": "sensitivity",
+                        "inputType": "dropdownList",
+                        "caption": "秘密度:",
+                        "id": "L_Setsensitivity"
+                    },
+                    {
+                        "valueName": "numdaysexpire",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 3652,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "メッセージの期限切れ日数の指定:",
+                        "id": "L_Messagesexpireafterdays"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowcommasinrecip",
+                        "inputType": "checkBox",
+                        "caption": "宛先の区切り文字にカンマも使用できる",
+                        "id": "L_Allowcommasasaddressseparator"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "autonamecheck",
+                        "inputType": "checkBox",
+                        "caption": "メッセージの送信前に宛先を確認する",
+                        "id": "L_Automaticnamechecking"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "deletewhenrespond",
+                        "inputType": "checkBox",
+                        "caption": "返信するとき、受信トレイの会議出席依頼を削除する",
+                        "id": "L_DeletemeetingrequestfromInboxwhenresponding"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "showautosug",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
+                        "inputType": "checkBox",
+                        "caption": "[宛先]、[ＣＣ]、[ＢＣＣ] フィールドを入力する時に名前の候補を表示する",
+                        "id": "L_SuggestnameswhilecompletingToCcandBccfields"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "adhocreviewbehavior",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\options\\mail",
+                        "inputType": "checkBox",
+                        "caption": "添付ファイルにプロパティを追加して、[校閲結果の返信] を有効にする",
+                        "id": "L_AddpropertiestoattachmentstoenableReplywithChanges"
+                    }
+                ]
+            },
+            "name": "L_Whensendingamessage",
+            "displayName": "メッセージを送信するとき",
+            "explainText": "対応する UI オプションの値を設定します。",
+            "tags": [
+                "L_AdvancedEmailoptions",
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Trackingoptions"
             },
             "supportedOn": {
@@ -1641,6 +1990,143 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\flagging",
             "valueName": "disablesenderflags"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Emailoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "元のメッセージを残さない"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "元のメッセージを添付する"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "元のメッセージを残す"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "元のメッセージを残し、インデントを設定する"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1000
+                                    }
+                                },
+                                "displayName": "元のメッセージの行頭にインデント記号を挿入する"
+                            }
+                        ],
+                        "valueName": "replystyle",
+                        "inputType": "dropdownList",
+                        "caption": "メッセージに返信するとき:",
+                        "id": "L_Whenreplyingtoamessage"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "元のメッセージを添付する"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "元のメッセージを残す"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "元のメッセージを残し、インデントを設定する"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1000
+                                    }
+                                },
+                                "displayName": "元のメッセージの行頭にインデント記号を挿入する"
+                            }
+                        ],
+                        "valueName": "forwardstyle",
+                        "inputType": "dropdownList",
+                        "caption": "メッセージを転送するとき:",
+                        "id": "L_Whenforwardingamessage"
+                    },
+                    {
+                        "valueName": "prefixtext",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "インデント記号:",
+                        "id": "L_Prefixeachlinewith"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "markcomments",
+                        "key": "software\\microsoft\\office\\16.0\\common\\mailsettings",
+                        "inputType": "checkBox",
+                        "caption": "ユーザーのコメントをマークできるようにする",
+                        "id": "L_Allowuserscommentstobemarked"
+                    }
+                ]
+            },
+            "name": "L_Onrepliesandforwards",
+            "displayName": "返信/転送時のスタイル",
+            "explainText": "対応する UI オプションの値を設定します。",
+            "tags": [
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
         },
         {
             "parentCategory": {
@@ -2615,6 +3101,829 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 480
+                                    }
+                                },
+                                "displayName": "午前 8:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "午前 12:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 30
+                                    }
+                                },
+                                "displayName": "午前 12:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 60
+                                    }
+                                },
+                                "displayName": "午前 1:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 90
+                                    }
+                                },
+                                "displayName": "午前 1:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 120
+                                    }
+                                },
+                                "displayName": "午前 2:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 150
+                                    }
+                                },
+                                "displayName": "午前 2:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 180
+                                    }
+                                },
+                                "displayName": "午前 3:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 210
+                                    }
+                                },
+                                "displayName": "午前 3:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 240
+                                    }
+                                },
+                                "displayName": "午前 4:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 270
+                                    }
+                                },
+                                "displayName": "午前 4:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 300
+                                    }
+                                },
+                                "displayName": "午前 5:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 330
+                                    }
+                                },
+                                "displayName": "午前 5:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 360
+                                    }
+                                },
+                                "displayName": "午前 6:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 390
+                                    }
+                                },
+                                "displayName": "午前 6:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 420
+                                    }
+                                },
+                                "displayName": "午前 7:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 450
+                                    }
+                                },
+                                "displayName": "午前 7:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 480
+                                    }
+                                },
+                                "displayName": "午前 8:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 510
+                                    }
+                                },
+                                "displayName": "午前 8:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 540
+                                    }
+                                },
+                                "displayName": "午前 9:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 570
+                                    }
+                                },
+                                "displayName": "午前 9:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 600
+                                    }
+                                },
+                                "displayName": "午前 10:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 630
+                                    }
+                                },
+                                "displayName": "午前 10:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 660
+                                    }
+                                },
+                                "displayName": "午前 11:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 690
+                                    }
+                                },
+                                "displayName": "午前 11:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 720
+                                    }
+                                },
+                                "displayName": "午後 12:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 750
+                                    }
+                                },
+                                "displayName": "午後 12:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 780
+                                    }
+                                },
+                                "displayName": "午後 1:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 810
+                                    }
+                                },
+                                "displayName": "午後 1:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 840
+                                    }
+                                },
+                                "displayName": "午後 2:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 870
+                                    }
+                                },
+                                "displayName": "午後 2:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 900
+                                    }
+                                },
+                                "displayName": "午後 3:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 930
+                                    }
+                                },
+                                "displayName": "午後 3:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 960
+                                    }
+                                },
+                                "displayName": "午後 4:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 990
+                                    }
+                                },
+                                "displayName": "午後 4:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1020
+                                    }
+                                },
+                                "displayName": "午後 5:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1050
+                                    }
+                                },
+                                "displayName": "午後 5:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1080
+                                    }
+                                },
+                                "displayName": "午後 6:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1110
+                                    }
+                                },
+                                "displayName": "午後 6:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1140
+                                    }
+                                },
+                                "displayName": "午後 7:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1170
+                                    }
+                                },
+                                "displayName": "午後 7:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1200
+                                    }
+                                },
+                                "displayName": "午後 8:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1230
+                                    }
+                                },
+                                "displayName": "午後 8:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1260
+                                    }
+                                },
+                                "displayName": "午後 9:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1290
+                                    }
+                                },
+                                "displayName": "午後 9:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1320
+                                    }
+                                },
+                                "displayName": "午後 10:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1350
+                                    }
+                                },
+                                "displayName": "午後 10:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1380
+                                    }
+                                },
+                                "displayName": "午後 11:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1410
+                                    }
+                                },
+                                "displayName": "午後 11:30"
+                            }
+                        ],
+                        "valueName": "caldefstart",
+                        "inputType": "dropdownList",
+                        "caption": "開始時刻:",
+                        "id": "L_Starttime"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1020
+                                    }
+                                },
+                                "displayName": "午後 5:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "午前 12:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 30
+                                    }
+                                },
+                                "displayName": "午前 12:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 60
+                                    }
+                                },
+                                "displayName": "午前 1:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 90
+                                    }
+                                },
+                                "displayName": "午前 1:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 120
+                                    }
+                                },
+                                "displayName": "午前 2:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 150
+                                    }
+                                },
+                                "displayName": "午前 2:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 180
+                                    }
+                                },
+                                "displayName": "午前 3:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 210
+                                    }
+                                },
+                                "displayName": "午前 3:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 240
+                                    }
+                                },
+                                "displayName": "午前 4:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 270
+                                    }
+                                },
+                                "displayName": "午前 4:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 300
+                                    }
+                                },
+                                "displayName": "午前 5:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 330
+                                    }
+                                },
+                                "displayName": "午前 5:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 360
+                                    }
+                                },
+                                "displayName": "午前 6:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 390
+                                    }
+                                },
+                                "displayName": "午前 6:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 420
+                                    }
+                                },
+                                "displayName": "午前 7:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 450
+                                    }
+                                },
+                                "displayName": "午前 7:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 480
+                                    }
+                                },
+                                "displayName": "午前 8:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 510
+                                    }
+                                },
+                                "displayName": "午前 8:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 540
+                                    }
+                                },
+                                "displayName": "午前 9:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 570
+                                    }
+                                },
+                                "displayName": "午前 9:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 600
+                                    }
+                                },
+                                "displayName": "午前 10:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 630
+                                    }
+                                },
+                                "displayName": "午前 10:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 660
+                                    }
+                                },
+                                "displayName": "午前 11:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 690
+                                    }
+                                },
+                                "displayName": "午前 11:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 720
+                                    }
+                                },
+                                "displayName": "午後 12:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 750
+                                    }
+                                },
+                                "displayName": "午後 12:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 780
+                                    }
+                                },
+                                "displayName": "午後 1:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 810
+                                    }
+                                },
+                                "displayName": "午後 1:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 840
+                                    }
+                                },
+                                "displayName": "午後 2:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 870
+                                    }
+                                },
+                                "displayName": "午後 2:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 900
+                                    }
+                                },
+                                "displayName": "午後 3:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 930
+                                    }
+                                },
+                                "displayName": "午後 3:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 960
+                                    }
+                                },
+                                "displayName": "午後 4:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 990
+                                    }
+                                },
+                                "displayName": "午後 4:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1020
+                                    }
+                                },
+                                "displayName": "午後 5:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1050
+                                    }
+                                },
+                                "displayName": "午後 5:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1080
+                                    }
+                                },
+                                "displayName": "午後 6:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1110
+                                    }
+                                },
+                                "displayName": "午後 6:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1140
+                                    }
+                                },
+                                "displayName": "午後 7:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1170
+                                    }
+                                },
+                                "displayName": "午後 7:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1200
+                                    }
+                                },
+                                "displayName": "午後 8:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1230
+                                    }
+                                },
+                                "displayName": "午後 8:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1260
+                                    }
+                                },
+                                "displayName": "午後 9:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1290
+                                    }
+                                },
+                                "displayName": "午後 9:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1320
+                                    }
+                                },
+                                "displayName": "午後 10:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1350
+                                    }
+                                },
+                                "displayName": "午後 10:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1380
+                                    }
+                                },
+                                "displayName": "午後 11:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1410
+                                    }
+                                },
+                                "displayName": "午後 11:30"
+                            }
+                        ],
+                        "valueName": "caldefend",
+                        "inputType": "dropdownList",
+                        "caption": "終了時刻:",
+                        "id": "L_EndTime"
+                    }
+                ]
+            },
+            "name": "L_Workinghours",
+            "displayName": "稼働時間",
+            "explainText": "対応する UI オプションの値を設定します。",
+            "tags": [
+                "L_Calendaroptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Calendaroptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -2880,6 +4189,65 @@
         },
         {
             "parentCategory": {
+                "ref": "L_FreeBusyOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "fbpublishrange",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 12,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "空き時間情報を公開する月数:",
+                        "id": "L_MonthsofFreeBusyinformationpublished"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "lock fb range",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar\\internet free/busy",
+                        "inputType": "checkBox",
+                        "caption": "空き時間情報を公開する月数をユーザーが変更できないようにする",
+                        "id": "L_PreventusersfromchangingMonthsofFreeBusyinformation1"
+                    },
+                    {
+                        "valueName": "fbupdatesecs",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 86400,
+                        "maxValueSpecified": true,
+                        "id": "L_FreeBusyupdatedontheservereveryxxxseconds"
+                    }
+                ]
+            },
+            "name": "L_options9",
+            "displayName": "空き時間情報オプション",
+            "explainText": "[公開する期間 [ ] か月先まで] オプションの値を設定します。",
+            "tags": [
+                "L_FreeBusyOptions",
+                "L_Calendaroptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_RecurrenceOptions"
             },
             "supportedOn": {
@@ -2897,7 +4265,7 @@
             },
             "name": "L_DisableNoEndDate",
             "displayName": "定期的なアイテムについて [終了日なし] オプションを無効にする",
-            "explainText": "このポリシー設定では、予定、会議、タスクの繰り返し期間について [終了日なし] オプションを無効にすることができます。\n\nこのポリシーを有効にすると、[終了日なし] オプションが無効になり、[反復回数] の繰り返し設定がオンにされ、既定で 10 回に設定されます。この既定の設定は [定期的な会議や予定の合計日数を指定する] ポリシー設定を構成することで変更できます。\n\nこのポリシー設定を無効にするか、構成しない場合は、[終了日なし] オプションが、有効になると同時に、定期的な会議、予約、タスクの既定の設定となります。\n",
+            "explainText": "このポリシー設定では、予定、会議、タスクの繰り返し期間について [終了日なし] オプションを無効にすることができます。\n\nこのポリシーを有効にすると、[終了日なし] オプションが無効になり、[反復回数] の繰り返し設定がオンにされ、既定で 10 回に設定されます。この既定の設定は [定期的な会議や予定の合計日数を指定する] ポリシー設定を構成することで変更できます。\n\nこのポリシー設定を無効にするか、構成しない場合は、[終了日なし] オプションが、有効になると同時に、定期的な会議、予約、タスクの既定の設定となります。",
             "tags": [
                 "L_RecurrenceOptions",
                 "L_Calendaroptions",
@@ -2942,6 +4310,36 @@
             ],
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Contactoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DetermineOrderOfSourcesForPhotos",
+            "displayName": "写真の取得先の検索順序を指定する",
+            "explainText": "このポリシー設定では、Outlook で表示される写真の取得先の検索順序を指定します。  \n\nこのポリシー設定を有効にした場合、Outlook では、最初に OAB/AD からユーザーの写真を検索します。OAB/AD に写真がなく、連絡先の写真がある場合は、連絡先の写真が表示されます。\n\nこのポリシー設定を無効にするか、または未構成にした場合、Outlook では、最初に連絡先アドレス帳からユーザーの写真を検索します。連絡先アドレス帳に写真がない場合、OAB/AD からユーザーの写真を検索します。",
+            "tags": [
+                "L_Contactoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook",
+            "valueName": "preferadphotos"
         },
         {
             "parentCategory": {
@@ -3000,6 +4398,193 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
             "valueName": "showcontactfieldobsolete"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Contactoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "E"
+                                },
+                                "displayName": "名 (ミドルネーム) 姓"
+                            },
+                            {
+                                "value": {
+                                    "string": "H"
+                                },
+                                "displayName": "姓 名"
+                            },
+                            {
+                                "value": {
+                                    "string": "S"
+                                },
+                                "displayName": "名 姓 1 姓 2"
+                            }
+                        ],
+                        "valueName": "nameparserstyle",
+                        "inputType": "dropdownList",
+                        "caption": "氏名の表示方法:",
+                        "id": "L_DefaultFullNameorder"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32791
+                                    }
+                                },
+                                "displayName": "姓 名"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32823
+                                    }
+                                },
+                                "displayName": "名 姓"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 14870
+                                    }
+                                },
+                                "displayName": "勤務先"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32793
+                                    }
+                                },
+                                "displayName": "姓, 名 (勤務先)"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32792
+                                    }
+                                },
+                                "displayName": "勤務先 (姓, 名)"
+                            }
+                        ],
+                        "valueName": "fileasorder",
+                        "inputType": "dropdownList",
+                        "caption": "表題の表示方法:",
+                        "id": "L_DefaultFileAsorder"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "confirmduplicates",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\contact",
+                        "inputType": "checkBox",
+                        "caption": "連絡先の重複をチェックする",
+                        "id": "L_Checkforduplicatecontacts"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "indextabson",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\contact",
+                        "inputType": "checkBox",
+                        "caption": "別の連絡先インデックスを表示する",
+                        "id": "L_ShowanadditionalContactsIndex"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "アラビア語"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "キリル言語"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 15
+                                    }
+                                },
+                                "displayName": "ギリシャ語"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 16
+                                    }
+                                },
+                                "displayName": "ヘブライ語"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 28
+                                    }
+                                },
+                                "displayName": "タイ語"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 30
+                                    }
+                                },
+                                "displayName": "ベトナム語"
+                            }
+                        ],
+                        "valueName": "indextabsscript",
+                        "inputType": "dropdownList",
+                        "caption": "別の連絡先インデックス:",
+                        "id": "L_AdditionalContactsIndex"
+                    }
+                ]
+            },
+            "name": "L_Selectthedefaultsettingforhowtofilenewcontacts",
+            "displayName": "表題の既定の表示方法を選択する",
+            "explainText": "対応する UI オプションの値を設定します。",
+            "tags": [
+                "L_Contactoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\contact"
         },
         {
             "parentCategory": {
@@ -3400,6 +4985,34 @@
         },
         {
             "parentCategory": {
+                "ref": "L_OutlookOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_WindowsVista"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_InternetAndNetworkPathsIntoHyperlinks",
+            "displayName": "インターネットとネットワークのアドレスをハイパーリンクに変更する",
+            "explainText": "このポリシー設定は、Outlook でインターネットやネットワークのパスを表すテキストをハイパーリンクに自動変更するかどうかを指定します。.  このオプションは、このオプションは [インターネットとネットワークのアドレスをハイパーリンクに変更する] を選択することでも構成できます。これは、Outlook のユーザー インターフェイス (UI) で、[ファイル]、[オプション]、[メール]、[編集オプション]、[文章校正]、[オートコレクトのオプション]、[オートフォーマット] タブの順に選択すると見つかります。\n\n\nこのポリシー設定を有効にするか、構成しないと、インターネットやネットワークのパスを表す Outlook のテキストがハイパーリンクに自動的に変更されます。これは Outlook の既定の動作です。\n\nこのポリシー設定を無効にすると、インターネットやネットワークのパスを表す Outlook のテキストはハイパーリンクに自動的に変更されません。",
+            "tags": [
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\autoformat",
+            "valueName": "pgrfafo_25_1"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_ComposeMessages"
             },
             "supportedOn": {
@@ -3458,6 +5071,55 @@
             "name": "L_OutlookRichTextoptions",
             "displayName": "Outlook リッチ テキスト形式オプション",
             "explainText": "このポリシー設定では、Outlook でリッチ テキスト形式 (RTF) のメッセージをインターネット メールの受信者に送信する方法を指定します。\n\nこのポリシー設定を有効にした場合、宛先がインターネット メールの受信者の RTF メッセージを処理する方法として以下を選択できます。\n* [テキスト形式に変換] - メッセージが Outlook によって既定の文字セットのテキスト形式に変換されます。メッセージ形式はすべて失われます。\n\nこのポリシー設定を無効にするか、未構成にした場合、メッセージ形式が維持され、添付ファイルが受信されるように、インターネット経由で送信される RTF 形式のメッセージが Outlook によって HTML 形式に自動的に変換されます。",
+            "tags": [
+                "L_InternetFormatting",
+                "L_MailFormat",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\mail"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_InternetFormatting"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "plainwraplen",
+                        "minValue": 30,
+                        "minValueSpecified": true,
+                        "maxValue": 132,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "次の文字数で自動的に文字列を折り返す。",
+                        "id": "L_Automaticallywraptextatxcharacters"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "message plain format mime",
+                        "inputType": "checkBox",
+                        "caption": "添付ファイルを UUENCODE 形式でエンコードする",
+                        "id": "L_EncodeattachmentsinUUENCODEformatwhensending1"
+                    }
+                ]
+            },
+            "name": "L_Plaintextoptions",
+            "displayName": "テキスト形式オプション",
+            "explainText": "このポリシー設定では、テキスト形式のメッセージを Outlook から転送するときの形式を指定します。\n\nこのポリシー設定を有効にした場合、インターネット電子メール メッセージのテキストは自動的に改行され、添付ファイルは UUENCODE 形式でエンコードされます。\n\nこのポリシー設定を無効にした場合、Outlook では、Outlook のテキスト形式メッセージの添付ファイルのエンコードに標準の MIME 形式が使用されます。ユーザーはこの構成を変更できません。\n\nこのポリシー設定を未構成にした場合、このポリシーを [無効] に設定した場合と同じ動作になりますが、ユーザーは必要に応じて、[ツール] メニューの [オプション] をクリックし、[メール形式] タブ、[インターネット形式] の順にクリックし、[テキスト形式オプション] の値を変更することによって、Outlook のテキスト形式オプションを変更できます。",
             "tags": [
                 "L_InternetFormatting",
                 "L_MailFormat",
@@ -4079,6 +5741,35 @@
                     "value": 0
                 }
             },
+            "name": "L_HidePhotoLink",
+            "displayName": "写真のリンクを表示しない",
+            "explainText": "このポリシー設定では、ユーザーの写真をアップロードできるユーザーの個人用サイトが検出された場合、そのサイトへのリンクを構成できます。このリンクは、[ファイル] タブにあります。 \n\nこのポリシー設定を有効にした場合、リンクは表示されません。\n\nこのポリシー設定を無効にするか、未構成にした場合、リンクは表示されます。",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options",
+            "valueName": "hidephotolink"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_AllowSelectionFloaties",
             "displayName": "選択時にミニ ツール バーを表示する",
             "explainText": "このポリシー設定を無効にすると、テキストの選択時にミニ ツール バーが表示されません。既定では選択時にミニ ツール バーが使用可能になりますが、[編集オプション] ダイアログ ボックスで表示されるかどうかを変更することができます。",
@@ -4620,6 +6311,84 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
             "valueName": "archiveignorelastmodifiedtime"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Righttoleft"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "左から右"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "右から左"
+                            }
+                        ],
+                        "valueName": "calendar direction",
+                        "inputType": "dropdownList",
+                        "caption": "文字列の方向:",
+                        "id": "L_Setlayoutdirection"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "コンテキストベース"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "左から右"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "右から左"
+                            }
+                        ],
+                        "valueName": "text direction",
+                        "inputType": "dropdownList",
+                        "caption": "編集する文字列の方向:",
+                        "id": "L_Setglobaltextdirection"
+                    }
+                ]
+            },
+            "name": "L_LayoutOptions",
+            "displayName": "レイアウト オプション",
+            "explainText": "対応する UI オプションの値を設定します。",
+            "tags": [
+                "L_Righttoleft",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
         },
         {
             "parentCategory": {
@@ -6383,6 +8152,36 @@
                     "value": 0
                 }
             },
+            "name": "L_ConfigureCachedExchangeMode",
+            "displayName": "新規および既存の Outlook プロファイルで Exchange キャッシュ モードを使用する",
+            "explainText": "既定では、ユーザーは Exchange キャッシュ モードを構成するか、オンライン モードを使用するかを選択できます。この設定を有効にすると、新規および既存の Outlook プロファイルが Exchange キャッシュ モードを使用するように構成されます。この設定を無効にすると、新規および既存の Outlook プロファイルではオンライン モードを使用します。",
+            "tags": [
+                "L_CachedExchangeMode",
+                "L_Exchangesettings",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\cached mode",
+            "valueName": "enable"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_CachedExchangeMode"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_InCachedExchangemakeSendReceiveF9nulloperation",
             "displayName": "Exchange キャッシュ モードではユーザーが [送受信] をクリックするか F9 キーを押したときに同期を行わない",
             "explainText": "既定では、ユーザーが Exchange キャッシュ モードのアカウントの [送受信] をクリックするか F9 キーを押すと、Outlook と Exchange サーバーが同期されます。この設定を有効にすると、1 つのフォルダーが同期中でない限り、[送受信] をクリックするか F9 キーを押しても Exchange サーバーと同期されません。設定後も、ユーザーは Shift キーを押しながら F9 キーを押すことで、現在のフォルダーを同期できます。",
@@ -6453,6 +8252,39 @@
             "name": "L_Entersecondstowaittodownloadchangesfromserver",
             "displayName": "サーバーからの変更のダウンロードを開始するまでの待機秒数を入力する",
             "explainText": "Exchange サーバーからの変更のダウンロードを開始するまでの待機時間 (秒) を指定します。",
+            "tags": [
+                "L_CachedExchangeMode",
+                "L_Exchangesettings",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\cached mode"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_CachedExchangeMode"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "maximum",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 86400,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "同期を開始するまでの待機秒数を入力してください (既定: 60 秒)",
+                        "id": "L_EntersecondstowaitbeforesyncDefault60sec"
+                    }
+                ]
+            },
+            "name": "L_Entermaximumsecondstowaittosyncchanges",
+            "displayName": "変更の同期を開始するまでの最長待機秒数を入力する",
+            "explainText": "Exchange サーバーとの変更の同期を開始するまでの最長待機時間 (秒) を指定します。",
             "tags": [
                 "L_CachedExchangeMode",
                 "L_Exchangesettings",
@@ -7032,6 +8864,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_AccountSettingsEmail"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_PreventSavingCredentialsForBasicAuthenticationPolicy",
+            "displayName": "基本認証ポリシーの資格情報が保存されないようにする",
+            "explainText": "このポリシー設定では、Outlook が基本認証を使用してユーザーの資格情報を保存しないようにすることができます。\n\nこのポリシー設定を有効にした場合、Outlook は、基本認証を使用してユーザーの資格情報を保存しません。\n\nこのポリシー設定を無効にするか、未構成にした場合、サーバーに対して基本認証を使用しているときでもユーザーは資格情報を保存できます。これらの資格情報は汎用として保存され、マシン上でそのユーザーの権限で実行されている任意のプロセスから取得することができます。",
+            "tags": [
+                "L_AccountSettingsEmail",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\rpc",
+            "valueName": "disablebasicauthsavedcreds"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Exchangesettings"
             },
             "supportedOn": {
@@ -7464,37 +9325,6 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "disablecrossaccountcopy",
-                        "requiredSpecified": false,
-                        "expandableSpecified": false,
-                        "maxLength": 100,
-                        "maxLengthSpecified": true,
-                        "inputType": "textBox",
-                        "id": "L_PreventCopyingOrMovingItemsBetweenAccountsID"
-                    }
-                ]
-            },
-            "name": "L_PreventCopyingOrMovingItemsBetweenAccounts",
-            "displayName": "アカウント間でアイテムをコピーまたは移動できないようにする",
-            "explainText": "このポリシー設定では、他のアカウントまたは PST との間でアイテムをコピーまたは移動できないようにすることができます。\n\nこのポリシー設定を有効にした場合、他のアカウントまたは PST との間でアイテムをコピーまたは移動することができなくなります。次のいずれかの情報を入力します。\n\n- \"Contoso.com\": 指定したドメインに対応するアカウントからのコピーまたは移動を禁止します\n- \"*\": すべてのアカウントおよび PST からのコピーまたは移動を禁止します\n- \"SharePoint\": SharePoint PST からのコピーまたは移動を禁止します\n\nこのポリシー設定を無効にするか、未構成にした場合、アカウントまたは PST 間でアイテムをコピーまたは移動できます。",
-            "tags": [
-                "L_Exchangesettings",
-                "L_ToolsAccounts",
-                "L_MicrosoftOfficeOutlook"
-            ],
-            "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\outlook"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Exchangesettings"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -7507,7 +9337,7 @@
             },
             "name": "L_AutomaticallyConfigureProfileBasedOnActive",
             "displayName": "Active Directory のプライマリ SMTP アドレスに基づいてプロファイルを自動的に構成する",
-            "explainText": "Active Directory のプライマリ SMTP アドレスに基づいて最初のプロファイルのみを自動的に構成します\n\nこのポリシー設定では、Active Directory 環境内のドメインに参加しているユーザーが Outlook でアカウントを設定するときに使用するプライマリ SMTP アドレスを変更できるかどうかを制御します。\n\nこのポリシー設定を有効にすると、ユーザーは新しいアカウントのウィザードを使用せずに、プロファイル名を入力して新しいプロファイルを作成できます。プロファイルの作成中には、ユーザー インターフェイスは表示されません。\n\nこのキーは、最初のプロファイルが正常に作成された後は無視されます。",
+            "explainText": "このポリシー設定では、新しいプロファイルを作成するときに、ユーザーの Active Directory プライマリ SMTP アドレスを自動的に使用するかどうかを指定します。\n\nこのポリシー設定を有効にすると、ユーザーが新しいプロファイルを作成するときに、そのユーザーの Active Directory プライマリ SMTP アドレスがプロファイルに使用されます。ユーザーはプロファイル名のみを入力できます。プロファイルの作成時、特定のプロファイル設定を構成するためのウィザードは表示されません。\n\n注: 最初の新しいプロファイルだけに Active Directory プライマリ SMTP アドレスを使用し、他のプロファイルを作成するときにはユーザーが別の SMTP アドレスを指定できるようにする場合は、代わりに \"Active Directory のプライマリ SMTP アドレスに基づいてプロファイルを自動的に構成する (1 回限り)\" ポリシー設定を使用してください。\n\nこのポリシー設定を無効にするか、構成しない場合、ユーザーが新しいプロファイルを作成すると、特定のプロファイル設定を構成するために使用するウィザードが表示され、プロファイルの作成時に任意の SMTP アドレスを指定できます。",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -7535,8 +9365,8 @@
                 }
             },
             "name": "L_AutomaticallyConfigureProfileBasedOnActiveOnce",
-            "displayName": "Active Directory のプライマリ SMTP アドレスに基づいて最初のプロファイルのみを自動的に構成する",
-            "explainText": "Active Directory のプライマリ SMTP アドレスに基づいてプロファイルを自動的に構成する\n\nこのポリシー設定では、Active Directory 環境内のドメインに参加しているユーザーが、Outlook のアカウントを設定するときに使用するプライマリ SMTP アドレスを変更できるかどうかを指定します。\n\nこのポリシー設定を有効にした場合、ユーザーは、プロファイル名を入力して新しいプロファイルを作成できます。プロファイルは、新しいアカウントのウィザードを使わずに作成されます。プロファイルの作成時には、ユーザー インターフェイスは表示されません。\n\nこのキーは、最初のプロファイルが正常に作成された後は無視されます。",
+            "displayName": "Active Directory のプライマリ SMTP アドレスに基づいてプロファイルを自動的に構成する (1 回限り)",
+            "explainText": "このポリシー設定は、ユーザーの Active Directory プライマリ SMTP アドレスを使用して最初のプロファイルが自動的に作成された後に、ユーザーが追加のプロファイルを作成し、別の SMTP アドレスを指定できるかどうかを制御します。\n\nこのポリシー設定を有効にすると、ユーザーが新しいプロファイルを初めて作成するときに、ユーザーの Active Directory プライマリ SMTP アドレスがプロファイルに使用されます。ユーザーはプロファイル名のみを入力できます。プロファイルの作成時、特定のプロファイル設定を構成するためのウィザードは表示されません。\n\n最初のプロファイルが自動的に作成された後は、ユーザーは手動で追加のプロファイルを作成できます。特定のプロファイル設定を構成するためのウィザードがユーザーに表示され、プロファイルが作成されるたびにユーザーが任意の SMTP アドレスを指定できます。\n\n注: 新しいプロファイルを作成するときに、ユーザーの Active Directory プライマリ SMTP アドレスを常に使用する場合は、代わりに “Active Directory のプライマリ SMTP アドレスに基づいてプロファイルを自動的に構成する” ポリシー設定を使用してください。そのポリシー設定が有効になっている場合、このポリシー設定よりも優先されます。\n\nこのポリシー設定を無効にするか、構成しない場合、ユーザーが新しいプロファイルを作成すると、特定のプロファイル設定を構成するために使用するウィザードが表示され、プロファイルの作成時に任意の SMTP アドレスを指定できます。",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -7605,6 +9435,35 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\folders",
             "valueName": "disableeditpermissions"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Predefined"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableEditDefaultUserPermissions",
+            "displayName": "メール フォルダと予定表で既定、匿名、または自分の組織に割り当てることができるアクセス許可を制限する",
+            "explainText": "このポリシー設定では、メール フォルダーと予定表の既定、匿名、または自分の組織に割り当てることができるアクセス許可を制限できます。\n\nこのポリシー設定を有効にすると、ユーザーは次のアクセス許可のみを既定、匿名、または自分の組織に割り当てることができます。\n\n- メールフォルダーにない場合\n- 予定表に空き時間情報がない場合、もしくは基本の空き時間情報しかない場合、\n\nユーザーは、既定、匿名、または自分の組織に他のアクセス許可を割り当てることはできません。メール フォルダーと予定表の他のユーザーには、まだすべてのアクセス許可が割り当てることができます。\n\nこのポリシー設定を無効にするか、構成しない場合、ユーザーはメール フォルダーと予定表の既定、匿名、または自分の組織に対してどんなアクセス許可も割り当てることができます。",
+            "tags": [
+                "L_Predefined",
+                "L_Disableitemsinuserinterface",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\folders",
+            "valueName": "disableeditdefaultuserpermissions"
         },
         {
             "parentCategory": {
@@ -9302,6 +11161,59 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "MAPI プロバイダーがサポートしない場合"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "すべての MAPI プロバイダーがサポートする場合"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "使用しない"
+                            }
+                        ],
+                        "valueName": "fastshutdownbehavior",
+                        "inputType": "dropdownList",
+                        "id": "L_ConfigureFastShutdownBehaviorDropID"
+                    }
+                ]
+            },
+            "name": "L_ConfigureFastShutdownBehavior",
+            "displayName": "高速シャットダウンの動作を構成する",
+            "explainText": "このポリシー設定は、Outlook の \"高速シャットダウン\" の動作を指定します。\n\nこのポリシー設定を有効にした場合、次のいずれかのオプションを選択できます。\n\n- MAPI プロバイダーがサポートしない場合: MAPI プロバイダーが明示的にサポートしない場合を除き、常に高速シャットダウンが使用されます。\n- すべての MAPI プロバイダーがサポートする場合: すべての MAPI プロバイダーがサポートしている場合のみ、高速シャットダウンが使用されます。\n- 使用しない: 高速シャットダウンを使用しません。\n\nこのポリシー設定を無効にするか、未構成にした場合、[MAPI プロバイダーがサポートしない場合] オプションを選択した場合と同じになります。",
+            "tags": [
+                "L_Shutdown",
+                "L_Miscellaneous",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\shutdown"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Shutdown"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -10368,48 +12280,6 @@
         },
         {
             "parentCategory": {
-                "ref": "L_OutlookSocialConnector"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "trustedproviderslist",
-                        "required": true,
-                        "requiredSpecified": true,
-                        "expandableSpecified": false,
-                        "maxLengthSpecified": false,
-                        "inputType": "textBox",
-                        "caption": "セミコロンで ProgIDs を区切る",
-                        "id": "L_SpecifyListOfSocialNetworkProvidersToLoadID"
-                    }
-                ]
-            },
-            "name": "L_SpecifyListOfSocialNetworkProvidersToLoad",
-            "displayName": "読み込むソーシャル ネットワーク プロバイダーの一覧を指定する",
-            "explainText": "このポリシー設定では、Outlook Social Connector で読み込むソーシャル ネットワーク プロバイダーの一覧を指定します。\n\nこのポリシー設定を有効にした場合、Outlook Social Connector で読み込むソーシャル ネットワーク プロバイダーの progID を入力できます。この一覧の区切り文字にはセミコロンを使用します。このポリシー設定を有効にした場合、この一覧に含まれるソーシャル ネットワークのみが Outlook Social Connector で読み込まれる点に注意してください。その他のソーシャル ネットワーク プロバイダーは読み込まれません。\n\nこのポリシー設定を無効にするか、未構成にした場合、Outlook Social Connector はユーザーが指定した任意のプロバイダーを読み込めるようになります。",
-            "tags": [
-                "L_OutlookSocialConnector",
-                "L_MicrosoftOfficeOutlook"
-            ],
-            "application": "outlk16",
-            "key": "software\\microsoft\\office\\outlook\\socialconnector",
-            "valueName": "providersecuritymode"
-        },
-        {
-            "parentCategory": {
                 "ref": "L_Exchangesettings"
             },
             "supportedOn": {
@@ -10467,8 +12337,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "activationalertthreshold"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10500,8 +12369,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "activationretrylimit"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10533,8 +12401,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "alertinterval"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10566,8 +12433,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "memoryalertthreshold"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10599,8 +12465,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "restartmanagerretrylimit"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10710,7 +12575,7 @@
             },
             "name": "L_DisablePreviewPlace",
             "displayName": "場所のプレビューを無効にします。",
-            "explainText": "このポリシー設定では、場所のプレビュー機能を許可するかどうかを指定します。この設定を有効にすると、場所のプレビュー機能を使用できなくなります。\n        ユーザーはプレビュー、および今後の Outlook の変更内容に関するフィードバックを送信できなくなります。\n\\t注: このポリシー設定は、Office 365 ProPlus などのサブスクリプション版の Office にのみ適用されます。",
+            "explainText": "        このポリシー設定では、場所のプレビュー機能を許可するかどうかを指定します。この設定を有効にすると、場所のプレビュー機能を使用できなくなります。\n        ユーザーはプレビュー、および今後の Outlook の変更内容に関するフィードバックを送信できなくなります。\n\\t注: このポリシー設定は、Microsoft 365 Apps for enterprise などのサブスクリプション版の Office にのみ適用されます。\n      ",
             "tags": [
                 "L_Other",
                 "L_OutlookOptions",
@@ -10739,7 +12604,7 @@
             },
             "name": "L_DisableOnlineModeAuthDiagnostics",
             "displayName": "診断情報の取得のオンライン モードを無効にします。",
-            "explainText": " このポリシー設定では、診断情報の取得のオンライン モードを許可するかどうかを指定します。この設定を有効にすると、診断情報の取得機能によって認証と診断のログが Microsoft のサービスに送信されることはなくなります。\n         結果として、ユーザーはオフライン モードになります。すべてのログは収集されてユーザーのダウンロード フォルダーに保存されます。このユーザーは、サポートに連絡し、Microsoft にログを送信するかどうかを決定できます。",
+            "explainText": "         このポリシー設定では、診断情報の取得のオンライン モードを許可するかどうかを指定します。この設定を有効にすると、診断情報の取得機能によって認証と診断のログが Microsoft のサービスに送信されることはなくなります。\n         結果として、ユーザーはオフライン モードになります。すべてのログは収集されてユーザーのダウンロード フォルダーに保存されます。このユーザーは、サポートに連絡し、Microsoft にログを送信するかどうかを決定できます。\n      ",
             "tags": [
                 "L_Other",
                 "L_OutlookOptions",
@@ -10768,7 +12633,7 @@
             },
             "name": "L_EnableEndEarly",
             "displayName": "予定と会議を早く終了する",
-            "explainText": "このポリシー設定では、ユーザーが予定または会議を作成したときに、予定と会議の終了時刻を指定の時間 (分) 早めるかどうかを制御できます。\n\nこのポリシー設定を有効にした場合は、ユーザーが予定または会議を作成したときに、予定と会議の終了時刻が指定の時間 (分) 早まります。\n\n予定と会議を短縮する時間 (分) を指定するには、ポリシー設定の \"短い予定と会議の終了時刻を指定の時間 (分) 早める\" と \"長い予定と会議の終了時刻を指定の時間 (分) 早める\" を使用できます。\n\n分単位の時間を指定するそれらのポリシー設定を有効にしない場合は、ユーザーが [ファイル] > [オプション] > [予定表] に移動して時間を分単位で指定できます。ユーザーが時間を指定していない場合は、既定値として短い会議には 5 分、長い会議には 10 分が使用されます。\n\nこのポリシー設定を無効にした場合は、予定と会議を早く終了するよう構成することはできず、[ファイル] > [オプション] > [予定表] でアクセスできるオプションは無効になり、ユーザーがオプションを有効にすることはできません。\n\nこのポリシー設定を構成しない場合は、予定と会議は早く終了するよう構成されていませんが、ユーザーが [ファイル] > [オプション] > [予定表] に移動して予定と会議を早く終了させることができます。\n\n注: このポリシー設定は、Office 365 ProPlus などのサブスクリプション版の Office にのみ適用されます。",
+            "explainText": "        このポリシー設定では、ユーザーが予定または会議を作成したときに、予定と会議の終了時刻を指定の時間 (分) 早めるかどうかを制御できます。\n\n        このポリシー設定を有効にした場合は、ユーザーが予定または会議を作成したときに、予定と会議の終了時刻が指定の時間 (分) 早まります。\n\n        予定と会議を短縮する時間 (分) を指定するには、ポリシー設定の \"短い予定と会議の終了時刻を指定の時間 (分) 早める\" と \"長い予定と会議の終了時刻を指定の時間 (分) 早める\" を使用できます。\n\n        分単位の時間を指定するそれらのポリシー設定を有効にしない場合は、ユーザーが [ファイル] > [オプション] > [予定表] に移動して時間を分単位で指定できます。ユーザーが時間を指定していない場合は、既定値として短い会議には 5 分、長い会議には 10 分が使用されます。\n\n        このポリシー設定を無効にした場合は、予定と会議を早く終了するよう構成することはできず、[ファイル] > [オプション] > [予定表] でアクセスできるオプションは無効になり、ユーザーがオプションを有効にすることはできません。\n\n        このポリシー設定を構成しない場合は、予定と会議は早く終了するよう構成されていませんが、ユーザーが [ファイル] > [オプション] > [予定表] に移動して予定と会議を早く終了させることができます。\n\n        注: このポリシー設定は、Microsoft 365 Apps for enterprise などのサブスクリプション版の Office にのみ適用されます。\n      ",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10778,6 +12643,55 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar",
             "valueName": "endeventsearly"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Calendaroptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "None"
+                                },
+                                "displayName": "何もしない"
+                            },
+                            {
+                                "value": {
+                                    "string": "End_Early"
+                                },
+                                "displayName": "早く終了する"
+                            },
+                            {
+                                "value": {
+                                    "string": "Start_Late"
+                                },
+                                "displayName": "遅く開始する"
+                            }
+                        ],
+                        "valueName": "shortenevents",
+                        "inputType": "dropdownList",
+                        "caption": "短縮するイベントの種類を選択します",
+                        "id": "L_SelecttheShortenEventsType"
+                    }
+                ]
+            },
+            "name": "L_ShortenEventsType",
+            "displayName": "予定と会議を短縮する",
+            "explainText": "       このポリシー設定では、 予定と会議の既定の時間を指定の時間 (分) 短くすることができます。このポリシー設定を有効にすると、次のオプションの中から選択できます: 早く終了する、遅く開始する、何もしない。\n        \"早く終了する\"を選択すると、会議と予定の終了時刻が、指定した時間 (分) だけ早くなります。\n        \"遅く開始する\"を選択すると、会議と予定の開始時刻が、指定した時間 (分) だけ遅くなります。\n        \"何もしない\"を選択すると、会議の既定の時間は短くなりません。\n        いずれの場合も、この機能の設定は Outlook のオプション ダイアログで無効になります。\n        このポリシー設定を構成しない場合は、ユーザーが [ファイル] > [オプション] > [予定表] に移動してこれらの設定を変更できます。\n\n        注: このポリシー設定は、Microsoft 365 Apps for enterprise などのサブスクリプション版の Office にのみ適用されます。",
+            "tags": [
+                "L_Calendaroptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
         },
         {
             "parentCategory": {
@@ -10802,7 +12716,7 @@
             },
             "name": "L_EndEarlyShort",
             "displayName": "短い予定と会議の終了時刻を指定の時間 (分) 早める",
-            "explainText": "このポリシー設定では、ユーザーが予定または会議を作成したときに短い予定または会議の終了時刻を早める時間 (分) を指定できます。短い予定または会議は、1 時間未満の予定または会議のことです。\n\nこのポリシー設定を有効にした場合は、ユーザーが予定または会議を作成したときに短い予定または会議の終了時刻を早める時間 (分) を指定します。ユーザーは、[ファイル] > [オプション] > [予定表] に移動してこの値を変更することはできません。\n\n注: ポリシー設定の \"予定と会議を早く終了する\" も有効にする必要があります。\n\nこのポリシー設定を無効にした場合、または構成しない場合は、既定値の 5 分、またはユーザーが [ファイル] > [オプション] > [予定表] に移動して指定した時間が使用されます。\n\n注: このポリシー設定は、Office 365 ProPlus などのサブスクリプション版の Office にのみ適用されます。",
+            "explainText": "        このポリシー設定では、ユーザーが予定または会議を作成したときに短い予定または会議の終了時刻を早める時間 (分) を指定できます。短い予定または会議は、1 時間未満の予定または会議のことです。\n\n        このポリシー設定を有効にした場合は、ユーザーが予定または会議を作成したときに短い予定または会議の終了時刻を早める時間 (分) を指定します。ユーザーは、[ファイル] > [オプション] > [予定表] に移動してこの値を変更することはできません。\n\n        注: ポリシー設定の \"予定と会議を早く終了する\" も有効にする必要があります。\n\n        このポリシー設定を無効にした場合、または構成しない場合は、既定値の 5 分、またはユーザーが [ファイル] > [オプション] > [予定表] に移動して指定した時間が使用されます。\n\n        注: このポリシー設定は、Microsoft 365 Apps for enterprise などのサブスクリプション版の Office にのみ適用されます。\n      ",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10835,7 +12749,7 @@
             },
             "name": "L_EndEarlyLong",
             "displayName": "長い予定と会議の終了時刻を指定の時間 (分) 早める",
-            "explainText": "このポリシー設定では、ユーザーが予定または会議を作成したときに長い予定または会議の終了時刻を早める時間 (分) を指定できます。長い予定または会議は、1 時間以上の予定または会議のことです。\n\nこのポリシー設定を有効にした場合は、ユーザーが予定または会議を作成したときに長い予定または会議の終了時刻を早める時間 (分) を指定します。ユーザーは、[ファイル] > [オプション] > [予定表] に移動してこの値を変更することはできません。\n\n注: ポリシー設定の \"予定と会議を早く終了する\" も有効にする必要があります。\n\nこのポリシー設定を無効にした場合、または構成しない場合は、既定値の 10 分、またはユーザーが [ファイル] > [オプション] > [予定表] に移動して指定した時間が使用されます。\n\n注: このポリシー設定は、Office 365 ProPlus などのサブスクリプション版の Office にのみ適用されます。",
+            "explainText": "        このポリシー設定では、ユーザーが予定または会議を作成したときに長い予定または会議の終了時刻を早める時間 (分) を指定できます。長い予定または会議は、1 時間以上の予定または会議のことです。\n\n        このポリシー設定を有効にした場合は、ユーザーが予定または会議を作成したときに長い予定または会議の終了時刻を早める時間 (分) を指定します。ユーザーは、[ファイル] > [オプション] > [予定表] に移動してこの値を変更することはできません。\n\n        注: ポリシー設定の \"予定と会議を早く終了する\" も有効にする必要があります。\n\n        このポリシー設定を無効にした場合、または構成しない場合は、既定値の 10 分、またはユーザーが [ファイル] > [オプション] > [予定表] に移動して指定した時間が使用されます。\n\n        注: このポリシー設定は、Microsoft 365 Apps for enterprise などのサブスクリプション版の Office にのみ適用されます。\n      ",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10863,8 +12777,8 @@
                 }
             },
             "name": "L_OnSendAddinsEnabled",
-            "displayName": "Web 拡張機能を読み込むことができない場合、送信を無効にします。",
-            "explainText": "このポリシー設定を有効にした場合、Exchange から Web アドインが読み込まれるまでは、Outlook でメールと会議出席依頼を送信できなくなります。",
+            "displayName": "Web アドインを読み込むことができない場合に送信をブロックする",
+            "explainText": "このポリシー設定を使用すると、Web アドインが Exchange から読み込まれるまで、Outlook がメールや会議出席依頼の送信をブロックするかどうかを制御できます。\n\nこのポリシー設定を有効にすると、Web アドインが Exchange から読み込まれるまで、Outlook はメールと会議出席依頼の送信を許可しません。\n\nこのポリシー設定を無効にするか、設定しない場合、最新の Web アドインが Exchange から読み込まれていない状態でも、Outlook はメールと会議出席依頼の送信を許可します。\n\nこの設定を使用する場合の詳細については、以下を参照してください。 https://go.microsoft.com/fwlink/p/?linkid=2161562",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -10893,7 +12807,7 @@
             },
             "name": "L_RestUpdatesForCalendar",
             "displayName": "予定表の REST 更新",
-            "explainText": "このポリシーでは、Outlook で予定表の更新に REST を使用できるかどうかを決定します。\n\nこのポリシーを有効にすると、Outlook は REST を使用してサポート対象の Office 365 と Outlook.com の予定表を更新します。\n\nこのポリシーを無効にすると、Outlook では予定表の更新に REST を使用しません。",
+            "explainText": "このポリシーでは、Outlook で予定表の更新に REST を使用できるかどうかを決定します。\n\n        このポリシーを有効にすると、Outlook は REST を使用してサポート対象の Office 365 と Outlook.com の予定表を更新します。\n\n        このポリシーを無効にすると、Outlook では予定表の更新に REST を使用しません。",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10923,7 +12837,7 @@
             },
             "name": "L_PreferProvidedEmailInAutoDiscoverAuthPrompts",
             "displayName": "自動検出の認証メッセージで、指定されたアカウントのメール アドレスが優先されます。",
-            "explainText": "設定されている場合、このポリシー設定では自動検出に関連する認証メッセージで表示されるメール アドレスを制御します。\n\n既定値は(0): アカウントの UPN が優先されます (存在する場合)。\n\nこの設定を有効にすると、自動検出の認証メッセージで、指定されたアカウントのメール アドレスが優先されます (構成に応じて SMTP または UPN のいずれか)。",
+            "explainText": "設定されている場合、このポリシー設定では自動検出に関連する認証メッセージで表示されるメール アドレスを制御します。\n\n        既定値は(0): アカウントの UPN が優先されます (存在する場合)。\n\n        この設定を有効にすると、自動検出の認証メッセージで、指定されたアカウントのメール アドレスが優先されます (構成に応じて SMTP または UPN のいずれか)。",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -11249,6 +13163,180 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\autodiscover",
             "valueName": "enableoffice365configservice"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Cryptography"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_AllowPrivateKeyCheck",
+            "displayName": "ユーザーが自分を受信者として含む暗号化されたメールを送信するときにユーザーの秘密キーを確認する",
+            "explainText": "このポリシー設定では、ユーザーが暗号化されたメールを送信するときに、そのユーザーがメールの受信者に含まれている場合、Outlook でユーザーの秘密キーを確認するかどうかを指定します。ユーザーは、直接、または配布リストのメンバーとして受信者に含めることができます。\n\nこのポリシー設定を有効にした場合、Outlook でユーザーの秘密キーが確認されます。\n\nこのポリシー設定を無効にした場合、Outlook でユーザーの秘密キーは確認されません。\n\nこのポリシー設定を構成しない場合は、Outlook でユーザーの秘密キーが確認されます。",
+            "tags": [
+                "L_Cryptography",
+                "L_Security",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\security",
+            "valueName": "allowprivatekeycheck"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableAdminNotifications",
+            "displayName": "Outlook のテナント管理者の通知を無効にする",
+            "explainText": "このポリシー設定では、テナント管理者が Outlook でサポート通知を受信できるかどうかを決定します。\n\n既定値は(0): サインインしているテナント管理者は、テナントに影響する可能性がある問題と解決策に関するステータスの更新情報を受信します。\n\nこの設定を有効にすると、サインインしているテナント管理者は、テナントに影響する可能性がある問題と解決策に関するステータスの更新情報を受信しません。",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\general",
+            "valueName": "disableadminnotifications"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableCrashNotificationOnRestart",
+            "displayName": "Outlook の再起動時に Outlook のクラッシュ通知を無効にします。",
+            "explainText": "このポリシー設定では、再起動時に Outlook のクラッシュ通知を許可するかどうかを指定します。この設定を有効にすると、再起動時に Outlook のクラッシュ通知がブロックされます。",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\general",
+            "valueName": "disablecrashnotificationonrestart"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Delegates"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DelegateSentItemsStyle",
+            "displayName": "共有メールボックスから送信されたメッセージを送信アイテム フォルダーに保存する",
+            "explainText": "このポリシー設定は、共有メールボックスから送信されたメッセージを共有メールボックスの [送信済みアイテム] フォルダーに保存するかどうかを制御します。\n\n既定では、共有メールボックスから送信されたメッセージは、共有メールボックスの [送信済みアイテム] フォルダーには保存されません。\n\nこのポリシー設定を有効にすると、共有メールボックスから送信されたメッセージは、共有メールボックスの送信済みアイテム フォルダーに保存されます。\n\nこのポリシー設定を無効にするか、構成しない場合、共有メールボックスから送信されたメッセージは、共有メールボックスの [送信済みアイテム] フォルダーに保存されません。",
+            "tags": [
+                "L_Delegates",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
+            "valueName": "delegatesentitemsstyle"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Exchangesettings"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_AlwaysUseMSOAuthForAutodiscover",
+            "displayName": "自動検出は常に先進認証を使用できます",
+            "explainText": "このポリシー設定は、プライマリ メールボックス接続の種類でサポートされている認証方法に関係なく、自動検出で常に最新の認証を使用できるかどうかを制御します。\n\n既定では、自動検出はプライマリ メールボックスの接続の種類でサポートされている認証方法のみを使用します。一部の接続の種類では、\"モダン認証\" がサポートされる認証方法の 1 つになるとは限りません。\n\nこのポリシー設定を有効にすると、プライマリ メールボックス接続の種類でサポートされている認証方法に関係なく、自動検出は常に最新の認証を使用することができます。このポリシー設定を有効にすると、最新の認証を使用する際に、接続の種類に対してサポートされていない場合、ユーザーがパスワードを指定するよう求めるプロンプトが表示される場合があります。\n\nこのポリシー設定を無効にするか、構成しない場合、自動検出ではプライマリ メールボックス接続の種類でサポートされている認証方法だけが使用されます。",
+            "tags": [
+                "L_Exchangesettings",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\exchange",
+            "valueName": "alwaysusemsoauthforautodiscover"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_RecommendOutlookExtension",
+            "displayName": "Microsoft Outlook 拡張機能の推奨",
+            "explainText": "このポリシー設定は、Outlook アプリおよび Outlook Web アプリを使用する Windows 10 ユーザーに対して、Microsoft Edge 用の新しい Microsoft Outlook 拡張機能のインストールを勧めるメッセージを表示するかどうかを制御します。ユーザーが推奨事項をクリックすると、Microsoft Outlook 拡張機能のページが表示され、この Web ベースの生産性向上アドオンのインストールを選択できます。ユーザーはこの推奨事項を解除することができ、推奨事項は 2 回しか表示されません。拡張機能のインストールを選択すると、別のブラウザー タブを開くことなく、Microsoft Edge のアイコンからメール、予定表、連絡先、およびタスクにアクセスできるようになります。この拡張機能は、Web 上の Outlook の「ミニ」バージョンで、ブラウザーのヘッダーからワンクリックで表示されます。\n\n将来的には、Microsoft はこの拡張機能の Chrome ブラウザー用バージョンをリリースする可能性があります。\n\nこのポリシー設定を有効にするか、または構成しない場合、推奨事項はユーザーに表示されます。\n\nこのポリシー設定を無効にした場合、推奨事項はユーザーに表示されません。\n\n注意: このポリシー設定は、Microsoft 365 Apps for enterprise や Outlook Web アプリなど、サブスクリプション版の Office にのみ適用されます。\n\n詳細については、https://go.microsoft.com/fwlink/?linkid=2165458 を参照してください。",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\general",
+            "valueName": "recommendoutlookextension"
         }
     ]
 }

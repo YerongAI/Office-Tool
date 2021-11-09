@@ -748,6 +748,64 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "0"
+                                },
+                                "displayName": "言語を自動的に選択"
+                            },
+                            {
+                                "value": {
+                                    "string": "1"
+                                },
+                                "displayName": "言語を選択するメッセージを表示"
+                            },
+                            {
+                                "value": {
+                                    "string": "2"
+                                },
+                                "displayName": "次の言語を使用"
+                            }
+                        ],
+                        "valueName": "fileconversionmode",
+                        "inputType": "dropdownList",
+                        "caption": "ファイル変換時の言語",
+                        "id": "L_languageforfileconversion5"
+                    },
+                    {
+                        "valueName": "fileconversionlanguage",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "使用する言語:",
+                        "id": "L_Uselanguage"
+                    }
+                ]
+            },
+            "name": "L_languageforfileconversion4",
+            "displayName": "ファイル変換時の言語",
+            "explainText": "このポリシー設定では、以前のバージョンの Visio との間でファイルを変換する際に使用する言語の特定方法を指定します。\n\nこのポリシー設定を有効にした場合、以下のオプションの 1 つを選択できます。\n\n- [言語を自動的に選択]\n- [言語を選択するメッセージを表示]\n- [次の言語を使用]: 該当する言語に対する Microsoft ロケール ID (LCID) を数値で指定する必要があります。\n\nこのポリシー設定を無効にするか、または未構成にした場合、Visio によって使用する言語が決定されます。",
+            "tags": [
+                "L_SaveOpen",
+                "L_Advanced",
+                "L_VisioOptions",
+                "L_MicrosoftVisio"
+            ],
+            "application": "visio16",
+            "key": "software\\microsoft\\office\\16.0\\visio\\application"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_SaveOpen"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "string": "1"
             },
@@ -1129,7 +1187,7 @@
             },
             "name": "L_BlockMacroExecutionFromInternet",
             "displayName": "インターネットから取得した Office ファイル内のマクロの実行をブロックします",
-            "explainText": "このポリシー設定では、インターネットから取得された Office ファイル内のマクロの実行をブロックできます。\n\nこのポリシー設定を有効にした場合、セキュリティ センターの [マクロの設定] セクションで [すべてのマクロを有効にする] がオンになっている場合でも、マクロの実行はブロックされます。また、[コンテンツの有効化] の選択肢が表示されないで、マクロの実行がブロックされたことを示す通知が表示されます。Office ファイルが信頼できる場所に保存されている場合、または以前にユーザーが信頼した場合は、マクロを実行できます。\n\nこのポリシーを無効にした場合、または構成していない場合は、セキュリティ センターの [マクロの設定] セクションで構成された設定で、インターネットから取得された Office ファイル内のマクロが実行されるかどうかが決まります。",
+            "explainText": "        このポリシー設定では、インターネットから取得された Office ファイル内のマクロの実行をブロックできます。\n\n        このポリシー設定を有効にした場合、セキュリティ センターの [マクロの設定] セクションで [すべてのマクロを有効にする] がオンになっている場合でも、マクロの実行はブロックされます。また、[コンテンツの有効化] の選択肢が表示されないで、マクロの実行がブロックされたことを示す通知が表示されます。Office ファイルが信頼できる場所に保存されている場合、または以前にユーザーが信頼した場合は、マクロを実行できます。\n\n        このポリシーを無効にした場合、または構成していない場合は、セキュリティ センターの [マクロの設定] セクションで構成された設定で、インターネットから取得された Office ファイル内のマクロが実行されるかどうかが決まります。\n      ",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1313,12 +1371,63 @@
                         "valueName": "vbawarnings",
                         "inputType": "dropdownList",
                         "id": "L_Empty"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "vbadigsigtrustedpublishers",
+                        "key": "software\\microsoft\\office\\16.0\\visio\\security",
+                        "inputType": "checkBox",
+                        "caption": "信頼できる発行元による署名をマクロに要求する",
+                        "id": "L_VBADigSigTrustedPublishersStr"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "vbarequirelmtrustedpublisher",
+                        "key": "software\\microsoft\\office\\16.0\\visio\\security",
+                        "inputType": "checkBox",
+                        "caption": "現在のユーザー証明書ストアにのみインストールされている信頼できる発行元からの証明書をブロックする",
+                        "id": "L_VBAOnlyAllowLMTrustedPublisherStr"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "vbarequiredigsigwithcodesigningeku",
+                        "key": "software\\microsoft\\office\\16.0\\visio\\security",
+                        "inputType": "checkBox",
+                        "caption": "信頼できる発行元からの証明書には、拡張キー使用法 (EKU) が必要です",
+                        "id": "L_VBAOnlyAllowDigSigWithCodeSigningEKUStr"
                     }
                 ]
             },
             "name": "L_VBAWarningsPolicy",
             "displayName": "VBA マクロ通知設定",
-            "explainText": "このポリシー設定では、Visual Basic for Applications (VBA) マクロが存在する場合に、指定したアプリケーションでユーザーに警告を表示する方法を指定します。\n\nこのポリシー設定を有効にした場合、指定したアプリケーションでマクロに関する警告をユーザーに表示する方法を、次の 4 つのオプションから選べます。\n \n- [通知してすべてを無効にする]: 署名の有無にかかわらず、すべてのマクロについてセキュリティ バーを表示します。このオプションでは、Office の既定の構成が適用されます。\n \n- [デジタル署名付きのマクロを除くすべてのマクロを無効にする]: デジタル署名付きのマクロについてセキュリティ バーで警告を表示します。ユーザーはこのマクロを有効にするか、または無効のままにできます。署名のないマクロは無効になり、ユーザーには通知されません。\n \n- [通知せずにすべてを無効にする]: 署名の有無にかかわらず、すべてのマクロを無効にします。ユーザーには通知されません。\n \n- [すべてのマクロを有効にする] (推奨しません): 署名の有無にかかわらず、すべてのマクロを有効にします。このオプションを選んだ場合、危険なコードの実行が検出されなくなるため、セキュリティが大幅に低下します。\n \nこのポリシー設定を無効にした場合、[通知せずにすべてを無効にする] が既定の設定になります。\n \nこのポリシー設定を未構成にした場合、指定したアプリケーションで VBA マクロを含むファイルを開くときに、このファイルはマクロが無効にされた状態で開きます。このとき、マクロが存在しており、無効にされたことを示すセキュリティ バーの警告が表示されます。ユーザーは必要に応じてファイルを検査して編集できますが、無効化された機能を使うことはできません。これらの機能を使うには、セキュリティ バーで [コンテンツを有効にする] をクリックして機能を有効にする必要があります。ユーザーが [コンテンツを有効にする] をクリックすると、ドキュメントは信頼済みのドキュメントとして追加されます。\n \n重要: [デジタル署名付きのマクロを除くすべてのマクロを無効にする] を選んだ場合、署名のない Access データベースを開くことができなくなります。\n \nまた、Microsoft Office では、信頼できる発行元の証明書は Internet Explorer の信頼できる発行元ストアに格納されます。以前のバージョンの Microsoft Office では、信頼できる発行元の証明書情報 (特に、証明書の拇印) は、Office の特別な信頼できる発行元ストアに格納されていました。Microsoft Office でも引き続き Office の信頼できる発行元ストアから証明書情報を読み取ることはできますが、このストアに情報を書き込むことはありません。\n \nしたがって、以前のバージョンの Microsoft Office で信頼できる発行元の一覧を作成した後で Office にアップグレードした場合、その一覧は引き続き認識されます。ただし、信頼できる発行元の証明書を一覧に追加した場合、その情報は Internet Explorer の信頼できる発行元ストアに格納されます。",
+            "explainText": "このポリシー設定では、Visual Basic for Applications (VBA) マクロが存在する場合に、指定したアプリケーションでユーザーに警告を表示する方法を指定します。\n\nこのポリシー設定を有効にした場合、指定したアプリケーションでマクロに関する警告をユーザーに表示する方法を、次の 4 つのオプションから選べます。\n \n[通知してすべてを無効にする]- : 署名の有無にかかわらず、すべてのマクロについてセキュリティ バーを表示します。このオプションでは、Office の既定の構成が適用されます。\n \n[デジタル署名付きのマクロを除くすべてのマクロを無効にする]- : デジタル署名付きのマクロについてセキュリティ バーで警告を表示します。ユーザーはこのマクロを有効にするか、または無効のままにできます。署名のないマクロは無効になり、ユーザーには通知されません。\n \n[通知せずにすべてを無効にする]- : 署名の有無にかかわらず、すべてのマクロを無効にします。ユーザーには通知されません。\n \n- [すべてのマクロを有効にする] (推奨しません): 署名の有無にかかわらず、すべてのマクロを有効にします。このオプションを選んだ場合、危険なコードの実行が検出されなくなるため、セキュリティが大幅に低下します。\n \nこのポリシー設定を無効にした場合、[通知してすべてを無効にする] が既定の設定になります。\n \nこのポリシー設定を未構成にした場合、指定したアプリケーションで VBA マクロを含むファイルを開くときに、このファイルはマクロが無効にされた状態で開きます。このとき、マクロが存在しており、無効にされたことを示すセキュリティ バーの警告が表示されます。ユーザーは必要に応じてファイルを検査して編集できますが、無効化された機能を使うことはできません。これらの機能を使うには、セキュリティ バーで [コンテンツを有効にする] をクリックして機能を有効にする必要があります。ユーザーが [コンテンツを有効にする] をクリックすると、ドキュメントは信頼済みのドキュメントとして追加されます。\n\n[デジタル署名付きのマクロを除くすべてのマクロを無効にする] を選択した場合、セキュリティを向上させるために [信頼できる発行元による署名をマクロに要求する] チェック ボックスも選択することをお勧めします。\n\n[信頼できる発行元による署名をマクロに要求する] チェック ボックスを選択した場合、デジタル署名付きのマクロを開いているが、それが信頼できる発行元によって署名されているファイルではないユーザーは、マクロの実行がブロックされているという通知を受け取ることになります。そして、セキュリティ向上のために選択をお勧めするチェック ボックスが 2 つ追加されます。\n\n- 現在のユーザー証明書ストアにインストールされている信頼できる発行元からの証明書をブロックする\n\n- 信頼できる発行元からの証明書には、拡張キー使用法 (EKU) が必要です\n\n注: これら 2 つのチェック ボックスは、[信頼できる発行元による署名をマクロに要求する] チェック ボックスを選択した場合にのみ適用されます。\n\n[ローカル コンピューターの証明書ストアにインストールされている信頼できる発行元からの証明書をブロックする] を選択した場合、信頼できる発行元からの証明書が現在のユーザー証明書ストアにインストールされていても、マクロは実行されません。マクロを実行するには、ローカル コンピューターの証明書ストアに証明書がインストールされている必要があります。ローカル コンピューターの証明書ストアに証明書をインストールできるのは、コンピューターに対する管理者アクセス権を持つアカウントのみです。\n\n[信頼できる発行元からの証明書には、拡張キー使用法 (EKU) が必要です] チェック ボックスを選択した場合、EKU には証明書の用途の 1 つとして \"コード署名\" が含まれている必要があります。\n\n重要: [デジタル署名付きのマクロを除くすべてのマクロを無効にする] を選んだ場合、署名のない Access データベースを開くことができなくなります。\n \nまた、Microsoft Office では、信頼できる発行元の証明書は Internet Explorer の信頼できる発行元ストアに格納されます。以前のバージョンの Microsoft Office では、信頼できる発行元の証明書情報 (特に、証明書の拇印) は、Office の特別な信頼できる発行元ストアに格納されていました。Microsoft Office でも引き続き Office の信頼できる発行元ストアから証明書情報を読み取ることはできますが、このストアに情報を書き込むことはありません。\n \nしたがって、以前のバージョンの Microsoft Office で信頼できる発行元の一覧を作成した後で Office にアップグレードした場合、その一覧は引き続き認識されます。ただし、信頼できる発行元の証明書を一覧に追加した場合、その情報は Internet Explorer の信頼できる発行元ストアに格納されます。",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -2063,6 +2172,156 @@
             ],
             "application": "visio16",
             "key": "software\\microsoft\\office\\16.0\\visio\\application"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrectOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Straightquoteswithsmartquotes",
+            "displayName": "左右の区別がない引用符を、区別がある引用符に変更する",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_AutoCorrectOptions",
+                "L_Proofing",
+                "L_VisioOptions",
+                "L_MicrosoftVisio"
+            ],
+            "application": "visio16",
+            "key": "software\\microsoft\\office\\16.0\\visio\\autoformat as you type",
+            "valueName": "smartquotes"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrectOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Fractionswithfractioncharacter",
+            "displayName": "分数 (1/2, 1/4, 3/4) を分数文字 (組み文字) に変更する",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_AutoCorrectOptions",
+                "L_Proofing",
+                "L_VisioOptions",
+                "L_MicrosoftVisio"
+            ],
+            "application": "visio16",
+            "key": "software\\microsoft\\office\\16.0\\visio\\autoformat as you type",
+            "valueName": "fractions"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrectOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ordinalswithsuperscript",
+            "displayName": "序数 (1st、2nd、3rd...) を上付き文字に変更する",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_AutoCorrectOptions",
+                "L_Proofing",
+                "L_VisioOptions",
+                "L_MicrosoftVisio"
+            ],
+            "application": "visio16",
+            "key": "software\\microsoft\\office\\16.0\\visio\\autoformat as you type",
+            "valueName": "ordinals"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrectOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Hyphenswithdash",
+            "displayName": "ハイフンをダッシュに変更する",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_AutoCorrectOptions",
+                "L_Proofing",
+                "L_VisioOptions",
+                "L_MicrosoftVisio"
+            ],
+            "application": "visio16",
+            "key": "software\\microsoft\\office\\16.0\\visio\\autoformat as you type",
+            "valueName": "dashes"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrectOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Smileyfacesandarrowswithspecialsymbols",
+            "displayName": ":-) や ==> を特殊な記号に変更する",
+            "explainText": "対応する UI オプションをオンまたはオフにします。",
+            "tags": [
+                "L_AutoCorrectOptions",
+                "L_Proofing",
+                "L_VisioOptions",
+                "L_MicrosoftVisio"
+            ],
+            "application": "visio16",
+            "key": "software\\microsoft\\office\\16.0\\visio\\autoformat as you type",
+            "valueName": "smileys"
         },
         {
             "parentCategory": {

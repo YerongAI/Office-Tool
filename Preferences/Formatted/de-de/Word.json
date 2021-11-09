@@ -347,38 +347,9 @@
                     "value": 0
                 }
             },
-            "name": "L_Openattachmentsforfullscreenreading",
-            "displayName": "E-Mail-Anlagen in der Leseansicht öffnen",
-            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
-            "tags": [
-                "L_OptionsGeneral",
-                "L_WordOptions",
-                "L_MicrosoftOfficeWord"
-            ],
-            "application": "word16",
-            "key": "software\\microsoft\\office\\16.0\\word\\options",
-            "valueName": "allowautoreadingmode"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_OptionsGeneral"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
             "name": "L_AllowSelectionFloaties",
             "displayName": "Minisymbolleiste für Auswahl anzeigen",
-            "explainText":"Durch Deaktivieren dieser Richtlinie wird die Minisymbolleiste für die Textauswahl nicht angezeigt. Standardmäßig ist 'Minisymbolleiste für Auswahl anzeigen' aktiviert. Ob die Minisymbolleiste angezeigt wird, kann mithilfe einer Einstellung im Dialogfeld 'Word-Optionen' geändert werden.",
+            "explainText": "Durch Deaktivieren dieser Richtlinie wird die Minisymbolleiste für die Textauswahl nicht angezeigt. Standardmäßig ist 'Minisymbolleiste für Auswahl anzeigen' aktiviert. Ob die Minisymbolleiste angezeigt wird, kann mithilfe einer Einstellung im Dialogfeld 'Word-Optionen' geändert werden.",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -553,7 +524,7 @@
             },
             "name": "L_Deletionscolor",
             "displayName": "Farbe für Löschvorgänge",
-            "explainText":"Wählt die Farbe für nachverfolgte Löschvorgänge aus. Dies entspricht den Optionen der Gruppe 'Überprüfen' im Menüband unter 'Änderungen nachverfolgen' im Dialogfeld 'Optionen zum Nachverfolgen von Änderungen'.",
+            "explainText": "Wählt die Farbe für nachverfolgte Löschvorgänge aus. Dies entspricht den Optionen der Gruppe 'Überprüfen' im Menüband unter 'Änderungen nachverfolgen' im Dialogfeld 'Optionen zum Nachverfolgen von Änderungen'.",
             "tags": [
                 "L_Trackchangesandcompare",
                 "L_WordOptions",
@@ -727,7 +698,7 @@
             },
             "name": "L_Insertionscolor",
             "displayName": "Farbe für Einfügungen",
-            "explainText":"Wählt die Standardfarbe für nachverfolgte Einfügungen aus. Dies entspricht den Optionen der Gruppe 'Überprüfen' im Menüband unter 'Änderungen nachverfolgen' im Dialogfeld 'Optionen zum Nachverfolgen von Änderungen'.",
+            "explainText": "Wählt die Standardfarbe für nachverfolgte Einfügungen aus. Dies entspricht den Optionen der Gruppe 'Überprüfen' im Menüband unter 'Änderungen nachverfolgen' im Dialogfeld 'Optionen zum Nachverfolgen von Änderungen'.",
             "tags": [
                 "L_Trackchangesandcompare",
                 "L_WordOptions",
@@ -755,7 +726,7 @@
             },
             "name": "L_IgnoreWhiteSpace",
             "displayName": "Leerzeichen ignorieren",
-            "explainText":"Diese Option bestimmt, ob Leerzeichen bei einem Dokumentvergleich verglichen werden. Dies entspricht der Option im Dialogfeld 'Vergleichen' (Gruppe 'Überprüfen' im Menüband unter 'Vergleichen', 'Weitere Optionen').",
+            "explainText": "Diese Option bestimmt, ob Leerzeichen bei einem Dokumentvergleich verglichen werden. Dies entspricht der Option im Dialogfeld 'Vergleichen' (Gruppe 'Überprüfen' im Menüband unter 'Vergleichen', 'Weitere Optionen').",
             "tags": [
                 "L_Trackchangesandcompare",
                 "L_WordOptions",
@@ -810,7 +781,7 @@
             },
             "name": "L_Compareresultingdocument",
             "displayName": "Resultierendes Dokument vergleichen",
-            "explainText":"Diese Option bestimmt, ob die Ergebnisse eines Dokumentvergleichs oder einer Dokumentzusammenfassung in einem neuen Dokument oder in einem der Quelldokumente angezeigt werden. Dies entspricht der Option im Dialogfeld 'Vergleichen' (im Menüband in der Gruppe 'Überarbeiten' unter 'Vergleichen', 'Weitere Optionen').",
+            "explainText": "Diese Option bestimmt, ob die Ergebnisse eines Dokumentvergleichs oder einer Dokumentzusammenfassung in einem neuen Dokument oder in einem der Quelldokumente angezeigt werden. Dies entspricht der Option im Dialogfeld 'Vergleichen' (im Menüband in der Gruppe 'Überarbeiten' unter 'Vergleichen', 'Weitere Optionen').",
             "tags": [
                 "L_Trackchangesandcompare",
                 "L_WordOptions",
@@ -864,6 +835,348 @@
             "name": "L_Balloons",
             "displayName": "Sprechblasen",
             "explainText": "Durch das Deaktivieren von Sprechblasen werden Überarbeitungen inline angezeigt. Dies entspricht den Optionen der Gruppe \"Überprüfen\" im Menüband.",
+            "tags": [
+                "L_Trackchangesandcompare",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Trackchangesandcompare"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Keine"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Nach Autor"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Rosa"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Hellblau"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "Hellgelb"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "Hellviolett"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "Hellorange"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Hellgrün"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "Grau"
+                            }
+                        ],
+                        "valueName": "revmodeinscellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "Farbe für eingefügte Zellen:",
+                        "id": "L_TablecomparecolorsPart1"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Keine"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Nach Autor"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Rosa"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Hellblau"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "Hellgelb"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "Hellviolett"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "Hellorange"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Hellgrün"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "Grau"
+                            }
+                        ],
+                        "valueName": "revmodedelcellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "Farbe für gelöschte Zellen:",
+                        "id": "L_TablecomparecolorsPart2"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Keine"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Nach Autor"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Rosa"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Hellblau"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "Hellgelb"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "Hellviolett"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "Hellorange"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Hellgrün"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "Grau"
+                            }
+                        ],
+                        "valueName": "revmodemergecellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "Farbe für zusammengeführte Zellen:",
+                        "id": "L_TablecomparecolorsPart3"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Keine"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Nach Autor"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Rosa"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Hellblau"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "Hellgelb"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "Hellviolett"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "Hellorange"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Hellgrün"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "Grau"
+                            }
+                        ],
+                        "valueName": "revmodesplitcellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "Farbe für geteilte Zellen:",
+                        "id": "L_TablecomparecolorsPart4"
+                    }
+                ]
+            },
+            "name": "L_Tablecomparecolors",
+            "displayName": "Farben zum Vergleichen von Tabellen",
+            "explainText": "Diese Option bestimmt die Farben, die zum Anzeigen der Ergebnisse verglichener Tabellen verwendet werden. Mit \"Keine\" werden die Änderungen nachverfolgt, aber im resultierenden Dokument nicht farblich dargestellt (sie werden im Überarbeitungsfenster aufgeführt).",
             "tags": [
                 "L_Trackchangesandcompare",
                 "L_WordOptions",
@@ -1042,6 +1355,837 @@
         },
         {
             "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_CorrectTWoINitialCApitals",
+            "displayName": "ZWei GRoßbuchstaben am WOrtanfang korrigieren",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ftwoinitialcaps_24_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Capitalizefirstletterofsentence",
+            "displayName": "Jeden Satz mit einem Großbuchstaben beginnen",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "finitialcap_32_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Capitalizenamesofdays",
+            "displayName": "Wochentage immer großschreiben",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcapdaynames_48_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_CorrectaccidentalusageofcAPSLOCKkey",
+            "displayName": "Unbeabsichtigtes Verwenden der fESTSTELLTASTE korrigieren",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Festlegen der Option \"Unbeabsichtigtes Verwenden der fESTSTELLTASTE korrigieren\" in den \"Word-Optionen\" unter \"Dokumentprüfung\" | \"AutoKorrektur-Optionen...\" | \"AutoKorrektur\".\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird \"Unbeabsichtigtes Verwenden der fESTSTELLTASTE korrigieren\" festgelegt.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird \"Unbeabsichtigtes Verwenden der fESTSTELLTASTE korrigieren\" nicht festgelegt.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcapslock_40_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Replacetextasyoutype",
+            "displayName": "Während der Eingabe ersetzen",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcorrecttyping_16_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Correctkeyboardsetting",
+            "displayName": "Tastatureinstellung korrigieren",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Festlegen der Option \"Tastatureinstellung korrigieren\" in den \"Word-Optionen\" unter \"Dokumentprüfung\" | \"AutoKorrektur-Optionen...\" | \"AutoKorrektur\".\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird \"Tastatureinstellung korrigieren\" festgelegt.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird \"Tastatureinstellung korrigieren\" nicht festgelegt.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcorrectkeyboard_64_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Firstlineindent",
+            "displayName": "Erstzeileneinzug",
+            "explainText": "Aktiviert/deaktiviert die Option \"Leerzeichen am Absatzanfang mit Erstzeileneinzug\" in der Gruppe \"Während der Eingabe ersetzen\". Möglicherweise wird diese Option in Word erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ffirstindent_344_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Straightquoteswithsmartquotes",
+            "displayName": "Gerade Anführungszeichen durch typografische Anführungszeichen",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fsmartquote_8_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ordinals1stwithsuperscript",
+            "displayName": "Englische Ordnungszahlen (1st) hochstellen",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fnumsupscript_104_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Fractions12withfractioncharacter",
+            "displayName": "Bruchzahlen (1/2) durch Sonderzeichen",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ffraction_96_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Symbolcharacterswithsymbols",
+            "displayName": "Symbolzeichen (--) durch Symbole",
+            "explainText": "Aktiviert/deaktiviert die Option \"Bindestriche (--) durch Geviertstrich (-)\".",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "femdash_112_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Boldand_italic_withrealformatting",
+            "displayName": "*Fett* und _kursiv_ durch Normalformatierung",
+            "explainText": "Mithilfe dieser Richtlinieneinstellung können Sie die Option \"*Fett* und _kursiv_ durch Normalformatierung\" festlegen.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die Option \"*Fett* und _kursiv_ durch Normalformatierung\" festgelegt, die sich auf der Registerkarte \"Datei\" | \"Optionen\" | \"Dokumentprüfung\" | \"AutoKorrektur-Optionen\" | \"AutoFormat\" befindet.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die Option nicht festgelegt.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fbolditalic_120_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Dashlikecharacters",
+            "displayName": "Gedankenstrichähnliche Zeichen",
+            "explainText": "Aktiviert/deaktiviert die Option \"Langgezogene Vokale durch Gedankenstrich\". Möglicherweise wird diese Option in Word erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fdbdashes_136_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Headings",
+            "displayName": "Überschriften",
+            "explainText": "Aktiviert/deaktiviert die Option \"Integrierte Überschriften\".",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fheading_280_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_BorderLines",
+            "displayName": "Rahmenlinien",
+            "explainText": "Aktiviert/deaktiviert die Option \"Rahmenlinien\".",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fbotbord_328_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Tables",
+            "displayName": "Tabellen",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ftable_392_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DateStyle",
+            "displayName": "Datumsformat",
+            "explainText": "Aktiviert/deaktiviert die Option \"Datumsformat\". Möglicherweise wird diese Option in Word erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fdate_376_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Automaticbulletedlists",
+            "displayName": "Automatische Aufzählung",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fbulletlist_296_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Automaticnumberedlists",
+            "displayName": "Automatische Nummerierung",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fnumberedlist_312_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ClosingStyleToLetterClosings",
+            "displayName": "Grußformeln am Briefende",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Festlegen der Option \"Grußformeln am Briefende\", die sich in den \"Word-Optionen\" unter \"Dokumentprüfung\" | \"AutoKorrektur-Optionen...\" | \"AutoFormat während der Eingabe\" befindet.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird \"Grußformeln am Briefende\" festgelegt.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird \"Grußformeln am Briefende\" nicht festgelegt.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fclosing_360_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Autospace",
+            "displayName": "Automatischer Abstand",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Festlegen der Option \"Überflüssige Leerzeichen zwischen asiatischem und westlichem Text löschen\" in der Gruppe \"AutoFormat während der Eingabe\". Möglicherweise wird diese Option in Word erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird \"Überflüssige Leerzeichen zwischen asiatischem und westlichem Text löschen\" festgelegt.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird \"Überflüssige Leerzeichen zwischen asiatischem und westlichem Text löschen\" nicht festgelegt.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fsbdbspace_152_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchparentheses",
+            "displayName": "Klammern beachten",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Festlegen der Option \"Klammern aneinander anpassen\" in den \"Word-Optionen\" unter \"Dokumentprüfung\" | \"AutoKorrektur-Optionen...\" | \"AutoFormat während der Eingabe\" | \"Während der Eingabe automatisch formatieren\". Möglicherweise wird diese Option in Word erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird \"Klammern aneinander anpassen\" festgelegt.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird \"Klammern aneinander anpassen\" nicht festgelegt.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fautopair_144_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Formatbeginningoflistitemliketheonebeforeit",
+            "displayName": "Listeneintrag wie vorherigen formatieren",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fleadinemph_176_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Setleftindentontabsandbackspace",
+            "displayName": "Linken Einzug für Tabstopps und Rücktaste festlegen",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ftabindent_128_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Definestylesbasedonyourformatting",
+            "displayName": "Formatvorlagen basierend auf Formatierung definieren",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fautostyledef_184_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_InsertClosingPhraseToMatchMemoStyle",
+            "displayName": "Schlussformel entsprechend der Memo-Formatvorlage",
+            "explainText": "Aktiviert/deaktiviert die Option \"Schlussformel entsprechend der Memo-Formatvorlage\". Möglicherweise wird diese Option in Word erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "finsertover_424_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_InsertClosingPhraseToMatchJapaneseSalutation",
+            "displayName": "Schlussformel entsprechend der japanischen Anrede",
+            "explainText": "Aktiviert/deaktiviert die Option \"Schlussformel entsprechend der japanischen Anrede\". Möglicherweise wird diese Option in Word erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "finsertclosing_408_1"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_OptionsCustomizeRibbon"
             },
             "supportedOn": {
@@ -1155,6 +2299,122 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "nomargpageview"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Documentproperties",
+            "displayName": "Dokumenteigenschaften drucken",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen die Steuerung der Einstellung \"Dokumenteigenschaften drucken\", die sich auf der Registerkarte \"Datei\" unter \"Optionen\" | \"Anzeige\" | \"Druckoptionen\" befindet.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird von Word für jedes Dokument, das gedruckt wird, eine zusätzliche Seite mit den Eigenschaften des Dokuments gedruckt. Hierzu gehören u. a. der Autor des Dokuments, der Dateiname, das Datum der Erstellung usw.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird keine zusätzliche Seite gedruckt.",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "summary_1_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Drawingobjects",
+            "displayName": "In Word erstellte Zeichnungen drucken",
+            "explainText": "Mithilfe dieser Richtlinieneinstellung können Sie die Einstellung \"In Word erstellte Zeichnungen drucken\" konfigurieren, die sich auf der Registerkarte \"Datei\" unter \"Optionen\" | \"Anzeige\" | \"Druckoptionen\" befindet.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, werden von Word Grafiken und unverankerte Textfelder gedruckt.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, druckt Word keine Grafiken oder unverankerten Textfelder. Stattdessen wird von Word an der Position jeder Grafik und jedes unverankerten Textfelds ein leeres Feld gedruckt.",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "disabledrawnobj_14_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Updatefields",
+            "displayName": "Felder vor dem Drucken aktualisieren",
+            "explainText": "Mithilfe dieser Richtlinieneinstellung können Sie die Einstellung \"Felder vor dem Drucken aktualisieren\" konfigurieren, die sich auf der Registerkarte \"Datei\" unter \"Optionen\" | \"Anzeige\" | \"Druckoptionen\" befindet.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, werden im Dokument enthaltene Felder von Word vor dem Drucken des Dokuments aktualisiert.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden die Felder im Dokument von Word nicht aktualisiert, bevor das Dokument gedruckt wird.",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "refresh_5_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Updatelinks",
+            "displayName": "Verknüpfte Daten vor dem Drucken aktualisieren",
+            "explainText": "Mithilfe dieser Richtlinieneinstellung können Sie die Einstellung \"Verknüpfte Daten vor dem Drucken aktualisieren\" steuern, die sich auf der Registerkarte \"Datei\" unter \"Optionen\" | \"Anzeige\" | \"Druckoptionen\" befindet.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, werden im Dokument enthaltene verknüpfte Daten von Word vor dem Drucken aktualisiert. Ein Beispiel für verknüpfte Daten in Word ist ein eingebettetes Excel-Diagramm, das mit einer Excel-Kalkulationstabelle verknüpft ist.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden verknüpfte Daten im Dokument von Word nicht aktualisiert, bevor das Dokument gedruckt wird.",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "updatelinks_13_1"
         },
         {
             "parentCategory": {
@@ -1440,7 +2700,7 @@
             },
             "name": "L_SaveAutoRecoverinfo",
             "displayName": "AutoWiederherstellen-Info speichern",
-            "explainText":"Wenn Sie diese Richtlinieneinstellung aktivieren, können Sie die Anzahl der Minuten angeben, die Word zwischen dem Speichern von AutoWiederherstellen-Informationen für die Datei wartet. Wenn Sie verhindern möchten, dass Word jemals AutoWiederherstellen-Informationen für die Datei speichert, aktivieren Sie diese Richtlinie, und legen Sie den Wert auf '0' fest.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, besitzt diese Richtlinie keine Auswirkungen auf die Anzahl der Minuten, die Word zwischen dem Speichern von AutoWiederherstellen-Informationen für die Datei wartet. Standardmäßig speichert Word AutoWiederherstellen-Informationen für die Datei alle 10 Minuten.",
+            "explainText": "Wenn Sie diese Richtlinieneinstellung aktivieren, können Sie die Anzahl der Minuten angeben, die Word zwischen dem Speichern von AutoWiederherstellen-Informationen für die Datei wartet. Wenn Sie verhindern möchten, dass Word jemals AutoWiederherstellen-Informationen für die Datei speichert, aktivieren Sie diese Richtlinie, und legen Sie den Wert auf '0' fest.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, besitzt diese Richtlinie keine Auswirkungen auf die Anzahl der Minuten, die Word zwischen dem Speichern von AutoWiederherstellen-Informationen für die Datei wartet. Standardmäßig speichert Word AutoWiederherstellen-Informationen für die Datei alle 10 Minuten.",
             "tags": [
                 "L_Save",
                 "L_WordOptions",
@@ -2724,7 +3984,7 @@
                 ]
             },
             "name": "L_Recentlyusedfilelist",
-            "displayName":"Anzahl der Dokumente in der Liste 'Zuletzt verwendete Dokumente'",
+            "displayName": "Anzahl der Dokumente in der Liste 'Zuletzt verwendete Dokumente'",
             "explainText": "Diese Richtlinieneinstellung gibt die Anzahl der Einträge in der Liste \"Zuletzt verwendete Dokumente\" an, die in der Backstage-Ansicht angezeigt wird, wenn Benutzer auf der Registerkarte \"Datei\" auf \"Öffnen\" klicken.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, können Sie die Anzahl der Einträge auf einen Wert zwischen 0 und 50 festlegen. Wenn Sie die Anzahl auf 0 festlegen, werden alle angehefteten und nicht angehefteten Einträge ausgeblendet.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden in der Liste \"Zuletzt verwendete Dokumente\" maximal 25 Einträge angezeigt.\n\nHinweis: Wenn Sie das Hinzufügen von Einträgen zur Liste \"Zuletzt verwendete Dokumente\" grundsätzlich verhindern möchten, können Sie die Windows-Richtlinieneinstellung \"Liste der zuletzt geöffneten Dokumente nicht beibehalten\" aktivieren.",
             "tags": [
                 "L_Advanced",
@@ -3113,6 +4373,35 @@
                     "value": 0
                 }
             },
+            "name": "L_Draftoutput",
+            "displayName": "Entwurfsqualität verwenden",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "draftoutput_2_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_Backgroundprinting",
             "displayName": "Im Hintergrund drucken",
             "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
@@ -3124,6 +4413,93 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "backgroundprint"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Reverseprintorder",
+            "displayName": "Seiten in umgekehrter Reihenfolge drucken",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "reverseprint_6_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Frontofsheet",
+            "displayName": "Blattvorderseite für Duplexdruck bedrucken",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "fprorder1_21_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Backofthesheet",
+            "displayName": "Blattrückseite für Duplexdruck bedrucken",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "fprorder2_22_1"
         },
         {
             "parentCategory": {
@@ -4662,7 +6038,7 @@
             },
             "name": "L_BlockMacroExecutionFromInternet",
             "displayName": "Ausführung von Makros in Office-Dateien aus dem Internet blockieren",
-            "explainText": "Diese Richtlinieneinstellung ermöglicht das Blockieren der Ausführung von Makros in Office-Dateien, die aus dem Internet stammen.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die Ausführung von Makros blockiert, selbst wenn im Abschnitt \"Makroeinstellungen\" im Trust Center \"Alle Makros aktivieren\" ausgewählt ist. Außerdem erhalten die Benutzer, statt \"Inhalt aktivieren\" auswählen zu können, eine Benachrichtigung, dass die Ausführung von Makros blockiert ist. Wenn die Office-Datei an einem vertrauenswürdigen Speicherort gespeichert wird oder zuvor vom Benutzer als vertrauenswürdig festgelegt wurde, wird die Ausführung von Makros zugelassen.\n\nBenutzer erhalten Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, bestimmen die im Abschnitt \"Makroeinstellungen\" im Trust Center konfigurierten Einstellungen, ob Makros in Office-Dateien, die aus dem Internet stammen, ausgeführt werden.",
+            "explainText": "        Diese Richtlinieneinstellung ermöglicht das Blockieren der Ausführung von Makros in Office-Dateien, die aus dem Internet stammen.\n\n        Wenn Sie diese Richtlinieneinstellung aktivieren, wird die Ausführung von Makros blockiert, selbst wenn im Abschnitt \"Makroeinstellungen\" im Trust Center \"Alle Makros aktivieren\" ausgewählt ist. Außerdem erhalten die Benutzer, statt \"Inhalt aktivieren\" auswählen zu können, eine Benachrichtigung, dass die Ausführung von Makros blockiert ist. Wenn die Office-Datei an einem vertrauenswürdigen Speicherort gespeichert wird oder zuvor vom Benutzer als vertrauenswürdig festgelegt wurde, wird die Ausführung von Makros zugelassen.\n\nBenutzer erhalten Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, bestimmen die im Abschnitt \"Makroeinstellungen\" im Trust Center konfigurierten Einstellungen, ob Makros in Office-Dateien, die aus dem Internet stammen, ausgeführt werden.\n      ",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -4806,7 +6182,7 @@
             },
             "name": "L_RequirethatApplicationExtensionsaresigned",
             "displayName": "Anwendungs-Add-Ins müssen von einem vertrauenswürdigen Herausgeber signiert sein",
-            "explainText": "Diese Richtlinieneinstellung steuert, ob Add-Ins für die angegebenen Office 2016-Anwendungen digital durch einen vertrauenswürdigen Herausgeber signiert sein müssen.\n \nWenn Sie diese Einstellung aktivieren, überprüft diese Anwendung die digitale Signatur für jedes Add-In vor dem Laden. Wenn ein Add-In keine digitale Signatur aufweist oder diese nicht von einem vertrauenswürdigen Herausgeber stammt, deaktiviert diese Anwendung das Add-In und benachrichtigt den Benutzer. Der Liste müssen Zertifikate hinzugefügt werden, wenn Sie die Signierung aller Add-Ins durch einen vertrauenswürdigen Herausgeber vorschreiben. Details zum Erhalten und Verteilen von Zertifikaten finden Sie unter \"http: //go.microsoft.com/fwlink/?LinkId=294922\". Office 2016 speichert Zertifikate für vertrauenswürdige Herausgeber im Speicher für vertrauenswürdige Herausgeber von Internet Explorer. In früheren Versionen von Microsoft Office wurden solche Zertifikatinformationen (insbesondere der Zertifikatfingerabdruck) in einem besonderen Office-Speicher für vertrauenswürdige Herausgeber gespeichert. Office 2016 liest solche Zertifikatinformationen nach wie vor aus dem Office-Speicher für vertrauenswürdige Herausgeber, sie speichert Informationen jedoch nicht mehr in diesem Speicher. Wenn Sie daher in einer früheren Office-Version eine Liste vertrauenswürdiger Herausgeber erstellt und ein Upgrade auf Office 2016 ausgeführt haben, wird diese Liste nach wie vor erkannt. Alle Zertifikate für vertrauenswürdige Herausgeber, die Sie der Liste hinzufügen, werden jedoch im Speicher für vertrauenswürdige Herausgeber von Internet Explorer gespeichert. Weitere Informationen über vertrauenswürdige Herausgeber finden Sie im Office Resource Kit.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, überprüfen Office 2016-Anwendungen nicht die digitale Signatur von Anwendungs-Add-Ins vor deren Öffnen. Wenn ein gefährliches Add-In geladen wird, kann es Computer des Benutzers beschädigen oder die Datensicherheit gefährden.",
+            "explainText": "Diese Richtlinieneinstellung steuert, ob Add-Ins für die angegebenen Office 2016-Anwendungen digital durch einen vertrauenswürdigen Herausgeber signiert sein müssen.\n \nWenn Sie diese Einstellung aktivieren, überprüft diese Anwendung die digitale Signatur für jedes Add-In vor dem Laden. Wenn ein Add-In keine digitale Signatur aufweist oder diese nicht von einem vertrauenswürdigen Herausgeber stammt, deaktiviert diese Anwendung das Add-In und benachrichtigt den Benutzer. Der Liste müssen Zertifikate hinzugefügt werden, wenn Sie die Signierung aller Add-Ins durch einen vertrauenswürdigen Herausgeber vorschreiben. Details zum Erhalten und Verteilen von Zertifikaten finden Sie unter \"http://go.microsoft.com/fwlink/?LinkId=294922\". Office 2016 speichert Zertifikate für vertrauenswürdige Herausgeber im Speicher für vertrauenswürdige Herausgeber von Internet Explorer. In früheren Versionen von Microsoft Office wurden solche Zertifikatinformationen (insbesondere der Zertifikatfingerabdruck) in einem besonderen Office-Speicher für vertrauenswürdige Herausgeber gespeichert. Office 2016 liest solche Zertifikatinformationen nach wie vor aus dem Office-Speicher für vertrauenswürdige Herausgeber, sie speichert Informationen jedoch nicht mehr in diesem Speicher. Wenn Sie daher in einer früheren Office-Version eine Liste vertrauenswürdiger Herausgeber erstellt und ein Upgrade auf Office 2016 ausgeführt haben, wird diese Liste nach wie vor erkannt. Alle Zertifikate für vertrauenswürdige Herausgeber, die Sie der Liste hinzufügen, werden jedoch im Speicher für vertrauenswürdige Herausgeber von Internet Explorer gespeichert. Weitere Informationen über vertrauenswürdige Herausgeber finden Sie im Office Resource Kit.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, überprüfen Office 2016-Anwendungen nicht die digitale Signatur von Anwendungs-Add-Ins vor deren Öffnen. Wenn ein gefährliches Add-In geladen wird, kann es Computer des Benutzers beschädigen oder die Datensicherheit gefährden.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -6121,7 +7497,7 @@
             },
             "name": "L_AllowTrustedLocationsOnTheNetwork",
             "displayName": "Vertrauenswürdige Speicherorte im Netzwerk zulassen",
-            "explainText": "Diese Richtlinieneinstellung steuert, ob vertrauenswürdige Speicherorte im Netzwerk verwendet werden können.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, können Benutzer vertrauenswürdige Speicherorte auf Netzwerkfreigaben oder an anderen Remotespeicherorten angeben, die sich nicht unter ihrer direkten Kontrolle befinden, indem sie im Trust Center im Bereich \"Vertrauenswürdige Speicherorte\" auf \"Neuen Speicherort hinzufügen\" klicken. Inhalte, Code und Add-Ins dürfen von vertrauenswürdigen Speicherorten mit minimaler Sicherheit und ohne den Benutzer um Erlaubnis zu bitten geladen werden.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, ignoriert die ausgewählte Anwendung alle im Trust Center im Abschnitt \"Vertrauenswürdige Speicherorte\" aufgelisteten Netzwerkspeicherorte.\n\nWenn Sie außerdem vertrauenswürdige Speicherorte mithilfe von Gruppenrichtlinien bereitstellen, sollten Sie überprüfen, ob sich darunter Remotespeicherorte befinden. Wenn sich Remotespeicherorte darunter befinden und Sie mithilfe dieser Richtlinieneinstellung keine Remotespeicherorte zulassen, werden diejenigen Richtlinienschlüssel, die auf Remotespeicherorte verweisen, auf Clientcomputern ignoriert.\n\nDurch das Deaktivieren dieser Richtlinieneinstellung werden keine Netzwerkspeicherorte aus der Liste der vertrauenswürdigen Speicherorte gelöscht, doch entsteht eine Dienstunterbrechung für Benutzer, die der Liste der vertrauenswürdigen Speicherorte Netzwerkspeicherorte hinzugefügt haben. Ferner werden Benutzer daran gehindert, der Liste der vertrauenswürdigen Speicherorte im Trust Center neue Netzwerkspeicherorte hinzuzufügen. Es wird empfohlen, diese Richtlinieneinstellung nicht zu aktivieren (wie ebenfalls im Kontrollkästchen \"Vertrauenswürdige Speicherorte im Netzwerk zulassen (nicht empfohlen)\" angegeben). Daher sollte es in der Praxis in den meisten Fällen möglich sein, diese Richtlinieneinstellung zu deaktivieren, ohne für die meisten Benutzer erhebliche Probleme mit der Nutzbarkeit zu verursachen.\n\nWenn Sie diese Richtlinieneinstellung nicht aktivieren, können Benutzer ggf. das Kontrollkästchen \"Vertrauenswürdige Speicherorte im Netzwerk zulassen (nicht empfohlen)\" aktivieren und dann durch Klicken auf die Schaltfläche \"Neuen Speicherort hinzufügen\" vertrauenswürdige Speicherorte angeben.",
+            "explainText": "Diese Richtlinieneinstellung steuert, ob vertrauenswürdige Speicherorte im Netzwerk verwendet werden können.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, können Benutzer vertrauenswürdige Speicherorte auf Netzwerkfreigaben oder an anderen Remotespeicherorten angeben, die sich nicht unter ihrer direkten Kontrolle befinden, indem sie im Trust Center im Bereich \"Vertrauenswürdige Speicherorte\" auf \"Neuen Speicherort hinzufügen\" klicken. Inhalte, Code und Add-Ins dürfen von vertrauenswürdigen Speicherorten mit minimaler Sicherheit und ohne den Benutzer um Erlaubnis zu bitten geladen werden.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, ignoriert die ausgewählte Anwendung alle im Trust Center im Abschnitt \"Vertrauenswürdige Speicherorte\" aufgelisteten Netzwerkspeicherorte.\n\nWenn Sie außerdem vertrauenswürdige Speicherorte mithilfe von Gruppenrichtlinien bereitstellen, sollten Sie überprüfen, ob sich darunter Remotespeicherorte befinden. Wenn sich Remotespeicherorte darunter befinden und Sie mithilfe dieser Richtlinieneinstellung keine Remotespeicherorte zulassen, werden diejenigen Richtlinienschlüssel, die auf Remotespeicherorte verweisen, auf Clientcomputern ignoriert.\n\nDurch das Deaktivieren dieser Richtlinieneinstellung werden keine Netzwerkspeicherorte aus der Liste der vertrauenswürdigen Speicherorte gelöscht, doch entsteht eine Dienstunterbrechung für Benutzer, die der Liste der vertrauenswürdigen Speicherorte Netzwerkspeicherorte hinzugefügt haben. Ferner werden Benutzer daran gehindert, der Liste der vertrauenswürdigen Speicherorte im Trust Center neue Netzwerkspeicherorte hinzuzufügen.  Es wird empfohlen, diese Richtlinieneinstellung nicht zu aktivieren (wie ebenfalls im Kontrollkästchen \"Vertrauenswürdige Speicherorte im Netzwerk zulassen (nicht empfohlen)\" angegeben). Daher sollte es in der Praxis in den meisten Fällen möglich sein, diese Richtlinieneinstellung zu deaktivieren, ohne für die meisten Benutzer erhebliche Probleme mit der Nutzbarkeit zu verursachen.\n\nWenn Sie diese Richtlinieneinstellung nicht aktivieren, können Benutzer ggf. das Kontrollkästchen \"Vertrauenswürdige Speicherorte im Netzwerk zulassen (nicht empfohlen)\" aktivieren und dann durch Klicken auf die Schaltfläche \"Neuen Speicherort hinzufügen\" vertrauenswürdige Speicherorte angeben.",
             "tags": [
                 "L_TrustedLocations",
                 "L_TrustCenter",
@@ -6290,6 +7666,70 @@
         },
         {
             "parentCategory": {
+                "ref": "L_ProtectedView"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Dateien blockieren"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "In geschützter Ansicht öffnen"
+                            }
+                        ],
+                        "valueName": "openinprotectedview",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsDropID"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "disableeditfrompv",
+                        "key": "software\\microsoft\\office\\16.0\\word\\security\\filevalidation",
+                        "inputType": "checkBox",
+                        "caption": "Aktiviert: Bearbeiten zulassen. Deaktiviert: Bearbeiten nicht zulassen.",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsStr3"
+                    }
+                ]
+            },
+            "name": "L_SetDocumentBehaviorIfFileValidationFails",
+            "displayName": "Dokumentverhalten bei Fehlschlagen der Dateiüberprüfung festlegen",
+            "explainText": "Diese Richtlinieneinstellung steuert, wie Office Dokumente bei einem Fehlschlagen der Dateiüberprüfung behandelt.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, können Sie folgende Optionen für Dateien konfigurieren, deren Dateiüberprüfung fehlgeschlagen ist:\n\n- \"Dateien blockieren\" (vollständig): Benutzer können die Dateien nicht öffnen.\n- \"In geschützter Ansicht öffnen und Bearbeitung nicht zulassen\": Benutzer können die Dateien nicht bearbeiten. Auf diese Art werden Dateien von Office behandelt, wenn Sie diese Richtlinieneinstellung deaktivieren.\n- \"In geschützter Ansicht öffnen und Bearbeitung zulassen\": Benutzer können die Dateien bearbeiten. Auf diese Art werden Dateien von Office behandelt, wenn Sie diese Richtlinieneinstellung nicht konfigurieren.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, verhält sich Office gemäß der Option \"In geschützter Ansicht öffnen und Bearbeitung nicht zulassen\".\n\nWenn Sie diese Richtlinieneinstellung nicht konfigurieren, verhält sich Office gemäß der Option \"In geschützter Ansicht öffnen und Bearbeitung zulassen\".",
+            "tags": [
+                "L_ProtectedView",
+                "L_TrustCenter",
+                "L_Security",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\security\\filevalidation"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -6403,6 +7843,510 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "showmarkupopensave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchcase",
+            "displayName": "Groß-/Kleinschreibung beachten",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Aktivieren/Deaktivieren der entsprechenden Benutzeroberflächenoption im Dialogfeld \"Suchoptionen für Japanisch\". Der Zugriff auf das Dialogfeld \"Suchoptionen für Japanisch\" erfolgt über das Dialogfeld \"Suchen\" auf der Registerkarte \"Start\" unter \"Bearbeiten\" | \"Suchen\" | \"Gehe zu...\" | \"Suchoptionen\" | \"Optionen...\". Der Zugriff kann auch im Navigationsbereich auf der Registerkarte \"Start\" | \"Bearbeiten\" | \"Suchen\" | <Pfeil nach unten> | \"Optionen...\" | \"Ähnl. Schreibweise (Japanisch)\" | \"Optionen\" erfolgen. Das Kontrollkästchen \"Ähnl. Schreibweise (Japanisch)\" und die Schaltfläche \"Optionen...\" werden in Word möglicherweise erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die entsprechende Benutzeroberflächenoption aktiviert, wie im Titel dieser Richtlinieneinstellung angegeben.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die entsprechende Benutzeroberflächenoption nicht aktiviert.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqcase_0_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchfullhalfwidthform",
+            "displayName": "Formen mit halber/ganzer Breite beachten",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Aktivieren/Deaktivieren der entsprechenden Benutzeroberflächenoption im Dialogfeld \"Suchoptionen für Japanisch\". Der Zugriff auf das Dialogfeld \"Suchoptionen für Japanisch\" erfolgt über das Dialogfeld \"Suchen\" auf der Registerkarte \"Start\" unter \"Bearbeiten\" | \"Suchen\" | \"Gehe zu...\" | \"Suchoptionen\" | \"Optionen...\". Der Zugriff kann auch im Navigationsbereich auf der Registerkarte \"Start\" | \"Bearbeiten\" | \"Suchen\" | <Pfeil nach unten> | \"Optionen...\" | \"Ähnl. Schreibweise (Japanisch)\" | \"Optionen\" erfolgen. Das Kontrollkästchen \"Ähnl. Schreibweise (Japanisch)\" und die Schaltfläche \"Optionen...\" werden in Word möglicherweise erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die entsprechende Benutzeroberflächenoption aktiviert, wie im Titel dieser Richtlinieneinstellung angegeben.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die entsprechende Benutzeroberflächenoption nicht aktiviert.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqbyte_1_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchhiraganakatakana",
+            "displayName": "Hiragana und Katakana beachten",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Aktivieren/Deaktivieren der entsprechenden Benutzeroberflächenoption im Dialogfeld \"Suchoptionen für Japanisch\". Der Zugriff auf das Dialogfeld \"Suchoptionen für Japanisch\" erfolgt über das Dialogfeld \"Suchen\" auf der Registerkarte \"Start\" unter \"Bearbeiten\" | \"Suchen\" | \"Gehe zu...\" | \"Suchoptionen\" | \"Optionen...\". Der Zugriff kann auch im Navigationsbereich auf der Registerkarte \"Start\" | \"Bearbeiten\" | \"Suchen\" | <Pfeil nach unten> | \"Optionen...\" | \"Ähnl. Schreibweise (Japanisch)\" | \"Optionen\" erfolgen. Das Kontrollkästchen \"Ähnl. Schreibweise (Japanisch)\" und die Schaltfläche \"Optionen...\" werden in Word möglicherweise erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die entsprechende Benutzeroberflächenoption aktiviert, wie im Titel dieser Richtlinieneinstellung angegeben.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die entsprechende Benutzeroberflächenoption nicht aktiviert.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqhira_kata_3_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchcontractionsyoonsokuon",
+            "displayName": "Kontraktionen (yo-on, sokuon)",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Aktivieren/Deaktivieren der entsprechenden Benutzeroberflächenoption im Dialogfeld \"Suchoptionen für Japanisch\". Der Zugriff auf das Dialogfeld \"Suchoptionen für Japanisch\" erfolgt über das Dialogfeld \"Suchen\" auf der Registerkarte \"Start\" unter \"Bearbeiten\" | \"Suchen\" | \"Gehe zu...\" | \"Suchoptionen\" | \"Optionen...\". Der Zugriff kann auch im Navigationsbereich auf der Registerkarte \"Start\" | \"Bearbeiten\" | \"Suchen\" | <Pfeil nach unten> | \"Optionen...\" | \"Ähnl. Schreibweise (Japanisch)\" | \"Optionen\" erfolgen. Das Kontrollkästchen \"Ähnl. Schreibweise (Japanisch)\" und die Schaltfläche \"Optionen...\" werden in Word möglicherweise erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die entsprechende Benutzeroberflächenoption aktiviert, wie im Titel dieser Richtlinieneinstellung angegeben.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die entsprechende Benutzeroberflächenoption nicht aktiviert.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqsmallkana_4_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchminusdashchoon",
+            "displayName": "Minus/Bindestrich/cho-on",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Aktivieren/Deaktivieren der entsprechenden Benutzeroberflächenoption im Dialogfeld \"Suchoptionen für Japanisch\". Der Zugriff auf das Dialogfeld \"Suchoptionen für Japanisch\" erfolgt über das Dialogfeld \"Suchen\" auf der Registerkarte \"Start\" unter \"Bearbeiten\" | \"Suchen\" | \"Gehe zu...\" | \"Suchoptionen\" | \"Optionen...\". Der Zugriff kann auch im Navigationsbereich auf der Registerkarte \"Start\" | \"Bearbeiten\" | \"Suchen\" | <Pfeil nach unten> | \"Optionen...\" | \"Ähnl. Schreibweise (Japanisch)\" | \"Optionen\" erfolgen. Das Kontrollkästchen \"Ähnl. Schreibweise (Japanisch)\" und die Schaltfläche \"Optionen...\" werden in Word möglicherweise erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die entsprechende Benutzeroberflächenoption aktiviert, wie im Titel dieser Richtlinieneinstellung angegeben.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die entsprechende Benutzeroberflächenoption nicht aktiviert.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqminus_2_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchrepeatcharactermarks",
+            "displayName": "Wiederholungszeichen",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Aktivieren/Deaktivieren der entsprechenden Benutzeroberflächenoption im Dialogfeld \"Suchoptionen für Japanisch\". Der Zugriff auf das Dialogfeld \"Suchoptionen für Japanisch\" erfolgt über das Dialogfeld \"Suchen\" auf der Registerkarte \"Start\" unter \"Bearbeiten\" | \"Suchen\" | \"Gehe zu...\" | \"Suchoptionen\" | \"Optionen...\". Der Zugriff kann auch im Navigationsbereich auf der Registerkarte \"Start\" | \"Bearbeiten\" | \"Suchen\" | <Pfeil nach unten> | \"Optionen...\" | \"Ähnl. Schreibweise (Japanisch)\" | \"Optionen\" erfolgen. Das Kontrollkästchen \"Ähnl. Schreibweise (Japanisch)\" und die Schaltfläche \"Optionen...\" werden in Word möglicherweise erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die entsprechende Benutzeroberflächenoption aktiviert, wie im Titel dieser Richtlinieneinstellung angegeben.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die entsprechende Benutzeroberflächenoption nicht aktiviert.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqrepsymbol_5_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchvariantformkanjiitaiji",
+            "displayName": "Kanji-Variante (itaiji)",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Aktivieren/Deaktivieren der entsprechenden Benutzeroberflächenoption im Dialogfeld \"Suchoptionen für Japanisch\". Der Zugriff auf das Dialogfeld \"Suchoptionen für Japanisch\" erfolgt über das Dialogfeld \"Suchen\" auf der Registerkarte \"Start\" unter \"Bearbeiten\" | \"Suchen\" | \"Gehe zu...\" | \"Suchoptionen\" | \"Optionen...\". Der Zugriff kann auch im Navigationsbereich auf der Registerkarte \"Start\" | \"Bearbeiten\" | \"Suchen\" | <Pfeil nach unten> | \"Optionen...\" | \"Ähnl. Schreibweise (Japanisch)\" | \"Optionen\" erfolgen. Das Kontrollkästchen \"Ähnl. Schreibweise (Japanisch)\" und die Schaltfläche \"Optionen...\" werden in Word möglicherweise erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die entsprechende Benutzeroberflächenoption aktiviert, wie im Titel dieser Richtlinieneinstellung angegeben.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die entsprechende Benutzeroberflächenoption nicht aktiviert.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqkanji_16_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matcholdkanaforms",
+            "displayName": "Alte Kana-Formen",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Aktivieren/Deaktivieren der entsprechenden Benutzeroberflächenoption im Dialogfeld \"Suchoptionen für Japanisch\". Der Zugriff auf das Dialogfeld \"Suchoptionen für Japanisch\" erfolgt über das Dialogfeld \"Suchen\" auf der Registerkarte \"Start\" unter \"Bearbeiten\" | \"Suchen\" | \"Gehe zu...\" | \"Suchoptionen\" | \"Optionen...\". Der Zugriff kann auch im Navigationsbereich auf der Registerkarte \"Start\" | \"Bearbeiten\" | \"Suchen\" | <Pfeil nach unten> | \"Optionen...\" | \"Ähnl. Schreibweise (Japanisch)\" | \"Optionen\" erfolgen. Das Kontrollkästchen \"Ähnl. Schreibweise (Japanisch)\" und die Schaltfläche \"Optionen...\" werden in Word möglicherweise erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die entsprechende Benutzeroberflächenoption aktiviert, wie im Titel dieser Richtlinieneinstellung angegeben.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die entsprechende Benutzeroberflächenoption nicht aktiviert.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqoldkana_6_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchchoonusedforvowels",
+            "displayName": "Cho-on bei Vokalen",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Aktivieren/Deaktivieren der entsprechenden Benutzeroberflächenoption im Dialogfeld \"Suchoptionen für Japanisch\". Der Zugriff auf das Dialogfeld \"Suchoptionen für Japanisch\" erfolgt über das Dialogfeld \"Suchen\" auf der Registerkarte \"Start\" unter \"Bearbeiten\" | \"Suchen\" | \"Gehe zu...\" | \"Suchoptionen\" | \"Optionen...\". Der Zugriff kann auch im Navigationsbereich auf der Registerkarte \"Start\" | \"Bearbeiten\" | \"Suchen\" | <Pfeil nach unten> | \"Optionen...\" | \"Ähnl. Schreibweise (Japanisch)\" | \"Optionen\" erfolgen. Das Kontrollkästchen \"Ähnl. Schreibweise (Japanisch)\" und die Schaltfläche \"Optionen...\" werden in Word möglicherweise erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die entsprechende Benutzeroberflächenoption aktiviert, wie im Titel dieser Richtlinieneinstellung angegeben.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die entsprechende Benutzeroberflächenoption nicht aktiviert.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqlongvowel_7_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchdiziduzu",
+            "displayName": "Di/zi, du/zu",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Aktivieren/Deaktivieren der entsprechenden Benutzeroberflächenoption im Dialogfeld \"Suchoptionen für Japanisch\". Der Zugriff auf das Dialogfeld \"Suchoptionen für Japanisch\" erfolgt über das Dialogfeld \"Suchen\" auf der Registerkarte \"Start\" unter \"Bearbeiten\" | \"Suchen\" | \"Gehe zu...\" | \"Suchoptionen\" | \"Optionen...\". Der Zugriff kann auch im Navigationsbereich auf der Registerkarte \"Start\" | \"Bearbeiten\" | \"Suchen\" | <Pfeil nach unten> | \"Optionen...\" | \"Ähnl. Schreibweise (Japanisch)\" | \"Optionen\" erfolgen. Das Kontrollkästchen \"Ähnl. Schreibweise (Japanisch)\" und die Schaltfläche \"Optionen...\" werden in Word möglicherweise erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die entsprechende Benutzeroberflächenoption aktiviert, wie im Titel dieser Richtlinieneinstellung angegeben.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die entsprechende Benutzeroberflächenoption nicht aktiviert.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqd_z_8_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchbavahafa",
+            "displayName": "Ba/va, ha/fa",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Aktivieren/Deaktivieren der entsprechenden Benutzeroberflächenoption im Dialogfeld \"Suchoptionen für Japanisch\". Der Zugriff auf das Dialogfeld \"Suchoptionen für Japanisch\" erfolgt über das Dialogfeld \"Suchen\" auf der Registerkarte \"Start\" unter \"Bearbeiten\" | \"Suchen\" | \"Gehe zu...\" | \"Suchoptionen\" | \"Optionen...\". Der Zugriff kann auch im Navigationsbereich auf der Registerkarte \"Start\" | \"Bearbeiten\" | \"Suchen\" | <Pfeil nach unten> | \"Optionen...\" | \"Ähnl. Schreibweise (Japanisch)\" | \"Optionen\" erfolgen. Das Kontrollkästchen \"Ähnl. Schreibweise (Japanisch)\" und die Schaltfläche \"Optionen...\" werden in Word möglicherweise erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die entsprechende Benutzeroberflächenoption aktiviert, wie im Titel dieser Richtlinieneinstellung angegeben.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die entsprechende Benutzeroberflächenoption nicht aktiviert.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqb_v_9_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchtsithichidhizi",
+            "displayName": "Ttsi/thi/chi, dhi/zi",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Aktivieren/Deaktivieren der entsprechenden Benutzeroberflächenoption im Dialogfeld \"Suchoptionen für Japanisch\". Der Zugriff auf das Dialogfeld \"Suchoptionen für Japanisch\" erfolgt über das Dialogfeld \"Suchen\" auf der Registerkarte \"Start\" unter \"Bearbeiten\" | \"Suchen\" | \"Gehe zu...\" | \"Suchoptionen\" | \"Optionen...\". Der Zugriff kann auch im Navigationsbereich auf der Registerkarte \"Start\" | \"Bearbeiten\" | \"Suchen\" | <Pfeil nach unten> | \"Optionen...\" | \"Ähnl. Schreibweise (Japanisch)\" | \"Optionen\" erfolgen. Das Kontrollkästchen \"Ähnl. Schreibweise (Japanisch)\" und die Schaltfläche \"Optionen...\" werden in Word möglicherweise erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die entsprechende Benutzeroberflächenoption aktiviert, wie im Titel dieser Richtlinieneinstellung angegeben.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die entsprechende Benutzeroberflächenoption nicht aktiviert.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqt_c_10_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchhyuiyubyuvyu",
+            "displayName": "Hyu/iyu, byu/vyu",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Aktivieren/Deaktivieren der entsprechenden Benutzeroberflächenoption im Dialogfeld \"Suchoptionen für Japanisch\". Der Zugriff auf das Dialogfeld \"Suchoptionen für Japanisch\" erfolgt über das Dialogfeld \"Suchen\" auf der Registerkarte \"Start\" unter \"Bearbeiten\" | \"Suchen\" | \"Gehe zu...\" | \"Suchoptionen\" | \"Optionen...\". Der Zugriff kann auch im Navigationsbereich auf der Registerkarte \"Start\" | \"Bearbeiten\" | \"Suchen\" | <Pfeil nach unten> | \"Optionen...\" | \"Ähnl. Schreibweise (Japanisch)\" | \"Optionen\" erfolgen. Das Kontrollkästchen \"Ähnl. Schreibweise (Japanisch)\" und die Schaltfläche \"Optionen...\" werden in Word möglicherweise erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die entsprechende Benutzeroberflächenoption aktiviert, wie im Titel dieser Richtlinieneinstellung angegeben.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die entsprechende Benutzeroberflächenoption nicht aktiviert.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqf_h_15_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchseshezeje",
+            "displayName": "Se/she, ze/je",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Aktivieren/Deaktivieren der entsprechenden Benutzeroberflächenoption im Dialogfeld \"Suchoptionen für Japanisch\". Der Zugriff auf das Dialogfeld \"Suchoptionen für Japanisch\" erfolgt über das Dialogfeld \"Suchen\" auf der Registerkarte \"Start\" unter \"Bearbeiten\" | \"Suchen\" | \"Gehe zu...\" | \"Suchoptionen\" | \"Optionen...\". Der Zugriff kann auch im Navigationsbereich auf der Registerkarte \"Start\" | \"Bearbeiten\" | \"Suchen\" | <Pfeil nach unten> | \"Optionen...\" | \"Ähnl. Schreibweise (Japanisch)\" | \"Optionen\" erfolgen. Das Kontrollkästchen \"Ähnl. Schreibweise (Japanisch)\" und die Schaltfläche \"Optionen...\" werden in Word möglicherweise erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die entsprechende Benutzeroberflächenoption aktiviert, wie im Titel dieser Richtlinieneinstellung angegeben.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die entsprechende Benutzeroberflächenoption nicht aktiviert.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqs_sh_13_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchiaiyapianopiyano",
+            "displayName": "Ia/iya (piano/piyano)",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Aktivieren/Deaktivieren der entsprechenden Benutzeroberflächenoption im Dialogfeld \"Suchoptionen für Japanisch\". Der Zugriff auf das Dialogfeld \"Suchoptionen für Japanisch\" erfolgt über das Dialogfeld \"Suchen\" auf der Registerkarte \"Start\" unter \"Bearbeiten\" | \"Suchen\" | \"Gehe zu...\" | \"Suchoptionen\" | \"Optionen...\". Der Zugriff kann auch im Navigationsbereich auf der Registerkarte \"Start\" | \"Bearbeiten\" | \"Suchen\" | <Pfeil nach unten> | \"Optionen...\" | \"Ähnl. Schreibweise (Japanisch)\" | \"Optionen\" erfolgen. Das Kontrollkästchen \"Ähnl. Schreibweise (Japanisch)\" und die Schaltfläche \"Optionen...\" werden in Word möglicherweise erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die entsprechende Benutzeroberflächenoption aktiviert, wie im Titel dieser Richtlinieneinstellung angegeben.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die entsprechende Benutzeroberflächenoption nicht aktiviert.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqy_a_12_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchkikutekisutotekusuto",
+            "displayName": "ki/ku (tekisuto/tekusuto)",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Aktivieren/Deaktivieren der entsprechenden Benutzeroberflächenoption im Dialogfeld \"Suchoptionen für Japanisch\". Der Zugriff auf das Dialogfeld \"Suchoptionen für Japanisch\" erfolgt über das Dialogfeld \"Suchen\" auf der Registerkarte \"Start\" unter \"Bearbeiten\" | \"Suchen\" | \"Gehe zu...\" | \"Suchoptionen\" | \"Optionen...\". Der Zugriff kann auch im Navigationsbereich auf der Registerkarte \"Start\" | \"Bearbeiten\" | \"Suchen\" | <Pfeil nach unten> | \"Optionen...\" | \"Ähnl. Schreibweise (Japanisch)\" | \"Optionen\" erfolgen. Das Kontrollkästchen \"Ähnl. Schreibweise (Japanisch)\" und die Schaltfläche \"Optionen...\" werden in Word möglicherweise erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die entsprechende Benutzeroberflächenoption aktiviert, wie im Titel dieser Richtlinieneinstellung angegeben.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die entsprechende Benutzeroberflächenoption nicht aktiviert.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqki_ku_14_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ignorepunctuationcharacters",
+            "displayName": "Interpunktionszeichen ignorieren",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Aktivieren/Deaktivieren der entsprechenden Benutzeroberflächenoption im Dialogfeld \"Suchoptionen für Japanisch\". Der Zugriff auf das Dialogfeld \"Suchoptionen für Japanisch\" erfolgt über das Dialogfeld \"Suchen\" auf der Registerkarte \"Start\" unter \"Bearbeiten\" | \"Suchen\" | \"Gehe zu...\" | \"Suchoptionen\" | \"Optionen...\". Der Zugriff kann auch im Navigationsbereich auf der Registerkarte \"Start\" | \"Bearbeiten\" | \"Suchen\" | <Pfeil nach unten> | \"Optionen...\" | \"Ähnl. Schreibweise (Japanisch)\" | \"Optionen\" erfolgen. Das Kontrollkästchen \"Ähnl. Schreibweise (Japanisch)\" und die Schaltfläche \"Optionen...\" werden in Word möglicherweise erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die entsprechende Benutzeroberflächenoption aktiviert, wie im Titel dieser Richtlinieneinstellung angegeben.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die entsprechende Benutzeroberflächenoption nicht aktiviert.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "fignorepunct_18_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ignorewhitespacecharacters",
+            "displayName": "Leerraumzeichen ignorieren",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Aktivieren/Deaktivieren der entsprechenden Benutzeroberflächenoption im Dialogfeld \"Suchoptionen für Japanisch\". Der Zugriff auf das Dialogfeld \"Suchoptionen für Japanisch\" erfolgt über das Dialogfeld \"Suchen\" auf der Registerkarte \"Start\" unter \"Bearbeiten\" | \"Suchen\" | \"Gehe zu...\" | \"Suchoptionen\" | \"Optionen...\". Der Zugriff kann auch im Navigationsbereich auf der Registerkarte \"Start\" | \"Bearbeiten\" | \"Suchen\" | <Pfeil nach unten> | \"Optionen...\" | \"Ähnl. Schreibweise (Japanisch)\" | \"Optionen\" erfolgen. Das Kontrollkästchen \"Ähnl. Schreibweise (Japanisch)\" und die Schaltfläche \"Optionen...\" werden in Word möglicherweise erst eingeblendet, nachdem bestimmte Bearbeitungssprachen aktiviert wurden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die entsprechende Benutzeroberflächenoption aktiviert, wie im Titel dieser Richtlinieneinstellung angegeben.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die entsprechende Benutzeroberflächenoption nicht aktiviert.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "fignorespace_19_1"
         },
         {
             "parentCategory": {
@@ -6935,7 +8879,7 @@
             },
             "name": "L_AlertIfNotDefault",
             "displayName": "Benutzer benachrichtigen, falls Word nicht die Standardanwendung für die ihm normalerweise assoziierten Dateierweiterungen ist",
-            "explainText": "Diese Richtlinieneinstellung gibt an, ob Benutzer aufgefordert werden, ihre Dateierweiterungsassoziation zu ändern, wenn eine der bisher Word zugeordneten Dateityperweiterungen nicht mehr mit Word assoziiert ist.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, werden Benutzer beim Programmstart nie benachrichtigt, wenn einer dieser Dateitypen mit anderen Anwendungen assoziiert ist. Wenn die Richtlinie aktiviert ist, ist das Kontrollkästchen unter \"Datei\"->\"Optionen\"->\"Allgemein\"->\"Startoptionen\"->\"Einen Hinweis anzeigen... …\" deaktiviert und nicht markiert.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden Benutzer beim Programmstart immer benachrichtigt, wenn einer dieser Dateitypen mit anderen Anwendungen assoziiert ist. Benutzer können das Verhalten dieser Funktion entweder durch Aktivieren des in der Benachrichtigung angezeigten Kontrollkästchens oder durch Aktivieren des Kontrollkästchens unter \"Datei\"->\"Optionen\"->\"Allgemein\" ->\"Startoptionen\"->\"Einen Hinweis anzeigen…\" ändern.\n        Wenn die Richtlinie nicht konfiguriert oder deaktiviert ist, ist das Kontrollkästchen standardmäßig aktiviert und ausgewählt.",
+            "explainText": "        Diese Richtlinieneinstellung gibt an, ob Benutzer aufgefordert werden, ihre Dateierweiterungsassoziation zu ändern, wenn eine der bisher Word zugeordneten Dateityperweiterungen nicht mehr mit Word assoziiert ist.\n\n        Wenn Sie diese Richtlinieneinstellung aktivieren, werden Benutzer beim Programmstart nie benachrichtigt, wenn einer dieser Dateitypen mit anderen Anwendungen assoziiert ist. Wenn die Richtlinie aktiviert ist, ist das Kontrollkästchen unter \"Datei\"->\"Optionen\"->\"Allgemein\"->\"Startoptionen\"->\"Einen Hinweis anzeigen... …\" deaktiviert und nicht markiert.\n\n        Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden Benutzer beim Programmstart immer benachrichtigt, wenn einer dieser Dateitypen mit anderen Anwendungen assoziiert ist. Benutzer können das Verhalten dieser Funktion entweder durch Aktivieren des in der Benachrichtigung angezeigten Kontrollkästchens oder durch Aktivieren des Kontrollkästchens unter \"Datei\"->\"Optionen\"->\"Allgemein\" ->\"Startoptionen\"->\"Einen Hinweis anzeigen…\" ändern.\n        Wenn die Richtlinie nicht konfiguriert oder deaktiviert ist, ist das Kontrollkästchen standardmäßig aktiviert und ausgewählt.",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7172,7 +9116,7 @@
             },
             "name": "L_OnlineVideos",
             "displayName": "Wiedergabe von Onlinevideos in Word zulassen",
-            "explainText": "Diese Richtlinieneinstellung kontrolliert, ob Onlinevideos in Word wiedergegeben werden können.\n\nWenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können Benutzer Onlinevideos in Word wiedergeben.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, können Sie keine Onlinevideos in Word wiedergeben.",
+            "explainText": "Diese Richtlinieneinstellung kontrolliert, ob Onlinevideos in Word wiedergegeben werden können.\n\nWenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können Benutzer Onlinevideos in Word wiedergeben.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, können Sie keine Onlinevideos in Word wiedergeben.\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7201,7 +9145,7 @@
             },
             "name": "L_LinkedInResumeAssistant",
             "displayName": "LinkedIn Lebenslauf-Assistenten-Funktion zulassen",
-            "explainText": "Diese Richtlinieneinstellung kontrolliert, ob der LinkedIn Lebenslauf-Assistent in Word angezeigt wird.\n\nWenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können Benutzer den LinkedIn Lebenslauf-Assistenten verwenden.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, ist der LinkedIn Lebenslauf-Assistent nicht verfügbar.\n\nWichtig: Diese Richtlinieneinstellung gilt nur für Office 365-Clients, die mit Klick-und-Los installiert wurden, einschließlich Office 365 ProPlus, Office 365 Business Visio Pro für Office 365 und Project Pro für Office 365. Sie gilt nicht für Office-Produkte, die Windows Installer (MSI) verwenden.",
+            "explainText": "Diese Richtlinieneinstellung kontrolliert, ob der LinkedIn Lebenslauf-Assistent in Word angezeigt wird.\n\nWenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können Benutzer den LinkedIn Lebenslauf-Assistenten verwenden.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, ist der LinkedIn Lebenslauf-Assistent nicht verfügbar.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Abonnementversionen von Office wie Microsoft 365 Apps for Enterprise sowie für Abonnementversionen von Project und Visio.\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7230,7 +9174,7 @@
             },
             "name": "L_DigitalPrint",
             "displayName": "Die Option zum Transformieren eines Dokuments in eine Sway-Webseite nicht anzeigen",
-            "explainText": "Diese Richtlinieneinstellung kontrolliert, ob dem Benutzer im Menü \"Datei\" die Option zum Transformieren eines Word-Dokuments in eine Sway-Webseite angezeigt wird. Standardmäßig wird diese Option dem Benutzer angezeigt.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird im Menü \"Datei\" die Option zum Transformieren eines Word-Dokuments in eine Sway-Webseite für den Benutzer ausgeblendet.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird dem Benutzer im Menü \"Datei\" die Option zum Transformieren eines Word-Dokuments in eine Sway-Webseite angezeigt.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Abonnementversionen von Office wie Office 365 ProPlus.",
+            "explainText": "Diese Richtlinieneinstellung kontrolliert, ob dem Benutzer im Menü \"Datei\" die Option zum Transformieren eines Word-Dokuments in eine Sway-Webseite angezeigt wird. Standardmäßig wird diese Option dem Benutzer angezeigt.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird im Menü \"Datei\" die Option zum Transformieren eines Word-Dokuments in eine Sway-Webseite für den Benutzer ausgeblendet.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird dem Benutzer im Menü \"Datei\" die Option zum Transformieren eines Word-Dokuments in eine Sway-Webseite angezeigt.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Abonnementversionen von Office wie Microsoft 365 Apps for Enterprise.\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7259,7 +9203,7 @@
             },
             "name": "L_DisableWarningOnIncludeFieldsUpdate",
             "displayName": "Vor dem Aktualisieren der Felder \"IncludePicture\" und \"IncludeText\" in Word keine Genehmigung anfordern",
-            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen zu kontrollieren, ob Word den Benutzer vor dem Aktualisieren der Felder \"IncludePicture\" und \"IncludeText\" im Dokument mit einer Sicherheitsmeldung abfragt.\n\nStandardmäßig wird der Benutzer mit einer Sicherheitsmeldung abgefragt, bevor diese Felder aktualisiert werden. Die Abfrage könnte sich aber auf automatisierte Workflows auswirken, die Word-Dokumente zusammenführen.\n\nWichtig: Felder, die \"IncludePicture\"- und \"IncludeText\"-Verweise enthalten, können zur Datenausfilterung oder für Phishing-Exploits verwendet werden. Ein Feld, das diese Verweise enthält, kann so geändert werden, dass es für Inhalte auf externe Websites verweist. Wenn für den Zugriff auf das Bild oder den Text Anmeldeinformationen erforderlich sind, erfordert die Aktualisierung des Felds eine Anmeldung des Benutzers. Während dies für vertrauenswürdige Quellen ein berechtigtes Szenario ist, ist es anfällig für Phishing, wenn das Dokument nicht von einer vertrauenswürdigen Quelle stammt.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird der Benutzer nicht mit einer Sicherheitsmeldung abgefragt, bevor diese Felder aktualisiert werden. Wegen der möglichen Sicherheitsrisiken wird nicht empfohlen, diese Richtlinieneinstellung zu aktivieren.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird der Benutzer vor dem Aktualisieren dieser Felder mit einer Sicherheitsmeldung abgefragt.",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen zu kontrollieren, ob Word den Benutzer vor dem Aktualisieren der Felder \"IncludePicture\" und \"IncludeText\" im Dokument mit einer Sicherheitsmeldung abfragt.\n\nStandardmäßig wird der Benutzer mit einer Sicherheitsmeldung abgefragt, bevor diese Felder aktualisiert werden. Die Abfrage könnte sich aber auf automatisierte Workflows auswirken, die Word-Dokumente zusammenführen.\n\nWichtig: Felder, die \"IncludePicture\"- und \"IncludeText\"-Verweise enthalten, können zur Datenausfilterung oder für Phishing-Exploits verwendet werden. Ein Feld, das diese Verweise enthält, kann so geändert werden, dass es für Inhalte auf externe Websites verweist. Wenn für den Zugriff auf das Bild oder den Text Anmeldeinformationen erforderlich sind, erfordert die Aktualisierung des Felds eine Anmeldung des Benutzers. Während dies für vertrauenswürdige Quellen ein berechtigtes Szenario ist, ist es anfällig für Phishing, wenn das Dokument nicht von einer vertrauenswürdigen Quelle stammt.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird der Benutzer nicht mit einer Sicherheitsmeldung abgefragt, bevor diese Felder aktualisiert werden. Wegen der möglichen Sicherheitsrisiken wird nicht empfohlen, diese Richtlinieneinstellung zu aktivieren.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird der Benutzer vor dem Aktualisieren dieser Felder mit einer Sicherheitsmeldung abgefragt.\n      ",
             "tags": [
                 "L_Security",
                 "L_WordOptions",
@@ -7288,7 +9232,7 @@
             },
             "name": "L_Acronyms",
             "displayName": "Den Befehl \"Akronyme\" aus dem Menüband entfernen",
-            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Entfernen des Befehls \"Akronyme\" aus dem Menüband. Der Befehl \"Akronyme\" befindet sich auf der Registerkarte \"Referenzen\".\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird der Befehl \"Akronyme\" aus dem Menüband entfernt. Benutzer können den Befehl \"Akronyme\" dem Menüband dann nicht manuell hinzufügen. Daher können Benutzer dann auch nicht die Funktion \"Akronyme\" verwenden.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird der Befehl \"Akronyme\" im Menüband angezeigt.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Abonnementversionen von Office wie Office 365 ProPlus.",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Ihnen das Entfernen des Befehls \"Akronyme\" aus dem Menüband. Der Befehl \"Akronyme\" befindet sich auf der Registerkarte \"Referenzen\".\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird der Befehl \"Akronyme\" aus dem Menüband entfernt. Benutzer können den Befehl \"Akronyme\" dem Menüband dann nicht manuell hinzufügen. Daher können Benutzer dann auch nicht die Funktion \"Akronyme\" verwenden.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird der Befehl \"Akronyme\" im Menüband angezeigt.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Abonnementversionen von Office wie Microsoft 365 Apps for Enterprise.\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7297,6 +9241,107 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "acronyms"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_EmailOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DoNotCompressInlinedImagesInOutlook",
+            "displayName": "Komprimieren Sie die in Outlook eingefügten Inline-Bilder nicht",
+            "explainText": "Diese Richtlinieneinstellung erlaubt es Ihnen, die Komprimierung von Inlinebildern in Outlook zu deaktivieren.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, komprimiert Outlook Inlinebilder in der Nachricht nicht.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden Inlinebilder komprimiert.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Abonnementversionen von Office wie Microsoft 365 Apps for Enterprise.\n      ",
+            "tags": [
+                "L_EmailOptions",
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\common\\mailsettings",
+            "valueName": "outlookdonotcompressimages"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_EmailOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Hohe Wiedergabetreue"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "330 ppi"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "220 ppi"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "150 ppi"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "96 ppi"
+                            }
+                        ],
+                        "valueName": "oulookimagedpiindex",
+                        "inputType": "dropdownList",
+                        "caption": "Standardmäßige Inline-Bildkomprimierungsqualität für Outlook:",
+                        "id": "L_DefaultCompressionQualityForInlinedImagesInOutlookPart"
+                    }
+                ]
+            },
+            "name": "L_DefaultCompressionQualityForInlinedImagesInOutlook",
+            "displayName": "Legen Sie die Standardqualität der Komprimierung von in Outlook eingefügten Inline-Bildern fest",
+            "explainText": "Diese Richtlinieneinstellung erlaubt es Ihnen, die Standardqualität der Komprimierung anzugeben, die in Outlook an Inlinebildern vorgenommen wird.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, komprimiert Outlook die Inlinebilder in der Nachricht mit der angegebenen Qualität.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden Inlinebilder mit der Standardqualität (220 dpi) komprimiert.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Abonnementversionen von Office wie Microsoft 365 Apps for Enterprise.\n    ",
+            "tags": [
+                "L_EmailOptions",
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\common\\mailsettings"
         }
     ]
 }

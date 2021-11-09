@@ -1132,6 +1132,120 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "다음 항목 열기"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "현재 폴더로 가기"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "이전 항목 열기"
+                            }
+                        ],
+                        "valueName": "aftermove",
+                        "inputType": "dropdownList",
+                        "caption": "열린 항목을 옮기거나 삭제한 후:",
+                        "id": "L_aftermovingordeletinganopenitem0"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "closeorig",
+                        "inputType": "checkBox",
+                        "caption": "회신 또는 전달할 때 원본 메시지 닫기",
+                        "id": "L_Closeoriginalmessagewhenreplyorforward"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "savesent",
+                        "inputType": "checkBox",
+                        "caption": "보낸 편지함 폴더에 복사본 저장",
+                        "id": "L_SavecopiesofmessagesinSentItemsfolder"
+                    },
+                    {
+                        "valueName": "autosavetime",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 99,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "xx분마다 보내지 않은 메시지 자동 저장(0 = 자동 저장 안 함):",
+                        "id": "L_Autosaveunsenteveryxxminutes0NoAutoSave"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "autoformatplaintext",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\options\\mail",
+                        "inputType": "checkBox",
+                        "caption": "일반 텍스트 메시지 자동으로 지우기",
+                        "id": "L_Automaticallycleanupplaintextmessages"
+                    }
+                ]
+            },
+            "name": "L_Messagehandling",
+            "displayName": "메시지 처리",
+            "explainText": "이 설정을 사용하여 전자 메일 메시지 처리 방법에 대한 다양한 옵션을 지정할 수 있습니다.",
+            "tags": [
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Emailoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -1295,7 +1409,7 @@
             },
             "name": "L_DisableMailTips",
             "displayName": "메일 설명 사용 안 함",
-            "explainText": "이 정책 설정은 메일 설명 표시 여부를 제어합니다.\n\\t  \n이 정책 설정을 사용하면 Outlook에 메일 설명이 표시되지 않습니다.\\t\\t\\t\n이 정책 설정을 사용하지 않거나 구성하지 않으면 Outlook에 메일 설명이 표시됩니다.",
+            "explainText": "이 정책 설정은 메일 설명 표시 여부를 제어합니다.\n\\t  \n이 정책 설정을 사용하면 Outlook에 메일 설명이 표시되지 않습니다.\n\\t\\t\\t\\t\\t\n이 정책 설정을 사용하지 않거나 구성하지 않으면 Outlook에 메일 설명이 표시됩니다.",
             "tags": [
                 "L_Emailoptions",
                 "L_Preferences",
@@ -1549,6 +1663,53 @@
         },
         {
             "parentCategory": {
+                "ref": "L_DesktopAlert"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "corner",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 3,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "모서리(0-3)",
+                        "id": "L_Corner03"
+                    },
+                    {
+                        "valueName": "xoffset",
+                        "minValueSpecified": false,
+                        "maxValueSpecified": false,
+                        "id": "L_XOffsetdefault44"
+                    },
+                    {
+                        "valueName": "yoffset",
+                        "minValueSpecified": false,
+                        "maxValueSpecified": false,
+                        "id": "L_YOffsetdefault42"
+                    }
+                ]
+            },
+            "name": "L_SpecifydefaultlocationofDesktopAlert",
+            "displayName": "바탕 화면 알림의 기본 위치 지정",
+            "explainText": "바탕 화면 알림의 기본 위치를 변경할 수 있습니다. [모서리] 필드에서 화면의 사분면에 해당하는 숫자 중 하나를 선택합니다(0 = 왼쪽 위, 1 = 오른쪽 위, 2 = 왼쪽 아래, 3 = 기본값, 오른쪽 아래). [X 오프셋] 필드에 지정한 모서리로부터의 가로 거리에 해당하는 숫자(기본값은 44)를 입력하고 [Y 오프셋] 필드에는 지정한 모서리로부터의 세로 거리에 해당하는 숫자(기본값은 42)를 입력합니다.",
+            "tags": [
+                "L_DesktopAlert",
+                "L_AdvancedEmailoptions",
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\common\\desktopalerts"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_AdvancedEmailoptions"
             },
             "supportedOn": {
@@ -1613,6 +1774,194 @@
         },
         {
             "parentCategory": {
+                "ref": "L_AdvancedEmailoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "높음"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "보통"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "낮음"
+                            }
+                        ],
+                        "valueName": "importance",
+                        "inputType": "dropdownList",
+                        "caption": "중요도 설정:",
+                        "id": "L_Setimportance"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "보통"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "개인"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "원본 유지"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "비밀 우편"
+                            }
+                        ],
+                        "valueName": "sensitivity",
+                        "inputType": "dropdownList",
+                        "caption": "우편물 종류:",
+                        "id": "L_Setsensitivity"
+                    },
+                    {
+                        "valueName": "numdaysexpire",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 3652,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "다음 기간(일)이 지나면 메시지 만료:",
+                        "id": "L_Messagesexpireafterdays"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowcommasinrecip",
+                        "inputType": "checkBox",
+                        "caption": "주소 구분 기호로 쉼표 사용",
+                        "id": "L_Allowcommasasaddressseparator"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "autonamecheck",
+                        "inputType": "checkBox",
+                        "caption": "이름 자동 확인",
+                        "id": "L_Automaticnamechecking"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "deletewhenrespond",
+                        "inputType": "checkBox",
+                        "caption": "모임 요청에 응답할 때 받은 편지함의 모임 요청 삭제",
+                        "id": "L_DeletemeetingrequestfromInboxwhenresponding"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "showautosug",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
+                        "inputType": "checkBox",
+                        "caption": "받는 사람, 참조, 숨은 참조 필드를 입력할 때 이름 추천",
+                        "id": "L_SuggestnameswhilecompletingToCcandBccfields"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "adhocreviewbehavior",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\options\\mail",
+                        "inputType": "checkBox",
+                        "caption": "첨부 파일에 속성을 추가하여 [변경 내용과 함께 회신] 실행",
+                        "id": "L_AddpropertiestoattachmentstoenableReplywithChanges"
+                    }
+                ]
+            },
+            "name": "L_Whensendingamessage",
+            "displayName": "메시지를 보낼 때",
+            "explainText": "해당 UI 옵션에서 값을 설정합니다.",
+            "tags": [
+                "L_AdvancedEmailoptions",
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Trackingoptions"
             },
             "supportedOn": {
@@ -1641,6 +1990,143 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\flagging",
             "valueName": "disablesenderflags"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Emailoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "원본 메시지 포함 안 함"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "원본 메시지 첨부"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "원본 메시지 내용 포함"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "원본 메시지 내용을 밀어 맞추어 포함"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1000
+                                    }
+                                },
+                                "displayName": "원본 메시지의 각 줄에 기호 붙이기"
+                            }
+                        ],
+                        "valueName": "replystyle",
+                        "inputType": "dropdownList",
+                        "caption": "메시지를 회신할 때:",
+                        "id": "L_Whenreplyingtoamessage"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "원본 메시지 첨부"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "원본 메시지 내용 포함"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "원본 메시지 내용을 밀어 맞추어 포함"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1000
+                                    }
+                                },
+                                "displayName": "원본 메시지의 각 줄에 기호 붙이기"
+                            }
+                        ],
+                        "valueName": "forwardstyle",
+                        "inputType": "dropdownList",
+                        "caption": "메시지를 전달할 때:",
+                        "id": "L_Whenforwardingamessage"
+                    },
+                    {
+                        "valueName": "prefixtext",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "줄마다 맨 앞에 다음 기호 삽입:",
+                        "id": "L_Prefixeachlinewith"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "markcomments",
+                        "key": "software\\microsoft\\office\\16.0\\common\\mailsettings",
+                        "inputType": "checkBox",
+                        "caption": "사용자의 메모 표시 허용",
+                        "id": "L_Allowuserscommentstobemarked"
+                    }
+                ]
+            },
+            "name": "L_Onrepliesandforwards",
+            "displayName": "회신 및 전달",
+            "explainText": "해당 UI 옵션에서 값을 설정합니다.",
+            "tags": [
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
         },
         {
             "parentCategory": {
@@ -1762,7 +2248,7 @@
                                         "value": 8192
                                     }
                                 },
-                                "displayName":"'아주 자세하게' 사용 안 함"
+                                "displayName": "'아주 자세하게' 사용 안 함"
                             },
                             {
                                 "value": {
@@ -1770,7 +2256,7 @@
                                         "value": 16384
                                     }
                                 },
-                                "displayName":"'아주 자세하게' 및 '간략하게' 사용 안 함"
+                                "displayName": "'아주 자세하게' 및 '간략하게' 사용 안 함"
                             }
                         ],
                         "valueName": "publishcalendardetailspolicy",
@@ -1781,7 +2267,7 @@
             },
             "name": "L_Restrictlevelofcalendardetails",
             "displayName": "사용자가 게시할 수 있는 일정 세부 사항 수준 제한",
-            "explainText":"이 정책 설정은 Outlook 사용자가 Microsoft Outlook 일정 공유 서비스로 게시할 수 있는 일정 정보 수준을 제어합니다.\n\n이 정책 설정을 사용하면 다음의 세 가지 정보 수준 중에서 선택할 수 있습니다.\n\n* 모든 옵션 사용 - 기본 구성입니다.\n* '아주 자세하게' 사용 안 함 \n* '아주 자세하게' 및 '간략하게' 사용 안 함 \n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 Outlook 사용자가 일정을 Microsoft Outlook 일정 공유 서비스로 게시하여 선택한 다른 사용자와 공유할 수 있습니다. 사용자는 다음의 세 가지 정보 수준 중에서 선택할 수 있습니다.\n\n* 약속 있음/없음 - 승인된 방문자가 [약속 없음], [약속 있음], [미정] 또는 [부재 중]으로 표시된 사용자 시간을 확인할 수 있지만 일정 항목의 제목이나 정보는 볼 수 없습니다.\n* 간략하게 - 승인된 방문자가 사용자의 약속 있음/없음 상태와 일정 항목 제목만 볼 수 있으며, 일정 항목 정보는 볼 수 없습니다. 원하는 경우 방문자가 개인 항목 유무를 볼 수 있도록 허용할 수도 있습니다.\n* 아주 자세하게 - 승인된 방문자가 일정 항목의 모든 정보를 볼 수 있습니다. 원하는 경우 방문자가 개인 항목 유무를 볼 수 있도록 허용할 수도 있습니다.",
+            "explainText": "이 정책 설정은 Outlook 사용자가 Microsoft Outlook 일정 공유 서비스로 게시할 수 있는 일정 정보 수준을 제어합니다.\n\n이 정책 설정을 사용하면 다음의 세 가지 정보 수준 중에서 선택할 수 있습니다.\n\n* 모든 옵션 사용 - 기본 구성입니다.\n* '아주 자세하게' 사용 안 함 \n* '아주 자세하게' 및 '간략하게' 사용 안 함 \n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 Outlook 사용자가 일정을 Microsoft Outlook 일정 공유 서비스로 게시하여 선택한 다른 사용자와 공유할 수 있습니다. 사용자는 다음의 세 가지 정보 수준 중에서 선택할 수 있습니다.\n\n* 약속 있음/없음 - 승인된 방문자가 [약속 없음], [약속 있음], [미정] 또는 [부재 중]으로 표시된 사용자 시간을 확인할 수 있지만 일정 항목의 제목이나 정보는 볼 수 없습니다.\n* 간략하게 - 승인된 방문자가 사용자의 약속 있음/없음 상태와 일정 항목 제목만 볼 수 있으며, 일정 항목 정보는 볼 수 없습니다. 원하는 경우 방문자가 개인 항목 유무를 볼 수 있도록 허용할 수도 있습니다.\n* 아주 자세하게 - 승인된 방문자가 일정 항목의 모든 정보를 볼 수 있습니다. 원하는 경우 방문자가 개인 항목 유무를 볼 수 있도록 허용할 수도 있습니다.",
             "tags": [
                 "L_MicrosoftOfficeOnlineSharing",
                 "L_Calendaroptions",
@@ -2188,7 +2674,7 @@
                                         "value": 16384
                                     }
                                 },
-                                "displayName":"세부 수준을 '약속 있음/없음'으로 지정하여 일정 공유 허용"
+                                "displayName": "세부 수준을 '약속 있음/없음'으로 지정하여 일정 공유 허용"
                             },
                             {
                                 "value": {
@@ -2196,7 +2682,7 @@
                                         "value": 8192
                                     }
                                 },
-                                "displayName":"세부 수준을 '약속 있음/없음' 및 '간략하게'로 지정하여 일정 공유 허용"
+                                "displayName": "세부 수준을 '약속 있음/없음' 및 '간략하게'로 지정하여 일정 공유 허용"
                             }
                         ],
                         "valueName": "payloadcalendardetailspolicy",
@@ -2615,6 +3101,829 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 480
+                                    }
+                                },
+                                "displayName": "오전 8:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "오전 12:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 30
+                                    }
+                                },
+                                "displayName": "오전 12:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 60
+                                    }
+                                },
+                                "displayName": "오전 1:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 90
+                                    }
+                                },
+                                "displayName": "오전 1:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 120
+                                    }
+                                },
+                                "displayName": "오전 2:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 150
+                                    }
+                                },
+                                "displayName": "오전 2:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 180
+                                    }
+                                },
+                                "displayName": "오전 3:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 210
+                                    }
+                                },
+                                "displayName": "오전 3:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 240
+                                    }
+                                },
+                                "displayName": "오전 4:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 270
+                                    }
+                                },
+                                "displayName": "오전 4:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 300
+                                    }
+                                },
+                                "displayName": "오전 5:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 330
+                                    }
+                                },
+                                "displayName": "오전 5:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 360
+                                    }
+                                },
+                                "displayName": "오전 6:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 390
+                                    }
+                                },
+                                "displayName": "오전 6:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 420
+                                    }
+                                },
+                                "displayName": "오전 7:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 450
+                                    }
+                                },
+                                "displayName": "오전 7:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 480
+                                    }
+                                },
+                                "displayName": "오전 8:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 510
+                                    }
+                                },
+                                "displayName": "오전 8:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 540
+                                    }
+                                },
+                                "displayName": "오전 9:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 570
+                                    }
+                                },
+                                "displayName": "오전 9:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 600
+                                    }
+                                },
+                                "displayName": "오전 10:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 630
+                                    }
+                                },
+                                "displayName": "오전 10:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 660
+                                    }
+                                },
+                                "displayName": "오전 11:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 690
+                                    }
+                                },
+                                "displayName": "오전 11:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 720
+                                    }
+                                },
+                                "displayName": "오후 12:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 750
+                                    }
+                                },
+                                "displayName": "오후 12:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 780
+                                    }
+                                },
+                                "displayName": "오후 1:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 810
+                                    }
+                                },
+                                "displayName": "오후 1:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 840
+                                    }
+                                },
+                                "displayName": "오후 2:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 870
+                                    }
+                                },
+                                "displayName": "오후 2:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 900
+                                    }
+                                },
+                                "displayName": "오후 3:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 930
+                                    }
+                                },
+                                "displayName": "오후 3:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 960
+                                    }
+                                },
+                                "displayName": "오후 4:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 990
+                                    }
+                                },
+                                "displayName": "오후 4:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1020
+                                    }
+                                },
+                                "displayName": "오후 5:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1050
+                                    }
+                                },
+                                "displayName": "오후 5:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1080
+                                    }
+                                },
+                                "displayName": "오후 6:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1110
+                                    }
+                                },
+                                "displayName": "오후 6:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1140
+                                    }
+                                },
+                                "displayName": "오후 7:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1170
+                                    }
+                                },
+                                "displayName": "오후 7:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1200
+                                    }
+                                },
+                                "displayName": "오후 8:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1230
+                                    }
+                                },
+                                "displayName": "오후 8:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1260
+                                    }
+                                },
+                                "displayName": "오후 9:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1290
+                                    }
+                                },
+                                "displayName": "오후 9:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1320
+                                    }
+                                },
+                                "displayName": "오후 10:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1350
+                                    }
+                                },
+                                "displayName": "오후 10:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1380
+                                    }
+                                },
+                                "displayName": "오후 11:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1410
+                                    }
+                                },
+                                "displayName": "오후 11:30"
+                            }
+                        ],
+                        "valueName": "caldefstart",
+                        "inputType": "dropdownList",
+                        "caption": "시작 시간:",
+                        "id": "L_Starttime"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1020
+                                    }
+                                },
+                                "displayName": "오후 5:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "오전 12:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 30
+                                    }
+                                },
+                                "displayName": "오전 12:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 60
+                                    }
+                                },
+                                "displayName": "오전 1:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 90
+                                    }
+                                },
+                                "displayName": "오전 1:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 120
+                                    }
+                                },
+                                "displayName": "오전 2:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 150
+                                    }
+                                },
+                                "displayName": "오전 2:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 180
+                                    }
+                                },
+                                "displayName": "오전 3:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 210
+                                    }
+                                },
+                                "displayName": "오전 3:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 240
+                                    }
+                                },
+                                "displayName": "오전 4:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 270
+                                    }
+                                },
+                                "displayName": "오전 4:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 300
+                                    }
+                                },
+                                "displayName": "오전 5:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 330
+                                    }
+                                },
+                                "displayName": "오전 5:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 360
+                                    }
+                                },
+                                "displayName": "오전 6:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 390
+                                    }
+                                },
+                                "displayName": "오전 6:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 420
+                                    }
+                                },
+                                "displayName": "오전 7:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 450
+                                    }
+                                },
+                                "displayName": "오전 7:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 480
+                                    }
+                                },
+                                "displayName": "오전 8:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 510
+                                    }
+                                },
+                                "displayName": "오전 8:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 540
+                                    }
+                                },
+                                "displayName": "오전 9:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 570
+                                    }
+                                },
+                                "displayName": "오전 9:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 600
+                                    }
+                                },
+                                "displayName": "오전 10:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 630
+                                    }
+                                },
+                                "displayName": "오전 10:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 660
+                                    }
+                                },
+                                "displayName": "오전 11:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 690
+                                    }
+                                },
+                                "displayName": "오전 11:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 720
+                                    }
+                                },
+                                "displayName": "오후 12:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 750
+                                    }
+                                },
+                                "displayName": "오후 12:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 780
+                                    }
+                                },
+                                "displayName": "오후 1:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 810
+                                    }
+                                },
+                                "displayName": "오후 1:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 840
+                                    }
+                                },
+                                "displayName": "오후 2:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 870
+                                    }
+                                },
+                                "displayName": "오후 2:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 900
+                                    }
+                                },
+                                "displayName": "오후 3:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 930
+                                    }
+                                },
+                                "displayName": "오후 3:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 960
+                                    }
+                                },
+                                "displayName": "오후 4:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 990
+                                    }
+                                },
+                                "displayName": "오후 4:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1020
+                                    }
+                                },
+                                "displayName": "오후 5:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1050
+                                    }
+                                },
+                                "displayName": "오후 5:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1080
+                                    }
+                                },
+                                "displayName": "오후 6:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1110
+                                    }
+                                },
+                                "displayName": "오후 6:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1140
+                                    }
+                                },
+                                "displayName": "오후 7:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1170
+                                    }
+                                },
+                                "displayName": "오후 7:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1200
+                                    }
+                                },
+                                "displayName": "오후 8:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1230
+                                    }
+                                },
+                                "displayName": "오후 8:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1260
+                                    }
+                                },
+                                "displayName": "오후 9:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1290
+                                    }
+                                },
+                                "displayName": "오후 9:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1320
+                                    }
+                                },
+                                "displayName": "오후 10:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1350
+                                    }
+                                },
+                                "displayName": "오후 10:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1380
+                                    }
+                                },
+                                "displayName": "오후 11:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1410
+                                    }
+                                },
+                                "displayName": "오후 11:30"
+                            }
+                        ],
+                        "valueName": "caldefend",
+                        "inputType": "dropdownList",
+                        "caption": "종료 시간:",
+                        "id": "L_EndTime"
+                    }
+                ]
+            },
+            "name": "L_Workinghours",
+            "displayName": "작업 시간",
+            "explainText": "해당 UI 옵션에서 값을 설정합니다.",
+            "tags": [
+                "L_Calendaroptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Calendaroptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -2880,6 +4189,65 @@
         },
         {
             "parentCategory": {
+                "ref": "L_FreeBusyOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "fbpublishrange",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 12,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "게시된 약속 있음/없음 정보의 개월 수:",
+                        "id": "L_MonthsofFreeBusyinformationpublished"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "lock fb range",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar\\internet free/busy",
+                        "inputType": "checkBox",
+                        "caption": "사용자가 게시 중인 약속 있음/없음 정보의 개월 수를 변경하지 못하도록 설정",
+                        "id": "L_PreventusersfromchangingMonthsofFreeBusyinformation1"
+                    },
+                    {
+                        "valueName": "fbupdatesecs",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 86400,
+                        "maxValueSpecified": true,
+                        "id": "L_FreeBusyupdatedontheservereveryxxxseconds"
+                    }
+                ]
+            },
+            "name": "L_options9",
+            "displayName": "약속 없음/다른 용무 중 옵션",
+            "explainText": "\"[]개월 동안의 약속 있음/없음 일정 정보를 서버에 게시\" 옵션에서 값을 설정합니다.",
+            "tags": [
+                "L_FreeBusyOptions",
+                "L_Calendaroptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_RecurrenceOptions"
             },
             "supportedOn": {
@@ -2945,6 +4313,36 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Contactoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DetermineOrderOfSourcesForPhotos",
+            "displayName": "사진 원본 순서 결정",
+            "explainText": "이 정책 설정에서는 Outlook에 표시되는 사진 원본의 순서를 조정합니다.\n\n이 정책 설정을 사용하면 Outlook에서는 먼저 OAB/AD에서 사용자 사진을 찾습니다. 이 부분을 확인할 수 없으며 연락처 사진을 사용할 수 있는 경우에는 연락처의 사진이 표시됩니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 Outlook에서는 먼저 연락처 주소록에서 사용자 사진을 찾습니다. 사진을 확인할 수 없는 경우 사용할 수 있는 OAB/AD를 확인합니다.",
+            "tags": [
+                "L_Contactoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook",
+            "valueName": "preferadphotos"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -3000,6 +4398,193 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
             "valueName": "showcontactfieldobsolete"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Contactoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "E"
+                                },
+                                "displayName": "이름 (중간이름) 성"
+                            },
+                            {
+                                "value": {
+                                    "string": "H"
+                                },
+                                "displayName": "성 이름"
+                            },
+                            {
+                                "value": {
+                                    "string": "S"
+                                },
+                                "displayName": "이름 성1 성2"
+                            }
+                        ],
+                        "valueName": "nameparserstyle",
+                        "inputType": "dropdownList",
+                        "caption": "기본 전체 이름 순서:",
+                        "id": "L_DefaultFullNameorder"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32791
+                                    }
+                                },
+                                "displayName": "성 이름"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32823
+                                    }
+                                },
+                                "displayName": "이름 성"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 14870
+                                    }
+                                },
+                                "displayName": "회사"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32793
+                                    }
+                                },
+                                "displayName": "성, 이름 (회사)"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32792
+                                    }
+                                },
+                                "displayName": "회사 (성, 이름)"
+                            }
+                        ],
+                        "valueName": "fileasorder",
+                        "inputType": "dropdownList",
+                        "caption": "기본 표시 방법 순서:",
+                        "id": "L_DefaultFileAsorder"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "confirmduplicates",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\contact",
+                        "inputType": "checkBox",
+                        "caption": "중복된 연락처 확인",
+                        "id": "L_Checkforduplicatecontacts"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "indextabson",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\contact",
+                        "inputType": "checkBox",
+                        "caption": "추가 연락처 색인 표시",
+                        "id": "L_ShowanadditionalContactsIndex"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "아랍어"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "키릴 자모"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 15
+                                    }
+                                },
+                                "displayName": "그리스어"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 16
+                                    }
+                                },
+                                "displayName": "히브리어"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 28
+                                    }
+                                },
+                                "displayName": "태국어"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 30
+                                    }
+                                },
+                                "displayName": "베트남어"
+                            }
+                        ],
+                        "valueName": "indextabsscript",
+                        "inputType": "dropdownList",
+                        "caption": "추가 연락처 색인:",
+                        "id": "L_AdditionalContactsIndex"
+                    }
+                ]
+            },
+            "name": "L_Selectthedefaultsettingforhowtofilenewcontacts",
+            "displayName": "새 연락처를 관리하는 방법에 대한 기본 설정 선택",
+            "explainText": "해당 UI 옵션에서 값을 설정합니다.",
+            "tags": [
+                "L_Contactoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\contact"
         },
         {
             "parentCategory": {
@@ -3400,6 +4985,34 @@
         },
         {
             "parentCategory": {
+                "ref": "L_OutlookOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_WindowsVista"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_InternetAndNetworkPathsIntoHyperlinks",
+            "displayName": "인터넷 및 네트워크 경로를 하이퍼링크로 변환",
+            "explainText": "이 정책 설정은 Outlook에서 인터넷 및 네트워크 경로를 나타내는 텍스트를 하이퍼링크로 자동 변환할지 여부를 지정합니다. 이 옵션은 UI(사용자 인터페이스)의 [Outlook] | [파일] | [옵션] | [메일] | [편집기 옵션...] | [언어 교정] | [자동 고침 옵션...] | [자동 서식] 탭에 있는 \"인터넷과 네트워크 경로를 하이퍼링크로 설정\" 확인란을 선택하여 구성할 수도 있습니다.\n\n이 정책 설정을 사용하거나 구성하지 않으면 Outlook에서 인터넷 및 네트워크 경로를 나타내는 텍스트가 하이퍼링크로 자동 변환됩니다. 이 동작은 Outlook의 기본 동작입니다.\n\n이 정책 설정을 사용하지 않으면 Outlook에서 인터넷 및 네트워크 경로를 나타내는 텍스트가 하이퍼링크로 자동 변환되지 않습니다.",
+            "tags": [
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\autoformat",
+            "valueName": "pgrfafo_25_1"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_ComposeMessages"
             },
             "supportedOn": {
@@ -3458,6 +5071,55 @@
             "name": "L_OutlookRichTextoptions",
             "displayName": "Outlook 서식 있는 텍스트 옵션",
             "explainText": "이 정책 설정은 Outlook에서 RTF(서식 있는 텍스트 형식) 메시지를 인터넷상으로 받는 사람에게 보내는 방법을 제어합니다.\n\n이 정책 설정을 사용하면 인터넷상으로 받는 사람에게 보내는 RTF 메시지 처리 방식을 다음 중에서 선택할 수 있습니다.\n* 일반 텍스트 형식으로 전환 - Outlook에서 메시지를 기본 문자 집합으로 된 일반 텍스트 형식으로 변환합니다. 메시지 형식이 손실됩니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 Outlook이 인터넷으로 전송된 RTF 형식 메시지를 HTML 형식으로 자동 변환하여 메시지 형식이 유지되고 첨부 파일이 수신됩니다.",
+            "tags": [
+                "L_InternetFormatting",
+                "L_MailFormat",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\mail"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_InternetFormatting"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "plainwraplen",
+                        "minValue": 30,
+                        "minValueSpecified": true,
+                        "maxValue": 132,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "<x> 문자 길이 단위로 텍스트 자동 줄 바꿈",
+                        "id": "L_Automaticallywraptextatxcharacters"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "message plain format mime",
+                        "inputType": "checkBox",
+                        "caption": "UUENCODE 서식으로 첨부 파일 인코딩",
+                        "id": "L_EncodeattachmentsinUUENCODEformatwhensending1"
+                    }
+                ]
+            },
+            "name": "L_Plaintextoptions",
+            "displayName": "일반 텍스트 옵션",
+            "explainText": "이 정책 설정을 통해 Outlook에서 일반 텍스트 메시지를 보낼 때 형식이 지정되는 방식을 제어할 수 있습니다.\n\n이 정책 설정을 사용하면 인터넷 전자 메일 메시지에서 텍스트의 줄이 자동으로 바뀌며 첨부 파일은 UUENCODE 형식으로 인코딩됩니다.\n\n이 정책 설정을 사용하지 않으면 표준 MIME 형식을 사용하여 일반 텍스트로 된 Outlook 메시지의 첨부 파일을 인코딩하며 사용자는 이 구성을 변경할 수 없습니다.\n\n이 정책 설정을 구성하지 않는 경우의 동작은 정책을 [사용 안 함]으로 설정하는 경우와 동일하지만, 사용자가 필요한 경우 [도구] > [옵션] > [메일 형식] 탭을 클릭하고 [인터넷 메일 형식]을 클릭한 다음 \"일반 텍스트 옵션\" 아래의 값을 변경하여 Outlook에서 일반 텍스트 옵션을 수정할 수 있습니다.",
             "tags": [
                 "L_InternetFormatting",
                 "L_MailFormat",
@@ -4079,6 +5741,35 @@
                     "value": 0
                 }
             },
+            "name": "L_HidePhotoLink",
+            "displayName": "사진 링크 숨기기",
+            "explainText": "이 정책 설정은 사용자 사진을 업로드할 수 있는 사용자의 내 사이트에 대한 링크(검색되는 경우)를 구성합니다. 이 링크는 [파일] 탭 아래에 있습니다.\n\n이 정책 설정을 사용하면 해당 링크를 볼 수 없습니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 해당 링크를 볼 수 있습니다.",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options",
+            "valueName": "hidephotolink"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_AllowSelectionFloaties",
             "displayName": "선택 영역에 미니 도구 모음 표시",
             "explainText": "이 정책 설정을 사용하지 않으면 미니 도구 모음이 텍스트 선택 영역에 표시되지 않습니다. 기본적으로 선택 영역에서는 미니 도구 모음을 사용할 수 있으며 편집기 옵션 대화 상자의 설정을 통해 미니 도구 모음 표시 여부를 변경할 수 있습니다.",
@@ -4620,6 +6311,84 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
             "valueName": "archiveignorelastmodifiedtime"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Righttoleft"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "왼쪽에서 오른쪽"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "오른쪽에서 왼쪽"
+                            }
+                        ],
+                        "valueName": "calendar direction",
+                        "inputType": "dropdownList",
+                        "caption": "레이아웃 방향 설정:",
+                        "id": "L_Setlayoutdirection"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "컨텍스트 기반"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "왼쪽에서 오른쪽"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "오른쪽에서 왼쪽"
+                            }
+                        ],
+                        "valueName": "text direction",
+                        "inputType": "dropdownList",
+                        "caption": "전체 텍스트 방향 설정:",
+                        "id": "L_Setglobaltextdirection"
+                    }
+                ]
+            },
+            "name": "L_LayoutOptions",
+            "displayName": "레이아웃 옵션",
+            "explainText": "해당 UI 옵션에서 값을 설정합니다.",
+            "tags": [
+                "L_Righttoleft",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
         },
         {
             "parentCategory": {
@@ -5671,7 +7440,7 @@
                 }
             },
             "name": "L_DisablePublishtoGALbutton",
-            "displayName":"'전체 주소 목록에 게시' 단추 표시 안 함",
+            "displayName": "'전체 주소 목록에 게시' 단추 표시 안 함",
             "explainText": "이 정책 설정은 Outlook 사용자가 GAL(전체 주소 목록)에 전자 메일 인증서를 게시할 수 있는지 여부를 제어합니다.\n\n이 정책 설정을 사용하면 \"전체 주소 목록에 게시\" 단추가 보안 센터의 \"전자 메일 보안\" 섹션에 표시되지 않습니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 Outlook 사용자가 보안 센터의 \"전자 메일 보안\" 섹션을 통해 전자 메일 인증서를 GAL에 게시할 수 있습니다.",
             "tags": [
                 "L_Cryptography",
@@ -6383,6 +8152,36 @@
                     "value": 0
                 }
             },
+            "name": "L_ConfigureCachedExchangeMode",
+            "displayName": "기존 및 새 Outlook 프로필에 대해 캐시된 Exchange 모드 사용",
+            "explainText": "기본적으로 사용자는 캐시된 Exchange 모드를 구성하거나 온라인 모드를 사용하도록 선택할 수 있습니다. 이 설정을 사용하면 기존 및 새 Outlook 프로필이 캐시된 Exchange 모드를 사용하도록 구성됩니다. 이 설정을 사용하지 않으면 기존 및 새 Outlook 프로필이 온라인 모드를 사용하도록 구성됩니다.",
+            "tags": [
+                "L_CachedExchangeMode",
+                "L_Exchangesettings",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\cached mode",
+            "valueName": "enable"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_CachedExchangeMode"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_InCachedExchangemakeSendReceiveF9nulloperation",
             "displayName": "사용자가 보내기/받기를 클릭하거나 F9 키를 누르면 캐시된 Exchange 모드에서 동기화 안 함",
             "explainText": "기본적으로 사용자가 캐시된 Exchange 모드 계정에 대해 [보내기/받기]를 클릭하거나 <F9> 키를 누르면 Outlook과 Exchange 서버가 동기화됩니다. 이 설정을 사용하면 [보내기/받기]를 클릭하거나 <F9> 키를 눌러도 하나의 폴더만을 동기화 중인 경우가 아니면 Outlook이 Exchange와 동기화되지 않습니다. 그러나 사용자는 <Shift+F9>를 눌러 현재 폴더를 동기화할 수는 있습니다.",
@@ -6453,6 +8252,39 @@
             "name": "L_Entersecondstowaittodownloadchangesfromserver",
             "displayName": "서버에서 변경 내용을 다운로드할 때까지 대기할 시간(초) 입력",
             "explainText": "Exchange 서버에서 변경 내용을 다운로드하기 전에 대기할 시간(초)을 지정합니다.",
+            "tags": [
+                "L_CachedExchangeMode",
+                "L_Exchangesettings",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\cached mode"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_CachedExchangeMode"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "maximum",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 86400,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "동기화하기 전에 대기할 시간(초) 입력(기본값 60초)",
+                        "id": "L_EntersecondstowaitbeforesyncDefault60sec"
+                    }
+                ]
+            },
+            "name": "L_Entermaximumsecondstowaittosyncchanges",
+            "displayName": "변경 내용을 동기화할 때까지 대기할 최대 시간(초) 입력",
+            "explainText": "Exchange 서버와 변경 내용을 동기화하기 전에 대기할 최대 시간(초)을 지정합니다.",
             "tags": [
                 "L_CachedExchangeMode",
                 "L_Exchangesettings",
@@ -7032,6 +8864,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_AccountSettingsEmail"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_PreventSavingCredentialsForBasicAuthenticationPolicy",
+            "displayName": "기본 인증 정책에 대한 자격 증명 저장 금지",
+            "explainText": "이 정책 설정을 통해 Outlook에서 기본 인증을 사용하여 사용자 자격 증명을 저장하지 못하게 할 수 있습니다.\n\n이 정책 설정을 사용하면 Outlook에서는 기본 인증을 사용하여 사용자 자격 증명을 저장하지 않습니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 Outlook에서는 서버에 대해 기본 인증을 사용하여 자격 증명을 저장할 수 있도록 합니다. 이러한 자격 증명은 일반 자격 증명으로 저장되며 시스템에서 해당 사용자 권한으로 실행되는 프로세스를 통해 검색할 수 있습니다.",
+            "tags": [
+                "L_AccountSettingsEmail",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\rpc",
+            "valueName": "disablebasicauthsavedcreds"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Exchangesettings"
             },
             "supportedOn": {
@@ -7235,7 +9096,7 @@
             },
             "name": "L_RPCHTTPConnectionFlags",
             "displayName": "RPC/HTTP 연결 플래그",
-            "explainText":"이 정책 설정은 Outlook Anywhere에 대한 연결 옵션을 구성합니다.\n\n이 정책 설정을 사용하면 필요한 설정이 조합되어 있는 드롭다운 메뉴에서 플래그를 선택하여 여러 연결 옵션을 구성할 수 있습니다. 다음과 같은 플래그를 사용할 수 있습니다.\n\n이 설정을 사용하지 않거나 구성하지 않으면 Outlook에서 자동 검색에 지정되어 있는 설정을 사용합니다.\n\n플래그 1: [연결] 탭의 'HTTP를 사용하여 Microsoft Exchange에 연결' 확인란 설정.\n\n다음 플래그는 [Microsoft Exchange 프록시 설정] 대화 상자의 옵션을 구성합니다.\n\n플래그 2: 'SSL만 사용하여 연결' 확인란 설정 \n플래그 3: '인증서에 이 사용자 이름이 있는 프록시 서버에만 연결' 확인란 설정 \n플래그 4: '고속 네트워크에서 먼저 HTTP를 사용하여 연결한 다음, TCP/IP를 사용하여 연결' 확인란 설정 \n플래그 5: '저속 네트워크에서 먼저 HTTP를 사용하여 연결한 다음, TCP/IP를 사용하여 연결' 확인란 설정 ",
+            "explainText": "이 정책 설정은 Outlook Anywhere에 대한 연결 옵션을 구성합니다.\n\n이 정책 설정을 사용하면 필요한 설정이 조합되어 있는 드롭다운 메뉴에서 플래그를 선택하여 여러 연결 옵션을 구성할 수 있습니다. 다음과 같은 플래그를 사용할 수 있습니다.\n\n이 설정을 사용하지 않거나 구성하지 않으면 Outlook에서 자동 검색에 지정되어 있는 설정을 사용합니다.\n\n플래그 1: [연결] 탭의 'HTTP를 사용하여 Microsoft Exchange에 연결' 확인란 설정.\n\n다음 플래그는 [Microsoft Exchange 프록시 설정] 대화 상자의 옵션을 구성합니다.\n\n플래그 2: 'SSL만 사용하여 연결' 확인란 설정 \n플래그 3: '인증서에 이 사용자 이름이 있는 프록시 서버에만 연결' 확인란 설정 \n플래그 4: '고속 네트워크에서 먼저 HTTP를 사용하여 연결한 다음, TCP/IP를 사용하여 연결' 확인란 설정 \n플래그 5: '저속 네트워크에서 먼저 HTTP를 사용하여 연결한 다음, TCP/IP를 사용하여 연결' 확인란 설정 ",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -7464,37 +9325,6 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "disablecrossaccountcopy",
-                        "requiredSpecified": false,
-                        "expandableSpecified": false,
-                        "maxLength": 100,
-                        "maxLengthSpecified": true,
-                        "inputType": "textBox",
-                        "id": "L_PreventCopyingOrMovingItemsBetweenAccountsID"
-                    }
-                ]
-            },
-            "name": "L_PreventCopyingOrMovingItemsBetweenAccounts",
-            "displayName": "계정 간에 항목 복사 또는 이동 금지",
-            "explainText": "이 정책 설정을 통해 사용자가 항목을 다른 계정이나 PST로 복사 또는 이동하지 못하게 할 수 있습니다.\n\n이 정책 설정을 사용하면 항목이 다른 계정이나 PST로 이동 또는 복사되지 못합니다. 다음 세부 항목 중 하나를 입력하십시오.\n\n- \"Contoso.com\": 나열된 도메인에 해당하는 계정에서 복사 또는 이동 금지\n- \"*\": 모든 계정 및 PST에서 복사 금지\n- \"SharePoint\": SharePoint PST에서 복사 또는 이동 금지\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 계정 또는 PST 간에 항목을 복사하거나 이동할 수 있습니다.",
-            "tags": [
-                "L_Exchangesettings",
-                "L_ToolsAccounts",
-                "L_MicrosoftOfficeOutlook"
-            ],
-            "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\outlook"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Exchangesettings"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -7507,7 +9337,7 @@
             },
             "name": "L_AutomaticallyConfigureProfileBasedOnActive",
             "displayName": "Active Directory 기본 SMTP 주소를 기반으로 프로필 자동 구성",
-            "explainText": "Active Directory 기본 SMTP 주소를 기반으로 하여 첫 번째 프로필만 자동으로 구성\n\n이 정책 설정은 Active Directory 환경에서 도메인에 가입한 사용자가 Outlook에서 계정을 설정할 때 사용하던 기본 SMTP 주소를 변경할 수 있는지를 제어합니다.\n\n이 정책 설정을 사용하도록 설정하면 사용자는 새 계정 마법사를 사용하지 않고 프로필 이름을 입력하여 새 프로필을 만들 수 있습니다. 프로필을 만들 때 사용자 인터페이스가 나타나지 않습니다.\n\n첫 번째 프로필이 생성된 후에는 이 키가 무시됩니다.",
+            "explainText": "이 정책 설정은 새 프로필을 만들 때 사용자의 Active Directory 기본 SMTP 주소를 자동으로 사용할 지 여부를 제어합니다.\n\n이 정책 설정을 사용하도록 설정하면 사용자가 새 프로필을 만들 때 사용자의 Active Directory 기본 SMTP 주소가 프로필에 사용됩니다. 사용자는 프로필 이름만 입력할 수 있습니다. 프로필을 만들 때 특정 프로필 설정을 구성하는 데 사용하는 마법사는 사용자에게 표시되지 않습니다.\n\n참고: 첫 번째 프로필만 Active Directory 기본 SMTP 주소에 사용하고, 사용자가 다른 프로필을 만들 때 다른 SMTP 주소를 지정하게 하려면 \"Active Directory 기본 SMTP 주소를 기반으로 프로필 자동 구성(한 번만 해당)\" 정책 설정을 대신 사용합니다.\n\n이 정책 설정을 사용하지 않도록 설정하거나 구성하지 않으면 사용자가 새 프로필을 만들 때 특정 프로필 설정을 구성하는 데 사용되는 마법사가 사용자에게 표시되고 사용자는 프로필이 생성될 때 모든 SMTP 주소를 지정할 수 있습니다.",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -7535,8 +9365,8 @@
                 }
             },
             "name": "L_AutomaticallyConfigureProfileBasedOnActiveOnce",
-            "displayName": "Active Directory 기본 SMTP 주소를 기반으로 하여 첫 번째 프로필만 자동으로 구성",
-            "explainText": "Active Directory 기본 SMTP 주소를 기반으로 하여 프로필을 한 번 자동으로 구성\n\n이 정책 설정은 Active Directory 환경의 도메인에 참가하는 사용자가 Outlook에서 계정을 설정할 때 사용한 기본 SMTP 주소를 변경할 수 있는지를 제어합니다.\n\n이 정책 설정을 사용하도록 설정하면 사용자가 프로필 이름을 입력하여 새 프로필을 만들 수 있습니다. 새 계정 마법사를 사용하지 않고 프로필을 만듭니다. 프로필을 만들 때 사용자 인터페이스가 나타나지 않습니다.\n\n첫 번째 프로필이 생성된 후에는 이 키가 무시됩니다.",
+            "displayName": "Active Directory 기본 SMTP 주소를 기반으로 프로필 자동 구성(한 번만 해당)",
+            "explainText": "이 정책 설정은 사용자의 Active Directory 기본 SMTP 주소를 사용하여 첫 번째 프로필이 자동으로 생성된 후 사용자가 추가 프로필을 만들고 다른 SMTP 주소를 지정할 수 있는지 여부를 제어합니다.\n\n이 정책 설정을 사용하도록 설정하면 사용자가 최초로 새 프로필을 만들 때 사용자의 Active Directory 기본 SMTP 주소가 프로필에 사용됩니다. 사용자는 프로필 이름만 입력할 수 있습니다. 프로필을 만들 때 특정 프로필 설정을 구성하는 데 사용하는 마법사는 사용자에게 표시되지 않습니다.\n\n첫 번째 프로필이 자동으로 만들어지면 사용자는 수동으로 추가 프로필을 만들 수 있습니다. 특정 프로필 설정을 구성하는 데 사용되는 마법사가 사용자에 게 표시되고 사용자는 프로필이 생성될 때 SMTP 주소를 지정할 수 있습니다.\n\n참고: 새 프로필을 만들 때 사용자의 Active Directory 기본 SMTP 주소가 항상 사용되도록 하려면 대신 \"Active Directory 기본 SMTP 주소를 기반으로 프로필 자동 구성\" 정책 설정을 사용합니다. 해당 정책 설정을 사용하도록 설정된 경우, 이 정책 설정보다 우선합니다.\n\n이 정책 설정을 사용하지 않도록 설정하거나 구성하지 않으면 사용자가 새 프로필을 만들 때 특정 프로필 설정을 구성하는 데 사용되는 마법사가 표시되고 사용자는 프로필이 생성될 때 모든 SMTP 주소를 지정할 수 있습니다.",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -7605,6 +9435,35 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\folders",
             "valueName": "disableeditpermissions"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Predefined"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableEditDefaultUserPermissions",
+            "displayName": "메일 폴더 및 일정에서 기본, 익명 또는 내 조직에 할당할 수 있는 권한 제한",
+            "explainText": "이 정책 설정을 통해 메일 폴더 및 일정에서 기본, 익명 또는 내 조직에 할당할 수 있는 권한을 제한할 수 있습니다.\n\n이 정책 설정을 사용하면 사용자는 다음 권한만을 기본, 익명 또는 내 조직에 할당할 수 있습니다.\n\n- 메일 폴더에 없음\n- 일정에 대한 없음 또는 기본 약속 있음/없음 정보\n\n사용자는 기본, 익명 혹은 내 조직에 다른 모든 권한은 할당할 수 없습니다. 메일 폴더 및 일정에서 다른 사용자에게 할당하는 모든 권한은 계속 사용이 가능합니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 사용자는 메일 폴더 및 일정에서 기본, 익명 또는 내 조직에 사용 권한을 할당할 수 있습니다.",
+            "tags": [
+                "L_Predefined",
+                "L_Disableitemsinuserinterface",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\folders",
+            "valueName": "disableeditdefaultuserpermissions"
         },
         {
             "parentCategory": {
@@ -9302,6 +11161,59 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "MAPI 공급자가 지원 안 함"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "모든 MAPI 공급자가 지원"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "사용 안 함"
+                            }
+                        ],
+                        "valueName": "fastshutdownbehavior",
+                        "inputType": "dropdownList",
+                        "id": "L_ConfigureFastShutdownBehaviorDropID"
+                    }
+                ]
+            },
+            "name": "L_ConfigureFastShutdownBehavior",
+            "displayName": "빠른 종료 동작 구성",
+            "explainText": "이 정책 설정은 Outlook의 \"빠른 종료\" 동작을 제어합니다.\n\n이 정책 설정을 사용하면 다음 옵션 중 하나를 선택할 수 있습니다.\n\n- MAPI 공급자가 지원 안 함: MAPI 공급자가 명시적으로 지원하는 경우 Outlook에서 항상 빠른 종료가 사용됩니다.\n- 모든 MAPI 공급자가 지원: 모든 MAPI 공급자가 지원하는 경우에만 Outlook에서 빠른 종료가 사용됩니다.\n- 사용 안 함: Outlook에서 빠른 종료가 절대로 사용되지 않습니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 \"MAPI 공급자가 지원 안 함\" 옵션을 선택했을 때와 동일한 결과가 발생합니다.",
+            "tags": [
+                "L_Shutdown",
+                "L_Miscellaneous",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\shutdown"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Shutdown"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -10368,48 +12280,6 @@
         },
         {
             "parentCategory": {
-                "ref": "L_OutlookSocialConnector"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "trustedproviderslist",
-                        "required": true,
-                        "requiredSpecified": true,
-                        "expandableSpecified": false,
-                        "maxLengthSpecified": false,
-                        "inputType": "textBox",
-                        "caption": "세미콜론으로 ProgID 구분",
-                        "id": "L_SpecifyListOfSocialNetworkProvidersToLoadID"
-                    }
-                ]
-            },
-            "name": "L_SpecifyListOfSocialNetworkProvidersToLoad",
-            "displayName": "로드할 소셜 네트워크 제공자 목록 지정",
-            "explainText": "이 정책 설정은 Outlook Social Connector에 의해 로드된 소셜 네트워크 제공자 목록을 결정합니다.\n\n이 정책 설정을 사용하면 Outlook Social Connector에 의해 로드될 소셜 네트워크 제공자의 제공자 progID 목록을 입력할 수 있습니다. 이 목록은 세미콜론으로 구분해야 합니다. 이 정책 설정을 사용하면 이 목록에 있는 소셜 네트워크 제공자만 Outlook Social Connector에 의해 로드되며 다른 소셜 네트워크 제공자는 로드되지 않습니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 Outlook Social Connector는 사용자가 지정한 어떤 공급자도 로드할 수 있습니다.",
-            "tags": [
-                "L_OutlookSocialConnector",
-                "L_MicrosoftOfficeOutlook"
-            ],
-            "application": "outlk16",
-            "key": "software\\microsoft\\office\\outlook\\socialconnector",
-            "valueName": "providersecuritymode"
-        },
-        {
-            "parentCategory": {
                 "ref": "L_Exchangesettings"
             },
             "supportedOn": {
@@ -10467,8 +12337,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "activationalertthreshold"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10500,8 +12369,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "activationretrylimit"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10533,8 +12401,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "alertinterval"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10566,8 +12433,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "memoryalertthreshold"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10599,8 +12465,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "restartmanagerretrylimit"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10710,7 +12575,7 @@
             },
             "name": "L_DisablePreviewPlace",
             "displayName": "미리 보기 장소 사용 안 함.",
-            "explainText": "이 정책 설정은 미리 보기 장소 기능이 허용되는지 여부를 결정합니다. 이 설정을 사용하면 미리 보기 장소 기능을 차단합니다.\n        사용자는 더 이상 Outlook의 향후 변경 사항을 미리 보고 피드백을 제공할 수 없습니다.\n\\t참고: 이 정책 설정은 Office 365 ProPlus와 같은 Office 구독 버전에만 적용됩니다.",
+            "explainText": "        이 정책 설정은 미리 보기 장소 기능이 허용되는지 여부를 결정합니다. 이 설정을 사용하면 미리 보기 장소 기능을 차단합니다.\n        사용자는 더 이상 Outlook의 향후 변경 사항을 미리 보고 피드백을 제공할 수 없습니다.\n\\t참고: 이 정책 설정은 엔터프라이즈용 Microsoft 365 앱과 같은 Office의 구독 버전에만 적용됩니다.\n      ",
             "tags": [
                 "L_Other",
                 "L_OutlookOptions",
@@ -10739,7 +12604,7 @@
             },
             "name": "L_DisableOnlineModeAuthDiagnostics",
             "displayName": "진단 가져오기의 온라인 모드를 비활성화합니다.",
-            "explainText": " 이 정책 설정은 진단 가져오기의 온라인 모드 허용 여부를 결정합니다. 이 설정을 활성화하면 진단 가져오기가 Microsoft 서비스로 인증 및 진단 로그를 보내는 것이 차단됩니다.\n         사용자는 이제 오프라인 모드를 사용하게 됩니다. Microsoft는 모든 로그를 수집하고, 사용자의 다운로드 폴더에 로그를 저장합니다. 이 사용자는 지원에 문의하여 로그 전송 여부를 결정할 수 있습니다. ",
+            "explainText": "         이 정책 설정은 진단 가져오기의 온라인 모드 허용 여부를 결정합니다. 이 설정을 활성화하면 진단 가져오기가 Microsoft 서비스로 인증 및 진단 로그를 보내는 것이 차단됩니다.\n         사용자는 이제 오프라인 모드를 사용하게 됩니다. Microsoft는 모든 로그를 수집하고, 사용자의 다운로드 폴더에 로그를 저장합니다. 이 사용자는 지원에 문의하여 로그 전송 여부를 결정할 수 있습니다.\n      ",
             "tags": [
                 "L_Other",
                 "L_OutlookOptions",
@@ -10768,7 +12633,7 @@
             },
             "name": "L_EnableEndEarly",
             "displayName": "약속 및 모임 조기 종료",
-            "explainText": "이 정책 설정을 사용하면 사용자가 약속 또는 모임을 만들 때 약속 및 모임의 종료 시간에서 지정된 시간(분)을 뺄 것인지 여부를 제어할 수 있습니다.\n\n이 정책 설정을 사용하도록 설정하면 사용자가 약속이나 모임을 만들 때 약속 및 모임의 종료 시간에서 지정된 시간(분)을 뺍니다.\n\n약속 및 모임에서 뺄 시간(분)을 지정하려면 \"짧은 약속 및 모임의 종료 시간을 지정된 시간(분)만큼 줄이기\" 및 \"긴 약속 및 모임의 종료 시간을 지정된 시간(분)만큼 줄이기\" 정책 설정을 사용할 수 있습니다.\n\n이러한 정책 설정을 사용하도록 설정하고 분 단위로 시간을 지정하지 않으면 사용자는 [파일] > [옵션] > [일정]으로 이동하여 분 단위로 시간을 지정할 수 있습니다. 사용자가 시간을 지정하지 않은 경우 짧은 모임의 경우 5분, 긴 모임의 경우 10분의 기본값이 사용됩니다.\n\n이 정책 설정을 사용하지 않도록 설정하면 약속 및 모임을 조기 종료되도록 구성할 수 없으며 [파일] > [옵션] > [일정]에서 옵션을 사용할 수 없게 되며 사용자가 이를 사용하도록 설정할 수 없습니다.\n\n이 정책 설정을 구성하지 않으면 약속 및 모임을 조기 종료되도록 구성할 수 없지만 사용자는 [파일] > [옵션] > [일정]으로 이동하여 약속 및 모임을 종기 종료되도록 설정할 수 있습니다.\n\n참고: 이 정책 설정은 Office 365 ProPlus와 같은 Office 구독 버전에만 적용됩니다.",
+            "explainText": "        이 정책 설정을 사용하면 사용자가 약속 또는 모임을 만들 때 약속 및 모임의 종료 시간에서 지정된 시간(분)을 뺄 것인지 여부를 제어할 수 있습니다.\n\n        이 정책 설정을 사용하도록 설정하면 사용자가 약속이나 모임을 만들 때 약속 및 모임의 종료 시간에서 지정된 시간(분)을 뺍니다.\n\n        약속 및 모임에서 뺄 시간(분)을 지정하려면 \"짧은 약속 및 모임의 종료 시간을 지정된 시간(분)만큼 줄이기\" 및 \"긴 약속 및 모임의 종료 시간을 지정된 시간(분)만큼 줄이기\" 정책 설정을 사용할 수 있습니다.\n\n        이러한 정책 설정을 사용하도록 설정하고 분 단위로 시간을 지정하지 않으면 사용자는 [파일] > [옵션] > [일정]으로 이동하여 분 단위로 시간을 지정할 수 있습니다. 사용자가 시간을 지정하지 않은 경우 짧은 모임의 경우 5분, 긴 모임의 경우 10분의 기본값이 사용됩니다.\n\n        이 정책 설정을 사용하지 않도록 설정하면 약속 및 모임을 조기 종료되도록 구성할 수 없으며 [파일] > [옵션] > [일정]에서 옵션을 사용할 수 없게 되며 사용자가 이를 사용하도록 설정할 수 없습니다.\n\n        이 정책 설정을 구성하지 않으면 약속 및 모임을 조기 종료되도록 구성할 수 없지만 사용자는 [파일] > [옵션] > [일정]으로 이동하여 약속 및 모임을 종기 종료되도록 설정할 수 있습니다.\n\n        참고: 이 정책 설정은 엔터프라이즈용 Microsoft 365 앱과 같은 Office의 구독 버전에만 적용됩니다.\n      ",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10778,6 +12643,55 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar",
             "valueName": "endeventsearly"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Calendaroptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "None"
+                                },
+                                "displayName": "없음"
+                            },
+                            {
+                                "value": {
+                                    "string": "End_Early"
+                                },
+                                "displayName": "일찍 종료"
+                            },
+                            {
+                                "value": {
+                                    "string": "Start_Late"
+                                },
+                                "displayName": "늦게 시작"
+                            }
+                        ],
+                        "valueName": "shortenevents",
+                        "inputType": "dropdownList",
+                        "caption": "이벤트 유형 단축 선택",
+                        "id": "L_SelecttheShortenEventsType"
+                    }
+                ]
+            },
+            "name": "L_ShortenEventsType",
+            "displayName": "약속 및 모임 시간 단축",
+            "explainText": "        이 정책 설정을 통해 약속 및 모임의 기본 시간을 지정된 시간(분)만큼 줄일 수 있습니다. 이 정책 설정을 사용하면 일찍 종료, 늦게 시작, 없음 옵션 중에서 선택할 수 있습니다.\n        일찍 종료를 선택하면 모임 및 약속은 지정된 시간(분)만큼 일찍 종료됩니다.\n        늦게 시작을 선택하면 모임 및 약속은 지정된 시간(분)만큼 늦게 시작됩니다.\n        없음을 선택하면 기본 모임 시간이 단축되지 않습니다.\n        모든 경우에 이 기능의 설정은 Outlook 옵션 대화 상자에서 사용할 수 없습니다.\n        이 정책 설정을 구성하지 않으면 사용자가 파일 > 옵션 > 일정으로 이동하여 이러한 설정을 수정할 수 있습니다.\n\n        참고: 이 정책 설정은 엔터프라이즈용 Microsoft 365 앱과 같은 Office 구독 버전에만 적용됩니다.",
+            "tags": [
+                "L_Calendaroptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
         },
         {
             "parentCategory": {
@@ -10802,7 +12716,7 @@
             },
             "name": "L_EndEarlyShort",
             "displayName": "짧은 약속 및 모임의 종료 시간을 지정된 시간(분)만큼 줄이기",
-            "explainText": "이 정책 설정을 사용하면 사용자가 약속이나 모임을 만들 때 짧은 약속이나 모임의 종료시간에서 뺄 시간(분)을 지정할 수 있습니다. 짧은 약속 또는 모임은 1시간 미만의 약속 또는 모임입니다.\n\n이 정책 설정을 사용하도록 설정하는 경우 사용자가 약속이나 모임을 만들 때 짧은 약속이나 모임의 종료 시간에서 뺄 시간(분)을 지정합니다. 사용자는 [파일] > [옵션] > [일정]으로 이동하여 이 값을 변경할 수 없습니다.\n\n참고: “약속 및 모임 조기 종료” 정책 설정을 사용하도록 설정해야 합니다.\n\n이 정책 설정을 사용하지 않도록 설정하거나 구성하지 않으면 기본값인 5분 또는 사용자가 [파일] > [옵션] > [일정]에서 지정한 시간이 사용됩니다.\n\n참고: 이 정책 설정은 Office 365 ProPlus와 같은 Office 구독 버전에만 적용됩니다.",
+            "explainText": "        이 정책 설정을 사용하면 사용자가 약속이나 모임을 만들 때 짧은 약속이나 모임의 종료시간에서 뺄 시간(분)을 지정할 수 있습니다. 짧은 약속 또는 모임은 1시간 미만인 약속 또는 모임입니다.\n\n        이 정책 설정을 사용하도록 설정하는 경우 사용자가 약속이나 모임을 만들 때 짧은 약속이나 모임의 종료 시간에서 뺄 시간(분)을 지정합니다. 사용자는 [파일] > [옵션] > [일정]으로 이동하여 이 값을 변경할 수 없습니다.\n\n        참고: “약속 및 모임 조기 종료” 정책 설정도 사용하도록 설정해야 합니다.\n\n        이 정책 설정을 사용하지 않도록 설정하거나 구성하지 않으면 기본값인 5분 또는 사용자가 [파일] > [옵션] > [일정]에서 지정한 시간이 사용됩니다.\n\n        참고: 이 정책 설정은 엔터프라이즈용 Microsoft 365 앱과 같은 Office의 구독 버전에만 적용됩니다.\n      ",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10835,7 +12749,7 @@
             },
             "name": "L_EndEarlyLong",
             "displayName": "긴 약속 및 모임의 종료 시간을 지정된 시간(분)만큼 줄이기",
-            "explainText": "이 정책 설정을 사용하면 사용자가 약속이나 모임을 만들 때 긴 약속이나 모임의 종료시간에서 뺄 시간(분)을 지정할 수 있습니다. 긴 약속 또는 모임은 1시간을 초과하는 약속 또는 모임입니다.\n\n이 정책 설정을 사용하도록 설정하는 경우 사용자가 약속이나 모임을 만들 때 긴 약속이나 모임의 종료 시간에서 뺄 시간(분)을 지정합니다. 사용자는 [파일] > [옵션] > [일정]으로 이동하여 이 값을 변경할 수 없습니다.\n\n참고: “약속 및 모임 조기 종료” 정책 설정도 사용하도록 설정해야 합니다.\n\n이 정책 설정을 사용하지 않도록 설정하거나 구성하지 않으면 기본값인 10분 또는 사용자가 [파일] > [옵션] > [일정]에서 지정한 시간이 사용됩니다.\n\n참고: 이 정책 설정은 Office 365 ProPlus와 같은 Office 구독 버전에만 적용됩니다.",
+            "explainText": "        이 정책 설정을 사용하면 사용자가 약속이나 모임을 만들 때 긴 약속이나 모임의 종료시간에서 뺄 시간(분)을 지정할 수 있습니다. 긴 약속 또는 모임은 1시간을 초과하는 약속 또는 모임입니다.\n\n        이 정책 설정을 사용하도록 설정하는 경우 사용자가 약속이나 모임을 만들 때 긴 약속이나 모임의 종료 시간에서 뺄 시간(분)을 지정합니다. 사용자는 [파일] > [옵션] > [일정]으로 이동하여 이 값을 변경할 수 없습니다.\n\n        참고: “약속 및 모임 조기 종료” 정책 설정도 사용하도록 설정해야 합니다.\n\n        이 정책 설정을 사용하지 않도록 설정하거나 구성하지 않으면 기본값인 10분 또는 사용자가 [파일] > [옵션] > [일정]에서 지정한 시간이 사용됩니다.\n\n        참고: 이 정책 설정은 엔터프라이즈용 Microsoft 365 앱과 같은 Office의 구독 버전에만 적용됩니다.\n      ",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10863,8 +12777,8 @@
                 }
             },
             "name": "L_OnSendAddinsEnabled",
-            "displayName": "웹 확장을 로드할 수 없는 경우 보내기를 사용하지 않도록 설정합니다.",
-            "explainText": "이 정책 설정을 사용하면 Exchange에서 웹 추가 기능이 로드될 때까지 Outlook에서 전자 메일 및 모임 요청을 보낼 수 없습니다.",
+            "displayName": "웹 추가 기능을 로드할 수 없는 경우 보내기 차단",
+            "explainText": "이 정책 설정을 사용하면 Exchange에서 웹 추가 기능이 로드될 때까지 Outlook에서 전자 메일 및 모임 요청 전송을 차단할지 여부를 제어할 수 있습니다.\n\n이 정책 설정을 사용하도록 설정하면 Exchange에서 웹 추가 기능을 로드할 때까지 전자 메일 및 모임 요청을 보낼 수 없습니다.\n\n 이 정책 설정을 사용하지 않거나 구성하지 않으면 Exchange에서 최신 웹 추가 기능을 아직 로드하지 않았더라도 전자 메일 및 모임 요청을 보낼 수 있습니다.\n\n이 설정을 사용하는 시기에 대한 자세한 내용은 https://go.microsoft.com/fwlink/p/?linkid=2161562를 참조하세요.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -10893,7 +12807,7 @@
             },
             "name": "L_RestUpdatesForCalendar",
             "displayName": "일정 REST 업데이트",
-            "explainText": "이 정책은 Outlook이 REST를 사용하여 일정을 업데이트할 수 있는지 여부를 결정합니다.\n\n이 정책을 사용하도록 설정하면 REST를 사용하여 지원되는 Office 365 및 Outlook.com 일정을 업데이트합니다.\n\n이 정책을 실행 중지하면 Outlook에서 REST를 사용하여 일정을 업데이트하지 않습니다.",
+            "explainText": "이 정책은 Outlook이 REST를 사용하여 일정을 업데이트할 수 있는지 여부를 결정합니다.\n\n        이 정책을 사용하도록 설정하면 REST를 사용하여 지원되는 Office 365 및 Outlook.com 일정을 업데이트합니다.\n\n        이 정책을 실행 중지하면 Outlook에서 REST를 사용하여 일정을 업데이트하지 않습니다.",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10923,7 +12837,7 @@
             },
             "name": "L_PreferProvidedEmailInAutoDiscoverAuthPrompts",
             "displayName": "AutoDiscover 인증 프롬프트에서 제공된 계정 전자 메일을 선호합니다.",
-            "explainText": "설정된 경우 이 정책 설정은 AutoDiscover와 관련된 인증 프롬프트에서 표시된 전자 메일을 제어합니다.\n\n기본값 (0): 사용 가능한 경우 계정 UPN을 선호합니다.\n\n이 설정을 사용하도록 설정하면 AutoDiscover 인증 프롬프트가 제공된 계정 전자 메일을 선호합니다(구성된 항목에 따라 SMTP 또는 UPN일 수 있음).",
+            "explainText": "설정된 경우 이 정책 설정은 AutoDiscover와 관련된 인증 프롬프트에서 표시된 전자 메일을 제어합니다.\n\n        기본값 (0): 사용 가능한 경우 계정 UPN을 선호합니다.\n\n        이 설정을 사용하도록 설정하면 AutoDiscover 인증 프롬프트가 제공된 계정 전자 메일을 선호합니다(구성된 항목에 따라 SMTP 또는 UPN일 수 있음).",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -11249,6 +13163,180 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\autodiscover",
             "valueName": "enableoffice365configservice"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Cryptography"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_AllowPrivateKeyCheck",
+            "displayName": "사용자가 받는 사람으로 사용자를 포함하는 암호화된 전자 메일을 보낼 때 사용자의 개인 키를 확인합니다.",
+            "explainText": "이 정책 설정은 사용자가 암호화된 전자 메일을 보내고, 사용자가 전자 메일의 받는 사람으로 포함되는 경우, Outlook에서 사용자의 개인 키를 확인할 지 여부를 제어합니다. 사용자는 받는 사람으로 직접 포함되거나 배포 목록의 구성원으로 포함될 수 있습니다.\n\n이 정책 설정을 사용하는 경우, Outlook에서 사용자의 개인 키를 확인합니다.\n\n이 정책 설정을 사용하지 않는 경우, Outlook에서 사용자의 개인 키를 확인하지 않습니다.\n\n이 정책 설정을 구성하지 않는 경우, Outlook에서 사용자의 개인 키를 확인합니다.",
+            "tags": [
+                "L_Cryptography",
+                "L_Security",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\security",
+            "valueName": "allowprivatekeycheck"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableAdminNotifications",
+            "displayName": "Outlook 테넌트 관리자 알림 사용 안 함",
+            "explainText": "이 정책 설정은 테넌트 관리자가 Outlook에서 지원 알림을 받을 수 있는지를 결정합니다.\n\n기본 (0): 로그인한 테넌트 관리자는 테넌트에 영향을 주는 잠재적인 문제 및 수정에 대한 상태 업데이트를 받습니다.\n\n이 설정을 사용하도록 설정한 경우 로그인한 테넌트 관리자가 테넌트에 영향을 주는 잠재적인 문제 및 수정에 대한 상태 업데이트를 받지 못합니다.",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\general",
+            "valueName": "disableadminnotifications"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableCrashNotificationOnRestart",
+            "displayName": "Outlook을 다시 시작할 때 Outlook 충돌 알림을 사용하지 않도록 설정합니다.",
+            "explainText": "이 정책 설정은 다시 시작 시 Outlook 충돌 알림이 허용 되는지 여부를 결정 합니다. 이 설정을 사용 하면 다시 시작할 때 Outlook 크래시 알림이 차단 됩니다.",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\general",
+            "valueName": "disablecrashnotificationonrestart"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Delegates"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DelegateSentItemsStyle",
+            "displayName": "공유 사서함에서 보낸 메일을 보낸 편지함 폴더에 저장하는 중",
+            "explainText": "이 정책 설정으로 공유 사서함에서 보낸 메일이 공유 사서함의 보낸 편지함 폴더에 저장되는지 여부를 제어합니다.\n\n기본적으로 공유 사서함에서 보낸 메일은 공유 사서함의 보낸 편지함 폴더에 저장되지 않습니다.\n\n이 정책 설정을 사용하면 공유 사서함에서 보낸 메일이 공유 사서함의 보낸 편지함 폴더에 저장됩니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않는 경우 공유 사서함에서 보낸 메일이 공유 사서함의 보낸 편지함 폴더에 저장되지 않습니다.",
+            "tags": [
+                "L_Delegates",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
+            "valueName": "delegatesentitemsstyle"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Exchangesettings"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_AlwaysUseMSOAuthForAutodiscover",
+            "displayName": "자동 검색에서 항상 최신 인증을 사용합니다.",
+            "explainText": "이 정책 설정은 인증 방법이 기본 사서함 연결 유형으로 지원되는지 여부에 관계없이 자동 검색에서 항상 최신 인증을 사용할지 여부를 제어합니다.\n\n기본적으로 자동 검색에서는 기본 사서함 연결 유형에서 지원되는 인증 방법만 사용합니다. 최신 인증이 일부 연결 유형에 대해 지원되는 인증 방법이 아닐 수 있습니다.\n\n이 정책 설정을 사용하면 인증 방법이 기본 사서함 연결 유형에서 지원되는지 여부에 관계없이 자동 검색에서 항상 최신 인증을 사용할 수 있습니다. 이 정책 설정을 사용하면 최신 인증을 사용하지만 연결 유형에서 지원되지 않는 경우에 사용자에게 암호를 입력하라는 추가 메시지가 표시됩니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 자동 검색에서 기본 사서함 연결 유형에서 지원하는 인증 방법만 사용합니다.",
+            "tags": [
+                "L_Exchangesettings",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\exchange",
+            "valueName": "alwaysusemsoauthforautodiscover"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_RecommendOutlookExtension",
+            "displayName": "Microsoft Outlook 확장 권장",
+            "explainText": "이 정책 설정은 Outlook 앱 및 Outlook 웹 앱의 Windows 10 사용자에게 Microsoft Edge에 대한 새 Microsoft Outlook 확장을 설치하기 위한 권장 사항을 표시할지 여부를 제어합니다. 사용자가 권장 사항을 클릭하도록 선택하면 Microsoft Outlook 확장 페이지로 이동하여 이 웹 기반 설치 작업을 선택할 수 있습니다. 사용자는 권장 사항을 해제하고 권장 사항을 두 번만 볼 수 있습니다. 확장 프로그램을 설치하도록 선택한 사용자는 다른 브라우저 탭을 열지 않고도 Microsoft Edge의 아이콘에서 메일, 일정관리, 연락처 및 작업에 액세스할 수 있습니다. 확장은 브라우저 헤더에서 원클릭 플라이아웃으로 작동하는 웹용 Outlook의 \"미니\" 버전입니다.\n\n향후 Microsoft는 Chrome 브라우저용으로 이 확장 버전을 릴리스할 수 있습니다. Microsoft는 Chrome 확장의 향후 프로모션에도 이 정책을 준수할 것입니다.\n\n이 정책 설정을 사용하거나 구성하지 않으면 사용자에게 권장 사항이 표시됩니다.\n\n이 정책 설정을 사용하지 않도록 설정하면 권장 사항이 사용자에게 표시되지 않습니다.\n\n참고: 이 정책 설정은 엔터프라이즈용 Microsoft 365 앱 및 Outlook 웹앱과 같은 Office 구독 버전에만 적용됩니다.\n\n자세한 내용은 https://go.microsoft.com/fwlink/?linkid=2165458을 참조하세요.",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\general",
+            "valueName": "recommendoutlookextension"
         }
     ]
 }

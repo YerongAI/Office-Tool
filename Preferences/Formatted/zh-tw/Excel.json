@@ -183,8 +183,8 @@
             "parentCategory": {
                 "ref": "L_MicrosoftOfficeExcel"
             },
-            "name": "L_IntelligentServices",
-            "displayName": "智慧型服務"
+            "name": "L_PowerBI",
+            "displayName": "Power BI"
         }
     ],
     "policies": [
@@ -395,6 +395,35 @@
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\common\\toolbars\\excel",
             "valueName": "allowselectionfloaties"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Formulas"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_R1C1referencestyle",
+            "displayName": "[R1C1] 欄名列號表示法",
+            "explainText": "核取/取消核取相對應的 UI 選項。",
+            "tags": [
+                "L_Formulas",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "frefa1_4_1"
         },
         {
             "parentCategory": {
@@ -621,6 +650,35 @@
                     "value": 0
                 }
             },
+            "name": "L_Promptforworkbookproperties",
+            "displayName": "提示輸入摘要資訊",
+            "explainText": "核取/取消核取相對應的 UI 選項。",
+            "tags": [
+                "L_Save",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fpromptsuminfo_65_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Save"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_SaveAutoRecoverinfo",
             "displayName": "儲存自動回復資訊",
             "explainText": "啟用此原則會選取使用者選項，以便「每 N 分鐘儲存一次自動回復資訊」。",
@@ -748,7 +806,7 @@
             },
             "name": "L_DisableAutoRepublish",
             "displayName": "停用自動重新發佈",
-            "explainText": "此原則設定可允許系統管理員停用 Excel 的自動重新發佈功能。如果使用者選擇將 Excel 資料發佈到靜態網頁並啟用自動重新發佈功能，則每次使用者儲存活頁簿時，Excel 會儲存一份資料至網頁。依照預設，當啟用自動重新發佈功能時，使用者每次儲存已發佈的活頁簿時會顯示訊息對話方塊。在此對話方塊中，使用者可暫時或永久停用自動重新發佈功能，或選取 [不要再顯示這個訊息] 以防止對話方塊在每次儲存後出現。如果使用者選取 [不要再顯示這個訊息]，則 Excel 每次儲存後，會在未告知使用者的情況下，繼續自動重新發佈資料。\n\n如果啟用此原則設定，則自動重新發佈功能會關閉，且 Excel 的使用者必須手動將資料發佈到網路。\n\n如果停用或未設定此原則設定，使用者可啟用自動重新發佈功能，將活頁簿另存為 [網頁] 類型以自動重新發佈。",
+            "explainText": "此原則設定可允許系統管理員停用 Excel 的自動重新發佈功能。如果使用者選擇將 Excel 資料發佈到靜態網頁並啟用自動重新發佈功能，則每次使用者儲存活頁簿時，Excel 會儲存一份資料至網頁。依照預設，當啟用自動重新發佈功能時，使用者每次儲存已發佈的活頁簿時會顯示訊息對話方塊。在此對話方塊中，使用者可暫時或永久停用自動重新發佈功能，或選取 [不要再顯示這個訊息] 以防止對話方塊在每次儲存後出現。如果使用者選取 [不要再顯示這個訊息]，則 Excel 每次儲存後，會在未告知使用者的情況下，繼續自動重新發佈資料。\n\n      如果啟用此原則設定，則自動重新發佈功能會關閉，且 Excel 的使用者必須手動將資料發佈到網路。\n\n      如果停用或未設定此原則設定，使用者可啟用自動重新發佈功能，將活頁簿另存為 [網頁] 類型以自動重新發佈。",
             "tags": [
                 "L_Save",
                 "L_ExcelOptions",
@@ -995,6 +1053,70 @@
         },
         {
             "parentCategory": {
+                "ref": "L_ProtectedView"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "封鎖檔案"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "在受保護檢視中開啟"
+                            }
+                        ],
+                        "valueName": "openinprotectedview",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsDropID"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "disableeditfrompv",
+                        "key": "software\\microsoft\\office\\16.0\\excel\\security\\filevalidation",
+                        "inputType": "checkBox",
+                        "caption": "核取: 允許編輯。取消核取: 不允許編輯。",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsStr3"
+                    }
+                ]
+            },
+            "name": "L_SetDocumentBehaviorIfFileValidationFails",
+            "displayName": "設定檔案驗證失敗時的文件行為",
+            "explainText": "此原則設定可控制 Office 在文件無法通過檔案驗證時處理文件的方式。\n\n如果啟用此原則設定，即可針對無法通過驗證的檔案設定下列選項:\n\n- 完全封鎖檔案。使用者無法開啟檔案。\n- 在受保護檢視中開啟檔案並禁止編輯。使用者無法編輯檔案。這也是停用此原則設定時 Office 處理檔案的方式。\n- 在受保護檢視中開啟檔案並允許編輯。使用者可以編輯檔案。這也是未設定此原則設定時 Office 處理檔案的方式。\n\n如果停用此原則設定，Office 將採用「在受保護檢視中開啟檔案並禁止編輯」行為。\n\n如果未設定此原則設定，Office 將採用「在受保護檢視中開啟檔案並允許編輯」行為。",
+            "tags": [
+                "L_ProtectedView",
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security\\filevalidation"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_ExternalContent"
             },
             "supportedOn": {
@@ -1012,7 +1134,7 @@
             },
             "name": "L_DisableDDEServerLookup",
             "displayName": "在 Excel 中不允許動態資料交換 (DDE) 伺服器查閱",
-            "explainText": "此原則設定可讓您控制是否允許動態資料交換 (DDE) 伺服器查閱。\n\n預設情況下，DDE 伺服器查閱已開啟，但使用者可以移至 [檔案] > [選項] > [信任中心] > [信任中心設定] > [外部內容]，以關閉 DDE 伺服器查詢。\n\n如果啟用此原則設定，則不允許 DDE 伺服器查閱，而且使用者無法在信任中心開啟 DDE 伺服器查詢。\n\n注意: 如果您使用動態資料交換 (DDE) 伺服器啟動 (不建議)，請不要啟用此原則設定，因為 DDE 伺服器啟動需要開啟 DDE 伺服器查詢。\n\n如果停用或不設定此原則設定，則會開啟 DDE 伺服器查閱，但使用者可以在信任中心關閉 DDE 伺服器查詢。\n\n注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Office 365 專業增強版。",
+            "explainText": "此原則設定可讓您控制是否允許動態資料交換 (DDE) 伺服器查閱。\n\n根據預設，DDE 伺服器查閱已開啟，但使用者可以移至 [檔案] > [選項] > [信任中心] > [信任中心設定] > [外部內容]，以關閉 DDE 伺服器查詢。\n\n如果啟用此原則設定，則不允許 DDE 伺服器查閱，而且使用者無法在信任中心開啟 DDE 伺服器查詢。\n\n注意: 如果您使用動態資料交換 (DDE) 伺服器啟動 (不建議)，請不要啟用此原則設定，因為 DDE 伺服器啟動需要開啟 DDE 伺服器查詢。\n\n如果停用或不設定此原則設定，則會開啟 DDE 伺服器查閱，但使用者可以在信任中心關閉 DDE 伺服器查詢。\n\n注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版。",
             "tags": [
                 "L_ExternalContent",
                 "L_TrustCenter",
@@ -1043,7 +1165,7 @@
             },
             "name": "L_DisableDDEServerLaunch",
             "displayName": "在 Excel 中不允許動態資料交換 (DDE) 伺服器啟動",
-            "explainText": "此原則設定可讓您控制是否允許動態資料交換 (DDE) 伺服器啟動。\n\n預設情況下，DDE 伺服器啟動已關閉，但使用者可以移至 [檔案] > [選項] > [信任中心] > [信任中心設定] > [外部內容]，以開啟 DDE 伺服器啟動。\n\n基於安全性考量，不建議開啟 DDE 伺服器啟動。\n\n注意: 若要讓 DDE 伺服器啟動正常運作，必須開啟動態資料交換 (DDE) 伺服器查閱。請確定 [不允許動態資料交換 (DDE) 伺服器查閱] 原則設定為未啟用狀態，因為啟用該原則設定會關閉 DDE 伺服器查閱。\n\n如果啟用此原則設定，則不允許 DDE 伺服器啟動，而且使用者無法在信任中心開啟 DDE 伺服器啟動。\n\n如果停用此原則設定，則允許 DDE 伺服器啟動，而且使用者無法在信任中心關閉 DDE 伺服器啟動。基於安全性考量，不建議這樣做。\n\n如果您未設定此原則設定，則會關閉 DDE 伺服器啟動，但使用者可以在信任中心開啟 DDE 伺服器啟動。\n\n注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Office 365 專業增強版。",
+            "explainText": "此原則設定可讓您控制是否允許啟動動態資料交換 (DDE) 伺服器。\n\n根據預設，DDE 伺服器啟動已關閉，但使用者可以移至 [檔案] > [選項] > [信任中心] > [信任中心設定] > [外部內容]，以開啟 DDE 伺服器啟動。\n\n基於安全性考量，不建議開啟 DDE 伺服器啟動。\n\n注意: 如需讓 DDE 伺服器啟動正常運作，必須開啟動態資料交換 (DDE) 伺服器查閱。請確定 [不允許動態資料交換 (DDE) 伺服器查閱] 原則設定為未啟用狀態，因為啟用該原則設定會關閉 DDE 伺服器查閱。\n\n如果啟用此原則設定，則不允許 DDE 伺服器啟動，而且使用者無法在信任中心開啟 DDE 伺服器啟動。\n\n如果停用此原則設定，則允許 DDE 伺服器啟動，而且使用者無法在信任中心關閉 DDE 伺服器啟動。基於安全性考量，不建議這樣做。\n\n如果您未設定此原則設定，則會關閉 DDE 伺服器啟動，但使用者可以在信任中心開啟 DDE 伺服器啟動。\n\n注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版。",
             "tags": [
                 "L_ExternalContent",
                 "L_TrustCenter",
@@ -1074,7 +1196,7 @@
             },
             "name": "L_EnableBlockUnsecureQueryFiles",
             "displayName": "永遠防止開啟未受信任的 Microsoft Query 檔案",
-            "explainText": "此原則設定可控制是否防止開啟未受信任位置中的 Microsoft Query 檔案 (.iqy、.oqy、.dqy 和 .rqy)。\n\n如果啟用此原則設定，將防止開啟未受信任位置的 Microsoft Query 檔案。使用者將無法在 [檔案] > [選項] > [信任中心] > [信任中心設定] > [外部內容] 下變更此設定。\n\n如果停用或不設定此原則設定，則將不會防止開啟未受信任位置中的 Microsoft Query 檔案，除非使用者已在信任中心變更此設定。\n\n注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Office 365 專業增強版。",
+            "explainText": "此原則設定可控制是否防止開啟未受信任位置中的 Microsoft Query 檔案 (.iqy、.oqy、.dqy 和 .rqy)。\n\n如果啟用此原則設定，將防止開啟未受信任位置的 Microsoft Query 檔案。使用者將無法在 [檔案] > [選項] > [信任中心] > [信任中心設定] > [外部內容] 底下變更此設定。\n\n如果停用或不設定此原則設定，則將不會防止開啟未受信任位置中的 Microsoft Query 檔案，除非使用者已在信任中心變更此設定。\n\n注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版。",
             "tags": [
                 "L_ExternalContent",
                 "L_TrustCenter",
@@ -1105,7 +1227,7 @@
             },
             "name": "L_EnableForeignTextFileProtectedView",
             "displayName": "永遠在受保護的檢視中開啟未受信任的文字檔案",
-            "explainText": "此原則設定可控制是否永遠在受保護的檢視中開啟來自未受信任位置的文字檔案 (.csv、.dif 和 .sylk)。\n\n如果啟用此原則設定，將永遠在受保護的檢視中開啟來自未受信任位置的文字檔案。使用者將無法在 [檔案] > [選項] > [信任中心] > [信任中心設定] > [受保護的檢視] 下變更此設定。\n\n如果停用或不設定此原則設定，則無法在受保護的檢視中開啟來自未受信任位置的文字檔案，除非使用者已在信任中心變更此設定。\n\n注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Office 365 專業增強版。",
+            "explainText": "此原則設定可控制是否永遠在受保護的檢視中開啟來自未受信任位置的文字檔案 (.csv、.dif 和 .sylk)。\n\n如果啟用此原則設定，將永遠在受保護的檢視中開啟來自未受信任位置的文字檔案。使用者將無法在 [檔案] > [選項] > [信任中心] > [信任中心設定] > [受保護的檢視] 底下變更此設定。\n\n如果停用或不設定此原則設定，則無法在受保護的檢視中開啟來自未受信任位置的文字檔案，除非使用者已在信任中心變更此設定。\n\n注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版。",
             "tags": [
                 "L_ProtectedView",
                 "L_TrustCenter",
@@ -1136,7 +1258,7 @@
             },
             "name": "L_EnableDataBaseFileProtectedView",
             "displayName": "永遠在受保護的檢視中開啟未受信任的資料庫檔案",
-            "explainText": "此原則設定可控制是否要永遠在受保護的檢視中開啟來自未受信任位置的資料庫檔案 (.dbf)。\n\n如果啟用此原則設定，將永遠在受保護的檢視中開啟來自未受信任位置的資料庫檔案。使用者將無法在 [檔案] > [選項] , > [信任中心] > [信任中心設定] > [受保護的檢視] 下變更此設定。\n\n如果停用或不設定此原則設定，將不會在受保護的檢視中開啟來自未受信任位置的資料庫檔案，除非使用者已在信任中心變更此設定。\n\n注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Office 365 專業增強版。",
+            "explainText": "此原則設定可控制是否要永遠在受保護的檢視中，開啟來自未受信任位置的資料庫檔案 (.dbf)。\n\n如果啟用此原則設定，將永遠在受保護的檢視中開啟來自未受信任位置的資料庫檔案。使用者將無法在 [檔案] > [選項] > [信任中心] > [信任中心設定] > [受保護的檢視] 底下變更此設定。\n\n如果停用或不設定此原則設定，則將不會在受保護的檢視中，開啟來自未受信任位置的資料庫檔案，除非使用者已在信任中心變更此設定。\n\n注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版。",
             "tags": [
                 "L_ProtectedView",
                 "L_TrustCenter",
@@ -1773,6 +1895,66 @@
                     "value": 0
                 }
             },
+            "name": "L_XL4KillSwitchPolicy",
+            "displayName": "防止 Excel 執行 XLM 巨集",
+            "explainText": "此原則設定會防止 Excel 執行 Excel 4.0 (XLM) 巨集。\n\n如果啟用此原則設定，便無法在 Excel 中執行 XLM 巨集。\n\n如果停用或未進行此原則設定，則可在 Excel 中執行 XLM 巨集。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security",
+            "valueName": "xl4macrooff"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_StoremacroinPersonalMacroWorkbookbydefault",
+            "displayName": "預設將巨集儲存於個人巨集活頁簿中",
+            "explainText": "此原則設定可控制 Excel 儲存巨集的預設位置。\n\n      如果啟用此原則設定，則 Excel 會在使用者的個人巨集活頁簿中儲存巨集。\n\n      如果您停用或未設定此原則設定，Excel 會在建立巨集的使用中活頁簿儲存巨集。\n\n      注意: 在使用者介面 (UI) 中，使用者可使用 [錄製巨集] 對話方塊 ([巨集] | [錄製巨集]) 中的 [將巨集儲存在] 下拉式清單方塊，選擇要將新巨集儲存在目前的活頁簿、新活頁簿，還是其個人的巨集活頁簿 (Personal.xlsb)，也就是每次啟動 Excel 時所開啟的隱藏活頁簿。\n\n      依照預設，Excel 會顯示 [將巨集儲存在] 方塊，下拉式清單中已經選取 [現用活頁簿]。如果使用者在使用中的活頁簿儲存巨集，然後散佈該活頁簿給其他人員，則該巨集也會隨著活頁簿一起散佈。如果啟用此原則設定，則 Excel 會顯示 [將巨集儲存在] 方塊，並已選取 [個人巨集活頁簿]。使用者仍然能夠選取下拉式功能表中另外兩個選項的其中一個。",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fglobalsheet_37_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_TrustaccesstoVisualBasicProject",
             "displayName": "信任存取 Visual Basic 專案",
             "explainText": "此原則設定可控制自動化用戶端 (例如 Microsoft Visual Studio 2005 Tools for Microsoft Office (VSTO)) 是否能夠使用指定的應用程式存取 Visual Basic for Applications 專案系統。即使 VSTO 專案不使用 Visual Basic for Applications，但專案仍需要存取 Excel、PowerPoint 及 Word 的 Visual Basic for Applications 專案系統。Visual Basic 及 C# 專案的設計階段支援控制項皆依賴 Word 和 Excel 中的 Visual Basic for Applications 專案系統。\n\n如果啟用此原則設定，則 VSTO 和其他自動化用戶端就可以在指定的應用程式中存取 Visual Basic for Applications 專案系統。使用者將無法透過 [信任中心] 的 [巨集設定] 區段中 [信任存取 VBA 專案物件模型] 使用者介面選項變更此行為。\n\n如果停用此原則設定，VSTO 將無法利用程式設計存取 VBA 專案。此外，會清除 [信任存取 VBA 專案物件模型] 核取方塊，且使用者無法進行變更。注意: 停用此原則設定會禁止 VSTO 專案與選取的應用程式中的 VBA 專案系統進行正常互動。\n\n若未設定此原則設定，自動化用戶端就無法利用程式設計存取 VBA 專案。使用者可藉由選取 [信任中心] 的 [巨集設定] 區段中 [信任存取 VBA 專案物件模型] 來啟用此設定。然而，這樣做會允許使用者所開啟之任何文件中的巨集能夠存取核心 Visual Basic 物件、方法及屬性，這代表可能會有安全性方面的危險。",
@@ -1925,7 +2107,7 @@
             },
             "name": "L_BlockMacroExecutionFromInternet",
             "displayName": "封鎖在 Office 檔案中執行來自網際網路的巨集",
-            "explainText": "此原則設定可讓您封鎖在 Office 檔案中執行來自網際網路的巨集。\n\n如果您啟用這個原則設定，即使已選取 [信任中心]  [巨集設定] 區段中的 [啟用所有巨集]，仍將封鎖執行巨集。此外，使用者會收到已封鎖執行巨集的通知，而無法 [啟用內容]。如果 Office 檔案已儲存至信任的位置，或是使用者先前已選擇信任，將允許執行巨集。\n\n若您停用或不設定此原則設定，將使用 [信任中心] [巨集設定] 區段中的設定決定是否在 Office 檔案中執行來自網際網路的巨集。",
+            "explainText": "        此原則設定可讓您封鎖在 Office 檔案中執行來自網際網路的巨集。\n\n        如果您啟用這個原則設定，即使已選取 [信任中心]  [巨集設定] 區段中的 [啟用所有巨集]，仍將封鎖執行巨集。此外，使用者會收到已封鎖執行巨集的通知，而無法 [啟用內容]。如果 Office 檔案已儲存至信任的位置，或是使用者先前已選擇信任，將允許執行巨集。\n\n        若您停用或不設定此原則設定，將使用 [信任中心] [巨集設定] 區段中的設定決定是否在 Office 檔案中執行來自網際網路的巨集。\n      ",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -4145,7 +4327,7 @@
             },
             "name": "L_MicrosoftExcelmenuorHelpkey",
             "displayName": "Microsoft Excel 功能表或說明鍵",
-            "explainText":"此原則設定可讓您設定選擇鍵的 ASCII 值 (例如 '/'=47)。",
+            "explainText": "此原則設定可讓您設定選擇鍵的 ASCII 值 (例如 '/'=47)。",
             "tags": [
                 "L_Advanced",
                 "L_ExcelOptions",
@@ -4153,6 +4335,267 @@
             ],
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\excel\\options"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Transitionnavigationkeys",
+            "displayName": "Lotus 1-2-3 慣用鍵盤",
+            "explainText": "啟用此原則會勾選名稱為「Lotus 1-2-3 慣用鍵盤」的進階 (Lotus 相容性) 使用者選項。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fisi_33_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Ignoreotherapplications",
+            "displayName": "忽略其他應用程式",
+            "explainText": "此原則設定可控制 Excel 是否可與其他使用動態資料交換 (DDE) 的應用程式交換資料。\n\n      如果您啟用此原則設定，Excel 將禁止與其他使用 DDE 的應用程式交換資料。此外，將選取 [Excel 選項] | [一般] 下的 [忽略其他使用動態資料交換 (DDE) 的應用程式] 使用者介面選項，使用者無法變更此選項。啟用此原則設定可能會對使用 Excel DDE 功能以更新活頁簿資訊的使用者造成困擾。這些使用者必須使用其他方式更新其他應用程式所提供的資訊。\n\n      如果您停用或未設定此原則設定，Excel 可使用動態資料交換 (DDE) 通訊協定與其他應用程式交換訊息與資料。例如，Excel 活頁簿的儲存格可動態連結至其他應用程式所提供的數值，像是天氣或股價資訊。當其他應用程式所提供的數值變更時，Excel 可自動更新活頁簿中的數值。注意: 使用者可選取 [Excel 選項] | [一般] 下的 [忽略其他使用動態資料交換 (DDE) 的應用程式] 使用者介面選項來變更此行為。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fddeenabled_6_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ZoomonrollwithIntelliMouse",
+            "displayName": "捲動 IntelliMouse 來調整縮放比例",
+            "explainText": "此原則設定用於設定在 [檔案] 索引標籤 | [選項] | [進階] | [編輯] 選項之下的 [捲動 IntelliMouse 來調整縮放比例] 選項\n\n如果啟用此原則設定，捲動滑鼠滾輪會變更工作表的縮放比例。\n\n如果停用或未設定此原則設定，捲動滑鼠滾輪會捲動工作表。這是預設的行為。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "frollzoom_98_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Shownames",
+            "displayName": "顯示名稱",
+            "explainText": "啟用此設定會選取 [進階] (顯示) 使用者選項，以便「停留時顯示圖表項目名稱」。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fshowchartnames_96_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Showvalues",
+            "displayName": "顯示值",
+            "explainText": "啟用此設定會選取 [進階] (顯示) 使用者選項，以便「停留時顯示資料點的值」。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fshowcharttipvalues_97_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Editdirectlyincell",
+            "displayName": "直接在儲存格內編輯",
+            "explainText": "此原則設定用於設定在 [檔案] 索引標籤 | [選項] | [進階] | [編輯] 選項之下的 [直接在儲存格內編輯] 選項。\n\n如果啟用或未設定此原則設定，Excel 將允許直接在儲存格內編輯。這是預設的行為。\n\n如果停用此原則設定，Excel 將不允許直接在儲存格內編輯。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fnoincell_66_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_EnableFillHandleAndCellDragAndDrop",
+            "displayName": "啟用填滿控點與儲存格拖放功能",
+            "explainText": "此原則設定可用來設定 [檔案] 索引標籤 | [選項] | [進階] | [編輯選項] 之下的 [啟用填滿控點與儲存格拖放功能] 選項。\n\n如果啟用或未設定此原則設定，Excel 會啟用填滿控點，並允許拖放。這是預設行為。\n\n如果停用此原則設定，Excel 會停用填滿控點，並且不允許使用拖放功能。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fdisabledman_36_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Alertbeforeoverwritingcells",
+            "displayName": "覆寫儲存格前先提醒",
+            "explainText": "此原則設定用於設定在 [檔案] 索引標籤 | [選項] | [進階] | [編輯] 選項之下的 [覆寫儲存格前先提醒] 選項。\n\n如果啟用或未設定此原則設定，在儲存格將遭覆寫之前，Excel 會發出警告。\n\n如果停用此原則設定，Excel 將隱藏儲存格將遭覆寫的警告。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fnodragwarning_76_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_MoveselectionafterEnter",
+            "displayName": "按 Enter 鍵後，移動選取範圍",
+            "explainText": "啟用此原則會選取 [進階] (編輯選項) 使用者選項，以便「按 Enter 鍵後，移動選取範圍」。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fentermove_75_1"
         },
         {
             "parentCategory": {
@@ -4262,6 +4705,93 @@
                     "value": 0
                 }
             },
+            "name": "L_CutAndCopyObjectsWithCells",
+            "displayName": "物件隨儲存格一起剪下和複製",
+            "explainText": "此原則設定可用來設定 [檔案] 索引標籤 | [選項] | [進階] | [剪下、複製與貼上選項] 之下的 [插入的物件隨父儲存格一起剪下、複製和排序] 選項。\n\n如果啟用或未設定此原則設定，Excel 會將插入的物件隨父儲存格一起剪下、複製和排序。\n\n如果停用此原則設定，Excel 就不會將插入的物件隨父儲存格一起剪下或複製。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fobjwcellmove_71_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Asktoupdateautomaticlinks",
+            "displayName": "自動更新連結",
+            "explainText": "此原則設定可控制 Excel 是否要提示使用者自動更新連結，或者要在背景執行更新且不提示使用者。\n\n如果啟用或未設定此原則設定，則 Excel 將會提示使用者更新自動連結。此外，也將選取 [檔案] 索引標籤 | [進階] | [一般] 下的 [自動更新連結] 使用者介面選項。\n\n如果停用此原則設定，則 Excel 會更新自動連結而不提示或告知使用者，如此可能會破壞活頁簿中部分資訊的完整性。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fupdateext_78_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_EnableAutoCompleteforcellvalues",
+            "displayName": "啟用儲存格值的自動完成功能",
+            "explainText": "此原則設定用於設定在 [檔案] 索引標籤 | [選項] | [進階] | [編輯] 選項之下的 [啟用儲存格值的自動完成功能] 選項。\n\n如果啟用或未設定此原則設定，Excel 將允許儲存格值的自動完成。這是預設的行為。\n\n如果停用此原則設定，Excel 將關閉自動完成功能。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fautocomplete_128_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_ExtendDataRangeFormatsAndFormulas",
             "displayName": "延續資料範圍格式與公式",
             "explainText": "此原則設定可用來設定 [檔案] 索引標籤 | [選項] | [進階] | [編輯選項] 之下的 [延續資料範圍格式與公式] 選項。\n\n如果啟用或未設定此原則設定，Excel 會允許使用者將新增到清單末尾的新項目自動格式設定，以符合清單其餘部份的格式。這是預設行為。\n\n如果停用此原則設定，Excel 就不會自動格式設定新增到清單末尾的項目。",
@@ -4273,6 +4803,35 @@
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\excel\\options",
             "valueName": "extendlist"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Enableautomaticpercententry",
+            "displayName": "啟用自動輸入百分比",
+            "explainText": "啟用此原則會選取 [進階] (編輯選項) 使用者選項，以便「啟用自動輸入百分比」。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fdisableautopercent_99_1"
         },
         {
             "parentCategory": {
@@ -4302,6 +4861,122 @@
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\common\\general",
             "valueName": "pasteoptions"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_ShowInsertOptionsbuttons",
+            "displayName": "顯示 [插入選項] 按鈕",
+            "explainText": "此原則設定用於設定在 [檔案] 索引標籤 | [選項] | [進階] | [剪下、複製與貼上] 選項之下的 [顯示插入選項按鈕] 選項。\n\n如果啟用或未設定此原則設定，Excel 將在插入含有格式設定的儲存格、列、或欄之後，顯示 [插入選項] 按鈕。這是預設的行為。\n\n如果停用此原則設定，Excel 在插入時將不會顯示 [插入選項] 按鈕。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "enableinsertcellsooui_102_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ShowFormulabarinNormalView",
+            "displayName": "一般檢視時顯示資料編輯列",
+            "explainText": "啟用此設定會選取 [進階] (顯示) 使用者選項，以便「顯示資料編輯列」。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "ffmlaf_1_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ShowFormulabarinFullView",
+            "displayName": "全螢幕檢視時顯示資料編輯列",
+            "explainText": "核取: 在 [檢視] 功能表設定 [全螢幕] 命令時，顯示資料編輯列。| 取消核取: 在 [檢視] 功能表設定 [全螢幕] 命令時，不要顯示資料編輯列。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "ffmlafull_68_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Functiontooltips",
+            "displayName": "函數工具提示",
+            "explainText": "啟用此設定會選取 [進階] (顯示) 使用者選項，以便「顯示函數工具提示」。",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fshowfuntips_101_1"
         },
         {
             "parentCategory": {
@@ -4918,7 +5593,7 @@
         },
         {
             "parentCategory": {
-                "ref": "L_IntelligentServices"
+                "ref": "L_PowerBI"
             },
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
@@ -4933,16 +5608,16 @@
                     "value": 0
                 }
             },
-            "name": "L_Insights",
-            "displayName": "從功能區移除 [構想] 按鈕",
-            "explainText": "此原則設定可讓您防止使用者在 Excel 中存取 [構想]，這是根據您的資料提供建議與分析的智慧型服務。[構想] 按鈕預設會顯示在功能區 [常用] 索引標籤的 [構想] 群組中。\n\n如果啟用此原則設定，[構想] 按鈕會從功能區移除，且使用者無法手動將該按鈕新增到功能區。使用者將無法存取 [構想]。\n\n如果停用或不設定此原則設定，則 [構想] 按鈕會顯示在功能區，且使用者可以存取 [構想]。",
+            "name": "L_DisableFromPowerBIDatasetOrganizationName",
+            "displayName": "停止在按鈕中顯示組織名稱，以從 Power BI 資料集建立樞紐分析表",
+            "explainText": "        此原則設定可讓您防止組織名稱顯示在使用 Power BI 資料集建立樞紐分析表的 Excel 功能區按鈕中。  根據預設，如果 Graph 中有可用的組織名稱，則會顯示在功能區中。\n\n        如果您啟用此原則設定，就不會顯示組織名稱。\n\n        如果您停用或未設定此原則設定，就會顯示組織名稱。\n\n        注意: 此原則設定只適用於 Office 訂閱版本，例如 Microsoft 365 Apps 企業版。",
             "tags": [
-                "L_IntelligentServices",
+                "L_PowerBI",
                 "L_MicrosoftOfficeExcel"
             ],
             "application": "excel16",
-            "key": "software\\microsoft\\office\\16.0\\excel\\intelligent services",
-            "valueName": "insights"
+            "key": "software\\microsoft\\office\\16.0\\excel\\power bi",
+            "valueName": "disablefrompowerbidatasetorganizationname"
         }
     ]
 }

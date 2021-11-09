@@ -347,35 +347,6 @@
                     "value": 0
                 }
             },
-            "name": "L_Openattachmentsforfullscreenreading",
-            "displayName": "Ouvrir les pièces jointes en mode Lecture",
-            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
-            "tags": [
-                "L_OptionsGeneral",
-                "L_WordOptions",
-                "L_MicrosoftOfficeWord"
-            ],
-            "application": "word16",
-            "key": "software\\microsoft\\office\\16.0\\word\\options",
-            "valueName": "allowautoreadingmode"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_OptionsGeneral"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
             "name": "L_AllowSelectionFloaties",
             "displayName": "Afficher la mini barre d’outils lors de la sélection",
             "explainText": "Lorsque cette stratégie est désactivée, la mini-barre d’outils ne s’affiche pas lors de la sélection d’un texte. Par défaut, elle s’active à la sélection, et il est possible de la masquer ou de l’afficher au moyen d’une option de la boîte de dialogue Options Word.",
@@ -874,6 +845,348 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Trackchangesandcompare"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Aucun"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Par auteur"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Rose"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Bleu clair"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "Jaune clair"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "Violet clair"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "Orange clair"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Vert clair"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "Gris"
+                            }
+                        ],
+                        "valueName": "revmodeinscellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "Couleur des cellules insérées :",
+                        "id": "L_TablecomparecolorsPart1"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Aucun"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Par auteur"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Rose"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Bleu clair"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "Jaune clair"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "Violet clair"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "Orange clair"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Vert clair"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "Gris"
+                            }
+                        ],
+                        "valueName": "revmodedelcellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "Couleur des cellules supprimées :",
+                        "id": "L_TablecomparecolorsPart2"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Aucun"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Par auteur"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Rose"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Bleu clair"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "Jaune clair"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "Violet clair"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "Orange clair"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Vert clair"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "Gris"
+                            }
+                        ],
+                        "valueName": "revmodemergecellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "Couleur des cellules fusionnées :",
+                        "id": "L_TablecomparecolorsPart3"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Aucun"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Par auteur"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Rose"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Bleu clair"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "Jaune clair"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "Violet clair"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "Orange clair"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Vert clair"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "Gris"
+                            }
+                        ],
+                        "valueName": "revmodesplitcellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "Couleur des cellules fractionnées :",
+                        "id": "L_TablecomparecolorsPart4"
+                    }
+                ]
+            },
+            "name": "L_Tablecomparecolors",
+            "displayName": "Couleurs de comparaison de tableaux",
+            "explainText": "Cette option détermine les couleurs utilisées pour afficher les résultats de la comparaison de tableaux. L’option Aucune permet d’effectuer le suivi des modifications, mais celles-ci ne sont pas mises en couleur dans le document obtenu (elles sont répertoriées dans le volet Vérifications).",
+            "tags": [
+                "L_Trackchangesandcompare",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Proofing"
             },
             "supportedOn": {
@@ -1042,6 +1355,837 @@
         },
         {
             "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_CorrectTWoINitialCApitals",
+            "displayName": "Supprimer la 2e majuscule d’un mot",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ftwoinitialcaps_24_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Capitalizefirstletterofsentence",
+            "displayName": "Majuscule en début de phrase",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "finitialcap_32_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Capitalizenamesofdays",
+            "displayName": "Majuscules aux jours de la semaine",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcapdaynames_48_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_CorrectaccidentalusageofcAPSLOCKkey",
+            "displayName": "Corriger l’utilisation accidentelle de la touche Verr. maj",
+            "explainText": "Ce paramètre de stratégie vous permet de définir l’option « Corriger l’utilisation accidentelle de la touche VERR.MAJ » sous Options Word | Vérification | « Options de correction automatique... » | Correction automatique.\n\nSi vous activez ce paramètre de stratégie, l’option « Corriger l’utilisation accidentelle de la touche VERR.MAJ » est sélectionnée.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option « Corriger l’utilisation accidentelle de la touche VERR.MAJ » n’est pas sélectionnée.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcapslock_40_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Replacetextasyoutype",
+            "displayName": "Correction en cours de frappe",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcorrecttyping_16_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Correctkeyboardsetting",
+            "displayName": "Corriger les paramètres du clavier",
+            "explainText": "Ce paramètre de stratégie vous permet de définir l’option « Corriger les paramètres du clavier » sous Options Word | Vérification | « Options de correction automatique... » | Correction automatique.\n\nSi vous activez ce paramètre de stratégie, l’option « Corriger les paramètres du clavier » est sélectionnée.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option « Corriger les paramètres du clavier » n’est pas sélectionnée.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcorrectkeyboard_64_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Firstlineindent",
+            "displayName": "Retrait de première ligne",
+            "explainText": "Active/désactive l’option « Espaces au début d'un paragraphe avec un retrait de première ligne » dans le groupe « Remplacer ». Cette option peut être masquée dans Word jusqu’à l’activation de certaines langues d’édition.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ffirstindent_344_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Straightquoteswithsmartquotes",
+            "displayName": "Guillemets typographiques par des guillemets",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fsmartquote_8_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ordinals1stwithsuperscript",
+            "displayName": "Ordinaux (1er) en exposant",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fnumsupscript_104_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Fractions12withfractioncharacter",
+            "displayName": "Fractions (1/2) par caractère de fraction (½)",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ffraction_96_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Symbolcharacterswithsymbols",
+            "displayName": "Caractères de symbole (--) par symboles",
+            "explainText": "Active/désactive l’option « Traits d’union (--) par un tiret demi-cadratin (-) ».",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "femdash_112_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Boldand_italic_withrealformatting",
+            "displayName": "*Gras* et _italique_ par les attributs correspondants",
+            "explainText": "Ce paramètre de stratégie vous permet de définir l’option « *Gras* et _italique_ par les attributs correspondants ».\n\nSi vous activez ce paramètre de stratégie, vous définissez l’option « *Gras* et _italique_ par les attributs correspondants » dans Fichier | Options | Vérification | Options de correction automatique... | Mise en forme automatique.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, cette option n’est pas définie.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fbolditalic_120_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Dashlikecharacters",
+            "displayName": "Tirets",
+            "explainText": "Active/désactive l’option « Sons des voyelles longues avec tiret ». Cette option peut être masquée dans Word jusqu’à l’activation de certaines langues d’édition.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fdbdashes_136_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Headings",
+            "displayName": "Titres",
+            "explainText": "Active/désactive l’option Styles de titres intégrés.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fheading_280_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_BorderLines",
+            "displayName": "Bordures",
+            "explainText": "Active/désactive l’option « Bordures ».",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fbotbord_328_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Tables",
+            "displayName": "Tableaux",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ftable_392_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DateStyle",
+            "displayName": "Style de date",
+            "explainText": "Active/désactive l’option « Style de date ». Cette option peut être masquée dans Word jusqu’à l’activation de certaines langues d’édition.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fdate_376_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Automaticbulletedlists",
+            "displayName": "Listes à puces automatiques",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fbulletlist_296_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Automaticnumberedlists",
+            "displayName": "Listes numérotées automatiques",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fnumberedlist_312_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ClosingStyleToLetterClosings",
+            "displayName": "Style de fin des formules de politesse",
+            "explainText": "Ce paramètre de stratégie vous permet de définir l’option « Style de fin des formules de politesse » sous Options Word | Vérification | Options de correction automatique... | Mise en forme automatique au cours de la frappe.\n\nSi vous activez ce paramètre de stratégie, l’option « Style de fin des formules de politesse » est sélectionnée.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option « Style de fin des formules de politesse » n’est pas sélectionnée.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fclosing_360_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Autospace",
+            "displayName": "Espacement automatique",
+            "explainText": "Ce paramètre de stratégie vous permet de définir l’option « Supprimer les espaces superflus entre les caractères de texte asiatiques et occidentaux » du groupe « Mise en forme automatique en cours de frappe ». Cette option peut être masquée dans Word jusqu’à l’activation de certaines langues d’édition.\n\nSi vous activez ce paramètre de stratégie, l’option « Supprimer les espaces superflus entre les caractères de texte asiatiques et occidentaux »  est sélectionnée.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option « Supprimer les espaces superflus entre les caractères de texte asiatiques et occidentaux » n’est pas sélectionnée.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fsbdbspace_152_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchparentheses",
+            "displayName": "Respecter les parenthèses",
+            "explainText": "Ce paramètre de stratégie vous permet de définir l’option « Faire correspondre les parenthèses ouvrante et fermante » sous Options Word | Vérification | Options de correction automatique... | Mise en forme automatique au cours de la frappe | Mise en forme automatique en cours de frappe. Cette option peut être masquée dans Word jusqu’à l’activation de certaines langues d’édition.\n\nSi vous activez ce paramètre de stratégie, l’option « Faire correspondre les parenthèses ouvrante et fermante » est sélectionnée.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option « Faire correspondre les parenthèses ouvrante et fermante » n’est pas sélectionnée.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fautopair_144_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Formatbeginningoflistitemliketheonebeforeit",
+            "displayName": "Appliquer au début de liste le même format que celui de la liste précédente",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fleadinemph_176_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Setleftindentontabsandbackspace",
+            "displayName": "Retrait à gauche à l’aide des touches Tab et Ret. arr.",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ftabindent_128_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Definestylesbasedonyourformatting",
+            "displayName": "Définir des styles à partir de votre mise en forme",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fautostyledef_184_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_InsertClosingPhraseToMatchMemoStyle",
+            "displayName": "Insérer une formule de clôture adaptée au mémo",
+            "explainText": "Active/désactive l’option « Insérer une formule de clôture adaptée au mémo ». Cette option peut être masquée dans Word jusqu’à l’activation de certaines langues d’édition.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "finsertover_424_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_InsertClosingPhraseToMatchJapaneseSalutation",
+            "displayName": "Insérer une formule de clôture adaptée à une salutation japonaise",
+            "explainText": "Active/désactive l’option « Insérer une formule de clôture adaptée à une salutation japonaise ». Cette option peut être masquée dans Word jusqu’à l’activation de certaines langues d’édition.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "finsertclosing_408_1"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_OptionsCustomizeRibbon"
             },
             "supportedOn": {
@@ -1088,7 +2232,7 @@
             },
             "name": "L_Highlight",
             "displayName": "Afficher les marques du surligneur",
-            "explainText":"Ce paramètre de stratégie contrôle les marques du surligneur.\n\nSi vous activez ce paramètre de stratégie, les marques du surligneur s'affichent à l’écran et à l’impression.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, les marques du surligneur sont masquées à l’écran et à l’impression.",
+            "explainText": "Ce paramètre de stratégie contrôle les marques du surligneur.\n\nSi vous activez ce paramètre de stratégie, les marques du surligneur s'affichent à l’écran et à l’impression.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, les marques du surligneur sont masquées à l’écran et à l’impression.",
             "tags": [
                 "L_Display",
                 "L_WordOptions",
@@ -1155,6 +2299,122 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "nomargpageview"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Documentproperties",
+            "displayName": "Imprimer les propriétés du document",
+            "explainText": "Ce paramètre de stratégie vous permet de contrôler le paramètre « Imprimer les propriétés du document » disponible sous l’onglet Fichier | Options | Affichage | Options d’impression.\n\nSi vous activez ce paramètre de stratégie, Word imprime une page supplémentaire comportant les propriétés du document imprimé, dont l’auteur du document, le nom de fichier, la date de création, etc., pour chaque document imprimé.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, aucune page supplémentaire n’est imprimée.",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "summary_1_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Drawingobjects",
+            "displayName": "Imprimer les dessins créés dans Word",
+            "explainText": "Ce paramètre de stratégie vous permet de configurer le paramètre « Imprimer les dessins créés dans Word » disponible sous l’onglet Fichier | Options | Affichage | Options d’impression.\n\nSi vous activez ce paramètre de stratégie, Word imprime les graphiques et les zones de texte flottantes.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, Word n’imprime pas les graphiques ni les zones de texte flottantes, mais imprime une zone vide à la place de chaque graphique et de chaque zone de texte flottante.",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "disabledrawnobj_14_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Updatefields",
+            "displayName": "Mettre à jour les champs avant l’impression",
+            "explainText": "Ce paramètre de stratégie vous permet de configurer le paramètre « Mettre à jour les champs avant l’impression » sous l’onglet Fichier | Options | Affichage | Options d’impression.\n\nSi vous activez ce paramètre de stratégie, Word met à jour les champs du document avant de l’imprimer.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, Word ne met pas à jour les champs du document avant de l’imprimer.",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "refresh_5_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Updatelinks",
+            "displayName": "Mettre à jour les données liées avant l’impression",
+            "explainText": "Ce paramètre de stratégie contrôle le paramètre « Mettre à jour les données liées avant l’impression » sous l’onglet Fichier | Options | Affichage | Options d’impression.\n\nSi vous activez ce paramètre de stratégie, Word met à jour les données liées du document avant de l’imprimer. Un graphique Excel incorporé lié à une feuille de calcul Excel est un exemple de données liées dans Word.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, Word ne met pas à jour les données liées du document avant de l’imprimer.",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "updatelinks_13_1"
         },
         {
             "parentCategory": {
@@ -2941,7 +4201,7 @@
             },
             "name": "L_Usecharacterunits",
             "displayName": "Afficher les mesures en largeur de caractères",
-            "explainText":"Active/désactive l'option d'interface correspondante. Cette option peut être masquée dans Word jusqu’à l’activation de certaines langues d’édition.",
+            "explainText": "Active/désactive l'option d'interface correspondante. Cette option peut être masquée dans Word jusqu’à l’activation de certaines langues d’édition.",
             "tags": [
                 "L_Advanced",
                 "L_WordOptions",
@@ -3113,6 +4373,35 @@
                     "value": 0
                 }
             },
+            "name": "L_Draftoutput",
+            "displayName": "Utiliser la qualité brouillon",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "draftoutput_2_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_Backgroundprinting",
             "displayName": "Imprimer en arrière-plan",
             "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
@@ -3124,6 +4413,93 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "backgroundprint"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Reverseprintorder",
+            "displayName": "Imprimer les pages en ordre inverse",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "reverseprint_6_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Frontofsheet",
+            "displayName": "Imprimer au recto pour l’impression recto verso",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "fprorder1_21_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Backofthesheet",
+            "displayName": "Imprimer au verso pour l’impression recto verso",
+            "explainText": "Active/désactive l’option d’interface utilisateur correspondante.",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "fprorder2_22_1"
         },
         {
             "parentCategory": {
@@ -3289,7 +4665,7 @@
             },
             "name": "L_ConfirmconversionatOpen",
             "displayName": "Confirmer la conversion du format de fichier lors de l’ouverture",
-            "explainText":"Ce paramètre de stratégie vous permet de définir l’option « Confirmer la conversion du format de fichier lors de l'ouverture » sous Options Word | Options avancées | Général.\n\nSi vous activez ce paramètre de stratégie, l’option « Confirmer la conversion du format de fichier lors de l'ouverture »est sélectionnée.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option « Confirmer la conversion du format de fichier lors de l'ouverture » n’est pas sélectionnée.",
+            "explainText": "Ce paramètre de stratégie vous permet de définir l’option « Confirmer la conversion du format de fichier lors de l'ouverture » sous Options Word | Options avancées | Général.\n\nSi vous activez ce paramètre de stratégie, l’option « Confirmer la conversion du format de fichier lors de l'ouverture »est sélectionnée.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option « Confirmer la conversion du format de fichier lors de l'ouverture » n’est pas sélectionnée.",
             "tags": [
                 "L_Advanced",
                 "L_WordOptions",
@@ -4507,7 +5883,7 @@
             },
             "name": "L_SpecifyCNGSaltLength",
             "displayName": "Spécifier la longueur de salt CNG",
-            "explainText":"Ce paramètre de stratégie vous permet de spécifier le nombre d'octets du salt à utiliser.\n\nSi vous activez ce paramètre de stratégie, le nombre d'octets spécifié est utilisé.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, la longueur par défaut est utilisée, soit 16.",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier le nombre d'octets du salt à utiliser.\n\nSi vous activez ce paramètre de stratégie, le nombre d'octets spécifié est utilisé.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, la longueur par défaut est utilisée, soit 16.",
             "tags": [
                 "L_Cryptography",
                 "L_Security",
@@ -4662,7 +6038,7 @@
             },
             "name": "L_BlockMacroExecutionFromInternet",
             "displayName": "Bloquer l’exécution des macros dans les fichiers Office provenant d’Internet",
-            "explainText": "Ce paramètre de stratégie vous permet de bloquer l’exécution des macros dans les fichiers Office provenant d’Internet.\n\nSi vous activez ce paramètre de stratégie, l’exécution des macros est bloquée, même si l’option « Activer toutes les macros » est sélectionnée dans la section Paramètres des macros du Centre de gestion de la confidentialité. Par ailleurs, au lieu de laisser les utilisateurs choisir s’il convient de sélectionner l’option « Activer le contenu », ceux-ci reçoivent une notification indiquant que l’exécution des macros est bloquée. Si le fichier Office est enregistré dans un emplacement approuvé ou s’il a été approuvé précédemment par l’utilisateur, l’exécution des macros est autorisée.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les paramètres configurés dans la section Paramètres des macros du Centre de gestion de la confidentialité déterminent si les macros peuvent être exécutées dans les fichiers Office provenant d’Internet.",
+            "explainText": "        Ce paramètre de stratégie vous permet de bloquer l’exécution des macros dans les fichiers Office provenant d’Internet.\n\n        Si vous activez ce paramètre de stratégie, l’exécution des macros est bloquée, même si l’option « Activer toutes les macros » est sélectionnée dans la section Paramètres des macros du Centre de gestion de la confidentialité. Par ailleurs, au lieu de laisser les utilisateurs choisir s’il convient de sélectionner l’option « Activer le contenu », ceux-ci reçoivent une notification indiquant que l’exécution des macros est bloquée. Si le fichier Office est enregistré dans un emplacement approuvé ou s’il a été approuvé précédemment par l’utilisateur, l’exécution des macros est autorisée.\n\n        Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les paramètres configurés dans la section Paramètres des macros du Centre de gestion de la confidentialité déterminent si les macros peuvent être exécutées dans les fichiers Office provenant d’Internet.\n      ",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -6290,6 +7666,70 @@
         },
         {
             "parentCategory": {
+                "ref": "L_ProtectedView"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Bloquer les fichiers"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Ouvrir en mode protégé"
+                            }
+                        ],
+                        "valueName": "openinprotectedview",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsDropID"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "disableeditfrompv",
+                        "key": "software\\microsoft\\office\\16.0\\word\\security\\filevalidation",
+                        "inputType": "checkBox",
+                        "caption": "Activé : autoriser la modification.  Désactivé : ne pas autoriser la modification.",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsStr3"
+                    }
+                ]
+            },
+            "name": "L_SetDocumentBehaviorIfFileValidationFails",
+            "displayName": "Définir le comportement des documents en cas d’échec de la validation de fichier",
+            "explainText": "Ce paramètre de stratégie contrôle la façon dont Office gère les documents en cas d’échec de la validation de fichier.\n\nSi vous activez ce paramètre de stratégie, vous pouvez configurer les options suivantes pour les fichiers pour lesquels la validation de fichier échoue : \n\n- Bloquer complètement les fichiers. Les utilisateurs ne peuvent pas ouvrir les fichiers.\n- Ouvrir les fichiers en mode protégé et interdire la modification. Les utilisateurs ne peuvent pas modifier les fichiers. Office gère les fichiers de la même façon si vous ne configurez pas ce paramètre de stratégie\n\n- Ouvrir les fichiers en mode protégé et autoriser la modification. Les utilisateurs peuvent modifier les fichiers. Office gère les fichiers de la même façon si vous ne configurez pas ce paramètre de stratégie.\n\nSi vous désactivez ce paramètre de stratégie, Office suit le comportement « Ouvrir les fichiers en mode protégé et interdire la modification ».\n\nSi vous ne configurez pas ce paramètre de stratégie, Office suit le comportement « Ouvrir les fichiers en mode protégé et autoriser la modification ».",
+            "tags": [
+                "L_ProtectedView",
+                "L_TrustCenter",
+                "L_Security",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\security\\filevalidation"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -6403,6 +7843,510 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "showmarkupopensave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchcase",
+            "displayName": "Respecter la casse",
+            "explainText": "Ce paramètre de stratégie permet d’activer ou désactiver l’option d’interface utilisateur correspondante dans la boîte de dialogue « Recherche japonais ». La boîte de dialogue « Recherche japonais » est accessible via la boîte de dialogue Rechercher, sous l’onglet Accueil | Édition | Rechercher | Atteindre... | Options de recherche | Options....  Elle est également disponible dans le volet de navigation, sous l’onglet Accueil | Édition | Rechercher | < flèche vers le bas > | Options... | Recherche phonétique (japonais) | Options. La case à cocher « Recherche phonétique (japonais) » et le bouton « Options » peuvent être masqués dans Word jusqu’à l’activation de certaines langues d’édition.\n\nSi vous activez ce paramètre de stratégie, vous activez l’option d’interface utilisateur correspondante spécifiée dans le titre de ce paramètre de stratégie.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option d’interface utilisateur correspondante n’est pas activée.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqcase_0_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchfullhalfwidthform",
+            "displayName": "Respecter les caractères à demi-chasse/à pleine chasse",
+            "explainText": "Ce paramètre de stratégie permet d’activer ou désactiver l’option d’interface utilisateur correspondante dans la boîte de dialogue « Recherche japonais ». La boîte de dialogue « Recherche japonais » est accessible via la boîte de dialogue Rechercher, sous l’onglet Accueil | Édition | Rechercher | Atteindre... | Options de recherche | Options....  Elle est également disponible dans le volet de navigation, sous l’onglet Accueil | Édition | Rechercher | < flèche vers le bas > | Options... | Recherche phonétique (japonais) | Options. La case à cocher « Recherche phonétique (japonais) » et le bouton « Options » peuvent être masqués dans Word jusqu’à l’activation de certaines langues d’édition.\n\nSi vous activez ce paramètre de stratégie, vous activez l’option d’interface utilisateur correspondante spécifiée dans le titre de ce paramètre de stratégie.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option d’interface utilisateur correspondante n’est pas activée.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqbyte_1_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchhiraganakatakana",
+            "displayName": "Respecter hiragana/katakana",
+            "explainText": "Ce paramètre de stratégie permet d’activer ou désactiver l’option d’interface utilisateur correspondante dans la boîte de dialogue « Recherche japonais ». La boîte de dialogue « Recherche japonais » est accessible via la boîte de dialogue Rechercher, sous l’onglet Accueil | Édition | Rechercher | Atteindre... | Options de recherche | Options....  Elle est également disponible dans le volet de navigation, sous l’onglet Accueil | Édition | Rechercher | < flèche vers le bas > | Options... | Recherche phonétique (japonais) | Options. La case à cocher « Recherche phonétique (japonais) » et le bouton « Options » peuvent être masqués dans Word jusqu’à l’activation de certaines langues d’édition.\n\nSi vous activez ce paramètre de stratégie, vous activez l’option d’interface utilisateur correspondante spécifiée dans le titre de ce paramètre de stratégie.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option d’interface utilisateur correspondante n’est pas activée.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqhira_kata_3_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchcontractionsyoonsokuon",
+            "displayName": "Respecter les contractions (yo-on, sokuon)",
+            "explainText": "Ce paramètre de stratégie permet d’activer ou désactiver l’option d’interface utilisateur correspondante dans la boîte de dialogue « Recherche japonais ». La boîte de dialogue « Recherche japonais » est accessible via la boîte de dialogue Rechercher, sous l’onglet Accueil | Édition | Rechercher | Atteindre... | Options de recherche | Options....  Elle est également disponible dans le volet de navigation, sous l’onglet Accueil | Édition | Rechercher | < flèche vers le bas > | Options... | Recherche phonétique (japonais) | Options. La case à cocher « Recherche phonétique (japonais) » et le bouton « Options » peuvent être masqués dans Word jusqu’à l’activation de certaines langues d’édition.\n\nSi vous activez ce paramètre de stratégie, vous activez l’option d’interface utilisateur correspondante spécifiée dans le titre de ce paramètre de stratégie.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option d’interface utilisateur correspondante n’est pas activée.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqsmallkana_4_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchminusdashchoon",
+            "displayName": "Respecter moins/tiret/cho-on",
+            "explainText": "Ce paramètre de stratégie permet d’activer ou désactiver l’option d’interface utilisateur correspondante dans la boîte de dialogue « Recherche japonais ». La boîte de dialogue « Recherche japonais » est accessible via la boîte de dialogue Rechercher, sous l’onglet Accueil | Édition | Rechercher | Atteindre... | Options de recherche | Options....  Elle est également disponible dans le volet de navigation, sous l’onglet Accueil | Édition | Rechercher | < flèche vers le bas > | Options... | Recherche phonétique (japonais) | Options. La case à cocher « Recherche phonétique (japonais) » et le bouton « Options » peuvent être masqués dans Word jusqu’à l’activation de certaines langues d’édition.\n\nSi vous activez ce paramètre de stratégie, vous activez l’option d’interface utilisateur correspondante spécifiée dans le titre de ce paramètre de stratégie.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option d’interface utilisateur correspondante n’est pas activée.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqminus_2_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchrepeatcharactermarks",
+            "displayName": "Respecter les marques de caractères répétés",
+            "explainText": "Ce paramètre de stratégie permet d’activer ou désactiver l’option d’interface utilisateur correspondante dans la boîte de dialogue « Recherche japonais ». La boîte de dialogue « Recherche japonais » est accessible via la boîte de dialogue Rechercher, sous l’onglet Accueil | Édition | Rechercher | Atteindre... | Options de recherche | Options....  Elle est également disponible dans le volet de navigation, sous l’onglet Accueil | Édition | Rechercher | < flèche vers le bas > | Options... | Recherche phonétique (japonais) | Options. La case à cocher « Recherche phonétique (japonais) » et le bouton « Options » peuvent être masqués dans Word jusqu’à l’activation de certaines langues d’édition.\n\nSi vous activez ce paramètre de stratégie, vous activez l’option d’interface utilisateur correspondante spécifiée dans le titre de ce paramètre de stratégie.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option d’interface utilisateur correspondante n’est pas activée.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqrepsymbol_5_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchvariantformkanjiitaiji",
+            "displayName": "Respecter les variations de forme des kanji (itaiji)",
+            "explainText": "Ce paramètre de stratégie permet d’activer ou désactiver l’option d’interface utilisateur correspondante dans la boîte de dialogue « Recherche japonais ». La boîte de dialogue « Recherche japonais » est accessible via la boîte de dialogue Rechercher, sous l’onglet Accueil | Édition | Rechercher | Atteindre... | Options de recherche | Options....  Elle est également disponible dans le volet de navigation, sous l’onglet Accueil | Édition | Rechercher | < flèche vers le bas > | Options... | Recherche phonétique (japonais) | Options. La case à cocher « Recherche phonétique (japonais) » et le bouton « Options » peuvent être masqués dans Word jusqu’à l’activation de certaines langues d’édition.\n\nSi vous activez ce paramètre de stratégie, vous activez l’option d’interface utilisateur correspondante spécifiée dans le titre de ce paramètre de stratégie.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option d’interface utilisateur correspondante n’est pas activée.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqkanji_16_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matcholdkanaforms",
+            "displayName": "Respecter les formes kana anciennes",
+            "explainText": "Ce paramètre de stratégie permet d’activer ou désactiver l’option d’interface utilisateur correspondante dans la boîte de dialogue « Recherche japonais ». La boîte de dialogue « Recherche japonais » est accessible via la boîte de dialogue Rechercher, sous l’onglet Accueil | Édition | Rechercher | Atteindre... | Options de recherche | Options....  Elle est également disponible dans le volet de navigation, sous l’onglet Accueil | Édition | Rechercher | < flèche vers le bas > | Options... | Recherche phonétique (japonais) | Options. La case à cocher « Recherche phonétique (japonais) » et le bouton « Options » peuvent être masqués dans Word jusqu’à l’activation de certaines langues d’édition.\n\nSi vous activez ce paramètre de stratégie, vous activez l’option d’interface utilisateur correspondante spécifiée dans le titre de ce paramètre de stratégie.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option d’interface utilisateur correspondante n’est pas activée.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqoldkana_6_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchchoonusedforvowels",
+            "displayName": "Respecter l’utilisation du signe cho-on pour les voyelles",
+            "explainText": "Ce paramètre de stratégie permet d’activer ou désactiver l’option d’interface utilisateur correspondante dans la boîte de dialogue « Recherche japonais ». La boîte de dialogue « Recherche japonais » est accessible via la boîte de dialogue Rechercher, sous l’onglet Accueil | Édition | Rechercher | Atteindre... | Options de recherche | Options....  Elle est également disponible dans le volet de navigation, sous l’onglet Accueil | Édition | Rechercher | < flèche vers le bas > | Options... | Recherche phonétique (japonais) | Options. La case à cocher « Recherche phonétique (japonais) » et le bouton « Options » peuvent être masqués dans Word jusqu’à l’activation de certaines langues d’édition.\n\nSi vous activez ce paramètre de stratégie, vous activez l’option d’interface utilisateur correspondante spécifiée dans le titre de ce paramètre de stratégie.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option d’interface utilisateur correspondante n’est pas activée.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqlongvowel_7_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchdiziduzu",
+            "displayName": "Respecter di/zi, du/zu",
+            "explainText": "Ce paramètre de stratégie permet d’activer ou désactiver l’option d’interface utilisateur correspondante dans la boîte de dialogue « Recherche japonais ». La boîte de dialogue « Recherche japonais » est accessible via la boîte de dialogue Rechercher, sous l’onglet Accueil | Édition | Rechercher | Atteindre... | Options de recherche | Options....  Elle est également disponible dans le volet de navigation, sous l’onglet Accueil | Édition | Rechercher | < flèche vers le bas > | Options... | Recherche phonétique (japonais) | Options. La case à cocher « Recherche phonétique (japonais) » et le bouton « Options » peuvent être masqués dans Word jusqu’à l’activation de certaines langues d’édition.\n\nSi vous activez ce paramètre de stratégie, vous activez l’option d’interface utilisateur correspondante spécifiée dans le titre de ce paramètre de stratégie.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option d’interface utilisateur correspondante n’est pas activée.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqd_z_8_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchbavahafa",
+            "displayName": "Respecter ba/va, ha/fa",
+            "explainText": "Ce paramètre de stratégie permet d’activer ou désactiver l’option d’interface utilisateur correspondante dans la boîte de dialogue « Recherche japonais ». La boîte de dialogue « Recherche japonais » est accessible via la boîte de dialogue Rechercher, sous l’onglet Accueil | Édition | Rechercher | Atteindre... | Options de recherche | Options....  Elle est également disponible dans le volet de navigation, sous l’onglet Accueil | Édition | Rechercher | < flèche vers le bas > | Options... | Recherche phonétique (japonais) | Options. La case à cocher « Recherche phonétique (japonais) » et le bouton « Options » peuvent être masqués dans Word jusqu’à l’activation de certaines langues d’édition.\n\nSi vous activez ce paramètre de stratégie, vous activez l’option d’interface utilisateur correspondante spécifiée dans le titre de ce paramètre de stratégie.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option d’interface utilisateur correspondante n’est pas activée.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqb_v_9_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchtsithichidhizi",
+            "displayName": "Respecter tsi/thi/chi, dhi/zi",
+            "explainText": "Ce paramètre de stratégie permet d’activer ou désactiver l’option d’interface utilisateur correspondante dans la boîte de dialogue « Recherche japonais ». La boîte de dialogue « Recherche japonais » est accessible via la boîte de dialogue Rechercher, sous l’onglet Accueil | Édition | Rechercher | Atteindre... | Options de recherche | Options....  Elle est également disponible dans le volet de navigation, sous l’onglet Accueil | Édition | Rechercher | < flèche vers le bas > | Options... | Recherche phonétique (japonais) | Options. La case à cocher « Recherche phonétique (japonais) » et le bouton « Options » peuvent être masqués dans Word jusqu’à l’activation de certaines langues d’édition.\n\nSi vous activez ce paramètre de stratégie, vous activez l’option d’interface utilisateur correspondante spécifiée dans le titre de ce paramètre de stratégie.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option d’interface utilisateur correspondante n’est pas activée.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqt_c_10_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchhyuiyubyuvyu",
+            "displayName": "Respecter hyu/iyu, byu/vyu",
+            "explainText": "Ce paramètre de stratégie permet d’activer ou désactiver l’option d’interface utilisateur correspondante dans la boîte de dialogue « Recherche japonais ». La boîte de dialogue « Recherche japonais » est accessible via la boîte de dialogue Rechercher, sous l’onglet Accueil | Édition | Rechercher | Atteindre... | Options de recherche | Options....  Elle est également disponible dans le volet de navigation, sous l’onglet Accueil | Édition | Rechercher | < flèche vers le bas > | Options... | Recherche phonétique (japonais) | Options. La case à cocher « Recherche phonétique (japonais) » et le bouton « Options » peuvent être masqués dans Word jusqu’à l’activation de certaines langues d’édition.\n\nSi vous activez ce paramètre de stratégie, vous activez l’option d’interface utilisateur correspondante spécifiée dans le titre de ce paramètre de stratégie.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option d’interface utilisateur correspondante n’est pas activée.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqf_h_15_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchseshezeje",
+            "displayName": "Respecter se/she, ze/je",
+            "explainText": "Ce paramètre de stratégie permet d’activer ou désactiver l’option d’interface utilisateur correspondante dans la boîte de dialogue « Recherche japonais ». La boîte de dialogue « Recherche japonais » est accessible via la boîte de dialogue Rechercher, sous l’onglet Accueil | Édition | Rechercher | Atteindre... | Options de recherche | Options....  Elle est également disponible dans le volet de navigation, sous l’onglet Accueil | Édition | Rechercher | < flèche vers le bas > | Options... | Recherche phonétique (japonais) | Options. La case à cocher « Recherche phonétique (japonais) » et le bouton « Options » peuvent être masqués dans Word jusqu’à l’activation de certaines langues d’édition.\n\nSi vous activez ce paramètre de stratégie, vous activez l’option d’interface utilisateur correspondante spécifiée dans le titre de ce paramètre de stratégie.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option d’interface utilisateur correspondante n’est pas activée.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqs_sh_13_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchiaiyapianopiyano",
+            "displayName": "Respecter ia/iya (piano/piyano)",
+            "explainText": "Ce paramètre de stratégie permet d’activer ou désactiver l’option d’interface utilisateur correspondante dans la boîte de dialogue « Recherche japonais ». La boîte de dialogue « Recherche japonais » est accessible via la boîte de dialogue Rechercher, sous l’onglet Accueil | Édition | Rechercher | Atteindre... | Options de recherche | Options....  Elle est également disponible dans le volet de navigation, sous l’onglet Accueil | Édition | Rechercher | < flèche vers le bas > | Options... | Recherche phonétique (japonais) | Options. La case à cocher « Recherche phonétique (japonais) » et le bouton « Options » peuvent être masqués dans Word jusqu’à l’activation de certaines langues d’édition.\n\nSi vous activez ce paramètre de stratégie, vous activez l’option d’interface utilisateur correspondante spécifiée dans le titre de ce paramètre de stratégie.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option d’interface utilisateur correspondante n’est pas activée.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqy_a_12_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchkikutekisutotekusuto",
+            "displayName": "Respecter ki/ku (tekisuto/tekusuto)",
+            "explainText": "Ce paramètre de stratégie permet d’activer ou désactiver l’option d’interface utilisateur correspondante dans la boîte de dialogue « Recherche japonais ». La boîte de dialogue « Recherche japonais » est accessible via la boîte de dialogue Rechercher, sous l’onglet Accueil | Édition | Rechercher | Atteindre... | Options de recherche | Options....  Elle est également disponible dans le volet de navigation, sous l’onglet Accueil | Édition | Rechercher | < flèche vers le bas > | Options... | Recherche phonétique (japonais) | Options. La case à cocher « Recherche phonétique (japonais) » et le bouton « Options » peuvent être masqués dans Word jusqu’à l’activation de certaines langues d’édition.\n\nSi vous activez ce paramètre de stratégie, vous activez l’option d’interface utilisateur correspondante spécifiée dans le titre de ce paramètre de stratégie.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option d’interface utilisateur correspondante n’est pas activée.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqki_ku_14_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ignorepunctuationcharacters",
+            "displayName": "Ignorer les marques de ponctuation",
+            "explainText": "Ce paramètre de stratégie permet d’activer ou désactiver l’option d’interface utilisateur correspondante dans la boîte de dialogue « Recherche japonais ». La boîte de dialogue « Recherche japonais » est accessible via la boîte de dialogue Rechercher, sous l’onglet Accueil | Édition | Rechercher | Atteindre... | Options de recherche | Options....  Elle est également disponible dans le volet de navigation, sous l’onglet Accueil | Édition | Rechercher | < flèche vers le bas > | Options... | Recherche phonétique (japonais) | Options. La case à cocher « Recherche phonétique (japonais) » et le bouton « Options » peuvent être masqués dans Word jusqu’à l’activation de certaines langues d’édition.\n\nSi vous activez ce paramètre de stratégie, vous activez l’option d’interface utilisateur correspondante spécifiée dans le titre de ce paramètre de stratégie.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option d’interface utilisateur correspondante n’est pas activée.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "fignorepunct_18_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ignorewhitespacecharacters",
+            "displayName": "Ignorer les caractères d’espacement",
+            "explainText": "Ce paramètre de stratégie permet d’activer ou désactiver l’option d’interface utilisateur correspondante dans la boîte de dialogue « Recherche japonais ». La boîte de dialogue « Recherche japonais » est accessible via la boîte de dialogue Rechercher, sous l’onglet Accueil | Édition | Rechercher | Atteindre... | Options de recherche | Options....  Elle est également disponible dans le volet de navigation, sous l’onglet Accueil | Édition | Rechercher | < flèche vers le bas > | Options... | Recherche phonétique (japonais) | Options. La case à cocher « Recherche phonétique (japonais) » et le bouton « Options » peuvent être masqués dans Word jusqu’à l’activation de certaines langues d’édition.\n\nSi vous activez ce paramètre de stratégie, vous activez l’option d’interface utilisateur correspondante spécifiée dans le titre de ce paramètre de stratégie.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, l’option d’interface utilisateur correspondante n’est pas activée.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "fignorespace_19_1"
         },
         {
             "parentCategory": {
@@ -6527,7 +8471,7 @@
             },
             "name": "L_ConvertCommonTerms",
             "displayName": "Convertir les termes courants",
-            "explainText":"Active/désactive l'option d'interface correspondante dans la boîte de dialogue « Conversion en chinois » sous l’onglet Révision | bouton Convertir avec options. Il se peut que cette option ne visible que lorsque le chinois est activé comme langue d’édition.",
+            "explainText": "Active/désactive l'option d'interface correspondante dans la boîte de dialogue « Conversion en chinois » sous l’onglet Révision | bouton Convertir avec options. Il se peut que cette option ne visible que lorsque le chinois est activé comme langue d’édition.",
             "tags": [
                 "L_ReviewChineseTranslation",
                 "L_ReviewTab",
@@ -6724,7 +8668,7 @@
             },
             "name": "L_DoNotUseOnlineTranslationDictionaries",
             "displayName": "Utiliser les dictionnaires de traduction en ligne",
-            "explainText":"Ce paramètre de stratégie vous permet d'empêcher l'utilisation de dictionnaires en ligne pour la traduction de texte via le volet Recherche.\n\nSi vous activez ce paramètre de stratégie ou si vous ne le configurez pas, vous pouvez utiliser les dictionnaires en ligne pour traduire du texte via le volet Recherche.\n\nSi vous désactivez ce paramètre de stratégie, vous ne pouvez pas utiliser les dictionnaires en ligne pour traduire du texte via le volet Recherche.",
+            "explainText": "Ce paramètre de stratégie vous permet d'empêcher l'utilisation de dictionnaires en ligne pour la traduction de texte via le volet Recherche.\n\nSi vous activez ce paramètre de stratégie ou si vous ne le configurez pas, vous pouvez utiliser les dictionnaires en ligne pour traduire du texte via le volet Recherche.\n\nSi vous désactivez ce paramètre de stratégie, vous ne pouvez pas utiliser les dictionnaires en ligne pour traduire du texte via le volet Recherche.",
             "tags": [
                 "L_miscellaneous178",
                 "L_MicrosoftOfficeWord"
@@ -6878,7 +8822,7 @@
             },
             "name": "L_CustomMarkupWarning",
             "displayName": "Avertissement de balisage personnalisé",
-            "explainText":"Ce paramètre de stratégie spécifie le comportement de Word lors de l'ouverture d'un document qui contient un balisage XML personnalisé.\n\nSi vous activez ce paramètre de stratégie, vous pouvez définir l'un des comportements suivants : \n\n- 0 : ne pas demander à l'utilisateur et supprimer le balisage XML personnalisé en mode silencieux.\n\n- 1 : demander à l'utilisateur pour ce qui concerne la perte du balisage XML personnalisé. Il s'agit de l'option par défaut.\n\n- 2 : demander à l'utilisateur pour ce qui concerne la perte du balisage XML personnalisé, et ne pas l'autoriser à supprimer cette invite.\n\n- 3 : demander à l'utilisateur pour ce qui concerne la perte du balisage XML personnalisé, et ouvrir le fichier en lecture seule.\n\n- 4 : demander à l'utilisateur pour ce qui concerne la perte du balisage XML personnalisé, ne pas l'autoriser à supprimer cette invite, puis ouvrir le fichier en lecture seule.\n\n- 5 : ne pas demander à l'utilisateur, supprimer le balisage XML personnalisé en mode silencieux, mais ouvrir le fichier en lecture seule.",
+            "explainText": "Ce paramètre de stratégie spécifie le comportement de Word lors de l'ouverture d'un document qui contient un balisage XML personnalisé.\n\nSi vous activez ce paramètre de stratégie, vous pouvez définir l'un des comportements suivants : \n\n- 0 : ne pas demander à l'utilisateur et supprimer le balisage XML personnalisé en mode silencieux.\n\n- 1 : demander à l'utilisateur pour ce qui concerne la perte du balisage XML personnalisé. Il s'agit de l'option par défaut.\n\n- 2 : demander à l'utilisateur pour ce qui concerne la perte du balisage XML personnalisé, et ne pas l'autoriser à supprimer cette invite.\n\n- 3 : demander à l'utilisateur pour ce qui concerne la perte du balisage XML personnalisé, et ouvrir le fichier en lecture seule.\n\n- 4 : demander à l'utilisateur pour ce qui concerne la perte du balisage XML personnalisé, ne pas l'autoriser à supprimer cette invite, puis ouvrir le fichier en lecture seule.\n\n- 5 : ne pas demander à l'utilisateur, supprimer le balisage XML personnalisé en mode silencieux, mais ouvrir le fichier en lecture seule.",
             "tags": [
                 "L_Advanced",
                 "L_WordOptions",
@@ -6906,7 +8850,7 @@
             },
             "name": "L_ChartRefTrackingEnabled",
             "displayName": "Autoriser la mise en forme et les étiquettes à suivre les points de données",
-            "explainText":"Ce paramètre de stratégie définit le comportement de la mise en forme et des étiquettes de données personnalisées en réaction aux modifications apportées aux données dans un graphique.\n\nSi vous activez ce paramètre de stratégie ou si vous ne le configurez pas, la mise en forme et les étiquettes de données personnalisées suivent les points de données lors de leur déplacement ou de leur modification dans l'un des graphiques de la présentation créée par l'utilisateur.\n\nSi vous désactivez ce paramètre de stratégie, la mise en forme et les étiquettes de données personnalisées ne suivent pas les points de données, mais les index des points de données.",
+            "explainText": "Ce paramètre de stratégie définit le comportement de la mise en forme et des étiquettes de données personnalisées en réaction aux modifications apportées aux données dans un graphique.\n\nSi vous activez ce paramètre de stratégie ou si vous ne le configurez pas, la mise en forme et les étiquettes de données personnalisées suivent les points de données lors de leur déplacement ou de leur modification dans l'un des graphiques de la présentation créée par l'utilisateur.\n\nSi vous désactivez ce paramètre de stratégie, la mise en forme et les étiquettes de données personnalisées ne suivent pas les points de données, mais les index des points de données.",
             "tags": [
                 "L_Advanced",
                 "L_WordOptions",
@@ -6934,8 +8878,8 @@
                 }
             },
             "name": "L_AlertIfNotDefault",
-            "displayName":"Demander à l'utilisateur lorsque Word n'est pas l'application par défaut pour ses extensions de fichier",
-            "explainText":"\n        Ce paramètre de stratégie permet d'indiquer si le programme doit inviter les utilisateurs à modifier l'association de leurs extensions de fichiers si l'une des extensions de type de fichier qui étaient associées à Word ne l'est plus.\n\nSi vous activez ce paramètre de stratégie, les utilisateurs ne reçoivent pas d'invite au démarrage du programme lorsque l'un de ces types de fichiers est associé à d'autres applications. Si la stratégie est activée, la case à cocher située sous « Fichier->Options-> Général -> Options de démarrage-> En savoir plus… » est désactivée.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les utilisateurs reçoivent une invite au démarrage du programme lorsque l'un de ces types de fichiers est associé à d'autres applications. Les utilisateurs peuvent modifier le comportement de la fonctionnalité en cochant la case qui figure dans l'invite ou en cochant la case située sous « Fichier->Options-> Général -> Options de démarrage-> En savoir plus… » \n        Si la stratégie est désactivée ou n'est pas configurée, la case à cocher est activée.",
+            "displayName": "Demander à l'utilisateur lorsque Word n'est pas l'application par défaut pour ses extensions de fichier",
+            "explainText": "        Ce paramètre de stratégie permet d'indiquer si le programme doit inviter les utilisateurs à modifier l'association de leurs extensions de fichiers si l'une des extensions de type de fichier qui étaient associées à Word ne l'est plus.\n\n        Si vous activez ce paramètre de stratégie, les utilisateurs ne reçoivent pas d'invite au démarrage du programme lorsque l'un de ces types de fichiers est associé à d'autres applications. Si la stratégie est activée, la case à cocher située sous « Fichier->Options-> Général -> Options de démarrage-> En savoir plus… » est désactivée.\n\n        Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les utilisateurs reçoivent une invite au démarrage du programme lorsque l'un de ces types de fichiers est associé à d'autres applications. Les utilisateurs peuvent modifier le comportement de la fonctionnalité en cochant la case qui figure dans l'invite ou en cochant la case située sous « Fichier->Options-> Général -> Options de démarrage-> En savoir plus… » \n        Si la stratégie est désactivée ou n'est pas configurée, la case à cocher est activée.",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7172,7 +9116,7 @@
             },
             "name": "L_OnlineVideos",
             "displayName": "Autoriser la lecture des vidéos en ligne dans Word",
-            "explainText": "Ce paramètre de stratégie contrôle si les vidéos en ligne peuvent être lues dans Word.\n\nSi vous activez ou omettez de configurer ce paramètre de stratégie, les utilisateurs pourront lire des vidéos en ligne dans Word.\n\nSi vous désactivez ce paramètre de stratégie, ils ne pourront pas lire de vidéos en ligne dans Word.",
+            "explainText": "Ce paramètre de stratégie contrôle si les vidéos en ligne peuvent être lues dans Word.\n\nSi vous activez ou omettez de configurer ce paramètre de stratégie, les utilisateurs pourront lire des vidéos en ligne dans Word.\n\nSi vous désactivez ce paramètre de stratégie, ils ne pourront pas lire de vidéos en ligne dans Word.\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7201,7 +9145,7 @@
             },
             "name": "L_LinkedInResumeAssistant",
             "displayName": "Autoriser la fonctionnalité Assistant C.V. de LinkedIn",
-            "explainText": "Ce paramètre de stratégie contrôle si l’Assistant C.V. de LinkedIn s’affiche dans Word.\n\nSi vous activez cette stratégie ou si vous ne la configurez pas, les utilisateurs peuvent utiliser l’Assistant C.V. de LinkedIn.\n\nSi vous désactivez ce paramètre de stratégie, l’Assistant C.V. de LinkedIn n’est pas disponible.\n\nImportant : ce paramètre de stratégie ne s’applique qu’aux clients Office 365 qui sont installés via la technologie « Démarrer en un clic », notamment Office 365 ProPlus, Office 365 Business, Visio Pro pour Office 365 et Project Pro pour Office 365. Il ne s’applique pas aux produits Office qui utilisent la technologie Windows Installer (MSI).",
+            "explainText": "Ce paramètre de stratégie contrôle si l’Assistant C.V. de LinkedIn s’affiche dans Word.\n\nSi vous activez ou omettez de configurer ce paramètre de stratégie, les utilisateurs peuvent utiliser l’Assistant C.V. de LinkedIn.\n\nSi vous désactivez ce paramètre de stratégie, l’Assistant C.V. de LinkedIn n’est pas disponible.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions par abonnement d’Office, telles qu’Applications Microsoft 365 pour les entreprises, et aux versions par abonnement de Project et Visio.\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7230,7 +9174,7 @@
             },
             "name": "L_DigitalPrint",
             "displayName": "Ne pas afficher l’option de transformation d’un document en page web Sway",
-            "explainText": "Ce paramètre de stratégie contrôle si l’option du menu Fichier permettant de transformer un document Word en page web Sway est affichée à l’utilisateur. Par défaut, cette option est affichée à l’utilisateur.\n\nSi vous activez ce paramètre de stratégie, l’option du menu Fichier permettant de transformer un document Word en page web Sway est masquée à l’utilisateur.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez par, l’option du menu Fichier permettant de transformer un document Word en page web Sway est affichée à l’utilisateur.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions d’Office sous abonnement, telles qu’Office 365 ProPlus.",
+            "explainText": "Ce paramètre de stratégie contrôle si l’option du menu Fichier permettant de transformer un document Word en page web Sway est affichée à l’utilisateur. Par défaut, cette option est affichée à l’utilisateur.\n\nSi vous activez ce paramètre de stratégie, l’option du menu Fichier permettant de transformer un document Word en page web Sway est masquée à l’utilisateur.\n\nSi vous désactivez ou omettez de configurer ce paramètre de stratégie, l’option du menu Fichier permettant de transformer un document Word en page web Sway est affichée à l’utilisateur.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions par abonnement d’Office, telles qu’Applications Microsoft 365 pour les entreprises.\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7259,7 +9203,7 @@
             },
             "name": "L_DisableWarningOnIncludeFieldsUpdate",
             "displayName": "Ne pas demander l’autorisation avant de mettre à jour les champs InclureImage et InclureTexte dans Word",
-            "explainText": "Ce paramètre de stratégie vous permet de contrôler l’affichage dans Word d’un message de sécurité à l’utilisateur avant la mise à jour des champs InclureImage et InclureTexte dans le document.\n\nPar défaut, un message de sécurité est affiché à l’utilisateur avant la mise à jour de ces champs. Celui-ci peut toutefois affecter les flux de travail automatisés qui fusionnent des documents Word.\n\nImportant : les champs qui contiennent des références InclureImage et InclureTexte peuvent être utilisés dans le cadre de tentatives d’exfiltration de données ou d’hameçonnage. Un champ contenant ces références peut être modifié afin de pointer vers des sites web externes pour le contenu. Si des informations d’identification sont requises pour accéder à l’image ou au texte, le processus de mise à jour du champ demandera à l’utilisateur de se connecter. Bien que ce scénario soit légitime pour les sources approuvées, il est vulnérable aux tentatives d’hameçonnage si le document ne provient pas d’une source fiable.\n\nSi vous activez ce paramètre de stratégie, aucun message de sécurité ne sera affiché à l’utilisateur avant la mise à jour de ces champs. Il n’est pas recommandé d’activer ce paramètre de stratégie en raison des implications possibles en matière de sécurité.\n\nSi vous désactivez ou omettez de configurer ce paramètre de stratégie, un message de sécurité sera affiché à l’utilisateur avant la mise à jour de ces champs.",
+            "explainText": "Ce paramètre de stratégie vous permet de contrôler l’affichage dans Word d’un message de sécurité à l’utilisateur avant la mise à jour des champs InclureImage et InclureTexte dans le document.\n\nPar défaut, un message de sécurité est affiché à l’utilisateur avant la mise à jour de ces champs. Celui-ci peut toutefois affecter les flux de travail automatisés qui fusionnent des documents Word.\n\nImportant : les champs qui contiennent des références InclureImage et InclureTexte peuvent être utilisés dans le cadre de tentatives d’exfiltration de données ou d’hameçonnage. Un champ contenant ces références peut être modifié afin de pointer vers des sites web externes pour le contenu. Si des informations d’identification sont requises pour accéder à l’image ou au texte, le processus de mise à jour du champ demandera à l’utilisateur de se connecter. Bien que ce scénario soit légitime pour les sources approuvées, il est vulnérable aux tentatives d’hameçonnage si le document ne provient pas d’une source fiable.\n\nSi vous activez ce paramètre de stratégie, aucun message de sécurité ne sera affiché à l’utilisateur avant la mise à jour de ces champs. Il n’est pas recommandé d’activer ce paramètre de stratégie en raison des implications possibles en matière de sécurité.\n\nSi vous désactivez ou omettez de configurer ce paramètre de stratégie, un message de sécurité sera affiché à l’utilisateur avant la mise à jour de ces champs.\n      ",
             "tags": [
                 "L_Security",
                 "L_WordOptions",
@@ -7288,7 +9232,7 @@
             },
             "name": "L_Acronyms",
             "displayName": "Supprimer la commande Acronymes du ruban",
-            "explainText": "Ce paramètre de stratégie vous permet de supprimer la commande Acronymes du ruban (onglet Références).\n\nSi vous activez ce paramètre de stratégie, la commande Acronymes est retirée du ruban. Les utilisateurs ne pourront pas l’ajouter manuellement au ruban ni utiliser la fonctionnalité associée.\n\nSi vous désactivez ou omettez de configurer ce paramètre de stratégie, la commande Acronymes apparaît sur le ruban.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions par abonnement d’Office, telles qu’Office 365 ProPlus.",
+            "explainText": "Ce paramètre de stratégie vous permet de supprimer la commande Acronymes du ruban (onglet Références).\n\nSi vous activez ce paramètre de stratégie, la commande Acronymes est retirée du ruban. Les utilisateurs ne pourront pas l’ajouter manuellement au ruban ni utiliser la fonctionnalité associée.\n\nSi vous désactivez ou omettez de configurer ce paramètre de stratégie, la commande Acronymes apparaît sur le ruban.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions par abonnement d’Office, telles qu’Applications Microsoft 365 pour les entreprises.\n      ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7297,6 +9241,107 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "acronyms"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_EmailOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DoNotCompressInlinedImagesInOutlook",
+            "displayName": "Ne pas compresser les images incorporées insérées dans Outlook",
+            "explainText": "Ce paramètre de stratégie vous permet de désactiver la compression sur les images incorporées dans Outlook.\n\nSi vous activez ce paramètre de stratégie, Outlook ne compressera pas les images incorporées dans le message.\n\nSi vous désactivez ou omettez de configurer ce paramètre de stratégie, les images incorporées seront compressées.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions par abonnement d’Office, telles qu’Applications Microsoft 365 pour les entreprises.\n      ",
+            "tags": [
+                "L_EmailOptions",
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\common\\mailsettings",
+            "valueName": "outlookdonotcompressimages"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_EmailOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Haute fidélité"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "330 ppp"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "220 ppp"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "150 ppp"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "96 ppp"
+                            }
+                        ],
+                        "valueName": "oulookimagedpiindex",
+                        "inputType": "dropdownList",
+                        "caption": "Qualité de compression des images en ligne par défaut pour Outlook:",
+                        "id": "L_DefaultCompressionQualityForInlinedImagesInOutlookPart"
+                    }
+                ]
+            },
+            "name": "L_DefaultCompressionQualityForInlinedImagesInOutlook",
+            "displayName": "Spécifier la qualité de compression par défaut appliquée aux images incorporées insérées dans Outlook",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier la qualité de compression par défaut appliquée aux images incorporées dans Outlook.\n\nSi vous activez ce paramètre de stratégie, Outlook compressera les images incorporées dans le message conformément à la qualité spécifiée.\n\nSi vous désactivez ou omettez de configurer ce paramètre de stratégie, les images incorporées seront compressées à la qualité par défaut (220 ppp).\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions par abonnement d’Office, telles qu’Applications Microsoft 365 pour les entreprises.\n    ",
+            "tags": [
+                "L_EmailOptions",
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\common\\mailsettings"
         }
     ]
 }

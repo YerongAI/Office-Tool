@@ -183,8 +183,8 @@
             "parentCategory": {
                 "ref": "L_MicrosoftOfficeExcel"
             },
-            "name": "L_IntelligentServices",
-            "displayName": "Intelligente Dienste"
+            "name": "L_PowerBI",
+            "displayName": "Power BI"
         }
     ],
     "policies": [
@@ -395,6 +395,35 @@
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\common\\toolbars\\excel",
             "valueName": "allowselectionfloaties"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Formulas"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_R1C1referencestyle",
+            "displayName": "Z1S1-Bezugsart",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Formulas",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "frefa1_4_1"
         },
         {
             "parentCategory": {
@@ -621,6 +650,35 @@
                     "value": 0
                 }
             },
+            "name": "L_Promptforworkbookproperties",
+            "displayName": "Anfrage nach Dateieigenschaften",
+            "explainText": "Aktiviert/deaktiviert die entsprechende Benutzeroberflächenoption.",
+            "tags": [
+                "L_Save",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fpromptsuminfo_65_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Save"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_SaveAutoRecoverinfo",
             "displayName": "AutoWiederherstellen-Info speichern",
             "explainText": "Durch Aktivieren dieser Richtlinie wird die Benutzeroption \"AutoWiederherstellen-Info speichern alle N Minuten\" ausgewählt.",
@@ -748,7 +806,7 @@
             },
             "name": "L_DisableAutoRepublish",
             "displayName": "Automatisches Wiederveröffentlichen deaktivieren",
-            "explainText": "Diese Richtlinieneinstellung ermöglicht Administratoren das Deaktivieren des Features \"Automatisches Wiederveröffentlichen\" in Excel. Wenn Benutzer sich entscheiden, Excel-Daten auf einer statischen Webseite zu veröffentlichen und das Feature \"Automatisches Wiederveröffentlichen\" aktivieren, speichert Excel bei jedem Speichern der Arbeitsmappe eine Kopie der Daten auf der Webseite. Standardmäßig wird bei jedem Speichern einer freigegebenen Arbeitsmappe durch den Benutzer ein Nachrichtendialogfeld angezeigt, wenn \"Automatisches Wiederveröffentlichen\" aktiviert ist. In diesem Dialogfeld können Benutzer \"Automatisches Wiederveröffentlichen\" vorübergehend oder dauerhaft deaktivieren oder \"Diese Meldung nicht mehr anzeigen\" aktivieren, um das Anzeigen des Dialogfelds bei jedem Speichern zu verhindern. Wenn der Benutzer \"Diese Meldung nicht mehr anzeigen\" aktiviert, fährt Excel mit der automatischen Wiederveröffentlichung von Daten bei jedem Speichern fort, ohne den Benutzer zu informieren.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird das Feature \"Automatisches Wiederveröffentlichen\" ausgeschaltet, und Excel-Benutzer müssen Daten manuell im Web veröffentlichen.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, können Benutzer das Feature \"Automatisches Wiederveröffentlichen\" aktivieren, um als Typ Webseite gespeicherte Arbeitsmappen automatisch erneut zu veröffentlichen.",
+            "explainText": "Diese Richtlinieneinstellung ermöglicht Administratoren das Deaktivieren des Features \"Automatisches Wiederveröffentlichen\" in Excel. Wenn Benutzer sich entscheiden, Excel-Daten auf einer statischen Webseite zu veröffentlichen und das Feature \"Automatisches Wiederveröffentlichen\" aktivieren, speichert Excel bei jedem Speichern der Arbeitsmappe eine Kopie der Daten auf der Webseite. Standardmäßig wird bei jedem Speichern einer freigegebenen Arbeitsmappe durch den Benutzer ein Nachrichtendialogfeld angezeigt, wenn \"Automatisches Wiederveröffentlichen\" aktiviert ist. In diesem Dialogfeld können Benutzer \"Automatisches Wiederveröffentlichen\" vorübergehend oder dauerhaft deaktivieren oder \"Diese Meldung nicht mehr anzeigen\" aktivieren, um das Anzeigen des Dialogfelds bei jedem Speichern zu verhindern. Wenn der Benutzer \"Diese Meldung nicht mehr anzeigen\" aktiviert, fährt Excel mit der automatischen Wiederveröffentlichung von Daten bei jedem Speichern fort, ohne den Benutzer zu informieren.\n\n      Wenn Sie diese Richtlinieneinstellung aktivieren, wird das Feature \"Automatisches Wiederveröffentlichen\" ausgeschaltet, und Excel-Benutzer müssen Daten manuell im Web veröffentlichen.\n\n      Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, können Benutzer das Feature \"Automatisches Wiederveröffentlichen\" aktivieren, um als Typ Webseite gespeicherte Arbeitsmappen automatisch erneut zu veröffentlichen.",
             "tags": [
                 "L_Save",
                 "L_ExcelOptions",
@@ -995,6 +1053,70 @@
         },
         {
             "parentCategory": {
+                "ref": "L_ProtectedView"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Dateien blockieren"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "In geschützter Ansicht öffnen"
+                            }
+                        ],
+                        "valueName": "openinprotectedview",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsDropID"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "disableeditfrompv",
+                        "key": "software\\microsoft\\office\\16.0\\excel\\security\\filevalidation",
+                        "inputType": "checkBox",
+                        "caption": "Aktiviert: Bearbeiten zulassen. Deaktiviert: Bearbeiten nicht zulassen.",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsStr3"
+                    }
+                ]
+            },
+            "name": "L_SetDocumentBehaviorIfFileValidationFails",
+            "displayName": "Dokumentverhalten bei Fehlschlagen der Dateiüberprüfung festlegen",
+            "explainText": "Diese Richtlinieneinstellung steuert, wie Office Dokumente bei einem Fehlschlagen der Dateiüberprüfung behandelt.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, können Sie folgende Optionen für Dateien konfigurieren, deren Dateiüberprüfung fehlgeschlagen ist:\n\n- \"Dateien blockieren\" (vollständig): Benutzer können die Dateien nicht öffnen.\n- \"In geschützter Ansicht öffnen und Bearbeitung nicht zulassen\": Benutzer können die Dateien nicht bearbeiten. Auf diese Art werden Dateien von Office behandelt, wenn Sie diese Richtlinieneinstellung deaktivieren.\n- \"In geschützter Ansicht öffnen und Bearbeitung zulassen\": Benutzer können die Dateien bearbeiten. Auf diese Art werden Dateien von Office behandelt, wenn Sie diese Richtlinieneinstellung nicht konfigurieren.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, verhält sich Office gemäß der Option \"In geschützter Ansicht öffnen und Bearbeitung nicht zulassen\".\n\nWenn Sie diese Richtlinieneinstellung nicht konfigurieren, verhält sich Office gemäß der Option \"In geschützter Ansicht öffnen und Bearbeitung zulassen\".",
+            "tags": [
+                "L_ProtectedView",
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security\\filevalidation"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_ExternalContent"
             },
             "supportedOn": {
@@ -1012,7 +1134,7 @@
             },
             "name": "L_DisableDDEServerLookup",
             "displayName": "DDE-Servernachschlagen (Dynamic Data Exchange) in Excel nicht zulassen",
-            "explainText": "Diese Richtlinieneinstellung gestattet Ihnen, zu kontrollieren, ob das DDE-Servernachschlagen (Dynamic Data Exchange) zulässig ist.\n\nStandardmäßig ist das DDE-Servernachschlagen aktiviert, aber Benutzer können das DDE-Servernachschlagen deaktivieren, indem sie zu \"Datei\" > \"Optionen\" > \"Trust Center\" > \"Trust Center-Einstellungen\" > \"Externer Inhalt\" wechseln.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, ist das DDE-Servernachschlagen nicht zulässig, und Benutzer können das DDE-Servernachschlagen im Trust Center nicht aktivieren.\n\nHinweis: Wenn Sie DDE-Serverstarten (Dynamic Data Exchange) verwenden, was nicht empfohlen wird, aktivieren Sie diese Richtlinieneinstellung nicht, weil DDE-Serverstarten erfordert, dass das DDE-Servernachschlagen aktiviert ist.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, ist DDE-Servernachschlagen aktiviert, aber Benutzer können DDE-Servernachschlagen im Trust Center deaktivieren.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Abonnementversionen von Office wie Office 365 ProPlus.",
+            "explainText": "Diese Richtlinieneinstellung gestattet Ihnen, zu kontrollieren, ob das DDE-Servernachschlagen (Dynamic Data Exchange) zulässig ist.\n\nStandardmäßig ist das DDE-Servernachschlagen aktiviert, aber Benutzer können das DDE-Servernachschlagen deaktivieren, indem sie zu \"Datei\" > \"Optionen\" > \"Trust Center\" > \"Trust Center-Einstellungen\" > \"Externer Inhalt\" wechseln.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, ist das DDE-Servernachschlagen nicht zulässig, und Benutzer können das DDE-Servernachschlagen im Trust Center nicht aktivieren.\n\nHinweis: Wenn Sie DDE-Serverstarten (Dynamic Data Exchange) verwenden, was nicht empfohlen wird, aktivieren Sie diese Richtlinieneinstellung nicht, weil DDE-Serverstarten erfordert, dass das DDE-Servernachschlagen aktiviert ist.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, ist DDE-Servernachschlagen aktiviert, aber Benutzer können DDE-Servernachschlagen im Trust Center deaktivieren.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Abonnementversionen von Office wie Microsoft 365 Apps for Enterprise.",
             "tags": [
                 "L_ExternalContent",
                 "L_TrustCenter",
@@ -1043,7 +1165,7 @@
             },
             "name": "L_DisableDDEServerLaunch",
             "displayName": "DDE-Serverstarten (Dynamic Data Exchange) in Excel nicht zulassen",
-            "explainText": "Diese Richtlinieneinstellung gestattet Ihnen, zu kontrollieren, ob das DDE-Serverstarten (Dynamic Data Exchange) zulässig ist.\n\nStandardmäßig ist DDE-Serverstarten deaktiviert, aber Benutzer können das DDE-Serverstarten aktivieren, indem sie zu \"Datei\" > \"Optionen\" > \"Trust Center\" > \"Trust Center-Einstellungen\" > \"Externer Inhalt\" wechseln.\n\nAus Sicherheitsgrünen wird nicht empfohlen, das DDE-Serverstarten zu aktivieren.\n\nHinweis: Damit das DDE-Serverstarten funktioniert, muss das DDE-Servernachschlagen (Dynamic Data Exchange) aktiviert sein. Stellen Sie sicher, dass die Richtlinieneinstellung \"DDE-Servernachschlagen (Dynamic Data Exchange) nicht zulassen\" nicht aktiviert ist, weil das Aktivieren dieser Richtlinieneinstellung das DDE-Servernachschlagen deaktiviert.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, ist das DDE-Serverstarten nicht zulässig, und Benutzer können das DDE-Serverstarten im Trust Center nicht aktivieren.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, ist das DDE-Serverstarten zulässig, und Benutzer können das DDE-Serverstarten im Trust Center nicht deaktivieren. Aus Sicherheitsgründen wird dies nicht empfohlen.\n\nWenn Sie diese Richtlinieneinstellung nicht konfigurieren, ist das DDE-Serverstarten deaktiviert, aber Benutzer können das DDE-Serverstarten im Trust Center aktivieren.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Abonnementversionen von Office wie Office 365 ProPlus.",
+            "explainText": "Diese Richtlinieneinstellung gestattet Ihnen, zu kontrollieren, ob das DDE-Serverstarten (Dynamic Data Exchange) zulässig ist.\n\nStandardmäßig ist DDE-Serverstarten deaktiviert, aber Benutzer können das DDE-Serverstarten aktivieren, indem sie zu \"Datei\" > \"Optionen\" > \"Trust Center\" > \"Trust Center-Einstellungen\" > \"Externer Inhalt\" wechseln.\n\nAus Sicherheitsgrünen wird nicht empfohlen, das DDE-Serverstarten zu aktivieren.\n\nHinweis: Damit das DDE-Serverstarten funktioniert, muss das DDE-Servernachschlagen (Dynamic Data Exchange) aktiviert sein. Stellen Sie sicher, dass die Richtlinieneinstellung \"DDE-Servernachschlagen (Dynamic Data Exchange) nicht zulassen\" nicht aktiviert ist, weil das Aktivieren dieser Richtlinieneinstellung das DDE-Servernachschlagen deaktiviert.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, ist das DDE-Serverstarten nicht zulässig, und Benutzer können das DDE-Serverstarten im Trust Center nicht aktivieren.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, ist das DDE-Serverstarten zulässig, und Benutzer können das DDE-Serverstarten im Trust Center nicht deaktivieren. Aus Sicherheitsgründen wird dies nicht empfohlen.\n\nWenn Sie diese Richtlinieneinstellung nicht konfigurieren, ist das DDE-Serverstarten deaktiviert, aber Benutzer können das DDE-Serverstarten im Trust Center aktivieren.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Abonnementversionen von Office wie Microsoft 365 Apps for Enterprise.",
             "tags": [
                 "L_ExternalContent",
                 "L_TrustCenter",
@@ -1074,7 +1196,7 @@
             },
             "name": "L_EnableBlockUnsecureQueryFiles",
             "displayName": "Das Öffnen nicht vertrauenswürdiger Microsoft Query-Dateien immer verhindern",
-            "explainText": "Diese Richtlinieneinstellung kontrolliert, ob Microsoft Query-Dateien (.iqy, oqy, .dqy und .rqy) an einem nicht vertrauenswürdigen Speicherort am Öffnen gehindert werden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, werden Microsoft Query-Dateien an einem nicht vertrauenswürdigen Speicherort am Öffnen gehindert. Benutzer können diese Einstellung nicht unter \"Datei\" > \"Optionen\" > \"Trust Center\" > \"Trust Center-Einstellungen\" > \"Externer Inhalt\" ändern.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden Microsoft Query-Dateien an einem nicht vertrauenswürdigen Speicherort nicht am Öffnen gehindert, außer Benutzer haben diese Einstellung im Trust Center geändert.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Abonnementversionen von Office wie Office 365 ProPlus.",
+            "explainText": "Diese Richtlinieneinstellung kontrolliert, ob Microsoft Query-Dateien (.iqy, oqy, .dqy und .rqy) an einem nicht vertrauenswürdigen Speicherort am Öffnen gehindert werden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, werden Microsoft Query-Dateien an einem nicht vertrauenswürdigen Speicherort am Öffnen gehindert. Benutzer können diese Einstellung nicht unter \"Datei\" > \"Optionen\" > \"Trust Center\" > \"Trust Center-Einstellungen\" > \"Externer Inhalt\" ändern.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden Microsoft Query-Dateien an einem nicht vertrauenswürdigen Speicherort nicht am Öffnen gehindert, außer Benutzer haben diese Einstellung im Trust Center geändert.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Abonnementversionen von Office wie Microsoft 365 Apps for Enterprise.",
             "tags": [
                 "L_ExternalContent",
                 "L_TrustCenter",
@@ -1105,7 +1227,7 @@
             },
             "name": "L_EnableForeignTextFileProtectedView",
             "displayName": "Nicht vertrauenswürdige, textbasierte Dateien immer in geschützter Ansicht öffnen",
-            "explainText": "Diese Richtlinieneinstellung kontrolliert, ob textbasierte Dateien (.csv, .dif und .sylk) an einem nicht vertrauenswürdigen Speicherort immer in der geschützten Ansicht geöffnet werden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, werden textbasierte Dateien an einem nicht vertrauenswürdigen Speicherort immer in der geschützten Ansicht geöffnet. Benutzer können diese Einstellung nicht unter \"Datei\" > \"Optionen\" > \"Trust Center\" > \"Trust Center-Einstellungen\" > \"Geschützte Ansicht\" ändern.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden an einem nicht vertrauenswürdigen Speicherort geöffnete textbasierte Dateien nicht in der geschützten Ansicht geöffnet, außer Benutzer haben diese Einstellung im Trust Center geändert.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Abonnementversionen von Office wie Office 365 ProPlus.",
+            "explainText": "Diese Richtlinieneinstellung kontrolliert, ob textbasierte Dateien (.csv, .dif und .sylk) an einem nicht vertrauenswürdigen Speicherort immer in der geschützten Ansicht geöffnet werden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, werden textbasierte Dateien an einem nicht vertrauenswürdigen Speicherort immer in der geschützten Ansicht geöffnet. Benutzer können diese Einstellung nicht unter \"Datei\" > \"Optionen\" > \"Trust Center\" > \"Trust Center-Einstellungen\" > \"Geschützte Ansicht\" ändern.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden an einem nicht vertrauenswürdigen Speicherort geöffnete textbasierte Dateien nicht in der geschützten Ansicht geöffnet, außer Benutzer haben diese Einstellung im Trust Center geändert.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Abonnementversionen von Office wie Microsoft 365 Apps for Enterprise.",
             "tags": [
                 "L_ProtectedView",
                 "L_TrustCenter",
@@ -1136,7 +1258,7 @@
             },
             "name": "L_EnableDataBaseFileProtectedView",
             "displayName": "Nicht vertrauenswürdige Datenbankdateien immer in geschützter Ansicht öffnen",
-            "explainText": "Diese Richtlinieneinstellung kontrolliert, ob Datenbankdateien (.dbf) an einem nicht vertrauenswürdigen Speicherort immer in der geschützten Ansicht geöffnet werden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, werden Datenbankdateien an einem nicht vertrauenswürdigen Speicherort immer in der geschützten Ansicht geöffnet. Benutzer können diese Einstellung nicht unter \"Datei\" > \"Optionen\" > \"Trust Center\" > \"Trust Center-Einstellungen\" > \"Geschützte Ansicht\" ändern.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden an einem nicht vertrauenswürdigen Speicherort geöffnete Datenbankdateien nicht in der geschützten Ansicht geöffnet, außer Benutzer haben diese Einstellung im Trust Center geändert.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Abonnementversionen von Office wie Office 365 ProPlus.",
+            "explainText": "Diese Richtlinieneinstellung kontrolliert, ob Datenbankdateien (.dbf) an einem nicht vertrauenswürdigen Speicherort immer in der geschützten Ansicht geöffnet werden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, werden Datenbankdateien an einem nicht vertrauenswürdigen Speicherort immer in der geschützten Ansicht geöffnet. Benutzer können diese Einstellung nicht unter \"Datei\" > \"Optionen\" > \"Trust Center\" > \"Trust Center-Einstellungen\" > \"Geschützte Ansicht\" ändern.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden an einem nicht vertrauenswürdigen Speicherort geöffnete Datenbankdateien nicht in der geschützten Ansicht geöffnet, außer Benutzer haben diese Einstellung im Trust Center geändert.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Abonnementversionen von Office wie Microsoft 365 Apps for Enterprise.",
             "tags": [
                 "L_ProtectedView",
                 "L_TrustCenter",
@@ -1773,6 +1895,66 @@
                     "value": 0
                 }
             },
+            "name": "L_XL4KillSwitchPolicy",
+            "displayName": "Excel am Ausführen von XLM-Makros hindern",
+            "explainText": "Diese Richtlinieneinstellung verhindert die Ausführung von Excel 4.0-Makros (XLM) in Excel.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, können XLM-Makros nicht in Excel ausgeführt werden.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, können XLM-Makros in Excel ausgeführt werden.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security",
+            "valueName": "xl4macrooff"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_StoremacroinPersonalMacroWorkbookbydefault",
+            "displayName": "Makro standardmäßig in Persönliche Makroarbeitsmappe speichern",
+            "explainText": "Diese Richtlinieneinstellung steuert den Standardspeicherort für Makros in Excel.\n\n      Wenn diese Richtlinieneinstellung aktiviert ist, speichert Excel Makros in der persönlichen Makroarbeitsmappe von Benutzern.\n\n      Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, speichert Excel Makros in der aktiven Arbeitsmappe, in der sie erstellt werden.\n\n      Hinweis: In der Benutzeroberfläche können Benutzer im Dropdown-Listenfeld \"Makro speichern\" des Dialogfelds \"Makro aufzeichnen\" (\"Makros\" | \"Makro aufzeichnen\") auswählen, ob das neue Makro in der aktuellen Arbeitsmappe, einer neuen Arbeitsmappe oder in ihrer persönlichen Makroarbeitsmappe (\"Personal.xlsb\") gespeichert werden soll. Letztere ist eine ausgeblendete Arbeitsmappe, die bei jedem Start von Excel geöffnet wird.\n\n      Standardmäßig zeigt Excel das Feld \"Makro speichern in\" so an, dass \"Diese Arbeitsmappe\" bereits in der Dropdownliste ausgewählt ist. Wenn ein Benutzer ein Makro in der aktiven Arbeitsmappe speichert und die Arbeitsmappe dann an andere Benutzer verteilt, wird das Makro zusammen mit der Arbeitsmappe verteilt. Wenn Sie diese Richtlinieneinstellung aktivieren, zeigt Excel das Feld \"Makro speichern in\" so an, dass \"Persönliche Makroarbeitsmappe\" bereits ausgewählt ist. Benutzer können jedoch auch eine der anderen beiden Optionen im Dropdownmenü auswählen.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fglobalsheet_37_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_TrustaccesstoVisualBasicProject",
             "displayName": "Zugriff auf Visual Basic-Projekt vertrauen",
             "explainText": "Mithilfe dieser Richtlinieneinstellung wird gesteuert, ob Automatisierungsclients, wie etwa Microsoft Visual Studio 2005 Tools für Office (VSTO), auf das Projektsystem von Visual Basic für Applikationen in den angegebenen Anwendungen zugreifen können. VSTO-Projekte erfordern Zugriff auf das Projektsystem von Visual Basic für Applikationen in Excel, PowerPoint und Word, obwohl die Projekte Visual Basic für Applikationen nicht verwenden. Die Entwurfszeitunterstützung von Steuerelementen in Visual Basic- sowie C#-Projekten hängt vom Projektsystem von Visual Basic für Applikationen in Word und Excel ab.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, können VSTO und andere Automatisierungsclients auf das Projektsystem von Visual Basic für Applikationen in den angegebenen Anwendungen zugreifen. Die Benutzer können dieses Verhalten nicht mithilfe der Benutzeroberflächenoption \"Zugriff auf das VBA-Projektobjektmodell vertrauen\" unter dem Abschnitt \"Makroeinstellungen\" des Trust Centers ändern.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, hat VSTO keinen programmgesteuerten Zugriff auf VBA-Projekte. Darüber hinaus ist das Kontrollkästchen \"Zugriff auf das VBA-Projektobjektmodell vertrauen\" deaktiviert, und Benutzer können diese Einstellung nicht ändern. Hinweis: Das Deaktivieren dieser Richtlinieneinstellung hindert VSTO-Projekte an der ordnungsgemäßen Interaktion mit dem VBA-Projektsystem in der ausgewählten Anwendung.\n\nWenn Sie diese Richtlinieneinstellung nicht konfigurieren, verfügen Automatisierungsclients nicht über programmgesteuerten Zugriff auf VBA-Projekte. Die Benutzer können diesen durch Aktivieren von \"Zugriff auf das VBA-Projektobjektmodell vertrauen\" im Abschnitt \"Makroeinstellungen\" des Trust Centers aktivieren. Dies ermöglicht Makros in allen vom Benutzer geöffneten Dokumenten jedoch den Zugriff auf die Core-Objekte, -Methoden und -Eigenschaften von Visual Basic, was ein mögliches Sicherheitsrisiko darstellt.",
@@ -1835,7 +2017,7 @@
             },
             "name": "L_RequirethatApplicationExtensionsaresigned",
             "displayName": "Anwendungs-Add-Ins müssen von einem vertrauenswürdigen Herausgeber signiert sein",
-            "explainText": "Diese Richtlinieneinstellung steuert, ob Add-Ins für die angegebenen Office 2016-Anwendungen digital durch einen vertrauenswürdigen Herausgeber signiert sein müssen.\n \nWenn Sie diese Einstellung aktivieren, überprüft diese Anwendung die digitale Signatur für jedes Add-In vor dem Laden. Wenn ein Add-In keine digitale Signatur aufweist oder diese nicht von einem vertrauenswürdigen Herausgeber stammt, deaktiviert diese Anwendung das Add-In und benachrichtigt den Benutzer. Der Liste müssen Zertifikate hinzugefügt werden, wenn Sie die Signierung aller Add-Ins durch einen vertrauenswürdigen Herausgeber vorschreiben. Details zum Erhalten und Verteilen von Zertifikaten finden Sie unter \"http: //go.microsoft.com/fwlink/?LinkId=294922\". Office 2016 speichert Zertifikate für vertrauenswürdige Herausgeber im Speicher für vertrauenswürdige Herausgeber von Internet Explorer. In früheren Versionen von Microsoft Office wurden solche Zertifikatinformationen (insbesondere der Zertifikatfingerabdruck) in einem besonderen Office-Speicher für vertrauenswürdige Herausgeber gespeichert. Office 2016 liest solche Zertifikatinformationen nach wie vor aus dem Office-Speicher für vertrauenswürdige Herausgeber, sie speichert Informationen jedoch nicht mehr in diesem Speicher. Wenn Sie daher in einer früheren Office-Version eine Liste vertrauenswürdiger Herausgeber erstellt und ein Upgrade auf Office 2016 ausgeführt haben, wird diese Liste nach wie vor erkannt. Alle Zertifikate für vertrauenswürdige Herausgeber, die Sie der Liste hinzufügen, werden jedoch im Speicher für vertrauenswürdige Herausgeber von Internet Explorer gespeichert. Weitere Informationen über vertrauenswürdige Herausgeber finden Sie im Office Resource Kit.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, überprüfen Office 2016-Anwendungen nicht die digitale Signatur von Anwendungs-Add-Ins vor deren Öffnen. Wenn ein gefährliches Add-In geladen wird, kann es Computer des Benutzers beschädigen oder die Datensicherheit gefährden.",
+            "explainText": "Diese Richtlinieneinstellung steuert, ob Add-Ins für die angegebenen Office 2016-Anwendungen digital durch einen vertrauenswürdigen Herausgeber signiert sein müssen.\n \nWenn Sie diese Einstellung aktivieren, überprüft diese Anwendung die digitale Signatur für jedes Add-In vor dem Laden. Wenn ein Add-In keine digitale Signatur aufweist oder diese nicht von einem vertrauenswürdigen Herausgeber stammt, deaktiviert diese Anwendung das Add-In und benachrichtigt den Benutzer. Der Liste müssen Zertifikate hinzugefügt werden, wenn Sie die Signierung aller Add-Ins durch einen vertrauenswürdigen Herausgeber vorschreiben. Details zum Erhalten und Verteilen von Zertifikaten finden Sie unter \"http://go.microsoft.com/fwlink/?LinkId=294922\". Office 2016 speichert Zertifikate für vertrauenswürdige Herausgeber im Speicher für vertrauenswürdige Herausgeber von Internet Explorer. In früheren Versionen von Microsoft Office wurden solche Zertifikatinformationen (insbesondere der Zertifikatfingerabdruck) in einem besonderen Office-Speicher für vertrauenswürdige Herausgeber gespeichert. Office 2016 liest solche Zertifikatinformationen nach wie vor aus dem Office-Speicher für vertrauenswürdige Herausgeber, sie speichert Informationen jedoch nicht mehr in diesem Speicher. Wenn Sie daher in einer früheren Office-Version eine Liste vertrauenswürdiger Herausgeber erstellt und ein Upgrade auf Office 2016 ausgeführt haben, wird diese Liste nach wie vor erkannt. Alle Zertifikate für vertrauenswürdige Herausgeber, die Sie der Liste hinzufügen, werden jedoch im Speicher für vertrauenswürdige Herausgeber von Internet Explorer gespeichert. Weitere Informationen über vertrauenswürdige Herausgeber finden Sie im Office Resource Kit.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, überprüfen Office 2016-Anwendungen nicht die digitale Signatur von Anwendungs-Add-Ins vor deren Öffnen. Wenn ein gefährliches Add-In geladen wird, kann es Computer des Benutzers beschädigen oder die Datensicherheit gefährden.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1865,7 +2047,7 @@
             },
             "name": "L_DisableTrustBarNotificationforunsigned",
             "displayName": "Benachrichtigung für Vertrauensstellungsleiste für nicht signierte Anwendungs-Add-Ins deaktivieren und blockieren",
-            "explainText": "Mithilfe dieser Richtlinieneinstellung wird gesteuert, ob Benutzer von den angegebenen Office 2016-Anwendungen benachrichtigt werden, wenn nicht signierte Anwendungs-Add-Ins geladen werden, oder ob diese Add-Ins ohne Benachrichtigung automatisch deaktiviert werden. Diese Richtlinieneinstellung gilt nur, wenn die Richtlinieneinstellung \"Anwendungs-Add-Ins müssen von einem vertrauenswürdigen Herausgeber signiert sein\" aktiviert ist, die Benutzer am Ändern dieser Richtlinieneinstellung hindert. \nWenn Sie diese Richtlinieneinstellung aktivieren, werden nicht signierte Add-Ins automatisch von Anwendungen deaktiviert, ohne dass die Benutzer benachrichtigt werden.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, werden alle von der Anwendung geladenen nicht signierten Add-Ins deaktiviert, wenn eine Anwendung die Signierung aller Add-Ins durch einen vertrauenswürdigen Herausgeber vorschreibt. In diesem Fall zeigt die Anwendung oben im aktiven Fenster die Vertrauensstellungsleiste an. Die Vertrauensstellungsleiste enthält eine Nachricht, die Benutzer über das nicht signierte Add-In informiert.\n\nWenn Sie die Richtlinieneinstellung nicht konfigurieren, trifft das Verhalten bei Deaktivierung zu, und Benutzer können diese Anforderung zusätzlich selbst in der Kategorie \"Add-Ins\" des Trust Centers der Anwendung konfigurieren.",
+            "explainText": "Mithilfe dieser Richtlinieneinstellung wird gesteuert, ob Benutzer von den angegebenen Office 2016-Anwendungen benachrichtigt werden, wenn nicht signierte Anwendungs-Add-Ins geladen werden, oder ob diese Add-Ins ohne Benachrichtigung automatisch deaktiviert werden. Diese Richtlinieneinstellung gilt nur, wenn die Richtlinieneinstellung \"Anwendungs-Add-Ins müssen von einem vertrauenswürdigen Herausgeber signiert sein\" aktiviert ist, die Benutzer am Ändern dieser Richtlinieneinstellung hindert.     \nWenn Sie diese Richtlinieneinstellung aktivieren, werden nicht signierte Add-Ins automatisch von Anwendungen deaktiviert, ohne dass die Benutzer benachrichtigt werden.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, werden alle von der Anwendung geladenen nicht signierten Add-Ins deaktiviert, wenn eine Anwendung die Signierung aller Add-Ins durch einen vertrauenswürdigen Herausgeber vorschreibt. In diesem Fall zeigt die Anwendung oben im aktiven Fenster die Vertrauensstellungsleiste an. Die Vertrauensstellungsleiste enthält eine Nachricht, die Benutzer über das nicht signierte Add-In informiert.\n\nWenn Sie die Richtlinieneinstellung nicht konfigurieren, trifft das Verhalten bei Deaktivierung zu, und Benutzer können diese Anforderung zusätzlich selbst in der Kategorie \"Add-Ins\" des Trust Centers der Anwendung konfigurieren.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1925,7 +2107,7 @@
             },
             "name": "L_BlockMacroExecutionFromInternet",
             "displayName": "Ausführung von Makros in Office-Dateien aus dem Internet blockieren",
-            "explainText": "Diese Richtlinieneinstellung ermöglicht das Blockieren der Ausführung von Makros in Office-Dateien, die aus dem Internet stammen.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die Ausführung von Makros blockiert, selbst wenn im Abschnitt \"Makroeinstellungen\" im Trust Center \"Alle Makros aktivieren\" ausgewählt ist. Außerdem erhalten die Benutzer, statt \"Inhalt aktivieren\" auswählen zu können, eine Benachrichtigung, dass die Ausführung von Makros blockiert ist. Wenn die Office-Datei an einem vertrauenswürdigen Speicherort gespeichert wird oder zuvor vom Benutzer als vertrauenswürdig festgelegt wurde, wird die Ausführung von Makros zugelassen.\n\nBenutzer erhalten Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, bestimmen die im Abschnitt \"Makroeinstellungen\" im Trust Center konfigurierten Einstellungen, ob Makros in Office-Dateien, die aus dem Internet stammen, ausgeführt werden.",
+            "explainText": "        Diese Richtlinieneinstellung ermöglicht das Blockieren der Ausführung von Makros in Office-Dateien, die aus dem Internet stammen.\n\n        Wenn Sie diese Richtlinieneinstellung aktivieren, wird die Ausführung von Makros blockiert, selbst wenn im Abschnitt \"Makroeinstellungen\" im Trust Center \"Alle Makros aktivieren\" ausgewählt ist. Außerdem erhalten die Benutzer, statt \"Inhalt aktivieren\" auswählen zu können, eine Benachrichtigung, dass die Ausführung von Makros blockiert ist. Wenn die Office-Datei an einem vertrauenswürdigen Speicherort gespeichert wird oder zuvor vom Benutzer als vertrauenswürdig festgelegt wurde, wird die Ausführung von Makros zugelassen.\n\nBenutzer erhalten Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, bestimmen die im Abschnitt \"Makroeinstellungen\" im Trust Center konfigurierten Einstellungen, ob Makros in Office-Dateien, die aus dem Internet stammen, ausgeführt werden.\n      ",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -4161,6 +4343,267 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Transitionnavigationkeys",
+            "displayName": "Alternative Bewegungstasten",
+            "explainText": "Durch das Aktivieren dieser Richtlinie wird die Benutzeroption \"Erweitert\" (Lotus-Kompatibilität) mit dem Namen \"Alternative Bewegungstasten\" aktiviert.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fisi_33_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Ignoreotherapplications",
+            "displayName": "Andere Anwendungen ignorieren",
+            "explainText": "Mithilfe dieser Richtlinieneinstellung wird gesteuert, ob Excel Daten mit anderen Anwendungen, die DDE (Dynamic Data Exchange) verwenden, austauschen kann.\n\n      Wenn Sie diese Richtlinieneinstellung aktivieren, lässt Excel keinen Datenaustausch mit anderen Anwendungen, die DDE verwenden, zu. Darüber hinaus ist die Benutzeroberflächenoption \"Andere Anwendungen ignorieren, die Dynamischen Datenaustausch (Dynamic Data Exchange, DDE) verwenden\" unter \"Excel-Optionen\" | \"Allgemein\" aktiviert, und Benutzer können sie nicht ändern. Das Aktivieren dieser Richtlinieneinstellung kann die Trennung von Benutzern bewirken, die DDE-Funktionalität in Excel verwenden, um Informationen in Arbeitsmappen zu aktualisieren. Diese Benutzer müssen ein anderes Verfahren zum Aktualisieren der von anderen Anwendungen bereitgestellten Informationen verwenden.\n\n      Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht aktivieren, kann Excel das DDE-Protokoll (Dynamic Data Exchange) zum Austausch von Nachrichten und Daten mit anderen Anwendungen verwenden. Beispielsweise kann eine Zelle in einer Excel-Arbeitsmappe dynamisch mit einem von einer anderen Anwendung bereitgestellten Wert, wie etwa Wetter- oder Aktienkursinformationen, verknüpft werden. Wenn sich der von der anderen Anwendung bereitgestellte Wert ändert, kann Excel den Wert in der Arbeitsmappe automatisch aktualisieren. Hinweis: Benutzer können dieses Verhalten ändern, indem sie die Benutzeroberflächenoption \"Andere Anwendungen ignorieren, die Dynamischen Datenaustausch (Dynamic Data Exchange, DDE) verwenden\" unter \"Excel-Optionen\" | \"Allgemein\" aktivieren.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fddeenabled_6_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ZoomonrollwithIntelliMouse",
+            "displayName": "Beim Rollen mit IntelliMouse zoomen",
+            "explainText": "Mithilfe dieser Richtlinieneinstellung wird die Option \"Beim Rollen mit IntelliMouse zoomen\" festgelegt, die sich auf der Registerkarte \"Datei\" unter \"Optionen\" | \"Erweitert\" | \"Bearbeitungsoptionen\" befindet.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird mit dem Mausrad im Arbeitsblatt gezoomt.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird mit dem Mausrad durch das Arbeitsblatt gescrollt. Dies ist das Standardverhalten.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "frollzoom_98_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Shownames",
+            "displayName": "Namen anzeigen",
+            "explainText": "Durch Aktivieren dieser Einstellung wird unter \"Erweitert\" (\"Anzeige\") die Benutzeroption \"Diagrammelementnamen beim Daraufzeigen anzeigen\" ausgewählt.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fshowchartnames_96_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Showvalues",
+            "displayName": "Werte anzeigen",
+            "explainText": "Durch Aktivieren dieser Einstellung wird unter \"Erweitert\" (\"Anzeige\") die Benutzeroption \"Datenpunktwerte beim Daraufzeigen anzeigen\" ausgewählt.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fshowcharttipvalues_97_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Editdirectlyincell",
+            "displayName": "Direkte Zellbearbeitung aktivieren",
+            "explainText": "Mithilfe dieser Richtlinieneinstellung wird die Option \"Direkte Zellbearbeitung aktivieren\" festgelegt, die sich auf der Registerkarte \"Datei\" unter \"Optionen\" | \"Erweitert\" | \"Bearbeitungsoptionen\" befindet.\n\nWenn Sie diese Richtlinieneinstellung aktivieren oder nicht konfigurieren, ist in Excel die direkte Bearbeitung in der Zelle zulässig. Dies ist das Standardverhalten.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, ist keine direkte Zellbearbeitung in Excel möglich.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fnoincell_66_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_EnableFillHandleAndCellDragAndDrop",
+            "displayName": "Ausfüllkästchen und Drag & Drop von Zellen aktivieren",
+            "explainText": "Diese Richtlinieneinstellung legt die Option \"Ausfüllkästchen und Drag & Drop von Zellen aktivieren\" fest, die sich auf der Registerkarte \"Datei\" unter \"Optionen\" | \"Erweitert\" | \"Bearbeitungsoptionen\" befindet.\n\nWenn Sie diese Richtlinieneinstellung aktivieren oder nicht konfigurieren, sind das Ausfüllkästchen in Excel aktiviert und Drag & Drop zulässig. Dies ist das Standardverhalten.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, sind das Ausfüllkästchen in Excel deaktiviert und Drag & Drop nicht zulässig.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fdisabledman_36_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Alertbeforeoverwritingcells",
+            "displayName": "Vor dem Überschreiben von Zellen warnen",
+            "explainText": "Mithilfe dieser Richtlinieneinstellung wird die Option \"Vor dem Überschreiben von Zellen warnen\" festgelegt, die sich auf der Registerkarte \"Datei\" unter \"Optionen\" | \"Erweitert\" | \"Bearbeitungsoptionen\" befindet.\n\nWenn Sie diese Richtlinieneinstellung aktivieren oder nicht konfigurieren, wird in Excel eine Warnung ausgegeben, wenn Sie im Begriff sind, Zellen zu überschreiben. Dies ist das Standardverhalten.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, wird die Warnung davor, dass Zellen überschrieben werden, in Excel unterdrückt.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fnodragwarning_76_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_MoveselectionafterEnter",
+            "displayName": "Markierung nach dem Drücken der Eingabetaste in die nächste Zelle verschieben",
+            "explainText": "Durch Aktivieren dieser Einstellung wird unter \"Erweitert\" (\"Bearbeitungsoptionen\") die Benutzeroption \"Markierung nach Drücken der Eingabetaste verschieben\" ausgewählt.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fentermove_75_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "elements": {
                 "items": [
                     {
@@ -4262,6 +4705,93 @@
                     "value": 0
                 }
             },
+            "name": "L_CutAndCopyObjectsWithCells",
+            "displayName": "Objekte mit Zellen ausschneiden, kopieren oder sortieren",
+            "explainText": "Diese Richtlinieneinstellung legt die Option \"Eingefügte Objekte mit übergeordneten Zellen ausschneiden, kopieren und sortieren\" fest, die sich auf der Registerkarte \"Datei\" unter \"Optionen\" | \"Erweitert\" | \"Ausschneiden, Kopieren und Einfügen\" befindet.\n\nWenn Sie diese Richtlinieneinstellung aktivieren oder nicht konfigurieren, werden eingefügte Objekte in Excel mit ihren übergeordneten Zellen ausgeschnitten, kopiert und sortiert.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, werden eingefügte Objekte in Excel nicht mit ihren übergeordneten Zellen ausgeschnitten und kopiert.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fobjwcellmove_71_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Asktoupdateautomaticlinks",
+            "displayName": "Aktualisieren von automatischen Verknüpfungen bestätigen",
+            "explainText": "Diese Richtlinieneinstellung steuert, ob Excel Benutzer zum Aktualisieren automatischer Verknüpfungen auffordert, oder ob die Aktualisierungen ohne Benachrichtigung im Hintergrund stattfinden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren oder nicht konfigurieren, fordert Excel Benutzer auf, automatische Verknüpfungen zu aktualisieren. Darüber hinaus wird die Benutzeroberflächenoption \"Aktualisieren von automatischen Verknüpfungen anfordern\" auf der Registerkarte \"Datei\" unter \"Erweitert\" | \"Allgemein\" aktiviert.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, aktualisiert Excel automatische Verknüpfungen, ohne Benutzer aufzufordern oder zu informieren, was die Integrität einiger der Informationen in der Arbeitsmappe gefährden kann.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fupdateext_78_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_EnableAutoCompleteforcellvalues",
+            "displayName": "AutoVervollständigen für Zellwerte aktivieren",
+            "explainText": "Mithilfe dieser Richtlinieneinstellung wird die Option \"AutoVervollständigen für Zellwerte aktivieren\" festgelegt, die sich auf der Registerkarte \"Datei\" unter \"Optionen\" | \"Erweitert\" | \"Bearbeitungsoptionen\" befindet.\n\nWenn Sie diese Richtlinieneinstellung aktivieren oder nicht konfigurieren, wird in Excel das AutoVervollständigen für Zellwerte zugelassen. Dies ist das Standardverhalten.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, wird das AutoVervollständigen-Feature Excel deaktiviert.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fautocomplete_128_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_ExtendDataRangeFormatsAndFormulas",
             "displayName": "Datenbereichsformate und -formeln erweitern",
             "explainText": "Diese Richtlinieneinstellung legt die Option \"Datenbereichsformate und -formeln erweitern\" fest, die sich auf der Registerkarte \"Datei\" unter \"Optionen\" | \"Erweitert\" | \"Bearbeitungsoptionen\" befindet.\n\nWenn Sie diese Richtlinieneinstellung aktivieren oder nicht konfigurieren, können Benutzer in Excel neue Elemente, die am Ende einer Liste hinzugefügt werden, automatisch im Format der restlichen Liste formatieren lassen. Dies ist das Standardverhalten.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, werden neue Elemente, die am Ende einer Liste hinzugefügt werden, in Excel nicht automatisch formatiert.",
@@ -4273,6 +4803,35 @@
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\excel\\options",
             "valueName": "extendlist"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Enableautomaticpercententry",
+            "displayName": "Automatische Prozentwerteingabe aktivieren",
+            "explainText": "Durch Aktivieren dieser Richtlinie wird unter \"Erweitert\" (\"Bearbeitungsoptionen\") die Benutzeroption \"Automatische Prozentwerteingabe aktivieren\" ausgewählt.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fdisableautopercent_99_1"
         },
         {
             "parentCategory": {
@@ -4302,6 +4861,122 @@
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\common\\general",
             "valueName": "pasteoptions"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_ShowInsertOptionsbuttons",
+            "displayName": "Optionen-Schaltfläche beim Einfügen von Zellen und Objekten anzeigen",
+            "explainText": "Mithilfe dieser Richtlinieneinstellung wird die Option \"Schaltflächen für Einfügeoptionen anzeigen\" festgelegt, die sich auf der Registerkarte \"Datei\" unter \"Optionen\" | \"Erweitert\" | \"Ausschneiden, Kopieren und Einfügen\" befindet.\n\nWenn Sie diese Richtlinieneinstellung aktivieren oder nicht konfigurieren, wird in Excel nach dem Einfügen von Zellen, Zeilen oder Spalten, die Formatierungen enthalten, die Schaltfläche \"Einfügeoptionen\" angezeigt. Dies ist das Standardverhalten.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, wird die Schaltfläche \"Einfügeoptionen\" beim Einfügen in Excel nicht angezeigt.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "enableinsertcellsooui_102_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ShowFormulabarinNormalView",
+            "displayName": "Bearbeitungsleiste in der Normalansicht anzeigen",
+            "explainText": "Durch Aktivieren dieser Einstellung wird unter \"Erweitert\" (\"Anzeige\") die Benutzeroption \"Bearbeitungsleiste anzeigen\" ausgewählt.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "ffmlaf_1_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ShowFormulabarinFullView",
+            "displayName": "Bearbeitungsleiste im Vollbildmodus anzeigen",
+            "explainText": "Aktiviert: Zeigt die Bearbeitungsleiste an, wenn der Befehl 'Ganzer Bildschirm' im Menü 'Ansicht' festgelegt ist. | Deaktiviert: Zeigt die Bearbeitungsleiste nicht an, wenn der Befehl 'Ganzer Bildschirm' im Menü 'Ansicht' festgelegt ist.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "ffmlafull_68_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Functiontooltips",
+            "displayName": "QuickInfo für Funktionen",
+            "explainText": "Durch Aktivieren dieser Einstellung wird unter \"Erweitert\" (\"Anzeige\") die Benutzeroption \"QuickInfos für Funktionen anzeigen\" ausgewählt.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fshowfuntips_101_1"
         },
         {
             "parentCategory": {
@@ -4762,7 +5437,7 @@
             },
             "name": "L_WebContentWarningLevel",
             "displayName": "Benachrichtigungseinstellungen für die WEBSERVICE-Funktion",
-            "explainText": "Diese Richtlinieneinstellung steuert, wie Excel Benutzer warnt, wenn WEBSERVICE-Funktionen vorhanden sind.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, können Sie unter drei Optionen wählen, um festzulegen, wie die angegebenen Anwendungen Benutzer hinsichtlich WEBSERVICE-Funktionen warnen:\n\n- Alle mit Benachrichtigung deaktivieren:  Die Anwendung zeigt für alle WEBSERVICE-Funktionen die Vertrauensstellungsleiste an. Diese Option setzt die Standardkonfiguration in Office durch.\n- Alle ohne Benachrichtigung deaktivieren: Die Anwendung deaktiviert alle WEBSERVICE-Funktionen und benachrichtigt die Benutzer nicht.\n- Alle WEBSERVICE-Funktionen aktivieren (nicht empfohlen):  Die Anwendung aktiviert alle WEBSERVICE-Funktionen und benachrichtigt Benutzer nicht. Diese Option kann die Sicherheit erheblich verringern, da die Offenlegung von Informationen gegenüber Webdiensten von Drittanbietern zugelassen wird.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, ist \"Alle mit Benachrichtigung deaktivieren\" die Standardeinstellung.\nWenn Sie diese Richtlinieneinstellung nicht konfigurieren, öffnet Excel beim Öffnen von Arbeitsmappen, die WEBSERVICE-Funktionen enthalten, die Dateien mit deaktivierten WEBSERVICE-Funktionen und zeigt die Vertrauensstellungsleiste mit einer Warnung an, dass WEBSERVICE-Funktionen vorhanden sind und deaktiviert wurden. Die Benutzer können die Dateien gegebenenfalls untersuchen und bearbeiten, jedoch können sie keine deaktivierten Funktionen verwenden, es sei denn, sie geben sie durch Klicken auf \"Inhalte aktivieren\" in der Vertrauensstellungsleiste frei. Wenn Benutzer auf \"Inhalte aktivieren\" klicken, wird das Dokument als vertrauenswürdiges Dokument hinzugefügt.",
+            "explainText": "Diese Richtlinieneinstellung steuert, wie Excel Benutzer warnt, wenn WEBSERVICE-Funktionen vorhanden sind.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, können Sie unter drei Optionen wählen, um festzulegen, wie die angegebenen Anwendungen Benutzer hinsichtlich WEBSERVICE-Funktionen warnen:\n\n- Alle mit Benachrichtigung deaktivieren:  Die Anwendung zeigt für alle WEBSERVICE-Funktionen die Vertrauensstellungsleiste an. Diese Option setzt die Standardkonfiguration in Office durch.\n- Alle ohne Benachrichtigung deaktivieren: Die Anwendung deaktiviert alle WEBSERVICE-Funktionen und benachrichtigt die Benutzer nicht.\n- Alle WEBSERVICE-Funktionen aktivieren (nicht empfohlen):  Die Anwendung aktiviert alle WEBSERVICE-Funktionen und benachrichtigt Benutzer nicht. Diese Option kann die Sicherheit erheblich verringern, da die Offenlegung von Informationen gegenüber Webdiensten von Drittanbietern zugelassen wird.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, ist \"Alle mit Benachrichtigung deaktivieren\" die Standardeinstellung.\nWenn Sie diese Richtlinieneinstellung nicht konfigurieren, öffnet Excel beim Öffnen von Arbeitsmappen, die WEBSERVICE-Funktionen enthalten, die Dateien mit deaktivierten WEBSERVICE-Funktionen und zeigt die Vertrauensstellungsleiste mit einer Warnung an, dass WEBSERVICE-Funktionen vorhanden sind und deaktiviert wurden. Die Benutzer können die Dateien gegebenenfalls untersuchen und bearbeiten, jedoch können sie keine deaktivierten Funktionen verwenden, es sei denn, sie geben sie durch Klicken auf \"Inhalte aktivieren\" in der Vertrauensstellungsleiste frei.  Wenn Benutzer auf \"Inhalte aktivieren\" klicken, wird das Dokument als vertrauenswürdiges Dokument hinzugefügt.",
             "tags": [
                 "L_Security",
                 "L_ExcelOptions",
@@ -4918,7 +5593,7 @@
         },
         {
             "parentCategory": {
-                "ref": "L_IntelligentServices"
+                "ref": "L_PowerBI"
             },
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
@@ -4933,16 +5608,16 @@
                     "value": 0
                 }
             },
-            "name": "L_Insights",
-            "displayName": "Schaltfläche \"Ideen\" aus dem Menüband entfernen",
-            "explainText": "Diese Richtlinieneinstellung erlaubt es Ihnen, Benutzer am Zugriff auf Ideen in Excel zu hindern, einem intelligenten Dienst, der Vorschläge und Analysen auf Grundlage Ihrer Daten bereitstellt. Standardmäßig wird im Menüband auf der Registerkarte \"Start\" in der Gruppe \"Ideen\" eine Schaltfläche für Ideen angezeigt.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die Schaltfläche für Ideen aus dem Menüband entfernt, und Benutzer können die Schaltfläche dem Menüband nicht manuell hinzufügen. Benutzer können dann nicht auf Ideen zugreifen.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die Schaltfläche für Ideen im Menüband angezeigt, und Benutzer können auf Einblicke zugreifen.",
+            "name": "L_DisableFromPowerBIDatasetOrganizationName",
+            "displayName": "Anzeige von Organisationsnamen in den Schaltflächen deaktivieren, um PivotTables aus Power BI-Datasets zu erstellen",
+            "explainText": "        Mithilfe dieser Richtlinieneinstellung können Sie verhindern, dass der Name der Organisation in den Schaltflächen im Excel-Menüband angezeigt wird, das zum Erstellen von PivotTables aus Power BI-Datasets verwendet wird.  Standardmäßig wird der Name der Organisation im Menüband angezeigt, wenn dieser in Graph verfügbar ist.\n\n        Wenn Sie diese Richtlinieneinstellung aktivieren, wird der Name der Organisation nicht angezeigt.\n\n        Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird der Name der Organisation angezeigt.\n\n        Bitte beachten: Diese Richtlinieneinstellung gilt nur für Abonnementversionen von Office wie beispielsweise Microsoft 365-Apps für Unternehmen.",
             "tags": [
-                "L_IntelligentServices",
+                "L_PowerBI",
                 "L_MicrosoftOfficeExcel"
             ],
             "application": "excel16",
-            "key": "software\\microsoft\\office\\16.0\\excel\\intelligent services",
-            "valueName": "insights"
+            "key": "software\\microsoft\\office\\16.0\\excel\\power bi",
+            "valueName": "disablefrompowerbidatasetorganizationname"
         }
     ]
 }

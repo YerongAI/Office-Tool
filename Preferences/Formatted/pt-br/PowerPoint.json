@@ -208,35 +208,6 @@
             },
             "enabledValue": {
                 "decimal": {
-                    "value": 0
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "name": "L_StopCheckingTableAltTextAccessibilityInformation",
-            "displayName": "Interromper verificação de informações de acessibilidade em texto alternativo da tabela",
-            "explainText": "Esta configuração de política impede que o Verificador de Acessibilidade verifique se as tabelas contêm texto alternativo.\n\nSe você habilitar essa configuração de política, o Verificador de Acessibilidade será impedido de verificar se as tabelas contêm texto alternativo.\n\nSe você desabilitar ou não definir essa configuração de política, as tabelas serão verificadas em busca de texto alternativo, e todos os problemas serão exibidos no Verificador de Acessibilidade.",
-            "tags": [
-                "L_CheckAccessibility",
-                "L_FileTab",
-                "L_MicrosoftOfficePowerPoint"
-            ],
-            "application": "ppt16",
-            "key": "software\\microsoft\\office\\16.0\\powerpoint\\accchecker",
-            "valueName": "tablealttext"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_CheckAccessibility"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
                     "value": 1
                 }
             },
@@ -637,7 +608,7 @@
             },
             "name": "L_SavePowerPointfilesas",
             "displayName": "Formato de arquivo padrão",
-            "explainText": "Essa configuração de política determina o formato padrão para novos arquivos de apresentação criados pelos usuários.\n\nSe você habilitar essa configuração de política, quando um usuário criar uma nova apresentação em branco, ela estará no formato\npadrão especificado. Os usuários ainda poderão substituir o padrão e determinar um formato específico quando criarem uma\napresentação.\n\nSe você desabilitar ou não definir essa configuração de política, Apresentação do PowerPoint será a opção padrão.",
+            "explainText": "Essa configuração de política determina o formato padrão para novos arquivos de apresentação criados pelos usuários.\n\nSe você habilitar essa configuração de política, quando um usuário criar uma nova apresentação em branco, ela estará no formato\npadrão especificado.  Os usuários ainda poderão substituir o padrão e determinar um formato específico quando criarem uma\napresentação.\n\nSe você desabilitar ou não definir essa configuração de política, Apresentação do PowerPoint será a opção padrão.",
             "tags": [
                 "L_Save",
                 "L_PowerPointOptions",
@@ -903,7 +874,7 @@
             },
             "name": "L_Popupmenuonrightmouseclick",
             "displayName": "Mostrar menu com botão direito do mouse",
-            "explainText":"Marcado: marca a opção ''Mostrar menu com botão direito do mouse''. | Desmarcado: desmarca a opção ''Mostrar menu com botão direito do mouse''.",
+            "explainText": "Marcado: marca a opção ''Mostrar menu com botão direito do mouse''. | Desmarcado: desmarca a opção ''Mostrar menu com botão direito do mouse''.",
             "tags": [
                 "L_Advanced",
                 "L_PowerPointOptions",
@@ -932,7 +903,7 @@
             },
             "name": "L_Showpopupmenubutton",
             "displayName": "Mostrar barra de ferramentas pop-up",
-            "explainText":"Marcado: marca a opção ''Mostrar barra de ferramentas pop-up''. | Desmarcado: desmarca a opção ''Mostrar barra de ferramentas pop-up''.",
+            "explainText": "Marcado: marca a opção ''Mostrar barra de ferramentas pop-up''. | Desmarcado: desmarca a opção ''Mostrar barra de ferramentas pop-up''.",
             "tags": [
                 "L_Advanced",
                 "L_PowerPointOptions",
@@ -1230,7 +1201,7 @@
             },
             "name": "L_DoNotOpenFilesInUnsafeLocationsInProtectedView",
             "displayName": "Não abrir arquivos em locais não seguros no Modo de Exibição Protegido",
-            "explainText": "Essa configuração de política permite determinar se os arquivos localizados em locais não seguros serão abertos no Modo de\nExibição Protegido. Se você não tiver especificado locais não seguros, apenas as pastas \"Arquivos de Programas Baixados\" e\n\"Arquivos de Internet Temporários\" serão consideradas locais não seguros.\n\nSe você habilitar essa configuração de política, os arquivos localizados em locais não seguros não serão abertos no Modo de\nExibição Protegido.\n\nSe você desabilitar ou não definir essa configuração de política, os arquivos localizados em locais não seguros serão abertos no\nModo de Exibição Protegido.",
+            "explainText": "Essa configuração de política permite determinar se os arquivos localizados em locais não seguros serão abertos no Modo de\nExibição Protegido.  Se você não tiver especificado locais não seguros, apenas as pastas \"Arquivos de Programas Baixados\" e\n\"Arquivos de Internet Temporários\" serão consideradas locais não seguros.\n\nSe você habilitar essa configuração de política, os arquivos localizados em locais não seguros não serão abertos no Modo de\nExibição Protegido.\n\nSe você desabilitar ou não definir essa configuração de política, os arquivos localizados em locais não seguros serão abertos no\nModo de Exibição Protegido.",
             "tags": [
                 "L_ProtectedView",
                 "L_TrustCenter",
@@ -1306,6 +1277,70 @@
         },
         {
             "parentCategory": {
+                "ref": "L_ProtectedView"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Bloquear arquivos"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Abrir no Modo de Exibição Protegido"
+                            }
+                        ],
+                        "valueName": "openinprotectedview",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsDropID"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "disableeditfrompv",
+                        "key": "software\\microsoft\\office\\16.0\\powerpoint\\security\\filevalidation",
+                        "inputType": "checkBox",
+                        "caption": "Marcada: Permitir edição. Desmarcada: Não permitir edição.",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsStr3"
+                    }
+                ]
+            },
+            "name": "L_SetDocumentBehaviorIfFileValidationFails",
+            "displayName": "Definir comportamento de documentos se a validação de arquivos falhar",
+            "explainText": "Essa configuração de política controla como o Office manipula documentos quando eles não são aprovados na Validação de Arquivos.\n\nSe você habilitar esta política de configuração, poderá configurar as seguintes opções para arquivos que não foram aprovados na validação de arquivos:\n\n- Bloquear arquivos completamente. Usuários não poderão abrir os arquivos.\n- Abrir arquivos no Modo de Exibição Protegido e proibir a edição.  É assim que o Office manipulará os arquivos se você desabilitar essa configuração de política.\n- Abrir arquivos no Modo de Exibição Protegido e permitir a edição. É assim que o Office manipulará os arquivos se você não configurar essa configuração de política.\n\nSe você desabilitar ou essa configuração de política, o Office seguirá o comportamento de \"Abrir arquivos no Modo de Exibição Protegido e proibir a edição\".\n\nSe você não configurar essa política, o Office seguirá o comportameno de \"Abrir arquivos no Modo de Exibição Protegido e permitir a edição\".",
+            "tags": [
+                "L_ProtectedView",
+                "L_TrustCenter",
+                "L_Security",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint\\security\\filevalidation"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -1323,7 +1358,7 @@
             },
             "name": "L_TurnOffFileValidation",
             "displayName": "Desativar validação de arquivos",
-            "explainText": "Essa configuração de política permite desativar o recurso de validação de arquivos.\n\nSe você habilitar essa configuração de política, a validação de arquivos será desativada.\n\nSe você desabilitar ou não definir essa configuração de política, a validação de arquivos será ativada. Antes de serem abertos, os\nDocumentos Binários do Office (97-2003) são verificados para determinar se eles estão em conformidade com o esquema de formato\nde arquivo.",
+            "explainText": "Essa configuração de política permite desativar o recurso de validação de arquivos.\n\nSe você habilitar essa configuração de política, a validação de arquivos será desativada.\n\nSe você desabilitar ou não definir essa configuração de política, a validação de arquivos será ativada.  Antes de serem abertos, os\nDocumentos Binários do Office (97-2003) são verificados para determinar se eles estão em conformidade com o esquema de formato\nde arquivo.",
             "tags": [
                 "L_Security",
                 "L_PowerPointOptions",
@@ -1537,7 +1572,7 @@
             },
             "name": "L_SetCNGCipherKeyLength",
             "displayName": "Definir comprimento da chave de criptografia CNG",
-            "explainText": "Essa configuração de política permite definir o número de bits a ser usado ao criar a chave de criptografia. Esse número será\narredondado para um múltiplo de 8.\n\nSe você habilitar essa configuração de política, os bits de chave especificados serão usados.\n\nSe você desabilitar ou não definir essa configuração de política, o valor padrão será usado.",
+            "explainText": "Essa configuração de política permite definir o número de bits a ser usado ao criar a chave de criptografia.  Esse número será\narredondado para um múltiplo de 8.\n\nSe você habilitar essa configuração de política, os bits de chave especificados serão usados.\n\nSe você desabilitar ou não definir essa configuração de política, o valor padrão será usado.",
             "tags": [
                 "L_Cryptography",
                 "L_Security",
@@ -1835,7 +1870,7 @@
             },
             "name": "L_TurnOffTrustedDocumentsOnTheNetwork",
             "displayName": "Desativar Documentos Confiáveis na rede",
-            "explainText": "Essa configuração de política permite desativar o recurso de documentos confiáveis para documentos abertos a partir da rede.\n\nSe você habilitar essa configuração de política, os usuários sempre verão notificações de segurança para conteúdo ativo, como\nmacros, controles ActiveX, conexões de dados etc., referentes a documentos abertos a partir da rede.\n\nSe você desabilitar ou não definir essa configuração de política, o recurso de documentos confiáveis possibilitará que os usuários\nsempre permitam conteúdo ativo em documentos, como macros, controles ActiveX, conexões de dados etc. Dessa maneira, eles não\nreceberão um prompt da próxima vez em que abrirem os documentos. Documentos confiáveis estão isentos de notificações de\nsegurança.",
+            "explainText": "Essa configuração de política permite desativar o recurso de documentos confiáveis para documentos abertos a partir da rede.\n\nSe você habilitar essa configuração de política, os usuários sempre verão notificações de segurança para conteúdo ativo, como\nmacros, controles ActiveX, conexões de dados etc., referentes a documentos abertos a partir da rede.\n\nSe você desabilitar ou não definir essa configuração de política, o recurso de documentos confiáveis possibilitará que os usuários\nsempre permitam conteúdo ativo em documentos, como macros, controles ActiveX, conexões de dados etc. Dessa maneira, eles não\nreceberão um prompt da próxima vez em que abrirem os documentos.  Documentos confiáveis estão isentos de notificações de\nsegurança.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1895,7 +1930,7 @@
             },
             "name": "L_BlockMacroExecutionFromInternet",
             "displayName": "Bloquear macros impedindo sua execução em arquivos do Office da Internet",
-            "explainText": "Esta configuração de política permite que você bloqueie as macros impedindo-as de serem executadas em arquivos do Office que vêm da Internet.\n\nSe você habilitar essa configuração de política, as macros terão a execução bloqueada, mesmo se a opção \"Habilitar todas as macros\" estiver selecionada na seção de configurações de Macro da Central de Confiabilidade. Além disso, em vez de ter a opção para \"Habilitar conteúdo\", os usuários receberão uma notificação de que as macros têm a execução bloqueada. Se o arquivo do Office é salvo em um local confiável ou anteriormente considerado confiável pelo usuário, as macros poderão ser executadas.\n\nSe você desabilita ou não define esta configuração de política, as configurações definidas na seção de configurações de Macro da Central de Confiabilidade é que determinam se as macros podem ser executadas em arquivos do Office que vêm da Internet.",
+            "explainText": "        Esta configuração de política permite que você bloqueie as macros impedindo-as de serem executadas em arquivos do Office que vêm da Internet.\n\n        Se você habilitar essa configuração de política, as macros terão a execução bloqueada, mesmo se a opção \"Habilitar todas as macros\" estiver selecionada na seção de configurações de Macro da Central de Confiabilidade. Além disso, em vez de ter a opção para \"Habilitar conteúdo\", os usuários receberão uma notificação de que as macros têm a execução bloqueada. Se o arquivo do Office é salvo em um local confiável ou anteriormente considerado confiável pelo usuário, as macros poderão ser executadas.\n\n        Se você desabilita ou não define esta configuração de política, as configurações definidas na seção de configurações de Macro da Central de Confiabilidade é que determinam se as macros podem ser executadas em arquivos do Office que vêm da Internet.\n      ",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -2051,7 +2086,7 @@
             },
             "name": "L_RequirethatApplicationExtensionsaresigned",
             "displayName": "Exigir que suplementos de aplicativo sejam assinados por um Fornecedor Confiável",
-            "explainText": "Esta configuração de política controla se os suplementos deste aplicativo devem ser digitalmente assinados por um fornecedor confiável.\n \nSe você habilitar esta configuração de política, este aplicativo verificará a assinatura digital de cada suplemento antes de carregá-lo. Se um suplemento não tiver uma assinatura digital, ou se a assinatura não for proveniente de um fornecedor confiável, o aplicativo desabilitará esse suplemento e notificará o usuário. Os certificados deverão ser adicionados à lista de Fornecedores Confiáveis se você exigir que todos os suplementos sejam assinados por um fornecedor confiável. Para obter informações detalhadas sobre como obter e distribuir certificados, consulte http://go.microsoft.com/fwlink/?LinkId=294922. O Office 2016 armazena certificados para fornecedores confiáveis no repositório de fornecedores confiáveis do Internet Explorer. Versões anteriores do Microsoft Office armazenavam informações de certificados de fornecedores confiáveis (especificamente, a impressão digital) em um repositório de fornecedores confiáveis especial do Office. O Office 2016 ainda lê informações de certificados de fornecedores confiáveis no repositório de fornecedores confiáveis do Office, mas não grava informações nesse repositório. Portanto, se você tiver criado uma lista de fornecedores confiáveis em uma versão anterior do Office e atualizar para o Office 2016, essa lista ainda será reconhecida. Porém, todos os certificados de fornecedores confiáveis que forem adicionados à lista serão armazenados no repositório de fornecedores confiáveis do Internet Explorer. Para saber mais sobre fornecedores confiáveis, consulte o Office Resource Kit.\n\nSe você desabilitar ou não definir esta configuração de política, este aplicativo não verificará a assinatura digital nos suplementos antes de abri-los. Se um suplemento perigoso for carregado, ele poderá prejudicar os computadores dos usuários ou comprometer a segurança dos dados.",
+            "explainText": "Esta configuração de política controla se os suplementos deste aplicativo devem ser digitalmente assinados por um fornecedor confiável.\n \nSe você habilitar esta configuração de política, este aplicativo verificará a assinatura digital de cada suplemento antes de carregá-lo. Se um suplemento não tiver uma assinatura digital, ou se a assinatura não for proveniente de um fornecedor confiável, o aplicativo desabilitará esse suplemento e notificará o usuário. Os certificados deverão ser adicionados à lista de Fornecedores Confiáveis se você exigir que todos os suplementos sejam assinados por um fornecedor confiável. Para obter informações detalhadas sobre como obter e distribuir certificados, consulte http://go.microsoft.com/fwlink/?LinkId=294922. O Office 2016 armazena certificados para fornecedores confiáveis no repositório de fornecedores confiáveis do Internet Explorer. Versões anteriores do Microsoft Office armazenavam informações de certificados de fornecedores confiáveis (especificamente, a impressão digital) em um repositório de fornecedores confiáveis especial do Office.  O Office 2016 ainda lê informações de certificados de fornecedores confiáveis no repositório de fornecedores confiáveis do Office, mas não grava informações nesse repositório. Portanto, se você tiver criado uma lista de fornecedores confiáveis em uma versão anterior do Office e atualizar para o Office 2016, essa lista ainda será reconhecida. Porém, todos os certificados de fornecedores confiáveis que forem adicionados à lista serão armazenados no repositório de fornecedores confiáveis do Internet Explorer. Para saber mais sobre fornecedores confiáveis, consulte o Office Resource Kit.\n\nSe você desabilitar ou não definir esta configuração de política, este aplicativo não verificará a assinatura digital nos suplementos antes de abri-los. Se um suplemento perigoso for carregado, ele poderá prejudicar os computadores dos usuários ou comprometer a segurança dos dados.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -2136,7 +2171,7 @@
             },
             "name": "L_SetDefaultFileBlockBehavior",
             "displayName": "Definir comportamento padrão de bloqueio de arquivo",
-            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir ou editar arquivos do Word.\n\nSe você habilitar essa configuração de política, poderá definir uma destas opções:\n- Arquivos bloqueados não são abertos\n- Arquivos bloqueados são abertos no Modo de Exibição Protegido e não podem ser editados\n- Arquivos bloqueados são abertos no Modo de Exibição Protegido e podem ser editados\n\nSe você desabilitar ou não definir essa configuração de política, o comportamento será o mesmo que a configuração \"Arquivos\nbloqueados não são abertos\". Os usuários não poderão abrir arquivos bloqueados.",
+            "explainText": "Essa configuração de política permite determinar se os usuários podem abrir, exibir ou editar arquivos do Word.\n\nSe você habilitar essa configuração de política, poderá definir uma destas opções:\n- Arquivos bloqueados não são abertos\n- Arquivos bloqueados são abertos no Modo de Exibição Protegido e não podem ser editados\n- Arquivos bloqueados são abertos no Modo de Exibição Protegido e podem ser editados\n\nSe você desabilitar ou não definir essa configuração de política, o comportamento será o mesmo que a configuração \"Arquivos\nbloqueados não são abertos\".  Os usuários não poderão abrir arquivos bloqueados.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2941,7 +2976,7 @@
             },
             "name": "L_DisableTrustedLoc",
             "displayName": "Desabilitar todos os locais confiáveis",
-            "explainText": "Esta configuração de política permite que os administradores desabilitem todos os locais confiáveis nos aplicativos especificados. Os locais confiáveis especificados na Central de Confiabilidade são usados para definir locais de arquivos supostamente seguros. Conteúdo, códigos e suplementos podem ser carregados a partir de locais confiáveis com segurança mínima e sem solicitar a permissão dos usuários. Se um arquivo perigoso for aberto a partir de um local confiável, ele não estará sujeito a medidas de segurança padrão e poderá danificar os computadores ou os dados dos usuários.\n\nSe você habilitar esta configuração de política, todos os locais confiáveis (especificados na Central de Confiabilidade) nos aplicativos especificados serão ignorados, incluindo os locais confiáveis estabelecidos pelo Office 2016 durante a instalação, implantados para os usuários com o uso da Política de Grupo ou adicionados pelos próprios usuários. Os usuários receberão um aviso novamente ao abrirem arquivos a partir de locais confiáveis.\n\nSe você desabilitar ou não definir esta configuração de política, todos os locais confiáveis (especificados na Central de Confiabilidade) nos aplicativos especificados serão considerados seguros.",
+            "explainText": "Esta configuração de política permite que os administradores desabilitem todos os locais confiáveis nos aplicativos especificados. Os locais confiáveis especificados na Central de Confiabilidade são usados para definir locais de arquivos supostamente seguros. Conteúdo, códigos e suplementos podem ser carregados a partir de locais confiáveis com segurança mínima e sem solicitar a permissão dos usuários. Se um arquivo perigoso for aberto a partir de um local confiável, ele não estará sujeito a medidas de segurança padrão e poderá danificar os computadores ou os dados dos usuários.\n\nSe você habilitar esta configuração de política, todos os locais confiáveis (especificados na Central de Confiabilidade) nos aplicativos especificados serão ignorados, incluindo os locais confiáveis estabelecidos pelo Office 2016 durante a instalação, implantados para os usuários com o uso da Política de Grupo ou adicionados pelos próprios usuários.  Os usuários receberão um aviso novamente ao abrirem arquivos a partir de locais confiáveis.\n\nSe você desabilitar ou não definir esta configuração de política, todos os locais confiáveis (especificados na Central de Confiabilidade) nos aplicativos especificados serão considerados seguros.",
             "tags": [
                 "L_TrustedLocations",
                 "L_TrustCenter",
@@ -2984,6 +3019,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Security"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DownloadImages",
+            "displayName": "Desbloquear download automático de imagens vinculadas",
+            "explainText": "Essa configuração de política determina se o PowerPoint baixa links de fontes externas automaticamente.\n\nSe você habilitar essa configuração de política, o PowerPoint carregará imagens salvas em locais remotos.\n\nSe você desabilitar ou não definir essa configuração de política, quando o PowerPoint abre uma apresentação, ele não exibirá imagens vinculadas salvas em um computador diferente, a não ser que a própria apresentação seja salva em um local confiável (configurada na Central de Confiabilidade).",
+            "tags": [
+                "L_Security",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint\\security",
+            "valueName": "downloadimages"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Coauthoring"
             },
             "supportedOn": {
@@ -3010,6 +3074,35 @@
             "application": "ppt16",
             "key": "software\\microsoft\\office\\16.0\\powerpoint\\coauthoring",
             "valueName": "disablecoauthoring"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Coauthoring"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_TurnOffRevisionTracking",
+            "displayName": "Desativar o controle de revisão",
+            "explainText": "Esta configuração de política permite que você desative o controle de revisão no PowerPoint.\n\nPor padrão, o controle de revisão está ativado nas apresentações em que há suporte para o controle de revisão.\n\nSe você habilitar essa configuração de política, as revisões efetuadas em uma apresentação não serão controladas ou mostradas.\n\nSe você desabilitar ou não definir esta configuração de política, as revisões efetuadas em uma apresentação serão controladas e mostradas.",
+            "tags": [
+                "L_Coauthoring",
+                "L_CollaborationSettings",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint\\coauthoring",
+            "valueName": "disablerevisiontracking"
         },
         {
             "parentCategory": {
@@ -3377,6 +3470,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Predefined"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_EnableRecordingRibbonTab",
+            "displayName": "Ativar guia de faixa de opções de gravação",
+            "explainText": "Esta configuração de política permite que você controle a guia de faixa de opções de gravação inicial no PowerPoint. Por padrão, a guia não fica visível.\n\nSe você habilitar essa configuração de política, a guia de faixa de opções de gravação ficará visível. Porém, o usuário pode optar por desativar o recurso manualmente na interface de usuário.\n\nSe você desabilitar ou não definir esta configuração de política, a guia de faixa de opções de gravação não ficará visível. O usuário pode optar por ativar o recurso manualmente na interface de usuário.\n    ",
+            "tags": [
+                "L_Predefined",
+                "L_Disableitemsinuserinterface",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint",
+            "valueName": "enablerecordingribbontab"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_OptionsGeneral"
             },
             "supportedOn": {
@@ -3479,9 +3601,38 @@
                     "value": 0
                 }
             },
+            "name": "L_DisableQuickStarter",
+            "displayName": "Desativar o Iniciador Rápido",
+            "explainText": "Esta configuração de política controla se o Iniciador Rápido está disponível para os usuários. Por padrão, o Iniciador Rápido estará disponível para os usuários se eles cumprirem os requisitos de idioma e região do recurso.\n\nSe você habilitar essa configuração de política, o Iniciador Rápido não ficará disponível para os usuários.\n\nSe você desabilitar ou não definir essa configuração de política, o Iniciador Rápido ficará disponível para os usuários se eles cumprirem os requisitos de idioma e região do recurso.\n\nObservação: essa configuração de política só se aplica às versões de assinatura do Office, como o Microsoft 365 Apps para Grandes Empresas.\n    ",
+            "tags": [
+                "L_OptionsGeneral",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint",
+            "valueName": "disablequickstarter"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_OptionsGeneral"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_DisableIncrementalDownload",
             "displayName": "Aguarde para mostrar aos usuários uma apresentação baseada em nuvem até que todo o conteúdo seja baixado",
-            "explainText": "Esta configuração de política permite controlar se o PowerPoint aguardará até que todo o conteúdo seja baixado antes de mostrar uma apresentação ao usuário. Esta configuração de política se aplica a apresentações abertas de um local baseado em nuvem, como OneDrive Pessoal, OneDrive for Business ou SharePoint Online.\n\nPor padrão, quando o usuário abre uma apresentação baseada em nuvem no PowerPoint, ele pode visualizar a apresentação enquanto outro conteúdo, como imagens ou vídeo, continua a ser baixado. Porém, algumas funcionalidades, como edição e apresentação, são limitadas ou não ficam disponíveis até que todo o conteúdo da apresentação seja baixado.\n\nSe você habilitar essa configuração de política, o PowerPoint aguardará, ao abrir uma apresentação baseada em nuvem, até que todo o conteúdo da apresentação seja baixado antes de mostrar a apresentação ao usuário.\n\nAtive esta configuração de política se você tiver suplementos ou processos automatizados que precisem que todo o conteúdo de uma apresentação esteja disponível e totalmente editável assim que a apresentação for exibida.\n\nSe você desabilitar ou não definir esta configuração, o PowerPoint abrirá arquivos baseados na nuvem mais rapidamente, para que o usuário possa começar a exibir a apresentação enquanto o outro conteúdo é baixado.\n\nObservação: esta configuração de política se aplica somente a versões de assinatura do Office, como o Office 365 ProPlus.\n    ",
+            "explainText": "Esta configuração de política permite controlar se o PowerPoint aguardará até que todo o conteúdo seja baixado antes de mostrar uma apresentação ao usuário. Esta configuração de política se aplica a apresentações abertas de um local baseado em nuvem, como OneDrive Pessoal, OneDrive for Business ou SharePoint Online.\n\nPor padrão, quando o usuário abre uma apresentação baseada em nuvem no PowerPoint, ele pode visualizar a apresentação enquanto outro conteúdo, como imagens ou vídeo, continua a ser baixado. Porém, algumas funcionalidades, como edição e apresentação, são limitadas ou não ficam disponíveis até que todo o conteúdo da apresentação seja baixado.\n\nSe você habilitar essa configuração de política, o PowerPoint aguardará, ao abrir uma apresentação baseada em nuvem, até que todo o conteúdo da apresentação seja baixado antes de mostrar a apresentação ao usuário.\n\nAtive esta configuração de política se você tiver suplementos ou processos automatizados que precisem que todo o conteúdo de uma apresentação esteja disponível e totalmente editável assim que a apresentação for exibida.\n\nSe você desabilitar ou não definir esta configuração, o PowerPoint abrirá arquivos baseados na nuvem mais rapidamente, para que o usuário possa começar a exibir a apresentação enquanto o outro conteúdo é baixado.\n\nObservação: esta configuração de política se aplica somente a versões de assinatura do Office, como o Microsoft 365 Apps para Grandes Empresas.\n    ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_PowerPointOptions",
@@ -3510,7 +3661,7 @@
             },
             "name": "L_DisableLiveSubtitles",
             "displayName": "Não permitir o uso de Legendas ao Vivo",
-            "explainText": "Esta configuração de política controla se os usuários podem ativar Legendas ao Vivo durante uma apresentação. Por padrão, as Legendas ao Vivo estão desativadas, mas podem ser ativadas pelos usuários.\n\nSe você habilitar essa configuração de política, os usuários não poderão ativar as Legendas ao Vivo durante uma apresentação.\n\nSe você desabilitar ou não definir essa configuração de política, os usuários poderão ativar as Legendas ao Vivo.\n\nObservação: esta configuração de política aplica-se somente a versões de assinatura do Office, como o Office 365 ProPlus.\n    ",
+            "explainText": "Esta configuração de política controla se os usuários podem ativar Legendas ao Vivo durante uma apresentação. Por padrão, as Legendas ao Vivo estão desativadas, mas podem ser ativadas pelos usuários.\n\nSe você habilitar esta configuração de política, os usuários não poderão ativar as Legendas ao Vivo durante uma apresentação.\n\nSe você desabilitar ou não definir esta configuração de política, os usuários poderão ativar as Legendas ao Vivo.\n\nObservação: esta configuração de política aplica-se somente a versões de assinatura do Office, como o Microsoft 365 Apps para Grandes Empresas.\n    ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_PowerPointOptions",
@@ -3519,6 +3670,35 @@
             "application": "ppt16",
             "key": "software\\microsoft\\office\\16.0\\powerpoint",
             "valueName": "disablelivesubtitles"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_OptionsGeneral"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_EnableModernCommentsCreateNew",
+            "displayName": "Usar comentários modernos no PowerPoint",
+            "explainText": "Esta configuração de política controla se comentários modernos são usados ​​no PowerPoint. Para obter mais informações sobre comentários modernos e sobre quando habilitar esta configuração, confira https://go.microsoft.com/fwlink/p/?linkid=2116065.\n\nSe você habilitar esta configuração de política, quando um usuário adicionar comentários a um novo arquivo ou a um arquivo sem comentários, os novos comentários adicionados serão modernos. Se os usuários tiverem uma versão do PowerPoint que não dá suporte a comentários modernos, será exibida uma notificação solicitando que eles usem o PowerPoint para a Web a fim de exibir comentários modernos nos arquivos que possuem esse recurso.\n\nSe você desativar esta configuração de política, os usuários continuarão vendo a experiência anterior de comentários em arquivos novos e existentes que não possuem comentários modernos. Os usuários ainda poderão ler arquivos que já possuem comentários modernos se tiverem uma versão do PowerPoint compatível com esse recurso.\n\nPara obter informações sobre o que acontece quando você não define esta configuração de política, confira https://go.microsoft.com/fwlink/?linkid=2116065.\n\nObservação: esta configuração de política se aplica apenas a versões de assinatura do Office, como o Microsoft 365 Apps para Grandes Empresas.\n    ",
+            "tags": [
+                "L_OptionsGeneral",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint",
+            "valueName": "enablemoderncommentscreatenew"
         }
     ]
 }

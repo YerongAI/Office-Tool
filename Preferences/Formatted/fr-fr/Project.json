@@ -1935,7 +1935,7 @@
             },
             "name": "L_PjProjectScreentips",
             "displayName": "Info-bulles de projet",
-            "explainText": "Affiche des conseils pour les barres du Gantt et les titres de champs, y compris les dates pour les unités d’échelle de temps et le contenu des cellules complètes, lorsqu’une cellule est trop petite pour afficher tout le texte dans les modes Affichage Tableau et Réseau de tâches.\n\nSi vous activez ce paramètre, des conseils s’affichent pour les barres du Gantt et les titres de champs.\n\nSi vous le désactivez ou ne le configurez pas, le paramètre par défaut de l’utilisateur est appliqué.",
+            "explainText": "Affiche des conseils pour les barres du Gantt et les en-têtes de champ, y compris les dates pour les unités d'échelle de temps et le contenu complet de la cellule si une cellule est trop étroite pour afficher complètement le texte dans les vues de feuille et de diagramme de réseau.\n\nSi vous activez ce paramètre, des conseils s'affichent pour les barres du Gantt et les en-têtes de champ.\n\nSi vous désactivez ou ne configurez pas ce paramètre, le paramètre par défaut de l'utilisateur est utilisé.",
             "tags": [
                 "L_PjShow",
                 "L_PjView",
@@ -4401,7 +4401,7 @@
                 }
             },
             "name": "L_PjMoveRemaining",
-            "displayName":"Recaler sur la date d'état la date de début de la partie inachevée de la tâche si elle est antérieure à la date d'état",
+            "displayName": "Recaler sur la date d'état la date de début de la partie inachevée de la tâche si elle est antérieure à la date d'état",
             "explainText": "Avance les parties restantes d’une tâche pour qu’elles commencent à la date d’état.\n\nSi vous activez ce paramètre, la partie restante de la tâche est avancée et commence à la date d’état.\n\nSi vous le désactivez ou ne le configurez pas, le paramètre par défaut de l’utilisateur est appliqué.",
             "tags": [
                 "L_PjCalcProjectFile",
@@ -5328,6 +5328,118 @@
         },
         {
             "parentCategory": {
+                "ref": "L_PjPGSettingsForProject1"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Utiliser la page par défaut de Microsoft Project"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Utiliser une page personnalisée"
+                            }
+                        ],
+                        "valueName": "usedefaultstartpage",
+                        "inputType": "dropdownList",
+                        "caption": "Page de disposition et de fonctionnalités du Guide de projets",
+                        "id": "L_pjusedefaultstartpage34"
+                    },
+                    {
+                        "valueName": "gbuidefaultstartpageurl",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "URL : ",
+                        "id": "L_PjGBUIDefaultPageURL"
+                    }
+                ]
+            },
+            "name": "L_PjUseDefaultStartPage",
+            "displayName": "Page de disposition et de fonctionnalités du Guide de projets",
+            "explainText": "Indique si le volet latéral affiche le Guide de projets par défaut ou un guide personnalisé conçu par votre entreprise.\n\nSi vous activez ce paramètre, le Guide de projets que vous avez spécifié s’affiche.\n\nSi vous le désactivez ou ne le configurez pas, le paramètre par défaut de l’utilisateur est appliqué.",
+            "tags": [
+                "L_PjPGSettingsForProject1",
+                "L_PjInterface",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\options\\interface"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PjPGSettingsForProject1"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Utiliser le contenu par défaut de Microsoft Project"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Utiliser un contenu personnalisé"
+                            }
+                        ],
+                        "valueName": "usedefaultxmlschema",
+                        "inputType": "dropdownList",
+                        "caption": "Contenu du Guide de projets",
+                        "id": "L_pjusedefaultxmlschema35"
+                    },
+                    {
+                        "valueName": "gbuixmlschemapath",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Fichier XML de contenu personnalisé :",
+                        "id": "L_PjGBUIXMLSchemaPath"
+                    }
+                ]
+            },
+            "name": "L_PjUseDefaultXMLSchema",
+            "displayName": "Contenu du Guide de projets",
+            "explainText": "Indique si le volet latéral affiche le contenu du Guide de projets fourni avec Project ou le contenu personnalisé conçu par votre organisation.\n\nSi vous activez ce paramètre, le contenu du Guide de projets est chargé à partir de l’emplacement spécifié.\n\nSi vous le désactivez ou ne le configurez pas, le paramètre par défaut de l’utilisateur est appliqué.",
+            "tags": [
+                "L_PjPGSettingsForProject1",
+                "L_PjInterface",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\options\\interface"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -5754,7 +5866,7 @@
             },
             "name": "L_VBAWarningsPolicy",
             "displayName": "Paramètres de notification de macro VBA",
-            "explainText": "Ce paramètre de stratégie contrôle l’avertissement des utilisateurs par les applications spécifiées lorsque des macros VBA (Visual Basic pour Applications) sont présentes.\n\nSi vous activez ce paramètre de stratégie, vous disposez de quatre options d’avertissement relatives aux macros :\n \n- Désactiver tous avec notification : l’application affiche la barre de confidentialité pour toutes les macros, signées ou non. Cette option applique la configuration par défaut dans Office.\n \n- Désactiver tous sauf les macros signées numériquement : l’application affiche la barre de confidentialité pour les macros signées numériquement, et permet aux utilisateurs de les activer ou de les laisser désactivées. Les macros non signées sont désactivées et les utilisateurs ne reçoivent pas de notification.\n \n- Désactiver tous sans notification : l’application désactive toutes les macros, signées ou non, et les utilisateurs ne reçoivent pas de notification.\n \n- Activer toutes les macros (non recommandé) : toutes les macros, signées ou non, sont activées. Cette option peut réduire la sécurité de manière significative en permettant l’exécution non détectée de code dangereux.\n \nSi vous désactivez ce paramètre de stratégie, le paramètre par défaut est « Désactiver tous avec notification ».\n \nSi vous ne configurez pas ce paramètre de stratégie, lors de l’ouverture de fichiers contenant des macros VBA dans les applications spécifiées, les macros sont désactivées, et la barre de confidentialité inclut un avertissement indiquant que les macros présentes ont été désactivées. Les utilisateurs peuvent inspecter et modifier les fichiers le cas échéant, mais ne peuvent pas utiliser les fonctionnalités désactivées. Celles-ci peuvent être activées en cliquant sur « Activer le contenu » dans la barre de confidentialité. Si l’utilisateur clique sur « Activer le contenu », le document est ajouté en tant que document approuvé.\n \nImportant : si l’option « Désactiver tous sauf les macros signées numériquement » est activée, les utilisateurs ne peuvent pas ouvrir les bases de données Access non signées.\n \nEn outre, Microsoft Office enregistre les certificats des éditeurs approuvés dans la banque des éditeurs approuvés d’Internet Explorer. Dans les versions précédentes de Microsoft Office, les informations relatives aux certificats des éditeurs approuvés (notamment, les empreintes de certificat) étaient enregistrées dans une banque d’éditeurs approuvés spéciale. Microsoft Office lit ces informations dans la banque d’éditeurs approuvés d’Office mais n’écrit aucune information dans cette banque.\n \nSi vous avez créé une liste des éditeurs approuvés dans une version précédente de Microsoft Office et effectué une mise à niveau vers Office, cette liste est toujours reconnue. Toutefois, les certificats d’éditeurs approuvés ajoutés à la liste sont enregistrés dans la banque des éditeurs approuvés d’Internet Explorer.",
+            "explainText": "Ce paramètre de stratégie contrôle l’avertissement des utilisateurs par les applications spécifiées lorsque des macros VBA (Visual Basic pour Applications) sont présentes.\n\nSi vous activez ce paramètre de stratégie, vous disposez de quatre options d’avertissement relatives aux macros :\n \n- Désactiver tous avec notification : l’application affiche la barre de confidentialité pour toutes les macros, signées ou non. Cette option applique la configuration par défaut dans Office.\n \n- Désactiver tous sauf les macros signées numériquement : l’application affiche la barre de confidentialité pour les macros signées numériquement, et permet aux utilisateurs de les activer ou de les laisser désactivées. Les macros non signées sont désactivées et les utilisateurs ne reçoivent pas de notification.\n\n- Désactiver tous sans notification : l’application désactive toutes les macros, signées ou non, et les utilisateurs ne reçoivent pas de notification.\n\n- Activer toutes les macros (non recommandé) : toutes les macros, signées ou non, sont activées. Cette option peut réduire la sécurité de manière significative en permettant l’exécution non détectée de code dangereux.\n\nSi vous désactivez ce paramètre de stratégie, le paramètre par défaut est « Désactiver tous avec notification ».\n\nSi vous ne configurez pas ce paramètre de stratégie, lors de l’ouverture de fichiers contenant des macros VBA dans les applications spécifiées, les macros sont désactivées, et la barre de confidentialité inclut un avertissement indiquant que les macros présentes ont été désactivées. Les utilisateurs peuvent inspecter et modifier les fichiers le cas échéant, mais ne peuvent pas utiliser les fonctionnalités désactivées. Celles-ci peuvent être activées en cliquant sur « Activer le contenu » dans la barre de confidentialité. Si l’utilisateur clique sur « Activer le contenu », le document est ajouté en tant que document approuvé.\n\nImportant : si l’option « Désactiver tous sauf les macros signées numériquement » est activée, les utilisateurs ne peuvent pas ouvrir les bases de données Access non signées.\n\nEn outre, Microsoft Office enregistre les certificats des éditeurs approuvés dans la banque des éditeurs approuvés d’Internet Explorer. Dans les versions précédentes de Microsoft Office, les informations relatives aux certificats des éditeurs approuvés (notamment, les empreintes de certificat) étaient enregistrées dans une banque d’éditeurs approuvés spéciale. Microsoft Office lit ces informations dans la banque d’éditeurs approuvés d’Office mais n’écrit aucune information dans cette banque.\n\nSi vous avez créé une liste des éditeurs approuvés dans une version précédente de Microsoft Office et effectué une mise à niveau vers Office, cette liste est toujours reconnue. Toutefois, les certificats d’éditeurs approuvés ajoutés à la liste sont enregistrés dans la banque des éditeurs approuvés d’Internet Explorer.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -5782,7 +5894,7 @@
                 }
             },
             "name": "L_RequirethatApplicationExtensionsaresigned",
-            "displayName":"Exiger la signature des compléments d'applications par un éditeur approuvé",
+            "displayName": "Exiger la signature des compléments d'applications par un éditeur approuvé",
             "explainText": "Ce paramètre de stratégie contrôle la signature numérique des compléments par un éditeur approuvé pour l’application spécifiée.\n \nSi vous activez ce paramètre de stratégie, l’application vérifie la signature numérique de chaque complément avant de le charger. Si un complément n’a pas de signature numérique, ou si la signature ne provient pas d’un éditeur approuvé, l’application désactive le complément et en informe l’utilisateur. Des certificats doivent être ajoutés à la liste des éditeurs approuvés si les compléments doivent être signés par un éditeur approuvé. Pour plus d’informations sur l’obtention et la distribution de certificats, consultez la page http://go.microsoft.com/fwlink/?LinkId=294922. Office 2016 enregistre les certificats des éditeurs approuvés dans la banque d’éditeurs approuvés d’Internet Explorer. Dans les versions précédentes de Microsoft Office, les informations relatives aux certificats des éditeurs approuvés (notamment, les empreintes de certificats) étaient enregistrées dans une banque d’éditeurs approuvés spéciale d’Office. Office 2016 lit encore ces informations dans la banque d’éditeurs approuvés d’Office, mais n’y écrit plus aucune information. Si vous avez créé une liste des éditeurs approuvés dans une version précédente d’Office et effectué une mise à niveau vers Office 2016, cette liste est toujours reconnue. En revanche, les certificats d’éditeurs approuvés qui ont été ajoutés à la liste sont enregistrés dans la banque d’éditeurs approuvés d’Internet Explorer. Pour obtenir plus d’informations sur les éditeurs approuvés, consultez le Kit de ressources d’Office.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l’application ne vérifie pas la signature numérique des compléments d’applications avant de les ouvrir. Le chargement d’un complément dangereux peut endommager les ordinateurs des utilisateurs ou compromettre la sécurité des données.",
             "tags": [
                 "L_TrustCenter",
@@ -5812,8 +5924,8 @@
                 }
             },
             "name": "L_DisableTrustBarNotificationforunsigned",
-            "displayName":"Désactiver la notification de la barre de confidentialité pour les compléments d'applications non signés et les bloquer",
-            "explainText":"Ce paramètre de stratégie détermine si l’application Office spécifiée envoie une notification à l’utilisateur lors du chargement des compléments d’applications non signés, ou si elle désactive automatiquement ces compléments sans notification. Ce paramètre de stratégie s’applique uniquement si vous activez le paramètre de stratégie « Exiger la signature des compléments d’applications par un éditeur approuvé », qui empêche l'utilisateur de modifier ce paramètre de stratégie.\n\nSi vous activez ce paramètre de stratégie, les applications désactivent automatiquement les compléments non signés sans en informer l’utilisateur.\n \nSi vous désactivez ce paramètre de stratégie et que la configuration de l’application exige la signature des compléments par un éditeur approuvé, les compléments non signés chargés par l’application sont désactivés et l’application affiche la barre de confidentialité en haut de la fenêtre active. La barre de confidentialité contient un message d’information relatif au complément non signé.\n\nSi vous ne configurez pas ce paramètre de stratégie, cela revient à le désactiver. Par ailleurs, les utilisateurs peuvent configurer cette condition dans la catégorie Compléments du Centre de gestion de la confidentialité pour l’application.",
+            "displayName": "Désactiver la notification de la barre de confidentialité pour les compléments d'applications non signés et les bloquer",
+            "explainText": "Ce paramètre de stratégie détermine si l’application Office spécifiée envoie une notification à l’utilisateur lors du chargement des compléments d’applications non signés, ou si elle désactive automatiquement ces compléments sans notification. Ce paramètre de stratégie s’applique uniquement si vous activez le paramètre de stratégie « Exiger la signature des compléments d’applications par un éditeur approuvé », qui empêche l'utilisateur de modifier ce paramètre de stratégie.\n\nSi vous activez ce paramètre de stratégie, les applications désactivent automatiquement les compléments non signés sans en informer l’utilisateur.\n \nSi vous désactivez ce paramètre de stratégie et que la configuration de l’application exige la signature des compléments par un éditeur approuvé, les compléments non signés chargés par l’application sont désactivés et l’application affiche la barre de confidentialité en haut de la fenêtre active. La barre de confidentialité contient un message d’information relatif au complément non signé.\n\nSi vous ne configurez pas ce paramètre de stratégie, cela revient à le désactiver. Par ailleurs, les utilisateurs peuvent configurer cette condition dans la catégorie Compléments du Centre de gestion de la confidentialité pour l’application.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -5883,6 +5995,1346 @@
             "application": "proj16",
             "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations",
             "valueName": "alllocationsdisabled"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Chemin d'accès :",
+                        "id": "L_Pathcolon"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Date :",
+                        "id": "L_Datecolon"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Description :",
+                        "id": "L_Descriptioncolon"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser les sous-dossiers :",
+                        "id": "L_Allowsubfolders"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc01",
+            "displayName": "Emplacement approuvé #1",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier un emplacement qui est utilisé comme source approuvée pour l’ouverture de fichiers dans cette application. Les fichiers présents dans les emplacements approuvés ne sont pas soumis à la validation de fichier, aux contrôles de contenu actif et au mode protégé. Les macros et le code de ces fichiers s’exécutent sans avertissement. Si vous modifiez ou ajoutez un emplacement, vérifiez qu’il est sécurisé, et que seuls les utilisateurs autorisés peuvent y ajouter des documents ou des fichiers.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un dossier, un chemin d’accès et une date pour lesquels l’application peut ouvrir sans avertissement des fichiers qui exécutent des macros. Si vous cochez la case « Autoriser les sous-dossiers », tous les sous-dossiers du dossier spécifié sont également approuvés.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'emplacement approuvé n'est pas spécifié.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Chemin d'accès :",
+                        "id": "L_pathcolon12"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Date :",
+                        "id": "L_datecolon13"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Description :",
+                        "id": "L_descriptioncolon14"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser les sous-dossiers :",
+                        "id": "L_allowsubfolders15"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc02",
+            "displayName": "Emplacement approuvé #2",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier un emplacement qui est utilisé comme source approuvée pour l’ouverture de fichiers dans cette application. Les fichiers présents dans les emplacements approuvés ne sont pas soumis à la validation de fichier, aux contrôles de contenu actif et au mode protégé. Les macros et le code de ces fichiers s’exécutent sans avertissement. Si vous modifiez ou ajoutez un emplacement, vérifiez qu’il est sécurisé, et que seuls les utilisateurs autorisés peuvent y ajouter des documents ou des fichiers.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un dossier, un chemin d’accès et une date pour lesquels l’application peut ouvrir sans avertissement des fichiers qui exécutent des macros. Si vous cochez la case « Autoriser les sous-dossiers », tous les sous-dossiers du dossier spécifié sont également approuvés.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'emplacement approuvé n'est pas spécifié.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location2"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Chemin d'accès :",
+                        "id": "L_pathcolon16"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Date :",
+                        "id": "L_datecolon17"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Description :",
+                        "id": "L_descriptioncolon18"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser les sous-dossiers :",
+                        "id": "L_allowsubfolders19"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc03",
+            "displayName": "Emplacement approuvé #3",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier un emplacement qui est utilisé comme source approuvée pour l’ouverture de fichiers dans cette application. Les fichiers présents dans les emplacements approuvés ne sont pas soumis à la validation de fichier, aux contrôles de contenu actif et au mode protégé. Les macros et le code de ces fichiers s’exécutent sans avertissement. Si vous modifiez ou ajoutez un emplacement, vérifiez qu’il est sécurisé, et que seuls les utilisateurs autorisés peuvent y ajouter des documents ou des fichiers.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un dossier, un chemin d’accès et une date pour lesquels l’application peut ouvrir sans avertissement des fichiers qui exécutent des macros. Si vous cochez la case « Autoriser les sous-dossiers », tous les sous-dossiers du dossier spécifié sont également approuvés.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'emplacement approuvé n'est pas spécifié.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location3"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Chemin d'accès :",
+                        "id": "L_pathcolon20"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Date :",
+                        "id": "L_datecolon21"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Description :",
+                        "id": "L_descriptioncolon22"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser les sous-dossiers :",
+                        "id": "L_allowsubfolders23"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc04",
+            "displayName": "Emplacement approuvé #4",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier un emplacement qui est utilisé comme source approuvée pour l’ouverture de fichiers dans cette application. Les fichiers présents dans les emplacements approuvés ne sont pas soumis à la validation de fichier, aux contrôles de contenu actif et au mode protégé. Les macros et le code de ces fichiers s’exécutent sans avertissement. Si vous modifiez ou ajoutez un emplacement, vérifiez qu’il est sécurisé, et que seuls les utilisateurs autorisés peuvent y ajouter des documents ou des fichiers.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un dossier, un chemin d’accès et une date pour lesquels l’application peut ouvrir sans avertissement des fichiers qui exécutent des macros. Si vous cochez la case « Autoriser les sous-dossiers », tous les sous-dossiers du dossier spécifié sont également approuvés.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'emplacement approuvé n'est pas spécifié.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location4"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Chemin d'accès :",
+                        "id": "L_pathcolon24"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Date :",
+                        "id": "L_datecolon25"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Description :",
+                        "id": "L_descriptioncolon26"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser les sous-dossiers :",
+                        "id": "L_allowsubfolders27"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc05",
+            "displayName": "Emplacement approuvé #5",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier un emplacement qui est utilisé comme source approuvée pour l’ouverture de fichiers dans cette application. Les fichiers présents dans les emplacements approuvés ne sont pas soumis à la validation de fichier, aux contrôles de contenu actif et au mode protégé. Les macros et le code de ces fichiers s’exécutent sans avertissement. Si vous modifiez ou ajoutez un emplacement, vérifiez qu’il est sécurisé, et que seuls les utilisateurs autorisés peuvent y ajouter des documents ou des fichiers.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un dossier, un chemin d’accès et une date pour lesquels l’application peut ouvrir sans avertissement des fichiers qui exécutent des macros. Si vous cochez la case « Autoriser les sous-dossiers », tous les sous-dossiers du dossier spécifié sont également approuvés.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'emplacement approuvé n'est pas spécifié.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location5"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Chemin d'accès :",
+                        "id": "L_pathcolon28"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Date :",
+                        "id": "L_datecolon29"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Description :",
+                        "id": "L_descriptioncolon30"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser les sous-dossiers :",
+                        "id": "L_allowsubfolders31"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc06",
+            "displayName": "Emplacement approuvé #6",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier un emplacement qui est utilisé comme source approuvée pour l’ouverture de fichiers dans cette application. Les fichiers présents dans les emplacements approuvés ne sont pas soumis à la validation de fichier, aux contrôles de contenu actif et au mode protégé. Les macros et le code de ces fichiers s’exécutent sans avertissement. Si vous modifiez ou ajoutez un emplacement, vérifiez qu’il est sécurisé, et que seuls les utilisateurs autorisés peuvent y ajouter des documents ou des fichiers.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un dossier, un chemin d’accès et une date pour lesquels l’application peut ouvrir sans avertissement des fichiers qui exécutent des macros. Si vous cochez la case « Autoriser les sous-dossiers », tous les sous-dossiers du dossier spécifié sont également approuvés.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'emplacement approuvé n'est pas spécifié.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location6"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Chemin d'accès :",
+                        "id": "L_pathcolon32"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Date :",
+                        "id": "L_datecolon33"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Description :",
+                        "id": "L_descriptioncolon34"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser les sous-dossiers :",
+                        "id": "L_allowsubfolders35"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc07",
+            "displayName": "Emplacement approuvé #7",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier un emplacement qui est utilisé comme source approuvée pour l’ouverture de fichiers dans cette application. Les fichiers présents dans les emplacements approuvés ne sont pas soumis à la validation de fichier, aux contrôles de contenu actif et au mode protégé. Les macros et le code de ces fichiers s’exécutent sans avertissement. Si vous modifiez ou ajoutez un emplacement, vérifiez qu’il est sécurisé, et que seuls les utilisateurs autorisés peuvent y ajouter des documents ou des fichiers.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un dossier, un chemin d’accès et une date pour lesquels l’application peut ouvrir sans avertissement des fichiers qui exécutent des macros. Si vous cochez la case « Autoriser les sous-dossiers », tous les sous-dossiers du dossier spécifié sont également approuvés.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'emplacement approuvé n'est pas spécifié.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location7"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Chemin d'accès :",
+                        "id": "L_pathcolon36"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Date :",
+                        "id": "L_datecolon37"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Description :",
+                        "id": "L_descriptioncolon38"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser les sous-dossiers :",
+                        "id": "L_allowsubfolders39"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc08",
+            "displayName": "Emplacement approuvé #8",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier un emplacement qui est utilisé comme source approuvée pour l’ouverture de fichiers dans cette application. Les fichiers présents dans les emplacements approuvés ne sont pas soumis à la validation de fichier, aux contrôles de contenu actif et au mode protégé. Les macros et le code de ces fichiers s’exécutent sans avertissement. Si vous modifiez ou ajoutez un emplacement, vérifiez qu’il est sécurisé, et que seuls les utilisateurs autorisés peuvent y ajouter des documents ou des fichiers.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un dossier, un chemin d’accès et une date pour lesquels l’application peut ouvrir sans avertissement des fichiers qui exécutent des macros. Si vous cochez la case « Autoriser les sous-dossiers », tous les sous-dossiers du dossier spécifié sont également approuvés.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'emplacement approuvé n'est pas spécifié.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location8"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Chemin d'accès :",
+                        "id": "L_pathcolon40"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Date :",
+                        "id": "L_datecolon41"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Description :",
+                        "id": "L_descriptioncolon42"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser les sous-dossiers :",
+                        "id": "L_allowsubfolders43"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc09",
+            "displayName": "Emplacement approuvé #9",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier un emplacement qui est utilisé comme source approuvée pour l’ouverture de fichiers dans cette application. Les fichiers présents dans les emplacements approuvés ne sont pas soumis à la validation de fichier, aux contrôles de contenu actif et au mode protégé. Les macros et le code de ces fichiers s’exécutent sans avertissement. Si vous modifiez ou ajoutez un emplacement, vérifiez qu’il est sécurisé, et que seuls les utilisateurs autorisés peuvent y ajouter des documents ou des fichiers.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un dossier, un chemin d’accès et une date pour lesquels l’application peut ouvrir sans avertissement des fichiers qui exécutent des macros. Si vous cochez la case « Autoriser les sous-dossiers », tous les sous-dossiers du dossier spécifié sont également approuvés.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'emplacement approuvé n'est pas spécifié.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location9"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Chemin d'accès :",
+                        "id": "L_pathcolon44"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Date :",
+                        "id": "L_datecolon45"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Description :",
+                        "id": "L_descriptioncolon46"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser les sous-dossiers :",
+                        "id": "L_allowsubfolders47"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc10",
+            "displayName": "Emplacement approuvé #10",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier un emplacement qui est utilisé comme source approuvée pour l’ouverture de fichiers dans cette application. Les fichiers présents dans les emplacements approuvés ne sont pas soumis à la validation de fichier, aux contrôles de contenu actif et au mode protégé. Les macros et le code de ces fichiers s’exécutent sans avertissement. Si vous modifiez ou ajoutez un emplacement, vérifiez qu’il est sécurisé, et que seuls les utilisateurs autorisés peuvent y ajouter des documents ou des fichiers.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un dossier, un chemin d’accès et une date pour lesquels l’application peut ouvrir sans avertissement des fichiers qui exécutent des macros. Si vous cochez la case « Autoriser les sous-dossiers », tous les sous-dossiers du dossier spécifié sont également approuvés.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'emplacement approuvé n'est pas spécifié.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location10"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Chemin d'accès :",
+                        "id": "L_pathcolon48"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Date :",
+                        "id": "L_datecolon49"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Description :",
+                        "id": "L_descriptioncolon50"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser les sous-dossiers :",
+                        "id": "L_allowsubfolders51"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc11",
+            "displayName": "Emplacement approuvé #11",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier un emplacement qui est utilisé comme source approuvée pour l’ouverture de fichiers dans cette application. Les fichiers présents dans les emplacements approuvés ne sont pas soumis à la validation de fichier, aux contrôles de contenu actif et au mode protégé. Les macros et le code de ces fichiers s’exécutent sans avertissement. Si vous modifiez ou ajoutez un emplacement, vérifiez qu’il est sécurisé, et que seuls les utilisateurs autorisés peuvent y ajouter des documents ou des fichiers.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un dossier, un chemin d’accès et une date pour lesquels l’application peut ouvrir sans avertissement des fichiers qui exécutent des macros. Si vous cochez la case « Autoriser les sous-dossiers », tous les sous-dossiers du dossier spécifié sont également approuvés.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'emplacement approuvé n'est pas spécifié.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location11"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Chemin d'accès :",
+                        "id": "L_pathcolon52"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Date :",
+                        "id": "L_datecolon53"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Description :",
+                        "id": "L_descriptioncolon54"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser les sous-dossiers :",
+                        "id": "L_allowsubfolders55"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc12",
+            "displayName": "Emplacement approuvé #12",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier un emplacement qui est utilisé comme source approuvée pour l’ouverture de fichiers dans cette application. Les fichiers présents dans les emplacements approuvés ne sont pas soumis à la validation de fichier, aux contrôles de contenu actif et au mode protégé. Les macros et le code de ces fichiers s’exécutent sans avertissement. Si vous modifiez ou ajoutez un emplacement, vérifiez qu’il est sécurisé, et que seuls les utilisateurs autorisés peuvent y ajouter des documents ou des fichiers.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un dossier, un chemin d’accès et une date pour lesquels l’application peut ouvrir sans avertissement des fichiers qui exécutent des macros. Si vous cochez la case « Autoriser les sous-dossiers », tous les sous-dossiers du dossier spécifié sont également approuvés.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'emplacement approuvé n'est pas spécifié.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location12"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Chemin d'accès :",
+                        "id": "L_pathcolon56"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Date :",
+                        "id": "L_datecolon57"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Description :",
+                        "id": "L_descriptioncolon58"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser les sous-dossiers :",
+                        "id": "L_allowsubfolders59"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc13",
+            "displayName": "Emplacement approuvé #13",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier un emplacement qui est utilisé comme source approuvée pour l’ouverture de fichiers dans cette application. Les fichiers présents dans les emplacements approuvés ne sont pas soumis à la validation de fichier, aux contrôles de contenu actif et au mode protégé. Les macros et le code de ces fichiers s’exécutent sans avertissement. Si vous modifiez ou ajoutez un emplacement, vérifiez qu’il est sécurisé, et que seuls les utilisateurs autorisés peuvent y ajouter des documents ou des fichiers.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un dossier, un chemin d’accès et une date pour lesquels l’application peut ouvrir sans avertissement des fichiers qui exécutent des macros. Si vous cochez la case « Autoriser les sous-dossiers », tous les sous-dossiers du dossier spécifié sont également approuvés.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'emplacement approuvé n'est pas spécifié.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location13"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Chemin d'accès :",
+                        "id": "L_pathcolon60"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Date :",
+                        "id": "L_datecolon61"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Description :",
+                        "id": "L_descriptioncolon62"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser les sous-dossiers :",
+                        "id": "L_allowsubfolders63"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc14",
+            "displayName": "Emplacement approuvé #14",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier un emplacement qui est utilisé comme source approuvée pour l’ouverture de fichiers dans cette application. Les fichiers présents dans les emplacements approuvés ne sont pas soumis à la validation de fichier, aux contrôles de contenu actif et au mode protégé. Les macros et le code de ces fichiers s’exécutent sans avertissement. Si vous modifiez ou ajoutez un emplacement, vérifiez qu’il est sécurisé, et que seuls les utilisateurs autorisés peuvent y ajouter des documents ou des fichiers.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un dossier, un chemin d’accès et une date pour lesquels l’application peut ouvrir sans avertissement des fichiers qui exécutent des macros. Si vous cochez la case « Autoriser les sous-dossiers », tous les sous-dossiers du dossier spécifié sont également approuvés.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'emplacement approuvé n'est pas spécifié.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location14"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Chemin d'accès :",
+                        "id": "L_pathcolon64"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Date :",
+                        "id": "L_datecolon65"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Description :",
+                        "id": "L_descriptioncolon66"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser les sous-dossiers :",
+                        "id": "L_allowsubfolders67"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc15",
+            "displayName": "Emplacement approuvé #15",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier un emplacement qui est utilisé comme source approuvée pour l’ouverture de fichiers dans cette application. Les fichiers présents dans les emplacements approuvés ne sont pas soumis à la validation de fichier, aux contrôles de contenu actif et au mode protégé. Les macros et le code de ces fichiers s’exécutent sans avertissement. Si vous modifiez ou ajoutez un emplacement, vérifiez qu’il est sécurisé, et que seuls les utilisateurs autorisés peuvent y ajouter des documents ou des fichiers.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un dossier, un chemin d’accès et une date pour lesquels l’application peut ouvrir sans avertissement des fichiers qui exécutent des macros. Si vous cochez la case « Autoriser les sous-dossiers », tous les sous-dossiers du dossier spécifié sont également approuvés.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'emplacement approuvé n'est pas spécifié.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location15"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Chemin d'accès :",
+                        "id": "L_pathcolon68"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Date :",
+                        "id": "L_datecolon69"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Description :",
+                        "id": "L_descriptioncolon70"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser les sous-dossiers :",
+                        "id": "L_allowsubfolders71"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc16",
+            "displayName": "Emplacement approuvé #16",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier un emplacement qui est utilisé comme source approuvée pour l’ouverture de fichiers dans cette application. Les fichiers présents dans les emplacements approuvés ne sont pas soumis à la validation de fichier, aux contrôles de contenu actif et au mode protégé. Les macros et le code de ces fichiers s’exécutent sans avertissement. Si vous modifiez ou ajoutez un emplacement, vérifiez qu’il est sécurisé, et que seuls les utilisateurs autorisés peuvent y ajouter des documents ou des fichiers.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un dossier, un chemin d’accès et une date pour lesquels l’application peut ouvrir sans avertissement des fichiers qui exécutent des macros. Si vous cochez la case « Autoriser les sous-dossiers », tous les sous-dossiers du dossier spécifié sont également approuvés.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'emplacement approuvé n'est pas spécifié.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location16"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Chemin d'accès :",
+                        "id": "L_pathcolon72"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Date :",
+                        "id": "L_datecolon73"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Description :",
+                        "id": "L_descriptioncolon74"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser les sous-dossiers :",
+                        "id": "L_allowsubfolders75"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc17",
+            "displayName": "Emplacement approuvé #17",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier un emplacement qui est utilisé comme source approuvée pour l’ouverture de fichiers dans cette application. Les fichiers présents dans les emplacements approuvés ne sont pas soumis à la validation de fichier, aux contrôles de contenu actif et au mode protégé. Les macros et le code de ces fichiers s’exécutent sans avertissement. Si vous modifiez ou ajoutez un emplacement, vérifiez qu’il est sécurisé, et que seuls les utilisateurs autorisés peuvent y ajouter des documents ou des fichiers.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un dossier, un chemin d’accès et une date pour lesquels l’application peut ouvrir sans avertissement des fichiers qui exécutent des macros. Si vous cochez la case « Autoriser les sous-dossiers », tous les sous-dossiers du dossier spécifié sont également approuvés.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'emplacement approuvé n'est pas spécifié.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location17"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Chemin d'accès :",
+                        "id": "L_pathcolon76"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Date :",
+                        "id": "L_datecolon77"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Description :",
+                        "id": "L_descriptioncolon78"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser les sous-dossiers :",
+                        "id": "L_allowsubfolders79"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc18",
+            "displayName": "Emplacement approuvé #18",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier un emplacement qui est utilisé comme source approuvée pour l’ouverture de fichiers dans cette application. Les fichiers présents dans les emplacements approuvés ne sont pas soumis à la validation de fichier, aux contrôles de contenu actif et au mode protégé. Les macros et le code de ces fichiers s’exécutent sans avertissement. Si vous modifiez ou ajoutez un emplacement, vérifiez qu’il est sécurisé, et que seuls les utilisateurs autorisés peuvent y ajouter des documents ou des fichiers.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un dossier, un chemin d’accès et une date pour lesquels l’application peut ouvrir sans avertissement des fichiers qui exécutent des macros. Si vous cochez la case « Autoriser les sous-dossiers », tous les sous-dossiers du dossier spécifié sont également approuvés.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'emplacement approuvé n'est pas spécifié.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location18"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Chemin d'accès :",
+                        "id": "L_pathcolon80"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Date :",
+                        "id": "L_datecolon81"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Description :",
+                        "id": "L_descriptioncolon82"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser les sous-dossiers :",
+                        "id": "L_allowsubfolders83"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc19",
+            "displayName": "Emplacement approuvé #19",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier un emplacement qui est utilisé comme source approuvée pour l’ouverture de fichiers dans cette application. Les fichiers présents dans les emplacements approuvés ne sont pas soumis à la validation de fichier, aux contrôles de contenu actif et au mode protégé. Les macros et le code de ces fichiers s’exécutent sans avertissement. Si vous modifiez ou ajoutez un emplacement, vérifiez qu’il est sécurisé, et que seuls les utilisateurs autorisés peuvent y ajouter des documents ou des fichiers.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un dossier, un chemin d’accès et une date pour lesquels l’application peut ouvrir sans avertissement des fichiers qui exécutent des macros. Si vous cochez la case « Autoriser les sous-dossiers », tous les sous-dossiers du dossier spécifié sont également approuvés.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'emplacement approuvé n'est pas spécifié.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location19"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Chemin d'accès :",
+                        "id": "L_pathcolon84"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Date :",
+                        "id": "L_datecolon85"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Description :",
+                        "id": "L_descriptioncolon86"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser les sous-dossiers :",
+                        "id": "L_allowsubfolders87"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc20",
+            "displayName": "Emplacement approuvé #20",
+            "explainText": "Ce paramètre de stratégie vous permet de spécifier un emplacement qui est utilisé comme source approuvée pour l’ouverture de fichiers dans cette application. Les fichiers présents dans les emplacements approuvés ne sont pas soumis à la validation de fichier, aux contrôles de contenu actif et au mode protégé. Les macros et le code de ces fichiers s’exécutent sans avertissement. Si vous modifiez ou ajoutez un emplacement, vérifiez qu’il est sécurisé, et que seuls les utilisateurs autorisés peuvent y ajouter des documents ou des fichiers.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier un dossier, un chemin d’accès et une date pour lesquels l’application peut ouvrir sans avertissement des fichiers qui exécutent des macros. Si vous cochez la case « Autoriser les sous-dossiers », tous les sous-dossiers du dossier spécifié sont également approuvés.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'emplacement approuvé n'est pas spécifié.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location20"
         },
         {
             "parentCategory": {

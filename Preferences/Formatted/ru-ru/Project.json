@@ -1935,7 +1935,7 @@
             },
             "name": "L_PjProjectScreentips",
             "displayName": "Всплывающие подсказки",
-            "explainText": "Отображает подсказки для отрезков диаграммы Ганта и заголовков полей, включая даты для единиц временной шкалы, а также полное содержимое ячеек, если ширина ячейки недостаточна для полного отображения текста на листе и в представлениях сетевого графика.\n\nЕсли этот параметр включен, подсказки для отрезков диаграммы Ганта и заголовков полей отображаются.\n\nЕсли этот параметр отключен или не настроен, используется заданное по умолчанию значение для пользователя.",
+            "explainText": "Отображает подсказки для отрезков диаграммы Ганта и заголовков полей, включая даты для единиц временной шкалы, а также полное содержимое ячеек, если ширина ячейки недостаточна для полного отображения текста на листе и в представлениях сетевого графика.\n\nЕсли этот параметр включен, для отрезков диаграммы Ганта и заголовков полей отображаются подсказки.\n\nЕсли этот параметр отключен или не настроен, используется заданное по умолчанию значение для пользователя.",
             "tags": [
                 "L_PjShow",
                 "L_PjView",
@@ -5328,6 +5328,118 @@
         },
         {
             "parentCategory": {
+                "ref": "L_PjPGSettingsForProject1"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Стандартная страница Microsoft Project"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Страница пользователя"
+                            }
+                        ],
+                        "valueName": "usedefaultstartpage",
+                        "inputType": "dropdownList",
+                        "caption": "Страница функциональных возможностей и макета консультанта",
+                        "id": "L_pjusedefaultstartpage34"
+                    },
+                    {
+                        "valueName": "gbuidefaultstartpageurl",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "URL-адрес: ",
+                        "id": "L_PjGBUIDefaultPageURL"
+                    }
+                ]
+            },
+            "name": "L_PjUseDefaultStartPage",
+            "displayName": "Страница функциональных возможностей и макета консультанта",
+            "explainText": "Выберите для отображения на боковой панели навигации консультант по умолчанию или настроенный консультант, разработанный в вашей организации.\n\nЕсли этот параметр включен, при открытии консультанта будет отображаться указанный консультант.\n\nЕсли этот параметр отключен или не настроен, используется заданное по умолчанию значение для пользователя.",
+            "tags": [
+                "L_PjPGSettingsForProject1",
+                "L_PjInterface",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\options\\interface"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_PjPGSettingsForProject1"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Стандартное содержимое Microsoft Project"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Содержимое, разработанное пользователем"
+                            }
+                        ],
+                        "valueName": "usedefaultxmlschema",
+                        "inputType": "dropdownList",
+                        "caption": "Содержимое консультанта",
+                        "id": "L_pjusedefaultxmlschema35"
+                    },
+                    {
+                        "valueName": "gbuixmlschemapath",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "XML-файл пользовательского содержимого:",
+                        "id": "L_PjGBUIXMLSchemaPath"
+                    }
+                ]
+            },
+            "name": "L_PjUseDefaultXMLSchema",
+            "displayName": "Содержимое консультанта",
+            "explainText": "Указывает для отображения на боковой панели навигации контент консультанта, поставляемый с приложением Project, или настроенный контент, разработанный в вашей организации.\n\nЕсли этот параметр включен, контент для консультанта загружается из указанного расположения.\n\nЕсли этот параметр отключен или не настроен, используется заданное по умолчанию значение для пользователя.",
+            "tags": [
+                "L_PjPGSettingsForProject1",
+                "L_PjInterface",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\options\\interface"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -5754,7 +5866,7 @@
             },
             "name": "L_VBAWarningsPolicy",
             "displayName": "Параметры уведомления макросов VBA",
-            "explainText": "Этот параметр политики определяет вид предупреждений, отображаемых указанными приложениями в случае наличия макросов Visual Basic для приложений (VBA).\n\nПри включении данного параметра политики можно выбрать способ предупреждения пользователя о макросах из следующих вариантов.\n\n- Отключить все с уведомлением. Приложение отобразит панель безопасности для всех макросов, подписанных и неподписанных. Это значение параметра используется в Office по умолчанию.\n\n- Отключить все, кроме макросов с цифровой подписью. Приложение отобразит панель безопасности для макросов с цифровой подписью, предоставляя пользователям возможность включить их или оставить отключенными. Любые неподписанные макросы отключаются без уведомления.\n\n- Отключить все без уведомления. Приложение отключает без уведомления все макросы, подписанные и неподписанные.\n\n- Включить все макросы (не рекомендуется). Все макросы, подписанные и неподписанные, включены. Выбор этого варианта может существенно снизить уровень безопасности, так как позволяет незаметно запустить опасный код.\n\nЕсли этот параметр политики отключен, по умолчанию будет использоваться вариант \"Отключить все с уведомлением\".\n\nЕсли этот параметр политики не настроен, то при открытии в указанных приложениях файлов, содержащих макросы VBA, эти файлы будут открываться с отключенными макросами, но приложение будет отображать панель безопасности с предупреждением о том, что макросы имеются и отключены. Пользователи смогут просмотреть и изменить соответствующие файлы, но использовать отключенные функции будет невозможно до тех пор, пока они не будут включены командой \"Включить содержимое\" на панели безопасности. Если пользователь нажмет кнопку \"Включить содержимое\", документ будет добавлен как надежный.\n\nВажно! Если выбран параметр \"Отключить все, кроме макросов с цифровой подписью\", пользователи не смогут открыть неподписанные базы данных Access.\n\nКроме того, обратите внимание на то, что в Microsoft Office сертификаты находятся в хранилище надежных издателей Internet Explorer. В предыдущих версиях Microsoft Office сведения о сертификатах надежных издателей (в частности, цифровые отпечатки сертификатов) находились в специальном хранилище надежных издателей Office. В Microsoft Office все еще поддерживается чтение сведений о сертификатах из хранилища надежных издателей Office, но новые сведения туда более не добавляются.\n\nТаким образом, если вы создали список надежных издателей в предыдущей версии Microsoft Office, а затем выполнили обновление до Office, прежний список надежных издателей все еще будет учитываться. Однако все новые сертификаты, добавляемые в список, будут помещены в хранилище надежных издателей Internet Explorer.",
+            "explainText": "Данный параметр политики определяет вид предупреждений, отображаемых в случае наличия макросов Visual Basic для приложений (VBA).\n\nПри включении данного параметра политики можно выбрать вид предупреждения о макросах из следующих четырех вариантов:\n \n– Отключить все с уведомлением. Приложение отобразит панель безопасности для всех макросов, подписанных и неподписанных. Это значение параметра используется в Office по умолчанию.\n \n– Отключить все, кроме макросов с цифровой подписью. Приложение отобразит панель безопасности для макросов с цифровой подписью, позволяя пользователям включить их или оставить отключенными. Любые неподписанные макросы отключаются без уведомления.\n \n– Отключить все без уведомления. Приложение отключает без уведомления все макросы, подписанные и неподписанные.\n \n– Включить все макросы (не рекомендуется). Все макросы, подписанные и неподписанные, включены. Выбор этого варианта может существенно снизить уровень безопасности, так как позволяет незаметно запустить опасный код.\n \nЕсли этот параметр политики отключен, по умолчанию будет использоваться вариант \"Отключить все с уведомлением\".\n \nЕсли этот параметр политики не настроен, то при открытии в указанных приложениях файлов, содержащих макросы VBA, эти файлы будут открываться с отключенными макросами, но приложение будет отображать панель безопасности с предупреждением о том, что макросы имеются и отключены. Пользователи смогут посмотреть и изменить соответствующие файлы, но использовать отключенные функции будет невозможно до тех пор, пока они не будут включены командой \"Включить содержимое\" на панели безопасности. После того как пользователь выберет \"Включить содержимое\", документ будет добавлен в список надежных документов.\n \nВажно! Если выбран параметр \"Отключить все, кроме макросов с цифровой подписью\", пользователи не смогут открыть неподписанные базы данных Access.\n \nКроме того, обратите внимание на то, что в Microsoft Office сертификаты находятся в хранилище надежных издателей Internet Explorer. В предыдущих версиях Microsoft Office сведения о сертификатах надежных издателей (в частности, цифровые отпечатки сертификатов) находились в специальном хранилище надежных издателей Office. В Microsoft Office все еще поддерживается чтение сведений о сертификатах из хранилища надежных издателей Office, но новые сведения туда более не добавляются.\n \nТаким образом, если список надежных издателей был создан в предыдущей версии Microsoft Office, а затем произведено обновление до Office, прежний список надежных издателей все еще будет учитываться. Однако все новые сертификаты, добавляемые в список, будут помещены в хранилище надежных издателей Internet Explorer.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -5883,6 +5995,1346 @@
             "application": "proj16",
             "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations",
             "valueName": "alllocationsdisabled"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Путь:",
+                        "id": "L_Pathcolon"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Дата:",
+                        "id": "L_Datecolon"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Описание:",
+                        "id": "L_Descriptioncolon"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить вложенные папки:",
+                        "id": "L_Allowsubfolders"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc01",
+            "displayName": "Надежное расположение 1",
+            "explainText": "Данный параметр политики позволяет указать расположение, которое используется как надежный источник для открытия файлов в приложении. К файлам в надежных расположениях не применяются проверка файлов, проверки активного содержимого и режим защищенного просмотра. Макросы и код в этих файлах будут выполняться без вывода предупреждений для пользователя. При изменении или добавлении расположения необходимо убедиться, что новое расположение защищено и только пользователи с подходящими разрешениями могут добавлять в него документы или файлы.\n\nЕсли включить этот параметр политики, можно указать расположение папки, путь и дату, начиная с которой приложение может без предупреждения открывать файлы, в которых запускаются макросы. Если установлен флажок \"Разрешить вложенные папки\", то все вложенные папки в указанной папке также будут считаться надежными расположениями.\n\nЕсли этот параметр политики отключен или не настроен, надежное расположение не будет указано.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Путь:",
+                        "id": "L_pathcolon12"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Дата:",
+                        "id": "L_datecolon13"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Описание:",
+                        "id": "L_descriptioncolon14"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить вложенные папки:",
+                        "id": "L_allowsubfolders15"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc02",
+            "displayName": "Надежное расположение 2",
+            "explainText": "Данный параметр политики позволяет указать расположение, которое используется как надежный источник для открытия файлов в приложении. К файлам в надежных расположениях не применяются проверка файлов, проверки активного содержимого и режим защищенного просмотра. Макросы и код в этих файлах будут выполняться без вывода предупреждений для пользователя. При изменении или добавлении расположения необходимо убедиться, что новое расположение защищено и только пользователи с подходящими разрешениями могут добавлять в него документы или файлы.\n\nЕсли включить этот параметр политики, можно указать расположение папки, путь и дату, начиная с которой приложение может без предупреждения открывать файлы, в которых запускаются макросы. Если установлен флажок \"Разрешить вложенные папки\", то все вложенные папки в указанной папке также будут считаться надежными расположениями.\n\nЕсли этот параметр политики отключен или не настроен, надежное расположение не будет указано.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location2"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Путь:",
+                        "id": "L_pathcolon16"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Дата:",
+                        "id": "L_datecolon17"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Описание:",
+                        "id": "L_descriptioncolon18"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить вложенные папки:",
+                        "id": "L_allowsubfolders19"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc03",
+            "displayName": "Надежное расположение 3",
+            "explainText": "Данный параметр политики позволяет указать расположение, которое используется как надежный источник для открытия файлов в приложении. К файлам в надежных расположениях не применяются проверка файлов, проверки активного содержимого и режим защищенного просмотра. Макросы и код в этих файлах будут выполняться без вывода предупреждений для пользователя. При изменении или добавлении расположения необходимо убедиться, что новое расположение защищено и только пользователи с подходящими разрешениями могут добавлять в него документы или файлы.\n\nЕсли включить этот параметр политики, можно указать расположение папки, путь и дату, начиная с которой приложение может без предупреждения открывать файлы, в которых запускаются макросы. Если установлен флажок \"Разрешить вложенные папки\", то все вложенные папки в указанной папке также будут считаться надежными расположениями.\n\nЕсли этот параметр политики отключен или не настроен, надежное расположение не будет указано.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location3"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Путь:",
+                        "id": "L_pathcolon20"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Дата:",
+                        "id": "L_datecolon21"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Описание:",
+                        "id": "L_descriptioncolon22"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить вложенные папки:",
+                        "id": "L_allowsubfolders23"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc04",
+            "displayName": "Надежное расположение 4",
+            "explainText": "Данный параметр политики позволяет указать расположение, которое используется как надежный источник для открытия файлов в приложении. К файлам в надежных расположениях не применяются проверка файлов, проверки активного содержимого и режим защищенного просмотра. Макросы и код в этих файлах будут выполняться без вывода предупреждений для пользователя. При изменении или добавлении расположения необходимо убедиться, что новое расположение защищено и только пользователи с подходящими разрешениями могут добавлять в него документы или файлы.\n\nЕсли включить этот параметр политики, можно указать расположение папки, путь и дату, начиная с которой приложение может без предупреждения открывать файлы, в которых запускаются макросы. Если установлен флажок \"Разрешить вложенные папки\", то все вложенные папки в указанной папке также будут считаться надежными расположениями.\n\nЕсли этот параметр политики отключен или не настроен, надежное расположение не будет указано.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location4"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Путь:",
+                        "id": "L_pathcolon24"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Дата:",
+                        "id": "L_datecolon25"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Описание:",
+                        "id": "L_descriptioncolon26"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить вложенные папки:",
+                        "id": "L_allowsubfolders27"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc05",
+            "displayName": "Надежное расположение 5",
+            "explainText": "Данный параметр политики позволяет указать расположение, которое используется как надежный источник для открытия файлов в приложении. К файлам в надежных расположениях не применяются проверка файлов, проверки активного содержимого и режим защищенного просмотра. Макросы и код в этих файлах будут выполняться без вывода предупреждений для пользователя. При изменении или добавлении расположения необходимо убедиться, что новое расположение защищено и только пользователи с подходящими разрешениями могут добавлять в него документы или файлы.\n\nЕсли включить этот параметр политики, можно указать расположение папки, путь и дату, начиная с которой приложение может без предупреждения открывать файлы, в которых запускаются макросы. Если установлен флажок \"Разрешить вложенные папки\", то все вложенные папки в указанной папке также будут считаться надежными расположениями.\n\nЕсли этот параметр политики отключен или не настроен, надежное расположение не будет указано.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location5"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Путь:",
+                        "id": "L_pathcolon28"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Дата:",
+                        "id": "L_datecolon29"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Описание:",
+                        "id": "L_descriptioncolon30"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить вложенные папки:",
+                        "id": "L_allowsubfolders31"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc06",
+            "displayName": "Надежное расположение 6",
+            "explainText": "Данный параметр политики позволяет указать расположение, которое используется как надежный источник для открытия файлов в приложении. К файлам в надежных расположениях не применяются проверка файлов, проверки активного содержимого и режим защищенного просмотра. Макросы и код в этих файлах будут выполняться без вывода предупреждений для пользователя. При изменении или добавлении расположения необходимо убедиться, что новое расположение защищено и только пользователи с подходящими разрешениями могут добавлять в него документы или файлы.\n\nЕсли включить этот параметр политики, можно указать расположение папки, путь и дату, начиная с которой приложение может без предупреждения открывать файлы, в которых запускаются макросы. Если установлен флажок \"Разрешить вложенные папки\", то все вложенные папки в указанной папке также будут считаться надежными расположениями.\n\nЕсли этот параметр политики отключен или не настроен, надежное расположение не будет указано.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location6"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Путь:",
+                        "id": "L_pathcolon32"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Дата:",
+                        "id": "L_datecolon33"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Описание:",
+                        "id": "L_descriptioncolon34"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить вложенные папки:",
+                        "id": "L_allowsubfolders35"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc07",
+            "displayName": "Надежное расположение 7",
+            "explainText": "Данный параметр политики позволяет указать расположение, которое используется как надежный источник для открытия файлов в приложении. К файлам в надежных расположениях не применяются проверка файлов, проверки активного содержимого и режим защищенного просмотра. Макросы и код в этих файлах будут выполняться без вывода предупреждений для пользователя. При изменении или добавлении расположения необходимо убедиться, что новое расположение защищено и только пользователи с подходящими разрешениями могут добавлять в него документы или файлы.\n\nЕсли включить этот параметр политики, можно указать расположение папки, путь и дату, начиная с которой приложение может без предупреждения открывать файлы, в которых запускаются макросы. Если установлен флажок \"Разрешить вложенные папки\", то все вложенные папки в указанной папке также будут считаться надежными расположениями.\n\nЕсли этот параметр политики отключен или не настроен, надежное расположение не будет указано.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location7"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Путь:",
+                        "id": "L_pathcolon36"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Дата:",
+                        "id": "L_datecolon37"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Описание:",
+                        "id": "L_descriptioncolon38"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить вложенные папки:",
+                        "id": "L_allowsubfolders39"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc08",
+            "displayName": "Надежное расположение 8",
+            "explainText": "Данный параметр политики позволяет указать расположение, которое используется как надежный источник для открытия файлов в приложении. К файлам в надежных расположениях не применяются проверка файлов, проверки активного содержимого и режим защищенного просмотра. Макросы и код в этих файлах будут выполняться без вывода предупреждений для пользователя. При изменении или добавлении расположения необходимо убедиться, что новое расположение защищено и только пользователи с подходящими разрешениями могут добавлять в него документы или файлы.\n\nЕсли включить этот параметр политики, можно указать расположение папки, путь и дату, начиная с которой приложение может без предупреждения открывать файлы, в которых запускаются макросы. Если установлен флажок \"Разрешить вложенные папки\", то все вложенные папки в указанной папке также будут считаться надежными расположениями.\n\nЕсли этот параметр политики отключен или не настроен, надежное расположение не будет указано.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location8"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Путь:",
+                        "id": "L_pathcolon40"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Дата:",
+                        "id": "L_datecolon41"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Описание:",
+                        "id": "L_descriptioncolon42"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить вложенные папки:",
+                        "id": "L_allowsubfolders43"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc09",
+            "displayName": "Надежное расположение 9",
+            "explainText": "Данный параметр политики позволяет указать расположение, которое используется как надежный источник для открытия файлов в приложении. К файлам в надежных расположениях не применяются проверка файлов, проверки активного содержимого и режим защищенного просмотра. Макросы и код в этих файлах будут выполняться без вывода предупреждений для пользователя. При изменении или добавлении расположения необходимо убедиться, что новое расположение защищено и только пользователи с подходящими разрешениями могут добавлять в него документы или файлы.\n\nЕсли включить этот параметр политики, можно указать расположение папки, путь и дату, начиная с которой приложение может без предупреждения открывать файлы, в которых запускаются макросы. Если установлен флажок \"Разрешить вложенные папки\", то все вложенные папки в указанной папке также будут считаться надежными расположениями.\n\nЕсли этот параметр политики отключен или не настроен, надежное расположение не будет указано.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location9"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Путь:",
+                        "id": "L_pathcolon44"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Дата:",
+                        "id": "L_datecolon45"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Описание:",
+                        "id": "L_descriptioncolon46"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить вложенные папки:",
+                        "id": "L_allowsubfolders47"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc10",
+            "displayName": "Надежное расположение 10",
+            "explainText": "Данный параметр политики позволяет указать расположение, которое используется как надежный источник для открытия файлов в приложении. К файлам в надежных расположениях не применяются проверка файлов, проверки активного содержимого и режим защищенного просмотра. Макросы и код в этих файлах будут выполняться без вывода предупреждений для пользователя. При изменении или добавлении расположения необходимо убедиться, что новое расположение защищено и только пользователи с подходящими разрешениями могут добавлять в него документы или файлы.\n\nЕсли включить этот параметр политики, можно указать расположение папки, путь и дату, начиная с которой приложение может без предупреждения открывать файлы, в которых запускаются макросы. Если установлен флажок \"Разрешить вложенные папки\", то все вложенные папки в указанной папке также будут считаться надежными расположениями.\n\nЕсли этот параметр политики отключен или не настроен, надежное расположение не будет указано.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location10"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Путь:",
+                        "id": "L_pathcolon48"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Дата:",
+                        "id": "L_datecolon49"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Описание:",
+                        "id": "L_descriptioncolon50"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить вложенные папки:",
+                        "id": "L_allowsubfolders51"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc11",
+            "displayName": "Надежное расположение 11",
+            "explainText": "Данный параметр политики позволяет указать расположение, которое используется как надежный источник для открытия файлов в приложении. К файлам в надежных расположениях не применяются проверка файлов, проверки активного содержимого и режим защищенного просмотра. Макросы и код в этих файлах будут выполняться без вывода предупреждений для пользователя. При изменении или добавлении расположения необходимо убедиться, что новое расположение защищено и только пользователи с подходящими разрешениями могут добавлять в него документы или файлы.\n\nЕсли включить этот параметр политики, можно указать расположение папки, путь и дату, начиная с которой приложение может без предупреждения открывать файлы, в которых запускаются макросы. Если установлен флажок \"Разрешить вложенные папки\", то все вложенные папки в указанной папке также будут считаться надежными расположениями.\n\nЕсли этот параметр политики отключен или не настроен, надежное расположение не будет указано.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location11"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Путь:",
+                        "id": "L_pathcolon52"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Дата:",
+                        "id": "L_datecolon53"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Описание:",
+                        "id": "L_descriptioncolon54"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить вложенные папки:",
+                        "id": "L_allowsubfolders55"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc12",
+            "displayName": "Надежное расположение 12",
+            "explainText": "Данный параметр политики позволяет указать расположение, которое используется как надежный источник для открытия файлов в приложении. К файлам в надежных расположениях не применяются проверка файлов, проверки активного содержимого и режим защищенного просмотра. Макросы и код в этих файлах будут выполняться без вывода предупреждений для пользователя. При изменении или добавлении расположения необходимо убедиться, что новое расположение защищено и только пользователи с подходящими разрешениями могут добавлять в него документы или файлы.\n\nЕсли включить этот параметр политики, можно указать расположение папки, путь и дату, начиная с которой приложение может без предупреждения открывать файлы, в которых запускаются макросы. Если установлен флажок \"Разрешить вложенные папки\", то все вложенные папки в указанной папке также будут считаться надежными расположениями.\n\nЕсли этот параметр политики отключен или не настроен, надежное расположение не будет указано.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location12"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Путь:",
+                        "id": "L_pathcolon56"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Дата:",
+                        "id": "L_datecolon57"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Описание:",
+                        "id": "L_descriptioncolon58"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить вложенные папки:",
+                        "id": "L_allowsubfolders59"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc13",
+            "displayName": "Надежное расположение 13",
+            "explainText": "Данный параметр политики позволяет указать расположение, которое используется как надежный источник для открытия файлов в приложении. К файлам в надежных расположениях не применяются проверка файлов, проверки активного содержимого и режим защищенного просмотра. Макросы и код в этих файлах будут выполняться без вывода предупреждений для пользователя. При изменении или добавлении расположения необходимо убедиться, что новое расположение защищено и только пользователи с подходящими разрешениями могут добавлять в него документы или файлы.\n\nЕсли включить этот параметр политики, можно указать расположение папки, путь и дату, начиная с которой приложение может без предупреждения открывать файлы, в которых запускаются макросы. Если установлен флажок \"Разрешить вложенные папки\", то все вложенные папки в указанной папке также будут считаться надежными расположениями.\n\nЕсли этот параметр политики отключен или не настроен, надежное расположение не будет указано.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location13"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Путь:",
+                        "id": "L_pathcolon60"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Дата:",
+                        "id": "L_datecolon61"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Описание:",
+                        "id": "L_descriptioncolon62"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить вложенные папки:",
+                        "id": "L_allowsubfolders63"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc14",
+            "displayName": "Надежное расположение 14",
+            "explainText": "Данный параметр политики позволяет указать расположение, которое используется как надежный источник для открытия файлов в приложении. К файлам в надежных расположениях не применяются проверка файлов, проверки активного содержимого и режим защищенного просмотра. Макросы и код в этих файлах будут выполняться без вывода предупреждений для пользователя. При изменении или добавлении расположения необходимо убедиться, что новое расположение защищено и только пользователи с подходящими разрешениями могут добавлять в него документы или файлы.\n\nЕсли включить этот параметр политики, можно указать расположение папки, путь и дату, начиная с которой приложение может без предупреждения открывать файлы, в которых запускаются макросы. Если установлен флажок \"Разрешить вложенные папки\", то все вложенные папки в указанной папке также будут считаться надежными расположениями.\n\nЕсли этот параметр политики отключен или не настроен, надежное расположение не будет указано.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location14"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Путь:",
+                        "id": "L_pathcolon64"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Дата:",
+                        "id": "L_datecolon65"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Описание:",
+                        "id": "L_descriptioncolon66"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить вложенные папки:",
+                        "id": "L_allowsubfolders67"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc15",
+            "displayName": "Надежное расположение 15",
+            "explainText": "Данный параметр политики позволяет указать расположение, которое используется как надежный источник для открытия файлов в приложении. К файлам в надежных расположениях не применяются проверка файлов, проверки активного содержимого и режим защищенного просмотра. Макросы и код в этих файлах будут выполняться без вывода предупреждений для пользователя. При изменении или добавлении расположения необходимо убедиться, что новое расположение защищено и только пользователи с подходящими разрешениями могут добавлять в него документы или файлы.\n\nЕсли включить этот параметр политики, можно указать расположение папки, путь и дату, начиная с которой приложение может без предупреждения открывать файлы, в которых запускаются макросы. Если установлен флажок \"Разрешить вложенные папки\", то все вложенные папки в указанной папке также будут считаться надежными расположениями.\n\nЕсли этот параметр политики отключен или не настроен, надежное расположение не будет указано.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location15"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Путь:",
+                        "id": "L_pathcolon68"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Дата:",
+                        "id": "L_datecolon69"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Описание:",
+                        "id": "L_descriptioncolon70"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить вложенные папки:",
+                        "id": "L_allowsubfolders71"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc16",
+            "displayName": "Надежное расположение 16",
+            "explainText": "Данный параметр политики позволяет указать расположение, которое используется как надежный источник для открытия файлов в приложении. К файлам в надежных расположениях не применяются проверка файлов, проверки активного содержимого и режим защищенного просмотра. Макросы и код в этих файлах будут выполняться без вывода предупреждений для пользователя. При изменении или добавлении расположения необходимо убедиться, что новое расположение защищено и только пользователи с подходящими разрешениями могут добавлять в него документы или файлы.\n\nЕсли включить этот параметр политики, можно указать расположение папки, путь и дату, начиная с которой приложение может без предупреждения открывать файлы, в которых запускаются макросы. Если установлен флажок \"Разрешить вложенные папки\", то все вложенные папки в указанной папке также будут считаться надежными расположениями.\n\nЕсли этот параметр политики отключен или не настроен, надежное расположение не будет указано.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location16"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Путь:",
+                        "id": "L_pathcolon72"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Дата:",
+                        "id": "L_datecolon73"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Описание:",
+                        "id": "L_descriptioncolon74"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить вложенные папки:",
+                        "id": "L_allowsubfolders75"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc17",
+            "displayName": "Надежное расположение 17",
+            "explainText": "Данный параметр политики позволяет указать расположение, которое используется как надежный источник для открытия файлов в приложении. К файлам в надежных расположениях не применяются проверка файлов, проверки активного содержимого и режим защищенного просмотра. Макросы и код в этих файлах будут выполняться без вывода предупреждений для пользователя. При изменении или добавлении расположения необходимо убедиться, что новое расположение защищено и только пользователи с подходящими разрешениями могут добавлять в него документы или файлы.\n\nЕсли включить этот параметр политики, можно указать расположение папки, путь и дату, начиная с которой приложение может без предупреждения открывать файлы, в которых запускаются макросы. Если установлен флажок \"Разрешить вложенные папки\", то все вложенные папки в указанной папке также будут считаться надежными расположениями.\n\nЕсли этот параметр политики отключен или не настроен, надежное расположение не будет указано.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location17"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Путь:",
+                        "id": "L_pathcolon76"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Дата:",
+                        "id": "L_datecolon77"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Описание:",
+                        "id": "L_descriptioncolon78"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить вложенные папки:",
+                        "id": "L_allowsubfolders79"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc18",
+            "displayName": "Надежное расположение 18",
+            "explainText": "Данный параметр политики позволяет указать расположение, которое используется как надежный источник для открытия файлов в приложении. К файлам в надежных расположениях не применяются проверка файлов, проверки активного содержимого и режим защищенного просмотра. Макросы и код в этих файлах будут выполняться без вывода предупреждений для пользователя. При изменении или добавлении расположения необходимо убедиться, что новое расположение защищено и только пользователи с подходящими разрешениями могут добавлять в него документы или файлы.\n\nЕсли включить этот параметр политики, можно указать расположение папки, путь и дату, начиная с которой приложение может без предупреждения открывать файлы, в которых запускаются макросы. Если установлен флажок \"Разрешить вложенные папки\", то все вложенные папки в указанной папке также будут считаться надежными расположениями.\n\nЕсли этот параметр политики отключен или не настроен, надежное расположение не будет указано.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location18"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Путь:",
+                        "id": "L_pathcolon80"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Дата:",
+                        "id": "L_datecolon81"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Описание:",
+                        "id": "L_descriptioncolon82"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить вложенные папки:",
+                        "id": "L_allowsubfolders83"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc19",
+            "displayName": "Надежное расположение 19",
+            "explainText": "Данный параметр политики позволяет указать расположение, которое используется как надежный источник для открытия файлов в приложении. К файлам в надежных расположениях не применяются проверка файлов, проверки активного содержимого и режим защищенного просмотра. Макросы и код в этих файлах будут выполняться без вывода предупреждений для пользователя. При изменении или добавлении расположения необходимо убедиться, что новое расположение защищено и только пользователи с подходящими разрешениями могут добавлять в него документы или файлы.\n\nЕсли включить этот параметр политики, можно указать расположение папки, путь и дату, начиная с которой приложение может без предупреждения открывать файлы, в которых запускаются макросы. Если установлен флажок \"Разрешить вложенные папки\", то все вложенные папки в указанной папке также будут считаться надежными расположениями.\n\nЕсли этот параметр политики отключен или не настроен, надежное расположение не будет указано.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location19"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "path",
+                        "requiredSpecified": false,
+                        "expandable": true,
+                        "expandableSpecified": true,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Путь:",
+                        "id": "L_pathcolon84"
+                    },
+                    {
+                        "valueName": "date",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Дата:",
+                        "id": "L_datecolon85"
+                    },
+                    {
+                        "valueName": "description",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Описание:",
+                        "id": "L_descriptioncolon86"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowsubfolders",
+                        "inputType": "checkBox",
+                        "caption": "Разрешить вложенные папки:",
+                        "id": "L_allowsubfolders87"
+                    }
+                ]
+            },
+            "name": "L_TrustedLoc20",
+            "displayName": "Надежное расположение 20",
+            "explainText": "Данный параметр политики позволяет указать расположение, которое используется как надежный источник для открытия файлов в приложении. К файлам в надежных расположениях не применяются проверка файлов, проверки активного содержимого и режим защищенного просмотра. Макросы и код в этих файлах будут выполняться без вывода предупреждений для пользователя. При изменении или добавлении расположения необходимо убедиться, что новое расположение защищено и только пользователи с подходящими разрешениями могут добавлять в него документы или файлы.\n\nЕсли включить этот параметр политики, можно указать расположение папки, путь и дату, начиная с которой приложение может без предупреждения открывать файлы, в которых запускаются макросы. Если установлен флажок \"Разрешить вложенные папки\", то все вложенные папки в указанной папке также будут считаться надежными расположениями.\n\nЕсли этот параметр политики отключен или не настроен, надежное расположение не будет указано.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ProjectOptions",
+                "L_Proj"
+            ],
+            "application": "proj16",
+            "key": "software\\microsoft\\office\\16.0\\ms project\\security\\trusted locations\\location20"
         },
         {
             "parentCategory": {

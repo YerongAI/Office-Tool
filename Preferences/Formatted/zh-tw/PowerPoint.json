@@ -208,35 +208,6 @@
             },
             "enabledValue": {
                 "decimal": {
-                    "value": 0
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "name": "L_StopCheckingTableAltTextAccessibilityInformation",
-            "displayName": "停止檢查表格替代文字協助工具資訊",
-            "explainText": "此原則設定可防止「協助工具檢查程式」驗證表格是否包含替代文字。\n\n如果啟用此原則設定，「協助工具檢查程式」將不會驗證表格否包含替代文字。\n\n如果停用或未設定此原則設定，則會檢查表格是否有替代文字，若發現任何問題將會顯示於「協助工具檢查程式」中。",
-            "tags": [
-                "L_CheckAccessibility",
-                "L_FileTab",
-                "L_MicrosoftOfficePowerPoint"
-            ],
-            "application": "ppt16",
-            "key": "software\\microsoft\\office\\16.0\\powerpoint\\accchecker",
-            "valueName": "tablealttext"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_CheckAccessibility"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
                     "value": 1
                 }
             },
@@ -1306,6 +1277,70 @@
         },
         {
             "parentCategory": {
+                "ref": "L_ProtectedView"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "封鎖檔案"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "在受保護檢視中開啟"
+                            }
+                        ],
+                        "valueName": "openinprotectedview",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsDropID"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "disableeditfrompv",
+                        "key": "software\\microsoft\\office\\16.0\\powerpoint\\security\\filevalidation",
+                        "inputType": "checkBox",
+                        "caption": "核取: 允許編輯。取消核取: 不允許編輯。",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsStr3"
+                    }
+                ]
+            },
+            "name": "L_SetDocumentBehaviorIfFileValidationFails",
+            "displayName": "設定檔案驗證失敗時的文件行為",
+            "explainText": "此原則設定可控制 Office 在文件無法通過檔案驗證時處理文件的方式。\n\n如果啟用此原則設定，即可針對無法通過驗證的檔案設定下列選項:\n\n- 完全封鎖檔案。使用者無法開啟檔案。\n- 在受保護檢視中開啟檔案並禁止編輯。使用者無法編輯檔案。這也是停用此原則設定時 Office 處理檔案的方式。\n- 在受保護檢視中開啟檔案並允許編輯。使用者可以編輯檔案。這也是未設定此原則設定時 Office 處理檔案的方式。\n\n如果停用此原則設定，Office 將採用「在受保護檢視中開啟檔案並禁止編輯」行為。\n\n如果未設定此原則設定，Office 將採用「在受保護檢視中開啟檔案並允許編輯」行為。",
+            "tags": [
+                "L_ProtectedView",
+                "L_TrustCenter",
+                "L_Security",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint\\security\\filevalidation"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -1895,7 +1930,7 @@
             },
             "name": "L_BlockMacroExecutionFromInternet",
             "displayName": "封鎖在 Office 檔案中執行來自網際網路的巨集",
-            "explainText": "此原則設定可讓您封鎖在 Office 檔案中執行來自網際網路的巨集。\n\n如果您啟用這個原則設定，即使已選取 [信任中心]  [巨集設定] 區段中的 [啟用所有巨集]，仍將封鎖執行巨集。此外，使用者會收到已封鎖執行巨集的通知，而無法 [啟用內容]。如果 Office 檔案已儲存至信任的位置，或是使用者先前已選擇信任，將允許執行巨集。\n\n若您停用或不設定此原則設定，將使用 [信任中心] [巨集設定] 區段中的設定決定是否在 Office 檔案中執行來自網際網路的巨集。",
+            "explainText": "        此原則設定可讓您封鎖在 Office 檔案中執行來自網際網路的巨集。\n\n        如果您啟用這個原則設定，即使已選取 [信任中心]  [巨集設定] 區段中的 [啟用所有巨集]，仍將封鎖執行巨集。此外，使用者會收到已封鎖執行巨集的通知，而無法 [啟用內容]。如果 Office 檔案已儲存至信任的位置，或是使用者先前已選擇信任，將允許執行巨集。\n\n        若您停用或不設定此原則設定，將使用 [信任中心] [巨集設定] 區段中的設定決定是否在 Office 檔案中執行來自網際網路的巨集。\n      ",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -2984,6 +3019,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Security"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DownloadImages",
+            "displayName": "解除自動下載連結圖像的封鎖",
+            "explainText": "此原則設定可決定 PowerPoint 是否要自動下載來自外部來源的連結。\n\n如果啟用此原則設定，PowerPoint 將載入遠端位置所儲存的影像。\n\n如果停用或未設定此原則設定，則當 PowerPoint 開啟簡報時，除非簡報本身儲存在信任位置中 (若有在信任中心設定過的話)，否則不會顯示儲存於其他電腦上的任何連結影像。",
+            "tags": [
+                "L_Security",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint\\security",
+            "valueName": "downloadimages"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Coauthoring"
             },
             "supportedOn": {
@@ -3010,6 +3074,35 @@
             "application": "ppt16",
             "key": "software\\microsoft\\office\\16.0\\powerpoint\\coauthoring",
             "valueName": "disablecoauthoring"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Coauthoring"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_TurnOffRevisionTracking",
+            "displayName": "關閉追蹤修訂",
+            "explainText": "此原則設定可讓您關閉 PowerPoint 中的追蹤修訂功能。\n\n預設會開啟簡報中的追蹤修訂功能 (若支援追蹤修訂的話)。\n\n如果啟用此原則設定，將不會追蹤或顯示對簡報所做的修訂。\n\n如果停用或不設定此原則設定，則會追蹤或顯示對簡報所做的修訂。",
+            "tags": [
+                "L_Coauthoring",
+                "L_CollaborationSettings",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint\\coauthoring",
+            "valueName": "disablerevisiontracking"
         },
         {
             "parentCategory": {
@@ -3377,6 +3470,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Predefined"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_EnableRecordingRibbonTab",
+            "displayName": "開啟錄製功能區索引標籤",
+            "explainText": "此原則設定可讓您控制 PowerPoint 中的初始錄製功能區索引標籤。預設不會顯示該索引標籤。\n\n如果啟用此原則設定，將顯示錄製功能區索引標籤。但是，使用者可以選擇在 UI 中手動關閉此功能。\n\n如果您停用或不設定此原則設定，將不會顯示錄製功能區索引標籤。使用者可以選擇在 UI 中手動開啟此功能。\n    ",
+            "tags": [
+                "L_Predefined",
+                "L_Disableitemsinuserinterface",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint",
+            "valueName": "enablerecordingribbontab"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_OptionsGeneral"
             },
             "supportedOn": {
@@ -3479,9 +3601,38 @@
                     "value": 0
                 }
             },
+            "name": "L_DisableQuickStarter",
+            "displayName": "關閉快速啟動工具",
+            "explainText": "此原則設定可控制使用者是否能使用快速啟動工具。根據預設，使用者是否可以使用快速啟動工具取決於其是否符合該功能的語言與地區需求。\n\n如果啟用此原則設定，使用者將無法使用快速啟動工具。\n\n如果停用或未設定此原則設定，則使用者將能夠在語言與地區符合功能需求的情況下使用快速啟動工具。\n\n注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版。\n    ",
+            "tags": [
+                "L_OptionsGeneral",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint",
+            "valueName": "disablequickstarter"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_OptionsGeneral"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_DisableIncrementalDownload",
             "displayName": "等到所有內容下載完成後再向使用者顯示雲端簡報",
-            "explainText": "此原則設定可讓您控制 PowerPoint 是否要等到所有內容下載完成再向使用者顯示簡報。此原則設定適用於從雲端位置 (例如 OneDrive 個人版、商務用 OneDrive 或 SharePoint Online) 開啟的簡報。\n\n根據預設，當使用者在 PowerPoint 中開啟雲端簡報時，使用者可以在持續下載其他內容 (例如影像或影片) 的同時檢視簡報，但某些功能 (例如編輯和放映簡報) 在整個簡報下載完成前僅提供受限功能或無法使用。\n\n如果啟用此原則設定，PowerPoint 在開啟雲端簡報時將等到完整的簡報下載完成後才會向使用者顯示簡報。\n\n如果您的增益集或自動程序需要在簡報顯示時使用並完整編輯簡報的整個內容，請啟用此原則設定。\n\n如果停用或不設定此設定，PowerPoint 會較快速地開啟雲端檔案，讓使用者可以在下載其他內容時開始檢視簡報。\n\n注意: 此原則設定只適用於訂閱版本的 Office，例如 Office 365 專業增強版。\n    ",
+            "explainText": "此原則設定可讓您控制 PowerPoint 是否要等到所有內容下載完成後再向使用者顯示簡報。此原則設定適用於從雲端式位置 (例如 OneDrive 個人版、商務用 OneDrive 或 SharePoint Online) 開啟的簡報。\n\n根據預設，當使用者在 PowerPoint 中開啟雲端式簡報時，使用者可以在繼續下載其他內容 (例如影像或影片) 的同時檢視簡報。但某些功能 (例如編輯和放映簡報) 在整個簡報下載完成前僅提供受限功能或無法使用。\n\n如果啟用此原則設定，PowerPoint 在開啟雲端式簡報時將等到簡報的整個內容下載完成後才會向使用者顯示簡報。\n\n如果您的增益集或自動程序需要在簡報顯示時使用並完整編輯簡報的整個內容，請啟用此原則設定。\n\n如果停用或不設定此設定，則 PowerPoint 會更快地開啟雲端式檔案，讓使用者可以在下載其他內容的同時開始檢視簡報。\n\n注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版。\n    ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_PowerPointOptions",
@@ -3510,7 +3661,7 @@
             },
             "name": "L_DisableLiveSubtitles",
             "displayName": "不允許使用即時字幕",
-            "explainText": "此原則設定能夠控制使用者是否可以在簡報時開啟即時字幕。預設為關閉即時字幕，但使用者可以開啟即時字幕。\n\n若啟用此原則設定，則使用者無法在簡報時開啟即時字幕。\n\n若停用或未設定此原則設定，則使用者可以開啟即時字幕。\n\n注意: 此原則設定只適用於訂閱版本的 Office，例如 Office 365 專業增強版。\n    ",
+            "explainText": "此原則設定可控制使用者是否可以在進行簡報時開啟即時字幕。根據預設，即時字幕為關閉，但使用者可以開啟即時字幕。\n\n如果啟用此原則設定，使用者就無法在進行簡報時開啟即時字幕。\n\n如果停用或未設定此原則設定，則使用者可以開啟即時字幕。\n\n注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版。\n    ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_PowerPointOptions",
@@ -3519,6 +3670,35 @@
             "application": "ppt16",
             "key": "software\\microsoft\\office\\16.0\\powerpoint",
             "valueName": "disablelivesubtitles"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_OptionsGeneral"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_EnableModernCommentsCreateNew",
+            "displayName": "在 PowerPoint 中使用新式註解",
+            "explainText": "此原則設定可控制是否能在 PowerPoint 中使用新式註解。如需新式註解及何時啟用此設定的詳細資訊，請參閱 https://go.microsoft.com/fwlink/p/?linkid=2116065。\n\n如果啟用此原則設定，當使用者將註解新增到新檔案或檔案沒有註解時，新增的註解將會是新式註解。如果使用者的 PowerPoint 版本不支援新式註解，系統會顯示通知將他們導向使用 PowerPoint 網頁版以檢視檔案中的新式註解。\n\n如果停用此原則設定，則使用者將繼續以先前的註解體驗檢視沒有新式註解的新檔案和現有檔案。如果使用者使用支援新式註解的 PowerPoint，他們仍可以讀取已有新式註解的檔案。\n\n如需未設定此原則設定會發生什麼狀況的詳細資訊，請參閱 https://go.microsoft.com/fwlink/p/?linkid=2116065。\n\n注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版。\n    ",
+            "tags": [
+                "L_OptionsGeneral",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint",
+            "valueName": "enablemoderncommentscreatenew"
         }
     ]
 }

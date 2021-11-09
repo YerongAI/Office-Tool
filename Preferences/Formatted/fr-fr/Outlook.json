@@ -480,7 +480,7 @@
             },
             "name": "L_DisplayDeveloperTab",
             "displayName": "Afficher l’onglet Développeur dans le ruban",
-            "explainText": "Ce paramètre de stratégie contrôle si l’onglet Développeur doit s’afficher ou non dans le ruban.\\r\n\\r\nSi vous activez ce paramètre de stratégie, l’onglet Développeur s’affiche dans le ruban.\\r\n\\r\nSi vous désactivez ce paramètre de stratégie, l’onglet Développeur n’est pas affiché dans le ruban.\\r\n\\r\nSi vous ne configurez pas ce paramètre de stratégie, l’onglet Développeur ne s’affiche pas dans le ruban, mais sa visibilité peut être modifiée via un paramètre de la boîte de dialogue Options de l’application.",
+            "explainText": "Ce paramètre de stratégie contrôle si l’onglet Développeur doit s’afficher ou non dans le ruban.\\r\\n\\r\\nSi vous activez ce paramètre de stratégie, l’onglet Développeur s’affiche dans le ruban.\\r\\n\\r\\nSi vous désactivez ce paramètre de stratégie, l’onglet Développeur n’est pas affiché dans le ruban.\\r\\n\\r\\nSi vous ne configurez pas ce paramètre de stratégie, l’onglet Développeur ne s’affiche pas dans le ruban, mais sa visibilité peut être modifiée via un paramètre de la boîte de dialogue Options de l’application.",
             "tags": [
                 "L_OptionsCustomizeRibbon",
                 "L_OutlookOptions",
@@ -567,7 +567,7 @@
             },
             "name": "L_TurnOffAutomaticSearchIndexReconciliation",
             "displayName": "Désactiver le rapprochement des index de recherche automatique",
-            "explainText":"Ce paramètre de stratégie configure la vérification automatique de l'intégrité des index de recherche d'Outlook toutes les 72 heures.\n\nSi vous activez ce paramètre de stratégie, rapprochement automatique sera désactivée.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, Outlook rapprocher son index de toutes les 72 heures.",
+            "explainText": "Ce paramètre de stratégie configure la vérification automatique de l'intégrité des index de recherche d'Outlook toutes les 72 heures.\n\nSi vous activez ce paramètre de stratégie, rapprochement automatique sera désactivée.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, Outlook rapprocher son index de toutes les 72 heures.",
             "tags": [
                 "L_SearchOptions",
                 "L_Preferences",
@@ -596,8 +596,8 @@
                 }
             },
             "name": "L_PreventClearSignedMessageAndAttachmentIndexing",
-            "displayName":"Empêcher le message signé en clair et l'indexation de pièce jointe",
-            "explainText":"Ce paramètre de stratégie permet de désactiver l'indexation du corps et pièces jointes des messages signés en clair.L'expéditeur, la ligne objet et la date continueront à être indexés et vous pouvez.Si vous activez ce paramètre de stratégie, l'indexation des messages signés en clair sera désactivée.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, les messages signés en clair seront indexés et vous pouvez.",
+            "displayName": "Empêcher le message signé en clair et l'indexation de pièce jointe",
+            "explainText": "Ce paramètre de stratégie permet de désactiver l'indexation du corps et pièces jointes des messages signés en clair.L'expéditeur, la ligne objet et la date continueront à être indexés et vous pouvez.Si vous activez ce paramètre de stratégie, l'indexation des messages signés en clair sera désactivée.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, les messages signés en clair seront indexés et vous pouvez.",
             "tags": [
                 "L_SearchOptions",
                 "L_Preferences",
@@ -1132,6 +1132,120 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Ouvrir l’élément suivant"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Revenir dans le dossier actif"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Ouvrir l’élément précédent"
+                            }
+                        ],
+                        "valueName": "aftermove",
+                        "inputType": "dropdownList",
+                        "caption": "Après déplacement ou suppression d’un élément ouvert :",
+                        "id": "L_aftermovingordeletinganopenitem0"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "closeorig",
+                        "inputType": "checkBox",
+                        "caption": "Fermer le message d’origine lors de la réponse ou du transfert",
+                        "id": "L_Closeoriginalmessagewhenreplyorforward"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "savesent",
+                        "inputType": "checkBox",
+                        "caption": "Enregistrer une copie des messages dans le dossier Éléments envoyés",
+                        "id": "L_SavecopiesofmessagesinSentItemsfolder"
+                    },
+                    {
+                        "valueName": "autosavetime",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 99,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "Enregistrer automatiquement les éléments non envoyés toutes les xx minutes (0 = pas d’enregistrement automatique) :",
+                        "id": "L_Autosaveunsenteveryxxminutes0NoAutoSave"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "autoformatplaintext",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\options\\mail",
+                        "inputType": "checkBox",
+                        "caption": "Nettoyer automatiquement les messages en texte brut",
+                        "id": "L_Automaticallycleanupplaintextmessages"
+                    }
+                ]
+            },
+            "name": "L_Messagehandling",
+            "displayName": "Gestion des messages",
+            "explainText": "Vous pouvez utiliser ce paramètre pour spécifier différentes options de gestion des messages électroniques.",
+            "tags": [
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Emailoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -1233,8 +1347,8 @@
                 }
             },
             "name": "L_DisableAutoPreview",
-            "displayName":"Désactiver l'aperçu partiel",
-            "explainText":"Le fait d'activer cette stratégie désactive définitivement l'aperçu des éléments. Vous ne pouvez pas réactiver cette fonctionnalité, car l'option du ruban permettant de la modifier est désactivée.",
+            "displayName": "Désactiver l'aperçu partiel",
+            "explainText": "Le fait d'activer cette stratégie désactive définitivement l'aperçu des éléments. Vous ne pouvez pas réactiver cette fonctionnalité, car l'option du ruban permettant de la modifier est désactivée.",
             "tags": [
                 "L_AdvancedEmailoptions",
                 "L_Emailoptions",
@@ -1295,7 +1409,7 @@
             },
             "name": "L_DisableMailTips",
             "displayName": "Désactiver les astuces de la messagerie",
-            "explainText": "Ce paramètre de stratégie détermine si les utilisateurs peuvent afficher les astuces de la messagerie.\n\\t  \nSi vous activez ce paramètre de stratégie, Outlook n’affiche pas les astuces de la messagerie.\\t\\t\\t\nSi vous désactivez cette stratégie ou si vous ne la configurez pas, Outlook affiche les astuces de la messagerie.",
+            "explainText": "Ce paramètre de stratégie détermine si les utilisateurs peuvent afficher les astuces de la messagerie.\n\\t  \nSi vous activez ce paramètre de stratégie, Outlook n’affiche pas les astuces de la messagerie.\n\\t\\t\\t\\t\\t\nSi vous désactivez cette stratégie ou si vous ne la configurez pas, Outlook affiche les astuces de la messagerie.",
             "tags": [
                 "L_Emailoptions",
                 "L_Preferences",
@@ -1549,6 +1663,53 @@
         },
         {
             "parentCategory": {
+                "ref": "L_DesktopAlert"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "corner",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 3,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "Angle (0-3)",
+                        "id": "L_Corner03"
+                    },
+                    {
+                        "valueName": "xoffset",
+                        "minValueSpecified": false,
+                        "maxValueSpecified": false,
+                        "id": "L_XOffsetdefault44"
+                    },
+                    {
+                        "valueName": "yoffset",
+                        "minValueSpecified": false,
+                        "maxValueSpecified": false,
+                        "id": "L_YOffsetdefault42"
+                    }
+                ]
+            },
+            "name": "L_SpecifydefaultlocationofDesktopAlert",
+            "displayName": "Indiquer l’emplacement par défaut de l’alerte sur le Bureau",
+            "explainText": "Vous pouvez modifier l’emplacement par défaut de l’alerte sur le Bureau. Dans le champ Angle, sélectionnez un nombre correspondant à un quadrant de l’écran de l’utilisateur : 0 = angle supérieur gauche, 1 = angle supérieur droit, 2 = angle inférieur gauche, 3 = angle inférieur droit (par défaut). Dans le champ Décalage X, entrez un nombre représentant la distance horizontale à partir de l’angle sélectionné (par défaut, 44). Dans le champ Décalage Y, entrez un nombre représentant la distance verticale à partir de l’angle sélectionné (par défaut, 42).",
+            "tags": [
+                "L_DesktopAlert",
+                "L_AdvancedEmailoptions",
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\common\\desktopalerts"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_AdvancedEmailoptions"
             },
             "supportedOn": {
@@ -1613,6 +1774,194 @@
         },
         {
             "parentCategory": {
+                "ref": "L_AdvancedEmailoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Élevé"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Normal"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Faible"
+                            }
+                        ],
+                        "valueName": "importance",
+                        "inputType": "dropdownList",
+                        "caption": "Définir l’importance :",
+                        "id": "L_Setimportance"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Normal"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Personnel"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Privé"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Confidentiel"
+                            }
+                        ],
+                        "valueName": "sensitivity",
+                        "inputType": "dropdownList",
+                        "caption": "Définir le critère de diffusion :",
+                        "id": "L_Setsensitivity"
+                    },
+                    {
+                        "valueName": "numdaysexpire",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 3652,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "Expiration des messages après (jours) :",
+                        "id": "L_Messagesexpireafterdays"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowcommasinrecip",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser la virgule comme séparateur d’adresses",
+                        "id": "L_Allowcommasasaddressseparator"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "autonamecheck",
+                        "inputType": "checkBox",
+                        "caption": "Vérification automatique des noms",
+                        "id": "L_Automaticnamechecking"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "deletewhenrespond",
+                        "inputType": "checkBox",
+                        "caption": "Supprimer la demande de réunion de la Boîte de réception lors de la réponse",
+                        "id": "L_DeletemeetingrequestfromInboxwhenresponding"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "showautosug",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
+                        "inputType": "checkBox",
+                        "caption": "Suggérer les noms lors de la saisie des champs À, Cc et Cci",
+                        "id": "L_SuggestnameswhilecompletingToCcandBccfields"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "adhocreviewbehavior",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\options\\mail",
+                        "inputType": "checkBox",
+                        "caption": "Ajouter des propriétés aux pièces jointes pour activer l’option Réponse avec modifications",
+                        "id": "L_AddpropertiestoattachmentstoenableReplywithChanges"
+                    }
+                ]
+            },
+            "name": "L_Whensendingamessage",
+            "displayName": "Lors de l’envoi d’un message",
+            "explainText": "Définit les valeurs des options d’interface utilisateur correspondantes.",
+            "tags": [
+                "L_AdvancedEmailoptions",
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Trackingoptions"
             },
             "supportedOn": {
@@ -1641,6 +1990,143 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\flagging",
             "valueName": "disablesenderflags"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Emailoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Ne pas inclure le message d’origine"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Joindre le message d’origine"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Inclure le texte du message d’origine"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Inclure et mettre en retrait le texte du message d’origine"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1000
+                                    }
+                                },
+                                "displayName": "Ajouter un préfixe à chaque ligne du message d’origine"
+                            }
+                        ],
+                        "valueName": "replystyle",
+                        "inputType": "dropdownList",
+                        "caption": "Lors de la réponse à un message :",
+                        "id": "L_Whenreplyingtoamessage"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Joindre le message d’origine"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Inclure le texte du message d’origine"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Inclure et mettre en retrait le texte du message d’origine"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1000
+                                    }
+                                },
+                                "displayName": "Ajouter un préfixe à chaque ligne du message d’origine"
+                            }
+                        ],
+                        "valueName": "forwardstyle",
+                        "inputType": "dropdownList",
+                        "caption": "Lors du transfert d’un message :",
+                        "id": "L_Whenforwardingamessage"
+                    },
+                    {
+                        "valueName": "prefixtext",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "Préfixe de chaque ligne :",
+                        "id": "L_Prefixeachlinewith"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "markcomments",
+                        "key": "software\\microsoft\\office\\16.0\\common\\mailsettings",
+                        "inputType": "checkBox",
+                        "caption": "Autoriser le marquage des commentaires de l’utilisateur",
+                        "id": "L_Allowuserscommentstobemarked"
+                    }
+                ]
+            },
+            "name": "L_Onrepliesandforwards",
+            "displayName": "Sur les réponses et les transferts",
+            "explainText": "Définit les valeurs des options d’interface utilisateur correspondantes.",
+            "tags": [
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
         },
         {
             "parentCategory": {
@@ -1904,7 +2390,7 @@
             },
             "name": "L_DoNotAllowHorizontalCalendarView",
             "displayName": "Ne pas autoriser l’affichage de calendrier horizontal",
-            "explainText":"Ce paramètre de stratégie permet d'empêcher l'affichage du calendrier horizontal.\n\nSi vous activez ce paramètre de stratégie, affichage du calendrier horizontal n'est pas autorisée.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, affichage du calendrier horizontal est autorisée.",
+            "explainText": "Ce paramètre de stratégie permet d'empêcher l'affichage du calendrier horizontal.\n\nSi vous activez ce paramètre de stratégie, affichage du calendrier horizontal n'est pas autorisée.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, affichage du calendrier horizontal est autorisée.",
             "tags": [
                 "L_ScheduleView",
                 "L_Calendaroptions",
@@ -1965,8 +2451,8 @@
                 }
             },
             "name": "L_PreventOtherDepartmentCalendarFromAppearing",
-            "displayName":"Empêcher l'affichage de calendrier de service autres",
-            "explainText":"Ce paramètre de stratégie empêche les autres calendrier de service d'apparaître dans le volet de navigation.\n\nSi vous activez ce paramètre de stratégie, autre calendrier de service n'apparaîtra pas dans le volet de navigation.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, autre calendrier de service apparaîtra dans le volet de navigation.",
+            "displayName": "Empêcher l'affichage de calendrier de service autres",
+            "explainText": "Ce paramètre de stratégie empêche les autres calendrier de service d'apparaître dans le volet de navigation.\n\nSi vous activez ce paramètre de stratégie, autre calendrier de service n'apparaîtra pas dans le volet de navigation.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, autre calendrier de service apparaîtra dans le volet de navigation.",
             "tags": [
                 "L_ScheduleView",
                 "L_Calendaroptions",
@@ -2026,8 +2512,8 @@
                 }
             },
             "name": "L_PreventReportingLineGroupCalendarFromAppearing",
-            "displayName":"Empêcher l'affichage de calendrier de groupe de ligne de Reporting",
-            "explainText":"Ce paramètre de stratégie vous empêche de s'afficher dans le volet de navigation Calendrier de groupe de ligne de Reporting.\n\nSi vous activez ce paramètre de stratégie, calendrier de groupe de ligne de Reporting n'apparaîtra pas dans le volet de navigation.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, mon calendrier groupe ligne Reporting apparaîtra dans le volet de navigation.",
+            "displayName": "Empêcher l'affichage de calendrier de groupe de ligne de Reporting",
+            "explainText": "Ce paramètre de stratégie vous empêche de s'afficher dans le volet de navigation Calendrier de groupe de ligne de Reporting.\n\nSi vous activez ce paramètre de stratégie, calendrier de groupe de ligne de Reporting n'apparaîtra pas dans le volet de navigation.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, mon calendrier groupe ligne Reporting apparaîtra dans le volet de navigation.",
             "tags": [
                 "L_ScheduleView",
                 "L_Calendaroptions",
@@ -2615,6 +3101,829 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 480
+                                    }
+                                },
+                                "displayName": "8:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "0:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 30
+                                    }
+                                },
+                                "displayName": "0:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 60
+                                    }
+                                },
+                                "displayName": "1:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 90
+                                    }
+                                },
+                                "displayName": "1:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 120
+                                    }
+                                },
+                                "displayName": "2:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 150
+                                    }
+                                },
+                                "displayName": "2:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 180
+                                    }
+                                },
+                                "displayName": "3:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 210
+                                    }
+                                },
+                                "displayName": "3:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 240
+                                    }
+                                },
+                                "displayName": "4:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 270
+                                    }
+                                },
+                                "displayName": "4:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 300
+                                    }
+                                },
+                                "displayName": "5:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 330
+                                    }
+                                },
+                                "displayName": "5:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 360
+                                    }
+                                },
+                                "displayName": "6:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 390
+                                    }
+                                },
+                                "displayName": "6:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 420
+                                    }
+                                },
+                                "displayName": "7:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 450
+                                    }
+                                },
+                                "displayName": "7:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 480
+                                    }
+                                },
+                                "displayName": "8:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 510
+                                    }
+                                },
+                                "displayName": "8:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 540
+                                    }
+                                },
+                                "displayName": "9:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 570
+                                    }
+                                },
+                                "displayName": "9:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 600
+                                    }
+                                },
+                                "displayName": "10:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 630
+                                    }
+                                },
+                                "displayName": "10:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 660
+                                    }
+                                },
+                                "displayName": "11:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 690
+                                    }
+                                },
+                                "displayName": "11:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 720
+                                    }
+                                },
+                                "displayName": "12:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 750
+                                    }
+                                },
+                                "displayName": "12:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 780
+                                    }
+                                },
+                                "displayName": "13:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 810
+                                    }
+                                },
+                                "displayName": "13:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 840
+                                    }
+                                },
+                                "displayName": "14:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 870
+                                    }
+                                },
+                                "displayName": "14:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 900
+                                    }
+                                },
+                                "displayName": "15:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 930
+                                    }
+                                },
+                                "displayName": "15:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 960
+                                    }
+                                },
+                                "displayName": "16:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 990
+                                    }
+                                },
+                                "displayName": "16:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1020
+                                    }
+                                },
+                                "displayName": "17:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1050
+                                    }
+                                },
+                                "displayName": "17:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1080
+                                    }
+                                },
+                                "displayName": "18:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1110
+                                    }
+                                },
+                                "displayName": "18:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1140
+                                    }
+                                },
+                                "displayName": "19:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1170
+                                    }
+                                },
+                                "displayName": "19:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1200
+                                    }
+                                },
+                                "displayName": "20:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1230
+                                    }
+                                },
+                                "displayName": "20:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1260
+                                    }
+                                },
+                                "displayName": "21:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1290
+                                    }
+                                },
+                                "displayName": "21:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1320
+                                    }
+                                },
+                                "displayName": "22:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1350
+                                    }
+                                },
+                                "displayName": "22:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1380
+                                    }
+                                },
+                                "displayName": "23:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1410
+                                    }
+                                },
+                                "displayName": "23:30"
+                            }
+                        ],
+                        "valueName": "caldefstart",
+                        "inputType": "dropdownList",
+                        "caption": "Heure de début :",
+                        "id": "L_Starttime"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1020
+                                    }
+                                },
+                                "displayName": "17:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "0:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 30
+                                    }
+                                },
+                                "displayName": "0:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 60
+                                    }
+                                },
+                                "displayName": "1:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 90
+                                    }
+                                },
+                                "displayName": "1:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 120
+                                    }
+                                },
+                                "displayName": "2:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 150
+                                    }
+                                },
+                                "displayName": "2:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 180
+                                    }
+                                },
+                                "displayName": "3:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 210
+                                    }
+                                },
+                                "displayName": "3:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 240
+                                    }
+                                },
+                                "displayName": "4:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 270
+                                    }
+                                },
+                                "displayName": "4:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 300
+                                    }
+                                },
+                                "displayName": "5:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 330
+                                    }
+                                },
+                                "displayName": "5:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 360
+                                    }
+                                },
+                                "displayName": "6:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 390
+                                    }
+                                },
+                                "displayName": "6:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 420
+                                    }
+                                },
+                                "displayName": "7:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 450
+                                    }
+                                },
+                                "displayName": "7:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 480
+                                    }
+                                },
+                                "displayName": "8:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 510
+                                    }
+                                },
+                                "displayName": "8:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 540
+                                    }
+                                },
+                                "displayName": "9:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 570
+                                    }
+                                },
+                                "displayName": "9:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 600
+                                    }
+                                },
+                                "displayName": "10:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 630
+                                    }
+                                },
+                                "displayName": "10:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 660
+                                    }
+                                },
+                                "displayName": "11:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 690
+                                    }
+                                },
+                                "displayName": "11:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 720
+                                    }
+                                },
+                                "displayName": "12:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 750
+                                    }
+                                },
+                                "displayName": "12:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 780
+                                    }
+                                },
+                                "displayName": "13:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 810
+                                    }
+                                },
+                                "displayName": "13:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 840
+                                    }
+                                },
+                                "displayName": "14:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 870
+                                    }
+                                },
+                                "displayName": "14:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 900
+                                    }
+                                },
+                                "displayName": "15:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 930
+                                    }
+                                },
+                                "displayName": "15:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 960
+                                    }
+                                },
+                                "displayName": "16:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 990
+                                    }
+                                },
+                                "displayName": "16:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1020
+                                    }
+                                },
+                                "displayName": "17:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1050
+                                    }
+                                },
+                                "displayName": "17:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1080
+                                    }
+                                },
+                                "displayName": "18:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1110
+                                    }
+                                },
+                                "displayName": "18:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1140
+                                    }
+                                },
+                                "displayName": "19:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1170
+                                    }
+                                },
+                                "displayName": "19:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1200
+                                    }
+                                },
+                                "displayName": "20:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1230
+                                    }
+                                },
+                                "displayName": "20:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1260
+                                    }
+                                },
+                                "displayName": "21:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1290
+                                    }
+                                },
+                                "displayName": "21:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1320
+                                    }
+                                },
+                                "displayName": "22:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1350
+                                    }
+                                },
+                                "displayName": "22:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1380
+                                    }
+                                },
+                                "displayName": "23:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1410
+                                    }
+                                },
+                                "displayName": "23:30"
+                            }
+                        ],
+                        "valueName": "caldefend",
+                        "inputType": "dropdownList",
+                        "caption": "Heure de fin :",
+                        "id": "L_EndTime"
+                    }
+                ]
+            },
+            "name": "L_Workinghours",
+            "displayName": "Heures de travail",
+            "explainText": "Définit la valeur dans l’option correspondante de l’interface utilisateur.",
+            "tags": [
+                "L_Calendaroptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Calendaroptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -2880,6 +4189,65 @@
         },
         {
             "parentCategory": {
+                "ref": "L_FreeBusyOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "fbpublishrange",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 12,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "Informations publiées sur les mois de disponibilité :",
+                        "id": "L_MonthsofFreeBusyinformationpublished"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "lock fb range",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar\\internet free/busy",
+                        "inputType": "checkBox",
+                        "caption": "Empêcher l’utilisateur de modifier les informations de disponibilité publiées",
+                        "id": "L_PreventusersfromchangingMonthsofFreeBusyinformation1"
+                    },
+                    {
+                        "valueName": "fbupdatesecs",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 86400,
+                        "maxValueSpecified": true,
+                        "id": "L_FreeBusyupdatedontheservereveryxxxseconds"
+                    }
+                ]
+            },
+            "name": "L_options9",
+            "displayName": "Options de disponibilité",
+            "explainText": "Définit la valeur de l’option Publier [] mois de disponibilité dans le calendrier sur le serveur.",
+            "tags": [
+                "L_FreeBusyOptions",
+                "L_Calendaroptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_RecurrenceOptions"
             },
             "supportedOn": {
@@ -2945,6 +4313,36 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Contactoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DetermineOrderOfSourcesForPhotos",
+            "displayName": "Déterminer la séquence de recherche des photos",
+            "explainText": "Ce paramètre de stratégie contrôle la séquence de recherche des photos affichées dans Outlook.\n\nSi vous activez ce paramètre, Outlook recherche la photo de l’utilisateur d’abord dans le Carnet d’adresses en mode hors connexion ou dans Active Directory. À défaut, Outlook affiche une photo d’un contact si elle existe.\n\nSi vous désactivez ou ne configurez pas ce paramètre, Outlook commence par rechercher la photo de l’utilisateur dans les carnets d’adresses Contacts, et, à défaut, dans le Carnet d’adresses en mode hors connexion ou dans Active Directory, le cas échéant.",
+            "tags": [
+                "L_Contactoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook",
+            "valueName": "preferadphotos"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -3000,6 +4398,193 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
             "valueName": "showcontactfieldobsolete"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Contactoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "E"
+                                },
+                                "displayName": "Prénom (deuxième prénom) Nom"
+                            },
+                            {
+                                "value": {
+                                    "string": "H"
+                                },
+                                "displayName": "Nom Prénom"
+                            },
+                            {
+                                "value": {
+                                    "string": "S"
+                                },
+                                "displayName": "Prénom Nom1 Nom2"
+                            }
+                        ],
+                        "valueName": "nameparserstyle",
+                        "inputType": "dropdownList",
+                        "caption": "Ordre des noms complets par défaut :",
+                        "id": "L_DefaultFullNameorder"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32791
+                                    }
+                                },
+                                "displayName": "Nom Prénom"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32823
+                                    }
+                                },
+                                "displayName": "Prénom Nom"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 14870
+                                    }
+                                },
+                                "displayName": "Société"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32793
+                                    }
+                                },
+                                "displayName": "Nom, Prénom (société)"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32792
+                                    }
+                                },
+                                "displayName": "Société (nom, prénom)"
+                            }
+                        ],
+                        "valueName": "fileasorder",
+                        "inputType": "dropdownList",
+                        "caption": "Ordre de classement par défaut :",
+                        "id": "L_DefaultFileAsorder"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "confirmduplicates",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\contact",
+                        "inputType": "checkBox",
+                        "caption": "Vérifier les contacts en double",
+                        "id": "L_Checkforduplicatecontacts"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "indextabson",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\contact",
+                        "inputType": "checkBox",
+                        "caption": "Afficher un autre index des contacts",
+                        "id": "L_ShowanadditionalContactsIndex"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Arabe"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Cyrillique"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 15
+                                    }
+                                },
+                                "displayName": "Grec"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 16
+                                    }
+                                },
+                                "displayName": "Hébreu"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 28
+                                    }
+                                },
+                                "displayName": "Thaï"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 30
+                                    }
+                                },
+                                "displayName": "Vietnamien"
+                            }
+                        ],
+                        "valueName": "indextabsscript",
+                        "inputType": "dropdownList",
+                        "caption": "Autre index des contacts :",
+                        "id": "L_AdditionalContactsIndex"
+                    }
+                ]
+            },
+            "name": "L_Selectthedefaultsettingforhowtofilenewcontacts",
+            "displayName": "Sélectionner la configuration par défaut pour le classement des nouveaux contacts",
+            "explainText": "Définit la valeur dans l’option correspondante de l’interface utilisateur.",
+            "tags": [
+                "L_Contactoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\contact"
         },
         {
             "parentCategory": {
@@ -3203,7 +4788,7 @@
             },
             "name": "L_JunkMailImportList",
             "displayName": "Déclencheur pour appliquer les paramètres de la liste du courrier indésirable",
-            "explainText":"Ce paramètre de stratégie vous permet de déclencher l'activation d'autres paramètres de stratégie de courrier indésirable.\n\nSi vous activez ce paramètre de stratégie, vous déclenchez l'activation d'autres paramètres de stratégie de courrier indésirable. Par exemple, si vous configurez le paramètre « Indiquer le chemin d'accès de la liste des expéditeurs approuvés », la liste des expéditeurs approuvés spécifiée n'est pas importée par Outlook si vous n'activez pas également le paramètre « Liste d'importation du courrier indésirable ».\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, vous ne déclenchez pas l'activation d'autres stratégies de courrier indésirable.",
+            "explainText": "Ce paramètre de stratégie vous permet de déclencher l'activation d'autres paramètres de stratégie de courrier indésirable.\n\nSi vous activez ce paramètre de stratégie, vous déclenchez l'activation d'autres paramètres de stratégie de courrier indésirable. Par exemple, si vous configurez le paramètre « Indiquer le chemin d'accès de la liste des expéditeurs approuvés », la liste des expéditeurs approuvés spécifiée n'est pas importée par Outlook si vous n'activez pas également le paramètre « Liste d'importation du courrier indésirable ».\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, vous ne déclenchez pas l'activation d'autres stratégies de courrier indésirable.",
             "tags": [
                 "L_JunkEmail",
                 "L_Preferences",
@@ -3266,7 +4851,7 @@
             },
             "name": "L_SpecifypathtoSafeSenderslist",
             "displayName": "Indiquer le chemin d’accès de la liste des expéditeurs approuvés",
-            "explainText":"Indiquez un fichier texte contenant la liste des adresses électroniques à ajouter à la liste des expéditeurs approuvés ou servant à la remplacer (en fonction de la stratégie « Remplacer ou ajouter la liste d'importation du courrier indésirable »).",
+            "explainText": "Indiquez un fichier texte contenant la liste des adresses électroniques à ajouter à la liste des expéditeurs approuvés ou servant à la remplacer (en fonction de la stratégie « Remplacer ou ajouter la liste d'importation du courrier indésirable »).",
             "tags": [
                 "L_JunkEmail",
                 "L_Preferences",
@@ -3298,7 +4883,7 @@
             },
             "name": "L_SpecifypathtoSafeRecipientslist",
             "displayName": "Indiquer le chemin d’accès de la liste des destinataires approuvés",
-            "explainText":"Indiquez un fichier texte contenant la liste des adresses électroniques à ajouter à la liste des destinataires approuvés ou servant à la remplacer (en fonction de la stratégie « Remplacer ou ajouter la liste d'importation du courrier indésirable »).",
+            "explainText": "Indiquez un fichier texte contenant la liste des adresses électroniques à ajouter à la liste des destinataires approuvés ou servant à la remplacer (en fonction de la stratégie « Remplacer ou ajouter la liste d'importation du courrier indésirable »).",
             "tags": [
                 "L_JunkEmail",
                 "L_Preferences",
@@ -3330,7 +4915,7 @@
             },
             "name": "L_SpecifypathtoBlockedSenderslist",
             "displayName": "Indiquer le chemin d’accès de la liste des expéditeurs bloqués",
-            "explainText":"Indiquez un fichier texte contenant la liste des adresses électroniques à ajouter à la liste des expéditeurs bloqués ou servant à la remplacer (en fonction de la stratégie « Remplacer ou ajouter la liste d'importation du courrier indésirable »).",
+            "explainText": "Indiquez un fichier texte contenant la liste des adresses électroniques à ajouter à la liste des expéditeurs bloqués ou servant à la remplacer (en fonction de la stratégie « Remplacer ou ajouter la liste d'importation du courrier indésirable »).",
             "tags": [
                 "L_JunkEmail",
                 "L_Preferences",
@@ -3400,6 +4985,34 @@
         },
         {
             "parentCategory": {
+                "ref": "L_OutlookOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_WindowsVista"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_InternetAndNetworkPathsIntoHyperlinks",
+            "displayName": "Adresses Internet et réseau en liens hypertexte",
+            "explainText": "Ce paramètre de stratégie spécifie si Outlook convertit automatiquement le texte correspondant à des adresses Internet et réseau en liens hypertexte. Vous pouvez également configurer cette option en cochant la case « Adresses Internet et réseau avec des liens hypertexte », située sous l’onglet Outlook | Fichier | Options | Messagerie | Options de l’éditeur... | Vérification | Options de correction automatique... | Mise en forme automatique de l’interface utilisateur.\n\nSi vous activez ce paramètre de stratégie ou si vous ne le configurez pas, les textes d’Outlook qui correspondent à des adresses Internet et réseau sont automatiquement convertis en liens hypertexte. Il s’agit du comportement par défaut d’Outlook.\n\nSi vous désactivez ce paramètre de stratégie, les textes d’Outlook qui correspondent à des adresses Internet et réseau ne sont pas automatiquement convertis en liens hypertexte.",
+            "tags": [
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\autoformat",
+            "valueName": "pgrfafo_25_1"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_ComposeMessages"
             },
             "supportedOn": {
@@ -3416,8 +5029,8 @@
                 }
             },
             "name": "L_OutlookProtectionRules",
-            "displayName":"Règles de protection d'Outlook",
-            "explainText":"Ce paramètre de stratégie contrôle l'activation du complément Règles de protection d'Outlook.\n\nSi vous activez ce paramètre de stratégie ou si vous ne configurez pas, le complément télécharge automatiquement les règles de protection d'Outlook à partir d'Exchange et les traite quand chaque utilisateur d'une boîte aux lettres Exchange écrit un nouveau courrier électronique.\n\nSi vous désactivez ce paramètre de stratégie, le complément ne télécharge pas et ne traite pas les règles de protection d'Outlook.",
+            "displayName": "Règles de protection d'Outlook",
+            "explainText": "Ce paramètre de stratégie contrôle l'activation du complément Règles de protection d'Outlook.\n\nSi vous activez ce paramètre de stratégie ou si vous ne configurez pas, le complément télécharge automatiquement les règles de protection d'Outlook à partir d'Exchange et les traite quand chaque utilisateur d'une boîte aux lettres Exchange écrit un nouveau courrier électronique.\n\nSi vous désactivez ce paramètre de stratégie, le complément ne télécharge pas et ne traite pas les règles de protection d'Outlook.",
             "tags": [
                 "L_ComposeMessages",
                 "L_Mail",
@@ -3458,6 +5071,55 @@
             "name": "L_OutlookRichTextoptions",
             "displayName": "Options du format RTF Outlook",
             "explainText": "Ce paramètre de stratégie contrôle la manière dont Outlook envoie les messages RTF (Rich Text Format) aux destinataires Internet.\n\nSi vous activez ce paramètre de stratégie, vous pouvez choisir parmi les options de gestion des messages RTF adressés à des destinataires Internet suivantes :\n* Convertir au format texte brut - Outlook convertit le message au format texte brut dans le jeu de caractères par défaut. Toute mise en forme du message est perdue.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, Outlook convertit automatiquement les messages RTF envoyés sur Internet au format HTML. La mise en forme du message est ainsi conservée, et les pièces jointes sont reçues.",
+            "tags": [
+                "L_InternetFormatting",
+                "L_MailFormat",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\mail"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_InternetFormatting"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "plainwraplen",
+                        "minValue": 30,
+                        "minValueSpecified": true,
+                        "maxValue": 132,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "Renvoyer automatiquement le texte à la ligne après <x> caractères.",
+                        "id": "L_Automaticallywraptextatxcharacters"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "message plain format mime",
+                        "inputType": "checkBox",
+                        "caption": "Coder les pièces jointes au format UUENCODE",
+                        "id": "L_EncodeattachmentsinUUENCODEformatwhensending1"
+                    }
+                ]
+            },
+            "name": "L_Plaintextoptions",
+            "displayName": "Options de texte brut",
+            "explainText": "Ce paramètre de stratégie permet de contrôler la mise en forme des messages en texte brut lors de leur envoi à partir d’Outlook.\n\nSi vous activez ce paramètre de stratégie, le texte est automatiquement encapsulé dans des messages électroniques Internet, et les pièces jointes sont codées au format UUENCODE.\n\nSi vous désactivez ce paramètre de stratégie, Outlook utilise le format MIME standard pour coder les pièces jointes dans les messages Outlook en texte brut. Les utilisateurs ne peuvent pas modifier cette configuration.\n\nSi vous ne configurez pas ce paramètre de stratégie, cela revient à désactiver la stratégie. Le cas échéant, les utilisateurs peuvent modifier les options de texte brut dans Outlook en cliquant sur Outils, Options, onglet Format du courrier, Format Internet, puis en modifiant les valeurs sous Options de texte brut.",
             "tags": [
                 "L_InternetFormatting",
                 "L_MailFormat",
@@ -4079,6 +5741,35 @@
                     "value": 0
                 }
             },
+            "name": "L_HidePhotoLink",
+            "displayName": "Masquer le lien de la photo",
+            "explainText": "Ce paramètre de stratégie configure le lien pour mon site l'utilisateur (lorsqu'elle est détectée) où la photo de l'utilisateur peut être téléchargé.Ce lien se trouve sous l'onglet fichier.Si vous activez ce paramètre de stratégie, le lien n'est pas visible.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, le lien est visible.",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options",
+            "valueName": "hidephotolink"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_AllowSelectionFloaties",
             "displayName": "Afficher la mini barre d’outils lors de la sélection",
             "explainText": "Lorsque cette stratégie est désactivée, la mini-barre d’outils ne s’affiche pas lors de la sélection d’un texte. Par défaut, elle s’active à la sélection, et il est possible de la masquer ou de l’afficher au moyen d’une option de la boîte de dialogue Options de l’éditeur.",
@@ -4371,7 +6062,7 @@
             },
             "name": "L_TurnOnLoggingForAllConflicts",
             "displayName": "Activer la journalisation de tous les conflits",
-            "explainText":"Ce paramètre de stratégie vous permet de créer des journaux Résolution des modifications à chaque exécution de l'outil de résolution des conflits Outlook.\n\nSi vous activez ce paramètre de stratégie, Outlook crée des journaux Résolution des modifications à chaque exécution de l'outil de résolution des conflits Outlook. Par défaut, dès que cet outil ne parvient pas à résoudre un conflit, les journaux Résolution des modifications sont enregistrés dans le dossier Problèmes de synchronisation.\n\nVous pouvez sélectionner l'une des options suivantes :\n- Aucun conflit n'est consigné :  à chaque exécution de l'outil de résolution des conflits d'Outlook, aucun journal Résolution des modifications n'est enregistré dans le dossier Problèmes de synchronisation.\n- Tous les conflits sont consignés : à chaque exécution de l'outil de résolution des conflits d'Outlook, les journaux Résolution des modifications sont enregistrés dans le dossier Problèmes de synchronisation.\n- Seuls les conflits non résolus sont consignés : dès que l'outil de résolution des conflits d'Outlook ne parvient pas à résoudre un conflit, les journaux Résolution des modifications sont enregistrés dans le dossier Problèmes de synchronisation.\n\nCela s'applique à tous les types d'éléments.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, aucun journal Résolution des modifications n'est enregistré à chaque fois que l'outil de résolution des conflits Outlook est exécuté.",
+            "explainText": "Ce paramètre de stratégie vous permet de créer des journaux Résolution des modifications à chaque exécution de l'outil de résolution des conflits Outlook.\n\nSi vous activez ce paramètre de stratégie, Outlook crée des journaux Résolution des modifications à chaque exécution de l'outil de résolution des conflits Outlook. Par défaut, dès que cet outil ne parvient pas à résoudre un conflit, les journaux Résolution des modifications sont enregistrés dans le dossier Problèmes de synchronisation.\n\nVous pouvez sélectionner l'une des options suivantes :\n- Aucun conflit n'est consigné :  à chaque exécution de l'outil de résolution des conflits d'Outlook, aucun journal Résolution des modifications n'est enregistré dans le dossier Problèmes de synchronisation.\n- Tous les conflits sont consignés : à chaque exécution de l'outil de résolution des conflits d'Outlook, les journaux Résolution des modifications sont enregistrés dans le dossier Problèmes de synchronisation.\n- Seuls les conflits non résolus sont consignés : dès que l'outil de résolution des conflits d'Outlook ne parvient pas à résoudre un conflit, les journaux Résolution des modifications sont enregistrés dans le dossier Problèmes de synchronisation.\n\nCela s'applique à tous les types d'éléments.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, aucun journal Résolution des modifications n'est enregistré à chaque fois que l'outil de résolution des conflits Outlook est exécuté.",
             "tags": [
                 "L_Advanced",
                 "L_Other",
@@ -4550,7 +6241,7 @@
             },
             "name": "L_DisableOutlookobjectmodelscriptsforpublicfolders",
             "displayName": "Ne pas autoriser l’exécution des scripts de modèle objet Outlook pour les dossiers publics",
-            "explainText":"Ce paramètre de stratégie contrôle si Outlook exécute des scripts associés aux formulaires personnalisés ou aux pages d'accueil des dossiers publics. Si vous activez ce paramètre de stratégie, Outlook n'exécute pas les scripts associés aux dossiers publics et remplace les modifications de configuration sur les ordinateurs des utilisateurs.\n\nSi vous désactivez ce paramètre de stratégie, Outlook exécute automatiquement les scripts associés aux formulaires personnalisés ou aux pages d'accueil des dossiers publics et remplace les modifications de configuration sur les ordinateurs des utilisateurs.\n\nSi vous ne configurez pas ce paramètre de stratégie, par défaut, Outlook n'exécute pas les scripts associés aux dossiers publics. Vous pouvez configurer ce paramètre dans le Centre de gestion de la confidentialité en activant la case à cocher « Autoriser les scripts dans les dossiers publics ».",
+            "explainText": "Ce paramètre de stratégie contrôle si Outlook exécute des scripts associés aux formulaires personnalisés ou aux pages d'accueil des dossiers publics. Si vous activez ce paramètre de stratégie, Outlook n'exécute pas les scripts associés aux dossiers publics et remplace les modifications de configuration sur les ordinateurs des utilisateurs.\n\nSi vous désactivez ce paramètre de stratégie, Outlook exécute automatiquement les scripts associés aux formulaires personnalisés ou aux pages d'accueil des dossiers publics et remplace les modifications de configuration sur les ordinateurs des utilisateurs.\n\nSi vous ne configurez pas ce paramètre de stratégie, par défaut, Outlook n'exécute pas les scripts associés aux dossiers publics. Vous pouvez configurer ce paramètre dans le Centre de gestion de la confidentialité en activant la case à cocher « Autoriser les scripts dans les dossiers publics ».",
             "tags": [
                 "L_Advanced",
                 "L_Other",
@@ -4609,8 +6300,8 @@
                 }
             },
             "name": "L_ArchiveIgnoreLastModifiedTime",
-            "displayName":"Modifier les critères utilisés par Outlook pour archiver différents types d'éléments",
-            "explainText":"Si vous activez ce paramètre de stratégie, Outlook ne tient pas compte de la date de la dernière modification et archive les éléments en fonction d'une date spécifique au type d'élément, comme suit :\n\n-Message électronique : la date de réception.\n-Élément de calendrier : la date réelle à laquelle un rendez-vous, un événement ou une réunion est prévu.\n-Tâche : la date d'achèvement. Les tâches qui ne sont pas marquées comme terminées ne sont pas archivées et celles qui sont attribuées à d'autres utilisateurs sont uniquement archivées si leur statut est Terminée.\n-Remarque : il s'agit de la date et de l'heure de la dernière modification.\n-Entrée du journal : la date de création de l'entrée du journal.\n-Contact : cet élément n'est pas archivé.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, Outlook archive les différents éléments en fonction du type d'élément, comme suit :\n\n-Message électronique : la date de réception ou la date et l'heure de la dernière modification, l'élément le plus récent étant retenu.\n-Élément de calendrier : la date et l'heure de la dernière modification ou la date réelle à laquelle un rendez-vous, un événement ou une réunion est prévu, l'élément le plus récent étant retenu.\n-Tâche : la date d'achèvement ou la date et l'heure de la dernière modification, l'élément le plus récent étant retenu. Les tâches qui ne sont pas marquées comme étant terminées ne sont pas archivées et celles qui sont attribuées à d'autres utilisateurs sont uniquement archivées si leur statut est Terminée.\n-Remarque : il s'agit de la date et de l'heure de la dernière modification.\n-Entrée du journal : la date de création de l'entrée du journal ou la date et l'heure de la dernière modification, l'élément le plus récent étant retenu.\n-Contact : cet élément n'est pas archivé.",
+            "displayName": "Modifier les critères utilisés par Outlook pour archiver différents types d'éléments",
+            "explainText": "Si vous activez ce paramètre de stratégie, Outlook ne tient pas compte de la date de la dernière modification et archive les éléments en fonction d'une date spécifique au type d'élément, comme suit :\n\n-Message électronique : la date de réception.\n-Élément de calendrier : la date réelle à laquelle un rendez-vous, un événement ou une réunion est prévu.\n-Tâche : la date d'achèvement. Les tâches qui ne sont pas marquées comme terminées ne sont pas archivées et celles qui sont attribuées à d'autres utilisateurs sont uniquement archivées si leur statut est Terminée.\n-Remarque : il s'agit de la date et de l'heure de la dernière modification.\n-Entrée du journal : la date de création de l'entrée du journal.\n-Contact : cet élément n'est pas archivé.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, Outlook archive les différents éléments en fonction du type d'élément, comme suit :\n\n-Message électronique : la date de réception ou la date et l'heure de la dernière modification, l'élément le plus récent étant retenu.\n-Élément de calendrier : la date et l'heure de la dernière modification ou la date réelle à laquelle un rendez-vous, un événement ou une réunion est prévu, l'élément le plus récent étant retenu.\n-Tâche : la date d'achèvement ou la date et l'heure de la dernière modification, l'élément le plus récent étant retenu. Les tâches qui ne sont pas marquées comme étant terminées ne sont pas archivées et celles qui sont attribuées à d'autres utilisateurs sont uniquement archivées si leur statut est Terminée.\n-Remarque : il s'agit de la date et de l'heure de la dernière modification.\n-Entrée du journal : la date de création de l'entrée du journal ou la date et l'heure de la dernière modification, l'élément le plus récent étant retenu.\n-Contact : cet élément n'est pas archivé.",
             "tags": [
                 "L_AutoArchive",
                 "L_Other",
@@ -4620,6 +6311,84 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
             "valueName": "archiveignorelastmodifiedtime"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Righttoleft"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "De gauche à droite"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "De droite à gauche"
+                            }
+                        ],
+                        "valueName": "calendar direction",
+                        "inputType": "dropdownList",
+                        "caption": "Définir l’orientation de la disposition :",
+                        "id": "L_Setlayoutdirection"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Contextuel"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "De gauche à droite"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "De droite à gauche"
+                            }
+                        ],
+                        "valueName": "text direction",
+                        "inputType": "dropdownList",
+                        "caption": "Définir l’orientation globale du texte :",
+                        "id": "L_Setglobaltextdirection"
+                    }
+                ]
+            },
+            "name": "L_LayoutOptions",
+            "displayName": "Options de disposition",
+            "explainText": "Définit la valeur dans l’option correspondante de l’interface utilisateur.",
+            "tags": [
+                "L_Righttoleft",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
         },
         {
             "parentCategory": {
@@ -6062,7 +7831,7 @@
             },
             "name": "L_Missingrootcertificates",
             "displayName": "Certificats racines manquants",
-            "explainText":"Ce paramètre de stratégie contrôle le fonctionnement d'Outlook quand un certificat racine est manquant.\n\nSi vous activez ce paramètre de stratégie, trois options de contrôle du fonctionnement d'Outlook s'offrent à vous quand un certificat racine est manquant.\n\n- Ni erreur, ni avertissement : cette option n'affiche aucun avertissement ou erreur, et applique la configuration par défaut dans Outlook.\n- Avertissement : Outlook affiche un message d'avertissement quand un certificat racine est manquant.\n- Erreur : Outlook affiche un message d'erreur quand un certificat racine est manquant.\n\nSi vous ne configurez pas ce paramètre de stratégie, vous recevez un message d'erreur si un certificat racine vient à manquer.",
+            "explainText": "Ce paramètre de stratégie contrôle le fonctionnement d'Outlook quand un certificat racine est manquant.\n\nSi vous activez ce paramètre de stratégie, trois options de contrôle du fonctionnement d'Outlook s'offrent à vous quand un certificat racine est manquant.\n\n- Ni erreur, ni avertissement : cette option n'affiche aucun avertissement ou erreur, et applique la configuration par défaut dans Outlook.\n- Avertissement : Outlook affiche un message d'avertissement quand un certificat racine est manquant.\n- Erreur : Outlook affiche un message d'erreur quand un certificat racine est manquant.\n\nSi vous ne configurez pas ce paramètre de stratégie, vous recevez un message d'erreur si un certificat racine vient à manquer.",
             "tags": [
                 "L_SignatureStatusDialog",
                 "L_Cryptography",
@@ -6383,6 +8152,36 @@
                     "value": 0
                 }
             },
+            "name": "L_ConfigureCachedExchangeMode",
+            "displayName": "Utiliser le mode Exchange mis en cache pour les profils Outlook nouveaux et existants",
+            "explainText": "Par défaut, les utilisateurs peuvent choisir de configurer le mode Exchange mis en cache ou d’utiliser le mode connexion. Si ce paramètre est activé, les nouveaux profils et les profils existants d’Outlook sont configurés de manière à utiliser le mode Exchange mis en cache. La désactivation de ce paramètre configure les profils Outlook nouveaux et existants de manière à ce qu’ils utilisent le mode connexion.",
+            "tags": [
+                "L_CachedExchangeMode",
+                "L_Exchangesettings",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\cached mode",
+            "valueName": "enable"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_CachedExchangeMode"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_InCachedExchangemakeSendReceiveF9nulloperation",
             "displayName": "Ne pas synchroniser en mode Exchange mis en cache en cas d’utilisation de la fonctionnalité Envoyer/Recevoir ou F9",
             "explainText": "Par défaut, lorsque l’utilisateur clique sur Envoyer/Recevoir ou appuie sur F9 pour un compte en mode Exchange mis en cache, Outlook effectue une synchronisation avec le serveur Exchange. Si ce paramètre est activé, les fonctions Envoyer/Recevoir et F9 ne lancent la synchronisation avec Exchange que si un seul dossier est synchronisé. L’utilisateur peut toujours appuyer sur Maj+F9 pour synchroniser le dossier actif.",
@@ -6453,6 +8252,39 @@
             "name": "L_Entersecondstowaittodownloadchangesfromserver",
             "displayName": "Entrer le délai d’attente (en secondes) avant le téléchargement des modifications à partir du serveur",
             "explainText": "Indique la durée d’attente (en secondes) avant le téléchargement des modifications à partir du serveur Exchange.",
+            "tags": [
+                "L_CachedExchangeMode",
+                "L_Exchangesettings",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\cached mode"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_CachedExchangeMode"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "maximum",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 86400,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "Entrez le nombre de secondes d’attente avant la synchronisation (par défaut : 60 sec)",
+                        "id": "L_EntersecondstowaitbeforesyncDefault60sec"
+                    }
+                ]
+            },
+            "name": "L_Entermaximumsecondstowaittosyncchanges",
+            "displayName": "Entrer le délai d’attente maximal (en secondes) avant la synchronisation des modifications",
+            "explainText": "Indique la durée d’attente maximale (en secondes) avant la synchronisation des modifications avec le serveur Exchange.",
             "tags": [
                 "L_CachedExchangeMode",
                 "L_Exchangesettings",
@@ -6596,7 +8428,7 @@
             },
             "name": "L_DisallowDownloadHeadersFileCachedExchangeMode",
             "displayName": "Désactiver le téléchargement des en-têtes",
-            "explainText":"Désactive/active l'option « Télécharger les en-têtes » dans le sous-menu Mode Exchange mis en cache du menu Fichier.",
+            "explainText": "Désactive/active l'option « Télécharger les en-têtes » dans le sous-menu Mode Exchange mis en cache du menu Fichier.",
             "tags": [
                 "L_CachedExchangeMode",
                 "L_Exchangesettings",
@@ -7032,6 +8864,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_AccountSettingsEmail"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_PreventSavingCredentialsForBasicAuthenticationPolicy",
+            "displayName": "Empêcher l'enregistrement des informations d'identification pour l'authentification de base stratégie",
+            "explainText": "Ce paramètre de stratégie permet d’empêcher Outlook d’enregistrer les informations d’identification de l’utilisateur à l’aide de l’authentification de base.\n\nSi vous activez ce paramètre de stratégie, Outlook n’enregistre pas les informations d’identification de l’utilisateur à l’aide de l’authentification de base.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, Outlook permet à l’utilisateur d’enregistrer les informations d’identification lors de l’utilisation de l’authentification de base sur un serveur. Ces informations d’identification sont stockées sous la forme d’informations génériques et récupérables par tout processus s’exécutant sur l’ordinateur avec les droits de l’utilisateur.",
+            "tags": [
+                "L_AccountSettingsEmail",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\rpc",
+            "valueName": "disablebasicauthsavedcreds"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Exchangesettings"
             },
             "supportedOn": {
@@ -7262,8 +9123,8 @@
                 }
             },
             "name": "L_TurnOffHierarchicalAddressBookDepartmentSelection",
-            "displayName":"Désactiver la sélection de service de carnet d'adresses hiérarchique",
-            "explainText":"Ce paramètre de stratégie détermine si les services peuvent être sélectionnées en tant que destinataires dans le carnet d'adresses hiérarchique (HAB).\n\nSi vous activez ce paramètre de stratégie, le contrôle d'arborescence pour sélectionner les services en tant que destinataires est désactivé dans le HAB.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, le contrôle d'arborescence pour sélectionner les services en tant que destinataires est activé dans le HAB.",
+            "displayName": "Désactiver la sélection de service de carnet d'adresses hiérarchique",
+            "explainText": "Ce paramètre de stratégie détermine si les services peuvent être sélectionnées en tant que destinataires dans le carnet d'adresses hiérarchique (HAB).\n\nSi vous activez ce paramètre de stratégie, le contrôle d'arborescence pour sélectionner les services en tant que destinataires est désactivé dans le HAB.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, le contrôle d'arborescence pour sélectionner les services en tant que destinataires est activé dans le HAB.",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -7291,8 +9152,8 @@
                 }
             },
             "name": "L_TurnOffHierarchicalAddressBookSearch",
-            "displayName":"Désactiver la recherche de carnet d'adresses hiérarchique",
-            "explainText":"Ce paramètre de stratégie contrôle des points d'entrée à rechercher dans le carnet d'adresses hiérarchique (HAB).\n\nSi vous activez ce paramètre de stratégie, tous les points d'entrée pour rechercher les fonctionnalités dans le HAB seront désactivées.Si vous désactivez ou ne configurez pas ce paramètre de stratégie, tous les points d'entrée pour rechercher les fonctionnalités dans le HAB seront activés.",
+            "displayName": "Désactiver la recherche de carnet d'adresses hiérarchique",
+            "explainText": "Ce paramètre de stratégie contrôle des points d'entrée à rechercher dans le carnet d'adresses hiérarchique (HAB).\n\nSi vous activez ce paramètre de stratégie, tous les points d'entrée pour rechercher les fonctionnalités dans le HAB seront désactivées.Si vous désactivez ou ne configurez pas ce paramètre de stratégie, tous les points d'entrée pour rechercher les fonctionnalités dans le HAB seront activés.",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -7464,37 +9325,6 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "disablecrossaccountcopy",
-                        "requiredSpecified": false,
-                        "expandableSpecified": false,
-                        "maxLength": 100,
-                        "maxLengthSpecified": true,
-                        "inputType": "textBox",
-                        "id": "L_PreventCopyingOrMovingItemsBetweenAccountsID"
-                    }
-                ]
-            },
-            "name": "L_PreventCopyingOrMovingItemsBetweenAccounts",
-            "displayName": "Empêcher la copie ou le déplacement d’éléments entre les comptes",
-            "explainText": "Ce paramètre de stratégie permet d’empêcher la copie ou le déplacement d’éléments vers d’autres comptes ou fichiers PST.\n\nSi vous activez ce paramètre de stratégie, des éléments ne peuvent pas être déplacés ou copiés vers d’autres comptes ou fichiers PST. Entrez l’une des informations suivantes :\n\n- Contoso.com : cette information empêche la copie ou le déplacement du compte correspondant au domaine répertorié\n- * : cette information empêche la copie de tous les comptes et fichiers PST\n- SharePoint : cette information empêche la copie ou le déplacement à partir du fichier PST SharePoint\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, copier ou déplacer des éléments entre des comptes ou des fichiers PST est autorisé.",
-            "tags": [
-                "L_Exchangesettings",
-                "L_ToolsAccounts",
-                "L_MicrosoftOfficeOutlook"
-            ],
-            "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\outlook"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Exchangesettings"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -7507,7 +9337,7 @@
             },
             "name": "L_AutomaticallyConfigureProfileBasedOnActive",
             "displayName": "Configurer le profil automatiquement en fonction de l’adresse SMTP principale d’Active Directory",
-            "explainText": "Ne configurer que le premier profil automatiquement en fonction de l’adresse SMTP principale d’Active Directory\n\nCe paramètre de stratégie vous permet de contrôler si les utilisateurs qui ont rejoint un domaine dans un environnement Active directory peuvent modifier l’adresse SMTP principale utilisée lors de la configuration des comptes dans Outlook.\n\nSi vous activez ce paramètre de stratégie, les utilisateurs peuvent créer un profil en entrant un nom de profil. Ce profil est créé sans l’aide de l’Assistant Nouveau compte. Aucune interface utilisateur ne s’affiche lors de la création du profil.\n\nCette clé sera ignorée une fois le premier profil créé.",
+            "explainText": "Ce paramètre de stratégie contrôle si l’adresse SMTP principale Active Directory d’un utilisateur est automatiquement utilisée lors de la création d’un profil.\n\nSi vous activez ce paramètre de stratégie, l’adresse SMTP principale Active Directory de l’utilisateur est utilisée pour le profil qu’un utilisateur crée un profil. L’utilisateur peut uniquement entrer un nom de profil. L’Assistant permettant de configurer des paramètres de profil spécifiques n’est pas visible par l’utilisateur lors de la création du profil.\n\nRemarque : Si vous voulez que le premier nouveau profil utilise uniquement l’adresse SMTP principale d’Active Directory et autorise l’utilisateur à spécifier une autre adresse SMTP lors de la création d’autres profils, utilisez plutôt le paramètre de stratégie « Configurer le profil automatiquement en fonction de l’adresse SMTP principale Active Directory (une seule fois) ».\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, lorsqu’un utilisateur crée un profil, l’Assistant utilisé pour configurer les paramètres de profil spécifiques s’affiche à l’utilisateur et l’utilisateur peut spécifier n’importe quelle adresse SMTP lors de la création du profil.",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -7535,8 +9365,8 @@
                 }
             },
             "name": "L_AutomaticallyConfigureProfileBasedOnActiveOnce",
-            "displayName": "Ne configurer que le premier profil automatiquement en fonction de l’adresse SMTP principale d’Active Directory",
-            "explainText": "Configurer le profil automatiquement en fonction de l’adresse SMTP principale d’Active Directory\n\nCe paramètre de stratégie vous permet de contrôler si les utilisateurs qui ont rejoint un domaine dans un environnement Active directory peuvent modifier l’adresse SMTP principale utilisée lors de la configuration des comptes dans Outlook.\n\nSi vous activez ce paramètre de stratégie, les utilisateurs peuvent créer un profil en entrant un nom de profil. Ce profil est créé sans l’aide de l’Assistant Nouveau compte. Aucune interface utilisateur ne s’affiche lors de la création du profil.\n\nCette clé sera ignorée une fois le premier profil créé.",
+            "displayName": "Configurer le profil automatiquement en fonction de l’adresse SMTP principale d’Active Directory (une seule fois)",
+            "explainText": "Ce paramètre de stratégie contrôle si un utilisateur peut créer des profils supplémentaires et spécifier une adresse SMTP différente, après la création automatique du premier profil à l’aide de l’adresse SMTP principale Active Directory de l’utilisateur.\n\nSi vous activez ce paramètre de stratégie, la première fois qu’un utilisateur crée un profil, l’adresse SMTP principale Active Directory de l’utilisateur est utilisée pour le profil. L’utilisateur peut uniquement entrer un nom de profil. L’Assistant permettant de configurer des paramètres de profil spécifiques n’est pas visible par l’utilisateur lors de la création du profil.\n\nUne fois le premier profil créé automatiquement, l’utilisateur peut créer manuellement des profils supplémentaires. L’Assistant permettant de configurer des paramètres de profil spécifiques s’affiche à l’utilisateur et l’utilisateur peut spécifier une adresse SMTP lors de la création du profil.\n\nRemarque : Si vous voulez que l’adresse SMTP principale Active Directory de l’utilisateur soit toujours utilisée lors de la création d’un profil, utilisez plutôt le paramètre de stratégie « Configurer le profil automatiquement en fonction de l’adresse SMTP principale Active Directory ». Si ce paramètre de stratégie est activé, il a la priorité sur ce paramètre de stratégie.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, lorsqu’un utilisateur crée u profil, l’Assistant utilisé pour configurer les paramètres de profil spécifiques s’affiche à l’utilisateur et l’utilisateur peut spécifier n’importe quelle adresse SMTP lors de la création du profil.",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -7605,6 +9435,35 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\folders",
             "valueName": "disableeditpermissions"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Predefined"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableEditDefaultUserPermissions",
+            "displayName": "Limiter les autorisations qui peuvent être attribuées à des anonymes par défaut, Mon organisation relativement aux dossiers de courriers et aux calendriers",
+            "explainText": "Ce paramètre de stratégie vous permet de limiter les autorisations qui peuvent être attribuées aux paramètres par défaut, Anonymes ou Mon organisation sur les dossiers de courrier et les calendriers.\n\nSi vous activez ce paramètre de stratégie, les utilisateurs peuvent attribuer uniquement les autorisations suivantes à par défaut, Anonyme ou Mon organisation.\n\n-Aucun dans les dossiers de courrier\n-Aucun ou les informations de disponibilité de base sur les calendriers\n\nLes utilisateurs ne pourront pas attribuer d’autres autorisations à par défaut, Anonyme ou Mon organisation. Toutes les autorisations seront toujours disponibles pour les attribuer à d’autres utilisateurs sur les dossiers de courrier et les calendriers.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, les utilisateurs peuvent attribuer n’importe quelle autorisation à par défaut, anonyme ou Mon organisation sur les dossiers de courrier et les calendriers.",
+            "tags": [
+                "L_Predefined",
+                "L_Disableitemsinuserinterface",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\folders",
+            "valueName": "disableeditdefaultuserpermissions"
         },
         {
             "parentCategory": {
@@ -8576,7 +10435,7 @@
             },
             "name": "L_DisableSharepointintegrationinOutlook",
             "displayName": "Ne pas autoriser l’intégration SharePoint-Outlook",
-            "explainText":"Désactive/active l'accès à Windows SharePoint Services avec Outlook.",
+            "explainText": "Désactive/active l'accès à Windows SharePoint Services avec Outlook.",
             "tags": [
                 "L_SharePointIntegration",
                 "L_ToolsAccounts",
@@ -8811,7 +10670,7 @@
             },
             "name": "L_Keepsearchfoldersoffline",
             "displayName": "Conserver les dossiers de recherche hors connexion",
-            "explainText":"Ce paramètre de stratégie permet de spécifier la durée (en jours) de conservation à l'état actif d'un dossier de recherche en mode hors connexion ou en mode mis en cache. Quand un dossier de recherche n'est pas utilisé pendant cette période, il est mis à l'état dormant et n'est plus actualisé en fonction du contenu actuel des dossiers (l'affichage du dossier de recherche le réactive et redémarre le minuteur).\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier la durée (en jours) de conservation à l'état actif d'un dossier de recherche en mode hors connexion.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les dossiers de recherche restent toujours dormants.",
+            "explainText": "Ce paramètre de stratégie permet de spécifier la durée (en jours) de conservation à l'état actif d'un dossier de recherche en mode hors connexion ou en mode mis en cache. Quand un dossier de recherche n'est pas utilisé pendant cette période, il est mis à l'état dormant et n'est plus actualisé en fonction du contenu actuel des dossiers (l'affichage du dossier de recherche le réactive et redémarre le minuteur).\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier la durée (en jours) de conservation à l'état actif d'un dossier de recherche en mode hors connexion.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les dossiers de recherche restent toujours dormants.",
             "tags": [
                 "L_SearchFolders",
                 "L_MicrosoftOfficeOutlook"
@@ -9284,8 +11143,8 @@
                 }
             },
             "name": "L_PreventShutdownIfExternalReferencesExist",
-            "displayName":"Empêcher l'arrêt s'il existent des références externes",
-            "explainText":"Ce paramètre de stratégie détermine si Outlook doit ignorer les références externes pendant l'arrêt.\n\nSi vous activez ce paramètre de stratégie, arrêt se produit pas si des références externes existent.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, les références externes seront ignorés pendant l'arrêt.",
+            "displayName": "Empêcher l'arrêt s'il existent des références externes",
+            "explainText": "Ce paramètre de stratégie détermine si Outlook doit ignorer les références externes pendant l'arrêt.\n\nSi vous activez ce paramètre de stratégie, arrêt se produit pas si des références externes existent.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, les références externes seront ignorés pendant l'arrêt.",
             "tags": [
                 "L_Shutdown",
                 "L_Miscellaneous",
@@ -9294,6 +11153,59 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\shutdown",
             "valueName": "allowshutdownwithexternalreferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Shutdown"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Fournisseur MAPI ne prend pas en charge"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Tous les fournisseurs MAPI prennent en charge"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Jamais"
+                            }
+                        ],
+                        "valueName": "fastshutdownbehavior",
+                        "inputType": "dropdownList",
+                        "id": "L_ConfigureFastShutdownBehaviorDropID"
+                    }
+                ]
+            },
+            "name": "L_ConfigureFastShutdownBehavior",
+            "displayName": "Configurer le comportement d’arrêt rapide",
+            "explainText": "Ce paramètre de stratégie contrôle le comportement de «arrêt rapide» d'Outlook.Si vous activez ce paramètre de stratégie, vous pouvez sélectionner une des options suivantes :\n\n-Fournisseur MAPI ne prend pas en charge : Outlook doit toujours utiliser l'arrêt rapide, sauf si un fournisseur MAPI explicitement ne la prend pas en charge.\n-Tous les fournisseurs MAPI prennent en charge : Outlook utilise uniquement l'arrêt rapide si tous les fournisseurs MAPI la prennent en charge.\n-Jamais : Outlook utilise jamais l'arrêt rapide\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, le comportement sera identique à l'option «fournisseur MAPI ne prend pas en charge».",
+            "tags": [
+                "L_Shutdown",
+                "L_Miscellaneous",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\shutdown"
         },
         {
             "parentCategory": {
@@ -9313,8 +11225,8 @@
                 }
             },
             "name": "L_ConfigureFastShutdownBehaviorForAddIns",
-            "displayName":"Configurer le comportement d'arrêt rapide pour les compléments",
-            "explainText":"Ce paramètre de stratégie contrôle le comportement de «arrêt rapide» d'Outlook pour les compléments.\n\nSi vous activez ce paramètre de stratégie, les événements BeginShutdown et OnDisconnection doivent toujours être appelées pour tous les compléments.Si vous désactivez ou ne configurez pas ce paramètre de stratégie, tous les compléments Outlook doivent toujours utiliser le comportement d'arrêt rapide macro complémentaire et pas les événements BeginShutdown et OnDisconnection ont appelée.",
+            "displayName": "Configurer le comportement d'arrêt rapide pour les compléments",
+            "explainText": "Ce paramètre de stratégie contrôle le comportement de «arrêt rapide» d'Outlook pour les compléments.\n\nSi vous activez ce paramètre de stratégie, les événements BeginShutdown et OnDisconnection doivent toujours être appelées pour tous les compléments.Si vous désactivez ou ne configurez pas ce paramètre de stratégie, tous les compléments Outlook doivent toujours utiliser le comportement d'arrêt rapide macro complémentaire et pas les événements BeginShutdown et OnDisconnection ont appelée.",
             "tags": [
                 "L_Shutdown",
                 "L_Miscellaneous",
@@ -9347,7 +11259,7 @@
             },
             "name": "L_SpecifyDelayBeforeSendingPeopleSearchRequest",
             "displayName": "Spécifier le délai avant l’envoi de la demande de recherche de contacts",
-            "explainText":"Cette stratégie permet de définir le délai d'attente avant l'envoi des demandes de recherche de personnes à partir de la zone Rechercher un contact d'Outlook et de la section Personnes associées qui apparaît dans le mode Backstage (onglet Infos) des applications Office.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier la valeur du délai d’attente en millisecondes entre le moment où l'utilisateur cesse (ou interrompt temporairement) d'entrer des données dans la zone de recherche et où l'application envoie une demande de recherche.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, la valeur du délai d'attente par défaut est de 200 millisecondes (0,20 secondes).",
+            "explainText": "Cette stratégie permet de définir le délai d'attente avant l'envoi des demandes de recherche de personnes à partir de la zone Rechercher un contact d'Outlook et de la section Personnes associées qui apparaît dans le mode Backstage (onglet Infos) des applications Office.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier la valeur du délai d’attente en millisecondes entre le moment où l'utilisateur cesse (ou interrompt temporairement) d'entrer des données dans la zone de recherche et où l'application envoie une demande de recherche.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, la valeur du délai d'attente par défaut est de 200 millisecondes (0,20 secondes).",
             "tags": [
                 "L_Miscellaneous",
                 "L_MicrosoftOfficeOutlook"
@@ -9377,8 +11289,8 @@
                 ]
             },
             "name": "L_SpecifyOutlookPeopleSearchTimeout",
-            "displayName":"Définir l'intervalle du délai d'attente pour la recherche de contacts dans Outlook",
-            "explainText":"Ce paramètre de stratégie contrôle l'intervalle du délai d'attente pour la recherche de contacts dans Outlook. Le programme renvoie autant de résultats que possible avant que l'intervalle du délai d'attente n'expire. Si les résultats de la recherche sont incomplets, Outlook affiche un message en bas de la liste des résultats.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier l'intervalle du délai d'attente en millisecondes.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'intervalle du délai d'attente est de 60 000 millisecondes (60 secondes).",
+            "displayName": "Définir l'intervalle du délai d'attente pour la recherche de contacts dans Outlook",
+            "explainText": "Ce paramètre de stratégie contrôle l'intervalle du délai d'attente pour la recherche de contacts dans Outlook. Le programme renvoie autant de résultats que possible avant que l'intervalle du délai d'attente n'expire. Si les résultats de la recherche sont incomplets, Outlook affiche un message en bas de la liste des résultats.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier l'intervalle du délai d'attente en millisecondes.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l'intervalle du délai d'attente est de 60 000 millisecondes (60 secondes).",
             "tags": [
                 "L_Miscellaneous",
                 "L_MicrosoftOfficeOutlook"
@@ -9844,7 +11756,7 @@
             },
             "name": "L_DisableVLVBrowsingonLDAPservers",
             "displayName": "Désactiver la navigation VLV sur les serveurs LDAP",
-            "explainText":"Quand cette stratégie est activée, Outlook n'utilise pas l'extension LDAP Virtual List Views (VLV) lors de l'envoi d'une requête à un serveur LDAP. Quand la stratégie est configurée ou désactivée, Outlook utilise l'extension LDAP Virtual List Views (VLV) lors de l'envoi d'une requête à un serveur LDAP.",
+            "explainText": "Quand cette stratégie est activée, Outlook n'utilise pas l'extension LDAP Virtual List Views (VLV) lors de l'envoi d'une requête à un serveur LDAP. Quand la stratégie est configurée ou désactivée, Outlook utilise l'extension LDAP Virtual List Views (VLV) lors de l'envoi d'une requête à un serveur LDAP.",
             "tags": [
                 "L_Miscellaneous",
                 "L_MicrosoftOfficeOutlook"
@@ -10128,7 +12040,7 @@
             },
             "name": "L_SpecifyActivityFeedSynchronizationInterval",
             "displayName": "Spécifier l’intervalle de synchronisation des informations sur les activités",
-            "explainText":"Ce paramètre de stratégie spécifie l'intervalle minimal pendant lequel Office patiente avant de demander des informations sur les flux d'activités des réseaux sociaux d'un contact donné.\n\nSi vous activez ce paramètre de stratégie, Office attend au moins la durée de l'intervalle spécifié avant de demander un nouveau flux d'activités pour chaque contact.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, Office attend au moins la durée de l'intervalle par défaut (60 minutes) avant de demander un nouveau flux d'activités pour chaque contact.",
+            "explainText": "Ce paramètre de stratégie spécifie l'intervalle minimal pendant lequel Office patiente avant de demander des informations sur les flux d'activités des réseaux sociaux d'un contact donné.\n\nSi vous activez ce paramètre de stratégie, Office attend au moins la durée de l'intervalle spécifié avant de demander un nouveau flux d'activités pour chaque contact.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, Office attend au moins la durée de l'intervalle par défaut (60 minutes) avant de demander un nouveau flux d'activités pour chaque contact.",
             "tags": [
                 "L_OutlookSocialConnector",
                 "L_MicrosoftOfficeOutlook"
@@ -10159,7 +12071,7 @@
             },
             "name": "L_SetGALContactSynchronizationInterval",
             "displayName": "Définir l’intervalle de synchronisation des contacts de la liste d’adresses globale",
-            "explainText":"Ce paramètre de stratégie contrôle la fréquence de synchronisation des informations sur les contacts entre Outlook et les réseaux sociaux connectés (en minutes).\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier l'intervalle (en minutes) de synchronisation des informations sur les contacts.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les informations sur les contacts sont synchronisées à l'intervalle par défaut (une fois tous les 4 jours, soit une fois toutes les 5 760 minutes).",
+            "explainText": "Ce paramètre de stratégie contrôle la fréquence de synchronisation des informations sur les contacts entre Outlook et les réseaux sociaux connectés (en minutes).\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier l'intervalle (en minutes) de synchronisation des informations sur les contacts.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les informations sur les contacts sont synchronisées à l'intervalle par défaut (une fois tous les 4 jours, soit une fois toutes les 5 760 minutes).",
             "tags": [
                 "L_OutlookSocialConnector",
                 "L_MicrosoftOfficeOutlook"
@@ -10270,7 +12182,7 @@
             },
             "name": "L_PreventSocialNetworkConnectivity",
             "displayName": "Désactiver les connexions Office aux réseaux sociaux",
-            "explainText":"Ce paramètre de stratégie empêche les utilisateurs de connecter Office aux réseaux sociaux (y compris SharePoint), et empêche Office d'afficher les contacts et les flux de ces réseaux sociaux.\n\nSi vous activez ce paramètre de stratégie, les utilisateurs ne peuvent pas connecter Office aux réseaux sociaux.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les utilisateurs peuvent connecter Office aux réseaux sociaux.",
+            "explainText": "Ce paramètre de stratégie empêche les utilisateurs de connecter Office aux réseaux sociaux (y compris SharePoint), et empêche Office d'afficher les contacts et les flux de ces réseaux sociaux.\n\nSi vous activez ce paramètre de stratégie, les utilisateurs ne peuvent pas connecter Office aux réseaux sociaux.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les utilisateurs peuvent connecter Office aux réseaux sociaux.",
             "tags": [
                 "L_OutlookSocialConnector",
                 "L_MicrosoftOfficeOutlook"
@@ -10368,48 +12280,6 @@
         },
         {
             "parentCategory": {
-                "ref": "L_OutlookSocialConnector"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "trustedproviderslist",
-                        "required": true,
-                        "requiredSpecified": true,
-                        "expandableSpecified": false,
-                        "maxLengthSpecified": false,
-                        "inputType": "textBox",
-                        "caption": "Séparer les ProgID par des points-virgules",
-                        "id": "L_SpecifyListOfSocialNetworkProvidersToLoadID"
-                    }
-                ]
-            },
-            "name": "L_SpecifyListOfSocialNetworkProvidersToLoad",
-            "displayName": "Spécifier la liste des fournisseurs de réseaux sociaux à charger",
-            "explainText": "Ce paramètre de stratégie détermine la liste des fournisseurs de réseaux sociaux qui doivent être chargés par Outlook Social Connector.\n\nSi vous activez ce paramètre de stratégie, vous pouvez entrer une liste des ProgID des fournisseurs de réseaux sociaux qui seront chargés par Outlook Social Connector. Cette liste doit être délimitée par des points-virgules. Notez que si vous activez ce paramètre de stratégie, seuls les fournisseurs de réseaux sociaux qui figurent dans cette liste sont chargés par Outlook Social Connector. Aucun autre fournisseur de réseaux sociaux n’est chargé.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, Outlook Social Connector peut charger n’importe quel fournisseur spécifié par l’utilisateur.",
-            "tags": [
-                "L_OutlookSocialConnector",
-                "L_MicrosoftOfficeOutlook"
-            ],
-            "application": "outlk16",
-            "key": "software\\microsoft\\office\\outlook\\socialconnector",
-            "valueName": "providersecuritymode"
-        },
-        {
-            "parentCategory": {
                 "ref": "L_Exchangesettings"
             },
             "supportedOn": {
@@ -10426,8 +12296,8 @@
                 }
             },
             "name": "L_PreventNondefaultExchangeAccounts",
-            "displayName":"Empêcher l'ajout de comptes Exchange personnalisés",
-            "explainText":"Cette stratégie vous permet d'empêcher les utilisateurs d'ajouter des comptes Exchange personnalisés aux profils Outlook existants.\n\nSi vous activez ce paramètre de stratégie, vous empêchez les utilisateurs d'ajouter des comptes Exchange personnalisés via l'Assistant Ajouter un nouveau compte de messagerie.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les utilisateurs peuvent ajouter des comptes Exchange personnalisés aux profils Outlook existants.",
+            "displayName": "Empêcher l'ajout de comptes Exchange personnalisés",
+            "explainText": "Cette stratégie vous permet d'empêcher les utilisateurs d'ajouter des comptes Exchange personnalisés aux profils Outlook existants.\n\nSi vous activez ce paramètre de stratégie, vous empêchez les utilisateurs d'ajouter des comptes Exchange personnalisés via l'Assistant Ajouter un nouveau compte de messagerie.\n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les utilisateurs peuvent ajouter des comptes Exchange personnalisés aux profils Outlook existants.",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -10467,8 +12337,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "activationalertthreshold"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10500,8 +12369,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "activationretrylimit"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10533,8 +12401,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "alertinterval"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10566,8 +12433,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "memoryalertthreshold"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10599,8 +12465,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "restartmanagerretrylimit"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10710,7 +12575,7 @@
             },
             "name": "L_DisablePreviewPlace",
             "displayName": "Désactiver l’espace Préversion.",
-            "explainText": "Ce paramètre de stratégie détermine si la fonctionnalité Espace Préversion est autorisée. Le fait d’activer ce paramètre empêche la fonctionnalité Espace Préversion d’être disponible.\n        Les utilisateurs ne pourront plus tester les changements à venir et envoyer des commentaires sur ces derniers dans Outlook.\n\\tRemarque : ce paramètre de stratégie s’applique uniquement aux versions d’Office avec abonnement, telles qu’Office 365 ProPlus.",
+            "explainText": "        Ce paramètre de stratégie détermine si la fonctionnalité Espace Préversion est autorisée. Le fait d’activer ce paramètre empêche la fonctionnalité Espace Préversion d’être disponible.\n        Les utilisateurs ne pourront plus tester les changements à venir et envoyer des commentaires sur ces derniers dans Outlook.\n\\tRemarque : ce paramètre de stratégie s’applique uniquement aux versions par abonnement d’Office, telles qu’Applications Microsoft 365 pour les entreprises.\n      ",
             "tags": [
                 "L_Other",
                 "L_OutlookOptions",
@@ -10739,7 +12604,7 @@
             },
             "name": "L_DisableOnlineModeAuthDiagnostics",
             "displayName": "Désactiver le mode en ligne pour la récupération des diagnostics.",
-            "explainText": " Ce paramètre de stratégie détermine si le mode en ligne est autorisé pour la récupération des diagnostics. L’activation de ce paramètre empêchera la fonctionnalité Récupérer les diagnostics d’envoyer les journaux d’authentification et de diagnostic à notre service.\n         Les utilisateurs devront alors utiliser le mode hors connexion. Nous recueillerons tous les journaux et les stockerons dans le dossier Téléchargements de l’utilisateur. L’utilisateur peut contacter le support et décider s’il souhaite nous envoyer les journaux. ",
+            "explainText": "         Ce paramètre de stratégie détermine si le mode en ligne est autorisé pour la récupération des diagnostics. L’activation de ce paramètre empêchera la fonctionnalité Récupérer les diagnostics d’envoyer les journaux d’authentification et de diagnostic à notre service.\n         Les utilisateurs devront alors utiliser le mode hors connexion. Nous recueillerons tous les journaux et les stockerons dans le dossier Téléchargements de l’utilisateur. L’utilisateur peut contacter le support et décider s’il souhaite nous envoyer les journaux.\n      ",
             "tags": [
                 "L_Other",
                 "L_OutlookOptions",
@@ -10768,7 +12633,7 @@
             },
             "name": "L_EnableEndEarly",
             "displayName": "Raccourcir les rendez-vous et réunions",
-            "explainText": "Ce paramètre de stratégie permet de contrôler si l’heure de fin des rendez-vous et réunions est réduite d’un nombre de minutes spécifié lorsqu’un utilisateur crée un rendez-vous ou une réunion.\n\nSi vous activez ce paramètre de stratégie, l’heure de fin des rendez-vous et réunions est réduite d’un nombre de minutes spécifié lorsqu’un utilisateur crée un rendez-vous ou une réunion.\n\nPour spécifier le nombre de minutes duquel réduire les rendez-vous et réunions, vous pouvez utiliser les paramètres de stratégie « Réduire l’heure de fin des réunions et rendez-vous courts d’un nombre de minutes spécifié » et « Réduire l’heure de fin des réunions et rendez-vous longs d’un nombre de minutes spécifié ».\n\nSi vous n’activez pas ces paramètres de stratégie afin de spécifier une durée en minutes, les utilisateurs pourront spécifier une durée (en minutes) en accédant à Fichier > Options > Calendrier. Si l’utilisateur n’a pas spécifié de durée, les valeurs par défaut de 5 minutes pour les réunions courtes et de 10 minutes pour les réunions longues seront utilisées.\n\nSi vous désactivez ce paramètre de stratégie, les réunions et rendez-vous ne peuvent pas être configurés pour se terminer plus tôt, et l’option est désactivée sous Fichier > Options > Calendrier et ne peut pas être activée par l’utilisateur.\n\nSi vous omettez de configurer ce paramètre de stratégie, les rendez-vous et réunions ne sont pas configurés pour se terminer plus tôt, mais l’utilisateur peut faire en sorte qu’ils se terminent plus tôt en accédant à Fichier > Options > Calendrier.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions avec abonnement d’Office, telles qu’Office 365 ProPlus.",
+            "explainText": "        Ce paramètre de stratégie permet de contrôler si l’heure de fin des rendez-vous et réunions est réduite d’un nombre de minutes spécifié lorsqu’un utilisateur crée un rendez-vous ou une réunion.\n\n        Si vous activez ce paramètre de stratégie, l’heure de fin des rendez-vous et réunions est réduite d’un nombre de minutes spécifié lorsqu’un utilisateur crée un rendez-vous ou une réunion.\n\n        Pour spécifier le nombre de minutes duquel réduire les rendez-vous et réunions, vous pouvez utiliser les paramètres de stratégie « Réduire l’heure de fin des réunions et rendez-vous courts d’un nombre de minutes spécifié » et « Réduire l’heure de fin des réunions et rendez-vous longs d’un nombre de minutes spécifié ».\n\n        Si vous n’activez pas ces paramètres de stratégie afin de spécifier une durée en minutes, les utilisateurs pourront spécifier une durée (en minutes) en accédant à Fichier > Options > Calendrier. Si l’utilisateur n’a pas spécifié de durée, les valeurs par défaut de 5 minutes pour les réunions courtes et de 10 minutes pour les réunions longues seront utilisées.\n\n        Si vous désactivez ce paramètre de stratégie, les réunions et rendez-vous ne peuvent pas être configurés pour se terminer plus tôt, et l’option est désactivée sous Fichier > Options > Calendrier et ne peut pas être activée par l’utilisateur.\n\n        Si vous omettez de configurer ce paramètre de stratégie, les rendez-vous et réunions ne sont pas configurés pour se terminer plus tôt, mais l’utilisateur peut faire en sorte qu’ils se terminent plus tôt en accédant à Fichier > Options > Calendrier.\n\n        Remarque : ce paramètre de stratégie s’applique uniquement aux versions par abonnement d’Office, telles qu’Applications Microsoft 365 pour les entreprises.\n      ",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10778,6 +12643,55 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar",
             "valueName": "endeventsearly"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Calendaroptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "None"
+                                },
+                                "displayName": "Aucun"
+                            },
+                            {
+                                "value": {
+                                    "string": "End_Early"
+                                },
+                                "displayName": "Finir tôt"
+                            },
+                            {
+                                "value": {
+                                    "string": "Start_Late"
+                                },
+                                "displayName": "Démarrer tard"
+                            }
+                        ],
+                        "valueName": "shortenevents",
+                        "inputType": "dropdownList",
+                        "caption": "Sélectionner le type d'événements raccourcis",
+                        "id": "L_SelecttheShortenEventsType"
+                    }
+                ]
+            },
+            "name": "L_ShortenEventsType",
+            "displayName": "Raccourcir les rendez-vous et réunions",
+            "explainText": "          Ce paramètre de stratégie vous permet de réduire la durée par défaut des rendez-vous et des réunions d’un nombre de minutes spécifié. Si vous activez ce paramètre de stratégie, vous pouvez choisir parmi les options suivantes : Finir tôt, Démarrer tard, Aucun.\n        Si vous sélectionnez Finir tôt, les réunions et rendez-vous se terminent plus tôt à l’expiration du nombre de minutes spécifié.\n        Si vous sélectionnez Démarrer tard, les réunions et rendez-vous commencent plus tard de l’équivalent du nombre de minutes spécifié.\n        Si vous sélectionnez Aucun, la durée par défaut de la réunion ne sera pas réduite.\n        Dans tous les cas, les paramètres de cette fonctionnalité seront désactivés dans la boîte de dialogue Options d’Outlook.\n        Si vous ne configurez pas ce paramètre de stratégie, les utilisateurs peuvent modifier ces paramètres en accédant à Fichier > Options > Calendrier.\n\n        Remarque : ce paramètre de stratégie s’applique uniquement aux versions d’Office sous abonnement, telles que Microsoft 365 Apps for enterprise.",
+            "tags": [
+                "L_Calendaroptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
         },
         {
             "parentCategory": {
@@ -10802,7 +12716,7 @@
             },
             "name": "L_EndEarlyShort",
             "displayName": "Réduire l’heure de fin des réunions et rendez-vous courts d’un nombre de minutes spécifié",
-            "explainText": "Ce paramètre de stratégie permet de spécifier le nombre de minutes duquel réduire l’heure de fin d’une réunion ou d’un rendez-vous court lorsqu’un utilisateur crée un rendez-vous ou une réunion. Une réunion ou un rendez-vous court dure moins d’une heure.\n\nSi vous activez ce paramètre de stratégie, vous spécifiez le nombre de minutes duquel réduire l’heure de fin d’une réunion ou d’un rendez-vous court lorsqu’un utilisateur crée un rendez-vous ou une réunion. L’utilisateur ne peut pas modifier cette valeur en accédant à Fichier > Options > Calendrier.\n\nRemarque : vous devez également activer le paramètre de stratégie « Raccourcir les rendez-vous et réunions ».\n\nSi vous désactivez ou omettez de configurer ce paramètre de stratégie, la valeur par défaut de 5 minutes est utilisée, ou toute valeur spécifiée par l’utilisateur en accédant à Fichier > Options > Calendrier.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions avec abonnement d’Office, telles qu’Office 365 ProPlus.",
+            "explainText": "        Ce paramètre de stratégie permet de spécifier le nombre de minutes duquel réduire l’heure de fin d’une réunion ou d’un rendez-vous court lorsqu’un utilisateur crée un rendez-vous ou une réunion. Une réunion ou un rendez-vous court dure moins d’une heure.\n\n        Si vous activez ce paramètre de stratégie, vous spécifiez le nombre de minutes duquel réduire l’heure de fin d’une réunion ou d’un rendez-vous court lorsqu’un utilisateur crée un rendez-vous ou une réunion. L’utilisateur ne peut pas modifier cette valeur en accédant à Fichier > Options > Calendrier.\n\n        Remarque : vous devez également activer le paramètre de stratégie « Raccourcir les rendez-vous et réunions ».\n\n        Si vous désactivez ou omettez de configurer ce paramètre de stratégie, la valeur par défaut de 5 minutes est utilisée, ou toute valeur spécifiée par l’utilisateur en accédant à Fichier > Options > Calendrier.\n\n        Remarque : ce paramètre de stratégie s’applique uniquement aux versions par abonnement d’Office, telles qu’Applications Microsoft 365 pour les entreprises.\n      ",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10835,7 +12749,7 @@
             },
             "name": "L_EndEarlyLong",
             "displayName": "Réduire l’heure de fin des réunions et rendez-vous longs d’un nombre de minutes spécifié",
-            "explainText": "Ce paramètre de stratégie permet de spécifier le nombre de minutes duquel réduire l’heure de fin d’une réunion ou d’un rendez-vous long lorsqu’un utilisateur crée un rendez-vous ou une réunion. Une réunion ou un rendez-vous long dure au minimum une heure.\n\nSi vous activez ce paramètre de stratégie, vous spécifiez le nombre de minutes duquel réduire l’heure de fin d’une réunion ou d’un rendez-vous long lorsqu’un utilisateur crée un rendez-vous ou une réunion. L’utilisateur ne pourra pas modifier cette valeur en accédant à Fichier > Options > Calendrier.\n\nRemarque : vous devez également activer le paramètre de stratégie « Raccourcir les rendez-vous et réunions ».\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, la valeur par défaut de 10 minutes est utilisée, ou toute valeur spécifiée par l’utilisateur en accédant à Fichier > Options > Calendrier.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions avec abonnement d’Office, telles qu’Office 365 ProPlus.",
+            "explainText": "        Ce paramètre de stratégie permet de spécifier le nombre de minutes duquel réduire l’heure de fin d’une réunion ou d’un rendez-vous long lorsqu’un utilisateur crée un rendez-vous ou une réunion. Une réunion ou un rendez-vous long dure au minimum une heure.\n\n        Si vous activez ce paramètre de stratégie, vous spécifiez le nombre de minutes duquel réduire l’heure de fin d’une réunion ou d’un rendez-vous long lorsqu’un utilisateur crée un rendez-vous ou une réunion. L’utilisateur ne pourra pas modifier cette valeur en accédant à Fichier > Options > Calendrier.\n\n        Remarque : vous devez également activer le paramètre de stratégie « Raccourcir les rendez-vous et réunions ».\n\n        Si vous désactivez ou omettez de configurer ce paramètre de stratégie, la valeur par défaut de 10 minutes est utilisée, ou toute valeur spécifiée par l’utilisateur en accédant à Fichier > Options > Calendrier.\n\n        Remarque : ce paramètre de stratégie s’applique uniquement aux versions par abonnement d’Office, telles qu’Applications Microsoft 365 pour les entreprises.\n      ",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10863,8 +12777,8 @@
                 }
             },
             "name": "L_OnSendAddinsEnabled",
-            "displayName": "Désactiver l’envoi tant que les extensions web ne sont pas chargées.",
-            "explainText": "Si vous activez ce paramètre de stratégie, Outlook n’autorise pas l’envoi des courriers et des demandes de réunions tant que les compléments web ne sont pas chargés à partir d’Exchange.",
+            "displayName": "Bloquer l'envoi de messages lorsque les modules complémentaires web ne peuvent pas être chargés",
+            "explainText": "Ce paramètre de stratégie vous permet de contrôler si Outlook doit bloquer l'envoi d' e-mails et de demandes de réunion jusqu'à ce que les modules complémentaires Web soient chargés à partir d' Exchange.\n\nSi vous activez ce paramètre de stratégie, Outlook n'autorisera pas l'envoi d' e-mails et de demandes de réunion tant que les modules d'extension Web ne seront pas chargés à partir d' Exchange.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, Outlook autorisera l'envoi de mails et de demandes de réunion même si les derniers modules complémentaires Web n'ont pas encore été chargés à partir d' Exchange.\n\nPour plus d'informations sur l'utilisation de ce paramètre, voir https://go.microsoft.com/fwlink/p/?linkid=2161562.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -10893,7 +12807,7 @@
             },
             "name": "L_RestUpdatesForCalendar",
             "displayName": "Mises à jour REST pour les calendriers",
-            "explainText": "Cette stratégie détermine si Outlook peut utiliser REST pour mettre à jour les calendriers.\n\nSi vous activez cette stratégie, Outlook utilisera REST pour mettre à jour les calendriers Office 365 et Outlook.com pris en charge.\n\nSi vous désactivez cette stratégie, Outlook n’utilisera pas REST pour mettre à jour les calendriers.",
+            "explainText": "Cette stratégie détermine si Outlook peut utiliser REST pour mettre à jour les calendriers.\n\n        Si vous activez cette stratégie, Outlook utilisera REST pour mettre à jour les calendriers Office 365 et Outlook.com pris en charge.\n\n        Si vous désactivez cette stratégie, Outlook n’utilisera pas REST pour mettre à jour les calendriers.",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10923,7 +12837,7 @@
             },
             "name": "L_PreferProvidedEmailInAutoDiscoverAuthPrompts",
             "displayName": "Utiliser de préférence le compte de courrier fourni dans les invites d’authentification de la découverte automatique.",
-            "explainText": "S’il est défini, ce paramètre de stratégie régit le compte de courrier affiché dans les invites d’authentification de la découverte automatique.\n\nPar défaut (0) : Utiliser de préférence l’UPN du compte lorsqu’il est disponible.\n\nSi vous activez ce paramètre, les invites d’authentification de la découverte automatique utiliseront de préférence l’adresse de courrier du compte fourni (SMTP ou UPN, en fonction de la configuration).",
+            "explainText": "S’il est défini, ce paramètre de stratégie régit le compte de courrier affiché dans les invites d’authentification de la découverte automatique.\n\n        Par défaut (0) : Utiliser de préférence l’UPN du compte lorsqu’il est disponible.\n\n        Si vous activez ce paramètre, les invites d’authentification de la découverte automatique utiliseront de préférence l’adresse de courrier du compte fourni (SMTP ou UPN, en fonction de la configuration).",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -11249,6 +13163,180 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\autodiscover",
             "valueName": "enableoffice365configservice"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Cryptography"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_AllowPrivateKeyCheck",
+            "displayName": "Rechercher la clé privée de l’utilisateur lorsque celui-ci envoie un courrier chiffré qui inclut l’utilisateur en tant que destinataire",
+            "explainText": "Ce paramètre de stratégie contrôle la vérification par Outlook de la présence de la clé privée de l’utilisateur lorsque celui-ci envoie un courrier chiffré et que l’utilisateur est inclus en tant que destinataire du courrier. L’utilisateur peut être inclus comme destinataire directement ou en tant que membre d’une liste de distribution.\n\nSi vous activez ce paramètre de stratégie, Outlook recherche la clé privée de l’utilisateur.\n\nSi vous désactivez ce paramètre de stratégie, Outlook ne recherche pas la clé privée de l’utilisateur.\n\nSi vous ne configurez pas ce paramètre de stratégie, Outlook recherche la clé privée de l’utilisateur.",
+            "tags": [
+                "L_Cryptography",
+                "L_Security",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\security",
+            "valueName": "allowprivatekeycheck"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableAdminNotifications",
+            "displayName": "Désactiver les notifications d’administrateur des clients Outlook",
+            "explainText": "Ce paramètre de stratégie détermine si les administrateurs de client peuvent recevoir des notifications de support technique dans Outlook.\n\nPar défaut (0) : les administrateurs de clients qui sont connectés recevront des informations sur l’état des problèmes potentiels et des correctifs qui affectent leur client.\n\nSi vous activez ce paramètre, les administrateurs de clients qui sont connectés ne recevront pas les informations d’état concernant les problèmes potentiels et les correctifs qui affectent leur client.",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\general",
+            "valueName": "disableadminnotifications"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableCrashNotificationOnRestart",
+            "displayName": "Désactiver les notifications de blocage d'Outlook lors du redémarrage d'Outlook.",
+            "explainText": "Ce paramètre de stratégie détermine si la notification de blocage d'Outlook au redémarrage est autorisée. L'activation de ce paramètre bloque la notification de blocage d'Outlook au redémarrage.",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\general",
+            "valueName": "disablecrashnotificationonrestart"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Delegates"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DelegateSentItemsStyle",
+            "displayName": "Enregistrement des messages envoyés à partir d’une boîte aux lettres partagée dans le dossier Éléments envoyés",
+            "explainText": "Ce paramètre de stratégie contrôle si les messages envoyés à partir d’une boîte aux lettres partagée sont enregistrés dans le dossier Éléments envoyés de la boîte aux lettres partagée.\n\nPar défaut, les messages envoyés à partir d’une boîte aux lettres partagée ne sont pas enregistrés dans le dossier Éléments envoyés de la boîte aux lettres partagée.\n\nSi vous activez ce paramètre de stratégie, les messages envoyés à partir d’une boîte aux lettres partagée sont enregistrés dans le dossier Éléments envoyés de la boîte aux lettres partagée.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, les messages envoyés à partir d’une boîte aux lettres partagée ne seront pas enregistrés dans le dossier Éléments envoyés de la boîte aux lettres partagée.",
+            "tags": [
+                "L_Delegates",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
+            "valueName": "delegatesentitemsstyle"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Exchangesettings"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_AlwaysUseMSOAuthForAutodiscover",
+            "displayName": "La découverte automatique est toujours capable d’utiliser l’authentification moderne",
+            "explainText": "Ce paramètre de stratégie contrôle si la découverte automatique est toujours capable d’utiliser l’authentification moderne, quelles que soient les méthodes d’authentification pris en charge par le type de connexion de boîte aux lettres principale.\n\nPar défaut, la découverte automatique utilise uniquement des méthodes d’authentification qui sont prises en charge par le type de connexion de boîte aux lettres principale. L’authentification moderne ne sera pas toujours l’une des méthodes d’authentification prises en charge pour certains types de connexions.\n\nSi vous activez ce paramètre de stratégie, la découverte automatique peut toujours utiliser l’authentification moderne, quelles que soient les méthodes d’authentification prises en charge par le type de connexion de boîte aux lettres principale. L’activation de ce paramètre de stratégie peut entraîner des invites supplémentaires auprès des utilisateurs leur demandant de fournir leur mot de passe, lorsque l’authentification moderne est utilisée, mais pas prise en charge pour le type de connexion.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, la découverte automatique utilise uniquement des méthodes d’authentification pris en charge par le type de connexion de boîte aux lettres principale.",
+            "tags": [
+                "L_Exchangesettings",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\exchange",
+            "valueName": "alwaysusemsoauthforautodiscover"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_RecommendOutlookExtension",
+            "displayName": "Recommander l’extension Microsoft Outlook",
+            "explainText": "Ce paramètre de stratégie détermine si Windows 10 utilisateurs de l’application Outlook et de l’application web Outlook verront une recommandation pour installer la nouvelle extension Microsoft Outlook pour Microsoft Edge. Si un utilisateur choisit de cliquer sur la recommandation, il est dirigé vers la page d’extension Microsoft Outlook où il peut choisir d’installer cette extension de productivité basée sur le web. Vos utilisateurs peuvent ignorer la recommandation et ne verront la recommandation que deux fois. Si vos utilisateurs choisissent d’installer l’extension, ils pourront accéder à leurs courriers, calendriers, contacts et tâches à partir d’une icône dans Microsoft Edge sans avoir à ouvrir un autre onglet de navigateur. L’extension est une « mini » version d’Outlook sur le web qui fonctionne comme un menu volant en un clic à partir de l’en-tête du navigateur.\n\nÀ l’avenir, Microsoft peut publier une version de cette extension pour le navigateur Chrome. Microsoft respectera également cette stratégie pour les futures promotions d’une extension Chrome.\n\nSi vous activez ou ne configurez pas ce paramètre de stratégie, la recommandation est présentée à l’utilisateur.\n\nSi vous désactivez ce paramètre de stratégie, la recommandation ne sera pas présentée à l’utilisateur.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions d’abonnement d’Office, telles que Microsoft 365 Apps pour entreprise et Outlook Web App.\n\nPour plus d’informations, voir https://go.microsoft.com/fwlink/?linkid=2165458",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\general",
+            "valueName": "recommendoutlookextension"
         }
     ]
 }

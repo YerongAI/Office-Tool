@@ -1958,7 +1958,7 @@
             },
             "name": "L_DaysOfAllVersions",
             "displayName": "所有版本歷程記錄項目「免於」清除的日數",
-            "explainText": "此原則設定可讓您指定 OneNote 保留完整版本歷程記錄頁面的時間範圍。待指定時間到期後，OneNote 就會保留較基本的版本歷程記錄頁面，減少佔用的存放空間。\n\n如果啟用此原則設定，OneNote 會在指定的時間長度範圍內保留完整的版本歷程記錄頁面，然後在到期後僅保留基本的版本歷程記錄頁面。\n\n如果停用或未設定此原則設定，則 OneNote 會保留完整的版本歷程記錄頁面 2 天，然後在到期後僅保留基本的版本歷程記錄頁面。",
+            "explainText": "此原則設定可讓您指定 OneNote 保留完整版本歷程記錄頁面的時間範圍。待指定時間到期後，OneNote 就會保留較基本的版本歷程記錄頁面，減少佔用的存放空間。\n\n如果啟用此原則設定，OneNote 會在指定的時間長度範圍內保留完整的版本歷程記錄頁面，然後在到期後僅保留基本的版本歷程記錄頁面。\n\n如果停用或未設定此原則設定，則 OneNote 會保留完整的版本歷程記錄頁面 2 天，然後在到期後僅保留基本的版本歷程記錄頁面。\n      ",
             "tags": [
                 "L_VersionsAndRecyleBin",
                 "L_OneNoteOptions",
@@ -2388,6 +2388,99 @@
             "name": "L_SharePointsyncinterval",
             "displayName": "在 SharePoint 中儲存筆記的 SharePoint 同步處理間隔",
             "explainText": "限制 OneNote 輪詢 SharePoint 網站節變更的次數。輸入同步處理間隔秒數。",
+            "tags": [
+                "L_Other",
+                "L_OneNoteOptions",
+                "L_MicrosoftOfficeOneNote"
+            ],
+            "application": "onent16",
+            "key": "software\\microsoft\\office\\16.0\\onenote\\options\\save"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "sharepointbackgroundsyncintervalmultiplier",
+                        "minValue": 1,
+                        "minValueSpecified": true,
+                        "maxValue": 10,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_empty16"
+                    }
+                ]
+            },
+            "name": "L_SharePointbackgroundsyncintervalmultiplier",
+            "displayName": "儲存於 SharePoint 筆記本的背景同步處理間隔時間乘數",
+            "explainText": "此原則設定可讓您增加 SharePoint 網站對筆記本變更的背景輪詢間的間隔時間。\n\n如果啟用此原則設定，OneNote 將會不常輪詢 SharePoint 到整個筆記本的變更。時間間隔會乘以輸入的值，為 1 到 10 的整數值。較大間隔會筆記本同步處理的速度，但會降低伺服器負載。\n\n如果停用或未設定此原則設定，OneNote 會以預設速率 (乘數值1) 同步處理筆記本。\n\n注意：此原則設定僅適用於使用  Windows Installer (MSI) 的 Office 2016 大量授權版本，例如 Office 專業增強版 2016 和 Office 標準版 2016。",
+            "tags": [
+                "L_Other",
+                "L_OneNoteOptions",
+                "L_MicrosoftOfficeOneNote"
+            ],
+            "application": "onent16",
+            "key": "software\\microsoft\\office\\16.0\\onenote\\options\\save"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "sharepointlivesyncintervalmultiplier",
+                        "minValue": 1,
+                        "minValueSpecified": true,
+                        "maxValue": 10,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_empty17"
+                    }
+                ]
+            },
+            "name": "L_SharePointlivesyncintervalmultiplier",
+            "displayName": "儲存於 SharePoint 目前已檢視區段的前景同步處理間隔時間乘數",
+            "explainText": "此原則設定可讓您增加 SharePoint 網站對目前已檢視區段變更的前景輪詢間的間隔時間。\n\n如果啟用此原則設定，OneNote 將會不常輪詢 SharePoint 到目前已檢視區段的變更。間隔時間會乘以輸入的值，為 1 到 10 的整數值。較大間隔會減緩區段同步處理的速度，但會降低伺服器負載。\n\n如果停用或未設定此原則設定，OneNote 會以預設速率 (乘數值1) 同步處理目前已檢視區段。\n\n注意：此原則設定僅適用於使用  Windows Installer (MSI) 的 Office 2016 大量授權版本，例如 Office 專業增強版 2016 和 Office 標準版 2016。",
+            "tags": [
+                "L_Other",
+                "L_OneNoteOptions",
+                "L_MicrosoftOfficeOneNote"
+            ],
+            "application": "onent16",
+            "key": "software\\microsoft\\office\\16.0\\onenote\\options\\save"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "sharepointpresenceintervalmultiplier",
+                        "minValue": 1,
+                        "minValueSpecified": true,
+                        "maxValue": 10,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_empty18"
+                    }
+                ]
+            },
+            "name": "L_SharePointpresenceintervalmultiplier",
+            "displayName": "儲存於 SharePoint 筆記本的目前狀態同步處理間隔時間乘數",
+            "explainText": "此原則設定可讓您增加輪詢至 SharePoint 間的間隔時間，以判斷筆記本的作用中使用者。當其他使用者與筆記本互動時，OneNote 會以更快的速率同步處理筆記本。\n\n如果啟用此原則設定，OneNote 將會不常輪詢 SharePoint，以判斷目前是否有其他使用者正在與筆記本互動。間隔時間會乘以輸入的值，為 1 到 10 的整數值。較大間隔會減緩筆記本中目前使用者偵測的速度，但會降低伺服器負載。\n\n如果停用或未設定此原則設定，OneNote 會以預設速率 (乘數值1) 輪詢筆記本的作用中使用者。\n\n注意：此原則設定僅適用於使用  Windows Installer (MSI) 的 Office 2016 大量授權版本，例如 Office 專業增強版 2016 和 Office 標準版 2016。",
             "tags": [
                 "L_Other",
                 "L_OneNoteOptions",

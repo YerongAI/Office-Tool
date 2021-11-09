@@ -1132,6 +1132,120 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "開啟下一項目"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "回到目前資料夾"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "開啟前個項目"
+                            }
+                        ],
+                        "valueName": "aftermove",
+                        "inputType": "dropdownList",
+                        "caption": "移動或刪除開啟的項目後:",
+                        "id": "L_aftermovingordeletinganopenitem0"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "closeorig",
+                        "inputType": "checkBox",
+                        "caption": "回覆或轉寄時關閉原始郵件",
+                        "id": "L_Closeoriginalmessagewhenreplyorforward"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "savesent",
+                        "inputType": "checkBox",
+                        "caption": "在 [寄件備份] 資料夾儲存郵件複本",
+                        "id": "L_SavecopiesofmessagesinSentItemsfolder"
+                    },
+                    {
+                        "valueName": "autosavetime",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 99,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "每隔 xx 分鐘自動儲存未傳送的郵件 (0=不要自動儲存):",
+                        "id": "L_Autosaveunsenteveryxxminutes0NoAutoSave"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "autoformatplaintext",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\options\\mail",
+                        "inputType": "checkBox",
+                        "caption": "自動清理純文字郵件",
+                        "id": "L_Automaticallycleanupplaintextmessages"
+                    }
+                ]
+            },
+            "name": "L_Messagehandling",
+            "displayName": "郵件處理",
+            "explainText": "您可以使用此設定，指定各種選項如何處理電子郵件訊息。",
+            "tags": [
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Emailoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -1549,6 +1663,53 @@
         },
         {
             "parentCategory": {
+                "ref": "L_DesktopAlert"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "corner",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 3,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "角落 (0-3)",
+                        "id": "L_Corner03"
+                    },
+                    {
+                        "valueName": "xoffset",
+                        "minValueSpecified": false,
+                        "maxValueSpecified": false,
+                        "id": "L_XOffsetdefault44"
+                    },
+                    {
+                        "valueName": "yoffset",
+                        "minValueSpecified": false,
+                        "maxValueSpecified": false,
+                        "id": "L_YOffsetdefault42"
+                    }
+                ]
+            },
+            "name": "L_SpecifydefaultlocationofDesktopAlert",
+            "displayName": "指定桌面通知的預設位置",
+            "explainText": "您可以變更「桌面通知」的預設位置。在 [角落] 欄位，選取對應使用者螢幕的象限數字: 0 = 左上角，1 = 右上角，2 = 左下角，3 = 右下角 (預設)。在 [XOffset] 欄位，輸入距離您指定角落之水平距離的數字 (預設值為 44)。在 [YOffset] 欄位，輸入距離您指定角落之垂直距離的數字 (預設值為 42)。",
+            "tags": [
+                "L_DesktopAlert",
+                "L_AdvancedEmailoptions",
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\common\\desktopalerts"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_AdvancedEmailoptions"
             },
             "supportedOn": {
@@ -1613,6 +1774,194 @@
         },
         {
             "parentCategory": {
+                "ref": "L_AdvancedEmailoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "高"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "標準"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "低"
+                            }
+                        ],
+                        "valueName": "importance",
+                        "inputType": "dropdownList",
+                        "caption": "設定重要性:",
+                        "id": "L_Setimportance"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "標準"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "個人"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "私人"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "機密"
+                            }
+                        ],
+                        "valueName": "sensitivity",
+                        "inputType": "dropdownList",
+                        "caption": "設定敏感度:",
+                        "id": "L_Setsensitivity"
+                    },
+                    {
+                        "valueName": "numdaysexpire",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 3652,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "郵件有效期限 (天):",
+                        "id": "L_Messagesexpireafterdays"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowcommasinrecip",
+                        "inputType": "checkBox",
+                        "caption": "允許逗點當作地址分隔符號",
+                        "id": "L_Allowcommasasaddressseparator"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "autonamecheck",
+                        "inputType": "checkBox",
+                        "caption": "自動檢查名稱",
+                        "id": "L_Automaticnamechecking"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "deletewhenrespond",
+                        "inputType": "checkBox",
+                        "caption": "答覆時從收件匣刪除會議邀請",
+                        "id": "L_DeletemeetingrequestfromInboxwhenresponding"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "showautosug",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
+                        "inputType": "checkBox",
+                        "caption": "在完成 [收件者]、[副本] 和 [密件副本] 欄位時建議名稱",
+                        "id": "L_SuggestnameswhilecompletingToCcandBccfields"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "adhocreviewbehavior",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\options\\mail",
+                        "inputType": "checkBox",
+                        "caption": "新增內容至附件以啟用回覆變更",
+                        "id": "L_AddpropertiestoattachmentstoenableReplywithChanges"
+                    }
+                ]
+            },
+            "name": "L_Whensendingamessage",
+            "displayName": "傳送郵件時",
+            "explainText": "設定對應 UI 選項的值。",
+            "tags": [
+                "L_AdvancedEmailoptions",
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Trackingoptions"
             },
             "supportedOn": {
@@ -1641,6 +1990,143 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\flagging",
             "valueName": "disablesenderflags"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Emailoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "不要加入原始郵件"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "附加原始郵件"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "加入原始郵件內容"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "加入原始郵件內容並縮排"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1000
+                                    }
+                                },
+                                "displayName": "原信件每行加上字首"
+                            }
+                        ],
+                        "valueName": "replystyle",
+                        "inputType": "dropdownList",
+                        "caption": "回覆郵件時:",
+                        "id": "L_Whenreplyingtoamessage"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "附加原始郵件"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "加入原始郵件內容"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "加入原始郵件內容並縮排"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1000
+                                    }
+                                },
+                                "displayName": "原信件每行加上字首"
+                            }
+                        ],
+                        "valueName": "forwardstyle",
+                        "inputType": "dropdownList",
+                        "caption": "轉寄郵件時:",
+                        "id": "L_Whenforwardingamessage"
+                    },
+                    {
+                        "valueName": "prefixtext",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "每行前加上:",
+                        "id": "L_Prefixeachlinewith"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "markcomments",
+                        "key": "software\\microsoft\\office\\16.0\\common\\mailsettings",
+                        "inputType": "checkBox",
+                        "caption": "允許標示使用者的註解",
+                        "id": "L_Allowuserscommentstobemarked"
+                    }
+                ]
+            },
+            "name": "L_Onrepliesandforwards",
+            "displayName": "回覆及轉寄時",
+            "explainText": "設定對應 UI 選項的值。",
+            "tags": [
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
         },
         {
             "parentCategory": {
@@ -2615,6 +3101,829 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 480
+                                    }
+                                },
+                                "displayName": "上午 8:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "上午 12:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 30
+                                    }
+                                },
+                                "displayName": "上午 12:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 60
+                                    }
+                                },
+                                "displayName": "上午 1:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 90
+                                    }
+                                },
+                                "displayName": "上午 1:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 120
+                                    }
+                                },
+                                "displayName": "上午 2:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 150
+                                    }
+                                },
+                                "displayName": "上午 2:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 180
+                                    }
+                                },
+                                "displayName": "上午 3:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 210
+                                    }
+                                },
+                                "displayName": "上午 3:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 240
+                                    }
+                                },
+                                "displayName": "上午 4:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 270
+                                    }
+                                },
+                                "displayName": "上午 4:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 300
+                                    }
+                                },
+                                "displayName": "上午 5:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 330
+                                    }
+                                },
+                                "displayName": "上午 5:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 360
+                                    }
+                                },
+                                "displayName": "上午 6:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 390
+                                    }
+                                },
+                                "displayName": "上午 6:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 420
+                                    }
+                                },
+                                "displayName": "上午 7:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 450
+                                    }
+                                },
+                                "displayName": "上午 7:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 480
+                                    }
+                                },
+                                "displayName": "上午 8:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 510
+                                    }
+                                },
+                                "displayName": "上午 8:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 540
+                                    }
+                                },
+                                "displayName": "上午 9:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 570
+                                    }
+                                },
+                                "displayName": "上午 9:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 600
+                                    }
+                                },
+                                "displayName": "上午 10:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 630
+                                    }
+                                },
+                                "displayName": "上午 10:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 660
+                                    }
+                                },
+                                "displayName": "上午 11:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 690
+                                    }
+                                },
+                                "displayName": "上午 11:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 720
+                                    }
+                                },
+                                "displayName": "下午 12:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 750
+                                    }
+                                },
+                                "displayName": "下午 12:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 780
+                                    }
+                                },
+                                "displayName": "下午 1:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 810
+                                    }
+                                },
+                                "displayName": "下午 1:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 840
+                                    }
+                                },
+                                "displayName": "下午 2:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 870
+                                    }
+                                },
+                                "displayName": "下午 2:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 900
+                                    }
+                                },
+                                "displayName": "下午 3:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 930
+                                    }
+                                },
+                                "displayName": "下午 3:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 960
+                                    }
+                                },
+                                "displayName": "下午 4:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 990
+                                    }
+                                },
+                                "displayName": "下午 4:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1020
+                                    }
+                                },
+                                "displayName": "下午 5:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1050
+                                    }
+                                },
+                                "displayName": "下午 5:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1080
+                                    }
+                                },
+                                "displayName": "下午 6:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1110
+                                    }
+                                },
+                                "displayName": "下午 6:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1140
+                                    }
+                                },
+                                "displayName": "下午 7:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1170
+                                    }
+                                },
+                                "displayName": "下午 7:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1200
+                                    }
+                                },
+                                "displayName": "下午 8:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1230
+                                    }
+                                },
+                                "displayName": "下午 8:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1260
+                                    }
+                                },
+                                "displayName": "下午 9:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1290
+                                    }
+                                },
+                                "displayName": "下午 9:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1320
+                                    }
+                                },
+                                "displayName": "下午 10:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1350
+                                    }
+                                },
+                                "displayName": "下午 10:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1380
+                                    }
+                                },
+                                "displayName": "下午 11:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1410
+                                    }
+                                },
+                                "displayName": "下午 11:30"
+                            }
+                        ],
+                        "valueName": "caldefstart",
+                        "inputType": "dropdownList",
+                        "caption": "開始時間:",
+                        "id": "L_Starttime"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1020
+                                    }
+                                },
+                                "displayName": "下午 5:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "上午 12:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 30
+                                    }
+                                },
+                                "displayName": "上午 12:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 60
+                                    }
+                                },
+                                "displayName": "上午 1:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 90
+                                    }
+                                },
+                                "displayName": "上午 1:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 120
+                                    }
+                                },
+                                "displayName": "上午 2:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 150
+                                    }
+                                },
+                                "displayName": "上午 2:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 180
+                                    }
+                                },
+                                "displayName": "上午 3:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 210
+                                    }
+                                },
+                                "displayName": "上午 3:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 240
+                                    }
+                                },
+                                "displayName": "上午 4:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 270
+                                    }
+                                },
+                                "displayName": "上午 4:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 300
+                                    }
+                                },
+                                "displayName": "上午 5:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 330
+                                    }
+                                },
+                                "displayName": "上午 5:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 360
+                                    }
+                                },
+                                "displayName": "上午 6:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 390
+                                    }
+                                },
+                                "displayName": "上午 6:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 420
+                                    }
+                                },
+                                "displayName": "上午 7:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 450
+                                    }
+                                },
+                                "displayName": "上午 7:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 480
+                                    }
+                                },
+                                "displayName": "上午 8:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 510
+                                    }
+                                },
+                                "displayName": "上午 8:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 540
+                                    }
+                                },
+                                "displayName": "上午 9:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 570
+                                    }
+                                },
+                                "displayName": "上午 9:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 600
+                                    }
+                                },
+                                "displayName": "上午 10:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 630
+                                    }
+                                },
+                                "displayName": "上午 10:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 660
+                                    }
+                                },
+                                "displayName": "上午 11:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 690
+                                    }
+                                },
+                                "displayName": "上午 11:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 720
+                                    }
+                                },
+                                "displayName": "下午 12:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 750
+                                    }
+                                },
+                                "displayName": "下午 12:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 780
+                                    }
+                                },
+                                "displayName": "下午 1:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 810
+                                    }
+                                },
+                                "displayName": "下午 1:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 840
+                                    }
+                                },
+                                "displayName": "下午 2:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 870
+                                    }
+                                },
+                                "displayName": "下午 2:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 900
+                                    }
+                                },
+                                "displayName": "下午 3:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 930
+                                    }
+                                },
+                                "displayName": "下午 3:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 960
+                                    }
+                                },
+                                "displayName": "下午 4:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 990
+                                    }
+                                },
+                                "displayName": "下午 4:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1020
+                                    }
+                                },
+                                "displayName": "下午 5:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1050
+                                    }
+                                },
+                                "displayName": "下午 5:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1080
+                                    }
+                                },
+                                "displayName": "下午 6:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1110
+                                    }
+                                },
+                                "displayName": "下午 6:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1140
+                                    }
+                                },
+                                "displayName": "下午 7:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1170
+                                    }
+                                },
+                                "displayName": "下午 7:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1200
+                                    }
+                                },
+                                "displayName": "下午 8:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1230
+                                    }
+                                },
+                                "displayName": "下午 8:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1260
+                                    }
+                                },
+                                "displayName": "下午 9:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1290
+                                    }
+                                },
+                                "displayName": "下午 9:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1320
+                                    }
+                                },
+                                "displayName": "下午 10:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1350
+                                    }
+                                },
+                                "displayName": "下午 10:30"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1380
+                                    }
+                                },
+                                "displayName": "下午 11:00"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1410
+                                    }
+                                },
+                                "displayName": "下午 11:30"
+                            }
+                        ],
+                        "valueName": "caldefend",
+                        "inputType": "dropdownList",
+                        "caption": "結束時間:",
+                        "id": "L_EndTime"
+                    }
+                ]
+            },
+            "name": "L_Workinghours",
+            "displayName": "工作時數",
+            "explainText": "設定對應的 UI 選項中的值。",
+            "tags": [
+                "L_Calendaroptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Calendaroptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -2880,6 +4189,65 @@
         },
         {
             "parentCategory": {
+                "ref": "L_FreeBusyOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "fbpublishrange",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 12,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "發佈的空閒/忙碌資訊月數:",
+                        "id": "L_MonthsofFreeBusyinformationpublished"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "lock fb range",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar\\internet free/busy",
+                        "inputType": "checkBox",
+                        "caption": "避免使用者變更發佈的空閒/忙碌資訊的月數",
+                        "id": "L_PreventusersfromchangingMonthsofFreeBusyinformation1"
+                    },
+                    {
+                        "valueName": "fbupdatesecs",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 86400,
+                        "maxValueSpecified": true,
+                        "id": "L_FreeBusyupdatedontheservereveryxxxseconds"
+                    }
+                ]
+            },
+            "name": "L_options9",
+            "displayName": "空閒/忙碌選項",
+            "explainText": "設定 [發佈 [] 個月的行事曆空閒/忙碌資訊到伺服器] 選項的值。",
+            "tags": [
+                "L_FreeBusyOptions",
+                "L_Calendaroptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_RecurrenceOptions"
             },
             "supportedOn": {
@@ -2945,6 +4313,36 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Contactoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DetermineOrderOfSourcesForPhotos",
+            "displayName": "決定相片的來源順序",
+            "explainText": "此原則設定可控制在 Outlook 中所顯示相片的來源順序。\n\n若啟用此原則設定，Outlook 會先在 OAB/AD 尋找使用者相片。若無法使用 OAB/AD，Outlook 會顯示連絡人相片 (若有連絡人相片)。\n\n若停用或未設定此原則設定，Outlook 會先在連絡人通訊錄尋找使用者相片。若其為不可用，則 Outlook 會尋找 OAB/AD (若可用)。",
+            "tags": [
+                "L_Contactoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook",
+            "valueName": "preferadphotos"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -3000,6 +4398,193 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
             "valueName": "showcontactfieldobsolete"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Contactoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "E"
+                                },
+                                "displayName": "名字 (中間名) 姓氏"
+                            },
+                            {
+                                "value": {
+                                    "string": "H"
+                                },
+                                "displayName": "姓氏 名字"
+                            },
+                            {
+                                "value": {
+                                    "string": "S"
+                                },
+                                "displayName": "名字 姓氏1 姓氏2"
+                            }
+                        ],
+                        "valueName": "nameparserstyle",
+                        "inputType": "dropdownList",
+                        "caption": "預設「全名」順序:",
+                        "id": "L_DefaultFullNameorder"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32791
+                                    }
+                                },
+                                "displayName": "姓氏 名字"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32823
+                                    }
+                                },
+                                "displayName": "名字 姓氏"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 14870
+                                    }
+                                },
+                                "displayName": "公司"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32793
+                                    }
+                                },
+                                "displayName": "姓氏, 名字 (公司)"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32792
+                                    }
+                                },
+                                "displayName": "公司 (姓氏, 名字)"
+                            }
+                        ],
+                        "valueName": "fileasorder",
+                        "inputType": "dropdownList",
+                        "caption": "預設「歸檔為」順序:",
+                        "id": "L_DefaultFileAsorder"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "confirmduplicates",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\contact",
+                        "inputType": "checkBox",
+                        "caption": "檢查重複的連絡人",
+                        "id": "L_Checkforduplicatecontacts"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "indextabson",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\contact",
+                        "inputType": "checkBox",
+                        "caption": "顯示其他連絡人索引",
+                        "id": "L_ShowanadditionalContactsIndex"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "阿拉伯文"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "斯拉夫文"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 15
+                                    }
+                                },
+                                "displayName": "希臘文"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 16
+                                    }
+                                },
+                                "displayName": "希伯來文"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 28
+                                    }
+                                },
+                                "displayName": "泰文"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 30
+                                    }
+                                },
+                                "displayName": "越南文"
+                            }
+                        ],
+                        "valueName": "indextabsscript",
+                        "inputType": "dropdownList",
+                        "caption": "其他連絡人索引:",
+                        "id": "L_AdditionalContactsIndex"
+                    }
+                ]
+            },
+            "name": "L_Selectthedefaultsettingforhowtofilenewcontacts",
+            "displayName": "選取記錄新連絡人的預設設定值",
+            "explainText": "設定對應的 UI 選項中的值。",
+            "tags": [
+                "L_Contactoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\contact"
         },
         {
             "parentCategory": {
@@ -3400,6 +4985,34 @@
         },
         {
             "parentCategory": {
+                "ref": "L_OutlookOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_WindowsVista"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_InternetAndNetworkPathsIntoHyperlinks",
+            "displayName": "將網際網路和網路路徑轉換為超連結",
+            "explainText": "此原則設定可指定 Outlook 是否要自動將代表網際網路和網路路徑的文字變成超連結。您也可以在使用者介面 (UI) 的 Outlook | [檔案] | [選項] | [郵件] | [編輯器選項....] | [校訂] | [自動校正選項…] | [自動格式設定] 索引標籤上，選取 [將網際網路和網路路徑轉換為超連結] 核取方塊，藉此設定這個選項。\n\n如果啟用或未設定此原則設定，則 Outlook 中代表網際網路和網路路徑的文字就會自動變成超連結。這是 Outlook 的預設行為。\n\n如果停用此原則設定，則 Outlook 中代表網際網路和網路路徑的文字就不會自動變成超連結。 ",
+            "tags": [
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\autoformat",
+            "valueName": "pgrfafo_25_1"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_ComposeMessages"
             },
             "supportedOn": {
@@ -3458,6 +5071,55 @@
             "name": "L_OutlookRichTextoptions",
             "displayName": "Outlook RTF 文字選項",
             "explainText": "此原則設定控制 Outlook 將 RTF 格式 (RTF) 郵件傳送到網際網路收件者的方式。\n\n如果啟用此原則設定，下列處理傳送至網際網路收件者的 RTF 郵件的選項可供您選擇:\n* 轉換成純文字格式 - Outlook 將郵件轉換為採用預設字元集的純文字格式。任何郵件格式都會遺失。\n\n如果停用或不設定此原則設定，Outlook 會自動將透過網際網路傳送的 RTF 格式郵件轉換為 HTML 格式，以便保留郵件格式並接收附件。",
+            "tags": [
+                "L_InternetFormatting",
+                "L_MailFormat",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\mail"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_InternetFormatting"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "plainwraplen",
+                        "minValue": 30,
+                        "minValueSpecified": true,
+                        "maxValue": 132,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "在 <x> 個字元自動換行。",
+                        "id": "L_Automaticallywraptextatxcharacters"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "message plain format mime",
+                        "inputType": "checkBox",
+                        "caption": "使用 UUENCODE 格式編碼附件",
+                        "id": "L_EncodeattachmentsinUUENCODEformatwhensending1"
+                    }
+                ]
+            },
+            "name": "L_Plaintextoptions",
+            "displayName": "純文字選項",
+            "explainText": "此原則設定可讓您控制如何設定從 Outlook 傳送的純文字郵件格式。\n\n如果啟用此原則設定，則會將網際網路電子郵件訊息的文字自動換行，並以 UUENCODE 格式編碼附件。\n\n如果停用此原則設定，Outlook 將使用標準的 MIME 格式來編碼純文字 Outlook 郵件中的附件格式。使用者無法變更此設定。\n\n若未設定此原則設定，則其行為等同於將原則設為 [已停用]，但使用者可視需要在 Outlook 中修改純文字選項，方法是依序按一下 [工具]、[選項]、[郵件格式] 索引標籤及 [網際網路格式]，再變更 [純文字選項] 下的值。",
             "tags": [
                 "L_InternetFormatting",
                 "L_MailFormat",
@@ -4079,6 +5741,35 @@
                     "value": 0
                 }
             },
+            "name": "L_HidePhotoLink",
+            "displayName": "隱藏相片連結",
+            "explainText": "此原則設定可設定連至使用者 [我的網站] 的連結 (偵測到時)。使用者的相片可上傳到 [我的網站]。這個連結位在 [檔案] 索引標籤中。\n\n如果啟用此原則設定，不會顯示此連結。\n\n如果停用或未設定此原則設定，會顯示此連結。",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options",
+            "valueName": "hidephotolink"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_AllowSelectionFloaties",
             "displayName": "選取時顯示迷你工具列",
             "explainText": "停用此原則設定將會造成選取文字時不會顯示迷你工具列。預設在選取時啟用迷你工具列，而且可以透過 [編輯器選項] 對話方塊中的設定變更迷你工具列的可見性。",
@@ -4620,6 +6311,84 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
             "valueName": "archiveignorelastmodifiedtime"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Righttoleft"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "從左至右"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "從右至左"
+                            }
+                        ],
+                        "valueName": "calendar direction",
+                        "inputType": "dropdownList",
+                        "caption": "設定版面配置方向:",
+                        "id": "L_Setlayoutdirection"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "以內容為主"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "從左至右"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "從右至左"
+                            }
+                        ],
+                        "valueName": "text direction",
+                        "inputType": "dropdownList",
+                        "caption": "設定全體文字方向:",
+                        "id": "L_Setglobaltextdirection"
+                    }
+                ]
+            },
+            "name": "L_LayoutOptions",
+            "displayName": "版面配置選項",
+            "explainText": "設定對應的 UI 選項中的值。",
+            "tags": [
+                "L_Righttoleft",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
         },
         {
             "parentCategory": {
@@ -6383,6 +8152,36 @@
                     "value": 0
                 }
             },
+            "name": "L_ConfigureCachedExchangeMode",
+            "displayName": "對新的或現有的 Outlook 設定檔使用「快取 Exchange 模式」",
+            "explainText": "根據預設，使用者可以選擇設定「快取 Exchange 模式」，或使用「線上模式」。啟用此設定後，會設定新的或現有的 Outlook 設定檔使用「快取 Exchange 模式」。停用此設定後，新的或現有的 Outlook 設定檔會使用「線上模式」。",
+            "tags": [
+                "L_CachedExchangeMode",
+                "L_Exchangesettings",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\cached mode",
+            "valueName": "enable"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_CachedExchangeMode"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_InCachedExchangemakeSendReceiveF9nulloperation",
             "displayName": "使用者按一下 [傳送/接收] 或 F9 時，不要以「快取 Exchange 模式」同步處理",
             "explainText": "使用者在「快取 Exchange 模式」的帳戶按一下 [傳送/接收] 或按 F9 時，Outlook 預設會與 Exchange 伺服器同步處理。啟用此設定時，按一下 [傳送/接收] 及按 F9 時，不會與 Exchange 同步處理，除非只有一個資料夾需要同步處理。使用者可以繼續使用 Shift-F9 來同步處理目前的資料夾。",
@@ -6453,6 +8252,39 @@
             "name": "L_Entersecondstowaittodownloadchangesfromserver",
             "displayName": "輸入等候從伺服器下載變更的秒數",
             "explainText": "指定從 Exchange Server 下載變更之前，要等候的秒數。",
+            "tags": [
+                "L_CachedExchangeMode",
+                "L_Exchangesettings",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\cached mode"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_CachedExchangeMode"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "maximum",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 86400,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "輸入同步處理之前等候的秒數 (預設為 60 秒)",
+                        "id": "L_EntersecondstowaitbeforesyncDefault60sec"
+                    }
+                ]
+            },
+            "name": "L_Entermaximumsecondstowaittosyncchanges",
+            "displayName": "輸入等候同步處理變更的最大秒數",
+            "explainText": "指定與 Exchange Server 同步處理變更之前，要等候的最大秒數。",
             "tags": [
                 "L_CachedExchangeMode",
                 "L_Exchangesettings",
@@ -7032,6 +8864,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_AccountSettingsEmail"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_PreventSavingCredentialsForBasicAuthenticationPolicy",
+            "displayName": "防止儲存 [基本驗證] 原則的認證",
+            "explainText": "此原則設定可防止 Outlook 使用 [基本驗證] 儲存使用者的認證。\n\n如果啟用此原則設定，Outlook 不會使用 [基本驗證] 儲存使用者的認證。\n\n如果停用或未設定此原則設定，Outlook 會允許使用者在對伺服器使用 [基本驗證] 時儲存認證。這些認證會儲存為 GENERIC，且在機器上以該使用者的權限執行的任何程序都能擷取。",
+            "tags": [
+                "L_AccountSettingsEmail",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\rpc",
+            "valueName": "disablebasicauthsavedcreds"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Exchangesettings"
             },
             "supportedOn": {
@@ -7464,37 +9325,6 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "disablecrossaccountcopy",
-                        "requiredSpecified": false,
-                        "expandableSpecified": false,
-                        "maxLength": 100,
-                        "maxLengthSpecified": true,
-                        "inputType": "textBox",
-                        "id": "L_PreventCopyingOrMovingItemsBetweenAccountsID"
-                    }
-                ]
-            },
-            "name": "L_PreventCopyingOrMovingItemsBetweenAccounts",
-            "displayName": "防止在帳戶之間複製或移動項目",
-            "explainText": "此原則設定可防止項目複製或移動到其他帳戶或 PST。\n\n如果啟用此原則設定，項目即無法移動或複製到其他帳戶或 PST。請鍵入下列其中一項詳細資料:\n\n- \"Contoso.com\": 防止從對應於所列網域的帳戶複製或移動\n- \"*\": 防止從所有帳戶和 PST 複製\n- \"SharePoint\": 防止從 SharePoint PST 複製或移動\n\n如果停用或未設定此原則設定，則允許在帳戶或 PST 之間複製或移動項目。",
-            "tags": [
-                "L_Exchangesettings",
-                "L_ToolsAccounts",
-                "L_MicrosoftOfficeOutlook"
-            ],
-            "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\outlook"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Exchangesettings"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -7507,7 +9337,7 @@
             },
             "name": "L_AutomaticallyConfigureProfileBasedOnActive",
             "displayName": "根據 Active Directory 主要 SMTP 位址自動設定設定檔",
-            "explainText": "根據 Active Directory 主要 SMTP 地址自動設定第一個個人檔案\n\n此原則設定控制已加入 Active Directory 環境網域的使用者是否可以變更於 Outlook 中設定帳戶時所使用的主要 SMTP 地址。\n\n如果啟用此原則設定，使用者只要輸入個人檔案名稱就可以建立新的個人檔案，不需要使用新增帳戶精靈。建立個人檔案時也不會顯示使用者介面。\n\n將在成功建立第一個個人檔案之後忽略此機碼。",
+            "explainText": "此原則設定可控制在建立任何新的設定檔時，是否自動使用使用者的 Active Directory 主要 SMTP 位址。\n\n如果您啟用這個原則設定，當使用者建立任何新的設定檔時，使用者的 Active Directory 主要 SMTP 位址會用於設定檔。使用者只能輸入設定檔名稱。在建立設定檔時，不會向使用者顯示用來設定特定設定檔設定的精靈。\n\n注意: 如果您只想讓第一個新的設定檔使用 Active Directory 主要 SMTP 位址，並允許使用者在建立其他設定檔時指定不同的 SMTP 位址，請改用「根據 Active Directory 主要 SMTP 位址自動設定設定檔 (僅一次)」原則設定。\n\n如果您停用或未設定這個原則設定，當使用者建立新的設定檔時，會向使用者顯示用來設定特定設定檔設定的精靈，而且使用者可以指定任何 SMTP 位址做為建立設定檔。",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -7535,8 +9365,8 @@
                 }
             },
             "name": "L_AutomaticallyConfigureProfileBasedOnActiveOnce",
-            "displayName": "根據 Active Directory 主要 SMTP 地址自動設定第一個個人檔案",
-            "explainText": "根據 Active Directory 主要 SMTP 地址自動設定個人檔案\n\n此原則設定控制已加入 Active Directory 環境網域的使用者是否可以變更於 Outlook 中設定帳戶時所使用的主要 SMTP 地址。\n\n如果啟用此原則設定，使用者只要輸入個人檔案名稱就可以建立新的個人檔案，不需要使用新增帳戶精靈。建立個人檔案時也不會顯示使用者介面。\n\n將在成功建立第一個個人檔案之後忽略此機碼。",
+            "displayName": "根據 Active Directory 主要 SMTP 位址自動設定設定檔 (僅一次)",
+            "explainText": "此原則設定可控制在使用使用者的 Active Directory 主要 SMTP 位址自動建立第一個設定檔之後，使用者是否可以建立其他設定檔並指定不同的 SMTP 位址。\n\n如果您啟用這個原則設定，當使用者第一次建立新的設定檔時，使用者的 Active Directory 主要 SMTP 位址會用於設定檔。使用者只能輸入設定檔名稱。在建立設定檔時，不會向使用者顯示用來設定特定設定檔設定的精靈。\n\n自動建立第一個設定檔後，使用者可以手動建立其他設定檔。用來設定特定設定檔設定的精靈會顯示給使用者，使用者可以指定任何 SMTP 位址做為建立設定檔。\n\n注意: 如果您要在建立新的設定檔時永遠使用使用者的 Active Directory 主要 SMTP 位址，請改為使用「根據 Active Directory 主要 SMTP 位址自動設定設定檔」原則設定。如果啟用該原則設定，則其優先順序高於此原則設定。\n\n如果您停用或未設定這個原則設定，當使用者建立新的設定檔時，會向使用者顯示用來設定特定設定檔設定的精靈，而且使用者可以指定任何 SMTP 位址做為建立設定檔。",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -7605,6 +9435,35 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\folders",
             "valueName": "disableeditpermissions"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Predefined"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableEditDefaultUserPermissions",
+            "displayName": "限制可以在郵件資料夾和行事曆上指派給 [預設]、[匿名] 或 [我的組織] 的權限",
+            "explainText": "此原則設定可讓您限制可以在郵件資料夾和行事曆上指派給 [預設]、[匿名] 或 [我的組織] 的權限。\n\n如果您啟用此原則設定，使用者只能將下列權限指派給 [預設]、[匿名] 或 [我的組織]。\n\n- 郵件資料夾上的 [無]\n- 行事曆上的 [無] 或 [基本空閒/忙碌資訊]\n\n使用者將無法指派任何其他權限給 [預設]、[匿名] 或 [我的組織]。所有權限仍可在郵件資料夾和行事曆上指派給其他使用者。\n\n如果您停用或未設定此原則設定，則使用者可以在郵件資料夾和行事曆上指派任何權限給 [預設]、[匿名] 或 [我的組織]。",
+            "tags": [
+                "L_Predefined",
+                "L_Disableitemsinuserinterface",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\folders",
+            "valueName": "disableeditdefaultuserpermissions"
         },
         {
             "parentCategory": {
@@ -8548,7 +10407,7 @@
             },
             "name": "L_DefinecustomlabelforSharePointstore",
             "displayName": "定義 SharePoint 市集的自訂標籤",
-            "explainText":"您可以使用此設定來定義一個自訂標籤，供 SharePoint 清單 PST 以及 Outlook 中含有 ''SharePoint'' 這個字的其他大多數地方使用 (設定此值會以您指定的值取代 Outlook 字串中的 ''SharePoint'' 這個字)。在部署 Outlook 用來同步處理的協力廠商伺服器 (支援相同的 Microsoft SharePoint Foundation Web 服務) 時，自訂標籤就特別有用。",
+            "explainText": "您可以使用此設定來定義一個自訂標籤，供 SharePoint 清單 PST 以及 Outlook 中含有 ''SharePoint'' 這個字的其他大多數地方使用 (設定此值會以您指定的值取代 Outlook 字串中的 ''SharePoint'' 這個字)。在部署 Outlook 用來同步處理的協力廠商伺服器 (支援相同的 Microsoft SharePoint Foundation Web 服務) 時，自訂標籤就特別有用。",
             "tags": [
                 "L_SharePointIntegration",
                 "L_ToolsAccounts",
@@ -9302,6 +11161,59 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "MAPI 提供者不支援"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "MAPI 提供者全部支援"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "永不"
+                            }
+                        ],
+                        "valueName": "fastshutdownbehavior",
+                        "inputType": "dropdownList",
+                        "id": "L_ConfigureFastShutdownBehaviorDropID"
+                    }
+                ]
+            },
+            "name": "L_ConfigureFastShutdownBehavior",
+            "displayName": "設定快速關閉行為",
+            "explainText": "此原則設定可控制 Outlook 的「快速關閉」行為。\n\n如果啟用此原則設定，您可以選擇下列選項之一:\n\n- MAPI 提供者不支援: 除非 MAPI 提供者明確不支援，否則 Outlook 應一律使用快速關閉。\n- MAPI 提供者全部支援: 唯有 MAPI 提供者全部支援，Outlook 才使用快速關閉。\n- 永不: Outlook 永不使用快速關閉\n\n如果停用或未設定此原則設定，行為將同於 [MAPI 提供者不支援] 選項。",
+            "tags": [
+                "L_Shutdown",
+                "L_Miscellaneous",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\shutdown"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Shutdown"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -9494,7 +11406,7 @@
             },
             "name": "L_PreventMAPIservicesfrombeingadded",
             "displayName": "避免新增 MAPI 服務",
-            "explainText":"使用者設定檔中預設可以新增任何 MAPI 服務做為 Outlook 帳戶。此設定可讓您避免使用者在服務清單中新增特定 MAPI 服務。若要避免新增 MAPI 服務，請將服務名稱附加到此設定儲存的服務清單中，與前一個名稱以分號 (;) 分隔。例如，如果您想要避免新增 Outlook Mobile Service 及 Live Meeting Transport，您可以設定 ''MSOMS;LiveMeeting''。",
+            "explainText": "使用者設定檔中預設可以新增任何 MAPI 服務做為 Outlook 帳戶。此設定可讓您避免使用者在服務清單中新增特定 MAPI 服務。若要避免新增 MAPI 服務，請將服務名稱附加到此設定儲存的服務清單中，與前一個名稱以分號 (;) 分隔。例如，如果您想要避免新增 Outlook Mobile Service 及 Live Meeting Transport，您可以設定 ''MSOMS;LiveMeeting''。",
             "tags": [
                 "L_Miscellaneous",
                 "L_MicrosoftOfficeOutlook"
@@ -10368,48 +12280,6 @@
         },
         {
             "parentCategory": {
-                "ref": "L_OutlookSocialConnector"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "trustedproviderslist",
-                        "required": true,
-                        "requiredSpecified": true,
-                        "expandableSpecified": false,
-                        "maxLengthSpecified": false,
-                        "inputType": "textBox",
-                        "caption": "以分號區隔 ProgID",
-                        "id": "L_SpecifyListOfSocialNetworkProvidersToLoadID"
-                    }
-                ]
-            },
-            "name": "L_SpecifyListOfSocialNetworkProvidersToLoad",
-            "displayName": "指定要載入的社交網路提供者清單",
-            "explainText": "此原則設定可決定 Outlook Social Connector 所載入的社交網路提供者清單。\n\n如果啟用此原則設定，您可輸入 Outlook Social Connector 要載入的社交網路提供者 progID 清單。此清單必須以分號分隔。請注意，如果啟用此原則設定，Outlook Social Connector 只會載入此清單中的社交網路提供者，其他社交網路提供者不會載入。\n\n如果停用或未設定此原則設定，Outlook Social Connector 可載入使用者指定的任何提供者。",
-            "tags": [
-                "L_OutlookSocialConnector",
-                "L_MicrosoftOfficeOutlook"
-            ],
-            "application": "outlk16",
-            "key": "software\\microsoft\\office\\outlook\\socialconnector",
-            "valueName": "providersecuritymode"
-        },
-        {
-            "parentCategory": {
                 "ref": "L_Exchangesettings"
             },
             "supportedOn": {
@@ -10467,8 +12337,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "activationalertthreshold"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10500,8 +12369,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "activationretrylimit"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10533,8 +12401,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "alertinterval"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10566,8 +12433,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "memoryalertthreshold"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10599,8 +12465,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "restartmanagerretrylimit"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10710,7 +12575,7 @@
             },
             "name": "L_DisablePreviewPlace",
             "displayName": "停用 [預覽位置]。",
-            "explainText": "此原則設定決定是否允許使用 [預覽位置] 功能。啟用此設定將會封鎖 [預覽位置] 功能。\n        使用者將無法對 Outlook 預定的變更進行預覽及提供意見反應。\n\\t注意: 此原則設定僅適用於 Office 的訂閱版本，如 Office 365 專業增強版。",
+            "explainText": "        此原則設定決定是否允許使用 [預覽位置] 功能。啟用此設定將會封鎖 [預覽位置] 功能。\n        使用者將無法對 Outlook 預定的變更進行預覽及提供意見反應。\n\\t注意此原則設定僅適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版。\n      ",
             "tags": [
                 "L_Other",
                 "L_OutlookOptions",
@@ -10739,7 +12604,7 @@
             },
             "name": "L_DisableOnlineModeAuthDiagnostics",
             "displayName": "停用「取得診斷」的線上模式。",
-            "explainText": " 此原則設定決定是否允許「取得診斷」啟用線上模式。啟用此設定會禁止「取得診斷」功能將驗證和診斷記錄檔傳送到我們的服務。\n         使用者現在將使用離線模式。我們將收集所有記錄檔，並將它們儲存在使用者的 [下載] 資料夾。此使用者可以連絡客戶支援並決定是否要將記錄檔傳送給我們。",
+            "explainText": "         此原則設定決定是否允許「取得診斷」啟用線上模式。啟用此設定會禁止「取得診斷」功能將驗證和診斷記錄檔傳送到我們的服務。\n         使用者現在將使用離線模式。我們將收集所有記錄檔，並將它們儲存在使用者的 [下載] 資料夾。此使用者可以連絡客戶支援並決定是否要將記錄檔傳送給我們。\n      ",
             "tags": [
                 "L_Other",
                 "L_OutlookOptions",
@@ -10768,7 +12633,7 @@
             },
             "name": "L_EnableEndEarly",
             "displayName": "提早結束約會與會議",
-            "explainText": "此原則設定可讓您控制是否要在使用者建立約會或會議時將約會或會議設定為提早在指定分鐘數內結束。\n\n若啟用此原則設定，約會與會議會根據使用者建立約會或會議時指定的分鐘數提早結束。\n\n若要指定提早結束的分鐘數，您可以使用 [指定短約會與會議提早結束的分鐘數] 或 [指定長約會與會議提早結束的分鐘數] 原則設定。\n\n若未啟用此原則設定來指定分鐘數，使用者可以移至 [檔案] > [選項] > [行事曆] 指定分鐘數。如果使用者未指定時間，將使用短會議 5 分鐘，而長會議 10 分鐘的預設值。\n\n若停用此原則設定，約會與會議無法設定提早結束，並會停用 [檔案] > [選項] > [行事曆] 中的選項，且使用者無法加以啟用。\n\n若未設定此原則設定，約會與會議將不會設定提早結束，但使用者可以移至 [檔案] > [選項] > [行事曆] 讓約會與會議提早結束。\n\n注意: 此原則設定只適用於訂閱版本的 Office，例如 Office 365 專業增強版。",
+            "explainText": "        此原則設定可讓您控制是否要在使用者建立約會或會議時，將約會與會議設定為提早在指定分鐘數內結束。\n\n        如果啟用此原則設定，約會與會議會根據使用者建立約會或會議提早在指定的分鐘數內結束。\n\n        若要指定約會與會議提早結束的分鐘數，您可以使用 [指定短約會與會議提早結束的分鐘數] 或 [指定長約會與會議提早結束的分鐘數] 原則設定。\n\n        如果未啟用那些原則設定來指定分鐘數，使用者可以移至 [檔案] > [選項] > [行事曆] 指定分鐘數。如果使用者未指定時間，則會使用短會議 5 分鐘，而長會議 10 分鐘的預設值。\n\n        如果停用此原則設定，則約會與會議無法設定提早結束，並會停用 [檔案] > [選項] > [行事曆] 底下的選項，且使用者無法加以啟用。\n\n        如果未設定此原則設定，則約會與會議將不會設定提早結束，但使用者可以移至 [檔案] > [選項] > [行事曆] 讓約會與會議提早結束。\n\n        注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版。\n      ",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10778,6 +12643,55 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar",
             "valueName": "endeventsearly"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Calendaroptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "None"
+                                },
+                                "displayName": "無"
+                            },
+                            {
+                                "value": {
+                                    "string": "End_Early"
+                                },
+                                "displayName": "提前結束"
+                            },
+                            {
+                                "value": {
+                                    "string": "Start_Late"
+                                },
+                                "displayName": "延遲開始"
+                            }
+                        ],
+                        "valueName": "shortenevents",
+                        "inputType": "dropdownList",
+                        "caption": "選取縮短事件種類",
+                        "id": "L_SelecttheShortenEventsType"
+                    }
+                ]
+            },
+            "name": "L_ShortenEventsType",
+            "displayName": "縮短約會與會議:",
+            "explainText": "        此原則設定可讓您在指定的分鐘數內縮短約會與會議的預設持續時間。如果您啟用這個原則設定，您可以選擇下列選項: [提前結束]、[延遲開始]、[無]。\n        如果您選取 [提前結束]，會議和約會將在指定的分鐘數後提前結束。\n        如果您選取 [延遲開始]，會議和約會將在指定的分鐘數後延遲開始。\n        如果您選取「無」，預設的會議期間將不會縮短。\n        在所有情況下，將會在 [Outlook 選項] 對話方塊中停用此功能的設定。\n        如果您未設定這個原則設定，使用者可以移至 [檔案] > [選項] > [行事曆] 修改這些設定。\n\n        注意:此原則設定僅適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版。",
+            "tags": [
+                "L_Calendaroptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
         },
         {
             "parentCategory": {
@@ -10802,7 +12716,7 @@
             },
             "name": "L_EndEarlyShort",
             "displayName": "指定短約會與會議提前結束的分鐘數",
-            "explainText": "此原則設定可讓您在使用者建立約會或會議時指定短約會或會議的提早結束分鐘數。短約會或會議是不到一小時的約會或會議。\n\n若啟用此原則設定，您會在使用者建立約會或會議時指定短約會或會議的提早結束分鐘數。使用者將無法透過 [檔案] > [選項] > [行事曆] 變更此值。\n\n注意: 您也必須啟用 [提早結束約會與會議] 原則設定\n\n若停用或未設定此原則設定，則預設使用 5 分鐘或使用使用者在 [檔案] > [選項] > [行事曆] 指定的任何值。\n\n注意: 此原則設定只適用於訂閱版本的 Office，例如 Office 365 專業增強版。",
+            "explainText": "        此原則設定可讓您在使用者建立約會或會議時指定短約會或會議的提早結束分鐘數。短約會或會議是不到一小時的約會或會議。\n\n        如果啟用此原則設定，您可以在使用者建立約會或會議時指定短約會或會議的提早結束分鐘數。使用者將無法移至 [檔案] > [選項] > [行事曆] 來變更此值。\n\n        注意: 您也必須啟用 [提早結束約會與會議] 原則設定\n\n        如果停用或未設定此原則設定，則預設值是使用 5 分鐘或使用者在 [檔案] > [選項] > [行事曆] 指定的任何值。\n\n        注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版。\n      ",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10835,7 +12749,7 @@
             },
             "name": "L_EndEarlyLong",
             "displayName": "指定長約會與會議提前結束的分鐘數",
-            "explainText": "此原則設定可讓您在使用者建立約會或會議時指定長約會或會議的提早結束分鐘數。長約會或會議是持續一小時或更久的約會或會議。\n\n若啟用此原則設定，您會在使用者建立約會或會議時指定長約會或會議的提早結束分鐘數。使用者將無法透過 [檔案] > [選項] > [行事曆] 變更此值。\n\n注意: 您也必須啟用 [提早結束約會與會議] 原則設定\n\n若停用或未設定此原則設定，則預設使用 10 分鐘或使用使用者在 [檔案] > [選項] > [行事曆] 指定的任何值。\n\n注意: 此原則設定只適用於訂閱版本的 Office，例如 Office 365 專業增強版。",
+            "explainText": "        此原則設定可讓您在使用者建立約會或會議時指定長約會或會議的提早結束分鐘數。長約會或會議是持續一小時或更久的約會或會議。\n\n        如果啟用此原則設定，您可以在使用者建立約會或會議時指定長約會或會議的提早結束分鐘數。使用者將無法移至 [檔案] > [選項] > [行事曆] 來變更此值。\n\n        注意: 您也必須啟用 [提早結束約會與會議] 原則設定\n\n        如果停用或未設定此原則設定，則預設值是使用 10 分鐘或使用者在 [檔案] > [選項] > [行事曆] 指定的任何值。\n\n        注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版。\n      ",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10863,8 +12777,8 @@
                 }
             },
             "name": "L_OnSendAddinsEnabled",
-            "displayName": "無法載入網頁擴充功能時停用傳送。",
-            "explainText": "若啟用此原則設定，則除非從 Outlook 載入網頁增益集，否則不會允許傳送電子郵件與會議要求。",
+            "displayName": "無法載入 Web 增益集時封鎖傳送",
+            "explainText": "此原則設定可讓您控制 Outlook 是否應封鎖傳送電子郵件和會議邀請，直到從 Exchange 載入 Web 增益集為止。\n\n若啟用此原則設定，Outlook 將不會允許傳送電子郵件及會議邀請，直到從 Exchange 載入 Web 增益集為止。\n\n如果停用或不設定此原則設定，即使尚未從 Exchange 載入最新的 Web 增益集，Outlook 也會允許傳送電子郵件和會議邀請。\n\n如需何時使用此設定的詳細資訊，請參閱 https://go.microsoft.com/fwlink/p/?linkid=2161562",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -10893,7 +12807,7 @@
             },
             "name": "L_RestUpdatesForCalendar",
             "displayName": "使用 REST 更新行事曆",
-            "explainText": "此原則會決定 Outlook 是否可以使用 REST 更新行事曆。\n\n如果啟用此原則，Outlook 將使用 REST 更新支援的 Office 365 和 Outlook.com 行事曆。\n\n如果停用此原則，Outlook 將不會使用 REST 更新任何行事曆。",
+            "explainText": "此原則會決定 Outlook 是否可以使用 REST 更新行事曆。\n\n        如果啟用此原則，Outlook 將使用 REST 更新支援的 Office 365 和 Outlook.com 行事曆。\n\n        如果停用此原則，Outlook 將不會使用 REST 更新任何行事曆。",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10923,7 +12837,7 @@
             },
             "name": "L_PreferProvidedEmailInAutoDiscoverAuthPrompts",
             "displayName": "在自動探索驗證提示中偏好所提供的帳戶電子郵件。",
-            "explainText": "如果進行設定，此原則設定將控管與自動探索相關驗證提示中顯示的電子郵件。\n\n預設 (0): 偏好帳戶 UPN (如果有的話)。\n\n如果啟用此設定，則自動探索驗證提示將偏好提供的帳戶電子郵件 (根據所設定的 SMTP 或 UPN 而定)。",
+            "explainText": "如果進行設定，此原則設定將控管與自動探索相關驗證提示中顯示的電子郵件。\n\n        預設 (0): 偏好帳戶 UPN (如果有的話)。\n\n        如果啟用此設定，則自動探索驗證提示將偏好提供的帳戶電子郵件 (根據所設定的 SMTP 或 UPN 而定)。",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -11249,6 +13163,180 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\autodiscover",
             "valueName": "enableoffice365configservice"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Cryptography"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_AllowPrivateKeyCheck",
+            "displayName": "當使用者傳送加密電子郵件的收件者有使用者時，檢查使用者的私密金鑰",
+            "explainText": "此原則設定可以控制當使用者傳送加密電子郵件，且使用者包含在電子郵件中做為收件者時，Outlook 是否要檢查使用者的私密金鑰。使用者可以透過直接或是做為通訊群組清單成員的方式，包含在電子郵件中做為收件者。\n\n如果您啟用此原則設定，Outlook 會檢查使用者的私密金鑰。\n\n如果您停用此原則設定，Outlook 不會檢查使用者的私密金鑰。\n\n如果您未設定此原則設定，Outlook 會檢查使用者的私密金鑰。",
+            "tags": [
+                "L_Cryptography",
+                "L_Security",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\security",
+            "valueName": "allowprivatekeycheck"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableAdminNotifications",
+            "displayName": "停用 Outlook 租用戶系統管理員通知",
+            "explainText": "此原則設定決定租用戶系統管理員是否可以在 Outlook 中接收支援通知。\n\n預設 (0): 登入的租用戶系統管理員將會收到影響其租用戶之潛在問題和修正的狀態更新。\n\n如果啟用此設定，已登入的租用戶系統管理員將不會收到影響其租用戶之潛在問題和修正的狀態更新。",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\general",
+            "valueName": "disableadminnotifications"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableCrashNotificationOnRestart",
+            "displayName": "在 Outlook 重新啟動時停用 Outlook 當機通知。",
+            "explainText": "這個原則設定會決定是否要允許 Outlook 損毀通知，在重新啟動。啟用此設定會封鎖在重新啟動 Outlook 損毀通知。",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\general",
+            "valueName": "disablecrashnotificationonrestart"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Delegates"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DelegateSentItemsStyle",
+            "displayName": "將從共用信箱傳送的郵件儲存至 [寄件備份] 資料夾",
+            "explainText": "此原則設定可控制從共用信箱傳送的郵件是否儲存到共用信箱的 [寄件備份] 資料夾。\n\n根據預設，從共用信箱傳送的郵件不會儲存到共用信箱的 [寄件備份] 資料夾中。\n\n若您啟用此原則設定，從共用信箱傳送的郵件將會儲存到共用信箱的 [寄件備份] 資料夾中。\n\n若您停用或不設定此原則設定，則從共用信箱傳送的郵件將不會儲存到共用信箱的 [寄件備份] 資料夾中。",
+            "tags": [
+                "L_Delegates",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
+            "valueName": "delegatesentitemsstyle"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Exchangesettings"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_AlwaysUseMSOAuthForAutodiscover",
+            "displayName": "自動探索一律可以使用新式驗證",
+            "explainText": "此原則設定控制自動探索是否始終能够使用新式驗證，無論主要信箱連線類型支援何種驗證方法。\n\n根據預設，自動探索僅使用主要信箱連線類型支援的驗證方法。對於某些連線類型，新式驗證並不總是受支援的驗證方法之一。\n\n如果啟用此原則設定，則無論主要信箱連線類型支援何種驗證方法，自動探索始終能够使用新式驗證。啟用此原則設定可能會導致在使用新式驗證 (但連線類型不支援) 時要求使用者提供密碼的其他提示。\n\n如果停用或未設定此原則設定，則自動探索將僅使用主要信箱連線類型支援的驗證方法。",
+            "tags": [
+                "L_Exchangesettings",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\exchange",
+            "valueName": "alwaysusemsoauthforautodiscover"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_RecommendOutlookExtension",
+            "displayName": "建議使用 Microsoft Outlook 延伸模組",
+            "explainText": "此原則設定可控制 Outlook 應用程式和 Outlook Web App 的 Windows 10 使用者是否會看到為 Microsoft Edge 安裝新的 Microsoft Outlook 延伸模組的建議。如果使用者選擇按一下建議，則會將他們導向 Microsoft Outlook 延伸模組頁面，讓他們可以選擇安裝此網頁型的生產力附加元件。您的使用者可以關閉建議，而且只會看到建議兩次。若您的使用者選擇安裝該延伸模組，他們將可以從 Microsoft Edge 中的圖示存取郵件、行事曆、連絡人和工作，而不需要開啟其他瀏覽器索引標籤。此延伸模組 Outlook 網頁版的「迷你」版本，從瀏覽器標頭按一下即可飛出。\n\n在未來，Microsoft 可能會為 Chrome 瀏覽器發行此延伸模組版本。Microsoft 也會尊重此原則，以便未來升級 Chrome 延伸模組。\n\n如果您啟用或未設定此原則設定，將會向使用者顯示建議。\n\n如果您停用此原則設定，將不會向使用者顯示建議。\n\n注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版與 Outlook Web App。\n\n如需詳細資訊，請參閱 https://go.microsoft.com/fwlink/?linkid=2165458",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\general",
+            "valueName": "recommendoutlookextension"
         }
     ]
 }

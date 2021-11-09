@@ -208,35 +208,6 @@
             },
             "enabledValue": {
                 "decimal": {
-                    "value": 0
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "name": "L_StopCheckingTableAltTextAccessibilityInformation",
-            "displayName": "Detener la comprobación de la información de accesibilidad del texto alternativo de la tabla",
-            "explainText": "Esta configuración de directiva impide que el Comprobador de accesibilidad compruebe si las tablas contienen texto alternativo.\n\nSi habilita esta configuración de directiva, no se realizará esta comprobación.\n\nSi la deshabilita o no la configura, se comprobará si las tablas contienen texto alternativo y los errores se mostrarán en el Comprobador de accesibilidad.",
-            "tags": [
-                "L_CheckAccessibility",
-                "L_FileTab",
-                "L_MicrosoftOfficePowerPoint"
-            ],
-            "application": "ppt16",
-            "key": "software\\microsoft\\office\\16.0\\powerpoint\\accchecker",
-            "valueName": "tablealttext"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_CheckAccessibility"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
                     "value": 1
                 }
             },
@@ -903,7 +874,7 @@
             },
             "name": "L_Popupmenuonrightmouseclick",
             "displayName": "Mostrar menú al hacer clic con el botón secundario",
-            "explainText":"Activada: activa la opción ''Mostrar menú al hacer clic con el botón secundario''. | Desactivada: desactiva la opción ''Mostrar menú al hacer clic con el botón secundario''.",
+            "explainText": "Activada: activa la opción ''Mostrar menú al hacer clic con el botón secundario''. | Desactivada: desactiva la opción ''Mostrar menú al hacer clic con el botón secundario''.",
             "tags": [
                 "L_Advanced",
                 "L_PowerPointOptions",
@@ -932,7 +903,7 @@
             },
             "name": "L_Showpopupmenubutton",
             "displayName": "Mostrar barra de herramientas emergente",
-            "explainText":"Activada: activa la opción ''Mostrar barra de herramientas emergente''. | Desactivada: desactiva la opción ''Mostrar barra de herramientas emergente''",
+            "explainText": "Activada: activa la opción ''Mostrar barra de herramientas emergente''. | Desactivada: desactiva la opción ''Mostrar barra de herramientas emergente''",
             "tags": [
                 "L_Advanced",
                 "L_PowerPointOptions",
@@ -1303,6 +1274,70 @@
             "application": "ppt16",
             "key": "software\\microsoft\\office\\16.0\\powerpoint\\security\\protectedview",
             "valueName": "disableattachmentsinpv"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_ProtectedView"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Bloquear archivos"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Abrir en Vista protegida"
+                            }
+                        ],
+                        "valueName": "openinprotectedview",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsDropID"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "disableeditfrompv",
+                        "key": "software\\microsoft\\office\\16.0\\powerpoint\\security\\filevalidation",
+                        "inputType": "checkBox",
+                        "caption": "Activado: permitir edición.  No activado: no permitir edición.",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsStr3"
+                    }
+                ]
+            },
+            "name": "L_SetDocumentBehaviorIfFileValidationFails",
+            "displayName": "Establecer el comportamiento de los documentos si se producen errores durante la validación del archivo",
+            "explainText": "Esta clave de directiva controla la administración de los documentos de Office cuando se produce un error en la validación de archivos.\n\nSi habilitas esta configuración de directiva, puedes configurar las siguientes opciones para los archivos con error durante la validación: \n\n- Bloquear completamente archivos. Los usuarios no podrán abrir los archivos.\n- Abrir archivos en Vista protegida y no permitir la edición. Los usuarios no pueden editar los archivos. Esta es también la manera en que Office administra los archivos si deshabilitas esta configuración de directiva.\n- Abrir archivos en Vista protegida y permitir la edición. Los usuarios pueden editar los archivos. Esta es también la manera en que Office administra los archivos si no estableces esta configuración de directiva.\n\nSi deshabilitas esta configuración de directiva, Office aplica el comportamiento \"Abrir archivos en Vista protegida y no permitir la edición\".\n\nSi no estableces esta configuración de directiva, Office aplica el comportamiento \"Abrir archivos en Vista protegida y permitir la edición\".",
+            "tags": [
+                "L_ProtectedView",
+                "L_TrustCenter",
+                "L_Security",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint\\security\\filevalidation"
         },
         {
             "parentCategory": {
@@ -1895,7 +1930,7 @@
             },
             "name": "L_BlockMacroExecutionFromInternet",
             "displayName": "Bloquear la ejecución de macros en archivos de Office procedentes de Internet",
-            "explainText": "Esta configuración de directiva permite bloquear la ejecución de las macros en archivos de Office que provengan de Internet.\n\nSi habilita esta configuración de directiva, se bloquea la ejecución de las macros aunque la opción \"Habilitar todas las macros\" esté seleccionada en la sección Configuración de macros del Centro de confianza. Además, en lugar de tener la opción \"Habilitar contenido\", los usuarios recibirán una notificación de que se ha bloqueado la ejecución de las macros. Si el archivo de Office se guarda en una ubicación de confianza o el usuario lo había marcado previamente como de confianza, se podrán ejecutar las macros.\n\nSi deshabilita o no establece esta configuración de directiva, la configuración establecida en la sección Configuración de macros del Centro de confianza determinará si se ejecutan las macros en archivos de Office procedentes de Internet.",
+            "explainText": "        Esta configuración de directiva permite bloquear la ejecución de las macros en archivos de Office que provengan de Internet.\n\n        Si habilita esta configuración de directiva, se bloquea la ejecución de las macros aunque la opción \"Habilitar todas las macros\" esté seleccionada en la sección Configuración de macros del Centro de confianza. Además, en lugar de tener la opción \"Habilitar contenido\", los usuarios recibirán una notificación de que se ha bloqueado la ejecución de las macros. Si el archivo de Office se guarda en una ubicación de confianza o el usuario lo había marcado previamente como de confianza, se podrán ejecutar las macros.\n\n        Si deshabilita o no establece esta configuración de directiva, la configuración establecida en la sección Configuración de macros del Centro de confianza determinará si se ejecutan las macros en archivos de Office procedentes de Internet.\n      ",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1991,7 +2026,7 @@
             },
             "name": "L_TrustaccesstoVisualBasicProject",
             "displayName": "Confiar en el acceso a proyectos de Visual Basic",
-            "explainText": "Esta configuración de directiva controla si los clientes de automatización, como Microsoft Visual Studio 2005 Tools para Microsoft Office (VSTO), pueden tener acceso al sistema de proyectos de Visual Basic para Aplicaciones en las aplicaciones especificadas. Los proyectos de VSTO requieren acceso al sistema de proyectos de Visual Basic para Aplicaciones en Excel, PowerPoint y Word, aunque los proyectos no usen Visual Basic para Aplicaciones. La compatibilidad en tiempo de diseño de los controles de proyectos de Visual Basic y C# depende del sistema de proyectos de Visual Basic para Aplicaciones en Word y Excel.\\r\n\\r\nSi habilita esta configuración de directiva, VSTO y otros clientes de automatización pueden tener acceso al sistema de proyectos de Visual Basic para Aplicaciones en las aplicaciones especificadas. Los usuarios no podrán cambiar este comportamiento mediante la opción de la interfaz de usuario \"Confiar en el acceso al modelo de objetos de proyectos de VBA\" de la sección Configuración de macros del Centro de confianza.\\r\n\\r\nSi deshabilita esta configuración de directiva, VSTO no tiene acceso mediante programación a los proyectos de VBA. Además, la casilla \"Confiar en el acceso al modelo de objetos de proyectos de VBA\" se desactiva y los usuarios no pueden cambiarla. Nota: si se deshabilita esta configuración de directiva, se impide a los proyectos de VSTO interactuar correctamente con el sistema de proyectos de VBA de la aplicación seleccionada.\\r\n\\r\nSi no establece esta configuración de directiva, los clientes de automatización no tendrán acceso mediante programación a los proyectos de VBA. Los usuarios pueden habilitar esta opción si activan \"Confiar en el acceso al modelo de objetos de proyectos de VBA\" en la sección \"Configuración de macros\" del Centro de confianza. No obstante, al hacer esto se permite a las macros de los documentos abiertos por el usuario tener acceso a los objetos, métodos y propiedades principales de Visual Basic, lo cual representa un posible riesgo de seguridad.",
+            "explainText": "Esta configuración de directiva controla si los clientes de automatización, como Microsoft Visual Studio 2005 Tools para Microsoft Office (VSTO), pueden tener acceso al sistema de proyectos de Visual Basic para Aplicaciones en las aplicaciones especificadas. Los proyectos de VSTO requieren acceso al sistema de proyectos de Visual Basic para Aplicaciones en Excel, PowerPoint y Word, aunque los proyectos no usen Visual Basic para Aplicaciones. La compatibilidad en tiempo de diseño de los controles de proyectos de Visual Basic y C# depende del sistema de proyectos de Visual Basic para Aplicaciones en Word y Excel.\\r\\n\\r\\nSi habilita esta configuración de directiva, VSTO y otros clientes de automatización pueden tener acceso al sistema de proyectos de Visual Basic para Aplicaciones en las aplicaciones especificadas. Los usuarios no podrán cambiar este comportamiento mediante la opción de la interfaz de usuario \"Confiar en el acceso al modelo de objetos de proyectos de VBA\" de la sección Configuración de macros del Centro de confianza.\\r\\n\\r\\nSi deshabilita esta configuración de directiva, VSTO no tiene acceso mediante programación a los proyectos de VBA. Además, la casilla \"Confiar en el acceso al modelo de objetos de proyectos de VBA\" se desactiva y los usuarios no pueden cambiarla. Nota: si se deshabilita esta configuración de directiva, se impide a los proyectos de VSTO interactuar correctamente con el sistema de proyectos de VBA de la aplicación seleccionada.\\r\\n\\r\\nSi no establece esta configuración de directiva, los clientes de automatización no tendrán acceso mediante programación a los proyectos de VBA. Los usuarios pueden habilitar esta opción si activan \"Confiar en el acceso al modelo de objetos de proyectos de VBA\" en la sección \"Configuración de macros\" del Centro de confianza. No obstante, al hacer esto se permite a las macros de los documentos abiertos por el usuario tener acceso a los objetos, métodos y propiedades principales de Visual Basic, lo cual representa un posible riesgo de seguridad.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -2984,6 +3019,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Security"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DownloadImages",
+            "displayName": "Desbloquear descarga automática de imágenes vinculadas",
+            "explainText": "Esta configuración de directiva determina si PowerPoint descarga automáticamente vínculos de orígenes externos.\n\nSi habilita esta configuración de directiva, PowerPoint cargará las imágenes guardadas en ubicaciones remotas.\n\nSi deshabilita o no establece esta configuración de directiva, cuando PowerPoint abra una presentación, no mostrará las imágenes vinculadas guardadas en un equipo distinto a menos que la presentación esté guardada en una ubicación de confianza (según lo configurado en el Centro de confianza).",
+            "tags": [
+                "L_Security",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint\\security",
+            "valueName": "downloadimages"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Coauthoring"
             },
             "supportedOn": {
@@ -3010,6 +3074,35 @@
             "application": "ppt16",
             "key": "software\\microsoft\\office\\16.0\\powerpoint\\coauthoring",
             "valueName": "disablecoauthoring"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Coauthoring"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_TurnOffRevisionTracking",
+            "displayName": "Desactivar el seguimiento de revisiones",
+            "explainText": "Esta configuración de directiva le permite desactivar el seguimiento de revisiones en PowerPoint.\n\nDe forma predeterminada, el seguimiento de revisiones está activado en las presentaciones en las que este se admite.\n\nSi habilita esta configuración de directiva, no se realizará ningún seguimiento de las revisiones que se realicen en las presentaciones ni se mostrarán.\n\nSi deshabilita o no establece esta configuración de directiva, se realizará un seguimiento de las revisiones que se realicen en las presentaciones y se mostrarán.",
+            "tags": [
+                "L_Coauthoring",
+                "L_CollaborationSettings",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint\\coauthoring",
+            "valueName": "disablerevisiontracking"
         },
         {
             "parentCategory": {
@@ -3377,6 +3470,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Predefined"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_EnableRecordingRibbonTab",
+            "displayName": "Activar la ficha de cinta de grabación",
+            "explainText": "Esta configuración de directiva permite controlar la ficha de cinta de grabación inicial en PowerPoint. De manera predeterminada, la ficha no está visible.\n\nSi habilita a esta configuración de directiva, la ficha de cinta de grabación será visible. Sin embargo, el usuario puede desactivar la característica manualmente en la interfaz de usuario.\n\nSi deshabilita o no configura esta directiva, la ficha de cinta de grabación no será visible. El usuario puede activar la característica manualmente en la interfaz de usuario.\n    ",
+            "tags": [
+                "L_Predefined",
+                "L_Disableitemsinuserinterface",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint",
+            "valueName": "enablerecordingribbontab"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_OptionsGeneral"
             },
             "supportedOn": {
@@ -3479,9 +3601,38 @@
                     "value": 0
                 }
             },
+            "name": "L_DisableQuickStarter",
+            "displayName": "Desactivar Inicio rápido",
+            "explainText": "Esta opción de directiva controla si la característica Inicio rápido está disponible para los usuarios. De forma predeterminada, Inicio rápido está disponible para los usuarios si cumplen los requisitos de idioma y región de la característica.\n\nSi habilita esta opción de directiva, Inicio rápido no estará disponible para los usuarios.\n\nSi deshabilita o no configura esta directiva, Inicio rápido estará disponible para los usuarios si cumplen los requisitos de idioma y región de la característica.\n\nNota: Esta opción de directiva solo se aplica a las versiones de la suscripción de Office, como Aplicaciones de Microsoft 365 para empresas.\n    ",
+            "tags": [
+                "L_OptionsGeneral",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint",
+            "valueName": "disablequickstarter"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_OptionsGeneral"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_DisableIncrementalDownload",
             "displayName": "Esperar para mostrar a los usuarios una presentación basada en la nube hasta que se descargue todo el contenido",
-            "explainText": "Esta configuración de directiva le permite controlar si PowerPoint espera hasta que se descargue todo el contenido antes de mostrar una presentación al usuario. Esta configuración de directiva se aplica a las presentaciones que se abren desde una ubicación basada en la nube, como OneDrive Personal, OneDrive para la Empresa o SharePoint Online.\n\nDe forma predeterminada, el usuario abre una presentación basada en la nube en PowerPoint, el usuario puede ver la presentación mientras otro contenido, como imágenes o vídeo, continúa descargándose. Sin embargo, algunas funciones, como editar y presentar, están limitadas o no están disponibles hasta que se descargue todo el contenido de la presentación.\n\nSi habilita a esta configuración de directiva, PowerPoint esperará, al abrir una presentación basada en la nube, hasta que se descargue todo el contenido de la presentación antes de mostrar la presentación al usuario.\n\nDebería habilitar esta configuración de directiva si tiene complementos o procesos automatizados que se dependen de que todo el contenido de la presentación esté disponible y sea totalmente editable en cuanto se muestra la presentación.\n\nSi deshabilita o no configura esta opción, PowerPoint abre archivos en la nube más rápidamente, por lo que el usuario puede empezar a ver la presentación mientras se descarga el resto del contenido.\n\nNota: Esta configuración de directiva solo se aplica a las versiones de suscripción de Office, como Office 365 ProPlus.\n    ",
+            "explainText": "Esta opción de directiva le permite controlar si PowerPoint espera hasta que se descargue todo el contenido antes de mostrar una presentación al usuario. Esta opción de directiva se aplica a las presentaciones que se abren desde una ubicación basada en la nube, como OneDrive Personal, OneDrive para la Empresa o SharePoint Online.\n\nDe forma predeterminada, el usuario abre una presentación basada en la nube en PowerPoint, el usuario puede ver la presentación mientras otro contenido, como imágenes o vídeo, continúa descargándose. Sin embargo, algunas funciones, como editar y presentar, están limitadas o no están disponibles hasta que se descargue todo el contenido de la presentación.\n\nSi habilita a esta opción de directiva, PowerPoint esperará, al abrir una presentación basada en la nube, hasta que se descargue todo el contenido de la presentación antes de mostrar la presentación al usuario.\n\nDebería habilitar esta opción de directiva si tiene complementos o procesos automatizados que se dependen de que todo el contenido de la presentación esté disponible y sea totalmente editable en cuanto se muestra la presentación.\n\nSi deshabilita o no configura esta opción, PowerPoint abre archivos en la nube más rápidamente, por lo que el usuario puede empezar a ver la presentación mientras se descarga el resto del contenido.\n\nNota: Esta opción de directiva solo se aplica a las versiones de suscripción de Office, como Aplicaciones de Microsoft 365 para empresas.\n    ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_PowerPointOptions",
@@ -3510,7 +3661,7 @@
             },
             "name": "L_DisableLiveSubtitles",
             "displayName": "No permitir el uso de Subtítulos en directo",
-            "explainText": "Esta configuración de directiva controla si los usuarios pueden activar los Subtítulos en directo durante una presentación. De forma predeterminada, los Subtítulos en directo están desactivados, pero los usuarios pueden activarlos.\n\nSi habilita esta configuración de directiva, los usuarios no podrán activar los Subtítulos en directo durante una presentación.\n\nSi deshabilita o no establece esta configuración de directiva, los usuarios podrán activar los Subtítulos en directo.\n\nNota: Esta configuración de directiva solo es válida para las versiones de suscripción de Office, como Office 365 ProPlus.\n    ",
+            "explainText": "Esta opción de directiva controla si los usuarios pueden activar los Subtítulos en directo durante una presentación. De forma predeterminada, los Subtítulos en directo están desactivados, pero los usuarios pueden activarlos.\n\nSi habilita esta opción de directiva, los usuarios no podrán activar los Subtítulos en directo durante una presentación.\n\nSi deshabilita o no configura esta opción de directiva, los usuarios podrán activar los Subtítulos en directo.\n\nNota: Esta opción de directiva solo se aplica a las versiones de suscripción de Office, como Aplicaciones de Microsoft 365 para empresas.\n    ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_PowerPointOptions",
@@ -3519,6 +3670,35 @@
             "application": "ppt16",
             "key": "software\\microsoft\\office\\16.0\\powerpoint",
             "valueName": "disablelivesubtitles"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_OptionsGeneral"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_EnableModernCommentsCreateNew",
+            "displayName": "Usar comentarios modernos en PowerPoint",
+            "explainText": "Esta opción de directiva controla si se usan los comentarios modernos en PowerPoint. Para obtener más información sobre los comentarios modernos y sobre cuándo habilitar esta opción, consulte https://go.microsoft.com/fwlink/p/?linkid=2116065.\n\nSi habilita esta opción de directiva, cuando un usuario agregue comentarios a un archivo nuevo o a un archivo sin comentarios, los nuevos comentarios agregados serán comentarios modernos. Si los usuarios tienen una versión de PowerPoint que no admite los comentarios modernos, aparecerá una notificación que les indica que usen PowerPoint para la Web para ver los comentarios modernos en aquellos archivos que los contengan.\n\nSi deshabilita esta opción de directiva, los usuarios seguirán teniendo la experiencia de comentarios anterior para los archivos nuevos y existentes que no tengan ningún comentario moderno. Los usuarios podrán seguir leyendo los archivos que ya contengan comentarios modernos si tienen una versión de PowerPoint que admita los comentarios modernos.\n\nPara obtener más información sobre lo que ocurre cuando no configura esta opción de directiva, consulte https://go.microsoft.com/fwlink/p/?linkid=2116065.\n\nNota: Esta opción de directiva solo se aplica a las versiones de suscripción de Office, como Aplicaciones de Microsoft 365 para empresas.\n    ",
+            "tags": [
+                "L_OptionsGeneral",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint",
+            "valueName": "enablemoderncommentscreatenew"
         }
     ]
 }

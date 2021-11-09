@@ -208,35 +208,6 @@
             },
             "enabledValue": {
                 "decimal": {
-                    "value": 0
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "name": "L_StopCheckingTableAltTextAccessibilityInformation",
-            "displayName": "停止检查表格替换文字辅助功能信息",
-            "explainText": "此策略设置可阻止辅助功能检查器验证表格是否包含替换文字。\n\n如果启用此策略设置，将阻止辅助功能检查器验证表格是否包含替换文字。\n\n如果禁用或未配置此策略设置，将检查表格是否包含替换文字，并且所有问题都将显示在辅助功能检查器中。",
-            "tags": [
-                "L_CheckAccessibility",
-                "L_FileTab",
-                "L_MicrosoftOfficePowerPoint"
-            ],
-            "application": "ppt16",
-            "key": "software\\microsoft\\office\\16.0\\powerpoint\\accchecker",
-            "valueName": "tablealttext"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_CheckAccessibility"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
                     "value": 1
                 }
             },
@@ -1306,6 +1277,70 @@
         },
         {
             "parentCategory": {
+                "ref": "L_ProtectedView"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "阻止文件"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "在受保护视图中打开"
+                            }
+                        ],
+                        "valueName": "openinprotectedview",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsDropID"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "disableeditfrompv",
+                        "key": "software\\microsoft\\office\\16.0\\powerpoint\\security\\filevalidation",
+                        "inputType": "checkBox",
+                        "caption": "选中: 允许编辑。未选中: 不允许编辑。",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsStr3"
+                    }
+                ]
+            },
+            "name": "L_SetDocumentBehaviorIfFileValidationFails",
+            "displayName": "文件验证失败时设置文档行为",
+            "explainText": "此策略设置控制当文件验证失败时 Office 如何处理文档。\n\n如果启用此策略设置，您可以为文件验证失败的文件配置以下选项:\n\n- 完全阻止文件。用户无法打开文件。\n- 在受保护视图中打开文件但不允许编辑。用户无法编辑文件。如果禁用此策略设置，这也是 Office 处理文件的方式。\n- 在受保护视图中打开文件并允许编辑。用户可以编辑文件。如果未配置此策略设置，这也是 Office 处理文件的方式。\n\n如果禁用此策略设置，Office 将按照“在受保护视图中打开文件但不允许编辑”行为执行操作。\n\n如果不配置此策略设置，Office 将按照“在受保护视图中打开文件并允许编辑”行为执行操作。",
+            "tags": [
+                "L_ProtectedView",
+                "L_TrustCenter",
+                "L_Security",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint\\security\\filevalidation"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -2051,7 +2086,7 @@
             },
             "name": "L_RequirethatApplicationExtensionsaresigned",
             "displayName": "要求由受信任发布者签署应用程序加载项",
-            "explainText": "此策略设置控制此应用程序的加载项是否必须由受信任的发布者数字签署。\n \n如果你启用此策略设置，此应用程序在加载每个加载项之前检查它的数字签名。如果某个加载项没有数字签名，或者签名不是来自受信任的发布者，此应用程序将禁用该加载项并通知用户。如果你要求所有加载项均由受信任的发布者签署，则必须将证书添加到“受信任的发布者”列表。有关获取和分发证书的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=294922。Office 2016 在 Internet Explorer 受信任的发布者库中存储受信任的发布者证书。较早版本的 Microsoft Office 将受信任的发布者证书信息(特别是证书指纹)存储在特殊的 Office 受信任的发布者库中。Office 2016 仍从 Office 受信任的发布者库中读取受信任的发布者证书信息，但不向此库写入信息。因此，如果你在以前版本的 Office 中创建了受信任的发布者列表，并且升级到 Office 2016，你的受信任的发布者列表仍将可识别。但是，你添加到该列表的任何受信任的发布者证书将存储在 Internet Explorer 受信任的发布者库中。有关受信任的发布者详细信息，请参阅 Office 资源工具包。\n\n如果你禁用或不配置此策略设置，此应用程序在打开应用程序加载项之前不检查它们的数字签名。如果加载了危险加载项，则可能危害用户的计算机或危及数据安全。",
+            "explainText": "此策略设置控制此应用程序的加载项是否必须由受信任的发布者数字签署。\n\n如果你启用此策略设置，此应用程序在加载每个加载项之前检查它的数字签名。如果某个加载项没有数字签名，或者签名不是来自受信任的发布者，此应用程序将禁用该加载项并通知用户。如果你要求所有加载项均由受信任的发布者签署，则必须将证书添加到“受信任的发布者”列表。有关获取和分发证书的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=294922。Office 2016 在 Internet Explorer 受信任的发布者库中存储受信任的发布者证书。较早版本的 Microsoft Office 将受信任的发布者证书信息(特别是证书指纹)存储在特殊的 Office 受信任的发布者库中。Office 2016 仍从 Office 受信任的发布者库中读取受信任的发布者证书信息，但不向此库写入信息。因此，如果你在以前版本的 Office 中创建了受信任的发布者列表，并且升级到 Office 2016，你的受信任的发布者列表仍将可识别。但是，你添加到该列表的任何受信任的发布者证书将存储在 Internet Explorer 受信任的发布者库中。有关受信任的发布者详细信息，请参阅 Office 资源工具包。\n\n如果你禁用或不配置此策略设置，此应用程序在打开应用程序加载项之前不检查它们的数字签名。如果加载了危险加载项，则可能危害用户的计算机或危及数据安全。",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -2984,6 +3019,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Security"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DownloadImages",
+            "displayName": "取消阻止自动下载链接图像",
+            "explainText": "此策略设置可确定 PowerPoint 是否自动下载外部来源的链接。\n\n如果您启用此策略设置，PowerPoint 将加载远程位置保存的图像。\n\n如果您禁用或不配置此策略设置，当 PowerPoint 打开演示文稿时，除非演示文稿本身保存在(信任中心配置的)受信任位置，否则不显示其他计算机上保存的任何链接图像。",
+            "tags": [
+                "L_Security",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint\\security",
+            "valueName": "downloadimages"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Coauthoring"
             },
             "supportedOn": {
@@ -3010,6 +3074,35 @@
             "application": "ppt16",
             "key": "software\\microsoft\\office\\16.0\\powerpoint\\coauthoring",
             "valueName": "disablecoauthoring"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Coauthoring"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_TurnOffRevisionTracking",
+            "displayName": "关闭修订跟踪",
+            "explainText": "此策略设置允许关闭 PowerPoint 中的修订跟踪。\n\n默认情况下，支持修订跟踪的演示文稿中启用了修订跟踪。\n\n如果启用此策略设置，将不会跟踪或显示对演示文稿所做的修订。\n\n如果你禁用或不配置此策略设置，将跟踪并显示对演示文稿所做的修订。",
+            "tags": [
+                "L_Coauthoring",
+                "L_CollaborationSettings",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint\\coauthoring",
+            "valueName": "disablerevisiontracking"
         },
         {
             "parentCategory": {
@@ -3336,7 +3429,7 @@
             },
             "name": "L_DefaultMuteAudioInScreenRecorder",
             "displayName": "关闭屏幕录制的录音",
-            "explainText": "此策略设置允许你控制 PowerPoint 中屏幕录制的初始录音设置。默认情况下，屏幕录制期间会录音。\n \n如果启用此策略设置，则在屏幕录制期间将不会录音。但是，用户可以选择在用户界面中手动打开录音。\n \n如果禁用或不配置此策略设置，在屏幕录制期间就会录音。用户可以在用户界面中手动关闭录音。",
+            "explainText": "此策略设置允许你控制 PowerPoint 中屏幕录制的初始录音设置。默认情况下，屏幕录制期间会录音。\n\n如果启用此策略设置，则在屏幕录制期间将不会录音。但是，用户可以选择在用户界面中手动打开录音。\n\n如果禁用或不配置此策略设置，在屏幕录制期间就会录音。用户可以在用户界面中手动关闭录音。",
             "tags": [
                 "L_Predefined",
                 "L_Disableitemsinuserinterface",
@@ -3374,6 +3467,35 @@
             "application": "ppt16",
             "key": "software\\microsoft\\office\\16.0\\powerpoint",
             "valueName": "muteaudiodefaultvalueinrecordingpresenterview"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Predefined"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_EnableRecordingRibbonTab",
+            "displayName": "打开录制功能区选项卡",
+            "explainText": "此策略设置允许你控制 PowerPoint 中的初始录制功能区选项卡。默认情况下，该选项卡不可见。\n\n如果启用此策略设置，则录制功能区选项卡将可见。但是，用户可以选择在用户界面中手动关闭该功能。\n\n如果禁用或不配置此策略设置，则录制功能区选项卡将不可见。用户可以选择在用户界面中手动打开该功能。\n    ",
+            "tags": [
+                "L_Predefined",
+                "L_Disableitemsinuserinterface",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint",
+            "valueName": "enablerecordingribbontab"
         },
         {
             "parentCategory": {
@@ -3479,9 +3601,38 @@
                     "value": 0
                 }
             },
+            "name": "L_DisableQuickStarter",
+            "displayName": "关闭快速启动",
+            "explainText": "此策略设置会控制用户是否可使用快速启动。默认情况下，如果用户满足快速启动的语言和区域要求，即可使用该功能。\n\n如果启用此策略设置，用户将不能使用快速启动。\n\n如果禁用或不配置此策略设置，并且用户满足快速启动的语言和区域要求，则可使用该功能。\n\n注意: 此策略设置仅适用于 Office 的订阅版本(例如 Microsoft 365 企业应用版)。\n    ",
+            "tags": [
+                "L_OptionsGeneral",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint",
+            "valueName": "disablequickstarter"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_OptionsGeneral"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_DisableIncrementalDownload",
             "displayName": "等到下载所有内容后，向用户显示基于云的演示文稿",
-            "explainText": "通过此策略设置，可以控制 PowerPoint 是否等到下载所有内容后再向用户显示演示文稿。此策略设置适用于从基于云的位置(例如 OneDrive 个人版、OneDrive for Business 或 SharePoint Online)打开的演示文稿。\n\n默认情况下，当用户在 PowerPoint 中打开基于云的演示文稿时，该用户可以在继续下载其他内容(例如图像或视频)时查看演示文稿。但在下载演示文稿的全部内容之前，某些功能(例如编辑和演示)不可用。\n\n如果启用此策略设置，当打开基于云的演示文稿时，PowerPoint 将等到下载演示文稿的全部内容，再向用户显示演示文稿。\n\n如果有加载项或自动化进程要求在显示演示文稿后立即可使用或编辑演示文稿的全部内容，最好启用此策略设置。\n\n如果禁用或不配置此设置，PowerPoint 将更快打开基于云的文件，让用户可以在下载其他内容时开始查看演示文稿。\n\n注意: 此策略设置仅适用于订阅版本的 Office，例如 Office 365 专业增强版。\n    ",
+            "explainText": "通过此策略设置，可控制 PowerPoint 是否等到下载所有内容后再向用户显示演示文稿。此策略设置适用于从基于云的位置(例如 OneDrive 个人版、OneDrive for Business 或 SharePoint Online)打开的演示文稿。\n\n默认情况下，当用户在 PowerPoint 中打开基于云的演示文稿时，该用户可在继续下载其他内容(例如图像或视频)时查看演示文稿。但是，在演示文稿的全部内容下载完成后，才能使用某些功能(例如编辑和演示)。\n\n如果启用此策略设置，当打开基于云的演示文稿时，PowerPoint 将等到下载演示文稿的全部内容，再向用户显示演示文稿。\n\n如果有加载项或自动化进程要求在显示演示文稿后立即可使用或编辑演示文稿的全部内容，最好启用此策略设置。\n\n如果禁用或不配置此策略设置，PowerPoint 将更快打开基于云的文件，让用户可在下载其他内容时开始查看演示文稿。\n\n注意: 此策略设置仅适用于 Office 的订阅版本(例如 Microsoft 365 企业应用版)。\n    ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_PowerPointOptions",
@@ -3510,7 +3661,7 @@
             },
             "name": "L_DisableLiveSubtitles",
             "displayName": "不允许使用实时字幕",
-            "explainText": "此策略设置控制用户能否在演示期间打开实时字幕。默认情况下，实时字幕处于关闭状态，但可由用户打开。\n\n如果启用此策略设置，则用户无法在演示期间打开实时字幕。\n\n如果禁用或不配置此策略设置，则用户可打开实时字幕。\n\n注意: 此策略设置仅适用于 Office 的订阅版本，例如 Office 365 专业增强版。\n    ",
+            "explainText": "此策略设置会控制用户是否可在演示期间打开实时字幕。实时字幕默认关闭，但用户可打开它。\n\n如果启用此策略设置，则用户无法在演示期间打开实时字幕。\n\n如果禁用或不配置此策略设置，则用户可打开实时字幕。\n\n注意: 此策略设置仅适用于 Office 的订阅版本(例如 Microsoft 365 企业应用版)。\n    ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_PowerPointOptions",
@@ -3519,6 +3670,35 @@
             "application": "ppt16",
             "key": "software\\microsoft\\office\\16.0\\powerpoint",
             "valueName": "disablelivesubtitles"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_OptionsGeneral"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_EnableModernCommentsCreateNew",
+            "displayName": "在 PowerPoint 中使用新式注释",
+            "explainText": "此策略设置会控制是否在 PowerPoint 中使用新式注释。要详细了解新式注释以及何时该启用此设置，请参阅 https://go.microsoft.com/fwlink/p/?linkid=2116065。\n\n如果启用此策略设置，则当用户向新文件或没有注释的文件添加注释时，所添加的新注释将是新式注释。如果用户拥有不支持新式注释的 PowerPoint 版本，则会显示一则通知，指示他们使用 PowerPoint 网页版来查看具有新式注释的文件中的注释。\n\n如果禁用此策略设置，则对于新文件以及没有任何新式注释的现有文件，用户将继续看到之前的注释体验。如果用户拥有支持新式注释的 PowerPoint 版本，则他们将仍然可以阅读已具有新式注释的文件。\n\n要了解在你未配置此策略设置的情况下会发生什么情况，请参阅 https://go.microsoft.com/fwlink/p/?linkid=2116065。\n\n注意: 此策略设置仅适用于 Office 的订阅版本(例如 Microsoft 365 企业应用版)。\n    ",
+            "tags": [
+                "L_OptionsGeneral",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint",
+            "valueName": "enablemoderncommentscreatenew"
         }
     ]
 }

@@ -748,6 +748,64 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "0"
+                                },
+                                "displayName": "由 Visio 决定语言"
+                            },
+                            {
+                                "value": {
+                                    "string": "1"
+                                },
+                                "displayName": "提示语言"
+                            },
+                            {
+                                "value": {
+                                    "string": "2"
+                                },
+                                "displayName": "使用以下语言"
+                            }
+                        ],
+                        "valueName": "fileconversionmode",
+                        "inputType": "dropdownList",
+                        "caption": "文件转换语言",
+                        "id": "L_languageforfileconversion5"
+                    },
+                    {
+                        "valueName": "fileconversionlanguage",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "使用语言:",
+                        "id": "L_Uselanguage"
+                    }
+                ]
+            },
+            "name": "L_languageforfileconversion4",
+            "displayName": "文件转换语言",
+            "explainText": "此策略设置可指定 Visio 如何确定转换为较早版本的 Visio 或从较早版本的 Visio 转换时要使用的语言。\n\n如果启用此策略设置，则可从以下选项之一中选择:\n\n- 由 Visio 决定语言\n- 提示语言\n- 使用以下语言: 您必须指定该语言的数字 Microsoft 区域设置 ID (LCID)。\n\n如果禁用或未配置此策略设置，Visio 将决定使用哪种语言。",
+            "tags": [
+                "L_SaveOpen",
+                "L_Advanced",
+                "L_VisioOptions",
+                "L_MicrosoftVisio"
+            ],
+            "application": "visio16",
+            "key": "software\\microsoft\\office\\16.0\\visio\\application"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_SaveOpen"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "string": "1"
             },
@@ -1313,12 +1371,63 @@
                         "valueName": "vbawarnings",
                         "inputType": "dropdownList",
                         "id": "L_Empty"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "vbadigsigtrustedpublishers",
+                        "key": "software\\microsoft\\office\\16.0\\visio\\security",
+                        "inputType": "checkBox",
+                        "caption": "要求受信任的发布者签署宏",
+                        "id": "L_VBADigSigTrustedPublishersStr"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "vbarequirelmtrustedpublisher",
+                        "key": "software\\microsoft\\office\\16.0\\visio\\security",
+                        "inputType": "checkBox",
+                        "caption": "阻止仅安装在当前用户证书存储中来自受信任发布者的证书",
+                        "id": "L_VBAOnlyAllowLMTrustedPublisherStr"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "vbarequiredigsigwithcodesigningeku",
+                        "key": "software\\microsoft\\office\\16.0\\visio\\security",
+                        "inputType": "checkBox",
+                        "caption": "需要来自受信任发布者的证书的扩展密钥用法(EKU)",
+                        "id": "L_VBAOnlyAllowDigSigWithCodeSigningEKUStr"
                     }
                 ]
             },
             "name": "L_VBAWarningsPolicy",
             "displayName": "VBA 宏通知设置",
-            "explainText": "此策略设置可控制指定的应用程序在 Visual Basic for Applications (VBA)宏存在时如何警告用户。\n\n如果您启用此策略设置，您可以从用于确定指定的应用程序关于宏将如何警告用户的四个选项中选择:\n \n- 禁用所有宏，并发出通知: 应用程序对所有宏(无论已签署还是未签署)显示信任栏。此选项可强制使用 Office 中的默认配置。\n \n- 禁用无数字签署的所有宏: 应用程序对数字签名的宏显示信任栏，从而允许用户启用它们或让它们保留为禁用状态。禁用任何未签署的宏，并且不通知用户。\n \n- 禁用所有宏，并且不通知: 应用程序禁用所有宏(无论已签署还是未签署)，并且不通知用户。\n \n- 启用所有宏(不推荐): 启用所有宏(无论已签署还是未签署)。此选项允许危险代码未经检测即运行，大大降低了安全性。\n \n如果您禁用此策略设置，“禁用所有宏，并发出通知”将为默认设置。\n \n如果您不配置此策略设置，当用户打开指定的应用程序中包含 VBA 宏的文件时，应用程序打开文件并禁用宏，并且显示具有警告的信任栏，表明宏存在并且已被禁用。用户可以根据需要检查并编辑文件，但是在信任栏上单击“启用内容”进行启用之前不能使用任何被禁用的功能。如果用户单击“启用内容”，文档将作为受信任文档被添加。\n \n重要提示: 如果选中“禁用无数字签署的所有宏”，用户将不能打开未签署的 Access 数据库。\n \n另请注意，Microsoft Office 将受信任发布者的证书存储在 Internet Explorer 受信任发布者存储中。较早版本的 Microsoft Office 将受信任发布者证书信息(特别是证书指纹)存储在特殊的 Office 受信任发布者存储中。Microsoft Office 仍从 Office 受信任发布者存储中读取受信任发布者证书信息，但它不向此存储写入信息。\n \n因此，如果您在以前版本的 Microsoft Office 中创建了受信任发布者列表，并且您升级到 Office 版本，您的受信任发布者列表仍将可识别。但是，您添加到该列表的任何受信任发布者证书将存储在 Internet Explorer 受信任发布者存储中。",
+            "explainText": "此策略设置可控制指定的应用程序在 Visual Basic for Applications (VBA)宏存在时如何警告用户。\n\n如果启用此策略设置，可以从用于确定指定的应用程序关于宏将如何警告用户的四个选项中选择:\n\n- 禁用所有宏，并发出通知: 应用程序对所有宏(无论已签署还是未签署)显示信任栏。此选项可强制使用 Office 中的默认配置。\n\n- 禁用无数字签署的所有宏: 应用程序对数字签名的宏显示信任栏，从而允许用户启用它们或让它们保留为禁用状态。禁用任何未签署的宏，并且不通知用户。\n\n- 禁用所有宏，并且不通知: 应用程序禁用所有宏(无论已签署还是未签署)，并且不通知用户。\n\n- 启用所有宏(不推荐): 启用所有宏(无论已签署还是未签署)。此选项允许危险代码未经检测即运行，大大降低了安全性。\n\n如果禁用此策略设置，“禁用所有宏，并发出通知”将为默认设置。\n\n如果未配置此策略设置，当用户打开指定的应用程序中包含 VBA 宏的文件时，应用程序将打开文件并禁用宏，并且显示具有警告的信任栏，表明宏存在并且已被禁用。用户可以根据需要检查并编辑文件，但是在信任栏上单击“启用内容”进行启用之前不能使用任何被禁用的功能。如果用户单击“启用内容”，文档将作为受信任文档被添加。\n\n如果选择“禁用无数字签署的所有宏”，建议还选中“要求受信任的发布者签署宏”复选框，以帮助提高安全性。\n\n如果选中“要求受信任的发布者签署宏”复选框，当用户打开的文件具有数字签署(而不是由受信任的发布者签署)的宏时，将收到有关阻止宏运行的通知。我们建议你另外选择两个复选框以帮助提高安全性。\n\n- 阻止安装在当前用户证书存储中来自受信任发布者的证书\n\n- 需要来自受信任发布者的证书的扩展密钥用法(EKU)\n\n注意: 仅当选中“要求受信任的发布者签署宏”复选框时，这两个复选框才适用。\n\n如果选择“阻止安装在本地计算机证书存储中来自受信任发布者的证书”复选框，当当前用户证书存储区中安装了来自受信任发布者的证书时，宏将不会运行。证书必须安装在本地计算机证书存储中，宏才能运行。只有对计算机具有管理员访问权限的帐户才能在本地计算机证书存储中安装证书。\n\n如果选择“需要来自受信任发布者的证书的扩展密钥用法(EKU)”复选框，则 EKU 必须包括“代码签名”作为证书的用途之一。\n\n重要提示: 如果选中“禁用无数字签署的所有宏”，用户将不能打开未签署的 Access 数据库。\n\n另请注意，Microsoft Office 将受信任发布者的证书存储在 Internet Explorer 受信任发布者存储中。较早版本的 Microsoft Office 将受信任发布者证书信息(特别是证书指纹)存储在特殊的 Office 受信任发布者存储中。Microsoft Office 仍从 Office 受信任发布者存储中读取受信任发布者证书信息，但它不向此存储写入信息。\n\n因此，如果你在以前版本的 Microsoft Office 中创建了受信任发布者列表，并且升级到 Office 版本，你的受信任发布者列表仍将可识别。但是，添加到该列表的任何受信任发布者证书将存储在 Internet Explorer 受信任发布者存储中。",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1347,7 +1456,7 @@
             },
             "name": "L_RequirethatApplicationExtensionsaresigned",
             "displayName": "要求由受信任发布者签署应用程序加载项",
-            "explainText": "此策略设置控制此应用程序的加载项是否必须由受信任的发布者数字签署。\n \n如果你启用此策略设置，此应用程序在加载每个加载项之前检查它的数字签名。如果某个加载项没有数字签名，或者签名不是来自受信任的发布者，此应用程序将禁用该加载项并通知用户。如果你要求所有加载项均由受信任的发布者签署，则必须将证书添加到“受信任的发布者”列表。有关获取和分发证书的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=294922。Office 2016 在 Internet Explorer 受信任的发布者库中存储受信任的发布者证书。较早版本的 Microsoft Office 将受信任的发布者证书信息(特别是证书指纹)存储在特殊的 Office 受信任的发布者库中。Office 2016 仍从 Office 受信任的发布者库中读取受信任的发布者证书信息，但不向此库写入信息。因此，如果你在以前版本的 Office 中创建了受信任的发布者列表，并且升级到 Office 2016，你的受信任的发布者列表仍将可识别。但是，你添加到该列表的任何受信任的发布者证书将存储在 Internet Explorer 受信任的发布者库中。有关受信任的发布者详细信息，请参阅 Office 资源工具包。\n\n如果你禁用或不配置此策略设置，此应用程序在打开应用程序加载项之前不检查它们的数字签名。如果加载了危险加载项，则可能危害用户的计算机或危及数据安全。",
+            "explainText": "此策略设置控制此应用程序的加载项是否必须由受信任的发布者数字签署。\n\n如果你启用此策略设置，此应用程序在加载每个加载项之前检查它的数字签名。如果某个加载项没有数字签名，或者签名不是来自受信任的发布者，此应用程序将禁用该加载项并通知用户。如果你要求所有加载项均由受信任的发布者签署，则必须将证书添加到“受信任的发布者”列表。有关获取和分发证书的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=294922。Office 2016 在 Internet Explorer 受信任的发布者库中存储受信任的发布者证书。较早版本的 Microsoft Office 将受信任的发布者证书信息(特别是证书指纹)存储在特殊的 Office 受信任的发布者库中。Office 2016 仍从 Office 受信任的发布者库中读取受信任的发布者证书信息，但不向此库写入信息。因此，如果你在以前版本的 Office 中创建了受信任的发布者列表，并且升级到 Office 2016，你的受信任的发布者列表仍将可识别。但是，你添加到该列表的任何受信任的发布者证书将存储在 Internet Explorer 受信任的发布者库中。有关受信任的发布者详细信息，请参阅 Office 资源工具包。\n\n如果你禁用或不配置此策略设置，此应用程序在打开应用程序加载项之前不检查它们的数字签名。如果加载了危险加载项，则可能危害用户的计算机或危及数据安全。",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -2063,6 +2172,156 @@
             ],
             "application": "visio16",
             "key": "software\\microsoft\\office\\16.0\\visio\\application"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrectOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Straightquoteswithsmartquotes",
+            "displayName": "直引号替换为弯引号",
+            "explainText": "选中/取消选中对应的用户界面选项。",
+            "tags": [
+                "L_AutoCorrectOptions",
+                "L_Proofing",
+                "L_VisioOptions",
+                "L_MicrosoftVisio"
+            ],
+            "application": "visio16",
+            "key": "software\\microsoft\\office\\16.0\\visio\\autoformat as you type",
+            "valueName": "smartquotes"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrectOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Fractionswithfractioncharacter",
+            "displayName": "分数替换为分数符号",
+            "explainText": "选中/取消选中对应的用户界面选项。",
+            "tags": [
+                "L_AutoCorrectOptions",
+                "L_Proofing",
+                "L_VisioOptions",
+                "L_MicrosoftVisio"
+            ],
+            "application": "visio16",
+            "key": "software\\microsoft\\office\\16.0\\visio\\autoformat as you type",
+            "valueName": "fractions"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrectOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ordinalswithsuperscript",
+            "displayName": "用上标替换序数",
+            "explainText": "选中/取消选中对应的用户界面选项。",
+            "tags": [
+                "L_AutoCorrectOptions",
+                "L_Proofing",
+                "L_VisioOptions",
+                "L_MicrosoftVisio"
+            ],
+            "application": "visio16",
+            "key": "software\\microsoft\\office\\16.0\\visio\\autoformat as you type",
+            "valueName": "ordinals"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrectOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Hyphenswithdash",
+            "displayName": "连字符替换为破折号",
+            "explainText": "选中/取消选中对应的用户界面选项。",
+            "tags": [
+                "L_AutoCorrectOptions",
+                "L_Proofing",
+                "L_VisioOptions",
+                "L_MicrosoftVisio"
+            ],
+            "application": "visio16",
+            "key": "software\\microsoft\\office\\16.0\\visio\\autoformat as you type",
+            "valueName": "dashes"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrectOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Smileyfacesandarrowswithspecialsymbols",
+            "displayName": "笑脸和箭头替换为特殊符号",
+            "explainText": "选中/取消选中对应的用户界面选项。",
+            "tags": [
+                "L_AutoCorrectOptions",
+                "L_Proofing",
+                "L_VisioOptions",
+                "L_MicrosoftVisio"
+            ],
+            "application": "visio16",
+            "key": "software\\microsoft\\office\\16.0\\visio\\autoformat as you type",
+            "valueName": "smileys"
         },
         {
             "parentCategory": {

@@ -1081,7 +1081,7 @@
             },
             "name": "L_SetMaximumNumberOfTrustRecordsToPreserve",
             "displayName": "Set maximum number of trust records to preserve",
-            "explainText": "This policy setting allows you to specify the maximum number of trust records to preserve when the purge task detects that this application has trusted more than the number of trusted documents set by the \"Set maximum number of trusted documents\" policy setting.\n\nIf you enable this policy setting, you may specify the maximum number of trust records to preserve, with an upper limit of 20000. Due to performance reasons, it is not recommended to set it to the upper limit.\n\nIf you disable or you do not configure this policy setting, the default value for of 400 is used.",
+            "explainText": "This policy setting allows you to specify the maximum number of trust records to preserve when the purge task detects that this application has trusted more than the number of trusted documents set by the \"Set maximum number of trusted documents\" policy setting.\n\nIf you enable this policy setting, you may specify the maximum number of trust records to preserve, with an upper limit of 20000.  Due to performance reasons, it is not recommended to set it to the upper limit.\n\nIf you disable or you do not configure this policy setting, the default value for of 400 is used.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1138,12 +1138,63 @@
                         "valueName": "vbawarnings",
                         "inputType": "dropdownList",
                         "id": "L_Empty"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "vbadigsigtrustedpublishers",
+                        "key": "software\\microsoft\\office\\16.0\\access\\security",
+                        "inputType": "checkBox",
+                        "caption": "Require macros to be signed by a trusted publisher",
+                        "id": "L_VBADigSigTrustedPublishersStr"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "vbarequirelmtrustedpublisher",
+                        "key": "software\\microsoft\\office\\16.0\\access\\security",
+                        "inputType": "checkBox",
+                        "caption": "Block certificates from trusted publishers that are only installed in the current user certificate store",
+                        "id": "L_VBAOnlyAllowLMTrustedPublisherStr"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "vbarequiredigsigwithcodesigningeku",
+                        "key": "software\\microsoft\\office\\16.0\\access\\security",
+                        "inputType": "checkBox",
+                        "caption": "Require Extended Key Usage (EKU) for certificates from trusted publishers",
+                        "id": "L_VBAOnlyAllowDigSigWithCodeSigningEKUStr"
                     }
                 ]
             },
             "name": "L_VBAWarningsPolicy",
             "displayName": "VBA Macro Notification Settings",
-            "explainText": "This policy setting controls how the specified applications warn users when Visual Basic for Applications (VBA) macros are present.\n\nIf you enable this policy setting, you can choose from four options for determining how the specified applications will warn the user about macros:\n \n- Disable all with notification:  The application displays the Trust Bar for all macros, whether signed or unsigned. This option enforces the default configuration in Office.\n \n- Disable all except digitally signed macros: The application displays the Trust Bar for digitally signed macros, allowing users to enable them or leave them disabled. Any unsigned macros are disabled, and users are not notified.\n \n- Disable all without notification: The application disables all macros, whether signed or unsigned, and does not notify users.\n \n- Enable all macros (not recommended):  All macros are enabled, whether signed or unsigned. This option can significantly reduce security by allowing dangerous code to run undetected.\n \nIf you disable this policy setting, \"Disable all with notification\" will be the default setting.\n \nIf you do not configure this policy setting, when users open files in the specified applications that contain VBA macros, the applications open the files with the macros disabled and display the Trust Bar with a warning that macros are present and have been disabled. Users can inspect and edit the files if appropriate, but cannot use any disabled functionality until they enable it by clicking \"Enable Content\" on the Trust Bar. If the user clicks \"Enable Content\", then the document is added as a trusted document.\n \nImportant: If \"Disable all except digitally signed macros\" is selected, users will not be able to open unsigned Access databases.\n \nAlso, note that Microsoft Office stores certificates for trusted publishers in the Internet Explorer trusted publisher store. Earlier versions of Microsoft Office stored trusted publisher certificate information (specifically, the certificate thumbprint) in a special Office trusted publisher store. Microsoft Office still reads trusted publisher certificate information from the Office trusted publisher store, but it does not write information to this store.\n \nTherefore, if you created a list of trusted publishers in a previous version of Microsoft Office and you upgrade to Office, your trusted publisher list will still be recognized. However, any trusted publisher certificates that you add to the list will be stored in the Internet Explorer trusted publisher store.",
+            "explainText": "This policy setting controls how the specified applications warn users when Visual Basic for Applications (VBA) macros are present.\n\nIf you enable this policy setting, you can choose from four options for determining how the specified applications will warn the user about macros:\n\n- Disable all with notification:  The application displays the Trust Bar for all macros, whether signed or unsigned. This option enforces the default configuration in Office.\n\n- Disable all except digitally signed macros: The application displays the Trust Bar for digitally signed macros, allowing users to enable them or leave them disabled. Any unsigned macros are disabled, and users are not notified.\n\n- Disable all without notification: The application disables all macros, whether signed or unsigned, and does not notify users.\n\n- Enable all macros (not recommended):  All macros are enabled, whether signed or unsigned. This option can significantly reduce security by allowing dangerous code to run undetected.\n\nIf you disable this policy setting, \"Disable all with notification\" will be the default setting.\n\nIf you do not configure this policy setting, when users open files in the specified applications that contain VBA macros, the applications open the files with the macros disabled and display the Trust Bar with a warning that macros are present and have been disabled. Users can inspect and edit the files if appropriate, but cannot use any disabled functionality until they enable it by clicking \"Enable Content\" on the Trust Bar.  If the user clicks \"Enable Content\", then the document is added as a trusted document.\n\nIf you select “Disable all except digitally signed macros” we recommend that you also select the “Require macros to be signed by a trusted publisher” check box to help improve security.\n\nIf you select the “Require macros to be signed by a trusted publisher” check box, users opening files with digitally signed macros but not by a Trusted Publisher will receive a notification that macros are blocked from running. And there are two additional check boxes that we recommend that you select to help improve security.\n\n- Block certificates from trusted publishers that are installed in the current user certificate store\n\n- Require Extended Key Usage (EKU) for certificates from trusted publishers\n\nNote: These two check boxes only apply if you have selected the \"Require macros to be signed by a trusted publisher\" check box.\n\nIf you select the “Block certificates from trusted publishers that are installed in the local machine certificate store” check box, macros won’t run if the certificate from the trusted publisher is installed in the current user certificate store. The certificate must be installed in the local machine certificate store for the macro to run. Only accounts with administrator access to the computer can install a certificate in the local machine certificate store.\n\nIf you select the “Require Extended Key Usage (EKU) for certificates from trusted publishers” check box, the EKU must include “Code Signing” as one of the uses of the certificate.\n\nImportant: If \"Disable all except digitally signed macros\" is selected, users will not be able to open unsigned Access databases.\n\nAlso, note that Microsoft Office stores certificates for trusted publishers in the Internet Explorer trusted publisher store. Earlier versions of Microsoft Office stored trusted publisher certificate information (specifically, the certificate thumbprint) in a special Office trusted publisher store. Microsoft Office still reads trusted publisher certificate information from the Office trusted publisher store, but it does not write information to this store.\n\nTherefore, if you created a list of trusted publishers in a previous version of Microsoft Office and you upgrade to Office, your trusted publisher list will still be recognized. However, any trusted publisher certificates that you add to the list will be stored in the Internet Explorer trusted publisher store.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1202,7 +1253,7 @@
             },
             "name": "L_TurnOffTrustedDocumentsOnTheNetwork",
             "displayName": "Turn off Trusted Documents on the network",
-            "explainText": "This policy setting allows you to turn off the trusted documents feature for documents opened from the network.\n\nIf you enable this policy setting, users will always see security notifications for active content such as macros, ActiveX controls, data connections, etc. for documents opened from the network.\n\nIf you disable or do not configure this policy setting, the trusted documents feature allows users to always allow active content in documents such as macros, ActiveX controls, data connections, etc. so that users are not prompted the next time they open the documents. Trusted documents are exempt from security notifications.",
+            "explainText": "This policy setting allows you to turn off the trusted documents feature for documents opened from the network.\n\nIf you enable this policy setting, users will always see security notifications for active content such as macros, ActiveX controls, data connections, etc. for documents opened from the network.\n\nIf you disable or do not configure this policy setting, the trusted documents feature allows users to always allow active content in documents such as macros, ActiveX controls, data connections, etc. so that users are not prompted the next time they open the documents.  Trusted documents are exempt from security notifications.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1262,7 +1313,7 @@
             },
             "name": "L_RequirethatApplicationExtensionsaresigned",
             "displayName": "Require that application add-ins are signed by Trusted Publisher",
-            "explainText":"This policy setting controls whether add-ins for this applications must be digitally signed by a trusted publisher.\n \nIf you enable this policy setting, this application checks the digital signature for each add-in before loading it. If an add-in does not have a digital signature, or if the signature did not come from a trusted publisher, this application disables the add-in and notifies the user. Certificates must be added to the Trusted Publishers list if you require that all add-ins be signed by a trusted publisher. For detail on about obtaining and distributing certificates, see http://go.microsoft.com/fwlink/?LinkId=294922. Office 2016 stores certificates for trusted publishers in the Internet Explorer trusted publisher store. Earlier versions of Microsoft Office stored trusted publisher certificate information (specifically, the certificate thumbprint) in a special Office trusted publisher store. Office 2016 still reads trusted publisher certificate information from the Office trusted publisher store, but it does not write information to this store. Therefore, if you created a list of trusted publishers in a previous version of Office and you upgrade to Office 2016, your trusted publisher list will still be recognized. However, any trusted publisher certificates that you add to the list will be stored in the Internet Explorer trusted publisher store. For more information about trusted publishers, see the Office Resource Kit.\n\nIf you disable or do not configure this policy setting, this application does not check the digital signature on application add-ins before opening them. If a dangerous add-in is loaded, it could harm users' computers or compromise data security.",
+            "explainText":"This policy setting controls whether add-ins for this applications must be digitally signed by a trusted publisher.\n\nIf you enable this policy setting, this application checks the digital signature for each add-in before loading it. If an add-in does not have a digital signature, or if the signature did not come from a trusted publisher, this application disables the add-in and notifies the user. Certificates must be added to the Trusted Publishers list if you require that all add-ins be signed by a trusted publisher. For detail on about obtaining and distributing certificates, see http://go.microsoft.com/fwlink/?LinkId=294922. Office 2016 stores certificates for trusted publishers in the Internet Explorer trusted publisher store. Earlier versions of Microsoft Office stored trusted publisher certificate information (specifically, the certificate thumbprint) in a special Office trusted publisher store.  Office 2016 still reads trusted publisher certificate information from the Office trusted publisher store, but it does not write information to this store. Therefore, if you created a list of trusted publishers in a previous version of Office and you upgrade to Office 2016, your trusted publisher list will still be recognized. However, any trusted publisher certificates that you add to the list will be stored in the Internet Explorer trusted publisher store. For more information about trusted publishers, see the Office Resource Kit.\n\nIf you disable or do not configure this policy setting, this application does not check the digital signature on application add-ins before opening them. If a dangerous add-in is loaded, it could harm users' computers or compromise data security.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1292,7 +1343,7 @@
             },
             "name": "L_DisableTrustBarNotificationforunsigned",
             "displayName": "Disable Trust Bar Notification for unsigned application add-ins and block them",
-            "explainText": "This policy setting controls whether the specified Office application notifies users when unsigned application add-ins are loaded or silently disable such add-ins without notification. This policy setting only applies if you enable the \"Require that application add-ins are signed by Trusted Publisher\" policy setting, which prevents users from changing this policy setting.\n\nIf you enable this policy setting, applications automatically disable unsigned add-ins without informing users.\n \nIf you disable this policy setting, if this application is configured to require that all add-ins be signed by a trusted publisher, any unsigned add-ins the application loads will be disabled and the application will display the Trust Bar at the top of the active window. The Trust Bar contains a message that informs users about the unsigned add-in.\n\nIf you do not configure this policy setting, the disable behavior applies, and in addition, users can configure this requirement themselves in the \"Add-ins\" category of the Trust Center for the application.",
+            "explainText": "This policy setting controls whether the specified Office application notifies users when unsigned application add-ins are loaded or silently disable such add-ins without notification. This policy setting only applies if you enable the \"Require that application add-ins are signed by Trusted Publisher\" policy setting, which prevents users from changing this policy setting.\n\nIf you enable this policy setting, applications automatically disable unsigned add-ins without informing users.\n\nIf you disable this policy setting, if this application is configured to require that all add-ins be signed by a trusted publisher, any unsigned add-ins the application loads will be disabled and the application will display the Trust Bar at the top of the active window. The Trust Bar contains a message that informs users about the unsigned add-in.\n\nIf you do not configure this policy setting, the disable behavior applies, and in addition, users can configure this requirement themselves in the \"Add-ins\" category of the Trust Center for the application.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1322,7 +1373,7 @@
             },
             "name": "L_TurnOffTrustedDocuments",
             "displayName": "Turn off trusted documents",
-            "explainText": "This policy setting allows you to turn off the trusted documents feature. The trusted documents feature allows users to always enable active content in documents such as macros, ActiveX controls, data connections, etc. so that they are not prompted the next time they open the documents. Trusted documents are exempt from security notifications.\n\nIf you enable this policy setting, you will turn off the trusted documents feature. Users will receive a security prompt every time a document containing active content is opened.\n\nIf you disable or do not configure this policy setting, documents will be trusted when users enable content for a document, and users will not receive a security prompt.",
+            "explainText": "This policy setting allows you to turn off the trusted documents feature.  The trusted documents feature allows users to always enable active content in documents such as macros, ActiveX controls, data connections, etc. so that they are not prompted the next time they open the documents.  Trusted documents are exempt from security notifications.\n\nIf you enable this policy setting, you will turn off the trusted documents feature.  Users will receive a security prompt every time a document containing active content is opened.\n\nIf you disable or do not configure this policy setting, documents will be trusted when users enable content for a document, and users will not receive a security prompt.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1383,7 +1434,7 @@
             },
             "name": "L_DisableTrustedLoc",
             "displayName": "Disable all trusted locations",
-            "explainText":"This policy setting allows administrators to disable all trusted locations in the specified applications. Trusted locations specified in the Trust Center are used to define file locations that are assumed to be safe. Content, code, and add-ins are allowed to load from trusted locations with a minimal amount of security, without prompting the users for permission. If a dangerous file is opened from a trusted location, it will not be subject to standard security measures and could harm users' computers or data.\n\nIf you enable this policy setting, all trusted locations (those specified in the Trust Center) in the specified applications are ignored, including any trusted locations established by Office 2016 during setup, deployed to users using Group Policy, or added by users themselves. Users will be prompted again when opening files from trusted locations.\n\nIf you disable or do not configure this policy setting, all trusted locations (those specified in the Trust Center) in the specified applications are assumed to be safe.",
+            "explainText":"This policy setting allows administrators to disable all trusted locations in the specified applications. Trusted locations specified in the Trust Center are used to define file locations that are assumed to be safe. Content, code, and add-ins are allowed to load from trusted locations with a minimal amount of security, without prompting the users for permission. If a dangerous file is opened from a trusted location, it will not be subject to standard security measures and could harm users' computers or data.\n\nIf you enable this policy setting, all trusted locations (those specified in the Trust Center) in the specified applications are ignored, including any trusted locations established by Office 2016 during setup, deployed to users using Group Policy, or added by users themselves.  Users will be prompted again when opening files from trusted locations.\n\nIf you disable or do not configure this policy setting, all trusted locations (those specified in the Trust Center) in the specified applications are assumed to be safe.",
             "tags": [
                 "L_TrustedLocations",
                 "L_TrustCenter",
@@ -1494,7 +1545,7 @@
             },
             "name": "L_2007CompatibleCachePolicy",
             "displayName": "Use Access 2007 compatible cache",
-            "explainText": "This policy setting allows you to force new and existing databases to use a cache compatible Access 2007.\n\nIf you enable this policy setting, new and existing databases will use caching compatible with Access 2007.\n\nIf you disable or do not configure this policy setting, new databases will default to use caching that is not compatible with Access 2007. Existing databases will use the caching mode that they were created with.",
+            "explainText": "This policy setting allows you to force new and existing databases to use a cache compatible Access 2007.\n\nIf you enable this policy setting, new and existing databases will use caching compatible with Access 2007.\n\nIf you disable or do not configure this policy setting, new databases will default to use caching that is not compatible with Access 2007.  Existing databases will use the caching mode that they were created with.",
             "tags": [
                 "L_Miscellaneous",
                 "L_MicrosoftOfficeaccess"
@@ -1522,7 +1573,7 @@
             },
             "name": "L_ClearCacheOnClosePolicy",
             "displayName": "Clear cache on close",
-            "explainText": "This policy setting allows you to force the cache to be cleared for databases that are not compatible with Access 2016 when the database is closed.\n\nIf you enable this policy setting, then any cached Microsoft SharePoint or Business Data Catalog (BDC) links will be cleared on close for databases that do not use Access 2016 compatible caching. If the database uses Access 2016 compatible caching, then this policy setting will have no effect when enabled.\n\nIf you disable or do not configure this policy setting, then any cached Microsoft SharePoint or Business Data Catalog (BDC) links will be not cleared on close for databases that do not use Access 2016 compatible caching. If the database uses Access 2016 compatible caching, then this policy setting will have no effect when disabled or not configured.",
+            "explainText": "This policy setting allows you to force the cache to be cleared for databases that are not compatible with Access 2016 when the database is closed.\n\nIf you enable this policy setting, then any cached Microsoft SharePoint or Business Data Catalog (BDC) links will be cleared on close for databases that do not use Access 2016 compatible caching.  If the database uses Access 2016 compatible caching, then this policy setting will have no effect when enabled.\n\nIf you disable or do not configure this policy setting, then any cached Microsoft SharePoint or Business Data Catalog (BDC) links will be not cleared on close for databases that do not use Access 2016 compatible caching.  If the database uses Access 2016 compatible caching, then this policy setting will have no effect when disabled or not configured.",
             "tags": [
                 "L_Miscellaneous",
                 "L_MicrosoftOfficeaccess"
@@ -1550,7 +1601,7 @@
             },
             "name": "L_NeverCachePolicy",
             "displayName": "Never cache data",
-            "explainText": "This policy setting allows you to force databases that do not use Access 2016 compatible caching to not cache any data.\n\nIf you enable this policy setting, then data from Microsoft SharePoint or Business Data Catalog (BDC) will not be cached for databases that do not use Access 2016 compatible caching. If the database uses Access 2016 compatible caching, then this policy setting will have no effect when enabled.\n\nIf you disable or do not configure this policy setting, then data from Microsoft SharePoint or Business Data Catalog (BDC) will be cached for databases that do not use Access 2016 compatible caching. If the database uses Access 2016 compatible caching, then this policy setting will have no effect when disabled or not configured.",
+            "explainText": "This policy setting allows you to force databases that do not use Access 2016 compatible caching to not cache any data.\n\nIf you enable this policy setting, then data from Microsoft SharePoint or Business Data Catalog (BDC) will not be cached for databases that do not use Access 2016 compatible caching.  If the database uses Access 2016 compatible caching, then this policy setting will have no effect when enabled.\n\nIf you disable or do not configure this policy setting, then data from Microsoft SharePoint or Business Data Catalog (BDC) will be cached for databases that do not use Access 2016 compatible caching.  If the database uses Access 2016 compatible caching, then this policy setting will have no effect when disabled or not configured.",
             "tags": [
                 "L_Miscellaneous",
                 "L_MicrosoftOfficeaccess"

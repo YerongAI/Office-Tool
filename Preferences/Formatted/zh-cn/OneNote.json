@@ -2022,7 +2022,7 @@
             },
             "name": "L_MaximumNumberOfOncePerDayVersionHistoryItemsKept",
             "displayName": "一天一次版本历史记录项目的最大保留数",
-            "explainText": "通过此策略设置，你可以设置每页要保留的一天一次历史记录项目的数目。通过 2016 格式笔记本，OneNote 将自动存储笔记本中的之前版本的页面，同时将存储所有已删除页面和分区的回收站。\n\n如果启用此策略设置，你可以设置每天要保留的版本数。如果你将值设置为 -1，这将通知 OneNote 保留所有旧的一天一次版本历史记录项目。\n \n如果禁用或不配置此策略设置，OneNote 将在过去的每天保留过去 10 天的页面。",
+            "explainText": "通过此策略设置，你可以设置每页要保留的一天一次历史记录项目的数目。通过 2016 格式笔记本，OneNote 将自动存储笔记本中的之前版本的页面，同时将存储所有已删除页面和分区的回收站。\n\n如果启用此策略设置，你可以设置每天要保留的版本数。如果你将值设置为 -1，这将通知 OneNote 保留所有旧的一天一次版本历史记录项目。\n\n如果禁用或不配置此策略设置，OneNote 将在过去的每天保留过去 10 天的页面。",
             "tags": [
                 "L_VersionsAndRecyleBin",
                 "L_OneNoteOptions",
@@ -2388,6 +2388,99 @@
             "name": "L_SharePointsyncinterval",
             "displayName": "SharePoint 中存储的笔记本的 SharePoint 同步间隔",
             "explainText": "限制 OneNote 在 SharePoint 网站上轮询分区更改的次数。请输入同步间隔(秒)。",
+            "tags": [
+                "L_Other",
+                "L_OneNoteOptions",
+                "L_MicrosoftOfficeOneNote"
+            ],
+            "application": "onent16",
+            "key": "software\\microsoft\\office\\16.0\\onenote\\options\\save"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "sharepointbackgroundsyncintervalmultiplier",
+                        "minValue": 1,
+                        "minValueSpecified": true,
+                        "maxValue": 10,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_empty16"
+                    }
+                ]
+            },
+            "name": "L_SharePointbackgroundsyncintervalmultiplier",
+            "displayName": "存储在 SharePoint 上的笔记本的后台同步间隔的倍数",
+            "explainText": "通过此策略设置，可增加 SharePoint 网站的后台轮询间隔，以便对笔记本进行更改。\n\n如果启用此策略设置，OneNote 将以较低的频率轮询 SharePoint，以对整个笔记本进行更改。间隔乘以输入值，即从 1 到 10 的正整数值。较大的间隔会使笔记本同步变慢，但会降低服务器负载。\n\n如果禁用或未配置此策略设置，OneNote 将按默认费率（倍数值 1）同步笔记本。\n\n注意：此策略设置仅适用于使用 Windows Installer（MSI）的 Office 2016 的批量许可版本，例如 Office 专业增强版 2016和 Office 标准版 2016。",
+            "tags": [
+                "L_Other",
+                "L_OneNoteOptions",
+                "L_MicrosoftOfficeOneNote"
+            ],
+            "application": "onent16",
+            "key": "software\\microsoft\\office\\16.0\\onenote\\options\\save"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "sharepointlivesyncintervalmultiplier",
+                        "minValue": 1,
+                        "minValueSpecified": true,
+                        "maxValue": 10,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_empty17"
+                    }
+                ]
+            },
+            "name": "L_SharePointlivesyncintervalmultiplier",
+            "displayName": "SharePoint 上存储的当前已查看分区的前台同步间隔的倍数",
+            "explainText": "通过此策略设置，可增加 SharePoint 网站的前台轮询间隔，以便对当前查看的分区的更改。\n\n如果启用此策略设置，OneNote 将以较低的频率轮询SharePoint，以查看对当前查看部分的更改。间隔乘以输入值，即从 1 到 10 的正整数值。较大的间隔会降低部分同步，但会降低服务器负载。\n\n如果禁用或未配置此策略设置，OneNote 将按默认费率（倍数值 1）同步当前查看的分区。\n\n注意：此策略设置仅适用于使用 Windows Installer（MSI）的Office 2016 的批量许可版本，例如 Office 专业增强版 2016和 Office 标准版 2016。",
+            "tags": [
+                "L_Other",
+                "L_OneNoteOptions",
+                "L_MicrosoftOfficeOneNote"
+            ],
+            "application": "onent16",
+            "key": "software\\microsoft\\office\\16.0\\onenote\\options\\save"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "sharepointpresenceintervalmultiplier",
+                        "minValue": 1,
+                        "minValueSpecified": true,
+                        "maxValue": 10,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "id": "L_empty18"
+                    }
+                ]
+            },
+            "name": "L_SharePointpresenceintervalmultiplier",
+            "displayName": "存储在 SharePoint 上的笔记本的状态同步间隔的倍数",
+            "explainText": "通过此策略设置，可增加 SharePoint 的轮询间隔，以确定笔记本的活跃用户。当其他用户与笔记本交互时，OneNote 将以更快的速度同步笔记本。\n\n如果启用此策略设置，OneNote 将减少对 SharePoint 的轮询频率，以确定当前是否有其他用户与笔记本交互。间隔乘以输入值，即从 1 到 10 的正整数值。较大的间隔会减慢笔记本中的并行用户检测，但会降低服务器负载。\n\n如果禁用或未配置此策略设置，OneNote 将按默认速率（倍数值 1）轮询笔记本的活跃用户。\n\n注意：此策略设置仅适用于使用 Windows Installer（MSI）的Office 2016 的批量许可版本，例如 Office 专业增强版 2016和 Office 标准版 2016。",
             "tags": [
                 "L_Other",
                 "L_OneNoteOptions",

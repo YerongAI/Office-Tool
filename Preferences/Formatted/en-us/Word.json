@@ -320,7 +320,7 @@
             },
             "name": "L_EnableLivePreview",
             "displayName": "Enable Live Preview",
-            "explainText": "This policy setting configures the \"Enable Live Preview\" checkbox found under File tab | Options | General. Live Preview shows how a command would be applied without actually applying it to the document.\n\nIf you enable this policy setting, the option is checked, and Live Preview will be shown when using Galleries that support previews\n\nIf you disable or do not configure this policy setting, the option is unchecked, and Live Preview will be hidden when using Galleries that support previews.",
+            "explainText": "This policy setting configures the \"Enable Live Preview\" checkbox found under File tab | Options | General.  Live Preview shows how a command would be applied without actually applying it to the document.\n\nIf you enable this policy setting, the option is checked, and Live Preview will be shown when using Galleries that support previews\n\nIf you disable or do not configure this policy setting, the option is unchecked, and Live Preview will be hidden when using Galleries that support previews.",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -329,35 +329,6 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "livepreview"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_OptionsGeneral"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "name": "L_Openattachmentsforfullscreenreading",
-            "displayName": "Open e-mail attachments in Reading View",
-            "explainText": "Checks/unchecks the corresponding UI option.",
-            "tags": [
-                "L_OptionsGeneral",
-                "L_WordOptions",
-                "L_MicrosoftOfficeWord"
-            ],
-            "application": "word16",
-            "key": "software\\microsoft\\office\\16.0\\word\\options",
-            "valueName": "allowautoreadingmode"
         },
         {
             "parentCategory": {
@@ -874,6 +845,348 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Trackchangesandcompare"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "None"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "By Author"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Pink"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Light blue"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "Light yellow"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "Light purple"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "Light Orange"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Light green"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "Gray"
+                            }
+                        ],
+                        "valueName": "revmodeinscellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "Color for inserted cells:",
+                        "id": "L_TablecomparecolorsPart1"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "None"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "By Author"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Pink"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Light blue"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "Light yellow"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "Light purple"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "Light Orange"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Light green"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "Gray"
+                            }
+                        ],
+                        "valueName": "revmodedelcellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "Color for deleted cells:",
+                        "id": "L_TablecomparecolorsPart2"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "None"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "By Author"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Pink"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Light blue"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "Light yellow"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "Light purple"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "Light Orange"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Light green"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "Gray"
+                            }
+                        ],
+                        "valueName": "revmodemergecellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "Color for merged cells:",
+                        "id": "L_TablecomparecolorsPart3"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "None"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "By Author"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Pink"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "Light blue"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "Light yellow"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 5
+                                    }
+                                },
+                                "displayName": "Light purple"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 6
+                                    }
+                                },
+                                "displayName": "Light Orange"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "Light green"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 8
+                                    }
+                                },
+                                "displayName": "Gray"
+                            }
+                        ],
+                        "valueName": "revmodesplitcellcolor",
+                        "inputType": "dropdownList",
+                        "caption": "Color for split cells:",
+                        "id": "L_TablecomparecolorsPart4"
+                    }
+                ]
+            },
+            "name": "L_Tablecomparecolors",
+            "displayName": "Table compare colors",
+            "explainText":"This option determines the colors used for displaying the results of compared tables.  Selecting ''none'' will track the changes, but they will not be colored in the resulting document (they will be listed in the reviewing pane).",
+            "tags": [
+                "L_Trackchangesandcompare",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Proofing"
             },
             "supportedOn": {
@@ -1042,6 +1355,837 @@
         },
         {
             "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_CorrectTWoINitialCApitals",
+            "displayName": "Correct TWo INitial CApitals",
+            "explainText": "Checks/unchecks the corresponding UI option.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ftwoinitialcaps_24_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Capitalizefirstletterofsentence",
+            "displayName": "Capitalize first letter of sentence",
+            "explainText": "Checks/unchecks the corresponding UI option.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "finitialcap_32_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Capitalizenamesofdays",
+            "displayName": "Capitalize names of days",
+            "explainText": "Checks/unchecks the corresponding UI option.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcapdaynames_48_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_CorrectaccidentalusageofcAPSLOCKkey",
+            "displayName": "Correct accidental usage of cAPS LOCK key",
+            "explainText": "This policy setting allows you to set the \"Correct accidental usage of cAPS LOCK key\" option in Word Options | Proofing | \"AutoCorrect Options...\" | AutoCorrect.\n\nIf you enable this policy setting, \"Correct accidental usage of cAPS LOCK key\" will be set.\n\nIf you disable or do not configure this policy setting, \"Correct accidental usage of cAPS LOCK key\" will not be set.y",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcapslock_40_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Replacetextasyoutype",
+            "displayName": "Replace text as you type",
+            "explainText": "Checks/unchecks the corresponding UI option.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcorrecttyping_16_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_AutoCorrect"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Correctkeyboardsetting",
+            "displayName": "Correct keyboard setting",
+            "explainText": "This policy setting allows you to set the \"Correct keyboard setting\" option in Word Options | Proofing | \"AutoCorrect Options...\" | AutoCorrect.\n\nIf you enable this policy setting, \"Correct keyboard setting\" will be set.\n\nIf you disable or do not configure this policy setting, \"Correct keyboard setting\" will not be set.",
+            "tags": [
+                "L_AutoCorrect",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fcorrectkeyboard_64_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Firstlineindent",
+            "displayName": "First line indent",
+            "explainText": "Checks/unchecks the option \"Spaces at beginning of paragraph with first-line indent\" in the group \"Replace as you type.\" This option may be hidden in Word until certain editing languages are enabled.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ffirstindent_344_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Straightquoteswithsmartquotes",
+            "displayName": "Straight quotes with smart quotes",
+            "explainText": "Checks/unchecks the corresponding UI option.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fsmartquote_8_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ordinals1stwithsuperscript",
+            "displayName": "Ordinals (1st) with superscript",
+            "explainText": "Checks/unchecks the corresponding UI option.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fnumsupscript_104_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Fractions12withfractioncharacter",
+            "displayName": "Fractions (1/2) with fraction character",
+            "explainText": "Checks/unchecks the corresponding UI option.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ffraction_96_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Symbolcharacterswithsymbols",
+            "displayName": "Symbol characters (--) with symbols",
+            "explainText":"Checks/unchecks the option ''Hyphens (--) with dash (-)''.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "femdash_112_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Boldand_italic_withrealformatting",
+            "displayName": "*Bold* and _italic_ with real formatting",
+            "explainText": "This policy setting allows you to set the \"*Bold* and _italic_ with real formatting\" option.\n\nIf you enable this policy setting, you will set the the \"*Bold* and _italic_ with real formatting\" option in File | Options | Proofing | AutoCorrect Options... | AutoFormat.\n\nIf you disable or do not configure this policy setting, the option is not set.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fbolditalic_120_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Replaceasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Dashlikecharacters",
+            "displayName": "Dash-like characters",
+            "explainText": "Checks/unchecks the option \"Long vowel sounds with dash.\" This option may be hidden in Word until certain editing languages are enabled.",
+            "tags": [
+                "L_Replaceasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fdbdashes_136_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Headings",
+            "displayName": "Headings",
+            "explainText":"Checks/unchecks the option ''Built in Heading styles''.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fheading_280_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_BorderLines",
+            "displayName": "Border lines",
+            "explainText": "Checks/unchecks the option \"Border Lines.\"",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fbotbord_328_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Tables",
+            "displayName": "Tables",
+            "explainText": "Checks/unchecks the corresponding UI option.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ftable_392_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DateStyle",
+            "displayName": "Date style",
+            "explainText": "Checks/unchecks the option \"Date style.\"  This option may be hidden in Word until certain editing languages are enabled.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fdate_376_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Automaticbulletedlists",
+            "displayName": "Automatic bulleted lists",
+            "explainText": "Checks/unchecks the corresponding UI option.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fbulletlist_296_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Automaticnumberedlists",
+            "displayName": "Automatic numbered lists",
+            "explainText": "Checks/unchecks the corresponding UI option.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fnumberedlist_312_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Applyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ClosingStyleToLetterClosings",
+            "displayName": "Closing style to letter closings",
+            "explainText": "This policy setting allows you to set the \"Closing style to letter closings\" option found in Word Options | Proofing | AutoCorrect Options... | AutoFormat As You Type.\n\nIf you enable this policy setting, \"Closing style to letter closings\" will be set.\n\nIf you disable or do not configure this policy setting, \"Closing style to letter closings\" will not be set.",
+            "tags": [
+                "L_Applyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fclosing_360_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Autospace",
+            "displayName": "Auto space",
+            "explainText": "This policy setting allows you to set the option \"Delete needless spaces between Asian and Western text\" in the group \"Automatically as you type.\" This option may be hidden in Word until certain editing languages are enabled.\n\nIf you enable this policy setting, \"Delete needless spaces between Asian and Western text\" will be set.\n\nIf you disable or do not configure this policy setting, \"Delete needless spaces between Asian and Western text\" will not be set.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fsbdbspace_152_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchparentheses",
+            "displayName": "Match parentheses",
+            "explainText": "This policy setting allows you to set the option \"Match opening and closing parentheses\" in Word Options | Proofing | AutoCorrect Options... | AutoFormat As You Type | Automatically as you type. This option may be hidden in Word until certain editing languages are enabled.\n\nIf you enable this policy setting, \"Match opening and closing parentheses\" will be set.\n\nIf you disable or do not configure this policy setting, \"Match opening and closing parentheses\" will not be set.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fautopair_144_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Formatbeginningoflistitemliketheonebeforeit",
+            "displayName": "Format beginning of list item like the one before it",
+            "explainText": "Checks/unchecks the corresponding UI option.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fleadinemph_176_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Setleftindentontabsandbackspace",
+            "displayName": "Set left indent on tabs and backspace",
+            "explainText": "Checks/unchecks the corresponding UI option.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "ftabindent_128_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Definestylesbasedonyourformatting",
+            "displayName": "Define styles based on your formatting",
+            "explainText": "Checks/unchecks the corresponding UI option.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "fautostyledef_184_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_InsertClosingPhraseToMatchMemoStyle",
+            "displayName": "Insert closing phrase to match memo style",
+            "explainText": "Checks/unchecks the option \"Insert closing phrase to match memo style.\"  This option may be hidden in Word until certain editing languages are enabled.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "finsertover_424_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Automaticallyasyoutype"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_InsertClosingPhraseToMatchJapaneseSalutation",
+            "displayName": "Insert closing phrase to match Japanese salutation",
+            "explainText": "Checks/unchecks the option \"Insert closing phrase to match Japanese salutation.\"  This option may be hidden in Word until certain editing languages are enabled.",
+            "tags": [
+                "L_Automaticallyasyoutype",
+                "L_AutoFormatasyoutype",
+                "L_Proofing",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\assist",
+            "valueName": "finsertclosing_408_1"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_OptionsCustomizeRibbon"
             },
             "supportedOn": {
@@ -1155,6 +2299,122 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "nomargpageview"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Documentproperties",
+            "displayName": "Print document properties",
+            "explainText": "This policy setting allows you to control the \"Print document properties\" setting found under File tab | Options | Display | Printing options.\n\nIf you enable this policy setting, Word will print an additional page with the printed document's properties, including the document's author, filename, creation date, etc., for every document that is printed.\n\nIf you disable or do not configure this policy setting, no additional page will be printed.",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "summary_1_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Drawingobjects",
+            "displayName": "Print drawings created in Word",
+            "explainText": "This policy setting allows you to configure the \"Print drawings created in Word\" setting found under File tab | Options | Display | Printing options.\n\nIf you enable this policy setting, Word will print graphics and floating text boxes.\n\nIf you disable or do not configure this policy setting, Word will not print graphics or floating text boxes.  Instead, Word will print a blank box in the place of each graphic and floating text box.",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "disabledrawnobj_14_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Updatefields",
+            "displayName": "Update fields before printing",
+            "explainText": "This policy setting allows you to configure the \"Update fields before printing\" setting found under File tab | Options | Display | Printing options.\n\nIf you enable this policy setting, Word will update fields in the document before the document is printed.\n\nIf you disable or do not configure this policy setting, Word will not update fields in the document before the document is printed.",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "refresh_5_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Display"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Updatelinks",
+            "displayName": "Update linked data before printing",
+            "explainText": "This policy setting controls the \"Update linked data before printing\" setting found under File tab | Options | Display | Printing options.\n\nIf you enable this policy setting, Word will update linked data in the document before the document is printed. One example of linked data in Word is an embedded Excel chart that is linked to an Excel spreadsheet.\n\nIf you disable or do not configure this policy setting, Word will not update linked data in the document before the document is printed.",
+            "tags": [
+                "L_Display",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "updatelinks_13_1"
         },
         {
             "parentCategory": {
@@ -1378,7 +2638,7 @@
             },
             "name": "L_KeepLastAutoSavedVersions",
             "displayName": "Keep the last AutoSaved versions of files for the next session",
-            "explainText": "This policy setting determines whether Word keeps the last AutoSaved version of a file if a user closes a file without saving it. (Note: AutoSave applies only when AutoRecover is enabled.)\n\nIf you enable or do not configure this policy setting, Word keeps the last AutoSaved version of the file and makes it available to the user the next time the file is opened if the user closes a file without saving it.\n\nIf you disable this policy setting, Word does not keep the last AutoSaved version of the file if the user closes a file without saving it.",
+            "explainText": "This policy setting determines whether Word keeps the last AutoSaved version of a file if a user closes a file without saving it.  (Note: AutoSave applies only when AutoRecover is enabled.)\n\nIf you enable or do not configure this policy setting, Word keeps the last AutoSaved version of the file and makes it available to the user the next time the file is opened if the user closes a file without saving it.\n\nIf you disable this policy setting, Word does not keep the last AutoSaved version of the file if the user closes a file without saving it.",
             "tags": [
                 "L_Save",
                 "L_WordOptions",
@@ -1407,7 +2667,7 @@
             },
             "name": "L_CompatModeOnSaveAs",
             "displayName": "Save As Open XML in Compatibility Mode",
-            "explainText": "This policy setting allows you to hide the \"Maintain compatibility with previous versions of Word\" checkbox. For any file format that is in Compatibility Mode, there will be a \"Maintain compatibility with previous versions of Word\" checkbox in the Save As dialog when saving to any of the Open XML file formats. This checkbox allows users to preserve the fidelity of documents that open in compatibility mode when saving those documents to any of the Open XML file formats. Checking this box will prevent conversion to the version of Word that is saving the file.\n\nConversion maximizes fidelity with the version of Word that is saving the file, and it is recommended for users who want their Word documents to be compatible with this version of Word. However, conversion may impact the fidelity and compatibility of some features when the file is opened by a previous version of Word.\n\nIf you enable this policy setting, the \"Maintain compatibility with previous versions of Word\" checkbox will be hidden. The Save As behavior for any of the Open XML file formats will always maintain compatibility with previous versions of Word. The file that is in compatibility mode will be prevented from being converted to the version of Word saving this file.\n\nIf you disable or do not configure this policy setting, the \"Maintain compatibility with previous versions of Word\" checkbox in the Save As dialog will be shown. Unless checked by the user, an Open XML file will be converted when the document is saved. Users will still, by default, be shown a final dialog when saving to confirm that the user wants to save the file without \"Maintain compatibility with previous versions of Word\" checked.",
+            "explainText": "This policy setting allows you to hide the \"Maintain compatibility with previous versions of Word\" checkbox.  For any file format that is in Compatibility Mode, there will be a \"Maintain compatibility with previous versions of Word\" checkbox in the Save As dialog when saving to any of the Open XML file formats. This checkbox allows users to preserve the fidelity of documents that open in compatibility mode when saving those documents to any of the Open XML file formats.  Checking this box will prevent conversion to the version of Word that is saving the file.\n\nConversion maximizes fidelity with the version of Word that is saving the file, and it is recommended for users who want their Word documents to be compatible with this version of Word. However, conversion may impact the fidelity and compatibility of some features when the file is opened by a previous version of Word.\n\nIf you enable this policy setting, the \"Maintain compatibility with previous versions of Word\" checkbox will be hidden.  The Save As behavior for any of the Open XML file formats will always maintain compatibility with previous versions of Word. The file that is in compatibility mode will be prevented from being converted to the version of Word saving this file.\n\nIf you disable or do not configure this policy setting, the \"Maintain compatibility with previous versions of Word\" checkbox in the Save As dialog will be shown.  Unless checked by the user, an Open XML file will be converted when the document is saved. Users will still, by default, be shown a final dialog when saving to confirm that the user wants to save the file without \"Maintain compatibility with previous versions of Word\" checked.",
             "tags": [
                 "L_Save",
                 "L_WordOptions",
@@ -1920,7 +3180,7 @@
             },
             "name": "L_Usesmartparagraphselection",
             "displayName": "Use smart paragraph selection",
-            "explainText": "This policy setting controls the \"Use smart paragraph selection\" option found under File tab | Options | Advanced | Editing options.\n\nIf you enable or do not configure this policy setting, Word will automatically select the paragraph mark at the end of a selected range of text.\n\nIf you disable this policy setting, Word will not automatically select the paragraph mark at the end of a selected range of text. However, a user can still select the paragraph mark manually.",
+            "explainText": "This policy setting controls the \"Use smart paragraph selection\" option found under File tab | Options | Advanced | Editing options.\n\nIf you enable or do not configure this policy setting, Word will automatically select the paragraph mark at the end of a selected range of text.\n\nIf you disable this policy setting, Word will not automatically select the paragraph mark at the end of a selected range of text.  However, a user can still select the paragraph mark manually.",
             "tags": [
                 "L_Advanced",
                 "L_WordOptions",
@@ -2157,7 +3417,7 @@
             },
             "name": "L_TypeAndReplace",
             "displayName": "Type and replace",
-            "explainText": "This policy setting allows you to check or uncheck the \"Type and Replace\" checkbox found under File tab | Options | Advanced. This checkbox may only be shown when certain South East Asian languages, such as Thai or Vietnamese, are enabled.\n\nSouth Asian languages follow stringent grammatical rules that dictate which textual character elements are allowed next to one another in the composition of words. To compound the complexity of correctly entering South Asian characters, text includes both simple characters and characters that include one or more markings such as diacritics, tone marks, vowels, and accents— for example, in Thai, leading vowels are normally followed by a consonant that does or does not include vowel markings, but diacritics are located below it.\n\nTo assist you in correctly entering characters in your document that prescribe to the grammar rules for the enabled South Asian language, Word can automatically check the text for you. Word can also make logical substitutions for you by using Type and Replace, a complementary feature.\n\nSequence checking can be used by itself or in combination with Type and Replace. When sequence checking only is selected, Word will not allow an invalid character to be typed at the insertion point. If Type and Replace is also selected, Word will insert or replace an existing character to make a valid sequence.\n\nIf you enable or do not configure this policy setting, the \"Type and Replace\" checkbox is checked.\n\nIf you disable this policy setting, the \"Type and Replace\" checkbox is unchecked.",
+            "explainText": "This policy setting allows you to check or uncheck the \"Type and Replace\" checkbox found under File tab | Options | Advanced.  This checkbox may only be shown when certain South East Asian languages, such as Thai or Vietnamese, are enabled.\n\nSouth Asian languages follow stringent grammatical rules that dictate which textual character elements are allowed next to one another in the composition of words. To compound the complexity of correctly entering South Asian characters, text includes both simple characters and characters that include one or more markings such as diacritics, tone marks, vowels, and accents— for example, in Thai, leading vowels are normally followed by a consonant that does or does not include vowel markings, but diacritics are located below it.\n\nTo assist you in correctly entering characters in your document that prescribe to the grammar rules for the enabled South Asian language, Word can automatically check the text for you. Word can also make logical substitutions for you by using Type and Replace, a complementary feature.\n\nSequence checking can be used by itself or in combination with Type and Replace. When sequence checking only is selected, Word will not allow an invalid character to be typed at the insertion point. If Type and Replace is also selected, Word will insert or replace an existing character to make a valid sequence.\n\nIf you enable or do not configure this policy setting, the \"Type and Replace\" checkbox is checked.\n\nIf you disable this policy setting, the \"Type and Replace\" checkbox is unchecked.",
             "tags": [
                 "L_Advanced",
                 "L_WordOptions",
@@ -3057,7 +4317,7 @@
             },
             "name": "L_Leftscrollbar",
             "displayName": "Left scroll bar",
-            "explainText": "Checks/unchecks the corresponding UI option. This option is only available if support for right-to-left languages is enabled through Microsoft Office Language Preferences. This setting also sets Right ruler (Print view only).",
+            "explainText": "Checks/unchecks the corresponding UI option. This option is only available if support for right-to-left languages is enabled through Microsoft Office Language Preferences.  This setting also sets Right ruler (Print view only).",
             "tags": [
                 "L_Advanced",
                 "L_WordOptions",
@@ -3113,6 +4373,35 @@
                     "value": 0
                 }
             },
+            "name": "L_Draftoutput",
+            "displayName": "Use draft quality",
+            "explainText": "Checks/unchecks the corresponding UI option.",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "draftoutput_2_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_Backgroundprinting",
             "displayName": "Print in background",
             "explainText": "Checks/unchecks the corresponding UI option.",
@@ -3124,6 +4413,93 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "backgroundprint"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Reverseprintorder",
+            "displayName": "Print pages in reverse order",
+            "explainText": "Checks/unchecks the corresponding UI option.",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "reverseprint_6_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Frontofsheet",
+            "displayName": "Print on front of the sheet for duplex printing",
+            "explainText": "Checks/unchecks the corresponding UI option.",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "fprorder1_21_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Backofthesheet",
+            "displayName": "Print on back of the sheet for duplex printing",
+            "explainText": "Checks/unchecks the corresponding UI option.",
+            "tags": [
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vprsu",
+            "valueName": "fprorder2_22_1"
         },
         {
             "parentCategory": {
@@ -4238,7 +5614,7 @@
             },
             "name": "L_SetCNGCipherKeyLength",
             "displayName": "Set CNG cipher key length",
-            "explainText": "This policy setting allows you to configure the number of bits to use when creating the cipher key. This number will be rounded down to a multiple of 8.\n\nIf you enable this policy setting, the key bits specified will be used.\n\nIf you disable or do not configure this policy setting, the default value will be used.",
+            "explainText": "This policy setting allows you to configure the number of bits to use when creating the cipher key.  This number will be rounded down to a multiple of 8.\n\nIf you enable this policy setting, the key bits specified will be used.\n\nIf you disable or do not configure this policy setting, the default value will be used.",
             "tags": [
                 "L_Cryptography",
                 "L_Security",
@@ -4536,7 +5912,7 @@
             },
             "name": "L_TurnOffTrustedDocumentsOnTheNetwork",
             "displayName": "Turn off Trusted Documents on the network",
-            "explainText": "This policy setting allows you to turn off the trusted documents feature for documents opened from the network.\n\nIf you enable this policy setting, users will always see security notifications for active content such as macros, ActiveX controls, data connections, etc. for documents opened from the network.\n\nIf you disable or do not configure this policy setting, the trusted documents feature allows users to always allow active content in documents such as macros, ActiveX controls, data connections, etc. so that users are not prompted the next time they open the documents. Trusted documents are exempt from security notifications.",
+            "explainText": "This policy setting allows you to turn off the trusted documents feature for documents opened from the network.\n\nIf you enable this policy setting, users will always see security notifications for active content such as macros, ActiveX controls, data connections, etc. for documents opened from the network.\n\nIf you disable or do not configure this policy setting, the trusted documents feature allows users to always allow active content in documents such as macros, ActiveX controls, data connections, etc. so that users are not prompted the next time they open the documents.  Trusted documents are exempt from security notifications.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -4566,7 +5942,7 @@
             },
             "name": "L_TurnOffTrustedDocuments",
             "displayName": "Turn off trusted documents",
-            "explainText": "This policy setting allows you to turn off the trusted documents feature. The trusted documents feature allows users to always enable active content in documents such as macros, ActiveX controls, data connections, etc. so that they are not prompted the next time they open the documents. Trusted documents are exempt from security notifications.\n\nIf you enable this policy setting, you will turn off the trusted documents feature. Users will receive a security prompt every time a document containing active content is opened.\n\nIf you disable or do not configure this policy setting, documents will be trusted when users enable content for a document, and users will not receive a security prompt.",
+            "explainText": "This policy setting allows you to turn off the trusted documents feature.  The trusted documents feature allows users to always enable active content in documents such as macros, ActiveX controls, data connections, etc. so that they are not prompted the next time they open the documents.  Trusted documents are exempt from security notifications.\n\nIf you enable this policy setting, you will turn off the trusted documents feature.  Users will receive a security prompt every time a document containing active content is opened.\n\nIf you disable or do not configure this policy setting, documents will be trusted when users enable content for a document, and users will not receive a security prompt.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -4633,7 +6009,7 @@
             },
             "name": "L_SetMaximumNumberOfTrustRecordsToPreserve",
             "displayName": "Set maximum number of trust records to preserve",
-            "explainText": "This policy setting allows you to specify the maximum number of trust records to preserve when the purge task detects that this application has trusted more than the number of trusted documents set by the \"Set maximum number of trusted documents\" policy setting.\n\nIf you enable this policy setting, you may specify the maximum number of trust records to preserve, with an upper limit of 20000. Due to performance reasons, it is not recommended to set it to the upper limit.\n\nIf you disable or you do not configure this policy setting, the default value for of 400 is used.",
+            "explainText": "This policy setting allows you to specify the maximum number of trust records to preserve when the purge task detects that this application has trusted more than the number of trusted documents set by the \"Set maximum number of trusted documents\" policy setting.\n\nIf you enable this policy setting, you may specify the maximum number of trust records to preserve, with an upper limit of 20000.  Due to performance reasons, it is not recommended to set it to the upper limit.\n\nIf you disable or you do not configure this policy setting, the default value for of 400 is used.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -4717,7 +6093,7 @@
             },
             "name": "L_DeterminewhethertoforceencryptedWord",
             "displayName": "Scan encrypted macros in Word Open XML documents",
-            "explainText": "This policy setting controls whether encrypted macros in Open XML documents be are required to be scanned with anti-virus software before being opened.\n\nIf you enable this policy setting, you may choose one of these options:\n\n- Scan encrypted macros: encrypted macros are disabled unless anti-virus software is installed. Encrypted macros are scanned by your anti-virus software when you attempt to open an encrypted workbook that contains macros.\n- Scan if anti-virus software available: if anti-virus software is installed, scan the encrypted macros first before allowing them to load. If anti-virus software is not available, allow encrypted macros to load.\n- Load macros without scanning: do not check for anti-virus software and allow macros to be loaded in an encrypted file.\n\nIf you disable or do not configure this policy setting, the behavior will be similar to the \"Scan encrypted macros\" option.",
+            "explainText": "This policy setting controls whether encrypted macros in Open XML documents be are required to be scanned with anti-virus software before being opened.\n\nIf you enable this policy setting, you may choose one of these options:\n\n- Scan encrypted macros: encrypted macros are disabled unless anti-virus software is installed.  Encrypted macros are scanned by your anti-virus software when you attempt to open an encrypted workbook that contains macros.\n- Scan if anti-virus software available: if anti-virus software is installed, scan the encrypted macros first before allowing them to load.  If anti-virus software is not available, allow encrypted macros to load.\n- Load macros without scanning: do not check for anti-virus software and allow macros to be loaded in an encrypted file.\n\nIf you disable or do not configure this policy setting, the behavior will be similar to the \"Scan encrypted macros\" option.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -4746,7 +6122,7 @@
             },
             "name": "L_TrustaccesstoVisualBasicProject",
             "displayName": "Trust access to Visual Basic Project",
-            "explainText": "This policy setting controls whether automation clients such as Microsoft Visual Studio 2005 Tools for Microsoft Office (VSTO) can access the Visual Basic for Applications project system in the specified applications. VSTO projects require access to the Visual Basic for Applications project system in Excel, PowerPoint, and Word, even though the projects do not use Visual Basic for Applications. Design-time support of controls in both Visual Basic and C# projects depends on the Visual Basic for Applications project system in Word and Excel.\n\nIf you enable this policy setting, VSTO and other automation clients can access the Visual Basic for Applications project system in the specified applications. Users will not be able to change this behavior through the \"Trust access to the VBA project object model\" user interface option under the Macro Settings section of the Trust Center.\n\nIf you disable this policy setting, VSTO does not have programmatic access to VBA projects. In addition, the \"Trust access to the VBA project object model\" check box is cleared and users cannot change it. Note: Disabling this policy setting prevents VSTO projects from interacting properly with the VBA project system in the selected application.\n\nIf you do not configure this policy setting, automation clients do not have programmatic access to VBA projects. Users can enable this by selecting the \"Trust access to the VBA project object model\" in the \"Macro Settings\" section of the Trust Center. However, doing so allows macros in any documents the user opens to access the core Visual Basic objects, methods, and properties, which represents a potential security hazard.",
+            "explainText": "This policy setting controls whether automation clients such as Microsoft Visual Studio 2005 Tools for Microsoft Office (VSTO) can access the Visual Basic for Applications project system in the specified applications. VSTO projects require access to the Visual Basic for Applications project system in Excel, PowerPoint, and Word, even though the projects do not use Visual Basic for Applications. Design-time support of controls in both Visual Basic and C# projects depends on the Visual Basic for Applications project system in Word and Excel.\n\nIf you enable this policy setting, VSTO and other automation clients can access the Visual Basic for Applications project system in the specified applications. Users will not be able to change this behavior through the \"Trust access to the VBA project object model\" user interface option under the Macro Settings section of the Trust Center.\n\nIf you disable this policy setting, VSTO does not have programmatic access to VBA projects. In addition, the \"Trust access to the VBA project object model\" check box is cleared and users cannot change it.  Note: Disabling this policy setting prevents VSTO projects from interacting properly with the VBA project system in the selected application.\n\nIf you do not configure this policy setting, automation clients do not have programmatic access to VBA projects. Users can enable this by selecting the \"Trust access to the VBA project object model\" in the \"Macro Settings\" section of the Trust Center. However, doing so allows macros in any documents the user opens to access the core Visual Basic objects, methods, and properties, which represents a potential security hazard.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -4806,7 +6182,7 @@
             },
             "name": "L_RequirethatApplicationExtensionsaresigned",
             "displayName": "Require that application add-ins are signed by Trusted Publisher",
-            "explainText":"This policy setting controls whether add-ins for this applications must be digitally signed by a trusted publisher.\n \nIf you enable this policy setting, this application checks the digital signature for each add-in before loading it. If an add-in does not have a digital signature, or if the signature did not come from a trusted publisher, this application disables the add-in and notifies the user. Certificates must be added to the Trusted Publishers list if you require that all add-ins be signed by a trusted publisher. For detail on about obtaining and distributing certificates, see http://go.microsoft.com/fwlink/?LinkId=294922. Office 2016 stores certificates for trusted publishers in the Internet Explorer trusted publisher store. Earlier versions of Microsoft Office stored trusted publisher certificate information (specifically, the certificate thumbprint) in a special Office trusted publisher store. Office 2016 still reads trusted publisher certificate information from the Office trusted publisher store, but it does not write information to this store. Therefore, if you created a list of trusted publishers in a previous version of Office and you upgrade to Office 2016, your trusted publisher list will still be recognized. However, any trusted publisher certificates that you add to the list will be stored in the Internet Explorer trusted publisher store. For more information about trusted publishers, see the Office Resource Kit.\n\nIf you disable or do not configure this policy setting, this application does not check the digital signature on application add-ins before opening them. If a dangerous add-in is loaded, it could harm users' computers or compromise data security.",
+            "explainText":"This policy setting controls whether add-ins for this applications must be digitally signed by a trusted publisher.\n\nIf you enable this policy setting, this application checks the digital signature for each add-in before loading it. If an add-in does not have a digital signature, or if the signature did not come from a trusted publisher, this application disables the add-in and notifies the user. Certificates must be added to the Trusted Publishers list if you require that all add-ins be signed by a trusted publisher. For detail on about obtaining and distributing certificates, see http://go.microsoft.com/fwlink/?LinkId=294922. Office 2016 stores certificates for trusted publishers in the Internet Explorer trusted publisher store. Earlier versions of Microsoft Office stored trusted publisher certificate information (specifically, the certificate thumbprint) in a special Office trusted publisher store.  Office 2016 still reads trusted publisher certificate information from the Office trusted publisher store, but it does not write information to this store. Therefore, if you created a list of trusted publishers in a previous version of Office and you upgrade to Office 2016, your trusted publisher list will still be recognized. However, any trusted publisher certificates that you add to the list will be stored in the Internet Explorer trusted publisher store. For more information about trusted publishers, see the Office Resource Kit.\n\nIf you disable or do not configure this policy setting, this application does not check the digital signature on application add-ins before opening them. If a dangerous add-in is loaded, it could harm users' computers or compromise data security.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -4836,7 +6212,7 @@
             },
             "name": "L_DisableTrustBarNotificationforunsigned",
             "displayName": "Disable Trust Bar Notification for unsigned application add-ins and block them",
-            "explainText": "This policy setting controls whether the specified Office application notifies users when unsigned application add-ins are loaded or silently disable such add-ins without notification. This policy setting only applies if you enable the \"Require that application add-ins are signed by Trusted Publisher\" policy setting, which prevents users from changing this policy setting.\n\nIf you enable this policy setting, applications automatically disable unsigned add-ins without informing users.\n \nIf you disable this policy setting, if this application is configured to require that all add-ins be signed by a trusted publisher, any unsigned add-ins the application loads will be disabled and the application will display the Trust Bar at the top of the active window. The Trust Bar contains a message that informs users about the unsigned add-in.\n\nIf you do not configure this policy setting, the disable behavior applies, and in addition, users can configure this requirement themselves in the \"Add-ins\" category of the Trust Center for the application.",
+            "explainText": "This policy setting controls whether the specified Office application notifies users when unsigned application add-ins are loaded or silently disable such add-ins without notification. This policy setting only applies if you enable the \"Require that application add-ins are signed by Trusted Publisher\" policy setting, which prevents users from changing this policy setting.\n\nIf you enable this policy setting, applications automatically disable unsigned add-ins without informing users.\n\nIf you disable this policy setting, if this application is configured to require that all add-ins be signed by a trusted publisher, any unsigned add-ins the application loads will be disabled and the application will display the Trust Bar at the top of the active window. The Trust Bar contains a message that informs users about the unsigned add-in.\n\nIf you do not configure this policy setting, the disable behavior applies, and in addition, users can configure this requirement themselves in the \"Add-ins\" category of the Trust Center for the application.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -4891,7 +6267,7 @@
             },
             "name": "L_SetDefaultFileBlockBehavior",
             "displayName": "Set default file block behavior",
-            "explainText": "This policy setting allows you to determine if users can open, view, or edit Word files.\n\nIf you enable this policy setting, you can set one of these options:\n- Blocked files are not opened\n- Blocked files open in Protected View and can not be edited\n- Blocked files open in Protected View and can be edited\n\nIf you disable or do not configure this policy setting, the behavior is the same as the \"Blocked files are not opened\" setting. Users will not be able to open blocked files.",
+            "explainText": "This policy setting allows you to determine if users can open, view, or edit Word files.\n\nIf you enable this policy setting, you can set one of these options:\n- Blocked files are not opened\n- Blocked files open in Protected View and can not be edited\n- Blocked files open in Protected View and can be edited\n\nIf you disable or do not configure this policy setting, the behavior is the same as the \"Blocked files are not opened\" setting.  Users will not be able to open blocked files.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -4971,7 +6347,7 @@
             },
             "name": "L_Word2007AndLaterDocsAndTemplates",
             "displayName": "Word 2007 and later documents and templates",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -5051,7 +6427,7 @@
             },
             "name": "L_OpenDocumentTextFiles",
             "displayName": "OpenDocument Text files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -5131,7 +6507,7 @@
             },
             "name": "L_Word2007AndLaterBinaryDocumentsAndTemplates",
             "displayName": "Word 2007 and later binary documents and templates",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -5203,7 +6579,7 @@
             },
             "name": "L_Word2003BinaryDocumentsAndTemplates",
             "displayName": "Word 2003 binary documents and templates",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -5283,7 +6659,7 @@
             },
             "name": "L_Word2003AndPlainXMLDocuments",
             "displayName": "Word 2003 and plain XML documents",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -5355,7 +6731,7 @@
             },
             "name": "L_WordXPBinaryDocumentsAndTemplates",
             "displayName": "Word XP binary documents and templates",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -5427,7 +6803,7 @@
             },
             "name": "L_Word2000BinaryDocumentsAndTemplates",
             "displayName": "Word 2000 binary documents and templates",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -5499,7 +6875,7 @@
             },
             "name": "L_Word97BinaryDocumentsAndTemplates",
             "displayName": "Word 97 binary documents and templates",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -5571,7 +6947,7 @@
             },
             "name": "L_Word95BinaryDocumentsAndTemplates",
             "displayName": "Word 95 binary documents and templates",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -5643,7 +7019,7 @@
             },
             "name": "L_Word6Pt0BinaryDocumentsAndTemplates",
             "displayName": "Word 6.0 binary documents and templates",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -5715,7 +7091,7 @@
             },
             "name": "L_Word2AndEarlierBinaryDocumentsAndTemplates",
             "displayName": "Word 2 and earlier binary documents and templates",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -5795,7 +7171,7 @@
             },
             "name": "L_WebPages",
             "displayName": "Web pages",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -5875,7 +7251,7 @@
             },
             "name": "L_RTFFiles",
             "displayName": "RTF files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -5931,7 +7307,7 @@
             },
             "name": "L_PlainTextFiles",
             "displayName": "Plain text files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -6011,7 +7387,7 @@
             },
             "name": "L_LegacyConvertersForWord",
             "displayName": "Legacy converters for Word",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -6091,7 +7467,7 @@
             },
             "name": "L_OfficeOpenXMLConvertersForWord",
             "displayName": "Office Open XML converters for Word",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Word files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -6121,7 +7497,7 @@
             },
             "name": "L_AllowTrustedLocationsOnTheNetwork",
             "displayName": "Allow Trusted Locations on the network",
-            "explainText": "This policy setting controls whether trusted locations on the network can be used.\n\nIf you enable this policy setting, users can specify trusted locations on network shares or in other remote locations that are not under their direct control by clicking the \"Add new location\" button in the Trusted Locations section of the Trust Center. Content, code, and add-ins are allowed to load from trusted locations with minimal security and without prompting the user for permission.\n\nIf you disable this policy setting, the selected application ignores any network locations listed in the Trusted Locations section of the Trust Center.\n\nIf you also deploy Trusted Locations via Group Policy, you should verify whether any of them are remote locations. If any of them are remote locations and you do not allow remote locations via this policy setting, those policy keys that point to remote locations will be ignored on client computers.\n\nDisabling this policy setting does not delete any network locations from the Trusted Locations list, but causes disruption for users who add network locations to the Trusted Locations list. Users are also prevented from adding new network locations to the Trusted Locations list in the Trust Center. We recommended that you do not enable this policy setting (as the \"Allow Trusted Locations on my network (not recommended)\" check box also states). Therefore, in practice, it should be possible to disable this policy setting in most situations without causing significant usability issues for most users.\n\nIf you do not enable this policy setting, users can select the \"Allow Trusted Locations on my network (not recommended)\" check box if desired and then specify trusted locations by clicking the \"Add new location\" button.",
+            "explainText": "This policy setting controls whether trusted locations on the network can be used.\n\nIf you enable this policy setting, users can specify trusted locations on network shares or in other remote locations that are not under their direct control by clicking the \"Add new location\" button in the Trusted Locations section of the Trust Center. Content, code, and add-ins are allowed to load from trusted locations with minimal security and without prompting the user for permission.\n\nIf you disable this policy setting, the selected application ignores any network locations listed in the Trusted Locations section of the Trust Center.\n\nIf you also deploy Trusted Locations via Group Policy, you should verify whether any of them are remote locations. If any of them are remote locations and you do not allow remote locations via this policy setting, those policy keys that point to remote locations will be ignored on client computers.\n\nDisabling this policy setting does not delete any network locations from the Trusted Locations list, but causes disruption for users who add network locations to the Trusted Locations list. Users are also prevented from adding new network locations to the Trusted Locations list in the Trust Center.  We recommended that you do not enable this policy setting (as the \"Allow Trusted Locations on my network (not recommended)\" check box also states). Therefore, in practice, it should be possible to disable this policy setting in most situations without causing significant usability issues for most users.\n\nIf you do not enable this policy setting, users can select the \"Allow Trusted Locations on my network (not recommended)\" check box if desired and then specify trusted locations by clicking the \"Add new location\" button.",
             "tags": [
                 "L_TrustedLocations",
                 "L_TrustCenter",
@@ -6152,7 +7528,7 @@
             },
             "name": "L_DisableTrustedLoc",
             "displayName": "Disable all trusted locations",
-            "explainText":"This policy setting allows administrators to disable all trusted locations in the specified applications. Trusted locations specified in the Trust Center are used to define file locations that are assumed to be safe. Content, code, and add-ins are allowed to load from trusted locations with a minimal amount of security, without prompting the users for permission. If a dangerous file is opened from a trusted location, it will not be subject to standard security measures and could harm users' computers or data.\n\nIf you enable this policy setting, all trusted locations (those specified in the Trust Center) in the specified applications are ignored, including any trusted locations established by Office 2016 during setup, deployed to users using Group Policy, or added by users themselves. Users will be prompted again when opening files from trusted locations.\n\nIf you disable or do not configure this policy setting, all trusted locations (those specified in the Trust Center) in the specified applications are assumed to be safe.",
+            "explainText":"This policy setting allows administrators to disable all trusted locations in the specified applications. Trusted locations specified in the Trust Center are used to define file locations that are assumed to be safe. Content, code, and add-ins are allowed to load from trusted locations with a minimal amount of security, without prompting the users for permission. If a dangerous file is opened from a trusted location, it will not be subject to standard security measures and could harm users' computers or data.\n\nIf you enable this policy setting, all trusted locations (those specified in the Trust Center) in the specified applications are ignored, including any trusted locations established by Office 2016 during setup, deployed to users using Group Policy, or added by users themselves.  Users will be prompted again when opening files from trusted locations.\n\nIf you disable or do not configure this policy setting, all trusted locations (those specified in the Trust Center) in the specified applications are assumed to be safe.",
             "tags": [
                 "L_TrustedLocations",
                 "L_TrustCenter",
@@ -6214,7 +7590,7 @@
             },
             "name": "L_DoNotOpenFilesInUnsafeLocationsInProtectedView",
             "displayName": "Do not open files in unsafe locations in Protected View",
-            "explainText": "This policy setting lets you determine if files located in unsafe locations will open in Protected View. If you have not specified unsafe locations, only the \"Downloaded Program Files\" and \"Temporary Internet Files\" folders are considered unsafe locations.\n\nIf you enable this policy setting, files located in unsafe locations do not open in Protected View.\n\nIf you disable or do not configure this policy setting, files located in unsafe locations open in Protected View.",
+            "explainText": "This policy setting lets you determine if files located in unsafe locations will open in Protected View.  If you have not specified unsafe locations, only the \"Downloaded Program Files\" and \"Temporary Internet Files\" folders are considered unsafe locations.\n\nIf you enable this policy setting, files located in unsafe locations do not open in Protected View.\n\nIf you disable or do not configure this policy setting, files located in unsafe locations open in Protected View.",
             "tags": [
                 "L_ProtectedView",
                 "L_TrustCenter",
@@ -6290,6 +7666,70 @@
         },
         {
             "parentCategory": {
+                "ref": "L_ProtectedView"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Block files"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Open in Protected View"
+                            }
+                        ],
+                        "valueName": "openinprotectedview",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsDropID"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "disableeditfrompv",
+                        "key": "software\\microsoft\\office\\16.0\\word\\security\\filevalidation",
+                        "inputType": "checkBox",
+                        "caption": "Checked: Allow edit.  Unchecked: Do not allow edit.",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsStr3"
+                    }
+                ]
+            },
+            "name": "L_SetDocumentBehaviorIfFileValidationFails",
+            "displayName": "Set document behavior if file validation fails",
+            "explainText": "This policy setting controls how Office handles documents when they fail file validation.\n\nIf you enable this policy setting, you can configure the following options for files that fail file validation:\n\n- Block files completely. Users cannot open the files.\n- Open files in Protected View and disallow edit. Users cannot edit the files. This is also how Office handles the files if you disable this policy setting.\n- Open files in Protected View and allow edit. Users can edit the files. This is also how Office handles the files if you do not configure this policy setting.\n\nIf you disable this policy setting, Office follows the \"Open files in Protected View and disallow edit\" behavior.\n\nIf you do not configure this policy setting, Office follows the \"Open files in Protected View and allow edit\" behavior.",
+            "tags": [
+                "L_ProtectedView",
+                "L_TrustCenter",
+                "L_Security",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\security\\filevalidation"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -6307,7 +7747,7 @@
             },
             "name": "L_TurnOffFileValidation",
             "displayName": "Turn off file validation",
-            "explainText": "This policy setting allows you turn off the file validation feature.\n\nIf you enable this policy setting, file validation will be turned off.\n\nIf you disable or do not configure this policy setting, file validation will be turned on. Office Binary Documents (97-2003) are checked to see if they conform against the file format schema before they are opened.",
+            "explainText": "This policy setting allows you turn off the file validation feature.\n\nIf you enable this policy setting, file validation will be turned off.\n\nIf you disable or do not configure this policy setting, file validation will be turned on.  Office Binary Documents (97-2003) are checked to see if they conform against the file format schema before they are opened.",
             "tags": [
                 "L_Security",
                 "L_WordOptions",
@@ -6403,6 +7843,510 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "showmarkupopensave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchcase",
+            "displayName": "Match case",
+            "explainText": "This policy setting allows you to check or uncheck the corresponding UI option in the \"Japanese Find\" dialog.  The \"Japanese Find\" dialog may be accessed from the Find dialog, under Home tab | Editing | Find | Go To... | Search Options | Options....  It could also be found under the Navigation Pane, under Home tab | Editing | Find | < down arrow > | Options... | Sounds Like (Japanese) | Options.  The \"Sounds like (Japanese)\" checkbox and the \"Options...\" button may be hidden in Word until certain editing languages are enabled.\n\nIf you enable this policy setting, you will check the corresponding UI option as specified in this policy setting's title.\n\nIf you disable or do not configure this policy setting, the corresponding UI option will be unchecked.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqcase_0_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchfullhalfwidthform",
+            "displayName": "Match full/half width form",
+            "explainText": "This policy setting allows you to check or uncheck the corresponding UI option in the \"Japanese Find\" dialog.  The \"Japanese Find\" dialog may be accessed from the Find dialog, under Home tab | Editing | Find | Go To... | Search Options | Options....  It could also be found under the Navigation Pane, under Home tab | Editing | Find | < down arrow > | Options... | Sounds Like (Japanese) | Options.  The \"Sounds like (Japanese)\" checkbox and the \"Options...\" button may be hidden in Word until certain editing languages are enabled.\n\nIf you enable this policy setting, you will check the corresponding UI option as specified in this policy setting's title.\n\nIf you disable or do not configure this policy setting, the corresponding UI option will be unchecked.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqbyte_1_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchhiraganakatakana",
+            "displayName": "Match hiragana/katakana",
+            "explainText": "This policy setting allows you to check or uncheck the corresponding UI option in the \"Japanese Find\" dialog.  The \"Japanese Find\" dialog may be accessed from the Find dialog, under Home tab | Editing | Find | Go To... | Search Options | Options....  It could also be found under the Navigation Pane, under Home tab | Editing | Find | < down arrow > | Options... | Sounds Like (Japanese) | Options.  The \"Sounds like (Japanese)\" checkbox and the \"Options...\" button may be hidden in Word until certain editing languages are enabled.\n\nIf you enable this policy setting, you will check the corresponding UI option as specified in this policy setting's title.\n\nIf you disable or do not configure this policy setting, the corresponding UI option will be unchecked.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqhira_kata_3_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchcontractionsyoonsokuon",
+            "displayName": "Match contractions (yo-on, sokuon)",
+            "explainText": "This policy setting allows you to check or uncheck the corresponding UI option in the \"Japanese Find\" dialog.  The \"Japanese Find\" dialog may be accessed from the Find dialog, under Home tab | Editing | Find | Go To... | Search Options | Options....  It could also be found under the Navigation Pane, under Home tab | Editing | Find | < down arrow > | Options... | Sounds Like (Japanese) | Options.  The \"Sounds like (Japanese)\" checkbox and the \"Options...\" button may be hidden in Word until certain editing languages are enabled.\n\nIf you enable this policy setting, you will check the corresponding UI option as specified in this policy setting's title.\n\nIf you disable or do not configure this policy setting, the corresponding UI option will be unchecked.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqsmallkana_4_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchminusdashchoon",
+            "displayName": "Match minus/dash/cho-on",
+            "explainText": "This policy setting allows you to check or uncheck the corresponding UI option in the \"Japanese Find\" dialog.  The \"Japanese Find\" dialog may be accessed from the Find dialog, under Home tab | Editing | Find | Go To... | Search Options | Options....  It could also be found under the Navigation Pane, under Home tab | Editing | Find | < down arrow > | Options... | Sounds Like (Japanese) | Options.  The \"Sounds like (Japanese)\" checkbox and the \"Options...\" button may be hidden in Word until certain editing languages are enabled.\n\nIf you enable this policy setting, you will check the corresponding UI option as specified in this policy setting's title.\n\nIf you disable or do not configure this policy setting, the corresponding UI option will be unchecked.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqminus_2_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchrepeatcharactermarks",
+            "displayName":"Match 'repeat character' marks",
+            "explainText": "This policy setting allows you to check or uncheck the corresponding UI option in the \"Japanese Find\" dialog.  The \"Japanese Find\" dialog may be accessed from the Find dialog, under Home tab | Editing | Find | Go To... | Search Options | Options....  It could also be found under the Navigation Pane, under Home tab | Editing | Find | < down arrow > | Options... | Sounds Like (Japanese) | Options.  The \"Sounds like (Japanese)\" checkbox and the \"Options...\" button may be hidden in Word until certain editing languages are enabled.\n\nIf you enable this policy setting, you will check the corresponding UI option as specified in this policy setting's title.\n\nIf you disable or do not configure this policy setting, the corresponding UI option will be unchecked.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqrepsymbol_5_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchvariantformkanjiitaiji",
+            "displayName": "Match variant-form kanji (itaiji)",
+            "explainText": "This policy setting allows you to check or uncheck the corresponding UI option in the \"Japanese Find\" dialog.  The \"Japanese Find\" dialog may be accessed from the Find dialog, under Home tab | Editing | Find | Go To... | Search Options | Options....  It could also be found under the Navigation Pane, under Home tab | Editing | Find | < down arrow > | Options... | Sounds Like (Japanese) | Options.  The \"Sounds like (Japanese)\" checkbox and the \"Options...\" button may be hidden in Word until certain editing languages are enabled.\n\nIf you enable this policy setting, you will check the corresponding UI option as specified in this policy setting's title.\n\nIf you disable or do not configure this policy setting, the corresponding UI option will be unchecked.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqkanji_16_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matcholdkanaforms",
+            "displayName": "Match old kana forms",
+            "explainText": "This policy setting allows you to check or uncheck the corresponding UI option in the \"Japanese Find\" dialog.  The \"Japanese Find\" dialog may be accessed from the Find dialog, under Home tab | Editing | Find | Go To... | Search Options | Options....  It could also be found under the Navigation Pane, under Home tab | Editing | Find | < down arrow > | Options... | Sounds Like (Japanese) | Options.  The \"Sounds like (Japanese)\" checkbox and the \"Options...\" button may be hidden in Word until certain editing languages are enabled.\n\nIf you enable this policy setting, you will check the corresponding UI option as specified in this policy setting's title.\n\nIf you disable or do not configure this policy setting, the corresponding UI option will be unchecked.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqoldkana_6_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchchoonusedforvowels",
+            "displayName": "Match cho-on used for vowels",
+            "explainText": "This policy setting allows you to check or uncheck the corresponding UI option in the \"Japanese Find\" dialog.  The \"Japanese Find\" dialog may be accessed from the Find dialog, under Home tab | Editing | Find | Go To... | Search Options | Options....  It could also be found under the Navigation Pane, under Home tab | Editing | Find | < down arrow > | Options... | Sounds Like (Japanese) | Options.  The \"Sounds like (Japanese)\" checkbox and the \"Options...\" button may be hidden in Word until certain editing languages are enabled.\n\nIf you enable this policy setting, you will check the corresponding UI option as specified in this policy setting's title.\n\nIf you disable or do not configure this policy setting, the corresponding UI option will be unchecked.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqlongvowel_7_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchdiziduzu",
+            "displayName": "Match di/zi, du/zu",
+            "explainText": "This policy setting allows you to check or uncheck the corresponding UI option in the \"Japanese Find\" dialog.  The \"Japanese Find\" dialog may be accessed from the Find dialog, under Home tab | Editing | Find | Go To... | Search Options | Options....  It could also be found under the Navigation Pane, under Home tab | Editing | Find | < down arrow > | Options... | Sounds Like (Japanese) | Options.  The \"Sounds like (Japanese)\" checkbox and the \"Options...\" button may be hidden in Word until certain editing languages are enabled.\n\nIf you enable this policy setting, you will check the corresponding UI option as specified in this policy setting's title.\n\nIf you disable or do not configure this policy setting, the corresponding UI option will be unchecked.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqd_z_8_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchbavahafa",
+            "displayName": "Match ba/va, ha/fa",
+            "explainText": "This policy setting allows you to check or uncheck the corresponding UI option in the \"Japanese Find\" dialog.  The \"Japanese Find\" dialog may be accessed from the Find dialog, under Home tab | Editing | Find | Go To... | Search Options | Options....  It could also be found under the Navigation Pane, under Home tab | Editing | Find | < down arrow > | Options... | Sounds Like (Japanese) | Options.  The \"Sounds like (Japanese)\" checkbox and the \"Options...\" button may be hidden in Word until certain editing languages are enabled.\n\nIf you enable this policy setting, you will check the corresponding UI option as specified in this policy setting's title.\n\nIf you disable or do not configure this policy setting, the corresponding UI option will be unchecked.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqb_v_9_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchtsithichidhizi",
+            "displayName": "Match tsi/thi/chi, dhi/zi",
+            "explainText": "This policy setting allows you to check or uncheck the corresponding UI option in the \"Japanese Find\" dialog.  The \"Japanese Find\" dialog may be accessed from the Find dialog, under Home tab | Editing | Find | Go To... | Search Options | Options....  It could also be found under the Navigation Pane, under Home tab | Editing | Find | < down arrow > | Options... | Sounds Like (Japanese) | Options.  The \"Sounds like (Japanese)\" checkbox and the \"Options...\" button may be hidden in Word until certain editing languages are enabled.\n\nIf you enable this policy setting, you will check the corresponding UI option as specified in this policy setting's title.\n\nIf you disable or do not configure this policy setting, the corresponding UI option will be unchecked.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqt_c_10_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchhyuiyubyuvyu",
+            "displayName": "Match hyu/iyu, byu/vyu",
+            "explainText": "This policy setting allows you to check or uncheck the corresponding UI option in the \"Japanese Find\" dialog.  The \"Japanese Find\" dialog may be accessed from the Find dialog, under Home tab | Editing | Find | Go To... | Search Options | Options....  It could also be found under the Navigation Pane, under Home tab | Editing | Find | < down arrow > | Options... | Sounds Like (Japanese) | Options.  The \"Sounds like (Japanese)\" checkbox and the \"Options...\" button may be hidden in Word until certain editing languages are enabled.\n\nIf you enable this policy setting, you will check the corresponding UI option as specified in this policy setting's title.\n\nIf you disable or do not configure this policy setting, the corresponding UI option will be unchecked.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqf_h_15_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchseshezeje",
+            "displayName": "Match se/she, ze/je",
+            "explainText": "This policy setting allows you to check or uncheck the corresponding UI option in the \"Japanese Find\" dialog.  The \"Japanese Find\" dialog may be accessed from the Find dialog, under Home tab | Editing | Find | Go To... | Search Options | Options....  It could also be found under the Navigation Pane, under Home tab | Editing | Find | < down arrow > | Options... | Sounds Like (Japanese) | Options.  The \"Sounds like (Japanese)\" checkbox and the \"Options...\" button may be hidden in Word until certain editing languages are enabled.\n\nIf you enable this policy setting, you will check the corresponding UI option as specified in this policy setting's title.\n\nIf you disable or do not configure this policy setting, the corresponding UI option will be unchecked.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqs_sh_13_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchiaiyapianopiyano",
+            "displayName": "Match ia/iya (piano/piyano)",
+            "explainText": "This policy setting allows you to check or uncheck the corresponding UI option in the \"Japanese Find\" dialog.  The \"Japanese Find\" dialog may be accessed from the Find dialog, under Home tab | Editing | Find | Go To... | Search Options | Options....  It could also be found under the Navigation Pane, under Home tab | Editing | Find | < down arrow > | Options... | Sounds Like (Japanese) | Options.  The \"Sounds like (Japanese)\" checkbox and the \"Options...\" button may be hidden in Word until certain editing languages are enabled.\n\nIf you enable this policy setting, you will check the corresponding UI option as specified in this policy setting's title.\n\nIf you disable or do not configure this policy setting, the corresponding UI option will be unchecked.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqy_a_12_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Matchkikutekisutotekusuto",
+            "displayName": "Match ki/ku (tekisuto/tekusuto)",
+            "explainText": "This policy setting allows you to check or uncheck the corresponding UI option in the \"Japanese Find\" dialog.  The \"Japanese Find\" dialog may be accessed from the Find dialog, under Home tab | Editing | Find | Go To... | Search Options | Options....  It could also be found under the Navigation Pane, under Home tab | Editing | Find | < down arrow > | Options... | Sounds Like (Japanese) | Options.  The \"Sounds like (Japanese)\" checkbox and the \"Options...\" button may be hidden in Word until certain editing languages are enabled.\n\nIf you enable this policy setting, you will check the corresponding UI option as specified in this policy setting's title.\n\nIf you disable or do not configure this policy setting, the corresponding UI option will be unchecked.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "feqki_ku_14_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ignorepunctuationcharacters",
+            "displayName": "Ignore punctuation characters",
+            "explainText": "This policy setting allows you to check or uncheck the corresponding UI option in the \"Japanese Find\" dialog.  The \"Japanese Find\" dialog may be accessed from the Find dialog, under Home tab | Editing | Find | Go To... | Search Options | Options....  It could also be found under the Navigation Pane, under Home tab | Editing | Find | < down arrow > | Options... | Sounds Like (Japanese) | Options.  The \"Sounds like (Japanese)\" checkbox and the \"Options...\" button may be hidden in Word until certain editing languages are enabled.\n\nIf you enable this policy setting, you will check the corresponding UI option as specified in this policy setting's title.\n\nIf you disable or do not configure this policy setting, the corresponding UI option will be unchecked.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "fignorepunct_18_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_JapaneseFind"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Ignorewhitespacecharacters",
+            "displayName": "Ignore whitespace characters",
+            "explainText": "This policy setting allows you to check or uncheck the corresponding UI option in the \"Japanese Find\" dialog.  The \"Japanese Find\" dialog may be accessed from the Find dialog, under Home tab | Editing | Find | Go To... | Search Options | Options....  It could also be found under the Navigation Pane, under Home tab | Editing | Find | < down arrow > | Options... | Sounds Like (Japanese) | Options.  The \"Sounds like (Japanese)\" checkbox and the \"Options...\" button may be hidden in Word until certain editing languages are enabled.\n\nIf you enable this policy setting, you will check the corresponding UI option as specified in this policy setting's title.\n\nIf you disable or do not configure this policy setting, the corresponding UI option will be unchecked.",
+            "tags": [
+                "L_JapaneseFind",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\word\\options\\vpreffuz",
+            "valueName": "fignorespace_19_1"
         },
         {
             "parentCategory": {
@@ -6935,7 +8879,7 @@
             },
             "name": "L_AlertIfNotDefault",
             "displayName": "Prompt the user if Word is not the default application for its file extensions",
-            "explainText": "This policy setting specifies whether to prompt users to change their file extensions association if any of the file type extensions that were associated with Word, are no longer associated with Word.\n\nIf you enable this policy setting, users will never be prompted on program start whenever any of these file types are associated with other applications. If the policy is Enabled, the checkbox under “File->Options-> General -> Start up options-> Tell me …” is Disabled and Unchecked.\n\nIf you disable or do not configure this policy setting users will be prompted on program start whenever any of these file types are associated with other applications. Users can change the behavior of the feature either by checking the checkbox presented in the prompt or by checking the checkbox under “File->Options-> General -> Start up options-> Tell me …”\n        If the policy is Not Configured or disabled the checkbox is Enabled and Checked by default.",
+            "explainText": "This policy setting specifies whether to prompt users to change their file extensions association if any of the file type extensions that were associated with Word, are no longer associated with Word.\n\nIf you enable this policy setting, users will never be prompted on program start whenever any of these file types are associated with other applications. If the policy is Enabled, the checkbox under “File->Options-> General -> Start up options-> Tell me …” is Disabled and Unchecked.\n\nIf you disable or do not configure this policy setting users will be prompted on program start whenever any of these file types are associated with other applications. Users can change the behavior of the feature either by checking the checkbox presented in the prompt or by checking the checkbox under “File->Options-> General -> Start up options-> Tell me …”\nIf the policy is Not Configured or disabled the checkbox is Enabled and Checked by default.",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7083,7 +9027,7 @@
             },
             "name": "L_ExpandCollapseUIMinimumZoomLevel",
             "displayName": "Set the minimum zoom level for expand / collapse on-object UI",
-            "explainText": "This policy setting allows you to specify the minimum zoom level percentage at which point the expand/collapse on-object UI stops rendering. Regardless of the value specified for this policy setting, the expand / collapse feature is still available from the context menu for headings.\n\nIf you enable this policy setting, you can specify a minimum zoom level percentage from 0-500.\n\nIf you disable or do not configure this policy setting, the minimum zoom level is set to 50%.",
+            "explainText": "This policy setting allows you to specify the minimum zoom level percentage at which point the expand/collapse on-object UI stops rendering.  Regardless of the value specified for this policy setting, the expand / collapse feature is still available from the context menu for headings.\n\nIf you enable this policy setting, you can specify a minimum zoom level percentage from 0-500.\n\nIf you disable or do not configure this policy setting, the minimum zoom level is set to 50%.",
             "tags": [
                 "L_Advanced",
                 "L_WordOptions",
@@ -7115,7 +9059,7 @@
             },
             "name": "L_ExpandCollapseUIMaximumZoomLevel",
             "displayName": "Set the maximum zoom level for expand / collapse on-object UI",
-            "explainText": "This policy setting allows you to specify the maximum zoom level percentage at which point the expand/collapse on-object UI stops rendering. Regardless of the value specified for this policy setting, the expand / collapse feature is still available from the context menu for headings.\n\nIf you enable this policy setting, you can specify a maximum zoom level percentage from 0-500. If you specify a value of 0, the on-object UI never renders.\n\nIf you disable or do not configure this policy setting, there will be no maximum.",
+            "explainText": "This policy setting allows you to specify the maximum zoom level percentage at which point the expand/collapse on-object UI stops rendering.  Regardless of the value specified for this policy setting, the expand / collapse feature is still available from the context menu for headings.\n\nIf you enable this policy setting, you can specify a maximum zoom level percentage from 0-500. If you specify a value of 0, the on-object UI never renders.\n\nIf you disable or do not configure this policy setting, there will be no maximum.",
             "tags": [
                 "L_Advanced",
                 "L_WordOptions",
@@ -7201,7 +9145,7 @@
             },
             "name": "L_LinkedInResumeAssistant",
             "displayName": "Allow LinkedIn Resume Assistant feature",
-            "explainText":"This policy setting controls whether the LinkedIn Resume Assistant appears in Word.\n\nIf you enable or do not configure this policy, users will be able to use the LinkedIn Resume Assistant.\n\nIf you disable this policy setting, the LinkedIn Resume Assistant will not be available.\n\nImportant: This policy setting only applies to Office 365 clients that are installed by using Click-to-Run, including Office 365 ProPlus, Office 365 Business, Visio Pro for Office 365 and Project Pro for Office 365. It doesn't apply to Office products that use Windows Installer (MSI).",
+            "explainText": "This policy setting controls whether the LinkedIn Resume Assistant appears in Word.\n\nIf you enable or do not configure this policy, users will be able to use the LinkedIn Resume Assistant.\n\nIf you disable this policy setting, the LinkedIn Resume Assistant will not be available.\n\nNote: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise, and to subscription versions of Project and Visio.",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7230,7 +9174,7 @@
             },
             "name": "L_DigitalPrint",
             "displayName":"Don't show the option to transform a document to a Sway web page",
-            "explainText":"This policy setting controls whether the File menu option to transform a Word document to a Sway web page is shown to the user. By default, this option is shown to the user.\n\nIf you enable this policy setting, the File menu option to transform a Word document to a Sway web page is hidden from the user.\n\nIf you disable or don't configure this policy setting, the File menu option to transform a Word document to a Sway web page is shown to the user.\n\nNote: This policy setting only applies to subscription versions of Office, such as Office 365 ProPlus.",
+            "explainText":"This policy setting controls whether the File menu option to transform a Word document to a Sway web page is shown to the user. By default, this option is shown to the user.\n\nIf you enable this policy setting, the File menu option to transform a Word document to a Sway web page is hidden from the user.\n\nIf you disable or don't configure this policy setting, the File menu option to transform a Word document to a Sway web page is shown to the user.\n\nNote: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise.",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7288,7 +9232,7 @@
             },
             "name": "L_Acronyms",
             "displayName": "Remove the Acronyms command from the ribbon",
-            "explainText":"This policy setting allows you to remove the Acronyms command from the ribbon. The Acronyms command appears on the References tab.\n\nIf you enable this policy setting, the Acronyms command is removed from the ribbon. Users won't be able to add the Acronyms command to the ribbon manually. Therefore users won't be able to use the Acronyms feature.\n\nIf you disable or don't configure this policy setting, the Acronyms command appears on the ribbon.\n\nNote: This policy setting only applies to subscription versions of Office, such as Office 365 ProPlus.",
+            "explainText":"This policy setting allows you to remove the Acronyms command from the ribbon. The Acronyms command appears on the References tab.\n\nIf you enable this policy setting, the Acronyms command is removed from the ribbon. Users won't be able to add the Acronyms command to the ribbon manually. Therefore users won't be able to use the Acronyms feature.\n\nIf you disable or don't configure this policy setting, the Acronyms command appears on the ribbon.\n\nNote: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise.",
             "tags": [
                 "L_OptionsGeneral",
                 "L_WordOptions",
@@ -7297,6 +9241,107 @@
             "application": "word16",
             "key": "software\\microsoft\\office\\16.0\\word\\options",
             "valueName": "acronyms"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_EmailOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DoNotCompressInlinedImagesInOutlook",
+            "displayName": "Do not compress the inlined images inserted in Outlook",
+            "explainText":"This policy setting allows you to disable compression on inlined images in Outlook.\n\nIf you enable this policy setting, Outlook won't compress inlined images in the message.\n\nIf you disable or don't configure this policy setting, inlined images would be compressed.\n\nNote: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise.",
+            "tags": [
+                "L_EmailOptions",
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\common\\mailsettings",
+            "valueName": "outlookdonotcompressimages"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_EmailOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "High Fidelity"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "330 ppi"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "220 ppi"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "150 ppi"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 4
+                                    }
+                                },
+                                "displayName": "96 ppi"
+                            }
+                        ],
+                        "valueName": "oulookimagedpiindex",
+                        "inputType": "dropdownList",
+                        "caption": "Default inline image compression quality for Outlook:",
+                        "id": "L_DefaultCompressionQualityForInlinedImagesInOutlookPart"
+                    }
+                ]
+            },
+            "name": "L_DefaultCompressionQualityForInlinedImagesInOutlook",
+            "displayName": "Specify default quality of compression done on inlined images inserted in Outlook",
+            "explainText":"This policy setting allows you to specify default quality of compression done on inlined images in Outlook.\n\nIf you enable this policy setting, Outlook would compress the inlined images in the message as per the specified quality.\n\nIf you disable or don't configure this policy setting, inlined images would be compressed at the default quality (220 dpi).\n\nNote: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise.\n    ",
+            "tags": [
+                "L_EmailOptions",
+                "L_Advanced",
+                "L_WordOptions",
+                "L_MicrosoftOfficeWord"
+            ],
+            "application": "word16",
+            "key": "software\\microsoft\\office\\16.0\\common\\mailsettings"
         }
     ]
 }

@@ -208,35 +208,6 @@
             },
             "enabledValue": {
                 "decimal": {
-                    "value": 0
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "name": "L_StopCheckingTableAltTextAccessibilityInformation",
-            "displayName": "Stop checking for table alt text accessibility information",
-            "explainText": "This policy setting prevents the Accessibility Checker from verifying that tables contain alt text.\n\nIf you enable this policy setting, the Accessibility Checker will be prevented from verifying that tables contain alt text.\n\nIf you disable or do not configure this policy setting, tables will be checked for alternative text and any issues will appear in the Accessibility Checker.",
-            "tags": [
-                "L_CheckAccessibility",
-                "L_FileTab",
-                "L_MicrosoftOfficePowerPoint"
-            ],
-            "application": "ppt16",
-            "key": "software\\microsoft\\office\\16.0\\powerpoint\\accchecker",
-            "valueName": "tablealttext"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_CheckAccessibility"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
                     "value": 1
                 }
             },
@@ -276,7 +247,7 @@
             },
             "name": "L_DisableGalleryPreviews",
             "displayName": "Enable Live Preview",
-            "explainText": "Shows or hides the Live Preview that appear when using Galleries that support previews. Live Preview shows how a command would be applied without actually applying it to the document.",
+            "explainText": "Shows or hides the Live Preview that appear when using Galleries that support previews.  Live Preview shows how a command would be applied without actually applying it to the document.",
             "tags": [
                 "L_OptionsGeneral",
                 "L_PowerPointOptions",
@@ -482,7 +453,7 @@
             },
             "name": "L_KeepLastAutoSavedVersions",
             "displayName": "Keep the last AutoSaved versions of files for the next session",
-            "explainText": "This policy setting determines whether PowerPoint keeps the last AutoSaved version of a file if a user closes a file without saving it. (Note: AutoSave applies only when AutoRecover is enabled.)\n\nIf you enable or do not configure this policy setting, PowerPoint keeps the last AutoSaved version of the file and makes it available to the user the next time the file is opened if the user closes a file without saving it.\n\nIf you disable this policy setting, PowerPoint does not keep the last AutoSaved version of the file if the user closes a file without saving it.",
+            "explainText": "This policy setting determines whether PowerPoint keeps the last AutoSaved version of a file if a user closes a file without saving it.  (Note: AutoSave applies only when AutoRecover is enabled.)\n\nIf you enable or do not configure this policy setting, PowerPoint keeps the last AutoSaved version of the file and makes it available to the user the next time the file is opened if the user closes a file without saving it.\n\nIf you disable this policy setting, PowerPoint does not keep the last AutoSaved version of the file if the user closes a file without saving it.",
             "tags": [
                 "L_Save",
                 "L_PowerPointOptions",
@@ -637,7 +608,7 @@
             },
             "name": "L_SavePowerPointfilesas",
             "displayName": "Default file format",
-            "explainText": "This policy setting governs the default format for new presentation files that users create.\n\nIf you enable this policy setting, when a user creates a new blank presentation, it is in the specified default format. Users may still override the default and specify a specific format when they create a presentation.\n\nIf you disable or do not configure this policy setting, PowerPoint Presentation is the default option.",
+            "explainText": "This policy setting governs the default format for new presentation files that users create.\n\nIf you enable this policy setting, when a user creates a new blank presentation, it is in the specified default format.  Users may still override the default and specify a specific format when they create a presentation.\n\nIf you disable or do not configure this policy setting, PowerPoint Presentation is the default option.",
             "tags": [
                 "L_Save",
                 "L_PowerPointOptions",
@@ -1230,7 +1201,7 @@
             },
             "name": "L_DoNotOpenFilesInUnsafeLocationsInProtectedView",
             "displayName": "Do not open files in unsafe locations in Protected View",
-            "explainText": "This policy setting lets you determine if files located in unsafe locations will open in Protected View. If you have not specified unsafe locations, only the \"Downloaded Program Files\" and \"Temporary Internet Files\" folders are considered unsafe locations.\n\nIf you enable this policy setting, files located in unsafe locations do not open in Protected View.\n\nIf you disable or do not configure this policy setting, files located in unsafe locations open in Protected View.",
+            "explainText": "This policy setting lets you determine if files located in unsafe locations will open in Protected View.  If you have not specified unsafe locations, only the \"Downloaded Program Files\" and \"Temporary Internet Files\" folders are considered unsafe locations.\n\nIf you enable this policy setting, files located in unsafe locations do not open in Protected View.\n\nIf you disable or do not configure this policy setting, files located in unsafe locations open in Protected View.",
             "tags": [
                 "L_ProtectedView",
                 "L_TrustCenter",
@@ -1306,6 +1277,70 @@
         },
         {
             "parentCategory": {
+                "ref": "L_ProtectedView"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Block files"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Open in Protected View"
+                            }
+                        ],
+                        "valueName": "openinprotectedview",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsDropID"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "disableeditfrompv",
+                        "key": "software\\microsoft\\office\\16.0\\powerpoint\\security\\filevalidation",
+                        "inputType": "checkBox",
+                        "caption": "Checked: Allow edit.  Unchecked: Do not allow edit.",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsStr3"
+                    }
+                ]
+            },
+            "name": "L_SetDocumentBehaviorIfFileValidationFails",
+            "displayName": "Set document behavior if file validation fails",
+            "explainText": "This policy setting controls how Office handles documents when they fail file validation.\n\nIf you enable this policy setting, you can configure the following options for files that fail file validation:\n\n- Block files completely. Users cannot open the files.\n- Open files in Protected View and disallow edit. Users cannot edit the files. This is also how Office handles the files if you disable this policy setting.\n- Open files in Protected View and allow edit. Users can edit the files. This is also how Office handles the files if you do not configure this policy setting.\n\nIf you disable this policy setting, Office follows the \"Open files in Protected View and disallow edit\" behavior.\n\nIf you do not configure this policy setting, Office follows the \"Open files in Protected View and allow edit\" behavior.",
+            "tags": [
+                "L_ProtectedView",
+                "L_TrustCenter",
+                "L_Security",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint\\security\\filevalidation"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -1323,7 +1358,7 @@
             },
             "name": "L_TurnOffFileValidation",
             "displayName": "Turn off file validation",
-            "explainText": "This policy setting allows you turn off the file validation feature.\n\nIf you enable this policy setting, file validation will be turned off.\n\nIf you disable or do not configure this policy setting, file validation will be turned on. Office Binary Documents (97-2003) are checked to see if they conform against the file format schema before they are opened.",
+            "explainText": "This policy setting allows you turn off the file validation feature.\n\nIf you enable this policy setting, file validation will be turned off.\n\nIf you disable or do not configure this policy setting, file validation will be turned on.  Office Binary Documents (97-2003) are checked to see if they conform against the file format schema before they are opened.",
             "tags": [
                 "L_Security",
                 "L_PowerPointOptions",
@@ -1377,7 +1412,7 @@
             },
             "name": "L_Determinewhethertoforceencryptedppt",
             "displayName": "Scan encrypted macros in PowerPoint Open XML presentations",
-            "explainText": "This policy setting controls whether encrypted macros in Open XML presentations are required to be scanned with anti-virus software before being opened.\n\nIf you enable this policy setting, you may choose one of these options:\n\n- Scan encrypted macros: encrypted macros are disabled unless anti-virus software is installed. Encrypted macros are scanned by your anti-virus software when you attempt to open an encrypted presentation that contains macros.\n- Scan if anti-virus software available: if anti-virus software is installed, scan the encrypted macros first before allowing them to load. If anti-virus software is not available, allow encrypted macros to load.\n- Load macros without scanning: do not check for anti-virus software and allow macros to be loaded in an encrypted file.\n\nIf you disable or do not configure this policy setting, the behavior will be similar to the \"Scan encrypted macros\" option.",
+            "explainText": "This policy setting controls whether encrypted macros in Open XML presentations are required to be scanned with anti-virus software before being opened.\n\nIf you enable this policy setting, you may choose one of these options:\n\n- Scan encrypted macros: encrypted macros are disabled unless anti-virus software is installed.  Encrypted macros are scanned by your anti-virus software when you attempt to open an encrypted presentation that contains macros.\n- Scan if anti-virus software available: if anti-virus software is installed, scan the encrypted macros first before allowing them to load.  If anti-virus software is not available, allow encrypted macros to load.\n- Load macros without scanning: do not check for anti-virus software and allow macros to be loaded in an encrypted file.\n\nIf you disable or do not configure this policy setting, the behavior will be similar to the \"Scan encrypted macros\" option.",
             "tags": [
                 "L_Security",
                 "L_PowerPointOptions",
@@ -1537,7 +1572,7 @@
             },
             "name": "L_SetCNGCipherKeyLength",
             "displayName": "Set CNG cipher key length",
-            "explainText": "This policy setting allows you to configure the number of bits to use when creating the cipher key. This number will be rounded down to a multiple of 8.\n\nIf you enable this policy setting, the key bits specified will be used.\n\nIf you disable or do not configure this policy setting, the default value will be used.",
+            "explainText": "This policy setting allows you to configure the number of bits to use when creating the cipher key.  This number will be rounded down to a multiple of 8.\n\nIf you enable this policy setting, the key bits specified will be used.\n\nIf you disable or do not configure this policy setting, the default value will be used.",
             "tags": [
                 "L_Cryptography",
                 "L_Security",
@@ -1835,7 +1870,7 @@
             },
             "name": "L_TurnOffTrustedDocumentsOnTheNetwork",
             "displayName": "Turn off Trusted Documents on the network",
-            "explainText": "This policy setting allows you to turn off the trusted documents feature for documents opened from the network.\n\nIf you enable this policy setting, users will always see security notifications for active content such as macros, ActiveX controls, data connections, etc. for documents opened from the network.\n\nIf you disable or do not configure this policy setting, the trusted documents feature allows users to always allow active content in documents such as macros, ActiveX controls, data connections, etc. so that users are not prompted the next time they open the documents. Trusted documents are exempt from security notifications.",
+            "explainText": "This policy setting allows you to turn off the trusted documents feature for documents opened from the network.\n\nIf you enable this policy setting, users will always see security notifications for active content such as macros, ActiveX controls, data connections, etc. for documents opened from the network.\n\nIf you disable or do not configure this policy setting, the trusted documents feature allows users to always allow active content in documents such as macros, ActiveX controls, data connections, etc. so that users are not prompted the next time they open the documents.  Trusted documents are exempt from security notifications.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1865,7 +1900,7 @@
             },
             "name": "L_TurnOffTrustedDocuments",
             "displayName": "Turn off trusted documents",
-            "explainText": "This policy setting allows you to turn off the trusted documents feature. The trusted documents feature allows users to always enable active content in documents such as macros, ActiveX controls, data connections, etc. so that they are not prompted the next time they open the documents. Trusted documents are exempt from security notifications.\n\nIf you enable this policy setting, you will turn off the trusted documents feature. Users will receive a security prompt every time a document containing active content is opened.\n\nIf you disable or do not configure this policy setting, documents will be trusted when users enable content for a document, and users will not receive a security prompt.",
+            "explainText": "This policy setting allows you to turn off the trusted documents feature.  The trusted documents feature allows users to always enable active content in documents such as macros, ActiveX controls, data connections, etc. so that they are not prompted the next time they open the documents.  Trusted documents are exempt from security notifications.\n\nIf you enable this policy setting, you will turn off the trusted documents feature.  Users will receive a security prompt every time a document containing active content is opened.\n\nIf you disable or do not configure this policy setting, documents will be trusted when users enable content for a document, and users will not receive a security prompt.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1962,7 +1997,7 @@
             },
             "name": "L_SetMaximumNumberOfTrustRecordsToPreserve",
             "displayName": "Set maximum number of trust records to preserve",
-            "explainText": "This policy setting allows you to specify the maximum number of trust records to preserve when the purge task detects that this application has trusted more than the number of trusted documents set by the \"Set maximum number of trusted documents\" policy setting.\n\nIf you enable this policy setting, you may specify the maximum number of trust records to preserve, with an upper limit of 20000. Due to performance reasons, it is not recommended to set it to the upper limit.\n\nIf you disable or you do not configure this policy setting, the default value for of 400 is used.",
+            "explainText": "This policy setting allows you to specify the maximum number of trust records to preserve when the purge task detects that this application has trusted more than the number of trusted documents set by the \"Set maximum number of trusted documents\" policy setting.\n\nIf you enable this policy setting, you may specify the maximum number of trust records to preserve, with an upper limit of 20000.  Due to performance reasons, it is not recommended to set it to the upper limit.\n\nIf you disable or you do not configure this policy setting, the default value for of 400 is used.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1991,7 +2026,7 @@
             },
             "name": "L_TrustaccesstoVisualBasicProject",
             "displayName": "Trust access to Visual Basic Project",
-            "explainText": "This policy setting controls whether automation clients such as Microsoft Visual Studio 2005 Tools for Microsoft Office (VSTO) can access the Visual Basic for Applications project system in the specified applications. VSTO projects require access to the Visual Basic for Applications project system in Excel, PowerPoint, and Word, even though the projects do not use Visual Basic for Applications. Design-time support of controls in both Visual Basic and C# projects depends on the Visual Basic for Applications project system in Word and Excel.\n\nIf you enable this policy setting, VSTO and other automation clients can access the Visual Basic for Applications project system in the specified applications. Users will not be able to change this behavior through the \"Trust access to the VBA project object model\" user interface option under the Macro Settings section of the Trust Center.\n\nIf you disable this policy setting, VSTO does not have programmatic access to VBA projects. In addition, the \"Trust access to the VBA project object model\" check box is cleared and users cannot change it. Note: Disabling this policy setting prevents VSTO projects from interacting properly with the VBA project system in the selected application.\n\nIf you do not configure this policy setting, automation clients do not have programmatic access to VBA projects. Users can enable this by selecting the \"Trust access to the VBA project object model\" in the \"Macro Settings\" section of the Trust Center. However, doing so allows macros in any documents the user opens to access the core Visual Basic objects, methods, and properties, which represents a potential security hazard.",
+            "explainText": "This policy setting controls whether automation clients such as Microsoft Visual Studio 2005 Tools for Microsoft Office (VSTO) can access the Visual Basic for Applications project system in the specified applications. VSTO projects require access to the Visual Basic for Applications project system in Excel, PowerPoint, and Word, even though the projects do not use Visual Basic for Applications. Design-time support of controls in both Visual Basic and C# projects depends on the Visual Basic for Applications project system in Word and Excel.\n\nIf you enable this policy setting, VSTO and other automation clients can access the Visual Basic for Applications project system in the specified applications. Users will not be able to change this behavior through the \"Trust access to the VBA project object model\" user interface option under the Macro Settings section of the Trust Center.\n\nIf you disable this policy setting, VSTO does not have programmatic access to VBA projects. In addition, the \"Trust access to the VBA project object model\" check box is cleared and users cannot change it.  Note: Disabling this policy setting prevents VSTO projects from interacting properly with the VBA project system in the selected application.\n\nIf you do not configure this policy setting, automation clients do not have programmatic access to VBA projects. Users can enable this by selecting the \"Trust access to the VBA project object model\" in the \"Macro Settings\" section of the Trust Center. However, doing so allows macros in any documents the user opens to access the core Visual Basic objects, methods, and properties, which represents a potential security hazard.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -2051,7 +2086,7 @@
             },
             "name": "L_RequirethatApplicationExtensionsaresigned",
             "displayName": "Require that application add-ins are signed by Trusted Publisher",
-            "explainText":"This policy setting controls whether add-ins for this applications must be digitally signed by a trusted publisher.\n \nIf you enable this policy setting, this application checks the digital signature for each add-in before loading it. If an add-in does not have a digital signature, or if the signature did not come from a trusted publisher, this application disables the add-in and notifies the user. Certificates must be added to the Trusted Publishers list if you require that all add-ins be signed by a trusted publisher. For detail on about obtaining and distributing certificates, see http://go.microsoft.com/fwlink/?LinkId=294922. Office 2016 stores certificates for trusted publishers in the Internet Explorer trusted publisher store. Earlier versions of Microsoft Office stored trusted publisher certificate information (specifically, the certificate thumbprint) in a special Office trusted publisher store. Office 2016 still reads trusted publisher certificate information from the Office trusted publisher store, but it does not write information to this store. Therefore, if you created a list of trusted publishers in a previous version of Office and you upgrade to Office 2016, your trusted publisher list will still be recognized. However, any trusted publisher certificates that you add to the list will be stored in the Internet Explorer trusted publisher store. For more information about trusted publishers, see the Office Resource Kit.\n\nIf you disable or do not configure this policy setting, this application does not check the digital signature on application add-ins before opening them. If a dangerous add-in is loaded, it could harm users' computers or compromise data security.",
+            "explainText":"This policy setting controls whether add-ins for this applications must be digitally signed by a trusted publisher.\n\nIf you enable this policy setting, this application checks the digital signature for each add-in before loading it. If an add-in does not have a digital signature, or if the signature did not come from a trusted publisher, this application disables the add-in and notifies the user. Certificates must be added to the Trusted Publishers list if you require that all add-ins be signed by a trusted publisher. For detail on about obtaining and distributing certificates, see http://go.microsoft.com/fwlink/?LinkId=294922. Office 2016 stores certificates for trusted publishers in the Internet Explorer trusted publisher store. Earlier versions of Microsoft Office stored trusted publisher certificate information (specifically, the certificate thumbprint) in a special Office trusted publisher store.  Office 2016 still reads trusted publisher certificate information from the Office trusted publisher store, but it does not write information to this store. Therefore, if you created a list of trusted publishers in a previous version of Office and you upgrade to Office 2016, your trusted publisher list will still be recognized. However, any trusted publisher certificates that you add to the list will be stored in the Internet Explorer trusted publisher store. For more information about trusted publishers, see the Office Resource Kit.\n\nIf you disable or do not configure this policy setting, this application does not check the digital signature on application add-ins before opening them. If a dangerous add-in is loaded, it could harm users' computers or compromise data security.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -2081,7 +2116,7 @@
             },
             "name": "L_DisableTrustBarNotificationforunsigned",
             "displayName": "Disable Trust Bar Notification for unsigned application add-ins and block them",
-            "explainText": "This policy setting controls whether the specified Office application notifies users when unsigned application add-ins are loaded or silently disable such add-ins without notification. This policy setting only applies if you enable the \"Require that application add-ins are signed by Trusted Publisher\" policy setting, which prevents users from changing this policy setting.\n\nIf you enable this policy setting, applications automatically disable unsigned add-ins without informing users.\n \nIf you disable this policy setting, if this application is configured to require that all add-ins be signed by a trusted publisher, any unsigned add-ins the application loads will be disabled and the application will display the Trust Bar at the top of the active window. The Trust Bar contains a message that informs users about the unsigned add-in.\n\nIf you do not configure this policy setting, the disable behavior applies, and in addition, users can configure this requirement themselves in the \"Add-ins\" category of the Trust Center for the application.",
+            "explainText": "This policy setting controls whether the specified Office application notifies users when unsigned application add-ins are loaded or silently disable such add-ins without notification. This policy setting only applies if you enable the \"Require that application add-ins are signed by Trusted Publisher\" policy setting, which prevents users from changing this policy setting.\n\nIf you enable this policy setting, applications automatically disable unsigned add-ins without informing users.\n\nIf you disable this policy setting, if this application is configured to require that all add-ins be signed by a trusted publisher, any unsigned add-ins the application loads will be disabled and the application will display the Trust Bar at the top of the active window. The Trust Bar contains a message that informs users about the unsigned add-in.\n\nIf you do not configure this policy setting, the disable behavior applies, and in addition, users can configure this requirement themselves in the \"Add-ins\" category of the Trust Center for the application.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -2136,7 +2171,7 @@
             },
             "name": "L_SetDefaultFileBlockBehavior",
             "displayName": "Set default file block behavior",
-            "explainText": "This policy setting allows you to determine if users can open, view, or edit Word files.\n\nIf you enable this policy setting, you can set one of these options:\n- Blocked files are not opened\n- Blocked files open in Protected View and can not be edited\n- Blocked files open in Protected View and can be edited\n\nIf you disable or do not configure this policy setting, the behavior is the same as the \"Blocked files are not opened\" setting. Users will not be able to open blocked files.",
+            "explainText": "This policy setting allows you to determine if users can open, view, or edit Word files.\n\nIf you enable this policy setting, you can set one of these options:\n- Blocked files are not opened\n- Blocked files open in Protected View and can not be edited\n- Blocked files open in Protected View and can be edited\n\nIf you disable or do not configure this policy setting, the behavior is the same as the \"Blocked files are not opened\" setting.  Users will not be able to open blocked files.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2216,7 +2251,7 @@
             },
             "name": "L_PowerPoint2007AndLaterPresentationsShowsTemplatesThemesAndAddInFiles",
             "displayName": "PowerPoint 2007 and later presentations, shows, templates, themes and add-in files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save PowerPoint files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save PowerPoint files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2296,7 +2331,7 @@
             },
             "name": "L_OpenDocumentPresentationFiles",
             "displayName": "OpenDocument Presentation files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save PowerPoint files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save PowerPoint files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2376,7 +2411,7 @@
             },
             "name": "L_PowerPoint972003PresentationsShowsTemplatesandAddInFiles",
             "displayName": "PowerPoint 97-2003 presentations, shows, templates and add-in files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save PowerPoint files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save PowerPoint files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2456,7 +2491,7 @@
             },
             "name": "L_WebPages",
             "displayName": "Web Pages",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save PowerPoint files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save PowerPoint files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2512,7 +2547,7 @@
             },
             "name": "L_OutlineFiles",
             "displayName": "Outline files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save PowerPoint files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save PowerPoint files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2592,7 +2627,7 @@
             },
             "name": "L_LegacyConvertersForPowerPoint",
             "displayName": "Legacy converters for PowerPoint",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save PowerPoint files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save PowerPoint files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2640,7 +2675,7 @@
             },
             "name": "L_GraphicFilters",
             "displayName": "Graphic Filters",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save PowerPoint files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save PowerPoint files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2720,7 +2755,7 @@
             },
             "name": "L_MicrosoftOfficeOpenXMLConvertersForPowerPoint",
             "displayName": "Microsoft Office Open XML converters for PowerPoint",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save PowerPoint files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save PowerPoint files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2800,7 +2835,7 @@
             },
             "name": "L_PowerPointBetaConverters",
             "displayName": "PowerPoint beta converters",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save PowerPoint files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save PowerPoint files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2880,7 +2915,7 @@
             },
             "name": "L_PowerPointBetaFiles",
             "displayName": "PowerPoint beta files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save PowerPoint files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save PowerPoint files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2910,7 +2945,7 @@
             },
             "name": "L_AllowTrustedLocationsOnTheNetwork",
             "displayName": "Allow Trusted Locations on the network",
-            "explainText": "This policy setting controls whether trusted locations on the network can be used.\n\nIf you enable this policy setting, users can specify trusted locations on network shares or in other remote locations that are not under their direct control by clicking the \"Add new location\" button in the Trusted Locations section of the Trust Center. Content, code, and add-ins are allowed to load from trusted locations with minimal security and without prompting the user for permission.\n\nIf you disable this policy setting, the selected application ignores any network locations listed in the Trusted Locations section of the Trust Center.\n\nIf you also deploy Trusted Locations via Group Policy, you should verify whether any of them are remote locations. If any of them are remote locations and you do not allow remote locations via this policy setting, those policy keys that point to remote locations will be ignored on client computers.\n\nDisabling this policy setting does not delete any network locations from the Trusted Locations list, but causes disruption for users who add network locations to the Trusted Locations list. Users are also prevented from adding new network locations to the Trusted Locations list in the Trust Center. We recommended that you do not enable this policy setting (as the \"Allow Trusted Locations on my network (not recommended)\" check box also states). Therefore, in practice, it should be possible to disable this policy setting in most situations without causing significant usability issues for most users.\n\nIf you do not enable this policy setting, users can select the \"Allow Trusted Locations on my network (not recommended)\" check box if desired and then specify trusted locations by clicking the \"Add new location\" button.",
+            "explainText": "This policy setting controls whether trusted locations on the network can be used.\n\nIf you enable this policy setting, users can specify trusted locations on network shares or in other remote locations that are not under their direct control by clicking the \"Add new location\" button in the Trusted Locations section of the Trust Center. Content, code, and add-ins are allowed to load from trusted locations with minimal security and without prompting the user for permission.\n\nIf you disable this policy setting, the selected application ignores any network locations listed in the Trusted Locations section of the Trust Center.\n\nIf you also deploy Trusted Locations via Group Policy, you should verify whether any of them are remote locations. If any of them are remote locations and you do not allow remote locations via this policy setting, those policy keys that point to remote locations will be ignored on client computers.\n\nDisabling this policy setting does not delete any network locations from the Trusted Locations list, but causes disruption for users who add network locations to the Trusted Locations list. Users are also prevented from adding new network locations to the Trusted Locations list in the Trust Center.  We recommended that you do not enable this policy setting (as the \"Allow Trusted Locations on my network (not recommended)\" check box also states). Therefore, in practice, it should be possible to disable this policy setting in most situations without causing significant usability issues for most users.\n\nIf you do not enable this policy setting, users can select the \"Allow Trusted Locations on my network (not recommended)\" check box if desired and then specify trusted locations by clicking the \"Add new location\" button.",
             "tags": [
                 "L_TrustedLocations",
                 "L_TrustCenter",
@@ -2941,7 +2976,7 @@
             },
             "name": "L_DisableTrustedLoc",
             "displayName": "Disable all trusted locations",
-            "explainText":"This policy setting allows administrators to disable all trusted locations in the specified applications. Trusted locations specified in the Trust Center are used to define file locations that are assumed to be safe. Content, code, and add-ins are allowed to load from trusted locations with a minimal amount of security, without prompting the users for permission. If a dangerous file is opened from a trusted location, it will not be subject to standard security measures and could harm users' computers or data.\n\nIf you enable this policy setting, all trusted locations (those specified in the Trust Center) in the specified applications are ignored, including any trusted locations established by Office 2016 during setup, deployed to users using Group Policy, or added by users themselves. Users will be prompted again when opening files from trusted locations.\n\nIf you disable or do not configure this policy setting, all trusted locations (those specified in the Trust Center) in the specified applications are assumed to be safe.",
+            "explainText":"This policy setting allows administrators to disable all trusted locations in the specified applications. Trusted locations specified in the Trust Center are used to define file locations that are assumed to be safe. Content, code, and add-ins are allowed to load from trusted locations with a minimal amount of security, without prompting the users for permission. If a dangerous file is opened from a trusted location, it will not be subject to standard security measures and could harm users' computers or data.\n\nIf you enable this policy setting, all trusted locations (those specified in the Trust Center) in the specified applications are ignored, including any trusted locations established by Office 2016 during setup, deployed to users using Group Policy, or added by users themselves.  Users will be prompted again when opening files from trusted locations.\n\nIf you disable or do not configure this policy setting, all trusted locations (those specified in the Trust Center) in the specified applications are assumed to be safe.",
             "tags": [
                 "L_TrustedLocations",
                 "L_TrustCenter",
@@ -2984,6 +3019,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Security"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DownloadImages",
+            "displayName": "Unblock automatic download of linked images",
+            "explainText": "This policy setting determines whether PowerPoint automatically downloads links from external sources.\n\nIf you enable this policy setting, PowerPoint will load images saved in remote locations.\n\nIf you disable or do not configure this policy setting, when PowerPoint opens a presentation it does not display any linked images saved on a different computer unless the presentation itself is saved in a trusted location (as configured in the Trust Center).",
+            "tags": [
+                "L_Security",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint\\security",
+            "valueName": "downloadimages"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Coauthoring"
             },
             "supportedOn": {
@@ -3010,6 +3074,35 @@
             "application": "ppt16",
             "key": "software\\microsoft\\office\\16.0\\powerpoint\\coauthoring",
             "valueName": "disablecoauthoring"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Coauthoring"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_TurnOffRevisionTracking",
+            "displayName": "Turn off revision tracking",
+            "explainText": "This policy setting allows you to turn off revision tracking in PowerPoint.\n\nBy default, revision tracking is on in presentations where revision tracking is supported.\n\nIf you enable this policy setting, revisions made to a presentation aren’t tracked or shown.\n\nIf you disable or don’t configure this policy setting, revisions made to a presentation are tracked and shown.",
+            "tags": [
+                "L_Coauthoring",
+                "L_CollaborationSettings",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint\\coauthoring",
+            "valueName": "disablerevisiontracking"
         },
         {
             "parentCategory": {
@@ -3336,7 +3429,7 @@
             },
             "name": "L_DefaultMuteAudioInScreenRecorder",
             "displayName": "Turn off audio recording for screen recording",
-            "explainText": "This policy setting allows you to control the initial audio recording setting for a screen recording in PowerPoint. By default, audio is recorded during a screen recording.\n \nIf you enable this policy setting, audio isn’t recorded during a screen recording. But, the user can choose to turn on audio recording manually in the UI.\n \nIf you disable or don’t configure this policy setting, audio is recorded during a screen recording. The user can choose to turn off audio recording manually in the UI.",
+            "explainText": "This policy setting allows you to control the initial audio recording setting for a screen recording in PowerPoint. By default, audio is recorded during a screen recording.\n\nIf you enable this policy setting, audio isn’t recorded during a screen recording. But, the user can choose to turn on audio recording manually in the UI.\n\nIf you disable or don’t configure this policy setting, audio is recorded during a screen recording. The user can choose to turn off audio recording manually in the UI.",
             "tags": [
                 "L_Predefined",
                 "L_Disableitemsinuserinterface",
@@ -3374,6 +3467,35 @@
             "application": "ppt16",
             "key": "software\\microsoft\\office\\16.0\\powerpoint",
             "valueName": "muteaudiodefaultvalueinrecordingpresenterview"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Predefined"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_EnableRecordingRibbonTab",
+            "displayName": "Turn on recording ribbon tab",
+            "explainText": "This policy setting allows you to control the initial recording ribbon tab in PowerPoint. By default, the tab is not visible.\n\nIf you enable this policy setting, recording ribbon tab is visible. But, the user can choose to turn off the feature manually in the UI.\n\nIf you disable or don’t configure this policy setting, recording ribbon tab is not visible. The user can choose to turn on the feature manually in the UI.\n    ",
+            "tags": [
+                "L_Predefined",
+                "L_Disableitemsinuserinterface",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint",
+            "valueName": "enablerecordingribbontab"
         },
         {
             "parentCategory": {
@@ -3479,9 +3601,38 @@
                     "value": 0
                 }
             },
+            "name": "L_DisableQuickStarter",
+            "displayName": "Turn off QuickStarter",
+            "explainText": "This policy setting controls whether QuickStarter is available to users. By default, QuickStarter is available to users if they meet the language and region requirements for the feature.\n\nIf you enable this policy setting, QuickStarter won’t be available to users.\n\nIf you disable or don’t configure this policy setting, QuickStarter will be available to users if they meet the language and region requirements for the feature.\n\nNote: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise.\n    ",
+            "tags": [
+                "L_OptionsGeneral",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint",
+            "valueName": "disablequickstarter"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_OptionsGeneral"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_DisableIncrementalDownload",
             "displayName": "Wait to show users a cloud-based presentation until all content is downloaded",
-            "explainText":"\nThis policy setting allows you to control whether PowerPoint waits until all content is downloaded before showing a presentation to the user. This policy setting applies to presentations that are opened from a cloud-based location, such as OneDrive Personal, OneDrive for Business, or SharePoint Online.\n\nBy default, when the user opens a cloud-based presentation in PowerPoint, the user can view the presentation while other content, such as images or video, continues to download. But, some functionality, such as editing and presenting, is limited or not available until the entire contents of the presentation are downloaded.\n\nIf you enable this policy setting, PowerPoint will wait, when opening a cloud-based presentation, until the entire contents of the presentation are downloaded before showing the presentation to the user.\n\nYou may want to enable this policy setting if you have add-ins or automated processes that rely on the entire contents of the presentation being available and fully editable as soon as the presentation is shown.\n\nIf you disable or don't configure this setting, PowerPoint opens cloud-based files more quickly, so the user can start viewing the presentation while the other content downloads.\n\nNote: This policy setting only applies to subscription versions of Office, such as Office 365 ProPlus.\n    ",
+            "explainText":"This policy setting allows you to control whether PowerPoint waits until all content is downloaded before showing a presentation to the user. This policy setting applies to presentations that are opened from a cloud-based location, such as OneDrive Personal, OneDrive for Business, or SharePoint Online.\n\nBy default, when the user opens a cloud-based presentation in PowerPoint, the user can view the presentation while other content, such as images or video, continues to download. But, some functionality, such as editing and presenting, is limited or not available until the entire contents of the presentation are downloaded.\n\nIf you enable this policy setting, PowerPoint will wait, when opening a cloud-based presentation, until the entire contents of the presentation are downloaded before showing the presentation to the user.\n\nYou may want to enable this policy setting if you have add-ins or automated processes that rely on the entire contents of the presentation being available and fully editable as soon as the presentation is shown.\n\nIf you disable or don't configure this setting, PowerPoint opens cloud-based files more quickly, so the user can start viewing the presentation while the other content downloads.\n\nNote: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise.\n    ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_PowerPointOptions",
@@ -3510,7 +3661,7 @@
             },
             "name": "L_DisableLiveSubtitles",
             "displayName": "Don’t allow the use of Live Subtitles",
-            "explainText":"\nThis policy setting controls whether users can turn on Live Subtitles during a presentation. By default, Live Subtitles are off but can be turned on by users.\n\nIf you enable this policy setting, users can't turn on Live Subtitles during a presentation.\n\nIf you disable or don't configure this policy setting, users can turn on Live Subtitles.\n\nNote: This policy setting only applies to subscription versions of Office, such as Office 365 ProPlus.\n    ",
+            "explainText":"This policy setting controls whether users can turn on Live Subtitles during a presentation. By default, Live Subtitles are off but can be turned on by users.\n\nIf you enable this policy setting, users can't turn on Live Subtitles during a presentation.\n\nIf you disable or don't configure this policy setting, users can turn on Live Subtitles.\n\nNote: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise.\n    ",
             "tags": [
                 "L_OptionsGeneral",
                 "L_PowerPointOptions",
@@ -3519,6 +3670,35 @@
             "application": "ppt16",
             "key": "software\\microsoft\\office\\16.0\\powerpoint",
             "valueName": "disablelivesubtitles"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_OptionsGeneral"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_EnableModernCommentsCreateNew",
+            "displayName": "Use modern comments in PowerPoint",
+            "explainText":"This policy setting controls whether modern comments are used in PowerPoint. For more information about modern comments and when to enable this setting, see https://go.microsoft.com/fwlink/p/?linkid=2116065.\n\nIf you enable this policy setting, when a user adds comments to a new file or a file without comments, the new comments that are added will be modern comments. If users have a version of PowerPoint that doesn’t support modern comments, a notification appears directing them to use PowerPoint for the web to view modern comments in files that have them.\n\nIf you disable this policy setting, users will continue to see the previous commenting experience for new files and existing files that do not have any modern comments. Users will still be able to read files that already have modern comments in them if they have a version of PowerPoint that supports modern comments.\n\nFor information about what happens when you don't configure this policy setting, see https://go.microsoft.com/fwlink/p/?linkid=2116065.\n\nNote: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise.\n    ",
+            "tags": [
+                "L_OptionsGeneral",
+                "L_PowerPointOptions",
+                "L_MicrosoftOfficePowerPoint"
+            ],
+            "application": "ppt16",
+            "key": "software\\microsoft\\office\\16.0\\powerpoint",
+            "valueName": "enablemoderncommentscreatenew"
         }
     ]
 }

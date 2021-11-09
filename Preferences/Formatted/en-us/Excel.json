@@ -183,8 +183,8 @@
             "parentCategory": {
                 "ref": "L_MicrosoftOfficeExcel"
             },
-            "name": "L_IntelligentServices",
-            "displayName": "Intelligent Services"
+            "name": "L_PowerBI",
+            "displayName": "Power BI"
         }
     ],
     "policies": [
@@ -265,7 +265,7 @@
             },
             "name": "L_DisableLivePreview",
             "displayName": "Enable Live Preview",
-            "explainText": "Shows or hides the Live Previews that appear when using Galleries that support previews. Live Preview shows how a command would be applied without actually applying it to the document.",
+            "explainText": "Shows or hides the Live Previews that appear when using Galleries that support previews.  Live Preview shows how a command would be applied without actually applying it to the document.",
             "tags": [
                 "L_OptionsGeneral",
                 "L_ExcelOptions",
@@ -398,6 +398,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Formulas"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_R1C1referencestyle",
+            "displayName": "R1C1 reference style",
+            "explainText": "Checks/Unchecks the corresponding UI option.",
+            "tags": [
+                "L_Formulas",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "frefa1_4_1"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_AutocorrectOptions"
             },
             "supportedOn": {
@@ -475,7 +504,7 @@
             },
             "name": "L_KeepLastAutoSavedVersions",
             "displayName": "Keep the last AutoSaved versions of files for the next session",
-            "explainText": "This policy setting determines whether Excel keeps the last AutoSaved version of a file if a user closes a file without saving it. (Note: AutoSave applies only when AutoRecover is enabled.)\n\nIf you enable or do not configure this policy setting, Excel keeps the last AutoSaved version of the file and makes it available to the user the next time the file is opened if the user closes a file without saving it.\n\nIf you disable this policy setting, Excel does not keep the last AutoSaved version of the file if the user closes a file without saving it.",
+            "explainText": "This policy setting determines whether Excel keeps the last AutoSaved version of a file if a user closes a file without saving it.  (Note: AutoSave applies only when AutoRecover is enabled.)\n\nIf you enable or do not configure this policy setting, Excel keeps the last AutoSaved version of the file and makes it available to the user the next time the file is opened if the user closes a file without saving it.\n\nIf you disable this policy setting, Excel does not keep the last AutoSaved version of the file if the user closes a file without saving it.",
             "tags": [
                 "L_Save",
                 "L_ExcelOptions",
@@ -509,7 +538,7 @@
             },
             "name": "L_Defaultfilelocation",
             "displayName": "Default file location",
-            "explainText": "This policy setting allows you to specify the folder that Excel uses when opening or saving a file. This setting can be found under File tab | Options | Save | Save workbook Options.\n\nIf you enable this policy setting, you may specify this folder.\n\nIf you disable or do not configure this policy setting, the default folder will be used.",
+            "explainText": "This policy setting allows you to specify the folder that Excel uses when opening or saving a file.  This setting can be found under File tab | Options | Save | Save workbook Options.\n\nIf you enable this policy setting, you may specify this folder.\n\nIf you disable or do not configure this policy setting, the default folder will be used.",
             "tags": [
                 "L_Save",
                 "L_ExcelOptions",
@@ -621,6 +650,35 @@
                     "value": 0
                 }
             },
+            "name": "L_Promptforworkbookproperties",
+            "displayName": "Prompt for workbook properties",
+            "explainText": "Checks/Unchecks the corresponding UI option.",
+            "tags": [
+                "L_Save",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fpromptsuminfo_65_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Save"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_SaveAutoRecoverinfo",
             "displayName": "Save AutoRecover info",
             "explainText": "Enabling this policy selects the user option to \"Save AutoRecover information every N minutes\".",
@@ -688,7 +746,7 @@
             },
             "name": "L_AutoRecoversavelocation",
             "displayName": "AutoRecover save location",
-            "explainText": "This policy setting allows you to specify the location where AutoRecover information is to be saved. Directing the location to a network drive may allow you to back up these files along with other network files.\n\nIf you enable this policy setting, you may specify the location where AutoRecover information is to be saved.\n\nIf you disable or you do not configure this policy setting, the default location is %userprofile%\\Application Data\\Microsoft\\Excel.",
+            "explainText": "This policy setting allows you to specify the location where AutoRecover information is to be saved.  Directing the location to a network drive may allow you to back up these files along with other network files.\n\nIf you enable this policy setting, you may specify the location where AutoRecover information is to be saved.\n\nIf you disable or you do not configure this policy setting, the default location is %userprofile%\\Application Data\\Microsoft\\Excel.",
             "tags": [
                 "L_Save",
                 "L_ExcelOptions",
@@ -748,7 +806,7 @@
             },
             "name": "L_DisableAutoRepublish",
             "displayName": "Disable AutoRepublish",
-            "explainText": "This policy setting allows administrators to disable the AutoRepublish feature in Excel. If users choose to publish Excel data to a static Web page and enable the AutoRepublish feature, Excel saves a copy of the data to the Web page every time the user saves the workbook. By default, a message dialog displays every time the user saves a published workbook when AutoRepublish is enabled. From this dialog, the user can disable AutoRepublish temporarily or permanently, or select \"Do not show this message again\" to prevent the dialog from appearing after every save. If the user selects \"Do not show this message again\", Excel will continue to automatically republish the data after every save without informing the user.\n\nIf you enable this policy setting, the AutoRepublish feature is turned off and Excel users will need to publish data to the Web manually.\n\nIf you disable or do not configure this policy setting, users can enable the AutoRepublish feature to automatically republish workbooks saved as type Web Page.",
+            "explainText": "This policy setting allows administrators to disable the AutoRepublish feature in Excel. If users choose to publish Excel data to a static Web page and enable the AutoRepublish feature, Excel saves a copy of the data to the Web page every time the user saves the workbook. By default, a message dialog displays every time the user saves a published workbook when AutoRepublish is enabled. From this dialog, the user can disable AutoRepublish temporarily or permanently, or select \"Do not show this message again\" to prevent the dialog from appearing after every save. If the user selects \"Do not show this message again\", Excel will continue to automatically republish the data after every save without informing the user.\n\n      If you enable this policy setting, the AutoRepublish feature is turned off and Excel users will need to publish data to the Web manually.\n\n      If you disable or do not configure this policy setting, users can enable the AutoRepublish feature to automatically republish workbooks saved as type Web Page.",
             "tags": [
                 "L_Save",
                 "L_ExcelOptions",
@@ -919,7 +977,7 @@
             },
             "name": "L_DoNotOpenFilesInUnsafeLocationsInProtectedView",
             "displayName": "Do not open files in unsafe locations in Protected View",
-            "explainText": "This policy setting lets you determine if files located in unsafe locations will open in Protected View. If you have not specified unsafe locations, only the \"Downloaded Program Files\" and \"Temporary Internet Files\" folders are considered unsafe locations.\n\nIf you enable this policy setting, files located in unsafe locations do not open in Protected View.\n\nIf you disable or do not configure this policy setting, files located in unsafe locations open in Protected View.",
+            "explainText": "This policy setting lets you determine if files located in unsafe locations will open in Protected View.  If you have not specified unsafe locations, only the \"Downloaded Program Files\" and \"Temporary Internet Files\" folders are considered unsafe locations.\n\nIf you enable this policy setting, files located in unsafe locations do not open in Protected View.\n\nIf you disable or do not configure this policy setting, files located in unsafe locations open in Protected View.",
             "tags": [
                 "L_ProtectedView",
                 "L_TrustCenter",
@@ -995,6 +1053,70 @@
         },
         {
             "parentCategory": {
+                "ref": "L_ProtectedView"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Block files"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Open in Protected View"
+                            }
+                        ],
+                        "valueName": "openinprotectedview",
+                        "inputType": "dropdownList",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsDropID"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "disableeditfrompv",
+                        "key": "software\\microsoft\\office\\16.0\\excel\\security\\filevalidation",
+                        "inputType": "checkBox",
+                        "caption": "Checked: Allow edit.  Unchecked: Do not allow edit.",
+                        "id": "L_SetDocumentBehaviorIfFileValidationFailsStr3"
+                    }
+                ]
+            },
+            "name": "L_SetDocumentBehaviorIfFileValidationFails",
+            "displayName": "Set document behavior if file validation fails",
+            "explainText": "This policy setting controls how Office handles documents when they fail file validation.\n\nIf you enable this policy setting, you can configure the following options for files that fail file validation:\n\n- Block files completely. Users cannot open the files.\n- Open files in Protected View and disallow edit. Users cannot edit the files. This is also how Office handles the files if you disable this policy setting.\n- Open files in Protected View and allow edit. Users can edit the files. This is also how Office handles the files if you do not configure this policy setting.\n\nIf you disable this policy setting, Office follows the \"Open files in Protected View and disallow edit\" behavior.\n\nIf you do not configure this policy setting, Office follows the \"Open files in Protected View and allow edit\" behavior.",
+            "tags": [
+                "L_ProtectedView",
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security\\filevalidation"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_ExternalContent"
             },
             "supportedOn": {
@@ -1012,7 +1134,7 @@
             },
             "name": "L_DisableDDEServerLookup",
             "displayName": "Don’t allow Dynamic Data Exchange (DDE) server lookup in Excel",
-            "explainText": "This policy setting allows you to control whether Dynamic Data Exchange (DDE) server lookup is allowed.\n\nBy default, DDE server lookup is turned on, but users can turn off DDE server lookup by going to File > Options > Trust Center > Trust Center Settings > External Content.\n\nIf you enable this policy setting, DDE server lookup isn’t allowed, and users can’t turn on DDE server lookup in the Trust Center.\n\nNote: If you’re using Dynamic Data Exchange (DDE) server launch, which isn’t recommended, don’t enable this policy setting, because DDE server launch requires DDE server lookup to be on.\n\nIf you disable or don’t configure this policy setting, DDE server lookup is turned on, but users can turn off DDE server lookup in the Trust Center.\n\nNote: This policy setting only applies to subscription versions of Office, such as Office 365 ProPlus.",
+            "explainText": "This policy setting allows you to control whether Dynamic Data Exchange (DDE) server lookup is allowed.\n\nBy default, DDE server lookup is turned on, but users can turn off DDE server lookup by going to File > Options > Trust Center > Trust Center Settings > External Content.\n\nIf you enable this policy setting, DDE server lookup isn’t allowed, and users can’t turn on DDE server lookup in the Trust Center.\n\nNote: If you’re using Dynamic Data Exchange (DDE) server launch, which isn’t recommended, don’t enable this policy setting, because DDE server launch requires DDE server lookup to be on.\n\nIf you disable or don’t configure this policy setting, DDE server lookup is turned on, but users can turn off DDE server lookup in the Trust Center.\n\nNote: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise.",
             "tags": [
                 "L_ExternalContent",
                 "L_TrustCenter",
@@ -1043,7 +1165,7 @@
             },
             "name": "L_DisableDDEServerLaunch",
             "displayName": "Don’t allow Dynamic Data Exchange (DDE) server launch in Excel",
-            "explainText": "This policy setting allows you to control whether Dynamic Data Exchange (DDE) server launch is allowed.\n\nBy default, DDE server launch is turned off, but users can turn on DDE server launch by going to File > Options > Trust Center > Trust Center Settings > External Content.\n\nFor security reasons, turning on DDE server launch is not recommended.\n\nNote: For DDE server launch to work, Dynamic Data Exchange (DDE) server lookup must be turned on. Be sure that the “Don’t allow Dynamic Data Exchange (DDE) server lookup” policy setting isn’t enabled, because enabling that policy setting turns off DDE server lookup.\n\nIf you enable this policy setting, DDE server launch isn’t allowed, and users can’t turn on DDE server launch in the Trust Center.\n\nIf you disable this policy setting, DDE server launch is allowed, and users cannot turn off DDE server launch in the Trust Center. For security reasons, this is not recommended.\n\nIf you don’t configure this policy setting, DDE server launch is turned off, but users can turn on DDE server launch in the Trust Center.\n\nNote: This policy setting only applies to subscription versions of Office, such as Office 365 ProPlus.",
+            "explainText": "This policy setting allows you to control whether Dynamic Data Exchange (DDE) server launch is allowed.\n\nBy default, DDE server launch is turned off, but users can turn on DDE server launch by going to File > Options > Trust Center > Trust Center Settings > External Content.\n\nFor security reasons, turning on DDE server launch is not recommended.\n\nNote: For DDE server launch to work, Dynamic Data Exchange (DDE) server lookup must be turned on. Be sure that the “Don’t allow Dynamic Data Exchange (DDE) server lookup” policy setting isn’t enabled, because enabling that policy setting turns off DDE server lookup.\n\nIf you enable this policy setting, DDE server launch isn’t allowed, and users can’t turn on DDE server launch in the Trust Center.\n\nIf you disable this policy setting, DDE server launch is allowed, and users cannot turn off DDE server launch in the Trust Center. For security reasons, this is not recommended.\n\nIf you don’t configure this policy setting, DDE server launch is turned off, but users can turn on DDE server launch in the Trust Center.\n\nNote: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise.",
             "tags": [
                 "L_ExternalContent",
                 "L_TrustCenter",
@@ -1074,7 +1196,7 @@
             },
             "name": "L_EnableBlockUnsecureQueryFiles",
             "displayName": "Always prevent untrusted Microsoft Query files from opening",
-            "explainText": "This policy setting controls whether Microsoft Query files (.iqy, oqy, .dqy, and .rqy) in an untrusted location are prevented from opening.\n\nIf you enable this policy setting, Microsoft Query files in an untrusted location are prevented from opening. Users will not be able to change this setting under File > Options > Trust Center > Trust Center Settings > External Content.\n\nIf you disable or don’t configure this policy setting, Microsoft Query files in an untrusted location are not prevented from opening, unless users have changed this setting in the Trust Center.\n\nNote: This policy setting only applies to subscription versions of Office, such as Office 365 ProPlus.",
+            "explainText": "This policy setting controls whether Microsoft Query files (.iqy, oqy, .dqy, and .rqy) in an untrusted location are prevented from opening.\n\nIf you enable this policy setting, Microsoft Query files in an untrusted location are prevented from opening. Users will not be able to change this setting under File > Options > Trust Center > Trust Center Settings > External Content.\n\nIf you disable or don’t configure this policy setting, Microsoft Query files in an untrusted location are not prevented from opening, unless users have changed this setting in the Trust Center.\n\nNote: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise.",
             "tags": [
                 "L_ExternalContent",
                 "L_TrustCenter",
@@ -1105,7 +1227,7 @@
             },
             "name": "L_EnableForeignTextFileProtectedView",
             "displayName": "Always open untrusted text-based files in Protected View",
-            "explainText": "This policy setting controls whether text-based files (.csv, .dif, and .sylk) opened from an untrusted location are always opened in Protected View.\n\nIf you enable this policy setting, text-based files opened from an untrusted location are always opened in Protected View. Users will not be able to change this setting under File > Options > Trust Center > Trust Center Settings > Protected View.\n\nIf you disable or don’t configure this policy setting, text-based files opened from an untrusted location are not opened in Protected View, unless users have changed this setting in the Trust Center.\n\nNote: This policy setting only applies to subscription versions of Office, such as Office 365 ProPlus.",
+            "explainText": "This policy setting controls whether text-based files (.csv, .dif, and .sylk) opened from an untrusted location are always opened in Protected View.\n\nIf you enable this policy setting, text-based files opened from an untrusted location are always opened in Protected View. Users will not be able to change this setting under File > Options > Trust Center > Trust Center Settings > Protected View.\n\nIf you disable or don’t configure this policy setting, text-based files opened from an untrusted location are not opened in Protected View, unless users have changed this setting in the Trust Center.\n\nNote: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise.",
             "tags": [
                 "L_ProtectedView",
                 "L_TrustCenter",
@@ -1136,7 +1258,7 @@
             },
             "name": "L_EnableDataBaseFileProtectedView",
             "displayName": "Always open untrusted database files in Protected View",
-            "explainText": "This policy setting controls whether database files (.dbf) opened from an untrusted location are always opened in Protected View.\n\nIf you enable this policy setting, database files opened from an untrusted location are always opened in Protected View. Users will not be able to change this setting under File > Options > Trust Center > Trust Center Settings > Protected View.\n\nIf you disable or don’t configure this policy setting, database files opened from an untrusted location are not opened in Protected View, unless users have changed this setting in the Trust Center.\n\nNote: This policy setting only applies to subscription versions of Office, such as Office 365 ProPlus.",
+            "explainText": "This policy setting controls whether database files (.dbf) opened from an untrusted location are always opened in Protected View.\n\nIf you enable this policy setting, database files opened from an untrusted location are always opened in Protected View. Users will not be able to change this setting under File > Options > Trust Center > Trust Center Settings > Protected View.\n\nIf you disable or don’t configure this policy setting, database files opened from an untrusted location are not opened in Protected View, unless users have changed this setting in the Trust Center.\n\nNote: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise.",
             "tags": [
                 "L_ProtectedView",
                 "L_TrustCenter",
@@ -1167,7 +1289,7 @@
             },
             "name": "L_TurnOffFileValidation",
             "displayName": "Turn off file validation",
-            "explainText": "This policy setting allows you turn off the file validation feature.\n\nIf you enable this policy setting, file validation will be turned off.\n\nIf you disable or do not configure this policy setting, file validation will be turned on. Office Binary Documents (97-2003) are checked to see if they conform against the file format schema before they are opened.",
+            "explainText": "This policy setting allows you turn off the file validation feature.\n\nIf you enable this policy setting, file validation will be turned off.\n\nIf you disable or do not configure this policy setting, file validation will be turned on.  Office Binary Documents (97-2003) are checked to see if they conform against the file format schema before they are opened.",
             "tags": [
                 "L_Security",
                 "L_ExcelOptions",
@@ -1221,7 +1343,7 @@
             },
             "name": "L_DeterminewhethertoforceencryptedExcel",
             "displayName": "Scan encrypted macros in Excel Open XML workbooks",
-            "explainText": "This policy setting controls whether encrypted macros in Open XML workbooks be are required to be scanned with anti-virus software before being opened.\n\nIf you enable this policy setting, you may choose one of these options:\n\n- Scan encrypted macros: encrypted macros are disabled unless anti-virus software is installed. Encrypted macros are scanned by your anti-virus software when you attempt to open an encrypted workbook that contains macros.\n- Scan if anti-virus software available: if anti-virus software is installed, scan the encrypted macros first before allowing them to load. If anti-virus software is not available, allow encrypted macros to load.\n- Load macros without scanning: do not check for anti-virus software and allow macros to be loaded in an encrypted file.\n\nIf you disable or do not configure this policy setting, the behavior will be similar to the \"Scan encrypted macros\" option.",
+            "explainText": "This policy setting controls whether encrypted macros in Open XML workbooks be are required to be scanned with anti-virus software before being opened.\n\nIf you enable this policy setting, you may choose one of these options:\n\n- Scan encrypted macros: encrypted macros are disabled unless anti-virus software is installed.  Encrypted macros are scanned by your anti-virus software when you attempt to open an encrypted workbook that contains macros.\n- Scan if anti-virus software available: if anti-virus software is installed, scan the encrypted macros first before allowing them to load.  If anti-virus software is not available, allow encrypted macros to load.\n- Load macros without scanning: do not check for anti-virus software and allow macros to be loaded in an encrypted file.\n\nIf you disable or do not configure this policy setting, the behavior will be similar to the \"Scan encrypted macros\" option.",
             "tags": [
                 "L_Security",
                 "L_ExcelOptions",
@@ -1381,7 +1503,7 @@
             },
             "name": "L_SetCNGCipherKeyLength",
             "displayName": "Set CNG cipher key length",
-            "explainText": "This policy setting allows you to configure the number of bits to use when creating the cipher key. This number will be rounded down to a multiple of 8.\n\nIf you enable this policy setting, the key bits specified will be used.\n\nIf you disable or do not configure this policy setting, the default value will be used.",
+            "explainText": "This policy setting allows you to configure the number of bits to use when creating the cipher key.  This number will be rounded down to a multiple of 8.\n\nIf you enable this policy setting, the key bits specified will be used.\n\nIf you disable or do not configure this policy setting, the default value will be used.",
             "tags": [
                 "L_Cryptography",
                 "L_Security",
@@ -1679,7 +1801,7 @@
             },
             "name": "L_TurnOffTrustedDocumentsOnTheNetwork",
             "displayName": "Turn off Trusted Documents on the network",
-            "explainText": "This policy setting allows you to turn off the trusted documents feature for documents opened from the network.\n\nIf you enable this policy setting, users will always see security notifications for active content such as macros, ActiveX controls, data connections, etc. for documents opened from the network.\n\nIf you disable or do not configure this policy setting, the trusted documents feature allows users to always allow active content in documents such as macros, ActiveX controls, data connections, etc. so that users are not prompted the next time they open the documents. Trusted documents are exempt from security notifications.",
+            "explainText": "This policy setting allows you to turn off the trusted documents feature for documents opened from the network.\n\nIf you enable this policy setting, users will always see security notifications for active content such as macros, ActiveX controls, data connections, etc. for documents opened from the network.\n\nIf you disable or do not configure this policy setting, the trusted documents feature allows users to always allow active content in documents such as macros, ActiveX controls, data connections, etc. so that users are not prompted the next time they open the documents.  Trusted documents are exempt from security notifications.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1746,7 +1868,7 @@
             },
             "name": "L_SetMaximumNumberOfTrustRecordsToPreserve",
             "displayName": "Set maximum number of trust records to preserve",
-            "explainText": "This policy setting allows you to specify the maximum number of trust records to preserve when the purge task detects that this application has trusted more than the number of trusted documents set by the \"Set maximum number of trusted documents\" policy setting.\n\nIf you enable this policy setting, you may specify the maximum number of trust records to preserve, with an upper limit of 20000. Due to performance reasons, it is not recommended to set it to the upper limit.\n\nIf you disable or you do not configure this policy setting, the default value for of 400 is used.",
+            "explainText": "This policy setting allows you to specify the maximum number of trust records to preserve when the purge task detects that this application has trusted more than the number of trusted documents set by the \"Set maximum number of trusted documents\" policy setting.\n\nIf you enable this policy setting, you may specify the maximum number of trust records to preserve, with an upper limit of 20000.  Due to performance reasons, it is not recommended to set it to the upper limit.\n\nIf you disable or you do not configure this policy setting, the default value for of 400 is used.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1773,9 +1895,69 @@
                     "value": 0
                 }
             },
+            "name": "L_XL4KillSwitchPolicy",
+            "displayName": "Prevent Excel from running XLM macros",
+            "explainText": "This policy setting will prevent Excel from running Excel 4.0 (XLM) macros.\n\nIf you enable this policy setting, XLM macros cannot be run in Excel.\n\nIf you disable or don’t configure this policy setting, XLM macros can be run in Excel.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security",
+            "valueName": "xl4macrooff"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_StoremacroinPersonalMacroWorkbookbydefault",
+            "displayName": "Store macro in Personal Macro Workbook by default",
+            "explainText":"This policy setting controls the default location for storing macros in Excel.\n\n      If this policy setting is enabled, Excel stores macros in users' personal macro workbook.\n\n      If you disable or do not configure this policy setting, Excel stores macros in the active workbook from which they are created.\n\n      Note: In the user interface (UI), the \"Store macro in\" drop down list box in the Record Macro dialog box (Macros | Record Macro) allows users to choose whether to store the new macro in the current workbook, a new workbook, or their personal macro workbook (Personal.xlsb), a hidden workbook that opens every time Excel starts.\n\n      By default, Excel displays the \"Store macro in\" box with \"This Workbook\" already selected in the drop-down list. If a user saves a macro in the active workbook and then distributes the workbook to others, the macro is distributed along with the workbook.  If you enable this policy setting, Excel displays the \"Store macro in\" box with \"Personal Macro Workbook\" already selected. Users can still select one of the other two options in the drop-down menu.",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fglobalsheet_37_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_TrustaccesstoVisualBasicProject",
             "displayName": "Trust access to Visual Basic Project",
-            "explainText": "This policy setting controls whether automation clients such as Microsoft Visual Studio 2005 Tools for Microsoft Office (VSTO) can access the Visual Basic for Applications project system in the specified applications. VSTO projects require access to the Visual Basic for Applications project system in Excel, PowerPoint, and Word, even though the projects do not use Visual Basic for Applications. Design-time support of controls in both Visual Basic and C# projects depends on the Visual Basic for Applications project system in Word and Excel.\n\nIf you enable this policy setting, VSTO and other automation clients can access the Visual Basic for Applications project system in the specified applications. Users will not be able to change this behavior through the \"Trust access to the VBA project object model\" user interface option under the Macro Settings section of the Trust Center.\n\nIf you disable this policy setting, VSTO does not have programmatic access to VBA projects. In addition, the \"Trust access to the VBA project object model\" check box is cleared and users cannot change it. Note: Disabling this policy setting prevents VSTO projects from interacting properly with the VBA project system in the selected application.\n\nIf you do not configure this policy setting, automation clients do not have programmatic access to VBA projects. Users can enable this by selecting the \"Trust access to the VBA project object model\" in the \"Macro Settings\" section of the Trust Center. However, doing so allows macros in any documents the user opens to access the core Visual Basic objects, methods, and properties, which represents a potential security hazard.",
+            "explainText": "This policy setting controls whether automation clients such as Microsoft Visual Studio 2005 Tools for Microsoft Office (VSTO) can access the Visual Basic for Applications project system in the specified applications. VSTO projects require access to the Visual Basic for Applications project system in Excel, PowerPoint, and Word, even though the projects do not use Visual Basic for Applications. Design-time support of controls in both Visual Basic and C# projects depends on the Visual Basic for Applications project system in Word and Excel.\n\nIf you enable this policy setting, VSTO and other automation clients can access the Visual Basic for Applications project system in the specified applications. Users will not be able to change this behavior through the \"Trust access to the VBA project object model\" user interface option under the Macro Settings section of the Trust Center.\n\nIf you disable this policy setting, VSTO does not have programmatic access to VBA projects. In addition, the \"Trust access to the VBA project object model\" check box is cleared and users cannot change it.  Note: Disabling this policy setting prevents VSTO projects from interacting properly with the VBA project system in the selected application.\n\nIf you do not configure this policy setting, automation clients do not have programmatic access to VBA projects. Users can enable this by selecting the \"Trust access to the VBA project object model\" in the \"Macro Settings\" section of the Trust Center. However, doing so allows macros in any documents the user opens to access the core Visual Basic objects, methods, and properties, which represents a potential security hazard.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1835,7 +2017,7 @@
             },
             "name": "L_RequirethatApplicationExtensionsaresigned",
             "displayName": "Require that application add-ins are signed by Trusted Publisher",
-            "explainText":"This policy setting controls whether add-ins for the specified Office 2016 applications must be digitally signed by a trusted publisher.\n \nIf you enable this policy setting, this application checks the digital signature for each add-in before loading it. If an add-in does not have a digital signature, or if the signature did not come from a trusted publisher, this application disables the add-in and notifies the user. Certificates must be added to the Trusted Publishers list if you require that all add-ins be signed by a trusted publisher. For detail on about obtaining and distributing certificates, see http://go.microsoft.com/fwlink/?LinkId=294922. Office 2016 stores certificates for trusted publishers in the Internet Explorer trusted publisher store. Earlier versions of Microsoft Office stored trusted publisher certificate information (specifically, the certificate thumbprint) in a special Office trusted publisher store. Office 2016 still reads trusted publisher certificate information from the Office trusted publisher store, but it does not write information to this store. Therefore, if you created a list of trusted publishers in a previous version of Office and you upgrade to Office 2016, your trusted publisher list will still be recognized. However, any trusted publisher certificates that you add to the list will be stored in the Internet Explorer trusted publisher store. For more information about trusted publishers, see the Office Resource Kit.\n\nIf you disable or do not configure this policy setting, Office 2016 applications do not check the digital signature on application add-ins before opening them. If a dangerous add-in is loaded, it could harm users' computers or compromise data security.",
+            "explainText":"This policy setting controls whether add-ins for the specified Office 2016 applications must be digitally signed by a trusted publisher.\n\nIf you enable this policy setting, this application checks the digital signature for each add-in before loading it. If an add-in does not have a digital signature, or if the signature did not come from a trusted publisher, this application disables the add-in and notifies the user. Certificates must be added to the Trusted Publishers list if you require that all add-ins be signed by a trusted publisher. For detail on about obtaining and distributing certificates, see http://go.microsoft.com/fwlink/?LinkId=294922. Office 2016 stores certificates for trusted publishers in the Internet Explorer trusted publisher store. Earlier versions of Microsoft Office stored trusted publisher certificate information (specifically, the certificate thumbprint) in a special Office trusted publisher store.  Office 2016 still reads trusted publisher certificate information from the Office trusted publisher store, but it does not write information to this store. Therefore, if you created a list of trusted publishers in a previous version of Office and you upgrade to Office 2016, your trusted publisher list will still be recognized. However, any trusted publisher certificates that you add to the list will be stored in the Internet Explorer trusted publisher store. For more information about trusted publishers, see the Office Resource Kit.\n\nIf you disable or do not configure this policy setting, Office 2016 applications do not check the digital signature on application add-ins before opening them. If a dangerous add-in is loaded, it could harm users' computers or compromise data security.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1865,7 +2047,7 @@
             },
             "name": "L_DisableTrustBarNotificationforunsigned",
             "displayName": "Disable Trust Bar Notification for unsigned application add-ins and block them",
-            "explainText":"This policy setting controls whether the specified Office 2016 applications notify users when unsigned application add-ins are loaded or silently disable such add-ins without notification. This policy setting only applies if you enable the ''Require that application add-ins are signed by Trusted Publisher'' policy setting, which prevents users from changing this policy setting. \nIf you enable this policy setting, applications automatically disable unsigned add-ins without informing users.\n \nIf you disable this policy setting, if an application is configured to require that all add-ins be signed by a trusted publisher, any unsigned add-ins the application loads will be disabled and the application will display the Trust Bar at the top of the active window. The Trust Bar contains a message that informs users about the unsigned add-in.\n\nIf you do not configure this policy setting, the disable behavior applies, and in addition, users can configure this requirement themselves in the ''Add-ins'' category of the Trust Center for the application.",
+            "explainText":"This policy setting controls whether the specified Office 2016 applications notify users when unsigned application add-ins are loaded or silently disable such add-ins without notification. This policy setting only applies if you enable the ''Require that application add-ins are signed by Trusted Publisher'' policy setting, which prevents users from changing this policy setting.       \nIf you enable this policy setting, applications automatically disable unsigned add-ins without informing users.\n\nIf you disable this policy setting, if an application is configured to require that all add-ins be signed by a trusted publisher, any unsigned add-ins the application loads will be disabled and the application will display the Trust Bar at the top of the active window. The Trust Bar contains a message that informs users about the unsigned add-in.\n\nIf you do not configure this policy setting, the disable behavior applies, and in addition, users can configure this requirement themselves in the ''Add-ins'' category of the Trust Center for the application.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1895,7 +2077,7 @@
             },
             "name": "L_TurnOffTrustedDocuments",
             "displayName": "Turn off trusted documents",
-            "explainText": "This policy setting allows you to turn off the trusted documents feature. The trusted documents feature allows users to always enable active content in documents such as macros, ActiveX controls, data connections, etc. so that they are not prompted the next time they open the documents. Trusted documents are exempt from security notifications.\n\nIf you enable this policy setting, you will turn off the trusted documents feature. Users will receive a security prompt every time a document containing active content is opened.\n\nIf you disable or do not configure this policy setting, documents will be trusted when users enable content for a document, and users will not receive a security prompt.",
+            "explainText": "This policy setting allows you to turn off the trusted documents feature.  The trusted documents feature allows users to always enable active content in documents such as macros, ActiveX controls, data connections, etc. so that they are not prompted the next time they open the documents.  Trusted documents are exempt from security notifications.\n\nIf you enable this policy setting, you will turn off the trusted documents feature.  Users will receive a security prompt every time a document containing active content is opened.\n\nIf you disable or do not configure this policy setting, documents will be trusted when users enable content for a document, and users will not receive a security prompt.",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -1980,7 +2162,7 @@
             },
             "name": "L_SetDefaultFileBlockBehavior",
             "displayName": "Set default file block behavior",
-            "explainText": "This policy setting allows you to determine if users can open, view, or edit Excel files.\n\nIf you enable this policy setting, you can set one of these options:\n- Blocked files are not opened\n- Blocked files open in Protected View and can not be edited\n- Blocked files open in Protected View and can be edited\n\nIf you disable or do not configure this policy setting, the behavior is the same as the \"Blocked files are not opened\" setting. Users will not be able to open blocked files.",
+            "explainText": "This policy setting allows you to determine if users can open, view, or edit Excel files.\n\nIf you enable this policy setting, you can set one of these options:\n- Blocked files are not opened\n- Blocked files open in Protected View and can not be edited\n- Blocked files open in Protected View and can be edited\n\nIf you disable or do not configure this policy setting, the behavior is the same as the \"Blocked files are not opened\" setting.  Users will not be able to open blocked files.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2060,7 +2242,7 @@
             },
             "name": "L_Excel2007AndLaterWorkbooksandTemplates",
             "displayName": "Excel 2007 and later workbooks and templates",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2140,7 +2322,7 @@
             },
             "name": "L_Excel2007AndLaterMacroEnabledWorkbooksAndTemplates",
             "displayName": "Excel 2007 and later macro-enabled workbooks and templates",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2196,7 +2378,7 @@
             },
             "name": "L_Excel2007AndLaterAddInFiles",
             "displayName": "Excel 2007 and later add-in files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2276,7 +2458,7 @@
             },
             "name": "L_Excel2007AndLaterBinaryWorkbooks",
             "displayName": "Excel 2007 and later binary workbooks",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2356,7 +2538,7 @@
             },
             "name": "L_OpenDocumentSpreadsheetFiles",
             "displayName": "OpenDocument Spreadsheet files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2412,7 +2594,7 @@
             },
             "name": "L_Excel972003AddInFiles",
             "displayName": "Excel 97-2003 add-in files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2492,7 +2674,7 @@
             },
             "name": "L_Excel972003WorkbooksAndTemplates",
             "displayName": "Excel 97-2003 workbooks and templates",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2564,7 +2746,7 @@
             },
             "name": "L_Excel9597WorkbooksAndTemplates",
             "displayName": "Excel 95-97 workbooks and templates",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2644,7 +2826,7 @@
             },
             "name": "L_Excel95Workbooks",
             "displayName": "Excel 95 workbooks",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2716,7 +2898,7 @@
             },
             "name": "L_Excel4Workbooks",
             "displayName": "Excel 4 workbooks",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2788,7 +2970,7 @@
             },
             "name": "L_Excel4Worksheets",
             "displayName": "Excel 4 worksheets",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2860,7 +3042,7 @@
             },
             "name": "L_Excel3Worksheets",
             "displayName": "Excel 3 worksheets",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -2932,7 +3114,7 @@
             },
             "name": "L_Excel2Worksheets",
             "displayName": "Excel 2 worksheets",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3004,7 +3186,7 @@
             },
             "name": "L_Excel4MacrosheetsAndAddInFiles",
             "displayName": "Excel 4 macrosheets and add-in files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3076,7 +3258,7 @@
             },
             "name": "L_Excel3MacrosheetsAndAddInFiles",
             "displayName": "Excel 3 macrosheets and add-in files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3148,7 +3330,7 @@
             },
             "name": "L_Excel2MacrosheetsAndAddInFiles",
             "displayName": "Excel 2 macrosheets and add-in files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3228,7 +3410,7 @@
             },
             "name": "L_WebPagesAndExcel2003XMLSpreadsheets",
             "displayName": "Web pages and Excel 2003 XML spreadsheets",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3284,7 +3466,7 @@
             },
             "name": "L_XMLFiles",
             "displayName": "XML files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3340,7 +3522,7 @@
             },
             "name": "L_TextFiles",
             "displayName": "Text files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3388,7 +3570,7 @@
             },
             "name": "L_ExcelAddInFiles",
             "displayName": "Excel add-in files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3436,7 +3618,7 @@
             },
             "name": "L_DBaseIIIANDIVFiles",
             "displayName": "dBase III / IV files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3516,7 +3698,7 @@
             },
             "name": "L_MicrosoftOfficeQueryFiles",
             "displayName": "Microsoft Office query files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3564,7 +3746,7 @@
             },
             "name": "L_OfficeDataConnectionFiles",
             "displayName": "Microsoft Office data connection files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3612,7 +3794,7 @@
             },
             "name": "L_OtherDataSourceFiles",
             "displayName": "Other data source files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3660,7 +3842,7 @@
             },
             "name": "L_OfflineCubeFiles",
             "displayName": "Offline cube files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3716,7 +3898,7 @@
             },
             "name": "L_DifAndSylkFiles",
             "displayName": "Dif and Sylk files",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3788,7 +3970,7 @@
             },
             "name": "L_LegacyConvertersForExcel",
             "displayName": "Legacy converters for Excel",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3868,7 +4050,7 @@
             },
             "name": "L_MicrosoftOfficeOpenXMLConvertersForExcel",
             "displayName": "Microsoft Office Open XML converters for Excel",
-            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below. Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
+            "explainText": "This policy setting allows you to determine whether users can open, view, edit, or save Excel files with the format specified by the title of this policy setting.\n\nIf you enable this policy setting, you can specify whether users can open, view, edit, or save files.\n\nThe options that can be selected are below.  Note: Not all options may be available for this policy setting.\n\n- Do not block: The file type will not be blocked.\n\n- Save blocked: Saving of the file type will be blocked.\n\n- Open/Save blocked, use open policy: Both opening and saving of the file type will be blocked. The file will open based on the policy setting configured in the \"default file block behavior\" key.\n\n- Block: Both opening and saving of the file type will be blocked, and the file will not open.\n\n- Open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit the file type will not be enabled.\n\n- Allow editing and open in Protected View: Both opening and saving of the file type will be blocked, and the option to edit will be enabled.\n\nIf you disable or do not configure this policy setting, the file type will not be blocked.",
             "tags": [
                 "L_FileBlockSettings",
                 "L_TrustCenter",
@@ -3898,7 +4080,7 @@
             },
             "name": "L_AllowTrustedLocationsOnTheNetwork",
             "displayName": "Allow Trusted Locations on the network",
-            "explainText": "This policy setting controls whether trusted locations on the network can be used.\n\nIf you enable this policy setting, users can specify trusted locations on network shares or in other remote locations that are not under their direct control by clicking the \"Add new location\" button in the Trusted Locations section of the Trust Center. Content, code, and add-ins are allowed to load from trusted locations with minimal security and without prompting the user for permission.\n\nIf you disable this policy setting, the selected application ignores any network locations listed in the Trusted Locations section of the Trust Center.\n\nIf you also deploy Trusted Locations via Group Policy, you should verify whether any of them are remote locations. If any of them are remote locations and you do not allow remote locations via this policy setting, those policy keys that point to remote locations will be ignored on client computers.\n\nDisabling this policy setting does not delete any network locations from the Trusted Locations list, but causes disruption for users who add network locations to the Trusted Locations list. Users are also prevented from adding new network locations to the Trusted Locations list in the Trust Center. We recommended that you do not enable this policy setting (as the \"Allow Trusted Locations on my network (not recommended)\" check box also states). Therefore, in practice, it should be possible to disable this policy setting in most situations without causing significant usability issues for most users.\n\nIf you do not enable this policy setting, users can select the \"Allow Trusted Locations on my network (not recommended)\" check box if desired and then specify trusted locations by clicking the \"Add new location\" button.",
+            "explainText": "This policy setting controls whether trusted locations on the network can be used.\n\nIf you enable this policy setting, users can specify trusted locations on network shares or in other remote locations that are not under their direct control by clicking the \"Add new location\" button in the Trusted Locations section of the Trust Center. Content, code, and add-ins are allowed to load from trusted locations with minimal security and without prompting the user for permission.\n\nIf you disable this policy setting, the selected application ignores any network locations listed in the Trusted Locations section of the Trust Center.\n\nIf you also deploy Trusted Locations via Group Policy, you should verify whether any of them are remote locations. If any of them are remote locations and you do not allow remote locations via this policy setting, those policy keys that point to remote locations will be ignored on client computers.\n\nDisabling this policy setting does not delete any network locations from the Trusted Locations list, but causes disruption for users who add network locations to the Trusted Locations list. Users are also prevented from adding new network locations to the Trusted Locations list in the Trust Center.  We recommended that you do not enable this policy setting (as the \"Allow Trusted Locations on my network (not recommended)\" check box also states). Therefore, in practice, it should be possible to disable this policy setting in most situations without causing significant usability issues for most users.\n\nIf you do not enable this policy setting, users can select the \"Allow Trusted Locations on my network (not recommended)\" check box if desired and then specify trusted locations by clicking the \"Add new location\" button.",
             "tags": [
                 "L_TrustedLocations",
                 "L_TrustCenter",
@@ -3929,7 +4111,7 @@
             },
             "name": "L_DisableTrustedLoc",
             "displayName": "Disable all trusted locations",
-            "explainText":"This policy setting allows administrators to disable all trusted locations in the specified applications. Trusted locations specified in the Trust Center are used to define file locations that are assumed to be safe. Content, code, and add-ins are allowed to load from trusted locations with a minimal amount of security, without prompting the users for permission. If a dangerous file is opened from a trusted location, it will not be subject to standard security measures and could harm users' computers or data.\n\nIf you enable this policy setting, all trusted locations (those specified in the Trust Center) in the specified applications are ignored, including any trusted locations established by Office 2016 during setup, deployed to users using Group Policy, or added by users themselves. Users will be prompted again when opening files from trusted locations.\n\nIf you disable or do not configure this policy setting, all trusted locations (those specified in the Trust Center) in the specified applications are assumed to be safe.",
+            "explainText":"This policy setting allows administrators to disable all trusted locations in the specified applications. Trusted locations specified in the Trust Center are used to define file locations that are assumed to be safe. Content, code, and add-ins are allowed to load from trusted locations with a minimal amount of security, without prompting the users for permission. If a dangerous file is opened from a trusted location, it will not be subject to standard security measures and could harm users' computers or data.\n\nIf you enable this policy setting, all trusted locations (those specified in the Trust Center) in the specified applications are ignored, including any trusted locations established by Office 2016 during setup, deployed to users using Group Policy, or added by users themselves.  Users will be prompted again when opening files from trusted locations.\n\nIf you disable or do not configure this policy setting, all trusted locations (those specified in the Trust Center) in the specified applications are assumed to be safe.",
             "tags": [
                 "L_TrustedLocations",
                 "L_TrustCenter",
@@ -4112,7 +4294,7 @@
             },
             "name": "L_LoadpicturesfromWebpagesnotcreatedinExcel",
             "displayName": "Load pictures from Web pages not created in Excel",
-            "explainText": "This policy setting controls whether Excel loads graphics when opening Web pages that were not created in Excel. It configures the \"Load pictures from Web pages not created in Excel\" option under the File tab | Options | Advanced | General | Web Options... | General tab.\n\nIf you enable or do not configure this policy setting, Excel loads any graphics that are included in the pages, regardless of whether they were originally created in Excel.\n\nIf you disable this policy setting, Excel will not load any pictures from Web pages that were not created in Excel.",
+            "explainText": "This policy setting controls whether Excel loads graphics when opening Web pages that were not created in Excel.  It configures the \"Load pictures from Web pages not created in Excel\" option under the File tab | Options | Advanced | General | Web Options... | General tab.\n\nIf you enable or do not configure this policy setting, Excel loads any graphics that are included in the pages, regardless of whether they were originally created in Excel.\n\nIf you disable this policy setting, Excel will not load any pictures from Web pages that were not created in Excel.",
             "tags": [
                 "L_General",
                 "L_WebOptions",
@@ -4153,6 +4335,267 @@
             ],
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\excel\\options"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_Transitionnavigationkeys",
+            "displayName": "Transition navigation keys",
+            "explainText": "Enabling this policy checks the Advanced (Lotus compatibility) user option named \"Transition navigation keys\".",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fisi_33_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Ignoreotherapplications",
+            "displayName": "Ignore other applications",
+            "explainText": "This policy setting controls whether Excel can exchange data with other applications that use Dynamic Data Exchange (DDE).\n\n      If you enable this policy setting, Excel does not allow the exchange of data with other applications that use DDE.  In addition, the \"Ignore other applications that use Dynamic Data Exchange (DDE)\" user interface option under Excel Options | General is selected and users cannot change it. Enabling this policy setting can cause disruptions for users who rely on the DDE functionality in Excel to update information in workbooks. These users will have to use some other method to update information provided by other applications.\n\n      If you disable or do not configure this policy setting, Excel can use the Dynamic Data Exchange (DDE) protocol to exchange messages and data with other applications. For example, a cell in an Excel workbook can be dynamically linked to a value provided by another application, such as weather or stock price information. When the value provided by the other application changes, Excel can automatically update the value in the workbook. Note: users can change this behavior by selecting the \"Ignore other applications that use Dynamic Data Exchange (DDE)\" user interface option under Excel Options | General.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fddeenabled_6_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ZoomonrollwithIntelliMouse",
+            "displayName": "Zoom on roll with IntelliMouse",
+            "explainText": "This policy setting sets the \"Zoom on roll with IntelliMouse'\" option found under File tab | Options | Advanced | Editing options\n\nIf you enable this policy setting, rolling the mouse wheel will change the zoom level of the worksheet.\n\nIf you disable or do not configure this policy setting, rolling the mouse wheel will scroll the worksheet. This is the default behavior.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "frollzoom_98_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Shownames",
+            "displayName": "Show names",
+            "explainText": "Enabling this setting selects the Advanced (Display) user option to \"Show chart element names on hover\".",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fshowchartnames_96_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Showvalues",
+            "displayName": "Show values",
+            "explainText": "Enabling this setting selects the Advanced (Display) user option to \"Show data point values on hover\".",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fshowcharttipvalues_97_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Editdirectlyincell",
+            "displayName": "Edit directly in cell",
+            "explainText": "This policy setting sets the \"Edit directly in cell\" option found under File tab | Options | Advanced | Editing Options.\n\nIf you enable or do not configure this policy setting, Excel will allow editing directly in the cell  This is the default behavior.\n\nIf you disable this policy setting, Excel will not allow editing to be done directly in the cell.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fnoincell_66_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_EnableFillHandleAndCellDragAndDrop",
+            "displayName": "Enable fill handle and cell drag-and-drop",
+            "explainText": "This policy setting sets the \"Enable fill handle and cell drag-and-drop\" option found under File tab | Options | Advanced | Editing Options.\n\nIf you enable or do not configure this policy setting, Excel will enable the fill handle and allow drag-and-drop.  This is the default behavior.\n\nIf you disable this policy setting, Excel will disable the fill handle and drag-and-drop will not be allowed.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fdisabledman_36_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Alertbeforeoverwritingcells",
+            "displayName": "Alert before overwriting cells",
+            "explainText": "This policy setting sets the \"Alert before overwriting cells\" option found under File tab | Options | Advanced | Editing Options.\n\nIf you enable or do not configure this policy setting, Excel will give a warning if cells are about to be overwritten.  This is the default behavior.\n\nIf you disable this policy setting, Excel will suppress the warning that cells are about to be overwritten.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fnodragwarning_76_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_MoveselectionafterEnter",
+            "displayName": "Move selection after Enter",
+            "explainText": "Enabling this policy selects the Advanced (Editing Options) user option to \"After pressing Enter, move selection\".",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fentermove_75_1"
         },
         {
             "parentCategory": {
@@ -4262,6 +4705,93 @@
                     "value": 0
                 }
             },
+            "name": "L_CutAndCopyObjectsWithCells",
+            "displayName": "Cut and copy objects with cells",
+            "explainText": "This policy setting sets the \"Cut, copy, and sort inserted objects with their parent cells\" option found under File tab | Options | Advanced | Cut, copy, and paste Options.\n\nIf you enable or do not configure this policy setting, Excel will cut, copy, and sort inserted objects with their parent cells.\n\nIf you disable this policy setting, Excel will not cut and copy inserted objects with their parent cells.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fobjwcellmove_71_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Asktoupdateautomaticlinks",
+            "displayName": "Ask to update automatic links",
+            "explainText": "This policy setting controls whether Excel prompts users to update automatic links, or whether the updates occur in the background with no prompt.\n\nIf you enable or do not configure this policy setting, Excel will prompt users to update automatic links. In addition, the \"Ask to update automatic links\" user interface option under File tab | Advanced | General is selected.\n\nIf you disable this policy setting, Excel updates automatic links without prompting or informing users, which could compromise the integrity of some of the information in the workbook.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fupdateext_78_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_EnableAutoCompleteforcellvalues",
+            "displayName": "Enable AutoComplete for cell values",
+            "explainText": "This policy setting sets the \"Enable AutoComplete for cell values\" option found under File tab | Options | Advanced | Editing Options.\n\nIf you enable or do not configure this policy setting, Excel will allow AutoComplete for cell values. This is the default behavior.\n\nIf you disable this policy setting, Excel will turn off the AutoComplete feature.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fautocomplete_128_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_ExtendDataRangeFormatsAndFormulas",
             "displayName": "Extend data range formats and formulas",
             "explainText": "This policy setting sets the \"Extend data range formats and formulas\" option found under File tab | Options | Advanced | Editing Options.\n\nIf you enable or do not configure this policy setting, Excel will allow the user to automatically format new items added to the end of a list to match the format of the rest of the list. This is the default behavior.\n\nIf you disable this policy setting, Excel will not automatically format new items added to the end of a list.",
@@ -4273,6 +4803,35 @@
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\excel\\options",
             "valueName": "extendlist"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Enableautomaticpercententry",
+            "displayName": "Enable automatic percent entry",
+            "explainText": "Enabling this policy selects the Advanced (Editing options) user option to \"Enable automatic percent entry\".",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fdisableautopercent_99_1"
         },
         {
             "parentCategory": {
@@ -4302,6 +4861,122 @@
             "application": "excel16",
             "key": "software\\microsoft\\office\\16.0\\common\\general",
             "valueName": "pasteoptions"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_ShowInsertOptionsbuttons",
+            "displayName": "Show Insert Options buttons",
+            "explainText": "This policy setting sets the \"Show Insert Options buttons\" option found under File tab | Options | Advanced | Cut, copy, and paste options.\n\nIf you enable or do not configure this policy setting, Excel will show the Insert Options button after inserting cells, rows, or columns that contain formatting. This is the default behavior.\n\nIf you disable this policy setting, Excel will not display the Insert Options buttons on insert.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "enableinsertcellsooui_102_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ShowFormulabarinNormalView",
+            "displayName": "Show Formula bar in Normal View",
+            "explainText": "Enabling this setting selects the Advanced (Display) user option to \"Show formula bar\".",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "ffmlaf_1_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_ShowFormulabarinFullView",
+            "displayName": "Show Formula bar in Full View",
+            "explainText": "Checked: Displays the Formula bar when the Full Screen command in the View menu is set. | Unchecked: Does not dispaly the Formula bar when the Full Screen command in the View menu is set.",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "ffmlafull_68_1"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Advanced"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_Functiontooltips",
+            "displayName": "Function tooltips",
+            "explainText": "Enabling this setting selects the Advanced (Display) user option to \"Show function ScreenTips\".",
+            "tags": [
+                "L_Advanced",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\options\\binaryoptions",
+            "valueName": "fshowfuntips_101_1"
         },
         {
             "parentCategory": {
@@ -4454,7 +5129,7 @@
             },
             "name": "L_Alternatestartupfilelocation",
             "displayName": "Alternate startup file location",
-            "explainText": "This policy setting allows you to specify the folder where files will be opened by Excel at startup.\n\nIf you enable this policy setting, you may specify the folder where files will be opened by Excel at startup. Files will be opened from this folder in addition to the XLSTART folder in the Microsoft Office installation directory (default C:\\Program Files\\Microsoft Office\\Office14\\XLSTART).\n\nIf you disable or do not configure this policy setting, files will only be opened from the XLSTART folder.",
+            "explainText": "This policy setting allows you to specify the folder where files will be opened by Excel at startup.\n\nIf you enable this policy setting, you may specify the folder where files will be opened by Excel at startup.  Files will be opened from this folder in addition to the XLSTART folder in the Microsoft Office installation directory (default C:\\Program Files\\Microsoft Office\\Office14\\XLSTART).\n\nIf you disable or do not configure this policy setting, files will only be opened from the XLSTART folder.",
             "tags": [
                 "L_Advanced",
                 "L_ExcelOptions",
@@ -4598,7 +5273,7 @@
             },
             "name": "L_DoNotCacheNetworkFilesLocally",
             "displayName": "Do not cache network files locally",
-            "explainText": "This policy setting allows you to configure whether network files are locally cached when editing spreadsheets stored on network shares.\n\nIf you enable this policy setting, a file located on a network share may not be saved if the network connection was lost at any time while editing the file and the file contains a pivot table, VBE code or an embedded OLE object.\n\nIf you disable or do not configure this policy setting, network files are locally cached when editing spreadsheets stored on network shares. This may help prevent data loss during network failures.",
+            "explainText": "This policy setting allows you to configure whether network files are locally cached when editing spreadsheets stored on network shares.\n\nIf you enable this policy setting, a file located on a network share may not be saved if the network connection was lost at any time while editing the file and the file contains a pivot table, VBE code or an embedded OLE object.\n\nIf you disable or do not configure this policy setting, network files are locally cached when editing spreadsheets stored on network shares.  This may help prevent data loss during network failures.",
             "tags": [
                 "L_miscellaneous168",
                 "L_MicrosoftOfficeExcel"
@@ -4762,7 +5437,7 @@
             },
             "name": "L_WebContentWarningLevel",
             "displayName": "WEBSERVICE Function Notification Settings",
-            "explainText": "This policy setting controls how Excel will warn users when WEBSERVICE functions are present.\n\nIf you enable this policy setting, you can choose from three options for determining how the specified applications will warn the user about WEBSERVICE functions:\n\n- Disable all with notification:  The application displays the Trust Bar for all WEBSERVICE functions. This option enforces the default configuration in Office.\n- Disable all without notification: The application disables all WEBSERVICE functions and does not notify users.\n- Enable all WEBSERVICE functions (not recommended):  The application enables all WEBSERVICE functions and does not notify users. This option can significantly reduce security by allowing information disclosure to third party web services.\n\nIf you disable this policy setting, the “Disable all with notification” will be the default setting.\nIf you do not configure this policy setting, when users open workbooks that contain WEBSERVICE functions, Excel will open the files with the WEBSERVICE functions disabled and display the Trust Bar with a warning that WEBSERVICE functions are present and have been disabled. Users can inspect and edit the files if appropriate, but cannot use any disabled functionality until they enable it by clicking \"Enable Content\" on the Trust Bar. If the user clicks \"Enable Content,\" then the document is added as a trusted document.",
+            "explainText": "This policy setting controls how Excel will warn users when WEBSERVICE functions are present.\n\nIf you enable this policy setting, you can choose from three options for determining how the specified applications will warn the user about WEBSERVICE functions:\n\n- Disable all with notification:  The application displays the Trust Bar for all WEBSERVICE functions. This option enforces the default configuration in Office.\n- Disable all without notification: The application disables all WEBSERVICE functions and does not notify users.\n- Enable all WEBSERVICE functions (not recommended):  The application enables all WEBSERVICE functions and does not notify users. This option can significantly reduce security by allowing information disclosure to third party web services.\n\nIf you disable this policy setting, the “Disable all with notification” will be the default setting.\nIf you do not configure this policy setting, when users open workbooks that contain WEBSERVICE functions, Excel will open the files with the WEBSERVICE functions disabled and display the Trust Bar with a warning that WEBSERVICE functions are present and have been disabled. Users can inspect and edit the files if appropriate, but cannot use any disabled functionality until they enable it by clicking \"Enable Content\" on the Trust Bar.  If the user clicks \"Enable Content,\" then the document is added as a trusted document.",
             "tags": [
                 "L_Security",
                 "L_ExcelOptions",
@@ -4918,7 +5593,7 @@
         },
         {
             "parentCategory": {
-                "ref": "L_IntelligentServices"
+                "ref": "L_PowerBI"
             },
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
@@ -4933,16 +5608,16 @@
                     "value": 0
                 }
             },
-            "name": "L_Insights",
-            "displayName": "Remove Ideas button from the Ribbon",
-            "explainText": "This policy setting allows you to prevent users from accessing Ideas in Excel, an intelligent service providing suggestions and analyses based on your data. By default, a button for Ideas appears in the “Ideas” group on the “Home” tab on the ribbon.\n\nIf you enable this policy setting, the button for Ideas is removed from the ribbon and users can’t add the button to the ribbon manually. Users won’t be able to access Ideas.\n\nIf you disable or don’t configure this policy setting, the button for Ideas appears on the ribbon and users can access Ideas.",
+            "name": "L_DisableFromPowerBIDatasetOrganizationName",
+            "displayName": "Disable displaying organization name in the buttons to create PivotTables from Power BI datasets",
+            "explainText": "This policy setting allows you to prevent the organization name from being displayed in the buttons in the Excel ribbon used to create PivotTables from Power BI datasets.  By default, the organization name will be shown in the ribbon if it is available from Graph.\n\nIf you enable this policy setting, the organization name will not be shown.\n\nIf you disable or don’t configure this policy setting, the organization name will be shown.\n\nNote: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise.",
             "tags": [
-                "L_IntelligentServices",
+                "L_PowerBI",
                 "L_MicrosoftOfficeExcel"
             ],
             "application": "excel16",
-            "key": "software\\microsoft\\office\\16.0\\excel\\intelligent services",
-            "valueName": "insights"
+            "key": "software\\microsoft\\office\\16.0\\excel\\power bi",
+            "valueName": "disablefrompowerbidatasetorganizationname"
         }
     ]
 }

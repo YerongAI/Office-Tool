@@ -690,7 +690,7 @@
             },
             "name": "L_SetDefaultSearchScope",
             "displayName": "设置默认搜索范围",
-            "explainText": "通过此策略设置，您可以指定要使用的默认搜索范围。一旦设置了此策略，用户不能更改默认设置，但是他们可以在运行搜索时更改范围。\n \n如果启用此策略，您可以指定当用户开始新搜索时 Outlook 默认搜索的文件夹。\n \n如果禁用或未配置此策略设置，当从收件箱启动搜索时，Outlook 会搜索当前邮箱中的所有文件夹。如果从其他文件夹启动搜索，则搜索仅包括当前文件夹中的项目。用户仍可以在搜索时更改范围。",
+            "explainText": "通过此策略设置，您可以指定要使用的默认搜索范围。一旦设置了此策略，用户不能更改默认设置，但是他们可以在运行搜索时更改范围。\n\n如果启用此策略，您可以指定当用户开始新搜索时 Outlook 默认搜索的文件夹。\n\n如果禁用或未配置此策略设置，当从收件箱启动搜索时，Outlook 会搜索当前邮箱中的所有文件夹。如果从其他文件夹启动搜索，则搜索仅包括当前文件夹中的项目。用户仍可以在搜索时更改范围。",
             "tags": [
                 "L_SearchOptions",
                 "L_Preferences",
@@ -1132,6 +1132,120 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "打开下一个项目"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "回到当前文件夹"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "打开上一个项目"
+                            }
+                        ],
+                        "valueName": "aftermove",
+                        "inputType": "dropdownList",
+                        "caption": "移动或删除某个打开的项目后:",
+                        "id": "L_aftermovingordeletinganopenitem0"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "closeorig",
+                        "inputType": "checkBox",
+                        "caption": "在答复或转发时关闭邮件原件",
+                        "id": "L_Closeoriginalmessagewhenreplyorforward"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "savesent",
+                        "inputType": "checkBox",
+                        "caption": "在“已发送邮件”文件夹中保留邮件副本",
+                        "id": "L_SavecopiesofmessagesinSentItemsfolder"
+                    },
+                    {
+                        "valueName": "autosavetime",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 99,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "每隔 xx 分钟自动保存未发送的邮件(0=不自动保存):",
+                        "id": "L_Autosaveunsenteveryxxminutes0NoAutoSave"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "autoformatplaintext",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\options\\mail",
+                        "inputType": "checkBox",
+                        "caption": "自动清除纯文本邮件",
+                        "id": "L_Automaticallycleanupplaintextmessages"
+                    }
+                ]
+            },
+            "name": "L_Messagehandling",
+            "displayName": "邮件处理",
+            "explainText": "可以使用此设置指定各种电子邮件处理方式选项。",
+            "tags": [
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Emailoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -1549,6 +1663,53 @@
         },
         {
             "parentCategory": {
+                "ref": "L_DesktopAlert"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "corner",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 3,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "角点(0-3)",
+                        "id": "L_Corner03"
+                    },
+                    {
+                        "valueName": "xoffset",
+                        "minValueSpecified": false,
+                        "maxValueSpecified": false,
+                        "id": "L_XOffsetdefault44"
+                    },
+                    {
+                        "valueName": "yoffset",
+                        "minValueSpecified": false,
+                        "maxValueSpecified": false,
+                        "id": "L_YOffsetdefault42"
+                    }
+                ]
+            },
+            "name": "L_SpecifydefaultlocationofDesktopAlert",
+            "displayName": "指定桌面通知的默认位置",
+            "explainText": "可以更改桌面通知的默认位置。在“角点”字段中，选择与用户屏幕象限对应的数字: 0 = 左上、1 = 右上、2 = 左下、3 = 右下(默认值)。在“XOffset”字段中，输入代表与所指定角点水平距离的数字(默认值为 44)。在“YOffset”字段中，输入代表与所指定角点垂直距离的数字(默认值为 42)。",
+            "tags": [
+                "L_DesktopAlert",
+                "L_AdvancedEmailoptions",
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\common\\desktopalerts"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_AdvancedEmailoptions"
             },
             "supportedOn": {
@@ -1613,6 +1774,194 @@
         },
         {
             "parentCategory": {
+                "ref": "L_AdvancedEmailoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "高"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "普通"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "低"
+                            }
+                        ],
+                        "valueName": "importance",
+                        "inputType": "dropdownList",
+                        "caption": "设置重要性:",
+                        "id": "L_Setimportance"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "普通"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "个人"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "私有"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "机密"
+                            }
+                        ],
+                        "valueName": "sensitivity",
+                        "inputType": "dropdownList",
+                        "caption": "设置敏感度:",
+                        "id": "L_Setsensitivity"
+                    },
+                    {
+                        "valueName": "numdaysexpire",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 3652,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "邮件过期时间(天):",
+                        "id": "L_Messagesexpireafterdays"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "allowcommasinrecip",
+                        "inputType": "checkBox",
+                        "caption": "允许使用逗号作为地址分隔符",
+                        "id": "L_Allowcommasasaddressseparator"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "autonamecheck",
+                        "inputType": "checkBox",
+                        "caption": "自动检查姓名",
+                        "id": "L_Automaticnamechecking"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "deletewhenrespond",
+                        "inputType": "checkBox",
+                        "caption": "应答时从收件箱删除会议要求",
+                        "id": "L_DeletemeetingrequestfromInboxwhenresponding"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "showautosug",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
+                        "inputType": "checkBox",
+                        "caption": "填写“收件人”、“抄送”和“密件抄送”字段时提示姓名",
+                        "id": "L_SuggestnameswhilecompletingToCcandBccfields"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "adhocreviewbehavior",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\options\\mail",
+                        "inputType": "checkBox",
+                        "caption": "添加附件属性，以启用“答复时包含更改”功能",
+                        "id": "L_AddpropertiestoattachmentstoenableReplywithChanges"
+                    }
+                ]
+            },
+            "name": "L_Whensendingamessage",
+            "displayName": "发送邮件时",
+            "explainText": "设置对应的用户界面选项的值。",
+            "tags": [
+                "L_AdvancedEmailoptions",
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Trackingoptions"
             },
             "supportedOn": {
@@ -1641,6 +1990,143 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\flagging",
             "valueName": "disablesenderflags"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Emailoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "不包含邮件原件"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "附加邮件原件"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "包含邮件原件文本"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "包含并缩进邮件原件文本"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1000
+                                    }
+                                },
+                                "displayName": "给邮件原件的每行加前缀"
+                            }
+                        ],
+                        "valueName": "replystyle",
+                        "inputType": "dropdownList",
+                        "caption": "答复邮件时:",
+                        "id": "L_Whenreplyingtoamessage"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "附加邮件原件"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "包含邮件原件文本"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 3
+                                    }
+                                },
+                                "displayName": "包含并缩进邮件原件文本"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1000
+                                    }
+                                },
+                                "displayName": "给邮件原件的每行加前缀"
+                            }
+                        ],
+                        "valueName": "forwardstyle",
+                        "inputType": "dropdownList",
+                        "caption": "转发邮件时:",
+                        "id": "L_Whenforwardingamessage"
+                    },
+                    {
+                        "valueName": "prefixtext",
+                        "requiredSpecified": false,
+                        "expandableSpecified": false,
+                        "maxLengthSpecified": false,
+                        "inputType": "textBox",
+                        "caption": "给每行加前缀:",
+                        "id": "L_Prefixeachlinewith"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "markcomments",
+                        "key": "software\\microsoft\\office\\16.0\\common\\mailsettings",
+                        "inputType": "checkBox",
+                        "caption": "允许标记用户备注",
+                        "id": "L_Allowuserscommentstobemarked"
+                    }
+                ]
+            },
+            "name": "L_Onrepliesandforwards",
+            "displayName": "答复和转发时",
+            "explainText": "设置对应的用户界面选项的值。",
+            "tags": [
+                "L_Emailoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
         },
         {
             "parentCategory": {
@@ -2615,6 +3101,829 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 480
+                                    }
+                                },
+                                "displayName": "8:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "12:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 30
+                                    }
+                                },
+                                "displayName": "12:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 60
+                                    }
+                                },
+                                "displayName": "1:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 90
+                                    }
+                                },
+                                "displayName": "1:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 120
+                                    }
+                                },
+                                "displayName": "2:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 150
+                                    }
+                                },
+                                "displayName": "2:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 180
+                                    }
+                                },
+                                "displayName": "3:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 210
+                                    }
+                                },
+                                "displayName": "3:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 240
+                                    }
+                                },
+                                "displayName": "4:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 270
+                                    }
+                                },
+                                "displayName": "4:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 300
+                                    }
+                                },
+                                "displayName": "5:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 330
+                                    }
+                                },
+                                "displayName": "5:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 360
+                                    }
+                                },
+                                "displayName": "6:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 390
+                                    }
+                                },
+                                "displayName": "6:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 420
+                                    }
+                                },
+                                "displayName": "7:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 450
+                                    }
+                                },
+                                "displayName": "7:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 480
+                                    }
+                                },
+                                "displayName": "8:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 510
+                                    }
+                                },
+                                "displayName": "8:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 540
+                                    }
+                                },
+                                "displayName": "9:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 570
+                                    }
+                                },
+                                "displayName": "9:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 600
+                                    }
+                                },
+                                "displayName": "10:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 630
+                                    }
+                                },
+                                "displayName": "10:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 660
+                                    }
+                                },
+                                "displayName": "11:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 690
+                                    }
+                                },
+                                "displayName": "11:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 720
+                                    }
+                                },
+                                "displayName": "12:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 750
+                                    }
+                                },
+                                "displayName": "12:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 780
+                                    }
+                                },
+                                "displayName": "1:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 810
+                                    }
+                                },
+                                "displayName": "1:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 840
+                                    }
+                                },
+                                "displayName": "2:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 870
+                                    }
+                                },
+                                "displayName": "2:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 900
+                                    }
+                                },
+                                "displayName": "3:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 930
+                                    }
+                                },
+                                "displayName": "3:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 960
+                                    }
+                                },
+                                "displayName": "4:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 990
+                                    }
+                                },
+                                "displayName": "4:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1020
+                                    }
+                                },
+                                "displayName": "5:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1050
+                                    }
+                                },
+                                "displayName": "5:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1080
+                                    }
+                                },
+                                "displayName": "6:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1110
+                                    }
+                                },
+                                "displayName": "6:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1140
+                                    }
+                                },
+                                "displayName": "7:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1170
+                                    }
+                                },
+                                "displayName": "7:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1200
+                                    }
+                                },
+                                "displayName": "8:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1230
+                                    }
+                                },
+                                "displayName": "8:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1260
+                                    }
+                                },
+                                "displayName": "9:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1290
+                                    }
+                                },
+                                "displayName": "9:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1320
+                                    }
+                                },
+                                "displayName": "10:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1350
+                                    }
+                                },
+                                "displayName": "10:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1380
+                                    }
+                                },
+                                "displayName": "11:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1410
+                                    }
+                                },
+                                "displayName": "11:30 PM"
+                            }
+                        ],
+                        "valueName": "caldefstart",
+                        "inputType": "dropdownList",
+                        "caption": "开始时间:",
+                        "id": "L_Starttime"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1020
+                                    }
+                                },
+                                "displayName": "5:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "12:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 30
+                                    }
+                                },
+                                "displayName": "12:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 60
+                                    }
+                                },
+                                "displayName": "1:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 90
+                                    }
+                                },
+                                "displayName": "1:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 120
+                                    }
+                                },
+                                "displayName": "2:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 150
+                                    }
+                                },
+                                "displayName": "2:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 180
+                                    }
+                                },
+                                "displayName": "3:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 210
+                                    }
+                                },
+                                "displayName": "3:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 240
+                                    }
+                                },
+                                "displayName": "4:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 270
+                                    }
+                                },
+                                "displayName": "4:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 300
+                                    }
+                                },
+                                "displayName": "5:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 330
+                                    }
+                                },
+                                "displayName": "5:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 360
+                                    }
+                                },
+                                "displayName": "6:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 390
+                                    }
+                                },
+                                "displayName": "6:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 420
+                                    }
+                                },
+                                "displayName": "7:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 450
+                                    }
+                                },
+                                "displayName": "7:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 480
+                                    }
+                                },
+                                "displayName": "8:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 510
+                                    }
+                                },
+                                "displayName": "8:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 540
+                                    }
+                                },
+                                "displayName": "9:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 570
+                                    }
+                                },
+                                "displayName": "9:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 600
+                                    }
+                                },
+                                "displayName": "10:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 630
+                                    }
+                                },
+                                "displayName": "10:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 660
+                                    }
+                                },
+                                "displayName": "11:00 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 690
+                                    }
+                                },
+                                "displayName": "11:30 AM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 720
+                                    }
+                                },
+                                "displayName": "12:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 750
+                                    }
+                                },
+                                "displayName": "12:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 780
+                                    }
+                                },
+                                "displayName": "1:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 810
+                                    }
+                                },
+                                "displayName": "1:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 840
+                                    }
+                                },
+                                "displayName": "2:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 870
+                                    }
+                                },
+                                "displayName": "2:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 900
+                                    }
+                                },
+                                "displayName": "3:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 930
+                                    }
+                                },
+                                "displayName": "3:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 960
+                                    }
+                                },
+                                "displayName": "4:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 990
+                                    }
+                                },
+                                "displayName": "4:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1020
+                                    }
+                                },
+                                "displayName": "5:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1050
+                                    }
+                                },
+                                "displayName": "5:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1080
+                                    }
+                                },
+                                "displayName": "6:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1110
+                                    }
+                                },
+                                "displayName": "6:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1140
+                                    }
+                                },
+                                "displayName": "7:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1170
+                                    }
+                                },
+                                "displayName": "7:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1200
+                                    }
+                                },
+                                "displayName": "8:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1230
+                                    }
+                                },
+                                "displayName": "8:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1260
+                                    }
+                                },
+                                "displayName": "9:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1290
+                                    }
+                                },
+                                "displayName": "9:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1320
+                                    }
+                                },
+                                "displayName": "10:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1350
+                                    }
+                                },
+                                "displayName": "10:30 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1380
+                                    }
+                                },
+                                "displayName": "11:00 PM"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1410
+                                    }
+                                },
+                                "displayName": "11:30 PM"
+                            }
+                        ],
+                        "valueName": "caldefend",
+                        "inputType": "dropdownList",
+                        "caption": "结束时间:",
+                        "id": "L_EndTime"
+                    }
+                ]
+            },
+            "name": "L_Workinghours",
+            "displayName": "工作时数",
+            "explainText": "设置对应的用户界面选项的值。",
+            "tags": [
+                "L_Calendaroptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Calendaroptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -2880,6 +4189,65 @@
         },
         {
             "parentCategory": {
+                "ref": "L_FreeBusyOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "fbpublishrange",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 12,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "已发布忙/闲信息的月份:",
+                        "id": "L_MonthsofFreeBusyinformationpublished"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "lock fb range",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar\\internet free/busy",
+                        "inputType": "checkBox",
+                        "caption": "禁止用户更改已发布忙/闲信息的月份",
+                        "id": "L_PreventusersfromchangingMonthsofFreeBusyinformation1"
+                    },
+                    {
+                        "valueName": "fbupdatesecs",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 86400,
+                        "maxValueSpecified": true,
+                        "id": "L_FreeBusyupdatedontheservereveryxxxseconds"
+                    }
+                ]
+            },
+            "name": "L_options9",
+            "displayName": "忙/闲选项",
+            "explainText": "设置“发布服务器上 [] 个月的日历忙/闲信息”选项的值。",
+            "tags": [
+                "L_FreeBusyOptions",
+                "L_Calendaroptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_RecurrenceOptions"
             },
             "supportedOn": {
@@ -2945,6 +4313,36 @@
         },
         {
             "parentCategory": {
+                "ref": "L_Contactoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DetermineOrderOfSourcesForPhotos",
+            "displayName": "确定照片来源的顺序",
+            "explainText": "此策略设置控制照片来源在 Outlook 中的显示顺序。\n\n如果启用此策略设置，Outlook 将首先查看 OAB/AD 中的用户照片。如果这不可用，而联系人照片可用，则 Outlook 将显示联系人照片。\n\n如果禁用或不配置此策略设置，Outlook 将首先查看联系人通讯簿中的用户照片。如果这不可用，Outlook 将查看可用的 OAB/AD。",
+            "tags": [
+                "L_Contactoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook",
+            "valueName": "preferadphotos"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Security"
             },
             "supportedOn": {
@@ -3000,6 +4398,193 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
             "valueName": "showcontactfieldobsolete"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Contactoptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "E"
+                                },
+                                "displayName": "姓氏(中间名)名字"
+                            },
+                            {
+                                "value": {
+                                    "string": "H"
+                                },
+                                "displayName": "姓氏 名字"
+                            },
+                            {
+                                "value": {
+                                    "string": "S"
+                                },
+                                "displayName": "名字 姓氏1 姓氏2"
+                            }
+                        ],
+                        "valueName": "nameparserstyle",
+                        "inputType": "dropdownList",
+                        "caption": "默认全名顺序:",
+                        "id": "L_DefaultFullNameorder"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32791
+                                    }
+                                },
+                                "displayName": "姓氏 名字"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32823
+                                    }
+                                },
+                                "displayName": "名字 姓氏"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 14870
+                                    }
+                                },
+                                "displayName": "单位"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32793
+                                    }
+                                },
+                                "displayName": "姓氏 名字(单位)"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 32792
+                                    }
+                                },
+                                "displayName": "单位(姓氏, 名字)"
+                            }
+                        ],
+                        "valueName": "fileasorder",
+                        "inputType": "dropdownList",
+                        "caption": "默认的“表示为”顺序:",
+                        "id": "L_DefaultFileAsorder"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "confirmduplicates",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\contact",
+                        "inputType": "checkBox",
+                        "caption": "检查重复的联系人",
+                        "id": "L_Checkforduplicatecontacts"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "valueName": "indextabson",
+                        "key": "software\\microsoft\\office\\16.0\\outlook\\contact",
+                        "inputType": "checkBox",
+                        "caption": "显示附加联系人索引",
+                        "id": "L_ShowanadditionalContactsIndex"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "阿拉伯语"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 7
+                                    }
+                                },
+                                "displayName": "西里尔文"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 15
+                                    }
+                                },
+                                "displayName": "希腊语"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 16
+                                    }
+                                },
+                                "displayName": "希伯来语"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 28
+                                    }
+                                },
+                                "displayName": "泰语"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 30
+                                    }
+                                },
+                                "displayName": "越南语"
+                            }
+                        ],
+                        "valueName": "indextabsscript",
+                        "inputType": "dropdownList",
+                        "caption": "附加联系人索引:",
+                        "id": "L_AdditionalContactsIndex"
+                    }
+                ]
+            },
+            "name": "L_Selectthedefaultsettingforhowtofilenewcontacts",
+            "displayName": "选择创建新联系人时使用的默认设置",
+            "explainText": "设置对应的用户界面选项的值。",
+            "tags": [
+                "L_Contactoptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\contact"
         },
         {
             "parentCategory": {
@@ -3400,6 +4985,34 @@
         },
         {
             "parentCategory": {
+                "ref": "L_OutlookOptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_WindowsVista"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_InternetAndNetworkPathsIntoHyperlinks",
+            "displayName": "Internet 和网络路径转变为超链接",
+            "explainText": "此策略设置指定 Outlook 是否自动将代表 Internet 和网络路径的文本转换为超链接。也可以通过选中“Internet 和网络路径替换为超链接”复选框来配置此选项，该复选框位于用户界面(UI)上的 Outlook |“文件”|“选项”|“邮件”|“编辑器选项...”|“校对”|“自动更正选项...”|“自动套用​​格式”选项卡上。\n\n如果启用或不配置此策略设置，Outlook 中代表 Internet 和网络路径的文本将自动转换为超链接。这是 Outlook 的默认行为。\n\n如果禁用此策略设置，Outlook 中代表 Internet 和网络路径的文本不会自动转换成超链接。",
+            "tags": [
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\autoformat",
+            "valueName": "pgrfafo_25_1"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_ComposeMessages"
             },
             "supportedOn": {
@@ -3458,6 +5071,55 @@
             "name": "L_OutlookRichTextoptions",
             "displayName": "Outlook RTF 选项",
             "explainText": "此策略设置可控制 Outlook 发送 RTF 邮件给 Internet 收件人的方式。\n\n如果启用此策略设置，可选择以下选项用于处理发送给 Internet 上的收件人的 RTF 邮件:\n* 转换成纯文本格式 - Outlook 将此邮件转换成默认字符集中的纯文本格式。任何邮件格式设置都将丢失。\n\n如果禁用或未配置此策略设置，Outlook 自动将通过 Internet 发送的 RTF 格式邮件转换成 HTML 格式，从而保留邮件格式设置并且接收附件。",
+            "tags": [
+                "L_InternetFormatting",
+                "L_MailFormat",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\mail"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_InternetFormatting"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "plainwraplen",
+                        "minValue": 30,
+                        "minValueSpecified": true,
+                        "maxValue": 132,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "文本在第 <x> 个字符处自动换行。",
+                        "id": "L_Automaticallywraptextatxcharacters"
+                    },
+                    {
+                        "trueValue": {
+                            "decimal": {
+                                "value": 0
+                            }
+                        },
+                        "falseValue": {
+                            "decimal": {
+                                "value": 1
+                            }
+                        },
+                        "valueName": "message plain format mime",
+                        "inputType": "checkBox",
+                        "caption": "使用 UUENCODE 格式对附件进行编码",
+                        "id": "L_EncodeattachmentsinUUENCODEformatwhensending1"
+                    }
+                ]
+            },
+            "name": "L_Plaintextoptions",
+            "displayName": "纯文本选项",
+            "explainText": "通过此策略设置，您可以控制从 Outlook 中发送纯文本邮件时如何设置它们的格式。\n\n如果您启用此策略设置，Internet 电子邮件中文本自动换行，并且附件使用 UUENCODE 格式进行编码。\n\n如果您禁用此策略设置，Outlook 使用标准 MIME 格式对纯文本 Outlook 邮件中的附件进行编码。用户将不能更改此配置。\n\n如果您不配置此策略设置，行为等效于将该策略设置为“禁用”，但用户在需要时可以通过以下方式修改 Outlook 中的纯文本选项: 依次单击“工具”、“选项”、“邮件格式”选项卡、“Internet 格式”，然后更改“纯文本选项”下的值。",
             "tags": [
                 "L_InternetFormatting",
                 "L_MailFormat",
@@ -4051,8 +5713,8 @@
                 }
             },
             "name": "L_HideAppsStoreButtonInHomeTabRibbon",
-            "displayName": "隐藏“Office 应用商店”按钮",
-            "explainText": "使用“Office 应用商店”按钮，用户可以从功能区上中的“开始”选项卡获取 Outlook 相关应用。\n\n如果您启用此策略设置，则“Office 应用商店”按钮不会出现在功能区上中的“开始”选项卡上。\n\n如果您禁用或不配置此策略设置，则“Office 应用商店”按钮会出现在功能区上中的“开始”选项卡上。",
+            "displayName": "隐藏\"Office 应用商店\"按钮",
+            "explainText": "使用\"Office 应用商店\"按钮，用户可以从功能区上中的\"开始\"选项卡获取 Outlook 相关应用。\n\n如果您启用此策略设置，则\"Office 应用商店\"按钮不会出现在功能区上中的\"开始\"选项卡上。\n\n如果您禁用或不配置此策略设置，则\"Office 应用商店\"按钮会出现在功能区上中的\"开始\"选项卡上。",
             "tags": [
                 "L_Other",
                 "L_OutlookOptions",
@@ -4061,6 +5723,35 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\webext",
             "valueName": "storebuttoninribbonhometaballowed"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_HidePhotoLink",
+            "displayName": "隐藏照片链接",
+            "explainText": "此策略设置可配置指向可上传用户照片的用户的“我的网站”(被检测时)的链接。此链接在“文件”选项卡下。\n\n如果启用此策略设置，该链接不可见。\n\n如果禁用或未配置此策略设置，该链接可见。",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options",
+            "valueName": "hidephotolink"
         },
         {
             "parentCategory": {
@@ -4610,7 +6301,7 @@
             },
             "name": "L_ArchiveIgnoreLastModifiedTime",
             "displayName": "更改 Outlook 用于归档不同项目类型的条件",
-            "explainText": "如果启用此策略设置，Outlook 将忽略上次修改日期，并基于项目类型的特定日期存档项目，如下所示:\\r\n\\r\n-电子邮件: 接收日期。\\r\n\\\\-日历项: 安排约会、事件或会议的实际日期。\\r\n-任务: 完成日期。未标记为已完成且未存档的任务。只有当状态为已完成时，分配给其他用户的任务才进行存档。\\r\n-注释: 上次修改日期和时间。\\r\n-日记条目: 日记条目创建日期。\\r\n-联系人: 未存档。\\r\n\\r\n如果禁用或不配置此策略设置，则 Outlook 将基于项目类型存档不同项目，如下所示:\\r\n-电子邮件\\r\n 接收日期或上次修改日期和时间(以最新时间为准)。\\r\n日历项: 上次修改日期和时间或安排约会、事件或会议的实际日期。\\r\n-任务: 完成日期或上次修改日期和时间(以最新时间为准)。未标记为已完成的任务不存档。只有当状态为已完成时，分配给其他用户的任务才进行存档。\\r\n-注释: 上次修改日期和时间。\\r\n-日记条目: 日记条目创建日期或上次修改日期和时间(以最新时间为准)。\\r\n-联系人: 不存档。",
+            "explainText": "如果启用此策略设置，Outlook 将忽略上次修改日期，并基于项目类型的特定日期存档项目，如下所示:\r\n\r\n-电子邮件: 接收日期。\r\n-日历项: 安排约会、事件或会议的实际日期。\r\n-任务: 完成日期。未标记为已完成且未存档的任务。只有当状态为已完成时，分配给其他用户的任务才进行存档。\r\n-注释: 上次修改日期和时间。\r\n-日记条目: 日记条目创建日期。\r\n-联系人: 未存档。\r\n\r\n如果禁用或不配置此策略设置，则 Outlook 将基于项目类型存档不同项目，如下所示:\r\n-电子邮件\r\n 接收日期或上次修改日期和时间(以最新时间为准)。\r\n日历项: 上次修改日期和时间或安排约会、事件或会议的实际日期。\r\n-任务: 完成日期或上次修改日期和时间(以最新时间为准)。未标记为已完成的任务不存档。只有当状态为已完成时，分配给其他用户的任务才进行存档。\r\n-注释: 上次修改日期和时间。\r\n-日记条目: 日记条目创建日期或上次修改日期和时间(以最新时间为准)。\r\n-联系人: 不存档。",
             "tags": [
                 "L_AutoArchive",
                 "L_Other",
@@ -4620,6 +6311,84 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
             "valueName": "archiveignorelastmodifiedtime"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Righttoleft"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "从左向右"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "从右向左"
+                            }
+                        ],
+                        "valueName": "calendar direction",
+                        "inputType": "dropdownList",
+                        "caption": "设置版式方向:",
+                        "id": "L_Setlayoutdirection"
+                    },
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "基于上下文"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "从左向右"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "从右向左"
+                            }
+                        ],
+                        "valueName": "text direction",
+                        "inputType": "dropdownList",
+                        "caption": "设置全球文字方向:",
+                        "id": "L_Setglobaltextdirection"
+                    }
+                ]
+            },
+            "name": "L_LayoutOptions",
+            "displayName": "版式选项",
+            "explainText": "设置对应的用户界面选项的值。",
+            "tags": [
+                "L_Righttoleft",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
         },
         {
             "parentCategory": {
@@ -6383,6 +8152,36 @@
                     "value": 0
                 }
             },
+            "name": "L_ConfigureCachedExchangeMode",
+            "displayName": "对新的和现有的 Outlook 配置文件都使用缓存 Exchange 模式",
+            "explainText": "默认情况下，用户可以选择配置缓存 Exchange 模式或使用联机模式。通过启用此设置，可以配置新的和现有的 Outlook 配置文件使用缓存 Exchange 模式。禁用此设置将配置新的和现有的 Outlook 配置文件使用联机模式。",
+            "tags": [
+                "L_CachedExchangeMode",
+                "L_Exchangesettings",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\cached mode",
+            "valueName": "enable"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_CachedExchangeMode"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
             "name": "L_InCachedExchangemakeSendReceiveF9nulloperation",
             "displayName": "用户单击“发送/接收”或按 F9 时不以缓存 Exchange 模式进行同步",
             "explainText": "默认情况下，对于“缓存 Exchange 模式”帐户，用户单击“发送/接收”或按 F9 时，Outlook 将与 Exchange 服务器进行同步。启用此设置后，单击“发送/接收”或按 F9 不会与 Exchange 进行同步，除非只同步一个文件夹。用户可以继续使用 Shift-F9 同步当前文件夹。",
@@ -6453,6 +8252,39 @@
             "name": "L_Entersecondstowaittodownloadchangesfromserver",
             "displayName": "输入从服务器下载更改的等待秒数",
             "explainText": "指定从 Exchange 服务器下载更改之前等待的秒数。",
+            "tags": [
+                "L_CachedExchangeMode",
+                "L_Exchangesettings",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\cached mode"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_CachedExchangeMode"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "valueName": "maximum",
+                        "minValue": 0,
+                        "minValueSpecified": true,
+                        "maxValue": 86400,
+                        "maxValueSpecified": true,
+                        "inputType": "decimalTextBox",
+                        "caption": "输入同步前的等待秒数(默认为 60 秒)",
+                        "id": "L_EntersecondstowaitbeforesyncDefault60sec"
+                    }
+                ]
+            },
+            "name": "L_Entermaximumsecondstowaittosyncchanges",
+            "displayName": "输入等待同步更改的最大秒数",
+            "explainText": "指定与 Exchange 服务器同步更改之前等待的最大秒数。",
             "tags": [
                 "L_CachedExchangeMode",
                 "L_Exchangesettings",
@@ -7032,6 +8864,35 @@
         },
         {
             "parentCategory": {
+                "ref": "L_AccountSettingsEmail"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_PreventSavingCredentialsForBasicAuthenticationPolicy",
+            "displayName": "禁用保存基本身份验证策略的凭据",
+            "explainText": "通过此策略设置，您可以防止 Outlook 使用基本身份验证保存用户凭据。\n\n如果启用此策略设置，Outlook 将不会使用基本身份验证保存用户凭据。\n\n如果禁用或未配置此策略设置，Outlook 将允许用户针对服务器使用基本身份验证时保存凭据。这些凭据被使用用户在计算机上的权限运行的任何进程存储为常规和可检索的凭据。",
+            "tags": [
+                "L_AccountSettingsEmail",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\rpc",
+            "valueName": "disablebasicauthsavedcreds"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Exchangesettings"
             },
             "supportedOn": {
@@ -7083,7 +8944,7 @@
             },
             "name": "L_RPCProxyAuthenticationSetting",
             "displayName": "RPC 代理身份验证设置",
-            "explainText": "此策略设置确定 Outlook Anywhere 的 RPC 代理身份验证设置。\n \n如果启用此策略设置，您可以指定 Outlook 使用的代理身份验证设置，这将替代“自动发现”中指定的任何代理身份验证设置。\n\n如果不配置此策略设置，Outlook 将使用“自动发现”中指定的代理服务器身份验证。",
+            "explainText": "此策略设置确定 Outlook Anywhere 的 RPC 代理身份验证设置。\n\n如果启用此策略设置，您可以指定 Outlook 使用的代理身份验证设置，这将替代“自动发现”中指定的任何代理身份验证设置。\n\n如果不配置此策略设置，Outlook 将使用“自动发现”中指定的代理服务器身份验证。",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -7116,7 +8977,7 @@
             },
             "name": "L_RPCProxyServerName",
             "displayName": "RPC 代理服务器名称",
-            "explainText": "此策略设置确定当连接到 Exchange 时 Outlook Anywhere 使用的 RPC 代理服务器。\n \n如果启用此策略设置，Outlook 在连接到 Exchange 时仅使用您指定的 RPC 代理服务器。它会忽略“自动发现”中指定的代理服务器。\n\n如果禁用或不配置此策略设置，Outlook 将使用“自动发现”中指定的 RPC 代理服务器。",
+            "explainText": "此策略设置确定当连接到 Exchange 时 Outlook Anywhere 使用的 RPC 代理服务器。\n\n如果启用此策略设置，Outlook 在连接到 Exchange 时仅使用您指定的 RPC 代理服务器。它会忽略“自动发现”中指定的代理服务器。\n\n如果禁用或不配置此策略设置，Outlook 将使用“自动发现”中指定的 RPC 代理服务器。",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -7464,37 +9325,6 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "disablecrossaccountcopy",
-                        "requiredSpecified": false,
-                        "expandableSpecified": false,
-                        "maxLength": 100,
-                        "maxLengthSpecified": true,
-                        "inputType": "textBox",
-                        "id": "L_PreventCopyingOrMovingItemsBetweenAccountsID"
-                    }
-                ]
-            },
-            "name": "L_PreventCopyingOrMovingItemsBetweenAccounts",
-            "displayName": "禁用在帐户间复制或移动项目",
-            "explainText": "通过此策略设置，您可以防止项目被复制或移动到其他帐户或 PST。\n\n如果启用此策略设置，项目将被禁止移动或复制到其他帐户或 PST。输入以下详细信息之一:\n\n- \"Contoso.com\": 防止从列出的域相应的帐户复制或移动\n- \"*\": 防止从所有帐户或 PTS 复制\n- \"SharePoint\": 防止来自 SharePoint PST 的副本或移动\n\n如果禁用或未配置此策略设置，允许在帐户或 PST 间复制或移动项目。",
-            "tags": [
-                "L_Exchangesettings",
-                "L_ToolsAccounts",
-                "L_MicrosoftOfficeOutlook"
-            ],
-            "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\outlook"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Exchangesettings"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -7507,7 +9337,7 @@
             },
             "name": "L_AutomaticallyConfigureProfileBasedOnActive",
             "displayName": "基于 Active Directory 主 SMTP 地址自动配置配置文件",
-            "explainText": "基于 Active Directory 主 SMTP 地址自动配置仅第一个配置文件\n\n此策略设置可控制加入 Active Directory 环境中的域的用户是否可以更改在 Outlook 中设置帐户时使用的主 SMTP 地址。\n\n如果启用此策略设置，用户可以通过输入配置文件名称来创建新的配置文件，而不使用“新建帐户”向导。创建配置文件时不会显示任何用户界面。\n\n成功创建第一个配置文件后，将忽略此密钥。",
+            "explainText": "此策略设置可控制创建任何新配置文件时是否自动使用用户的 Active Directory 主 SMTP 地址。\n\n如果启用此策略设置，则当用户创建任何新配置文件时，用户的 Active Directory 主 SMTP 地址将用于该配置文件。用户只能输入配置文件名称。用于配置特定配置文件设置的向导在创建配置文件时不会显示给用户。\n\n注意: 如果只希望第一个新配置文件使用 Active Directory 主 SMTP 地址，并允许用户在创建其他配置文件时指定不同的 SMTP 地址，请使用 \"基于 Active Directory 主 SMTP 地址自动配置配置文件 (一次性) \" 策略设置。\n\n如果禁用或未配置此策略设置，则当用户创建新的配置文件时，用于配置特定配置文件设置的向导将显示给用户，用户可以指定任何 SMTP 地址作为配置文件创建。",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -7535,8 +9365,8 @@
                 }
             },
             "name": "L_AutomaticallyConfigureProfileBasedOnActiveOnce",
-            "displayName": "基于 Active Directory 主 SMTP 地址仅自动配置第一个配置文件",
-            "explainText": "基于 Active Directory 主 SMTP 地址自动配置一次配置文件\n\n此策略设置可控制加入 Active Directory 环境中的域的用户是否可以更改在 Outlook 中设置帐户时使用的主 SMTP 地址。\n\n如果启用此策略设置，用户可以通过输入配置文件名称来创建新的配置文件。该配置文件不是使用“新建帐户”向导创建的。创建配置文件时不会显示任何用户界面。\n\n成功创建第一个配置文件后，将忽略此密钥。",
+            "displayName": "根据 Active Directory 的主 SMTP 地址自动配置配置文件（一次性）",
+            "explainText": "此策略设置控制在使用用户的 Active Directory 主 SMTP 地址自动创建第一个配置文件后，用户是否可以创建其他配置文件并指定不同的 SMTP 地址。\n\n如果启用此策略设置，则在用户首次创建新配置文件时，用户的 Active Directory 主 SMTP 地址用于该配置文件。用户只能输入配置文件名称。在创建配置文件时，用于配置特定配置文件设置的向导不会显示给用户。\n\n自动创建第一个配置文件后，用户可以手动创建其他配置文件。将向用户显示用于配置特定配置文件设置的向导，并且用户可以在创建配置文件时指定任何 SMTP 地址。\n\n注意: 如果你希望在创建新配置文件时始终使用用户的 Active Directory 主 SMTP 地址，请改用“基于 Active Directory 主 SMTP 地址自动配置配置文件”策略设置。如果启用了该策略设置，则它将优先于此策略设置。\n\n如果禁用或未配置此策略设置，则当用户创建新配置文件时，将向用户显示用于配置特定配置文件设置的向导，并且用户可以在创建配置文件时指定任何 SMTP 地址。",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -7605,6 +9435,35 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\folders",
             "valueName": "disableeditpermissions"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Predefined"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableEditDefaultUserPermissions",
+            "displayName": "限制可在邮件文件夹和日历上，为“默认”、“匿名”或“我的组织”进行分配的权限",
+            "explainText": "此策略设置允许限制可在邮件文件夹和日历上向默认、匿名或\"我的组织\"分配哪些权限。\n\n如果启用此策略设置，用户只能向\"默认、匿名\"或\"我的组织\"分配以下权限。\n\n- 邮件文件夹没有\n- 日历上的无内容或基本闲/忙信息\n\n用户无法向默认、匿名或\"我的组织\"分配任何其他权限。仍可使用所有权限向邮件文件夹和日历上的其他用户分配。\n\n如果禁用或不配置此策略设置，用户可以在邮件文件夹和日历上向默认、匿名或\"我的组织\"分配任何权限。",
+            "tags": [
+                "L_Predefined",
+                "L_Disableitemsinuserinterface",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\folders",
+            "valueName": "disableeditdefaultuserpermissions"
         },
         {
             "parentCategory": {
@@ -7724,7 +9583,7 @@
             },
             "name": "L_DisableRpcTransportFallback",
             "displayName": "禁用协议之间的连接回退",
-            "explainText": "通过此策略设置，您可以控制当 Outlook 试图连接到 Microsoft Exchange Server 时的连接传输回退行为。\n \n如果您正在使用 Outlook Anywhere (RPC over HTTP)连接到 Microsoft Exchange Server，则此策略设置适用。“Microsoft Exchange 代理服务器设置”对话框(通过控制面板或帐户设置访问)上有两个 Outlook 配置文件设置，可配置默认的连接传输回退行为。\n \n- 在快速网络中，首先使用 HTTP 连接，然后使用 TCP/IP 连接\n- 在低速网络中，首先使用 HTTP 连接，然后使用 TCP/IP 连接\n \n例如，如果您使用快速网络，并且在“Microsoft Exchange 代理服务器设置”对话框中启用“在快速网络中，首先使用 HTTP 连接，然后使用 TCP/IP 连接”设置，则 Outlook 首先试图使用 HTTP 连接到 Exchange Server。如果 Outlook 无法使用 HTTP 进行连接，则将尝试使用 TCP/IP 进行连接。\n \n如果启用此策略设置，并且 Outlook 试图与 Microsoft Exchange Server 连接失败，则不管“Microsoft Exchange 代理服务器设置”对话框中指定的内容如何，Outlook 都不会回退到 TCP/IP 协议。\n\n如果禁用或不配置此策略设置，Outlook 与 Microsoft Exchange Server 的连接尝试可以从 TCP/IP 回退到 HTTP，或者从 HTTP 回退到 TCP/IP，具体取决于“Microsoft Exchange 代理服务器设置”对话框中指定的设置。",
+            "explainText": "通过此策略设置，您可以控制当 Outlook 试图连接到 Microsoft Exchange Server 时的连接传输回退行为。\n\n如果您正在使用 Outlook Anywhere (RPC over HTTP)连接到 Microsoft Exchange Server，则此策略设置适用。“Microsoft Exchange 代理服务器设置”对话框(通过控制面板或帐户设置访问)上有两个 Outlook 配置文件设置，可配置默认的连接传输回退行为。\n\n- 在快速网络中，首先使用 HTTP 连接，然后使用 TCP/IP 连接\n- 在低速网络中，首先使用 HTTP 连接，然后使用 TCP/IP 连接\n\n例如，如果您使用快速网络，并且在“Microsoft Exchange 代理服务器设置”对话框中启用“在快速网络中，首先使用 HTTP 连接，然后使用 TCP/IP 连接”设置，则 Outlook 首先试图使用 HTTP 连接到 Exchange Server。如果 Outlook 无法使用 HTTP 进行连接，则将尝试使用 TCP/IP 进行连接。\n\n如果启用此策略设置，并且 Outlook 试图与 Microsoft Exchange Server 连接失败，则不管“Microsoft Exchange 代理服务器设置”对话框中指定的内容如何，Outlook 都不会回退到 TCP/IP 协议。\n\n如果禁用或不配置此策略设置，Outlook 与 Microsoft Exchange Server 的连接尝试可以从 TCP/IP 回退到 HTTP，或者从 HTTP 回退到 TCP/IP，具体取决于“Microsoft Exchange 代理服务器设置”对话框中指定的设置。",
             "tags": [
                 "L_Exchangesettings",
                 "L_ToolsAccounts",
@@ -9302,6 +11161,59 @@
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "MAPI 提供程序不支持"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "所有 MAPI 提供程序支持"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "从不"
+                            }
+                        ],
+                        "valueName": "fastshutdownbehavior",
+                        "inputType": "dropdownList",
+                        "id": "L_ConfigureFastShutdownBehaviorDropID"
+                    }
+                ]
+            },
+            "name": "L_ConfigureFastShutdownBehavior",
+            "displayName": "配置快速关闭行为",
+            "explainText": "此策略设置可控制 Outlook 的“快速关闭”行为。\n\n如果启用此策略设置，您可以选择以下选项之一:\n\n- MAPI 提供程序不支持: Outlook 必须始终使用“快速关闭”，除非 MAPI 提供程序明确不支持它。\n- 所有 MAPI 提供程序支持: 如果所有 MAPI 提供程序不支持它，Outlook 仅使用“快速关闭”。\n- 从不: Outlook 从不使用“快速关闭”\n\n如果禁用或未配置此策略设置，该行为与“MAPI 提供程序不支持”选项相同。",
+            "tags": [
+                "L_Shutdown",
+                "L_Miscellaneous",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\shutdown"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Shutdown"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
             "enabledValue": {
                 "decimal": {
                     "value": 1
@@ -10368,48 +12280,6 @@
         },
         {
             "parentCategory": {
-                "ref": "L_OutlookSocialConnector"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "trustedproviderslist",
-                        "required": true,
-                        "requiredSpecified": true,
-                        "expandableSpecified": false,
-                        "maxLengthSpecified": false,
-                        "inputType": "textBox",
-                        "caption": "用分号隔开 ProgID",
-                        "id": "L_SpecifyListOfSocialNetworkProvidersToLoadID"
-                    }
-                ]
-            },
-            "name": "L_SpecifyListOfSocialNetworkProvidersToLoad",
-            "displayName": "指定要加载的社交网络提供程序的列表",
-            "explainText": "此策略设置可确定 Outlook Social Connector 加载的社交网络提供程序的列表。\n\n如果启用此策略设置，您可以输入将由 Outlook Social Connector 加载的社交网络提供程序的提供程序 progID 列表。此列表必须使用分号隔开。请注意，如果启用此策略设置，只有在此列表上的社交网络提供程序将由 Outlook Social Connector 加载。将不会加载其他任何社交网络提供程序。\n\n如果禁用或未配置此策略设置，Outlook Social Connector 可加载用户指定的任何提供程序。",
-            "tags": [
-                "L_OutlookSocialConnector",
-                "L_MicrosoftOfficeOutlook"
-            ],
-            "application": "outlk16",
-            "key": "software\\microsoft\\office\\outlook\\socialconnector",
-            "valueName": "providersecuritymode"
-        },
-        {
-            "parentCategory": {
                 "ref": "L_Exchangesettings"
             },
             "supportedOn": {
@@ -10467,8 +12337,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "activationalertthreshold"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10500,8 +12369,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "activationretrylimit"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10533,8 +12401,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "alertinterval"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10566,8 +12433,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "memoryalertthreshold"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10599,8 +12465,7 @@
                 "L_MicrosoftOfficeOutlook"
             ],
             "application": "outlk16",
-            "key": "software\\microsoft\\office\\16.0\\wef\\outlook",
-            "valueName": "restartmanagerretrylimit"
+            "key": "software\\microsoft\\office\\16.0\\wef\\outlook"
         },
         {
             "parentCategory": {
@@ -10710,7 +12575,7 @@
             },
             "name": "L_DisablePreviewPlace",
             "displayName": "禁用“预览位置”。",
-            "explainText": "此策略设置决定是否允许使用“预览位置”功能。如果启用此设置，将阻止使用“预览位置”功能。\n        用户将不再能够预览 Outlook 中即将推出的更改并提供反馈。\n\\t注意: 此策略设置仅适用于订阅版本的 Office，例如 Office 365 专业增强版。",
+            "explainText": "此策略设置会决定是否允许使用“预览位置”功能。如果启用此设置，则将阻止使用“预览位置”功能。\n用户将不再能够预览 Outlook 中即将推出的更改并提供反馈。\n\\t注意: 此策略设置仅适用于 Office 的订阅版本(例如 Microsoft 365 企业应用版)。",
             "tags": [
                 "L_Other",
                 "L_OutlookOptions",
@@ -10739,7 +12604,7 @@
             },
             "name": "L_DisableOnlineModeAuthDiagnostics",
             "displayName": "禁用 Get Diagnostics 的联机模式。",
-            "explainText": " 通过此策略设置，可确定是否允许 Get Diagnostics 的联机模式。如果启用此设置，将阻止 Get Diagnostics 功能向我们的服务发送身份验证和诊断日志。\n         用户现在将进入脱机模式。我们将收集所有日志，并将其存储在用户的“下载”文件夹中。此用户可与支持部门联系，确定是否要向我们发送日志。",
+            "explainText": " 通过此策略设置，可确定是否允许 Get Diagnostics 的联机模式。如果启用此设置，将阻止 Get Diagnostics 功能向我们的服务发送身份验证和诊断日志。\n 用户现在将进入脱机模式。我们将收集所有日志，并将其存储在用户的“下载”文件夹中。此用户可与支持部门联系，确定是否要向我们发送日志。",
             "tags": [
                 "L_Other",
                 "L_OutlookOptions",
@@ -10768,7 +12633,7 @@
             },
             "name": "L_EnableEndEarly",
             "displayName": "提早结束约会和会议",
-            "explainText": "通过此策略设置，可通过在用户创建约会或会议时指定分钟数，控制是否将约会和会议的结束时间提前。\n\n如果启用此策略设置，当用户创建约会或会议时，约会和会议的结束时间将提前特定的分钟数。\n\n若要指定将约会和会议缩短多少分钟，可使用“将短时间约会和会议的结束时间提前指定的分钟数”和“将长时间约会和会议的结束时间提前指定的分钟数”策略设置。 \n\n如果不允许这些策略设置以分钟为单位指定时间，则用户可转到“文件”>“选项”>“日历”，以分钟为单位指定时间。如果用户尚未指定时间，将使用默认值: 短时间会议 5 分钟，长时间会议 10 分钟。\n\n如果禁用此策略设置，则不能将约会和会议配置为提前结束，并会在“文件”>“选项”>“日历”下禁用相应选项，用户不能启用它。\n\n如果不配置此策略设置，则不会将约会和会议配置为提前结束，但用户可以转到“文件”>“选项”>“日历”以允许约会和会议提前结束。\n\n注意: 此策略设置仅适用于订阅版本的 Office，例如 Office 365 专业增强版。",
+            "explainText": "通过此策略设置，可控制在用户创建约会或会议时，是否要将约会和会议的结束时间提前指定的分钟数。\n\n如果启用此策略设置，则在用户创建约会或会议时，会将约会和会议的结束时间提前指定的分钟数。\n\n要指定需将约会和会议时长缩短多少分钟，可使用“将短时间约会和会议的结束时间提前指定的分钟数”和“将长时间约会和会议的结束时间提前指定的分钟数”策略设置。\n\n如果不启用这些策略设置来指定时间(以分钟为单位)，用户将可转到“文件”>“选项”>“日历”来指定一个时间(以分钟为单位)。如果用户未指定时间，则短时间会议将使用默认值 5 分钟，长时间会议使用默认值 10 分钟。\n\n如果禁用此策略设置，则不可将约会和会议配置为提前结束，“文件”>“选项”>“日历”下的选项将被禁用且无法由用户启用。\n\n如果不配置此策略设置，则不可将约会和会议配置为提前结束，但用户可转到“文件”>“选项”>“日历”，来将约会和会议设置为提前结束。\n\n注意: 此策略设置仅适用于 Office 的订阅版本(例如 Microsoft 365 企业应用版)。",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10778,6 +12643,55 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar",
             "valueName": "endeventsearly"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Calendaroptions"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "string": "None"
+                                },
+                                "displayName": "无"
+                            },
+                            {
+                                "value": {
+                                    "string": "End_Early"
+                                },
+                                "displayName": "提前结束"
+                            },
+                            {
+                                "value": {
+                                    "string": "Start_Late"
+                                },
+                                "displayName": "推迟开始"
+                            }
+                        ],
+                        "valueName": "shortenevents",
+                        "inputType": "dropdownList",
+                        "caption": "选择缩短事件类型",
+                        "id": "L_SelecttheShortenEventsType"
+                    }
+                ]
+            },
+            "name": "L_ShortenEventsType",
+            "displayName": "缩短约会与会议",
+            "explainText": "通过此策略设置，可按指定分钟数缩短约会和会议的默认持续时间。如果启用此策略设置，则可在以下选项之间进行选择: 提前结束、推迟开始、无。\n如果选择“提前结束”，则会议和约会将按指定分钟数提前结束。\n如果选择“推迟开始”，则会议和约会将按指定的分钟数推迟开始。\n如果选择“无”，则默认会议持续时间将不会缩短。\n在所有情况下，此功能的设置都将在“Outlook 选项”对话框中禁用。\n如果未配置此策略设置，则用户可以通过转到“文件”>“选项”>“日历”来修改这些设置。\n\n注意: 此策略设置仅适用于 Office 的订阅版本，如 Microsoft 365 企业应用版。",
+            "tags": [
+                "L_Calendaroptions",
+                "L_Preferences",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\calendar"
         },
         {
             "parentCategory": {
@@ -10802,7 +12716,7 @@
             },
             "name": "L_EndEarlyShort",
             "displayName": "指定分钟数，将短时间约会和会议的结束时间提前",
-            "explainText": "此策略设置，可以指定在用户创建约会或会议时，将短时间约会或会议的结束时间提前多少分钟。短时间约会或会议即持续时间不到一小时的约会或会议。\n\n如果启用此策略设置，可以指定在用户创建约会或会议时要将约会或会议结束时间提前的分钟数。用户无法通过转到“文件”>“选项”>“日历”来更改此值。\n\n注意: 应还启用“提前结束约会和会议”策略设置\n\n如果禁用或不配置此策略设置，则使用默认值 5 分钟或用户转到“文件”>“选项”>“日历”指定的任何值。\n\n注意: 此策略设置仅适用于订阅版本的 Office，例如 Office 365 专业增强版。",
+            "explainText": "通过此策略设置，可指定在用户创建约会或会议时，将短时间约会或会议的结束时间提前多少分钟。短时间约会或会议的持续时间不到一小时。\n\n如果启用此策略设置，则可指定在用户创建约会或会议时要将约会或会议结束时间提前多少分钟。用户无法通过转到“文件”>“选项”>“日历”来更改此值。\n\n注意: 还应启用“提前结束约会和会议”策略设置\n\n如果禁用或不配置此策略设置，则使用默认值 5 分钟或用户转到“文件”>“选项”>“日历”指定的任何值。\n\n注意: 此策略设置仅适用于 Office 的订阅版本(例如 Microsoft 365 企业应用版)。",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10835,7 +12749,7 @@
             },
             "name": "L_EndEarlyLong",
             "displayName": "指定分钟数，将长时间约会和会议的结束时间提前",
-            "explainText": "此策略设置，可以指定在用户创建约会或会议时，将长时间约会或会议的结束时间提前多少分钟。长时间约会或会议即持续时间在一小时或以上的约会或会议。\n\n如果启用此策略设置，可以指定在用户创建约会或会议时要将约会或会议结束时间提前的分钟数。用户无法通过转到“文件”>“选项”>“日历”来更改此值。\n\n注意: 应还启用“提前结束约会和会议”策略设置\n\n如果禁用或不配置此策略设置，则使用默认值 10 分钟或用户转到“文件”>“选项”>“日历”指定的任何值。\n\n注意: 此策略设置仅适用于订阅版本的 Office，例如 Office 365 专业增强版。",
+            "explainText": "通过此策略设置，可指定在用户创建约会或会议时，将长时间约会或会议的结束时间提前多少分钟。长时间约会或会议的持续时间至少为一小时。\n\n如果启用此策略设置，可指定在用户创建约会或会议时要将约会或会议结束时间提前多少分钟。用户无法通过转到“文件”>“选项”>“日历”来更改此值。\n\n注意: 还应启用“提前结束约会和会议”策略设置\n\n如果禁用或不配置此策略设置，则使用默认值 10 分钟或用户转到“文件”>“选项”>“日历”指定的任何值。\n\n注意: 此策略设置仅适用于 Office 的订阅版本(例如 Microsoft 365 企业应用版)。",
             "tags": [
                 "L_Calendaroptions",
                 "L_Preferences",
@@ -10863,8 +12777,8 @@
                 }
             },
             "name": "L_OnSendAddinsEnabled",
-            "displayName": "无法加载 Web 扩展时禁用发送。",
-            "explainText": "如果启用此策略设置，在从 Exchange 加载 Web 加载项之前，Outlook 将不允许发送电子邮件和会议请求。",
+            "displayName": "无法加载 web 加载项时阻止发送",
+            "explainText": "通过此策略设置，你可以控制是否在从 Exchange 加载 web 加载项之前，阻止 Outlook 发送电子邮件和会议请求。\n\n如果启用此策略设置，则在从 Exchange 加载 web 加载项之前，Outlook 不允许发送电子邮件和会议请求。\n\n如果禁用或未配置此策略设置，即使尚未从 Exchange 加载最新的 web 加载项，Outlook 也将允许发送电子邮件和会议请求。\n\n有关何时使用此设置的详细信息，请参阅 https://go.microsoft.com/fwlink/p/?linkid=2161562",
             "tags": [
                 "L_TrustCenter",
                 "L_Security",
@@ -11249,6 +13163,180 @@
             "application": "outlk16",
             "key": "software\\microsoft\\office\\16.0\\outlook\\autodiscover",
             "valueName": "enableoffice365configservice"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Cryptography"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_AllowPrivateKeyCheck",
+            "displayName": "当用户发送将其自身作为收件人包含在内的加密电子邮件时，检查该用户的私钥",
+            "explainText": "此策略设置控制当用户发送加密的电子邮件，并且用户作为电子邮件的收件人包含在内时，Outlook 是否检查用户的私钥。用户可直接或作为通讯组列表的成员被包含在收件人中。\n\n如果启用此策略设置，Outlook 将检查用户的私钥。\n\n如果禁用此策略设置，Outlook 不检查用户的私钥。\n\n如果未配置此策略设置，Outlook 将检查用户的私钥。",
+            "tags": [
+                "L_Cryptography",
+                "L_Security",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\security",
+            "valueName": "allowprivatekeycheck"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableAdminNotifications",
+            "displayName": "禁用 Outlook 租户管理员通知",
+            "explainText": "此策略设置用于确定租户管理员是否可在 Outlook 中接收支持通知。\n\n默认值(0): 已登录的租户管理员将收到有关影响其租户的潜在问题和修复的状态更新。\n\n如果启用此设置，则已登录的租户管理员将不会收到有关影响其租户的潜在问题和修复的状态更新。",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\general",
+            "valueName": "disableadminnotifications"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DisableCrashNotificationOnRestart",
+            "displayName": "在 Outlook 重新启动时，请禁用 Outlook 崩溃通知。",
+            "explainText": "此策略设置确定是否允许 Outlook 在重新启动时崩溃通知。启用此设置将在重启时阻止 Outlook 崩溃通知。",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\general",
+            "valueName": "disablecrashnotificationonrestart"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Delegates"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_DelegateSentItemsStyle",
+            "displayName": "正在将来自共享邮箱的邮件保存到“已发送邮件”文件夹",
+            "explainText": "此策略设置可控制是否将从共享邮箱发送的邮件保存到共享邮箱的 \"已发送邮件\" 文件夹中。\n\n默认情况下，从共享邮箱发送的邮件不会保存到共享邮箱的 \"已发送邮件\" 文件夹中。\n\n如果启用此策略设置，则将从共享邮箱发送的邮件保存到共享邮箱的 \"已发送邮件\" 文件夹中。\n\n如果禁用或未配置此策略设置，则不会将从共享邮箱发送的邮件保存到共享邮箱的 \"已发送邮件\" 文件夹中。",
+            "tags": [
+                "L_Delegates",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\preferences",
+            "valueName": "delegatesentitemsstyle"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Exchangesettings"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_AlwaysUseMSOAuthForAutodiscover",
+            "displayName": "自动发现始终能够使用新式身份验证",
+            "explainText": "此策略设置控制无论主邮箱连接类型支持哪些身份验证方法，自动发现是否始终能够使用新式身份验证。\n\n默认情况下，自动发现仅使用主邮箱连接类型支持的身份验证方法。对于某些连接类型，新式验证并非始终是受支持的身份验证方法之一。\n\n如果启用此策略设置，无论主邮箱连接类型支持哪种身份验证方法，自动发现都始终能够使用新式身份验证。启用此策略设置可能导致在使用新式身份验证，但不支持该连接类型时，额外提示用户提供其密码。\n\n如果禁用或不配置此策略设置，自动发现将仅使用主邮箱连接类型支持的身份验证方法。",
+            "tags": [
+                "L_Exchangesettings",
+                "L_ToolsAccounts",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\exchange",
+            "valueName": "alwaysusemsoauthforautodiscover"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Other"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_RecommendOutlookExtension",
+            "displayName": "建议使用 Microsoft Outlook 扩展",
+            "explainText": "此策略设置控制 Outlook 应用和 Outlook Web 应用的 Windows 10 用户是否会看到安装适用于 Microsoft Edge 的新 Microsoft Outlook 扩展的建议。如果用户选择单击该建议，则将转到 Microsoft Outlook 扩展页面，他们可以选择在其中安装此基于 Web 的生产力加载项。你的用户可以关闭建议，并将只会看到两次建议。如果你的用户选择安装扩展，则将能够从 Microsoft Edge 中的图标访问其邮件、日历、联系人和任务，而无需打开另一个浏览器选项卡。扩展是 Outlook 网页版的“微型”版本，可作为浏览器标头中的一键式浮出控件运行。\n\n将来，Microsoft 可能会为 Chrome 浏览器发布此扩展的一个版本。Microsoft 也将遵循此策略，以便将来推广 Chrome 扩展。\n\n如果启用或未配置此策略设置，则会向用户提供建议。\n\n如果禁用此策略设置，则不会向用户提供建议。\n\n注意: 此策略设置仅适用于 Office 的订阅版本，如 Microsoft 365 企业应用版和 Outlook web 应用。\n\n有关详细信息，请查看 https://go.microsoft.com/fwlink/?linkid=2165458",
+            "tags": [
+                "L_Other",
+                "L_OutlookOptions",
+                "L_MicrosoftOfficeOutlook"
+            ],
+            "application": "outlk16",
+            "key": "software\\microsoft\\office\\16.0\\outlook\\options\\general",
+            "valueName": "recommendoutlookextension"
         }
     ]
 }

@@ -5,7 +5,7 @@ V8.2.8.2
 3. Se ha solucionado un problema por el cual la operación de descarga se activaba automáticamente en el modo ISO.
 4. Se solucionado un problema por el cual los avatares de los usuarios no se podían cargar en Windows Server 2019.
 5. Se ha solucionado un problema por el que el canal era incorrecto al instalar la edición minorista de Office con la instalación de un solo clic.
-6. Se ha solucionado un problema de desalineación de los iconos en DPI altos (escalado del 165%).
-7. Mejoras en la accesibilidad.
+6. Se ha solucionado un problema de desalineación de los iconos en DPI altos (escalado del 165%). [#371](https://github.com/YerongAI/Office-Tool/issues/371)
+7. Mejoras en la accesibilidad. [#376](https://github.com/YerongAI/Office-Tool/issues/376)
 8. Se ha eliminado la obsoleta herramienta oficial de desinstalación.
 9. Otros problemas corregidos.

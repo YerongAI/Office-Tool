@@ -78,11 +78,11 @@ We encourage everyone to help with localization. The following is how to do it.
 There is the files you can translate with:
 
 ``` batch
-src\OfficeToolPlus\Style\Languages
-src\OfficeToolPlus\Style\ProductsName
-config\Launcher
-config\Message
-config\Update Logs
+src/OfficeToolPlus/Style/Languages
+src/OfficeToolPlus/Style/ProductsName
+config/Launcher
+config/Message
+config/Update Logs
 ```
 
 Note: I don't suggest anyone to change preferences data! This data is provided by Microsoft.

@@ -1,11 +1,10 @@
 ---
 name: Ask for Help / 寻求帮助
-about: If you have any questions, you can ask for help.
+about: Please go to [discussions](https://github.com/YerongAI/Office-Tool/discussions).
 title: "[ASK] "
 labels: help wanted
 assignees: ''
 
 ---
 
-**Question:**
-> Write down here
+Please go to [discussions](https://github.com/YerongAI/Office-Tool/discussions).

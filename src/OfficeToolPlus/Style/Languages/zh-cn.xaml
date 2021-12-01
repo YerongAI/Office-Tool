@@ -45,12 +45,19 @@
     <sys:String x:Key="Query">查询</sys:String>
     <sys:String x:Key="Uninstall">卸载(_U)</sys:String>
 
+    <!-- Context Menu -->
+    <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
+    <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
+    <!-- If you can't understand what is hotkey, remove '&amp;' when you are translating. -->
+    <sys:String x:Key="CD-ROM_InstallNow">立即安装(&amp;I)</sys:String>
+    <sys:String x:Key="CopyToClipboard">复制到剪贴板</sys:String>
+
     <!-- Greetings -->
     <!-- Showed when app started. -->
     <sys:String x:Key="GreetingHi">您好! {0}</sys:String>
-    <!-- 06:00 - 11:00 -->
+    <!-- 06:00 - 10:00 -->
     <sys:String x:Key="GreetingGoodMorning">早上好! {0}</sys:String>
-    <!-- 11:00 - 13:00 -->
+    <!-- 10:00 - 13:00 -->
     <sys:String x:Key="GreetingGoodAfternoon1">中午好! {0}</sys:String>
     <!-- 13:00 - 18:00 -->
     <sys:String x:Key="GreetingGoodAfternoon2">下午好! {0}</sys:String>
@@ -309,7 +316,7 @@
     <sys:String x:Key="QueryErrorCode">查询错误代码信息</sys:String>
     <sys:String x:Key="QueryErrorCodeDescription">错误代码通常以「0x」开头，例如: 0x2 或者 0x80070002.</sys:String>
     <sys:String x:Key="ToolboxCheckKMS">检查 KMS 可用性</sys:String>
-    <sys:String x:Key="ToolboxCheckKMSDescription">使用逗号或者分行隔开每个 KMS 地址，你可以给地址添加一个端口。&#x000A;若要测试是否可以激活，请使用包含 vlmcs 的版本。</sys:String>
+    <sys:String x:Key="ToolboxCheckKMSDescription">使用逗号或者分行隔开每个 KMS 地址，你可以给地址添加一个端口。</sys:String>
     <sys:String x:Key="CheckKMSConnectionFailed">连接失败！</sys:String>
     <sys:String x:Key="CheckKMSConnectionSuccessful">连接成功</sys:String>
     <sys:String x:Key="CheckKMSActivationSuccessful">连接成功，激活测试成功</sys:String>
@@ -331,7 +338,9 @@
     <sys:String x:Key="ToolboxRepairVBS">修复 VBS 文件关联</sys:String>
     <sys:String x:Key="ToolboxRepairVBSDescription">这将会重建 VBS 文件关联，适用于激活 Office 时提示「输入错误: 没有文件扩展 ".vbs" 的脚本引擎」。</sys:String>
     <sys:String x:Key="ToolboxRepairVariables">修复系统变量</sys:String>
-    <sys:String x:Key="ToolboxRepairVariablesDescription">这将会重置你的系统变量为默认值，如果不确定，请勿使用此功能。</sys:String>
+    <sys:String x:Key="ToolboxRepairVariablesDescription">这将会重置你的系统变量为默认值。如果你不确定，请勿使用此功能。&#x000A;&#x000A;修复完成后，你需要重启系统以使更改生效。</sys:String>
+    <sys:String x:Key="ToolboxRepairWMI">修复 WMI 组件</sys:String>
+    <sys:String x:Key="ToolboxRepairWMIDescription">这将会重新注册 WMI 组件。如果你不确定，请勿使用此功能。&#x000A;&#x000A;修复完成后，你需要重启系统以使更改生效。</sys:String>
     <sys:String x:Key="ToolboxRepairTemplates">恢复 Word 默认文档模板</sys:String>
     <sys:String x:Key="ToolboxRepairTemplatesDescription">这将会重建 Word 的默认模板，适用于 Word 在新建文档的时候显示「兼容模式」。</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettings">恢复 Office 设置为默认设置</sys:String>
@@ -442,7 +451,8 @@
     <sys:String x:Key="Task_CheckVersion">正在查询 Office 版本信息</sys:String>
     <sys:String x:Key="Task_CheckKMS">正在测试 KMS 主机</sys:String>
     <sys:String x:Key="Task_CollectLog">正在收集 Office 安装程序日志</sys:String>
-    <sys:String x:Key="Task_RemoveOffice">正在移除 Office</sys:String>
+    <sys:String x:Key="Task_RemoveOffice">正在移除 Office，请稍等</sys:String>
+    <sys:String x:Key="Task_RepairWMI">正在修复 WMI，请稍等</sys:String>
     <sys:String x:Key="Task_ConvertDocument">正在转换 Office 文档</sys:String>
     <!-- Example: Installing iSlide, please wait. -->
     <sys:String x:Key="Task_InstallingApp">正在安装 {0}，请稍等</sys:String>
@@ -470,12 +480,14 @@
     <sys:String x:Key="InfoRestart">你需要重新启动程序以使更改生效。</sys:String>
     <sys:String x:Key="InfoUpdate">您使用的是最新版本的 Office Tool Plus.</sys:String>
     <sys:String x:Key="InfoNoConfigured">配置信息不正确，请检查配置，然后重试。</sys:String>
+    <sys:String x:Key="InfoNoLanguagePackAddedForDownload">检测到您没有添加语言。大多数情况下，我们建议您添加语言以免发生问题。</sys:String>
     <sys:String x:Key="InfoAllExist">没有需要下载的文件，所有文件均存在。</sys:String>
     <sys:String x:Key="InfoFinishVerifying">安装文件校验完成，没有发现任何错误。</sys:String>
     <sys:String x:Key="InfoDownloading">Office 正在下载。</sys:String>
     <sys:String x:Key="InfoSetupExited">Office 部署工具已正常退出。</sys:String>
     <sys:String x:Key="InfoInstallationComplete">安装完成</sys:String>
     <sys:String x:Key="InfoInstallationFailed">安装失败</sys:String>
+    <sys:String x:Key="InfoNoOfficeDetectedForActivation">未在此计算机上检测到 Click-to-Run 版本的 Office，无法加载 Office 许可证。</sys:String>
 
     <!-- Success Message -->
     <sys:String x:Key="SuccessAddDownloadTask">成功添加下载任务</sys:String>

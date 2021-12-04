@@ -45,12 +45,19 @@
     <sys:String x:Key="Query">สอบถาม</sys:String>
     <sys:String x:Key="Uninstall">_ถอนการติดตั้ง</sys:String>
 
+    <!-- Context Menu -->
+    <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
+    <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
+    <!-- If you can't understand what is hotkey, remove '&amp;' when you are translating. -->
+    <sys:String x:Key="CD-ROM_InstallNow">&amp;Install now</sys:String>
+    <sys:String x:Key="CopyToClipboard">Copy to clipboard</sys:String>
+
     <!-- Greetings -->
     <!-- Showed when app started. -->
     <sys:String x:Key="GreetingHi">สวัสดี, {0}</sys:String>
-    <!-- 06:00 - 11:00 -->
+    <!-- 06:00 - 10:00 -->
     <sys:String x:Key="GreetingGoodMorning">สวัสดี ตอนเช้า, {0}</sys:String>
-    <!-- 11:00 - 13:00 -->
+    <!-- 10:00 - 13:00 -->
     <sys:String x:Key="GreetingGoodAfternoon1">สวัสดี ตอนบ่าย, {0}</sys:String>
     <!-- 13:00 - 18:00 -->
     <sys:String x:Key="GreetingGoodAfternoon2">สวัสดี ตอนค่ำ, {0}</sys:String>
@@ -309,7 +316,7 @@
     <sys:String x:Key="QueryErrorCode">สอบถามข้อมูลรหัสข้อผิดพลาด</sys:String>
     <sys:String x:Key="QueryErrorCodeDescription">รหัสข้อผิดพลาดมักจะเริ่มต้นด้วย '0x' ตัวอย่าง: 0x2 or 0x80070002</sys:String>
     <sys:String x:Key="ToolboxCheckKMS">ตรวจสอบสถานะของ KMS</sys:String>
-    <sys:String x:Key="ToolboxCheckKMSDescription">KMS พอร์ต ตัวอัษรแต่ละจะคั่นด้วยเครื่องหมายจุลภาคหรือขึ้นบรรทัดใหม่ คุณยังสามารถเพิ่มพอร์ตได้&#x000A;หากต้องการทดสอบว่าการเปิดใช้งาน ใช้งานได้ หรือไม่ ให้ใช้เวอร์ชั่นที่มี vlmcs</sys:String>
+    <sys:String x:Key="ToolboxCheckKMSDescription">KMS พอร์ต ตัวอัษรแต่ละจะคั่นด้วยเครื่องหมายจุลภาคหรือขึ้นบรรทัดใหม่ คุณยังสามารถเพิ่มพอร์ตได้</sys:String>
     <sys:String x:Key="CheckKMSConnectionFailed">ทำการเชื่อมต่อล้มเหลว!</sys:String>
     <sys:String x:Key="CheckKMSConnectionSuccessful">ทำการเชื่อมต่อสำเร็จ</sys:String>
     <sys:String x:Key="CheckKMSActivationSuccessful">การเชื่อมต่อสำเร็จ การทดสอบการเปิดใช้งานสำเร็จ</sys:String>
@@ -332,9 +339,11 @@
     <sys:String x:Key="ToolboxRepairVBS">ซ่อมแซมความสัมพันธ์ของไฟล์ VBS</sys:String>
     <sys:String x:Key="ToolboxRepairVBSDescription">การดำเนินการนี้จะสร้างการเชื่อมโยงไฟล์ VBS ใหม่และนำไปใช้กับการเปิดใช้งาน Office ด้วยข้อความแจ้ง "ไม่มีโปรแกรมสคริปต์สำหรับนามสกุลไฟล์ ".vbs"</sys:String>
     <sys:String x:Key="ToolboxRepairVariables">ซ่อมแซมระบบของตัวแปร</sys:String>
-    <sys:String x:Key="ToolboxRepairVariablesDescription">การดำเนินการนี้จะรีเซ็ตระบบตัวแปรของคุณเป็นค่าเริ่มต้น อย่าใช้มันหากคุณไม่แน่ใจ</sys:String>
+    <sys:String x:Key="ToolboxRepairVariablesDescription">This will reset your system variables to default values. Do not use it if you are unsure.&#x000A;&#x000A;After the repair is complete, you need to reboot your system for it to take effect.</sys:String>
+    <sys:String x:Key="ToolboxRepairWMI">Repair WMI component</sys:String>
+    <sys:String x:Key="ToolboxRepairWMIDescription">This will re-register the WMI component. Do not use it if you are unsure.&#x000A;&#x000A;After the repair is complete, you need to reboot your system for it to take effect.</sys:String>
     <sys:String x:Key="ToolboxRepairTemplates">กู้คืนเทมเพลตเอกสารเริ่มต้นของ Word</sys:String>
-    <sys:String x:Key="ToolboxRepairTemplatesDescription">สิ่งนี้จะสร้างเทมเพลตเริ่มต้นของ Word ใหม่สำหรับ Word เพื่อแสดง [โหมดที่เข้ากันได้] เมื่อมีการสร้างเอกสารใหม่</sys:String>
+    <sys:String x:Key="ToolboxRepairTemplatesDescription">This will rebuild Word's default template.</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettings">คืนค่าการตั้งค่า Office เป็นค่าเริ่มต้น</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettingsDescription">การดำเนินการนี้จะรีเซ็ตการตั้งค่า Office ของคุณ รวมถึงการตั้งค่าแอปพลิเคชัน ประวัติไฟล์ในเครื่อง และเส้นทางการบันทึกล่าสุด&#x000A;โปรดปิดแอปพลิเคชัน Office ทั้งหมดก่อนดำเนินการต่อ</sys:String>
     <!-- Convert Document -->
@@ -444,6 +453,7 @@
     <sys:String x:Key="Task_CheckKMS">ทดสอบ โฮสต์ KMS</sys:String>
     <sys:String x:Key="Task_CollectLog">การรวบรวมบันทึกการติดตั้ง Office</sys:String>
     <sys:String x:Key="Task_RemoveOffice">การถอนการติดตั้ง Office</sys:String>
+    <sys:String x:Key="Task_RepairWMI">Repairing WMI, please wait.</sys:String>
     <sys:String x:Key="Task_ConvertDocument">การแปลงเอกสาร Office</sys:String>
     <!-- Example: Installing iSlide, please wait. -->
     <sys:String x:Key="Task_InstallingApp">กำลังทำการติดตั้ง {0}, โปรดรอสักครู่</sys:String>
@@ -471,12 +481,14 @@
     <sys:String x:Key="InfoRestart">คุณต้องรีสตาร์ทแอปพลิเคชันเพื่อให้มีผล</sys:String>
     <sys:String x:Key="InfoUpdate">คุณกำลังใช้งาน Office Tool Plus เวอร์ชั่นล่าสุด</sys:String>
     <sys:String x:Key="InfoNoConfigured">การกำหนดค่าไม่ถูกต้อง โปรดตรวจสอบและลองอีกครั้ง</sys:String>
+    <sys:String x:Key="InfoNoLanguagePackAddedForDownload">We have detected that you have not added a language. In most cases, we recommend that you add languages to avoid problems.</sys:String>
     <sys:String x:Key="InfoAllExist">คุณไม่จำเป็นต้องดาวน์โหลด เพราะคุณมีไฟล์ทั้งหมดอยู่แล้ว</sys:String>
     <sys:String x:Key="InfoFinishVerifying">ไฟล์การติดตั้งได้รับการตรวจสอบและไม่พบข้อผิดพลาด</sys:String>
     <sys:String x:Key="InfoDownloading">กำลังดาวน์โหลด Office</sys:String>
     <sys:String x:Key="InfoSetupExited">เครื่องมือปรับใช้ Office ออกได้ปกติ</sys:String>
     <sys:String x:Key="InfoInstallationComplete">การติดตั้งเสร็จสมบูรณ์</sys:String>
     <sys:String x:Key="InfoInstallationFailed">การติดตั้งล้มเหลว</sys:String>
+    <sys:String x:Key="InfoNoOfficeDetectedForActivation">The Click-to-Run version of Office was not detected on this computer, the Office licenses could not be loaded.</sys:String>
 
     <!-- Success Message -->
     <sys:String x:Key="SuccessAddDownloadTask">เพิ่มงานดาวน์โหลดสำเร็จ</sys:String>

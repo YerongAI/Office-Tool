@@ -45,12 +45,19 @@
     <sys:String x:Key="Query">Kueri</sys:String>
     <sys:String x:Key="Uninstall">_Copot</sys:String>
 
+    <!-- Context Menu -->
+    <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
+    <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
+    <!-- If you can't understand what is hotkey, remove '&amp;' when you are translating. -->
+    <sys:String x:Key="CD-ROM_InstallNow">&amp;Install now</sys:String>
+    <sys:String x:Key="CopyToClipboard">Copy to clipboard</sys:String>
+
     <!-- Greetings -->
     <!-- Showed when app started. -->
     <sys:String x:Key="GreetingHi">Halo, {0}</sys:String>
-    <!-- 06:00 - 11:00 -->
+    <!-- 06:00 - 10:00 -->
     <sys:String x:Key="GreetingGoodMorning">Selamat Pagi, {0}</sys:String>
-    <!-- 11:00 - 13:00 -->
+    <!-- 10:00 - 13:00 -->
     <sys:String x:Key="GreetingGoodAfternoon1">Selamat Siang, {0}</sys:String>
     <!-- 13:00 - 18:00 -->
     <sys:String x:Key="GreetingGoodAfternoon2">Selamat Sore, {0}</sys:String>
@@ -309,7 +316,7 @@
     <sys:String x:Key="QueryErrorCode">Mengumpulkan informasi kode kesalahan</sys:String>
     <sys:String x:Key="QueryErrorCodeDescription">Kode kesalahan biasanya dimulai dengan '0x'. Contoh: 0x2 atau 0x80070002.</sys:String>
     <sys:String x:Key="ToolboxCheckKMS">Cek status KMS</sys:String>
-    <sys:String x:Key="ToolboxCheckKMSDescription">Pisahkan setiap KMS dengan koma atau baris baru, anda bisa juga menambahkan port-nya. Ketika aktivasi berhasil ditampilkan, itu berarti server-nya tersedia.&#x000A;Untuk menguji coba apabila aktivitasnya berkerja, gunakan versi yang mengandung vlmcs.</sys:String>
+    <sys:String x:Key="ToolboxCheckKMSDescription">Pisahkan setiap KMS dengan koma atau baris baru, anda bisa juga menambahkan port-nya.</sys:String>
     <sys:String x:Key="CheckKMSConnectionFailed">Gagal terkoneksi!</sys:String>
     <sys:String x:Key="CheckKMSConnectionSuccessful">Berhasil terkoneksi.</sys:String>
     <sys:String x:Key="CheckKMSActivationSuccessful">Berhasil terkoneksi, berhasil pula menguji coba aktivasinya.</sys:String>
@@ -331,9 +338,11 @@
     <sys:String x:Key="ToolboxRepairVBS">Perbaiki asosiasi berkas VBS</sys:String>
     <sys:String x:Key="ToolboxRepairVBSDescription">Ini akan membangun ulang berkas asosiasi VBS dan berlaku untuk mengaktivasi Office dengan "There is no script engine for file extension ".vbs"".</sys:String>
     <sys:String x:Key="ToolboxRepairVariables">Perbaiki variabel sistem</sys:String>
-    <sys:String x:Key="ToolboxRepairVariablesDescription">Ini akan mengatur ulang variabel sistem ke nilai bawaan. Jangan digunakan apabila anda tidak yakin.</sys:String>
+    <sys:String x:Key="ToolboxRepairVariablesDescription">This will reset your system variables to default values. Do not use it if you are unsure.&#x000A;&#x000A;After the repair is complete, you need to reboot your system for it to take effect.</sys:String>
+    <sys:String x:Key="ToolboxRepairWMI">Repair WMI component</sys:String>
+    <sys:String x:Key="ToolboxRepairWMIDescription">This will re-register the WMI component. Do not use it if you are unsure.&#x000A;&#x000A;After the repair is complete, you need to reboot your system for it to take effect.</sys:String>
     <sys:String x:Key="ToolboxRepairTemplates">Mengembalikan template dokumen bawaan Word</sys:String>
-    <sys:String x:Key="ToolboxRepairTemplatesDescription">Ini akan membangun ulang template dokumen bawaan Word untuk yang menampilkan [Compatible Mode] ketika dokumen baru dibuat.</sys:String>
+    <sys:String x:Key="ToolboxRepairTemplatesDescription">This will rebuild Word's default template.</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettings">Kembalikan pengaturan Office ke pengaturan aslinya</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettingsDescription">Ini akan mengatur ulang pengaturan Office anda, termasuk pengaturan aplikasi, riwayat berkas lokal, dan jalur penyimpanan terakhir. Catatan: Harap tutup semua aplikasi Office sebelum melanjutkan.</sys:String>
     <!-- Convert Document -->
@@ -443,6 +452,7 @@
     <sys:String x:Key="Task_CheckKMS">Menguji coba host KMS.</sys:String>
     <sys:String x:Key="Task_CollectLog">Mengumpulkan catatan pemasangan Office.</sys:String>
     <sys:String x:Key="Task_RemoveOffice">Membersihkan Office.</sys:String>
+    <sys:String x:Key="Task_RepairWMI">Repairing WMI, please wait.</sys:String>
     <sys:String x:Key="Task_ConvertDocument">Mengonversikan dokumen Office.</sys:String>
     <!-- Example: Installing iSlide, please wait. -->
     <sys:String x:Key="Task_InstallingApp">Memasang {0}, silakan tunggu.</sys:String>
@@ -470,12 +480,14 @@
     <sys:String x:Key="InfoRestart">Anda perlu memulai ulang aplikasi untuk menerapkan perubahan.</sys:String>
     <sys:String x:Key="InfoUpdate">Anda menggunakan Office Tool Plus versi terbaru.</sys:String>
     <sys:String x:Key="InfoNoConfigured">Tidak ada perubahan yang terdeteksi.</sys:String>
+    <sys:String x:Key="InfoNoLanguagePackAddedForDownload">We have detected that you have not added a language. In most cases, we recommend that you add languages to avoid problems.</sys:String>
     <sys:String x:Key="InfoAllExist">Tidak diperlukan untuk mengunduh, semua berkas sudah ada.</sys:String>
     <sys:String x:Key="InfoFinishVerifying">Berkas pemasangan sudah diperiksa dan tidak ditemukan kesalahan.</sys:String>
     <sys:String x:Key="InfoDownloading">Office sedang diunduh.</sys:String>
     <sys:String x:Key="InfoSetupExited">Office Deployment Tool tertutup secara normal.</sys:String>
     <sys:String x:Key="InfoInstallationComplete">Pemasangan berhasil.</sys:String>
     <sys:String x:Key="InfoInstallationFailed">Pemasangan gagal.</sys:String>
+    <sys:String x:Key="InfoNoOfficeDetectedForActivation">The Click-to-Run version of Office was not detected on this computer, the Office licenses could not be loaded.</sys:String>
 
     <!-- Success Message -->
     <sys:String x:Key="SuccessAddDownloadTask">Tugas unduhan berhasil ditambahkan.</sys:String>

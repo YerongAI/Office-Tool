@@ -1,7 +1,7 @@
 #
 
 <p align="center">
-<img alt="Office Tool Plus Logo" src="https://otp.landian.vip/static/images/logo.png"/>
+<img alt="Office Tool Plus Logo" src="https://otp.landian.vip/static/images/logo.webp"/>
 </p>
 
 <p align="center">
@@ -78,11 +78,14 @@ We encourage everyone to help with localization. The following is how to do it.
 There is the files you can translate with:
 
 ``` batch
-src\OfficeToolPlus\Style\Languages
-src\OfficeToolPlus\Style\ProductsName
-doc\Update logs
-doc\Launcher
+src/OfficeToolPlus/Style/Languages
+src/OfficeToolPlus/Style/ProductsName
+config/Launcher
+config/Message
+config/Update Logs
 ```
+
+Note: I don't suggest anyone to change preferences data! This data is provided by Microsoft.
 
 ## About
 

@@ -38,19 +38,26 @@
     <sys:String x:Key="x64">64 Bits</sys:String>
     <sys:String x:Key="BasicSettings">Ajustes básicos</sys:String>
     <sys:String x:Key="AdvancedSettings">Ajustes avanzados</sys:String>
-    <sys:String x:Key="MatchOS">Match Operating System</sys:String>
+    <sys:String x:Key="MatchOS">Coincidir con el sistema operativo</sys:String>
     <sys:String x:Key="Retry">P_rocesar de nuevo</sys:String>
     <sys:String x:Key="Normal">Normal</sys:String>
     <sys:String x:Key="None">Ninguno</sys:String>
     <sys:String x:Key="Query">Consulta</sys:String>
     <sys:String x:Key="Uninstall">_Desinstalar</sys:String>
 
+    <!-- Context Menu -->
+    <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
+    <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
+    <!-- If you can't understand what is hotkey, remove '&amp;' when you are translating. -->
+    <sys:String x:Key="CD-ROM_InstallNow">&amp;Install now</sys:String>
+    <sys:String x:Key="CopyToClipboard">Copy to clipboard</sys:String>
+
     <!-- Greetings -->
     <!-- Showed when app started. -->
     <sys:String x:Key="GreetingHi">¡Hola!, {0}</sys:String>
-    <!-- 06:00 - 11:00 -->
+    <!-- 06:00 - 10:00 -->
     <sys:String x:Key="GreetingGoodMorning">Buenos dias, {0}</sys:String>
-    <!-- 11:00 - 13:00 -->
+    <!-- 10:00 - 13:00 -->
     <sys:String x:Key="GreetingGoodAfternoon1">Buenas tardes, {0}</sys:String>
     <!-- 13:00 - 18:00 -->
     <sys:String x:Key="GreetingGoodAfternoon2">Buenas tardes, {0}</sys:String>
@@ -309,7 +316,7 @@
     <sys:String x:Key="QueryErrorCode">Consultar información del código de error.</sys:String>
     <sys:String x:Key="QueryErrorCodeDescription">El código de error generalmente comienza con '0x'. Ejemplo: 0x2 o 0x80070002.</sys:String>
     <sys:String x:Key="ToolboxCheckKMS">Verificar estado de KMS</sys:String>
-    <sys:String x:Key="ToolboxCheckKMSDescription">Separar cada KMS con coma o nueva línea, también puede agregar un puerto. Cuando la activación se muestra correctamente, significa que el servidor está disponible.&#x000A;Para comprobar si la activación funciona, utilice la versión que incluye vlmcs.</sys:String>
+    <sys:String x:Key="ToolboxCheckKMSDescription">Separar cada KMS con coma o nueva línea, también puede agregar un puerto.</sys:String>
     <sys:String x:Key="CheckKMSConnectionFailed">¡La conexión falló!</sys:String>
     <sys:String x:Key="CheckKMSConnectionSuccessful">La conexión se realizó correctamente.</sys:String>
     <sys:String x:Key="CheckKMSActivationSuccessful">Conexión exitosa, prueba de activación exitosa.</sys:String>
@@ -331,9 +338,11 @@
     <sys:String x:Key="ToolboxRepairVBS">Reparación de asociación con archivos .VBS</sys:String>
     <sys:String x:Key="ToolboxRepairVBSDescription">Esto reconstruirá la asociación de archivos VBS y se aplicará a la activación de Office con el mensaje "No hay un motor de secuencia de comandos para la extensión de archivo ".vbs"".</sys:String>
     <sys:String x:Key="ToolboxRepairVariables">Reparar variables del sistema</sys:String>
-    <sys:String x:Key="ToolboxRepairVariablesDescription">Esto restablecerá las variables de su sistema a los valores predeterminados. No lo use si no está seguro.</sys:String>
+    <sys:String x:Key="ToolboxRepairVariablesDescription">This will reset your system variables to default values. Do not use it if you are unsure.&#x000A;&#x000A;After the repair is complete, you need to reboot your system for it to take effect.</sys:String>
+    <sys:String x:Key="ToolboxRepairWMI">Repair WMI component</sys:String>
+    <sys:String x:Key="ToolboxRepairWMIDescription">This will re-register the WMI component. Do not use it if you are unsure.&#x000A;&#x000A;After the repair is complete, you need to reboot your system for it to take effect.</sys:String>
     <sys:String x:Key="ToolboxRepairTemplates">Restaurar la plantilla de documento predeterminada de Word.</sys:String>
-    <sys:String x:Key="ToolboxRepairTemplatesDescription">Esto reconstruirá la plantilla predeterminada de Word para que Word muestre [Modo compatible] cuando se cree un nuevo documento.</sys:String>
+    <sys:String x:Key="ToolboxRepairTemplatesDescription">This will rebuild Word's default template.</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettings">Restaurar la configuración de Office a los valores predeterminados originales</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettingsDescription">Esto restablecerá la configuración de Office, incluida la configuración de la aplicación, el historial de archivos locales y las rutas de guardado recientes. Nota: cierre todas las aplicaciones de Office antes de continuar.</sys:String>
     <!-- Convert Document -->
@@ -443,6 +452,7 @@
     <sys:String x:Key="Task_CheckKMS">Prueba de host(s) KMS.</sys:String>
     <sys:String x:Key="Task_CollectLog">Recopilación de registros del instalador de Office.</sys:String>
     <sys:String x:Key="Task_RemoveOffice">Limpiando Office.</sys:String>
+    <sys:String x:Key="Task_RepairWMI">Repairing WMI, please wait.</sys:String>
     <sys:String x:Key="Task_ConvertDocument">Conversión de documentos de Office.</sys:String>
     <!-- Example: Installing iSlide, please wait. -->
     <sys:String x:Key="Task_InstallingApp">Instalando {0}, por favor espere.</sys:String>
@@ -470,12 +480,14 @@
     <sys:String x:Key="InfoRestart">Es necesario reiniciar la aplicación para que surta efecto.</sys:String>
     <sys:String x:Key="InfoUpdate">Está utilizando la última versión de Office Tool Plus.</sys:String>
     <sys:String x:Key="InfoNoConfigured">No se detectaron cambios.</sys:String>
+    <sys:String x:Key="InfoNoLanguagePackAddedForDownload">We have detected that you have not added a language. In most cases, we recommend that you add languages to avoid problems.</sys:String>
     <sys:String x:Key="InfoAllExist">No es necesario descargar el archivo, todos los archivos ya existen.</sys:String>
     <sys:String x:Key="InfoFinishVerifying">Se ha verificado el archivo de instalación y no se han encontrado errores.</sys:String>
     <sys:String x:Key="InfoDownloading">Office se está descargando.</sys:String>
     <sys:String x:Key="InfoSetupExited">La herramienta de implementación de Office salió normalmente.</sys:String>
     <sys:String x:Key="InfoInstallationComplete">La instalación se ha completado.</sys:String>
     <sys:String x:Key="InfoInstallationFailed">Falló la instalación.</sys:String>
+    <sys:String x:Key="InfoNoOfficeDetectedForActivation">The Click-to-Run version of Office was not detected on this computer, the Office licenses could not be loaded.</sys:String>
 
     <!-- Success Message -->
     <sys:String x:Key="SuccessAddDownloadTask">Añadido con éxito las tareas de descarga.</sys:String>

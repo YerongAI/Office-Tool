@@ -45,12 +45,19 @@
     <sys:String x:Key="Query">Выполнить запрос</sys:String>
     <sys:String x:Key="Uninstall">Удаление</sys:String>
 
+    <!-- Context Menu -->
+    <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
+    <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
+    <!-- If you can't understand what is hotkey, remove '&amp;' when you are translating. -->
+    <sys:String x:Key="CD-ROM_InstallNow">Установить сейчас</sys:String>
+    <sys:String x:Key="CopyToClipboard">Скопировать в буфер</sys:String>
+
     <!-- Greetings -->
     <!-- Showed when app started. -->
     <sys:String x:Key="GreetingHi">Привет, {0}</sys:String>
-    <!-- 06:00 - 11:00 -->
+    <!-- 06:00 - 10:00 -->
     <sys:String x:Key="GreetingGoodMorning">Доброе утро, {0}</sys:String>
-    <!-- 11:00 - 13:00 -->
+    <!-- 10:00 - 13:00 -->
     <sys:String x:Key="GreetingGoodAfternoon1">Доброго дня, {0}</sys:String>
     <!-- 13:00 - 18:00 -->
     <sys:String x:Key="GreetingGoodAfternoon2">Добрый день, {0}</sys:String>
@@ -309,7 +316,7 @@
     <sys:String x:Key="QueryErrorCode">Проверка кода ошибки</sys:String>
     <sys:String x:Key="QueryErrorCodeDescription">Используй начало кода '0x'. Пример: 0x2 или 0x80070002.</sys:String>
     <sys:String x:Key="ToolboxCheckKMS">Проверить статус KMS</sys:String>
-    <sys:String x:Key="ToolboxCheckKMSDescription">Разделите каждый KMS запятой или новой строкой, можете указать порт.&#x000A;Чтобы проверить, работает ли активация, используйте версию, которая включает vlmcs.</sys:String>
+    <sys:String x:Key="ToolboxCheckKMSDescription">Разделите каждый KMS запятой или новой строкой, можете указать порт.</sys:String>
     <sys:String x:Key="CheckKMSConnectionFailed">Ошибка соединения!</sys:String>
     <sys:String x:Key="CheckKMSConnectionSuccessful">Успешное соединение.</sys:String>
     <sys:String x:Key="CheckKMSActivationSuccessful">Успешное соединение, тест активации успешно пройден.</sys:String>
@@ -332,9 +339,11 @@
     <sys:String x:Key="ToolboxRepairVBS">Восстановление ассоциации VBS файла</sys:String>
     <sys:String x:Key="ToolboxRepairVBSDescription">Это восстановит ассоциацию файлов VBS и применимо к активации Office с запросом «Нет обработчика сценария для расширения файла ".vbs"».</sys:String>
     <sys:String x:Key="ToolboxRepairVariables">Восстановление системных переменных</sys:String>
-    <sys:String x:Key="ToolboxRepairVariablesDescription">Это сбросит ваши системные переменные до стандартных значений. Не используйте его, если не уверены.</sys:String>
+    <sys:String x:Key="ToolboxRepairVariablesDescription">Это сбросит системные переменные в начальное состояние. Не используйте, если не уверены.&#x000A;&#x000A;После завершения восстановления обязательно перезагрузите ПК, чтобы применить изменения.</sys:String>
+    <sys:String x:Key="ToolboxRepairWMI">Восстановить компонент WMI </sys:String>
+    <sys:String x:Key="ToolboxRepairWMIDescription">Это перерегистрирует компонент WMI. Не используйте, если не уверены.&#x000A;&#x000A;После завершения восстановления обязательно перезагрузите ПК, чтобы применить изменения.</sys:String>
     <sys:String x:Key="ToolboxRepairTemplates">Восстановление стандартного шаблона для Word</sys:String>
-    <sys:String x:Key="ToolboxRepairTemplatesDescription">Это восстановит шаблон Word по умолчанию для отображения в Word, когда видите [Совместимый режим] при создании нового документа.</sys:String>
+    <sys:String x:Key="ToolboxRepairTemplatesDescription">Это пересоздаст стандартный шаблон для Word.</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettings">Восстановление исходных настроек Office</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettingsDescription">Это приведёт к сбросу настроек Office, включая настройки приложений, локальную историю файлов и недавние пути сохранения.&#x000A;Пожалуйста, перед продолжением закройте все приложения Office.</sys:String>
     <!-- Convert Document -->
@@ -444,6 +453,7 @@
     <sys:String x:Key="Task_CheckKMS">Тестирование KMS хоста(-ов).</sys:String>
     <sys:String x:Key="Task_CollectLog">Сбор установочных журналов Office.</sys:String>
     <sys:String x:Key="Task_RemoveOffice">Очистка от Office.</sys:String>
+    <sys:String x:Key="Task_RepairWMI">Восстановление WMI, пожалуйста, подождите.</sys:String>
     <sys:String x:Key="Task_ConvertDocument">Конвертация документов.</sys:String>
     <!-- Example: Installing iSlide, please wait. -->
     <sys:String x:Key="Task_InstallingApp">Установка {0}, нужно подождать.</sys:String>
@@ -471,12 +481,14 @@
     <sys:String x:Key="InfoRestart">Вам необходимо перезапустить приложение для просмотра изменений.</sys:String>
     <sys:String x:Key="InfoUpdate">Вы используете последнюю версию Office Tool Plus.</sys:String>
     <sys:String x:Key="InfoNoConfigured">Изменения не обнаружены</sys:String>
+    <sys:String x:Key="InfoNoLanguagePackAddedForDownload">Мы обнаружили, что вы не добавили язык. В большинтсве случаев мы рекомендуем добавить язык или несколько языков, чтобы избежать проблем в будущем.</sys:String>
     <sys:String x:Key="InfoAllExist">Скачивание не требуется, все файлы существуют.</sys:String>
     <sys:String x:Key="InfoFinishVerifying">Установочные файлы проверены, ошибки не найдены.</sys:String>
     <sys:String x:Key="InfoDownloading">Скачивание Office началось.</sys:String>
     <sys:String x:Key="InfoSetupExited">Работа Office Deployment Tool завершена нормально.</sys:String>
     <sys:String x:Key="InfoInstallationComplete">Установка завершена.</sys:String>
     <sys:String x:Key="InfoInstallationFailed">Установка окончилась провалом.</sys:String>
+    <sys:String x:Key="InfoNoOfficeDetectedForActivation">Office с типом установки Click-to-Run ("Нажми и работай") не обнаружен на этом компьютере, лицензии Office не могут быть загружены.</sys:String>
 
     <!-- Success Message -->
     <sys:String x:Key="SuccessAddDownloadTask">Успешное добавление задачи скачивания</sys:String>

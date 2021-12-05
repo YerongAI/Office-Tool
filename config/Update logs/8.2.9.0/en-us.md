@@ -1,10 +1,10 @@
 V8.2.9.0
 
-1. Support to fix WMI component (Toolbox).
-2. Lync and Groove applications now unchecked by default.
-3. One-click installation will now try to match the OS language.
-4. Fixed an issue where can not switch language from Traditional Chinese (Hong Kong) to Traditional Chinese (Taiwan).
-5. Fixed an error when importing a configuration file containing application preferences.
-6. Fixed an issue that /setImage command and /getBWP command do not work properly.
-7. Fixed an issue that could accidentally delete other files when deleting Office installation files.
-8. Optimize the KMS history query function.
+1. (بعلبة الادوات) WMI دعم اصلاح مكون 
+2. اصبحت غير مختارة افتراضيا Groove و Lync تطبيقات 
+3. التثبيت السريع سيطابق لغة النظام 
+4. اصلاح مشكلة عدم امكانية التحويل للغة الصينية (هونج كونج) الى اللغة الصينية (تايوان) 
+5. اصلاح مشكلة عند استيراد ملف اعدادات يحتوي على اعدادات لتطبيق معين 
+6. /getBWP و /setImage اصلاح اوامر 
+7. اصلاح مشكلة حذف ملفات اخرى بالخطأ عند ازالة ملفات تثبيت الاوفيس 
+8. KMS تطوير وظيفة الاستعلام عن تاريخ 

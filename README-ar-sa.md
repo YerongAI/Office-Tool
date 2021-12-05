@@ -39,7 +39,7 @@
 
 - [تحميل](https://help.coolhub.top/start/download.html).
 - [البدء السريع](https://github.com/YerongAI/Office-Tool/wiki).
-- [Documentation](https://help.coolhub.top/).
+- [التوثيق](https://help.coolhub.top/).
 
 ## عنا
 

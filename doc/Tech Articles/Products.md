@@ -29,11 +29,11 @@ MondoOnly stand for Office Lime application, some test components will also be r
 | ExcelRetail | Excel 2016 | OneDrive | DCF, OSM, PowerPivot, PowerView | ✔ | YY6CN-WVPG8-T72BH-QB6QH-RGDRJ |
 | ExcelVolume | Excel 2016 - Volume License | OneDrive | DCF, OSM, OSMUX, PowerPivot, PowerView | ❌ | 9C2PK-NWTVB-JMPW8-BFT28-7FTBF |
 | HomeBusiness2019Retail | Office Home and Business 2019 | Excel, OneDrive, OneNote, Outlook, PowerPoint, Word | PowerPivot | ✔ | 3F4GT-DN2RR-B89CP-8KVPC-J46MR |
-| HomeBusiness2021Retail | Office Home and Business 2021 | Excel, OneDrive, OneNote, Outlook, PowerPoint, Word |  | ✔ | QGTQ3-RNVPB-6YJ23-Y32R4-X2HMD |
+| HomeBusiness2021Retail | Office Home and Business 2021 | Excel, OneDrive, OneNote, Outlook, PowerPoint, Teams, Word |  | ✔ | QGTQ3-RNVPB-6YJ23-Y32R4-X2HMD |
 | HomeBusinessPipcRetail | Office Home and Business Premium | Excel, OneDrive, OneNote, Outlook, PowerPoint, Word |  | ❌ | NMRD9-JVD2M-7MDJG-3DBC4-GXWPX |
 | HomeBusinessRetail | Office Home and Business 2016 | Excel, OneDrive, OneNote, Outlook, PowerPoint, Word |  | ✔ | NKVRG-XP9FX-FKFRD-2HXY2-D6928 |
 | HomeStudent2019Retail | Office Home and Student 2019 | Excel, OneDrive, OneNote, PowerPoint, Word | PowerPivot | ✔ | NTMYR-DM4C3-MHK32-7QBRC-RVXB8 |
-| HomeStudent2021Retail | Office Home and Student 2021 | Excel, OneDrive, OneNote, PowerPoint, Word |  | ✔ | PB2D6-G4NJR-4CD7B-DF7RH-9BXFH |
+| HomeStudent2021Retail | Office Home and Student 2021 | Excel, OneDrive, OneNote, PowerPoint, Teams, Word |  | ✔ | PB2D6-G4NJR-4CD7B-DF7RH-9BXFH |
 | HomeStudentRetail | Office Home and Student 2016 | Excel, OneDrive, OneNote, PowerPoint, Word |  | ✔ | RGNMP-V32H3-QBWXM-BF7XR-DJ3QD |
 | HomeStudentVNextRetail | Office Home and Student 2016 | Excel, OneDrive, OneNote, PowerPoint, Word |  | ❌ | T2NP2-GM3V4-VYBYW-HT963-B99M9 |
 | MondoRetail | Office Mondo 2016 | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Project, Publisher, Visio, Word | DCF, MondoOnly, OSM, OSMUX, PowerPivot, PowerView | ✔ | DMTCJ-KNRKX-26982-JYCKT-P7KB6 |
@@ -54,7 +54,7 @@ MondoOnly stand for Office Lime application, some test components will also be r
 | OutlookRetail | Outlook 2016 |  | OSM | ✔ | DR7HN-K76WM-TQC9V-34PRK-BKMX7 |
 | OutlookVolume | Outlook 2016 - Volume License |  | OSM | ❌ | R69KK-NTPKF-7M3Q4-QYBHW-6MT9B |
 | Personal2019Retail | Office Personal 2019 | Excel, OneDrive, Outlook, Word |  | ✔ | VQFTQ-GNRXK-HCVHQ-DWJDJ-JFJHV |
-| Personal2021Retail | Office Personal 2021 | Excel, OneDrive, Outlook, Word |  | ✔ | WN2B7-QJPXV-93VY2-6WTH3-BHC6H |
+| Personal2021Retail | Office Personal 2021 | Excel, OneDrive, Outlook, Teams, Word |  | ✔ | WN2B7-QJPXV-93VY2-6WTH3-BHC6H |
 | PersonalPipcRetail | Office Personal Premium | Excel, OneDrive, Outlook, Word |  | ❌ | RV7NR-XV7HY-VM488-H6JCC-J4287 |
 | PersonalRetail | Office Personal 2016 | Excel, OneDrive, Outlook, Word |  | ✔ | CJKFJ-WNWBK-29CW7-P9786-C9X7Y |
 | PowerPoint2019Retail | PowerPoint 2019 | OneDrive |  | ✔ | 7FJ6Q-QNFB8-BGXGQ-FFWMV-9BWH2 |
@@ -64,7 +64,7 @@ MondoOnly stand for Office Lime application, some test components will also be r
 | PowerPointRetail | PowerPoint 2016 | OneDrive | OSM | ✔ | 23GNX-8FTCJ-THJBB-DVGMH-BDW7J |
 | PowerPointVolume | PowerPoint 2016 - Volume License | OneDrive | OSM | ❌ | J7MQP-HNJ4Y-WJ7YM-PFYGF-BY6C6 |
 | Professional2019Retail | Office Professional 2019 | Access, Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | PowerPivot, PowerView | ✔ | 7PND3-J7G8B-9M7V3-8VXHR-QGQYY |
-| Professional2021Retail | Office Professional 2021 | Access, Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word |  | ✔ | G7R2D-6NQ7C-CX62B-9YR9J-DGRYH |
+| Professional2021Retail | Office Professional 2021 | Access, Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word |  | ✔ | G7R2D-6NQ7C-CX62B-9YR9J-DGRYH |
 | ProfessionalPipcRetail | Office Professional Premium | Access, Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word |  | ❌ | Q6NGD-M6J3Y-29HGJ-3RB6Y-G29KC |
 | ProfessionalRetail | Office Professional 2016 | Access, Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | PowerPivot, PowerView | ✔ | J2VPX-NMM9V-TPYKJ-P7VT2-3YJDQ |
 | ProjectPro2019Retail | Project Professional 2019 |  |  | ✔ | GP2G7-N7P9M-MGVJB-PK9GM-B4JJJ |
@@ -83,9 +83,9 @@ MondoOnly stand for Office Lime application, some test components will also be r
 | ProjectStdXVolume | Project Standard 2016 - Volume License |  | OSM | ✔ | D8NRQ-JTYM3-7J2DX-646CT-6836M |
 | ProPlus2019Retail | Office Professional Plus 2019 | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ | Y64MN-DK448-Q3VK7-YBTP3-8MBCX |
 | ProPlus2019Volume | Office Professional Plus 2019 - Volume License | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ | NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP |
-| ProPlus2021Retail | Office Professional Plus 2021 | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ | YNYDT-B8RMY-G8WJX-RPTY2-PG343 |
-| ProPlus2021Volume | Office LTSC Professional Plus 2021 - Volume License | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ | FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH |
-| ProPlusSPLA2021Volume | Office LTSC Professional Plus 2021 (SPLA) - Volume License | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | DCF, OSM, OSMUX, PowerPivot | ✔ |  |
+| ProPlus2021Retail | Office Professional Plus 2021 | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ | YNYDT-B8RMY-G8WJX-RPTY2-PG343 |
+| ProPlus2021Volume | Office LTSC Professional Plus 2021 - Volume License | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ | FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH |
+| ProPlusSPLA2021Volume | Office LTSC Professional Plus 2021 (SPLA) - Volume License | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | DCF, OSM, OSMUX, PowerPivot | ✔ |  |
 | ProPlusRetail | Office Professional Plus 2016 | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ | CYC3N-BHX8G-QJVJV-H2WWP-BTDRB |
 | ProPlusVolume | Office Professional Plus 2016 - Volume License | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ❌ | XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99 |
 | Publisher2019Retail | Publisher 2019 | OneDrive |  | ✔ | JPGNM-X3K7H-KHGQC-JHWDD-CBBC2 |
@@ -106,22 +106,22 @@ MondoOnly stand for Office Lime application, some test components will also be r
 | SkypeServiceBypassRetail | Skype for Business 2016 | OneDrive |  | ❌ | 69R22-7NYPW-PCXGG-Q6KBJ-K2DJB |
 | Standard2019Retail | Office Standard 2019 | Excel, Groove, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | OSM, OSMUX, PowerPivot | ✔ | MKFY8-QNW8D-YKV28-H2CJD-Y4JMV |
 | Standard2019Volume | Office Standard 2019 - Volume License | Excel, Groove, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | OSM, OSMUX, PowerPivot | ✔ | 6NWWJ-YQWMR-QKGCB-6TMB3-9D9HK |
-| Standard2021Retail | Office Standard 2021 | Excel, Groove, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | OSM, OSMUX, PowerPivot | ✔ | RXK2W-N42KP-FT9W3-Q7DG8-TRBHK |
-| Standard2021Volume | Office LTSC Standard 2021 - Volume License | Excel, Groove, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | OSM, OSMUX, PowerPivot | ✔ | KDX7X-BNVR8-TXXGX-4Q7Y8-78VT3 |
-| StandardSPLA2021Volume | Office LTSC Standard 2021 (SPLA) - Volume License | Excel, Groove, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | OSM, OSMUX, PowerPivot | ✔ |  |
+| Standard2021Retail | Office Standard 2021 | Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | OSM, OSMUX, PowerPivot | ✔ | RXK2W-N42KP-FT9W3-Q7DG8-TRBHK |
+| Standard2021Volume | Office LTSC Standard 2021 - Volume License | Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | OSM, OSMUX, PowerPivot | ✔ | KDX7X-BNVR8-TXXGX-4Q7Y8-78VT3 |
+| StandardSPLA2021Volume | Office LTSC Standard 2021 (SPLA) - Volume License | Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | OSM, OSMUX, PowerPivot | ✔ |  |
 | StandardRetail | Office Standard 2016 | Excel, Groove, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | OSM, OSMUX | ✔ | PCCXN-7MKB3-F986V-V6HV4-CR4MR |
 | StandardVolume | Office Standard 2016 - Volume License | Excel, Groove, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | OSM, OSMUX | ❌ | JNRGM-WHDWX-FJJG3-K47QV-DRTFM |
 | VisioPro2019Retail | Visio Professional 2019 | Groove, OneDrive |  | ✔ | GFNR9-GJ3T6-2GHCR-QF6CT-684YW |
 | VisioPro2019Volume | Visio Professional 2019 - Volume License | Groove, OneDrive |  | ✔ | 9BGNQ-K37YR-RQHF2-38RQ3-7VCBB |
-| VisioPro2021Retail | Visio Professional 2021 | Groove, OneDrive |  | ✔ | 6PKRH-BNYBM-JWY82-4PBJ8-Q7DBB |
-| VisioPro2021Volume | Visio LTSC Professional 2021 - Volume License | Groove, OneDrive |  | ✔ | KNH8D-FGHT4-T8RK3-CTDYJ-K2HT4 |
+| VisioPro2021Retail | Visio Professional 2021 | OneDrive |  | ✔ | 6PKRH-BNYBM-JWY82-4PBJ8-Q7DBB |
+| VisioPro2021Volume | Visio LTSC Professional 2021 - Volume License | OneDrive |  | ✔ | KNH8D-FGHT4-T8RK3-CTDYJ-K2HT4 |
 | VisioProRetail | Visio Professional 2016 | Groove, OneDrive | OSM | ✔ | BB6YN-3W2C6-R82H2-PTBMF-F6YYT |
 | VisioProVolume | Visio Professional 2016 - Volume License | Groove, OneDrive | OSM | ❌ | PD3PC-RHNGV-FXJ29-8JK7D-RJRJK |
 | VisioProXVolume | Visio Professional 2016 - Volume License | Groove, OneDrive | OSM | ✔ | 69WXN-MBYV6-22PQG-3WGHK-RM6XC |
 | VisioStd2019Retail | Visio Standard 2019 | Groove, OneDrive |  | ✔ | 79NH8-K7F3C-YBF8P-3WMYC-V8TWH |
 | VisioStd2019Volume | Visio Standard 2019 - Volume License | Groove, OneDrive |  | ✔ | 7TQNQ-K3YQQ-3PFH7-CCPPM-X4VQ2 |
-| VisioStd2021Retail | Visio Standard 2021 | Groove, OneDrive |  | ✔ | QFNR2-YGMTQ-7PYYT-667D2-V8VVX |
-| VisioStd2021Volume | Visio LTSC Standard 2021 - Volume License | Groove, OneDrive |  | ✔ | MJVNY-BYWPY-CWV6J-2RKRT-4M8QG |
+| VisioStd2021Retail | Visio Standard 2021 | OneDrive |  | ✔ | QFNR2-YGMTQ-7PYYT-667D2-V8VVX |
+| VisioStd2021Volume | Visio LTSC Standard 2021 - Volume License | OneDrive |  | ✔ | MJVNY-BYWPY-CWV6J-2RKRT-4M8QG |
 | VisioStdRetail | Visio Standard 2016 | Groove, OneDrive | OSM | ✔ | NJFDP-X46PK-M7DBR-VMHW6-MKMYV |
 | VisioStdVolume | Visio Standard 2016 - Volume License | Groove, OneDrive | OSM | ❌ | 7WHWN-4T7MP-G96JF-G33KR-W8GF4 |
 | VisioStdXVolume | Visio Standard 2016 - Volume License | Groove, OneDrive | OSM | ✔ | NY48V-PPYYH-3F4PX-XJRKJ-W4423 |

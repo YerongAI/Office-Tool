@@ -1,7 +1,7 @@
-﻿#
+#
 
 <p align="center">
-<img alt="Office Tool Plus Logo" src="https://otp.landian.vip/static/images/logo.png"/>
+<img alt="Office Tool Plus Logo" src="https://otp.landian.vip/static/images/logo.webp"/>
 </p>
 
 <p align="center">
@@ -18,7 +18,7 @@ Admite la implementación y activación personalizadas de los siguientes product
 - Microsoft 365
 - Office 2016, 2019, 2021
 - Visio 2016, 2019, 2021 y plan en línea 2
-- Proyecto 2016, 2019, 2021 y cliente de escritorio en línea
+- Project 2016, 2019, 2021 y cliente de escritorio en línea
 
 Funciones adicionales:
 
@@ -33,34 +33,14 @@ Funciones adicionales:
 - Se cambió el canal de actualización de Office sin reinstalar Office.
 - Conversión por lotes de documentos de Office, basada en la API de Office.
 
-Componentes:
+## Descarga e inicio rápido
 
-- **[Herramienta de implementación de Office](https://docs.microsoft.com/es-es/deployoffice/overview-office-deployment-tool)**. Puede personalizar la configuración de su instalación de Office y descargar archivos de instalación para instalar Office sin Internet.
-- **[OSPP](https://docs.microsoft.com/es-es/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Plataforma de protección de software de oficina .
-- **Thunder**: los motores principales para descargar Office.
-- **[vlmcs](https://github.com/Wind4/vlmcsd)** - Componentes para probar la disponibilidad de KMS.
+- [Download](https://help.coolhub.top/start/download.html).
+- [Quick start](https://github.com/YerongAI/Office-Tool/wiki).
+- [Documentation](https://help.coolhub.top/).
 
-## Configuración requerida
-
-Windows 7 SP1, Windows 8 y Windows 10.
-Windows Server 2008 R2 SP1, Windows Server 2012 o superior.
-
-- [Microsoft .NET 5.0 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet/current/runtime)
-
-## Descarga Office Tool Plus
-
-- [Sitio oficial](https://otp.landian.vip/)
-
-- [Sitio de descarga](https://download.coolhub.top/)
-
-- [OneDrive for Business](https://coolhub-my.sharepoint.com/:f:/g/personal/yerong_coolhub_onmicrosoft_com/Ev9IUbXAw01JgwrAgsIFB8YBzJebdZZpmsR9hZFAZZVDgg?e=AkSdZU)
-
-## Inicio rápido
-
-Consulte [Inicio rápido de Office Tool Plus](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)
-
-## A proposito
+## A propósito
 
 © 2016-2021 Yerong. Todos los derechos reservados.
 
-> Blog [@Yerong の 小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)
+> Blog [@Yerong の 小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel) · [E-mail](mailto:yerong@coolhub.top)

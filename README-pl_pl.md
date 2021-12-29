@@ -1,7 +1,7 @@
 #
 
 <p align="center">
-<img alt="Office Tool Plus Logo" src="https://otp.landian.vip/static/images/logo.png"/>
+<img alt="Office Tool Plus Logo" src="https://otp.landian.vip/static/images/logo.webp"/>
 </p>
 
 <p align="center">
@@ -33,34 +33,14 @@ Dodatkowe funkcje:
 - Zmiana kanału aktualizacji pakietu Office bez ponownej instalacji pakietu Office.
 - Konwersja wsadowa dokumentów Office w oparciu o Office API.
 
-Komponenty :
+## Pobierz i szybki start
 
-- **[Office Deployment Tool](https://docs.microsoft.com/pl-pl/deployoffice/overview-office-deployment-tool)** - Główne moduły instalacji pakietu Office.
-- **[OSPP](https://docs.microsoft.com/pl-pl/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Platforma ochrony oprogramowania biurowego.
-- **Thunder** - Główne silniki do pobierania pakietu Office.
-- **[vlmcs](https://github.com/Wind4/vlmcsd)** - Komponenty do testowania dostępności KMS.
+- [Pobierz](https://help.coolhub.top/start/download.html).
+- [Szybki start](https://github.com/YerongAI/Office-Tool/wiki).
+- [Documentation](https://help.coolhub.top/).
 
-## Wymagania Systemowe
-
-- Windows 7 SP1, Windows 8 i Windows 10.
-- Windows Server 2008 R2 SP1, Windows Server 2012 lub wyżej.
-
-- [Microsoft .NET 5.0 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet/current/runtime)
-
-## Pobierz Office Tool Plus
-
-- [Oficjalna strona internetowa](https://otp.landian.vip/)
-
-- [Pobieranie lustrzane](https://download.coolhub.top/)
-
-- [OneDrive for Business](https://coolhub-my.sharepoint.com/:f:/g/personal/yerong_coolhub_onmicrosoft_com/Ev9IUbXAw01JgwrAgsIFB8YBzJebdZZpmsR9hZFAZZVDgg?e=AkSdZU)
-
-## Szybki start
-
-Należy zapoznać się [Office Tool Plus Quick Start](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)
-
-## O
+## O...
 
 © 2016-2021 Yerong. Wszelkie prawa zastrzeżone.
 
-> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)
+> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel) · [E-mail](mailto:yerong@coolhub.top)

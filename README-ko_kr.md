@@ -1,7 +1,7 @@
 ﻿#
 
 <p align="center">
-<img alt="Office Tool Plus Logo" src="https://otp.landian.vip/static/images/logo.png"/>
+<img alt="Office Tool Plus Logo" src="https://otp.landian.vip/static/images/logo.webp"/>
 </p>
 
 <p align="center">
@@ -33,34 +33,14 @@ Office 배포 제외의 다른 기능들:
 - 재설치 필요 없이 Office 업데이트 채널을 바꾸기
 - 일과로 Office 파일 전환, Office API 기능 사용
 
-일부의 기능들이 다음 도구들오 완성함:
+## 다운로드와 빠른시작
 
-- **[Office 배포도구](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - Office 배포에 관한 도구
-- **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office 정품인정 스크립트
-- **Thunder 다운로드 클라우드 프랫폼** - Office 다운로드 기능의 주요 엔진
-- **[vlmcs](https://github.com/Wind4/vlmcsd)** - KMS 사용 가능성을 검사하는 도구
-
-## 시스템 요구사항
-
-- Windows 7 SP1, Windows 8 和 Windows 10.
-- Windows Server 2008 R2 SP1, Windows Server 2012나 이상 버전
-
-- [Microsoft .NET 5.0 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet/current/runtime)
-
-## Office Tool Plus 다운로드
-
-- [공식 사이트](https://otp.landian.vip/)
-
-- [비상 사이트](https://download.coolhub.top/)
-
-- [OneDrive for Business](https://coolhub-my.sharepoint.com/:f:/g/personal/yerong_coolhub_onmicrosoft_com/Ev9IUbXAw01JgwrAgsIFB8YBzJebdZZpmsR9hZFAZZVDgg?e=AkSdZU)
-
-## 빠른 알아보기
-
-[Office Tool Plus 빠른 시작](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-Quick-Start)에 가서 알아보세요.
+- [다운로드](https://help.coolhub.top/start/download.html).
+- [빠른시작](https://github.com/YerongAI/Office-Tool/wiki).
+- [Documentation](https://help.coolhub.top/).
 
 ## 추가정보
 
 © 2016-2021 Yerong. All Rights Reserved.
 
-> 블로그 [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)
+> 블로그 [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel) · [E-mail](mailto:yerong@coolhub.top)

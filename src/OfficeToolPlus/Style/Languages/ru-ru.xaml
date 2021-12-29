@@ -5,9 +5,10 @@
     <sys:String x:Key="Culture">ru-ru</sys:String>
     <!-- Eula Content -->
     <sys:String x:Key="EulaTitle">Лицензионное соглашение</sys:String>
-    <sys:String x:Key="EulaContent">Для использования этой программы вы должны принять [лицензионное соглашение]({0}) and [правила служб Microsoft Services]({1}).</sys:String>
+    <sys:String x:Key="EulaContent">Для использования этой программы вы должны принять [лицензионное соглашение]({0}) и [правила служб Microsoft Services]({1}).</sys:String>
     <!-- Header -->
     <sys:String x:Key="ISOMode">- режим ISO</sys:String>
+    <sys:String x:Key="Command">Command</sys:String>
     <sys:String x:Key="Help">Помощь</sys:String>
     <sys:String x:Key="About">О программе</sys:String>
     <sys:String x:Key="Settings">Настройки</sys:String>
@@ -37,18 +38,26 @@
     <sys:String x:Key="x64">64 бита</sys:String>
     <sys:String x:Key="BasicSettings">Основные настройки</sys:String>
     <sys:String x:Key="AdvancedSettings">Дополнительные настройки</sys:String>
+    <sys:String x:Key="MatchOS">Совпадает с ОС</sys:String>
     <sys:String x:Key="Retry">Повторить</sys:String>
     <sys:String x:Key="Normal">Обычный</sys:String>
     <sys:String x:Key="None">Нет</sys:String>
     <sys:String x:Key="Query">Выполнить запрос</sys:String>
     <sys:String x:Key="Uninstall">Удаление</sys:String>
 
+    <!-- Context Menu -->
+    <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
+    <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
+    <!-- If you can't understand what is hotkey, remove '&amp;' when you are translating. -->
+    <sys:String x:Key="CD-ROM_InstallNow">Установить сейчас</sys:String>
+    <sys:String x:Key="CopyToClipboard">Скопировать в буфер</sys:String>
+
     <!-- Greetings -->
     <!-- Showed when app started. -->
     <sys:String x:Key="GreetingHi">Привет, {0}</sys:String>
-    <!-- 06:00 - 11:00 -->
+    <!-- 06:00 - 10:00 -->
     <sys:String x:Key="GreetingGoodMorning">Доброе утро, {0}</sys:String>
-    <!-- 11:00 - 13:00 -->
+    <!-- 10:00 - 13:00 -->
     <sys:String x:Key="GreetingGoodAfternoon1">Доброго дня, {0}</sys:String>
     <!-- 13:00 - 18:00 -->
     <sys:String x:Key="GreetingGoodAfternoon2">Добрый день, {0}</sys:String>
@@ -63,7 +72,7 @@
     <sys:String x:Key="ConvertDocuments">Конвертер документов</sys:String>
     <sys:String x:Key="Contact">Контакты</sys:String>
     <sys:String x:Key="InstallOffice">Установить Office</sys:String>
-    <sys:String x:Key="O365PPRDescription">Включает Outlook, OneDrive for Business, Word, Excel, PowerPoint и другое.</sys:String>
+    <sys:String x:Key="O365PPRDescription">Включает Outlook, OneDrive для бизнеса, Word, Excel, PowerPoint и другое.</sys:String>
     <sys:String x:Key="O365HPRDescription">Включает Outlook, Word, Excel, PowerPoint и другое.</sys:String>
     <sys:String x:Key="PP2019RDescription">Включает Outlook, Word, Excel, PowerPoint и другое.</sys:String>
     <sys:String x:Key="HS2019Description">Включает Word, Excel, PowerPoint.</sys:String>
@@ -79,14 +88,15 @@
     <sys:String x:Key="DeployImportConfig">Импорт XML файла</sys:String>
     <sys:String x:Key="DeployImportConfigFromWeb">Импорт XML файла из Интернета</sys:String>
     <!-- Download Panel -->
-    <sys:String x:Key="DownloadStatus">Статус:</sys:String>
     <sys:String x:Key="DownloadPending">Ожидание</sys:String>
-    <sys:String x:Key="DownloadDownloading">Загрузка</sys:String>
+    <sys:String x:Key="DownloadDownloading">Скачивание, {0} завершено.</sys:String>
+    <sys:String x:Key="DownloadDownloadingTime">Скачивание, оставшееся время: {0}</sys:String>
     <sys:String x:Key="DownloadPausing">Приостановка</sys:String>
     <sys:String x:Key="DownloadPaused">Пауза</sys:String>
     <sys:String x:Key="DownloadCreating">Создание ISO файла</sys:String>
     <sys:String x:Key="DownloadPause">Паузы</sys:String>
     <sys:String x:Key="DownloadResume">Возобновить</sys:String>
+    <sys:String x:Key="DownloadCancel">Отмена</sys:String>
     <!-- Product -->
     <sys:String x:Key="DeployProducts">Продукты</sys:String>
     <sys:String x:Key="DeployProductID">ID продукта:</sys:String>
@@ -171,20 +181,22 @@
     <sys:String x:Key="DeployChannel">Название канала:</sys:String>
     <sys:String x:Key="DeployMode">Метод развёртывания:</sys:String>
     <sys:String x:Key="DeployModeEdit">Только изменить настройки</sys:String>
-    <sys:String x:Key="DeployModeDownload">Только скачать</sys:String>
+    <sys:String x:Key="DeployModeDownload">Только загрузить</sys:String>
+    <sys:String x:Key="DeployModeInstall">Установка</sys:String>
     <sys:String x:Key="DeployModeCreateISO">Создать ISO файл</sys:String>
     <sys:String x:Key="DeployModule">Модуль установки:</sys:String>
-    <sys:String x:Key="DeployModeIAD">Установка после загрузки</sys:String>
+    <sys:String x:Key="DeployModeIAD">Сначала скачать, затем развернуть.</sys:String>
     <sys:String x:Key="DeployCreateShortcut">Создать ярлыки на рабочем столе.</sys:String>
-    <sys:String x:Key="DeployInstalliSlide">Установка методом iSlide.</sys:String>
+    <sys:String x:Key="DeployInstalliSlide">Установка инструменов iSlide.</sys:String>
     <!-- Download Settings -->
     <sys:String x:Key="DownloadSettings">Настройки скачивания</sys:String>
-    <sys:String x:Key="DownloadSettingTip">Applies only when downloading Office.</sys:String>
+    <sys:String x:Key="DownloadSettingTip">Применяется только при скачивании Office.</sys:String>
     <sys:String x:Key="DownloadEngine">Модуль:</sys:String>
     <sys:String x:Key="DownloadEngineThunder">Thunder</sys:String>
     <sys:String x:Key="DownloadAgent">User Agent:</sys:String>
     <sys:String x:Key="DownloadAgentTip">По умолчанию, Office Tool Plus определяет текущую версию системы. Настройте это, если вам нужно загрузить Office для других версий Windows.</sys:String>
     <sys:String x:Key="DownloadUseHTTPS">Использовать HTTPS.</sys:String>
+    <sys:String x:Key="DownloadVerifyInstallations">Проверить установочные файлы Office после загрузки.</sys:String>
     <sys:String x:Key="DownloadThunderSettings">Настройки Thunder</sys:String>
     <sys:String x:Key="DownloadSpeedLimit">Ограничение скорости:</sys:String>
     <sys:String x:Key="DownloadProxyType">Тип прокси:</sys:String>
@@ -193,7 +205,8 @@
     <sys:String x:Key="DownloadPassword">Пароль:</sys:String>
     <!-- Installation Manage -->
     <sys:String x:Key="InstallationFilesManage">Управление загруженными файлами</sys:String>
-    <sys:String x:Key="InstallationSelectFile">Select file</sys:String>
+    <sys:String x:Key="InstallationSelectFile">Выбрать файл</sys:String>
+    <sys:String x:Key="InstallationVerifyFiles">Проверить файлы</sys:String>
     <!-- Activate Page -->
     <sys:String x:Key="ActivateButton">Активировать</sys:String>
     <sys:String x:Key="ActivateViewInformation">Отображение информации об активации</sys:String>
@@ -229,8 +242,8 @@
     <sys:String x:Key="ActivateKMSPort">KMS порт (опционально):</sys:String>
     <sys:String x:Key="ActivateSetKMS">Задать KMS хост</sys:String>
     <sys:String x:Key="ActivateSetPort">Задать KMS порт</sys:String>
-    <sys:String x:Key="ActivateEnableCaching">Включить кеширование хоста</sys:String>
-    <sys:String x:Key="ActivateDisableCaching">Выключить кеширование хоста</sys:String>
+    <sys:String x:Key="ActivateEnableCaching">Включить кэширование хоста</sys:String>
+    <sys:String x:Key="ActivateDisableCaching">Выключить кэширование хоста</sys:String>
     <sys:String x:Key="ActivateResetKMS">Удалить KMS хост (сброс порта на стандартный)</sys:String>
     <!-- Content Translation -->
     <sys:String x:Key="ActivationTitle">Процесс активации Office</sys:String>
@@ -281,7 +294,7 @@
     <sys:String x:Key="ActivationInterval">Период активации: </sys:String>
     <sys:String x:Key="RenewalInterval">Период обновления: </sys:String>
     <sys:String x:Key="IntervalMinutes">минут</sys:String>
-    <sys:String x:Key="HostCaching">KMS кешируется: </sys:String>
+    <sys:String x:Key="HostCaching">KMS кэшируется: </sys:String>
     <sys:String x:Key="HostCachingEnabled">Включено</sys:String>
     <sys:String x:Key="HostCachingDisabled">Выключено</sys:String>
     <sys:String x:Key="HostRegOverride">KMS устройство: </sys:String>
@@ -293,7 +306,7 @@
     <sys:String x:Key="ToolboxRepair">Восстановить</sys:String>
     <!-- Common Tools -->
     <sys:String x:Key="ToolboxChangeChannel">Изменение канала обновления для Office</sys:String>
-    <sys:String x:Key="ToolboxChangeChannelDescription">После сохранения настроек проверь правильность обновления Office.</sys:String>
+    <sys:String x:Key="ToolboxChangeChannelDescription">Изменение канала обновления позволяет повышать или понижать версию Office без переустановки.</sys:String>
     <sys:String x:Key="ToolboxChangeOwner">Изменение владельца Office</sys:String>
     <sys:String x:Key="ToolboxChangeOwnerDescription">Имя отображается на странице учетной записи приложений Office, если Office использует правильную лицензию.&#x000A;&#x000A;Чтобы изменить владельца определённого продукта используйте этот формат: [ID продукта]:Имя</sys:String>
     <sys:String x:Key="ToolboxChangeOwnerName">Имя:</sys:String>
@@ -303,15 +316,15 @@
     <sys:String x:Key="QueryErrorCode">Проверка кода ошибки</sys:String>
     <sys:String x:Key="QueryErrorCodeDescription">Используй начало кода '0x'. Пример: 0x2 или 0x80070002.</sys:String>
     <sys:String x:Key="ToolboxCheckKMS">Проверить статус KMS</sys:String>
-    <sys:String x:Key="ToolboxCheckKMSDescription">Разделите каждый KMS запятой или новой строкой, можете указать порт.&#x000A;To test if activation is working, use the version that includes vlmcs.</sys:String>
+    <sys:String x:Key="ToolboxCheckKMSDescription">Разделите каждый KMS запятой или новой строкой, можете указать порт.</sys:String>
     <sys:String x:Key="CheckKMSConnectionFailed">Ошибка соединения!</sys:String>
-    <sys:String x:Key="CheckKMSConnectionSuccessful">Соединение успешное.</sys:String>
-    <sys:String x:Key="CheckKMSActivationSuccessful">Соединение успешное, тест активации успешно пройден.</sys:String>
+    <sys:String x:Key="CheckKMSConnectionSuccessful">Успешное соединение.</sys:String>
+    <sys:String x:Key="CheckKMSActivationSuccessful">Успешное соединение, тест активации успешно пройден.</sys:String>
     <sys:String x:Key="ToolboxCollectLog">Сбор установочных журналов Office</sys:String>
     <sys:String x:Key="ToolboxCollectLogDescription">Используется для анализа и решения проблем.</sys:String>
     <!-- Repair Tools -->
     <sys:String x:Key="ToolboxRemoveOffice">Удаление Office</sys:String>
-    <sys:String x:Key="ToolboxRODescription">Это приведет к удалению компонентов, файлов и записей реестра, связанных с Office. Если очистка не удалась, попробуйте ещё несколько раз или попробуйте удалить иным методом.&#x000A;&#x000A;Примечание: Эту функцию следует использовать только в том случае, если нельзя удалить Office обычным способом.</sys:String>
+    <sys:String x:Key="ToolboxRODescription">Это приведет к удалению компонентов, файлов и записей реестра, связанных с Office. Если очистка не удалась, попробуйте ещё несколько раз.&#x000A;&#x000A;Примечание: Эту функцию следует использовать только в том случае, если нельзя удалить Office обычным способом.</sys:String>
     <sys:String x:Key="ToolboxRemoveViaOfficial">Удалить инструментами Office</sys:String>
     <sys:String x:Key="ToolboxRemoveViaOfficeToolPlus">Удалить инструментами Office Tool Plus</sys:String>
     <sys:String x:Key="ToolboxRemoveUWPOffice">Удаление установленного приложения Office из Microsoft Store </sys:String>
@@ -320,14 +333,20 @@
     <sys:String x:Key="ToolboxRepairODIDescription">Это сбросит привязку документов Office. Как только это будет сделано, вам нужно будет использовать быстрое исправление Office.</sys:String>
     <sys:String x:Key="ToolboxRepairActivation">Восстановление активации Office</sys:String>
     <sys:String x:Key="ToolboxRepairActivationDescription">Это приведет к сбросу конфигурации службы защиты программного обеспечения и восстановлению файла активации в Windows Insider. Применяется к «Произошла неизвестная ошибка» или «Сбой использования лицензии (0xC004E015)» при активации Office.</sys:String>
+    <sys:String x:Key="ToolboxRepairGenuineWarning">Исправить проблему с лицензией Office</sys:String>
+    <sys:String x:Key="ToolboxRepairGenuineWarningDescription">Если в вашем Office отображается сообщение «Возникла проблема с вашей лицензией на Office» или схожее сообщение, то вы можете настроить узел KMS, чтобы устранить проблему. Это пропишет узел KMS в конфигурацию службы защиты программного обеспечения.</sys:String>
     <sys:String x:Key="ToolboxRepairVBS">Восстановление ассоциации VBS файла</sys:String>
     <sys:String x:Key="ToolboxRepairVBSDescription">Это восстановит ассоциацию файлов VBS и применимо к активации Office с запросом «Нет обработчика сценария для расширения файла ".vbs"».</sys:String>
     <sys:String x:Key="ToolboxRepairVariables">Восстановление системных переменных</sys:String>
-    <sys:String x:Key="ToolboxRepairVariablesDescription">Это сбросит ваши системные переменные до стандартных значений. Не используйте его, если не уверены.</sys:String>
-    <sys:String x:Key="ToolboxRepairTemplates">Восстановление стандартного шаблона для Word</sys:String>
-    <sys:String x:Key="ToolboxRepairTemplatesDescription">Это восстановит шаблон Word по умолчанию для отображения в Word, когда видите [Совместимый режим] при создании нового документа.</sys:String>
+    <sys:String x:Key="ToolboxRepairVariablesDescription">Это сбросит системные переменные в начальное состояние. Не используйте, если не уверены.&#x000A;&#x000A;После завершения восстановления обязательно перезагрузите ПК, чтобы применить изменения.</sys:String>
+    <sys:String x:Key="ToolboxRepairWMI">Восстановить компонент WMI </sys:String>
+    <sys:String x:Key="ToolboxRepairWMIDescription">Это перерегистрирует компонент WMI. Не используйте, если не уверены.&#x000A;&#x000A;После завершения восстановления обязательно перезагрузите ПК, чтобы применить изменения.</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettings">Восстановление исходных настроек Office</sys:String>
-    <sys:String x:Key="ToolboxResetOfficeSettingsDescription">Это приведёт к сбросу настроек Office, включая настройки приложений, локальную историю файлов и недавние пути сохранения.&#x000A;Пожалуйста, перед продолжением закройте все приложения Office.</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsDescription">Restore Office to default settings as you want. Before starting, please close all Office applications.</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsUserSettings">Delete current user settings (includes Office applications settings, recently opened files and recently save location).</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsUserProfiles">Delete applications profiles (includes applications cache).</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsNormalTemplate">Delete the Normal template (Normal.dotm).</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsGlobalSettings">Delete applications preference settings.</sys:String>
     <!-- Convert Document -->
     <sys:String x:Key="ConvertSourceFormat">Исходный формат:</sys:String>
     <sys:String x:Key="ConvertOutputFormat">Конечный формат:</sys:String>
@@ -391,12 +410,22 @@
     <sys:String x:Key="SaveSettings">Сохранять настройки в файл</sys:String>
     <sys:String x:Key="DisplaySettings">Настройки отображения</sys:String>
     <sys:String x:Key="SettingsTopmost">Всегда сверху</sys:String>
-    <sys:String x:Key="SettingsTransparencyEffect">Включить эффект прозрачности окна</sys:String>
-    <sys:String x:Key="SettingsTransparencyEffectTip">Доступно только в Windows 10.</sys:String>
-    <sys:String x:Key="SettingsTransparency">Прозрачность</sys:String>
-    <sys:String x:Key="SettingsBlurValue">Размытие фонового изображения</sys:String>
+    <sys:String x:Key="SettingsBackground">Фон</sys:String>
+    <sys:String x:Key="SettingsBackgroundOff">Выключить</sys:String>
+    <sys:String x:Key="SettingsBackgroundBlur">Размытие</sys:String>
+    <sys:String x:Key="SettingsBackgroundAcrylic">Акрил</sys:String>
+    <sys:String x:Key="SettingsBackgroundBing">Обои Bing</sys:String>
+    <sys:String x:Key="SettingsBackgroundLocal">Локальный файл</sys:String>
     <sys:String x:Key="SettingsChooseBGI">Выбрать фоновое изображение</sys:String>
-    <sys:String x:Key="SettingsAdvanced">Enable advanced features.</sys:String>
+    <sys:String x:Key="SettingsTransparencyEffectTip">Доступно только в Windows 10.</sys:String>
+    <sys:String x:Key="SettingsOpacity">Затенение</sys:String>
+    <sys:String x:Key="SettingsBlurValue">Размытие фонового изображения</sys:String>
+    <sys:String x:Key="SettingsLanguageName">Отображаемое имя языка:</sys:String>
+    <sys:String x:Key="SettingsNativeName">Родное имя</sys:String>
+    <sys:String x:Key="SettingsEnglishName">Английское имя</sys:String>
+    <sys:String x:Key="SettingsLocalizedName">Переведённое имя</sys:String>
+    <sys:String x:Key="SettingsAdvanced">Включить дополнительные функции.</sys:String>
+    <sys:String x:Key="SettingsHWAcceleration">Включить аппаратное ускорение.</sys:String>
     <!-- About Panel -->
     <sys:String x:Key="AppInf">Информация о приложении</sys:String>
     <sys:String x:Key="Homepage">Домашняя страница:</sys:String>
@@ -412,10 +441,11 @@
     <sys:String x:Key="TextBlockResources">Локальный, сетевой, HTTP путь.</sys:String>
 
     <!-- Task Message -->
+    <sys:String x:Key="Task_DownloadUpdate">Скачивание обновлений, {0} завершено ({1} из {2}).</sys:String>
+    <sys:String x:Key="Task_VerifyFiles">Проверка файлов, пожалуйста, подождите.</sys:String>
     <sys:String x:Key="Task_DownloadingContent">Получение контента, пожалуйста, подождите.</sys:String>
     <sys:String x:Key="Task_PreparingDownload">Подготовка к скачиванию Office.</sys:String>
-    <sys:String x:Key="Task_DeployClickToRun">Подготовка Click-to-Run.</sys:String>
-    <sys:String x:Key="Task_ODT">Office Deployment Tool запущен, ожидайте.</sys:String>
+    <sys:String x:Key="Task_ODT">Deploying now, please wait.</sys:String>
     <sys:String x:Key="Task_OSPP">OSPP запущен, ожидайте.</sys:String>
     <sys:String x:Key="Task_SearchKMSAEvent">Поиск событий KMS активации на устройстве: {0}</sys:String>
     <sys:String x:Key="Task_SearchIAFEvent">Поиск ошибок Интернет-активации на устройстве: {0}</sys:String>
@@ -423,16 +453,19 @@
     <sys:String x:Key="Task_CheckKMS">Тестирование KMS хоста(-ов).</sys:String>
     <sys:String x:Key="Task_CollectLog">Сбор установочных журналов Office.</sys:String>
     <sys:String x:Key="Task_RemoveOffice">Очистка от Office.</sys:String>
+    <sys:String x:Key="Task_RepairWMI">Восстановление WMI, пожалуйста, подождите.</sys:String>
     <sys:String x:Key="Task_ConvertDocument">Конвертация документов.</sys:String>
     <!-- Example: Installing iSlide, please wait. -->
     <sys:String x:Key="Task_InstallingApp">Установка {0}, нужно подождать.</sys:String>
 
     <!-- Question Message -->
     <sys:String x:Key="QuesUpdateTitle">Обновление Office Tool Plus</sys:String>
-    <sys:String x:Key="QuesUpdateAvailable">Доступно обновление, открыть страницу загрузки?</sys:String>
+    <sys:String x:Key="QuesUpdateAvailable">Обновление доступно, скачать сейчас?</sys:String>
     <sys:String x:Key="QuesUpdateNow">Обновление подготовлено, перезапустить приложение? Это займёт несколько секунд.</sys:String>
     <sys:String x:Key="QuesExit">Office Tool Plus выполняет работу. Вы действительно хотите выйти?</sys:String>
     <sys:String x:Key="QuesOneClickInstallation">Вы выбрали удалить {0}.&#x000A;Если вам нужно выбрать приложения или языки, используйте другие варианты установки.&#x000A;&#x000A;Нажмите "Да" для установки после загрузки, "Нет" для установки во время скачивания, а для отмены закройте окно.</sys:String>
+    <sys:String x:Key="QuesSelectOfficeVersionToDownload">Вы указали версию Office {0}, но мы получили другую версию.&#x000A;&#x000A;Нажмите "Да" для скачивания Office версии {1}.&#x000A;Нажмите "Нет" для скачивания Office версии {2}.</sys:String>
+    <sys:String x:Key="QuesVerifyInstallation">Хотите проверить установочные файлы Office, чтобы найти возможные ошибки?</sys:String>
     <sys:String x:Key="QuesInstallation">Готовы к установке Office?</sys:String>
     <sys:String x:Key="QuesConfiguration">Код для подробной конфигурации, правильная ли базовая конфигурация, указанная выше?</sys:String>
     <sys:String x:Key="QuesDeleteFiles">Удалить {0}?</sys:String>
@@ -445,29 +478,43 @@
 
     <!-- Info Message -->
     <sys:String x:Key="InfoPermission">Office Tool Plus запущен со стандартными правами, часть операций недоступна.</sys:String>
+    <sys:String x:Key="InfoRestart">Вам необходимо перезапустить приложение для просмотра изменений.</sys:String>
     <sys:String x:Key="InfoUpdate">Вы используете последнюю версию Office Tool Plus.</sys:String>
     <sys:String x:Key="InfoNoConfigured">Изменения не обнаружены</sys:String>
+    <sys:String x:Key="InfoNoLanguagePackAddedForDownload">Мы обнаружили, что вы не добавили язык. В большинтсве случаев мы рекомендуем добавить язык или несколько языков, чтобы избежать проблем в будущем.</sys:String>
     <sys:String x:Key="InfoAllExist">Скачивание не требуется, все файлы существуют.</sys:String>
-    <sys:String x:Key="InfoDownloading">Office is being downloaded.</sys:String>
+    <sys:String x:Key="InfoFinishVerifying">Установочные файлы проверены, ошибки не найдены.</sys:String>
+    <sys:String x:Key="InfoDownloading">Скачивание Office началось.</sys:String>
     <sys:String x:Key="InfoSetupExited">Работа Office Deployment Tool завершена нормально.</sys:String>
     <sys:String x:Key="InfoInstallationComplete">Установка завершена.</sys:String>
     <sys:String x:Key="InfoInstallationFailed">Установка окончилась провалом.</sys:String>
+    <sys:String x:Key="InfoNoOfficeDetectedForActivation">Office с типом установки Click-to-Run ("Нажми и работай") не обнаружен на этом компьютере, лицензии Office не могут быть загружены.</sys:String>
+    <sys:String x:Key="Info64BitOfficeForConversion">You are using a 64-bit version of Office, documents conversion may not work properly.</sys:String>
 
     <!-- Success Message -->
-    <sys:String x:Key="SuccessAddDownloadTask">Successfully add download tasks.</sys:String>
-    <sys:String x:Key="SuccessDownloadInstallation">Installation files downloaded successfully.</sys:String>
-    <sys:String x:Key="SuccessSave">Успешно сохранено.</sys:String>
-    <sys:String x:Key="SuccessRepair">Восстановление успешно.</sys:String>
+    <sys:String x:Key="SuccessAddDownloadTask">Успешное добавление задачи скачивания</sys:String>
+    <sys:String x:Key="SuccessDownloadInstallation">Успешное скачивание файлов установки.</sys:String>
+    <sys:String x:Key="SuccessSave">Успешное сохранение.</sys:String>
+    <sys:String x:Key="SuccessRepair">Успешное восстановление.</sys:String>
 
     <!-- Error Message -->
+    <sys:String x:Key="ErrCreateTempPath">Невозможно создать путь к папке временных файлов. Проверьте системные переменные и повторите снова.</sys:String>
     <sys:String x:Key="ErrRunning">Office Tool Plus уже запущен.</sys:String>
-    <sys:String x:Key="ErrGettingInfo">Контент недоступен, повторите попытку позже.</sys:String>
+    <sys:String x:Key="ErrAutoUpdate">При автоматическом обновлении произошла ошибка, пожалуйста, скачайте вручную последнюю версию Office Tool Plus.</sys:String>
+    <sys:String x:Key="ErrFileMissing">Отсутствуют файлы:</sys:String>
+    <sys:String x:Key="ErrExtracting">Ошибка при извлечении файлов.</sys:String>
+    <sys:String x:Key="ErrInstallationHash">Ошибка проверки хэша. Файл: {0}&#x000A;Хэш: {1}&#x000A;Фактический хеш: {2}</sys:String>
+    <sys:String x:Key="ErrInstallationVersion">Ошибка проверки версии. Файл: {0}&#x000A;Версия: {1}&#x000A;Версия клиента: {2}</sys:String>
+    <sys:String x:Key="ErrInstallationMismatch">Версия не соответствует, файл: {0}&#x000A; Актуальная версия: {1}&#x000A; Архитектура: {2}.</sys:String>
+    <sys:String x:Key="ErrVerifyingInstallation">Обнаружена ошибка при проверке установочных файлов Office, посмотрите "Управление загруженными файлами" для просмотра подробностей об ошибках.</sys:String>
     <sys:String x:Key="ErrReadingInfo">Ошибка чтения информации Office.</sys:String>
     <sys:String x:Key="ErrSavingInfo">Ошибка сохранения информации Office.</sys:String>
     <sys:String x:Key="ErrSetProxy">Настройка прокси провалена!</sys:String>
     <sys:String x:Key="ErrGetVersion">Не удалось получить информацию о версии, попробуйте еще раз или используйте Office Deployment Tool.</sys:String>
     <sys:String x:Key="ErrCreateISO">Не удается найти установочные файлы Office в корневом каталоге Office Tool Plus, сначала загрузите установочные файлы! Или переместите установочные файлы в рабочую папку.</sys:String>
     <sys:String x:Key="ErrInput">Некорректный ввод.</sys:String>
+    <!-- Example: Invalid product. ID: ProPlus2021Retail. -->
+    <sys:String x:Key="ErrInvalidProductID">Неверный продукт. ID: {0}.</sys:String>
     <sys:String x:Key="ErrSetupExited">Работа Office Deployment Tool завершена не нормально</sys:String>
     <sys:String x:Key="ErrAppNotFound">{0} не был найден на компьютере, проверьте, установлена ли последняя версия Office.</sys:String>
 
@@ -491,6 +538,6 @@
     <sys:String x:Key="ThunderErrorProxyAuthTypeFailed">Ошибка авторизации прокси.</sys:String>
     <sys:String x:Key="ThunderErrorProxyAuthTypeUnknown">Неизвестный тип прокси.</sys:String>
     <sys:String x:Key="ThunderErrorTimeOut">Время задачи истекло.</sys:String>
-    <sys:String x:Key="ThunderErrorCrashed">Модуль Thunder аварийно завершён.</sys:String>
+    <sys:String x:Key="ThunderErrorCrashed">Аварийное завершение модуля Thunder.</sys:String>
     <sys:String x:Key="ThunderErrorCancel">Задача отменена.</sys:String>
 </ResourceDictionary>

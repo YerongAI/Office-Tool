@@ -8,6 +8,7 @@
     <sys:String x:Key="EulaContent">Ao usar este software, você precisa aceitar o [Temos da Licença do Software]({0}) e [Contrato de Serviços da Microsoft]({1}).</sys:String>
     <!-- Header -->
     <sys:String x:Key="ISOMode">- Modo ISO</sys:String>
+    <sys:String x:Key="Command">Comando</sys:String>
     <sys:String x:Key="Help">Ajuda</sys:String>
     <sys:String x:Key="About">Sobre</sys:String>
     <sys:String x:Key="Settings">Configurações</sys:String>
@@ -37,18 +38,26 @@
     <sys:String x:Key="x64">64 Bits</sys:String>
     <sys:String x:Key="BasicSettings">Configurações básicas</sys:String>
     <sys:String x:Key="AdvancedSettings">Configurações avançadas</sys:String>
+    <sys:String x:Key="MatchOS">Corresponder ao sistema operacional</sys:String>
     <sys:String x:Key="Retry">_Repetir</sys:String>
     <sys:String x:Key="Normal">Normal</sys:String>
     <sys:String x:Key="None">Nenhum</sys:String>
     <sys:String x:Key="Query">Consultar</sys:String>
     <sys:String x:Key="Uninstall">_Desinstalar</sys:String>
 
+    <!-- Context Menu -->
+    <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
+    <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
+    <!-- If you can't understand what is hotkey, remove '&amp;' when you are translating. -->
+    <sys:String x:Key="CD-ROM_InstallNow">&amp;Instalar agora</sys:String>
+    <sys:String x:Key="CopyToClipboard">Copiar para a área de transferência</sys:String>
+
     <!-- Greetings -->
     <!-- Showed when app started. -->
     <sys:String x:Key="GreetingHi">Olá, {0} !</sys:String>
-    <!-- 06:00 - 11:00 -->
+    <!-- 06:00 - 10:00 -->
     <sys:String x:Key="GreetingGoodMorning">Bom dia, {0}.</sys:String>
-    <!-- 11:00 - 13:00 -->
+    <!-- 10:00 - 13:00 -->
     <sys:String x:Key="GreetingGoodAfternoon1">Boa tarde, {0}.</sys:String>
     <!-- 13:00 - 18:00 -->
     <sys:String x:Key="GreetingGoodAfternoon2">Boa tarde, {0}.</sys:String>
@@ -79,14 +88,15 @@
     <sys:String x:Key="DeployImportConfig">Importar arquivo XML</sys:String>
     <sys:String x:Key="DeployImportConfigFromWeb">Importar arquivo XML da web</sys:String>
     <!-- Download Panel -->
-    <sys:String x:Key="DownloadStatus">Estado:</sys:String>
     <sys:String x:Key="DownloadPending">Pendente...</sys:String>
-    <sys:String x:Key="DownloadDownloading">Baixando</sys:String>
+    <sys:String x:Key="DownloadDownloading">Baixando... {0} concluído</sys:String>
+    <sys:String x:Key="DownloadDownloadingTime">Baixando... tempo restante: {0}</sys:String>
     <sys:String x:Key="DownloadPausing">Pausando...</sys:String>
     <sys:String x:Key="DownloadPaused">Pausado</sys:String>
     <sys:String x:Key="DownloadCreating">Criando arquivo ISO…</sys:String>
     <sys:String x:Key="DownloadPause">Pausar</sys:String>
     <sys:String x:Key="DownloadResume">Continuar</sys:String>
+    <sys:String x:Key="DownloadCancel">Cancelar</sys:String>
     <!-- Product -->
     <sys:String x:Key="DeployProducts">Produtos</sys:String>
     <sys:String x:Key="DeployProductID">ID do Produto:</sys:String>
@@ -172,19 +182,21 @@
     <sys:String x:Key="DeployMode">Modo de implantação:</sys:String>
     <sys:String x:Key="DeployModeEdit">Somente editar configurações</sys:String>
     <sys:String x:Key="DeployModeDownload">Somente baixar</sys:String>
+    <sys:String x:Key="DeployModeInstall">Instalar</sys:String>
     <sys:String x:Key="DeployModeCreateISO">Criar arquivo ISO</sys:String>
     <sys:String x:Key="DeployModule">Módulo de instalação:</sys:String>
-    <sys:String x:Key="DeployModeIAD">Instalar após baixar</sys:String>
+    <sys:String x:Key="DeployModeIAD">Baixar primeiro, então implantar</sys:String>
     <sys:String x:Key="DeployCreateShortcut">Criar atalhos na Área de Trabalho</sys:String>
     <sys:String x:Key="DeployInstalliSlide">Instalar o iSlide</sys:String>
     <!-- Download Settings -->
     <sys:String x:Key="DownloadSettings">Configurações de download</sys:String>
-    <sys:String x:Key="DownloadSettingTip">Applies only when downloading Office.</sys:String>
+    <sys:String x:Key="DownloadSettingTip">Aplica-se somente ao baixar o Office.</sys:String>
     <sys:String x:Key="DownloadEngine">Engine:</sys:String>
     <sys:String x:Key="DownloadEngineThunder">Thunder</sys:String>
     <sys:String x:Key="DownloadAgent">User agent:</sys:String>
     <sys:String x:Key="DownloadAgentTip">Por padrão, o Office Tool Plus detecta a versão atual do sistema. Configure-o se você precisar baixar instalações do Office para outras versões do Windows.</sys:String>
     <sys:String x:Key="DownloadUseHTTPS">Conectar usando HTTPS</sys:String>
+    <sys:String x:Key="DownloadVerifyInstallations">Verifica os arquivos de instalação do Office após o download.</sys:String>
     <sys:String x:Key="DownloadThunderSettings">Ajustes Thunder</sys:String>
     <sys:String x:Key="DownloadSpeedLimit">Limite de Velocidade:</sys:String>
     <sys:String x:Key="DownloadProxyType">Tipo de Proxy:</sys:String>
@@ -193,7 +205,8 @@
     <sys:String x:Key="DownloadPassword">Senha:</sys:String>
     <!-- Installation Manage -->
     <sys:String x:Key="InstallationFilesManage">Gerenciar arquivos de instalação</sys:String>
-    <sys:String x:Key="InstallationSelectFile">Select file</sys:String>
+    <sys:String x:Key="InstallationSelectFile">Selecionar arquivo</sys:String>
+    <sys:String x:Key="InstallationVerifyFiles">Verificar arquivos</sys:String>
     <!-- Activate Page -->
     <sys:String x:Key="ActivateButton">_Ativar</sys:String>
     <sys:String x:Key="ActivateViewInformation">Mostrar informações da Ativação</sys:String>
@@ -293,7 +306,7 @@
     <sys:String x:Key="ToolboxRepair">Reparar</sys:String>
     <!-- Common Tools -->
     <sys:String x:Key="ToolboxChangeChannel">Alterar canal de atualização do Office</sys:String>
-    <sys:String x:Key="ToolboxChangeChannelDescription">Após salvar suas configurações, verifique por atualizações no aplicativo do Office.</sys:String>
+    <sys:String x:Key="ToolboxChangeChannelDescription">Alterar o canal de atualização permite que você faça o upgrade ou o downgrade do Office sem reinstalá-lo.</sys:String>
     <sys:String x:Key="ToolboxChangeOwner">Alterar proprietário do produto Office</sys:String>
     <sys:String x:Key="ToolboxChangeOwnerDescription">O nome é exibido na página de conta do aplicativo do Office somente se o Office usar uma licença correta.&#x000A;&#x000A;Especifique um produto: ProductID:Name</sys:String>
     <sys:String x:Key="ToolboxChangeOwnerName">Nome:</sys:String>
@@ -303,7 +316,7 @@
     <sys:String x:Key="QueryErrorCode">Consultar Informações do Código de Erro</sys:String>
     <sys:String x:Key="QueryErrorCodeDescription">Código de erro geralmente começa com '0x'. Exemplo: 0x2 ou 0x80070002.</sys:String>
     <sys:String x:Key="ToolboxCheckKMS">Verificar status do KMS</sys:String>
-    <sys:String x:Key="ToolboxCheckKMSDescription">Separe cada KMS com vírgula ou nova linha, você também pode adicionar uma porta. Quando a ativação é exibida com sucesso, isto significa que o servidor está disponível.&#x000A;To test if activation is working, use the version that includes vlmcs.</sys:String>
+    <sys:String x:Key="ToolboxCheckKMSDescription">Separe cada KMS com vírgula ou nova linha, você também pode adicionar uma porta.</sys:String>
     <sys:String x:Key="CheckKMSConnectionFailed">Falha na conexão!</sys:String>
     <sys:String x:Key="CheckKMSConnectionSuccessful">Conexão bem sucedida.</sys:String>
     <sys:String x:Key="CheckKMSActivationSuccessful">Ativação bem sucedida.</sys:String>
@@ -311,7 +324,7 @@
     <sys:String x:Key="ToolboxCollectLogDescription">Coleta logs para analisar e solucionar problemas desconhecidos.</sys:String>
     <!-- Repair Tools -->
     <sys:String x:Key="ToolboxRemoveOffice">Remover o Office</sys:String>
-    <sys:String x:Key="ToolboxRODescription">Isto irá remover componentes, arquivos e registros relacionados ao Office. Se a limpeza falhar, tente mais algumas vezes, ou faça de outra maneira.&#x000A;&#x000A;Nota: Este recurso somente deve ser usado se o Office não puder ser removido corretamente.</sys:String>
+    <sys:String x:Key="ToolboxRODescription">Isto irá remover componentes, arquivos e registros relacionados ao Office. Se a limpeza falhar, tente mais algumas vezes.&#x000A;&#x000A;Nota: Este recurso somente deve ser usado se o Office não puder ser removido corretamente.</sys:String>
     <sys:String x:Key="ToolboxRemoveViaOfficial">Remover o Office com a ferramenta oficial</sys:String>
     <sys:String x:Key="ToolboxRemoveViaOfficeToolPlus">Remover o Office com o Office Tool Plus</sys:String>
     <sys:String x:Key="ToolboxRemoveUWPOffice">Remover o app Office da Microsoft Store</sys:String>
@@ -320,14 +333,20 @@
     <sys:String x:Key="ToolboxRepairODIDescription">Isto irá redefinir a associação de arquivos do Office. Feito isso, você também precisará usar a Correção Rápida do Office.</sys:String>
     <sys:String x:Key="ToolboxRepairActivation">Reparar a ativação do Office</sys:String>
     <sys:String x:Key="ToolboxRepairActivationDescription">Isto irá redefinir as configurações do serviço de Proteção de Software e recriar o arquivo de ativação no Windows Insider. Aplica-se a "Ocorreu um erro desconhecido" ou "falha no consumo de licença (0xC004E015)" ao ativar o Office.</sys:String>
+    <sys:String x:Key="ToolboxRepairGenuineWarning">Reparar problema de licença do Office</sys:String>
+    <sys:String x:Key="ToolboxRepairGenuineWarningDescription">Se o seu Office mostrar "Há um problema com a sua licença do Office", você pode definir um host KMS para corrigir o problema. Isto escreverá o host KMS à configuração do serviço de Proteção de Software.</sys:String>
     <sys:String x:Key="ToolboxRepairVBS">Reparar a associação de arquivos VBS</sys:String>
     <sys:String x:Key="ToolboxRepairVBSDescription">Isto irá recriar a associação de arquivo VBS e aplica-se à ativação do Office com o prompt "Não há mecanismo de script para extensão de arquivo ".vbs"".</sys:String>
     <sys:String x:Key="ToolboxRepairVariables">Reparar variáveis do ambiente</sys:String>
-    <sys:String x:Key="ToolboxRepairVariablesDescription">Isto irá redefinir as variáveis do seu sistema para os valores padrão. Não use isto se não tiver certeza.</sys:String>
-    <sys:String x:Key="ToolboxRepairTemplates">Restaurar modelo de documento padrão do Word</sys:String>
-    <sys:String x:Key="ToolboxRepairTemplatesDescription">Isto irá recriar o modelo padrão do Word para exibir no [Modo de Compatibilidade] quando um novo documento é criado.</sys:String>
+    <sys:String x:Key="ToolboxRepairVariablesDescription">Isto irá redefinir as variáveis do sistema para os seus valores padrão. Não use isto se não tiver certeza.&#x000A;&#x000A;Após a reparação ser concluída, você precisará reiniciar o sistema aplicar as alterações.</sys:String>
+    <sys:String x:Key="ToolboxRepairWMI">Reparar componente WMI</sys:String>
+    <sys:String x:Key="ToolboxRepairWMIDescription">Isto irá registrar novamente o componente WMI. Não use isto se não tiver certeza.&#x000A;&#x000A;Após a reparação ser concluída, você precisará reiniciar o sistema para aplicar as alterações.</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettings">Restaurar configurações do Office para os padrões originais</sys:String>
-    <sys:String x:Key="ToolboxResetOfficeSettingsDescription">Esta opção irá redefinir as configurações do Office, incluindo todas as configurações do aplicativo, histórico local e caminhos recentes. Nota: Feche todas as aplicações do Office antes de continuar.</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsDescription">Restaurar o Office para as configurações padrão como você desejar. Antes de começar, feche todos os aplicativos do Office.</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsUserSettings">Excluir configurações atuais do usuário (inclui configurações dos aplicativos do Office, arquivos abertos recentemente e locais salvos recentemente).</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsUserProfiles">Excluir perfis dos aplicativos (inclui cache dos aplicativos).</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsNormalTemplate">Excluir o modelo Normal (Normal.dotm).</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsGlobalSettings">Excluir configurações de preferências dos aplicativos.</sys:String>
     <!-- Convert Document -->
     <sys:String x:Key="ConvertSourceFormat">Formato de entrada:</sys:String>
     <sys:String x:Key="ConvertOutputFormat">Formato de saída:</sys:String>
@@ -391,12 +410,22 @@
     <sys:String x:Key="SaveSettings">Salvar configurações no local</sys:String>
     <sys:String x:Key="DisplaySettings">Configurações da exibição</sys:String>
     <sys:String x:Key="SettingsTopmost">Sempre no topo</sys:String>
-    <sys:String x:Key="SettingsTransparencyEffect">Habilitar efeitos de transparência da janela</sys:String>
-    <sys:String x:Key="SettingsTransparencyEffectTip">Disponível somente no Windows 10.</sys:String>
-    <sys:String x:Key="SettingsTransparency">Transparência</sys:String>
-    <sys:String x:Key="SettingsBlurValue">Desfoque da imagem de fundo</sys:String>
+    <sys:String x:Key="SettingsBackground">Plano de fundo</sys:String>
+    <sys:String x:Key="SettingsBackgroundOff">Desligado</sys:String>
+    <sys:String x:Key="SettingsBackgroundBlur">Desfocado</sys:String>
+    <sys:String x:Key="SettingsBackgroundAcrylic">Acrílico</sys:String>
+    <sys:String x:Key="SettingsBackgroundBing">Wallpaper do Bing</sys:String>
+    <sys:String x:Key="SettingsBackgroundLocal">Imagem local</sys:String>
     <sys:String x:Key="SettingsChooseBGI">Escolher imagem de fundo</sys:String>
-    <sys:String x:Key="SettingsAdvanced">Enable advanced features.</sys:String>
+    <sys:String x:Key="SettingsTransparencyEffectTip">Disponível somente no Windows 10.</sys:String>
+    <sys:String x:Key="SettingsOpacity">Opacidade</sys:String>
+    <sys:String x:Key="SettingsBlurValue">Desfoque da imagem de fundo</sys:String>
+    <sys:String x:Key="SettingsLanguageName">Nome do idioma de exibição:</sys:String>
+    <sys:String x:Key="SettingsNativeName">Nome nativo</sys:String>
+    <sys:String x:Key="SettingsEnglishName">Nome em inglês</sys:String>
+    <sys:String x:Key="SettingsLocalizedName">Nome localizado</sys:String>
+    <sys:String x:Key="SettingsAdvanced">Habilitar recursos avançados</sys:String>
+    <sys:String x:Key="SettingsHWAcceleration">Habilitar aceleração por hardware</sys:String>
     <!-- About Panel -->
     <sys:String x:Key="AppInf">Informações do aplicativo</sys:String>
     <sys:String x:Key="Homepage">Site:</sys:String>
@@ -408,14 +437,15 @@
     <sys:String x:Key="BackgroundImageSource">Origem da imagem de fundo</sys:String>
 
     <!-- Text about Textbox, notice to control the string length. -->
-    <sys:String x:Key="TextBlockCommand">> Digite o comando aqui.</sys:String>
+    <sys:String x:Key="TextBlockCommand">> Digite o comando aqui</sys:String>
     <sys:String x:Key="TextBlockResources">Local, rede ou caminho HTTP.</sys:String>
 
     <!-- Task Message -->
-    <sys:String x:Key="Task_DownloadingContent">Obtendo o conteúdo. Por favor, aguarde.</sys:String>
+    <sys:String x:Key="Task_DownloadUpdate">Baixando atualizações, {0} concluído ({1} de {2}).</sys:String>
+    <sys:String x:Key="Task_VerifyFiles">Verificando arquivos. Por favor, aguarde...</sys:String>
+    <sys:String x:Key="Task_DownloadingContent">Obtendo o conteúdo. Por favor, aguarde...</sys:String>
     <sys:String x:Key="Task_PreparingDownload">Preparando para baixar o Office.</sys:String>
-    <sys:String x:Key="Task_DeployClickToRun">Instalando Click-to-Run.</sys:String>
-    <sys:String x:Key="Task_ODT">O Office Deployment Tool está em execução agora. Por favor, aguarde.</sys:String>
+    <sys:String x:Key="Task_ODT">Implementando agora. Por favor, aguarde...</sys:String>
     <sys:String x:Key="Task_OSPP">O OSPP está em execução agora. Por favor, aguarde.</sys:String>
     <sys:String x:Key="Task_SearchKMSAEvent">Procurando eventos de ativação kms na máquina: {0}</sys:String>
     <sys:String x:Key="Task_SearchIAFEvent">Procurando eventos de falha de ativação pela Internet na máquina: {0}</sys:String>
@@ -423,16 +453,19 @@
     <sys:String x:Key="Task_CheckKMS">Testando servidor(es) KMS.</sys:String>
     <sys:String x:Key="Task_CollectLog">Coletando logs do instalador do Office.</sys:String>
     <sys:String x:Key="Task_RemoveOffice">Limpando o Office.</sys:String>
+    <sys:String x:Key="Task_RepairWMI">Reparando WMI. Por favor, aguarde...</sys:String>
     <sys:String x:Key="Task_ConvertDocument">Convertendo documento do Office.</sys:String>
     <!-- Example: Installing iSlide, please wait. -->
-    <sys:String x:Key="Task_InstallingApp">Instalando o {0}. Por favor, aguarde.</sys:String>
+    <sys:String x:Key="Task_InstallingApp">Instalando o {0}. Por favor, aguarde...</sys:String>
 
     <!-- Question Message -->
     <sys:String x:Key="QuesUpdateTitle">Atualização do Office Tool Plus</sys:String>
-    <sys:String x:Key="QuesUpdateAvailable">Uma atualização está disponível, abrir a página de download agora?</sys:String>
+    <sys:String x:Key="QuesUpdateAvailable">Atualização disponível, baixar agora?</sys:String>
     <sys:String x:Key="QuesUpdateNow">A atualização está pronta, deseja reiniciar o aplicativo agora? Leva apenas alguns segundos.</sys:String>
     <sys:String x:Key="QuesExit">O Office Tool Plus está em execução. Confirmar a saída?</sys:String>
     <sys:String x:Key="QuesOneClickInstallation">Você escolheu instalar {0}.&#x000A;Se você quiser selecionar aplicativos ou idiomas, use outras opções de instalação.&#x000A;&#x000A;Clique "Sim" para instalar após o download, "Não" para instalar durante o download, ou feche a janela para cancelar.</sys:String>
+    <sys:String x:Key="QuesSelectOfficeVersionToDownload">Você especificou a versão do Office para {0}, mas obtemos uma versão diferente.&#x000A;&#x000A;Clicar em "Sim" irá baixar a versão {1} do Office.&#x000A;Clicar em "Não" irá baixar a versão {2} do Office.</sys:String>
+    <sys:String x:Key="QuesVerifyInstallation">Você deseja verificar os arquivos de instalação do Office para localizar possíveis erros?</sys:String>
     <sys:String x:Key="QuesInstallation">Pronto para instalar o Office?</sys:String>
     <sys:String x:Key="QuesConfiguration">Veja o código com os detalhes da configuração. A configuração básica acima está correta?</sys:String>
     <sys:String x:Key="QuesDeleteFiles">Deseja excluir o {0}?</sys:String>
@@ -445,29 +478,43 @@
 
     <!-- Info Message -->
     <sys:String x:Key="InfoPermission">O Office Tool Plus foi iniciado com privilégios normais e alguns recursos não estarão disponíveis.</sys:String>
+    <sys:String x:Key="InfoRestart">Você precisa reiniciar o aplicativo para aplicar as alterações.</sys:String>
     <sys:String x:Key="InfoUpdate">Você está usando a versão mais recente do Office Tool Plus.</sys:String>
     <sys:String x:Key="InfoNoConfigured">Nenhuma alteração foi detectada.</sys:String>
+    <sys:String x:Key="InfoNoLanguagePackAddedForDownload">Detectamos que você não adicionou um idioma. Na maioria dos casos, recomendamos que você adicione idiomas para evitar problemas.</sys:String>
     <sys:String x:Key="InfoAllExist">Não há necessidade de baixar o arquivo.</sys:String>
-    <sys:String x:Key="InfoDownloading">Office is being downloaded.</sys:String>
+    <sys:String x:Key="InfoFinishVerifying">Os arquivos de instalação foram verificados e nenhum erro foi encontrado.</sys:String>
+    <sys:String x:Key="InfoDownloading">O Office está sendo baixado.</sys:String>
     <sys:String x:Key="InfoSetupExited">A ferramenta de implantação do Office finalizou normalmente.</sys:String>
     <sys:String x:Key="InfoInstallationComplete">A instalação foi concluída.</sys:String>
     <sys:String x:Key="InfoInstallationFailed">A instalação falhou.</sys:String>
+    <sys:String x:Key="InfoNoOfficeDetectedForActivation">A versão do Click-to-Run do Office não foi detectada neste computador, as licenças do Office não puderam ser carregadas.</sys:String>
+    <sys:String x:Key="Info64BitOfficeForConversion">Você está usando a versão de 64 bits do Office, a conversão de documentos pode não funcionar corretamente.</sys:String>
 
     <!-- Success Message -->
-    <sys:String x:Key="SuccessAddDownloadTask">Successfully add download tasks.</sys:String>
-    <sys:String x:Key="SuccessDownloadInstallation">Installation files downloaded successfully.</sys:String>
+    <sys:String x:Key="SuccessAddDownloadTask">Tarefas de download adicionadas com sucesso.</sys:String>
+    <sys:String x:Key="SuccessDownloadInstallation">Arquivos de instalação baixados com sucesso.</sys:String>
     <sys:String x:Key="SuccessSave">Salvo com sucesso.</sys:String>
     <sys:String x:Key="SuccessRepair">A reparação foi bem sucedida.</sys:String>
 
     <!-- Error Message -->
+    <sys:String x:Key="ErrCreateTempPath">Não foi possível criar o caminho temporário. Por favor, verifique as variáveis do sistema e tente novamente.</sys:String>
     <sys:String x:Key="ErrRunning">O Office Tool Plus está em execução.</sys:String>
-    <sys:String x:Key="ErrGettingInfo">O conteúdo não está disponível. Por favor, tente novamente mais tarde.</sys:String>
+    <sys:String x:Key="ErrAutoUpdate">Ocorreu um erro com a atualização automática. Por favor, baixe a versão mais recente do Office Tool Plus manualmente.</sys:String>
+    <sys:String x:Key="ErrFileMissing">Arquivo faltando:</sys:String>
+    <sys:String x:Key="ErrExtracting">Ocorreu um erro ao extrair os arquivos.</sys:String>
+    <sys:String x:Key="ErrInstallationHash">Falha de verificação do hash. Arquivo: {0}&#x000A;Hash: {1}&#x000A;Hash atual: {2}</sys:String>
+    <sys:String x:Key="ErrInstallationVersion">Falha de verificação de versão. Arquivo: {0}&#x000A;Versão: {1}&#x000A;Versão do cliente: {2}</sys:String>
+    <sys:String x:Key="ErrInstallationMismatch">Versão incompatível, arquivo: {0}&#x000A;Versão atual: {1}&#x000A;Arquitetura: {2}</sys:String>
+    <sys:String x:Key="ErrVerifyingInstallation">Error foram encontrados ao verificar os arquivos de instalação do Office. Por favor, veja "Gerenciamento dos arquivos de instalação" para detalhes dos erros.</sys:String>
     <sys:String x:Key="ErrReadingInfo">Erro ao ler informações do Office.</sys:String>
     <sys:String x:Key="ErrSavingInfo">Erro ao salvar informações do Office.</sys:String>
     <sys:String x:Key="ErrSetProxy">Falha ao definir proxy!</sys:String>
     <sys:String x:Key="ErrGetVersion">Não foi possível obter as informações da versão. Por favor, tente novamente ou use o Office Deployment Tool.</sys:String>
     <sys:String x:Key="ErrCreateISO">Não é possível localizar a instalação do Office na pasta do Office Tool Plus. Faça o download da instalação primeiro ou mova a instalação para o caminho de trabalho.</sys:String>
     <sys:String x:Key="ErrInput">Entrada incorreta</sys:String>
+    <!-- Example: Invalid product. ID: ProPlus2021Retail. -->
+    <sys:String x:Key="ErrInvalidProductID">Produto inválido. ID: {0}.</sys:String>
     <sys:String x:Key="ErrSetupExited">Ocorreu um erro ao sair da ferramenta de implantação do Office.</sys:String>
     <sys:String x:Key="ErrAppNotFound">{0} não foi encontrado no computador. Por favor, confirme se a versão mais recente do Office está instalada.</sys:String>
 

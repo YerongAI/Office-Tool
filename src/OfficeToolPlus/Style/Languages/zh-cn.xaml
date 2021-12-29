@@ -8,6 +8,7 @@
     <sys:String x:Key="EulaContent">使用本软件即代表你接受[软件许可条款]({0})以及 [Microsoft 服务协议]({1})</sys:String>
     <!-- Header -->
     <sys:String x:Key="ISOMode">- ISO 模式</sys:String>
+    <sys:String x:Key="Command">命令</sys:String>
     <sys:String x:Key="Help">帮助</sys:String>
     <sys:String x:Key="About">关于</sys:String>
     <sys:String x:Key="Settings">设置</sys:String>
@@ -37,18 +38,26 @@
     <sys:String x:Key="x64">64 位</sys:String>
     <sys:String x:Key="BasicSettings">基础设置</sys:String>
     <sys:String x:Key="AdvancedSettings">高级设置</sys:String>
+    <sys:String x:Key="MatchOS">匹配操作系统</sys:String>
     <sys:String x:Key="Retry">重试(_R)</sys:String>
     <sys:String x:Key="Normal">默认</sys:String>
     <sys:String x:Key="None">无</sys:String>
     <sys:String x:Key="Query">查询</sys:String>
     <sys:String x:Key="Uninstall">卸载(_U)</sys:String>
 
+    <!-- Context Menu -->
+    <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
+    <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
+    <!-- If you can't understand what is hotkey, remove '&amp;' when you are translating. -->
+    <sys:String x:Key="CD-ROM_InstallNow">立即安装(&amp;I)</sys:String>
+    <sys:String x:Key="CopyToClipboard">复制到剪贴板</sys:String>
+
     <!-- Greetings -->
     <!-- Showed when app started. -->
     <sys:String x:Key="GreetingHi">您好! {0}</sys:String>
-    <!-- 06:00 - 11:00 -->
+    <!-- 06:00 - 10:00 -->
     <sys:String x:Key="GreetingGoodMorning">早上好! {0}</sys:String>
-    <!-- 11:00 - 13:00 -->
+    <!-- 10:00 - 13:00 -->
     <sys:String x:Key="GreetingGoodAfternoon1">中午好! {0}</sys:String>
     <!-- 13:00 - 18:00 -->
     <sys:String x:Key="GreetingGoodAfternoon2">下午好! {0}</sys:String>
@@ -79,14 +88,15 @@
     <sys:String x:Key="DeployImportConfig">导入配置</sys:String>
     <sys:String x:Key="DeployImportConfigFromWeb">从网络位置导入配置</sys:String>
     <!-- Download Panel -->
-    <sys:String x:Key="DownloadStatus">当前状态:</sys:String>
     <sys:String x:Key="DownloadPending">等待下载</sys:String>
-    <sys:String x:Key="DownloadDownloading">正在下载</sys:String>
+    <sys:String x:Key="DownloadDownloading">正在下载，{0} 已完成</sys:String>
+    <sys:String x:Key="DownloadDownloadingTime">正在下载，剩余时间: {0}</sys:String>
     <sys:String x:Key="DownloadPausing">正在暂停……</sys:String>
     <sys:String x:Key="DownloadPaused">已暂停</sys:String>
     <sys:String x:Key="DownloadCreating">正在创建 ISO 文件…</sys:String>
     <sys:String x:Key="DownloadPause">暂停</sys:String>
     <sys:String x:Key="DownloadResume">继续</sys:String>
+    <sys:String x:Key="DownloadCancel">取消</sys:String>
     <!-- Product -->
     <sys:String x:Key="DeployProducts">产品</sys:String>
     <sys:String x:Key="DeployProductID">产品 ID:</sys:String>
@@ -175,7 +185,7 @@
     <sys:String x:Key="DeployModeInstall">安装</sys:String>
     <sys:String x:Key="DeployModeCreateISO">创建 ISO 文件</sys:String>
     <sys:String x:Key="DeployModule">安装模块:</sys:String>
-    <sys:String x:Key="DeployModeIAD">下载后安装</sys:String>
+    <sys:String x:Key="DeployModeIAD">下载后再部署</sys:String>
     <sys:String x:Key="DeployCreateShortcut">创建桌面快捷方式</sys:String>
     <sys:String x:Key="DeployInstalliSlide">安装 iSlide 插件</sys:String>
     <!-- Download Settings -->
@@ -186,6 +196,7 @@
     <sys:String x:Key="DownloadAgent">UA:</sys:String>
     <sys:String x:Key="DownloadAgentTip">默认情况下，Office Tool Plus 会检测当前系统的版本，如果你需要为其他版本的 Windows 下载 Office 安装包，请配置此项</sys:String>
     <sys:String x:Key="DownloadUseHTTPS">使用 HTTPS 连接</sys:String>
+    <sys:String x:Key="DownloadVerifyInstallations">下载后校验 Office 安装文件</sys:String>
     <sys:String x:Key="DownloadThunderSettings">迅雷设置</sys:String>
     <sys:String x:Key="DownloadSpeedLimit">迅雷限速:</sys:String>
     <sys:String x:Key="DownloadProxyType">代理类型:</sys:String>
@@ -195,6 +206,7 @@
     <!-- Installation Manage -->
     <sys:String x:Key="InstallationFilesManage">安装文件管理</sys:String>
     <sys:String x:Key="InstallationSelectFile">选择文件</sys:String>
+    <sys:String x:Key="InstallationVerifyFiles">校验文件</sys:String>
     <!-- Activate Page -->
     <sys:String x:Key="ActivateButton">激活(_A)</sys:String>
     <sys:String x:Key="ActivateViewInformation">查看激活信息</sys:String>
@@ -294,7 +306,7 @@
     <sys:String x:Key="ToolboxRepair">修复</sys:String>
     <!-- Common Tools -->
     <sys:String x:Key="ToolboxChangeChannel">修改 Office 更新通道</sys:String>
-    <sys:String x:Key="ToolboxChangeChannelDescription">保存设置后，请在 Office 应用程序内检查更新。</sys:String>
+    <sys:String x:Key="ToolboxChangeChannelDescription">更改更新通道允许你在不重装 Office 的情况下进行升级/降级。</sys:String>
     <sys:String x:Key="ToolboxChangeOwner">修改 Office 产品属于者</sys:String>
     <sys:String x:Key="ToolboxChangeOwnerDescription">产品属于者显示在 Office 应用程序的账户页面中。&#x000A;&#x000A;若要修改指定产品的属于者，请使用此格式: ProductID:Name&#x000A;&#x000A;设置空白名将会重置属于者为默认值。</sys:String>
     <sys:String x:Key="ToolboxChangeOwnerName">名称:</sys:String>
@@ -304,7 +316,7 @@
     <sys:String x:Key="QueryErrorCode">查询错误代码信息</sys:String>
     <sys:String x:Key="QueryErrorCodeDescription">错误代码通常以「0x」开头，例如: 0x2 或者 0x80070002.</sys:String>
     <sys:String x:Key="ToolboxCheckKMS">检查 KMS 可用性</sys:String>
-    <sys:String x:Key="ToolboxCheckKMSDescription">使用逗号或者分行隔开每个 KMS 地址，你可以给地址添加一个端口。&#x000A;若要测试是否可以激活，请使用包含 vlmcs 的版本。</sys:String>
+    <sys:String x:Key="ToolboxCheckKMSDescription">使用逗号或者分行隔开每个 KMS 地址，你可以给地址添加一个端口。</sys:String>
     <sys:String x:Key="CheckKMSConnectionFailed">连接失败！</sys:String>
     <sys:String x:Key="CheckKMSConnectionSuccessful">连接成功</sys:String>
     <sys:String x:Key="CheckKMSActivationSuccessful">连接成功，激活测试成功</sys:String>
@@ -312,7 +324,7 @@
     <sys:String x:Key="ToolboxCollectLogDescription">收集 Office 安装日志以用于分析并解决未知的安装问题。</sys:String>
     <!-- Repair Tools -->
     <sys:String x:Key="ToolboxRemoveOffice">移除 Office</sys:String>
-    <sys:String x:Key="ToolboxRODescription">这将会删除和 Office 有关的组件、文件以及注册表信息。如果一次清理未完全成功，可以多试几次，或者换个方式。&#x000A;&#x000A;注意：仅当 Office 无法正常移除时才应该使用此功能。</sys:String>
+    <sys:String x:Key="ToolboxRODescription">这将会删除和 Office 有关的组件、文件以及注册表信息。如果一次清理未完全成功，可以多试几次。&#x000A;&#x000A;注意：仅当 Office 无法正常卸载时才应该使用此功能。</sys:String>
     <sys:String x:Key="ToolboxRemoveViaOfficial">使用微软官方工具移除 Office</sys:String>
     <sys:String x:Key="ToolboxRemoveViaOfficeToolPlus">使用 Office Tool Plus 移除 Office</sys:String>
     <sys:String x:Key="ToolboxRemoveUWPOffice">移除应用商店版本的 Office</sys:String>
@@ -321,14 +333,20 @@
     <sys:String x:Key="ToolboxRepairODIDescription">这将会重置 Office 文档关联。使用此功能后还需使用 Office 的快速修复。</sys:String>
     <sys:String x:Key="ToolboxRepairActivation">修复 Office 无法正常激活</sys:String>
     <sys:String x:Key="ToolboxRepairActivationDescription">这将会重置 Software Protection 服务的配置信息，在 Windows Insider 系统上还会重建激活文件。适用于激活 Office 时提示「发生未知错误」、「许可证使用失败 (0xC004E015)」或「服务器运行失败 (0x80080005)」。</sys:String>
+    <sys:String x:Key="ToolboxRepairGenuineWarning">修复 Office 许可证问题</sys:String>
+    <sys:String x:Key="ToolboxRepairGenuineWarningDescription">如果你的 Office 显示「你的 Office 许可证不是正版」，你可以设置一个 KMS 主机以修复此问题。执行此操作会将 KMS 主机写进 Software Protection 服务配置中。</sys:String>
     <sys:String x:Key="ToolboxRepairVBS">修复 VBS 文件关联</sys:String>
     <sys:String x:Key="ToolboxRepairVBSDescription">这将会重建 VBS 文件关联，适用于激活 Office 时提示「输入错误: 没有文件扩展 ".vbs" 的脚本引擎」。</sys:String>
     <sys:String x:Key="ToolboxRepairVariables">修复系统变量</sys:String>
-    <sys:String x:Key="ToolboxRepairVariablesDescription">这将会重置你的系统变量为默认值，如果不确定，请勿使用此功能。</sys:String>
-    <sys:String x:Key="ToolboxRepairTemplates">恢复 Word 默认文档模板</sys:String>
-    <sys:String x:Key="ToolboxRepairTemplatesDescription">这将会重建 Word 的默认模板，适用于 Word 在新建文档的时候显示「兼容模式」。</sys:String>
+    <sys:String x:Key="ToolboxRepairVariablesDescription">这将会重置你的系统变量为默认值。如果你不确定，请勿使用此功能。&#x000A;&#x000A;修复完成后，你需要重启系统以使更改生效。</sys:String>
+    <sys:String x:Key="ToolboxRepairWMI">修复 WMI 组件</sys:String>
+    <sys:String x:Key="ToolboxRepairWMIDescription">这将会重新注册 WMI 组件。如果你不确定，请勿使用此功能。&#x000A;&#x000A;修复完成后，你需要重启系统以使更改生效。</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettings">恢复 Office 设置为默认设置</sys:String>
-    <sys:String x:Key="ToolboxResetOfficeSettingsDescription">这将删除 Office 的所有设置，包括应用程序设置，本地文件列表以及最近的保存位置。使用此功能时，请关闭所有 Office 应用程序。</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsDescription">根据需要将 Office 恢复为默认设置。开始之前，请关闭所有 Office 应用程序。</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsUserSettings">删除当前用户设置（包含 Office 应用程序设置、最近打开的文件以及最近保存的位置）</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsUserProfiles">删除程序配置文件（包含 Office 程序缓存）</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsNormalTemplate">删除默认模板 (Normal.dotm)</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsGlobalSettings">删除应用程序首选项设置</sys:String>
     <!-- Convert Document -->
     <sys:String x:Key="ConvertSourceFormat">输入格式:</sys:String>
     <sys:String x:Key="ConvertOutputFormat">输出格式:</sys:String>
@@ -391,13 +409,23 @@
     <sys:String x:Key="SettingsRestart">重启</sys:String>
     <sys:String x:Key="SaveSettings">保存设置到本地</sys:String>
     <sys:String x:Key="DisplaySettings">界面设置</sys:String>
-    <sys:String x:Key="SettingsTopmost">保持窗口最前</sys:String>
-    <sys:String x:Key="SettingsTransparencyEffect">启用窗口透明效果</sys:String>
+    <sys:String x:Key="SettingsTopmost">窗口置顶</sys:String>
+    <sys:String x:Key="SettingsBackground">背景</sys:String>
+    <sys:String x:Key="SettingsBackgroundOff">关闭</sys:String>
+    <sys:String x:Key="SettingsBackgroundBlur">模糊效果</sys:String>
+    <sys:String x:Key="SettingsBackgroundAcrylic">亚克力效果</sys:String>
+    <sys:String x:Key="SettingsBackgroundBing">必应壁纸</sys:String>
+    <sys:String x:Key="SettingsBackgroundLocal">本地文件</sys:String>
+    <sys:String x:Key="SettingsChooseBGI">选择文件</sys:String>
     <sys:String x:Key="SettingsTransparencyEffectTip">仅在 Windows 10 中有效</sys:String>
-    <sys:String x:Key="SettingsTransparency">透明度</sys:String>
+    <sys:String x:Key="SettingsOpacity">不透明度</sys:String>
     <sys:String x:Key="SettingsBlurValue">背景图模糊度</sys:String>
-    <sys:String x:Key="SettingsChooseBGI">选择背景图</sys:String>
+    <sys:String x:Key="SettingsLanguageName">语言显示名称:</sys:String>
+    <sys:String x:Key="SettingsNativeName">本地名称</sys:String>
+    <sys:String x:Key="SettingsEnglishName">英文名称 </sys:String>
+    <sys:String x:Key="SettingsLocalizedName">本地化名称</sys:String>
     <sys:String x:Key="SettingsAdvanced">启用高级功能</sys:String>
+    <sys:String x:Key="SettingsHWAcceleration">启用硬件加速</sys:String>
     <!-- About Panel -->
     <sys:String x:Key="AppInf">程序信息</sys:String>
     <sys:String x:Key="Homepage">官方网站:</sys:String>
@@ -413,27 +441,31 @@
     <sys:String x:Key="TextBlockResources">本地、网络或 HTTP 路径</sys:String>
 
     <!-- Task Message -->
+    <sys:String x:Key="Task_DownloadUpdate">正在下载更新，{0} 已完成（第 {1} 个文件，共 {2} 个）</sys:String>
+    <sys:String x:Key="Task_VerifyFiles">正在校验文件，请稍等</sys:String>
     <sys:String x:Key="Task_DownloadingContent">正在获取内容，请稍等</sys:String>
     <sys:String x:Key="Task_PreparingDownload">准备下载 Office</sys:String>
-    <sys:String x:Key="Task_DeployClickToRun">正在准备 Click-to-Run</sys:String>
-    <sys:String x:Key="Task_ODT">Office 部署工具正在运行，请稍等</sys:String>
+    <sys:String x:Key="Task_ODT">正在部署，请稍等</sys:String>
     <sys:String x:Key="Task_OSPP">OSPP 正在运行，请稍候</sys:String>
     <sys:String x:Key="Task_SearchKMSAEvent">正在此计算机上搜索 KMS 激活事件: {0}</sys:String>
     <sys:String x:Key="Task_SearchIAFEvent">正在此计算机上搜索在线激活失败事件: {0}</sys:String>
     <sys:String x:Key="Task_CheckVersion">正在查询 Office 版本信息</sys:String>
     <sys:String x:Key="Task_CheckKMS">正在测试 KMS 主机</sys:String>
     <sys:String x:Key="Task_CollectLog">正在收集 Office 安装程序日志</sys:String>
-    <sys:String x:Key="Task_RemoveOffice">正在移除 Office</sys:String>
+    <sys:String x:Key="Task_RemoveOffice">正在移除 Office，请稍等</sys:String>
+    <sys:String x:Key="Task_RepairWMI">正在修复 WMI，请稍等</sys:String>
     <sys:String x:Key="Task_ConvertDocument">正在转换 Office 文档</sys:String>
     <!-- Example: Installing iSlide, please wait. -->
     <sys:String x:Key="Task_InstallingApp">正在安装 {0}，请稍等</sys:String>
 
     <!-- Question Message -->
     <sys:String x:Key="QuesUpdateTitle">Office Tool Plus 更新</sys:String>
-    <sys:String x:Key="QuesUpdateAvailable">有更新可用，是否现在打开下载页面？</sys:String>
+    <sys:String x:Key="QuesUpdateAvailable">有更新可用，是否现在下载？</sys:String>
     <sys:String x:Key="QuesUpdateNow">更新已经准备好，是否现在重启程序？这只需要几秒钟的时间。</sys:String>
     <sys:String x:Key="QuesExit">程序正在执行操作，确认退出？</sys:String>
     <sys:String x:Key="QuesOneClickInstallation">你选择安装 {0}。&#x000A;如果你需要选择应用程序或语言包，请使用“其他安装选项”。&#x000A;&#x000A;点击“是”下载后再安装，点击“否”下载时安装，或者关闭窗口以取消安装。</sys:String>
+    <sys:String x:Key="QuesSelectOfficeVersionToDownload">您已指定下载版本号为 {0} 的 Office，但我们检索到了不一样的版本。&#x000A;&#x000A;点击「是」将会下载版本号为 {1} 的 Office.&#x000A;点击「否」将会下载版本号为 {2} 的 Office.</sys:String>
+    <sys:String x:Key="QuesVerifyInstallation">是否需要校验 Office 安装文件以检查潜在的错误？</sys:String>
     <sys:String x:Key="QuesInstallation">准备好安装 Office 了吗？</sys:String>
     <sys:String x:Key="QuesConfiguration">如要了解详细配置请查看代码，以上基本配置是否正确？</sys:String>
     <sys:String x:Key="QuesDeleteFiles">确定要删除 {0} 吗？</sys:String>
@@ -445,14 +477,19 @@
     <sys:String x:Key="QuesAutoShutdown">你的电脑将在一分钟后注销/关机/重启。点击“是”立即执行，或者点击“否”取消操作。</sys:String>
 
     <!-- Info Message -->
-    <sys:String x:Key="InfoPermission">Office Tool Plus 是以普通权限启动的，一些功能将不可用</sys:String>
-    <sys:String x:Key="InfoUpdate">您使用的是最新版本的 Office Tool Plus</sys:String>
-    <sys:String x:Key="InfoNoConfigured">请先进行配置再继续操作</sys:String>
-    <sys:String x:Key="InfoAllExist">没有需要下载的文件，所有文件均存在</sys:String>
-    <sys:String x:Key="InfoDownloading">Office 正在下载</sys:String>
-    <sys:String x:Key="InfoSetupExited">Office 部署工具已正常退出</sys:String>
+    <sys:String x:Key="InfoPermission">Office Tool Plus 是以普通权限启动的，一些功能将不可用。</sys:String>
+    <sys:String x:Key="InfoRestart">你需要重新启动程序以使更改生效。</sys:String>
+    <sys:String x:Key="InfoUpdate">您使用的是最新版本的 Office Tool Plus.</sys:String>
+    <sys:String x:Key="InfoNoConfigured">配置信息不正确，请检查配置，然后重试。</sys:String>
+    <sys:String x:Key="InfoNoLanguagePackAddedForDownload">检测到您没有添加语言。大多数情况下，我们建议您添加语言以免发生问题。</sys:String>
+    <sys:String x:Key="InfoAllExist">没有需要下载的文件，所有文件均存在。</sys:String>
+    <sys:String x:Key="InfoFinishVerifying">安装文件校验完成，没有发现任何错误。</sys:String>
+    <sys:String x:Key="InfoDownloading">Office 正在下载。</sys:String>
+    <sys:String x:Key="InfoSetupExited">Office 部署工具已正常退出。</sys:String>
     <sys:String x:Key="InfoInstallationComplete">安装完成</sys:String>
     <sys:String x:Key="InfoInstallationFailed">安装失败</sys:String>
+    <sys:String x:Key="InfoNoOfficeDetectedForActivation">未在此计算机上检测到 Click-to-Run 版本的 Office，无法加载 Office 许可证。</sys:String>
+    <sys:String x:Key="Info64BitOfficeForConversion">您正在使用的是 64 位版本的 Office，文档转换可能无法正常工作。</sys:String>
 
     <!-- Success Message -->
     <sys:String x:Key="SuccessAddDownloadTask">成功添加下载任务</sys:String>
@@ -461,14 +498,23 @@
     <sys:String x:Key="SuccessRepair">修复成功</sys:String>
 
     <!-- Error Message -->
+    <sys:String x:Key="ErrCreateTempPath">无法创建临时文件夹，请确认系统环境变量是否设置正确！</sys:String>
     <sys:String x:Key="ErrRunning">Office Tool Plus 已经在运行中</sys:String>
-    <sys:String x:Key="ErrGettingInfo">内容暂不可用，请稍后重试</sys:String>
+    <sys:String x:Key="ErrAutoUpdate">自动更新出错，请手动下载最新版本的 Office Tool Plus.</sys:String>
+    <sys:String x:Key="ErrFileMissing">文件丢失:</sys:String>
+    <sys:String x:Key="ErrExtracting">提取文件时发生错误。</sys:String>
+    <sys:String x:Key="ErrInstallationHash">哈希值不匹配，文件: {0}&#x000A;哈希值: {1}&#x000A;实际的哈希值: {2}</sys:String>
+    <sys:String x:Key="ErrInstallationVersion">版本不匹配，文件: {0}&#x000A;版本: {1}&#x000A;实际的版本: {2}</sys:String>
+    <sys:String x:Key="ErrInstallationMismatch">版本不匹配，文件: {0}&#x000A;实际版本: {1}&#x000A;体系结构: {2}</sys:String>
+    <sys:String x:Key="ErrVerifyingInstallation">检查 Office 安装文件时发现错误，请查看「安装文件管理」获取错误的详细信息。</sys:String>
     <sys:String x:Key="ErrReadingInfo">读取 Office 信息时发生错误</sys:String>
     <sys:String x:Key="ErrSavingInfo">保存数据时发生错误！</sys:String>
     <sys:String x:Key="ErrSetProxy">设置代理失败！</sys:String>
-    <sys:String x:Key="ErrGetVersion">无法获取版本信息，请再试一次。或者改用 Office 部署工具作为下载引擎</sys:String>
-    <sys:String x:Key="ErrCreateISO">无法在 Office Tool Plus 文件夹中找到 Office 安装文件，请先下载 Office 安装文件，或者移动 Office 安装文件到工作目录中！</sys:String>
+    <sys:String x:Key="ErrGetVersion">无法获取 Office 版本，请再试一次，或者改用 Office 部署工具作为下载引擎。</sys:String>
+    <sys:String x:Key="ErrCreateISO">无法在 Office Tool Plus 文件夹中找到 Office 安装文件，请先下载 Office 安装文件，或者移动 Office 安装文件到工作目录中。</sys:String>
     <sys:String x:Key="ErrInput">输入错误</sys:String>
+    <!-- Example: Invalid product. ID: ProPlus2021Retail. -->
+    <sys:String x:Key="ErrInvalidProductID">无效的产品。ID: {0}.</sys:String>
     <sys:String x:Key="ErrSetupExited">Office 部署工具未正常退出</sys:String>
     <sys:String x:Key="ErrAppNotFound">没有在计算机上找到 {0}，请确认是否已经安装最新版本的 Office.</sys:String>
 

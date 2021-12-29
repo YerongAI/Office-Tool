@@ -1,7 +1,7 @@
 ﻿#
 
 <p align="center">
-<img alt="Office Tool Plus Logo" src="https://otp.landian.vip/static/images/logo.png"/>
+<img alt="Office Tool Plus Logo" src="https://otp.landian.vip/static/images/logo.webp"/>
 </p>
 
 <p align="center">
@@ -36,31 +36,11 @@
 - 批量转换 Office 文档
 - 自定义主题，支持保存程序设置
 
-部分功能基于以下组件：
+## 下载 & 快速入门
 
-- **[Office 部署工具](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)** - Office 的部署相关程序
-- **[OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)** - Office 的激活相关脚本
-- **迅雷云加速开放平台** - 下载 Office 的主要引擎
-- **[vlmcs](https://github.com/Wind4/vlmcsd)** - 检测 KMS 可用性的组件
-
-## 系统要求
-
-- Windows 7 SP1, Windows 8 和 Windows 10.
-- Windows Server 2008 R2 SP1, Windows Server 2012 或者更高版本.
-
-- [Microsoft .NET 5.0 Desktop Runtime x86](https://dotnet.microsoft.com/download/dotnet/current/runtime)
-
-## 下载 Office Tool Plus
-
-- [官方网站](https://otp.landian.vip/)
-
-- [下载站点](https://download.coolhub.top/)
-
-- [OneDrive for Business](https://coolhub-my.sharepoint.com/:f:/g/personal/yerong_coolhub_onmicrosoft_com/Ev9IUbXAw01JgwrAgsIFB8YBzJebdZZpmsR9hZFAZZVDgg?e=AkSdZU)
-
-## 快速入门
-
-请参考 [Office Tool Plus 的快速入门](https://github.com/YerongAI/Office-Tool/wiki/Office-Tool-Plus-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8)
+- [下载](https://help.coolhub.top/zh-cn/start/download.html)
+- [快速入门](https://github.com/YerongAI/Office-Tool/wiki).
+- [帮助文档](https://otp.landian.vip/help/).
 
 更多详细教程可访问 [Yerong の小窝](https://www.coolhub.top/) 获取。
 
@@ -68,4 +48,4 @@
 
 © 2016-2021 Yerong. All Rights Reserved.
 
-> 博客 [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel)
+> 博客 [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel) · [E-mail](mailto:yerong@coolhub.top)

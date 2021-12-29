@@ -324,7 +324,6 @@
     <sys:String x:Key="ToolboxCollectLogDescription">รวบรวมบันทึกเพื่อวิเคราะห์และแก้ไขปัญหา</sys:String>
     <!-- Repair Tools -->
     <sys:String x:Key="ToolboxRemoveOffice">ลบ Office</sys:String>
-    <!-- To do: Remove the translation for ", or do it another way", the new string is "If the cleanup fails, try a few more times." -->
     <sys:String x:Key="ToolboxRODescription">การดำเนินการนี้จะลบส่วนประกอบ ไฟล์ และรีจิสทรีที่เกี่ยวข้องกับ Office หากการล้างข้อมูลล้มเหลว ให้ลองอีกสองสามครั้งหรือทำอย่างอื่น&#x000A;&#x000A;หมายเหตุ: ควรใช้ฟีเจอร์นี้เฉพาะในกรณีที่ไม่สามารถถอนการติดตั้ง Office ได้อย่างถูกต้อง</sys:String>
     <sys:String x:Key="ToolboxRemoveViaOfficial">ลบ Office ผ่านเครื่องมืออย่างเป็นทางการ</sys:String>
     <sys:String x:Key="ToolboxRemoveViaOfficeToolPlus">ลบ Office ผ่าน Office Tool Plus</sys:String>
@@ -342,10 +341,12 @@
     <sys:String x:Key="ToolboxRepairVariablesDescription">การดำเนินการนี้จะรีเซ็ตตัวแปรระบบของคุณเป็นค่าเริ่มต้น อย่าใช้มันหากคุณไม่แน่ใจ&#x000A;&#x000A;หลังจากการซ่อมแซมเสร็จสิ้น คุณจะต้องรีบูตระบบเพื่อให้ระบบมีผล</sys:String>
     <sys:String x:Key="ToolboxRepairWMI">ซ่อมแซมส่วนประกอบ WMI</sys:String>
     <sys:String x:Key="ToolboxRepairWMIDescription">การดำเนินการนี้จะลงทะเบียนคอมโพเนนต์ WMI อีกครั้ง อย่าใช้มันหากคุณไม่แน่ใจ&#x000A;&#x000A;หลังจากการซ่อมแซมเสร็จสิ้น คุณจะต้องรีบูตระบบเพื่อให้ระบบมีผล</sys:String>
-    <sys:String x:Key="ToolboxRepairTemplates">กู้คืนเทมเพลตเอกสารเริ่มต้นของ Word</sys:String>
-    <sys:String x:Key="ToolboxRepairTemplatesDescription">ฟังชั่นนี้จะเป็นการสร้างเทมเพลตเริ่มต้นของ Word ใหม่</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettings">คืนค่าการตั้งค่า Office เป็นค่าเริ่มต้น</sys:String>
-    <sys:String x:Key="ToolboxResetOfficeSettingsDescription">การดำเนินการนี้จะรีเซ็ตการตั้งค่า Office ของคุณ รวมถึงการตั้งค่าแอปพลิเคชัน ประวัติไฟล์ในเครื่อง และเส้นทางการบันทึกล่าสุด&#x000A;โปรดปิดแอปพลิเคชัน Office ทั้งหมดก่อนดำเนินการต่อ</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsDescription">Restore Office to default settings as you want. Before starting, please close all Office applications.</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsUserSettings">Delete current user settings (includes Office applications settings, recently opened files and recently save location).</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsUserProfiles">Delete applications profiles (includes applications cache).</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsNormalTemplate">Delete the Normal template (Normal.dotm).</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsGlobalSettings">Delete applications preference settings.</sys:String>
     <!-- Convert Document -->
     <sys:String x:Key="ConvertSourceFormat">รูปแบบการนำเข้า:</sys:String>
     <sys:String x:Key="ConvertOutputFormat">รูปแบบการส่งออก:</sys:String>
@@ -444,8 +445,7 @@
     <sys:String x:Key="Task_VerifyFiles">กำลังตรวจสอบไฟล์ โปรดรอสักครู่</sys:String>
     <sys:String x:Key="Task_DownloadingContent">กำลังรับเนื้อหา กรุณารอสักครู่</sys:String>
     <sys:String x:Key="Task_PreparingDownload">กำลังเตรียมดาวน์โหลด Office</sys:String>
-    <sys:String x:Key="Task_DeployClickToRun">กำลังเตรียม คลิก-ทู-รัน</sys:String>
-    <sys:String x:Key="Task_ODT">เครื่องมือการปรับใช้ Office กำลังทำงานอยู่ โปรดรอสักครู่</sys:String>
+    <sys:String x:Key="Task_ODT">Deploying now, please wait.</sys:String>
     <sys:String x:Key="Task_OSPP">OSPP กำลังทำงานอยู่ กรุณารอสักครู่</sys:String>
     <sys:String x:Key="Task_SearchKMSAEvent">กำลังค้นหาเหตุการณ์การเปิดใช้งาน KMS บนเครื่อง: {0}</sys:String>
     <sys:String x:Key="Task_SearchIAFEvent">กำลังค้นหาเหตุการณ์ความล้มเหลวในการเปิดใช้งานอินเทอร์เน็ตบนเครื่อง: {0}</sys:String>
@@ -489,6 +489,7 @@
     <sys:String x:Key="InfoInstallationComplete">การติดตั้งเสร็จสมบูรณ์</sys:String>
     <sys:String x:Key="InfoInstallationFailed">การติดตั้งล้มเหลว</sys:String>
     <sys:String x:Key="InfoNoOfficeDetectedForActivation">ไม่พบ Office รุ่น Click-to-Run บนคอมพิวเตอร์เครื่องนี้ ไม่สามารถโหลดใบอนุญาต Office ได้</sys:String>
+    <sys:String x:Key="Info64BitOfficeForConversion">You are using a 64-bit version of Office, documents conversion may not work properly.</sys:String>
 
     <!-- Success Message -->
     <sys:String x:Key="SuccessAddDownloadTask">เพิ่มงานดาวน์โหลดสำเร็จ</sys:String>

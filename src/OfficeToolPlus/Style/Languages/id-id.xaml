@@ -49,8 +49,8 @@
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
     <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
     <!-- If you can't understand what is hotkey, remove '&amp;' when you are translating. -->
-    <sys:String x:Key="CD-ROM_InstallNow">&amp;Install now</sys:String>
-    <sys:String x:Key="CopyToClipboard">Copy to clipboard</sys:String>
+    <sys:String x:Key="CD-ROM_InstallNow">&amp;Pasang sekarang</sys:String>
+    <sys:String x:Key="CopyToClipboard">Salin ke papan klip</sys:String>
 
     <!-- Greetings -->
     <!-- Showed when app started. -->
@@ -185,7 +185,7 @@
     <sys:String x:Key="DeployModeInstall">Pasangkan</sys:String>
     <sys:String x:Key="DeployModeCreateISO">Buat berkas ISO</sys:String>
     <sys:String x:Key="DeployModule">Modul pemasangan:</sys:String>
-    <sys:String x:Key="DeployModeIAD">Download first, then deploy.</sys:String>
+    <sys:String x:Key="DeployModeIAD">Unduh terlebih dulu, lalu pasang.</sys:String>
     <sys:String x:Key="DeployCreateShortcut">Buat pintasan ke desktop.</sys:String>
     <sys:String x:Key="DeployInstalliSlide">Pasang iSlide.</sys:String>
     <!-- Download Page -->
@@ -324,7 +324,7 @@
     <sys:String x:Key="ToolboxCollectLogDescription">Kumpulkan catatan untuk menganalisa dan memecahkan masalah yang tidak diketahui.</sys:String>
     <!-- Repair Tools -->
     <sys:String x:Key="ToolboxRemoveOffice">Copot Office</sys:String>
-    <sys:String x:Key="ToolboxRODescription">Ini akan mencopot komponen, berkas, dan registri terkait Office. Apabila pembersihan gagal, cobalah beberapa.&#x000A;&#x000A;Catatan: Fitur ini hanya perlu digunakan ketika Office tidak bisa dicopot dengan benar.</sys:String>
+    <sys:String x:Key="ToolboxRODescription">Ini akan mencopot komponen, berkas, dan registri terkait Office. Apabila pembersihan gagal, silakan coba lagi.&#x000A;&#x000A;Catatan: Fitur ini hanya perlu digunakan ketika Office tidak bisa dicopot dengan benar.</sys:String>
     <sys:String x:Key="ToolboxRemoveViaOfficial">Copot Office melalui alat resmi</sys:String>
     <sys:String x:Key="ToolboxRemoveViaOfficeToolPlus">Copot Office melalui Office Tool Plus</sys:String>
     <sys:String x:Key="ToolboxRemoveUWPOffice">Copot aplikasi Office dari Microsoft Store</sys:String>
@@ -338,13 +338,15 @@
     <sys:String x:Key="ToolboxRepairVBS">Perbaiki asosiasi berkas VBS</sys:String>
     <sys:String x:Key="ToolboxRepairVBSDescription">Ini akan membangun ulang berkas asosiasi VBS dan berlaku untuk mengaktivasi Office dengan "There is no script engine for file extension ".vbs"".</sys:String>
     <sys:String x:Key="ToolboxRepairVariables">Perbaiki variabel sistem</sys:String>
-    <sys:String x:Key="ToolboxRepairVariablesDescription">This will reset your system variables to default values. Do not use it if you are unsure.&#x000A;&#x000A;After the repair is complete, you need to reboot your system for it to take effect.</sys:String>
-    <sys:String x:Key="ToolboxRepairWMI">Repair WMI component</sys:String>
-    <sys:String x:Key="ToolboxRepairWMIDescription">This will re-register the WMI component. Do not use it if you are unsure.&#x000A;&#x000A;After the repair is complete, you need to reboot your system for it to take effect.</sys:String>
-    <sys:String x:Key="ToolboxRepairTemplates">Mengembalikan template dokumen bawaan Word</sys:String>
-    <sys:String x:Key="ToolboxRepairTemplatesDescription">This will rebuild Word's default template.</sys:String>
+    <sys:String x:Key="ToolboxRepairVariablesDescription">Ini akan mengatur ulang variabel sistem ke nilai bawaan. Jangan digunakan apabila anda tidak yakin.&#x000A;&#x000A;Setelah perbaikan telah selesai, anda perlu menyalakan ulang sistem anda untuk melihat perubahan.</sys:String>
+    <sys:String x:Key="ToolboxRepairWMI">Perbaiki komponen WMI</sys:String>
+    <sys:String x:Key="ToolboxRepairWMIDescription">Ini akan mendaftarkan ulang komponen WMI. Jangan digunakan apabila anda tidak yakin.&#x000A;&#x000A;Setelah perbaikan telah selesai, anda perlu menyalakan ulang sistem anda untuk melihat perubahan.</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettings">Kembalikan pengaturan Office ke pengaturan aslinya</sys:String>
-    <sys:String x:Key="ToolboxResetOfficeSettingsDescription">Ini akan mengatur ulang pengaturan Office anda, termasuk pengaturan aplikasi, riwayat berkas lokal, dan jalur penyimpanan terakhir. Catatan: Harap tutup semua aplikasi Office sebelum melanjutkan.</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsDescription">Kembalikan pengaturan Office ke pengaturan aslinya seperti anda inginkan. Sebelum memulai, silakan tutup semua aplikasi Office.</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsUserSettings">Hapus pengaturan pengguna saat ini (termasuk pengaturan aplikasi Office, berkas yang baru saja dibuka dan baru saja disimpan).</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsUserProfiles">Hapus pengaturan profil aplikasi (termasuk cache aplikasi).</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsNormalTemplate">Hapus templat Normal (Normal.dotm).</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsGlobalSettings">Hapus pengaturan preferensi aplikasi.</sys:String>
     <!-- Convert Document -->
     <sys:String x:Key="ConvertSourceFormat">Format masukkan:</sys:String>
     <sys:String x:Key="ConvertOutputFormat">Format keluaran:</sys:String>
@@ -443,8 +445,7 @@
     <sys:String x:Key="Task_VerifyFiles">Memeriksa berkas, silakan tunggu.</sys:String>
     <sys:String x:Key="Task_DownloadingContent">Mendapatkan konten, silakan tunggu.</sys:String>
     <sys:String x:Key="Task_PreparingDownload">Mempersiapkan untuk mengunduh Office.</sys:String>
-    <sys:String x:Key="Task_DeployClickToRun">Pemasangan Click-to-Run.</sys:String>
-    <sys:String x:Key="Task_ODT">Office Deployment Tool sedang berjalan sekarang, silakan tunggu.</sys:String>
+    <sys:String x:Key="Task_ODT">Memasang sekarang, silakan tunggu.</sys:String>
     <sys:String x:Key="Task_OSPP">OSPP sedang berjalan sekarang, silakan tunggu.</sys:String>
     <sys:String x:Key="Task_SearchKMSAEvent">Mencari peristiwa aktivasi KMS di Perangkat: {0}</sys:String>
     <sys:String x:Key="Task_SearchIAFEvent">Mencari peristiwa gagalnya aktivasi Internet di Perangkat: {0}</sys:String>
@@ -452,7 +453,7 @@
     <sys:String x:Key="Task_CheckKMS">Menguji coba host KMS.</sys:String>
     <sys:String x:Key="Task_CollectLog">Mengumpulkan catatan pemasangan Office.</sys:String>
     <sys:String x:Key="Task_RemoveOffice">Membersihkan Office.</sys:String>
-    <sys:String x:Key="Task_RepairWMI">Repairing WMI, please wait.</sys:String>
+    <sys:String x:Key="Task_RepairWMI">Memperbaiki WMI, silakan tunggu.</sys:String>
     <sys:String x:Key="Task_ConvertDocument">Mengonversikan dokumen Office.</sys:String>
     <!-- Example: Installing iSlide, please wait. -->
     <sys:String x:Key="Task_InstallingApp">Memasang {0}, silakan tunggu.</sys:String>
@@ -463,7 +464,7 @@
     <sys:String x:Key="QuesUpdateNow">Pembaruan sudah siap, ingin memulai ulang aplikasinya sekarang? Ini dilakukan hanya beberapa detik saja.</sys:String>
     <sys:String x:Key="QuesExit">Office Tool Plus sedang bekerja sekarang. Apakah anda ingin keluar?</sys:String>
     <sys:String x:Key="QuesOneClickInstallation">Anda memilih {0} untuk dipasangkan.&#x000A;Apabila anda ingin memilih aplikasi atau bahasa, gunakan opsi pemasangan lain.&#x000A;&#x000A;Klik "Ya" untuk memasang setelah diunduh, "Tidak" untuk memasang saat mengunduh, atau tutup jendela untuk membatalkannya.</sys:String>
-    <sys:String x:Key="QuesSelectOfficeVersionToDownload">You have specified Office version to {0}, but we get a different version.&#x000A;&#x000A;Clicking "Yes" will download version {1} of Office.&#x000A;Clicking "No" will download version {2} of Office.</sys:String>
+    <sys:String x:Key="QuesSelectOfficeVersionToDownload">Anda memiliki versi Office tertentu yaitu {0}, tetapi kita mendapatkan versi yang berbeda.&#x000A;&#x000A;Klik "Ya" akan mengunduh Office versi {1}.&#x000A;Klik "Tidak" akan mengunduh Office versi {2}.</sys:String>
     <sys:String x:Key="QuesVerifyInstallation">Anda ingin memeriksa berkas pemasangan Office untuk menemukan kemungkinan terjadinya kesalahan?</sys:String>
     <sys:String x:Key="QuesInstallation">Siap untuk memasang Office?</sys:String>
     <sys:String x:Key="QuesConfiguration">Tampilkan kode untuk konfigurasi detail, apakah konfigurasi dasar di atas sudah tepat?</sys:String>
@@ -480,14 +481,15 @@
     <sys:String x:Key="InfoRestart">Anda perlu memulai ulang aplikasi untuk menerapkan perubahan.</sys:String>
     <sys:String x:Key="InfoUpdate">Anda menggunakan Office Tool Plus versi terbaru.</sys:String>
     <sys:String x:Key="InfoNoConfigured">Tidak ada perubahan yang terdeteksi.</sys:String>
-    <sys:String x:Key="InfoNoLanguagePackAddedForDownload">We have detected that you have not added a language. In most cases, we recommend that you add languages to avoid problems.</sys:String>
+    <sys:String x:Key="InfoNoLanguagePackAddedForDownload">Kita mendeteksi bahwa anda tidak menambahkan sebuah bahasa. Kebanyakkan kasus, kita menyarankan anda untuk menambahkan sebuah bahasa agar mencegah terjadinya masalah.</sys:String>
     <sys:String x:Key="InfoAllExist">Tidak diperlukan untuk mengunduh, semua berkas sudah ada.</sys:String>
     <sys:String x:Key="InfoFinishVerifying">Berkas pemasangan sudah diperiksa dan tidak ditemukan kesalahan.</sys:String>
     <sys:String x:Key="InfoDownloading">Office sedang diunduh.</sys:String>
     <sys:String x:Key="InfoSetupExited">Office Deployment Tool tertutup secara normal.</sys:String>
     <sys:String x:Key="InfoInstallationComplete">Pemasangan berhasil.</sys:String>
     <sys:String x:Key="InfoInstallationFailed">Pemasangan gagal.</sys:String>
-    <sys:String x:Key="InfoNoOfficeDetectedForActivation">The Click-to-Run version of Office was not detected on this computer, the Office licenses could not be loaded.</sys:String>
+    <sys:String x:Key="InfoNoOfficeDetectedForActivation">Versi Click-to-Run Office anda tidak terdeteksi di komputer ini, lisensi Office-nya tidak dapat dimuat.</sys:String>
+    <sys:String x:Key="Info64BitOfficeForConversion">Anda menggunakan Office versi 64-bit, konversi dokumen mungkin tidak dapat bekerja dengan benar.</sys:String>
 
     <!-- Success Message -->
     <sys:String x:Key="SuccessAddDownloadTask">Tugas unduhan berhasil ditambahkan.</sys:String>

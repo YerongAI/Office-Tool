@@ -49,8 +49,8 @@
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
     <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
     <!-- If you can't understand what is hotkey, remove '&amp;' when you are translating. -->
-    <sys:String x:Key="CD-ROM_InstallNow">&amp;Install now</sys:String>
-    <sys:String x:Key="CopyToClipboard">Copy to clipboard</sys:String>
+    <sys:String x:Key="CD-ROM_InstallNow">今すぐインストール(&amp;I)</sys:String>
+    <sys:String x:Key="CopyToClipboard">コピー</sys:String>
 
     <!-- Greetings -->
     <!-- Showed when app started. -->
@@ -146,7 +146,7 @@
     <sys:String x:Key="DeployEnableUpdate">Officeの自動更新を有効にします。</sys:String>
     <sys:String x:Key="DeployEnableCOM">「Microsoft Endpoint Configuration Manager」を使用して更新を管理します。</sys:String>
     <sys:String x:Key="DeployUpdatePath">更新のソース:</sys:String>
-    <sys:String x:Key="DeployUpdatePathTip">パスが空の場合、OfficeCDNがデフォルトでソースとして使用されます。</sys:String>
+    <sys:String x:Key="DeployUpdatePathTip">パスが空の場合、Office CDNがデフォルトでソースとして使用されます。</sys:String>
     <sys:String x:Key="DeployTargetVersion">対象バージョン:</sys:String>
     <sys:String x:Key="DeployUpdateDeadline">更新期限:</sys:String>
     <sys:String x:Key="DeployUpdateChannel">更新チャンネル:</sys:String>
@@ -185,7 +185,7 @@
     <sys:String x:Key="DeployModeInstall">インストール</sys:String>
     <sys:String x:Key="DeployModeCreateISO">ISOファイルを作成</sys:String>
     <sys:String x:Key="DeployModule">インストールモジュール:</sys:String>
-    <sys:String x:Key="DeployModeIAD">まずダウンロードしてからデプロイします</sys:String>
+    <sys:String x:Key="DeployModeIAD">まずダウンロードしてから展開します</sys:String>
     <sys:String x:Key="DeployCreateShortcut">デスクトップショートカットを作成する</sys:String>
     <sys:String x:Key="DeployInstalliSlide">iSlide「PowerPoint プラグイン」のインストール</sys:String>
     <!-- Download Settings -->
@@ -338,13 +338,15 @@
     <sys:String x:Key="ToolboxRepairVBS">VBSファイルの関連付けを修復</sys:String>
     <sys:String x:Key="ToolboxRepairVBSDescription">これによりVBSファイルの関連付けが再構築され、Officeのアクティブ化に適用されます。</sys:String>
     <sys:String x:Key="ToolboxRepairVariables">システム変数を修復する</sys:String>
-    <sys:String x:Key="ToolboxRepairVariablesDescription">This will reset your system variables to default values. Do not use it if you are unsure.&#x000A;&#x000A;After the repair is complete, you need to reboot your system for it to take effect.</sys:String>
-    <sys:String x:Key="ToolboxRepairWMI">Repair WMI component</sys:String>
-    <sys:String x:Key="ToolboxRepairWMIDescription">This will re-register the WMI component. Do not use it if you are unsure.&#x000A;&#x000A;After the repair is complete, you need to reboot your system for it to take effect.</sys:String>
-    <sys:String x:Key="ToolboxRepairTemplates">Wordのデフォルトのドキュメントテンプレートを復元します。</sys:String>
-    <sys:String x:Key="ToolboxRepairTemplatesDescription">This will rebuild Word's default template.</sys:String>
+    <sys:String x:Key="ToolboxRepairVariablesDescription">これにより、システム変数がデフォルト値にリセットされます。不明な場合は使用しないでください。&#x000A;&#x000A;修復が完了したら、システムを再起動して有効にする必要があります。</sys:String>
+    <sys:String x:Key="ToolboxRepairWMI">WMI コンポーネントの修復</sys:String>
+    <sys:String x:Key="ToolboxRepairWMIDescription">WMI コンポーネントが再登録されます。不明な場合は使用しないでください。&#x000A;&#x000A;修復が完了したら、システムを再起動して有効にする必要があります。</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettings">Officeの設定をデフォルトに戻す</sys:String>
-    <sys:String x:Key="ToolboxResetOfficeSettingsDescription">これにより、アプリケーションの設定、ローカルファイルの履歴、最近の保存パスなど、Officeの設定がリセットされます。注：先に進む前に、すべてのOfficeアプリケーションを閉じてください。</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsDescription">Office を必要に応じて既定の設定に戻します。開始する前に、すべての Office アプリケーションを閉じてください。</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsUserSettings">現在のユーザー設定を削除します (Office アプリケーションの設定、最近開いたファイル、最近保存した場所など)。</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsUserProfiles">アプリケーション プロファイル (アプリケーション キャッシュを含む) を削除します。</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsNormalTemplate">標準テンプレート (Normal.dotm) を削除します。</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsGlobalSettings">アプリケーションの環境設定を削除します。</sys:String>
     <!-- Convert Document -->
     <sys:String x:Key="ConvertSourceFormat">入力フォーマット:</sys:String>
     <sys:String x:Key="ConvertOutputFormat">出力フォーマット:</sys:String>
@@ -401,7 +403,7 @@
     <!-- Settings Panel -->
     <sys:String x:Key="LanguageSettings">言語：</sys:String>
     <sys:String x:Key="ThemeSettings">テーマ：</sys:String>
-    <sys:String x:Key="AutoShutdownSettings">デプロイが完了した後:</sys:String>
+    <sys:String x:Key="AutoShutdownSettings">展開が完了した後:</sys:String>
     <sys:String x:Key="SettingsSignOut">サインアウト</sys:String>
     <sys:String x:Key="SettingsShutdown">シャットダウン</sys:String>
     <sys:String x:Key="SettingsRestart">再起動します</sys:String>
@@ -440,11 +442,10 @@
 
     <!-- Task Message -->
     <sys:String x:Key="Task_DownloadUpdate">更新プログラムのダウンロード、{0}完了 ({1} of {2}).</sys:String>
-    <sys:String x:Key="Task_VerifyFiles">ファイルを確認中。しばらくお待ちください。</sys:String>
+    <sys:String x:Key="Task_VerifyFiles">ファイルを確認中。お待ちください。</sys:String>
     <sys:String x:Key="Task_DownloadingContent">コンテンツを取得して、お待ちください。</sys:String>
     <sys:String x:Key="Task_PreparingDownload">Officeをダウンロードする準備をしています。</sys:String>
-    <sys:String x:Key="Task_DeployClickToRun">「Click-to-Run」のインストール。</sys:String>
-    <sys:String x:Key="Task_ODT">「Office 展開ツール」を実行しています。しばらくお待ちください。</sys:String>
+    <sys:String x:Key="Task_ODT">Deploying now, please wait.</sys:String>
     <sys:String x:Key="Task_OSPP">OSPPは現在実行中です。お待​​ちください。</sys:String>
     <sys:String x:Key="Task_SearchKMSAEvent">コンピューターでKMSライセンス認証イベントを検索する: {0}</sys:String>
     <sys:String x:Key="Task_SearchIAFEvent">マシンでインターネットアクティベーションイベントを検索する: {0}</sys:String>
@@ -452,7 +453,7 @@
     <sys:String x:Key="Task_CheckKMS">KMSホストのテスト。</sys:String>
     <sys:String x:Key="Task_CollectLog">Officeインストーラーログの収集。</sys:String>
     <sys:String x:Key="Task_RemoveOffice">Officeをクリアする。</sys:String>
-    <sys:String x:Key="Task_RepairWMI">Repairing WMI, please wait.</sys:String>
+    <sys:String x:Key="Task_RepairWMI">WMI コンポーネントを修復しています。お待ちください。</sys:String>
     <sys:String x:Key="Task_ConvertDocument">Officeドキュメントを変換しています。</sys:String>
     <!-- Example: Installing iSlide, please wait. -->
     <sys:String x:Key="Task_InstallingApp">{0}をインストールしています。お待ちください。</sys:String>
@@ -480,14 +481,15 @@
     <sys:String x:Key="InfoRestart">有効にするには、アプリケーションを再起動する必要があります。</sys:String>
     <sys:String x:Key="InfoUpdate">最新バージョンの「Office Tool Plus」を使用しています。</sys:String>
     <sys:String x:Key="InfoNoConfigured">変更は検出されませんでした。</sys:String>
-    <sys:String x:Key="InfoNoLanguagePackAddedForDownload">We have detected that you have not added a language. In most cases, we recommend that you add languages to avoid problems.</sys:String>
+    <sys:String x:Key="InfoNoLanguagePackAddedForDownload">言語を追加していないことが検出されました。 ほとんどの場合、問題を回避するために言語を追加することをお勧めします。</sys:String>
     <sys:String x:Key="InfoAllExist">ダウンロードするファイルはありません。すべてのファイルが存在します。</sys:String>
     <sys:String x:Key="InfoFinishVerifying">インストールファイルが検証され、エラーは見つかりませんでした。</sys:String>
     <sys:String x:Key="InfoDownloading">Officeがダウンロードされています。</sys:String>
     <sys:String x:Key="InfoSetupExited">「Office 展開ツール」は正常に終了しました。</sys:String>
     <sys:String x:Key="InfoInstallationComplete">インストールが完了しました。</sys:String>
     <sys:String x:Key="InfoInstallationFailed">インストールに失敗しました。</sys:String>
-    <sys:String x:Key="InfoNoOfficeDetectedForActivation">The Click-to-Run version of Office was not detected on this computer, the Office licenses could not be loaded.</sys:String>
+    <sys:String x:Key="InfoNoOfficeDetectedForActivation">このコンピュータで Office のクイック実行バージョンが検出されず、Office ライセンスを読み込めませんでした。</sys:String>
+    <sys:String x:Key="Info64BitOfficeForConversion">You are using a 64-bit version of Office, documents conversion may not work properly.</sys:String>
 
     <!-- Success Message -->
     <sys:String x:Key="SuccessAddDownloadTask">ダウンロードタスクを正常に追加します。</sys:String>

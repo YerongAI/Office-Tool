@@ -1,4 +1,4 @@
-V8.2.10.1
+V8.3.0.1
 
 1. Soporte para migrar arquitectura usando Office Tool Plus como módulo de instalación.
 2. Soporte para aplicar preferencias para aplicaciones de Office usando Office Tool Plus como módulo de instalación.

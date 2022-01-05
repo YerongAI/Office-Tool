@@ -1,5 +1,7 @@
 V8.3.0.1
 
+**Note: This update required [.NET 6 Desktop Runtime x86](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime) installed.**
+
 1. Support to migrate architecture using Office Tool Plus as installation module.
 2. Support to apply preferences for Office applications using Office Tool Plus as installation module.
 3. Support to set options when restore Office settings to default.

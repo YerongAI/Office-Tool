@@ -1,5 +1,7 @@
 V8.3.0.1
 
+**本次更新需要安装 [.NET 6 Desktop Runtime x86](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime) 才能完成。**
+
 1. 支援 Office Tool Plus 安裝模組部署變更架構。
 2. 支援 Office Tool Plus 安裝模組部署應用應用程式喜好設定。
 3. 支援更多「還原 Office 預設設定」還原選項。

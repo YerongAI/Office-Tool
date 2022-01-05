@@ -1,5 +1,7 @@
 V8.3.0.1
 
+**本次更新需要安装 [.NET 6 Desktop Runtime x86](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime) 才能完成。**
+
 1. Office Tool Plus 安装模块支持迁移体系结构。
 2. Office Tool Plus 安装模块支持应用应用程序首选项。
 3. 「恢复 Office 默认设置」功能支持设置恢复选项。

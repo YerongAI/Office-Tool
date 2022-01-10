@@ -41,6 +41,6 @@ Fungsi Tambahan:
 
 ## Tentang
 
-© 2016-2021 Yerong. Semua Hak Cipta Dilindungi.
+© 2016-2022 Yerong. Semua Hak Cipta Dilindungi.
 
 > Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel) · [E-mail](mailto:yerong@coolhub.top)

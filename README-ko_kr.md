@@ -37,7 +37,7 @@ Office 배포 제외의 다른 기능들:
 
 - [다운로드](https://help.coolhub.top/start/download.html).
 - [빠른시작](https://github.com/YerongAI/Office-Tool/wiki).
-- [Documentation](https://help.coolhub.top/).
+- [매뉴얼](https://help.coolhub.top/).
 
 ## 추가정보
 

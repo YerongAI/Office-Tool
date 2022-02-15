@@ -37,7 +37,7 @@ Funzioni e caratteristiche::
 
 - [Scarica](https://help.coolhub.top/start/download.html)
 - [Lezione rapida](https://github.com/YerongAI/Office-Tool/wiki).
-- [Documentation](https://help.coolhub.top/).
+- [Documentazione](https://help.coolhub.top/).
 
 ## Informazioni
 

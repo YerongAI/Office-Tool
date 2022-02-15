@@ -47,20 +47,20 @@ Functions and Features:
 | :-- | :-- | :-- |
 | ar-sa | العربية (المملكة العربية السعودية) | [Yarani](https://github.com/Yarani) |
 | de-de | Deutsch (Deutschland) | [Berny23](https://steamcommunity.com/id/Berny23) |
-| en-us | English (United States) | [Me](https://github.com/YerongAI) and [Moedog](https://prprpr.love) |
+| en-us | English (United States) | [Yerong](https://officetool.plus/), [Moedog](https://prprpr.love) |
 | es-es | Español (España) | Xoseba |
 | fr-fr | Français (France) | Drake4478, MONOKUMA |
 | id-id | Bahasa Indonesia (Indonesia) | [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Jovanzers](https://github.com/jovanzers) |
 | it-it | Italiano (Italia) | [garf02](https://github.com/garf02) |
 | ja-jp | 日本語 (日本) | [秋山ヘイワ](https://github.com/akio1321), kai, 河豚 |
 | ko-kr | 한국어(대한민국) | [Jay Jang](https://iamx.work) |
-| nl-nl | Nederlands (Nederland) | Kajoe |
-| pl-pl | Polski (Polska) | JakubDriver |
+| nl-nl | Nederlands (Nederland) | [Kajoe](https://github.com/Kajoe1) |
+| pl-pl | Polski (Polska) | [JakubDriver](https://github.com/jakubdriver) |
 | pt-br | Português (Brasil) | [Hélio de Souza](https://tinyurl.com/hdstec), [Igor Rückert](https://github.com/igorruckert) |
-| ro-ro | Română (România) | ianymaty |
+| ro-ro | Română (România) | [ianymaty](https://github.com/ianymaty) |
 | ru-ru | Русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov) |
 | th-th | ไทย (ไทย) | [Alisa Callaway](https://github.com/OllyMaster), [Pattharapong Kt.](https://github.com/OllyModerator) |
-| zh-hk | 繁體中文 (香港) | TurboHK |
+| zh-hk | 繁體中文 (香港) | [TurboHK](https://github.com/TurboHK) |
 | zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412) |
 
 ## Help With Localization

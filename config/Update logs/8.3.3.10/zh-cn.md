@@ -1,6 +1,5 @@
-### V8.3.3.6
+### V8.3.3.10
 
-- 修复了 tooltip 工作不正常的问题。[#440](https://github.com/YerongAI/Office-Tool/issues/440)
 - 翻译更新。
 
 #### 主页

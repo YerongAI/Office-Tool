@@ -1,6 +1,5 @@
-### V8.3.3.6
+### V8.3.3.10
 
-- Probleem opgelost waarbij knopinfo onverwachts werd gesloten. [#440](https://github.com/YerongAI/Office-Tool/issues/440)
 - Translation update.
 
 #### Homepage
@@ -13,4 +12,4 @@
 
 #### About page
 
-- Informatie geüpdate.
+- Informatie geï¿½pdate.

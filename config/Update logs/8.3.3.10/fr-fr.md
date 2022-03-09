@@ -1,6 +1,5 @@
-### V8.3.3.6
+### V8.3.3.10
 
-- Correction d’un problème selon lequel l’info-bulle se fermait de manière inattendue. [#440](https://github.com/YerongAI/Office-Tool/issues/440)
 - Mise à jour de la traduction.
 
 #### Page d'accueil

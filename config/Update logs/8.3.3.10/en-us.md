@@ -1,6 +1,5 @@
-### V8.3.3.6
+### V8.3.3.10
 
-- Fixed an issue that tooltip closed unexpected. [#440](https://github.com/YerongAI/Office-Tool/issues/440)
 - Translation update.
 
 #### Homepage

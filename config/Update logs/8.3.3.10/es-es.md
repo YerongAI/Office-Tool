@@ -1,6 +1,5 @@
-### V8.3.3.6
+### V8.3.3.10
 
-- Se ha solucionado un problema por el que el tooltip se cerraba de forma inesperada. [#440](https://github.com/YerongAI/Office-Tool/issues/440)
 - Actualización de la traducción.
 
 #### Página web

@@ -59,7 +59,7 @@ Functions and Features:
 | pt-br | Português (Brasil) | [Hélio de Souza](https://tinyurl.com/hdstec), [Igor Rückert](https://github.com/igorruckert) |
 | ro-ro | Română (România) | [ianymaty](https://github.com/ianymaty) |
 | ru-ru | Русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov) |
-| th-th | ไทย (ไทย) | [Alisa Callaway](https://github.com/OllyMaster), [Pattharapong Kt.](https://github.com/OllyModerator) |
+| th-th | ไทย (ไทย) | [Alisa Callaway](https://github.com/OllyMaster), [Pattharapong Kt.](https://github.com/miracledev) |
 | zh-hk | 繁體中文 (香港) | [TurboHK](https://github.com/TurboHK) |
 | zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412) |
 

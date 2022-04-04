@@ -1958,7 +1958,7 @@
             },
             "name": "L_DaysOfAllVersions",
             "displayName": "对于删除所有版本历史记录项目都是“安全”的天数",
-            "explainText": "通过此策略设置，您可以指定 OneNote 保留全面的版本历史记录页面的时间。指定时间之后，OneNote 将保留更多版本历史记录空白页面，这将使用更少的存储空间。\n\n如果启用此策略设置，则 OneNote 将在指定的时间段内保留全面的版本历史记录页面，过期之后，OneNote 将保留版本历史记录空白页面。\n\n如果禁用或不配置此策略设置，则 OneNote 将保留全面的版本历史记录页面 2 天，过期之后，OneNote 将保留版本历史记录空白页面。",
+            "explainText": "通过此策略设置，您可以指定 OneNote 保留全面的版本历史记录页面的时间。指定时间之后，OneNote 将保留更多版本历史记录空白页面，这将使用更少的存储空间。\n\n如果启用此策略设置，则 OneNote 将在指定的时间段内保留全面的版本历史记录页面，过期之后，OneNote 将保留版本历史记录空白页面。\n\n如果禁用或不配置此策略设置，则 OneNote 将保留全面的版本历史记录页面 2 天，过期之后，OneNote 将保留版本历史记录空白页面。\n",
             "tags": [
                 "L_VersionsAndRecyleBin",
                 "L_OneNoteOptions",
@@ -2022,7 +2022,7 @@
             },
             "name": "L_MaximumNumberOfOncePerDayVersionHistoryItemsKept",
             "displayName": "一天一次版本历史记录项目的最大保留数",
-            "explainText": "通过此策略设置，你可以设置每页要保留的一天一次历史记录项目的数目。通过 2016 格式笔记本，OneNote 将自动存储笔记本中的之前版本的页面，同时将存储所有已删除页面和分区的回收站。\n\n如果启用此策略设置，你可以设置每天要保留的版本数。如果你将值设置为 -1，这将通知 OneNote 保留所有旧的一天一次版本历史记录项目。\n\n如果禁用或不配置此策略设置，OneNote 将在过去的每天保留过去 10 天的页面。",
+            "explainText": "通过此策略设置，你可以设置每页要保留的一天一次历史记录项目的数目。通过 2016 格式笔记本，OneNote 将自动存储笔记本中的之前版本的页面，同时将存储所有已删除页面和分区的回收站。\n\n如果启用此策略设置，你可以设置每天要保留的版本数。如果你将值设置为 -1，这将通知 OneNote 保留所有旧的一天一次版本历史记录项目。\n \n如果禁用或不配置此策略设置，OneNote 将在过去的每天保留过去 10 天的页面。",
             "tags": [
                 "L_VersionsAndRecyleBin",
                 "L_OneNoteOptions",
@@ -2650,59 +2650,56 @@
         },
         {
             "parentCategory": {
-                "ref": "L_CustomOptions"
+                "ref": "L_Advanced"
             },
             "supportedOn": {
                 "ref": "windows:SUPPORTED_Windows7"
             },
-            "falseValue": {
-                "string": "false"
-            },
-            "elements": {
-                "items": [
-                    {
-                        "trueValue": {
-                            "string": "true"
-                        },
-                        "falseValue": {
-                            "string": "false"
-                        },
-                        "valueName": "Microsoft.Office.UXPlatform.FluentSVRefresh",
-                        "inputType": "checkBox",
-                        "caption": "启用 visual refresh 新界面（建议设置相同的值）",
-                        "id": "L_OneNoteFluentSVRefresh"
+            "enabledList": [
+                {
+                    "value": {
+                        "string": "true"
                     },
-                    {
-                        "trueValue": {
-                            "string": "true"
-                        },
-                        "falseValue": {
-                            "string": "false"
-                        },
-                        "valueName": "Microsoft.Office.UXPlatform.RibbonTouchOptimization",
-                        "inputType": "checkBox",
-                        "caption": "启用触摸优化（建议设置相同的值）",
-                        "id": "L_OneNoteRibbonTouchOptimization"
+                    "valueName": "Microsoft.Office.UXPlatform.FluentSVRefresh"
+                },
+                {
+                    "value": {
+                        "string": "true"
                     },
-                    {
-                        "trueValue": {
-                            "string": "true"
-                        },
-                        "falseValue": {
-                            "string": "false"
-                        },
-                        "valueName": "Microsoft.Office.UXPlatform.FluentSVRibbonOptionsMenu",
-                        "inputType": "checkBox",
-                        "caption": "启用 visual refresh 新菜单（建议设置相同的值）",
-                        "id": "L_OneNoteFluentSVRibbonOptionsMenu"
-                    }
-                ]
-            },
+                    "valueName": "Microsoft.Office.UXPlatform.RibbonTouchOptimization"
+                },
+                {
+                    "value": {
+                        "string": "true"
+                    },
+                    "valueName": "Microsoft.Office.UXPlatform.FluentSVRibbonOptionsMenu"
+                }
+            ],
+            "disabledList": [
+                {
+                    "value": {
+                        "string": "false"
+                    },
+                    "valueName": "Microsoft.Office.UXPlatform.FluentSVRefresh"
+                },
+                {
+                    "value": {
+                        "string": "false"
+                    },
+                    "valueName": "Microsoft.Office.UXPlatform.RibbonTouchOptimization"
+                },
+                {
+                    "value": {
+                        "string": "false"
+                    },
+                    "valueName": "Microsoft.Office.UXPlatform.FluentSVRibbonOptionsMenu"
+                }
+            ],
             "name": "L_OneNoteVisualRefresh",
             "displayName": "Visual refresh 设置",
-            "explainText": "通过此策略设置是否开启 visual refresh. 可能对某些版本的 Office 无效。\n\n数据由 Office Tool Plus 提供，并非 Microsoft.",
+            "explainText": "通过此策略设置是否开启 visual refresh. 可能对某些版本的 Office 无效。\n\n数据由 Office Tool Plus 提供。",
             "tags": [
-                "L_VisualRefresh"
+                "L_Advanced"
             ],
             "application": "onent16",
             "key": "Software\\Microsoft\\Office\\16.0\\Common\\ExperimentConfigs\\ExternalFeatureOverrides\\onenote"

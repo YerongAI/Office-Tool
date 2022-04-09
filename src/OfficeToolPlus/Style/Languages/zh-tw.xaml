@@ -44,6 +44,7 @@
     <sys:String x:Key="None">無</sys:String>
     <sys:String x:Key="Query">查詢</sys:String>
     <sys:String x:Key="Uninstall">解除安裝(_U)</sys:String>
+    <sys:String x:Key="TypeToSearch">Type to search</sys:String>
 
     <!-- Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
@@ -188,6 +189,7 @@
     <sys:String x:Key="DeployModeIAD">下載後再部署</sys:String>
     <sys:String x:Key="DeployCreateShortcut">安裝完成後於桌面建立捷徑</sys:String>
     <sys:String x:Key="DeployInstalliSlide">安裝 iSlide 增益集</sys:String>
+    <sys:String x:Key="DeployInstalliSlideDescription">輕鬆設計專業型 PowerPoint 簡報。</sys:String>
     <!-- Download Settings -->
     <sys:String x:Key="DownloadSettings">下載設定</sys:String>
     <sys:String x:Key="DownloadSettingTip">此區設定僅在下載 Office 檔案時生效。</sys:String>
@@ -258,12 +260,12 @@
     <sys:String x:Key="ErrorUnknown">發生未知的錯誤。</sys:String>
     <sys:String x:Key="StatusLicensed">**已授權** </sys:String>
     <sys:String x:Key="StatusUnlicensed">`未授權`</sys:String>
-    <sys:String x:Key="StatusOOBGrace">`---OOB_寬限期---`</sys:String>
-    <sys:String x:Key="StatusOOTGrace">`---OOT_寬限期---`</sys:String>
-    <sys:String x:Key="StatusNonGenuineGrace">`---非正版寬限期---`</sys:String>
-    <sys:String x:Key="StatusNotifications">`---通知狀態---`</sys:String>
-    <sys:String x:Key="StatusExtendedGrace">`---延長 寬限期---`</sys:String>
-    <sys:String x:Key="StatusUnknown">`---不明---`</sys:String>
+    <sys:String x:Key="StatusOOBGrace">`OOB_寬限期`</sys:String>
+    <sys:String x:Key="StatusOOTGrace">`OOT_寬限期`</sys:String>
+    <sys:String x:Key="StatusNonGenuineGrace">`非正版寬限期`</sys:String>
+    <sys:String x:Key="StatusNotifications">`通知狀態`</sys:String>
+    <sys:String x:Key="StatusExtendedGrace">`延長 寬限期`</sys:String>
+    <sys:String x:Key="StatusUnknown">`不明`</sys:String>
 
     <sys:String x:Key="AppliedSetting">已成功套用設定</sys:String>
     <sys:String x:Key="NoKMSLics">找不到 KMS 授權。</sys:String>
@@ -322,6 +324,11 @@
     <sys:String x:Key="CheckKMSActivationSuccessful">測試啟用功能成功!</sys:String>
     <sys:String x:Key="ToolboxCollectLog">收集 Office 安裝記錄</sys:String>
     <sys:String x:Key="ToolboxCollectLogDescription">如果您在安裝 Office 時發生錯誤，則您可以使用此功能收集安裝記錄，並分享給您的管理員請求分析與解決問題。</sys:String>
+    <sys:String x:Key="ToolboxBackupOrRestoreSettings">備份或還原 Office 設定</sys:String>
+    <sys:String x:Key="ToolboxBackupOrRestoreSettingsDescription">您可以使用此功能備份或還原 Office 應用程式設定 (不包含個人文件以及內容)。開始操作前，請先關閉所有 Office 應用程式。&#x000A;&#x000A;請注意，請勿隨意向他人分享您的備份檔，以免造成個人資料外洩。</sys:String>
+    <sys:String x:Key="ToolboxBackupSettingsExcludePersonalInf">排除個人資料</sys:String>
+    <sys:String x:Key="ToolboxBackup">備份</sys:String>
+    <sys:String x:Key="ToolboxRestore">還原</sys:String>
     <!-- Repair Tools -->
     <sys:String x:Key="ToolboxRemoveOffice">解除安裝 Office</sys:String>
     <sys:String x:Key="ToolboxRODescription">如果您無法透過 Microsoft 官方程式移除 Office，則您可以使用此功能移除 Office。建議您重複操作此功能，以免解除安裝不乾淨。</sys:String>
@@ -331,8 +338,10 @@
     <sys:String x:Key="ToolboxRemoveOfficeDone">已完成 Office 移除操作。</sys:String>
     <sys:String x:Key="ToolboxRepairOfficeDocumentIcon">修復 Office 文件圖示</sys:String>
     <sys:String x:Key="ToolboxRepairODIDescription">如果 Office 文件圖示無法正常顯示，則您可以嘗試使用此功能嘗試修復登錄檔。操作完成後，必須使用 Office 的快速修復功能。</sys:String>
-    <sys:String x:Key="ToolboxRepairActivation">修復 Office 無法正常啟用</sys:String>
-    <sys:String x:Key="ToolboxRepairActivationDescription">如果啟用 Office 授權時出現未知的錯誤碼，則您可以使用此功能重設啟用設定。</sys:String>
+    <sys:String x:Key="ToolboxResetSPPSvc">Reset Software Protection service</sys:String>
+    <sys:String x:Key="ToolboxResetSPPSvcDescription">This will reset the configuration of Software Protection service. Applies to "Server execution failed (0x80080005)" when activating Office.</sys:String>
+    <sys:String x:Key="ToolboxRebuildActivationToken">Rebuild activation token</sys:String>
+    <sys:String x:Key="ToolboxRebuildActivationTokenDescription">This will rebuild the Windows activation token under "%SystemRoot%\System32\spp\store\2.0".&#x000A;&#x000A;Applies to "unknown error occurred", "license consumption failed (0xC004E015)" or "a token in the Token Store contains an invalid hash (0x8004E108)" when activating Office.&#x000A;&#x000A;Note: your Windows activation status may be lost.</sys:String>
     <sys:String x:Key="ToolboxRepairGenuineWarning">修復 Office 授權問題</sys:String>
     <sys:String x:Key="ToolboxRepairGenuineWarningDescription">如果 Office 顯示「您的 Office 授權發生問題」，則您可以在下方設定一個 KMS 主機位址嘗試修復問題。這個操作會將 KMS 主機位址寫入「Microsoft 軟體保護服務」設定中。</sys:String>
     <sys:String x:Key="ToolboxRepairVBS">修復 VBS 檔案關聯</sys:String>
@@ -426,6 +435,7 @@
     <sys:String x:Key="SettingsLocalizedName">本機語言</sys:String>
     <sys:String x:Key="SettingsAdvanced">啟用進階功能</sys:String>
     <sys:String x:Key="SettingsHWAcceleration">啟用硬體加速</sys:String>
+    <sys:String x:Key="SettingsForceRTLLayout">強制使用從右至左版面配置方向</sys:String>
     <!-- About Panel -->
     <sys:String x:Key="AppInf">程式資訊</sys:String>
     <sys:String x:Key="Homepage">官方網站:</sys:String>
@@ -434,6 +444,8 @@
     <sys:String x:Key="TrademarkInfo">Microsoft Office 是 Microsoft Corporation 在美國和/或其他國家/地區的註冊商標。</sys:String>
     <sys:String x:Key="ServerProvider">伺服器來源</sys:String>
     <sys:String x:Key="Translator">翻譯人員</sys:String>
+    <sys:String x:Key="OpenSourceNotice">開放原始碼聲明</sys:String>
+    <sys:String x:Key="OpenSourceDescription">本應用程式使用以下來自第三方的程式碼及資料。</sys:String>
     <sys:String x:Key="BackgroundImageSource">背景圖片來源</sys:String>
 
     <!-- Text about Textbox, notice to control the string length. -->

@@ -44,6 +44,7 @@
     <sys:String x:Key="None">Nenhum</sys:String>
     <sys:String x:Key="Query">Consultar</sys:String>
     <sys:String x:Key="Uninstall">_Desinstalar</sys:String>
+    <sys:String x:Key="TypeToSearch">Digite para pesquisar</sys:String>
 
     <!-- Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
@@ -188,6 +189,7 @@
     <sys:String x:Key="DeployModeIAD">Baixar primeiro, então implantar</sys:String>
     <sys:String x:Key="DeployCreateShortcut">Criar atalhos na Área de Trabalho</sys:String>
     <sys:String x:Key="DeployInstalliSlide">Instalar o iSlide</sys:String>
+    <sys:String x:Key="DeployInstalliSlideDescription">Cria apresentações profissionais do PowerPoint, torna o projeto mais fácil.</sys:String>
     <!-- Download Settings -->
     <sys:String x:Key="DownloadSettings">Configurações de download</sys:String>
     <sys:String x:Key="DownloadSettingTip">Aplica-se somente ao baixar o Office.</sys:String>
@@ -256,14 +258,14 @@
     <sys:String x:Key="ErrorCode">Código de Erro: </sys:String>
     <sys:String x:Key="ErrorDescrpition">Descrição do Erro: </sys:String>
     <sys:String x:Key="ErrorUnknown">Um erro desconhecido ocorreu.</sys:String>
-    <sys:String x:Key="StatusLicensed"> **---LICENCIADO---** </sys:String>
-    <sys:String x:Key="StatusUnlicensed"> `---NÂO LICENCIADO---` </sys:String>
-    <sys:String x:Key="StatusOOBGrace"> `---PERÍODO OOB---` </sys:String>
-    <sys:String x:Key="StatusOOTGrace"> `---PERÍODO OOT---` </sys:String>
-    <sys:String x:Key="StatusNonGenuineGrace"> `---PERÍODO NÃO GENUÍNO---` </sys:String>
-    <sys:String x:Key="StatusNotifications"> `---NOTIFICACÕES---` </sys:String>
-    <sys:String x:Key="StatusExtendedGrace"> `---PERÍODO EXTENDIDO---` </sys:String>
-    <sys:String x:Key="StatusUnknown"> `---DESCONHECIDO---` </sys:String>
+    <sys:String x:Key="StatusLicensed"> **LICENCIADO** </sys:String>
+    <sys:String x:Key="StatusUnlicensed">`NÂO LICENCIADO`</sys:String>
+    <sys:String x:Key="StatusOOBGrace">`PERÍODO OOB`</sys:String>
+    <sys:String x:Key="StatusOOTGrace">`PERÍODO OOT`</sys:String>
+    <sys:String x:Key="StatusNonGenuineGrace">`PERÍODO NÃO GENUÍNO`</sys:String>
+    <sys:String x:Key="StatusNotifications">`NOTIFICACÕES`</sys:String>
+    <sys:String x:Key="StatusExtendedGrace">`PERÍODO EXTENDIDO`</sys:String>
+    <sys:String x:Key="StatusUnknown">`DESCONHECIDO`</sys:String>
 
     <sys:String x:Key="AppliedSetting">Configuração aplicada com sucesso.</sys:String>
     <sys:String x:Key="NoKMSLics">Nenhuma licença do Office KMS foi encontrada no sistema.</sys:String>
@@ -322,6 +324,11 @@
     <sys:String x:Key="CheckKMSActivationSuccessful">Ativação bem sucedida.</sys:String>
     <sys:String x:Key="ToolboxCollectLog">Coletar logs do instalador do Office</sys:String>
     <sys:String x:Key="ToolboxCollectLogDescription">Coleta logs para analisar e solucionar problemas desconhecidos.</sys:String>
+    <sys:String x:Key="ToolboxBackupOrRestoreSettings">Fazer backup ou restaurar configurações do Office</sys:String>
+    <sys:String x:Key="ToolboxBackupOrRestoreSettingsDescription">Faz o backup ou restaura as configurações, arquivos excluídos e conteúdo dos aplicativos do Office. Antes de iniciar, feche todos os aplicativos do Office.&#x000A;&#x000A;Nota: Não compartilhe os seus backups com os outros, podem vazar suas informações pessoais.</sys:String>
+    <sys:String x:Key="ToolboxBackupSettingsExcludePersonalInf">Excluir informações pessoais</sys:String>
+    <sys:String x:Key="ToolboxBackup">Backup</sys:String>
+    <sys:String x:Key="ToolboxRestore">Restaurar</sys:String>
     <!-- Repair Tools -->
     <sys:String x:Key="ToolboxRemoveOffice">Remover o Office</sys:String>
     <sys:String x:Key="ToolboxRODescription">Isto irá remover componentes, arquivos e registros relacionados ao Office. Se a limpeza falhar, tente mais algumas vezes.&#x000A;&#x000A;Nota: Este recurso somente deve ser usado se o Office não puder ser removido corretamente.</sys:String>
@@ -331,8 +338,10 @@
     <sys:String x:Key="ToolboxRemoveOfficeDone">Fim da remoção do Office.</sys:String>
     <sys:String x:Key="ToolboxRepairOfficeDocumentIcon">Reparar ícones de documentos do Office</sys:String>
     <sys:String x:Key="ToolboxRepairODIDescription">Isto irá redefinir a associação de arquivos do Office. Feito isso, você também precisará usar a Correção Rápida do Office.</sys:String>
-    <sys:String x:Key="ToolboxRepairActivation">Reparar a ativação do Office</sys:String>
-    <sys:String x:Key="ToolboxRepairActivationDescription">Isto irá redefinir as configurações do serviço de Proteção de Software e recriar o arquivo de ativação no Windows Insider. Aplica-se a "Ocorreu um erro desconhecido" ou "falha no consumo de licença (0xC004E015)" ao ativar o Office.</sys:String>
+    <sys:String x:Key="ToolboxResetSPPSvc">Redefinir serviço de Proteção de Software</sys:String>
+    <sys:String x:Key="ToolboxResetSPPSvcDescription">Isto irá redefinir as configurações so serviço de Proteção de Software. Aplica-se a "Falha na execução do servidor (0x80080005)" ao ativar o Office.</sys:String>
+    <sys:String x:Key="ToolboxRebuildActivationToken">Recriar token de ativação</sys:String>
+    <sys:String x:Key="ToolboxRebuildActivationTokenDescription">Isto irá recriar o token de ativação do Windows localizado em "%SystemRoot%\System32\spp\store\2.0".&#x000A;&#x000A;Alica-se a "ocorreu um erro desconhecido", "falha no consumo de licença (0xC004E015)" o "um token no Armazenamento de Tokens contém um hash inválido (0x8004E108)" ao ativar o Office.&#x000A;&#x000A;Nota: o status de ativação do seu Windows será perdido.</sys:String>
     <sys:String x:Key="ToolboxRepairGenuineWarning">Reparar problema de licença do Office</sys:String>
     <sys:String x:Key="ToolboxRepairGenuineWarningDescription">Se o seu Office mostrar "Há um problema com a sua licença do Office", você pode definir um host KMS para corrigir o problema. Isto escreverá o host KMS à configuração do serviço de Proteção de Software.</sys:String>
     <sys:String x:Key="ToolboxRepairVBS">Reparar a associação de arquivos VBS</sys:String>
@@ -426,6 +435,7 @@
     <sys:String x:Key="SettingsLocalizedName">Nome localizado</sys:String>
     <sys:String x:Key="SettingsAdvanced">Habilitar recursos avançados</sys:String>
     <sys:String x:Key="SettingsHWAcceleration">Habilitar aceleração por hardware</sys:String>
+    <sys:String x:Key="SettingsForceRTLLayout">Forçar direção do layout para RTL</sys:String>
     <!-- About Panel -->
     <sys:String x:Key="AppInf">Informações do aplicativo</sys:String>
     <sys:String x:Key="Homepage">Site:</sys:String>
@@ -434,6 +444,8 @@
     <sys:String x:Key="TrademarkInfo">Microsoft Office é uma marca registrada ou marca comercial da Microsoft Corporation nos Estados Unidos e/ou outros países.</sys:String>
     <sys:String x:Key="ServerProvider">Provedor do servidor</sys:String>
     <sys:String x:Key="Translator">Tradução</sys:String>
+    <sys:String x:Key="OpenSourceNotice">Aviso de código aberto</sys:String>
+    <sys:String x:Key="OpenSourceDescription">Este software incorpora material de terceiros.</sys:String>
     <sys:String x:Key="BackgroundImageSource">Origem da imagem de fundo</sys:String>
 
     <!-- Text about Textbox, notice to control the string length. -->

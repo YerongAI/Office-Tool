@@ -44,6 +44,7 @@
     <sys:String x:Key="None">Niciuna</sys:String>
     <sys:String x:Key="Query">Interogare</sys:String>
     <sys:String x:Key="Uninstall">_Dezinstalați</sys:String>
+    <sys:String x:Key="TypeToSearch">Type to search</sys:String>
 
     <!-- Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
@@ -188,6 +189,7 @@
     <sys:String x:Key="DeployModeIAD">Download first, then deploy.</sys:String>
     <sys:String x:Key="DeployCreateShortcut">Creați comenzi rapide pe desktop.</sys:String>
     <sys:String x:Key="DeployInstalliSlide">Instalați iSlide.</sys:String>
+    <sys:String x:Key="DeployInstalliSlideDescription">Create professional PowerPoint presentations, make design easier.</sys:String>
     <!-- Download Settings -->
     <sys:String x:Key="DownloadSettings">Setări de descărcare</sys:String>
     <sys:String x:Key="DownloadSettingTip">Se aplică numai la descărcarea Office.</sys:String>
@@ -256,14 +258,14 @@
     <sys:String x:Key="ErrorCode">Cod de eroare: </sys:String>
     <sys:String x:Key="ErrorDescrpition">Descriere eroare: </sys:String>
     <sys:String x:Key="ErrorUnknown">O eroare necunoscută s-a întâmplat.</sys:String>
-    <sys:String x:Key="StatusLicensed"> **---AUTORIZAT---** </sys:String>
-    <sys:String x:Key="StatusUnlicensed"> `---NEAUTORIZAT---` </sys:String>
-    <sys:String x:Key="StatusOOBGrace"> `---GRAȚIE_OOB---` </sys:String>
-    <sys:String x:Key="StatusOOTGrace"> `---GRAȚIE_OOT---` </sys:String>
-    <sys:String x:Key="StatusNonGenuineGrace"> `---GRAȚIE NON-AUTENTICĂ---` </sys:String>
-    <sys:String x:Key="StatusNotifications"> `---NOTIFICĂRI---` </sys:String>
-    <sys:String x:Key="StatusExtendedGrace"> `---GRAȚIE PRELUNGITĂ---` </sys:String>
-    <sys:String x:Key="StatusUnknown"> `---NECUNOSCUT---` </sys:String>
+    <sys:String x:Key="StatusLicensed"> **AUTORIZAT** </sys:String>
+    <sys:String x:Key="StatusUnlicensed">`NEAUTORIZAT`</sys:String>
+    <sys:String x:Key="StatusOOBGrace">`GRAȚIE_OOB`</sys:String>
+    <sys:String x:Key="StatusOOTGrace">`GRAȚIE_OOT`</sys:String>
+    <sys:String x:Key="StatusNonGenuineGrace">`GRAȚIE NON-AUTENTICĂ`</sys:String>
+    <sys:String x:Key="StatusNotifications">`NOTIFICĂRI`</sys:String>
+    <sys:String x:Key="StatusExtendedGrace">`GRAȚIE PRELUNGITĂ`</sys:String>
+    <sys:String x:Key="StatusUnknown">`NECUNOSCUT`</sys:String>
 
     <sys:String x:Key="AppliedSetting">Setare aplicată cu succes.</sys:String>
     <sys:String x:Key="NoKMSLics">Nu au fost găsite licențe Office KMS pe sistem.</sys:String>
@@ -322,6 +324,11 @@
     <sys:String x:Key="CheckKMSActivationSuccessful">Conexiunea a reușit, testul de activare a reușit.</sys:String>
     <sys:String x:Key="ToolboxCollectLog">Colectați jurnalele de instalare Office</sys:String>
     <sys:String x:Key="ToolboxCollectLogDescription">Colectați jurnale pentru a analiza și rezolva probleme.</sys:String>
+    <sys:String x:Key="ToolboxBackupOrRestoreSettings">Backup or restore Office settings</sys:String>
+    <sys:String x:Key="ToolboxBackupOrRestoreSettingsDescription">Backup or restore your Office applications settings, exclude files and contents. Before starting, please close all Office applications.&#x000A;&#x000A;Note: Do not share your backups with others, it may leak your personal information.</sys:String>
+    <sys:String x:Key="ToolboxBackupSettingsExcludePersonalInf">Exclude personal information.</sys:String>
+    <sys:String x:Key="ToolboxBackup">Backup</sys:String>
+    <sys:String x:Key="ToolboxRestore">Restore</sys:String>
     <!-- Repair Tools -->
     <sys:String x:Key="ToolboxRemoveOffice">Eliminați Office</sys:String>
     <sys:String x:Key="ToolboxRODescription">Aceasta va elimina componentele, fișierele și registrele legate de Office. Dacă curățarea nu reușește, încercați de câteva ori.&#x000A;&#x000A;Notă: Această caracteristică trebuie utilizată numai dacă Office nu poate fi dezinstalat corect.</sys:String>
@@ -331,8 +338,10 @@
     <sys:String x:Key="ToolboxRemoveOfficeDone">Sfârșitul eliminării Office.</sys:String>
     <sys:String x:Key="ToolboxRepairOfficeDocumentIcon">Reparați pictograma documentelor Office</sys:String>
     <sys:String x:Key="ToolboxRepairODIDescription">Aceasta va reseta asocierea documentelor Office. După ce ați făcut acest lucru, va trebui, de asemenea, să utilizați remedierea rapidă Office.</sys:String>
-    <sys:String x:Key="ToolboxRepairActivation">Reparați activarea Office</sys:String>
-    <sys:String x:Key="ToolboxRepairActivationDescription">Aceasta va reseta configurația serviciului Software Protection și va reconstrui fișierul de activare pe Windows Insider. Se aplică la „A apărut o eroare necunoscută”, „consumul licenței a eșuat (0xC004E015)” sau „executarea serverului a eșuat (0x80080005)” când activați Office.</sys:String>
+    <sys:String x:Key="ToolboxResetSPPSvc">Reset Software Protection service</sys:String>
+    <sys:String x:Key="ToolboxResetSPPSvcDescription">This will reset the configuration of Software Protection service. Applies to "Server execution failed (0x80080005)" when activating Office.</sys:String>
+    <sys:String x:Key="ToolboxRebuildActivationToken">Rebuild activation token</sys:String>
+    <sys:String x:Key="ToolboxRebuildActivationTokenDescription">This will rebuild the Windows activation token under "%SystemRoot%\System32\spp\store\2.0".&#x000A;&#x000A;Applies to "unknown error occurred", "license consumption failed (0xC004E015)" or "a token in the Token Store contains an invalid hash (0x8004E108)" when activating Office.&#x000A;&#x000A;Note: your Windows activation status may be lost.</sys:String>
     <sys:String x:Key="ToolboxRepairGenuineWarning">Problemă la repararea licenței Office</sys:String>
     <sys:String x:Key="ToolboxRepairGenuineWarningDescription">Dacă Office arată „Există o problemă cu licența dvs. Office”, puteți seta o gazdă KMS pentru a remedia problema. Aceasta va scrie gazda KMS în configurația serviciului de protecție software.</sys:String>
     <sys:String x:Key="ToolboxRepairVBS">Reparați asociațiile de fișiere VBS</sys:String>
@@ -426,6 +435,7 @@
     <sys:String x:Key="SettingsLocalizedName">Numele localizat</sys:String>
     <sys:String x:Key="SettingsAdvanced">Activați funcțiile avansate.</sys:String>
     <sys:String x:Key="SettingsHWAcceleration">Activați accelerarea hardware.</sys:String>
+    <sys:String x:Key="SettingsForceRTLLayout">Force RTL layout direction.</sys:String>
     <!-- About Panel -->
     <sys:String x:Key="AppInf">Informații despre aplicație</sys:String>
     <sys:String x:Key="Homepage">Pagina principală:</sys:String>
@@ -434,6 +444,8 @@
     <sys:String x:Key="TrademarkInfo">Microsoft Office este o marcă comercială înregistrată sau marcă comercială a Microsoft Corporation în Statele Unite și / sau în alte țări.</sys:String>
     <sys:String x:Key="ServerProvider">Furnizori de server</sys:String>
     <sys:String x:Key="Translator">Traducători</sys:String>
+    <sys:String x:Key="OpenSourceNotice">Open Source Notice</sys:String>
+    <sys:String x:Key="OpenSourceDescription">This software incorporates material from third parties.</sys:String>
     <sys:String x:Key="BackgroundImageSource">Sursa imaginii de fundal</sys:String>
 
     <!-- Text about Textbox, notice to control the string length. -->

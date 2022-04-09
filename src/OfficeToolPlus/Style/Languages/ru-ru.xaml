@@ -44,6 +44,7 @@
     <sys:String x:Key="None">Нет</sys:String>
     <sys:String x:Key="Query">Выполнить запрос</sys:String>
     <sys:String x:Key="Uninstall">Удаление</sys:String>
+    <sys:String x:Key="TypeToSearch">Введите для поиска</sys:String>
 
     <!-- Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
@@ -188,6 +189,7 @@
     <sys:String x:Key="DeployModeIAD">Сначала скачать, затем развернуть.</sys:String>
     <sys:String x:Key="DeployCreateShortcut">Создать ярлыки на рабочем столе.</sys:String>
     <sys:String x:Key="DeployInstalliSlide">Установка инструменов iSlide.</sys:String>
+    <sys:String x:Key="DeployInstalliSlideDescription">Создавайте профессиональные презентации PowerPoint, лёгкое создание дизайна.</sys:String>
     <!-- Download Settings -->
     <sys:String x:Key="DownloadSettings">Настройки скачивания</sys:String>
     <sys:String x:Key="DownloadSettingTip">Применяется только при скачивании Office.</sys:String>
@@ -256,14 +258,14 @@
     <sys:String x:Key="ErrorCode">Код ошибки: </sys:String>
     <sys:String x:Key="ErrorDescrpition">Описание ошибки: </sys:String>
     <sys:String x:Key="ErrorUnknown">Произошла неизвестная ошибка.</sys:String>
-    <sys:String x:Key="StatusLicensed"> **---ЛИЦЕНЗИРОВАНО---** </sys:String>
-    <sys:String x:Key="StatusUnlicensed"> `---НЕ ЛИЦЕНЗИРОВАНО---` </sys:String>
-    <sys:String x:Key="StatusOOBGrace"> `---OOB_GRACE---` </sys:String>
-    <sys:String x:Key="StatusOOTGrace"> `---OOT_GRACE---` </sys:String>
-    <sys:String x:Key="StatusNonGenuineGrace"> `---NON_GENUINE_GRACE---` </sys:String>
-    <sys:String x:Key="StatusNotifications"> `---УВЕДОМЛЕНИЕ---` </sys:String>
-    <sys:String x:Key="StatusExtendedGrace"> `---РАСШИРЕННЫЙ ПЕРИОД GRACE---` </sys:String>
-    <sys:String x:Key="StatusUnknown"> `---НЕИЗВЕСТНО---` </sys:String>
+    <sys:String x:Key="StatusLicensed"> **ЛИЦЕНЗИРОВАНО** </sys:String>
+    <sys:String x:Key="StatusUnlicensed">`НЕ ЛИЦЕНЗИРОВАНО`</sys:String>
+    <sys:String x:Key="StatusOOBGrace">`OOB_GRACE`</sys:String>
+    <sys:String x:Key="StatusOOTGrace">`OOT_GRACE`</sys:String>
+    <sys:String x:Key="StatusNonGenuineGrace">`NON_GENUINE_GRACE`</sys:String>
+    <sys:String x:Key="StatusNotifications">`УВЕДОМЛЕНИЕ`</sys:String>
+    <sys:String x:Key="StatusExtendedGrace">`РАСШИРЕННЫЙ ПЕРИОД GRACE`</sys:String>
+    <sys:String x:Key="StatusUnknown">`НЕИЗВЕСТНО`</sys:String>
 
     <sys:String x:Key="AppliedSetting">Настройка успешно применена.</sys:String>
     <sys:String x:Key="NoKMSLics">Не обнаружено KMS лицензий Office в системе.</sys:String>
@@ -322,6 +324,11 @@
     <sys:String x:Key="CheckKMSActivationSuccessful">Успешное соединение, тест активации успешно пройден.</sys:String>
     <sys:String x:Key="ToolboxCollectLog">Сбор установочных журналов Office</sys:String>
     <sys:String x:Key="ToolboxCollectLogDescription">Используется для анализа и решения проблем.</sys:String>
+    <sys:String x:Key="ToolboxBackupOrRestoreSettings">Сохранить или восстановить настройки Office</sys:String>
+    <sys:String x:Key="ToolboxBackupOrRestoreSettingsDescription">Сохраните или восстановите свои настройки приложений Office, не включая файлы и содержимое. Перед началом, пожалуйста, закройте все приложения Office.&#x000A;&#x000A;Примечание: Не распространяйте копии другим людям, это может привести к утечке персональной информации.</sys:String>
+    <sys:String x:Key="ToolboxBackupSettingsExcludePersonalInf">Исключить личную информацию.</sys:String>
+    <sys:String x:Key="ToolboxBackup">Сохранить</sys:String>
+    <sys:String x:Key="ToolboxRestore">Восстановить</sys:String>
     <!-- Repair Tools -->
     <sys:String x:Key="ToolboxRemoveOffice">Удаление Office</sys:String>
     <sys:String x:Key="ToolboxRODescription">Это приведет к удалению компонентов, файлов и записей реестра, связанных с Office. Если очистка не удалась, попробуйте ещё несколько раз.&#x000A;&#x000A;Примечание: Эту функцию следует использовать только в том случае, если нельзя удалить Office обычным способом.</sys:String>
@@ -331,8 +338,10 @@
     <sys:String x:Key="ToolboxRemoveOfficeDone">Окончание удаления Office.</sys:String>
     <sys:String x:Key="ToolboxRepairOfficeDocumentIcon">Восстановление иконок Office</sys:String>
     <sys:String x:Key="ToolboxRepairODIDescription">Это сбросит привязку документов Office. Как только это будет сделано, вам нужно будет использовать быстрое исправление Office.</sys:String>
-    <sys:String x:Key="ToolboxRepairActivation">Восстановление активации Office</sys:String>
-    <sys:String x:Key="ToolboxRepairActivationDescription">Это приведет к сбросу конфигурации службы защиты программного обеспечения и восстановлению файла активации в Windows Insider. Применяется к «Произошла неизвестная ошибка» или «Сбой использования лицензии (0xC004E015)» при активации Office.</sys:String>
+    <sys:String x:Key="ToolboxResetSPPSvc">Сброс службы защиты программного обеспечения</sys:String>
+    <sys:String x:Key="ToolboxResetSPPSvcDescription">Это сбросит параметры службы защита программного обеспечения. Относится к ошибке "Ошибка при выполнении приложения-сервера (0x80080005)" при активации Office.</sys:String>
+    <sys:String x:Key="ToolboxRebuildActivationToken">Пересоздать токен активации</sys:String>
+    <sys:String x:Key="ToolboxRebuildActivationTokenDescription">Это перестроит токен активации Windows в папке "%SystemRoot%\System32\spp\store\2.0".&#x000A;&#x000A;Относится к "произошла неизвестная ошибка", "произошла ошибка при использовании лицензии (0xC004E015)" или "токен в хранилище токенов содержит недопустимых хэш (0x8004E108)" при активации Office.&#x000A;&#x000A;Предупреждение: Ваша активация Windows может быть утрачена.</sys:String>
     <sys:String x:Key="ToolboxRepairGenuineWarning">Исправить проблему с лицензией Office</sys:String>
     <sys:String x:Key="ToolboxRepairGenuineWarningDescription">Если в вашем Office отображается сообщение «Возникла проблема с вашей лицензией на Office» или схожее сообщение, то вы можете настроить узел KMS, чтобы устранить проблему. Это пропишет узел KMS в конфигурацию службы защиты программного обеспечения.</sys:String>
     <sys:String x:Key="ToolboxRepairVBS">Восстановление ассоциации VBS файла</sys:String>
@@ -426,6 +435,7 @@
     <sys:String x:Key="SettingsLocalizedName">Переведённое имя</sys:String>
     <sys:String x:Key="SettingsAdvanced">Включить дополнительные функции.</sys:String>
     <sys:String x:Key="SettingsHWAcceleration">Включить аппаратное ускорение.</sys:String>
+    <sys:String x:Key="SettingsForceRTLLayout">Принудительное направление RTL для макета.</sys:String>
     <!-- About Panel -->
     <sys:String x:Key="AppInf">Информация о приложении</sys:String>
     <sys:String x:Key="Homepage">Домашняя страница:</sys:String>
@@ -434,6 +444,8 @@
     <sys:String x:Key="TrademarkInfo">Microsoft Office является зарегистрированным товарным знаком, товарной маркой Microsoft Corporation в США и/или других странах.</sys:String>
     <sys:String x:Key="ServerProvider">Поставщики серверов</sys:String>
     <sys:String x:Key="Translator">Переводчики</sys:String>
+    <sys:String x:Key="OpenSourceNotice">Уведомление об открытом исходном коде</sys:String>
+    <sys:String x:Key="OpenSourceDescription">Это программное обеспечение включает в себя материалы от третьих лиц.</sys:String>
     <sys:String x:Key="BackgroundImageSource">Источник фонового изображения</sys:String>
 
     <!-- Text about Textbox, notice to control the string length. -->

@@ -37,10 +37,10 @@ Funzioni e caratteristiche::
 
 - [Scarica](https://help.coolhub.top/start/download.html)
 - [Lezione rapida](https://github.com/YerongAI/Office-Tool/wiki).
-- [Documentation](https://help.coolhub.top/).
+- [Documentazione](https://help.coolhub.top/).
 
 ## Informazioni
 
-© 2016-2021 Yerong. All Rights Reserved.
+© 2016-2022 Yerong. All Rights Reserved.
 
-> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel) · [E-mail](mailto:yerong@coolhub.top)
+> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel) · [E-mail](mailto:yerong@coolhub.top)

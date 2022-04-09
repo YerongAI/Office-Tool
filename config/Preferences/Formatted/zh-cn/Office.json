@@ -593,205 +593,6 @@
     "policies": [
         {
             "parentCategory": {
-                "ref": "L_SecuritySettingsMachine"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "name": "L_DisablePackageRepair",
-            "displayName": "禁用包修复",
-            "explainText": "此策略设置可禁用修复 Open XML 文档的选项。\n\n如果启用此策略设置，Office 2016 禁止应用程序修复已损坏的 Open XML 文档。\n\n如果禁用或不配置此策略设置，则当 Office 2016 应用程序检测到某个 Open XML 文档已损坏时，用户可选择修复损坏的文档。 ",
-            "tags": [
-                "L_SecuritySettingsMachine",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common\\openxmlformat",
-            "valueName": "disablepackagerepair"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_SecuritySettingsMachine"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "name": "L_DisableVBAforOfficeapplications",
-            "displayName": "禁用 VBA for Office Applications",
-            "explainText": "此策略设置将阻止 Office 应用程序使用 Visual Basic for Applications (VBA)。\n\n 如果启用此策略设置，将禁用适用于 Office 应用程序的 Visual Basic for Applications (VBA)。\n\n如果禁用或未配置此策略设置，将为 Office 应用程序启用 Visual Basic for Applications (VBA)。\n\n 有关配置安全设置的更重要信息，请参阅 Office 资源工具包。\n\n 注意：更改此设置不会安装或删除计算机中的 VBA 文件。",
-            "tags": [
-                "L_SecuritySettingsMachine",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common",
-            "valueName": "vbaoff"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_ExchangeSettings"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "name": "L_OfflineAddressBookEnableSendReceiveGroupDownload",
-            "displayName": "脱机通讯簿: 启用发送/接收组下载",
-            "explainText": "启用此策略可允许通过缓存模式/F9 同步/发送接收组完全下载",
-            "tags": [
-                "L_ExchangeSettings",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\exchange\\exchange provider",
-            "valueName": "allow srs full oab download"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_ExchangeSettings"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "allow srs ce full oab download",
-                        "minValueSpecified": false,
-                        "maxValueSpecified": false,
-                        "inputType": "decimalTextBox",
-                        "caption": "允许每 13 小时进行一次 xx 完全下载",
-                        "id": "L_Allowxxfulldownloadsper13hrperiod"
-                    }
-                ]
-            },
-            "name": "L_OfflineAddressBookLimitnumberoffullOABdownloads",
-            "displayName": "脱机通讯簿: 限制 OAB 完全下载次数",
-            "explainText": "选中/取消选中对应的用户界面选项。",
-            "tags": [
-                "L_ExchangeSettings",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\exchange\\exchange provider"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_ExchangeSettings"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "limit srs incremental download",
-                        "minValueSpecified": false,
-                        "maxValueSpecified": false,
-                        "inputType": "decimalTextBox",
-                        "caption": "允许每 13 小时进行一次 xx 增量下载",
-                        "id": "L_Allowxxincrementaldownloadsper13hrperiod"
-                    }
-                ]
-            },
-            "name": "L_OfflineAddressBookLimitnumberofincrementalOABdownloads",
-            "displayName": "脱机通讯簿: 限制 OAB 增量下载次数",
-            "explainText": "选中/取消选中对应的用户界面选项。",
-            "tags": [
-                "L_ExchangeSettings",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\exchange\\exchange provider"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_ExchangeSettings"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "limit manual oab download",
-                        "minValueSpecified": false,
-                        "maxValueSpecified": false,
-                        "inputType": "decimalTextBox",
-                        "caption": "允许每 13 小时进行一次 xx 手动 OAB 下载",
-                        "id": "L_AllowxxmanualOABdownloadsper13hrperiod"
-                    }
-                ]
-            },
-            "name": "L_OfflineAddressBookLimitmanualOABdownloads",
-            "displayName": "脱机通讯簿: 限制手动 OAB 下载次数",
-            "explainText": "选中/取消选中对应的用户界面选项。",
-            "tags": [
-                "L_ExchangeSettings",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\exchange\\exchange provider"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_SecuritySettingsMachine"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "name": "L_GraphicsFilterImport",
-            "displayName": "图形筛选器导入",
-            "explainText":"通过此策略设置，你可以指定 2016 Office 应用程序加载的图形筛选器列表。\n\n如果启用此策略设置，你可以指定 2016 Office 应用程序加载的图形筛选器列表。你所指定的图形筛选器必须指定 FILTER.FLT (FILTER.FLT 将被实际筛选器的名称替代)的字符串值，该字符串值为 XX.YY.ZZ.WW，其中 XX、YY、ZZ 和 WW 均为小于 2^16 的正数，而注册表中的版本小于或等于筛选器的版本。例如: ''myfilter.flt''=''2006.1200.1000.1000''。\n\n如果禁用或不配置此策略设置，2016 Office 应用程序将不限制加载任何图形筛选器。",
-            "tags": [
-                "L_SecuritySettingsMachine",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\common\\security\\allowlists\\graphicsfilterimport",
-            "valueName": "allowlistenabled"
-        },
-        {
-            "parentCategory": {
                 "ref": "L_SecuritySettings"
             },
             "supportedOn": {
@@ -814,7 +615,7 @@
             },
             "name": "L_Model3DBlockedExtensions",
             "displayName": "禁用 3D 模型文件格式列表",
-            "explainText": "此策略设置允许指定阻止加载到 Office 应用程序中的 3D 模型文件格式列表。\n\n如果启用此策略设置，则可指定 Office 应用程序将阻止插入或加载的 3D 模型文件格式列表。应在文件扩展名列表中指定要阻止的 3D 模型文件格式列表。例如，要阻止 FBX 扩展名，请输入字符串 \"FBX\"。要阻止 FBX 和 OBJ 扩展名，请输出字符串 \"FBX; OBJ\"。\n\n如果禁用或不配置此策略设置，Office 应用程序将不会限制任何 3D 模型文件格式。",
+            "explainText": "此策略设置允许指定阻止加载到 Office 应用程序中的 3D 模型文件格式列表。\n\n如果启用此策略设置，则可指定 Office 应用程序将阻止插入或加载的 3D 模型文件格式列表。应在文件扩展名列表中指定要阻止的 3D 模型文件格式列表。例如，要阻止 FBX 扩展名，请输入字符串 \"FBX\"。要阻止 FBX 和 OBJ 扩展名，请输出字符串 \"FBX; OBJ\"。\n\n如果禁用或不配置此策略设置，Office 应用程序将不会限制任何 3D 模型文件格式。\n",
             "tags": [
                 "L_SecuritySettings",
                 "L_MicrosoftOfficeSystem"
@@ -991,90 +792,6 @@
             "application": "office16",
             "key": "software\\microsoft\\office\\16.0\\common\\general",
             "valueName": "disableprintfeaturesoncrash"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Miscellaneous"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "name": "L_AgeOutPolicy",
-            "displayName": "老化早于 n 天的文档",
-            "explainText": "此策略可控制本地缓存的 Office 文档从 Office 文档缓存中老化的时间",
-            "tags": [
-                "L_Miscellaneous",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common\\fileio",
-            "valueName": "ageoutpolicy"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Miscellaneous"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "name": "L_MaxImplicitCacheSize",
-            "displayName": "设置 Office 文档缓存的最大大小",
-            "explainText": "此策略可控制用户 Office 文档缓存的大小。它不适用于“OneDrive for Business 客户端”和“OneDrive (消费者)客户端”上显式缓存的文件。",
-            "tags": [
-                "L_Miscellaneous",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common\\fileio",
-            "valueName": "maxcachesize"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Miscellaneous"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "name": "L_OpenDirectlyInApp",
-            "displayName": "在 Office 客户端应用程序中直接打开",
-            "explainText": "通过此策略，管理员可选择是直接在应用程序中打开 Web 服务器上的 Office 文档还是通过 Web 浏览器浏览",
-            "tags": [
-                "L_Miscellaneous",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common\\fileio",
-            "valueName": "opendirectlyinapp"
         },
         {
             "parentCategory": {
@@ -2416,7 +2133,7 @@
             },
             "name": "L_OpenOfficedocumentsasreadwritewhilebrowsing",
             "displayName": "浏览时以读/写方式打开 Office 文档",
-            "explainText": "此策略设置可控制用户是否可以编辑和保存 Web 服务器上他们使用 Internet Explorer 打开的 Office 2016 文档。\n\n如果启用此策略设置，当用户使用 Internet Explorer 浏览到 Web 服务器上的 Office 2016 文档时，合适的应用程序在读/写模式下打开文件。\n\n如果禁用或不配置此策略设置，当用户使用 Internet Explorer 浏览到 Web 服务器上的 Office 2016 文档时，合适的应用程序在只读模式下打开文件。",
+            "explainText": "此策略设置可控制用户是否可以编辑和保存 Web 服务器上他们使用 Internet Explorer 打开的 Office 2016 文档。\n      \n如果启用此策略设置，当用户使用 Internet Explorer 浏览到 Web 服务器上的 Office 2016 文档时，合适的应用程序在读/写模式下打开文件。\n\n如果禁用或不配置此策略设置，当用户使用 Internet Explorer 浏览到 Web 服务器上的 Office 2016 文档时，合适的应用程序在只读模式下打开文件。",
             "tags": [
                 "L_Files",
                 "L_ToolsOptionsGeneralWebOptions",
@@ -3838,7 +3555,7 @@
             },
             "name": "L_ConfigureTimeStampingHashingAlgorithm",
             "displayName": "配置时间戳哈希算法",
-            "explainText": "通过此策略设置，你可以配置 Office 2016 应用程序用于验证消息或文档的时间戳哈希算法。\n\n如果启用此策略设置，你可以指定以下任何标准的哈希算法(SHA)函数:\n- SHA1\n- SHA256\n- SHA384\n- SHA512\n\n如果禁用或不配置此策略设置，将使用 SHA1。",
+            "explainText": "通过此策略设置，你可以配置 Office 2016 应用程序用于验证消息或文档的时间戳哈希算法。\n \n如果启用此策略设置，你可以指定以下任何标准的哈希算法(SHA)函数:\n- SHA1\n- SHA256\n- SHA384\n- SHA512\n\n如果禁用或不配置此策略设置，将使用 SHA1。",
             "tags": [
                 "L_DigSig",
                 "L_SecuritySettings",
@@ -3944,7 +3661,7 @@
             },
             "name": "L_SelectDigitalSignatureInvalidHashingAlgorithm",
             "displayName": "配置无效的哈希算法",
-            "explainText": "通过此策略设置，您可以配置当某个数字签名包含特定哈希算法时，Office 是否将它显示为无效。\n\n如果启用此策略设置，您可以指定 Office 视为无效的最弱哈希算法。如果启用此策略设置，您可以指定以下任何算法:\n- MD5\n- SHA1\n- SHA256\n- SHA384\n\n如果不配置此策略设置，则由于哈希算法，Office 不会将数字签名视为无效。\n\n例如，如果您将 MD5 设置为无效的哈希算法，则 Office 会将 MD5 签名视为无效。",
+            "explainText": "通过此策略设置，您可以配置当某个数字签名包含特定哈希算法时，Office 是否将它显示为无效。\n\n如果启用此策略设置，您可以指定 Office 视为无效的最弱哈希算法。如果启用此策略设置，您可以指定以下任何算法:\n- MD5\n- SHA1\n- SHA256\n- SHA384\n\n如果不配置此策略设置，则由于哈希算法，Office 不会将数字签名视为无效。\n\n例如，如果您将 MD5 设置为无效的哈希算法，则 Office 会将 MD5 签名视为无效。\n",
             "tags": [
                 "L_DigSig",
                 "L_SecuritySettings",
@@ -4029,7 +3746,7 @@
             },
             "name": "L_SelectDigitalSignatureMinRSABits",
             "displayName": "配置最小 RSA 公钥大小",
-            "explainText": "通过此策略设置，您可以配置 Office 允许创建数字签名的最小 RSA 公钥位数。\n\n如果启用此策略设置，您可以指定可用于创建数字签名的最小位数。例如: 1024、2048 等。\n\n如果禁用或不配置此策略设置，则除非配置了旧版或无效的 RSA 策略设置，否则 Office 允许所有 RSA 密钥。\n\n 如果配置了旧版或无效的 RSA 公钥位数策略设置，则此设置的默认值将是下一个较大值。例如，如果 RSA 公钥位数为 768，则此设置将默认为 1024。",
+            "explainText": "通过此策略设置，您可以配置 Office 允许创建数字签名的最小 RSA 公钥位数。\n        \n如果启用此策略设置，您可以指定可用于创建数字签名的最小位数。例如: 1024、2048 等。\n        \n如果禁用或不配置此策略设置，则除非配置了旧版或无效的 RSA 策略设置，否则 Office 允许所有 RSA 密钥。\n\n 如果配置了旧版或无效的 RSA 公钥位数策略设置，则此设置的默认值将是下一个较大值。例如，如果 RSA 公钥位数为 768，则此设置将默认为 1024。",
             "tags": [
                 "L_DigSig",
                 "L_SecuritySettings",
@@ -4244,7 +3961,7 @@
             },
             "name": "L_SelectDigitalSignatureMinDSABits",
             "displayName": "配置最小 DSA 公用密钥大小",
-            "explainText": "通过此策略设置，您可以配置 Office 允许创建数字签名的最小 DSA 公钥位数。\n\n如果启用此策略设置，您可以指定可用于创建数字签名的最小位数。例如: 1024、2048 等。\n\n如果禁用或不配置此策略设置，则除非配置了旧版或无效的 DSA 策略设置，否则 Office 允许所有 DSA 密钥。\n\n如果配置了旧版或无效的 DSA 公钥位数策略设置，则此设置的默认值将是下一个较大值。例如，如果 DSA 公钥位数设置为 768，则此设置将默认为 1024。",
+            "explainText": "通过此策略设置，您可以配置 Office 允许创建数字签名的最小 DSA 公钥位数。\n        \n如果启用此策略设置，您可以指定可用于创建数字签名的最小位数。例如: 1024、2048 等。\n        \n如果禁用或不配置此策略设置，则除非配置了旧版或无效的 DSA 策略设置，否则 Office 允许所有 DSA 密钥。\n\n如果配置了旧版或无效的 DSA 公钥位数策略设置，则此设置的默认值将是下一个较大值。例如，如果 DSA 公钥位数设置为 768，则此设置将默认为 1024。",
             "tags": [
                 "L_DigSig",
                 "L_SecuritySettings",
@@ -4398,7 +4115,7 @@
             },
             "name": "L_SpecifyIssuerFilter",
             "displayName": "指定对证书颁发者的筛选",
-            "explainText": "通过此策略设置，您可以将 Office 配置为在创建数字签名时仅允许来自特定颁发者的证书。\n\n如果启用此策略设置，则 Office 仅显示包含您在策略中设置的字符串的证书。此设置区分大小写。\n\n例如，设置“MyCA”将匹配“MyCA 1”和“MyCA 2”的颁发者，而不匹配“MYCA 3”。\n\n如果禁用或不配置此策略设置，则可以使用来自任何颁发者的签名证书。",
+            "explainText": "通过此策略设置，您可以将 Office 配置为在创建数字签名时仅允许来自特定颁发者的证书。\n      \n如果启用此策略设置，则 Office 仅显示包含您在策略中设置的字符串的证书。此设置区分大小写。\n\n例如，设置“MyCA”将匹配“MyCA 1”和“MyCA 2”的颁发者，而不匹配“MYCA 3”。\n\n如果禁用或不配置此策略设置，则可以使用来自任何颁发者的签名证书。",
             "tags": [
                 "L_DigSig",
                 "L_SecuritySettings",
@@ -7442,7 +7159,7 @@
             },
             "name": "L_Protectdocumentmetadataforpasswordprotected",
             "displayName": "保护受密码保护的文件的文档元数据",
-            "explainText": "此策略设置可确定 Office Open XML 文件受密码保护时是否加密元数据。\n       \n如果启用此策略设置，Excel 2016、PowerPoint 2016 和 Word 2016 将加密受密码保护的 Office Open XML 文件中存储的元数据，并且替代用户计算机上的任何配置更改。\n\n如果禁用此策略设置，Office 2016 应用程序不能加密受密码保护的 Office Open XML 文件中存储的元数据，降低安全性。\n\n如果不配置此策略设置，当 Office Open XML 文件使用密码进行保护并保存时，与文档关联的任何元数据都随文档的其余内容一起加密。如果更改此配置，文档作者和超链接引用等潜在敏感信息可能暴露给未经授权的人员。",
+            "explainText": "此策略设置可确定 Office Open XML 文件受密码保护时是否加密元数据。\n       \n如果启用此策略设置，Excel 2016、PowerPoint 2016 和 Word 2016 将加密受密码保护的 Office Open XML 文件中存储的元数据，并且替代用户计算机上的任何配置更改。\n \n如果禁用此策略设置，Office 2016 应用程序不能加密受密码保护的 Office Open XML 文件中存储的元数据，降低安全性。\n \n如果不配置此策略设置，当 Office Open XML 文件使用密码进行保护并保存时，与文档关联的任何元数据都随文档的其余内容一起加密。如果更改此配置，文档作者和超链接引用等潜在敏感信息可能暴露给未经授权的人员。",
             "tags": [
                 "L_SecuritySettings",
                 "L_MicrosoftOfficeSystem"
@@ -7473,7 +7190,7 @@
             },
             "name": "L_Encryptiontypeforpasswordprotectedofficeopen",
             "displayName": "受密码保护的 Office Open XML 文件的加密类型",
-            "explainText": "通过此策略设置，你可以指定 Office Open XML 文件的加密类型。\n\n如果启用此策略设置，你可以指定 Office 应用程序使用的加密类型，以加密 Excel、PowerPoint 和 Word 使用的 Office Open XML 文件格式的受密码保护的文件。所选加密类型必须在加密文件的计算机上安装对应的加密服务提供程序(CSP)。有关本地计算机上安装的 CSP 的列表，请参阅 HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\Defaults\\Provider\\ 注册表项。通过按以下格式在提供的文本框中输入要使用的加密类型来进行指定:\n\n<加密提供程序>,<加密算法>,<加密密钥长度>\n\n例如: Microsoft Enhanced Cryptographic Provider v1.0,RC4,128\n\n如果禁用或未配置此策略设置，则使用默认 CSP。默认加密服务提供程序(CSP)是 Microsoft 增强 RSA 和 AES 加密提供程序，AES128，128 位。\n\n注意: 此策略设置只有在注册表项 \nHKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\<Office 应用程序名称>\\Security\\Crypto\\CompatMode 设置为 0 时才会生效。默认情况下，CompatMode 注册表项设置为 1。",
+            "explainText": "通过此策略设置，你可以指定 Office Open XML 文件的加密类型。\n      \n如果启用此策略设置，你可以指定 Office 应用程序使用的加密类型，以加密 Excel、PowerPoint 和 Word 使用的 Office Open XML 文件格式的受密码保护的文件。所选加密类型必须在加密文件的计算机上安装对应的加密服务提供程序(CSP)。有关本地计算机上安装的 CSP 的列表，请参阅 HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\Defaults\\Provider\\ 注册表项。通过按以下格式在提供的文本框中输入要使用的加密类型来进行指定:\n\n<加密提供程序>,<加密算法>,<加密密钥长度>\n\n例如: Microsoft Enhanced Cryptographic Provider v1.0,RC4,128\n\n如果禁用或未配置此策略设置，则使用默认 CSP。默认加密服务提供程序(CSP)是 Microsoft 增强 RSA 和 AES 加密提供程序，AES128，128 位。\n\n注意: 此策略设置只有在注册表项 \nHKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\<Office 应用程序名称>\\Security\\Crypto\\CompatMode 设置为 0 时才会生效。默认情况下，CompatMode 注册表项设置为 1。\n",
             "tags": [
                 "L_SecuritySettings",
                 "L_MicrosoftOfficeSystem"
@@ -7503,7 +7220,7 @@
             },
             "name": "L_Encryptiontypeforpasswordprotectedoffice972003",
             "displayName": "受密码保护的 Office 97-2003 文件的加密类型",
-            "explainText": "通过此策略设置，您可以为密码保护的 Office 97-2003 文件指定加密类型。\n\n如果您启用此策略设置，您可以指定 Office 应用程序将用于加密较旧 Office 97-2003 文件格式的密码保护文件的加密类型。选择的加密类型必须在加密文件的计算机上安装相应的加密服务提供程序(CSP)。有关本地计算机上安装的 CSP 的列表，请参阅 HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\Defaults\\Provider\\ 注册表项。通过使用以下格式在提供的文本框中输入加密类型指定加密类型:\n\n<加密提供程序>,<加密算法>,<加密密钥长度>。\n例如，Microsoft Enhanced Cryptographic Provider v1.0,RC4,128\n\n如果您不配置此策略设置，Excel、PowerPoint 和 Word 使用“Office 97/2000 兼容”加密(一种专有加密方法)对密码保护的 Office 97-2003 文件进行加密。",
+            "explainText": "通过此策略设置，您可以为密码保护的 Office 97-2003 文件指定加密类型。\n      \n如果您启用此策略设置，您可以指定 Office 应用程序将用于加密较旧 Office 97-2003 文件格式的密码保护文件的加密类型。选择的加密类型必须在加密文件的计算机上安装相应的加密服务提供程序(CSP)。有关本地计算机上安装的 CSP 的列表，请参阅 HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\Defaults\\Provider\\ 注册表项。通过使用以下格式在提供的文本框中输入加密类型指定加密类型:\n\n<加密提供程序>,<加密算法>,<加密密钥长度>。\n例如，Microsoft Enhanced Cryptographic Provider v1.0,RC4,128\n\n如果您不配置此策略设置，Excel、PowerPoint 和 Word 使用“Office 97/2000 兼容”加密(一种专有加密方法)对密码保护的 Office 97-2003 文件进行加密。",
             "tags": [
                 "L_SecuritySettings",
                 "L_MicrosoftOfficeSystem"
@@ -7530,7 +7247,7 @@
             },
             "name": "L_disablevbaforofficeapplications319",
             "displayName": "禁用 VBA for Office Applications",
-            "explainText": "此策略设置将阻止 Office 应用程序使用 Visual Basic for Applications (VBA)。\n\n 如果启用此策略设置，将禁用适用于 Office 应用程序的 Visual Basic for Applications (VBA)。\n\n如果禁用或未配置此策略设置，将为 Office 应用程序启用 Visual Basic for Applications (VBA)。\n\n 有关配置安全设置的更重要信息，请参阅 Office 资源工具包。\n\n 注意：更改此设置不会安装或删除计算机中的 VBA 文件。",
+            "explainText": "此策略设置将阻止 Office 应用程序使用 Visual Basic for Applications (VBA)。\n\n 如果启用此策略设置，将禁用适用于 Office 应用程序的 Visual Basic for Applications (VBA)。\n\n如果禁用或未配置此策略设置，将为 Office 应用程序启用 Visual Basic for Applications (VBA)。\n\n 有关配置安全设置的更重要信息，请参阅 Office 资源工具包。\n\n 注意：更改此设置不会安装或删除计算机中的 VBA 文件。\n",
             "tags": [
                 "L_SecuritySettings",
                 "L_MicrosoftOfficeSystem"
@@ -7592,7 +7309,7 @@
             },
             "name": "L_LoadControlsinForms3",
             "displayName": "在 Forms3 中加载控件",
-            "explainText": "通过此策略设置，可控制应如何根据 UserForm 中的 ActiveX 控件是初始化安全(SFI)或初始化不安全(UFI)来初始化这些控件。\n\nActiveX 控件为组件对象模型(COM)对象，对用户的计算机没有访问限制。ActiveX 控件可以访问本地文件系统和更改操作系统的注册表设置。如果恶意用户重新更改 ActiveX 控件以接管用户的计算机，这影响将会很大。为帮助改善安全性，ActiveX 开发人员可将控件标记为初始化安全(SFI)，这意味着开发人员证明控件可安全打开和运行，不会损坏任何计算机。如果控件未被标记为 SFI，该控件会对计算机造成不利影响，或者可能开发人员未在所有条件下测试该控件，不确定他们的控件在未来是否有危害性。SFI 控件在安全模式下运行，这可限制它们对计算机的访问。例如，当工作表控件处于不安全模式时，它可以读取和写入文件，但是在安全模式下只能从文件中读取。通过此功能，该控件可以在安全不是很重要的情况下很好地使用，但是在网页上使用该控件仍然是安全的。如果控件未标记为 SFI，而是标记为初始化不安全(UFI)，这意味着会影响用户的计算机。如果加载了 UFI ActiveX 控件，则这些控件始终在不安全模式下加载。\n\n如果启用此策略设置，你可以从四个选项中选择以在 UserForm 中加载控件:\n\n1- 对于支持安全和不安全模式的 UFI 或 SFI 签名控件，则在不安全模式下加载该控件。对于只支持安全模式配置的 SFI 签名控件，则在安全模式下加载该控件。此选项强制使用默认配置。\n\n2- 提示用户确定 UserForm 表单将如何加载。一个应用程序内每一次会话只显示一次提示。当用户响应该提示时，则根据控件是否为 UFI 或 SFI 继续加载:\n\n- 对于 UFI 签名控件，如果用户以“是”响应该提示，则在不安全模式下加载该控件。如果用户以“否”响应，则使用默认属性加载该控件。\n\n- 对于同时支持安全和不安全模式的 SFI 签名控件，如果用户以“是”响应该提示，则在不安全模式下加载该控件。如果用户以“否”响应，则使用安全模式加载该控件。如果 SFI 控件只能支持安全模式，则在安全模式下加载该控件。此选项为 Microsoft Office 2016 版本中的默认配置。\n\n3- 提示用户确定 UserForm 表单将如何加载。一个应用程序内每一次会话只显示一次提示。当用户响应提示时，则根据控件是否为 UFI 或 SFI 继续加载: \n\n- 对于 UFI 签名控件，如果用户以“是”响应该提示，则在不安全模式下加载该控件。如果用户以“否”响应，则使用其默认属性加载该控件。\n\n- 对于 SFI 签名控件，则在安全模式下加载。\n\n4- 对于 UFI 签名控件，则使用该控件默认属性加载。对于 SFI 签名控件，则在安全模式下加载(认为是最安全的模式)。\n\n如果禁用或未配置此策略设置，该行为等效于你启用此策略设置，然后选择选项 1。  ",
+            "explainText": "通过此策略设置，可控制应如何根据 UserForm 中的 ActiveX 控件是初始化安全(SFI)或初始化不安全(UFI)来初始化这些控件。\n \nActiveX 控件为组件对象模型(COM)对象，对用户的计算机没有访问限制。ActiveX 控件可以访问本地文件系统和更改操作系统的注册表设置。如果恶意用户重新更改 ActiveX 控件以接管用户的计算机，这影响将会很大。为帮助改善安全性，ActiveX 开发人员可将控件标记为初始化安全(SFI)，这意味着开发人员证明控件可安全打开和运行，不会损坏任何计算机。如果控件未被标记为 SFI，该控件会对计算机造成不利影响，或者可能开发人员未在所有条件下测试该控件，不确定他们的控件在未来是否有危害性。SFI 控件在安全模式下运行，这可限制它们对计算机的访问。例如，当工作表控件处于不安全模式时，它可以读取和写入文件，但是在安全模式下只能从文件中读取。通过此功能，该控件可以在安全不是很重要的情况下很好地使用，但是在网页上使用该控件仍然是安全的。如果控件未标记为 SFI，而是标记为初始化不安全(UFI)，这意味着会影响用户的计算机。如果加载了 UFI ActiveX 控件，则这些控件始终在不安全模式下加载。\n\n如果启用此策略设置，你可以从四个选项中选择以在 UserForm 中加载控件:\n \n1- 对于支持安全和不安全模式的 UFI 或 SFI 签名控件，则在不安全模式下加载该控件。对于只支持安全模式配置的 SFI 签名控件，则在安全模式下加载该控件。此选项强制使用默认配置。\n \n2- 提示用户确定 UserForm 表单将如何加载。一个应用程序内每一次会话只显示一次提示。当用户响应该提示时，则根据控件是否为 UFI 或 SFI 继续加载:\n \n- 对于 UFI 签名控件，如果用户以“是”响应该提示，则在不安全模式下加载该控件。如果用户以“否”响应，则使用默认属性加载该控件。\n \n- 对于同时支持安全和不安全模式的 SFI 签名控件，如果用户以“是”响应该提示，则在不安全模式下加载该控件。如果用户以“否”响应，则使用安全模式加载该控件。如果 SFI 控件只能支持安全模式，则在安全模式下加载该控件。此选项为 Microsoft Office 2016 版本中的默认配置。\n \n3- 提示用户确定 UserForm 表单将如何加载。一个应用程序内每一次会话只显示一次提示。当用户响应提示时，则根据控件是否为 UFI 或 SFI 继续加载: \n \n- 对于 UFI 签名控件，如果用户以“是”响应该提示，则在不安全模式下加载该控件。如果用户以“否”响应，则使用其默认属性加载该控件。\n \n- 对于 SFI 签名控件，则在安全模式下加载。\n \n4- 对于 UFI 签名控件，则使用该控件默认属性加载。对于 SFI 签名控件，则在安全模式下加载(认为是最安全的模式)。\n \n如果禁用或未配置此策略设置，该行为等效于你启用此策略设置，然后选择选项 1。  ",
             "tags": [
                 "L_SecuritySettings",
                 "L_MicrosoftOfficeSystem"
@@ -7728,7 +7445,7 @@
             },
             "name": "L_DisablepasswordtoopenUI",
             "displayName": "禁用打开用户界面的密码",
-            "explainText": "此策略设置可控制 Office 2016 用户是否可以为文档添加密码加密。(用户可以在 Microsoft Office 选项卡中访问此功能: 依次单击“信息”、“保护文档”和“用密码加密”。)\n\n如果启用此策略设置，用户将不能对其 2016 Office 文档进行密码保护。\n\n\n如果禁用或不配置此策略设置，则用户可以用密码对其 2016 Office 文件进行加密。",
+            "explainText": "此策略设置可控制 Office 2016 用户是否可以为文档添加密码加密。(用户可以在 Microsoft Office 选项卡中访问此功能: 依次单击“信息”、“保护文档”和“用密码加密”。)\n \n如果启用此策略设置，用户将不能对其 2016 Office 文档进行密码保护。\n\n\n如果禁用或不配置此策略设置，则用户可以用密码对其 2016 Office 文件进行加密。",
             "tags": [
                 "L_SecuritySettings",
                 "L_MicrosoftOfficeSystem"
@@ -8064,7 +7781,7 @@
             },
             "name": "L_AllowNonAdminUserInstallLAPs",
             "displayName": "允许不是管理员的用户安装语言配件包",
-            "explainText": "此策略设置控制用户是否可以安装 Office 语言附件包，即使其在设备上没有本地管理员权限。默认情况下，用户在其设备上必须具有本地管理员权限才能安装语言附件包。\n\n如果启用此策略设置，用户将能够安装 Office 的语言附件包，即使其在设备上没有本地管理员权限。通过在应用(如 Word)中转到“文件”>“选项”>“语言”，即可安装这些语言附件包。\n\n如果禁用或不配置此策略设置，则在设备上不具有本地管理员权限的用户将无法安装语言附件包，而在设备上拥有本地管理员权限的某些人员则需要为该用户安装语言配件包。\n\n，有关详细信息，请参阅 https://go.microsoft.com/fwlink/p/?linkid=2161939.",
+            "explainText": "此策略设置控制用户是否可以安装 Office 语言附件包，即使其在设备上没有本地管理员权限。默认情况下，用户在其设备上必须具有本地管理员权限才能安装语言附件包。\n\n如果启用此策略设置，用户将能够安装 Office 的语言附件包，即使其在设备上没有本地管理员权限。通过在应用(如 Word)中转到“文件”>“选项”>“语言”，即可安装这些语言附件包。\n\n如果禁用或不配置此策略设置，则在设备上不具有本地管理员权限的用户将无法安装语言附件包，而在设备上拥有本地管理员权限的某些人员则需要为该用户安装语言配件包。\n\n，有关详细信息，请参阅 https://go.microsoft.com/fwlink/p/?linkid=2161939.\n      ",
             "tags": [
                 "L_Displaylanguage",
                 "L_Languagesettings",
@@ -27367,7 +27084,7 @@
             },
             "name": "L_TurnOffContactTabCalendar",
             "displayName": "删除日历行",
-            "explainText": "通过此策略设置，您可以删除联系人卡片的联系人选项卡上的日历行。\n\n如果启用此策略设置，您可要删除日历行。\n\n如果禁用或不配置此策略设置，联系人选项卡上将显示日历行。",
+            "explainText": "\n通过此策略设置，您可以删除联系人卡片的联系人选项卡上的日历行。\n\n如果启用此策略设置，您可要删除日历行。\n\n如果禁用或不配置此策略设置，联系人选项卡上将显示日历行。\n",
             "tags": [
                 "L_ContactTab",
                 "L_ContactCard",
@@ -27396,7 +27113,7 @@
             },
             "name": "L_TurnOffContactTabLocation",
             "displayName": "删除位置行",
-            "explainText": "通过此策略设置，您可以删除联系人卡片的联系人选项卡上的位置行。\n\n如果启用此策略设置，您可要删除位置行。\n\n如果禁用或不配置此策略设置，联系人选项卡上将显示位置行。",
+            "explainText": "\n通过此策略设置，您可以删除联系人卡片的联系人选项卡上的位置行。\n\n如果启用此策略设置，您可要删除位置行。\n\n如果禁用或不配置此策略设置，联系人选项卡上将显示位置行。\n",
             "tags": [
                 "L_ContactTab",
                 "L_ContactCard",
@@ -28092,7 +27809,7 @@
             },
             "name": "L_SetDocumentSynchronizationTimeout",
             "displayName": "设置文档同步超时",
-            "explainText": "此策略设置可指定文档同步的服务器超时值(毫秒)。此策略设置不适用于在 SharePoint 服务器上同步文档。\n\n如果启用此策略设置，您可指定文档同步的服务器超时值(毫秒)。\n\n如果禁用或未配置此策略设置，服务器超时将默认为 Windows 超时值。",
+            "explainText": "此策略设置可指定文档同步的服务器超时值(毫秒)。此策略设置不适用于在 SharePoint 服务器上同步文档。\n\n如果启用此策略设置，您可指定文档同步的服务器超时值(毫秒)。\n\n如果禁用或未配置此策略设置，服务器超时将默认为 Windows 超时值。\n",
             "tags": [
                 "L_Coauthoring",
                 "L_CollaborationSettings",
@@ -28100,91 +27817,6 @@
             ],
             "application": "office16",
             "key": "software\\microsoft\\office\\16.0\\common\\internet"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_VolumeActivation"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledList": [
-                {
-                    "value": {
-                        "decimal": {
-                            "value": 1
-                        }
-                    },
-                    "key": "software\\microsoft\\officesoftwareprotectionplatform",
-                    "valueName": "tokenactivationonly"
-                },
-                {
-                    "value": {
-                        "decimal": {
-                            "value": 3
-                        }
-                    },
-                    "key": "software\\microsoft\\softwareprotectionplatform",
-                    "valueName": "vlactivationtype"
-                }
-            ],
-            "disabledList": [
-                {
-                    "value": {
-                        "decimal": {
-                            "value": 0
-                        }
-                    },
-                    "key": "software\\microsoft\\officesoftwareprotectionplatform",
-                    "valueName": "tokenactivationonly"
-                },
-                {
-                    "value": {
-                        "decimal": {
-                            "value": 0
-                        }
-                    },
-                    "key": "software\\microsoft\\softwareprotectionplatform",
-                    "valueName": "vlactivationtype"
-                }
-            ],
-            "name": "L_UseOnlyTokenActivation",
-            "displayName": "仅使用令牌激活",
-            "explainText": "通过此策略设置，您可以将令牌激活指定为 Office 合订版的唯一合订激活方法。此策略设置只适用于计算机上已安装令牌激活发布许可证的情况。\n\n如果启用此策略设置，令牌激活是唯一可用于激活 Office 的方法。\n\n如果禁用或未配置此策略设置，密钥管理服务(KMS)或令牌激活均可用于激活 Office。",
-            "tags": [
-                "L_VolumeActivation",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "none"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_VolumeActivation"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "name": "L_PreventTokenActivationDialogFromClosing",
-            "displayName": "禁止令牌激活对话框关闭",
-            "explainText": "通过此策略设置，您可以禁止激活对话框的令牌激活提示关闭。\n\n如果启用此策略设置，对话框右上角的“关闭”按钮和 \"X\" 按钮被禁用。如果用户继续激活并失败，对话框下次显示时将激活按钮。\n\n如果禁用或未配置此策略设置，当提示激活时用户可关闭该对话框。",
-            "tags": [
-                "L_VolumeActivation",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\officesoftwareprotectionplatform",
-            "valueName": "suppresstokenactivationdialogclose"
         },
         {
             "parentCategory": {
@@ -29054,7 +28686,7 @@
             },
             "name": "L_DisableinclusionofdocumentpropertiesinPDFandXPSoutput",
             "displayName": "禁止在 PDF 和 XPS 输出中包含文档属性",
-            "explainText": "此策略设置可控制 PDF 和 XPS 文档中是否可以保存元数据。\n\n如果您启用此策略设置，文档属性元数据不导出到 PDF 和 XPS 文件。如果您禁用此策略设置，文档属性元数据将始终随 PDF 和 XPS 文件保存，并且用户不能替代此配置。\n\n如果您不配置此策略设置，并且安装了用于 Microsoft Office 程序的 Microsoft 另存为 PDF/XPS 加载项，除非“选项”对话框中取消选中“文档属性”选项，否则当用户使用 Access、Excel、InfoPath、PowerPoint 和 Word 中的“PDF 或 XPS”或“发布为 PDF 或 XPS”命令保存文件时，文档属性另存为元数据。",
+            "explainText": "此策略设置可控制 PDF 和 XPS 文档中是否可以保存元数据。\n\n如果您启用此策略设置，文档属性元数据不导出到 PDF 和 XPS 文件。如果您禁用此策略设置，文档属性元数据将始终随 PDF 和 XPS 文件保存，并且用户不能替代此配置。\n\n如果您不配置此策略设置，并且安装了用于 Microsoft Office 程序的 Microsoft 另存为 PDF/XPS 加载项，除非“选项”对话框中取消选中“文档属性”选项，否则当用户使用 Access、Excel、InfoPath、PowerPoint 和 Word 中的“PDF 或 XPS”或“发布为 PDF 或 XPS”命令保存文件时，文档属性另存为元数据。\n\n",
             "tags": [
                 "L_PDFandXPS",
                 "L_MicrosoftOfficeSystem"
@@ -29115,7 +28747,7 @@
             },
             "name": "L_EnforcePDFcompliancewithISO190051PDFA",
             "displayName": "强制 PDF 执行 ISO 19005-1 标准(PDF/A)",
-            "explainText": "允许在 PDF 输出中强制执行 ISO 19005-1 标准。此设置的值如下:\n\n默认: 选项用户界面默认为不执行 ISO 标准。用户可以更改该值。\n\n鼓励: 选项用户界面默认为执行 ISO 标准。用户可以更改该值。\n\n禁止: 不执行 ISO 标准。用户不可更改该值。\n\n强制: 执行 ISO 标准。用户不可更改该值。\n\n有关选择 ISO 19005 标准的利弊的详细信息，请参阅 Office 帮助。",
+            "explainText": "允许在 PDF 输出中强制执行 ISO 19005-1 标准。此设置的值如下:\n      \n默认: 选项用户界面默认为不执行 ISO 标准。用户可以更改该值。\n\n鼓励: 选项用户界面默认为执行 ISO 标准。用户可以更改该值。\n\n禁止: 不执行 ISO 标准。用户不可更改该值。\n\n强制: 执行 ISO 标准。用户不可更改该值。\n\n有关选择 ISO 19005 标准的利弊的详细信息，请参阅 Office 帮助。",
             "tags": [
                 "L_PDFandXPS",
                 "L_MicrosoftOfficeSystem"
@@ -30307,7 +29939,7 @@
             },
             "name": "L_RetryIntervalLimit",
             "displayName": "设置订阅刷新重试间隔",
-            "explainText": "通过此策略设置，您可以指定操作失败后重试操作前系统须等待的最大分钟数。\n\n如果启用此策略设置，则可指定操作失败后重试操作前的最大时间间隔(分钟)。\n\n如果禁用或未配置此策略设置，将使用默认值 360 分钟。",
+            "explainText": "通过此策略设置，您可以指定操作失败后重试操作前系统须等待的最大分钟数。\n\n如果启用此策略设置，则可指定操作失败后重试操作前的最大时间间隔(分钟)。\n\n如果禁用或未配置此策略设置，将使用默认值 360 分钟。\n",
             "tags": [
                 "L_Synchronization",
                 "L_BusinessData",
@@ -30499,7 +30131,7 @@
             },
             "name": "L_DatabaseMaxInstancesLimit",
             "displayName": "设置最大数据库实例限制",
-            "explainText": "通过此策略设置，您可以指定数据库填充程序每页可返回的最大实例数限制。此策略设置可强制实施允许的最大应用程序数(包括忽略默认值的应用程序)。\n\n如果启用此策略设置，您可指定数据库填充程序可返回的最大实例数限制。\n\n如果禁用或未配置此策略设置，数据库填充程序可返回的实例数将没有限制。",
+            "explainText": "通过此策略设置，您可以指定数据库填充程序每页可返回的最大实例数限制。此策略设置可强制实施允许的最大应用程序数(包括忽略默认值的应用程序)。\n \n如果启用此策略设置，您可指定数据库填充程序可返回的最大实例数限制。\n\n如果禁用或未配置此策略设置，数据库填充程序可返回的实例数将没有限制。",
             "tags": [
                 "L_Database",
                 "L_BusinessData",
@@ -34197,7 +33829,7 @@
             },
             "name": "L_SignInOptions",
             "displayName": "阻止登录到 Office",
-            "explainText": "此策略设置控制用户是否可以使用其 Microsoft 帐户或由您的组织分配用于访问 Office 365 的用户 ID 向 Office 提供凭据。\n如果启用此策略设置，您可以指定以下其中一个选项:\n\n- 如果选择“允许两个 ID”，则用户可以使用任一 ID 登录并访问 Office 内容\n- 如果选择“仅 Microsoft 帐户”，则用户只能使用其 Microsoft 帐户登录。\n- 如果选择“仅组织”，则用户只能使用由您的组织分配用于访问 Office 365 的用户 ID 登录。\n- 如果选择“都不允许”，则用户不能使用任一 ID 登录。\n\n如果禁用或不配置此策略设置，用户可以使用任一 ID 登录。\n\n注意: 此策略不适合于授权。如果用户具有与该帐户相关联的有效许可证，则可以使用任何适用的 ID 对其产品进行授权。但是当禁用该 ID 类型时，提供用于进行授权的凭据不会影响 Office 的登录状态。",
+            "explainText": "此策略设置控制用户是否可以使用其 Microsoft 帐户或由您的组织分配用于访问 Office 365 的用户 ID 向 Office 提供凭据。\n如果启用此策略设置，您可以指定以下其中一个选项:\n\n- 如果选择“允许两个 ID”，则用户可以使用任一 ID 登录并访问 Office 内容\n- 如果选择“仅 Microsoft 帐户”，则用户只能使用其 Microsoft 帐户登录。\n- 如果选择“仅组织”，则用户只能使用由您的组织分配用于访问 Office 365 的用户 ID 登录。\n- 如果选择“都不允许”，则用户不能使用任一 ID 登录。\n\n如果禁用或不配置此策略设置，用户可以使用任一 ID 登录。\n\n注意: 此策略不适合于授权。如果用户具有与该帐户相关联的有效许可证，则可以使用任何适用的 ID 对其产品进行授权。但是当禁用该 ID 类型时，提供用于进行授权的凭据不会影响 Office 的登录状态。\n      ",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"
@@ -34392,7 +34024,7 @@
             },
             "name": "L_federatedSearchForHelp",
             "displayName": "联合搜索帮助",
-            "explainText": "通过此策略设置，可确定你组织中的 Office 用户可通过 Office 帮助(F1)访问的内容的来源。\n\n  如果启用或不配置此策略设置，使用 Office 帮助的用户会看到来自 Office 和 Internet 的内容。\n\n  如果禁用此策略设置，Office 用户通过帮助搜索到的搜索结果限制为 Office 内容。",
+            "explainText": "通过此策略设置，可确定你组织中的 Office 用户可通过 Office 帮助(F1)访问的内容的来源。\n\n          如果启用或不配置此策略设置，使用 Office 帮助的用户会看到来自 Office 和 Internet 的内容。\n\n          如果禁用此策略设置，Office 用户通过帮助搜索到的搜索结果限制为 Office 内容。\n      ",
             "tags": [
                 "L_Help",
                 "L_MicrosoftOfficeSystem"
@@ -34420,7 +34052,7 @@
             },
             "name": "L_AutoOrgIDGetKey",
             "displayName": "自动激活 Office 联盟的组织凭据",
-            "explainText": "此策略设置激活用户的计算机上的 Office，而不提示他们登录其 Office 365 帐户。\n\n如果启用或不配置此策略设置，并且用户已使用联盟组织凭据登录，则当用户第一次启动 Office 应用程序时，Office 会自动激活。如果找到了多个组织凭据或找不到凭据，则提示用户登录。\n\n如果禁用此策略设置，当用户未从其 Office 365 帐户主页直接安装 Office 时，Office 可能会提示用户使用其组织的凭据进行登录。",
+            "explainText": "此策略设置激活用户的计算机上的 Office，而不提示他们登录其 Office 365 帐户。\n\n如果启用或不配置此策略设置，并且用户已使用联盟组织凭据登录，则当用户第一次启动 Office 应用程序时，Office 会自动激活。如果找到了多个组织凭据或找不到凭据，则提示用户登录。\n\n如果禁用此策略设置，当用户未从其 Office 365 帐户主页直接安装 Office 时，Office 可能会提示用户使用其组织的凭据进行登录。\n",
             "tags": [
                 "L_SubscriptionActivation",
                 "L_MicrosoftOfficeSystem"
@@ -34484,394 +34116,6 @@
             "application": "office16",
             "key": "software\\microsoft\\office\\16.0\\firstrun",
             "valueName": "disablemovie"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Updates"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "updatepath",
-                        "required": false,
-                        "requiredSpecified": true,
-                        "expandableSpecified": false,
-                        "maxLengthSpecified": false,
-                        "inputType": "textBox",
-                        "caption": "更新的位置:",
-                        "id": "L_UpdatePathID"
-                    }
-                ]
-            },
-            "name": "L_UpdatePath",
-            "displayName": "更新路径",
-            "explainText": "此策略设置可让您指定 Office 获取更新的位置。\n\n如果您启用此策略设置，您可以指定以下其中一项作为更新位置: 网络共享位置、本地计算机上安装 Office 的文件夹，或是 HTTP 地址。映射的网络驱动器不受支持。\n\n如果您启用此策略设置，但将更新位置留空，则 Office 将从 Internet 获取更新。\n\n如果您禁用或不配置此策略设置，除非您使用 Office 部署工具指定其他位置，否则 Office 将从 Internet 获取更新。\n\n重要: 此策略设置仅适用于使用即点即用安装的 Office 产品。它不适用于使用 Windows Installer (MSI)安装的 Office 产品。",
-            "tags": [
-                "L_Updates",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common\\officeupdate"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Updates"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "updatetargetversion",
-                        "required": false,
-                        "requiredSpecified": true,
-                        "expandableSpecified": false,
-                        "maxLengthSpecified": false,
-                        "inputType": "textBox",
-                        "caption": "更新版本:",
-                        "id": "L_UpdateTargetVersionID"
-                    }
-                ]
-            },
-            "name": "L_UpdateTargetVersion",
-            "displayName": "目标版本",
-            "explainText": "此策略设置可让你指定 Office 更新的目标版本号。有关版本号列表，请参阅 http://go.microsoft.com/fwlink/?LinkId=616875。\n\n如果你启用此策略设置，则需指定 Office 更新的目标版本号。下次当 Office 查找更新时，Office 会尝试更新到该版本。配置 Office 查找的更新位置(例如在网络共享位置上)，必须有可用的版本。\n\n如果你启用此策略设置，但将版本留空，Office 会更新到 Office 更新位置可用的最新版本。\n\n如果禁用或不配置此策略设置，除非使用 Office 部署工具指定其他版本，否则 Office 会更新到 Office 更新位置可用的最新版本。\n\n重要: 此策略设置仅适用于使用即点即用安装的 Office 产品。不适用于使用 Windows Installer (MSI)安装的 Office 产品。",
-            "tags": [
-                "L_Updates",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common\\officeupdate"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Updates"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "elements": {
-                "items": [
-                    {
-                        "item": [
-                            {
-                                "value": {
-                                    "string": "Current"
-                                },
-                                "displayName": "当前频道"
-                            },
-                            {
-                                "value": {
-                                    "string": "FirstReleaseCurrent"
-                                },
-                                "displayName": "当前频道（预览）"
-                            },
-                            {
-                                "value": {
-                                    "string": "MonthlyEnterprise"
-                                },
-                                "displayName": "每月企业频道"
-                            },
-                            {
-                                "value": {
-                                    "string": "Deferred"
-                                },
-                                "displayName": "半年企业频道"
-                            },
-                            {
-                                "value": {
-                                    "string": "FirstReleaseDeferred"
-                                },
-                                "displayName": "半年企业频道（预览）"
-                            },
-                            {
-                                "value": {
-                                    "string": "InsiderFast"
-                                },
-                                "displayName": "Beta 版频道"
-                            }
-                        ],
-                        "valueName": "updatebranch",
-                        "inputType": "dropdownList",
-                        "caption": "频道名称:",
-                        "id": "L_UpdateBranchID"
-                    }
-                ]
-            },
-            "name": "L_UpdateBranch",
-            "displayName": "更新通道",
-            "explainText": "此策略设置可控制 Teams 从哪个更新通道获取更新。\n\n如果启用此策略设置，则 Office 从你选择的更新通道获取更新。\n\n如果禁用或不配置此策略设置，则 Office 从其默认通道获取更新，或者按 Office 部署工具指定的更新通道获取更新。默认通道由安装的具体 Office 产品决定。\n\n注意: 此策略设置仅适用于 Office 的订阅版本(例如 Microsoft 365 企业应用版)，以及 Project 和 Visio 的订阅版本。",
-            "tags": [
-                "L_Updates",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common\\officeupdate"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Updates"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "name": "L_VLtoSubscription",
-            "displayName": "将 Office 2019 升级到 Microsoft 365 企业应用版",
-            "explainText": "通过此策略设置，可将 Office 专业增强版 2019 的批量许可版升级为 Microsoft 365 企业应用版。\n\n注意: 对于能够使用 Microsoft 365 企业应用版的用户，你必须已购买包含 Microsoft 365 企业应用版的 Office 365 或 Microsoft 365 计划，并且你必须已向用户分配可使用 Microsoft 365 企业应用版的许可证。\n\n如果启用此策略设置，则用户计算机上安装的批量许可证将升级为 Microsoft 365 企业应用版。我们还建议你使用组策略来指定 Microsoft 365 企业应用版的更新路径和更新通道。\n\n注意: 如果用户计算机上存在 Visio 和 Project 的批量许可版，则这些版本将不升级到 Visio 和 Project 的订阅版本。\n\n如果禁用或不配置此策略设置，则 Office 2019 不会自动升级到 Microsoft 365 企业应用版。但是，你可使用其他某种方法(例如使用 Office 部署工具)来开始升级。",
-            "tags": [
-                "L_Updates",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common\\officeupdate",
-            "valueName": "vltosubscription"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Updates"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "blockversion",
-                        "required": false,
-                        "requiredSpecified": true,
-                        "expandableSpecified": false,
-                        "maxLengthSpecified": false,
-                        "inputType": "textBox",
-                        "caption": "阻止版本:",
-                        "id": "L_UpdateBlockVersionID"
-                    }
-                ]
-            },
-            "name": "L_UpdateBlockVersion",
-            "displayName": "避免 Office 更新到特定版本",
-            "explainText": "通过此策略设置，可防止 Office 更新为特定版本，而将 Office 更新为指定的其他版本。\n\n如果启用此策略设置，则需要指定要阻止的版本和要将 Office 更新到的版本。应首先列出要阻止的版本，并用冒号分隔两个版本。可通过用竖线分隔条目来指定多个要阻止的版本。\n\n例如，如果要阻止版本16.0.10326.10000 和 16.0.10326.20000，并将 Office 更新到版本 16.0.10328.10000，则可输入 16.0.10326.10000: 16.0.10328.10000|16.0.10326.20000: 16.0.10328.10000。\n\n如果已安装阻止的版本，则 Office 将更新为指定的其他版本。\n\n注意: 如果在输入版本时出错，将不会阻止更新。此外，请确保要更新 Office 的版本的安装文件在更新位置上可用。\n\n如果禁用或未配置此策略设置，则 Office 将更新为可在配置为从中获取更新的位置的任何最新版本，除非已指定要使用 Office 部署工具阻止的版本。\n\n注意: 此策略设置仅适用于使用即点即用安装的 Office 产品。它不适用于使用 Windows Installer (MSI)的 Office 产品。",
-            "tags": [
-                "L_Updates",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common\\officeupdate"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Updates"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "name": "L_PreventTeamsInstall",
-            "displayName": "不要使用 Office 的新安装或更新来安装 Microsoft Teams",
-            "explainText": "通过此策略设置，可控制是否随附 Office 的新安装或在更新 Office 的现有安装时安装 Microsoft Teams。\n\n注意: 此策略设置仅适用于 Office 的版本，例如 Microsoft 365 企业应用版，其中 Teams 随附 Office 的新安装或更新一起安装。\n\n如果启用此策略设置，则将不随附 Office 的新安装或更新一起安装 Teams。\n\n如果禁用或不配置此策略设置，则将在 Office 的新安装或更新期间安装 Teams，除非你采用了其他某种方法(例如 Office 部署工具)来将 Teams 排除在安装之外。",
-            "tags": [
-                "L_Updates",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common\\officeupdate",
-            "valueName": "preventteamsinstall"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Updates"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "name": "L_PreventBingInstall",
-            "displayName": "不要为“Microsoft 在必应中搜索”功能安装后台服务",
-            "explainText": "此策略设置可控制是否安装针对“Microsoft 在必应中搜索”功能的后台服务。在首次安装 Microsoft 365 企业应用版或更新到新版本时，会安装该后台服务。\n\n该后台服务会检查 Microsoft 365 管理中心的“Microsoft 搜索”部分中的复选框的状态。如果此复选框已选中，则安装适合 Google Chrome 的“Microsoft 在必应中搜索”扩展。该扩展会将默认搜索引擎设置为必应，但即使在安装该扩展之后，用户也可更改默认搜索引擎。\n\n注意: Microsoft 365 管理中心的复选框默认不选中。因此，即使安装了后台服务，你的用户也看不到任何变化，除非你转到 Microsoft 365 管理中心并勾选该复选框。\n\n如果启用此策略设置，则不会安装此后台服务。由于未安装后台服务，即使 Microsoft 365 管理中心的复选框已选中，也不会安装此扩展。\n\n如果你禁用或不配置此策略设置，则将安装该后台服务。即使安装了该后台服务，也不会安装该扩展，除非 Microsoft 365 中的复选框已选中。\n\n有关详细信息，请参阅 https://go.microsoft.com/fwlink/p/?linkid=2109345。",
-            "tags": [
-                "L_Updates",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common\\officeupdate",
-            "valueName": "preventbinginstall"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Updates"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "updatedeadline",
-                        "required": false,
-                        "requiredSpecified": true,
-                        "expandableSpecified": false,
-                        "maxLengthSpecified": false,
-                        "inputType": "textBox",
-                        "caption": "最后期限:",
-                        "id": "L_UpdateDeadlineID"
-                    }
-                ]
-            },
-            "name": "L_UpdateDeadline",
-            "displayName": "更新最后期限",
-            "explainText": "通过此策略设置，可设置必须应用 Office 更新的最后期限。\n\n可以通过两种方式设置最后期限:\n\n    指定日期和时间\n\n    指定下载更新后的天数\n\n在最后期限之前，用户将收到多个有关安装更新的提醒。如果未在最后期限前更新 Ofiice，将自动应用更新。如果打开了任何 Office 程序，会将其关闭，这可能导致数据丢失。\n\n如果要指定的日期和时间，建议至少将最后期限设置为一周以后，让用户有时间安装更新。\n\n如果启用此策略设置，需指定日期和时间或指定特定天数。\n\n注意: 此策略设置仅适用于通过即点即用安装的 Office 产品。它不适用于使用 Windows Installer (MSI)的 Office 产品。",
-            "tags": [
-                "L_Updates",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common\\officeupdate"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Updates"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "elements": {
-                "items": [
-                    {
-                        "valueName": "deferupdatedays",
-                        "minValue": 0,
-                        "minValueSpecified": true,
-                        "maxValue": 14,
-                        "maxValueSpecified": true,
-                        "inputType": "decimalTextBox",
-                        "caption": "天数:",
-                        "id": "L_DeferUpdateDaysID"
-                    }
-                ]
-            },
-            "name": "L_DeferUpdateDays",
-            "displayName": "推迟 Office 更新的下载和安装",
-            "explainText": "通过此策略设置，可延迟指定的天数再下载和安装 Office 更新。\n\n注意: 如果使用其他某种方法来管理更新，则此策略设置不适用。例如，如果你使用 Microsoft Endpoint Configuration Manager 来部署 Office 更新，或者使用组策略来指定目标版本。此外，如果将 Office 切换到其他更新通道，则不会延迟更新。\n\n如果启用此策略设置，Office 将延迟指定的天数再下载和应用更新。可指定的最大值为 14。如果指定 0，则一旦 Office 检测到更新可用，就会下载和应用这些更新。\n\n注意: 如果还对要安装的更新指定了截止日期，则在你使用此策略设置指定的延迟时间之后，才会考虑该截止日期。\n\n如果禁用或不配置此策略设置，则一旦 Office 检测到更新可用，就会下载和应用这些更新。\n\n注意: 此策略设置仅适用于 Office 的订阅版本(例如 Microsoft 365 企业应用版)，以及 Project 和 Visio 的订阅版本。",
-            "tags": [
-                "L_Updates",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common\\officeupdate"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Updates"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "name": "L_HideUpdateNotifications",
-            "displayName": "隐藏更新通知",
-            "explainText": "此策略设置可让您在有可用的 Office 更新时隐藏给用户的通知。\n\n当为 Office 启用自动更新时，在大多数情况下更新都会在后台自动应用，无需用户输入任何信息。但是，如果 Office 程序处于打开状态，系统会在稍后尝试应用更新。如果某 Office 程序处于打开状态，系统会在稍后尝试应用更新。如果几天后仍无法应用更新，用户才会看到有 Office 更新可用的通知。\n\n如果您启用此策略设置，当有可用的 Office 更新时，用户不会看到通知。\n\n如果您禁用或不配置此策略设置，则当有可用的 Office 更新时，用户会看到通知。\n\n此策略设置不适用于与更新最后期限相关联的通知。\n\n重要: 此策略设置仅适用于使用即点即用安装的 Office 产品。它不适用于使用 Windows Installer (MSI)安装的 Office 产品。",
-            "tags": [
-                "L_Updates",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common\\officeupdate",
-            "valueName": "hideupdatenotifications"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Updates"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "name": "L_OfficeMgmtCOM",
-            "displayName": "Microsoft 365 企业应用版的管理",
-            "explainText": "通过此策略设置，可实现对 Microsoft 365 企业应用版的编程控制。\n\n如果启用此策略设置，Microsoft Endpoint Configuration Manager 或其他应用程序管理解决方案可管理 Microsoft 365 企业应用版。应用此策略设置后，你需要重启 Office 即点即用服务。\n\n如果禁用或不配置此策略设置，Configuration Manager 更新工作流将无法管理 Microsoft 365 企业应用版。但是，你将能够继续使用 Office 部署工具以及 Configuration Manager 的程序和包或者应用程序部署方法。\n\n注意: 此策略设置还适用于 Project 和 Visio 的订阅版本 - 这些版本还可通过即点即用进行安装。",
-            "tags": [
-                "L_Updates",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common\\officeupdate",
-            "valueName": "officemgmtcom"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_Updates"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "name": "L_SetBITSasPrimary",
-            "displayName": "设置 BITS 的优先级",
-            "explainText": "通过此策略设置，可在从 Office 内容交付网络(CDN)下载 Office 更新时使Office 客户端优先使用 Windows 后台接口传送服务(BITS)。\n\n如果启用此策略设置，则将在从 Office CDN 直接下载 Office 更新的设备上使用 BITS，并且将采用 BITS 使用的限制值。如果更新是从本地 UNC 共享中获取的，则设备将不使用 BITS。\n\n如果禁用或不配置此策略设置，则不优先使用 BITS，并且 http 将作为用于下载更新的主要传输。\n\n注意: 此策略设置仅适用于 Office 的订阅版本(例如 Microsoft 365 企业应用版)，以及 Project 和 Visio 的订阅版本。",
-            "tags": [
-                "L_Updates",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common\\officeupdate",
-            "valueName": "setbitsasprimary"
         },
         {
             "parentCategory": {
@@ -35021,34 +34265,6 @@
         },
         {
             "parentCategory": {
-                "ref": "L_Miscellaneous"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "name": "L_EvictServerVersionsPolicy",
-            "displayName": "让超过 n 天的服务器文档版本的本地缓存副本老化。",
-            "explainText": "此策略控制本地缓存中来自服务器的本地缓存 Office 版本文档何时老化。\n\n如果启用此策略设置，本地缓存超过 n 天的来自服务器的 Office 文档版本将被从本地缓存中删除。\n\n如果禁用或不配置此策略设置，则当超过默认值一天时，本地缓存的来自服务器的 Office 文档版本将被从本地缓存中删除。",
-            "tags": [
-                "L_Miscellaneous",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common\\fileio",
-            "valueName": "evictserverversionspolicy"
-        },
-        {
-            "parentCategory": {
                 "ref": "L_miscellaneous437"
             },
             "supportedOn": {
@@ -35122,34 +34338,6 @@
             ],
             "application": "office16",
             "key": "software\\microsoft\\office\\16.0\\common\\internet"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_LicensingSettings"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "name": "L_OrgIdEDUEnabledCentennial",
-            "displayName": "为从 Windows 应用商店获取的 Office 启用 EDU 组织 ID 登录",
-            "explainText": "此策略设置控制是否使用学生的电子邮件帐户激活 Office 产品。默认情况下，不允许使用组织 ID 登录。\n\n如果启用此策略设置，则将使用学生的电子邮件 ID 登录来激活计算机上安装的 Office 版本。\n\n如果禁用此策略设置，则不能使用学生的电子邮件 ID 登录来激活计算机上安装的 Office 版本。\n\n启用或禁用此策略设置将优先于通过使用 Office 部署工具或手动编辑注册表配置的任何设置。\n\n如果不配置此策略设置，则不会使用学生的电子邮件 ID 登录激活计算机上安装的 Office 版本，除非通过手动编辑注册表启用了组织 ID。",
-            "tags": [
-                "L_LicensingSettings",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common\\licensing",
-            "valueName": "orgideduenabledcentennial"
         },
         {
             "parentCategory": {
@@ -35318,62 +34506,6 @@
             "application": "office16",
             "key": "software\\microsoft\\office\\16.0\\word",
             "valueName": "dontshowwhatsnew"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_LicensingSettings"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "name": "L_SharedComputerLicensing",
-            "displayName": "使用共享计算机激活",
-            "explainText": "通过此策略设置，可控制是否使用共享计算机激活来激活计算机上安装的 Office 版本。默认情况下，不使用共享计算机激活功能来进行激活。\n\n仅在多名用户共享同一台计算机时才使用共享计算机激活功能。例如，在使用远程桌面服务(RDS)时。\n\n如果启用此策略设置，则使用共享计算机激活功能来激活计算机上安装的 Office 版本。\n\n如果禁用或不配置此策略设置，则将不使用共享计算机激活功能来激活计算机上安装的 Office 版本，除非你已使用 Office 部署工具或通过手动编辑注册表启用了共享计算机激活功能。\n\n注意: 此策略设置仅适用于包含 Microsoft 365 企业应用版的订阅计划，以及 Project 和 Visio 的订阅版本。",
-            "tags": [
-                "L_LicensingSettings",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common\\licensing",
-            "valueName": "sharedcomputerlicensing"
-        },
-        {
-            "parentCategory": {
-                "ref": "L_LicensingSettings"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows_10_0"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "name": "L_DBS",
-            "displayName": "为 Microsoft 365 企业应用版使用基于设备的许可证",
-            "explainText": "通过此策略设置，可控制 Microsoft 365 企业应用版是否使用基于设备的许可证而不是基于用户的许可证。\n\n重要提示: 有关对 Microsoft 365 企业应用版使用基于设备的许可证的资格要求和配置步骤，请参阅 https://go.microsoft.com/fwlink/p/?linkid=2094216。\n\n如果启用此策略设置，Microsoft 365 企业应用版将使用基于设备的许可证而不是基于用户的许可证。\n\n如果禁用或不配置此策略设置，Microsoft 365 企业应用版将使用基于用户的许可证。因此，登录并激活 Office 的用户必须具有 Office 许可证。",
-            "tags": [
-                "L_LicensingSettings",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common\\licensing",
-            "valueName": "dbsproplus"
         },
         {
             "parentCategory": {
@@ -35761,34 +34893,6 @@
         },
         {
             "parentCategory": {
-                "ref": "L_LicensingSettings"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "enabledValue": {
-                "decimal": {
-                    "value": 1
-                }
-            },
-            "disabledValue": {
-                "decimal": {
-                    "value": 0
-                }
-            },
-            "name": "L_ViewerMode",
-            "displayName": "使用查看者模式",
-            "explainText": "通过此策略设置，可控制是否在查看者模式中打开 Office、Project 和 Visio，这意味着用户只能查看和打印文件的内容。查看者模式默认关闭，它适用于未获得 Office、Project 或 Visio 许可的用户。\n\n如果启用此策略设置，则将在查看者模式中打开 Office、Project 和 Visio。此外，“文件”>“帐户”下的“激活产品”按钮也会隐藏。注意: 如果启用此策略设置，则无法使用共享计算机激活功能。\n\n如果禁用或不配置此策略设置，则系统将提示未获得许可的用户在每次打开 Office、Project 或 Visio 时激活相应的应用。如果用户没有激活，则只能查看和打印文件的内容。\n\n注意: 此策略设置仅适用于 Office 的订阅版本(例如 Microsoft 365 企业应用版)，以及 Project 和 Visio 的订阅版本。",
-            "tags": [
-                "L_LicensingSettings",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common\\licensing",
-            "valueName": "viewermode"
-        },
-        {
-            "parentCategory": {
                 "ref": "L_miscellaneous437"
             },
             "supportedOn": {
@@ -36165,68 +35269,6 @@
         },
         {
             "parentCategory": {
-                "ref": "L_CustomizeMachine"
-            },
-            "supportedOn": {
-                "ref": "windows:SUPPORTED_Windows7"
-            },
-            "elements": {
-                "items": [
-                    {
-                        "item": [
-                            {
-                                "value": {
-                                    "decimal": {
-                                        "value": 0
-                                    }
-                                },
-                                "displayName": "彩色"
-                            },
-                            {
-                                "value": {
-                                    "decimal": {
-                                        "value": 3
-                                    }
-                                },
-                                "displayName": "深灰色"
-                            },
-                            {
-                                "value": {
-                                    "decimal": {
-                                        "value": 4
-                                    }
-                                },
-                                "displayName": "黑色"
-                            },
-                            {
-                                "value": {
-                                    "decimal": {
-                                        "value": 5
-                                    }
-                                },
-                                "displayName": "白色"
-                            }
-                        ],
-                        "valueName": "default ui theme",
-                        "inputType": "dropdownList",
-                        "caption": "主题:",
-                        "id": "L_defaultUIThemeEnum"
-                    }
-                ]
-            },
-            "name": "L_DefaultUIThemeMachine",
-            "displayName": "默认 Office 主题",
-            "explainText": "通过此策略设置，可选择 Office 使用的用户界面(UI)主题(如果用户尚未选择 Office 主题)。\n\n注意: 此设置仅适用于 Office 版本 1903 或更高版本。\n\n如果启用此策略设置，则可选择用户未选择 Office 主题本身的情况下使用的 Office 主题。\n\n如果禁用或未配置此策略设置，Office 将在用户尚未选择 Office 主题本身的情况下使用彩色主题。\n\n不管如何配置此策略设置，用户都可以转到“文件”>“帐户”>“Office 主题”更改其 Office 主题(或者，在 Outlook 中，转到“文件”>“Office 帐户”>“Office 主题”)。\n\n注意: 位于“计算机配置”下的“默认 Office 主题”策略设置优先于此策略设置。",
-            "tags": [
-                "L_CustomizeMachine",
-                "L_GlobalOptionsMachine",
-                "L_MicrosoftOfficemachine"
-            ],
-            "application": "office16",
-            "key": "software\\microsoft\\office\\16.0\\common"
-        },
-        {
-            "parentCategory": {
                 "ref": "L_miscellaneous437"
             },
             "supportedOn": {
@@ -36244,7 +35286,7 @@
             },
             "name": "L_DisableRoamingMruForOnPremServers",
             "displayName": "关闭本地文件名称和元数据的漫游",
-            "explainText": "此策略设置控制 Office 文件的文件名和元数据是否漫游并显示在不同设备上 Office 应用(如 Word)中最近打开的文件列表中。\n\n漫游依赖于基于 web 的 Microsoft 服务，如果用户在不同设备上使用相同的工作或学校帐户登录 Office，则会发生漫游。\n\n注意: 此策略设置仅适用于保存到本地 SharePoint Server 或 OneDrive for Business 实例的 Office 文件。\n\n如果启用此策略设置，则不会漫游文件名称和元数据，并且不会在其他设备上 Office 应用中最近打开的文件列表中显示这些文件名称和元数据，除非该文件曾在该设备上打开过。\n\n如果禁用或未配置此策略设置，则会漫游文件名称和元数据，并会在其他设备上 Office 应用中最近打开的文件列表中显示，即使该文件未曾在该设备上打开过。",
+            "explainText": "\n此策略设置控制 Office 文件的文件名和元数据是否漫游并显示在不同设备上 Office 应用(如 Word)中最近打开的文件列表中。\n\n漫游依赖于基于 web 的 Microsoft 服务，如果用户在不同设备上使用相同的工作或学校帐户登录 Office，则会发生漫游。\n\n注意: 此策略设置仅适用于保存到本地 SharePoint Server 或 OneDrive for Business 实例的 Office 文件。\n\n如果启用此策略设置，则不会漫游文件名称和元数据，并且不会在其他设备上 Office 应用中最近打开的文件列表中显示这些文件名称和元数据，除非该文件曾在该设备上打开过。\n\n如果禁用或未配置此策略设置，则会漫游文件名称和元数据，并会在其他设备上 Office 应用中最近打开的文件列表中显示，即使该文件未曾在该设备上打开过。",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"
@@ -36364,7 +35406,7 @@
             },
             "name": "L_AllowVbaIntranetRefs",
             "displayName": "允许 VBA 通过非信任 Intranet 位置的路径加载 Typelib 引用",
-            "explainText": "如果该路径指向 \"系统受信任的网站\" 列表中未明确显示的 intranet 位置，则此策略设置允许 VBA 使用从项目数据中读取的显式路径加载 Typelib 引用。\n\n默认情况下，VBA 会通过在注册表中搜索库 GUID 来尝试加载项目中引用的 Typelib。如果未在注册表中找到它，只要引用未指向 \"受信任的站点\" 列表中不存在的 Internet 或 Intranet 位置，VBA 就会尝试使用存储在项目中的路径加载 Typelib 或项目引用。\n\n如果启用此策略设置，VBA 将处理本地计算机路径等 Intranet 路径，因此 VBA 将尝试在不是本地计算机或系统的 \"受信任的站点\" 列表中的 Intranet 位置搜索未注册的引用。\n\n如果禁用或未配置此策略设置，VBA 将保留其默认行为，如果未找到在 HKEY_CLASSES_ROOT 中注册的 Typelib，则拒绝在 Intranet 路径上加载 Typelib。",
+            "explainText": "如果该路径指向 \"系统受信任的网站\" 列表中未明确显示的 intranet 位置，则此策略设置允许 VBA 使用从项目数据中读取的显式路径加载 Typelib 引用。\n\n默认情况下，VBA 会通过在注册表中搜索库 GUID 来尝试加载项目中引用的 Typelib。如果未在注册表中找到它，只要引用未指向 \"受信任的站点\" 列表中不存在的 Internet 或 Intranet 位置，VBA 就会尝试使用存储在项目中的路径加载 Typelib 或项目引用。\n\n如果启用此策略设置，VBA 将处理本地计算机路径等 Intranet 路径，因此 VBA 将尝试在不是本地计算机或系统的 \"受信任的站点\" 列表中的 Intranet 位置搜索未注册的引用。\n\n如果禁用或未配置此策略设置，VBA 将保留其默认行为，如果未找到在 HKEY_CLASSES_ROOT 中注册的 Typelib，则拒绝在 Intranet 路径上加载 Typelib。\n      ",
             "tags": [
                 "L_SecuritySettings",
                 "L_MicrosoftOfficeSystem"
@@ -36392,7 +35434,7 @@
             },
             "name": "L_DisableStrictVbaRefsSecurityPolicy",
             "displayName": "对于可能在本地计算机上引用不安全的位置的 VBA 库引用，禁止对这些引用进行额外安全性检查",
-            "explainText": "此策略设置限制了 VBA，使其仅针对注册表和受信任的区域检查项目库引用。默认情况下，VBA 还会针对库路径执行额外检查，以防止加载来自本地计算机上不安全的位置的引用。建议将此设置保留为 0 或不设置的状态，以实现更安全的默认行为。仅在默认行为要导致与关键解决方案的兼容性问题时，才启用此设置；然后，仅留出时间迁移这些解决方案以处理安全性更低的行为，而此时应再次关闭该设置。",
+            "explainText": "此策略设置限制了 VBA，使其仅针对注册表和受信任的区域检查项目库引用。默认情况下，VBA 还会针对库路径执行额外检查，以防止加载来自本地计算机上不安全的位置的引用。建议将此设置保留为 0 或不设置的状态，以实现更安全的默认行为。仅在默认行为要导致与关键解决方案的兼容性问题时，才启用此设置；然后，仅留出时间迁移这些解决方案以处理安全性更低的行为，而此时应再次关闭该设置。\n      ",
             "tags": [
                 "L_SecuritySettings",
                 "L_MicrosoftOfficeSystem"
@@ -36477,7 +35519,7 @@
             },
             "name": "L_OfficeEnableAutoAltText",
             "displayName": "为图片自动生成替换文字 (替换文字) ",
-            "explainText": "此策略设置可控制 Word、PowerPoint 和 Outlook 中的图片是否自动生成可选文字 (alt 文本) 。\n\n此策略设置与 \"自动为我生成替换文字\" 复选框有关，请在 \"文件 > 选项\" 下 > \"轻松访问 > 自动替换文字\"。\n\n如果启用此策略设置，将自动为图片生成替换文字。\"自动为我生成替换文字\" 复选框将被选中，用户不能清除复选框。\n\n如果禁用此策略设置，则不会为图片自动生成替换文字。\"自动为我生成替换文字\" 复选框未选中，用户将无法选中复选框。\n\n如果未配置此策略设置，则将自动为图片生成替换文字。但是，用户将能够清除 \"自动为我生成替换文字\" 复选框。",
+            "explainText": "此策略设置可控制 Word、PowerPoint 和 Outlook 中的图片是否自动生成可选文字 (alt 文本) 。\n\n此策略设置与 \"自动为我生成替换文字\" 复选框有关，请在 \"文件 > 选项\" 下 > \"轻松访问 > 自动替换文字\"。\n\n如果启用此策略设置，将自动为图片生成替换文字。\"自动为我生成替换文字\" 复选框将被选中，用户不能清除复选框。\n\n如果禁用此策略设置，则不会为图片自动生成替换文字。\"自动为我生成替换文字\" 复选框未选中，用户将无法选中复选框。\n\n如果未配置此策略设置，则将自动为图片生成替换文字。但是，用户将能够清除 \"自动为我生成替换文字\" 复选框。\n",
             "tags": [
                 "L_Services",
                 "L_MicrosoftOfficeSystem"
@@ -36505,7 +35547,7 @@
             },
             "name": "L_OfficeRecommendedDocuments",
             "displayName": "在“文件”选项卡或开始页上显示推荐的文件",
-            "explainText": "使用此策略设置，可以控制用户是否在运行 Windows 的设备上在 Word、Excel 和 PowerPoint“文件”选项卡或开始页上看到推荐文件的列表。\n\n如果启用此策略设置，用户将在“文件”选项卡或开始页上看到推荐文件的列表。\n\n如果禁用此策略设置，则用户不会在“文件”选项卡或开始页上看到建议的文件列表。\n\n如果未配置此策略设置，用户将在“文件”选项卡或开始页上看到建议的文件列表。\n\n有关详细信息，请参阅 https://go.microsoft.com/fwlink/p/?linkid=2146780。\n\n注意: 此策略设置仅适用于 Office 的订阅版本，例如 Microsoft 365 企业应用版。",
+            "explainText": "使用此策略设置，可以控制用户是否在运行 Windows 的设备上在 Word、Excel 和 PowerPoint“文件”选项卡或开始页上看到推荐文件的列表。\n\n如果启用此策略设置，用户将在“文件”选项卡或开始页上看到推荐文件的列表。\n\n如果禁用此策略设置，则用户不会在“文件”选项卡或开始页上看到建议的文件列表。\n\n如果未配置此策略设置，用户将在“文件”选项卡或开始页上看到建议的文件列表。\n\n有关详细信息，请参阅 https://go.microsoft.com/fwlink/p/?linkid=2146780。\n\n注意: 此策略设置仅适用于 Office 的订阅版本，例如 Microsoft 365 企业应用版。\n      ",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"

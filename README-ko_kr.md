@@ -27,7 +27,7 @@ Office 배포 제외의 다른 기능들:
 - XML 환경설정 파일 도입/수출
 - ISO 파일을 만들어 공유하고 오프라인 설치 가능
 - Office 라이선스 설치 (Office 버전 전환)
-- 하나의 키로 Office 라이선스와 키 제거
+- Office 라이선스와 키 제거
 - 온라인 정품인정/전환 정품인정(오프라인 정품인정)과 KMS 정품인정
 - Office 강제 제거
 - 재설치 필요 없이 Office 업데이트 채널을 바꾸기
@@ -37,10 +37,10 @@ Office 배포 제외의 다른 기능들:
 
 - [다운로드](https://help.coolhub.top/start/download.html).
 - [빠른시작](https://github.com/YerongAI/Office-Tool/wiki).
-- [Documentation](https://help.coolhub.top/).
+- [매뉴얼](https://help.coolhub.top/).
 
 ## 추가정보
 
-© 2016-2021 Yerong. All Rights Reserved.
+© 2016-2022 Yerong. All Rights Reserved.
 
-> 블로그 [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel) · [E-mail](mailto:yerong@coolhub.top)
+> 블로그 [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel) · [E-mail](mailto:yerong@coolhub.top)

@@ -52,4 +52,4 @@ Visio
 > Membuat diagram profesional dan serbaguna yang menyederhanakan informasi kompleks.
 
 Word
-> Keluarkan tulisan terbaik Anda.
+> Tunjukkan tulisan terbaik Anda.

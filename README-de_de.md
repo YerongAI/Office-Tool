@@ -43,8 +43,8 @@ Funktionen und Features:
 
 ## Über Office Tool Plus
 
-© 2016-2021 Yerong. Alle Rechte vorbehalten.
+© 2016-2022 Yerong. Alle Rechte vorbehalten.
 
-> Blog: [@Yerong の小窝](https://www.coolhub.top/) · GitHub: [@YerongAI](https://github.com/YerongAI) · Telegram: [@Office Tool Plus](https://t.me/otp_channel) · [E-Mail](mailto:yerong@coolhub.top)
+> Blog: [@Yerong の小窝](https://www.coolhub.top/) · GitHub: [@YerongAI](https://github.com/YerongAI) · Telegram: [@Office Tool Plus](https://t.me/s/otp_channel) · [E-Mail](mailto:yerong@coolhub.top)
 
 <!-- © 2021 | German translation by Berny23 | v4.10 | https://steamcommunity.com/id/Berny23 | https://sourceforge.net/u/berny23 | https://github.com/Berny23 -->

@@ -44,6 +44,7 @@
     <sys:String x:Key="None">None</sys:String>
     <sys:String x:Key="Query">Query</sys:String>
     <sys:String x:Key="Uninstall">_Uninstall</sys:String>
+    <sys:String x:Key="TypeToSearch">Type to search</sys:String>
 
     <!-- Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
@@ -188,6 +189,7 @@
     <sys:String x:Key="DeployModeIAD">Download first, then deploy.</sys:String>
     <sys:String x:Key="DeployCreateShortcut">Create desktop shortcuts.</sys:String>
     <sys:String x:Key="DeployInstalliSlide">Install iSlide.</sys:String>
+    <sys:String x:Key="DeployInstalliSlideDescription">Create professional PowerPoint presentations, make design easier.</sys:String>
     <!-- Download Settings -->
     <sys:String x:Key="DownloadSettings">Download settings</sys:String>
     <sys:String x:Key="DownloadSettingTip">Applies only when downloading Office.</sys:String>
@@ -256,14 +258,14 @@
     <sys:String x:Key="ErrorCode">Error Code: </sys:String>
     <sys:String x:Key="ErrorDescrpition">Error Description: </sys:String>
     <sys:String x:Key="ErrorUnknown">An unknown error occurred.</sys:String>
-    <sys:String x:Key="StatusLicensed"> **---LICENSED---** </sys:String>
-    <sys:String x:Key="StatusUnlicensed"> `---UNLICENSED---` </sys:String>
-    <sys:String x:Key="StatusOOBGrace"> `---OOB_GRACE---` </sys:String>
-    <sys:String x:Key="StatusOOTGrace"> `---OOT_GRACE---` </sys:String>
-    <sys:String x:Key="StatusNonGenuineGrace"> `---NON_GENUINE_GRACE---` </sys:String>
-    <sys:String x:Key="StatusNotifications"> `---NOTIFICATIONS---` </sys:String>
-    <sys:String x:Key="StatusExtendedGrace"> `---EXTENDED GRACE---` </sys:String>
-    <sys:String x:Key="StatusUnknown"> `---UNKNOWN---` </sys:String>
+    <sys:String x:Key="StatusLicensed"> **LICENSED** </sys:String>
+    <sys:String x:Key="StatusUnlicensed">`UNLICENSED`</sys:String>
+    <sys:String x:Key="StatusOOBGrace">`OOB_GRACE`</sys:String>
+    <sys:String x:Key="StatusOOTGrace">`OOT_GRACE`</sys:String>
+    <sys:String x:Key="StatusNonGenuineGrace">`NON_GENUINE_GRACE`</sys:String>
+    <sys:String x:Key="StatusNotifications">`NOTIFICATIONS`</sys:String>
+    <sys:String x:Key="StatusExtendedGrace">`EXTENDED GRACE`</sys:String>
+    <sys:String x:Key="StatusUnknown">`UNKNOWN`</sys:String>
 
     <sys:String x:Key="AppliedSetting">Successfully applied setting.</sys:String>
     <sys:String x:Key="NoKMSLics">No Office KMS licenses were found on the system.</sys:String>
@@ -322,6 +324,11 @@
     <sys:String x:Key="CheckKMSActivationSuccessful">Connection succeeded, activation test succeeded.</sys:String>
     <sys:String x:Key="ToolboxCollectLog">Collect Office installer logs</sys:String>
     <sys:String x:Key="ToolboxCollectLogDescription">Collect logs to analyze and solve problems.</sys:String>
+    <sys:String x:Key="ToolboxBackupOrRestoreSettings">Backup or restore Office settings</sys:String>
+    <sys:String x:Key="ToolboxBackupOrRestoreSettingsDescription">Backup or restore your Office applications settings, exclude files and contents. Before starting, please close all Office applications.&#x000A;&#x000A;Note: Do not share your backups with others, it may leak your personal information.</sys:String>
+    <sys:String x:Key="ToolboxBackupSettingsExcludePersonalInf">Exclude personal information.</sys:String>
+    <sys:String x:Key="ToolboxBackup">Backup</sys:String>
+    <sys:String x:Key="ToolboxRestore">Restore</sys:String>
     <!-- Repair Tools -->
     <sys:String x:Key="ToolboxRemoveOffice">Remove Office</sys:String>
     <sys:String x:Key="ToolboxRODescription">This will remove Office related components, files, and registries. If the cleanup fails, try a few more times.&#x000A;&#x000A;Note: This feature should only be used if Office can not be uninstalled properly.</sys:String>
@@ -331,8 +338,10 @@
     <sys:String x:Key="ToolboxRemoveOfficeDone">End of removing Office.</sys:String>
     <sys:String x:Key="ToolboxRepairOfficeDocumentIcon">Repair Office documents icon</sys:String>
     <sys:String x:Key="ToolboxRepairODIDescription">This will reset the Office document association. Once this is done, you will also need to use Office's quick fix.</sys:String>
-    <sys:String x:Key="ToolboxRepairActivation">Repair Office activation</sys:String>
-    <sys:String x:Key="ToolboxRepairActivationDescription">This will reset the configuration of Software Protection service and rebuild the activation file on Windows Insider. Applies to "Unknown error occurred", "license consumption failed (0xC004E015)" or "Server execution failed (0x80080005)" when activating Office.</sys:String>
+    <sys:String x:Key="ToolboxResetSPPSvc">Reset Software Protection service</sys:String>
+    <sys:String x:Key="ToolboxResetSPPSvcDescription">This will reset the configuration of Software Protection service. Applies to "Server execution failed (0x80080005)" when activating Office.</sys:String>
+    <sys:String x:Key="ToolboxRebuildActivationToken">Rebuild activation token</sys:String>
+    <sys:String x:Key="ToolboxRebuildActivationTokenDescription">This will rebuild the Windows activation token under "%SystemRoot%\System32\spp\store\2.0".&#x000A;&#x000A;Applies to "unknown error occurred", "license consumption failed (0xC004E015)" or "a token in the Token Store contains an invalid hash (0x8004E108)" when activating Office.&#x000A;&#x000A;Note: your Windows activation status may be lost.</sys:String>
     <sys:String x:Key="ToolboxRepairGenuineWarning">Repair Office license issue</sys:String>
     <sys:String x:Key="ToolboxRepairGenuineWarningDescription">If your Office show "Your Office license is not genuine", you can set a KMS host to fix the problem. This will write the KMS host to the Software Protection service configuration.</sys:String>
     <sys:String x:Key="ToolboxRepairVBS">Repair VBS file associations</sys:String>
@@ -426,6 +435,7 @@
     <sys:String x:Key="SettingsLocalizedName">Localized name</sys:String>
     <sys:String x:Key="SettingsAdvanced">Enable advanced features.</sys:String>
     <sys:String x:Key="SettingsHWAcceleration">Enable hardware acceleration.</sys:String>
+    <sys:String x:Key="SettingsForceRTLLayout">Force RTL layout direction.</sys:String>
     <!-- About Panel -->
     <sys:String x:Key="AppInf">App information</sys:String>
     <sys:String x:Key="Homepage">Homepage:</sys:String>
@@ -434,6 +444,8 @@
     <sys:String x:Key="TrademarkInfo">Microsoft Office is a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.</sys:String>
     <sys:String x:Key="ServerProvider">Server providers</sys:String>
     <sys:String x:Key="Translator">Translators</sys:String>
+    <sys:String x:Key="OpenSourceNotice">Open Source Notice</sys:String>
+    <sys:String x:Key="OpenSourceDescription">This software incorporates material from third parties.</sys:String>
     <sys:String x:Key="BackgroundImageSource">Background image source</sys:String>
 
     <!-- Text about Textbox, notice to control the string length. -->

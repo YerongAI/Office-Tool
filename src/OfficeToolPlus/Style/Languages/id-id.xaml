@@ -44,6 +44,7 @@
     <sys:String x:Key="None">Tidak ada</sys:String>
     <sys:String x:Key="Query">Kueri</sys:String>
     <sys:String x:Key="Uninstall">_Copot</sys:String>
+    <sys:String x:Key="TypeToSearch">Type to search</sys:String>
 
     <!-- Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
@@ -188,7 +189,8 @@
     <sys:String x:Key="DeployModeIAD">Unduh terlebih dulu, lalu pasang.</sys:String>
     <sys:String x:Key="DeployCreateShortcut">Buat pintasan ke desktop.</sys:String>
     <sys:String x:Key="DeployInstalliSlide">Pasang iSlide.</sys:String>
-    <!-- Download Page -->
+    <sys:String x:Key="DeployInstalliSlideDescription">Membuat presentasi PowerPoint profesional, buat desain makin mudah.</sys:String>
+    <!-- Download Settings -->
     <sys:String x:Key="DownloadSettings">Pengaturan unduhan</sys:String>
     <sys:String x:Key="DownloadSettingTip">Hanya saat mengunduh Office diterapkan.</sys:String>
     <sys:String x:Key="DownloadEngine">Mesin:</sys:String>
@@ -256,14 +258,14 @@
     <sys:String x:Key="ErrorCode">Kode Kesalahan: </sys:String>
     <sys:String x:Key="ErrorDescrpition">Deskripsi Kesalahan: </sys:String>
     <sys:String x:Key="ErrorUnknown">Terjadi kesalahan yang tak diketahui.</sys:String>
-    <sys:String x:Key="StatusLicensed"> **---BERLISENSI---** </sys:String>
-    <sys:String x:Key="StatusUnlicensed"> `---TIDAK_BERLISENSI---` </sys:String>
-    <sys:String x:Key="StatusOOBGrace"> `---MASA_TENGGANG_OOB---` </sys:String>
-    <sys:String x:Key="StatusOOTGrace"> `---MASA_TENGGANG_OOT---` </sys:String>
-    <sys:String x:Key="StatusNonGenuineGrace"> `---MASA_TENGGANG_TIDAK_ASLI---` </sys:String>
-    <sys:String x:Key="StatusNotifications"> `---PEMBERITAHUAN---` </sys:String>
-    <sys:String x:Key="StatusExtendedGrace"> `---PERPANJANG_MASA_TENGGANG---` </sys:String>
-    <sys:String x:Key="StatusUnknown"> `---TAK_DIKETAHUI---` </sys:String>
+    <sys:String x:Key="StatusLicensed"> **BERLISENSI** </sys:String>
+    <sys:String x:Key="StatusUnlicensed">`TIDAK_BERLISENSI`</sys:String>
+    <sys:String x:Key="StatusOOBGrace">`MASA_TENGGANG_OOB`</sys:String>
+    <sys:String x:Key="StatusOOTGrace">`MASA_TENGGANG_OOT`</sys:String>
+    <sys:String x:Key="StatusNonGenuineGrace">`MASA_TENGGANG_TIDAK_ASLI`</sys:String>
+    <sys:String x:Key="StatusNotifications">`PEMBERITAHUAN`</sys:String>
+    <sys:String x:Key="StatusExtendedGrace">`PERPANJANG_MASA_TENGGANG`</sys:String>
+    <sys:String x:Key="StatusUnknown">`TAK_DIKETAHUI`</sys:String>
 
     <sys:String x:Key="AppliedSetting">Pengaturan berhasil diterapkan.</sys:String>
     <sys:String x:Key="NoKMSLics">Tidak ada Lisensi KMS Office yang ditemukan di sistem.</sys:String>
@@ -322,6 +324,11 @@
     <sys:String x:Key="CheckKMSActivationSuccessful">Berhasil terkoneksi, berhasil pula menguji coba aktivasinya.</sys:String>
     <sys:String x:Key="ToolboxCollectLog">Kumpulkan catatan pemasangan Office</sys:String>
     <sys:String x:Key="ToolboxCollectLogDescription">Kumpulkan catatan untuk menganalisa dan memecahkan masalah yang tidak diketahui.</sys:String>
+    <sys:String x:Key="ToolboxBackupOrRestoreSettings">Cadangkan atau kembalikan pengaturan Office</sys:String>
+    <sys:String x:Key="ToolboxBackupOrRestoreSettingsDescription">Cadangkan atau kembalikan pengaturan Office, tidak termasuk berkas dan konten. Sebelum memulai, silakan menutup semua aplikasi Office.&#x000A;&#x000A;Catatan: Jangan pernah membagi cadangan anda dengan orang lain, informasi pribadi anda mungkin akan bocor.</sys:String>
+    <sys:String x:Key="ToolboxBackupSettingsExcludePersonalInf">Tidak termasuk informasi pribadi.</sys:String>
+    <sys:String x:Key="ToolboxBackup">Cadangkan</sys:String>
+    <sys:String x:Key="ToolboxRestore">Kembalikan</sys:String>
     <!-- Repair Tools -->
     <sys:String x:Key="ToolboxRemoveOffice">Copot Office</sys:String>
     <sys:String x:Key="ToolboxRODescription">Ini akan mencopot komponen, berkas, dan registri terkait Office. Apabila pembersihan gagal, silakan coba lagi.&#x000A;&#x000A;Catatan: Fitur ini hanya perlu digunakan ketika Office tidak bisa dicopot dengan benar.</sys:String>
@@ -331,8 +338,10 @@
     <sys:String x:Key="ToolboxRemoveOfficeDone">Selesai mencopot Office.</sys:String>
     <sys:String x:Key="ToolboxRepairOfficeDocumentIcon">Perbaiki ikon dokumen Office</sys:String>
     <sys:String x:Key="ToolboxRepairODIDescription">Ini akan mengatur ulang asosiasi dokumen Office. Setelah ini selesai, anda akan perlu juga menggunakan Perbaikan Cepat Office.</sys:String>
-    <sys:String x:Key="ToolboxRepairActivation">Perbaiki aktivasi Office</sys:String>
-    <sys:String x:Key="ToolboxRepairActivationDescription">Ini akan mengatur ulang konfiguarsi dari layanan Software Protection dan membangun ulang berkas aktivasi di Windows Insider. Berlaku untuk "Unknown error occurred" atau "license consumption failed (0xC004E015)" ketika mengaktivasi Office.</sys:String>
+    <sys:String x:Key="ToolboxResetSPPSvc">Reset Software Protection service</sys:String>
+    <sys:String x:Key="ToolboxResetSPPSvcDescription">This will reset the configuration of Software Protection service. Applies to "Server execution failed (0x80080005)" when activating Office.</sys:String>
+    <sys:String x:Key="ToolboxRebuildActivationToken">Rebuild activation token</sys:String>
+    <sys:String x:Key="ToolboxRebuildActivationTokenDescription">This will rebuild the Windows activation token under "%SystemRoot%\System32\spp\store\2.0".&#x000A;&#x000A;Applies to "unknown error occurred", "license consumption failed (0xC004E015)" or "a token in the Token Store contains an invalid hash (0x8004E108)" when activating Office.&#x000A;&#x000A;Note: your Windows activation status may be lost.</sys:String>
     <sys:String x:Key="ToolboxRepairGenuineWarning">Perbaiki masalah lisensi Office</sys:String>
     <sys:String x:Key="ToolboxRepairGenuineWarningDescription">Apabila Office anda menampilkan "There's a problem with your Office license" (Terdapat masalah dengan lisensi Office anda), anda bisa mengatur host KMS untuk memperbaiki masalahnya. Ini akan menulis host KMS ke konfigurasi layanan Software Protection.</sys:String>
     <sys:String x:Key="ToolboxRepairVBS">Perbaiki asosiasi berkas VBS</sys:String>
@@ -426,6 +435,7 @@
     <sys:String x:Key="SettingsLocalizedName">Bahasa wilayah</sys:String>
     <sys:String x:Key="SettingsAdvanced">Fitur lanjutan diaktifkan.</sys:String>
     <sys:String x:Key="SettingsHWAcceleration">Aktifkan akselerasi perangkat keras.</sys:String>
+    <sys:String x:Key="SettingsForceRTLLayout">Mengubah paksa arah tata letak dari kiri ke kanan (RTL).</sys:String>
     <!-- About Panel -->
     <sys:String x:Key="AppInf">Informasi aplikasi</sys:String>
     <sys:String x:Key="Homepage">Laman Depan:</sys:String>
@@ -434,6 +444,8 @@
     <sys:String x:Key="TrademarkInfo">Microsoft Office adalah merek dagang terdaftar atau merek dagang Microsoft Corporation di Amerika Serikat dan/atau negara lain.</sys:String>
     <sys:String x:Key="ServerProvider">Penyedia server</sys:String>
     <sys:String x:Key="Translator">Penerjemah</sys:String>
+    <sys:String x:Key="OpenSourceNotice">Pemberitahuan Sumber Terbuka</sys:String>
+    <sys:String x:Key="OpenSourceDescription">Perangkat lunak ini menggabungkan materi dari pihak ketiga.</sys:String>
     <sys:String x:Key="BackgroundImageSource">Sumber gambar latar belakang</sys:String>
 
     <!-- Text about Textbox, notice to control the string length. -->

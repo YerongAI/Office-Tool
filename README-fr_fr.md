@@ -1,4 +1,4 @@
-﻿#
+#
 
 <p align="center">
 <img alt="Office Tool Plus Logo" src="https://otp.landian.vip/static/images/logo.webp"/>
@@ -13,34 +13,36 @@
 
 > Un outil puissant et utile pour les déploiements Office.
 
-Prend en charge le déploiement personnalisé et l’activation des produits suivants:
+Supports le déploiement et l’activation personnalisés des produits suivants:
 
 - Microsoft 365
-- Office 2016, 2019 & 2021
-- Visio 2016, 2019, 2021 & Plan en ligne 2
+- Office 2016, 2019, 2021
+- Visio 2016, 2019, 2021 & Plan 2 en ligne
 - Project 2016, 2019, 2021 & Client de bureau en ligne
 
-Fonctions supplémentaires:
+Fonctions et caractéristiques:
 
-- Prise en charge des 17 canaux d’Office, y compris la requête, le téléchargement et l’installation.
-- Modifications apportées à l’Office existant, y compris les ajouts et les suppressions de produits, d’applications, de modules linguistiques, etc.
-- Importation/exportation de profils XML.
-- Créer des fichiers ISO pour le partage ou l’installation hors connexion.
-- Installation de licences Office (édition convertie).
-- Nettoyage des licences et clés Office.
-- Prend en charge l’activation en ligne, l’activation par téléphone (activation hors connexion) et l’activation kms.
-- Réinitialiser/Suppression forcée d’Office.
-- Modification du canal de mise à jour d’Office sans réinstaller Office.
-- Conversion par lots de documents Office, basée sur l’API Office.
+- Créez une configuration d’installation Office. La configuration peut être exportée vers local ou importée à partir de local ou Web.
+- Télécharger Office, en prenant en charge les canaux Office `TOUS` et les langues Office `TOUS`.
+- Installer Office ou modifier l’Office existant, par exemple en ajoutant de nouveaux produits et applications ou en désinstallant des produits et des applications.
+- Créer une ISO Office, prend en charge la configuration d’installation par défaut et la configuration d’installation silencieuse.
+- Activer Office. Prise en charge de l’activation en ligne, de l’activation par téléphone et de l’activation KMS.
+- Support gestion de l’activation Office, y compris la gestion des licences, la gestion des clés et la gestion KMS.
+- Modifier le canal de mise à jour Office, prenez en charge la mise à niveau / rétrogradation d’Office sans réinstaller Office.
+- Supprimer Office. Forcer la suppression d’Office alors qu’il ne peut pas être désinstallé normalement, prendre en charge Office d’Office 2003 vers la dernière version d’Office.
+- Outils Office intégrés, y compris la réinitialisation des paramètres, la résolution des problèmes Office.
+- Convertisser des documents Office, basés sur Office COM. c’est rapide et stable.
+- Personnaliser le thème, vous pouvez créer votre outil Office Spécial Plus.
+- Les paramètres avancés vous permettent d’utiliser des fonctionnalités plus avancées, telles que les canaux internes Office.
 
 ## Télécharger et démarrage rapide
 
-- [Télécharger](https://help.coolhub.top/start/download.html)
+- [Télécharger](https://help.coolhub.top/start/download.html).
 - [Démarrage rapide](https://github.com/YerongAI/Office-Tool/wiki).
 - [Documentation](https://help.coolhub.top/).
 
 ## À propos
 
-© 2016-2021 Yerong. Tous droits réservés.
+© 2016-2022 Yerong. Tous droits réservés.
 
-> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/otp_channel) · [E-mail](mailto:yerong@coolhub.top)
+> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel) · [E-mail](mailto:yerong@coolhub.top)

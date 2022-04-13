@@ -51,7 +51,7 @@ Functions and Features:
 | es-es | Español (España) | Xoseba |
 | fr-fr | Français (France) | Drake4478, MONOKUMA |
 | id-id | Bahasa Indonesia (Indonesia) | [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Jovanzers](https://github.com/jovanzers) |
-| it-it | Italiano (Italia) | [garf02](https://github.com/garf02) |
+| it-it | Italiano (Italia) | [garf02](https://github.com/garf02), tfrtint |
 | ja-jp | 日本語 (日本) | [秋山ヘイワ](https://github.com/akio1321), kai, 河豚 |
 | ko-kr | 한국어(대한민국) | [Jay Jang](https://iamx.work) |
 | nl-nl | Nederlands (Nederland) | [Kajoe](https://github.com/Kajoe1) |

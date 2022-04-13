@@ -1,8 +1,12 @@
-### V8.3.7.1
+### V8.3.8.0
 
 - Support pour ouvrir la zone de commande à l’aide de `Ctrl+P`.
 - Mise à jour de la traduction.
 - Correction de bugs et amélioration des performances.
+
+#### Déployer
+
+- Prise en charge des listes de produits et de langues pour la recherche et le filtrage.
 
 #### Toolbox
 

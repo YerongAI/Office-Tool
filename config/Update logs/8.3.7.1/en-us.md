@@ -1,8 +1,12 @@
-### V8.3.7.1
+### V8.3.8.0
 
 - Support to open command box using `Ctrl + P`.
 - Translation update.
 - Bugs fixed and performance improvement.
+
+#### Deploy
+
+- Product and language list support to search and filter.
 
 #### Toolbox
 

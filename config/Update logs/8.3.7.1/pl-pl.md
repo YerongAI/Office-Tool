@@ -1,8 +1,12 @@
-### V8.3.7.1
+### V8.3.8.0
 
 - Wsparcie otwierania okna poleceń za pomocą `Ctrl + P`.
 - Aktualizacja tłumaczenia.
 - Naprawiono błędy i poprawiono wydajność.
+
+#### Wdrażanie
+
+- Obsługa listy produktów i języków w celu wyszukiwania i filtrowania.
 
 #### Przybornik
 

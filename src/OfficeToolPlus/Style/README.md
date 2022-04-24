@@ -6,6 +6,23 @@ XAML files are localized files used by Office Tool Plus. We recommend that you u
 
 ## Special strings
 
+### TO DO Remarks
+
+For better working, I will add some to do marks. Search "TO DO" on files to find out what needs to be processed.
+
+```xml
+<!-- TO DO: Translate -->
+<sys:String x:Key="Menu">Menu</sys:String>
+```
+
+**After TO DO is done, you need to remove the remarks:**
+
+```xml
+<sys:String x:Key="Menu">菜单</sys:String>
+```
+
+### Others
+
 Don't change any strings or words like this:
 
 ```xml
@@ -15,7 +32,7 @@ Don't change any strings or words like this:
 &#x000A;
 ```
 
-The remarks or escape characters should be kept as original.
+This remarks or escape characters should be kept as original.
 
 ## Proper nouns
 

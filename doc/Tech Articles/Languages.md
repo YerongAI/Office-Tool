@@ -113,4 +113,4 @@ For more information about language ID, please visit [Languages, culture codes, 
 | isiZulu (iNingizimu Afrika) | isiZulu (South Africa) | zu-za |  | 1077 | Proofing |
 
 <center>　</center>
-<center>© 2021 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.1</center>
+<center>© 2022 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.1</center>

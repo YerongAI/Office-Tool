@@ -99,7 +99,6 @@ MondoOnly stand for Office Lime application, some test components will also be r
 | SkypeforBusiness2021Retail | Skype for Business 2021 | OneDrive |  | ✔ | H4TN4-FQXYB-B74CH-WF7D4-YTGX3 |
 | SkypeforBusiness2021Volume | Skype for Business LTSC - Volume License | OneDrive |  | ✔ | HWCXN-K3WBT-WJBKY-R8BD9-XK29P |
 | SkypeforBusinessEntry2019Retail | Skype for Business Basic 2019 | OneDrive |  | ✔ | CGRNC-VC826-JJJX8-Y7MHW-6MWMK |
-| SkypeforBusinessEntry2021Retail | Skype for Business Basic 2021 | OneDrive |  | ✔ | P9K68-FNW8W-FK8WK-CJFGB-X4WQP |
 | SkypeforBusinessEntryRetail | Skype for Business Basic 2016 | OneDrive |  | ✔ | JXN88-22KXV-YR73M-JCT8M-HT9YM |
 | SkypeforBusinessRetail | Skype for Business 2016 | OneDrive |  | ✔ | DNCD4-JDKR3-WQQCY-47GYX-JXCV3 |
 | SkypeforBusinessVolume | Skype for Business 2016 - Volume License | OneDrive |  | ❌ | 869NQ-FJ69K-466HW-QYCP2-DDBV6 |
@@ -133,4 +132,4 @@ MondoOnly stand for Office Lime application, some test components will also be r
 | WordVolume | Word 2016 - Volume License | OneDrive | OSM | ❌ | WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6 |
 
 <center>　</center>
-<center>© 2021 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.6</center>
+<center>© 2022 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.7</center>

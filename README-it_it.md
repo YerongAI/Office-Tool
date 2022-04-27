@@ -22,16 +22,16 @@ Supporta la distribuzione personalizzata e l'attivazione dei seguenti prodotti:
 
 Funzioni e caratteristiche::
 
-- Supporto per tutti i 17 canali di Office, inclusi query, download e installazione.
-- Modifiche a Office esistente, incluse aggiunte ed eliminazioni di prodotti, applicazioni, language pack, ecc.
+- Supporto per tutti i 17 canali di Office, inclusi query, scaricamento e installazione.
+- Modifiche all'Office esistente, incluse aggiunte ed eliminazioni di prodotti, applicazioni, language pack, ecc.
 - Importazione/Esportazione profili XML.
 - Creazione file ISO per la condivisione o per l'installazione offline.
 - Installazione licenze di Office (edizione convertita).
 - Cancellazione delle licenze e chiavi di Office.
-- Supporta attivazione online, telefonica (attivazione offline) e attivazione KMS.
+- Supporto attivazione online, telefonica (attivazione offline) e attivazione KMS.
 - Reimpostazione/rimozione forzata di Office.
 - Modifica del canale di aggiornamento di Office senza dover reinstallare Office.
-- Conversione in batch di documenti Office, basata sulle API di Office.
+- Conversione in massa di documenti Office, basata sulle API di Office.
 
 ## Scaricamento e lezione rapida
 

@@ -12,7 +12,12 @@
     <sys:String x:Key="Help">Pomoc</sys:String>
     <sys:String x:Key="About">O aplikacji</sys:String>
     <sys:String x:Key="Settings">Ustawienia</sys:String>
-    <!-- Channels Name, if you don't want to translate them, please keep in English. -->
+    <!-- TO DO: Translate, please remove this line after translation is done. -->
+    <sys:String x:Key="MinimizeButton">Minimize</sys:String>
+    <sys:String x:Key="MaximizeButton">Maximize</sys:String>
+    <sys:String x:Key="RestoreButton">Restore</sys:String>
+    <sys:String x:Key="CloseButton">Close</sys:String>
+    <!-- Channels Name, if you do not want to translate them, please keep in English. -->
     <sys:String x:Key="PerpetualVL2019">Office 2019 Korporacyjny (dożywotnia wersja)</sys:String>
     <sys:String x:Key="PerpetualVL2021">Office 2021 Korporacyjny (dożywotnia wersja)</sys:String>
     <sys:String x:Key="SemiAnnual">Kanał półroczny (korporacyjny)</sys:String>
@@ -30,6 +35,8 @@
     <sys:String x:Key="No">_Nie</sys:String>
     <sys:String x:Key="OK">_OK</sys:String>
     <sys:String x:Key="Cancel">_Anuluj</sys:String>
+    <!-- TO DO: Translate -->
+    <sys:String x:Key="Menu">Menu</sys:String>
     <sys:String x:Key="OfficeDeploymentTool">Narzędzie do wdrażania pakietu Office</sys:String>
     <sys:String x:Key="Version">Wersja:</sys:String>
     <sys:String x:Key="Branch">Kanał:</sys:String>
@@ -44,7 +51,7 @@
     <sys:String x:Key="None">Brak</sys:String>
     <sys:String x:Key="Query">Pytanie</sys:String>
     <sys:String x:Key="Uninstall">_Odinstaluj</sys:String>
-    <sys:String x:Key="TypeToSearch">Type to search</sys:String>
+    <sys:String x:Key="TypeToSearch">Wpisz aby wyszukać</sys:String>
 
     <!-- Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
@@ -102,6 +109,7 @@
     <sys:String x:Key="DeployProducts">Produkt</sys:String>
     <sys:String x:Key="DeployProductID">Produkt ID:</sys:String>
     <sys:String x:Key="DeployAddProduct">Dodaj _produkt</sys:String>
+    <sys:String x:Key="DeployOpenProductList">Otwórz listę produktów</sys:String>
     <sys:String x:Key="DeployErrorConfig">⚠ Produkt nie może współistnieć z istniejącymi produktami.</sys:String>
     <sys:String x:Key="DeployErrorModule">⚠ Produkt wymaga instalacji za pomocą modułu Office Tool Plus.</sys:String>
     <sys:String x:Key="DeployErrorChannel">⚠ Nie można zainstalować produktu na wybranym kanale: {0}</sys:String>
@@ -125,6 +133,7 @@
     <sys:String x:Key="LangProofingToolsTip">Pakiet językowy zawiera tylko moduł sprawdzania pisowni.</sys:String>
     <sys:String x:Key="DeployAsProof">Wdróż tylko narzędzia sprawdzające.</sys:String>
     <sys:String x:Key="DeployAddLanguage">Dodaj pakiet językowy</sys:String>
+    <sys:String x:Key="DeployOpenLanguageList">Otwórz listę języków</sys:String>
     <!-- Advanced Settings -->
     <sys:String x:Key="DeployOrganizationName">Podaj nazwę organizacji, aby ustawić właściwość firmy w dokumentach pakietu Office.</sys:String>
     <sys:String x:Key="DeployDescription">Podaj opis tej konfiguracji dla celów dokumentacji.</sys:String>
@@ -338,18 +347,19 @@
     <sys:String x:Key="ToolboxRemoveOfficeDone">Koniec usuwania pakietu Office.</sys:String>
     <sys:String x:Key="ToolboxRepairOfficeDocumentIcon">Napraw ikonę dokumentów Office</sys:String>
     <sys:String x:Key="ToolboxRepairODIDescription">Spowoduje to zresetowanie powiązania dokumentów pakietu Office. Po wykonaniu tej czynności konieczne będzie skorzystanie z szybkiej poprawki pakietu Office.</sys:String>
-    <sys:String x:Key="ToolboxResetSPPSvc">Reset Software Protection service</sys:String>
-    <sys:String x:Key="ToolboxResetSPPSvcDescription">This will reset the configuration of Software Protection service. Applies to "Server execution failed (0x80080005)" when activating Office.</sys:String>
-    <sys:String x:Key="ToolboxRebuildActivationToken">Rebuild activation token</sys:String>
-    <sys:String x:Key="ToolboxRebuildActivationTokenDescription">This will rebuild the Windows activation token under "%SystemRoot%\System32\spp\store\2.0".&#x000A;&#x000A;Applies to "unknown error occurred", "license consumption failed (0xC004E015)" or "a token in the Token Store contains an invalid hash (0x8004E108)" when activating Office.&#x000A;&#x000A;Note: your Windows activation status may be lost.</sys:String>
+    <sys:String x:Key="ToolboxResetSPPSvc">Zresetuj usługę ochrony oprogramowania</sys:String>
+    <sys:String x:Key="ToolboxResetSPPSvcDescription">Spowoduje to zresetowanie konfiguracji usługi Ochrona oprogramowania. Dotyczy "Wykonywanie serwera nie powiodło się (0x80080005)" lub "Dane są nieprawidłowe (0x8007000D)" podczas aktywacji pakietu Office.</sys:String>
+    <sys:String x:Key="ToolboxRebuildActivationToken">Odbuduj token aktywacyjny</sys:String>
+    <sys:String x:Key="ToolboxRebuildActivationTokenDescription">Spowoduje to odbudowanie tokena aktywacji systemu Windows w "%SystemRoot%\System32\spp\store\2.0".&#x000A;&#x000A;Dotyczy "wystąpił nieznany błąd", "niepowodzenie korzystania z licencji (0xC004E015)" lub "token w sklepie Token Store zawiera nieprawidłowy skrót (0x8004E108)" podczas aktywacji pakietu Office. Uwaga: status aktywacji systemu Windows może zostać utracony.</sys:String>
     <sys:String x:Key="ToolboxRepairGenuineWarning">Problem z licencją pakietu naprawczego</sys:String>
     <sys:String x:Key="ToolboxRepairGenuineWarningDescription">Jeśli Twój pakiet Office wyświetla komunikat „Wystąpił problem z Twoją licencją pakietu Office”, możesz ustawić hosta usługi KMS, aby rozwiązać problem. Spowoduje to zapisanie hosta KMS w konfiguracji usługi ochrony oprogramowania.</sys:String>
     <sys:String x:Key="ToolboxRepairVBS">Napraw powiązania plików VBS</sys:String>
     <sys:String x:Key="ToolboxRepairVBSDescription">Spowoduje to przebudowanie powiązania plików VBS i dotyczy aktywacji pakietu Office z monitem "Nie ma silnika skryptowego dla rozszerzenia pliku".vbs"".</sys:String>
     <sys:String x:Key="ToolboxRepairVariables">Napraw zmienne systemowe</sys:String>
     <sys:String x:Key="ToolboxRepairVariablesDescription">Spowoduje to zresetowanie zmiennych systemowych do wartości domyślnych. Nie używaj go, jeśli nie masz pewności.&#x000A;&#x000A;Po zakończeniu naprawy musisz ponownie uruchomić system, aby zaczął działać.</sys:String>
-    <sys:String x:Key="ToolboxRepairWMI">Repair WMI component</sys:String>
+    <sys:String x:Key="ToolboxRepairWMI">Napraw komponent WMI</sys:String>
     <sys:String x:Key="ToolboxRepairWMIDescription">Spowoduje to ponowne zarejestrowanie składnika WMI. Nie używaj go, jeśli nie masz pewności.&#x000A;&#x000A;Po zakończeniu naprawy musisz ponownie uruchomić system, aby zaczął działać.</sys:String>
+    <!-- TO DO: change 'restore' to 'reset'. From 'Restore Office settings to defaults' to 'Reset Office settings to defaults' -->
     <sys:String x:Key="ToolboxResetOfficeSettings">Przywróć ustawienia pakietu Office do oryginalnych ustawień domyślnych</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettingsDescription">Przywróć pakiet Office do ustawień domyślnych, jak chcesz. Przed rozpoczęciem zamknij wszystkie aplikacje pakietu Office.</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettingsUserSettings">Usuń bieżące ustawienia użytkownika (w tym ustawienia aplikacji pakietu Office, ostatnio otwierane pliki i ostatnio zapisaną lokalizację).</sys:String>

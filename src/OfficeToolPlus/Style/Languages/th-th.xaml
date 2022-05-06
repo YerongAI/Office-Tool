@@ -12,6 +12,11 @@
     <sys:String x:Key="Help">ช่วยเหลือ</sys:String>
     <sys:String x:Key="About">เกี่ยวกับ</sys:String>
     <sys:String x:Key="Settings">ตั้งค่า</sys:String>
+    <!-- TO DO: Translate, please remove this line after translation is done. -->
+    <sys:String x:Key="MinimizeButton">Minimize</sys:String>
+    <sys:String x:Key="MaximizeButton">Maximize</sys:String>
+    <sys:String x:Key="RestoreButton">Restore</sys:String>
+    <sys:String x:Key="CloseButton">Close</sys:String>
     <!-- Channels Name, if you do not want to translate them, please keep in English. -->
     <sys:String x:Key="PerpetualVL2019">Office 2019 Perpetual Enterprise</sys:String>
     <sys:String x:Key="PerpetualVL2021">Office 2021 Perpetual Enterprise</sys:String>
@@ -30,6 +35,7 @@
     <sys:String x:Key="No">_ไม่ใช่</sys:String>
     <sys:String x:Key="OK">_ตกลง</sys:String>
     <sys:String x:Key="Cancel">_ยกเลิก</sys:String>
+    <sys:String x:Key="Menu">เมนู</sys:String>
     <sys:String x:Key="OfficeDeploymentTool">เครื่องมือปรับใช้ Office</sys:String>
     <sys:String x:Key="Version">เวอร์ชั่น:</sys:String>
     <sys:String x:Key="Branch">การแยกย่อย:</sys:String>
@@ -44,7 +50,7 @@
     <sys:String x:Key="None">ไม่มี</sys:String>
     <sys:String x:Key="Query">สอบถาม</sys:String>
     <sys:String x:Key="Uninstall">_ถอนการติดตั้ง</sys:String>
-    <sys:String x:Key="TypeToSearch">Type to search</sys:String>
+    <sys:String x:Key="TypeToSearch">พิมพ์เพื่อค้นหา</sys:String>
 
     <!-- Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
@@ -102,6 +108,7 @@
     <sys:String x:Key="DeployProducts">ผลิตภัณฑ์</sys:String>
     <sys:String x:Key="DeployProductID">รหัสผลิตภัณฑ์:</sys:String>
     <sys:String x:Key="DeployAddProduct"> _เพิ่มผลิตภัณฑ์</sys:String>
+    <sys:String x:Key="DeployOpenProductList">เปิดรายการผลิตภัณฑ์</sys:String>
     <sys:String x:Key="DeployErrorConfig">⚠ ผลิตภัณฑ์นี้ ไม่สามารถใช้งานร่วมกับ ผลิตภัณฑ์ที่มีอยู่ได้</sys:String>
     <sys:String x:Key="DeployErrorModule">⚠ ในการติดตั้งผลิตภัณฑ์นี้ ให้เปลี่ยนโมดูลการติดตั้งเป็น Office Tool Plus</sys:String>
     <sys:String x:Key="DeployErrorChannel">⚠ ไม่สามารถติดตั้งผลิตภัณฑ์ในช่องทางนี้ที่เลือกได้: {0}</sys:String>
@@ -125,6 +132,7 @@
     <sys:String x:Key="LangProofingToolsTip">ชุดภาษามีเฉพาะเครื่องตรวจตัวสะกดเท่านั้น</sys:String>
     <sys:String x:Key="DeployAsProof">ปรับใช้เครื่องมือพิสูจน์อักษรเท่านั้น</sys:String>
     <sys:String x:Key="DeployAddLanguage">เพิ่ม _ชุดภาษา</sys:String>
+    <sys:String x:Key="DeployOpenLanguageList">เปิดรายการภาษา</sys:String>
     <!-- Advanced Settings -->
     <sys:String x:Key="DeployOrganizationName">ระบุชื่อองค์กรของคุณเพื่อกำหนดคุณสมบัติของบริษัทในเอกสาร Office</sys:String>
     <sys:String x:Key="DeployDescription">ระบุรายละเอียดของการกำหนดค่าสำหรับเอกสารประกอบ</sys:String>
@@ -338,10 +346,11 @@
     <sys:String x:Key="ToolboxRemoveOfficeDone">สิ้นสุดการลบ Office</sys:String>
     <sys:String x:Key="ToolboxRepairOfficeDocumentIcon">ซ่อมแซมไอคอนเอกสาร Office</sys:String>
     <sys:String x:Key="ToolboxRepairODIDescription">การดำเนินการนี้จะรีเซ็ตการเชื่อมโยงเอกสาร Office เมื่อเสร็จแล้ว คุณจะต้องใช้การแก้ไขด่วนของ Office ด้วย</sys:String>
-    <sys:String x:Key="ToolboxResetSPPSvc">Reset Software Protection service</sys:String>
-    <sys:String x:Key="ToolboxResetSPPSvcDescription">This will reset the configuration of Software Protection service. Applies to "Server execution failed (0x80080005)" when activating Office.</sys:String>
-    <sys:String x:Key="ToolboxRebuildActivationToken">Rebuild activation token</sys:String>
-    <sys:String x:Key="ToolboxRebuildActivationTokenDescription">This will rebuild the Windows activation token under "%SystemRoot%\System32\spp\store\2.0".&#x000A;&#x000A;Applies to "unknown error occurred", "license consumption failed (0xC004E015)" or "a token in the Token Store contains an invalid hash (0x8004E108)" when activating Office.&#x000A;&#x000A;Note: your Windows activation status may be lost.</sys:String>
+    <sys:String x:Key="ToolboxResetSPPSvc">รีเซ็ตบริการป้องกันซอฟต์แวร์</sys:String>
+    <!-- TO DO: Add "The data is invalid (0x8007000D)", source string is "Applies to "Server execution failed (0x80080005)" or "The data is invalid (0x8007000D)" when activating Office." -->
+    <sys:String x:Key="ToolboxResetSPPSvcDescription">การดำเนินการนี้จะรีเซ็ตการกำหนดค่าของบริการป้องกันซอฟต์แวร์ นำไปใช้กับ "เซิร์ฟเวอร์ดำเนินการล้มเหลว (0x80080005)" เมื่อเปิดใช้งาน Office</sys:String>
+    <sys:String x:Key="ToolboxRebuildActivationToken">สร้างโทเค็นการเปิดใช้งานอีกครั้ง</sys:String>
+    <sys:String x:Key="ToolboxRebuildActivationTokenDescription">การดำเนินการนี้จะสร้างโทเค็นการเปิดใช้งาน Windows ใหม่ภายใต้ "%SystemRoot%\System32\spp\store\2.0".&#x000A;&#x000A;นำไปใช้กับ "เกิดข้อผิดพลาดที่ไม่รู้จัก", "การใช้ใบอนุญาตล้มเหลว (0xC004E015)" หรือ "โทเค็นในร้านค้าโทเค็น มีแฮชที่ไม่ถูกต้อง (0x8004E108)" เมื่อเปิดใช้งาน Office&#x000A;&#x000A;หมายเหตุ: สถานะการเปิดใช้งาน Windows ของคุณอาจสูญหาย</sys:String>
     <sys:String x:Key="ToolboxRepairGenuineWarning">ซ่อมปัญหาใบอนุญาต Office</sys:String>
     <sys:String x:Key="ToolboxRepairGenuineWarningDescription">หาก Office ของคุณแสดงข้อความว่า "ใบอนุญาต Office ของคุณไม่ใช่ของแท้" คุณสามารถตั้งค่าโฮสต์ KMS เพื่อแก้ไขปัญหาได้ การดำเนินการนี้จะเขียนโฮสต์ KMS ไปยังการกำหนดค่าบริการการป้องกันซอฟต์แวร์</sys:String>
     <sys:String x:Key="ToolboxRepairVBS">ซ่อมแซมความสัมพันธ์ของไฟล์ VBS</sys:String>
@@ -350,6 +359,7 @@
     <sys:String x:Key="ToolboxRepairVariablesDescription">การดำเนินการนี้จะรีเซ็ตตัวแปรระบบของคุณเป็นค่าเริ่มต้น อย่าใช้มันหากคุณไม่แน่ใจ&#x000A;&#x000A;หลังจากการซ่อมแซมเสร็จสิ้น คุณจะต้องรีบูตระบบเพื่อให้ระบบมีผล</sys:String>
     <sys:String x:Key="ToolboxRepairWMI">ซ่อมแซมส่วนประกอบ WMI</sys:String>
     <sys:String x:Key="ToolboxRepairWMIDescription">การดำเนินการนี้จะลงทะเบียนคอมโพเนนต์ WMI อีกครั้ง อย่าใช้มันหากคุณไม่แน่ใจ&#x000A;&#x000A;หลังจากการซ่อมแซมเสร็จสิ้น คุณจะต้องรีบูตระบบเพื่อให้ระบบมีผล</sys:String>
+    <!-- TO DO: change 'restore' to 'reset'. From 'Restore Office settings to defaults' to 'Reset Office settings to defaults' -->
     <sys:String x:Key="ToolboxResetOfficeSettings">คืนค่าการตั้งค่า Office เป็นค่าเริ่มต้น</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettingsDescription">คืนค่า Office เป็นการตั้งค่าเริ่มต้นตามที่คุณต้องการ ก่อนเริ่มต้น โปรดปิดแอปพลิเคชัน Office ทั้งหมด</sys:String>
     <sys:String x:Key="ToolboxResetOfficeSettingsUserSettings">ลบการตั้งค่าผู้ใช้ปัจจุบัน (รวมถึงการตั้งค่าแอปพลิเคชัน Office ไฟล์ที่เปิดล่าสุด และตำแหน่งที่บันทึกล่าสุด)</sys:String>

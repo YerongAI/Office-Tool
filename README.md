@@ -51,7 +51,7 @@ Functions and Features:
 | es-es | Español (España) | Xoseba |
 | fr-fr | Français (France) | Drake4478, MONOKUMA |
 | id-id | Bahasa Indonesia (Indonesia) | [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Jovanzers](https://github.com/jovanzers) |
-| it-it | Italiano (Italia) | [garf02](https://github.com/garf02) |
+| it-it | Italiano (Italia) | [garf02](https://github.com/garf02), tfrtint |
 | ja-jp | 日本語 (日本) | [秋山ヘイワ](https://github.com/akio1321), kai, 河豚 |
 | ko-kr | 한국어(대한민국) | [Jay Jang](https://iamx.work) |
 | nl-nl | Nederlands (Nederland) | [Kajoe](https://github.com/Kajoe1) |
@@ -59,7 +59,7 @@ Functions and Features:
 | pt-br | Português (Brasil) | [Hélio de Souza](https://tinyurl.com/hdstec), [Igor Rückert](https://github.com/igorruckert) |
 | ro-ro | Română (România) | [ianymaty](https://github.com/ianymaty) |
 | ru-ru | Русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov) |
-| th-th | ไทย (ไทย) | [Alisa Callaway](https://github.com/OllyMaster) |
+| th-th | ไทย (ไทย) | [TAN-THAI & ALISA](https://github.com/OllyMaster) |
 | zh-hk | 繁體中文 (香港) | [TurboHK](https://github.com/TurboHK) |
 | zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412) |
 

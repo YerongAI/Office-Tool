@@ -22,16 +22,18 @@ Admite la implementación y activación personalizadas de los siguientes product
 
 Funciones adicionales:
 
-- Soporte para 17 canales de Office, incluida la consulta, descarga e instalación.
-- Cambios realizados en Office existente, incluidas adiciones y eliminaciones de productos, aplicaciones, paquetes de idioma, etc.
-- Importación / exportación de perfiles XML.
-- Crear archivos ISO para compartirlos o instalarlos sin conexión.
-- Instalación de licencias de Office (edición convertida).
-- Limpieza de licencias y llaves de Office.
-- Soporta activación online, activación telefónica (activación offline) y activación kms.
-- Reinicio / Eliminación forzada de Office.
-- Se cambió el canal de actualización de Office sin reinstalar Office.
-- Conversión por lotes de documentos de Office, basada en la API de Office.
+- Crear la configuración de la instalación de Office. La configuración puede ser exportada a local, o importada desde local o web.
+- Descargar Office, con soporte para TODOS los canales de Office y TODOS los idiomas de Office.
+- Instalar Office o modificar el existente, como añadir nuevos productos y aplicaciones, o desinstalar productos y aplicaciones.
+- Crear ISO de Office, soporta la configuración de instalación por defecto y la configuración de instalación silenciosa.
+- Activar Office. Soporta activación en línea, activación telefónica y activación KMS.
+- Soporta la gestión de la activación de Office, incluyendo la gestión de licencias, la gestión de claves y la gestión de KMS.
+- Cambia el canal de actualización de Office, soporta la actualización/desactualización de Office sin reinstalar Office.
+- Eliminar Office. Forzar la eliminación de Office mientras no se pueda desinstalar de forma normal, soportar Office desde Office 2003 hasta la última versión de Office.
+- Herramientas integradas de Office, incluyendo el restablecimiento de la configuración, la fijación de los problemas de Office.
+- Convertir documentos de Office, basado en Office COM. es rápido y estable.
+- Personalizar el tema, usted puede construir su herramienta especial de Office Plus.
+- La configuración avanzada le permite utilizar características más avanzadas, como los canales internos de Office.
 
 ## Descarga e inicio rápido
 

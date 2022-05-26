@@ -78,8 +78,8 @@ We encourage everyone to help with localization. The following is how to do it.
 There is the files you can translate with:
 
 ``` batch
-src/OfficeToolPlus/Style/Languages
-src/OfficeToolPlus/Style/ProductsName
+src/OfficeToolPlus/Dictionaries/Languages
+src/OfficeToolPlus/Dictionaries/ProductsName
 config/Launcher
 config/Message
 config/Update Logs

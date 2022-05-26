@@ -6,12 +6,12 @@ XAML files are localized files used by Office Tool Plus. We recommend that you u
 
 ## Special strings
 
-### TO DO Remarks
+### TODO Remarks
 
-For better working, I will add some to do marks. Search "TO DO" on files to find out what needs to be processed.
+For better working, I will add some to do marks. Search "TODO" on files to find out what needs to be processed.
 
 ```xml
-<!-- TO DO: Translate -->
+<!-- TODO: Translate -->
 <sys:String x:Key="Menu">Menu</sys:String>
 ```
 

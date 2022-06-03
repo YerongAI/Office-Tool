@@ -15,7 +15,7 @@ For better working, I will add some to do marks. Search "TODO" on files to find 
 <sys:String x:Key="Menu">Menu</sys:String>
 ```
 
-**After TO DO is done, you need to remove the remarks:**
+**After TODO is done, you need to remove the remarks:**
 
 ```xml
 <sys:String x:Key="Menu">菜单</sys:String>

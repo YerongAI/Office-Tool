@@ -1,6 +1,7 @@
 #### V9.0.1
 
-- 支持通过 CMD 或者 PowerShell 执行 **deploy** 或 **ospp** 命令.
+- 支持通过命令行执行 **deploy** 或 **ospp** 命令.
+- 支持通过命令行加载 XML 配置文件并启动安装。
 
 若要获取 *Office Tool Plus.Console* 的更多信息，请访问[帮助文档](https://help.coolhub.top/others/#office-tool-plus-in-application-commands).
 

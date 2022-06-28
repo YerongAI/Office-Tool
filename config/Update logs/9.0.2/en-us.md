@@ -1,6 +1,6 @@
 #### 9.0.2
 
-1. The shortcut key of opening command box changed from **Ctrl + P** to **Ctrl + `**
+1. The shortcut key of opening command box changed from **Ctrl + P** to **Ctrl + Shift + P**
 2. Added tooltip for navigation bar items.
 3. Fixed an issue that some languages could not be loaded.
 4. Other bug fixes and performance improvement.
@@ -20,7 +20,7 @@
 2. Support for reloading Office information via `F5` and `Ctrl + R`.
 3. Support for displaying activation information via `Ctrl + D`.
 4. Support for clearing operation result via `Ctrl + E`.
-5. Support for opening licenses list via `Ctrl + Shift + P`.
+5. Support for opening licenses list via `Ctrl + Alt + P`.
 
 ##### Toolbox
 

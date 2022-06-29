@@ -35,9 +35,9 @@ Dodatkowe funkcje:
 
 ## Pobierz i szybki start
 
-- [Pobierz](https://help.coolhub.top/start/download.html).
-- [Szybki start](https://github.com/YerongAI/Office-Tool/wiki).
-- [Dokumentacja](https://help.coolhub.top/).
+- [Pobierz](https://help.coolhub.top/start)
+- [Szybki start](https://github.com/YerongAI/Office-Tool/wiki)
+- [Dokumentacja](https://help.coolhub.top)
 
 ## O...
 

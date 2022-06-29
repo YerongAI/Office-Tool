@@ -37,9 +37,9 @@ Funktionen und Features:
 
 ## Download und Schnellstart
 
-- [Download](https://help.coolhub.top/start/download.html)
-- [Schnellstart](https://github.com/YerongAI/Office-Tool/wiki).
-- [Dokumentation](https://help.coolhub.top/).
+- [Download](https://help.coolhub.top/start/)
+- [Schnellstart](https://github.com/YerongAI/Office-Tool/wiki)
+- [Documentation](https://help.coolhub.top)
 
 ## Über Office Tool Plus
 

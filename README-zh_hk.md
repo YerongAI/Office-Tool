@@ -35,7 +35,7 @@
 
 ## 下載 & 快速入門
 
-- [下載](https://help.coolhub.top/start/download.html)
+- [下載](https://help.coolhub.top/start/)
 - [快速入門(台灣繁體)](https://help.coolhub.top/zh-tw/)
 
 ## 合法性

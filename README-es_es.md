@@ -37,9 +37,9 @@ Funciones adicionales:
 
 ## Descarga e inicio rápido
 
-- [Download](https://help.coolhub.top/start/download.html).
-- [Quick start](https://github.com/YerongAI/Office-Tool/wiki).
-- [Documentation](https://help.coolhub.top/).
+- [Download](https://help.coolhub.top/start/)
+- [Quick start](https://github.com/YerongAI/Office-Tool/wiki)
+- [Documentation](https://help.coolhub.top/)
 
 ## A propósito
 

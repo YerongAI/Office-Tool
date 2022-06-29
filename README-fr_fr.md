@@ -37,9 +37,9 @@ Fonctions et caractéristiques:
 
 ## Télécharger et démarrage rapide
 
-- [Télécharger](https://help.coolhub.top/start/download.html).
-- [Démarrage rapide](https://github.com/YerongAI/Office-Tool/wiki).
-- [Documentation](https://help.coolhub.top/).
+- [Télécharger](https://help.coolhub.top/start/)
+- [Démarrage rapide](https://github.com/YerongAI/Office-Tool/wiki)
+- [Documentation](https://help.coolhub.top)
 
 ## À propos
 

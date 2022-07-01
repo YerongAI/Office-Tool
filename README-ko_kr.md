@@ -35,7 +35,7 @@ Office 배포 제외의 다른 기능들:
 
 ## 다운로드와 빠른시작
 
-- [다운로드](https://help.coolhub.top/start/)
+- [다운로드](https://otp.landian.vip/download.html)
 - [빠른시작](https://github.com/YerongAI/Office-Tool/wiki)
 - [매뉴얼](https://help.coolhub.top)
 

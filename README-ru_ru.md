@@ -35,7 +35,7 @@
 
 ## Скачивание и быстрый старт
 
-- [Скачать](https://help.coolhub.top/start/)
+- [Скачать](https://otp.landian.vip/download.html)
 - [Быстрый старт](https://github.com/YerongAI/Office-Tool/wiki)
 - [Документация](https://help.coolhub.top)
 

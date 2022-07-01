@@ -37,7 +37,7 @@ Fonctions et caractéristiques:
 
 ## Télécharger et démarrage rapide
 
-- [Télécharger](https://help.coolhub.top/start/)
+- [Télécharger](https://otp.landian.vip/download.html)
 - [Démarrage rapide](https://github.com/YerongAI/Office-Tool/wiki)
 - [Documentation](https://help.coolhub.top)
 

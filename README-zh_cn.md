@@ -38,7 +38,7 @@
 
 ## 下载 & 快速入门
 
-- [下载](https://help.coolhub.top/zh-cn/start/)
+- [下载](https://otp.landian.vip/download.html)
 - [快速入门](https://github.com/YerongAI/Office-Tool/wiki)
 - [帮助文档](https://otp.landian.vip/help)
 

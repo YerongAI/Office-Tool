@@ -37,9 +37,9 @@
 
 ## ดาวน์โหลด และ เริ่มต้นอย่างรวดเร็ว
 
-- [ดาวน์โหลด](https://help.coolhub.top/start/download.html).
-- [เริ่มต้นอย่างรวดเร็ว](https://github.com/YerongAI/Office-Tool/wiki).
-- [เอกสาร](https://help.coolhub.top/).
+- [ดาวน์โหลด](https://otp.landian.vip/download.html)
+- [เริ่มต้นอย่างรวดเร็ว](https://github.com/YerongAI/Office-Tool/wiki)
+- [เอกสาร](https://help.coolhub.top)
 
 ## เกี่ยวกับเรา
 

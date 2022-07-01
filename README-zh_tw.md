@@ -35,7 +35,7 @@
 
 ## 下載 & 快速入門
 
-- [下載](https://help.coolhub.top/start/download.html)
+- [下載](https://help.coolhub.top/start/)
 - [快速入門(繁體)](https://help.coolhub.top/zh-tw/)
 - [教學文章(繁體)](https://www.cotpear.com/topics/office-tool-plus/?utm_source=github.com/office-tool)
 

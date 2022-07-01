@@ -37,9 +37,9 @@ Functions and Features:
 
 ## Download and quick start
 
-- [Download](https://help.coolhub.top/start/download.html).
-- [Quick start](https://github.com/YerongAI/Office-Tool/wiki).
-- [Documentation](https://help.coolhub.top/).
+- [Download](https://otp.landian.vip/download.html)
+- [Quick start](https://github.com/YerongAI/Office-Tool/wiki)
+- [Documentation](https://help.coolhub.top)
 
 ## Thanks to the Translators
 

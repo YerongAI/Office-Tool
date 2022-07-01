@@ -35,7 +35,7 @@ Dodatkowe funkcje:
 
 ## Pobierz i szybki start
 
-- [Pobierz](https://help.coolhub.top/start)
+- [Pobierz](https://otp.landian.vip/download.html)
 - [Szybki start](https://github.com/YerongAI/Office-Tool/wiki)
 - [Dokumentacja](https://help.coolhub.top)
 

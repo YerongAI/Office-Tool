@@ -37,7 +37,7 @@ Functies en kenmerken:
 
 ## Downloaden en snelstart
 
-- [Download](https://help.coolhub.top/start/)
+- [Download](https://otp.landian.vip/download.html)
 - [Snelstart](https://github.com/YerongAI/Office-Tool/wiki)
 - [Documentation](https://help.coolhub.top)
 

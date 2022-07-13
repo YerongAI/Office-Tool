@@ -15,10 +15,10 @@
 
 Supports custom deployment and activation of the following products:
 
-- Microsoft 365
-- Office 2016, 2019, 2021
-- Visio 2016, 2019, 2021 & Online Plan 2
-- Project 2016, 2019, 2021 & Online Desktop Client
+- Microsoft 365.
+- Office 2016, 2019, 2021.
+- Visio 2016, 2019, 2021 & Online Plan 2.
+- Project 2016, 2019, 2021 & Online Desktop Client.
 
 Functions and Features:
 

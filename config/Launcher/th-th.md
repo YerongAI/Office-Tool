@@ -6,8 +6,8 @@ GitHub Wiki
 Telegram
 > เข้าร่วมกลุ่มอย่างเป็นทางการของเราและพูดคุยกับเรา
 
-My Digital Life
-> กระทู้อย่างเป็นทางการใน MDL
+Discord
+> Join our official Discord Community.
 
 Office
 > หน้าแรกของ Microsoft Office

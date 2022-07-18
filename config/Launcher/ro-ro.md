@@ -6,8 +6,8 @@ GitHub Wiki
 Telegram
 > Alăturați-vă grupului nostru oficial și discutați cu noi.
 
-My Digital Life
-> Fir oficial pe MDL.
+Discord
+> Join our official Discord Community.
 
 Office
 > Pagina de pornire Microsoft Office.

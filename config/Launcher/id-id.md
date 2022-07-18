@@ -6,8 +6,8 @@ Wiki GitHub
 Telegram
 > Gabung ke grup resmi dan mulai obrolan dengan kami.
 
-My Digital Life
-> Lembaran resmi di MDL.
+Discord
+> Join our official Discord Community.
 
 Office
 > Laman depan Microsoft Office.

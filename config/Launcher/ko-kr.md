@@ -6,8 +6,8 @@ GitHub 지식백과
 Telegram
 > 공식 그룹 채팅에 참여하세요.
 
-My Digital Life
-> MDL 공식 주체에 댓글을 남겨주세요.
+Discord
+> Join our official Discord Community.
 
 Office
 > Microsoft Office 공식 사이트에 이동합니다.

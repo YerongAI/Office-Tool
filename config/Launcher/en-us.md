@@ -4,10 +4,10 @@ GitHub Wiki
 > Click to view Office Tool Plus Quick Start.
 
 Telegram
-> Join our official group and chat with us.
+> Join our official Telegram Community.
 
-My Digital Life
-> Official thread on MDL.
+Discord
+> Join our official Discord Community.
 
 Office
 > Microsoft Office homepage.

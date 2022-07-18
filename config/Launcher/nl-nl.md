@@ -6,8 +6,8 @@ GitHub Wiki
 Telegram
 > Word lid van onze officiële groep en chat met ons.
 
-My Digital Life
-> Officiële thread op MDL.
+Discord
+> Join our official Discord Community.
 
 Office
 > Microsoft Office homepagina.

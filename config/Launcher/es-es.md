@@ -6,8 +6,8 @@ GitHub Wiki
 Telegram
 > Únete a nuestro grupo oficial y chatea con nosotros.
 
-My Digital Life
-> Hilo oficial en MDL.
+Discord
+> Join our official Discord Community.
 
 Office
 > Página de inicio de Microsoft Office.

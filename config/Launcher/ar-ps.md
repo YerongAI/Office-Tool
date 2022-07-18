@@ -6,8 +6,8 @@ GitHub Wiki
 تليجرام
 > انضم لمجموعتنا الرسمية وتحاور معنا
 
-My Digital Life
-> Official thread on MDL.
+Discord
+> Join our official Discord Community.
 
 Office
 > صفحة مايكروسوفت اوفيس

@@ -60,6 +60,7 @@ Functions and Features:
 | ro-ro | Română (România) | [ianymaty](https://github.com/ianymaty) |
 | ru-ru | Русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov) |
 | th-th | ไทย (ไทย) | [Filling Developer](https://github.com/OllyMaster) |
+| vi-vn | Tiếng Việt (Việt Nam) | [phjtieudoc](https://github.com/phjtieudoc) |
 | zh-hk | 繁體中文 (香港) | [TurboHK](https://github.com/TurboHK) |
 | zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412) |
 

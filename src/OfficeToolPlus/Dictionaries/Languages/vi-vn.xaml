@@ -1,0 +1,571 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=System.RunTime" xml:space="preserve">
+    <!-- Country settings, it is used to get information from server. -->
+    <sys:String x:Key="Culture">vi-vn</sys:String>
+    <!-- Products name settings, "en-us" is default value if not set. -->
+    <sys:String x:Key="ProductDict">vi-vn</sys:String>
+    <!-- Eula Content -->
+    <sys:String x:Key="EulaTitle">Điều khoản cấp phép</sys:String>
+    <sys:String x:Key="EulaContent">Bằng cách sử dụng phần mềm này, bạn chấp nhận với [Điều khoản cấp phép phần mềm]({0}) và [Thoả thuận dịch vụ của Microsoft]({1}).</sys:String>
+    <!-- Title Bar -->
+    <sys:String x:Key="ISOMode">- Chế độ ISO</sys:String>
+    <sys:String x:Key="Command">Lệnh</sys:String>
+    <sys:String x:Key="Contact">Liên hệ chúng tôi</sys:String>
+    <sys:String x:Key="MinimizeButton">Thu nhỏ</sys:String>
+    <sys:String x:Key="MaximizeButton">Phóng to</sys:String>
+    <sys:String x:Key="RestoreButton">Khôi phục</sys:String>
+    <sys:String x:Key="CloseButton">Đóng</sys:String>
+    <!-- Channels Name, if you do not want to translate them, please keep in English. -->
+    <sys:String x:Key="PerpetualVL2019">Office 2019 Perpetual Enterprise</sys:String>
+    <sys:String x:Key="PerpetualVL2021">Office 2021 Perpetual Enterprise</sys:String>
+    <sys:String x:Key="SemiAnnual">Kênh doanh nghiệp nửa năm 1 lần</sys:String>
+    <sys:String x:Key="MonthlyEnterprise">Kênh doanh nghiệp hàng tháng</sys:String>
+    <sys:String x:Key="Current">Kênh hiện tại</sys:String>
+    <sys:String x:Key="SemiAnnualPreview">Kênh doanh nghiệp nửa năm 1 lần (Xem trước)</sys:String>
+    <sys:String x:Key="CurrentPreview">Kênh hiện tại (Xem trước)</sys:String>
+    <sys:String x:Key="BetaChannel">Kênh Beta</sys:String>
+    <!-- Global -->
+    <sys:String x:Key="Message">Tin nhắn</sys:String>
+    <sys:String x:Key="Notice">Thông báo</sys:String>
+    <sys:String x:Key="Warning">Cảnh báo</sys:String>
+    <sys:String x:Key="Error">Lỗi</sys:String>
+    <sys:String x:Key="Yes">Có (_Y)</sys:String>
+    <sys:String x:Key="No">Không (_N)</sys:String>
+    <sys:String x:Key="OK">_OK</sys:String>
+    <sys:String x:Key="Cancel">Huỷ bỏ (_C)</sys:String>
+    <sys:String x:Key="Menu">Menu</sys:String>
+    <sys:String x:Key="OfficeDeploymentTool">Công cụ triển khai Office</sys:String>
+    <sys:String x:Key="Version">Phiên bản:</sys:String>
+    <sys:String x:Key="Branch">Nhánh:</sys:String>
+    <sys:String x:Key="Architecture">Kiến trúc:</sys:String>
+    <sys:String x:Key="x86">32 Bit</sys:String>
+    <sys:String x:Key="x64">64 Bit</sys:String>
+    <sys:String x:Key="BasicSettings">Cài đặt cơ bản</sys:String>
+    <sys:String x:Key="AdvancedSettings">Cài đặt nâng cao</sys:String>
+    <sys:String x:Key="MatchOS">Khớp hệ điều hành</sys:String>
+    <sys:String x:Key="Retry">Thử lại (_R)</sys:String>
+    <sys:String x:Key="Normal">Bình thường</sys:String>
+    <sys:String x:Key="None">Không có</sys:String>
+    <sys:String x:Key="Query">Truy vấn</sys:String>
+    <sys:String x:Key="Uninstall">Gỡ cài đặt (_U)</sys:String>
+    <sys:String x:Key="TypeToSearch">Gõ để tìm kiếm</sys:String>
+
+    <!-- Context Menu -->
+    <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
+    <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
+    <!-- If you can't understand what is hotkey, remove '&amp;' when you are translating. -->
+    <sys:String x:Key="CD-ROM_InstallNow">&amp;Cài đặt ngay</sys:String>
+    <sys:String x:Key="CopyToClipboard">Sao chép vào khay nhớ tạm</sys:String>
+
+    <!-- Greetings -->
+    <!-- Showed when app started. -->
+    <sys:String x:Key="GreetingHi">Chào</sys:String>
+    <!-- 06:00 - 10:00 -->
+    <sys:String x:Key="GreetingGoodMorning">Chào buổi sáng</sys:String>
+    <!-- 10:00 - 13:00 -->
+    <sys:String x:Key="GreetingGoodAfternoon1">Chào buổi trưa</sys:String>
+    <!-- 13:00 - 18:00 -->
+    <sys:String x:Key="GreetingGoodAfternoon2">Chào buổi chiều</sys:String>
+    <!-- 18:00 - 22:00 -->
+    <sys:String x:Key="GreetingGoodEvening">Chào buổi tối</sys:String>
+    <!-- 22:00 - 06:00 (+1) -->
+    <sys:String x:Key="GreetingLateAtNight">Khuya rồi đấy, chúc bạn ngủ ngon nhé!</sys:String>
+    <!-- Navigation Bar -->
+    <sys:String x:Key="Home">Trang chủ</sys:String>
+    <sys:String x:Key="Deploy">Triển khai</sys:String>
+    <sys:String x:Key="Activate">Kích hoạt</sys:String>
+    <sys:String x:Key="Toolbox">Hộp công cụ</sys:String>
+    <sys:String x:Key="ConvertDocuments">Chuyển đổi tài liệu</sys:String>
+    <sys:String x:Key="Settings">Thiết lập</sys:String>
+    <sys:String x:Key="About">Thông tin</sys:String>
+    <sys:String x:Key="Help">Trợ giúp</sys:String>
+    <!-- Home -->
+    <sys:String x:Key="InstallOffice">Cài đặt Office</sys:String>
+    <sys:String x:Key="O365PPRDescription">Bao gồm Outlook, OneDrive for Business, Word, Excel, PowerPoint và hơn thế nữa.</sys:String>
+    <sys:String x:Key="O365HPRDescription">Bao gồm Outlook, Word, Excel, PowerPoint và hơn thế nữa.</sys:String>
+    <sys:String x:Key="PP2019RDescription">Bao gồm Outlook, Word, Excel, PowerPoint và hơn thế nữa.</sys:String>
+    <sys:String x:Key="HS2019Description">Bao gồm Word, Excel, PowerPoint.</sys:String>
+    <sys:String x:Key="OtherInstallOptions">Tùy chọn cài đặt khác</sys:String>
+    <sys:String x:Key="OIODescription">Chọn sản phẩm hoặc ngôn ngữ khác.</sys:String>
+    <sys:String x:Key="CreateShortcut">Tạo một lối tắt trên bàn làm việc</sys:String>
+    <sys:String x:Key="ServerUnavailable">Không thể kết nối với máy chủ, hãy kiểm tra kết nối mạng.</sys:String>
+    <!-- Deploy Page -->
+    <sys:String x:Key="StartDeploy">Bắt đầu _triển khai</sys:String>
+    <sys:String x:Key="DeployViewCode">Xem mã XML (_V)</sys:String>
+    <sys:String x:Key="DeployApplySettings">Đang áp dụng tùy chọn cho ứng dụng Office</sys:String>
+    <sys:String x:Key="DeployExportConfig">Xuất cấu hình</sys:String>
+    <sys:String x:Key="DeployImportConfig">Nhập cấu hình</sys:String>
+    <sys:String x:Key="DeployImportConfigFromWeb">Nhập cấu hình từ Web</sys:String>
+    <!-- Download Panel -->
+    <sys:String x:Key="DownloadPending">Đang chờ</sys:String>
+    <sys:String x:Key="DownloadDownloading">Đang tải về, đã hoàn tất {0}.</sys:String>
+    <sys:String x:Key="DownloadDownloadingTime">Đang tải về, thời gian còn lại: {0}</sys:String>
+    <sys:String x:Key="DownloadPausing">Đang tạm dừng</sys:String>
+    <sys:String x:Key="DownloadPaused">Đã tạm dừng</sys:String>
+    <sys:String x:Key="DownloadCreating">Đang tạo tập tin ISO</sys:String>
+    <sys:String x:Key="DownloadPause">Tạm dừng</sys:String>
+    <sys:String x:Key="DownloadResume">Tiếp tục</sys:String>
+    <sys:String x:Key="DownloadCancel">Huỷ bỏ</sys:String>
+    <!-- Product -->
+    <sys:String x:Key="DeployProducts">Sản phẩm</sys:String>
+    <sys:String x:Key="DeployProductID">ID sản phẩm:</sys:String>
+    <sys:String x:Key="DeployAddProduct">Thêm sản phẩm (_P)</sys:String>
+    <sys:String x:Key="DeployOpenProductList">Mở danh sách sản phẩm</sys:String>
+    <sys:String x:Key="DeployErrorConfig">⚠ Sản phẩm không thể cùng tồn tại với sản phẩm hiện có.</sys:String>
+    <sys:String x:Key="DeployErrorModule">⚠ Để cài đặt sản phẩm này, hãy thay đổi mô-đun cài đặt sang Office Tool Plus.</sys:String>
+    <sys:String x:Key="DeployErrorChannel">⚠ Sản phẩm không thể cài đặt trên kênh đã chọn: {0}</sys:String>
+    <sys:String x:Key="DeployErrorUnsupportedChannel">⚠ Nếu bạn muốn dùng {0}, hãy thay đổi mô-đun cài đặt sang Office Tool Plus.</sys:String>
+    <sys:String x:Key="DeployErrorSystem">⚠ Bạn không thể cài đặt Office 64-bit trên hệ thống không phải 64-bit.</sys:String>
+    <!-- Example: ⚠ You can not install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
+    <sys:String x:Key="DeployErrorArch">⚠ Bạn không thể cài đặt Office {0}, vì bạn đã cài đặt Office {1} trên máy tính của bạn rồi.</sys:String>
+    <sys:String x:Key="DeployWillUninstall">⚠ Để xác nhận việc gỡ cài đặt, hãy nhấn vào "Bắt đầu triển khai".</sys:String>
+    <sys:String x:Key="DeployApps">Ứng dụng</sys:String>
+    <!-- Language -->
+    <sys:String x:Key="LanguagePack">Ngôn ngữ</sys:String>
+    <sys:String x:Key="LanguageID">ID ngôn ngữ:</sys:String>
+    <sys:String x:Key="LanguageType">Loại ngôn ngữ: {0}</sys:String>
+    <sys:String x:Key="Full">Toàn bộ</sys:String>
+    <sys:String x:Key="Partial">Một phần</sys:String>
+    <sys:String x:Key="PartialWithoutProofingTools">Một phần, không có công cụ soát lỗi</sys:String>
+    <sys:String x:Key="ProofingTools">Công cụ soát lỗi</sys:String>
+    <sys:String x:Key="LangFullTip">Gói ngôn ngữ bao gồm ngôn ngữ hiển thị và công cụ soát lỗi.</sys:String>
+    <sys:String x:Key="LangPartialTip">Gói ngôn ngữ bao gồm ngôn ngữ hiển thị cho một số ứng dụng Office và bao gồm công cụ soát lỗi.</sys:String>
+    <sys:String x:Key="LangPartialWithoutProofingToolsTip">Gói ngôn ngữ bao gồm ngôn ngữ hiển thị cho một số ứng dụng Office nhưng không bao gồm công cụ soát lỗi.</sys:String>
+    <sys:String x:Key="LangProofingToolsTip">Gói ngôn ngữ chỉ bao gồm trình kiểm tra chính tả.</sys:String>
+    <sys:String x:Key="DeployAsProof">Chỉ triển khai công cụ soát lỗi.</sys:String>
+    <sys:String x:Key="DeployAddLanguage">Thêm ngôn ngữ (_L)</sys:String>
+    <sys:String x:Key="DeployOpenLanguageList">Mở danh sách ngôn ngữ</sys:String>
+    <!-- Advanced Settings -->
+    <sys:String x:Key="DeployOrganizationName">Cung cấp tên tổ chức của bạn để đặt tài sản công ty trên các tài liệu Office.</sys:String>
+    <sys:String x:Key="DeployDescription">Cung cấp mô tả cấu hình cho tài liệu.</sys:String>
+    <!-- Installation Settings -->
+    <sys:String x:Key="DeployInstallationSettings">Thiết lập cài đặt</sys:String>
+    <sys:String x:Key="DeployFallbackLanguage">Ngôn ngữ dự phòng:</sys:String>
+    <sys:String x:Key="DeployFallbackLanguageTip">Khi ngôn ngữ được đặt để khớp với ngôn ngữ hệ thống, bạn có thể chỉ định một ngôn ngữ dự phòng để cài đặt khi ngôn ngữ phù hợp không được Office hỗ trợ hoặc không thể tìm thấy trong nguồn cục bộ.</sys:String>
+    <sys:String x:Key="DeployVersionTip">Mặc định cài phiên bản mới nhất nếu không được chỉ định.</sys:String>
+    <sys:String x:Key="DeployGetHistoricalVersions">Tải về phiên bản cũ của Office.</sys:String>
+    <sys:String x:Key="DeployDownloadPath">Đường dẫn tải về:</sys:String>
+    <sys:String x:Key="DeployDownloadPathTip">Xác định nơi tập tin cài đặt được tải về nằm ở đâu, bạn phải chỉ định một phiên bản khi sử dụng đường dẫn tải về.</sys:String>
+    <sys:String x:Key="DeploySourcePath">Đường dẫn nguồn:</sys:String>
+    <sys:String x:Key="DeploySourcePathTip">Nếu đường dẫn nguồn để trống, Office CDN sẽ được sử dụng làm nguồn mặc định. Trong chế độ tải về, mục này được dùng để xác định nơi lưu tập tin.</sys:String>
+    <sys:String x:Key="DeployDisplayLevel">Không có giao diện hiển thị trong khi cài đặt.</sys:String>
+    <sys:String x:Key="DeployAllowCDNFallback">Cho phép trình cài đặt dùng Office CDN làm nguồn dự phòng cho ngôn ngữ bị thiếu.</sys:String>
+    <sys:String x:Key="DeployForceCloseApps">Đóng tất cả các ứng dụng Office đang chạy.</sys:String>
+    <sys:String x:Key="DeployPinIconToTaskbar">Ghim biểu tượng vào thanh tác vụ trên Windows 7, 8 và 8.1.</sys:String>
+    <!-- Update Settings -->
+    <sys:String x:Key="DeployUpdateSettings">Thiết lập cập nhật</sys:String>
+    <sys:String x:Key="DeployEnableUpdate">Kích hoạt tự động cập nhật Office.</sys:String>
+    <sys:String x:Key="DeployEnableCOM">Quản lí cập nhật dùng Microsoft Endpoint Configuration Manager.</sys:String>
+    <sys:String x:Key="DeployUpdatePath">Nguồn cập nhật:</sys:String>
+    <sys:String x:Key="DeployUpdatePathTip">Nếu đường dẫn để trống, Office CDN sẽ được sử dụng làm nguồn mặc định.</sys:String>
+    <sys:String x:Key="DeployTargetVersion">Phiên bản đích:</sys:String>
+    <sys:String x:Key="DeployUpdateDeadline">Thời hạn cập nhật:</sys:String>
+    <sys:String x:Key="DeployUpdateChannel">Kênh cập nhật:</sys:String>
+    <!-- Upgrade Settings -->
+    <sys:String x:Key="DeployUpgradeSettings">Tuỳ chọn nâng cấp</sys:String>
+    <sys:String x:Key="DeployMigrateArch">Di chuyển kiến trúc.</sys:String>
+    <sys:String x:Key="DeployMigrateArchTip">Nếu chọn di chuyển kiến trúc, cài đặt Office hiện có sẽ được thay đổi thành kiến trúc được chỉ định.</sys:String>
+    <sys:String x:Key="DeployForceUpgrade">Bắt buộc nâng cấp.</sys:String>
+    <sys:String x:Key="DeployRemoveMSI">Loại bỏ các phiên bản MSI hiện có của Office.</sys:String>
+    <sys:String x:Key="DeployIgnoreProduct">Bỏ qua sản phẩm này</sys:String>
+    <sys:String x:Key="DeployMatchPreviousMSI">Cài đặt cùng ngôn ngữ với phiên bản MSI trước.</sys:String>
+    <!-- Activate Settings -->
+    <sys:String x:Key="DeployActivateSettings">Thiết lập kích hoạt</sys:String>
+    <sys:String x:Key="DeployAcceptEULA">Tự động chấp nhận EULA.</sys:String>
+    <sys:String x:Key="DeployAcceptEULATip">Khi được chọn, hộp thoại "Điều khoản Cấp phép Phần mềm Microsoft" sẽ không được hiện.</sys:String>
+    <sys:String x:Key="DeployProductMAK">Thiết lập MAK</sys:String>
+    <sys:String x:Key="DeployAutoActivate">Sau khi thiết lập MAK, chúng tôi sẽ cố gắng kích hoạt sản phẩm một cách tự động.</sys:String>
+    <sys:String x:Key="DeployProductActivation">Kích hoạt sản phẩm</sys:String>
+    <sys:String x:Key="DeployActivateByUser">Dựa trên người dùng.</sys:String>
+    <sys:String x:Key="DeployActivateBySCL">Máy tính dùng chung.</sys:String>
+    <sys:String x:Key="DeployActivateSCLCacheOverride">Cho phép mã thông báo cấp phép chuyển vùng.</sys:String>
+    <sys:String x:Key="DeployBasedDevice">Dựa trên thiết bị.</sys:String>
+    <!-- App Preferences -->
+    <sys:String x:Key="DeployPreferences">Tùy chọn ứng dụng</sys:String>
+    <sys:String x:Key="DeployPreferencesSearch">Gõ để tìm kiếm tùy chọn ứng dụng</sys:String>
+    <sys:String x:Key="DeployPreferencesEnable">Kích hoạt</sys:String>
+    <sys:String x:Key="DeployPreferencesApply">Áp dụng</sys:String>
+    <sys:String x:Key="DeployPreferencesReset">Thiết lập lại</sys:String>
+    <sys:String x:Key="DeployPreferencesResetAll">Thiết lập lại mọi cài đặt</sys:String>
+    <!-- Deploy Settings -->
+    <sys:String x:Key="DeploySettings">Thiết lập triển khai</sys:String>
+    <sys:String x:Key="DeployChannel">Kênh:</sys:String>
+    <sys:String x:Key="DeployMode">Chế độ triển khai:</sys:String>
+    <sys:String x:Key="DeployModeEdit">Sửa cấu hình</sys:String>
+    <sys:String x:Key="DeployModeDownload">Tải về</sys:String>
+    <sys:String x:Key="DeployModeInstall">Cài đặt</sys:String>
+    <sys:String x:Key="DeployModeCreateISO">Tạo tập tin ISO</sys:String>
+    <sys:String x:Key="DeployModule">Mô-đun cài đặt:</sys:String>
+    <sys:String x:Key="DeployModeIAD">Tải về trước, rồi sau đó triển khai.</sys:String>
+    <sys:String x:Key="DeployCreateShortcut">Tạo lối tắt trên bàn làm việc.</sys:String>
+    <sys:String x:Key="DeployInstalliSlide">Cài đặt iSlide.</sys:String>
+    <sys:String x:Key="DeployInstalliSlideDescription">Tạo bản trình bày PowerPoint chuyên nghiệp, thiết kế dễ dàng hơn.</sys:String>
+    <!-- Download Settings -->
+    <sys:String x:Key="DownloadSettings">Thiết lập tải về</sys:String>
+    <sys:String x:Key="DownloadSettingTip">Chỉ áp dụng khi tải Office về máy.</sys:String>
+    <sys:String x:Key="DownloadEngine">Công cụ:</sys:String>
+    <sys:String x:Key="DownloadEngineThunder">Thunder</sys:String>
+    <sys:String x:Key="DownloadAgent">Tác nhân người dùng:</sys:String>
+    <sys:String x:Key="DownloadAgentTip">Theo mặc định, Office Tool Plus nhận diện phiên bản hệ thống hiện tại. Cấu hình nó nếu bạn cần tải về Office cho các phiên bản Windows khác.</sys:String>
+    <sys:String x:Key="DownloadUseHTTPS">Kết nối bằng HTTPS.</sys:String>
+    <sys:String x:Key="DownloadVerifyInstallations">Xác minh tập tin cài đặt Office sau khi tải về.</sys:String>
+    <sys:String x:Key="DownloadThunderSettings">Thiết lập Thunder</sys:String>
+    <sys:String x:Key="DownloadSpeedLimit">Tốc độ giới hạn:</sys:String>
+    <sys:String x:Key="DownloadProxyType">Loại proxy:</sys:String>
+    <sys:String x:Key="DownloadServerAddress">Địa chỉ máy chủ:</sys:String>
+    <sys:String x:Key="DownloadUserName">Tài khoản:</sys:String>
+    <sys:String x:Key="DownloadPassword">Mật khẩu:</sys:String>
+    <!-- Installation Manage -->
+    <sys:String x:Key="InstallationFilesManage">Trình quản lí tập tin cài đặt</sys:String>
+    <sys:String x:Key="InstallationSelectFile">Chọn tập tin</sys:String>
+    <sys:String x:Key="InstallationVerifyFiles">Xác minh tập tin</sys:String>
+    <!-- Activate Page -->
+    <sys:String x:Key="ActivateButton">Kích hoạt (_A)</sys:String>
+    <sys:String x:Key="ActivateViewInformation">Hiện thông tin kích hoạt</sys:String>
+    <sys:String x:Key="ActivateViewLicenses">Hiện thông tin giấy phép</sys:String>
+    <sys:String x:Key="ActivateViewFailureHistory">Hiện lịch sử lỗi kích hoạt MAK/Bán lẻ</sys:String>
+    <sys:String x:Key="ActivateViewKMSHistory">Hiện lịch sử kích hoạt ứng dụng khách KMS</sys:String>
+    <sys:String x:Key="ActivateClearResult">Xoá kết quả thao tác</sys:String>
+    <sys:String x:Key="ActivateResult">Kết quả thao tác</sys:String>
+    <!-- Licenses -->
+    <sys:String x:Key="ActivateLicensesManage">Quản lý giấy phép</sys:String>
+    <sys:String x:Key="ActivateSelectLicense">Chọn sản phẩm:</sys:String>
+    <sys:String x:Key="ActivateInstallLicenses">Cài đặt giấy phép</sys:String>
+    <sys:String x:Key="ActivateInstallOtherLicenses">Cài đặt giấy phép khác</sys:String>
+    <sys:String x:Key="ActivateClearLicenses">Xoá giấy phép</sys:String>
+    <sys:String x:Key="ActivateRLS">Đặt lại trạng thái giấy phép cho giấy phép Office</sys:String>
+    <sys:String x:Key="ActivateRLSTip">Bạn cần cung cấp giá trị SKU ID.</sys:String>
+    <sys:String x:Key="ActivateRLSForAll">Đặt lại trạng thái giấy phép cho tất cả giấy phép</sys:String>
+    <sys:String x:Key="ActivateRLSForAllTip">Đặt lại trạng thái giấy phép cho tất cả khóa sản phẩm Office đã cài đặt có nghĩa là bạn sẽ cần phải kích hoạt lại Office sau thao tác này.</sys:String>
+    <sys:String x:Key="ActivateClearActivation">Xóa kích hoạt</sys:String>
+    <!-- Key -->
+    <sys:String x:Key="ActivateKeyManage">Quản lý khoá</sys:String>
+    <sys:String x:Key="ActivateProductKey">Khóa sản phẩm:</sys:String>
+    <sys:String x:Key="ActivateProductKeyTip">Nhập khóa đầy đủ để cài đặt hoặc 5 ký tự cuối cùng của khóa đã cài đặt để gỡ cài đặt.</sys:String>
+    <sys:String x:Key="ActivateInstallKey">Cài đặt khóa</sys:String>
+    <sys:String x:Key="ActivateUninstallKey">Gỡ cài đặt khóa</sys:String>
+    <sys:String x:Key="ActivateUninstallAllKeys">Gỡ cài đặt tất cả khóa</sys:String>
+    <sys:String x:Key="ActivateViewIID">Xem ID cài đặt (IID)</sys:String>
+    <sys:String x:Key="ActivateInstallCID">Cài đặt ID xác nhận (CID)</sys:String>
+    <sys:String x:Key="ActivateInstallCIDTip">Bạn cần cung cấp ID xác nhận (CID).</sys:String>
+    <!-- KMS -->
+    <sys:String x:Key="ActivateKMSManage">Trình quản lí KMS</sys:String>
+    <sys:String x:Key="ActivateKMSHost">Máy chủ KMS:</sys:String>
+    <sys:String x:Key="ActivateKMSPort">Cổng KMS (không bắt buộc):</sys:String>
+    <sys:String x:Key="ActivateSetKMS">Đặt máy chủ KMS</sys:String>
+    <sys:String x:Key="ActivateSetPort">Đặt cổng KMS</sys:String>
+    <sys:String x:Key="ActivateEnableCaching">Kích hoạt bộ nhớ đệm máy chủ</sys:String>
+    <sys:String x:Key="ActivateDisableCaching">Vô hiệu hoá bộ nhớ đệm máy chủ</sys:String>
+    <sys:String x:Key="ActivateResetKMS">Xóa máy chủ KMS (đặt lại cổng về mặc định)</sys:String>
+    <!-- Content Translation -->
+    <sys:String x:Key="ActivationTitle">Đang xử lí kích hoạt Office</sys:String>
+    <sys:String x:Key="LicenseDescription">Mô tả giấy phép: </sys:String>
+    <sys:String x:Key="LicenseStatus">Trạng thái giấy phép: </sys:String>
+    <sys:String x:Key="RemainGrace">Còn trong thời gian gia hạn: </sys:String>
+    <sys:String x:Key="RemainGraceDay">ngày</sys:String>
+    <sys:String x:Key="RemainGraceMin">phút trước khi hết hạn</sys:String>
+    <sys:String x:Key="Licexpiry">Ngày hết hạn Beta: </sys:String>
+    <sys:String x:Key="ErrorCode">Mã lỗi: </sys:String>
+    <sys:String x:Key="ErrorDescrpition">Mô tả lỗi: </sys:String>
+    <sys:String x:Key="ErrorUnknown">Đã xảy ra lỗi không rõ.</sys:String>
+    <sys:String x:Key="StatusLicensed"> **ĐÃ CẤP PHÉP** </sys:String>
+    <sys:String x:Key="StatusUnlicensed">`CHƯA ĐƯỢC CẤP PHÉP`</sys:String>
+    <sys:String x:Key="StatusOOBGrace">`OOB_GRACE (Hết thời gian gia hạn beta)`</sys:String>
+    <sys:String x:Key="StatusOOTGrace">`OOT_GRACE (Hết thời gian gia hạn)`</sys:String>
+    <sys:String x:Key="StatusNonGenuineGrace">`NON_GENUINE_GRACE (Thời gian gia hạn không chính hãng)`</sys:String>
+    <sys:String x:Key="StatusNotifications">`THÔNG BÁO`</sys:String>
+    <sys:String x:Key="StatusExtendedGrace">`ĐÃ KÉO DÀI THỜI GIAN GIA HẠN`</sys:String>
+    <sys:String x:Key="StatusUnknown">`KHÔNG RÕ`</sys:String>
+
+    <sys:String x:Key="AppliedSetting">Đã áp dụng thiết lập thành công.</sys:String>
+    <sys:String x:Key="NoKMSLics">Không tìm thấy giấy phép Office KMS nào trên hệ thống.</sys:String>
+    <sys:String x:Key="NoKeyInstalled">Không phát hiện thấy khóa sản phẩm đã cài đặt nào.</sys:String>
+    <sys:String x:Key="UninstallKey">Gỡ cài đặt khóa sản phẩm thành công.</sys:String>
+    <sys:String x:Key="ActivationSuccess">**Kích hoạt sản phẩm thành công**</sys:String>
+    <sys:String x:Key="OfflineActivationSuccess">**Kích hoạt sản phẩm ngoại tuyến thành công**</sys:String>
+    <sys:String x:Key="IKeySuccess">**Cài đặt khóa sản phẩm thành công**</sys:String>
+    <sys:String x:Key="ProductKey">5 ký tự cuối cùng của khóa sản phẩm đã cài đặt: </sys:String>
+    <sys:String x:Key="UninstallingKey">Đang gỡ cài đặt khóa sản phẩm cho: </sys:String>
+    <sys:String x:Key="ILicense">Đang cài đặt giấy phép Office: </sys:String>
+    <sys:String x:Key="ILicenseSuccess">Giấy phép Office đã được cài đặt thành công.</sys:String>
+    <sys:String x:Key="InstallationID">ID cài đặt:</sys:String>
+    <sys:String x:Key="NoKMSEvent">Không tìm thấy sự kiện kích hoạt KMS nào trên máy: </sys:String>
+    <sys:String x:Key="NoIAEvent">Không tìm thấy sự kiện hỏng hóc nào trên máy: </sys:String>
+    <sys:String x:Key="NoEvents">Không tìm thấy sự kiện.</sys:String>
+    <sys:String x:Key="SuccessEvent">Sự kiện kích hoạt thành công: </sys:String>
+    <sys:String x:Key="FailureEvent">Sự kiện kích hoạt không thành công: </sys:String>
+    <sys:String x:Key="ProductKeyNotFound">Không tìm thấy khóa sản phẩm</sys:String>
+    <sys:String x:Key="NotFound">Không tìm thấy.</sys:String>
+    <sys:String x:Key="NotLicenseFound">Không tìm thấy giấy phép.</sys:String>
+    <sys:String x:Key="InfoOnly"> (chỉ dùng cho mục đích thông tin khi trạng thái được cấp phép)</sys:String>
+
+    <sys:String x:Key="VLActivationType">Cấu hình loại kích hoạt: </sys:String>
+    <sys:String x:Key="ActRecent">Thông tin mã khách hàng kích hoạt thành công gần nhất: </sys:String>
+    <sys:String x:Key="KMSDNS">Tên máy KMS từ DNS: </sys:String>
+    <sys:String x:Key="ADInfoAOName">Tên đối tượng kích hoạt: </sys:String>
+    <sys:String x:Key="ActivationInterval">Khoảng thời gian kích hoạt: </sys:String>
+    <sys:String x:Key="RenewalInterval">Khoảng thời gian gia hạn: </sys:String>
+    <sys:String x:Key="IntervalMinutes">phút</sys:String>
+    <sys:String x:Key="HostCaching">Bộ nhớ đệm máy chủ KMS: </sys:String>
+    <sys:String x:Key="HostCachingEnabled">Đã kích hoạt</sys:String>
+    <sys:String x:Key="HostCachingDisabled">Đã vô hiệu hoá</sys:String>
+    <sys:String x:Key="HostRegOverride">Máy KMS: </sys:String>
+    <!-- Toolbox Page -->
+    <sys:String x:Key="CommonTools">Công cụ phổ biến</sys:String>
+    <sys:String x:Key="RepairTools">Công cụ sửa chữa</sys:String>
+    <sys:String x:Key="ToolboxSave">Lưu</sys:String>
+    <sys:String x:Key="ToolboxStart">Bắt đầu</sys:String>
+    <sys:String x:Key="ToolboxRepair">Sửa chữa</sys:String>
+    <!-- Common Tools -->
+    <sys:String x:Key="ToolboxChangeChannel">Thay đổi kênh cập nhật Office</sys:String>
+    <sys:String x:Key="ToolboxChangeChannelDescription">Thay đổi kênh cập nhật cho phép bạn nâng cấp hoặc hạ cấp Office mà không cần phải cài đặt lại.</sys:String>
+    <sys:String x:Key="ToolboxChangeOwner">Thay đổi chủ sở hữu sản phẩm Office</sys:String>
+    <sys:String x:Key="ToolboxChangeOwnerDescription">Tên được hiển thị trên trang tài khoản của ứng dụng Office.&#x000A;&#x000A;Để thay đổi chủ sở hữu của một sản phẩm cụ thể, hãy dùng định dạng sau: IDsảnphẩm:Tên&#x000A;&#x000A;Đặt tên trống sẽ hoàn nguyên về giá trị mặc định.</sys:String>
+    <sys:String x:Key="ToolboxChangeOwnerName">Tên:</sys:String>
+    <sys:String x:Key="ToolboxChangeOwnerNameTip">LHNam hoặc là ProPlus2019Volume:LHNam</sys:String>
+    <sys:String x:Key="ToolboxCheckVersion">Truy vấn phiên bản Office</sys:String>
+    <sys:String x:Key="ToolboxCheckVersionDescription">Truy vấn thông tin kênh Office, bao gồm phiên bản và nhánh.</sys:String>
+    <sys:String x:Key="ToolboxCheckVersionCheckInternalChannel">Bao gồm các kênh nội bộ.</sys:String>
+    <sys:String x:Key="ToolboxCheckVersionUseCache">Dùng bộ nhớ đệm.</sys:String>
+    <sys:String x:Key="CheckVersionCreatedTimeUTC">Thời gian tạo (UTC):</sys:String>
+    <sys:String x:Key="QueryErrorCode">Truy vấn thông tin mã lỗi</sys:String>
+    <sys:String x:Key="QueryErrorCodeDescription">Mã lỗi thường bắt đầu bằng '0x'. Ví dụ: 0x2 hoặc 0x80070002.</sys:String>
+    <sys:String x:Key="ToolboxCheckKMS">Kiểm tra trạng thái KMS</sys:String>
+    <sys:String x:Key="ToolboxCheckKMSDescription">Tách từng KMS bằng dấu phẩy hoặc xuống dòng, bạn cũng có thể thêm cổng.</sys:String>
+    <sys:String x:Key="CheckKMSConnectionFailed">Kết nối không thành công!</sys:String>
+    <sys:String x:Key="CheckKMSConnectionSuccessful">Kết nối thành công.</sys:String>
+    <sys:String x:Key="CheckKMSActivationSuccessful">Kết nối thành công, kiểm tra kích hoạt thành công.</sys:String>
+    <sys:String x:Key="ToolboxCollectLog">Thu thập nhật ký trình cài đặt Office</sys:String>
+    <sys:String x:Key="ToolboxCollectLogDescription">Thu thập nhật ký để phân tích và giải quyết vấn đề.</sys:String>
+    <sys:String x:Key="ToolboxBackupOrRestoreSettings">Sao lưu hoặc khôi phục thiết lập Office</sys:String>
+    <sys:String x:Key="ToolboxBackupOrRestoreSettingsDescription">Sao lưu hoặc khôi phục thiết lập ứng dụng Office của bạn, ngoại trừ tập tin và nội dung. Trước khi bắt đầu, vui lòng đóng tất cả ứng dụng Office.&#x000A;&#x000A;Lưu ý: Không chia sẻ bản sao lưu của bạn với người khác, nó có thể làm rò rỉ thông tin cá nhân của bạn.</sys:String>
+    <sys:String x:Key="ToolboxBackupSettingsExcludePersonalInf">Loại trừ thông tin cá nhân.</sys:String>
+    <sys:String x:Key="ToolboxBackup">Sao lưu</sys:String>
+    <sys:String x:Key="ToolboxRestore">Khôi phục</sys:String>
+    <!-- Repair Tools -->
+    <sys:String x:Key="ToolboxRemoveOffice">Xoá Office</sys:String>
+    <sys:String x:Key="ToolboxRODescription">Thao tác này sẽ xóa các thành phần, tập tin và sổ đăng kí liên quan đến Office. Nếu quá trình dọn dẹp không thành công, hãy thử thêm một vài lần nữa.&#x000A;&#x000A;Lưu ý: Chỉ nên sử dụng tính năng này nếu không thể gỡ cài đặt Office đúng cách.</sys:String>
+    <sys:String x:Key="ToolboxRemoveViaOfficial">Xóa Office thông qua công cụ chính thức</sys:String>
+    <sys:String x:Key="ToolboxRemoveViaOfficeToolPlus">Xóa Office thông qua Office Tool Plus</sys:String>
+    <sys:String x:Key="ToolboxRemoveUWPOffice">Xóa cài đặt ứng dụng Microsoft Store của Office</sys:String>
+    <sys:String x:Key="ToolboxRemoveOfficeDone">Kết thúc xóa Office.</sys:String>
+    <sys:String x:Key="ToolboxRepairOfficeDocumentIcon">Sửa chữa biểu tượng tài liệu Office</sys:String>
+    <sys:String x:Key="ToolboxRepairODIDescription">Thao tác này sẽ đặt lại liên kết tài liệu Office. Sau khi hoàn tất việc này, bạn cũng sẽ cần sử dụng sửa lỗi nhanh của Office.</sys:String>
+    <sys:String x:Key="ToolboxResetSPPSvc">Đặt lại dịch vụ bảo vệ phần mềm</sys:String>
+    <sys:String x:Key="ToolboxResetSPPSvcDescription">Thao tác này sẽ đặt lại cấu hình của dịch vụ bảo vệ phần mềm. Áp dụng cho lỗi "Máy chủ thực thi không thành công (0x80080005)" hay "Dữ liệu không hợp lệ (0x8007000D)" khi kích hoạt Office.</sys:String>
+    <sys:String x:Key="ToolboxRebuildActivationToken">Xây dựng lại mã thông báo kích hoạt</sys:String>
+    <sys:String x:Key="ToolboxRebuildActivationTokenDescription">Thao tác này sẽ xây dựng lại mã thông báo kích hoạt Windows trong "%SystemRoot%\System32\spp\store\2.0".&#x000A;&#x000A;Áp dụng cho lỗi "xảy ra lỗi không rõ", "tiêu thụ giấy phép không thành công (0xC004E015)" hoặc "mã thông báo trong cửa hàng mã thông báo chứa hàm băm không hợp lệ (0x8004E108)" khi kích hoạt Office.&#x000A;&#x000A;Lưu ý: trạng thái kích hoạt Windows của bạn có thể sẽ bị mất.</sys:String>
+    <sys:String x:Key="ToolboxRepairGenuineWarning">Sửa chữa vấn đề về giấy phép Office</sys:String>
+    <sys:String x:Key="ToolboxRepairGenuineWarningDescription">Nếu Office hiện "Giấy phép Office của bạn không phải là chính hãng", bạn có thể đặt máy chủ KMS để khắc phục sự cố. Thao tác này sẽ ghi máy chủ KMS vào cấu hình dịch vụ bảo vệ phần mềm.</sys:String>
+    <sys:String x:Key="ToolboxRepairVBS">Sửa chữa liên kết tập tin VBS</sys:String>
+    <sys:String x:Key="ToolboxRepairVBSDescription">Thao tác này sẽ xây dựng lại liên kết tập tin VBS và áp dụng cho việc kích hoạt Office với lời nhắc "Không có công cụ tập lệnh nào cho phần mở rộng tập tin ".vbs"".</sys:String>
+    <sys:String x:Key="ToolboxRepairVariables">Sửa chữa biến hệ thống</sys:String>
+    <sys:String x:Key="ToolboxRepairVariablesDescription">Thao tác này sẽ đặt lại các biến hệ thống của bạn về giá trị mặc định. Đừng sử dụng nó nếu bạn không chắc chắn mình đang làm gì.&#x000A;&#x000A;Sau khi sửa chữa xong, bạn cần khởi động lại hệ thống của mình để thao tác có hiệu lực.</sys:String>
+    <sys:String x:Key="ToolboxRepairWMI">Sửa chữa thành phần WMI</sys:String>
+    <sys:String x:Key="ToolboxRepairWMIDescription">Thao tác này sẽ đăng kí lại thành phần WMI. Đừng sử dụng nó nếu bạn không chắc chắn mình đang làm gì.&#x000A;&#x000A;Sau khi sửa chữa xong, bạn cần khởi động lại hệ thống của mình để thao tác có hiệu lực.</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettings">Đặt lại cài đặt Office về mặc định</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsDescription">Đặt lại Office về thiết lập mặc định như bạn muốn. Trước khi bắt đầu, hãy đóng tất cả ứng dụng Office.</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsUserSettings">Xóa thiết lập người dùng hiện tại (bao gồm thiết lập ứng dụng Office, tập tin đã mở và vị trí đã lưu gần đây).</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsUserProfiles">Xóa cấu hình ứng dụng (bao gồm cả bộ đệm ứng dụng).</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsNormalTemplate">Xóa mẫu Normal (Normal.dotm).</sys:String>
+    <sys:String x:Key="ToolboxResetOfficeSettingsGlobalSettings">Xóa thiết lập tùy chọn ứng dụng.</sys:String>
+    <!-- Convert Document -->
+    <sys:String x:Key="ConvertSourceFormat">Định dạng đầu vào:</sys:String>
+    <sys:String x:Key="ConvertOutputFormat">Định dạng đầu ra:</sys:String>
+    <sys:String x:Key="ConvertSelectFile">Chọn tập tin</sys:String>
+    <sys:String x:Key="ConvertSelectFolder">Chọn thư mục</sys:String>
+    <sys:String x:Key="ConvertSearchOnSubfolders">Đang tìm kiếm tập tin trong thư mục con khi chọn thư mục.</sys:String>
+    <sys:String x:Key="ConvertDeleteFile">Xóa tập tin gốc sau khi chuyển đổi thành công.</sys:String>
+    <sys:String x:Key="ConvertFileList">Danh sách tập tin</sys:String>
+    <sys:String x:Key="ConvertFileName">Tên tập tin</sys:String>
+    <sys:String x:Key="ConvertNewFormat">Định dạng mới</sys:String>
+    <sys:String x:Key="ConvertSelectAll">Chọn tất cả</sys:String>
+    <sys:String x:Key="ConvertDeleteSelectedItems">Xóa mục đã chọn</sys:String>
+    <!-- File Types -->
+    <!-- Common -->
+    <sys:String x:Key="TypeOfPDF">PDF (.pdf)</sys:String>
+    <sys:String x:Key="TypeOfXPS">Tài liệu XPS (.xps)</sys:String>
+    <sys:String x:Key="TypeOfTXT">Văn bản thô (.txt)</sys:String>
+    <sys:String x:Key="TypeOfMHTML">Trang web tập tin đơn (.mhtml)</sys:String>
+    <sys:String x:Key="TypeOfHTML">Trang web (.html)</sys:String>
+    <sys:String x:Key="TypeOfRTF">Định dạng văn bản phong phú (.rtf)</sys:String>
+    <!-- Image -->
+    <sys:String x:Key="TypeOfGIF">Định dạng GIF động (.gif)</sys:String>
+    <sys:String x:Key="TypeOfJPG">Định dạng trao đổi tập tin (.jpeg)</sys:String>
+    <sys:String x:Key="TypeOfPNG">Định dạng đồ họa khả chuyển trên mạng (.png)</sys:String>
+    <sys:String x:Key="TypeOfTIF">Định dạng tệp hình ảnh thẻ (.tiff)</sys:String>
+    <sys:String x:Key="TypeOfBMP">Bitmap độc lập thiết bị (.bmp)</sys:String>
+    <!-- Video -->
+    <sys:String x:Key="TypeOfMP4">Video MPEG-4 (.mp4)</sys:String>
+    <sys:String x:Key="TypeOfWMV">Video của Windows Media (.wmv)</sys:String>
+    <!-- Word -->
+    <sys:String x:Key="WordDOCX">Tài liệu Word (.docx)</sys:String>
+    <sys:String x:Key="WordDOCM">Tài liệu Word cho phép Macro (.docm)</sys:String>
+    <sys:String x:Key="WordDOC">Tài liệu Word 97-2003 (.doc)</sys:String>
+    <sys:String x:Key="WordDOTX">Mẫu Word (.dotx)</sys:String>
+    <sys:String x:Key="WordDOTM">Mẫu Word cho phép Macro (.dotm)</sys:String>
+    <sys:String x:Key="WordDOT">Mẫu Word 97-2003 (.dot)</sys:String>
+    <!-- PowerPoint -->
+    <sys:String x:Key="PowerPointPPTX">Bản trình bày Powerpoint (.pptx)</sys:String>
+    <sys:String x:Key="PowerPointPPTM">Bản trình bày PowerPoint cho phép Macro (.pptm)</sys:String>
+    <sys:String x:Key="PowerPointPPT">Bản trình bày PowerPoint 97-2003 (.ppt)</sys:String>
+    <sys:String x:Key="PowerPointPOTX">Mẫu PowerPoint (.potx)</sys:String>
+    <sys:String x:Key="PowerPointPOTM">Mẫu PowerPoint cho phép Macro (.potm)</sys:String>
+    <sys:String x:Key="PowerPointPOT">Mẫu PowerPoint 97-2003 (.pot)</sys:String>
+    <sys:String x:Key="PowerPointPPSX">Chiếu hình PowerPoint (.ppsx)</sys:String>
+    <sys:String x:Key="PowerPointPPSM">Chiếu hình PowerPoint cho phép Macro (.ppsm)</sys:String>
+    <sys:String x:Key="PowerPointPPS">Chiếu hình PowerPoint 97-2003 (.pps)</sys:String>
+    <!-- Excel -->
+    <sys:String x:Key="ExcelXLSX">Sổ làm việc Excel (.xlsx)</sys:String>
+    <sys:String x:Key="ExcelXLSM">Sổ làm việc Excel cho phép Macro (.xlsm)</sys:String>
+    <sys:String x:Key="ExcelXLS">Sổ làm việc Excel 97-2003 (.xls)</sys:String>
+    <sys:String x:Key="ExcelCSV">CSV UTF-8 (Phân tách bằng dấu phẩy) (.csv)</sys:String>
+    <sys:String x:Key="ExcelXLTX">Mẫu Excel (.xltx)</sys:String>
+    <sys:String x:Key="ExcelXLTM">Mẫu Excel cho phép Macro (.xltm)</sys:String>
+    <sys:String x:Key="ExcelXLT">Mẫu Excel 97-2003 (.xlt)</sys:String>
+    <!-- Settings Panel -->
+    <sys:String x:Key="LanguageSettings">Ngôn ngữ:</sys:String>
+    <sys:String x:Key="ThemeSettings">Chủ đề:</sys:String>
+    <sys:String x:Key="AutoShutdownSettings">Sau khi triển khai:</sys:String>
+    <sys:String x:Key="SettingsSignOut">Đăng xuất</sys:String>
+    <sys:String x:Key="SettingsShutdown">Tắt máy</sys:String>
+    <sys:String x:Key="SettingsRestart">Khởi động lại</sys:String>
+    <sys:String x:Key="SettingsQuit">Thoát Office Tool Plus</sys:String>
+    <sys:String x:Key="SaveSettings">Lưu thiết lập về cục bộ.</sys:String>
+    <sys:String x:Key="DisplaySettings">Thiết lập hiển thị</sys:String>
+    <sys:String x:Key="SettingsTopmost">Luôn luôn trên đầu trang.</sys:String>
+    <sys:String x:Key="SettingsBackground">Hình nền</sys:String>
+    <sys:String x:Key="SettingsBackgroundOff">Tắt</sys:String>
+    <sys:String x:Key="SettingsBackgroundBlur">Mơ hồ</sys:String>
+    <sys:String x:Key="SettingsBackgroundAcrylic">Acrylic</sys:String>
+    <sys:String x:Key="SettingsBackgroundBing">Hình nền Bing</sys:String>
+    <sys:String x:Key="SettingsBackgroundLocal">Hình ảnh cục bộ</sys:String>
+    <sys:String x:Key="SettingsChooseBGI">Chọn tập tin</sys:String>
+    <sys:String x:Key="SettingsTransparencyEffectTip">Chỉ có sẵn trong Windows 10.</sys:String>
+    <sys:String x:Key="SettingsOpacity">Độ mờ</sys:String>
+    <sys:String x:Key="SettingsBlurValue">Hình nền mờ</sys:String>
+    <sys:String x:Key="SettingsLanguageName">Tên hiển thị ngôn ngữ:</sys:String>
+    <sys:String x:Key="SettingsNativeName">Tên địa phương</sys:String>
+    <sys:String x:Key="SettingsEnglishName">Tên tiếng Anh</sys:String>
+    <sys:String x:Key="SettingsLocalizedName">Tên biên dịch</sys:String>
+    <sys:String x:Key="SettingsAdvanced">Kích hoạt tính năng nâng cao.</sys:String>
+    <sys:String x:Key="SettingsHWAcceleration">Kích hoạt tăng tốc phần cứng.</sys:String>
+    <sys:String x:Key="SettingsForceRTLLayout">Bắt buộc hướng bố cục phải sang trái (RTL).</sys:String>
+    <!-- About Panel -->
+    <sys:String x:Key="AppInf">Thông tin ứng dụng</sys:String>
+    <sys:String x:Key="Homepage">Trang chủ:</sys:String>
+    <sys:String x:Key="CreatorInfo">Được phát triển bởi Yerong, dựa trên Công cụ triển khai Office.</sys:String>
+    <sys:String x:Key="Copyright">Bản quyền © 2016-{0} Yerong. Đã đăng ký bản quyền.</sys:String>
+    <sys:String x:Key="TrademarkInfo">Microsoft Office là nhãn hiệu đã đăng kí của Tập đoàn Microsoft tại Hoa Kỳ và/hoặc các quốc gia khác.</sys:String>
+    <sys:String x:Key="ServerProvider">Nhà cung cấp máy chủ</sys:String>
+    <sys:String x:Key="Translator">Dịch thuật</sys:String>
+    <sys:String x:Key="OpenSourceNotice">Thông báo mã nguồn mở</sys:String>
+    <sys:String x:Key="OpenSourceDescription">Phần mềm này kết hợp tài liệu từ bên thứ ba.</sys:String>
+    <sys:String x:Key="BackgroundImageSource">Nguồn hình nền</sys:String>
+
+    <!-- Text about Textbox, notice to control the string length. -->
+    <sys:String x:Key="TextBlockCommand">> Gõ lệnh vào đây.</sys:String>
+    <sys:String x:Key="TextBlockResources">Cục bộ, mạng, hoặc đường dẫn HTTP.</sys:String>
+
+    <!-- Task Message -->
+    <sys:String x:Key="Task_DownloadUpdate">Đang tải về cập nhật, đã hoàn tất {0} ({1} trong {2}).</sys:String>
+    <sys:String x:Key="Task_VerifyFiles">Đang xác minh tệp, vui lòng đợi.</sys:String>
+    <sys:String x:Key="Task_DownloadingContent">Đang tải nội dung, vui lòng đợi.</sys:String>
+    <sys:String x:Key="Task_PreparingDownload">Đang chuẩn bị tải Office về.</sys:String>
+    <sys:String x:Key="Task_ODT">Đang triển khai, vui lòng đợi.</sys:String>
+    <sys:String x:Key="Task_OSPP">OSPP hiện đang chạy, vui lòng đợi.</sys:String>
+    <sys:String x:Key="Task_SearchKMSAEvent">Đang tìm kiếm sự kiện kích hoạt KMS trên máy: {0}</sys:String>
+    <sys:String x:Key="Task_SearchIAFEvent">Đang tìm kiếm sự kiện kích hoạt Internet không thành công trên máy: {0}</sys:String>
+    <sys:String x:Key="Task_CheckVersion">Đang truy vấn thông tin phiên bản Office.</sys:String>
+    <sys:String x:Key="Task_CheckKMS">Đang kiểm tra máy chủ KMS.</sys:String>
+    <sys:String x:Key="Task_CollectLog">Đang thu thập nhật ký trình cài đặt Office.</sys:String>
+    <sys:String x:Key="Task_RemoveOffice">Đang xóa Office, vui lòng đợi.</sys:String>
+    <sys:String x:Key="Task_RepairWMI">Đang sửa chữa WMI, vui lòng đợi.</sys:String>
+    <sys:String x:Key="Task_ConvertDocument">Đang chuyển đổi tài liệu Office.</sys:String>
+    <!-- Example: Installing iSlide, please wait. -->
+    <sys:String x:Key="Task_InstallingApp">Đang cài đặt {0}, vui lòng đợi.</sys:String>
+
+    <!-- Question Message -->
+    <sys:String x:Key="QuesUpdateTitle">Cập nhật Office Tool Plus</sys:String>
+    <sys:String x:Key="QuesUpdateAvailable">Đã có bản cập nhật, bạn muốn tải về chứ?</sys:String>
+    <sys:String x:Key="QuesUpdateNow">Cập nhật đã sẵn sàng, bạn muốn khởi động lại ứng dụng ngay bây giờ chứ? Chỉ tốn vài giây thôi.</sys:String>
+    <sys:String x:Key="QuesExit">Office Tool Plus hiện đang làm việc. Bạn vẫn muốn thoát chứ?</sys:String>
+    <sys:String x:Key="QuesOneClickInstallation">Bạn đã chọn cài đặt {0}.&#x000A;Nếu bạn cần chọn ứng dụng hoặc ngôn ngữ, hãy sử dụng tùy chọn cài đặt khác.&#x000A;&#x000A;Nhấn "Có" để cài đặt sau khi tải về, "Không" để cài đặt trong khi tải về, hoặc đóng cửa sổ để huỷ bỏ.</sys:String>
+    <sys:String x:Key="QuesSelectOfficeVersionToDownload">Bạn đã chỉ định phiên bản Office thành {0}, nhưng chúng tôi nhận được phiên bản khác.&#x000A;&#x000A;Nhấn "Có" sẽ tải về Office phiên bản {1}.&#x000A;Nhấn "Không" sẽ tải về Office phiên bản {2}.</sys:String>
+    <sys:String x:Key="QuesVerifyInstallation">Bạn có muốn xác minh tập tin cài đặt Office để tìm lỗi có thể xảy ra không?</sys:String>
+    <sys:String x:Key="QuesInstallation">Sẵn sàng cài đặt Office chứ?</sys:String>
+    <sys:String x:Key="QuesConfiguration">Hãy xem mã để biết cấu hình chi tiết, liệu cấu hình cơ bản ở trên có đúng không?</sys:String>
+    <sys:String x:Key="QuesDeleteFiles">Xoá {0} chứ?</sys:String>
+    <sys:String x:Key="QuesInstallLicenses">Bạn có thể không thấy thông tin kích hoạt trong Office sau khi cài đặt giấy phép Office, nhưng bạn có thể xem thông tin hoặc kích hoạt Office thông qua Office Tool Plus. Bạn muốn tiếp tục chứ?</sys:String>
+    <sys:String x:Key="QuesClearLicenses">Gỡ cài đặt tất cả giấy phép có nghĩa là bạn sẽ cần cài đặt lại giấy phép sau thao tác này. Bạn muốn tiếp tục chứ?</sys:String>
+    <sys:String x:Key="QuesClearActivation">Gỡ cài đặt tất cả khóa và giấy phép có nghĩa là bạn sẽ cần cài đặt lại giấy phép và kích hoạt Office sau thao tác này. Bạn muốn tiếp tục chứ?</sys:String>
+    <sys:String x:Key="QuesClearKeys">Gỡ cài đặt tất cả khóa có nghĩa là bạn sẽ cần cài đặt lại các khóa và kích hoạt Office sau thao tác này. Bạn muốn tiếp tục chứ?</sys:String>
+    <sys:String x:Key="QuesCleanOffice">Bạn vẫn muốn dọn dẹp Office chứ? Sau khi bắt đầu, thao tác này không thể bị hủy bỏ.</sys:String>
+    <sys:String x:Key="QuesAutoShutdown">PC của bạn sẽ đăng xuất/tắt máy/khởi động lại trong 1 phút nữa. Nhấn "Có" để thao tác ngay, hoặc "Không" để huỷ thao tác.</sys:String>
+
+    <!-- Info Message -->
+    <sys:String x:Key="InfoPermission">Office Tool Plus đang chạy với đặc quyền bình thường, một số tính năng không khả dụng.</sys:String>
+    <sys:String x:Key="InfoRestart">Bạn cần khởi động lại ứng dụng để có hiệu lực.</sys:String>
+    <sys:String x:Key="InfoUpdate">Bạn đang sử dụng phiên bản mới nhất của Office Tool Plus.</sys:String>
+    <sys:String x:Key="InfoNoConfigured">Cấu hình không chính xác, hãy kiểm tra và thử lại.</sys:String>
+    <sys:String x:Key="InfoNoLanguagePackAddedForDownload">Chúng tôi đã phát hiện ra bạn chưa thêm ngôn ngữ. Trong hầu hết các trường hợp, chúng tôi khuyên bạn nên thêm ngôn ngữ để tránh sự cố.</sys:String>
+    <sys:String x:Key="InfoAllExist">Không cần tải về, tất cả tập tin đã tồn tại trong máy.</sys:String>
+    <sys:String x:Key="InfoFinishVerifying">Tập tin cài đặt đã được xác minh và không tìm thấy lỗi nào.</sys:String>
+    <sys:String x:Key="InfoDownloading">Office đang được tải về.</sys:String>
+    <sys:String x:Key="InfoSetupExited">Công cụ triển khai Office đã thoát bình thường.</sys:String>
+    <sys:String x:Key="InfoInstallationComplete">Quá trình cài đặt hoàn tất.</sys:String>
+    <sys:String x:Key="InfoInstallationFailed">Quá trình cài đặt không thành công.</sys:String>
+    <sys:String x:Key="InfoNoOfficeDetectedForActivation">Phiên bản Click-to-Run của Office không được phát hiện trên máy tính này, không thể tải giấy phép Office.</sys:String>
+    <sys:String x:Key="Info64BitOfficeForConversion">Bạn đang sử dụng phiên bản Office 64-bit, việc chuyển đổi tài liệu có thể không hoạt động ổn định.</sys:String>
+
+    <!-- Success Message -->
+    <sys:String x:Key="SuccessAddDownloadTask">Đã thêm thành công tác vụ tải về.</sys:String>
+    <sys:String x:Key="SuccessDownloadInstallation">Tập tin cài đặt đã được tải về thành công.</sys:String>
+    <sys:String x:Key="SuccessSave">Đã lưu thành công.</sys:String>
+    <sys:String x:Key="SuccessRepair">Đã sửa chữa thành công.</sys:String>
+
+    <!-- Error Message -->
+    <sys:String x:Key="ErrCreateTempPath">Không thể tạo đường dẫn tạm thời. Hãy kiểm tra biến hệ thống và thử lại.</sys:String>
+    <sys:String x:Key="ErrRunning">Office Tool Plus đã chạy rồi.</sys:String>
+    <sys:String x:Key="ErrAutoUpdate">Đã xảy ra lỗi với bản cập nhật tự động, hãy tải về phiên bản Office Tool Plus mới nhất theo cách thủ công.</sys:String>
+    <sys:String x:Key="ErrFileMissing">Tập tin bị thiếu: {0}</sys:String>
+    <sys:String x:Key="ErrExtracting">Đã xảy ra lỗi khi giải nén tập tin.</sys:String>
+    <sys:String x:Key="ErrInstallationHash">Kiểm tra hàm băm không thành công. Tập tin: {0}&#x000A;Hàm băm: {1}&#x000A;Hàm băm thực tế: {2}</sys:String>
+    <sys:String x:Key="ErrInstallationVersion">Kiểm tra phiên bản không thành công. Tập tin: {0}&#x000A;Phiên bản: {1}&#x000A;Phiên bản máy khách: {2}</sys:String>
+    <sys:String x:Key="ErrInstallationMismatch">Phiên bản không khớp, tập tin: {0}&#x000A;Phiên bản thực tế: {1}&#x000A;Kiến trúc: {2}</sys:String>
+    <sys:String x:Key="ErrVerifyingInstallation">Đã tìm thấy lỗi khi kiểm tra tập tin cài đặt Office, hãy dùng "Trình quản lí tập tin cài đặt" để biết thêm chi tiết lỗi.</sys:String>
+    <sys:String x:Key="ErrReadingInfo">Lỗi khi đọc thông tin Office.</sys:String>
+    <sys:String x:Key="ErrSavingInfo">Lỗi khi lưu thông tin Office.</sys:String>
+    <sys:String x:Key="ErrSetProxy">Đặt proxy không thành công!</sys:String>
+    <sys:String x:Key="ErrGetVersion">Không thể nhận phiên bản Office, hãy thử lại hoặc dùng Công cụ triển khai Office là công cụ tải về.</sys:String>
+    <sys:String x:Key="ErrCreateISO">Không thể tìm thấy tập tin cài đặt Office trong thư mục gốc của Office Tool Plus,hãy tải về tập tin cài đặt trước! Hoặc là di chuyển tập tin cài đặt sang đường dẫn làm việc.</sys:String>
+    <sys:String x:Key="ErrInput">Nhập vào chưa đúng.</sys:String>
+    <!-- Example: Invalid product. ID: ProPlus2021Retail. -->
+    <sys:String x:Key="ErrInvalidProductID">Sản phẩm không hợp lệ. ID: {0}.</sys:String>
+    <sys:String x:Key="ErrSetupExited">Công cụ triển khai Office đã thoát bất thường.</sys:String>
+    <sys:String x:Key="ErrAppNotFound">{0} không được tìm thấy trong máy tính của bạn, hãy xác nhận xem phiên bản Office mới nhất đã được cài đặt chưa.</sys:String>
+
+    <!-- Error Message about Thunder -->
+    <sys:String x:Key="DownloadErrorTitle">Lỗi tải về</sys:String>
+    <sys:String x:Key="ThunderErrorStart">Không thể bắt đầu tác vụ.</sys:String>
+    <sys:String x:Key="ThunderErrorStop">Không thể tạm dừng tác vụ.</sys:String>
+    <sys:String x:Key="ThunderErrorExit">Không thể thoát Thunder.</sys:String>
+    <sys:String x:Key="ThunderErrorPreparation">Không thể khởi tạo Thunder.</sys:String>
+    <sys:String x:Key="ThunderErrorUnknown">Lỗi tải về không rõ.</sys:String>
+    <sys:String x:Key="ThunderErrorCreate">Không thể tạo tập tin.</sys:String>
+    <sys:String x:Key="ThunderErrorDelete">Không thể xoá tập tin.</sys:String>
+    <sys:String x:Key="ThunderErrorFileHash">Không thể xác minh tập tin.</sys:String>
+    <sys:String x:Key="ThunderErrorPieceHash">Không thể xác minh tập tin.</sys:String>
+    <sys:String x:Key="ThunderErrorRead">Không thể đọc tập tin.</sys:String>
+    <sys:String x:Key="ThunderErrorRename">Không thể đổi tên tập tin.</sys:String>
+    <sys:String x:Key="ThunderErrorWrite">Không thể viết tập tin.</sys:String>
+    <sys:String x:Key="ThunderErrorDownInvalid">Địa chỉ không hợp lệ.</sys:String>
+    <sys:String x:Key="ThunderErrorNotIP">Không có IP trong tải về HTTP.</sys:String>
+    <sys:String x:Key="ThunderErrorIDInvalid">ID tác vụ không hợp lệ.</sys:String>
+    <sys:String x:Key="ThunderErrorProxyAuthTypeFailed">Không thể xác thực proxy.</sys:String>
+    <sys:String x:Key="ThunderErrorProxyAuthTypeUnknown">Loại proxy không rõ.</sys:String>
+    <sys:String x:Key="ThunderErrorTimeOut">Hết thời gian chờ tác vụ.</sys:String>
+    <sys:String x:Key="ThunderErrorCrashed">Công cụ Thunder đã bị sập.</sys:String>
+    <sys:String x:Key="ThunderErrorCancel">Đã huỷ bỏ tác vụ.</sys:String>
+</ResourceDictionary>

@@ -11,9 +11,9 @@
 <img alt="License" src="https://img.shields.io/github/license/YerongAI/Office-Tool?style=flat-square"/>
 </p>
 
- > 하나의 유용한 Office 배포도구입니다.
+> 하나의 유용한 Office 배포도구입니다.
 
-아래 제품들에 대한 사용자 정의된 배포와 정품인정 지원:
+아래 제품들에 대한 사용자 정의된 배포와 정품인증을 지원합니다:
 
 - Microsoft 365
 - Office 2016, 2019, 2021
@@ -22,13 +22,13 @@
 
 Office 배포 제외의 다른 기능들:
 
-- Office 17개의 전체 채널을 지원, 조회/다운로드/설치 포함
-- 기존 Office 수정, 제품/응용프로그램/언어팩 추가 및 제거
-- XML 환경설정 파일 도입/수출
-- ISO 파일을 만들어 공유하고 오프라인 설치 가능
-- Office 라이선스 설치 (Office 버전 전환)
-- Office 라이선스와 키 제거
-- 온라인 정품인정/전환 정품인정(오프라인 정품인정)과 KMS 정품인정
+- Office 17개의 전체 채널을 지원합니다
+- 기존 Office 수정, 제품/응용프로그램/언어팩 추가 및 제거하기
+- XML 환경설정 파일 도입/수출하기
+- ISO 파일을 만들어 공유하고 오프라인 설치하기
+- Office 라이선스 설치하기 (Office 버전 전환)
+- Office 라이선스와 키 제거하기
+- 온라인 정품인증(오프라인 정품인증)과 KMS 정품인증
 - Office 강제 제거
 - 재설치 필요 없이 Office 업데이트 채널을 바꾸기
 - 일과로 Office 파일 전환, Office API 기능 사용

@@ -1,19 +1,91 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:sys="clr-namespace:System;assembly=System.RunTime" xml:space="preserve">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=System.RunTime"
+                    xml:space="preserve">
+    
     <!-- Country settings, it is used to get information from server. -->
     <sys:String x:Key="Culture">th-th</sys:String>
-    <!-- Eula Content -->
-    <sys:String x:Key="EulaTitle">เงื่อนไขใบอนุญาต</sys:String>
-    <sys:String x:Key="EulaContent">การใช้งานซอฟต์แวร์นี้ คุณต้องยอมรับ [ข้อกำหนดสิทธิ์การใช้งานซอฟต์แวร์]({0}) และ [ข้อตกลงการบริการของ Microsoft]({1}).</sys:String>
-    <!-- Title Bar -->
-    <sys:String x:Key="ISOMode">โหมด ISO</sys:String>
-    <sys:String x:Key="Command">สั่งการ</sys:String>
-    <sys:String x:Key="Contact">ติดต่อเรา</sys:String>
-    <sys:String x:Key="MinimizeButton">ย่อให้เล็กลง</sys:String>
-    <sys:String x:Key="MaximizeButton">ทำให้ใหญ่ขึ้น</sys:String>
-    <sys:String x:Key="RestoreButton">คืนค่า</sys:String>
-    <sys:String x:Key="CloseButton">ปิด</sys:String>
+    <!-- Products name settings, "en-us" is default value if not set. -->
+    <sys:String x:Key="ProductDict">en-us</sys:String>
+    
+    <!-- Eula content -->
+    <sys:String x:Key="Eula.Title">เงื่อนไขใบอนุญาต</sys:String>
+    <sys:String x:Key="Eula.Content">การใช้งานซอฟต์แวร์นี้ คุณต้องยอมรับ [ข้อกำหนดสิทธิ์การใช้งานซอฟต์แวร์]({0}) และ [ข้อตกลงการบริการของ Microsoft]({1}).</sys:String>
+
+    <!-- Custom control -->
+    <sys:String x:Key="Yerong_String_ToggleButton.Unset">Unset</sys:String>
+    <sys:String x:Key="Yerong_String_ToggleButton.Off">ปิด</sys:String>
+    <sys:String x:Key="Yerong_String_ToggleButton.On">On</sys:String>
+    <sys:String x:Key="Yerong_String_MicaMenu.Name">เมนู</sys:String>
+    <sys:String x:Key="Yerong_String_MicaMenu.HelpText">Click to open context menu.</sys:String>
+    
+    <!-- Title bar -->
+    <sys:String x:Key="Title_Bar_Command_Box">สั่งการ</sys:String>
+
+    <!-- Navigation bar -->
+    <sys:String x:Key="Navigation_Menu.Name">Navigation menu</sys:String>
+    <sys:String x:Key="Navigation_Menu.ToolTip">Click to expand or collapse navigation bar.</sys:String>
+    <sys:String x:Key="Navigation_Bar.Name">Navigation bar</sys:String>
+    <sys:String x:Key="Navigation_Bar_Bottom.Name">Bottom navigation bar</sys:String>
+
+    <sys:String x:Key="Navigate_Page.Home">หน้าแรก</sys:String>
+    <sys:String x:Key="Navigate_Page.Deploy">การปรับใช้</sys:String>
+    <sys:String x:Key="Navigate_Page.Activate">เปิดการใช้งาน</sys:String>
+    <sys:String x:Key="Navigate_Page.Toolbox">กล่องเครื่องมือ</sys:String>
+    <sys:String x:Key="Navigate_Page.ConvertDocuments">แปลงไฟล์เอกสาร</sys:String>
+    <sys:String x:Key="Navigate_Page.HashChecker">Check hash</sys:String>
+
+    <sys:String x:Key="Navigate_Page.Settings">ตั้งค่า</sys:String>
+    <sys:String x:Key="Navigate_Page.About">เกี่ยวกับ</sys:String>
+    
+    <!-- Notification list -->
+    <sys:String x:Key="Notification_Close_Message.Name">Close message</sys:String>
+    <sys:String x:Key="Notification_Message_Content">Message content: {0}, {1}</sys:String>
+    <sys:String x:Key="Notification_Message_Button_List">Message buttons</sys:String>
+    <sys:String x:Key="Notification_Cancel_Task.Name">Cancel task</sys:String>
+
+    <!-- Home page -->
+    <sys:String x:Key="Home_Messages_Center.Name">Messages center</sys:String>
+    <!-- Greetings, customize it according to your country and habits. -->
+    <sys:String x:Key="Home_Greeting_Hello">สวัสดี</sys:String>
+    <!-- 00:00 -> 05:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.0">ดึกแล้ว ขอหลับฝันดีนะ!</sys:String>
+    <!-- 05:00 -> 06:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.5">It's almost dawn, ready to get up?</sys:String>
+    <!-- 06:00 -> 10:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.6">สวัสดี ตอนเช้า</sys:String>
+    <!-- 10:00 -> 11:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.10">สวัสดี ตอนเช้า</sys:String>
+    <!-- 11:00 -> 12:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.11">สวัสดี ตอนบ่าย</sys:String>
+    <!-- 12:00 -> 13:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.12">สวัสดี ตอนบ่าย</sys:String>
+    <!-- 13:00 -> 15:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.13">สวัสดี ตอนบ่าย</sys:String>
+    <!-- 15:00 -> 17:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.15">สวัสดี ตอนบ่าย</sys:String>
+    <!-- 17:00 -> 18:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.17">สวัสดี ตอนบ่าย</sys:String>
+    <!-- 18:00 -> 21:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.18">สวัสดี ตอนดึก</sys:String>
+    <!-- 21:00 -> 22:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.21">Time to sleep, have a nice dream!</sys:String>
+    <!-- 22:00 -> 00:00 (+1) -->
+    <sys:String x:Key="Home_Greeting_Hour.22">ดึกแล้ว ขอหลับฝันดีนะ!</sys:String>
+    <!-- Greetings end -->
+    <sys:String x:Key="Home_Install_Office">ติดตั้ง Office</sys:String>
+    <sys:String x:Key="Home_Install_Office.O365PPRDescription">ประกอบด้วย Outlook, OneDrive for Business, Word, Excel, PowerPoint, และอีกมากมาย</sys:String>
+    <sys:String x:Key="Home_Install_Office.O365HPRDescription">ประกอบด้วย Outlook, Word, Excel, PowerPoint, และอีกมากมาย</sys:String>
+    <sys:String x:Key="Home_Install_Office.PP2019RDescription">ประกอบด้วย Outlook, Word, Excel, PowerPoint, และอีกมากมาย</sys:String>
+    <sys:String x:Key="Home_Install_Office.HS2019Description">ประกอบด้วย Word, Excel, PowerPoint.</sys:String>
+    <sys:String x:Key="Home_Getting_Content">Getting content, please wait...</sys:String>
+    <sys:String x:Key="Home_Error_While_Getting_Content">Unable to get content, please check your Internet connection and try again.</sys:String>
+    <sys:String x:Key="Home_Retry">_ลองอีกครั้ง</sys:String>
+    <sys:String x:Key="Home_Launcher.Name">Application list</sys:String>
+    <sys:String x:Key="Home_Launcher_CreateShortcut">สร้างทางลัดบนเดสก์ท็อป</sys:String>
+
+    <!-- Deploy page -->
+    <sys:String x:Key="Deploy_Learn_More">Learn more</sys:String>
     <!-- Channels Name, if you do not want to translate them, please keep in English. -->
     <sys:String x:Key="PerpetualVL2019">Office 2019 Perpetual Enterprise</sys:String>
     <sys:String x:Key="PerpetualVL2021">Office 2021 Perpetual Enterprise</sys:String>
@@ -23,240 +95,230 @@
     <sys:String x:Key="SemiAnnualPreview">Semi-Annual Enterprise Channel (Preview)</sys:String>
     <sys:String x:Key="CurrentPreview">Current Channel (Preview)</sys:String>
     <sys:String x:Key="BetaChannel">Beta Channel</sys:String>
-    <!-- Global -->
-    <sys:String x:Key="Message">ข้อความ</sys:String>
-    <sys:String x:Key="Notice">ข้อสังเกตุ</sys:String>
-    <sys:String x:Key="Warning">คำเตือน</sys:String>
-    <sys:String x:Key="Error">ข้อผิดพลาด</sys:String>
-    <sys:String x:Key="Yes">_ใช่</sys:String>
-    <sys:String x:Key="No">_ไม่ใช่</sys:String>
-    <sys:String x:Key="OK">_ตกลง</sys:String>
-    <sys:String x:Key="Cancel">_ยกเลิก</sys:String>
-    <sys:String x:Key="Menu">เมนู</sys:String>
-    <sys:String x:Key="OfficeDeploymentTool">เครื่องมือปรับใช้ Office</sys:String>
-    <sys:String x:Key="Version">เวอร์ชั่น:</sys:String>
-    <sys:String x:Key="Branch">การแยกย่อย:</sys:String>
-    <sys:String x:Key="Architecture">สถาปัตยกรรม:</sys:String>
-    <sys:String x:Key="x86">32 บิต</sys:String>
-    <sys:String x:Key="x64">64 บิต</sys:String>
-    <sys:String x:Key="BasicSettings">การตั้งค่าพื้นฐาน</sys:String>
-    <sys:String x:Key="AdvancedSettings">การตั้งค่าขั้นสูง</sys:String>
-    <sys:String x:Key="MatchOS">เข้ากันได้กับระบบปฏิบัติการ</sys:String>
-    <sys:String x:Key="Retry">_ลองอีกครั้ง</sys:String>
-    <sys:String x:Key="Normal">ปกติ</sys:String>
-    <sys:String x:Key="None">ไม่มี</sys:String>
-    <sys:String x:Key="Query">สอบถาม</sys:String>
-    <sys:String x:Key="Uninstall">_ถอนการติดตั้ง</sys:String>
-    <sys:String x:Key="TypeToSearch">พิมพ์เพื่อค้นหา</sys:String>
 
-    <!-- Context Menu -->
-    <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
-    <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
-    <!-- If you can't understand what is hotkey, remove '&amp;' when you are translating. -->
-    <sys:String x:Key="CD-ROM_InstallNow">&amp;ติดตั้งเลยตอนนี้!</sys:String>
-    <sys:String x:Key="CopyToClipboard">คัดลอกไปที่คลิปบอร์ด</sys:String>
+    <!-- Error messages -->
+    <!-- {0} means product name. -->
+    <sys:String x:Key="Deploy_Error_Coexist">{0} can not coexist with existing products.</sys:String>
+    <!-- {0} means product name. -->
+    <sys:String x:Key="Deploy_Error_ODT_Not_Supported">If you want to install {0}, change the installation module to Office Tool Plus.</sys:String>
+    <!-- {0} means product name, {1} means channel name. -->
+    <sys:String x:Key="Deploy_Error_Channel">{0} can not be installed on the selected channel: {1}.</sys:String>
+    <!-- {0} means channel name, such as Current Channel. -->
+    <sys:String x:Key="Deploy_Error_Unsupported_Channel">If you want to use {0}, change the installation module to Office Tool Plus.</sys:String>
+    <sys:String x:Key="Deploy_Error_System_Architecture">You can not install 64-bit of Office on a non-64-bit system.</sys:String>
+    <!-- Example: You can not install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
+    <sys:String x:Key="Deploy_Error_Office_Architecture">You can not install {0} of Office, because you have the {1} of Office installed on your computer.</sys:String>
+    <sys:String x:Key="Deploy_Error_Installation_Arch">The architecture you have selected does not match the architecture of the local installation files, please reselect architecture or do not use the local installation files for deployment.</sys:String>
+    <sys:String x:Key="Deploy_Error_Installation_Channel">The update channel you have selected does not match the update channel of the local installation files, please reselect update channel or do not use the local installation files for deployment.</sys:String>
 
-    <!-- Greetings -->
-    <!-- Showed when app started. -->
-    <sys:String x:Key="GreetingHi">สวัสดี</sys:String>
-    <!-- 06:00 - 10:00 -->
-    <sys:String x:Key="GreetingGoodMorning">สวัสดี ตอนเช้า</sys:String>
-    <!-- 10:00 - 13:00 -->
-    <sys:String x:Key="GreetingGoodAfternoon1">สวัสดี ตอนบ่าย</sys:String>
-    <!-- 13:00 - 18:00 -->
-    <sys:String x:Key="GreetingGoodAfternoon2">สวัสดี ตอนค่ำ</sys:String>
-    <!-- 18:00 - 22:00 -->
-    <sys:String x:Key="GreetingGoodEvening">สวัสดี ตอนดึก</sys:String>
-    <!-- 22:00 - 06:00 (+1) -->
-    <sys:String x:Key="GreetingLateAtNight">ดึกแล้ว ขอหลับฝันดีนะ!</sys:String>
-    <!-- Navigation Bar -->
-    <sys:String x:Key="Home">หน้าแรก</sys:String>
-    <sys:String x:Key="Deploy">การปรับใช้</sys:String>
-    <sys:String x:Key="Activate">เปิดการใช้งาน</sys:String>
-    <sys:String x:Key="Toolbox">กล่องเครื่องมือ</sys:String>
-    <sys:String x:Key="ConvertDocuments">แปลงไฟล์เอกสาร</sys:String>
-    <sys:String x:Key="Settings">ตั้งค่า</sys:String>
-    <sys:String x:Key="About">เกี่ยวกับ</sys:String>
-    <sys:String x:Key="Help">ช่วยเหลือ</sys:String>
-    <!-- Home -->
-    <sys:String x:Key="InstallOffice">ติดตั้ง Office</sys:String>
-    <sys:String x:Key="O365PPRDescription">ประกอบด้วย Outlook, OneDrive for Business, Word, Excel, PowerPoint, และอีกมากมาย</sys:String>
-    <sys:String x:Key="O365HPRDescription">ประกอบด้วย Outlook, Word, Excel, PowerPoint, และอีกมากมาย</sys:String>
-    <sys:String x:Key="PP2019RDescription">ประกอบด้วย Outlook, Word, Excel, PowerPoint, และอีกมากมาย</sys:String>
-    <sys:String x:Key="HS2019Description">ประกอบด้วย Word, Excel, PowerPoint.</sys:String>
-    <sys:String x:Key="OtherInstallOptions">ตัวเลือกการติดตั้งอื่นๆ</sys:String>
-    <sys:String x:Key="OIODescription">เลือกผลิตภัณฑ์หรือภาษาอื่น</sys:String>
-    <sys:String x:Key="CreateShortcut">สร้างทางลัดบนเดสก์ท็อป</sys:String>
-    <sys:String x:Key="ServerUnavailable">ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณ</sys:String>
-    <!-- Deploy Page -->
-    <sys:String x:Key="StartDeploy">เริ่ม _การปรับใช้</sys:String>
-    <sys:String x:Key="DeployViewCode">_เรียกดู XML โค้ด</sys:String>
-    <sys:String x:Key="DeployApplySettings">การใช้การกำหนดลักษณะสำหรับแอปพลิเคชัน Office</sys:String>
-    <sys:String x:Key="DeployExportConfig">ส่งออกการกำหนดค่า</sys:String>
-    <sys:String x:Key="DeployImportConfig">นำเข้าการกำหนดค่า</sys:String>
-    <sys:String x:Key="DeployImportConfigFromWeb">นำเข้าการกำหนดค่าจากเว็บ</sys:String>
-    <!-- Download Panel -->
-    <sys:String x:Key="DownloadPending">รอดำเนินการ</sys:String>
-    <sys:String x:Key="DownloadDownloading">ดาวน์โหลด {0} สำเร็จ</sys:String>
-    <sys:String x:Key="DownloadDownloadingTime">กำลังดาวน์โหลด เวลาที่เหลืออยู่: {0}</sys:String>
-    <sys:String x:Key="DownloadPausing">หยุดชั่วคราว</sys:String>
-    <sys:String x:Key="DownloadPaused">หยุดชั่วคราว</sys:String>
-    <sys:String x:Key="DownloadCreating">การสร้างไฟล์ ISO</sys:String>
-    <sys:String x:Key="DownloadPause">หยุดชั่วคราว</sys:String>
-    <sys:String x:Key="DownloadResume">ทำต่อ</sys:String>
-    <sys:String x:Key="DownloadCancel">ยกเลิก</sys:String>
-    <!-- Product -->
-    <sys:String x:Key="DeployProducts">ผลิตภัณฑ์</sys:String>
-    <sys:String x:Key="DeployProductID">รหัสผลิตภัณฑ์:</sys:String>
-    <sys:String x:Key="DeployAddProduct"> _เพิ่มผลิตภัณฑ์</sys:String>
-    <sys:String x:Key="DeployOpenProductList">เปิดรายการผลิตภัณฑ์</sys:String>
-    <sys:String x:Key="DeployErrorConfig">⚠ ผลิตภัณฑ์นี้ ไม่สามารถใช้งานร่วมกับ ผลิตภัณฑ์ที่มีอยู่ได้</sys:String>
-    <sys:String x:Key="DeployErrorModule">⚠ ในการติดตั้งผลิตภัณฑ์นี้ ให้เปลี่ยนโมดูลการติดตั้งเป็น Office Tool Plus</sys:String>
-    <sys:String x:Key="DeployErrorChannel">⚠ ไม่สามารถติดตั้งผลิตภัณฑ์ในช่องทางนี้ที่เลือกได้: {0}</sys:String>
-    <sys:String x:Key="DeployErrorUnsupportedChannel">⚠ หากคุณต้องการใช้ {0}, เปลี่ยนโมดูลการติดตั้งเป็น Office Tool Plus</sys:String>
-    <sys:String x:Key="DeployErrorSystem">⚠ คุณไม่สามารถติดตั้ง Office 64 บิต บนระบบของคุณได้ เนื่องจากระบบของคุณไม่ใช่ 64 บิต</sys:String>
-    <!-- Example: ⚠ You can not install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
-    <sys:String x:Key="DeployErrorArch">⚠ คุณไม่สามารถติดตั้ง {0} Office เนื่องจากคุณมี {1} Office ติดตั้งไว้บนคอมพิวเตอร์ของคุณอยู่แล้ว</sys:String>
-    <sys:String x:Key="DeployWillUninstall">⚠ เพื่อเป็นการยืนยันว่า คุณจะทำการถอนการติดตั้ง โปรดคลิกที่ปุ่ม "เริ่มการปรับใช้"</sys:String>
-    <sys:String x:Key="DeployApps">แอปพลิเคชั่น</sys:String>
-    <!-- Language -->
-    <sys:String x:Key="LanguagePack">ชุดภาษา</sys:String>
-    <sys:String x:Key="LanguageID">รหัสภาษา:</sys:String>
-    <sys:String x:Key="LanguageType">ประเภทภาษา: {0}</sys:String>
-    <sys:String x:Key="Full">ตัวเต็ม</sys:String>
-    <sys:String x:Key="Partial">บางส่วน</sys:String>
-    <sys:String x:Key="PartialWithoutProofingTools">บางส่วน โดยไม่มี เครื่องมือพิสูจน์อักษร</sys:String>
-    <sys:String x:Key="ProofingTools">เครื่องมือพิสูจน์อักษร</sys:String>
-    <sys:String x:Key="LangFullTip">ชุดภาษาประกอบด้วยภาษาที่แสดงและเครื่องมือพิสูจน์อักษร</sys:String>
-    <sys:String x:Key="LangPartialTip">ชุดภาษาประกอบด้วยภาษาที่ใช้แสดงผลสำหรับแอปพลิเคชัน Office บางส่วน และมีเครื่องมือพิสูจน์อักษร</sys:String>
-    <sys:String x:Key="LangPartialWithoutProofingToolsTip">ชุดภาษามีภาษาที่แสดงสำหรับแอปพลิเคชัน Office บางส่วน แต่ไม่มีเครื่องมือพิสูจน์อักษร</sys:String>
-    <sys:String x:Key="LangProofingToolsTip">ชุดภาษามีเฉพาะเครื่องตรวจตัวสะกดเท่านั้น</sys:String>
-    <sys:String x:Key="DeployAsProof">ปรับใช้เครื่องมือพิสูจน์อักษรเท่านั้น</sys:String>
-    <sys:String x:Key="DeployAddLanguage">เพิ่ม _ชุดภาษา</sys:String>
-    <sys:String x:Key="DeployOpenLanguageList">เปิดรายการภาษา</sys:String>
-    <!-- Advanced Settings -->
-    <sys:String x:Key="DeployOrganizationName">ระบุชื่อองค์กรของคุณเพื่อกำหนดคุณสมบัติของบริษัทในเอกสาร Office</sys:String>
-    <sys:String x:Key="DeployDescription">ระบุรายละเอียดของการกำหนดค่าสำหรับเอกสารประกอบ</sys:String>
-    <!-- Installation Settings -->
-    <sys:String x:Key="DeployInstallationSettings">การตั้งค่าการติดตั้ง</sys:String>
-    <sys:String x:Key="DeployFallbackLanguage">ภาษาทางเลือก:</sys:String>
-    <sys:String x:Key="DeployFallbackLanguageTip">เมื่อภาษาถูกตั้งค่าให้ตรงกับภาษาของระบบ คุณสามารถระบุภาษาทางเลือกที่จะติดตั้งเมื่อ Office ไม่สนับสนุนภาษาที่ตรงกันหรือไม่พบในแหล่งข้อมูลภายในเครื่อง</sys:String>
-    <sys:String x:Key="DeployVersionTip">ค่าเริ่มต้นเป็นเวอร์ชันล่าสุดที่มีให้หากไม่ได้ระบุไว้</sys:String>
-    <sys:String x:Key="DeployGetHistoricalVersions">รับ Office เวอร์ชันเก่าที่พร้อมใช้งาน</sys:String>
-    <sys:String x:Key="DeployDownloadPath">เส้นทางดาวน์โหลด:</sys:String>
-    <sys:String x:Key="DeployDownloadPathTip">กำหนดตำแหน่งที่จะดาวน์โหลดไฟล์การติดตั้ง คุณต้องระบุเวอร์ชั่นเมื่อใช้เส้นทางการดาวน์โหลด</sys:String>
-    <sys:String x:Key="DeploySourcePath">เส้นทางแหล่งที่มา:</sys:String>
-    <sys:String x:Key="DeploySourcePathTip">ถ้าเส้นทางต้นทางว่างเปล่า Office CDN จะถูกใช้เป็นค่าเริ่มต้นเป็นแหล่งที่มา</sys:String>
-    <sys:String x:Key="DeployDisplayLevel">ไม่มีอินเทอร์เฟซปรากฏขึ้นระหว่างการติดตั้ง</sys:String>
-    <sys:String x:Key="DeployAllowCDNFallback">อนุญาตให้โปรแกรมติดตั้งทางเลือก Office CDN เพื่อทดแทนชุดภาษาที่หายไป</sys:String>
-    <sys:String x:Key="DeployForceCloseApps">ปิดแอปพลิเคชัน Office ที่ทำงานอยู่ทั้งหมด</sys:String>
-    <sys:String x:Key="DeployPinIconToTaskbar">ปักหมุดไอคอนไว้ที่ทาสก์บาร์ของ วินโดว์ 7, 8 และ 8.1</sys:String>
-    <!-- Update Settings -->
-    <sys:String x:Key="DeployUpdateSettings">ปรับปรุงการตั้งค่า</sys:String>
-    <sys:String x:Key="DeployEnableUpdate">เปิดใช้งานการอัปเดตอัตโนมัติของ Office</sys:String>
-    <sys:String x:Key="DeployEnableCOM">จัดการการปรับปรุงโดยใช้ ตัวจัดการการกำหนดค่าปลายทางของ Microsoft</sys:String>
-    <sys:String x:Key="DeployUpdatePath">ปรับปรุงแหล่งที่มา:</sys:String>
-    <sys:String x:Key="DeployUpdatePathTip">ถ้าเส้นทางว่างเปล่า Office CDN จะใช้เป็นแหล่งต้นทางตามค่าเริ่มต้น</sys:String>
-    <sys:String x:Key="DeployTargetVersion">เลือกเวอร์ชั่น:</sys:String>
-    <sys:String x:Key="DeployUpdateDeadline">ปรับปรุงกำหนดเวลา:</sys:String>
-    <sys:String x:Key="DeployUpdateChannel">ปรับปรุงช่องทาง:</sys:String>
-    <!-- Upgrade Settings -->
-    <sys:String x:Key="DeployUpgradeSettings">ตัวเลือกการปรับปรุง</sys:String>
-    <sys:String x:Key="DeployMigrateArch">โยกย้ายสถาปัตยกรรม</sys:String>
-    <sys:String x:Key="DeployMigrateArchTip">หากสถาปัตยกรรมโยกย้ายมีการตรวจสอบการติดตั้ง Office ที่มีอยู่จะถูกเปลี่ยนเป็นสถาปัตยกรรมที่ระบุไว้ในปัจจุบัน</sys:String>
-    <sys:String x:Key="DeployForceUpgrade">บังคับปรับปรุง</sys:String>
-    <sys:String x:Key="DeployRemoveMSI">ลบ Office เวอร์ชั่น MSI ที่มีอยู่</sys:String>
-    <sys:String x:Key="DeployIgnoreProduct">ละเว้นผลิตภัณฑ์นี้</sys:String>
-    <sys:String x:Key="DeployMatchPreviousMSI">ติดตั้งภาษาเดียวกับ MSI เวอร์ชั่นก่อนหน้า</sys:String>
-    <!-- Activate Settings -->
-    <sys:String x:Key="DeployActivateSettings">การตั้งค่าการเปิดใช้งาน</sys:String>
-    <sys:String x:Key="DeployAcceptEULA">ยอมรับ EULA โดยอัตโนมัติ</sys:String>
-    <sys:String x:Key="DeployAcceptEULATip">เมื่อเลือกแล้ว กล่องโต้ตอบ "ข้อกำหนดสิทธิ์การใช้งานซอฟต์แวร์ของ Microsoft" จะไม่ปรากฏขึ้น</sys:String>
-    <sys:String x:Key="DeployProductMAK">การตั้งค่า MAK</sys:String>
-    <sys:String x:Key="DeployAutoActivate">หลังจากตั้งค่า MAK เราจะพยายามเปิดใช้งานผลิตภัณฑ์โดยอัตโนมัติ</sys:String>
-    <sys:String x:Key="DeployProductActivation">เปิดใช้งานผลิตภัณฑ์</sys:String>
-    <sys:String x:Key="DeployActivateByUser">อ้างอิงจากผู้ใช้</sys:String>
-    <sys:String x:Key="DeployActivateBySCL">แบ่งปันคอมพิวเตอร์</sys:String>
-    <sys:String x:Key="DeployActivateSCLCacheOverride">อนุญาตให้โทเค็นใบอนุญาตสามารถใช้งานข้ามอุปกรณ์ได้</sys:String>
-    <sys:String x:Key="DeployBasedDevice">อ้างอิงจากอุปกรณ์</sys:String>
-    <!-- App Preferences -->
-    <sys:String x:Key="DeployPreferences">การตั้งค่าแอปพลิเคชัน</sys:String>
-    <sys:String x:Key="DeployPreferencesSearch">พิมพ์เพื่อค้นหาการตั้งค่าแอปพลิเคชัน</sys:String>
-    <sys:String x:Key="DeployPreferencesEnable">เปิดใช้งาน</sys:String>
-    <sys:String x:Key="DeployPreferencesApply">นำไปใช้</sys:String>
-    <sys:String x:Key="DeployPreferencesReset">เริ่มใหม่</sys:String>
-    <sys:String x:Key="DeployPreferencesResetAll">เริ่มการตั้งค่าใหม่ทั้งหมด</sys:String>
-    <!-- Deploy Settings -->
-    <sys:String x:Key="DeploySettings">การตั้งการปรับใช้</sys:String>
-    <sys:String x:Key="DeployChannel">ช่องทาง:</sys:String>
-    <sys:String x:Key="DeployMode">โหมดการปรับใช้:</sys:String>
-    <sys:String x:Key="DeployModeEdit">แก้ไขการกำหนดค่า</sys:String>
-    <sys:String x:Key="DeployModeDownload">ดาวน์โหลด</sys:String>
-    <sys:String x:Key="DeployModeInstall">ติดตั้ง</sys:String>
-    <sys:String x:Key="DeployModeCreateISO">การสร้างไฟล์ ISO</sys:String>
-    <sys:String x:Key="DeployModule">การติดตั้งโมดูล:</sys:String>
-    <sys:String x:Key="DeployModeIAD">ดาวน์โหลดก่อน แล้วจึงทำการปรับใช้</sys:String>
-    <sys:String x:Key="DeployCreateShortcut">สร้างทางลัดบนเดสก์ท็อป</sys:String>
-    <sys:String x:Key="DeployInstalliSlide">ติดตั้ง iSlide.</sys:String>
-    <sys:String x:Key="DeployInstalliSlideDescription">สร้างงานนำเสนอ PowerPoint แบบมืออาชีพ ทำให้การออกแบบง่ายขึ้น</sys:String>
-    <!-- Download Settings -->
-    <sys:String x:Key="DownloadSettings">การตั้งค่าการดาวน์โหลด</sys:String>
-    <sys:String x:Key="DownloadSettingTip">ใช้เฉพาะเมื่อดาวน์โหลด Office</sys:String>
-    <sys:String x:Key="DownloadEngine">ระบบ:</sys:String>
-    <sys:String x:Key="DownloadEngineThunder">โหมดดาวน์โหลดอย่างรวดเร็ว</sys:String>
-    <sys:String x:Key="DownloadAgent">ตัวแทนของผู้ใช้:</sys:String>
-    <sys:String x:Key="DownloadAgentTip">ตามค่าเริ่มต้น Office Tool Plus จะตรวจพบเวอร์ชั่นของระบบปัจจุบัน กำหนดค่าหากคุณต้องการดาวน์โหลดการติดตั้ง Office สำหรับ Windows เวอร์ชั่นอื่น</sys:String>
-    <sys:String x:Key="DownloadUseHTTPS">เชื่อมต่อเพื่อใช้งาน HTTPS</sys:String>
-    <sys:String x:Key="DownloadVerifyInstallations">ตรวจสอบไฟล์การติดตั้ง Office หลังจากดาวน์โหลด</sys:String>
-    <sys:String x:Key="DownloadThunderSettings">การตั้งค่าการดาวน์โหลดอย่างรวดเร็ว</sys:String>
-    <sys:String x:Key="DownloadSpeedLimit">จำกัดความเร็ว:</sys:String>
-    <sys:String x:Key="DownloadProxyType">ประเภทพร็อกซี่:</sys:String>
-    <sys:String x:Key="DownloadServerAddress">ที่อยู่เซิฟเวอร์:</sys:String>
-    <sys:String x:Key="DownloadUserName">ผู้ใช้งาน:</sys:String>
-    <sys:String x:Key="DownloadPassword">รหัสผ่าน:</sys:String>
-    <!-- Installation Manage -->
-    <sys:String x:Key="InstallationFilesManage">ติดตั้งการจัดการไฟล์</sys:String>
-    <sys:String x:Key="InstallationSelectFile">เลือกไฟล์ที่จะติดตั้ง</sys:String>
-    <sys:String x:Key="InstallationVerifyFiles">ตรวจสอบไฟล์</sys:String>
-    <!-- Activate Page -->
-    <sys:String x:Key="ActivateButton">_เปิดการใช้งาน</sys:String>
-    <sys:String x:Key="ActivateViewInformation">แสดงข้อมูลการเปิดใช้งาน</sys:String>
-    <sys:String x:Key="ActivateViewLicenses">แสดงข้อมูลใบอนุญาต</sys:String>
-    <sys:String x:Key="ActivateViewFailureHistory">แสดงประวัติความล้มเหลวในการเปิดใช้งาน MAK/Retail</sys:String>
-    <sys:String x:Key="ActivateViewKMSHistory">แสดงประวัติการเปิดใช้งาน KMS ไคลเอ็นต์</sys:String>
-    <sys:String x:Key="ActivateClearResult">ล้างผลการดำเนินการ</sys:String>
-    <sys:String x:Key="ActivateResult">ผลการดำเนินงาน</sys:String>
-    <!-- Licenses -->
-    <sys:String x:Key="ActivateLicensesManage">จัดการใบอนุญาต</sys:String>
-    <sys:String x:Key="ActivateSelectLicense">เลือกผลิตภัณฑ์:</sys:String>
-    <sys:String x:Key="ActivateInstallLicenses">ติดตั้งใบอนุญาต</sys:String>
-    <sys:String x:Key="ActivateInstallOtherLicenses">ติดตั้งใบอนุญาตอื่น</sys:String>
-    <sys:String x:Key="ActivateClearLicenses">ล้างใบอนุญาต</sys:String>
-    <sys:String x:Key="ActivateRLS">รีเซ็ตสถานะใบอนุญาต Office</sys:String>
-    <sys:String x:Key="ActivateRLSTip">คุณต้องระบุค่ารหัส SKU</sys:String>
-    <sys:String x:Key="ActivateRLSForAll">รีเซ็ตสถานะใบอนุญาตทั้งหมด</sys:String>
-    <sys:String x:Key="ActivateRLSForAllTip">รีเซ็ตสถานะสิทธิ์การใช้งานสำหรับรหัสผลิตภัณฑ์ Office ที่ติดตั้งทั้งหมด หมายความว่าคุณจะต้องเปิดใช้งาน Office อีกครั้งหลังจากการดำเนินการนี้</sys:String>
-    <sys:String x:Key="ActivateClearActivation">ล้างการเปิดการใช้งาน</sys:String>
-    <!-- Key -->
-    <sys:String x:Key="ActivateKeyManage">จัดการรหัส</sys:String>
-    <sys:String x:Key="ActivateProductKey">รหัสผลิตภัณฑ์:</sys:String>
-    <sys:String x:Key="ActivateProductKeyTip">ป้อนรหัสแบบเต็มเพื่อติดตั้ง หรือ อักษร 5 ตัวสุดท้ายของรหัสที่ติดตั้งเพื่อถอนการติดตั้ง</sys:String>
-    <sys:String x:Key="ActivateInstallKey">ติดตั้งรหัส</sys:String>
-    <sys:String x:Key="ActivateUninstallKey">ถอนการติดตั้งรหัส</sys:String>
-    <sys:String x:Key="ActivateUninstallAllKeys">ถอนการติดตั้งรหัสทั้งหมด</sys:String>
-    <sys:String x:Key="ActivateViewIID">ดูรหัสการติดตั้ง (IID)</sys:String>
-    <sys:String x:Key="ActivateInstallCID">ติดตั้งรหัสยืนยัน (CID)</sys:String>
-    <sys:String x:Key="ActivateInstallCIDTip">คุณต้องระบุรหัสเพื่อการยืนยัน (CID)</sys:String>
-    <!-- KMS -->
-    <sys:String x:Key="ActivateKMSManage">จัดการ KMS</sys:String>
-    <sys:String x:Key="ActivateKMSHost">โฮสต์ KMS:</sys:String>
-    <sys:String x:Key="ActivateKMSPort">พอร์ต KMS (ไม่จำเป็น):</sys:String>
-    <sys:String x:Key="ActivateSetKMS">ตั้งโฮสต์ KMS</sys:String>
-    <sys:String x:Key="ActivateSetPort">ตั้งพอร์ต KMS</sys:String>
-    <sys:String x:Key="ActivateEnableCaching">เปิดใช้งานการแคชโฮสต์</sys:String>
-    <sys:String x:Key="ActivateDisableCaching">ปิดใช้งานการแคชโฮสต์</sys:String>
-    <sys:String x:Key="ActivateResetKMS">ลบโฮสต์ KMS (รีเซ็ตพอร์ตเป็นค่าเริ่มต้น)</sys:String>
-    <!-- Content Translation -->
+    <sys:String x:Key="Deploy_Deployment">Deploy Office</sys:String>
+    <sys:String x:Key="Deploy_Deployment.Description">Before deploying Office, make sure that deployment mode is set correctly and the product and language are configured.</sys:String>
+    <sys:String x:Key="Deploy_Start_Deploy">เริ่ม _การปรับใช้</sys:String>
+    <sys:String x:Key="Deploy_Reset">_Reset all settings</sys:String>
+    <sys:String x:Key="Deploy_View_Code">_เรียกดู XML โค้ด</sys:String>
+    <sys:String x:Key="Deploy_Apply_Preferences">_Apply preferences for Office applications</sys:String>
+    <sys:String x:Key="Deploy_Export_Config">_Export configuration</sys:String>
+    <sys:String x:Key="Deploy_Import_Config">_Import configuration</sys:String>
+    <sys:String x:Key="Deploy_Import_Config_Web">Import configuration from _Web</sys:String>
+    <sys:String x:Key="Deploy_Mode">Deployment mode</sys:String>
+    <sys:String x:Key="Deploy_Mode.Edit">แก้ไขการกำหนดค่า</sys:String>
+    <sys:String x:Key="Deploy_Mode.Download">ดาวน์โหลด</sys:String>
+    <sys:String x:Key="Deploy_Mode.Install">ติดตั้ง</sys:String>
+    <sys:String x:Key="Deploy_Mode.Create_ISO">การสร้างไฟล์ ISO</sys:String>
+    <sys:String x:Key="Deploy_Architecture">Architecture</sys:String>
+    <sys:String x:Key="Deploy_Architecture.x86">32 บิต</sys:String>
+    <sys:String x:Key="Deploy_Architecture.x64">64 บิต</sys:String>
+    <sys:String x:Key="Deploy_Channel">Update channel</sys:String>
+    <sys:String x:Key="Deploy_Module">Installation module</sys:String>
+    <sys:String x:Key="Deploy_Module.ODT">เครื่องมือปรับใช้ Office</sys:String>
+    <sys:String x:Key="Deploy_Module.OTP">Office Tool Plus</sys:String>
+    <sys:String x:Key="Deploy_Download_First">Download first, then deploy</sys:String>
+    <sys:String x:Key="Deploy_Download_First.Description">The installation files will be saved in the program directory or the directory specified by source path.</sys:String>
+    <sys:String x:Key="Deploy_Create_Shortcut">Create desktop shortcuts</sys:String>
+    <sys:String x:Key="Deploy_Create_Shortcut.Description">Create desktop shortcuts to Office applications after Office installation.</sys:String>
+    <!-- Do not edit it or translate it. iSlide only provided in mainland China. -->
+    <sys:String x:Key="Deploy_iSlide">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_iSlide.Description">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_iSlide_Install">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_iSlide_Install.Name">PlaceHolder</sys:String>
+
+    <sys:String x:Key="Deploy_Product">ผลิตภัณฑ์</sys:String>
+    <sys:String x:Key="Deploy_Product.Description">{0} installed product(s), {1} ready to deploy and {2} ready to uninstall.</sys:String>
+    <sys:String x:Key="Deploy_Product_Button">Add _products</sys:String>
+    <sys:String x:Key="Deploy_Product_Nothing_Here">There's nothing here.</sys:String>
+    <sys:String x:Key="Deploy_Product_Installed">Installed product(s)</sys:String>
+    <sys:String x:Key="Deploy_Product_To_Be_Deployed">To be deployed</sys:String>
+    <sys:String x:Key="Deploy_Product_To_Be_Uninstalled">To be uninstalled</sys:String>
+    <sys:String x:Key="Deploy_Uninstall_Product">Uninstall</sys:String>
+    <sys:String x:Key="Deploy_Cancel_Uninstall_Product">Cancel uninstall</sys:String>
+    <sys:String x:Key="Deploy_Cancel_Deploy_Product">Cancel deployment</sys:String>
+    <sys:String x:Key="Deploy_Applications">แอปพลิเคชั่น</sys:String>
+    <sys:String x:Key="Deploy_Language">ชุดภาษา</sys:String>
+    <sys:String x:Key="Deploy_Language.Description">{0} installed langauge(s), {1} ready to deploy and {2} ready to uninstall.</sys:String>
+    <sys:String x:Key="Deploy_Language_Button">Add _languages</sys:String>
+    <sys:String x:Key="Deploy_Language_Nothing_Here">There's nothing here.</sys:String>
+    <sys:String x:Key="Deploy_Language_Installed">Installed language(s)</sys:String>
+    <sys:String x:Key="Deploy_Language_To_Be_Deployed">To be deployed</sys:String>
+    <sys:String x:Key="Deploy_Language_To_Be_Uninstalled">To be uninstalled</sys:String>
+    <sys:String x:Key="Deploy_Uninstall_Language">Uninstall</sys:String>
+    <sys:String x:Key="Deploy_Cancel_Uninstall_Language">Cancel uninstall</sys:String>
+    <sys:String x:Key="Deploy_Cancel_Deploy_Language">Cancel deployment</sys:String>
+    
+    <sys:String x:Key="Deploy_Products_List">Products list</sys:String>
+    <sys:String x:Key="Deploy_Products_List_Type_To_Search">Type to filter the products list</sys:String>
+    <sys:String x:Key="Deploy_Products_List_ID">รหัสผลิตภัณฑ์:</sys:String>
+    <sys:String x:Key="Deploy_Languages_List">Languages list</sys:String>
+    <sys:String x:Key="Deploy_Languages_List_Type_To_Search">Type to filter the languages list</sys:String>
+    <sys:String x:Key="Deploy_Languages_As_Proofing_Tool">ปรับใช้เครื่องมือพิสูจน์อักษรเท่านั้น</sys:String>
+    <sys:String x:Key="Deploy_Languages_List_ID">รหัสภาษา:</sys:String>
+    <sys:String x:Key="Deploy_Languages_List_Type">Language type:</sys:String>
+    <sys:String x:Key="Deploy_Language_Tpye.Full">ตัวเต็ม</sys:String>
+    <sys:String x:Key="Deploy_Language_Tpye.Partial">บางส่วน</sys:String>
+    <sys:String x:Key="Deploy_Language_Tpye.PartialWithoutProofingTools">บางส่วน โดยไม่มี เครื่องมือพิสูจน์อักษร</sys:String>
+    <sys:String x:Key="Deploy_Language_Tpye.ProofingTools">เครื่องมือพิสูจน์อักษร</sys:String>
+    
+    <sys:String x:Key="Deploy_Installation_Files">Installation files</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files.Description">Select, verify or delete Office installation files.</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Select">Select</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Select.Description">When selecting the installation files, select any of the CAB files.</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Verify">Verify</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Verify.Description">Verify the installation files for errors.</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_DeleteAll">Delete all</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Reset">เริ่มใหม่</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Reset.Description">Do not use the current installation files to deploy Office.</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_UseAsSource">Use as source</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_UseAsSource.Description">The architecture and update channel will automatically match this installation.</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Delete">Delete</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Settings">Go to advanced settings</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Settings.Description">Go to advanced settings to set more options.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Settings_Button">_Advanced settings</sys:String>
+    
+    <!-- Deploy advanced page -->
+    <sys:String x:Key="Deploy_Advanced">การตั้งค่าขั้นสูง</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Go_Back">Go back</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Go_Back.Description">Back to basic settings.</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_General_Settings">General settings</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Company_Name">ระบุชื่อองค์กรของคุณเพื่อกำหนดคุณสมบัติของบริษัทในเอกสาร Office</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Description">ระบุรายละเอียดของการกำหนดค่าสำหรับเอกสารประกอบ</sys:String>
+    
+    <sys:String x:Key="Deploy_Advanced_Install_Settings">Install settings</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Fallback_Language">Fallback language</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Fallback_Language.Description">เมื่อภาษาถูกตั้งค่าให้ตรงกับภาษาของระบบ คุณสามารถระบุภาษาทางเลือกที่จะติดตั้งเมื่อ Office ไม่สนับสนุนภาษาที่ตรงกันหรือไม่พบในแหล่งข้อมูลภายในเครื่อง</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Version">Office version</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Version.Description">ค่าเริ่มต้นเป็นเวอร์ชันล่าสุดที่มีให้หากไม่ได้ระบุไว้</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Download_Path">Download path</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Download_Path.Description">Defines where the installation files are downloaded from, you must specify Office version when using download path.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Source_Path">Source path</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Source_Path.Description">ถ้าเส้นทางต้นทางว่างเปล่า Office CDN จะถูกใช้เป็นค่าเริ่มต้นเป็นแหล่งที่มา</sys:String>
+    <sys:String x:Key="Deploy_Advanced_No_Display">Silent install</sys:String>
+    <sys:String x:Key="Deploy_Advanced_No_Display.Description">No progress bars, error messages, or other user interface are displayed during Office installation.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback">Allow fallback to CDN</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback.Description">Allow Office installer to fallback to Office CDN to download the missing languages.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Force_Close_Apps">Force close all running Office applications</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar">Pin to taskbar</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar.Description">Pin Office applications icons to taskbar on Windows 7, 8 and 8.1.</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Update_Settings">ปรับปรุงการตั้งค่า</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM">Manage updates using MECM.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM.Description">When managing updates using Microsoft Endpoint Configuration Manager, updates are managed by administrator.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Enable_Update">Enable Office automatic update</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Update_Path">Update source</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Update_Path.Description">ถ้าเส้นทางว่างเปล่า Office CDN จะใช้เป็นแหล่งต้นทางตามค่าเริ่มต้น</sys:String>
+    
+    <sys:String x:Key="Deploy_Advanced_Upgrade_Settings">ตัวเลือกการปรับปรุง</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Migrate_Arch">โยกย้ายสถาปัตยกรรม</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Migrate_Arch.Description">Change the existing Office installation to the currently specified architecture. For example, from 32 bit to 64 bit.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Remove_MSI">ลบ Office เวอร์ชั่น MSI ที่มีอยู่</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Match_Previous_MSI">ติดตั้งภาษาเดียวกับ MSI เวอร์ชั่นก่อนหน้า</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Ignore_Product">Ignore this products</sys:String>
+    
+    <sys:String x:Key="Deploy_Advanced_Activate_Settings">การตั้งค่าการเปิดใช้งาน</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Accept_EULA">Automatically accept the EULA</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Accept_EULA.Description">When enabled, the "Microsoft Software License Terms" dialog box will not be displayed.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_MAK">การตั้งค่า MAK</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Auto_Activate">หลังจากตั้งค่า MAK เราจะพยายามเปิดใช้งานผลิตภัณฑ์โดยอัตโนมัติ</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Product_Activation">Product activation</sys:String>
+    <sys:String x:Key="Deploy_Advanced_UserBased">User based</sys:String>
+    <sys:String x:Key="Deploy_Advanced_DeviceBased">Device based</sys:String>
+    <sys:String x:Key="Deploy_Advanced_SCL">Shared computer</sys:String>
+    <sys:String x:Key="Deploy_Advanced_SCL_Cache_Override">Overwrite licensing token location</sys:String>
+    <sys:String x:Key="Deploy_Advanced_SCL_Cache_Override.ToolTip">Specify a folder location for the licensing token.</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Preferences">การตั้งค่าแอปพลิเคชัน</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Apply_Preferences.Description">Apply application preferences to Office applications immediately.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Reset_Preferences">Reset all application preferences</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Reset_Preferences_Button">เริ่มใหม่</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Load_Preferences_Button">Load application preferences</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Type_To_Search.Name">Search application preferences</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Type_To_Search.HelpText">พิมพ์เพื่อค้นหาการตั้งค่าแอปพลิเคชัน</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Settings">ตั้งค่า</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Enable">เปิดใช้งาน</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Set_Preferences_Button">นำไปใช้</sys:String>
+
+    <!-- Activate page -->
+    <sys:String x:Key="Activate_Activation">Activation</sys:String>
+    <sys:String x:Key="Activate_Activation.Description">Activate or view your Office licenses.</sys:String>
+    <sys:String x:Key="Activate_Button">_เปิดการใช้งาน</sys:String>
+    <sys:String x:Key="Activate_Display_Activation">แสดงข้อมูลการเปิดใช้งาน</sys:String>
+    <sys:String x:Key="Activate_Display_Licenses">แสดงข้อมูลใบอนุญาต</sys:String>
+    <sys:String x:Key="Activate_Display_FailureHistory">แสดงประวัติความล้มเหลวในการเปิดใช้งาน MAK/Retail</sys:String>
+    <sys:String x:Key="Activate_Display_KMSHistory">แสดงประวัติการเปิดใช้งาน KMS ไคลเอ็นต์</sys:String>
+    <sys:String x:Key="Activate_Clear_Activation">ล้างการเปิดการใช้งาน</sys:String>
+    
+    <sys:String x:Key="Activate_Licenses_Management">Licenses management</sys:String>
+    <sys:String x:Key="Activate_Licenses_Management.Description">Install, uninstall or reset Office licenses.</sys:String>
+    <sys:String x:Key="Activate_Install_Licenses">ติดตั้งใบอนุญาต</sys:String>
+    <sys:String x:Key="Activate_Install_Licenses.Description">Get licenses from installed Office and install them.</sys:String>
+    <sys:String x:Key="Activate_Install_Licenses_Button">ติดตั้ง</sys:String>
+    <sys:String x:Key="Activate_Install_Other_Licenses">ติดตั้งใบอนุญาตอื่น</sys:String>
+    <sys:String x:Key="Activate_Install_Other_Licenses.Description">Install other licenses from local disk.</sys:String>
+    <sys:String x:Key="Activate_Install_Other_Licenses_Button">ติดตั้ง</sys:String>
+    <sys:String x:Key="Activate_Uninstall_All_Licenses">Uninstall all licenses</sys:String>
+    <sys:String x:Key="Activate_Uninstall_All_Licenses.Description">Uninstall all installed licenses. You will need to install license after this operation.</sys:String>
+    <sys:String x:Key="Activate_Uninstall_All_Licenses_Button">Uninstall</sys:String>
+    <sys:String x:Key="Activate_Reset_License">รีเซ็ตสถานะใบอนุญาต Office</sys:String>
+    <sys:String x:Key="Activate_Reset_License.Description">Reset the licensing status of a specific license. You need to provide a SKU ID.</sys:String>
+    <sys:String x:Key="Activate_Reset_License_Button">เริ่มใหม่</sys:String>
+    <sys:String x:Key="Activate_Input_SKU_ID">Please enter the SKU ID</sys:String>
+    <sys:String x:Key="Activate_Reset_All_Licenses">รีเซ็ตสถานะใบอนุญาตทั้งหมด</sys:String>
+    <sys:String x:Key="Activate_Reset_All_Licenses.Description">Reset the licensing status for all installed Office product keys. You will need to reactivate Office after this operation.</sys:String>
+    <sys:String x:Key="Activate_Reset_All_Licenses_Button">เริ่มใหม่</sys:String>
+        
+    <sys:String x:Key="Activate_Keys_Management">Keys management</sys:String>
+    <sys:String x:Key="Activate_Keys_Management.Description">Install, uninstall keys or activate Office offline.</sys:String>
+    <sys:String x:Key="Activate_Product_Key">Product key</sys:String>
+    <sys:String x:Key="Activate_Product_Key.Description">Install Office product key, product key format: XXXXX-XXXXX-XXXXX-XXXXX-XXXXX.</sys:String>
+    <sys:String x:Key="Activate_Install_Product_Key">_Install key</sys:String>
+    <sys:String x:Key="Activate_Uninstall_Product_Key">_Uninstall key</sys:String>
+    <sys:String x:Key="Activate_Input_Key">Please enter the last five characters of the key</sys:String>
+    <sys:String x:Key="Activate_Uninstall_All_Product_Keys">Uninstall _all keys</sys:String>
+    <sys:String x:Key="Activate_View_IID">View installation ID</sys:String>
+    <sys:String x:Key="Activate_View_IID.Description">Get the installation ID, you can activate Office offline by phone activation, etc.</sys:String>
+    <sys:String x:Key="Activate_Install_CID">Install confirmation ID</sys:String>
+    <sys:String x:Key="Activate_Install_CID.Description">Install confirmation ID to activate Office offline.</sys:String>
+    <sys:String x:Key="Activate_Input_CID">Please enter the confirmation ID</sys:String>
+
+    <sys:String x:Key="Activate_KMS_Management">จัดการ KMS</sys:String>
+    <sys:String x:Key="Activate_KMS_Management.Description">Set or reset the KMS host or port.</sys:String>
+    <sys:String x:Key="Activate_KMS_Apply">_Set host</sys:String>
+    <sys:String x:Key="Activate_KMS_Host">KMS host</sys:String>
+    <sys:String x:Key="Activate_KMS_Host.Description">KMS host name. For example, kms.example.com, kms.example.com:1688 or IP address.</sys:String>
+    <sys:String x:Key="Activate_KMS_Host_Cache.Enable">เปิดใช้งานการแคชโฮสต์</sys:String>
+    <sys:String x:Key="Activate_KMS_Host_Cache.Disable">ปิดใช้งานการแคชโฮสต์</sys:String>
+    <sys:String x:Key="Activate_KMS_Reset">Reset KMS</sys:String>
+    <sys:String x:Key="Activate_KMS_Reset.Description">Remove KMS host name and set KMS port to default.</sys:String>
+
+    <sys:String x:Key="Activate_Outputs">Outputs</sys:String>
+    <sys:String x:Key="Activate_Outputs.Description">Operation results, the latest one are at the top.</sys:String>
+    <sys:String x:Key="Activate_Clear_Outputs">_Clear outputs</sys:String>
+    
+    <sys:String x:Key="Activate_Licenses_List">Licenses list</sys:String>
+    <sys:String x:Key="Activate_Licenses_List_Type_To_Search">Type to filter the licenses list</sys:String>
+    <sys:String x:Key="Activate_Licenses_List_ID">รหัสผลิตภัณฑ์:</sys:String>
+    
+    <!-- Activate content translation -->
     <sys:String x:Key="ActivationTitle">การประมวลผลการเปิดใช้งาน Office</sys:String>
     <sys:String x:Key="LicenseDescription">คำอธิบายใบอนุญาต: </sys:String>
     <sys:String x:Key="LicenseStatus">สถานะใบอนุญาต: </sys:String>
@@ -288,8 +350,8 @@
     <sys:String x:Key="ILicense">การติดตั้งใบอนุญาต Office: </sys:String>
     <sys:String x:Key="ILicenseSuccess">ติดตั้งใบอนุญาต Office สำเร็จแล้ว</sys:String>
     <sys:String x:Key="InstallationID">รหัสการติดตั้ง:</sys:String>
-    <sys:String x:Key="NoKMSEvent">ไม่พบกิจกรรมการเปิดใช้งาน KMS บนเครื่อง: </sys:String>
-    <sys:String x:Key="NoIAEvent">ไม่พบ เหตุการณ์ความล้มเหลวในเครื่อง: </sys:String>
+    <sys:String x:Key="NoKMSEvent">No KMS activation events found on machine: {0}</sys:String>
+    <sys:String x:Key="NoIAEvent">No failure events found on machine: {0}</sys:String>
     <sys:String x:Key="NoEvents">ไม่พบ เหตุการณ์</sys:String>
     <sys:String x:Key="SuccessEvent">เหตุการณ์การเปิดใช้งานสำเร็จ: </sys:String>
     <sys:String x:Key="FailureEvent">เหตุการณ์การเปิดใช้งานล้มเหลว: </sys:String>
@@ -309,262 +371,453 @@
     <sys:String x:Key="HostCachingEnabled">เปิดการใช้งาน</sys:String>
     <sys:String x:Key="HostCachingDisabled">ปิดการใช้งาน</sys:String>
     <sys:String x:Key="HostRegOverride">KMS ของเครื่อง: </sys:String>
-    <!-- Toolbox Page -->
-    <sys:String x:Key="CommonTools">เครื่องมือทั่วไป</sys:String>
-    <sys:String x:Key="RepairTools">ซ่อมแซมเครื่องมือ</sys:String>
-    <sys:String x:Key="ToolboxSave">บันทึก</sys:String>
-    <sys:String x:Key="ToolboxStart">เริ่ม</sys:String>
-    <sys:String x:Key="ToolboxRepair">ซ่อมแซม</sys:String>
-    <!-- Common Tools -->
-    <sys:String x:Key="ToolboxChangeChannel">เปลี่ยนช่องทางการปรับปรุง Office</sys:String>
-    <sys:String x:Key="ToolboxChangeChannelDescription">การเปลี่ยนช่องทางการปรับปรุงทำให้คุณสามารถอัปเกรดหรือดาวน์เกรด Office ได้โดยไม่ต้องติดตั้งใหม่</sys:String>
-    <sys:String x:Key="ToolboxChangeOwner">เปลี่ยนเจ้าของผลิตภัณฑ์ Office</sys:String>
-    <sys:String x:Key="ToolboxChangeOwnerDescription">ชื่อจะปรากฏบนหน้าบัญชีของแอปพลิเคชัน Office&#x000A;&#x000A;หากต้องการเปลี่ยนเจ้าของผลิตภัณฑ์ที่ระบุ ให้ใช้รูปแบบนี้: รหัสผลิตภัณฑ์:ชื่อ&#x000A;&#x000A;การตั้งชื่อว่างจะเปลี่ยนกลับเป็นค่าเริ่มต้น</sys:String>
-    <sys:String x:Key="ToolboxChangeOwnerName">ชื่อ:</sys:String>
-    <sys:String x:Key="ToolboxChangeOwnerNameTip">OllyMaster และ ProPlus2019Volume:OllyMaster</sys:String>
-    <sys:String x:Key="ToolboxCheckVersion">สอบถามเวอร์ชั่น Office</sys:String>
-    <sys:String x:Key="ToolboxCheckVersionDescription">แสดงข้อมูล ช่องทาง Office, รวมไปถึง เวอร์ชั่น และ ส่วนขยาย</sys:String>
-    <sys:String x:Key="ToolboxCheckVersionCheckInternalChannel">รวมไปถึงช่องทางภายใน</sys:String>
-    <sys:String x:Key="ToolboxCheckVersionUseCache">ใช้งานแคช</sys:String>
-    <sys:String x:Key="CheckVersionCreatedTimeUTC">สร้างเวลา (UTC):</sys:String>
-    <sys:String x:Key="QueryErrorCode">สอบถามข้อมูลรหัสข้อผิดพลาด</sys:String>
-    <sys:String x:Key="QueryErrorCodeDescription">รหัสข้อผิดพลาดมักจะเริ่มต้นด้วย '0x' ตัวอย่าง: 0x2 หรือ 0x80070002</sys:String>
-    <sys:String x:Key="ToolboxCheckKMS">ตรวจสอบสถานะของ KMS</sys:String>
-    <sys:String x:Key="ToolboxCheckKMSDescription">KMS พอร์ต ตัวอัษรแต่ละจะคั่นด้วยเครื่องหมายจุลภาคหรือขึ้นบรรทัดใหม่ คุณยังสามารถเพิ่มพอร์ตได้</sys:String>
-    <sys:String x:Key="CheckKMSConnectionFailed">ทำการเชื่อมต่อล้มเหลว!</sys:String>
-    <sys:String x:Key="CheckKMSConnectionSuccessful">ทำการเชื่อมต่อสำเร็จ</sys:String>
-    <sys:String x:Key="CheckKMSActivationSuccessful">การเชื่อมต่อสำเร็จ การทดสอบการเปิดใช้งานสำเร็จ</sys:String>
-    <sys:String x:Key="ToolboxCollectLog">รวบรวมบันทึกการติดตั้ง Office</sys:String>
-    <sys:String x:Key="ToolboxCollectLogDescription">รวบรวมบันทึกเพื่อวิเคราะห์และแก้ไขปัญหา</sys:String>
-    <sys:String x:Key="ToolboxBackupOrRestoreSettings">สำรองหรือกู้คืนการตั้งค่า Office</sys:String>
-    <sys:String x:Key="ToolboxBackupOrRestoreSettingsDescription">สำรองหรือกู้คืนการตั้งค่าแอปพลิเคชัน Office ของคุณ ไม่รวมไฟล์และเนื้อหา ก่อนเริ่มต้น โปรดปิดแอปพลิเคชัน Office ทั้งหมด&#x000A;&#x000A;คำแนะนำ: อย่าเปิดเผยข้อมูลสำรองของคุณกับผู้อื่น เพราะอาจทำให้ข้อมูลส่วนตัวของคุณรั่วไหลได้</sys:String>
-    <sys:String x:Key="ToolboxBackupSettingsExcludePersonalInf">ยกเว้นข้อมูลส่วนบุคคล</sys:String>
-    <sys:String x:Key="ToolboxBackup">สำรองข้อมูล</sys:String>
-    <sys:String x:Key="ToolboxRestore">กู้คืนข้อมูล</sys:String>
-    <!-- Repair Tools -->
-    <sys:String x:Key="ToolboxRemoveOffice">ลบ Office</sys:String>
-    <sys:String x:Key="ToolboxRODescription">การดำเนินการนี้จะลบส่วนประกอบ ไฟล์ และรีจิสทรีที่เกี่ยวข้องกับ Office หากการล้างข้อมูลล้มเหลว ให้ลองอีกสองสามครั้งหรือทำอย่างอื่น&#x000A;&#x000A;หมายเหตุ: ควรใช้ฟีเจอร์นี้เฉพาะในกรณีที่ไม่สามารถถอนการติดตั้ง Office ได้อย่างถูกต้อง</sys:String>
-    <sys:String x:Key="ToolboxRemoveViaOfficial">ลบ Office ผ่านเครื่องมืออย่างเป็นทางการ</sys:String>
-    <sys:String x:Key="ToolboxRemoveViaOfficeToolPlus">ลบ Office ผ่าน Office Tool Plus</sys:String>
-    <sys:String x:Key="ToolboxRemoveUWPOffice">ลบการติดตั้งแอป Microsoft Store ของ Office</sys:String>
-    <sys:String x:Key="ToolboxRemoveOfficeDone">สิ้นสุดการลบ Office</sys:String>
-    <sys:String x:Key="ToolboxRepairOfficeDocumentIcon">ซ่อมแซมไอคอนเอกสาร Office</sys:String>
-    <sys:String x:Key="ToolboxRepairODIDescription">การดำเนินการนี้จะรีเซ็ตการเชื่อมโยงเอกสาร Office เมื่อเสร็จแล้ว คุณจะต้องใช้การแก้ไขด่วนของ Office ด้วย</sys:String>
-    <sys:String x:Key="ToolboxResetSPPSvc">รีเซ็ตบริการป้องกันซอฟต์แวร์</sys:String>
-    <sys:String x:Key="ToolboxResetSPPSvcDescription">การดำเนินการนี้จะรีเซ็ตการกำหนดค่าของบริการป้องกันซอฟต์แวร์ นำไปใช้กับ "การเรียกใช้เซิร์ฟเวอร์ล้มเหลว (0x80080005)" หรือ "ข้อมูลไม่ถูกต้อง (0x8007000D)" เมื่อเปิดใช้งาน Office</sys:String>
-    <sys:String x:Key="ToolboxRebuildActivationToken">สร้างโทเค็นการเปิดใช้งานอีกครั้ง</sys:String>
-    <sys:String x:Key="ToolboxRebuildActivationTokenDescription">การดำเนินการนี้จะสร้างโทเค็นการเปิดใช้งาน Windows ใหม่ภายใต้ "%SystemRoot%\System32\spp\store\2.0".&#x000A;&#x000A;นำไปใช้กับ "เกิดข้อผิดพลาดที่ไม่รู้จัก", "การใช้ใบอนุญาตล้มเหลว (0xC004E015)" หรือ "โทเค็นในร้านค้าโทเค็น มีแฮชที่ไม่ถูกต้อง (0x8004E108)" เมื่อเปิดใช้งาน Office&#x000A;&#x000A;หมายเหตุ: สถานะการเปิดใช้งาน Windows ของคุณอาจสูญหาย</sys:String>
-    <sys:String x:Key="ToolboxRepairGenuineWarning">ซ่อมปัญหาใบอนุญาต Office</sys:String>
-    <sys:String x:Key="ToolboxRepairGenuineWarningDescription">หาก Office ของคุณแสดงข้อความว่า "ใบอนุญาต Office ของคุณไม่ใช่ของแท้" คุณสามารถตั้งค่าโฮสต์ KMS เพื่อแก้ไขปัญหาได้ การดำเนินการนี้จะเขียนโฮสต์ KMS ไปยังการกำหนดค่าบริการการป้องกันซอฟต์แวร์</sys:String>
-    <sys:String x:Key="ToolboxRepairVBS">ซ่อมแซมความสัมพันธ์ของไฟล์ VBS</sys:String>
-    <sys:String x:Key="ToolboxRepairVBSDescription">การดำเนินการนี้จะสร้างการเชื่อมโยงไฟล์ VBS ใหม่และนำไปใช้กับการเปิดใช้งาน Office ด้วยข้อความแจ้ง "ไม่มีโปรแกรมสคริปต์สำหรับนามสกุลไฟล์ ".vbs"</sys:String>
-    <sys:String x:Key="ToolboxRepairVariables">ซ่อมแซมระบบของตัวแปร</sys:String>
-    <sys:String x:Key="ToolboxRepairVariablesDescription">การดำเนินการนี้จะรีเซ็ตตัวแปรระบบของคุณเป็นค่าเริ่มต้น อย่าใช้มันหากคุณไม่แน่ใจ&#x000A;&#x000A;หลังจากการซ่อมแซมเสร็จสิ้น คุณจะต้องรีบูตระบบเพื่อให้ระบบมีผล</sys:String>
-    <sys:String x:Key="ToolboxRepairWMI">ซ่อมแซมส่วนประกอบ WMI</sys:String>
-    <sys:String x:Key="ToolboxRepairWMIDescription">การดำเนินการนี้จะลงทะเบียนคอมโพเนนต์ WMI อีกครั้ง อย่าใช้มันหากคุณไม่แน่ใจ&#x000A;&#x000A;หลังจากการซ่อมแซมเสร็จสิ้น คุณจะต้องรีบูตระบบเพื่อให้ระบบมีผล</sys:String>
-    <sys:String x:Key="ToolboxResetOfficeSettings">รีเซ็ตการตั้งค่า Office เป็นค่าเริ่มต้น</sys:String>
-    <sys:String x:Key="ToolboxResetOfficeSettingsDescription">รีเซ็ต Office เป็นการตั้งค่าเริ่มต้นตามที่คุณต้องการ ก่อนเริ่มต้น โปรดปิดแอปพลิเคชัน Office ทั้งหมด</sys:String>
-    <sys:String x:Key="ToolboxResetOfficeSettingsUserSettings">ลบการตั้งค่าผู้ใช้ปัจจุบัน (รวมถึงการตั้งค่าแอปพลิเคชัน Office ไฟล์ที่เปิดล่าสุด และตำแหน่งที่บันทึกล่าสุด)</sys:String>
-    <sys:String x:Key="ToolboxResetOfficeSettingsUserProfiles">ลบโปรไฟล์แอปพลิเคชัน (รวมถึงแคชของแอปพลิเคชัน)</sys:String>
-    <sys:String x:Key="ToolboxResetOfficeSettingsNormalTemplate">ลบเทมเพลต Normal (Normal.dotm)</sys:String>
-    <sys:String x:Key="ToolboxResetOfficeSettingsGlobalSettings">ลบการตั้งค่าการกำหนดลักษณะแอปพลิเคชัน</sys:String>
-    <!-- Convert Document -->
-    <sys:String x:Key="ConvertSourceFormat">รูปแบบการนำเข้า:</sys:String>
-    <sys:String x:Key="ConvertOutputFormat">รูปแบบการส่งออก:</sys:String>
-    <sys:String x:Key="ConvertSelectFile">เลือกไฟล์</sys:String>
-    <sys:String x:Key="ConvertSelectFolder">เลือกโฟลเดอร์</sys:String>
-    <sys:String x:Key="ConvertSearchOnSubfolders">ค้นหาไฟล์ในโฟลเดอร์ย่อยเมื่อเลือกโฟลเดอร์</sys:String>
-    <sys:String x:Key="ConvertDeleteFile">ลบไฟล์ต้นฉบับหลังจากแปลงสำเร็จ</sys:String>
-    <sys:String x:Key="ConvertFileList">รายการไฟล์</sys:String>
-    <sys:String x:Key="ConvertFileName">ชื่อไฟล์</sys:String>
-    <sys:String x:Key="ConvertNewFormat">รูปแบบใหม่</sys:String>
-    <sys:String x:Key="ConvertSelectAll">เลือกทั้งหมด</sys:String>
-    <sys:String x:Key="ConvertDeleteSelectedItems">ลบรายการที่เลือก</sys:String>
-    <!-- File Types -->
-    <!-- Common -->
-    <sys:String x:Key="TypeOfPDF">PDF</sys:String>
-    <sys:String x:Key="TypeOfXPS">XPS Document</sys:String>
-    <sys:String x:Key="TypeOfTXT">Plain Text</sys:String>
-    <sys:String x:Key="TypeOfMHTML">Single File Web Page</sys:String>
-    <sys:String x:Key="TypeOfHTML">Web Page</sys:String>
-    <sys:String x:Key="TypeOfRTF">Rich Text Format</sys:String>
-    <!-- Image -->
-    <sys:String x:Key="TypeOfGIF">Animated GIF Format</sys:String>
-    <sys:String x:Key="TypeOfJPG">JPEG File Interchange Format</sys:String>
-    <sys:String x:Key="TypeOfPNG">PNG Portable Network Graphics Format</sys:String>
-    <sys:String x:Key="TypeOfTIF">TIFF Tag Image File Format</sys:String>
-    <sys:String x:Key="TypeOfBMP">Device Independent Bitmap</sys:String>
-    <!-- Video -->
-    <sys:String x:Key="TypeOfMP4">MPEG-4 Video</sys:String>
-    <sys:String x:Key="TypeOfWMV">Windows Media Video</sys:String>
-    <!-- Word -->
-    <sys:String x:Key="WordDOCX">Word Document</sys:String>
-    <sys:String x:Key="WordDOCM">Word Macro-Enabled Document</sys:String>
-    <sys:String x:Key="WordDOC">Word 97-2003 Document</sys:String>
-    <sys:String x:Key="WordDOTX">Word Template</sys:String>
-    <sys:String x:Key="WordDOTM">Word Macro-Enabled Template</sys:String>
-    <sys:String x:Key="WordDOT">Word 97-2003 Template</sys:String>
-    <!-- PowerPoint -->
-    <sys:String x:Key="PowerPointPPTX">PowerPoint Presentation</sys:String>
-    <sys:String x:Key="PowerPointPPTM">PowerPoint Macro-Enabled Presentation</sys:String>
-    <sys:String x:Key="PowerPointPPT">PowerPoint 97-2003 Presentation</sys:String>
-    <sys:String x:Key="PowerPointPOTX">PowerPoint Template</sys:String>
-    <sys:String x:Key="PowerPointPOTM">PowerPoint Macro-Enabled Template</sys:String>
-    <sys:String x:Key="PowerPointPOT">PowerPoint 97-2003 Template</sys:String>
-    <sys:String x:Key="PowerPointPPSX">PowerPoint Show</sys:String>
-    <sys:String x:Key="PowerPointPPSM">PowerPoint Macro-Enabled Show</sys:String>
-    <sys:String x:Key="PowerPointPPS">PowerPoint 97-2003 Show</sys:String>
-    <!-- Excel -->
-    <sys:String x:Key="ExcelXLSX">Excel Workbook</sys:String>
-    <sys:String x:Key="ExcelXLSM">Excel Macro-Enabled Workbook</sys:String>
-    <sys:String x:Key="ExcelXLS">Excel 97-2003 Workbook</sys:String>
-    <sys:String x:Key="ExcelCSV">CSV UTF-8 (Comma delimited)</sys:String>
-    <sys:String x:Key="ExcelXLTX">Excel Template</sys:String>
-    <sys:String x:Key="ExcelXLTM">Excel Macro-Enabled Template</sys:String>
-    <sys:String x:Key="ExcelXLT">Excel 97-2003 Template</sys:String>
-    <!-- Settings Panel -->
-    <sys:String x:Key="LanguageSettings">ภาษา:</sys:String>
-    <sys:String x:Key="ThemeSettings">ธีม:</sys:String>
-    <sys:String x:Key="AutoShutdownSettings">ดำเนินการหลังจากปรับใช้:</sys:String>
-    <sys:String x:Key="SettingsSignOut">ออกจากระบบ</sys:String>
-    <sys:String x:Key="SettingsShutdown">ปิดเครื่อง</sys:String>
-    <sys:String x:Key="SettingsRestart">เริ่มระบบใหม่</sys:String>
-    
-    <sys:String x:Key="SettingsQuit">ออกจาก Office Tool Plus</sys:String>
-    <sys:String x:Key="SaveSettings">บันทึกการตั้งค่าไปยังที่เก็บ</sys:String>
-    <sys:String x:Key="DisplaySettings">การตั้งค่าการแสดงผล</sys:String>
-    <sys:String x:Key="SettingsTopmost">อยู่ด้านบนเสมอ</sys:String>
-    <sys:String x:Key="SettingsBackground">พื้นหลัง</sys:String>
-    <sys:String x:Key="SettingsBackgroundOff">ปิด</sys:String>
-    <sys:String x:Key="SettingsBackgroundBlur">เบลอ</sys:String>
-    <sys:String x:Key="SettingsBackgroundAcrylic">อะคริลิค</sys:String>
-    <sys:String x:Key="SettingsBackgroundBing">บิงวอลล์เปเปอร์</sys:String>
-    <sys:String x:Key="SettingsBackgroundLocal">รูปภาพจากในเครื่อง</sys:String>
-    <sys:String x:Key="SettingsChooseBGI">เลือกไฟล์</sys:String>
-    <sys:String x:Key="SettingsTransparencyEffectTip">ใช้ได้เฉพาะใน วินโดว์ 10</sys:String>
-    <sys:String x:Key="SettingsOpacity">ความโปร่งใส</sys:String>
-    <sys:String x:Key="SettingsBlurValue">เบลอรูปภาพพื้นหลัง</sys:String>
-    <sys:String x:Key="SettingsLanguageName">ชื่อภาษาที่แสดง:</sys:String>
-    <sys:String x:Key="SettingsNativeName">ชื่อดั่งเดิม</sys:String>
-    <sys:String x:Key="SettingsEnglishName">ชื่อภาษาอังกฤษ</sys:String>
-    <sys:String x:Key="SettingsLocalizedName">ชื่อที่แปลแล้ว</sys:String>
-    <sys:String x:Key="SettingsAdvanced">เปิดใช้งานคุณสมบัติขั้นสูง</sys:String>
-    <sys:String x:Key="SettingsHWAcceleration">เปิดใช้งานการเร่งด้วยฮาร์ดแวร์</sys:String>
-    <sys:String x:Key="SettingsForceRTLLayout">บังคับการจัดวางเลย์เอาต์ของ RTL</sys:String>
-    <!-- About Panel -->
-    <sys:String x:Key="AppInf">ข้อมูลของโปรแกรม</sys:String>
-    <sys:String x:Key="Homepage">หน้าแรก:</sys:String>
-    <sys:String x:Key="CreatorInfo">พัฒนาโดย Yerong, พื้นฐานตามเครื่องมือการปรับใช้ของ Office</sys:String>
-    <sys:String x:Key="Copyright">ลิขสิทธิ์ © 2016-{0} Yerong สงวนลิขสิทธิ์</sys:String>
-    <sys:String x:Key="TrademarkInfo">Microsoft Office เป็นเครื่องหมายการค้าจดทะเบียนหรือเครื่องหมายการค้าของ Microsoft Corporation ในสหรัฐอเมริกา และ/หรือ ประเทศอื่นๆ</sys:String>
-    <sys:String x:Key="ServerProvider">ผู้ให้บริการเซิร์ฟเวอร์</sys:String>
-    <sys:String x:Key="Translator">นักแปล</sys:String>
-    <sys:String x:Key="OpenSourceNotice">ประกาศเกี่ยวกับโอเพ่นซอร์ส</sys:String>
-    <sys:String x:Key="OpenSourceDescription">ซอฟต์แวร์นี้รวมเอาเนื้อหาจากบุคคลที่สาม</sys:String>
-    <sys:String x:Key="BackgroundImageSource">ที่มาของภาพพื้นหลัง</sys:String>
+    <!-- End of activate content translation -->
 
-    <!-- Text about Textbox, notice to control the string length. -->
-    <sys:String x:Key="TextBlockCommand">> พิมพ์คำสั่งที่นี่</sys:String>
-    <sys:String x:Key="TextBlockResources">เส้นทางของ ที่เก็บ, เครือข่าย, HTTP</sys:String>
+    <!-- Toolbox page -->
+    <sys:String x:Key="Toolbox_Repair">ซ่อมแซม</sys:String>
+    <sys:String x:Key="Toolbox_Learn_More">Learn more</sys:String>
+
+    <sys:String x:Key="Toolbox_General_Tools">General tools</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version">สอบถามเวอร์ชั่น Office</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version.Description">Query Office update channels information from Microsoft.</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_Button">สอบถาม</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_Includes_Internel">รวมไปถึงช่องทางภายใน</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List">Office update channels information</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_Channel">Channel</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_Branch">Branch</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_Version">Version</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_CreatedTimeUTC">Created time (UTC)</sys:String>
+    <sys:String x:Key="Toolbox_Query_ErrorCode">Query error code description</sys:String>
+    <sys:String x:Key="Toolbox_Query_ErrorCode.Description">Error code usually start with '0x'. For example, 0x2 or 0x80070002.</sys:String>
+    <sys:String x:Key="Toolbox_Query_ErrorCode_Button">สอบถาม</sys:String>
+    <sys:String x:Key="Toolbox_Input_ErrorCode">Please enter the error code</sys:String>
+    <sys:String x:Key="Toolbox_Check_KMS">Test KMS host reachability</sys:String>
+    <sys:String x:Key="Toolbox_Check_KMS.Description">Use TCPing to test if the KMS host can be connected.</sys:String>
+    <sys:String x:Key="Toolbox_Check_KMS_Button">Test</sys:String>
+
+    <sys:String x:Key="Toolbox_Office_Tools">Office tools</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Office">ลบ Office</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Office.Description">Remove Office related components and registries.</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Office.Description_Bold">Note: you should only remove Office if it cannot be uninstalled properly.</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Office_Button">Remove</sys:String>
+    <sys:String x:Key="Toolbox_Remove_APPX">Also remove the Microsoft Store edition of Office</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Clear_Activation">Also clear activation</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Result">Remove result</sys:String>
+    <sys:String x:Key="Toolbox_Collect_InstallerLog">รวบรวมบันทึกการติดตั้ง Office</sys:String>
+    <sys:String x:Key="Toolbox_Collect_InstallerLog.Description">รวบรวมบันทึกเพื่อวิเคราะห์และแก้ไขปัญหา</sys:String>
+    <sys:String x:Key="Toolbox_Collect_InstallerLog_Button">Collect</sys:String>
+    <sys:String x:Key="Toolbox_Change_UpdateChannel">เปลี่ยนช่องทางการปรับปรุง Office</sys:String>
+    <sys:String x:Key="Toolbox_Change_UpdateChannel.Description">การเปลี่ยนช่องทางการปรับปรุงทำให้คุณสามารถอัปเกรดหรือดาวน์เกรด Office ได้โดยไม่ต้องติดตั้งใหม่</sys:String>
+    <sys:String x:Key="Toolbox_Change_UpdateChannel_Includes_Internel">Include internal channels</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner">เปลี่ยนเจ้าของผลิตภัณฑ์ Office</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner.Description">The name is displayed on the account page of Office application.</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Set">Set name</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Reset">Reset owner name to defaults</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Name">Name</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Name.Description">Set the owner of a product. For example, James or ProPlus2019Volume:James.</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Name.LearnMore">Learn more about owner name format.</sys:String>
+    <sys:String x:Key="Toolbox_Repair_DocumentIcon">ซ่อมแซมไอคอนเอกสาร Office</sys:String>
+    <sys:String x:Key="Toolbox_Repair_DocumentIcon.Description">This will reset the Office document association.</sys:String>
+    <sys:String x:Key="Toolbox_Repair_GenuineWarning">ซ่อมปัญหาใบอนุญาต Office</sys:String>
+    <sys:String x:Key="Toolbox_Repair_GenuineWarning.Description">Fix a problem that Office shows "Your Office license is not genuine" incorrectly.</sys:String>
+    <sys:String x:Key="Toolbox_Input_KMS_Host">Please enter a KMS host</sys:String>
+    <sys:String x:Key="Toolbox_Backup_Restore_Settings">สำรองหรือกู้คืนการตั้งค่า Office</sys:String>
+    <sys:String x:Key="Toolbox_Backup_Restore_Settings.Description">Backup or restore your Office applications settings, exclude files and contents.&#x000A;Note: Do not share your backups, it may leak your personal information.</sys:String>
+    <sys:String x:Key="Toolbox_Backup_Exclude_PersonalInf">Exclude personal information when backing up.</sys:String>
+    <sys:String x:Key="Toolbox_Backup">สำรองข้อมูล</sys:String>
+    <sys:String x:Key="Toolbox_Restore">คืนค่า</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings">รีเซ็ตการตั้งค่า Office เป็นค่าเริ่มต้น</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings.Description">รีเซ็ต Office เป็นการตั้งค่าเริ่มต้นตามที่คุณต้องการ ก่อนเริ่มต้น โปรดปิดแอปพลิเคชัน Office ทั้งหมด</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_Button">เริ่มใหม่</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserSettings">Delete current user settings</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserSettings.Description">Includes Office applications settings, recently opened files and recently save location.</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserAppData">Delete applications data</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserAppData.Description">Includes applications cache.</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_NormalTemplate">Delete the Normal template</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_NormalTemplate.Description">Normal.dotm</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_GlobalSettings">Delete applications preference Settings</sys:String>
+
+    <sys:String x:Key="Toolbox_Windows_Tools">Windows tools</sys:String>
+    <sys:String x:Key="Toolbox_Repair_VBS">Reset VBS file associations</sys:String>
+    <sys:String x:Key="Toolbox_Repair_VBS.Description">This will reset VBS file association.</sys:String>
+    <sys:String x:Key="Toolbox_Repair_VBS.LearnMore">Learn more about reset VBS file associations.</sys:String>
+    <sys:String x:Key="Toolbox_Reset_SPPSvc">รีเซ็ตบริการป้องกันซอฟต์แวร์</sys:String>
+    <sys:String x:Key="Toolbox_Reset_SPPSvc.Description">This will reset the configuration of Software Protection service.</sys:String>
+    <sys:String x:Key="Toolbox_Reset_SPPSvc.LearnMore">Learn more about reset Software Protection service.</sys:String>
+    <sys:String x:Key="Toolbox_Rebuild_ActivationToken">Rebuild Windows activation token</sys:String>
+    <sys:String x:Key="Toolbox_Rebuild_ActivationToken.Description">This will rebuild the Windows activation token. Your Windows activation status may be lost.</sys:String>
+    <sys:String x:Key="Toolbox_Rebuild_ActivationToken.LearnMore">Learn more about rebuild Windows activation token.</sys:String>
+    <sys:String x:Key="Toolbox_Repair_Variables">Reset system variables</sys:String>
+    <sys:String x:Key="Toolbox_Repair_Variables.Description">This will reset your system variables to default values. Do not use it if you are unsure.</sys:String>
+    <sys:String x:Key="Toolbox_Repair_Variables.LearnMore">Learn more about reset system variables.</sys:String>
+    <sys:String x:Key="Toolbox_Repair_WMI">Repair WMI components</sys:String>
+    <sys:String x:Key="Toolbox_Repair_WMI.Description">This will re-register the WMI components. Do not use it if you are unsure.</sys:String>
+    <sys:String x:Key="Toolbox_Repair_WMI.LearnMore">Learn more about repair WMI components.</sys:String>
+
+    <!-- Convert page -->
+    <sys:String x:Key="Convert_Excel">Excel</sys:String>
+    <sys:String x:Key="Convert_Excel.Description">Convert Excel documents.</sys:String>
+    <sys:String x:Key="Convert_PowerPoint">PowerPoint</sys:String>
+    <sys:String x:Key="Convert_PowerPoint.Description">Convert PowerPoint documents.</sys:String>
+    <sys:String x:Key="Convert_Word">Word</sys:String>
+    <sys:String x:Key="Convert_Word.Description">Convert Word documents.</sys:String>
+    <sys:String x:Key="Convert_Actions">_Import documents</sys:String>
+    <sys:String x:Key="Convert_Actions.SelectFiles">Select files</sys:String>
+    <sys:String x:Key="Convert_Actions.SelectFolder">เลือกโฟลเดอร์</sys:String>
+    <sys:String x:Key="Convert_Input">Input format</sys:String>
+    <sys:String x:Key="Convert_Input.Description">When selecting a folder, only files that match the input format will be imported.</sys:String>
+    <sys:String x:Key="Convert_Output">Output format</sys:String>
+    
+    <sys:String x:Key="Convert_File_List">รายการไฟล์</sys:String>
+    <sys:String x:Key="Convert_StartConvert">Convert</sys:String>
+    <sys:String x:Key="Convert_StartConvert.ToolTip">Start converting documents.</sys:String>
+    <sys:String x:Key="Convert_RemoveSelected">Delete</sys:String>
+    <sys:String x:Key="Convert_SelectAll">เลือกทั้งหมด</sys:String>
+    <sys:String x:Key="Convert_File">File</sys:String>
+    <sys:String x:Key="Convert_NewFormat">รูปแบบใหม่</sys:String>
+    <sys:String x:Key="Convert_Open_File_Location">_Open file location</sys:String>
+
+    <sys:String x:Key="Convert_Settings">Convert settings</sys:String>
+    <sys:String x:Key="Convert_Settings.Description">Adjusting the settings.</sys:String>
+    <sys:String x:Key="Convert_SearchOnSubfolders">Search subfolders</sys:String>
+    <sys:String x:Key="Convert_SearchOnSubfolders.Description">Search for files in subfolders when selecting a folder.</sys:String>
+    <sys:String x:Key="Convert_Delete">Delete file</sys:String>
+    <sys:String x:Key="Convert_Delete.Description">Delete the original file after successful conversion. This cannot be undone.</sys:String>
+    <sys:String x:Key="Convert_HideUI">Hide user interface</sys:String>
+    <sys:String x:Key="Convert_HideUI.Description">Hide alert window when Office is working.</sys:String>
+    
+    <!-- File types -->
+    <!-- Common -->
+    <sys:String x:Key="File_Type.All">All files</sys:String>
+    <sys:String x:Key="File_Type.Supported">All supported files</sys:String>
+    <sys:String x:Key="File_Type.PDF">PDF</sys:String>
+    <sys:String x:Key="File_Type.XPS">XPS Document</sys:String>
+    <sys:String x:Key="File_Type.TXT">Plain Text</sys:String>
+    <sys:String x:Key="File_Type.MHTML">Single File Web Page</sys:String>
+    <sys:String x:Key="File_Type.HTML">Web Page</sys:String>
+    <sys:String x:Key="File_Type.RTF">Rich Text Format</sys:String>
+    <!-- Image -->
+    <sys:String x:Key="File_Type.GIF">Animated GIF Format</sys:String>
+    <sys:String x:Key="File_Type.JPG">JPEG File Interchange Format</sys:String>
+    <sys:String x:Key="File_Type.PNG">PNG Portable Network Graphics Format</sys:String>
+    <sys:String x:Key="File_Type.TIF">TIFF Tag Image File Format</sys:String>
+    <sys:String x:Key="File_Type.BMP">Device Independent Bitmap</sys:String>
+    <!-- Video -->
+    <sys:String x:Key="File_Type.MP4">MPEG-4 Video</sys:String>
+    <sys:String x:Key="File_Type.WMV">Windows Media Video</sys:String>
+    <!-- Word -->
+    <sys:String x:Key="File_Type.Word_DOCX">Word Document</sys:String>
+    <sys:String x:Key="File_Type.Word_DOCM">Word Macro-Enabled Document</sys:String>
+    <sys:String x:Key="File_Type.Word_DOC">Word 97-2003 Document</sys:String>
+    <sys:String x:Key="File_Type.Word_DOTX">Word Template</sys:String>
+    <sys:String x:Key="File_Type.Word_DOTM">Word Macro-Enabled Template</sys:String>
+    <sys:String x:Key="File_Type.Word_DOT">Word 97-2003 Template</sys:String>
+    <!-- PowerPoint -->
+    <sys:String x:Key="File_Type.PowerPoint_PPTX">PowerPoint Presentation</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPTM">PowerPoint Macro-Enabled Presentation</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPT">PowerPoint 97-2003 Presentation</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_POTX">PowerPoint Template</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_POTM">PowerPoint Macro-Enabled Template</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_POT">PowerPoint 97-2003 Template</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPSX">PowerPoint Show</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPSM">PowerPoint Macro-Enabled Show</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPS">PowerPoint 97-2003 Show</sys:String>
+    <!-- Excel -->
+    <sys:String x:Key="File_Type.Excel_XLSX">Excel Workbook</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLSM">Excel Macro-Enabled Workbook</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLS">Excel 97-2003 Workbook</sys:String>
+    <sys:String x:Key="File_Type.Excel_CSV">CSV UTF-8 (Comma delimited)</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLTX">Excel Template</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLTM">Excel Macro-Enabled Template</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLT">Excel 97-2003 Template</sys:String>
+    
+    <!-- Hash checker page -->
+    <sys:String x:Key="Hash_Checker_Hash">Hash</sys:String>
+    <sys:String x:Key="Hash_Checker_Hash.Description">Generate the hash of files, supports MD5, SHA-1, SHA-256, SHA-384 and SHA-512.</sys:String>
+    <sys:String x:Key="Hash_Checker_Actions">_Import files</sys:String>
+    <sys:String x:Key="Hash_Checker_Actions.SelectFiles">Select files</sys:String>
+    <sys:String x:Key="Hash_Checker_Actions.SelectFolder">เลือกโฟลเดอร์</sys:String>
+    <sys:String x:Key="Hash_Checker_SearchOnSubfolders">Search subfolders</sys:String>
+    <sys:String x:Key="Hash_Checker_SearchOnSubfolders.Description">Search for files in subfolders when selecting a folder.</sys:String>
+    <sys:String x:Key="Hash_Checker_SearchString">Search string</sys:String>
+    <sys:String x:Key="Hash_Checker_SearchString.Description">When selecting a folder, find files whose file names match the search string.</sys:String>
+    <sys:String x:Key="Hash_Checker_DisplayPath">Show file path</sys:String>
+    <sys:String x:Key="Hash_Checker_AutoCompute">Automatic computation</sys:String>
+    <sys:String x:Key="Hash_Checker_AutoCompute.Description">Automatically start computing hash value after the file import is completed.</sys:String>
+    <sys:String x:Key="Hash_Checker_MD5.Description">Enable or disable MD5 computing.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA1.Description">Enable or disable SHA-1 computing.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA256.Description">Enable or disable SHA-256 computing.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA384.Description">Enable or disable SHA-384 computing.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA512.Description">Enable or disable SHA-512 computing.</sys:String>
+
+    <sys:String x:Key="Hash_Checker_File_List">รายการไฟล์</sys:String>
+    <sys:String x:Key="Hash_Checker_TypeToSearch">Type to compare hash value.</sys:String>
+    <sys:String x:Key="Hash_Checker_StartCompute">Compute</sys:String>
+    <sys:String x:Key="Hash_Checker_StartCompute.ToolTip">Start computing hash values.</sys:String>
+    <sys:String x:Key="Hash_Checker_RemovaAll">Delete all</sys:String>
+    <sys:String x:Key="Hash_Checker_Export">Export</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.ToolTip">Export results to files.</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.AsTXT">Export as plain _text</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.AsCSV">Export as _CSV</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.AsMD">Export as _Markdown</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.AsJSON">Export as _JSON</sys:String>
+    <sys:String x:Key="Hash_Checker_FilePath">File path</sys:String>
+    <sys:String x:Key="Hash_Checker_FileName">ชื่อไฟล์</sys:String>
+    <sys:String x:Key="Hash_Checker_Compute_Selected">_Compute hash value of selected files</sys:String>
+    <sys:String x:Key="Hash_Checker_Open_File_Location">_Open file location</sys:String>
+    <sys:String x:Key="Hash_Checker_Copy_Hash_Value">Copy _hash value</sys:String>
+
+    <!-- Settings page -->
+    <sys:String x:Key="Settings_General">General</sys:String>
+    <sys:String x:Key="Settings_Language">Language</sys:String>
+    <sys:String x:Key="Settings_Language.Description">Change application display language.</sys:String>
+    <sys:String x:Key="Settings_MatchOS">เข้ากันได้กับระบบปฏิบัติการ</sys:String>
+    <sys:String x:Key="Settings_Save">Save settings</sys:String>
+    <sys:String x:Key="Settings_Save.Description">Save all settings to local.</sys:String>
+    
+    <sys:String x:Key="Settings_Appearance">Appearance &amp; behavior</sys:String>
+    <sys:String x:Key="Settings_Theme">Theme</sys:String>
+    <sys:String x:Key="Settings_Theme_OpenColorSetting">Windows color setting</sys:String>
+    <sys:String x:Key="Settings_Background">พื้นหลัง</sys:String>
+    <sys:String x:Key="Settings_Background.Description">Change application background.</sys:String>
+    <sys:String x:Key="Settings_Background.Off">ปิด</sys:String>
+    <sys:String x:Key="Settings_Background.Acrylic">อะคริลิค</sys:String>
+    <sys:String x:Key="Settings_Background.Blur">เบลอ</sys:String>
+    <sys:String x:Key="Settings_Background.Bing">บิงวอลล์เปเปอร์</sys:String>
+    <sys:String x:Key="Settings_Background.Local">รูปภาพจากในเครื่อง</sys:String>
+    <sys:String x:Key="Settings_SelectLocalImage.Title">Select a local image and set to application background</sys:String>
+    <sys:String x:Key="Settings_SelectLocalImage.Button">เลือกไฟล์ที่จะติดตั้ง</sys:String>
+    <sys:String x:Key="Settings_Opacity">ความโปร่งใส</sys:String>
+    <sys:String x:Key="Settings_Blur">เบลอ</sys:String>
+    <sys:String x:Key="Settings_Topmost">Always on top</sys:String>
+    
+    <sys:String x:Key="Settings_Advanced">Advanced</sys:String>
+    <sys:String x:Key="Settings_SecurityProtocol">Security protocol</sys:String>
+    <sys:String x:Key="Settings_SecurityProtocol.Description">Specify which TLS protocol should be used. Do not change it if application can connect to the network.</sys:String>
+    <sys:String x:Key="Settings_SecurityProtocol_SystemDefault">System default</sys:String>
+    <sys:String x:Key="Settings_HardwareAcceleration">Hardware acceleration</sys:String>
+    <sys:String x:Key="Settings_HardwareAcceleration.Description">Do not turn off it if application is working well. Disabling it will reduce the performance of application.</sys:String>
+    
+    <sys:String x:Key="Settings_Deploy">การปรับใช้</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation">After deploying</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.Description">Action to perform after Office download or installation is complete.</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.None">ไม่มี</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.Quit">Close Office Tool Plus</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.SignOut">ออกจากระบบ</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.Shutdown">Power off</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.Reboot">Reboot</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat">Office languages display format</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat.Default">Default name</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat.Native">ชื่อดั่งเดิม</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat.English">ชื่อภาษาอังกฤษ</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat.Localized">ชื่อที่แปลแล้ว</sys:String>
+    <sys:String x:Key="Settings_Deploy_Internal">Display internal products and channels</sys:String>
+    
+    <sys:String x:Key="Settings_Download">ดาวน์โหลด</sys:String>
+    <sys:String x:Key="Settings_Download_Ask_Where_To_Save">Ask where to save files</sys:String>
+    <sys:String x:Key="Settings_Download_Ask_Where_To_Save.Description">Select where to save Office installation files before downloading Office.</sys:String>
+    <sys:String x:Key="Settings_Download_Engine">Engine</sys:String>
+    <sys:String x:Key="Settings_Download_Engine.Description">Select which engine to use when downloading Office.</sys:String>
+    <sys:String x:Key="Settings_Download_Engine.Xunlei">Xunlei</sys:String>
+    <sys:String x:Key="Settings_Download_Engine.Downloader">bezzad.Downloader</sys:String>
+    <sys:String x:Key="Settings_Download_Engine.OfficeToolPlus">Office Tool Plus</sys:String>
+    <sys:String x:Key="Settings_Download_Engine.OfficeDeploymentTool">เครื่องมือปรับใช้ Office</sys:String>
+    <sys:String x:Key="Settings_Download_HTTPS">Connect using HTTPS</sys:String>
+    <sys:String x:Key="Settings_Download_HTTPS.Description">Try to enable it when you have problems to download Office.</sys:String>
+    <sys:String x:Key="Settings_Download_Verify">ตรวจสอบไฟล์</sys:String>
+    <sys:String x:Key="Settings_Download_Verify.Description">Verify Office installation(s) after downloading.</sys:String>
+    <sys:String x:Key="Settings_Download_UA">Windows version</sys:String>
+    <sys:String x:Key="Settings_Download_UA.Description">The default version of Office for the current Windows version is downloaded. Change this if you want to download Office for a different version of Windows.</sys:String>
+    <sys:String x:Key="Settings_Download_UA.AutoDetection">Automatic detection</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy">Proxy</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy.Description">Set the proxy to use when downloading Office.</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy.Type">Proxy type</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy.None">ไม่มี</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy.HTTP">HTTP</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy.Socket4">Socket 4</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy.Socket5">Socket 5</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy_Host">Host</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy_Host.Hint">127.0.0.1:1080</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy_Username">Username</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy_Password">Password</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy_Optional">Optional</sys:String>
+    
+    <!-- About page -->
+    <sys:String x:Key="About_Link.Homepage">Homepage</sys:String>
+    <sys:String x:Key="About_Link.Docs">Docs</sys:String>
+    <sys:String x:Key="About_Link.Sponsor">Sponsor</sys:String>
+    <sys:String x:Key="About_Link.Report_Issue">Report issue</sys:String>
+    <sys:String x:Key="About_Version">Version</sys:String>
+    <sys:String x:Key="About_ReleaseDate">Release date:</sys:String>
+    <sys:String x:Key="About_CheckUpdate">_Check update</sys:String>
+    <sys:String x:Key="About_CreatorInfo">พัฒนาโดย Yerong, พื้นฐานตามเครื่องมือการปรับใช้ของ Office</sys:String>
+    <sys:String x:Key="About_Copyright">ลิขสิทธิ์ © 2016-{0} Yerong สงวนลิขสิทธิ์</sys:String>
+    <sys:String x:Key="About_TrademarkInfo">Microsoft Office เป็นเครื่องหมายการค้าจดทะเบียนหรือเครื่องหมายการค้าของ Microsoft Corporation ในสหรัฐอเมริกา และ/หรือ ประเทศอื่นๆ</sys:String>
+
+    <sys:String x:Key="About_Server_Provider">ผู้ให้บริการเซิร์ฟเวอร์</sys:String>
+
+    <sys:String x:Key="About_MoreInfo">More info</sys:String>
+    <sys:String x:Key="About_Image_Source">ที่มาของภาพพื้นหลัง</sys:String>
+    <sys:String x:Key="About_Link.Translator">นักแปล</sys:String>
+    <sys:String x:Key="About_Link.OpenSourceNotice">ประกาศเกี่ยวกับโอเพ่นซอร์ส</sys:String>
+    
+    <!-- Downloader -->
+    <sys:String x:Key="Downloader_Resume">ทำต่อ</sys:String>
+    <sys:String x:Key="Downloader_Pause">หยุดชั่วคราว</sys:String>
+    <sys:String x:Key="Downloader_Cancel">ยกเลิก</sys:String>
+    <sys:String x:Key="Downloader_SetSpeedLimit.Name">Set download speed limit</sys:String>
+    <sys:String x:Key="Downloader_Percentage">ดาวน์โหลด {0} สำเร็จ</sys:String>
+    <sys:String x:Key="Downloader_Remaining">กำลังดาวน์โหลด เวลาที่เหลืออยู่: {0}</sys:String>
+    <sys:String x:Key="Downloader_Pending">รอดำเนินการ</sys:String>
+    <sys:String x:Key="Downloader_Pausing">หยุดชั่วคราว</sys:String>
+    <sys:String x:Key="Downloader_Paused">หยุดชั่วคราว</sys:String>
+
+    <!-- Notification strings -->
+    <sys:String x:Key="Message">ข้อความ</sys:String>
+    <sys:String x:Key="Notice">ข้อสังเกตุ</sys:String>
+    <sys:String x:Key="Warning">คำเตือน</sys:String>
+    <sys:String x:Key="Error">ข้อผิดพลาด</sys:String>
+    <sys:String x:Key="Yes">_ใช่</sys:String>
+    <sys:String x:Key="No">_ไม่ใช่</sys:String>
+    <sys:String x:Key="OK">_ตกลง</sys:String>
+    <sys:String x:Key="Cancel">_ยกเลิก</sys:String>
+    
+    <!-- Inpupt box strings-->
+    <sys:String x:Key="Input_Command">Please enter the application commands</sys:String>
+    <sys:String x:Key="Input_URL">Please enter the URL</sys:String>
+    <sys:String x:Key="Input_Xunlei_Speed_Limit">Set Xunlei download speed limit (in KBps)</sys:String>
+
+    <!-- Office ISO Context Menu -->
+    <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
+    <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
+    <!-- If you can't understand what is hotkey, remove '&amp;' when you are translating. -->
+    <sys:String x:Key="CD-ROM_InstallNow">&amp;Install now</sys:String>
 
     <!-- Task Message -->
-    <sys:String x:Key="Task_DownloadUpdate">กำลังดาวน์โหลดอัปเดต, {0} สมบูรณ์ ({1} จาก {2}).</sys:String>
-    <sys:String x:Key="Task_VerifyFiles">กำลังตรวจสอบไฟล์ โปรดรอสักครู่</sys:String>
-    <sys:String x:Key="Task_DownloadingContent">กำลังรับเนื้อหา กรุณารอสักครู่</sys:String>
-    <sys:String x:Key="Task_PreparingDownload">กำลังเตรียมดาวน์โหลด Office</sys:String>
+    <sys:String x:Key="Task_Checking_Updates">Checking updates.</sys:String>
+    <sys:String x:Key="Task_Downloading_Updates">กำลังดาวน์โหลดอัปเดต, {0} สมบูรณ์ ({1} จาก {2}).</sys:String>
+    <sys:String x:Key="Task_Verifying_Installation_Files">กำลังตรวจสอบไฟล์ โปรดรอสักครู่</sys:String>
+    <sys:String x:Key="Task_Loading_Preferences">Loading application preferences, please wait.</sys:String>
+    <sys:String x:Key="Task_Downloading_Web_Config">Getting configuration file from web, please wait.</sys:String>
+    <sys:String x:Key="Task_Preparing_Download">กำลังเตรียมดาวน์โหลด Office</sys:String>
+    <!-- Example: Creating Office ISO file, file size: 3.1GB, 45% completed. -->
+    <sys:String x:Key="Task_Creating_ISO">Creating Office ISO file, file size: {0}, {1} completed.</sys:String>
     <sys:String x:Key="Task_ODT">ตอนนี้กำลังทำการปรับใช้ โปรดรอสักครู่</sys:String>
     <sys:String x:Key="Task_OSPP">OSPP กำลังทำงานอยู่ กรุณารอสักครู่</sys:String>
-    <sys:String x:Key="Task_SearchKMSAEvent">กำลังค้นหาเหตุการณ์การเปิดใช้งาน KMS บนเครื่อง: {0}</sys:String>
-    <sys:String x:Key="Task_SearchIAFEvent">กำลังค้นหาเหตุการณ์ความล้มเหลวในการเปิดใช้งานอินเทอร์เน็ตบนเครื่อง: {0}</sys:String>
-    <sys:String x:Key="Task_CheckVersion">สอบถามข้อมูลเวอร์ชั่น Office</sys:String>
-    <sys:String x:Key="Task_CheckKMS">ทดสอบ โฮสต์ KMS</sys:String>
-    <sys:String x:Key="Task_CollectLog">การรวบรวมบันทึกการติดตั้ง Office</sys:String>
-    <sys:String x:Key="Task_RemoveOffice">การถอนการติดตั้ง Office</sys:String>
-    <sys:String x:Key="Task_RepairWMI">กำลังซ่อมแซม WMI โปรดรอสักครู่</sys:String>
-    <sys:String x:Key="Task_ConvertDocument">การแปลงเอกสาร Office</sys:String>
+    <sys:String x:Key="Task_Searching_KMS_Events">กำลังค้นหาเหตุการณ์การเปิดใช้งาน KMS บนเครื่อง: {0}</sys:String>
+    <sys:String x:Key="Task_Searching_IAF_Events">กำลังค้นหาเหตุการณ์ความล้มเหลวในการเปิดใช้งานอินเทอร์เน็ตบนเครื่อง: {0}</sys:String>
+    <sys:String x:Key="Task_Checking_Office_Update_Channel">Querying Office update channels information.</sys:String>
+    <sys:String x:Key="Task_Testing_KMS_Host">Testing KMS host reachability.</sys:String>
+    <sys:String x:Key="Task_Collecting_Installer_Logs">การรวบรวมบันทึกการติดตั้ง Office</sys:String>
+    <sys:String x:Key="Task_Removing_Office">การถอนการติดตั้ง Office</sys:String>
+    <sys:String x:Key="Task_Repairing_License_Issue">Repairing license issue, please wait.</sys:String>
+    <sys:String x:Key="Task_Repairing_WMI">Repairing WMI components, please wait.</sys:String>
+    <sys:String x:Key="Task_Converting_Documents">Converting Office document(s), {0} remaining.</sys:String>
+    <sys:String x:Key="Task_Importing_Files">Importing files, please wait.</sys:String>
+    <sys:String x:Key="Task_Computing_Hash">Computing hash, {0} file(s) remaining.</sys:String>
+    <sys:String x:Key="Task_Exporting_Hash">Exporting results, please wait.</sys:String>
     <!-- Example: Installing iSlide, please wait. -->
-    <sys:String x:Key="Task_InstallingApp">กำลังทำการติดตั้ง {0}, โปรดรอสักครู่</sys:String>
+    <sys:String x:Key="Task_Installing_App">กำลังทำการติดตั้ง {0}, โปรดรอสักครู่</sys:String>
 
     <!-- Question Message -->
-    <sys:String x:Key="QuesUpdateTitle">ปรับปรุง Office Tool Plus</sys:String>
-    <sys:String x:Key="QuesUpdateAvailable">อัปเดตพร้อมให้ดาวน์โหลด ต้องการดาวน์โหลดตอนนี้หรือไม่?</sys:String>
-    <sys:String x:Key="QuesUpdateNow">การปรับปรุงพร้อม รีสตาร์ทแอปพลิเคชันทันทีหรือไม่? ในการปรับปรุงใช้เวลาไม่นาน</sys:String>
-    <sys:String x:Key="QuesExit">Office Tool Plus กำลังทำงานอยู่ คุณต้องการที่จะยกเลิกหรือไม่?</sys:String>
-    <sys:String x:Key="QuesOneClickInstallation">คุณเลือกที่จะติดตั้ง {0}.&#x000A;หากคุณต้องการเลือกแอปพลิเคชันหรือภาษา ให้ใช้ตัวเลือกการติดตั้งอื่นๆ&#x000A;&#x000A;คลิก "ใช่" เพื่อติดตั้งหลังจากดาวน์โหลด "ไม่" เพื่อติดตั้งระหว่างการดาวน์โหลด หรือ ปิดหน้าต่าง เพื่อยกเลิก</sys:String>
-    <sys:String x:Key="QuesSelectOfficeVersionToDownload">คุณได้ระบุเวอร์ชั่นของ Office เป็น {0}, แต่เราแนะนำให้คุณใช้อีกเวอร์ชั่น&#x000A;&#x000A;คลิก "ใช่" เพื่อดาวน์โหลดเวอร์ชันดังกล่าว {1} ของ Office&#x000A;คลิก "ไม่ใช่" เพื่อยกเลิกการดาวน์โหลดเวอร์ชั่นดังกล่าว {2} ของ Office</sys:String>
-    <sys:String x:Key="QuesVerifyInstallation">คุณต้องการตรวจสอบไฟล์การติดตั้ง Office เพื่อค้นหาข้อผิดพลาดที่เป็นไปได้หรือไม่?</sys:String>
-    <sys:String x:Key="QuesInstallation">พร้อมติดตั้ง Office แล้วหรือยัง?</sys:String>
-    <sys:String x:Key="QuesConfiguration">ดูโค้ดสำหรับการกำหนดค่าโดยละเอียด การกำหนดค่าพื้นฐานด้านบนถูกต้องหรือไม่?</sys:String>
-    <sys:String x:Key="QuesDeleteFiles">ต้องการที่จะลบ {0}หรือไม่?</sys:String>
-    <sys:String x:Key="QuesInstallLicenses">คุณอาจไม่เห็นข้อมูลการเปิดใช้งานใน Office หลังจากที่คุณติดตั้งใบอนุญาต Office แต่คุณสามารถดูข้อมูลหรือเปิดใช้งาน Office ผ่าน Office Tool Plus ได้ คุณต้องการดำเนินการต่อหรือไม่?</sys:String>
-    <sys:String x:Key="QuesClearLicenses">ถอนการติดตั้งใบอนุญาตทั้งหมดหมายความว่าคุณจะต้องติดตั้งใบอนุญาตใหม่หลังจากการดำเนินการนี้ คุณต้องการดำเนินการต่อหรือไม่?</sys:String>
-    <sys:String x:Key="QuesClearActivation">ถอนการติดตั้งรหัสผลิตภัณฑ์และสิทธิ์การใช้งานทั้งหมดหมายความว่าคุณจะต้องติดตั้งสิทธิ์การใช้งานใหม่และเปิดใช้งาน Office หลังจากการดำเนินการนี้ คุณต้องการดำเนินการต่อหรือไม่?</sys:String>
-    <sys:String x:Key="QuesClearKeys">ถอนการติดตั้งรหัสผลิตภัณฑ์ทั้งหมดหมายความว่าคุณจะต้องติดตั้งคีย์ใหม่และเปิดใช้งาน Office หลังจากการดำเนินการนี้ คุณต้องการดำเนินการต่อหรือไม่?</sys:String>
-    <sys:String x:Key="QuesCleanOffice">แน่ใจว่าจะทำความสะอาด Office? เมื่อเริ่มต้นแล้ว การดำเนินการนี้จะไม่สามารถยกเลิกได้</sys:String>
-    <sys:String x:Key="QuesAutoShutdown">พีซีของคุณจะ ออกจากระบบ/ปิดระบบ/รีสตาร์ท ในหนึ่งนาที คลิก "ใช่" เพื่อดำเนินการทันที หรือ "ไม่" เพื่อยกเลิกการดำเนินการ</sys:String>
+    <sys:String x:Key="Ques_Update.Title">ปรับปรุง Office Tool Plus</sys:String>
+    <sys:String x:Key="Ques_Update.Content">อัปเดตพร้อมให้ดาวน์โหลด ต้องการดาวน์โหลดตอนนี้หรือไม่?</sys:String>
+    <sys:String x:Key="Ques_Exit">Office Tool Plus กำลังทำงานอยู่ คุณต้องการที่จะยกเลิกหรือไม่?</sys:String>
+    <sys:String x:Key="Ques_Can_Not_Verify_Signature">We can't verify the signature of the file, do you want to open it anyway?&#x000A;&#x000A;File: {0}</sys:String>
+    <sys:String x:Key="Ques_Quick_Installation">You chose to install {0}.&#x000A;&#x000A;Click "Yes" to install after download, "No" to install during download, or close the window to cancel.</sys:String>
+    <sys:String x:Key="Ques_Select_Office_To_Download">You have specified Office version to {0}, but we get a different version.&#x000A;&#x000A;Clicking "Yes" will download version {1} of Office.&#x000A;Clicking "No" will download version {2} of Office.</sys:String>
+    <sys:String x:Key="Ques_Verify_Installation_Files">คุณต้องการตรวจสอบไฟล์การติดตั้ง Office เพื่อค้นหาข้อผิดพลาดที่เป็นไปได้หรือไม่?</sys:String>
+    <sys:String x:Key="Ques_Install_Office">พร้อมติดตั้ง Office แล้วหรือยัง?</sys:String>
+    <sys:String x:Key="Ques_Install_Office.Applications">Application(s): {0}</sys:String>
+    <sys:String x:Key="Ques_Install_Office.Architecture">Architecture: {0}</sys:String>
+    <sys:String x:Key="Ques_Install_Office.UpdateChannel">Update channel: {0}</sys:String>
+    <sys:String x:Key="Ques_Install_Office.OfficeVersion">Office version: {0}</sys:String>
+    <sys:String x:Key="Ques_Install_Office.SourcePath">/Installation files source: {0}</sys:String>
+    <sys:String x:Key="Ques_Install_Configuration">ดูโค้ดสำหรับการกำหนดค่าโดยละเอียด การกำหนดค่าพื้นฐานด้านบนถูกต้องหรือไม่?</sys:String>
+    <sys:String x:Key="Ques_Delete_All_Installations">Are you sure you want to delete all installation files?</sys:String>
+    <sys:String x:Key="Ques_Delete_Installation">Are you sure you want to delete {0}?</sys:String>
+    <sys:String x:Key="Ques_Delete_Installation_Languages">Are you sure you want to delete {0}?</sys:String>
+    <sys:String x:Key="Ques_Install_iSlide">Are you sure you want to install iSlide now?</sys:String>
+    <sys:String x:Key="Ques_Clear_Activation">Are you sure you want to uninstall all licenses and keys? After this operation you will need to reinstall licenses and reactivate Office.</sys:String>
+    <sys:String x:Key="Ques_Install_Licenses">คุณอาจไม่เห็นข้อมูลการเปิดใช้งานใน Office หลังจากที่คุณติดตั้งใบอนุญาต Office แต่คุณสามารถดูข้อมูลหรือเปิดใช้งาน Office ผ่าน Office Tool Plus ได้ คุณต้องการดำเนินการต่อหรือไม่?</sys:String>
+    <sys:String x:Key="Ques_Uninstall_Licenses">Are you sure you want to uninstall all Office licenses?</sys:String>
+    <sys:String x:Key="Ques_Uninstall_All_Keys">Are you sure you want to uninstall all Office product keys? Please back up your keys first if needed.</sys:String>
+    <sys:String x:Key="Ques_Remove_Office">แน่ใจว่าจะทำความสะอาด Office? เมื่อเริ่มต้นแล้ว การดำเนินการนี้จะไม่สามารถยกเลิกได้</sys:String>
+    <sys:String x:Key="Ques_Invoke_Office_Update">Update channel was changed, check for Office updates now?</sys:String>
 
     <!-- Info Message -->
-    <sys:String x:Key="InfoPermission">Office Tool Plus ทำงานด้วยสิทธิ์ปกติ ฟีเจอร์บางอย่างใช้งานไม่ได้</sys:String>
-    <sys:String x:Key="InfoRestart">คุณต้องรีสตาร์ทแอปพลิเคชันเพื่อให้มีผล</sys:String>
-    <sys:String x:Key="InfoUpdate">คุณกำลังใช้งาน Office Tool Plus เวอร์ชั่นล่าสุด</sys:String>
-    <sys:String x:Key="InfoNoConfigured">การกำหนดค่าไม่ถูกต้อง โปรดตรวจสอบและลองอีกครั้ง</sys:String>
-    <sys:String x:Key="InfoNoLanguagePackAddedForDownload">เราตรวจพบว่าคุณยังไม่ได้เพิ่มภาษา เราขอแนะนำให้คุณเพิ่มภาษาเพื่อหลีกเลี่ยงปัญหา</sys:String>
-    <sys:String x:Key="InfoAllExist">คุณไม่จำเป็นต้องดาวน์โหลด เพราะคุณมีไฟล์ทั้งหมดอยู่แล้ว</sys:String>
-    <sys:String x:Key="InfoFinishVerifying">ไฟล์การติดตั้งได้รับการตรวจสอบและไม่พบข้อผิดพลาด</sys:String>
-    <sys:String x:Key="InfoDownloading">กำลังดาวน์โหลด Office</sys:String>
-    <sys:String x:Key="InfoSetupExited">เครื่องมือปรับใช้ Office ออกได้ปกติ</sys:String>
-    <sys:String x:Key="InfoInstallationComplete">การติดตั้งเสร็จสมบูรณ์</sys:String>
-    <sys:String x:Key="InfoInstallationFailed">การติดตั้งล้มเหลว</sys:String>
-    <sys:String x:Key="InfoNoOfficeDetectedForActivation">ไม่พบ Office รุ่น Click-to-Run บนคอมพิวเตอร์เครื่องนี้ ไม่สามารถโหลดใบอนุญาต Office ได้</sys:String>
-    <sys:String x:Key="Info64BitOfficeForConversion">คุณกำลังใช้ Office เวอร์ชัน 64 บิต การแปลงเอกสารอาจทำงานไม่ถูกต้อง</sys:String>
+    <sys:String x:Key="Info_User_Role">Office Tool Plus ทำงานด้วยสิทธิ์ปกติ ฟีเจอร์บางอย่างใช้งานไม่ได้</sys:String>
+    <sys:String x:Key="Info_Restart_Required">คุณต้องรีสตาร์ทแอปพลิเคชันเพื่อให้มีผล</sys:String>
+    <sys:String x:Key="Info_No_Updates">คุณกำลังใช้งาน Office Tool Plus เวอร์ชั่นล่าสุด</sys:String>
+    <sys:String x:Key="Info_Update_In_Progress">Update(s) is in progress, please wait.</sys:String>
+    <sys:String x:Key="Info_No_Language_Added_For_Download">We have detected that you have not added a language. In most cases, we recommend to add languages to avoid problems.</sys:String>
+    <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">Please select the folder to save the Office installation files.&#x000A;To use default location, disable "Ask where to save files" on the settings page.</sys:String>
+    <sys:String x:Key="Info_All_Files_Exist">คุณไม่จำเป็นต้องดาวน์โหลด เพราะคุณมีไฟล์ทั้งหมดอยู่แล้ว</sys:String>
+    <sys:String x:Key="Info_Office_Downloading">กำลังดาวน์โหลด Office</sys:String>
+    <sys:String x:Key="Info_Software_Installation_Complete">การติดตั้งเสร็จสมบูรณ์</sys:String>
+    <sys:String x:Key="Info_Software_Installation_Failed">การติดตั้งล้มเหลว</sys:String>
+    <sys:String x:Key="Info_Auto_Shutdown">Your PC will sign out/shutdown/restart in one minute.</sys:String>
+    <sys:String x:Key="Info_KMS_Test_Result.Success">KMS test method: {0}. Test result: success, elapsed time: {1}ms.</sys:String>
+    <sys:String x:Key="Info_KMS_Test_Result.Failed">KMS test failure.</sys:String>
 
     <!-- Success Message -->
-    <sys:String x:Key="SuccessAddDownloadTask">เพิ่มงานดาวน์โหลดสำเร็จ</sys:String>
-    <sys:String x:Key="SuccessDownloadInstallation">ดาวน์โหลดไฟล์สำหรับการติดตั้งสำเร็จ</sys:String>
-    <sys:String x:Key="SuccessSave">บันทึกสำเร็จ</sys:String>
-    <sys:String x:Key="SuccessRepair">การซ่อมแซมสำเร็จ</sys:String>
+    <sys:String x:Key="Success_Add_Download_Task">Successfully added download tasks.</sys:String>
+    <sys:String x:Key="Success_Create_ISO">Office ISO file is created.</sys:String>
+    <sys:String x:Key="Success_Installation_Verify">ไฟล์การติดตั้งได้รับการตรวจสอบและไม่พบข้อผิดพลาด</sys:String>
+    <sys:String x:Key="Success_Installer_Exited">เครื่องมือปรับใช้ Office ออกได้ปกติ</sys:String>
+    <sys:String x:Key="Success_Apply_Preferences">Successfully applied Office application preferences.</sys:String>
+    <sys:String x:Key="Success_Save">บันทึกสำเร็จ</sys:String>
+    <sys:String x:Key="Success_Collect_Logs">Log files are collected and saved in: {0}</sys:String>
+    <sys:String x:Key="Success_Repair">การซ่อมแซมสำเร็จ</sys:String>
+    <sys:String x:Key="Success_Repair_System_Variables">System variables reset completed, please reboot your system for the changes to take effect.</sys:String>
+    <sys:String x:Key="Success_Repair_WMI_Components">WMI components repair completed, please reboot your system for the changes to take effect.</sys:String>
 
     <!-- Error Message -->
-    <sys:String x:Key="ErrCreateTempPath">สร้างเส้นทางชั่วคราวไม่ได้ โปรดตรวจสอบระบบตัวแปรแล้วลองอีกครั้ง</sys:String>
-    <sys:String x:Key="ErrRunning">Office Tool Plus กำลังทำงานอยู่</sys:String>
-    <sys:String x:Key="ErrAutoUpdate">เกิดข้อผิดพลาดกับการปรับปรุงแบบอัตโนมัติ โปรดดาวน์โหลด Office Tool Plus เวอร์ชันล่าสุดด้วยตนเอง</sys:String>
-    <sys:String x:Key="ErrFileMissing">ไฟล์สูญหาย: {0}</sys:String>
-    <sys:String x:Key="ErrExtracting">เกิดข้อผิดพลาดขณะแตกไฟล์</sys:String>
-    <sys:String x:Key="ErrInstallationHash">การตรวจสอบไฟล์แฮชล้มเหลว: {0}&#x000A;แฮช: {1}&#x000A;แฮชจริง: {2}</sys:String>
-    <sys:String x:Key="ErrInstallationVersion">ความล้มเหลวในการตรวจสอบเวอร์ชั่นของไฟล์: {0}&#x000A;เวอร์ชั่น: {1}&#x000A;เวอร์ชั่นของไคลเอ็นต์: {2}</sys:String>
-    <sys:String x:Key="ErrInstallationMismatch">เวอร์ชั่นของไฟล์ไม่ตรงกัน: {0}&#x000A;เวอร์ชั่นจริง: {1}&#x000A;สถาปัตยกรรม: {2}</sys:String>
-    <sys:String x:Key="ErrVerifyingInstallation">พบข้อผิดพลาดขณะตรวจสอบไฟล์การติดตั้ง Office โปรดดู "การจัดการไฟล์การติดตั้ง" สำหรับรายละเอียดของข้อผิดพลาด</sys:String>
-    <sys:String x:Key="ErrReadingInfo">เกิดข้อผิดพลาดในการอ่านข้อมูล Office</sys:String>
-    <sys:String x:Key="ErrSavingInfo">เกิดข้อผิดพลาดในการบันทึกข้อมูล Office</sys:String>
-    <sys:String x:Key="ErrSetProxy">ตั้งค่าพร็อกซีล้มเหลว!</sys:String>
-    <sys:String x:Key="ErrGetVersion">ไม่สามารถรับเวอร์ชัน Office โปรดลองอีกครั้งหรือใช้ เครื่องมือปรับใช้ Office เป็นเครื่องมือดาวน์โหลด</sys:String>
-    <sys:String x:Key="ErrCreateISO">ไม่พบไฟล์การติดตั้ง Office ในไดเรกทอรีของ Office Tool Plus โปรดดาวน์โหลดไฟล์การติดตั้งก่อน! หรือย้ายไฟล์การติดตั้งไปยังเส้นทางการทำงาน</sys:String>
-    <sys:String x:Key="ErrInput">การนำเข้าไม่ถูกต้อง</sys:String>
-    <!-- Example: Invalid product. ID: ProPlus2021Retail. -->
-    <sys:String x:Key="ErrInvalidProductID">ไม่พบ รหัสผลิตภัณฑ์: {0}.</sys:String>
-    <sys:String x:Key="ErrSetupExited">เครื่องมือปรับใช้ Office ออกอย่างผิดปกติ</sys:String>
-    <sys:String x:Key="ErrAppNotFound">{0} ไม่พบการติดตั้ง Office บนคอมพิวเตอร์ โปรดยืนยันว่าได้ติดตั้ง Office เวอร์ชันล่าสุดแล้วหรือไม่</sys:String>
+    <sys:String x:Key="Err_Create_Temp_Path">สร้างเส้นทางชั่วคราวไม่ได้ โปรดตรวจสอบระบบตัวแปรแล้วลองอีกครั้ง</sys:String>
+    <sys:String x:Key="Err_Already_Running">Office Tool Plus กำลังทำงานอยู่</sys:String>
+    <sys:String x:Key="Err_Perform_Update">An error occurred while performing update, please download the latest version of Office Tool Plus manually.</sys:String>
+    <sys:String x:Key="Err_Unknown_Command">Unknown command: {0}</sys:String>
+    <sys:String x:Key="Err_Checking_Installation">An error occurred while checking the installation files. Please try again later, or redownload the Office installation files.</sys:String>
+    <sys:String x:Key="Err_Installation">Installation file ({0}) contains errors:&#x000A;{1}</sys:String>
+    <sys:String x:Key="Err_Installation_File_Missing">ไฟล์สูญหาย: {0}</sys:String>
+    <sys:String x:Key="Err_Installation_Hash">Hash check failure, file: {0}&#x000A;Hash: {1}&#x000A;Actual hash: {2}</sys:String>
+    <sys:String x:Key="Err_Installation_Version">Version check failure, file: {0}&#x000A;Version: {1}&#x000A;Client version: {2}</sys:String>
+    <sys:String x:Key="Err_Installation_Mismatch">Version mismatch, file: {0}&#x000A;Actual version: {1}&#x000A;Architecture: {2}</sys:String>
+    <sys:String x:Key="Err_Installation_Redownload">The installation files contains errors, please try to delete and download it again.</sys:String>
+    <sys:String x:Key="Err_Reading_Info">An error occurred while reading Office information.</sys:String>
+    <sys:String x:Key="Err_Saving_Info">An error occurred while saving Office information.</sys:String>
+    <sys:String x:Key="Err_Start_Deploy.Download">Unable to download Office, make sure you have added a product or language, then try again.</sys:String>
+    <sys:String x:Key="Err_Start_Deploy.Deploy">Unable to deploy Office, make sure you have set the basic settings correctly, then try again.</sys:String>
+    <sys:String x:Key="Err_Start_Deploy.Preferences">Unable to set the application preferences, make sure you have set the application preferences correctly, then try again.</sys:String>
+    <sys:String x:Key="Err_Installer_Exited">เครื่องมือปรับใช้ Office ออกอย่างผิดปกติ</sys:String>
+    <sys:String x:Key="Err_Prepare_To_Download_Office">ไม่สามารถรับเวอร์ชัน Office โปรดลองอีกครั้งหรือใช้ เครื่องมือปรับใช้ Office เป็นเครื่องมือดาวน์โหลด</sys:String>
+    <sys:String x:Key="Err_Create_ISO">Can not find Office installation files in Office Tool Plus's root directory. Please download installation files first, or move installation files to the working path.</sys:String>
+    <sys:String x:Key="Err_Loading_Office_Licenses">The Click-to-Run version of Office was not detected on this computer, the Office licenses could not be loaded. Please make sure you have the latest version of Office installed.</sys:String>
+    <sys:String x:Key="Err_Product_Key_Invalid">The entered product key is invalid, please check and try again.</sys:String>
+    <sys:String x:Key="Err_Confirmation_ID_Invalid">The entered confirmation ID is invalid, please check and try again.</sys:String>
+    <sys:String x:Key="Err_KMS_Host_Invalid">The entered KMS host name is invalid, please check and try again.</sys:String>
+    <sys:String x:Key="Err_Office_App_NotFound">{0} ไม่พบการติดตั้ง Office บนคอมพิวเตอร์ โปรดยืนยันว่าได้ติดตั้ง Office เวอร์ชันล่าสุดแล้วหรือไม่</sys:String>
 
-    <!-- Error Message about Thunder -->
-    <sys:String x:Key="DownloadErrorTitle">เกิดข้อผิดพลาดในการดาวน์โหลด</sys:String>
-    <sys:String x:Key="ThunderErrorStart">ไม่สามารถเริ่มการทำงานได้</sys:String>
-    <sys:String x:Key="ThunderErrorStop">ไม่สามารถหยุดการทำงานชั่วคราวได้</sys:String>
-    <sys:String x:Key="ThunderErrorExit">ไม่สามารถออกจากดาวน์โหลดแบบรวดเร็วได้</sys:String>
-    <sys:String x:Key="ThunderErrorPreparation">ไม่สามารถเริ่มต้นการดาวน์โหลดแบบรวดเร็วได้</sys:String>
-    <sys:String x:Key="ThunderErrorUnknown">ข้อผิดพลาดในการดาวน์โหลดที่ไม่รู้จัก</sys:String>
-    <sys:String x:Key="ThunderErrorCreate">การสร้างไฟล์ล้มเหลว</sys:String>
-    <sys:String x:Key="ThunderErrorDelete">การลบไฟล์ล้มเหลว</sys:String>
-    <sys:String x:Key="ThunderErrorFileHash">การตรวจสอบไฟล์ล้มเหลว</sys:String>
-    <sys:String x:Key="ThunderErrorPieceHash">การตรวจสอบไฟล์ล้มเหลว</sys:String>
-    <sys:String x:Key="ThunderErrorRead">การอ่านไฟล์ล้มเหลว</sys:String>
-    <sys:String x:Key="ThunderErrorRename">การเปลี่ยนชื่อไฟล์ล้มเหลว</sys:String>
-    <sys:String x:Key="ThunderErrorWrite">การเขียนไฟล์ล้มเหลว</sys:String>
-    <sys:String x:Key="ThunderErrorDownInvalid">ไม่พบที่อยู่</sys:String>
-    <sys:String x:Key="ThunderErrorNotIP">ไม่มี IP ในการดาวน์โหลดแบบ HTTP</sys:String>
-    <sys:String x:Key="ThunderErrorIDInvalid">หมายงานไม่ถูกต้อง</sys:String>
-    <sys:String x:Key="ThunderErrorProxyAuthTypeFailed">การตรวจสอบพร็อกซีล้มเหลว</sys:String>
-    <sys:String x:Key="ThunderErrorProxyAuthTypeUnknown">ประเภทพร็อกซีที่ไม่รู้จัก</sys:String>
-    <sys:String x:Key="ThunderErrorTimeOut">หมดเวลาการงาน</sys:String>
-    <sys:String x:Key="ThunderErrorCrashed">ระบบดาวน์โหลดรวดเร็วขัดข้อง</sys:String>
-    <sys:String x:Key="ThunderErrorCancel">งานถูกยกเลิก</sys:String>
+    <!-- Error messages about Xunlei -->
+    <sys:String x:Key="Xunlei_Err_Init">Failed to initialize Xunlei.</sys:String>
+    <sys:String x:Key="Xunlei_Err_Start">ไม่สามารถเริ่มการทำงานได้</sys:String>
+    <sys:String x:Key="Xunlei_Err_Stop">ไม่สามารถหยุดการทำงานชั่วคราวได้</sys:String>
+    <sys:String x:Key="Xunlei_Err_Exit">Failed to exit Xunlei.</sys:String>
+    <sys:String x:Key="Xunlei_Err_Unknown">ข้อผิดพลาดในการดาวน์โหลดที่ไม่รู้จัก</sys:String>
+    <sys:String x:Key="Xunlei_Err_Create">การสร้างไฟล์ล้มเหลว</sys:String>
+    <sys:String x:Key="Xunlei_Err_Delete">การลบไฟล์ล้มเหลว</sys:String>
+    <sys:String x:Key="Xunlei_Err_FileHash">การตรวจสอบไฟล์ล้มเหลว</sys:String>
+    <sys:String x:Key="Xunlei_Err_PieceHash">การตรวจสอบไฟล์ล้มเหลว</sys:String>
+    <sys:String x:Key="Xunlei_Err_Read">การอ่านไฟล์ล้มเหลว</sys:String>
+    <sys:String x:Key="Xunlei_Err_Rename">การเปลี่ยนชื่อไฟล์ล้มเหลว</sys:String>
+    <sys:String x:Key="Xunlei_Err_Write">การเขียนไฟล์ล้มเหลว</sys:String>
+    <sys:String x:Key="Xunlei_Err_DownInvalid">ไม่พบที่อยู่</sys:String>
+    <sys:String x:Key="Xunlei_Err_NotIP">ไม่มี IP ในการดาวน์โหลดแบบ HTTP</sys:String>
+    <sys:String x:Key="Xunlei_Err_IDInvalid">หมายงานไม่ถูกต้อง</sys:String>
+    <sys:String x:Key="Xunlei_Err_SetProxy">Failed to set proxy.</sys:String>
+    <sys:String x:Key="Xunlei_Err_ProxyAuthTypeFailed">การตรวจสอบพร็อกซีล้มเหลว</sys:String>
+    <sys:String x:Key="Xunlei_Err_ProxyAuthTypeUnknown">ประเภทพร็อกซีที่ไม่รู้จัก</sys:String>
+    <sys:String x:Key="Xunlei_Err_Timeout">หมดเวลาการงาน</sys:String>
+    <sys:String x:Key="Xunlei_Err_Crashed">Xunlei engine has crashed.</sys:String>
+    <sys:String x:Key="Xunlei_Err_Cancel">งานถูกยกเลิก</sys:String>
 </ResourceDictionary>

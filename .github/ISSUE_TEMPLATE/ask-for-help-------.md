@@ -7,4 +7,4 @@ assignees: ''
 
 ---
 
-Please go to discussions for help.
+Please go to [discussions](https://github.com/YerongAI/Office-Tool/discussions) for help.

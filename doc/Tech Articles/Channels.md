@@ -31,4 +31,4 @@ Dogfood::CC | f3260cf1-a92c-4c75-b02e-d64c0a86a968 | Beta Channel | ❌ | 08/05/
 Dogfood::DevMain | ea4a4090-de26-49d7-93c1-91bff9e53fc3 | Beta Channel | ❌ | 08/05/2020 |
 
 <center>　</center>
-<center>© 2022 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.4</center>
+<center>© 2023 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.4</center>

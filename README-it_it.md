@@ -41,6 +41,6 @@ Funzioni e caratteristiche::
 
 ## Informazioni
 
-© 2016-2022 Yerong. All Rights Reserved.
+© 2016-2023 Yerong. All Rights Reserved.
 
 > Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel) · [E-mail](mailto:yerong@coolhub.top)

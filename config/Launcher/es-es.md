@@ -7,7 +7,7 @@ Telegram
 > Únete a nuestro grupo oficial y chatea con nosotros.
 
 Discord
-> Join our official Discord Community.
+> Únete a nuestra comunidad oficial de Discord.
 
 Office
 > Página de inicio de Microsoft Office.

@@ -128,6 +128,8 @@
     <sys:String x:Key="Deploy_Architecture">架構</sys:String>
     <sys:String x:Key="Deploy_Architecture.x86">32 位元</sys:String>
     <sys:String x:Key="Deploy_Architecture.x64">64 位元</sys:String>
+    <sys:String x:Key="Deploy_Architecture.ARM">32-bit (ARM compatible)</sys:String>
+    <sys:String x:Key="Deploy_Architecture.ARM64">64-bit (ARM64 compatible)</sys:String>
     <sys:String x:Key="Deploy_Channel">更新通道</sys:String>
     <sys:String x:Key="Deploy_Module">安裝模組</sys:String>
     <sys:String x:Key="Deploy_Module.ODT">Office 部署工具</sys:String>
@@ -258,17 +260,12 @@
     <sys:String x:Key="Deploy_Advanced_Set_Preferences_Button">套用</sys:String>
 
     <!-- Activate page -->
-    <sys:String x:Key="Activate_Activation">啟用</sys:String>
-    <sys:String x:Key="Activate_Activation.Description">啟用或檢視您的 Office 授權。</sys:String>
-    <sys:String x:Key="Activate_Button">啟用(_A)</sys:String>
-    <sys:String x:Key="Activate_Display_Activation">檢視啟用資訊</sys:String>
-    <sys:String x:Key="Activate_Display_Licenses">檢視授權資訊</sys:String>
-    <sys:String x:Key="Activate_Display_FailureHistory">檢視 MAK/一般版啟用失敗歷史記錄</sys:String>
-    <sys:String x:Key="Activate_Display_KMSHistory">檢視 KMS 使用者端啟用歷史記錄</sys:String>
-    <sys:String x:Key="Activate_Clear_Activation">清除啟用資訊</sys:String>
-    
     <sys:String x:Key="Activate_Licenses_Management">授權管理</sys:String>
-    <sys:String x:Key="Activate_Licenses_Management.Description">安裝、解除安裝或重設 Office 授權。</sys:String>
+    <sys:String x:Key="Activate_Licenses_Management.Description">Install, uninstall or activate Office licenses.</sys:String>
+    <sys:String x:Key="Activate_Button">啟用(_A)</sys:String>
+    <sys:String x:Key="Activate_Display_Internet_Act_Events">Display Internet activation failure events</sys:String>
+    <sys:String x:Key="Activate_Display_KMS_Events">Display KMS activation events</sys:String>
+    <sys:String x:Key="Activate_Clear_Activation">清除啟用資訊</sys:String>
     <sys:String x:Key="Activate_Install_Licenses">安裝授權</sys:String>
     <sys:String x:Key="Activate_Install_Licenses.Description">此操作將從已安裝的 Office 中取得授權並安裝。</sys:String>
     <sys:String x:Key="Activate_Install_Licenses_Button">安裝</sys:String>
@@ -278,24 +275,14 @@
     <sys:String x:Key="Activate_Uninstall_All_Licenses">解除安裝全部授權</sys:String>
     <sys:String x:Key="Activate_Uninstall_All_Licenses.Description">此操作將解除安裝全部已安裝的授權，並且操作完成後需要重新安裝授權。</sys:String>
     <sys:String x:Key="Activate_Uninstall_All_Licenses_Button">解除安裝</sys:String>
-    <sys:String x:Key="Activate_Reset_License">重設指定的 Office 授權狀態</sys:String>
-    <sys:String x:Key="Activate_Reset_License.Description">此操作將重設指定的 Office 授權狀態 (需要提供該授權的 SKU 識別碼)。</sys:String>
-    <sys:String x:Key="Activate_Reset_License_Button">重設</sys:String>
-    <sys:String x:Key="Activate_Input_SKU_ID">請輸入 SKU 識別碼:</sys:String>
-    <sys:String x:Key="Activate_Reset_All_Licenses">重設全部 Office 授權狀態</sys:String>
-    <sys:String x:Key="Activate_Reset_All_Licenses.Description">此操作將重設全部已安裝金鑰的授權狀態，並且操作完成後需要重新啟用 Office。</sys:String>
-    <sys:String x:Key="Activate_Reset_All_Licenses_Button">重設</sys:String>
 
     <sys:String x:Key="Activate_Keys_Management">金鑰管理</sys:String>
     <sys:String x:Key="Activate_Keys_Management.Description">安裝、解除安裝金鑰，或離線啟用 Office。</sys:String>
     <sys:String x:Key="Activate_Product_Key">產品金鑰</sys:String>
     <sys:String x:Key="Activate_Product_Key.Description">此操作將安裝 Office 產品金鑰。金鑰格式: XXXXX-XXXXX-XXXXX-XXXXX-XXXXX。</sys:String>
     <sys:String x:Key="Activate_Install_Product_Key">安裝金鑰(_I)</sys:String>
-    <sys:String x:Key="Activate_Uninstall_Product_Key">解除安裝金鑰(_U)</sys:String>
-    <sys:String x:Key="Activate_Input_Key">請輸入產品金鑰的最後五個字元:</sys:String>
+    <sys:String x:Key="Activate_Uninstall_Unactivated_Key">_Uninstall all unactivated keys</sys:String>
     <sys:String x:Key="Activate_Uninstall_All_Product_Keys">解除安裝全部產品金鑰(_A)</sys:String>
-    <sys:String x:Key="Activate_View_IID">檢視安裝識別碼 (IID)</sys:String>
-    <sys:String x:Key="Activate_View_IID.Description">此操作將取得安裝識別碼，以供電話啟用等方式離線啟用 Office。</sys:String>
     <sys:String x:Key="Activate_Install_CID">安裝確認識別碼 (CID)</sys:String>
     <sys:String x:Key="Activate_Install_CID.Description">此操作將安裝確認識別碼，以離線啟用產品。</sys:String>
     <sys:String x:Key="Activate_Input_CID">請輸入確認識別碼:</sys:String>
@@ -310,69 +297,71 @@
     <sys:String x:Key="Activate_KMS_Reset">重設 KMS</sys:String>
     <sys:String x:Key="Activate_KMS_Reset.Description">此操作將移除 KMS 主機名稱，並重設連接埠至預設值。</sys:String>
 
-    <sys:String x:Key="Activate_Outputs">輸出</sys:String>
-    <sys:String x:Key="Activate_Outputs.Description">在頂端顯示最新操作結果輸出。</sys:String>
-    <sys:String x:Key="Activate_Clear_Outputs">清除輸出(_C)</sys:String>
+    <!-- Licenses list -->
+    <sys:String x:Key="Activate_Licenses">Office licenses</sys:String>
+    <sys:String x:Key="Activate_License">Licenses list</sys:String>
+    <sys:String x:Key="Activate_License.Description">Manage installed licenses.</sys:String>
+    <sys:String x:Key="Activate_License_Refresh">_Refresh</sys:String>
+    <sys:String x:Key="Activate_License_Expand">_Expand all</sys:String>
+    <sys:String x:Key="Activate_License_Collapse">_Collapse all</sys:String>
+    <sys:String x:Key="Activate_License_Clear">C_lear list</sys:String>
+    <sys:String x:Key="Activate_License_Status.Unactivated">Unactivated</sys:String>
+    <sys:String x:Key="Activate_License_Status.Activated">Activated</sys:String>
+    <!-- vNext Licnese -->
+    <sys:String x:Key="Activate_License_vNext.Type">License type:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Type.Subscription">subscription</sys:String>
+    <sys:String x:Key="Activate_License_vNext.ExpireDate">License expiry date:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.MaxDevice">Max devices allowed:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Status">Status:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Status.Provisioned">provisioned</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Code">Reason code:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Beneficiary.User">The license is assigned to the following user:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Beneficiary.Device">The license is assigned to the following device:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.TenantID">Tenant ID:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.DeviceID">Device ID:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.UserID">User ID:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.UserEmail">User Email:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.UserValidFrom">Authorization valid from:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.UserValidTo">Authorization valid to:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.ValidFrom">Valid from:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.ValidTo">Valid to:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.RenewalTime">Next renewal time:</sys:String>
+    <!-- Legacy License -->
+    <sys:String x:Key="Activate_License_Lic.Description">Description:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Key">Last 5 characters of key:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Period">Remaining period:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Error_Code">Error code:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Error_Description">Error description:</sys:String>
+    <sys:String x:Key="Activate_License_VL.Type">Activation type:</sys:String>
+    <!-- AO equal to Activation Object -->
+    <sys:String x:Key="Activate_License_AD.ObjectName">Activation Object name: </sys:String>
+    <sys:String x:Key="Activate_License_AD.ObjectDN">AO DN: </sys:String>
+    <sys:String x:Key="Activate_License_AD.ExtendedPid">AO extended PID: </sys:String>
+    <sys:String x:Key="Activate_License_AD.AID">AO activation ID: </sys:String>
+    <sys:String x:Key="Activate_License_KMS.Host">KMS host:</sys:String>
+    <sys:String x:Key="Activate_License_KMS_Host_Caching">Host caching:</sys:String>
+    <sys:String x:Key="Activate_License_KMS_Host_Caching.Enabled">Enabled</sys:String>
+    <sys:String x:Key="Activate_License_KMS_Host_Caching.Disabled">Disabled</sys:String>
+    <sys:String x:Key="Activate_License_KMS.Act_Interval">Activate interval:</sys:String>
+    <sys:String x:Key="Activate_License_KMS.Renew_Interval">Renew interval:</sys:String>
+    
+    <sys:String x:Key="Activate_License_Period.Infinite">infinite</sys:String>
+    <sys:String x:Key="Activate_License_Period.Day">{0} day(s)</sys:String>
+    <sys:String x:Key="Activate_License_Period.Hour">{0} hour(s)</sys:String>
+    <sys:String x:Key="Activate_License_Period.Minute">{0} min(s)</sys:String>
+    
+    <sys:String x:Key="Activate_License_Button.Copy_LicenseID">Copy license ID</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_TenantID">Copy tenant ID</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_UserID">Copy user ID</sys:String>
+    <sys:String x:Key="Activate_License_Button.Delete_License">Delete license</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_SKU">Copy SKU ID</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_IID">Copy Installation ID</sys:String>
+    <sys:String x:Key="Activate_License_Button.Uninstall_Key">Uninstall key</sys:String>
     
     <sys:String x:Key="Activate_Licenses_List">授權列表</sys:String>
     <sys:String x:Key="Activate_Licenses_List_Type_To_Search">輸入以篩選授權列表</sys:String>
     <sys:String x:Key="Activate_Licenses_List_ID">產品識別碼:</sys:String>
     
-    <!-- Activate content translation -->
-    <sys:String x:Key="ActivationTitle">Office 啟用處理</sys:String>
-    <sys:String x:Key="LicenseDescription">授權描述: </sys:String>
-    <sys:String x:Key="LicenseStatus">授權狀態: </sys:String>
-    <sys:String x:Key="RemainGrace">剩餘寬限時數: </sys:String>
-    <sys:String x:Key="RemainGraceDay">天</sys:String>
-    <sys:String x:Key="RemainGraceMin">分鐘後到期</sys:String>
-    <sys:String x:Key="Licexpiry">BETA 到期期限: </sys:String>
-    <sys:String x:Key="ErrorCode">錯誤碼: </sys:String>
-    <sys:String x:Key="ErrorDescrpition">錯誤描述: </sys:String>
-    <sys:String x:Key="ErrorUnknown">發生未知的錯誤。</sys:String>
-    <sys:String x:Key="StatusLicensed">**已授權** </sys:String>
-    <sys:String x:Key="StatusUnlicensed">`未授權`</sys:String>
-    <sys:String x:Key="StatusOOBGrace">`OOB_寬限期`</sys:String>
-    <sys:String x:Key="StatusOOTGrace">`OOT_寬限期`</sys:String>
-    <sys:String x:Key="StatusNonGenuineGrace">`非正版寬限期`</sys:String>
-    <sys:String x:Key="StatusNotifications">`通知狀態`</sys:String>
-    <sys:String x:Key="StatusExtendedGrace">`延長 寬限期`</sys:String>
-    <sys:String x:Key="StatusUnknown">`不明`</sys:String>
-
-    <sys:String x:Key="AppliedSetting">已成功套用設定</sys:String>
-    <sys:String x:Key="NoKMSLics">找不到 KMS 授權。</sys:String>
-    <sys:String x:Key="NoKeyInstalled">未偵測到已安裝的產品金鑰</sys:String>
-    <sys:String x:Key="UninstallKey">已成功解除安裝產品金鑰</sys:String>
-    <sys:String x:Key="ActivationSuccess">**已成功啟用產品**</sys:String>
-    <sys:String x:Key="OfflineActivationSuccess">**已成功離線啟用產品**</sys:String>
-    <sys:String x:Key="IKeySuccess">**已成功安裝產品金鑰**</sys:String>
-    <sys:String x:Key="ProductKey">產品金鑰的最後5個字元: </sys:String>
-    <sys:String x:Key="UninstallingKey">正在移除下列的產品金鑰: </sys:String>
-    <sys:String x:Key="ILicense">正在安裝授權: </sys:String>
-    <sys:String x:Key="ILicenseSuccess">已成功安裝 Office 授權。</sys:String>
-    <sys:String x:Key="InstallationID">安裝識別碼:</sys:String>
-    <sys:String x:Key="NoKMSEvent">在本機中找不到 KMS 啟用事件: {0}</sys:String>
-    <sys:String x:Key="NoIAEvent">在本機中找不到啟用失敗事件: {0}</sys:String>
-    <sys:String x:Key="NoEvents">找不到任何事件。</sys:String>
-    <sys:String x:Key="SuccessEvent">啟用成功事件: </sys:String>
-    <sys:String x:Key="FailureEvent">啟用失敗事件: </sys:String>
-    <sys:String x:Key="ProductKeyNotFound">找不到產品金鑰</sys:String>
-    <sys:String x:Key="NotFound">找不到。</sys:String>
-    <sys:String x:Key="NotLicenseFound">找不到產品授權</sys:String>
-    <sys:String x:Key="InfoOnly"> (僅供已啟用授權時參考)</sys:String>
-
-    <sys:String x:Key="VLActivationType">啟用類型: </sys:String>
-    <sys:String x:Key="ActRecent">最近成功啟用用戶端資訊: </sys:String>
-    <sys:String x:Key="KMSDNS">從 DNS 擷取的 KMS 名稱: </sys:String>
-    <sys:String x:Key="ADInfoAOName">啟用物件名稱: </sys:String>
-    <sys:String x:Key="ActivationInterval">啟用間隔: </sys:String>
-    <sys:String x:Key="RenewalInterval">續訂間隔: </sys:String>
-    <sys:String x:Key="IntervalMinutes">分鐘</sys:String>
-    <sys:String x:Key="HostCaching">KMS 主機快取: </sys:String>
-    <sys:String x:Key="HostCachingEnabled">已啟用</sys:String>
-    <sys:String x:Key="HostCachingDisabled">已停用</sys:String>
-    <sys:String x:Key="HostRegOverride">KMS 主機: </sys:String>
-    <!-- End of activate content translation -->
-
     <!-- Toolbox page -->
     <sys:String x:Key="Toolbox_Repair">修復</sys:String>
     <sys:String x:Key="Toolbox_Learn_More">瞭解更多</sys:String>
@@ -386,7 +375,8 @@
     <sys:String x:Key="Toolbox_Query_Office_Version_List_Channel">通道</sys:String>
     <sys:String x:Key="Toolbox_Query_Office_Version_List_Branch">分支</sys:String>
     <sys:String x:Key="Toolbox_Query_Office_Version_List_Version">版本</sys:String>
-    <sys:String x:Key="Toolbox_Query_Office_Version_List_CreatedTimeUTC">建立時間 (UTC)</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_CreatedTime">建立時間</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_Copy">Copy version number</sys:String>
     <sys:String x:Key="Toolbox_Query_ErrorCode">查詢錯誤碼的詳細描述</sys:String>
     <sys:String x:Key="Toolbox_Query_ErrorCode.Description">錯誤程式碼通常以 '0x' 為開頭，例如: 0x2 或者 0x80070002</sys:String>
     <sys:String x:Key="Toolbox_Query_ErrorCode_Button">查詢</sys:String>
@@ -408,7 +398,7 @@
     <sys:String x:Key="Toolbox_Collect_InstallerLog_Button">收集</sys:String>
     <sys:String x:Key="Toolbox_Change_UpdateChannel">變更 Office 更新通道</sys:String>
     <sys:String x:Key="Toolbox_Change_UpdateChannel.Description">使用此工具變更更新通道，以在免重新安裝 Office 情況下升級或降級您的 Office。</sys:String>
-    <sys:String x:Key="Toolbox_Change_UpdateChannel_Display_Internel">Display internal channels</sys:String>
+    <sys:String x:Key="Toolbox_Change_UpdateChannel_Display_Internel">顯示內部通道</sys:String>
     <sys:String x:Key="Toolbox_Change_Owner">變更 Office 產品擁有者名稱</sys:String>
     <sys:String x:Key="Toolbox_Change_Owner.Description">產品擁有者名稱會在 Office 各應用程式的帳戶頁面中顯示。</sys:String>
     <sys:String x:Key="Toolbox_Change_Owner_Set">設定名稱</sys:String>
@@ -418,9 +408,6 @@
     <sys:String x:Key="Toolbox_Change_Owner_Name.LearnMore">瞭解更多關於名稱格式的資訊。</sys:String>
     <sys:String x:Key="Toolbox_Repair_DocumentIcon">修復 Office 文件圖示</sys:String>
     <sys:String x:Key="Toolbox_Repair_DocumentIcon.Description">使用此工具以重設 Office 文件關聯。</sys:String>
-    <sys:String x:Key="Toolbox_Repair_GenuineWarning">修復 Office 授權問題</sys:String>
-    <sys:String x:Key="Toolbox_Repair_GenuineWarning.Description">使用此功能以修復 Office 顯示「您的 Office 授權發生問題」錯誤對話方塊的問題。</sys:String>
-    <sys:String x:Key="Toolbox_Input_KMS_Host">請輸入 KMS 主機:</sys:String>
     <sys:String x:Key="Toolbox_Backup_Restore_Settings">備份或還原 Office 設定</sys:String>
     <sys:String x:Key="Toolbox_Backup_Restore_Settings.Description">使用此工具以備份或還原 Office 設定 (不包含個人文件以及內容)。&#x000A;請注意，請勿隨意向他人分享您的備份檔，以免造成個人資料外洩。</sys:String>
     <sys:String x:Key="Toolbox_Backup_Exclude_PersonalInf">排除個人資料</sys:String>
@@ -482,7 +469,7 @@
     <sys:String x:Key="Convert_SearchOnSubfolders">搜尋子資料夾</sys:String>
     <sys:String x:Key="Convert_SearchOnSubfolders.Description">選取資料夾時，在子資料夾內搜尋檔案。</sys:String>
     <sys:String x:Key="Convert_Delete">刪除檔案</sys:String>
-    <sys:String x:Key="Convert_Delete.Description">Move the original file to the Recycle Bin after successful conversion. If the Recycle Bin is not available, the file will be permanently deleted.</sys:String>
+    <sys:String x:Key="Convert_Delete.Description">轉換成功後，將原始檔案移動至資源回收筒。如果資源回收筒無法使用，檔案將永久刪除。</sys:String>
     <sys:String x:Key="Convert_HideUI">隱藏使用者介面</sys:String>
     <sys:String x:Key="Convert_HideUI.Description">Office 處理時不顯示任何提示方塊。</sys:String>
     
@@ -566,7 +553,7 @@
     <sys:String x:Key="Hash_Checker_Compute_Selected">計算選取的檔案雜湊碼(_C)</sys:String>
     <sys:String x:Key="Hash_Checker_Open_File_Location">開啟檔案位置(_O)</sys:String>
     <sys:String x:Key="Hash_Checker_Copy_Hash_Value">複製雜湊碼(_H)</sys:String>
-    <sys:String x:Key="Hash_Checker_Create_Hash_File">Create h_ash file(s)</sys:String>
+    <sys:String x:Key="Hash_Checker_Create_Hash_File">建立雜湊檔案(_A)</sys:String>
 
     <!-- Settings page -->
     <sys:String x:Key="Settings_General">一般</sys:String>
@@ -704,14 +691,14 @@
     <!-- Example: Creating Office ISO file, file size: 3.1GB, 45% completed. -->
     <sys:String x:Key="Task_Creating_ISO">正在建立 Office ISO 檔案，檔案大小：{0}，{1} 已完成</sys:String>
     <sys:String x:Key="Task_ODT">正在部署，請稍後</sys:String>
-    <sys:String x:Key="Task_OSPP">正在執行 OSPP，請稍候</sys:String>
-    <sys:String x:Key="Task_Searching_KMS_Events">正在搜尋本機的 KMS 啟用事件: {0}</sys:String>
-    <sys:String x:Key="Task_Searching_IAF_Events">正在搜尋本機的網際網路啟用事件: {0}</sys:String>
+    <sys:String x:Key="Task_OSPP">OSPP is working now, please wait.</sys:String>
+    <sys:String x:Key="Task_SPP">SPP is working now, please wait.</sys:String>
+    <sys:String x:Key="Task_Searching_KMS_Events">Searching for KMS activation events, please wait.</sys:String>
+    <sys:String x:Key="Task_Searching_IAF_Events">Searching for Internet activation failure events, please wait.</sys:String>
     <sys:String x:Key="Task_Checking_Office_Update_Channel">正在查詢 Office 更新通道資訊</sys:String>
     <sys:String x:Key="Task_Testing_KMS_Host">正在測試 KMS 主機可用性</sys:String>
     <sys:String x:Key="Task_Collecting_Installer_Logs">正在擷取 Office 安裝記錄檔，請稍候</sys:String>
     <sys:String x:Key="Task_Removing_Office">正在移除 Office，請稍候</sys:String>
-    <sys:String x:Key="Task_Repairing_License_Issue">正在修復授權問題，請稍候</sys:String>
     <sys:String x:Key="Task_Repairing_WMI">正在修復 WMI 元件，請稍候</sys:String>
     <sys:String x:Key="Task_Converting_Documents">正在轉換 Office 文件，剩餘 {0} 個</sys:String>
     <sys:String x:Key="Task_Importing_Files">正在匯入檔案，請稍候</sys:String>
@@ -728,13 +715,15 @@
     <sys:String x:Key="Ques_Quick_Installation">已選擇安裝 {0}。&#x000A;&#x000A;按一下 [是] 即下載安裝文件後再安裝；按一下 [否] 即安裝時下載安裝文件，或者關閉視窗以取消安裝操作。</sys:String>
     <sys:String x:Key="Ques_Select_Office_To_Download">已指定下載版本號為 {0} 的 Office，但已檢索到不一樣的版本。&#x000A;&#x000A;點選「是」將會下載版本編號為 {1} 的 Office。&#x000A;點選「否」將會下載版本編號為 {2} 的 Office。</sys:String>
     <sys:String x:Key="Ques_Verify_Installation_Files">是否啟用「驗證 Office 安裝檔案」，以檢查可能存在的損毀檔案？</sys:String>
-    <sys:String x:Key="Ques_Install_Office">準備好要安裝 Office 了嗎？</sys:String>
+    <sys:String x:Key="Ques_Deploy_Office">準備好要部署 Office 了嗎？</sys:String>
+    <sys:String x:Key="Ques_Deploy_Office.ToInstall">Products to be installed:</sys:String>
+    <sys:String x:Key="Ques_Deploy_Office.ToUninstall">Products to be uninstalled:</sys:String>
     <sys:String x:Key="Ques_Install_Office.Applications">應用程式: {0}</sys:String>
     <sys:String x:Key="Ques_Install_Office.Architecture">架構: {0}</sys:String>
     <sys:String x:Key="Ques_Install_Office.UpdateChannel">更新通道: {0}</sys:String>
     <sys:String x:Key="Ques_Install_Office.OfficeVersion">Office 版本: {0}</sys:String>
     <sys:String x:Key="Ques_Install_Office.SourcePath">安裝檔案來源: {0}</sys:String>
-    <sys:String x:Key="Ques_Install_Configuration">如要了解詳細內容及設定，請查看 [檢視代碼]，以上設定是否正確？</sys:String>
+    <sys:String x:Key="Ques_Deploy_Configuration">如要了解詳細內容及設定，請查看 [檢視代碼]，以上設定是否正確？</sys:String>
     <sys:String x:Key="Ques_Delete_All_Installations">確定要刪除 {0} 嗎？</sys:String>
     <sys:String x:Key="Ques_Delete_Installation">確定要刪除安裝檔案 {0} 嗎？</sys:String>
     <sys:String x:Key="Ques_Delete_Installation_Languages">確定要刪除語言套件 {0} 嗎？</sys:String>
@@ -743,10 +732,12 @@
     <sys:String x:Key="Ques_Install_Licenses">操作完成後，可能不會在 Office 應用程式中顯示授權資訊，但仍可透過 Office Tool Plus 查詢或執行啟用操作，是否繼續？</sys:String>
     <sys:String x:Key="Ques_Uninstall_Licenses">確定要解除安裝全部 Office 授權嗎？</sys:String>
     <sys:String x:Key="Ques_Uninstall_All_Keys">確定要解除安裝全部 Office 金鑰嗎？如有需要，請先備份 Office 金鑰。</sys:String>
+    <sys:String x:Key="Ques_Delete_vNextLicense">Are you sure you want to delete the license?</sys:String>
     <sys:String x:Key="Ques_Remove_Office">此操作將會清除 Office，且無法取消。是否繼續？</sys:String>
     <sys:String x:Key="Ques_Invoke_Office_Update">已變更更新通道，是否立即檢查 Office 更新？</sys:String>
 
     <!-- Info Message -->
+    <sys:String x:Key="Info_OS_Outdated">Your operating system is no longer supported, please update your operating system or download an older version of Office Tool Plus to use.</sys:String>
     <sys:String x:Key="Info_User_Role">目前 Office Tool Plus 並不是以系統管理員身分執行，某些功能將無法使用。</sys:String>
     <sys:String x:Key="Info_Restart_Required">您必須重新啟動程式以套用新變更。</sys:String>
     <sys:String x:Key="Info_No_Updates">您使用的是最新版本的 Office Tool Plus。</sys:String>
@@ -758,6 +749,10 @@
     <sys:String x:Key="Info_Software_Installation_Complete">安裝完成</sys:String>
     <sys:String x:Key="Info_Software_Installation_Failed">安裝時發生錯誤</sys:String>
     <sys:String x:Key="Info_Auto_Shutdown">電腦將在一分鐘後登出/關機/重新啟動。</sys:String>
+    <sys:String x:Key="Info_No_Events">No events found.</sys:String>
+    <sys:String x:Key="Info_No_Office_Licenses">No Office licenses were found.</sys:String>
+    <sys:String x:Key="Info_Office_License_Activation.Title">Product activation results</sys:String>
+    <sys:String x:Key="Info_Office_License_Activation_Successful">Product activation successful.</sys:String>
     <sys:String x:Key="Info_KMS_Test_Result.Success">KMS 測試方法: {0}。測試結果: 成功，耗時: {1}ms</sys:String>
     <sys:String x:Key="Info_KMS_Test_Result.Failed">KMS 測試失敗。</sys:String>
 
@@ -767,6 +762,7 @@
     <sys:String x:Key="Success_Installation_Verify">已完成安裝檔案驗證，沒有發現錯誤。</sys:String>
     <sys:String x:Key="Success_Installer_Exited">已正常結束 Office 部署工具</sys:String>
     <sys:String x:Key="Success_Apply_Preferences">已套用 Office 應用程式喜好設定。</sys:String>
+    <sys:String x:Key="Success_Set_KMS">Successfully applied KMS settings.</sys:String>
     <sys:String x:Key="Success_Save">已成功儲存</sys:String>
     <sys:String x:Key="Success_Collect_Logs">已完成收集記錄並儲存在: {0}</sys:String>
     <sys:String x:Key="Success_Repair">已成功修復</sys:String>
@@ -793,10 +789,18 @@
     <sys:String x:Key="Err_Installer_Exited">Office 部署工具未正常結束。</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">無法取得版本資訊，請再試一次。或者改用下載引擎「Office 部署工具」。</sys:String>
     <sys:String x:Key="Err_Create_ISO">在 Office Tool Plus 資料夾中找不到任何安裝檔案，請先下載 Office 安裝檔案 (或移動安裝檔案)後，再執行此操作。</sys:String>
+    <sys:String x:Key="Err_Query_Office_Licenses">Unable to query Office licenses, please try again.</sys:String>
     <sys:String x:Key="Err_Loading_Office_Licenses">找不到 Click-to-Run 版本的 Office，因此無法載入 Office 授權。請確認是否已安裝最新版本的 Office。</sys:String>
     <sys:String x:Key="Err_Product_Key_Invalid">產品金鑰輸入不正確，請檢查後再試一次。</sys:String>
     <sys:String x:Key="Err_Confirmation_ID_Invalid">確認識別碼輸入不正確，請檢查後再試一次。</sys:String>
-    <sys:String x:Key="Err_KMS_Host_Invalid">KMS 主機名稱輸入不正確，請檢查後再試一次。</sys:String>
+    <sys:String x:Key="Err_KMS_Host_Invalid">Unable to save KMS settings, please check the KMS host name and try again.</sys:String>
+    <sys:String x:Key="Err_No_KMS_Lic">Unable to save KMS settings, no Office KMS licenses were installed on the system.</sys:String>
+    <sys:String x:Key="Err_Set_KMS">Unable to save KMS settings, please try again.</sys:String>
+    <sys:String x:Key="Err_Act_Office_License">An error occurred while activating the product.&#x000A;&#x000A;Error code: {0}</sys:String>
+    <sys:String x:Key="Err_Install_Office_Lic">An error occurred while installing the license.&#x000A;&#x000A;Error code: {0}</sys:String>
+    <sys:String x:Key="Err_Install_Product_Key">An error occurred while installing the product key.&#x000A;&#x000A;Error code: {0}</sys:String>
+    <sys:String x:Key="Err_Uninstall_Product_Key">An error occurred while uninstalling the product key.&#x000A;&#x000A;Error code: {0}</sys:String>
+    <sys:String x:Key="Err_Check_KMS_Status">Unable to check KMS status, please check the KMS host name and try again.</sys:String>
     <sys:String x:Key="Err_Office_App_NotFound">找不到「{0}」，請確認是否已安裝最新版本的 Office。</sys:String>
     <sys:String x:Key="Err_Open_Clipboard">無法存取剪貼簿，請再試一次。</sys:String>
 

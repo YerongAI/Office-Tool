@@ -126,8 +126,10 @@
     <sys:String x:Key="Deploy_Mode.Install">Installieren</sys:String>
     <sys:String x:Key="Deploy_Mode.Create_ISO">ISO-Datei erstellen</sys:String>
     <sys:String x:Key="Deploy_Architecture">Architektur</sys:String>
-    <sys:String x:Key="Deploy_Architecture.x86">32 Bit</sys:String>
-    <sys:String x:Key="Deploy_Architecture.x64">64 Bit</sys:String>
+    <sys:String x:Key="Deploy_Architecture.x86">32-bit</sys:String>
+    <sys:String x:Key="Deploy_Architecture.x64">64-bit</sys:String>
+    <sys:String x:Key="Deploy_Architecture.ARM">32-bit (ARM compatible)</sys:String>
+    <sys:String x:Key="Deploy_Architecture.ARM64">64-bit (ARM64 compatible)</sys:String>
     <sys:String x:Key="Deploy_Channel">Update-Kanal</sys:String>
     <sys:String x:Key="Deploy_Module">Installationsmodul</sys:String>
     <sys:String x:Key="Deploy_Module.ODT">Office-Bereitstellungstool</sys:String>
@@ -258,17 +260,12 @@
     <sys:String x:Key="Deploy_Advanced_Set_Preferences_Button">Anwenden</sys:String>
 
     <!-- Activate page -->
-    <sys:String x:Key="Activate_Activation">Aktivierung</sys:String>
-    <sys:String x:Key="Activate_Activation.Description">Aktivieren Sie Ihre Office-Lizenzen oder zeigen Sie sie an.</sys:String>
-    <sys:String x:Key="Activate_Button">_Aktivieren</sys:String>
-    <sys:String x:Key="Activate_Display_Activation">Aktivierungsinformationen anzeigen</sys:String>
-    <sys:String x:Key="Activate_Display_Licenses">Lizenzinformationen anzeigen</sys:String>
-    <sys:String x:Key="Activate_Display_FailureHistory">MAK-/Einzelhandels-Aktivierungsfehlerhistorie anzeigen</sys:String>
-    <sys:String x:Key="Activate_Display_KMSHistory">KMS-Client-Aktivierungshistorie anzeigen</sys:String>
-    <sys:String x:Key="Activate_Clear_Activation">Aktivierung vollständig entfernen</sys:String>
-    
     <sys:String x:Key="Activate_Licenses_Management">Lizenzverwaltung</sys:String>
-    <sys:String x:Key="Activate_Licenses_Management.Description">Office-Lizenzen installieren, deinstallieren oder zurücksetzen.</sys:String>
+    <sys:String x:Key="Activate_Licenses_Management.Description">Install, uninstall or activate Office licenses.</sys:String>
+    <sys:String x:Key="Activate_Button">_Aktivieren</sys:String>
+    <sys:String x:Key="Activate_Display_Internet_Act_Events">Display Internet activation failure events</sys:String>
+    <sys:String x:Key="Activate_Display_KMS_Events">Display KMS activation events</sys:String>
+    <sys:String x:Key="Activate_Clear_Activation">Aktivierung vollständig entfernen</sys:String>
     <sys:String x:Key="Activate_Install_Licenses">Lizenzen installieren</sys:String>
     <sys:String x:Key="Activate_Install_Licenses.Description">Lizenzen aus dem installierten Office abrufen und installieren.</sys:String>
     <sys:String x:Key="Activate_Install_Licenses_Button">Installieren</sys:String>
@@ -278,24 +275,14 @@
     <sys:String x:Key="Activate_Uninstall_All_Licenses">Alle Lizenzen deinstallieren</sys:String>
     <sys:String x:Key="Activate_Uninstall_All_Licenses.Description">Alle installierten Lizenzen deinstallieren. Nach diesem Vorgang müssen Sie eine neue Lizenz installieren.</sys:String>
     <sys:String x:Key="Activate_Uninstall_All_Licenses_Button">Deinstallieren</sys:String>
-    <sys:String x:Key="Activate_Reset_License">Setze den Lizenzstatus für eine Office-Lizenz zurück</sys:String>
-    <sys:String x:Key="Activate_Reset_License.Description">Den Lizenzierungsstatus einer bestimmten Lizenz zurücksetzen. Sie müssen eine SKU-ID angeben.</sys:String>
-    <sys:String x:Key="Activate_Reset_License_Button">Zurücksetzen</sys:String>
-    <sys:String x:Key="Activate_Input_SKU_ID">Bitte geben Sie die SKU-ID ein</sys:String>
-    <sys:String x:Key="Activate_Reset_All_Licenses">Den Lizenzstatus für alle Lizenzen zurücksetzen</sys:String>
-    <sys:String x:Key="Activate_Reset_All_Licenses.Description">Den Lizenzstatus für alle installierten Office-Produktschlüssel zurücksetzen. Sie müssen Office nach diesem Vorgang erneut aktivieren.</sys:String>
-    <sys:String x:Key="Activate_Reset_All_Licenses_Button">Zurücksetzen</sys:String>
-        
+
     <sys:String x:Key="Activate_Keys_Management">Schlüsselverwaltung</sys:String>
     <sys:String x:Key="Activate_Keys_Management.Description">Installieren und deinstallieren Sie Schlüssel oder aktivieren Sie Office offline.</sys:String>
     <sys:String x:Key="Activate_Product_Key">Produktschlüssel</sys:String>
     <sys:String x:Key="Activate_Product_Key.Description">Office-Produktschlüssel installieren, Produktschlüsselformat: XXXXX-XXXXX-XXXXX-XXXXX-XXXXX.</sys:String>
     <sys:String x:Key="Activate_Install_Product_Key">Schlüssel _installieren</sys:String>
-    <sys:String x:Key="Activate_Uninstall_Product_Key">Schlüssel _deinstallieren</sys:String>
-    <sys:String x:Key="Activate_Input_Key">Bitte geben Sie die letzten fünf Zeichen des Schlüssels ein</sys:String>
+    <sys:String x:Key="Activate_Uninstall_Unactivated_Key">_Uninstall all unactivated keys</sys:String>
     <sys:String x:Key="Activate_Uninstall_All_Product_Keys">_Alle Schlüssel deinstallieren</sys:String>
-    <sys:String x:Key="Activate_View_IID">Installations-ID anzeigen</sys:String>
-    <sys:String x:Key="Activate_View_IID.Description">Rufen Sie die Installations-ID ab, um Office offline per Telefonaktivierung usw. zu aktivieren.</sys:String>
     <sys:String x:Key="Activate_Install_CID">Bestätigungs-ID installieren</sys:String>
     <sys:String x:Key="Activate_Install_CID.Description">Installieren Sie die Bestätigungs-ID, um Office offline zu aktivieren.</sys:String>
     <sys:String x:Key="Activate_Input_CID">Bitte geben Sie die Bestätigungs-ID ein</sys:String>
@@ -309,70 +296,72 @@
     <sys:String x:Key="Activate_KMS_Host_Cache.Disable">Host-Caching deaktivieren</sys:String>
     <sys:String x:Key="Activate_KMS_Reset">KMS zurücksetzen</sys:String>
     <sys:String x:Key="Activate_KMS_Reset.Description">KMS-Hostnamen entfernen und KMS-Port auf Standard zurücksetzen.</sys:String>
-
-    <sys:String x:Key="Activate_Outputs">Ausgaben</sys:String>
-    <sys:String x:Key="Activate_Outputs.Description">Vorgangsergebnisse, die neuesten stehen oben.</sys:String>
-    <sys:String x:Key="Activate_Clear_Outputs">Ausgaben _leeren</sys:String>
+    
+    <!-- Licenses list -->
+    <sys:String x:Key="Activate_Licenses">Office licenses</sys:String>
+    <sys:String x:Key="Activate_License">Licenses list</sys:String>
+    <sys:String x:Key="Activate_License.Description">Manage installed licenses.</sys:String>
+    <sys:String x:Key="Activate_License_Refresh">_Refresh</sys:String>
+    <sys:String x:Key="Activate_License_Expand">_Expand all</sys:String>
+    <sys:String x:Key="Activate_License_Collapse">_Collapse all</sys:String>
+    <sys:String x:Key="Activate_License_Clear">C_lear list</sys:String>
+    <sys:String x:Key="Activate_License_Status.Unactivated">Unactivated</sys:String>
+    <sys:String x:Key="Activate_License_Status.Activated">Activated</sys:String>
+    <!-- vNext Licnese -->
+    <sys:String x:Key="Activate_License_vNext.Type">License type:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Type.Subscription">subscription</sys:String>
+    <sys:String x:Key="Activate_License_vNext.ExpireDate">License expiry date:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.MaxDevice">Max devices allowed:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Status">Status:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Status.Provisioned">provisioned</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Code">Reason code:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Beneficiary.User">The license is assigned to the following user:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Beneficiary.Device">The license is assigned to the following device:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.TenantID">Tenant ID:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.DeviceID">Device ID:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.UserID">User ID:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.UserEmail">User Email:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.UserValidFrom">Authorization valid from:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.UserValidTo">Authorization valid to:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.ValidFrom">Valid from:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.ValidTo">Valid to:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.RenewalTime">Next renewal time:</sys:String>
+    <!-- Legacy License -->
+    <sys:String x:Key="Activate_License_Lic.Description">Description:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Key">Last 5 characters of key:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Period">Remaining period:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Error_Code">Error code:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Error_Description">Error description:</sys:String>
+    <sys:String x:Key="Activate_License_VL.Type">Activation type:</sys:String>
+    <!-- AO equal to Activation Object -->
+    <sys:String x:Key="Activate_License_AD.ObjectName">Activation Object name: </sys:String>
+    <sys:String x:Key="Activate_License_AD.ObjectDN">AO DN: </sys:String>
+    <sys:String x:Key="Activate_License_AD.ExtendedPid">AO extended PID: </sys:String>
+    <sys:String x:Key="Activate_License_AD.AID">AO activation ID: </sys:String>
+    <sys:String x:Key="Activate_License_KMS.Host">KMS host:</sys:String>
+    <sys:String x:Key="Activate_License_KMS_Host_Caching">Host caching:</sys:String>
+    <sys:String x:Key="Activate_License_KMS_Host_Caching.Enabled">Enabled</sys:String>
+    <sys:String x:Key="Activate_License_KMS_Host_Caching.Disabled">Disabled</sys:String>
+    <sys:String x:Key="Activate_License_KMS.Act_Interval">Activate interval:</sys:String>
+    <sys:String x:Key="Activate_License_KMS.Renew_Interval">Renew interval:</sys:String>
+    
+    <sys:String x:Key="Activate_License_Period.Infinite">infinite</sys:String>
+    <sys:String x:Key="Activate_License_Period.Day">{0} day(s)</sys:String>
+    <sys:String x:Key="Activate_License_Period.Hour">{0} hour(s)</sys:String>
+    <sys:String x:Key="Activate_License_Period.Minute">{0} min(s)</sys:String>
+    
+    <sys:String x:Key="Activate_License_Button.Copy_LicenseID">Copy license ID</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_TenantID">Copy tenant ID</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_UserID">Copy user ID</sys:String>
+    <sys:String x:Key="Activate_License_Button.Delete_License">Delete license</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_SKU">Copy SKU ID</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_IID">Copy Installation ID</sys:String>
+    <sys:String x:Key="Activate_License_Button.Uninstall_Key">Uninstall key</sys:String>
     
     <sys:String x:Key="Activate_Licenses_List">Lizenzliste</sys:String>
     <sys:String x:Key="Activate_Licenses_List_Type_To_Search">Tippen Sie, um die Lizenzliste zu filtern</sys:String>
     <sys:String x:Key="Activate_Licenses_List_ID">Produkt-ID:</sys:String>
     
-    <!-- Activate content translation -->
-    <sys:String x:Key="ActivationTitle">Verarbeitung der Office-Aktivierung</sys:String>
-    <sys:String x:Key="LicenseDescription">Lizenzbeschreibung: </sys:String>
-    <sys:String x:Key="LicenseStatus">Lizenzstatus: </sys:String>
-    <sys:String x:Key="RemainGrace">Verbleibende Laufzeit: </sys:String>
-    <sys:String x:Key="RemainGraceDay">Tag(e)</sys:String>
-    <sys:String x:Key="RemainGraceMin">Minute(n) vor Ende der Laufzeit</sys:String>
-    <sys:String x:Key="Licexpiry">Ablauf der Beta-Version: </sys:String>
-    <sys:String x:Key="ErrorCode">Fehlercode: </sys:String>
-    <sys:String x:Key="ErrorDescrpition">Fehlerbeschreibung: </sys:String>
-    <sys:String x:Key="ErrorUnknown">Ein unbekannter Fehler ist aufgetreten.</sys:String>
-    <sys:String x:Key="StatusLicensed"> **LIZENZIERT** </sys:String>
-    <sys:String x:Key="StatusUnlicensed">`UNLIZENZIERT`</sys:String>
-    <sys:String x:Key="StatusOOBGrace">`OOB_LAUFZEIT`</sys:String>
-    <sys:String x:Key="StatusOOTGrace">`OOT_LAUFZEIT`</sys:String>
-    <sys:String x:Key="StatusNonGenuineGrace">`UNGÜLTIGE_LAUFZEIT`</sys:String>
-    <sys:String x:Key="StatusNotifications">`BENACHRICHTIGUNGEN`</sys:String>
-    <sys:String x:Key="StatusExtendedGrace">`VERLÄNGERTE_LAUFZEIT`</sys:String>
-    <sys:String x:Key="StatusUnknown">`UNBEKANNT`</sys:String>
-
-    <sys:String x:Key="AppliedSetting">Einstellung erfolgreich angewandt.</sys:String>
-    <sys:String x:Key="NoKMSLics">Es wurden keine Office-KMS-Lizenzen auf dem System gefunden..</sys:String>
-    <sys:String x:Key="NoKeyInstalled">Keine installierten Produktschlüssel erkannt.</sys:String>
-    <sys:String x:Key="UninstallKey">Produktschlüssel erfolgreich deinstalliert.</sys:String>
-    <sys:String x:Key="ActivationSuccess">**Produktaktivierung erfolgreich**</sys:String>
-    <sys:String x:Key="OfflineActivationSuccess">**Offline-Produktaktivierung erfolgreich**</sys:String>
-    <sys:String x:Key="IKeySuccess">**Produktschlüssel-Installation erfolgreich**</sys:String>
-    <sys:String x:Key="ProductKey">Letzte 5 Zeichen des installierten Produktschlüssels: </sys:String>
-    <sys:String x:Key="UninstallingKey">Deinstallation des Produktschlüssels für: </sys:String>
-    <sys:String x:Key="ILicense">Installation der Office-Lizenz: </sys:String>
-    <sys:String x:Key="ILicenseSuccess">Office-Lizenz erfolgreich installiert.</sys:String>
-    <sys:String x:Key="InstallationID">Installations-ID:</sys:String>
-    <sys:String x:Key="NoKMSEvent">Keine KMS-Aktivierungsereignisse auf dem Gerät gefunden: {0}</sys:String>
-    <sys:String x:Key="NoIAEvent">Keine Fehlerereignisse auf dem Gerät gefunden: {0}</sys:String>
-    <sys:String x:Key="NoEvents">Keine Ereignisse gefunden.</sys:String>
-    <sys:String x:Key="SuccessEvent">Aktivierungserfolg-Ereignis: </sys:String>
-    <sys:String x:Key="FailureEvent">Aktivierungsfehler-Ereignis: </sys:String>
-    <sys:String x:Key="ProductKeyNotFound">Produktschlüssel nicht gefunden</sys:String>
-    <sys:String x:Key="NotFound">Nicht gefunden.</sys:String>
-    <sys:String x:Key="NotLicenseFound">Keine Lizenzen gefunden.</sys:String>
-    <sys:String x:Key="InfoOnly"> (nur zu Informationszwecken, da der Status "LIZENZIERT" ist)</sys:String>
-
-    <sys:String x:Key="VLActivationType">Konfiguration der Aktivierungsart: </sys:String>
-    <sys:String x:Key="ActRecent">Letzte erfolgreiche Aktivierungs-Client-Informationen: </sys:String>
-    <sys:String x:Key="KMSDNS">KMS-Gerätename aus dem DNS: </sys:String>
-    <sys:String x:Key="ADInfoAOName">Aktivierungsobjekt-Name: </sys:String>
-    <sys:String x:Key="ActivationInterval">Aktivierungsintervall: </sys:String>
-    <sys:String x:Key="RenewalInterval">Verlängerungsintervall: </sys:String>
-    <sys:String x:Key="IntervalMinutes">Minute(n)</sys:String>
-    <sys:String x:Key="HostCaching">KMS-Host-Caching: </sys:String>
-    <sys:String x:Key="HostCachingEnabled">Aktiviert</sys:String>
-    <sys:String x:Key="HostCachingDisabled">Deaktiviert</sys:String>
-    <sys:String x:Key="HostRegOverride">KMS-Server: </sys:String>
-    <!-- End of activate content translation -->
-
     <!-- Toolbox page -->
     <sys:String x:Key="Toolbox_Repair">Reparieren</sys:String>
     <sys:String x:Key="Toolbox_Learn_More">Mehr erfahren</sys:String>
@@ -386,7 +375,8 @@
     <sys:String x:Key="Toolbox_Query_Office_Version_List_Channel">Kanal</sys:String>
     <sys:String x:Key="Toolbox_Query_Office_Version_List_Branch">Zweig</sys:String>
     <sys:String x:Key="Toolbox_Query_Office_Version_List_Version">Version</sys:String>
-    <sys:String x:Key="Toolbox_Query_Office_Version_List_CreatedTimeUTC">Erstellungszeit (UTC)</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_CreatedTime">Erstellungszeit</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_Copy">Copy version number</sys:String>
     <sys:String x:Key="Toolbox_Query_ErrorCode">Fehlercodebeschreibung abfragen</sys:String>
     <sys:String x:Key="Toolbox_Query_ErrorCode.Description">Fehlercodes beginnen in der Regel mit '0x'. Zum Beispiel: 0x2 oder 0x80070002.</sys:String>
     <sys:String x:Key="Toolbox_Query_ErrorCode_Button">Abfragen</sys:String>
@@ -418,9 +408,6 @@
     <sys:String x:Key="Toolbox_Change_Owner_Name.LearnMore">Erfahren Sie mehr über das Format des Eigentümernamens.</sys:String>
     <sys:String x:Key="Toolbox_Repair_DocumentIcon">Office-Dokumentensymbole reparieren</sys:String>
     <sys:String x:Key="Toolbox_Repair_DocumentIcon.Description">Hiermit wird die Zuordnung der Office-Dokumente zurückgesetzt.</sys:String>
-    <sys:String x:Key="Toolbox_Repair_GenuineWarning">Office-Lizenzproblem beheben</sys:String>
-    <sys:String x:Key="Toolbox_Repair_GenuineWarning.Description">Behebt ein Problem, bei dem Office fälschlicherweise "Ihre Office-Lizenz ist nicht original" anzeigt.</sys:String>
-    <sys:String x:Key="Toolbox_Input_KMS_Host">Bitte geben Sie einen KMS-Host ein</sys:String>
     <sys:String x:Key="Toolbox_Backup_Restore_Settings">Office-Einstellungen sichern oder wiederherstellen</sys:String>
     <sys:String x:Key="Toolbox_Backup_Restore_Settings.Description">Sichern Sie die Einstellungen Ihrer Office-Anwendungen oder stellen Sie sie wieder her (mit Ausnahme von Dateien und Inhalten).&#x000A;Hinweis: Geben Sie Ihre Sicherungskopien nicht weiter, da diese persönliche Informationen enthalten können.</sys:String>
     <sys:String x:Key="Toolbox_Backup_Exclude_PersonalInf">Persönliche Daten von der Sicherung ausschließen.</sys:String>
@@ -704,14 +691,14 @@
     <!-- Example: Creating Office ISO file, file size: 3.1GB, 45% completed. -->
     <sys:String x:Key="Task_Creating_ISO">Office-ISO-Datei wird erstellt, Dateigröße: {0}, {1} abgeschlossen.</sys:String>
     <sys:String x:Key="Task_ODT">Wird bereitgestellt, bitte warten Sie.</sys:String>
-    <sys:String x:Key="Task_OSPP">OSPP wird momentan ausgeführt, bitte warten Sie.</sys:String>
-    <sys:String x:Key="Task_Searching_KMS_Events">Suche nach KMS-Aktivierungsereignissen auf dem Gerät: {0}</sys:String>
-    <sys:String x:Key="Task_Searching_IAF_Events">Suche nach Internet-Aktivierungsfehlern auf dem Gerät: {0}</sys:String>
+    <sys:String x:Key="Task_OSPP">OSPP is working now, please wait.</sys:String>
+    <sys:String x:Key="Task_SPP">SPP is working now, please wait.</sys:String>
+    <sys:String x:Key="Task_Searching_KMS_Events">Searching for KMS activation events, please wait.</sys:String>
+    <sys:String x:Key="Task_Searching_IAF_Events">Searching for Internet activation failure events, please wait.</sys:String>
     <sys:String x:Key="Task_Checking_Office_Update_Channel">Informationen zu den Update-Kanälen von Office werden abgerufen.</sys:String>
     <sys:String x:Key="Task_Testing_KMS_Host">Erreichbarkeit des KMS-Hosts wird getestet.</sys:String>
     <sys:String x:Key="Task_Collecting_Installer_Logs">Office-Installationsprogramm-Protokolle werden gesammelt.</sys:String>
     <sys:String x:Key="Task_Removing_Office">Office wird entfernt.</sys:String>
-    <sys:String x:Key="Task_Repairing_License_Issue">Lizenzproblem wird repariert, bitte warten Sie.</sys:String>
     <sys:String x:Key="Task_Repairing_WMI">WMI-Komponenten werden repariert, bitte warten Sie.</sys:String>
     <sys:String x:Key="Task_Converting_Documents">Office-Dokumente werden konvertiert, {0} verbleiben.</sys:String>
     <sys:String x:Key="Task_Importing_Files">Dateien werden importiert, bitte warten Sie.</sys:String>
@@ -728,13 +715,15 @@
     <sys:String x:Key="Ques_Quick_Installation">Sie haben sich für die Installation von {0} entschieden.&#x000A;&#x000A;Klicken Sie auf "Ja", um nach dem Download zu installieren, auf "Nein", um während des Downloads zu installieren, oder schließen Sie das Fenster, um abzubrechen.</sys:String>
     <sys:String x:Key="Ques_Select_Office_To_Download">Sie haben als Office-Version {0} angegeben, aber es wurde eine andere Version ermittelt.&#x000A;&#x000A;Klicken Sie auf "Ja", um die Version {1} von Office herunterzuladen.&#x000A;Klicken Sie auf "Nein", um die Version {2} von Office herunterzuladen.</sys:String>
     <sys:String x:Key="Ques_Verify_Installation_Files">Möchten Sie die Office-Installationsdateien überprüfen, um mögliche Fehler zu finden?</sys:String>
-    <sys:String x:Key="Ques_Install_Office">Bereit zur Installation von Office?</sys:String>
+    <sys:String x:Key="Ques_Deploy_Office">Ready to deploy Office?</sys:String>
+    <sys:String x:Key="Ques_Deploy_Office.ToInstall">Products to be installed:</sys:String>
+    <sys:String x:Key="Ques_Deploy_Office.ToUninstall">Products to be uninstalled:</sys:String>
     <sys:String x:Key="Ques_Install_Office.Applications">Anwendung(en): {0}</sys:String>
     <sys:String x:Key="Ques_Install_Office.Architecture">Architektur: {0}</sys:String>
     <sys:String x:Key="Ques_Install_Office.UpdateChannel">Update-Kanal: {0}</sys:String>
     <sys:String x:Key="Ques_Install_Office.OfficeVersion">Office-Version: {0}</sys:String>
     <sys:String x:Key="Ques_Install_Office.SourcePath">/Quelle der Installationsdateien: {0}</sys:String>
-    <sys:String x:Key="Ques_Install_Configuration">Zeige Code für die Detailkonfiguration an. Ist die obige Grundkonfiguration korrekt?</sys:String>
+    <sys:String x:Key="Ques_Deploy_Configuration">Zeige Code für die Detailkonfiguration an. Ist die obige Grundkonfiguration korrekt?</sys:String>
     <sys:String x:Key="Ques_Delete_All_Installations">Sind Sie sicher, dass Sie alle Installationsdateien löschen wollen?</sys:String>
     <sys:String x:Key="Ques_Delete_Installation">Sind Sie sicher, dass Sie {0} löschen wollen?</sys:String>
     <sys:String x:Key="Ques_Delete_Installation_Languages">Sind Sie sicher, dass Sie {0} löschen wollen?</sys:String>
@@ -743,10 +732,12 @@
     <sys:String x:Key="Ques_Install_Licenses">Möglicherweise sehen Sie nach der Installation einer Office-Lizenz keine Aktivierungsinformationen in Office, aber Sie können über Office Tool Plus Informationen anzeigen oder Office aktivieren. Fortfahren?</sys:String>
     <sys:String x:Key="Ques_Uninstall_Licenses">Sind Sie sicher, dass Sie alle Office-Lizenzen deinstallieren möchten?</sys:String>
     <sys:String x:Key="Ques_Uninstall_All_Keys">Sind Sie sicher, dass Sie alle Office-Produktschlüssel deinstallieren möchten? Sichern Sie bitte zuerst Ihre Schlüssel, falls erforderlich.</sys:String>
+    <sys:String x:Key="Ques_Delete_vNextLicense">Are you sure you want to delete the license?</sys:String>
     <sys:String x:Key="Ques_Remove_Office">Möchten Sie Office wirklich entfernen? Dieser Vorgang kann nicht mehr abgebrochen werden, wenn er einmal gestartet wurde.</sys:String>
     <sys:String x:Key="Ques_Invoke_Office_Update">Der Update-Kanal wurde geändert, jetzt nach Office-Updates suchen?</sys:String>
 
     <!-- Info Message -->
+    <sys:String x:Key="Info_OS_Outdated">Your operating system is no longer supported, please update your operating system or download an older version of Office Tool Plus to use.</sys:String>
     <sys:String x:Key="Info_User_Role">Office Tool Plus wurde mit normalen Berechtigungen gestartet, einige Funktionen sind nicht verfügbar.</sys:String>
     <sys:String x:Key="Info_Restart_Required">Sie müssen die Anwendung neu starten, damit die Änderungen wirksam werden.</sys:String>
     <sys:String x:Key="Info_No_Updates">Sie verwenden die neueste Version von Office Tool Plus.</sys:String>
@@ -758,6 +749,10 @@
     <sys:String x:Key="Info_Software_Installation_Complete">Die Installation ist abgeschlossen.</sys:String>
     <sys:String x:Key="Info_Software_Installation_Failed">Die Installation ist fehlgeschlagen.</sys:String>
     <sys:String x:Key="Info_Auto_Shutdown">Ihr PC wird in einer Minute abgemeldet, heruntergefahren oder neu gestartet.</sys:String>
+    <sys:String x:Key="Info_No_Events">No events found.</sys:String>
+    <sys:String x:Key="Info_No_Office_Licenses">No Office licenses were found.</sys:String>
+    <sys:String x:Key="Info_Office_License_Activation.Title">Product activation results</sys:String>
+    <sys:String x:Key="Info_Office_License_Activation_Successful">Product activation successful.</sys:String>
     <sys:String x:Key="Info_KMS_Test_Result.Success">KMS-Testmethode: {0}. Testergebnis: Erfolg, vergangene Zeit: {1}ms.</sys:String>
     <sys:String x:Key="Info_KMS_Test_Result.Failed">KMS-Test fehlgeschlagen.</sys:String>
 
@@ -767,6 +762,7 @@
     <sys:String x:Key="Success_Installation_Verify">Die Installationsdatei wurde überprüft und es wurden keine Fehler gefunden.</sys:String>
     <sys:String x:Key="Success_Installer_Exited">Das Office-Bereitstellungstool wurde normal beendet.</sys:String>
     <sys:String x:Key="Success_Apply_Preferences">Die Office-Anwendungseinstellungen wurden erfolgreich angewendet.</sys:String>
+    <sys:String x:Key="Success_Set_KMS">Successfully applied KMS settings.</sys:String>
     <sys:String x:Key="Success_Save">Erfolgreich gespeichert.</sys:String>
     <sys:String x:Key="Success_Collect_Logs">Die Protokolldateien wurden gesammelt und hier gespeichert: {0}</sys:String>
     <sys:String x:Key="Success_Repair">Die Reparatur war erfolgreich.</sys:String>
@@ -793,10 +789,18 @@
     <sys:String x:Key="Err_Installer_Exited">Beim Beenden des Office-Bereitstellungstools ist ein Fehler aufgetreten.</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">Versionsinformationen können nicht abgerufen werden, bitte versuchen Sie es erneut oder verwenden Sie das Office-Bereitstellungstool.</sys:String>
     <sys:String x:Key="Err_Create_ISO">Die Office-Installationsdateien können im Stammverzeichnis von Office Tool Plus nicht gefunden werden. Bitte laden Sie zuerst die Installationsdateien herunter oder verschieben Sie sie in den Arbeitspfad.</sys:String>
+    <sys:String x:Key="Err_Query_Office_Licenses">Unable to query Office licenses, please try again.</sys:String>
     <sys:String x:Key="Err_Loading_Office_Licenses">Die Click-to-Run-Version von Office wurde auf diesem Computer nicht erkannt, die Office-Lizenzen konnten nicht geladen werden. Bitte stellen Sie sicher, dass Sie die neueste Version von Office installiert haben.</sys:String>
     <sys:String x:Key="Err_Product_Key_Invalid">Der eingegebene Produktschlüssel ist ungültig, bitte überprüfen Sie ihn und versuchen Sie es erneut.</sys:String>
     <sys:String x:Key="Err_Confirmation_ID_Invalid">Die eingegebene Bestätigungs-ID ist ungültig, bitte überprüfen Sie sie und versuchen Sie es erneut.</sys:String>
-    <sys:String x:Key="Err_KMS_Host_Invalid">Der eingegebene KMS-Hostname ist ungültig, bitte überprüfen Sie ihn und versuchen Sie es erneut.</sys:String>
+    <sys:String x:Key="Err_KMS_Host_Invalid">Unable to save KMS settings, please check the KMS host name and try again.</sys:String>
+    <sys:String x:Key="Err_No_KMS_Lic">Unable to save KMS settings, no Office KMS licenses were installed on the system.</sys:String>
+    <sys:String x:Key="Err_Set_KMS">Unable to save KMS settings, please try again.</sys:String>
+    <sys:String x:Key="Err_Act_Office_License">An error occurred while activating the product.&#x000A;&#x000A;Error code: {0}</sys:String>
+    <sys:String x:Key="Err_Install_Office_Lic">An error occurred while installing the license.&#x000A;&#x000A;Error code: {0}</sys:String>
+    <sys:String x:Key="Err_Install_Product_Key">An error occurred while installing the product key.&#x000A;&#x000A;Error code: {0}</sys:String>
+    <sys:String x:Key="Err_Uninstall_Product_Key">An error occurred while uninstalling the product key.&#x000A;&#x000A;Error code: {0}</sys:String>
+    <sys:String x:Key="Err_Check_KMS_Status">Unable to check KMS status, please check the KMS host name and try again.</sys:String>
     <sys:String x:Key="Err_Office_App_NotFound">{0} wurde auf dem Computer nicht gefunden. Bitte überprüfen Sie, ob die neueste Version von Office installiert wurde.</sys:String>
     <sys:String x:Key="Err_Open_Clipboard">Zugriff auf die Zwischenablage nicht möglich, bitte versuchen Sie es erneut.</sys:String>
 

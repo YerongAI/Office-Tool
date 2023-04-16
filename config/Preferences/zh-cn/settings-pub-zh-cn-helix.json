@@ -57,6 +57,20 @@
             "parentCategory": {
                 "ref": "L_MicrosoftOfficePublisher"
             },
+            "name": "L_Security",
+            "displayName": "安全"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Security"
+            },
+            "name": "L_TrustCenter",
+            "displayName": "信任中心"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
             "name": "L_Miscellaneous",
             "displayName": "杂项"
         }
@@ -607,6 +621,35 @@
             "application": "pub16",
             "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
             "valueName": "backgroundsave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_BlockMacroExecutionFromInternet",
+            "displayName": "阻止宏在来自 Internet 的 Office 文件中运行",
+            "explainText": "\n        使用此策略设置可以阻止来自 Internet 的 Office 文件中的宏运行。\n\n        如果启用此策略设置，即使在“信任中心”的“宏设置”部分中选择了“启用所有宏”，也将阻止宏运行。用户将收到阻止宏运行的通知。\n\n        允许运行宏时的例外情况为:\n       - 将 Office 文件保存到受信任的位置。\n        - 用户以前信任的 Office 文件。\n       - 宏经过数字签名，设备上安装了匹配的“受信任发布服务器”证书。\n\n       如果禁用此策略设置，“信任中心”的“宏设置”部分中配置的设置将确定是否在来自 Internet 的 Office 文件中运行宏。\n\n        如果未配置此策略设置，将阻止宏运行。用户将收到通知，告知他们来自 Internet 宏的安全风险以及了解详细信息的链接。\n\n        有关详细信息，请参阅 https://go.microsoft.com/fwlink/p/?linkid=2185771。\n      ",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\security",
+            "valueName": "blockcontentexecutionfrominternet"
         },
         {
             "parentCategory": {

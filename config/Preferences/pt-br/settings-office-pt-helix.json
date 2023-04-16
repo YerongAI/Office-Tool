@@ -4828,7 +4828,7 @@
                 }
             },
             "name": "L_TurnOffHardwareAccelerationInApplicationGuard",
-            "displayName": "Desabilitar a aceleração de hardware do Office no Application Guard.",
+            "displayName": "Desabilitar a aceleração de hardware do Office no Application Guard",
             "explainText": "Essa configuração de política controla se o Office no Application Guard usa aceleração de hardware ou software para renderizar gráficos.\n\nSe você habilitar essa configuração, o Application Guard usará a renderização baseada em software (CPU) e não carregará nenhum driver gráfico de terceiros ou interagirá com qualquer hardware gráfico conectado.\n\nImportante: Lembre-se de que desativar ou não definir essa configuração de política com dispositivos ou drivers gráficos potencialmente comprometidos pode representar um risco para o dispositivo do usuário.\n\nSe você desabilitar ou não definir essa configuração, o Application Guard usará o Hyper-V para acessar hardware gráfico de alta segurança com suporte. Essas GPUs melhoram o desempenho da renderização e a vida útil da bateria ao usar o Application Guard, particularmente para reprodução de vídeo e outras operações de uso intensivo de gráficos. Se você desabilitar ou não definir essa configuração sem a conexão de um hardware gráfico de renderização de alta segurança, o Application Guard será revertido automaticamente para a renderização baseada em software (CPU).\n\nObservação: Essa configuração de política só se aplica aos aplicativos do Microsoft 365 para empresas. ",
             "tags": [
                 "L_ApplicationGuard",
@@ -4858,7 +4858,7 @@
                 }
             },
             "name": "L_TurnOffBlockingOfUnsupportedFileTypesInApplicationGuard",
-            "displayName": "Desabilitar a proteção de tipos de arquivo não suportados no Application Guard for Office.",
+            "displayName": "Desabilitar a proteção de tipos de arquivo não suportados no Application Guard para Office",
             "explainText": "Esta configuração de política controla se o Application Guard for Office bloqueará a abertura de tipos de arquivo sem suporte em aplicativos do Office ou se habilitará o redirecionamento para o Modo de Exibição Protegido.\n\nSe você habilitar esta configuração, o Application Guard for Office redirecionará os tipos de arquivo não suportados para o Modo de Exibição Protegido em aplicativos do Office.\n\nImportante: Esteja ciente de que habilitar esta configuração de política pode representar um risco para o dispositivo do usuário.\n\nSe você desabilitar ou não definir esta configuração, o Application Guard for Office bloqueará os tipos de arquivo não suportados em aplicativos do Office. \n\nObservação: esta configuração de política se aplica apenas ao Microsoft 365 Apps para Grandes Empresas.",
             "tags": [
                 "L_ApplicationGuard",
@@ -4892,7 +4892,7 @@
                 ]
             },
             "name": "L_ConfigurePreCreateInApplicationGuard",
-            "displayName": "Configure a pré-criação do contêiner do Application Guard.",
+            "displayName": "Configure a pré-criação do contêiner do Application Guard",
             "explainText": "Esta configuração de política determina se o contêiner do Application Guard, para isolar arquivos não confiáveis, é pré-criado para melhorar o desempenho do tempo de execução. \n\n \nSe você habilitar esta configuração de política, você pode especificar o número de dias para continuar criando um contêiner do Application Guard se o usuário não abriu um arquivo com o Application Guard. A pré-criação de um contêiner quando o usuário faz login diminuirá o tempo de espera ao abrir um arquivo não confiável.\n \n “65535” configurará o Office para sempre criar um contêiner quando um usuário fizer login no Windows.\n \"20\" configurará o Office para pré-criar o contêiner a cada vez que um usuário fizer login no Windows por até 20 dias após a última vez em que o usuário abriu um arquivo não confiável usando o Application Guard.\n\"0\" configurará o Office para nunca pré-criar o contêiner. Em vez disso, o contêiner só será criado quando um usuário abrir seu primeiro arquivo não confiável após registrar em log no Windows.\n \nObservação: se você configurar o Office para nunca pré-criar um contêiner, os usuários experimentarão uma espera mais longa ao abrir um arquivo não confiável após registrar em log no Windows.\n \n\nSe você desabilitar ou não definir esta configuração, o Office usará uma heurística integrada para pré-criar o contêiner.\n\nObservação: esta configuração de política se aplica apenas ao Microsoft 365 Apps para Grandes Empresas.",
             "tags": [
                 "L_ApplicationGuard",
@@ -28966,6 +28966,34 @@
         },
         {
             "parentCategory": {
+                "ref": "L_PDFandXPS"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_PDFProtectionFromOffice",
+            "displayName": "Use o recurso Confidencialidade no Office para aplicar rótulos de confidencialidade a PDFs",
+            "explainText": "Esta configuração de política controla se os rótulos de confidencialidade fornecidas pela Proteção de Informações do Microsoft Purview serão aplicados aos PDFs criados no Word, Excel e PowerPoint.\n\nSe você habilitar ou não definir essa configuração de política, os PDFs herdarão o rótulo de confidencialidade e a criptografia do documento de origem do Word, Excel e PowerPoint.\n\nSe você desabilitar essa configuração de política, os PDFs criados no Word, Excel e PowerPoint não herdarão os rótulos de confidencialidade e a criptografia de seus arquivos de origem. Quando o arquivo de origem é criptografado, os usuários que não têm direitos para remover a proteção e não podem exportar para PDF.\n\nObservação: esta configuração de política se aplica somente a versões de assinatura do Office, como o Microsoft 365 Apps para Grandes Empresas. Para obter mais informações sobre esta configuração, consulte https://go.microsoft.com/fwlink/?linkid=2220953.",
+            "tags": [
+                "L_PDFandXPS",
+                "L_MicrosoftOfficeSystem"
+            ],
+            "application": "office16",
+            "key": "software\\microsoft\\office\\16.0\\common\\fixedformat",
+            "valueName": "disablepdfprotection"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Disableitemsinuserinterface"
             },
             "supportedOn": {
@@ -34434,8 +34462,8 @@
                 ]
             },
             "name": "L_EvictServerVersionsPolicy",
-            "displayName": "Classificar por vencimento as cópias armazenadas em cache localmente de versões do documento do servidor com mais de n dias vencidos.",
-            "explainText": "\n        Esta política controla quando documentos da versão do Office armazenados localmente em cache do servidor são classificados por vencimento no cache local.\n\n        Se você habilitar essa configuração de política, as versões de documento do Office no servidor que foram armazenadas localmente por mais de n dias, serão excluídas do cache local.\n\n        Se você desabilitar ou não definir esta configuração de política, as versões de documentos do Office do servidor que foram armazenadas localmente, serão excluídas do cache local, se forem mais antigos do que o padrão de um dia.",
+            "displayName": "Classificar por vencimento as cópias armazenadas em cache localmente de versões do documento do servidor com mais de n dias vencidos",
+            "explainText": "\n        Esta política controla quando os documentos da versão do Office armazenados localmente em cache do servidor envelhecem fora do cache local.\n\n        Se você habilitar essa configuração de política, as versões de documentos do Office do servidor que foram armazenadas localmente em cache por mais de n dias serão excluídas do cache local.\n\n        Se você desabilitar ou não definir essa configuração de política, as versões de documentos do Office do servidor que foram armazenadas em cache localmente serão excluídas do cache local se forem anteriores ao padrão de um dia.",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"
@@ -35403,7 +35431,7 @@
                 }
             },
             "name": "L_AIPException",
-            "displayName": "Use the Azure Information Protection add-in for sensitivity labeling",
+            "displayName": "Usar o suplemento Proteção de Informações Azure para rotulagem de confidencialidade",
             "explainText": "Essa configuração de política controla se o suplemento da Proteção de Informações do Microsoft Azure pode ser usado em vez do padrão de rotulagem interna para exibir e aplicar rótulos de confidencialidade em aplicativos do Office. Aplica-se apenas a versões de assinatura do Office, como o Microsoft 365 Apps para Grandes Empresas.\n\nA partir da versão 2211 para Canal Atual e Canal Empresarial Mensal, e versão 2302 para Canal Empresarial Semestral:\n\nSe você habilitar essa configuração de política e o cliente de rotulagem unificado da Proteção de Informações do Microsoft Azure estiver instalado, o suplemento desse cliente substituirá a rotulagem padrão incorporada aos aplicativos do Office. \n\nSe você desabilitar essa configuração de política ou não a configurar, a experiência de rotulagem padrão incorporada aos aplicativos do Office será usada para exibir e aplicar rótulos de confidencialidade.\n\nPara obter mais informações sobre essa configuração, confira https://go.microsoft.com/fwlink/p/?linkid=2207430.",
             "tags": [
                 "L_SecuritySettings",
@@ -35521,8 +35549,8 @@
                 }
             },
             "name": "L_OfficeInsiderUserExperience",
-            "displayName": "Mostrar a opção para o Office Insider",
-            "explainText": "Esta configuração de política controla se a opção do Office Insider é mostrada em Arquivo > Conta em um aplicativo do Office, como o Word.\n\nAo mostrar essa opção, um usuário pode optar por ingressar ou sair do programa Office Insider. Para obter mais informações sobre o programa Office Insider, confira https://insider.office.com.\n\nSe você habilitar essa configuração de política, a opção do Office Insider será mostrada em Arquivo > Conta.\n\nObservação: se você habilitar essa configuração de política, não habilite nem defina a configuração de política \"Atualizar Canal\" ou \"Atualizar Caminho\" em Configuração do Computador\\Política\\Modelos Administrativos\\Microsoft Office 2016 (Máquina)\\Atualizações. Se você fizer isso, essas configurações de política terão precedência, mesmo que a opção do Office Insider seja mostrada.\n\nSe você desabilitar essa configuração de política, a opção do Office Insider não será mostrada em Arquivo > Conta.\n\nObservação: essa configuração de política aplica-se somente a versões de assinatura do Office, como o Microsoft 365 Apps para Grandes Empresas, ou a versões de assinatura do Project e do Visio.",
+            "displayName": "Mostrar a opção do Microsoft 365 Insider",
+            "explainText": "Esta configuração de política controla se a opção do Microsoft 365 Insider é mostrada em Arquivo > Conta em um aplicativo, como o Word.\n\nAo mostrar essa opção, um usuário pode optar por ingressar ou sair do programa Microsoft 365 Insider. Para obter mais informações sobre o programa Microsoft 365 Insider, confira https://insider.office.com.\n\nSe você habilitar essa configuração de política, a opção do Microsoft 365 Insider será mostrada em Arquivo > Conta.\n\nObservação: se você habilitar essa configuração de política, não deverá habilitar e definir a configuração de política \"Canal de Atualizações\" ou \"Caminho de Atualização\" em Configuração do Computador\\Políticas\\Modelos Administrativos\\Microsoft Office 2016 (Computador)\\Atualizações. Se você fizer isso, essas configurações de política terão precedência, mesmo que a opção do Microsoft 365 Insider seja mostrada.\n\nSe você desabilitar essa configuração de política, a opção do Microsoft 365 Insider não será exibida em Arquivo > Conta.\n\nObservação: essa configuração de política se aplica apenas a versões de assinatura do Office, como aplicativos do Microsoft 365 Apps para Grandes Empresas e a versões de assinatura do Project e do Visio.",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"
@@ -35785,7 +35813,7 @@
                 ]
             },
             "name": "L_DisallowedRoamingMruDomains",
-            "displayName": "Desative o roaming de nomes de arquivos e metadados por domínio do servidor.",
+            "displayName": "Desative o roaming de nomes de arquivos e metadados por domínio do servidor",
             "explainText": "\nEsta configuração de política controla se os nomes de arquivos e metadados para os arquivos do Office estão em roaming e aparecem na lista de arquivos abertos recentemente em um aplicativo do Office, como o Word, em dispositivos diferentes.\n\nO roaming, que depende de um serviço Microsoft baseado na web, ocorre quando um usuário entra no Office com a mesma conta corporativa ou escolar em dispositivos diferentes.\n\nObservação: esta política é aplicada a todos os arquivos do Office armazenados em uma lista especificada de domínios do servidor. O conjunto de domínios não permitidos é uma lista separada por ponto e vírgula: \"*.contoso.com;service.microsoft.com\".\n\nSe você habilitar essa configuração de política, os nomes e metadados de arquivos não irão roam e não aparecerão na lista de arquivos abertos recentemente em aplicativos do Office em outros dispositivos, a menos que o arquivo tenha sido aberto nesse dispositivo.\n\n \nSe você desabilitar ou não definir essa configuração de política, os nomes e metadados de arquivos usarão perfil móvel e aparecerão na lista de arquivos abertos recentemente em aplicativos do Office em outros dispositivos, mesmo que o arquivo não tenha sido aberto nesse dispositivo.",
             "tags": [
                 "L_miscellaneous437",

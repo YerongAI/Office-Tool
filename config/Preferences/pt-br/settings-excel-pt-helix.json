@@ -2126,6 +2126,60 @@
         },
         {
             "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows_10_0"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Bloquear"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Mostrar Aviso Adicional"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Permitir"
+                            }
+                        ],
+                        "valueName": "blockxllfrominternet",
+                        "inputType": "dropdownList",
+                        "id": "L_BlockXLLFromInternetEnum"
+                    }
+                ]
+            },
+            "name": "L_BlockXLLFromInternet",
+            "displayName": "Bloquear Suplementos XLL do Excel que vêm de uma fonte não confiável",
+            "explainText": "\n        Essa configuração de política permite bloquear Suplementos XLL do Excel provenientes de uma fonte não confiável.\n\n        Se você habilitar essa configuração de política, poderá definir uma destas opções:\n        – Bloquear: suplementos XLL de fontes não confiáveis são bloqueados. Os usuários receberão uma notificação de que o suplemento foi bloqueado.\n        – Mostrar Aviso Adicional: mostrar um prompt de aviso adicional depois que o usuário optar por habilitar um suplemento XLL de uma fonte não confiável.\n        – Permitir: suplementos XLL de uma fonte não confiável são permitidos..\n\n        As exceções quando os Suplementos XLL do Excel poderão ser executados são:\n        – O XLL é armazenado em um Local Confiável.\n        – O XLL é assinado digitalmente e o certificado de Fonte Confiável correspondente é instalado no dispositivo.\n\n        Se você desabilitar essa configuração de política, as configurações definidas nas seções Configurações de Macro e Suplemento da Central de Confiabilidade determinarão se os Suplementos XLL do Excel provenientes de uma fonte não confiável serão permitidos.\n\n        Se você desabilitar ou não definir essa configuração de política, os usuários poderão substituir o comportamento padrão modificando o registro.\n\n        Para obter mais informações, confira https://support.microsoft.com/topic/1e3752e2-1177-4444-a807-7b700266a6fb.\n      ",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_FileBlockSettings"
             },
             "supportedOn": {

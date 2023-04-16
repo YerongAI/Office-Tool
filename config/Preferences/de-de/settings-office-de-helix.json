@@ -4828,7 +4828,7 @@
                 }
             },
             "name": "L_TurnOffHardwareAccelerationInApplicationGuard",
-            "displayName": "Deaktivieren Sie die Hardwarebeschleunigung für Office im Application Guard.",
+            "displayName": "Deaktivieren Sie die Hardwarebeschleunigung für Office im Application Guard",
             "explainText": "Mit dieser Richtlinieneinstellung bestimmen Sie, ob Office in Application Guard Grafiken mittels Hardware- oder Softwarebeschleunigung rendert.\n\nWenn Sie diese Einstellung aktivieren, verwendet Application Guard softwarebasiertes Rendering (CPU), ohne Grafiktreiber von Drittanbietern zu laden oder mit angeschlossener Grafikhardware zu interagieren.\n\nWichtig: Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, können kompromittierte Grafikgeräte oder -treiber einen Gefahr für das Gerät des Benutzers darstellen.\n\nWenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, verwendet Application Guard Hyper-V für den Zugriff auf unterstützte, hochsichere Hardware (GPUs) zum Rendern von Grafiken. Diese GPUs verbessern die Renderingleistung und die Akkulaufzeit bei Verwendung von Application Guard. Dies gilt vor allem für die Videowiedergabe und andere grafikintensive Vorgänge. Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, ohne dass hochsichere Hardware zum Rendern von Grafiken angeschlossen ist, greift Application Guard automatisch auf das softwarebasierte Rendering (CPU) zurück.\n\nHinweis: Diese Richtlinieneinstellung betrifft nur Microsoft 365 Apps for Enterprise. ",
             "tags": [
                 "L_ApplicationGuard",
@@ -4858,7 +4858,7 @@
                 }
             },
             "name": "L_TurnOffBlockingOfUnsupportedFileTypesInApplicationGuard",
-            "displayName": "Den Schutz nicht unterstützter Dateitypen in Application Guard für Office deaktivieren.",
+            "displayName": "Den Schutz nicht unterstützter Dateitypen in Application Guard für Office deaktivieren",
             "explainText": "Diese Richtlinieneinstellung steuert, ob Application Guard für Office das Öffnen nicht unterstützter Dateitypen in Office-Apps blockiert oder ob die Umleitung in die Geschützte Ansicht aktiviert wird.\n\nWenn Sie diese Einstellung aktivieren, leitet der Application Guard für Office nicht unterstützte Dateitypen in die Geschützte Ansicht in Office-Apps um.\n\nWichtig: Beachten Sie, dass die Aktivierung dieser Richtlinieneinstellung ein Risiko für das Gerät des Benutzers darstellen kann.\n\nWenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, wird Application Guard für Office nicht unterstützte Dateitypen in Office-Apps blockieren.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Microsoft 365 Apps for Enterprise.",
             "tags": [
                 "L_ApplicationGuard",
@@ -4892,7 +4892,7 @@
                 ]
             },
             "name": "L_ConfigurePreCreateInApplicationGuard",
-            "displayName": "Konfiguration des vor-erstellten Application Guard-Containers.",
+            "displayName": "Konfiguration des vorab erstellten Application Guard-Containers.",
             "explainText": "Diese Richtlinieneinstellung bestimmt, ob der Application Guard-Container für das Isolieren nicht vertrauenswürdiger Dateien vorab erstellt wird, um die Laufzeit-Leistung zu verbessern.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, können Sie die Anzahl der Tage angeben, während denen die Vorerstellung eines Application Guard-Containers weitergeführt wird, wenn der Benutzer bisher noch keine Datei mit Application Guard geöffnet hat. Einen Container beim Anmelden des Benutzers vorab zu erstellen wird die Wartezeit beim Öffnen einer nicht vertrauenswürdigen Datei verringern.\n\nDie Angabe „65535“ wird Office so konfigurieren, dass ein Application Guard-Container immer erstellt wird, wenn sich ein Benutzer bei Windows anmeldet.\nDie Angabe „20“ wird Office so konfigurieren, dass der Container bei jeder Anmeldung des Benutzers bei Windows vorab erstellt wird, dies während bis zu 20 Tagen nach dem letzten Öffnen einer nicht vertrauenswürdigen Datei mit Application Guard\nDie Angabe „0“ wird Office so konfigurieren, dass der Container nie vorab erstellt wird. Der Container wird nur dann erstellt, wenn ein Benutzer nach der Anmeldung in Windows seine erste nicht vertrauenswürdige Datei öffnet.\n\nHinweis: Wenn Sie Office so konfigurieren, dass ein Container nie vorab erstellt wird, werden Benutzern nach der Anmeldung in Windows beim Öffnen einer nicht vertrauenswürdigen Datei eine längere Wartezeit erfahren.\n\nWenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, verwendet Office eine integrierte Heuristik, um den Container vorab zu erstellen.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Microsoft 365-Apps for Enterprise.",
             "tags": [
                 "L_ApplicationGuard",
@@ -28966,6 +28966,34 @@
         },
         {
             "parentCategory": {
+                "ref": "L_PDFandXPS"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_PDFProtectionFromOffice",
+            "displayName": "Vertraulichkeitsbezeichnungen auf PDF-Dateien anwenden mit der Funktion „Vertraulichkeit“ in Office",
+            "explainText": "Diese Richtlinieneinstellung steuert, ob Vertraulichkeitsbezeichnungen, die von Microsoft Purview Information Protection unterstützt werden, auf in Word, Excel und PowerPoint erstellte PDFs angewendet werden.\n\nWenn Sie diese Richtlinieneinstellung aktivieren oder nicht konfigurieren, erben PDFs die Vertraulichkeitsbezeichnung und die Verschlüsselung aus dem Word-, Excel- und PowerPoint-Quelldokument.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, erben in Word, Excel und PowerPoint erstellte PDFs nicht die Vertraulichkeitsbezeichnungen und Verschlüsselung der Quelldatei. Wenn die Quelldatei verschlüsselt ist, können Benutzer, die nicht über die Rechte zum Entfernen des Schutzes verfügen, keine PDF-Datei exportieren.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Abonnementversionen von Office, z. B. Microsoft 365 Apps for Enterprise. Weitere Informationen zu dieser Einstellung finden Sie unter https://go.microsoft.com/fwlink/?linkid=2220953.",
+            "tags": [
+                "L_PDFandXPS",
+                "L_MicrosoftOfficeSystem"
+            ],
+            "application": "office16",
+            "key": "software\\microsoft\\office\\16.0\\common\\fixedformat",
+            "valueName": "disablepdfprotection"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Disableitemsinuserinterface"
             },
             "supportedOn": {
@@ -34434,7 +34462,7 @@
                 ]
             },
             "name": "L_EvictServerVersionsPolicy",
-            "displayName": "Lokal zwischengespeicherte Kopien von Serverdokumentversionen, die älter als n Tage sind, wegen Überalterung entfernen.",
+            "displayName": "Lokal zwischengespeicherte Kopien von Serverdokumentversionen, die älter als n Tage sind, wegen Überalterung entfernen",
             "explainText": "\n        Diese Richtlinie steuert, wann lokal zwischengespeicherte Office-Versionsdokumente wegen Überalterung auf dem Server aus dem lokalen Cache entfernt werden.\n\n        Wenn Sie diese Richtlinieneinstellung aktivieren, werden Office-Dokumentversionen auf dem Server, die mehr als n Tage lang lokal zwischengespeichert wurden, aus dem lokalen Cache gelöscht.\n\n        Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden Office-Dokumentversionen auf dem Server, die lokal zwischengespeichert wurden, aus dem lokalen Cache gelöscht, wenn sie älter als der Standardwert von einem Tag sind.",
             "tags": [
                 "L_miscellaneous437",
@@ -35403,7 +35431,7 @@
                 }
             },
             "name": "L_AIPException",
-            "displayName": "Use the Azure Information Protection add-in for sensitivity labeling",
+            "displayName": "Verwenden des Azure Information Protection-Add-Ins für Vertraulichkeitsbezeichnungen",
             "explainText": "Diese Richtlinieneinstellung steuert, ob das Microsoft Azure Information Protection-Add-In anstelle der standardmäßig integrierten Bezeichnungsfunktion zum Anwenden und Anzeigen von Vertraulichkeitsbezeichnungen in Office-Apps verwendet werden kann. Dies gilt nur für Abonnementversionen von Office wie z. B. Microsoft 365 Apps for Enterprise.\n\nAb Version 2211 für den aktuellen Kanal und den monatlichen Enterprise-Kanal sowie Version 2302 für den halbjährlichen Enterprise-Kanal:\n\nWenn Sie diese Richtlinieneinstellung aktivieren und der Microsoft Azure Information Protection-Client für einheitliche Bezeichnungen installiert ist, ersetzt das Add-In von diesem Client die in Office-Apps standardmäßig integrierte Bezeichnungsfunktion. \n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die standardmäßig für Office-Apps integrierte Bezeichnungsfunktion zum Anzeigen und Anwenden von Vertraulichkeitsbezeichnungen verwendet.\n\nWeitere Informationen zu dieser Einstellung finden Sie unter https://go.microsoft.com/fwlink/p/?linkid=2207430.",
             "tags": [
                 "L_SecuritySettings",
@@ -35521,8 +35549,8 @@
                 }
             },
             "name": "L_OfficeInsiderUserExperience",
-            "displayName": "Option für Office Insider anzeigen",
-            "explainText": "Diese Richtlinieneinstellung kontrolliert, ob die Option für Office Insider unter \"Datei\" > \"Konto\" in einer Office-App wie Word angezeigt wird.\n\nWenn diese Option angezeigt wird, kann ein Benutzer auswählen, ob er dem Office Insider-Programm beitritt oder es verlässt. Weitere Informationen über das Office Insider-Programm finden Sie unter \"https://insider.office.com\".\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die Option für Office Insider unter \"Datei\" > \"Konto\" angezeigt.\n\nHinweis: Wenn Sie diese Richtlinieneinstellung aktivieren, sollten Sie unter \"Computerkonfiguration\\Richtlinien\\Administrative Vorlagen\\Microsoft Office 2016 (Computer)\\Updates\" weder die Richtlinieneinstellung \"Updatekanal\" noch \"Updatepfad\" aktivieren und konfigurieren. Wenn Sie dies tun, haben diese Richtlinieneinstellungen Vorrang, auch wenn die Option für Office Insider angezeigt wird.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, wird die Option für Office Insider nicht unter \"Datei\" > \"Konto\" angezeigt.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Abonnementversionen von Office wie Microsoft 365 Apps for Enterprise sowie für Abonnementversionen von Project und Visio.",
+            "displayName": "Option für Microsoft 365 Insider anzeigen",
+            "explainText": "Diese Richtlinieneinstellung steuert, ob die Option für Microsoft 365 Insider unter „Datei“ > „Konto“ in einer App wie Word angezeigt wird.\n\nWenn diese Option angezeigt wird, kann ein Benutzer dem Microsoft 365-Insider-Programm beitreten oder es verlassen. Weitere Informationen zum Microsoft 365-Insider-Programm finden Sie unter https://insider.office.com.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, wird die Option für Microsoft 365 Insider unter „Datei“ > „Konto“ angezeigt.\n\nHinweis: Wenn Sie diese Richtlinieneinstellung aktivieren, sollten Sie die Richtlinieneinstellung „Updatekanal“ oder „Updatepfad“ unter \"Computerkonfiguration\\Richtlinien\\Administrative Vorlagen\\Microsoft Office 2016 (Computer)\\Aktualisierungen“ nicht aktivieren und konfigurieren. Wenn Sie dies tun, haben diese Richtlinieneinstellungen Vorrang, auch wenn die Option für Microsoft 365 Insider angezeigt wird.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, wird die Option für Microsoft 365 Insider unter „Datei“ > „Konto“ nicht angezeigt.\n\nHinweis: Diese Richtlinieneinstellung gilt nur für Abonnementversionen von Office, z. B. Microsoft 365 Apps for Enterprise, sowie für Abonnementversionen von Project und Visio.",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"
@@ -35785,7 +35813,7 @@
                 ]
             },
             "name": "L_DisallowedRoamingMruDomains",
-            "displayName": "Deaktivieren Sie das Roaming von Dateinamen und Metadaten nach Serverdomäne.",
+            "displayName": "Deaktivieren Sie das Roaming von Dateinamen und Metadaten nach Serverdomäne",
             "explainText": "\nDiese Richtlinieneinstellung steuert, ob Dateinamen und Metadaten für Office-Dateien via Roaming übergeben werden und in der Liste der zuletzt geöffneten Dateien in einer Office-App, z. B. Word, auf verschiedenen Geräten angezeigt werden.\n\nRoaming, das auf einem webbasierten Microsoft-Dienst basiert, tritt auf, wenn sich ein Benutzer mit demselben Geschäfts-, Schul- oder Uni-Konto auf verschiedenen Geräten bei Office anmeldet.\n\nHinweis: Diese Richtlinie wird auf alle Office-Dateien angewendet, die in einer angegebenen Liste von Serverdomänen gespeichert sind. Die Gruppe unzulässiger Domänen ist eine durch Strichpunkte getrennte Liste: „*.contoso.com;service.microsoft.com“. \n\nWenn Sie diese Richtlinieneinstellung aktivieren, werden Dateinamen und Metadaten nicht via Roaming übergeben und nicht in der Liste der zuletzt geöffneten Dateien in Office-Apps auf anderen Geräten angezeigt, es sei denn, die Datei wurde auf diesem Gerät geöffnet.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden Dateinamen und Metadaten via Roaming übergeben und in der Liste der zuletzt geöffneten Dateien in Office-Apps auf anderen Geräten angezeigt, selbst wenn die Datei auf diesem Gerät nicht geöffnet wurde.",
             "tags": [
                 "L_miscellaneous437",

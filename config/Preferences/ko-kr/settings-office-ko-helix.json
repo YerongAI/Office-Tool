@@ -4828,7 +4828,7 @@
                 }
             },
             "name": "L_TurnOffHardwareAccelerationInApplicationGuard",
-            "displayName": "Application Guard에서 Office의 하드웨어 가속을 사용 해제합니다.",
+            "displayName": "Application Guard에서 Office에 대한 하드웨어 가속 사용 안 함",
             "explainText": "이 정책 설정은 Application Guard의 Office에서 하드웨어 가속 또는 소프트웨어 가속을 사용하여 그래픽을 렌더링할지 여부를 제어합니다.\n\n이 설정을 사용하면 Application Guard는 소프트웨어 기반(CPU)의 렌더링을 사용하고 타사의 그래픽 드라이버를 로드하거나 연결된 어떠한 그래픽 하드웨어와도 상호 작용하지 않습니다.\n\n중요: 잠재적으로 손상된 그래픽 장치 또는 드라이버에 이 설정을 사용하지 않도록 구성하면 호스트 장치에 위험이 발생할 수 있음에 유의하세요.\n\n이 설정을 사용하지 않거나 구성하지 않으면 Application Guard는 Hyper-V를 사용하여 지원되는 높은 수준의 보안 렌더링 그래픽 하드웨어(GPU)에 액세스하려고 합니다. 이 GPU는 Application Guard를 사용하는 동안 렌더링 성능 및 배터리 수명을 증가시킵니다. 특히 비디오 재생 및 기타 그래픽 중심 작업에 유용합니다. 높은 수준의 보안 렌더링 그래픽 하드웨어를 연결하지 않고 이 설정을 사용하지 않도록 설정하거나 구성하지 않으면 Application Guard는 자동으로 소프트웨어 기반(CPU) 렌더링으로 되돌아갑니다.\n\n참고: 참고:이 정책 설정은 엔터프라이즈용 Microsoft 365 앱에만 적용됩니다.",
             "tags": [
                 "L_ApplicationGuard",
@@ -4858,7 +4858,7 @@
                 }
             },
             "name": "L_TurnOffBlockingOfUnsupportedFileTypesInApplicationGuard",
-            "displayName": "Office용 Application Guard에서 지원되지 않는 파일 형식의 보호를 해제합니다.",
+            "displayName": "Office용 Application Guard에서 지원되지 않는 파일 형식 보호 해제",
             "explainText": "이 정책 설정은 Office 앱에서 Office용 Application Guard가 지원되지 않는 파일 형식을 열 수 없도록 차단할지 또는 제한된 보기로 리디렉션을 사용하도록 설정할지 여부를 제어합니다.\n\n이 설정을 사용하도록 설정하면 Office 앱에서 Office용 Application Guard가 지원되지 않는 파일 형식을 제한된 보기로 리디렉션합니다.\n\n중요: 이 정책 설정을 사용하도록 설정하면 사용자의 장치에 위험이 발생할 수 있습니다.\n\n 이 설정을 사용하지 않도록 설정하거나 구성하지 않으면 Office 앱에서 Office용 Application Guard가 지원되지 않는 파일 형식을 차단합니다.\n\n참고: 이 정책 설정은 엔터프라이즈용 Microsoft 365 앱에만 적용됩니다.",
             "tags": [
                 "L_ApplicationGuard",
@@ -4892,7 +4892,7 @@
                 ]
             },
             "name": "L_ConfigurePreCreateInApplicationGuard",
-            "displayName": "Application Guard 컨테이너 미리 만들기를 구성합니다.",
+            "displayName": "Application Guard 컨테이너 사전 생성 구성",
             "explainText": "이 정책 설정은 런타임 성능 향상을 위해 Application Guard 컨테이너가 신뢰할 수 없는 파일을 격리하기 위해 미리 만들었는지 여부를 결정합니다.\n\n이 정책 설정을 사용하면 사용자가 Application Guard에서 파일을 열지 않은 경우 Application Guard 컨테이너를 계속 미리 만들 기간(일)을 지정할 수 있습니다. 사용자가 로그인할 때 컨테이너를 미리 만들면 신뢰할 수 없는 파일을 열 때 대기 시간이 줄어듭니다.\n\n\"65535\"는 사용자가 Windows에 로그인할 때 항상 Application Guard 컨테이너를 만들도록 Office를 구성합니다.\n\"20\"은 사용자가 Application Guard를 사용하여 신뢰할 수 없는 파일을 마지막으로 연 후 최대 20일까지 사용자가 Windows에 로그인할 때마다 컨테이너를 미리 만들도록 Office를 구성합니다.\n\"0\"은 컨테이너를 미리 만들지 않도록 Office를 구성합니다. 대신 사용자가 Windows에 로그인한 후 처음 신뢰할 수 없는 파일을 열면 컨테이너가 만들어집니다.\n\n참고: 컨테이너를 미리 만들지 않게 Office를 구성하면 사용자가 Windows에 로그인한 후 신뢰할 수 없는 파일을 열 때 대기 시간이 더 길어질 수 있습니다.\n\n이 설정을 사용하지 않도록 설정하거나 구성하지 않으면 Office는 기본 제공된 경험적 접근을 사용하여 컨테이너를 미리 만듭니다.\n\n참고: 이 정책 설정은 엔터프라이즈용 Microsoft 365 앱에만 적용됩니다.",
             "tags": [
                 "L_ApplicationGuard",
@@ -28966,6 +28966,34 @@
         },
         {
             "parentCategory": {
+                "ref": "L_PDFandXPS"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_PDFProtectionFromOffice",
+            "displayName": "Office의 민감도 기능을 사용하여 PDF에 민감도 레이블 적용",
+            "explainText": "이 정책 설정은 Microsoft Purview Information Protection의 민감도 레이블을 Word, Excel 및 PowerPoint에서 만든 PDF에 적용할지 여부를 제어합니다.\n\n이 정책 설정을 사용하거나 구성하지 않으면 PDF는 원본 Word, Excel 및 PowerPoint 문서에서 민감도 레이블 및 암호화를 상속합니다.\n\n이 정책 설정을 사용하지 않으면 Word, Excel 및 PowerPoint에서 만든 PDF가 원본 파일의 민감도 레이블 및 암호화를 상속하지 않습니다. 원본 파일이 암호화되면 보호 해제 권한이 없는 사용자는 PDF로 내보낼 수 없습니다.\n\n참고: 이 정책 설정은 엔터프라이즈용 Microsoft 365 앱과 같은 구독 버전의 Office에만 적용됩니다. 이 설정에 대한 자세한 내용은 https://go.microsoft.com/fwlink/?linkid=2220953을 참조하세요.",
+            "tags": [
+                "L_PDFandXPS",
+                "L_MicrosoftOfficeSystem"
+            ],
+            "application": "office16",
+            "key": "software\\microsoft\\office\\16.0\\common\\fixedformat",
+            "valueName": "disablepdfprotection"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Disableitemsinuserinterface"
             },
             "supportedOn": {
@@ -34435,7 +34463,7 @@
             },
             "name": "L_EvictServerVersionsPolicy",
             "displayName": "특정 일 수보다 오래된 서버 문서 버전의 로컬 캐시 복사본을 기한 지남으로 처리합니다.",
-            "explainText": "\n        이 정책은 로컬에 캐시된 서버의 Office 버전 문서가 로컬 캐시보다 오래되는 경우를 제어합니다.\n\n        이 정책 설정을 사용하는 경우 로컬에 캐시된 서버의 Office 문서 버전이 특정 일수보다 오래되면 로컬 캐시에서 삭제됩니다.\n\n        이 정책 설정을 사용하지 않거나 구성하지 않는 경우 로컬에 캐시된 서버의 Office 문서 버전은 기본적으로 하루가 지나면 로컬 캐시에서 삭제됩니다.",
+            "explainText": "\n        이 정책은 서버에서 로컬로 캐시된 Office 버전 문서가 로컬 캐시에서 기한 지남으로 처리되는 시기를 제어합니다.\n\n        이 정책 설정을 사용하면 로컬로 캐시된 서버의 Office 문서 버전이 특정 일 수가 지나면 로컬 캐시에서 삭제됩니다.\n\n        이 정책 설정을 사용하지 않거나 구성하지 않으면 서버에서 로컬로 캐시된 Office 문서 버전이 기본적으로 하루가 지나면 로컬 캐시에서 삭제됩니다.",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"
@@ -35403,7 +35431,7 @@
                 }
             },
             "name": "L_AIPException",
-            "displayName": "Use the Azure Information Protection add-in for sensitivity labeling",
+            "displayName": "민감도 레이블 지정에 Azure Information Protection 추가 기능 사용",
             "explainText": "이 정책 설정은 기본 제공 레이블 지정 대신 Microsoft Azure Information Protection 추가 기능을 사용하여 Office 앱에서 민감도 레이블을 보고 적용할 수 있는지 여부를 제어합니다. 엔터프라이즈용 Microsoft 365 앱과 같은 Office의 구독 버전에만 적용됩니다.\n\n현재 채널 및 월간 엔터프라이즈 채널의 경우 버전 2211, 반기 엔터프라이즈 채널의 경우 버전 2302부터:\n\n이 정책 설정을 사용하도록 설정하고 Microsoft Azure Information Protection 통합 레이블 지정 클라이언트가 설치된 경우 해당 클라이언트의 추가 기능이 Office 앱에 기본 제공되는 기본 레이블 지정을 대체합니다. \n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 Office 앱에 기본 제공되는 기본 레이블 지정 환경을 사용하여 민감도 레이블을 보고 적용합니다.\n\n이 설정에 대한 자세한 내용은 https://go.microsoft.com/fwlink/p/?linkid=2207430을 참조하세요.",
             "tags": [
                 "L_SecuritySettings",
@@ -35521,8 +35549,8 @@
                 }
             },
             "name": "L_OfficeInsiderUserExperience",
-            "displayName": "Office 참가자에 대한 옵션 표시",
-            "explainText": "이 정책 설정은 Office Insider의 옵션이 Word와 같은 Office 앱에서 [파일] > [계정]에 표시되는지 여부를 제어합니다.\n\n이 옵션을 표시하면 Office Insider 프로그램에 가입하거나 탈퇴하도록 선택할 수 있습니다. Office 참가자 프로그램에 대한 자세한 내용은 https://insider.office.com을 참조하세요.\n\n이 정책 설정을 사용하는 경우, [파일] > [계정]에 Office Insider의 옵션이 표시됩니다.\n\n참고: 이 정책 설정을 사용하는 경우, Computer Configuration\\Policies\\Administrative Templates\\Microsoft Office 2016 (Machine)\\Updates에서 \"채널 업데이트\" 또는 \"경로 업데이트\" 정책 설정을 활성화하고 구성하지 않아야 합니다. 그런 경우, Office Insider의 옵션이 표시되는 경우에도 해당 정책 설정이 우선 적용됩니다.\n\n이 정책 설정을 사용하지 않는 경우, Office Insider에 대한 옵션이 [파일] > [계정]에 표시되지 않습니다.\n\n참고: 이 정책 설정은 엔터프라이즈용 Microsoft 365 앱이 포함된 구독 플랜과 Project 및 Visio의 구독 버전에만 적용됩니다.",
+            "displayName": "Microsoft 365 참가자에게 제공되는 옵션 표시",
+            "explainText": "이 정책 설정은 Word와 같은 앱의 파일 > 계정에 Microsoft 365 참가자에 대한 옵션을 표시할지 여부를 제어합니다.\n\n이 옵션을 표시하면 사용자가 Microsoft 365 참가자 프로그램 참가 또는 나가기를 선택할 수 있습니다. Microsoft 365 참가자 프로그램에 대한 자세한 내용은 https://insider.office.com을 참조하세요.\n\n이 정책 설정을 사용하면 Microsoft 365 참가자에 대한 옵션이 파일 > 계정에 표시됩니다.\n\n참고: 이 정책 설정을 사용하면 컴퓨터 구성\\정책\\관리 템플릿\\Microsoft Office 2016(컴퓨터)\\업데이트 아래 \"업데이트 채널\" 또는 \"경로 업데이트\" 정책 설정을 사용 설정 및 구성하지 않아야 합니다. 그러한 정책이 설정 및 구성되면 Microsoft 365 참가자에 대한 옵션이 표시되더라도 해당 정책이 우선합니다.\n\n이 정책 설정을 사용하지 않으면 Microsoft 365 참가자에 대한 옵션이 파일 > 계정에 표시되지 않습니다.\n\n참고: 이 정책 설정은 엔터프라이즈용 Microsoft 365 앱과 같은 Office의 구독 버전과 Project 및 Visio의 구독 버전에만 적용됩니다.",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"
@@ -35785,7 +35813,7 @@
                 ]
             },
             "name": "L_DisallowedRoamingMruDomains",
-            "displayName": "서버 도메인별 파일 이름 및 메타데이터 로밍을 해제합니다.",
+            "displayName": "서버 도메인별 파일 이름 및 메타데이터 로밍 끄기",
             "explainText": "\n이 정책 설정은 Office 파일의 파일 이름 및 메타데이터가 로밍되고 다른 장치의 Word와 같은 Office 앱에서 최근에 열린 파일 목록에 표시되는지 여부를 제어합니다.\n\n웹 기반 Microsoft 서비스를 사용하는 로밍은 사용자가 다른 장치에서 동일한 회사 또는 학교 계정으로 Office에 로그인할 때 발생합니다.\n\n참고: 이 정책은 지정된 서버 도메인 목록에 저장된 모든 Office 파일에 적용됩니다. 허용되지 않는 도메인 집합은 \"*.contoso.com;service.microsoft.com\"과 같이 세미콜론으로 구분된 목록입니다.\n\n이 정책 설정을 사용하면 파일 이름 및 메타데이터는 로밍되지 않으며 파일이 해당 장치에서 열린 적이 없는 한 다른 장치의 Office 앱에서 최근에 연 파일 목록에 표시되지 않습니다.\n\n이 정책 설정을 사용하지 않거나 구성하지 않으면 파일 이름 및 메타데이터가 로밍되고 해당 장치에서 파일이 열리지 않은 경우에도 다른 장치의 Office 앱에서 최근에 열린 파일 목록에 표시됩니다.",
             "tags": [
                 "L_miscellaneous437",

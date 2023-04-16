@@ -57,6 +57,20 @@
             "parentCategory": {
                 "ref": "L_MicrosoftOfficePublisher"
             },
+            "name": "L_Security",
+            "displayName": "Segurança"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Security"
+            },
+            "name": "L_TrustCenter",
+            "displayName": "Central de Confiabilidade"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
             "name": "L_Miscellaneous",
             "displayName": "Diversos"
         }
@@ -607,6 +621,35 @@
             "application": "pub16",
             "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
             "valueName": "backgroundsave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_BlockMacroExecutionFromInternet",
+            "displayName": "Impedir que macros sejam executadas em arquivos do Office da Internet",
+            "explainText": "\n        Esta configuração de política permite bloquear a execução de macros em arquivos do Office provenientes da Internet.\n\n        Se habilitar essa configuração de política, a execução de macros será bloqueada, mesmo se a opção \"Habilitar todas as macros\" estiver selecionada na seção Configurações de Macro da Central de Confiabilidade. Os usuários receberão uma notificação de que as macros estão bloqueadas para execução.\n\n        As exceções em que as macros poderão ser executadas são:\n        - O arquivo do Office é salvo em um Local Confiável.\n        - O arquivo do Office era confiável anteriormente para o usuário.\n        - As macros são assinadas digitalmente e o certificado do Fornecedor Confiável correspondente está instalado no dispositivo.\n\n        Se desabilitar essa configuração de política, as configurações definidas na seção Configurações de Macro da Central de Confiabilidade determinarão se as macros são executadas em arquivos do Office provenientes da Internet.\n\n        Se não definir essa configuração de política, a execução das macros será bloqueada. Os usuários receberão uma notificação informando sobre os riscos de segurança das macros da Internet, juntamente com um link para saber mais.\n\n        Para obter mais informações, confira https://go.microsoft.com/fwlink/p/?linkid=2185771.\n      ",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\security",
+            "valueName": "blockcontentexecutionfrominternet"
         },
         {
             "parentCategory": {

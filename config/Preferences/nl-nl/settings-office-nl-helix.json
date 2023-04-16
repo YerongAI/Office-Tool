@@ -4828,7 +4828,7 @@
                 }
             },
             "name": "L_TurnOffHardwareAccelerationInApplicationGuard",
-            "displayName": "De hardwareversnelling voor Office uitschakelen in Application Guard.",
+            "displayName": "De hardwareversnelling voor Office uitschakelen in Application Guard",
             "explainText": "Met deze beleidsinstelling bepaalt u of Office in Application Guard hardware- of softwareversnelling gebruikt om afbeeldingen weer te geven.\n\nAls u deze instelling inschakelt, gebruikt Application Guard softwarematige (CPU) rendering en laadt het geen grafische stuurprogramma's van derden en werkt het niet met aangesloten grafische hardware.\n\nBelangrijk: houd er rekening mee dat het uitschakelen of niet configureren van deze beleidsinstelling met mogelijk gecompromitteerde grafische apparaten of stuurprogramma's een risico kan vormen voor het apparaat van de gebruiker.\n\nAls u deze instelling uitschakelt of niet configureert, maakt Application Guard gebruik van Hyper-V om toegang te krijgen tot ondersteunde, goed beveiligde grafische hardware (GPU's). Deze GPU's verbeteren de weergaveprestaties en de levensduur van de batterij tijdens het gebruik van Application Guard, met name voor het afspelen van video en andere grafisch intensieve bewerkingen. Als u deze instelling uitschakelt of niet configureert zonder een high-security grafische hardware voor rendering aan te sluiten, keert Application Guard automatisch terug naar softwarematige (CPU) rendering.\n\nOpmerking: deze beleidsinstelling is alleen van toepassing op Microsoft 365 Apps voor ondernemingen. ",
             "tags": [
                 "L_ApplicationGuard",
@@ -4858,7 +4858,7 @@
                 }
             },
             "name": "L_TurnOffBlockingOfUnsupportedFileTypesInApplicationGuard",
-            "displayName": "Schakel de beveiliging van niet-ondersteunde bestandstypen in Application Guard voor Office uit.",
+            "displayName": "Schakel de beveiliging van niet-ondersteunde bestandstypen in Application Guard voor Office uit",
             "explainText": "Deze beleidsinstelling bepaalt of Application Guard voor Office ervoor zorgt dat niet-ondersteunde bestandstypen in Office-apps worden geblokkeerd of dat de omleiding naar de beveiligde weergave wordt ingeschakeld.\n\nAls u deze instelling inschakelt, worden niet-ondersteunde bestandstypen door Application Guard voor Office omgeleid naar de beveiligde weergave in Office-apps.\n\nBelangrijk: houd er rekening mee dat het inschakelen van deze beleidsinstelling een risico voor het apparaat van de gebruiker kan vormen.\n\nAls u deze instelling uitschakelt of niet configureert, worden niet-ondersteunde bestandstypen in Office-apps geblokkeerd door Application Guard voor Office.\n\nOpmerking: deze beleidsinstelling is alleen van toepassing op Microsoft 365-apps voor bedrijven.",
             "tags": [
                 "L_ApplicationGuard",
@@ -4892,7 +4892,7 @@
                 ]
             },
             "name": "L_ConfigurePreCreateInApplicationGuard",
-            "displayName": "Het voorbereiden van de Application Guard-container configureren.",
+            "displayName": "Het voorbereiden van de Application Guard-container configureren",
             "explainText": "Met deze beleidsinstelling wordt bepaald of de Application Guard-container voor het isoleren van verdachte bestanden is voorbereid voor betere prestaties van de uitvoeringstijd.\n\nAls u deze beleidsinstelling inschakelt, kunt u het aantal dagen opgeven dat een Application Guard-container moet blijven voorbereiden als de gebruiker geen bestand met Application Guard heeft geopend. Het voorbereiden van een container wanneer de gebruiker zich aanmeldt, verkleint de wachttijd bij het openen van een verdacht bestand.\n\n'65535' configureert Office om altijd een Application Guard-container te maken wanneer een gebruiker zich aanmeldt bij Windows.\n'20' configureert Office om de container voor te bereiden wanneer een gebruiker zich aanmeldt bij Windows tot 20 dagen na de laatste keer dat de gebruiker een verdacht bestand met Application Guard heeft geopend.\n'0' configureert Office om de container nooit voor te bereiden. In plaats daarvan wordt de container alleen gemaakt wanneer een gebruiker het eerste verdachte bestand opent na het aanmelden bij Windows.\n\nOpmerking: als u Office configureert om nooit een container voor te bereiden, ervaren gebruikers een langere wachttijd wanneer een verdacht bestand wordt geopend na aanmelding bij Windows.\n\nAls u deze instelling uitschakelt of niet configureert, wordt in Office een ingebouwde heuristiek gebruikt om de container voor te bereiden.\n\nOpmerking: deze beleidsinstelling is alleen van toepassing op Microsoft 365-apps voor ondernemingen.",
             "tags": [
                 "L_ApplicationGuard",
@@ -28966,6 +28966,34 @@
         },
         {
             "parentCategory": {
+                "ref": "L_PDFandXPS"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_PDFProtectionFromOffice",
+            "displayName": "De vertrouwelijkheidsfunctie in Office gebruiken om vertrouwelijkheidslabels toe te passen op PDF's",
+            "explainText": "Met deze beleidsinstelling wordt bepaald of vertrouwelijkheidslabels, mogelijk gemaakt door Microsoft Purview Informatiebeveiliging, worden toegepast op PDF's die in Word, Excel en PowerPoint zijn gemaakt.\n\nAls u deze beleidsinstelling inschakelt of niet configureert, nemen PDF's het vertrouwelijkheidslabel en de versleuteling over van het brondocument in Word, Excel of PowerPoint.\n\nAls u deze beleidsinstelling uitschakelt, nemen PDF's die in Word, Excel of PowerPoint zijn gemaakt, de vertrouwelijkheidslabels en versleuteling van het bronbestand niet over. Wanneer het bronbestand is versleuteld, kunnen gebruikers die geen rechten hebben om de beveiliging te verwijderen, niet exporteren naar PDF.\n\nOpmerking: deze beleidsinstelling is alleen van toepassing op abonnementsversies van Office, zoals Microsoft 365-apps voor ondernemingen. Zie https://go.microsoft.com/fwlink/?linkid=2220953. voor meer informatie over deze instelling.",
+            "tags": [
+                "L_PDFandXPS",
+                "L_MicrosoftOfficeSystem"
+            ],
+            "application": "office16",
+            "key": "software\\microsoft\\office\\16.0\\common\\fixedformat",
+            "valueName": "disablepdfprotection"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Disableitemsinuserinterface"
             },
             "supportedOn": {
@@ -34434,8 +34462,8 @@
                 ]
             },
             "name": "L_EvictServerVersionsPolicy",
-            "displayName": "Kopieën van serverdocumentversies in de lokale cache die ouder zijn dan n dagen verwijderen.",
-            "explainText": "\n        Met dit beleid bepaalt u of de Office-documentversies in de lokale cache van de server wordt verwijderd uit de lokale cache.\n\n        Als u deze beleidsinstelling inschakelt, worden Office-documentversies van de server die langer dan n dagen in de lokale cache zijn opgeslagen uit de lokale cache verwijderd.\n\n        Als u deze beleidsinstelling uitschakelt of niet configureert, worden Office-documentversies van de server die in de lokale cache zijn opgeslagen uit de lokale cache verwijderd als deze ouder zijn dan de standaardwaarde van één dag.",
+            "displayName": "De lokaal in de cache opgeslagen kopieën van serverdocumentversies die meer dan n dagen oud zijn laten verlopen.",
+            "explainText": "\n       Dit beleid bepaalt wanneer office-versiedocumenten van de server die lokaal in de cache zijn opgeslagen, buiten de lokale cache worden opgeslagen.\n\n        Als u deze beleidsinstelling inschakelt, worden Office-documentversies van de server die meer dan n dagen lokaal in de cache zijn opgeslagen, verwijderd uit de lokale cache.\n\n        Als u deze beleidsinstelling uitschakelt of niet configureert, worden Office-documentversies van de server die lokaal in de cache zijn opgeslagen, verwijderd uit de lokale cache als ze ouder zijn dan de standaardwaarde van één dag.",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"
@@ -35403,7 +35431,7 @@
                 }
             },
             "name": "L_AIPException",
-            "displayName": "Use the Azure Information Protection add-in for sensitivity labeling",
+            "displayName": "De Azure Information Protection-invoegtoepassing gebruiken voor vertrouwelijkheidslabels",
             "explainText": "Met deze beleidsinstelling bepaalt u of de Microsoft Azure Information Protection-invoegtoepassing kan worden gebruikt in plaats van de standaardinstelling voor ingebouwde labels om vertrouwelijkheidslabels weer te geven en toe te passen in Office-apps. Dit is alleen van toepassing op abonnementsversies van Office, zoals Microsoft 365-apps voor ondernemingen.\n\nVanaf versie 2211 voor Huidig kanaal en Maandelijks ondernemingskanaal en versie 2302 voor Halfjaarlijks ondernemingskanaal:\n\nals u deze beleidsinstelling inschakelt en de geïntegreerde labelclient van Microsoft Azure Information Protection is geïnstalleerd, vervangt de invoegtoepassing van die client de standaardlabels die zijn ingebouwd in Office-apps. \n\nAls u deze beleidsinstelling uitschakelt of niet configureert, wordt de standaard labelervaring die is ingebouwd voor Office-apps gebruikt om vertrouwelijkheidslabels weer te geven en toe te passen.\n\nVoor meer informatie over deze instelling, zie https://go.microsoft.com/fwlink/p/?linkid=2207430.",
             "tags": [
                 "L_SecuritySettings",
@@ -35521,8 +35549,8 @@
                 }
             },
             "name": "L_OfficeInsiderUserExperience",
-            "displayName": "Optie voor Office Insider weergeven",
-            "explainText": "Met deze beleidsinstelling wordt bepaald of de optie voor Office Insider wordt weergegeven onder Bestand > account in een Office-app, zoals Word.\n\nAls u deze optie weergeeft, kan een gebruiker ervoor kiezen om deel te nemen aan het Office Insider-programma of dit te verlaten. Zie https://insider.office.com voor meer informatie over het Office Insider-programma.\n\nAls u deze beleidsinstelling inschakelt, wordt de optie voor Office Insider weergegeven onder Bestand > Account.\n\nOpmerking: als u deze beleidsinstelling inschakelt, moet u de beleidsinstelling Updatekanaal of Updatepad niet inschakelen en configureren onder Computeronfiguratie\\Beleid\\Beheersjablonen\\Microsoft Office 2016 (Machine)\\Updates. Als u dit doet, hebben die beleidsinstellingen voorrang, ook al wordt de optie voor Office Insider weergegeven.\n\nAls u deze beleidsinstelling uitschakelt, wordt de optie voor Office Insider niet weergegeven onder Bestand > Account.\n\nOpmerking: deze beleidsinstelling is alleen van toepassing op abonnementsversies van Office, zoals Microsoft 365-apps voor ondernemingen en abonnementsversies van Project en Visio.",
+            "displayName": "De optie voor Microsoft 365 Insider weergeven",
+            "explainText": "Met deze beleidsinstelling wordt bepaald of de optie voor Microsoft 365 Insider wordt weergegeven onder Bestand > Account in een app, zoals Word.\n\nAls u deze optie weergeeft, kan een gebruiker ervoor kiezen om deel te nemen aan het Microsoft 365 Insider-programma of deze te verlaten. Zie https://insider.office.com. voor meer informatie over het Microsoft 365 Insider-programma\n\nAls u deze beleidsinstelling inschakelt, wordt de optie voor Microsoft 365 Insider weergegeven onder Bestand > Account.\n\nOpmerking: als u deze beleidsinstelling inschakelt, moet u de beleidsinstelling Kanaal bijwerken of Updatepad niet inschakelen en configureren onder Computerconfiguratie\\Beleid\\Beheersjablonen\\Microsoft Office 2016 (Computer)\\Updates. Als u dit doet, hebben deze beleidsinstellingen voorrang, hoewel de optie voor Microsoft 365 Insider wordt weergegeven.\n\nAls u deze beleidsinstelling uitschakelt, wordt de optie voor Microsoft 365 Insider niet weergegeven onder Bestand > Account.\n\nOpmerking: deze beleidsinstelling is alleen van toepassing op abonnementsversies van Office, zoals Microsoft 365-apps voor ondernemingen, en op abonnementsversies van Project en Visio.",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"
@@ -35785,7 +35813,7 @@
                 ]
             },
             "name": "L_DisallowedRoamingMruDomains",
-            "displayName": "Schakel roaming van bestandsnamen en metagegevens per serverdomein uit.",
+            "displayName": "Roaming van bestandsnamen en metagegevens per serverdomein uitschakelen",
             "explainText": "\nMet deze beleidsinstelling bepaalt u of bestandsnamen en metagegevens voor Office-bestanden roamen en worden weergegeven in de lijst met onlangs geopende bestanden in een Office-app, zoals Word, op verschillende apparaten.\n\nRoaming, dat afhankelijk is van een webservice van Microsoft, treedt op wanneer een gebruiker zich met hetzelfde werk- of schoolaccount aanmeldt bij Office op verschillende apparaten.\n\nOpmerking: deze beleidsinstelling is alleen van toepassing op Office-bestanden die zijn opgeslagen in specifieke lijst met serverdomeinen. De set met niet-toegestane domeinen lijst waarin ze zijn gescheiden met puntkomma's: '*.contoso.com;service.microsoft.com'.\n\nAls u deze beleidsinstelling inschakelt, zullen bestandsnamen en metagegevens niet roamen en worden ze niet weergegeven in de lijst met onlangs geopende bestanden in Office-apps op andere apparaten, tenzij het bestand op dat apparaat is geopend.\n\nAls u deze beleidsinstelling uitschakelt of niet configureert, zullen bestandsnamen en metagegevens roamen en worden weergegeven in de lijst met onlangs geopende bestanden in Office-apps op andere apparaten, zelfs als het bestand niet is geopend op dat apparaat.",
             "tags": [
                 "L_miscellaneous437",

@@ -57,6 +57,20 @@
             "parentCategory": {
                 "ref": "L_MicrosoftOfficePublisher"
             },
+            "name": "L_Security",
+            "displayName": "Sécurité"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Security"
+            },
+            "name": "L_TrustCenter",
+            "displayName": "Centre de gestion de la confidentialité"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
             "name": "L_Miscellaneous",
             "displayName": "Divers"
         }
@@ -607,6 +621,35 @@
             "application": "pub16",
             "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
             "valueName": "backgroundsave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_BlockMacroExecutionFromInternet",
+            "displayName": "Bloquer l’exécution des macros dans les fichiers Office provenant d’Internet",
+            "explainText": "\n        Ce paramètre de stratégie vous permet d’empêcher l’exécution de macros dans des fichiers Office provenant d’Internet.\n\n        Si vous activez ce paramètre de stratégie, l’exécution des macros est bloquée, même si «\u00A0Activer toutes les macros\u00A0» est sélectionné dans la section Paramètres des macros du Centre de gestion de la confidentialité. Les utilisateurs recevront une notification indiquant que l’exécution des macros est bloquée.\n\n        Les exceptions lorsque les macros sont autorisées à s’exécuter sont les suivantes\u00A0:\n        – Le fichier Office est enregistré dans un emplacement approuvé.\n        – Le fichier Office a été précédemment approuvé par l’utilisateur.\n        – les macros sont signées numériquement et le certificat d’éditeur approuvé correspondant est installé sur l’appareil.\n\n        Si vous désactivez ce paramètre de stratégie, les paramètres configurés dans la section Paramètres de macro du Centre de gestion de la confidentialité déterminent si les macros s’exécutent dans des fichiers Office provenant d’Internet.\n\n        Si vous ne’ configurez pas ce paramètre de stratégie, l’exécution des macros sera bloquée. Les utilisateurs recevront une notification leur indiquant les risques de sécurité des macros à partir d’Internet, ainsi qu’un lien pour en savoir plus.\n\n        Pour plus d’informations, consultez https://go.microsoft.com/fwlink/p/?linkid=2185771.\n      ",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\security",
+            "valueName": "blockcontentexecutionfrominternet"
         },
         {
             "parentCategory": {

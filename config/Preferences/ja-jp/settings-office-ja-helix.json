@@ -4828,7 +4828,7 @@
                 }
             },
             "name": "L_TurnOffHardwareAccelerationInApplicationGuard",
-            "displayName": "Application Guard で Office のハードウェア アクセラレータを無効にします。",
+            "displayName": "Application Guard で Office のハードウェア アクセラレータを無効にする",
             "explainText": "このポリシー設定では、Application Guard の Office がグラフィックのレンダリングにハードウェアまたはソフトウェアのアクセラレータを使用するかどうかを制御します。\n\nこの設定を有効にしている場合、Application Guard はソフトウェア ベースの (CPU) レンダリングを使用し、サードパーティ製のグラフィック ドライバーを読み込んだり、接続されているグラフィック ハードウェアと通信したりすることはありません。\n\n重要: セキュリティ侵害を受けている可能性のあるグラフィック デバイスやドライバーでこのポリシー設定を無効にしているか、設定していない場合、ユーザーのデバイスをリスクにさらす可能性があることにご注意ください。\n\nこの設定を無効にしているか、構成していない場合、Application Guard は Hyper-V を使用して、サポートされている安全性の高いレンダリング グラフィック ハードウェア (GPU) にアクセスします。これらの GPU は、特に動画再生などのグラフィックを多用する動作において、Application Guard を使用している間のレンダリング性能やバッテリーの寿命を向上させます。安全性の高いレンダリング グラフィック ハードウェアを接続せずにこの設定を無効にしているか、または構成していない場合、Application Guard は自動的にソフトウェア ベースの (CPU) レンダリングに戻ります。\n\n注: このポリシー設定は、Microsoft 365 Apps for enterprise にのみ適用されます。",
             "tags": [
                 "L_ApplicationGuard",
@@ -4858,7 +4858,7 @@
                 }
             },
             "name": "L_TurnOffBlockingOfUnsupportedFileTypesInApplicationGuard",
-            "displayName": "Application Guard for Office でサポートされていないファイルの種類の保護をオフにします。",
+            "displayName": "Application Guard for Office でサポートされていないファイルの種類の保護をオフにする",
             "explainText": "このポリシー設定で、Office 用 Application Guard を使用しながら Office アプリでサポートされていないファイルの種類が開くのをブロックするか、保護ビューへのリダイレクトを有効にするかを制御します。\n\nこの設定を有効にすると、Office 用 Application Guard を使用して、Office アプリでサポートされていないファイルの種類を保護ビューにリダイレクトできます。\n\n重要: このポリシー設定を有効にすると、ユーザーのデバイスが危険にさらされる可能性があることに注意してください。\n\nこの設定を無効にするか、構成しない場合、Office 用 Application Guard は、Office アプリでサポートされていないファイルの種類をブロックします。\n\n注: このポリシー設定は、Microsoft 365 Apps for enterprise にのみ適用されます。 ",
             "tags": [
                 "L_ApplicationGuard",
@@ -4892,7 +4892,7 @@
                 ]
             },
             "name": "L_ConfigurePreCreateInApplicationGuard",
-            "displayName": "Application Guard コンテナーの事前作成を構成します。",
+            "displayName": "Application Guard コンテナーの事前作成を構成する",
             "explainText": "このポリシー設定は、信頼されていないファイルを分離するための Application Guard コンテナーを事前に作成して、実行時のパフォーマンスを向上させるかどうかを決定します。\n\nこのポリシー設定を有効にすると、ユーザーが Application Guard を使用してファイルを開いていない場合に、Application Guard コンテナーの事前作成を継続する日数を指定できます。ユーザーのログイン時にコンテナーを事前に作成すると、信頼できないファイルを開こうとしたときに待機時間が短縮されます。\n\n「65535」は、ユーザーが Windows にログインするときに常に Application Guard コンテナーが作成されるように Office を構成します。\n「20」は、ユーザーが Windows にログインするたびに、ユーザーが Application Guard を使用して信頼できないファイルを最後に開いてから最大 20 日間、そのユーザーが Windows にログインするたびに、コンテナーを事前に作成するように Office を構成します。\n「0」は、コンテナーを事前に作成しないように Office を構成します。代わりに、ユーザーが Windows へのログイン後に、信頼されていない最初のファイルを開いたときにのみコンテナーが作成されます。\n\n注: コンテナーを事前に作成しないように Office を構成すると、Windows にログインした後に信頼されていないファイルを開くときに、待機時間がより長くなります。\n\nこの設定を無効にするか、未構成にした場合、Office はコンテナーの事前作成に組み込みのヒューリスティックを使用します。\n\n注: このポリシー設定は、Microsoft 365 Apps for enterprise アプリにのみ適用されます。",
             "tags": [
                 "L_ApplicationGuard",
@@ -28966,6 +28966,34 @@
         },
         {
             "parentCategory": {
+                "ref": "L_PDFandXPS"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_PDFProtectionFromOffice",
+            "displayName": "Office の秘密度機能を使用して秘密度ラベルを PDF に適用する",
+            "explainText": "このポリシー設定では、Word、Excel、PowerPoint で作成された PDF に Microsoft Purview 情報保護の秘密度ラベルを適用するかどうかを指定します。\n\nこのポリシー設定を有効にした場合、または構成しなかった場合、PDF は Word、Excel、PowerPoint のソース ドキュメントから秘密度ラベルと暗号化を継承します。\n\nこのポリシー設定を無効にした場合、Word、Excel、PowerPoint で作成された PDF は、ソース ファイルの秘密度ラベルと暗号化を継承しません。ソース ファイルが暗号化されている場合、保護を削除する権限がないユーザーは PDF にエクスポートできません。\n\n注: このポリシー設定は、サブスクリプション版の Office (Microsoft 365 Apps for enterprise など) にのみ適用されます。この設定の詳細については、https://go.microsoft.com/fwlink/?linkid=2220953 をご覧ください。",
+            "tags": [
+                "L_PDFandXPS",
+                "L_MicrosoftOfficeSystem"
+            ],
+            "application": "office16",
+            "key": "software\\microsoft\\office\\16.0\\common\\fixedformat",
+            "valueName": "disablepdfprotection"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Disableitemsinuserinterface"
             },
             "supportedOn": {
@@ -34434,8 +34462,8 @@
                 ]
             },
             "name": "L_EvictServerVersionsPolicy",
-            "displayName": "ローカルにキャッシュされたサーバー ドキュメントのコピー バージョンのうち、n 日経過したものを削除します。",
-            "explainText": "\n        このポリシーは、サーバーからローカルにキャッシュされた Office バージョンのドキュメントをローカル キャッシュから削除するタイミングを制御します。\n\n        このポリシー設定を有効にした場合、サーバーからローカルにキャッシュされた Office バージョンのドキュメントのうち、n 日経過したものが、ローカル キャッシュから削除されます。\n\n        このポリシー設定を無効にするか、構成しなかった場合、サーバーからローカルにキャッシュされた Office バージョンのドキュメントは、既定の 1 日を経過すると、ローカル キャッシュから削除されます。",
+            "displayName": "ローカルにキャッシュされたサーバー ドキュメントのコピー バージョンのうち、n 日経過したものを削除する",
+            "explainText": "\n        このポリシーは、サーバーからローカルにキャッシュされた Office バージョンのドキュメントをローカル キャッシュから削除するタイミングを制御します。\n\n       このポリシー設定を有効にした場合、サーバーからローカルにキャッシュされた Office バージョンのドキュメントのうち、n 日経過したものが、ローカル キャッシュから削除されます。\n\n       このポリシー設定を無効にするか、構成しなかった場合、サーバーからローカルにキャッシュされた Office バージョンのドキュメントは、既定の 1 日を経過すると、ローカル キャッシュから削除されます。",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"
@@ -35403,7 +35431,7 @@
                 }
             },
             "name": "L_AIPException",
-            "displayName": "Use the Azure Information Protection add-in for sensitivity labeling",
+            "displayName": "秘密度のラベル付けに Azure Information Protection アドインを使用する",
             "explainText": "このポリシー設定は、Office アプリで秘密度ラベルを表示および適用するための組み込みラベル付けの既定値ではなく、Microsoft Azure Information Protection アドインを使用できるかどうかを制御します。これは、エンタープライズ向け Microsoft 365 Apps などの Office のサブスクリプション バージョンにのみ適用されます。\n\n現在のチャネルおよび月次エンタープライズ チャネルのバージョン 2211 以降、および半期エンタープライズ チャネルのバージョン 2302 以降:\n\nこのポリシー設定を有効にし、統合ラベル付けクライアントMicrosoft Azure Information Protectionがインストールされている場合は、 そのクライアントのアドインは、Office アプリに組み込まれている既定のラベル付けを置き換えます。 \n\nこのポリシー設定を無効にした場合、または設定しなかった場合、Office アプリ用に組み込まれている既定のラベル付けエクスペリエンスが秘密度ラベルの表示と適用に使用されます。\n\nこの設定の詳細については、 https://go.microsoft.com/fwlink/p/?linkid=2207430 を参照してください。",
             "tags": [
                 "L_SecuritySettings",
@@ -35521,8 +35549,8 @@
                 }
             },
             "name": "L_OfficeInsiderUserExperience",
-            "displayName": "Office Insider のオプションを表示する",
-            "explainText": "このポリシー設定では、Word などの Office アプリの [ファイル] > [アカウント] で Office Insider のオプションが表示されるかどうかを制御します。\n\nこのオプションを表示すると、ユーザーは Office Insider プログラムへの参加または参加の終了を選択できます。Office Insider プログラムの詳細については、https://insider.office.com をご覧ください。\n\nこのポリシー設定を有効にすると、Office Insider のオプションが [ファイル] > [アカウント] で表示されます。\n\n注: このポリシー設定を有効にする場合は、[コンピューターの構成]\\[ポリシー]\\[管理用テンプレート]\\[Microsoft Office 2016 (マシン)]\\[更新] で \"更新プログラム チャネル\" または \"更新プログラムのパス\" ポリシー設定を有効化/構成しないでください。有効化/構成すると、Office Insider のオプションが表示されている場合でも、それらのポリシー設定が優先されます。\n\nこのポリシー設定を無効にすると、Office Insider のオプションは [ファイル] > [アカウント] で表示されません。\n\n注: このポリシー設定は、Microsoft 365 Apps for enterprise などのサブスクリプション版の Office と、サブスクリプション版の Project および Visio にのみ適用されます。",
+            "displayName": "Microsoft 365 Insider のオプションを表示する",
+            "explainText": "このポリシー設定では、Word などのアプリの [ファイル > アカウント] に [Microsoft 365 Insider] オプションを表示するかどうかを指定します。\n\nこのオプションを表示すると、ユーザーは Microsoft 365 Insider プログラムに参加するか、参加をやめるか選択できます。Microsoft 365 Insider プログラムの詳細については、https://insider.office.com を参照してください。\n\nこのポリシー設定を有効にした場合、[ファイル > アカウント]に [Microsoft 365 Insider] のオプションが表示されます。\n\n注: このポリシー設定を有効にした場合は、[コンピューターの構成]、[ポリシー]、[管理用テンプレート]、[Microsoft Office 2016 (コンピューター)]、[更新プログラム] の [更新プログラム チャネル] または [更新パス] ポリシー設定を有効にして構成しないでください。そうすると、Microsoft 365 Insider のオプションが表示されていても、それらのポリシー設定が優先されます。\n\nこのポリシー設定を無効にした場合、Microsoft 365 Insider のオプションは [ファイル > アカウント] に表示されません。\n\n注: このポリシー設定は、サブスクリプション版の Office (Microsoft 365 Apps for enterpriseなど) および Project と Visio のサブスクリプション バージョンにのみ適用されます。",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"
@@ -35785,7 +35813,7 @@
                 ]
             },
             "name": "L_DisallowedRoamingMruDomains",
-            "displayName": "サーバー ドメインごとのファイル名とメタデータのローミングを無効にします。",
+            "displayName": "サーバー ドメインごとのファイル名とメタデータのローミングを無効にします",
             "explainText": "\nこのポリシー設定は、Office ファイルのファイル名とメタデータをローミングし、Word などの Office アプリで最近開いたファイルのリストに表示するかどうかを制御します。\n\nWeb ベースの Microsoft サービスに依存するローミングは、ユーザーが別のデバイスで同じ職場または学校アカウントで Office にサインインしたときに発生します。\n\n注: このポリシー設定は、サーバー ドメインの特定のリストに保存される Office ファイルにのみ適用されます。許可されていないドメインのセットはセミコロンで分離されたリストです: \"*.contoso.com;service.microsoft.com\"。\n\nこのポリシー設定を有効にした場合、ファイル名とメタデータはローミングされず、他のデバイスの Office アプリで最近開いたファイルのリストに表示されなくなります。ただし、そのデバイスでファイルが開かれている場合を除きます。\n\nこのポリシー設定を無効にした場合、または構成しなかった場合、ファイル名とメタデータはローミングされ、そのデバイスでファイルが開かなくても、他のデバイス上の Office アプリで最近開いたファイルのリストに表示されます。",
             "tags": [
                 "L_miscellaneous437",

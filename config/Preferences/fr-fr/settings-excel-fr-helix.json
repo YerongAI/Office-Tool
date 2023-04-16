@@ -2126,6 +2126,60 @@
         },
         {
             "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows_10_0"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Bloquer"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Afficher un avertissement supplémentaire"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Autoriser"
+                            }
+                        ],
+                        "valueName": "blockxllfrominternet",
+                        "inputType": "dropdownList",
+                        "id": "L_BlockXLLFromInternetEnum"
+                    }
+                ]
+            },
+            "name": "L_BlockXLLFromInternet",
+            "displayName": "Bloquer les compléments XLL Excel provenant d’une source non approuvée",
+            "explainText": "\n        Ce paramètre de stratégie vous permet de bloquer les compléments XLL Excel provenant d’une source non approuvée.\n\n        Si vous activez ce paramètre de stratégie, vous pouvez définir l’une des options suivantes\u00A0:\n        – Bloquer\u00A0: les compléments XLL provenant de sources non approuvées sont bloqués. Les utilisateurs recevront une notification indiquant que le complément a été bloqué.\n        – Afficher un avertissement supplémentaire\u00A0: afficher une invite d’avertissement supplémentaire une fois que l’utilisateur a choisi d’activer un complément XLL à partir d’une source non approuvée.\n        – Autoriser : les compléments XLL d’une source non approuvée sont autorisés.\n\n        Les exceptions lors de l’exécution des compléments XLL Excel sont les suivantes\u00A0:\n        – La XLL est stockée dans un emplacement approuvé.\n        – La XLL est signée numériquement et le certificat d’éditeur approuvé correspondant est installé sur l’appareil.\n\n        Si vous désactivez ce paramètre de stratégie, les paramètres configurés dans les sections Macro et Paramètres des compléments du Centre de gestion de la confidentialité déterminent si les compléments XLL Excel provenant d’une source non approuvée sont autorisés.\n\n        Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les utilisateurs peuvent remplacer le comportement par défaut en modifiant le Registre.\n\n        Pour plus d’informations, consultez https://support.microsoft.com/topic/1e3752e2-1177-4444-a807-7b700266a6fb.\n      ",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_FileBlockSettings"
             },
             "supportedOn": {

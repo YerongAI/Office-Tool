@@ -4828,7 +4828,7 @@
                 }
             },
             "name": "L_TurnOffHardwareAccelerationInApplicationGuard",
-            "displayName": "停用應用程式防護的 Office 硬體加速。",
+            "displayName": "停用應用程式防護中的 Office 硬體加速。",
             "explainText": "此原則設定控制是否應用程式防護的 Office 會使用硬體或軟體加速來轉譯圖形。\n\n如果啟用此設定應用程式防護會使用以軟體為基礎的 (CPU) 轉譯，且不會載入任何第三方圖形驅動程式，亦不會與任何連接的圖形硬體互動。\n\n重要: 若停用或未設定此原則，搭配使用可能已遭入侵的圖形裝置或驅動程式，可能會對主機裝置構成危險。\n\n如果你停用或未進行此設定，應用程式防護會使用 Hyper-V 來存取支援的高安全性轉譯圖形硬體 (GPU)。這些 GPU 會在使用應用程式防護的同時改進轉譯效能和電池使用時間，尤其是針對影片播放和其他圖形密集的使用案例。如果停用或未進行此設定但未連接任何高安全性轉譯圖形硬體，應用程式防護會自動回復為軟體式 (CPU) 轉譯。\n\n注意: 此原則設定僅適用於 Microsoft 365 Apps 企業版。 ",
             "tags": [
                 "L_ApplicationGuard",
@@ -4858,7 +4858,7 @@
                 }
             },
             "name": "L_TurnOffBlockingOfUnsupportedFileTypesInApplicationGuard",
-            "displayName": "關閉 Office 的應用程式防護中不受支援的檔案類型的保護。",
+            "displayName": "關閉 Office 的應用程式防護中不受支援的檔案類型的保護",
             "explainText": "此原則設定可控制適用於 Office 的應用程式防護是否會阻止在 Office 應用程式中開啟不支援的檔案類型，或是否啟用重新導向到 [受保護的檢視]。\n\n若啟用此設定，適用於 Office 的應用程式防護會將不支援的檔案類型重新導向到 Office 應用程式中的 [受保護的檢視]。\n\n重要事項: 請注意，啟用此原則設定可能會對使用者的裝置造成風險。\n\n若停用或未設定此設定，適用於 Office 的應用程式防護將會封鎖 Office 應用程式中不支援的檔案類型。\n\n注意: 此原則設定只適用於 Microsoft 365 Apps 企業版。 ",
             "tags": [
                 "L_ApplicationGuard",
@@ -4892,7 +4892,7 @@
                 ]
             },
             "name": "L_ConfigurePreCreateInApplicationGuard",
-            "displayName": "設定應用程式防護容器預先建立。",
+            "displayName": "設定應用程式防護容器預先建立",
             "explainText": "這個原則設定會決定是否預先建立應用程式防護容器（用於隔離不受信任的檔案），以改善執行時間的效能。\n\n如果您啟用這個原則設定，您可以指定在使用者未開啟含有應用程式防護的檔案的情況下，繼續預先建立應用程式防護容器的天數。在使用者登入時預先建立容器，會減少開啟不受信任檔案時的等候時間。\n\n\"65535\" 會將 Office 設定為在使用者登入 Windows 時一律建立應用程式防護容器。\n在使用者最後一次使用應用程式防護開啟不受信任的檔案的 20 天內，\"20\" 會將 Office 設定為在使用者每次登入 Windows 時預先建立容器。\n\"0\" 會將 Office 設定為永不預先建立容器。而只會在使用者登入 Windows 後開啟其第一個不受信任的檔案時，才會建立容器。\n\n注意：如果您設定 Office 永不預先建立容器，則當使用者在登入 Windows 後要開啟不受信任的檔案時，等待時間將會較長。\n\n若停用或未設定此設定，Office 將會使用內建啟發式來建立容器。\n\n注意：這個原則設定只可套用在適用于企業版的 Microsoft 365 應用程式。",
             "tags": [
                 "L_ApplicationGuard",
@@ -28966,6 +28966,34 @@
         },
         {
             "parentCategory": {
+                "ref": "L_PDFandXPS"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_PDFProtectionFromOffice",
+            "displayName": "在 Office 中使用敏感度功能以將敏感度標籤套用至 PDF",
+            "explainText": "此原則設定可控制是否將 Microsoft Purview 資訊保護提供的敏感度標籤套用至在 Word、Excel 和 PowerPoint 中建立的 PDF。\n\n如果啟用或未設定此原則設定，PDF 會繼承來自來源 Word、Excel 和 PowerPoint 文件的敏感度標籤並加密。\n\n如果停用此原則設定，則在 Word、Excel 和 PowerPoint 中建立的 PDF 不會繼承其來源檔案的敏感度標籤和加密。加密來源檔案時，沒有移除保護權限的使用者無法匯出至 PDF。\n\n注意: 此原則設定僅適用 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版。如需此設定的詳細資訊，請參閱 https://go.microsoft.com/fwlink/?linkid=2220953。",
+            "tags": [
+                "L_PDFandXPS",
+                "L_MicrosoftOfficeSystem"
+            ],
+            "application": "office16",
+            "key": "software\\microsoft\\office\\16.0\\common\\fixedformat",
+            "valueName": "disablepdfprotection"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Disableitemsinuserinterface"
             },
             "supportedOn": {
@@ -34434,7 +34462,7 @@
                 ]
             },
             "name": "L_EvictServerVersionsPolicy",
-            "displayName": "刪除存留超過 n 天且本機快取的伺服器文件版本複本。",
+            "displayName": "將超過 n 天的本機快取伺服器文件版本的複本設為過期",
             "explainText": "\n        此原則控制從伺服器本機快取的 Office 版本文件在本機快取中過期的時間。\n\n        如果您啟用這個原則設定，來自伺服器並且已在本機快取存留多於 n 天的 Office 文件版本將從本機快取中刪除。\n\n        如果停用或沒有進行此原則設定，來自伺服器並且已在本機快取存留超過 1 天預設值的 Office 文件版本將從本機快取中刪除。",
             "tags": [
                 "L_miscellaneous437",
@@ -35403,7 +35431,7 @@
                 }
             },
             "name": "L_AIPException",
-            "displayName": "Use the Azure Information Protection add-in for sensitivity labeling",
+            "displayName": "使用 Azure 資訊保護增益集來標示敏感度",
             "explainText": "此原則設定可控制是否可以使用Microsoft Azure 資訊保護增益集，而非預設的內建標籤，以在 Office 應用程式中檢視及套用敏感度標籤。它只適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版。\n\n從目前通道和每月企業通道 2211 版開始，以及半年企業通道版本 2302:\n\n如果您啟用這個原則設定，而且已安裝 Microsoft Azure 資訊保護統一標籤用戶端，該用戶端的增益集會取代 Office 應用程式內建的預設標籤。 \n\n如果停用或未設定此原則設定，則會使用 Office 應用程式內建的預設標籤體驗來檢視及套用敏感度標籤。\n\n如需此設定的詳細資訊，請參閱 https://go.microsoft.com/fwlink/p/?linkid=2207430.",
             "tags": [
                 "L_SecuritySettings",
@@ -35521,8 +35549,8 @@
                 }
             },
             "name": "L_OfficeInsiderUserExperience",
-            "displayName": "顯示 Office 測試人員的選項",
-            "explainText": "此原則設定可控制 Office 測試人員選項是否在 Office 應用程式中的 [檔案] > [帳戶] 底下顯示，例如 Word。\n\n一旦顯示此選項，即表示使用者可以選擇加入或離開 Office 測試人員計畫。如需有關 Office 測試人員計畫的詳細資訊，請參閱 https://insider.office.com。\n\n如果啟用此原則設定，Office 測試人員選項就會在 [檔案] > [帳戶] 底下顯示。\n\n注意: 如果啟用此原則設定，您就不應啟用並設定 [電腦組態]\\[原則]\\[系統管理範本]\\[Microsoft Office 2016 (電腦)]\\[更新] 底下的 [更新通道] 或 [更新路徑] 原則設定。如果啟用此原則設定，即使有顯示 Office 測試人員選項，則依舊將優先採用那些原則設定。\n\n如果停用此原則設定，Office 測試人員選項不會在 [檔案] > [帳戶] 底下顯示。\n\n注意: 此原則設定僅適用於 Office 的訂閱版本，例如 Microsoft 365 Apps 企業版，以及 Project 和 Visio 的訂閱版本。",
+            "displayName": "顯示 Microsoft 365 測試人員的選項",
+            "explainText": "此原則設定控制是否在應用程式 (如 Word) 的 [檔案] > [帳戶] 底下顯示 [Microsoft 365 測試人員] 選項。\n\n透過顯示此選項，使用者可以選擇加入或離開 Microsoft 365 測試人員計畫。如需關於 Microsoft 365 測試人員計畫的詳細資料，請參閱 https://insider.office.com。\n\n如果啟用此原則設定，Microsoft 365 測試人員的選項會在 [檔案] > [帳戶] 底下顯示。\n\n注意: 如果啟用此原則設定，則不應在 [電腦設定\\原則\\系統管理範本\\Microsoft Office 2016 (電腦)\\更新] 底下啟用和設定「更新通道」或「更新路徑」原則設定。如果這樣做，即使顯示了 [Microsoft 365 測試人員] 的選項，這些設定還是會優先於其他設定。\n\n如果停用此原則設定，則 [檔案] > [帳戶] 底下就不會顯示 [Microsoft 365測試人員]。\n\n注意: 此原則設定僅適用於 Office 訂閱版本 ，例如 Microsoft 365 Apps 企業版，以及 Project 和 Visio 的訂閱版本。",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"
@@ -35785,7 +35813,7 @@
                 ]
             },
             "name": "L_DisallowedRoamingMruDomains",
-            "displayName": "按伺服器網域，關閉檔案名稱和中繼資料的漫遊。",
+            "displayName": "按伺服器網域，關閉檔案名稱和中繼資料的漫遊",
             "explainText": "\n此原則設定可控制是否可在不同的裝置上漫遊 Office 檔案的檔案名稱和中繼資料，並顯示在 Office 應用程式中最近開啟的檔案清單中 (例如 Word)。\n\n當使用者在不同裝置上使用相同的公司或學校帳戶登入 Office 時, 會發生仰賴於 Web Microsoft 服務的漫遊。\n\n注意: 此原則適用於儲存在特定伺服器網域清單上的所有 Office 檔案。不允許網域的集合是一份以分號分隔的清單: \"*.contoso.com;service.microsoft.com\"。\n\n如果您啟用此原則設定，除非已在該裝置上開啟檔案，否則無法漫遊檔案名稱和中繼資料，也不會顯示在其他裝置上 Office 應用程式中的最近開啟檔案清單中。\n\n如果您停用或未設定此原則設定，即使尚未在裝置上開啟該檔案，也可以漫遊檔案名稱和中繼資料，也會顯示在其他裝置上 Office 應用程式中最近開啟的檔案清單中。",
             "tags": [
                 "L_miscellaneous437",

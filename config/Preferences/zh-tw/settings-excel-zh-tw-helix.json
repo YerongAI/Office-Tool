@@ -2126,6 +2126,60 @@
         },
         {
             "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows_10_0"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "封鎖"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "顯示其他警告"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "允許"
+                            }
+                        ],
+                        "valueName": "blockxllfrominternet",
+                        "inputType": "dropdownList",
+                        "id": "L_BlockXLLFromInternetEnum"
+                    }
+                ]
+            },
+            "name": "L_BlockXLLFromInternet",
+            "displayName": "封鎖來自不受信任來源的 Excel XLL 增益集",
+            "explainText": "\n        此原則設定可讓您封鎖來自不受信任來源的 Excel XLL 增益集。\n\n        如果啟用此原則設定，您可以設定下列其中一個選項:\n        - 封鎖: 封鎖來自不受信任來源的 XLL 增益集。使用者會收到增益集遭封鎖的通知。\n        - 顯示其他警告: 在使用者選擇從不受信任的來源啟用 XLL 增益集之後，顯示其他警告提示。\n        - 允許: 允許來自不受信任來源的 XLL 增益集。\n\n        允許執行 Excel XLL 增益集時的例外狀況為:\n        - XLL 儲存在受信任的位置。\n        - XLL 已完成數位簽章，且裝置上已安裝相符之信任的發行者憑證。\n\n        如果停用此原則設定，則信任中心 [巨集及增益集設定] 區段中設定的設定會決定是否允許來自不受信任來源的 Excel XLL 增益集。\n\n        如果您停用或未設定這個原則設定，使用者將可以修改登錄來覆寫預設行為。\n\n        如需詳細資訊，請參閱https://support.microsoft.com/topic/1e3752e2-1177-4444-a807-7b700266a6fb。\n      ",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_FileBlockSettings"
             },
             "supportedOn": {

@@ -57,6 +57,20 @@
             "parentCategory": {
                 "ref": "L_MicrosoftOfficePublisher"
             },
+            "name": "L_Security",
+            "displayName": "安全性"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Security"
+            },
+            "name": "L_TrustCenter",
+            "displayName": "信任中心"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
             "name": "L_Miscellaneous",
             "displayName": "其他"
         }
@@ -607,6 +621,35 @@
             "application": "pub16",
             "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
             "valueName": "backgroundsave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_BlockMacroExecutionFromInternet",
+            "displayName": "封鎖來自網際網路之 Office 檔案中的巨集，使其無法執行",
+            "explainText": "\n        此原則設定可讓您封鎖巨集在來自網際網路的 Office 檔案中執行。\n\n        如果啟用這個原則設定，即使已選取 [信任中心] 之 [巨集設定] 區段中的 [啟用所有巨集]，仍會封鎖執行巨集。使用者會收到已封鎖執行巨集的通知。\n\n        可允許執行巨集的例外狀況為:\n        - Office 檔案已儲存至信任的位置。\n        - 使用者先前已信任該 Office 檔案。\n        - 巨集有數位簽章且在裝置上已安裝相符之受信任的發行者憑證。\n\n        如果停用此原則設定，在 [信任中心] 之 [巨集設定] 區段中的設定會決定巨集是否可在來自網際網路的 Office 檔案中執行。\n\n        若未設定此原則設定，則會封鎖執行巨集。使用者會收到告知他們來自網際網路之巨集的安全性風險，並隨附連結以供深入了解。\n\n        如需更多資訊，請參閱 https://go.microsoft.com/fwlink/p/?linkid=2185771。\n      ",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\security",
+            "valueName": "blockcontentexecutionfrominternet"
         },
         {
             "parentCategory": {

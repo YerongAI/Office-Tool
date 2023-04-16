@@ -2126,6 +2126,60 @@
         },
         {
             "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows_10_0"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Blocca"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Visualizza avviso aggiuntivo"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Consenti"
+                            }
+                        ],
+                        "valueName": "blockxllfrominternet",
+                        "inputType": "dropdownList",
+                        "id": "L_BlockXLLFromInternetEnum"
+                    }
+                ]
+            },
+            "name": "L_BlockXLLFromInternet",
+            "displayName": "Blocca i componenti aggiuntivi XLL di Excel provenienti da un'origine non attendibile",
+            "explainText": "\n        Questa impostazione di criterio consente di bloccare i componenti aggiuntivi XLL di Excel provenienti da un'origine non attendibile.\n\n        Se si abilita questa impostazione dei criteri, sarà possibile impostare una delle opzioni seguenti:\n        - Blocco: i componenti aggiuntivi XLL provenienti da origini non attendibili sono bloccati. Gli utenti riceveranno una notifica che indica che il componente aggiuntivo è stato bloccato.\n        - Mostra avviso aggiuntivo: visualizza un messaggio di avviso aggiuntivo dopo che l'utente ha scelto di abilitare un componente aggiuntivo XLL da un'origine non attendibile.\n        - Consenti: sono consentiti componenti aggiuntivi XLL da un'origine non attendibile.\n\n        Le eccezioni per l'esecuzione dei componenti aggiuntivi XLL di Excel sono:\n        - XLL è archiviato in un percorso attendibile.\n        - XLL con firma digitale e il certificato dell'editore attendibile corrispondente è installato nel dispositivo.\n\n        Se si disabilita questa impostazione dei criteri, le impostazioni configurate nelle sezioni Macro e Impostazioni componenti aggiuntivi del Centro protezione determineranno se i componenti aggiuntivi XLL di Excel provenienti da un'origine non attendibile saranno consentiti.\n\n        Se si disabilita o non si configura questa impostazione dei criteri, gli utenti potranno ignorare il comportamento predefinito modificando il Registro di sistema.\n\n        Per altre informazioni, vedere https://support.microsoft.com/topic/1e3752e2-1177-4444-a807-7b700266a6fb.\n      ",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_FileBlockSettings"
             },
             "supportedOn": {

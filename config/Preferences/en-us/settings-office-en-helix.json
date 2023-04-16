@@ -4828,7 +4828,7 @@
                 }
             },
             "name": "L_TurnOffHardwareAccelerationInApplicationGuard",
-            "displayName": "Disable hardware acceleration for Office in Application Guard.",
+            "displayName": "Disable hardware acceleration for Office in Application Guard",
             "explainText": "This policy setting controls whether Office in Application Guard uses hardware or software acceleration to render graphics.\n\nIf you enable this setting, Application Guard uses software-based (CPU) rendering and won’t load any third-party graphics drivers or interact with any connected graphics hardware.\n\nImportant: Be aware that disabling or not configuring this policy setting with potentially compromised graphics devices or drivers might pose a risk to the user's device.\n\nIf you disable or don't configure this setting, Application Guard uses Hyper-V to access supported, high-security rendering graphics hardware (GPUs). These GPUs improve rendering performance and battery life while using Application Guard, particularly for video playback and other graphics-intensive operations. If you disable or don't configure this setting without connecting any high-security rendering graphics hardware, Application Guard will automatically revert to software-based (CPU) rendering.\n\nNote: This policy setting only applies to Microsoft 365 Apps for enterprise. ",
             "tags": [
                 "L_ApplicationGuard",
@@ -4858,7 +4858,7 @@
                 }
             },
             "name": "L_TurnOffBlockingOfUnsupportedFileTypesInApplicationGuard",
-            "displayName": "Turn off protection of unsupported file types in Application Guard for Office.",
+            "displayName": "Turn off protection of unsupported file types in Application Guard for Office",
             "explainText": "This policy setting controls whether Application Guard for Office will block unsupported file types from being opened in Office apps or if it will enable the redirection to Protected View.\n\nIf you enable this setting, Application Guard for Office will redirect unsupported file types to Protected View in Office apps.\n\nImportant: Be aware that enabling this policy setting might pose a risk to the user's device.\n\nIf you disable or don't configure this setting, Application Guard for Office will block unsupported file types in Office apps.\n\nNote: This policy setting only applies to Microsoft 365 Apps for enterprise.",
             "tags": [
                 "L_ApplicationGuard",
@@ -4892,7 +4892,7 @@
                 ]
             },
             "name": "L_ConfigurePreCreateInApplicationGuard",
-            "displayName": "Configure Application Guard container precreation.",
+            "displayName": "Configure Application Guard container precreation",
             "explainText": "This policy setting determines if the Application Guard container, for isolating untrusted files, is pre-created for improved run time performance.\n\nIf you enable this policy setting, you can specify the number of days to continue pre-creating an Application Guard container if the user has not opened a file with Application Guard. Pre-creating a container when the user logs in will decrease the wait time when opening an untrusted file.\n\n“65535” will configure Office to always create an Application Guard container when a user logs into Windows.\n\"20\" will configure Office to pre-create the container each time a user logs into Windows for up to 20 days after the last time the user opened an untrusted file using Application Guard.\n“0” will configure Office to never pre-create the container. Instead the container will only be created when a user opens their first untrusted file after logging into Windows.\n\nNote: if you configure Office to never pre-create a container then users will experience a longer wait when opening an untrusted file after logging into Windows.\n\nIf you disable or don’t configure this setting, Office will use a built-in heuristic to pre-create the container.\n\nNote: This policy setting only applies to Microsoft 365 Apps for enterprise.",
             "tags": [
                 "L_ApplicationGuard",
@@ -28966,6 +28966,34 @@
         },
         {
             "parentCategory": {
+                "ref": "L_PDFandXPS"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_PDFProtectionFromOffice",
+            "displayName": "Use the Sensitivity feature in Office to apply sensitivity labels to PDFs",
+            "explainText": "This policy setting controls whether sensitivity labels powered by Microsoft Purview Information Protection are applied to PDFs created in Word, Excel, and PowerPoint.​\n\nIf you enable this policy setting or don’t configure it, PDFs will inherit the sensitivity label and encryption from the source Word, Excel, and PowerPoint document.\n\nIf you disable this policy setting, PDFs created in Word, Excel, and PowerPoint do not inherit their source file’s sensitivity labels and encryption. When the source file is encrypted, users who do not have the rights to remove protection cannot export to PDF.\n\nNote: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise. For more information about this setting, see https://go.microsoft.com/fwlink/?linkid=2220953.",
+            "tags": [
+                "L_PDFandXPS",
+                "L_MicrosoftOfficeSystem"
+            ],
+            "application": "office16",
+            "key": "software\\microsoft\\office\\16.0\\common\\fixedformat",
+            "valueName": "disablepdfprotection"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Disableitemsinuserinterface"
             },
             "supportedOn": {
@@ -34434,8 +34462,8 @@
                 ]
             },
             "name": "L_EvictServerVersionsPolicy",
-            "displayName": "Age out the locally cached copies of server document versions that are more than n days old.",
-            "explainText": "\n        This policy controls when locally cached Office version documents from the server are aged out of the local cache.\n\n        If you enable this policy setting, Office document versions from the server that have been locally cached for more than n days, will be deleted from the local cache.\n\n        If you disable or do not configure this policy setting, Office document versions from the server that have been locally cached, will be deleted from the local cache if older than the default of one day.",
+            "displayName": "Age out the locally cached copies of server document versions that are more than n days old",
+            "explainText": "\n        This policy controls when locally cached Office version documents from the server are aged out of the local cache.\n\n        If you enable this policy setting, Office document versions from the server that have been locally cached for more than n days, will be deleted from the local cache.\n\n        If you disable or don't configure this policy setting, Office document versions from the server that have been locally cached, will be deleted from the local cache if older than the default of one day.",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"
@@ -35376,7 +35404,7 @@
             },
             "name": "L_UseOfficeForLabelling",
             "displayName": "Use the Sensitivity feature in Office to apply and view sensitivity labels",
-            "explainText": "This policy setting controls whether sensitivity labels configured by an admin can be applied and viewed by using sensitivity labels in an Office app, such as Word. It applies only to subscription versions of Office, such as Microsoft 365 Apps for enterprise.\n\nStarting with version 2211 for Current Channel and Monthly Enterprise Channel, and version 2302 for Semi-Annual Enterprise Channel:\n\nIf you enable this policy setting, or don’t configure this policy setting, sensitivity labels that are built into Office apps can be used to apply and view sensitivity labels. \n\nIf you disable this policy setting, sensitivity labels that are built into Office apps can’t be used to apply or view sensitivity labels. If the Microsoft Azure Information Protection unified labeling client is installed and you want to use the add-in from that client for labeling, you must also configure the policy setting \"Use the Azure Information Protection add-in for sensitivity labeling\".\n\nFor prior versions:\n\nIf you enable this policy setting, labels built into Office apps can be used to apply and view sensitivity labels. If the Microsoft Azure Information Protection unified labeling client is installed, we also recommend you block that client’s add-in from loading in Word, Excel, PowerPoint, and Outlook. \n\nIf you disable this policy setting, or don’t configure this policy setting, labels built into Office apps can’t be used to apply and view sensitivity labels. If the Microsoft Azure Information Protection unified labeling client is installed, the add-in from that client can be used to apply and view sensitivity labels in Office apps. \n\nFor more information about this setting, see https://go.microsoft.com/fwlink/p/?linkid=2207430.",
+            "explainText": "This policy setting controls whether sensitivity labels configured by an admin can be applied and viewed by using sensitivity labels in an Office app, such as Word. It applies only to subscription versions of Office, such as Microsoft 365 Apps for enterprise.​\n\nThis setting has been updated for newer versions of M365 Apps. For more information about this setting and how it applies to versions of M365 Apps, see https://go.microsoft.com/fwlink/p/?linkid=2207430. ​\n\nFor newer versions of M365 Apps:​\n\nIf you enable this policy setting, or don’t configure this policy setting, sensitivity labels that are built into Office apps can be used to apply and view sensitivity labels.\n\nIf you disable this policy setting, sensitivity labels that are built into Office apps can’t be used to apply or view sensitivity labels. If the Microsoft Azure Information Protection unified labeling client is installed and you want to use the add-in from that client for labeling, you must also configure the policy setting \"Use the Azure Information Protection add-in for sensitivity labeling\".​\n\nFor prior versions:​\n\nIf you enable this policy setting, labels built into Office apps can be used to apply and view sensitivity labels. If the Microsoft Azure Information Protection unified labeling client is installed, we also recommend you block that client’s add-in from loading in Word, Excel, PowerPoint, and Outlook.\n\nIf you disable this policy setting, or don’t configure this policy setting, labels built into Office apps can’t be used to apply and view sensitivity labels. If the Microsoft Azure Information Protection unified labeling client is installed, the add-in from that client can be used to apply and view sensitivity labels in Office apps.",
             "tags": [
                 "L_SecuritySettings",
                 "L_MicrosoftOfficeSystem"
@@ -35404,7 +35432,7 @@
             },
             "name": "L_AIPException",
             "displayName": "Use the Azure Information Protection add-in for sensitivity labeling",
-            "explainText": "This policy setting controls whether the Microsoft Azure Information Protection add-in can be used rather than the default of built-in labeling to view and apply sensitivity labels in Office apps. It applies only to subscription versions of Office, such as Microsoft 365 Apps for enterprise.\n\nStarting with version 2211 for Current Channel and Monthly Enterprise Channel, and version 2302 for Semi-Annual Enterprise Channel:\n\nIf you enable this policy setting and the Microsoft Azure Information Protection unified labeling client is installed, the add-in from that client replaces the default labeling built into Office apps. \n\nIf you disable this policy setting or don’t configure it, the default labeling experience that’s built-in for Office apps is used to view and apply sensitivity labels.\n\nFor more information about this setting, see https://go.microsoft.com/fwlink/p/?linkid=2207430.",
+            "explainText": "This policy setting controls whether the Microsoft Azure Information Protection add-in can be used rather than the default of built-in labeling to view and apply sensitivity labels in Office apps. It applies only to subscription versions of Office, such as Microsoft 365 Apps for enterprise.​\n\nIf you enable this policy setting and the Microsoft Azure Information Protection unified labeling client is installed, the add-in from that client replaces the default labeling built into Office apps.\n\nIf you disable this policy setting or don’t configure it, the default labeling experience that’s built-in for Office apps is used to view and apply sensitivity labels.​\n\nFor more information about this setting, see https://go.microsoft.com/fwlink/p/?linkid=2207430.",
             "tags": [
                 "L_SecuritySettings",
                 "L_MicrosoftOfficeSystem"
@@ -35521,8 +35549,8 @@
                 }
             },
             "name": "L_OfficeInsiderUserExperience",
-            "displayName": "Show the option for Office Insider",
-            "explainText": "This policy setting controls whether the option for Office Insider is shown under File > Account in an Office app, such as Word.\n\nBy showing this option, a user can choose to join or leave the Office Insider program. For more information about the Office Insider program, see https://insider.office.com.\n\nIf you enable this policy setting, the option for Office Insider is shown under File > Account.\n\nNote: if you enable this policy setting, you shouldn’t enable and configure the “Update Channel” or the “Update Path” policy setting under Computer Configuration\\Policies\\Administrative Templates\\Microsoft Office 2016 (Machine)\\Updates. If you do, those policy settings will take precedence, even though the option for Office Insider is shown.\n\nIf you disable this policy setting, the option for Office Insider is not shown under File > Account.\n\nNote: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise, and to subscription versions of Project and Visio.",
+            "displayName": "Show the option for Microsoft 365 Insider",
+            "explainText": "This policy setting controls whether the option for Microsoft 365 Insider is shown under File > Account in an app, such as Word.\n\nBy showing this option, a user can choose to join or leave the Microsoft 365 Insider program. For more information about the Microsoft 365 Insider program, see https://insider.office.com.\n\nIf you enable this policy setting, the option for Microsoft 365 Insider is shown under File > Account.\n\nNote: if you enable this policy setting, you shouldn’t enable and configure the “Update Channel” or the “Update Path” policy setting under Computer Configuration\\Policies\\Administrative Templates\\Microsoft Office 2016 (Machine)\\Updates. If you do, those policy settings will take precedence, even though the option for Microsoft 365 Insider is shown.\n\nIf you disable this policy setting, the option for Microsoft 365 Insider is not shown under File > Account.\n\nNote: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise, and to subscription versions of Project and Visio.",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"
@@ -35785,7 +35813,7 @@
                 ]
             },
             "name": "L_DisallowedRoamingMruDomains",
-            "displayName": "Turn off roaming of file names and metadata by server domain.",
+            "displayName": "Turn off roaming of file names and metadata by server domain",
             "explainText": "\nThis policy setting controls whether file names and metadata for Office files are roamed and appear in the list of recently opened files in an Office app, such as Word, on different devices.\n\nRoaming, which relies on a web-based Microsoft service, occurs when a user signs into Office with the same work or school account on different devices.\n\nNote: This policy is applied to any Office files stored on a specified list of server domains. The set of disallowed domains is a semicolon separated list: \"*.contoso.com;service.microsoft.com\".\n\nIf you enable this policy setting, file names and metadata won't roam and won’t appear in the list of recently opened files in Office apps on other devices, unless the file has been opened on that device.\n\nIf you disable or don't configure this policy setting, file names and metadata will roam and will appear in the list of recently opened files in Office apps on other devices, even if the file hasn’t been opened on that device.",
             "tags": [
                 "L_miscellaneous437",

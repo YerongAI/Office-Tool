@@ -2126,6 +2126,60 @@
         },
         {
             "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows_10_0"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "ブロックする"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "追加の警告を表示する"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "許可する"
+                            }
+                        ],
+                        "valueName": "blockxllfrominternet",
+                        "inputType": "dropdownList",
+                        "id": "L_BlockXLLFromInternetEnum"
+                    }
+                ]
+            },
+            "name": "L_BlockXLLFromInternet",
+            "displayName": "信頼されていないソースからの Excel XLL アドインをブロックします",
+            "explainText": "\n        このポリシー設定を使用すると、信頼されていないソースからの Excel XLL アドインをブロックできます。\n\n        このポリシー設定を有効にした場合、次のいずれかのオプションを設定できます:\n        - [ブロックする]: 信頼されていないソースからの XLL アドインがブロックされます。ユーザーは、アドインがブロックされたことを示す通知を受け取ります。\n        - [追加の警告を表示する]: ユーザーが信頼されていないソースからの XLL アドインを有効にすることを選択した後に、追加の警告プロンプトを表示します。\n        - [許可する]: 信頼されていないソースからの XLL アドインは許可されます。\n\n        Excel XLL アドインの実行が許可される例外:\n        - XLL は信頼できる場所に保存されています。\n        - XLL はデジタル署名されており、一致する信頼された発行元の証明書がデバイスにインストールされています。\n\n        このポリシー設定を無効にした場合、トラスト センターの [マクロとアドインの設定] セクションで構成された設定によって、信頼できないソースからの Excel XLL アドインを許可するかどうかを決定します。\n\n        このポリシー設定を無効にした、または未構成の場合、ユーザーはレジストリを変更して既定の動作をオーバーライドできます。\n\n        詳細については、https://support.microsoft.com/topic/1e3752e2-1177-4444-a807-7b700266a6fb を参照してください。\n      ",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_FileBlockSettings"
             },
             "supportedOn": {

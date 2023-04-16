@@ -57,6 +57,20 @@
             "parentCategory": {
                 "ref": "L_MicrosoftOfficePublisher"
             },
+            "name": "L_Security",
+            "displayName": "Sicherheit"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Security"
+            },
+            "name": "L_TrustCenter",
+            "displayName": "Trust Center"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
             "name": "L_Miscellaneous",
             "displayName": "Verschiedenes"
         }
@@ -607,6 +621,35 @@
             "application": "pub16",
             "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
             "valueName": "backgroundsave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_BlockMacroExecutionFromInternet",
+            "displayName": "Blockieren der Ausführung von Makros in Office-Dateien aus dem Internet",
+            "explainText": "\n        Mit dieser Richtlinieneinstellung können Sie die Ausführung von Makros in Office-Dateien blockieren, die aus dem Internet stammen.\n\n        Wenn Sie diese Richtlinieneinstellung aktivieren, wird die Ausführung von Makros blockiert, auch wenn im Abschnitt „Makroeinstellungen“ des Trust Centers die Option „Alle Makros aktivieren“ ausgewählt ist. Benutzer erhalten eine Benachrichtigung, dass die Ausführung von Makros blockiert wird.\n\n        Die Ausnahmen, wenn Makros ausgeführt werden dürfen, sind:\n        – Die Office-Datei wird an einem vertrauenswürdigen Speicherort gespeichert.\n        – Die Office-Datei wurde zuvor vom Benutzer als vertrauenswürdig eingestuft.\n        – Makros werden digital signiert, und das entsprechende Zertifikat des vertrauenswürdigen Herausgebers wird auf dem Gerät installiert.\n\n        Wenn Sie diese Richtlinieneinstellung deaktivieren, bestimmen die im Abschnitt „Makroeinstellungen“ des Trust Centers konfigurierten Einstellungen, ob Makros in Office-Dateien ausgeführt werden, die aus dem Internet stammen.\n\n        Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, wird die Ausführung von Makros blockiert. Benutzer erhalten eine Benachrichtigung über die Sicherheitsrisiken von Makros aus dem Internet sowie einen Link, um mehr zu erfahren.\n\n        Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/p/?linkid=2185771.\n      ",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\security",
+            "valueName": "blockcontentexecutionfrominternet"
         },
         {
             "parentCategory": {

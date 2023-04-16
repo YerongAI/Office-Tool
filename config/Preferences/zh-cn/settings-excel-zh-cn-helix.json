@@ -2126,6 +2126,60 @@
         },
         {
             "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows_10_0"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "阻止"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "显示其他警告"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "允许"
+                            }
+                        ],
+                        "valueName": "blockxllfrominternet",
+                        "inputType": "dropdownList",
+                        "id": "L_BlockXLLFromInternetEnum"
+                    }
+                ]
+            },
+            "name": "L_BlockXLLFromInternet",
+            "displayName": "阻止来自不受信任源的 Excel XLL 加载项",
+            "explainText": "\n        通过此策略设置，你可以阻止来自不受信任源的 Excel XLL 加载项。\n\n        如果启用此策略设置，则可以设置以下选项之一:\n        - 阻止: 阻止来自不受信任源的 XLL 加载项。用户将收到加载项被阻止的通知。\n        - 显示其他警告: 在用户选择启用来自不受信任源的 XLL 加载项后，显示其他警告提示。\n        - 允许: 允许来自不受信任源的 XLL 加载项。\n\n        允许运行 Excel XLL 加载项时的例外情况为: \n        - XLL 存储在受信任的位置。\n        - XLL 带有数字签名，并在设备上安装了匹配的受信任发布者证书。\n\n        如果禁用此策略设置，在信任中心“宏和加载项设置”部分中配置的设置将确定是否允许来自不受信任源的 Excel XLL 加载项。\n\n        如果禁用或未配置此策略设置，则用户可以通过修改注册表来替代默认行为。\n\n        有关详细信息，请参阅 https://support.microsoft.com/topic/1e3752e2-1177-4444-a807-7b700266a6fb。\n      ",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_FileBlockSettings"
             },
             "supportedOn": {

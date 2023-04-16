@@ -57,6 +57,20 @@
             "parentCategory": {
                 "ref": "L_MicrosoftOfficePublisher"
             },
+            "name": "L_Security",
+            "displayName": "Seguridad"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Security"
+            },
+            "name": "L_TrustCenter",
+            "displayName": "Centro de confianza"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
             "name": "L_Miscellaneous",
             "displayName": "Varios"
         }
@@ -607,6 +621,35 @@
             "application": "pub16",
             "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
             "valueName": "backgroundsave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_BlockMacroExecutionFromInternet",
+            "displayName": "Bloquear la ejecución de macros en archivos de Office procedentes de Internet",
+            "explainText": "\n        Esta configuración de directiva le permite bloquear la ejecución de macros en archivos de Office procedentes de Internet.\n\n        Si habilita esta configuración de directiva, se bloqueará la ejecución de macros, incluso si la opción \"Habilitar todas las macros\" está seleccionada en la sección Configuración de macros del Centro de confianza. Los usuarios recibirán una notificación de que las macros están bloqueadas para ejecutarse.\n\n        Las excepciones cuando se permitirá la ejecución de macros son:\n        - El archivo de Office se guarda en una ubicación de confianza.\n        - El usuario ha confiado previamente en el archivo de Office.\n        - Las macros están firmadas digitalmente y se instala el certificado Editor de confianza en el dispositivo el correspondiente.\n\n        Si deshabilita esta configuración de directiva, la configuración establecida en la sección Configuración de macros del Centro de confianza determina si las macros se ejecutan en archivos de Office procedentes de Internet.\n\n        Si no establece esta configuración de directiva, se bloqueará la ejecución de macros. Los usuarios recibirán una notificación que les informa de los riesgos de seguridad de las macros de Internet junto con un vínculo para obtener más información.\n\n        Para obtener más información, consulte https://go.microsoft.com/fwlink/p/?linkid=2185771.\n      ",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\security",
+            "valueName": "blockcontentexecutionfrominternet"
         },
         {
             "parentCategory": {

@@ -2126,6 +2126,60 @@
         },
         {
             "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows_10_0"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Blockieren"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Zusätzliche Warnung anzeigen"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Zulassen"
+                            }
+                        ],
+                        "valueName": "blockxllfrominternet",
+                        "inputType": "dropdownList",
+                        "id": "L_BlockXLLFromInternetEnum"
+                    }
+                ]
+            },
+            "name": "L_BlockXLLFromInternet",
+            "displayName": "Excel-XLL-Add-Ins blockieren, die aus einer nicht vertrauenswürdigen Quelle stammen",
+            "explainText": "\n        Mit dieser Richtlinieneinstellung können Sie Excel-XLL-Add-Ins blockieren, die aus einer nicht vertrauenswürdigen Quelle stammen.\n\nWenn Sie diese Richtlinieneinstellung aktivieren, können Sie eine der folgenden Optionen festlegen:\n        - Blockieren: XLL-Add-Ins aus nicht vertrauenswürdigen Quellen werden blockiert. Benutzer erhalten eine Benachrichtigung, dass das Add-In blockiert wurde.\n        - Zusätzliche Warnung anzeigen: Zeigt eine zusätzliche Bestätigungsaufforderung an, nachdem der Benutzer ein XLL-Add-In aus einer nicht vertrauenswürdigen Quelle aktiviert hat.\n        - Zulassen: XLL-Add-Ins aus einer nicht vertrauenswürdigen Quelle werden zugelassen.\n\nDie Ausnahmen, wenn Excel-XLL-Add-Ins ausgeführt werden dürfen, sind:\n        - Die XLL wird an einem vertrauenswürdigen Speicherort gespeichert.\n        - Die XLL ist digital signiert, und das entsprechende Zertifikat für vertrauenswürdige Herausgeber ist auf dem Gerät installiert.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren, legen die im Abschnitt „Makro- und Add-In-Einstellungen“ des Trust Centers konfigurierten Einstellungen fest, ob Excel-XLL-Add-Ins, die aus einer nicht vertrauenswürdigen Quelle stammen, zugelassen werden.\n\nWenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, können Benutzer das Standardverhalten durch Ändern der Registrierung außer Kraft setzen.\n\nWeitere Informationen finden Sie unter https://support.microsoft.com/topic/1e3752e2-1177-4444-a807-7b700266a6fb.\n      ",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_FileBlockSettings"
             },
             "supportedOn": {

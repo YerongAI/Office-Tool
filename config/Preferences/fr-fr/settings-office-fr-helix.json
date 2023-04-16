@@ -4828,7 +4828,7 @@
                 }
             },
             "name": "L_TurnOffHardwareAccelerationInApplicationGuard",
-            "displayName": "Désactiver l’accélération matérielle pour Office dans Application Guard.",
+            "displayName": "Désactiver l’accélération matérielle pour Office dans Application Guard",
             "explainText": "Ce paramètre de stratégie contrôle si Office dans Application Guard utilise l’accélération matérielle ou logicielle pour afficher les graphiques.\n\nSi vous activez ce paramètre, Application Guard utilise le rendu logiciel (UC) et ne charge pas de pilotes graphiques tiers ou n’interagit avec aucun matériel graphique connecté.\n\nImportant : n’oubliez pas que la désactivation ou la non configuration de ce paramètre de stratégie avec des appareils ou pilotes graphiques potentiellement compromis pourrait présenter un risque pour l’appareil de l’utilisateur.\n\nSi vous désactivez ou ne configurez pas ce paramètre, Application Guard utilise Hyper-V pour accéder aux graphiques matériels de rendu élevé pris en charge (UC). Ces unités UC améliorent les performances de rendu et la durée de vie de la batterie tout en utilisant Application Guard, notamment pour la lecture de vidéos et d’autres opérations nécessitant de nombreux graphiques. Si vous désactivez ou ne configurez pas ce paramètre sans connecter de matériel de rendu élevé, Application Guard rétablit automatiquement le rendu logiciel (UC).\n\nRemarque : ce paramètre de stratégie s’applique uniquement à Microsoft 365 Apps for enterprise. ",
             "tags": [
                 "L_ApplicationGuard",
@@ -4858,7 +4858,7 @@
                 }
             },
             "name": "L_TurnOffBlockingOfUnsupportedFileTypesInApplicationGuard",
-            "displayName": "Désactivation de la protection des types de fichiers non pris en charge dans Application Guard pour Office.",
+            "displayName": "Désactivez la protection des types de fichiers non pris en charge dans Application Guard pour Office",
             "explainText": "Ce paramètre de stratégie contrôle si Application Guard pour Office empêchera l’ouverture des types de fichiers non pris en charge ou si elle autorisera la redirection vers le mode Protégé.\n\nSi vous activez ce paramètre, Application Guard pour Office redirige les types de fichiers non pris en charge vers le mode protégé.\n\nImportant : Sachez que l’activation de ce paramètre de stratégie peut présenter un risque pour l’appareil de l’utilisateur.\n\nSi vous désactivez ou ne configurez pas ce paramètre, Application Guard pour Office bloque les types de fichiers non pris en charge dans les applications Office.\n\nRemarque : ce paramètre de stratégie s’applique uniquement à Microsoft 365 Apps for enterprise. ",
             "tags": [
                 "L_ApplicationGuard",
@@ -4892,7 +4892,7 @@
                 ]
             },
             "name": "L_ConfigurePreCreateInApplicationGuard",
-            "displayName": "Configurer la précréation d’un conteneur Application Guard.",
+            "displayName": "Configurer la précréation d’un conteneur Application Guard",
             "explainText": "Ce paramètre de stratégie détermine si le conteneur Application Guard, pour l’isolement des fichiers non approuvés, est pré-créé pour améliorer les performances d’exécution.\n\nSi vous activez ce paramètre de stratégie, vous pouvez spécifier le nombre de jours avant de continuer la création d’un conteneur Application Guard si l’utilisateur n’a pas ouvert de fichier avec Application Guard. La pré-création d’un conteneur lorsque l’utilisateur se connecte réduira le temps d’attente lors de l’ouverture d’un fichier non approuvé.\n\n« 65535 » va configurer Office pour toujours créer un conteneur Application Guard lorsqu’un utilisateur se connecte à Windows.\n« 20 » va configurer Office pour pré-créer le conteneur chaque fois qu’un utilisateur se connecte à Windows pendant 20 jours après la dernière ouverture d’un fichier non approuvé à l’aide d’Application Guard.\n« 0 » va configurer Office pour ne jamais pré-créer le conteneur. À la place, le conteneur sera créé uniquement lorsqu’un utilisateur ouvre son premier fichier non approuvé suite à la connexion à Windows.\n\nRemarque : si vous configurez Office pour ne jamais pré-créer un conteneur, les utilisateurs recevront plus d’attente lors de l’ouverture d’un fichier non approuvé après la connexion à Windows.\n\nSi vous désactivez ou ne configurez pas ce paramètre, Office utilisera une heuristique intégrée pour pré-créer le conteneur.\n\nRemarque : ce paramètre de stratégie s’applique uniquement à Microsoft 365 Apps for enterprise.",
             "tags": [
                 "L_ApplicationGuard",
@@ -28966,6 +28966,34 @@
         },
         {
             "parentCategory": {
+                "ref": "L_PDFandXPS"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_PDFProtectionFromOffice",
+            "displayName": "Utiliser la fonctionnalité Confidentialité d’Office pour appliquer et afficher les étiquettes de confidentialité",
+            "explainText": "Ce paramètre de stratégie contrôle si les étiquettes de confidentialité avec des Protection des données Microsoft Purview sont appliquées aux fichiers PDF créés dans Word, Excel et PowerPoint.\n\nSi vous activez ce paramètre de stratégie ou si vous ne le configurez pas, les fichiers PDF héritent de l’étiquette de confidentialité et du chiffrement du document Source Word, Excel et PowerPoint.\n\nSi vous désactivez ce paramètre de stratégie, les fichiers PDF créés dans Word, Excel et PowerPoint n’héritent pas des étiquettes de confidentialité et du chiffrement de leur fichier source. Lorsque le fichier source est chiffré, les utilisateurs qui ne disposent pas des droits nécessaires pour supprimer la protection ne peuvent pas exporter au format PDF.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions d’Office par abonnement, telles que Microsoft 365 Apps for enterprise. Pour plus d’informations sur ce paramètre, consultez https://go.microsoft.com/fwlink/?linkid=2220953.",
+            "tags": [
+                "L_PDFandXPS",
+                "L_MicrosoftOfficeSystem"
+            ],
+            "application": "office16",
+            "key": "software\\microsoft\\office\\16.0\\common\\fixedformat",
+            "valueName": "disablepdfprotection"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Disableitemsinuserinterface"
             },
             "supportedOn": {
@@ -34435,7 +34463,7 @@
             },
             "name": "L_EvictServerVersionsPolicy",
             "displayName": "Échoir les copies mises en cache localement des versions du document serveur antérieures à n jours.",
-            "explainText": "\n        Cette stratégie contrôle le moment auquel les documents Office mis en cache localement sont échus du cache local.\n\n        Si vous activez ce paramètre de stratégie, les versions des documents Office du serveur mises en cache localement plus de n jours, seront supprimées du cache local.\n\n        Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les versions des documents Office du serveur mises en cache localement, seront supprimées du cache local si elles sont antérieures à la valeur par défaut d’un jour.",
+            "explainText": "\n        Cette stratégie contrôle l’échéance dans le cache local des documents Office mis en cache localement.\n\n        Si vous activez ce paramètre de stratégie, les versions des documents Office du serveur mises en cache localement plus de n jours, seront supprimées du cache local.\n\n        Si vous désactivez ou omettez de configurer ce paramètre de stratégie, les versions des documents Office du serveur mises en cache localement seront supprimées du cache local si elles sont antérieures à la valeur par défaut d’un jour.",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"
@@ -35403,7 +35431,7 @@
                 }
             },
             "name": "L_AIPException",
-            "displayName": "Use the Azure Information Protection add-in for sensitivity labeling",
+            "displayName": "Utiliser le complément Azure Information Protection pour l’étiquetage de confidentialité",
             "explainText": "Ce paramètre de stratégie contrôle si le complément Microsoft Azure Information Protection peut être utilisé plutôt que la valeur par défaut de l’étiquetage intégré pour afficher et appliquer des étiquettes de confidentialité dans les applications Office. Il s’applique uniquement aux versions d’Office par abonnement, telles que Microsoft 365 Apps for enterprise.\n\nÀ partir de la version 2211 pour le Canal actuel et Canal Entreprise mensuel, et de la version 2302 pour le Canal Entreprise semestriel :\n\nSi vous activez ce paramètre de stratégie et que le client d’étiquetage unifié Microsoft Azure Information Protection est installé, le complément de ce client remplace l’étiquetage par défaut intégré aux applications Office. \n\nSi vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l’expérience d’étiquetage par défaut intégrée aux applications Office est utilisée pour afficher et appliquer des étiquettes de confidentialité.\n\nPour plus d’informations sur ce paramètre, consultez https://go.microsoft.com/fwlink/p/?linkid=2207430.",
             "tags": [
                 "L_SecuritySettings",
@@ -35521,8 +35549,8 @@
                 }
             },
             "name": "L_OfficeInsiderUserExperience",
-            "displayName": "Afficher l’option pour Office Insider",
-            "explainText": "Ce paramètre de stratégie contrôle si l’option Office Insider apparaît sous Fichier > Compte dans les logiciels Office tels que Word.\n\nLorsque cette option est affichée, un utilisateur peut choisir de rejoindre ou quitter le programme Office Insider. Pour plus d’informations sur le programme Office Insider, voir https://insider.office.com.\n\nSi vous activez ce paramètre de stratégie, l’option Office Insider apparaît sous Fichier > Compte.\n\nRemarque : si vous activez ce paramètre de stratégie, vous ne devez pas activer ni configurer le paramètre de stratégie « Canal de mise à jour » ou « Chemin de mise à jour » sous Configuration ordinateur\\Stratégies\\Modèles d’administration\\Microsoft Office 2016 (ordinateur)\\Mises à jour. Dans ce cas, ces paramètres de stratégie prévalent, même si l’option Office Insider est affichée.\n\nSi vous désactivez ce paramètre de stratégie, l’option Office Insider n’apparaît pas sous Fichier > Compte.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions par abonnement d’Office, telles qu’Applications Microsoft 365 pour les entreprises, et aux versions par abonnement de Project et Visio.",
+            "displayName": "Afficher l’option pour Microsoft 365 Insider",
+            "explainText": "Ce paramètre de stratégie contrôle l’affichage de l’option pour Microsoft 365 Insider sous Fichier > Compte dans une application, telle que Word.\n\nEn affichant cette option, un utilisateur peut choisir de rejoindre ou de quitter le programme Microsoft 365 Insider. Pour plus d’informations sur le programme Microsoft 365 Insider, consultez https://insider.office.com.\n\nSi vous activez ce paramètre de stratégie, l’option pour Microsoft 365 Insider s’affiche sous Fichier > Compte.\n\nRemarque : si vous activez ce paramètre de stratégie, vous ne devez pas activer et configurer le paramètre de stratégie « Canal de mise à jour » ou « Chemin de mise à jour » sous Configuration ordinateur\\Stratégies\\Modèles d'administration\\Microsoft Office 2016 (ordinateur)\\Mises à jour. Si vous le faites, ces paramètres de stratégie seront prioritaires, même si l’option pour Microsoft 365 Insider est affichée.\n\nSi vous désactivez ce paramètre de stratégie, l’option pour Microsoft 365 Insider ne s’affiche pas sous Fichier > Compte.\n\nRemarque : ce paramètre de stratégie s’applique uniquement aux versions d’Office par abonnement, telles que Applications Microsoft 365 pour les grandes entreprises, ainsi qu’aux versions de Project et Visio par abonnement.",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"
@@ -35785,7 +35813,7 @@
                 ]
             },
             "name": "L_DisallowedRoamingMruDomains",
-            "displayName": "Désactivez l’itinérance des noms de fichiers et des métadonnées par domaine de serveur.",
+            "displayName": "Désactivez l’itinérance des noms de fichiers et des métadonnées par domaine de serveur",
             "explainText": "\nCe paramètre de stratégie contrôle si les noms de fichiers et les métadonnées des fichiers Office sont itinérants et s’affichent dans la liste des fichiers récemment ouverts dans une application Office, tels que Word, sur différents appareils.\n\nRoaming, qui s’appuie sur un service Microsoft web, se produit lorsqu’un utilisateur se connecte à Office avec le même compte professionnel ou scolaire sur différents appareils.\n\nNote : cette stratégie est appliquée à tous les fichiers Office stockés sur une liste spécifiée de domaines serveur. L’ensemble des domaines non autorisés est une liste séparée par des points-virgules : « *.contoso.com;service.microsoft.com ».\n\nSi vous activez ce paramètre de stratégie, les noms de fichiers et les métadonnées ne sont pas itinérants et n’apparaissent pas dans la liste des fichiers récemment ouverts dans les applications Office sur d’autres appareils, sauf si le fichier a été ouvert sur cet appareil.\n\nSi vous désactivez ou ne configurez pas ce paramètre de stratégie, les noms de fichiers et les métadonnées seront itinérants et apparaîtront dans la liste des fichiers récemment ouverts dans les applications Office sur d’autres appareils, même si le fichier n’a pas été ouvert sur cet appareil.",
             "tags": [
                 "L_miscellaneous437",

@@ -4828,7 +4828,7 @@
                 }
             },
             "name": "L_TurnOffHardwareAccelerationInApplicationGuard",
-            "displayName": "Deshabilitar la aceleración de hardware para Office en la Protección de aplicaciones.",
+            "displayName": "Deshabilitar la aceleración de hardware para Office en la Protección de aplicaciones",
             "explainText": "Este ajuste de la directiva controla si Office usa aceleración de hardware o de software para representar gráficos en la Protección de aplicaciones.\n\nSi habilita este ajuste, la Protección de aplicaciones usará una representación basada en software (CPU) y no cargará ningún controlador de gráficos de terceros ni interactuará con ningún hardware gráfico conectado.\n\nImportante: Tenga en cuenta que si no configura o deshabilita este ajuste de la directiva con controladores o con dispositivos gráficos potencialmente peligrosos, ello puede suponer un riesgo para el dispositivo del usuario.\n\nSi deshabilita o no configura este ajuste, la Protección de aplicaciones usará Hyper-V para acceder a un hardware de representación de gráficos (GPU) compatible de alto nivel de seguridad. Estos GPU mejoran el rendimiento de la representación y la duración de la batería mientras usan la Protección de aplicaciones, especialmente para la reproducción de vídeo y otras operaciones de uso intensivo de gráficos. Si deshabilita o no configura este ajuste sin conectar algún hardware de representación de gráficos de alta seguridad, la Protección de aplicaciones lo revertirá automáticamente a la representación basada en software (CPU).\n\nNota: Esta ajuste de la directiva solo se aplica a las Aplicaciones de Microsoft 365 para empresas.",
             "tags": [
                 "L_ApplicationGuard",
@@ -4858,7 +4858,7 @@
                 }
             },
             "name": "L_TurnOffBlockingOfUnsupportedFileTypesInApplicationGuard",
-            "displayName": "Desactive la protección de los tipos de archivos no compatibles en la Protección de aplicaciones de Office.",
+            "displayName": "Desactive la protección de los tipos de archivos no compatibles en la Protección de aplicaciones de Office",
             "explainText": "Esta configuración de directiva controla si la Protección de aplicaciones de Office bloqueará los tipos de archivos que no sean compatibles para que no se abran en las aplicaciones de Office o si habilitará el redireccionamiento a la vista protegida.\n\nSi habilita esta configuración, la Protección de aplicaciones de Office redirigirá los tipos de archivos no compatibles a la vista protegida en las aplicaciones de Office.\n\nImportante: Tenga en cuenta que habilitar esta configuración de directiva puede suponer un riesgo para el dispositivo del usuario.\n\nSi deshabilita o no configura este ajuste, la Protección de aplicaciones de Office bloqueará los tipos de archivos no compatibles en las aplicaciones de Office.\n\nNota: Esta configuración de directiva solo se aplica a las Aplicaciones de Microsoft 365 para empresas.",
             "tags": [
                 "L_ApplicationGuard",
@@ -4892,7 +4892,7 @@
                 ]
             },
             "name": "L_ConfigurePreCreateInApplicationGuard",
-            "displayName": "Configurar la creación previa del contenedor de Protección de aplicaciones.",
+            "displayName": "Configure la creación previa del contenedor de Protección de aplicaciones",
             "explainText": "Esta configuración de directiva determina si el contenedor de Protección de aplicaciones para el aislamiento de archivos que no son de confianza se crea previamente para mejorar el rendimiento en tiempo de ejecución.\n\nSi habilita esta configuración de directiva, puede especificar el número de días para continuar con la creación previa de un contenedor de Protección de aplicaciones si el usuario no abre un archivo con Protección de aplicaciones. La creación previa de un contenedor cuando el usuario inicia sesión reducirá el tiempo de espera al abrir un archivo que no es de confianza.\n\n“65535” configurará Office para crear siempre un contenedor de protección de aplicaciones cuando un usuario inicie sesión en Windows.\n\"20\" configurará Office para que cree previamente el contenedor cada vez que un usuario inicie sesión en Windows hasta 20 días después de la última vez que el usuario abrió un archivo que no es de confianza mediante la Protección de aplicaciones.\n“0” configurará Office para que nunca cree previamente el contenedor. En su lugar, el contenedor solo se creará cuando un usuario abra su primer archivo que no sea de confianza después de iniciar sesión en Windows.\n\nNota: si configura Office para que nunca cree previamente un contenedor, los usuarios experimentarán un mayor tiempo de espera al abrir un archivo que no sea de confianza después de iniciar sesión en Windows.\n\nSi deshabilita o no configura esta opción, Office usará una heurística integrada para crear previamente el contenedor.\n\nNota: esta configuración de directiva solo se aplica a las Aplicaciones de Microsoft 365 para empresas.",
             "tags": [
                 "L_ApplicationGuard",
@@ -28966,6 +28966,34 @@
         },
         {
             "parentCategory": {
+                "ref": "L_PDFandXPS"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_PDFProtectionFromOffice",
+            "displayName": "Use la función de confidencialidad de Office para ver y aplicar etiquetas de confidencialidad a los archivos PDF",
+            "explainText": "Esta configuración de directiva controla si las etiquetas de confidencialidad de Microsoft Purview Information Protection se aplican a los archivos PDF creados en Word, Excel y PowerPoint.\n\nSi habilita esta configuración de directiva o no la configura, los archivos PDF heredarán la etiqueta de confidencialidad y el cifrado del documento de origen de Word, Excel y PowerPoint.\n\nSi deshabilita esta configuración de directiva, los archivos PDF creados en Word, Excel y PowerPoint no heredan las etiquetas de confidencialidad ni el cifrado del archivo de origen. Cuando se cifra el archivo de origen, los usuarios que no tengan derechos para quitar la protección no podrán exportar a PDF.\n\nNota: Esta configuración de directiva solo se aplica a las versiones de suscripción de Office, como las Aplicaciones de Microsoft 365 para empresas. Para obtener más información sobre esta configuración, consulte https://go.microsoft.com/fwlink/?linkid=2220953.",
+            "tags": [
+                "L_PDFandXPS",
+                "L_MicrosoftOfficeSystem"
+            ],
+            "application": "office16",
+            "key": "software\\microsoft\\office\\16.0\\common\\fixedformat",
+            "valueName": "disablepdfprotection"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Disableitemsinuserinterface"
             },
             "supportedOn": {
@@ -34434,8 +34462,8 @@
                 ]
             },
             "name": "L_EvictServerVersionsPolicy",
-            "displayName": "Antigüedad de las copias de la caché local de las versiones de documentos del servidor que tienen más de n días.",
-            "explainText": "\n        Esta directiva controla cuándo las versiones de documentos de Office de la caché local del servidor son más antiguas que los de la caché local.\n\n        Si habilita esta configuración de directiva, las versiones de documentos de Office del servidor que se han almacenado en cache local durante más de n días se eliminarán de la caché local.\n\n        Si no configura o deshabilita esta configuración de directiva, las versiones de documentos de Office del servidor que se han almacenado en cache local, se eliminarán de la caché local si es mayor que el valor predeterminado de un día.",
+            "displayName": "Antigüedad de las copias de la caché local de las versiones de documentos del servidor que tienen más de n días",
+            "explainText": "\n        Esta directiva controla cuándo los documentos de versión de Office almacenados localmente en caché desde el servidor caducan fuera de la memoria caché local.\n\n        Si habilita esta configuración de directiva, las versiones de documentos de Office del servidor que se hayan almacenado en caché localmente durante más de n días se eliminarán de la memoria caché local.\n\n        Si deshabilita o no configura esta opción de directiva, las versiones de documentos de Office del servidor que se han almacenado en caché localmente se eliminarán de la memoria caché local si son anteriores a la predeterminada de un día.",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"
@@ -35403,7 +35431,7 @@
                 }
             },
             "name": "L_AIPException",
-            "displayName": "Use the Azure Information Protection add-in for sensitivity labeling",
+            "displayName": "Usar el complemento Azure Information Protection para el etiquetado de confidencialidad",
             "explainText": "Esta configuración de directiva controla si se puede usar el complemento de Microsoft Azure Information Protection en lugar del etiquetado predeterminado integrado para ver y aplicar etiquetas de confidencialidad en las aplicaciones de Office. Solo se aplica a las versiones de suscripción de Office, como Aplicaciones de Microsoft 365 para empresas.\n\nA partir de la versión 2211 para el Canal actual y el Canal mensual para empresas y a partir de la versión 2302 para el Canal semestral para empresas:\n\nSi habilita esta configuración de directiva y el cliente de etiquetado unificado de Microsoft Azure Information Protection está instalado, el complemento de ese cliente reemplaza el etiquetado predeterminado integrado en las aplicaciones de Office. \n\nSi deshabilita esta configuración de directiva o no la configura, la experiencia de etiquetado predeterminado integrado en las aplicaciones de Office se usará para ver y aplicar etiquetas de confidencialidad.\n\nPara obtener más información acerca de esta configuración, consulte https://go.microsoft.com/fwlink/p/?linkid=2207430.",
             "tags": [
                 "L_SecuritySettings",
@@ -35521,8 +35549,8 @@
                 }
             },
             "name": "L_OfficeInsiderUserExperience",
-            "displayName": "Mostrar la opción de Office Insider",
-            "explainText": "Esta opción de directiva controla si la opción de Office Insider se muestra en Archivo > Cuenta en una aplicación de Office, como Word.\n\nAl mostrar esta opción, el usuario puede elegir unirse o abandonar el programa Office Insider. Para obtener más información sobre el programa Office Insider, consulte https://insider.office.com.\n\nSi habilita esta opción de directiva, la opción de Office Insider se mostrará en Archivo > Cuenta.\n\nNota: Si habilita esta opción de directiva, no debe habilitar ni configurar las opciones de directiva \"Canal de actualización\" o \"Ruta de acceso de actualización\" en Configuración del equipo\\Directivas\\Plantillas administrativas\\Microsoft Office 2016 (Equipo)\\Actualizaciones. Si lo hace, esa opción de directiva tendrá prioridad, incluso si se muestra la opción de Office Insider.\n\nSi deshabilita esta opción de directiva, la opción de Office Insider no se mostrará en Archivo > Cuenta.\n\nNota: Esta opción de directiva solo se aplica a las versiones de suscripción de Office, como Aplicaciones de Microsoft 365 para empresas, y a las versiones de suscripción de Project y Visio.",
+            "displayName": "Mostrar la opción de Microsoft 365 Insider",
+            "explainText": "Esta configuración de directiva controla si la opción para Microsoft 365 Insider se muestra en Archivo > Cuenta en una aplicación, como Word, por ejemplo.\n\nAl mostrar esta opción, un usuario puede elegir unirse o abandonar el programa Microsoft 365 Insider. Para obtener más información acerca del programa Microsoft 365 Insider, consulte https://insider.office.com.\n\nSi habilita esta configuración de directiva, la opción para Microsoft 365 Insider se mostrará en Archivo > Cuenta.\n\nNota: Si habilita esta configuración de directiva, no debe habilitar ni establecer la configuración de directiva \"Canal de actualización\" o \"Ruta de acceso de actualización\" en Configuración del equipo\\Directivas\\Plantillas administrativas\\Microsoft Office 2016 (Equipo)\\Novedades. Si lo hace, esa configuración de directiva tendrá prioridad, aunque se muestre la opción para Microsoft 365 Insider.\n\nSi deshabilita esta configuración de directiva, la opción para Microsoft 365 Insider no se mostrará en Archivo > Cuenta.\n\nNota: Esta configuración de directiva solo se aplica a las versiones de suscripción de Office, como Aplicaciones de Microsoft 365 para empresas, y a las versiones de suscripción de Project y Visio.",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"

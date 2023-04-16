@@ -57,6 +57,20 @@
             "parentCategory": {
                 "ref": "L_MicrosoftOfficePublisher"
             },
+            "name": "L_Security",
+            "displayName": "セキュリティ"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Security"
+            },
+            "name": "L_TrustCenter",
+            "displayName": "セキュリティ センター"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
             "name": "L_Miscellaneous",
             "displayName": "その他"
         }
@@ -607,6 +621,35 @@
             "application": "pub16",
             "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
             "valueName": "backgroundsave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_BlockMacroExecutionFromInternet",
+            "displayName": "インターネットから取得した Office ファイル内のマクロの実行をブロックします",
+            "explainText": "\n        このポリシー設定では、インターネットから取得された Office ファイル内のマクロの実行をブロックできます。\n\n        このポリシー設定を有効にした場合、トラスト センターの [マクロの設定] セクションで [すべてのマクロを有効にする] がオンになっている場合でも、マクロの実行はブロックされます。ユーザーにマクロの実行がブロックされたことを示す通知が表示されます。\n\n        マクロの実行が許可される例外は次のとおりです:\n        - Office ファイルが信頼できる場所に保存されている場合。\n        - Office ファイルを以前にユーザーが信頼した場合。\n        - マクロがデジタル署名され、一致する信頼できる発行元証明書がデバイスにインストールされている場合。\n\n        このポリシーを無効にした場合は、トラスト センターの [マクロの設定] セクションで構成された設定で、インターネットから取得された Office ファイル内のマクロが実行されるかどうかが決まります。\n\n        このポリシーを構成しない場合、マクロの実行はブロックされます。ユーザーにインターネットからのマクロのセキュリティ リスクに関する通知が表示され、詳細を確認するためのリンクが表示されます。\n\n        詳細については、https://go.microsoft.com/fwlink/p/?linkid=2185771 を参照してください。\n      ",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\security",
+            "valueName": "blockcontentexecutionfrominternet"
         },
         {
             "parentCategory": {

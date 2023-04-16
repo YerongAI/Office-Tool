@@ -4828,7 +4828,7 @@
                 }
             },
             "name": "L_TurnOffHardwareAccelerationInApplicationGuard",
-            "displayName": "Disabilita accelerazione hardware per Office in Application Guard.",
+            "displayName": "Disattivare l'accelerazione hardware per Office in Application Guard",
             "explainText": "Questa impostazione di criteri controlla se Office in Application Guard utilizza l'accelerazione hardware o software per il rendering della grafica.\n\nSe si abilita questa impostazione, Application Guard userà il rendering basato su software (CPU) e non caricherà alcun driver di grafica di terze parti né interagirà con alcun dispositivo hardware grafico connesso.\n\nImportante: tenere presente che disabilitare questa impostazione con driver o dispositivi grafici potenzialmente compromessi può costituire un rischio per il dispositivo dell'utente.\n\nSe si disabilita o non si configura questa impostazione, Application Guard userà Hyper-V per accedere all'hardware grafico supportato per il rendering con sicurezza elevata (GPU). Queste GPU migliorano la durata della batteria e le prestazioni di rendering con Application Guard, soprattutto per la riproduzione di video e per altri casi d'uso con un utilizzo intensivo della grafica. Se si disabilita o non si configura questa impostazione senza connettere alcun dispositivo hardware grafico per il rendering con sicurezza elevata, Application Guard ripristinerà automaticamente il rendering basato su software (CPU).\n\nNota: questa impostazione di criteri si applica solo a Microsoft 365 Apps for enterprise. ",
             "tags": [
                 "L_ApplicationGuard",
@@ -4858,7 +4858,7 @@
                 }
             },
             "name": "L_TurnOffBlockingOfUnsupportedFileTypesInApplicationGuard",
-            "displayName": "Disattivare la protezione dei tipi di file non supportati in Application Guard per Office.",
+            "displayName": "Disattivare la protezione dei tipi di file non supportati in Application Guard per Office",
             "explainText": "Questa impostazione dei criteri controlla se Application Guard per Office bloccherà l'apertura di tipi di file non supportati o se abiliterà il reindirizzamento alla visualizzazione protetta.\n\nSe abiliti questa impostazione, Application Guard per Office reindirizzerà i tipi di file non supportati a Visualizzazione protetta nelle app di Office.\n\nImportante: tenere presente che l'attivazione di questa impostazione di criterio potrebbe rappresentare un rischio per il dispositivo dell'utente.\n\nSe disabiliti o non configuri questa impostazione, Application Guard per Office bloccherà i tipi di file non supportati nelle app di Office.\n\nNota: questa impostazione dei criteri si applica solo a Microsoft 365 Apps for enterprise.",
             "tags": [
                 "L_ApplicationGuard",
@@ -4892,7 +4892,7 @@
                 ]
             },
             "name": "L_ConfigurePreCreateInApplicationGuard",
-            "displayName": "Configura creazione preliminare del contenitore Application Guard.",
+            "displayName": "Configurare la precreazione del contenitore Application Guard",
             "explainText": "Questa impostazione dei criteri determina se il contenitore Application Guard, per l’isolamento di file non attendibili, è creato in via preliminare per migliorare le prestazioni di esecuzione.\n\nSe si abilita questa impostazione dei criteri, è possibile specificare il numero di giorni in cui prolungare la creazione preliminare di un contenitore Application Guard, se l'utente non ha aperto un file con Application Guard. La creazione preliminare di un contenitore nel momento in cui l'utente effettua l’accesso riduce il tempo di attesa all’apertura di un file non attendibile.\n\nCon “65535” Office sarà configurato per creare sempre un contenitore Application Guard quando un utente accede a Windows.\nCon “20” Office sarà configurato per creare in via preliminare il contenitore ogni volta che un utente accede a Windows, per un massimo di 20 giorni dopo l'ultima volta che l'utente ha aperto un file non attendibile con Application Guard.\nCon “0” Office sarà configurato per non creare mai in via preliminare il contenitore. Il contenitore viene creato solo quando un utente apre il primo file non attendibile dopo aver effettuato l’accesso a Windows.\n\nNota: se Office viene configurato per non creare mai in via preliminare un contenitore, gli utenti subiranno un tempo di attesa più lungo all’apertura di un file non attendibile dopo aver effettuato l'accesso a Windows.\n\nSe si disabilita o non si configura questa impostazione, Office utilizzerà un’euristica predefinita per la creazione preliminare del contenitore.\n\nNota: questa impostazione dei criteri si applica solo a Microsoft 365 Apps for enterprise.",
             "tags": [
                 "L_ApplicationGuard",
@@ -28966,6 +28966,34 @@
         },
         {
             "parentCategory": {
+                "ref": "L_PDFandXPS"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_PDFProtectionFromOffice",
+            "displayName": "Usare la funzionalità Riservatezza in Office per applicare etichette di riservatezza ai PDF",
+            "explainText": "Questa impostazione di criterio controlla se le etichette di riservatezza basate su Microsoft Purview Information Protection vengono applicate ai PDF creati in Word, Excel e PowerPoint.\n\nSe si abilita o non si configura questa impostazione di criterio, i PDF erediteranno l'etichetta di riservatezza e la crittografia dal documento di Word, Excel e PowerPoint di origine.\n\nSe si disabilita questa impostazione di criterio, i PDF creati in Word, Excel e PowerPoint non ereditano le etichette di riservatezza e la crittografia del file di origine. Quando il file di origine è crittografato, gli utenti che non dispongono dei diritti di rimozione della protezione non possono esportare in PDF.\n\nNota: questa impostazione di criterio si applica solo alle versioni in abbonamento di Office, ad esempio Microsoft 365 Apps per enterprise. Per ulteriori informazioni su questa impostazione, vedere https://go.microsoft.com/fwlink/?linkid=2220953.",
+            "tags": [
+                "L_PDFandXPS",
+                "L_MicrosoftOfficeSystem"
+            ],
+            "application": "office16",
+            "key": "software\\microsoft\\office\\16.0\\common\\fixedformat",
+            "valueName": "disablepdfprotection"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Disableitemsinuserinterface"
             },
             "supportedOn": {
@@ -34434,8 +34462,8 @@
                 ]
             },
             "name": "L_EvictServerVersionsPolicy",
-            "displayName": "Rimuove le copie delle versioni dei documenti del server memorizzate nella cache e che risalgono a più di n giorni prima.",
-            "explainText": "\n        Questa impostazione di criteri controlla quando rimuovere dalla cache locale i documenti delle versioni di Office del server.\n\n        Se si abilita questa impostazione di criteri, le versioni dei documenti di Office del server memorizzate nella cache per più di n giorni verranno eliminate dalla cache locale.\n\n        Se si disabilita o non si configura questa impostazione di criteri, le versioni dei documenti di Office del server memorizzate nella cache locale verranno eliminate dalla cache locale se risalgono a un giorno prima, che è l'impostazione predefinita.",
+            "displayName": "Invecchiare le copie memorizzate nella cache locale delle versioni dei documenti del server che hanno più di n giorni.",
+            "explainText": "\n        Questo criterio controlla quando i documenti della versione di Office memorizzati nella cache locale dal server vengono eliminati dalla cache locale.\n\n        Se si attiva questa impostazione di criterio, le versioni di documenti di Office del server che sono state memorizzate nella cache locale per più di n giorni verranno eliminate dalla cache locale.\n\n        Se si disattiva o non si configura questa impostazione di criterio, le versioni dei documenti di Office provenienti dal server che sono state memorizzate nella cache locale verranno eliminate dalla cache locale se più vecchie del valore predefinito di un giorno.",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"
@@ -35403,7 +35431,7 @@
                 }
             },
             "name": "L_AIPException",
-            "displayName": "Use the Azure Information Protection add-in for sensitivity labeling",
+            "displayName": "Usare il componente aggiuntivo protezione delle informazioni di Azure per l'etichettatura di riservatezza",
             "explainText": "Questa impostazione dei criteri controlla se è possibile usare il componente aggiuntivo di protezione delle informazioni di Microsoft Azure anziché l'impostazione predefinita dell'etichettatura predefinita per visualizzare e applicare etichette di riservatezza nelle app di Office. Si applica solo alle versioni in abbonamento di Office, ad esempio Microsoft 365 Apps for Enterprise.\n\na partire dalla versione 2211 per Canale corrente e Canale Enterprise mensile e versione 2302 per canale Enterprise semestrale:\n\nSe si abilita questa impostazione dei criteri e viene installato il client di etichettatura unificata di protezione delle informazioni di Microsoft Azure, il componente aggiuntivo di tale client sostituisce l'etichettatura predefinita incorporata nelle app di Office. \n\nSe si disabilita o non si configura questa impostazione dei criteri, l'esperienza di etichettatura predefinita per le app di Office viene usata per visualizzare e applicare le etichette di riservatezza.\n\nPer altre informazioni su questa impostazione, vedere https://go.microsoft.com/fwlink/p/?linkid=2207430.",
             "tags": [
                 "L_SecuritySettings",
@@ -35521,8 +35549,8 @@
                 }
             },
             "name": "L_OfficeInsiderUserExperience",
-            "displayName": "Mostra l'opzione per Office Insider",
-            "explainText": "Questa impostazione di criteri consente di stabilire se l'opzione per Office Insider viene mostrata in File > Account in un'app di Office, come Word.\n\nSe viene visualizzata questa opzione, un utente può scegliere di accedere al programma Office Insider o di abbandonarlo. Per altre informazioni sul programma Office Insider, vedere https://insider.office.com.\n\nSe si abilita questa impostazione di criteri, l'opzione per Office Insider viene mostrata in File > Account.\n\nNota: se si abilita questa impostazione di criteri, è consigliabile non abilitare e configurare l'impostazione di criteri \"Canale di aggiornamento\" o l'impostazione di criteri \"Percorso di aggiornamento\" in Configurazione computer\\Criteri\\Modelli amministrativi\\Microsoft Office 2016 (computer)\\Aggiornamenti. Se abilitate e configurate, tali impostazioni di criteri avranno la precedenza, anche se l'opzione per Office Insider viene mostrata.\n\nSe si disabilita questa impostazione di criteri, l'opzione per Office Insider non viene mostrata in File > Account.\n\nNota: questa impostazione di criteri si applica solo alle versioni in abbonamento di Office, come Microsoft 365 Apps for enterprise, e alle versioni in abbonamento di Project e Visio.",
+            "displayName": "Mostra l'opzione per Microsoft 365 Insider",
+            "explainText": "Questa impostazione di criterio controlla se l'opzione per Microsoft 365 Insider viene visualizzata in File > Account in un'app, ad esempio Word.\n\nVisualizzando questa opzione, un utente può scegliere di partecipare o abbandonare il programma Insider di Microsoft 365. Per ulteriori informazioni sul programma Microsoft 365 Insider, vedi https://insider.office.com.\n\nSe si abilita questa impostazione dei criteri, l'opzione per Microsoft 365 Insider verrà visualizzata in Account > file.\n\nNota: se si abilita questa impostazione dei criteri, non sarà necessario abilitare e configurare l'impostazione dei criteri \"Canale di aggiornamento\" o \"Percorso aggiornamento\" in Configurazione computer\\Criteri\\Modelli amministrativi\\Microsoft Office 2016 (computer)\\Aggiornamenti. In tal caso, queste impostazioni dei criteri avranno la precedenza, anche se è visualizzata l'opzione per Microsoft 365 Insider.\n\nSe si disabilita questa impostazione dei criteri, l'opzione per Microsoft 365 Insider non verrà visualizzata in File > Account.\n\nNota: questa impostazione di criterio si applica solo alle versioni in abbonamento di Office, ad esempio Microsoft 365 Apps for enterprise, e alle versioni in abbonamento di Project e Visio.",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"
@@ -35785,7 +35813,7 @@
                 ]
             },
             "name": "L_DisallowedRoamingMruDomains",
-            "displayName": "Disattivare il roaming dei nomi di file e dei metadati in base al dominio del server.",
+            "displayName": "Disattivare il roaming dei nomi dei file e dei metadati in base al dominio del server.",
             "explainText": "\nQuesta impostazione criterio permette di controllare che i nomi e i metadati dei file di Office siano in roaming e appaiano nell'elenco dei file aperti di recente in un'app di Office, ad esempio Word, su dispositivi diversi.\n\nIl roaming, che si appoggia a un servizio Microsoft basato sul Web, si ha quando l’utente accede a Office con lo stesso account aziendale o dell'istituto di istruzione su dispositivi diversi.\n\nNota: questo criterio viene applicato a qualsiasi file di Office memorizzato su un elenco specificato di domini di server. L'insieme dei domini non consentiti è un elenco separato da punto e virgola: \"*.contoso.com;service.microsoft.com\".\n\nSe si abilita questa impostazione criterio, i nomi dei file e i metadati non risulteranno in roaming e non verranno visualizzati nell'elenco dei file aperti di recente nelle app di Office su altri dispositivi, a meno che il file non sia stato aperto in tale dispositivo.\n\nSe si disabilita o non si configura questa impostazione criterio, i nomi dei file e i metadati risulteranno in roaming e verranno visualizzati nell'elenco dei file aperti di recente nelle app di Office su altri dispositivi, anche se il file non è stato aperto in tale dispositivo.",
             "tags": [
                 "L_miscellaneous437",

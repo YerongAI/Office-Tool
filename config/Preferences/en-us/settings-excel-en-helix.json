@@ -2126,6 +2126,60 @@
         },
         {
             "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows_10_0"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Block"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Show Additional Warning"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Allow"
+                            }
+                        ],
+                        "valueName": "blockxllfrominternet",
+                        "inputType": "dropdownList",
+                        "id": "L_BlockXLLFromInternetEnum"
+                    }
+                ]
+            },
+            "name": "L_BlockXLLFromInternet",
+            "displayName": "Block Excel XLL Add-ins that come from an untrusted source",
+            "explainText": "\n        This policy setting allows you to block Excel XLL Add-ins that come from an untrusted source.\n\n        If you enable this policy setting, you can set one of these options:\n        - Block: XLL add-ins from untrusted sources are blocked. Users will receive a notification that the add-in was blocked.\n        - Show Additional Warning: Show an additional warning prompt after the user chooses to enable an XLL add-in from an untrusted source.\n        - Allow: XLL add-ins from an untrusted source are allowed.\n\n        The exceptions when Excel XLL Add-ins will be allowed to run are:\n        - The XLL is stored in a Trusted Location.\n        - The XLL is digitally signed and the matching Trusted Publisher certificate is installed on the device.\n\n        If you disable this policy setting, the settings configured in the Macro and Add-in Settings sections of the Trust Center determine whether Excel XLL Add-ins that come from an untrusted source will be allowed.\n\n        If you disable or do not configure this policy setting, users will be able to override default behavior by modifying the registry.\n\n        For more information, see https://support.microsoft.com/topic/1e3752e2-1177-4444-a807-7b700266a6fb.\n      ",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_FileBlockSettings"
             },
             "supportedOn": {

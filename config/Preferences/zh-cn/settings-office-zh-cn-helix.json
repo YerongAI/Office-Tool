@@ -4828,7 +4828,7 @@
                 }
             },
             "name": "L_TurnOffHardwareAccelerationInApplicationGuard",
-            "displayName": "在应用程序防护中禁用 Office 的硬件加速。",
+            "displayName": "在应用程序防护中禁用 Office 的硬件加速",
             "explainText": "此策略设置控制应用程序防护中的 Office 使用硬件还是软件加速来呈现图形。\n\n如果启用此设置，应用程序防护将使用基于软件的(CPU)渲染，并且不会加载任何第三方图形驱动程序，也不会与任何连接的图形硬件进行交互。\n\n重要: 请注意，在可能受到威胁的图形设备或驱动程序上禁用或不配置此策略设置可能会给用户的设备带来风险。\n\n如果禁用或不配置此设置，应用程序防护将使用 Hyper-V 访问受支持的高安全性渲染图形硬件(GPU)。这些 GPU 在使用应用程序防护时可以改善渲染性能和电池寿命，特别是对于视频播放和其他图形密集型操作。如果在未连接任何高安全性渲染图形硬件的情况下禁用或不配置此设置，应用程序防护将自动恢复为基于软件(CPU)的渲染。\n\n注意: 此策略设置仅适用于 Microsoft 365 企业应用版。",
             "tags": [
                 "L_ApplicationGuard",
@@ -4858,7 +4858,7 @@
                 }
             },
             "name": "L_TurnOffBlockingOfUnsupportedFileTypesInApplicationGuard",
-            "displayName": "在适用于 Office 的应用程序防护中关闭不受支持的文件类型的保护。",
+            "displayName": "在适用于 Office 的应用程序防护中关闭不受支持的文件类型的保护",
             "explainText": "此策略设置控制适用于 Office 的应用程序防护是否会阻止打开不受支持的文件类型，或者是否会启用重定向“受保护的视图”的设置。\n\n如果启用此设置，则适用于 Office 的应用程序防护会将不受支持的文件类型重定向到“受保护的视图”。\n\n重要提示：请注意，启用此策略设置可能会对用户的设备造成风险。\n\n如果禁用或未配置此设置，则适用于 Office 的应用程序防护将阻止不受支持的文件类型。\n\n注意：此策略设置仅适用于 Microsoft 365 企业应用版。",
             "tags": [
                 "L_ApplicationGuard",
@@ -4892,7 +4892,7 @@
                 ]
             },
             "name": "L_ConfigurePreCreateInApplicationGuard",
-            "displayName": "配置应用程序防护容器预创建。",
+            "displayName": "配置应用程序防护容器预创建",
             "explainText": "此策略设置确定是否预创建了用于隔离不受信任文件的应用程序防护容器以提高运行时性能。\n\n如果启用此策略设置，则可以指定在用户未使用应用程序防护打开文件时继续预创建应用程序防护容器的天数。在用户登录时预创建容器将减少打开不受信任文件时的等待时间。\n\n“65535”会将 Office 配置为在用户登录 Windows 时始终创建应用程序防护容器。\n“20”会将 Office 配置为在用户最后一次使用应用程序防护打开不受信任文件之后的 20 天内，每次用户登录 Windows 时预创建容器。\n“0”会将 Office 配置为从不预创建容器。相反，只有在用户登录 Windows 后打开第一个不受信任文件时，才会创建容器。\n\n注意: 如果将 Office 配置为从不预创建容器，则用户在登录 Windows 后打开不受信任文件时将经历更长时间的等待。\n\n如果禁用或未配置此设置，Office 将使用内置启发预创建容器。\n\n注意: 此策略设置仅适用于 Microsoft 365 企业应用版。",
             "tags": [
                 "L_ApplicationGuard",
@@ -28966,6 +28966,34 @@
         },
         {
             "parentCategory": {
+                "ref": "L_PDFandXPS"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "name": "L_PDFProtectionFromOffice",
+            "displayName": "使用 Office 中的“敏感度”功能向 PDF 应用敏感度标签",
+            "explainText": "此策略设置控制是否将 Microsoft Purview 信息保护支持的的敏感度标签应用于在 Word、Excel 和 PowerPoint 中创建的 PDF。\n\n如果启用或未配置此策略设置，则 PDF 将从源 Word、Excel 和 PowerPoint 文档继承敏感度标签和加密。\n\n如果禁用此策略设置，则在 Word、Excel 和 PowerPoint 中创建的 PDF 不会继承其源文件的敏感度标签和加密。加密源文件时，没有删除保护权限的用户无法导出到 PDF。\n\n注意: 此策略设置仅适用于 Office 的订阅版本，如 Microsoft 365 企业应用版。有关此设置的详细信息，请参阅 https://go.microsoft.com/fwlink/?linkid=2220953。",
+            "tags": [
+                "L_PDFandXPS",
+                "L_MicrosoftOfficeSystem"
+            ],
+            "application": "office16",
+            "key": "software\\microsoft\\office\\16.0\\common\\fixedformat",
+            "valueName": "disablepdfprotection"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_Disableitemsinuserinterface"
             },
             "supportedOn": {
@@ -34434,7 +34462,7 @@
                 ]
             },
             "name": "L_EvictServerVersionsPolicy",
-            "displayName": "让超过 n 天的服务器文档版本的本地缓存副本老化。",
+            "displayName": "让超过 n 天的服务器文档版本的本地缓存副本老化",
             "explainText": "\n        此策略控制本地缓存中来自服务器的本地缓存 Office 版本文档何时老化。\n\n        如果启用此策略设置，本地缓存超过 n 天的来自服务器的 Office 文档版本将被从本地缓存中删除。\n\n        如果禁用或不配置此策略设置，则当超过默认值一天时，本地缓存的来自服务器的 Office 文档版本将被从本地缓存中删除。",
             "tags": [
                 "L_miscellaneous437",
@@ -35403,7 +35431,7 @@
                 }
             },
             "name": "L_AIPException",
-            "displayName": "Use the Azure Information Protection add-in for sensitivity labeling",
+            "displayName": "使用 Azure 信息保护加载项进行敏感度标记",
             "explainText": "此策略设置控制是否可以使用 Microsoft Azure 信息保护加载项，而不是默认的内置标签在 Office 应用中查看和应用敏感度标签。它仅适用于 Office 的订阅版本，例如 Microsoft 365 企业应用版。\n\n从当前频道和每月企业频道的版本 2211 以及半年版企业频道版本 2302 开始:\n\n如果启用此策略设置并安装了 Microsoft Azure 信息保护统一标记客户端，则该客户端的加载项将替换内置于 Office 应用中的默认标签。 \n\n如果禁用或未配置此策略设置，则使用 Office 应用内置的默认标签体验查看和应用敏感度标签。\n\n有关此设置的详细信息，请参阅 https://go.microsoft.com/fwlink/p/?linkid=2207430。",
             "tags": [
                 "L_SecuritySettings",
@@ -35521,8 +35549,8 @@
                 }
             },
             "name": "L_OfficeInsiderUserExperience",
-            "displayName": "显示 Office 预览体验计划选项",
-            "explainText": "通过此策略设置，可控制是否在 Office 应用(如 Word)的“文件”>“帐户”下显示 Office 预览体验计划的选项。\n\n显示此选项后，用户可选择加入或退出 Office 预览体验计划。要详细了解 Office 预览体验计划，请参阅 https://insider.office.com。\n\n如果启用此策略设置，则会在“文件”>“帐户”下显示 Office 预览体验计划的选项。\n\n注意: 如果启用此策略设置，则不得在 Computer Configuration\\Policies\\Administrative Templates\\Microsoft Office 2016 (Machine)\\Updates 下启用和配置“更新通道”或“更新路径”策略设置。如果已启用和配置，则即使显示 Office 预览体验计划，也将优先采用这些策略设置。\n\n如果禁用此策略设置，则“文件”>“帐户”下将不显示 Office 预览体验计划的选项。\n\n注意: 此策略设置仅适用于 Office 的订阅版本(例如 Microsoft 365 企业应用版)，以及 Project 和 Visio 的订阅版本。",
+            "displayName": "显示“Microsoft 365会员”选项",
+            "explainText": "此策略设置可控制应用中“文件>帐户”下是否显示 Microsoft 365 预览体验成员的选项，如 Word。\n\n通过显示此选项，用户可以选择加入或退出 Microsoft 365 预览体验计划。有关 Microsoft 365 会员计划的详细信息，请参阅 https://insider.office.com.\n\n如果启用此策略设置，则“文件>帐户”下将显示 Microsoft 365 预览体验成员的选项。\n\n注意: 如果启用此策略设置，则不应在“计算机配置\\策略\\管理模板\\Microsoft Office 2016 (计算机)\\更新”下启用和配置“更新通道”或“更新路径”策略设置。如果执行此操作，则这些策略设置将优先，即使显示预览体验成员 Microsoft 365 选项也是如此。\n\n如果禁用此策略设置，则在“文件>帐户”下不显示 Microsoft 365 预览体验成员的选项。\n\n注意: 此策略设置仅适用于 Office 的订阅版本，如 Microsoft 365 企业应用版，以及 Project 和 Visio 的订阅版本。",
             "tags": [
                 "L_miscellaneous437",
                 "L_MicrosoftOfficeSystem"
@@ -35785,7 +35813,7 @@
                 ]
             },
             "name": "L_DisallowedRoamingMruDomains",
-            "displayName": "服务器域关闭文件名和元数据的漫游。",
+            "displayName": "服务器域关闭文件名和元数据的漫游",
             "explainText": "\n此策略设置控制是否漫游 Office 文件的文件名和元数据并显示在不同设备上 Office 应用中最近打开的文件列表中， 例如 Word。\n\n漫游依赖于基于 Web 的 Microsoft 服务，当用户在不同设备上使用相同的工作或学校帐户登录到 Office 时，就会发生漫游。\n\n请注意: 此策略应用于存储在指定服务器域列表上的任何 Office 文件。不允许的域集是分号分隔的列表: \"*.contoso.com;service.microsoft.com\"。\n\n如果启用此策略设置， 文件名和元数据将不会漫游，也不会出现在其他设备上 Office 应用中最近打开的文件列表中， 除非该文件已在该设备上打开。\n\n如果禁用或未配置此策略设置，将漫游文件名和元数据，并将显示在其他设备上 Office 应用中最近打开的文件列表中，即使该文件尚未在该设备上打开也是如此。",
             "tags": [
                 "L_miscellaneous437",

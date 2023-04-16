@@ -2126,6 +2126,60 @@
         },
         {
             "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows_10_0"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "차단"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "추가 경고 표시"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "허용"
+                            }
+                        ],
+                        "valueName": "blockxllfrominternet",
+                        "inputType": "dropdownList",
+                        "id": "L_BlockXLLFromInternetEnum"
+                    }
+                ]
+            },
+            "name": "L_BlockXLLFromInternet",
+            "displayName": "신뢰할 수 없는 원본에서 가져온 Excel XLL 추가 기능 차단",
+            "explainText": "\n        이 정책 설정을 통해 신뢰할 수 없는 원본에서 가져온 Excel XLL 추가 기능을 차단할 수 있습니다.\n\n        이 정책 설정을 사용하면 다음 옵션 중 하나를 설정할 수 있습니다.\n        - 차단: 신뢰할 수 없는 원본의 XLL 추가 기능을 차단합니다. 사용자에게는 추가 기능이 차단되었다는 알림이 발송됩니다.\n        - 추가 경고 표시: 사용자가 신뢰할 수 없는 원본에서 XLL 추가 기능을 사용하도록 선택하면 추가 경고 프롬프트가 표시됩니다.\n        - 허용: 신뢰할 수 없는 원본의 XLL 추가 기능을 허용합니다.\n\n        Excel XLL 추가 기능을 실행할 수 있는 예외는 다음과 같습니다.\n        - XLL이 신뢰할 수 있는 위치에 저장된 경우\n        - XLL에 디지털 서명이 있고, 일치하는 신뢰할 수 있는 게시자 인증서가 장치에 설치되어 있는 경우\n\n        이 정책 설정을 사용하지 않으면 보안 센터의 매크로 및 추가 기능 설정 구역에 구성된 설정에 따라 신뢰할 수 없는 원본에서 가져온 Excel XLL 추가 기능을 허용할지를 결정합니다.\n\n        이 정책 설정을 사용하지 않거나 구성하지 않으면 사용자가 레지스트리를 수정하여 기본 동작을 재정의할 수 있습니다.\n\n        자세한 내용은 https://support.microsoft.com/topic/1e3752e2-1177-4444-a807-7b700266a6fb를 참조하세요.\n      ",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_FileBlockSettings"
             },
             "supportedOn": {

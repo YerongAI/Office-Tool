@@ -2126,6 +2126,60 @@
         },
         {
             "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows_10_0"
+            },
+            "elements": {
+                "items": [
+                    {
+                        "item": [
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 1
+                                    }
+                                },
+                                "displayName": "Bloquear"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 0
+                                    }
+                                },
+                                "displayName": "Mostrar advertencia adicional"
+                            },
+                            {
+                                "value": {
+                                    "decimal": {
+                                        "value": 2
+                                    }
+                                },
+                                "displayName": "Permitir"
+                            }
+                        ],
+                        "valueName": "blockxllfrominternet",
+                        "inputType": "dropdownList",
+                        "id": "L_BlockXLLFromInternetEnum"
+                    }
+                ]
+            },
+            "name": "L_BlockXLLFromInternet",
+            "displayName": "Bloquear complementos XLL de Excel procedentes de un origen que no es de confianza",
+            "explainText": "\n        Esta configuración de directiva le permite bloquear complementos XLL de Excel procedentes de un origen que no es de confianza.\n\n        Si habilita esta configuración de directiva, puede establecer una de estas opciones:\n        - Bloquear: se bloquean los complementos XLL de orígenes que no son de confianza. Los usuarios recibirán una notificación de que el complemento se bloqueó.\n        - Mostrar advertencia adicional: muestra un mensaje de advertencia adicional después de que el usuario elija habilitar un complemento XLL desde un origen que no es de confianza.\n        - Permitir: se permiten complementos XLL de un origen que no es de confianza.\n\n        Las excepciones cuando se permite ejecutar complementos XLL de Excel son:\n        - El XLL se almacena en una ubicación de confianza.\n        - El XLL está firmado digitalmente y el certificado de editor de confianza correspondiente está instalado en el dispositivo.\n\n        Si deshabilita esta configuración de directiva, las opciones configuradas en las secciones Configuración de macros y complementos del Centro de confianza determinan si se permitirán complementos XLL de Excel procedentes de un origen que no sea de confianza.\n\n        Si deshabilita o no establece esta configuración de directiva, los usuarios podrán invalidar el comportamiento predeterminado modificando el registro.\n\n        Para más información, consulte https://support.microsoft.com/topic/1e3752e2-1177-4444-a807-7b700266a6fb.\n      ",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_ExcelOptions",
+                "L_MicrosoftOfficeExcel"
+            ],
+            "application": "excel16",
+            "key": "software\\microsoft\\office\\16.0\\excel\\security"
+        },
+        {
+            "parentCategory": {
                 "ref": "L_FileBlockSettings"
             },
             "supportedOn": {

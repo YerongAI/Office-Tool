@@ -57,6 +57,20 @@
             "parentCategory": {
                 "ref": "L_MicrosoftOfficePublisher"
             },
+            "name": "L_Security",
+            "displayName": "Безопасность"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Security"
+            },
+            "name": "L_TrustCenter",
+            "displayName": "Центр управления безопасностью"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
             "name": "L_Miscellaneous",
             "displayName": "Прочие"
         }
@@ -607,6 +621,35 @@
             "application": "pub16",
             "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
             "valueName": "backgroundsave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_BlockMacroExecutionFromInternet",
+            "displayName": "Блокирование запуска макросов в файлах Microsoft Office, полученных через Интернет",
+            "explainText": "\n        Этот параметр политики позволяет блокировать запуск макросов в файлах Office, полученных через Интернет.\n\n        Если включить этот параметр политики, макросы будут блокироваться, даже если в разделе \"Параметры макросов\" в центре управления безопасностью выбрано \"Включить все макросы\". Пользователи получат уведомление о блокировании макросов.\n\n        Исключения, при которых запуск макросов будет разрешен:\n        – Файл Office сохранен в надежном расположении.\n        – Файл Office ранее был помечен пользователем как доверенный.\n        – Макросы содержат цифровую подпись, а соответствующий сертификат надежного издателя установлен на устройстве.\n\n        Если этот параметр политики отключен, выполнение макросов в файлах Office, полученных из Интернета, определяется параметрами, настроенными в разделе \"Параметры макросов\" центра управления безопасностью.\n\n        Если этот параметр политики не настроен, выполнение макросов будет заблокировано. Пользователи получат уведомление о рисках безопасности, связанных с макросами из Интернета, а также ссылку на дополнительные сведения.\n\n        Дополнительные сведения см. на странице https://go.microsoft.com/fwlink/p/?linkid=2185771.\n      ",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\security",
+            "valueName": "blockcontentexecutionfrominternet"
         },
         {
             "parentCategory": {

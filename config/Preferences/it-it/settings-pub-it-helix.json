@@ -57,6 +57,20 @@
             "parentCategory": {
                 "ref": "L_MicrosoftOfficePublisher"
             },
+            "name": "L_Security",
+            "displayName": "Sicurezza"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Security"
+            },
+            "name": "L_TrustCenter",
+            "displayName": "Centro protezione"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
             "name": "L_Miscellaneous",
             "displayName": "Varie"
         }
@@ -607,6 +621,35 @@
             "application": "pub16",
             "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
             "valueName": "backgroundsave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_BlockMacroExecutionFromInternet",
+            "displayName": "Blocca l'esecuzione delle macro nei file di Office provenienti da Internet",
+            "explainText": "\n        Questa impostazione criterio permette di bloccare l'esecuzione delle macro nei file di Office provenienti da Internet.\n\n        Se si abilita questa impostazione criterio, l'esecuzione delle macro verrà bloccata anche se è selezionata l'opzione \"Abilita tutte le macro\" nella sezione Impostazioni macro del Centro protezione. Gli utenti riceveranno una notifica che indica che l'esecuzione delle macro è bloccata.\n\n        Eccezioni per l'esecuzione delle macro: \n       - Il file di Office viene salvato in un percorso attendibile.\n        - Il file di Office è stato precedentemente considerato attendibile dall'utente.\n        - Le macro sono firmate digitalmente e nel dispositivo viene installato il certificato dell'autore attendibile corrispondente.\n\n        Se si disabilita questa impostazione criterio, le impostazioni configurate nella sezione Impostazioni macro del Centro protezione determinano se le macro vengono eseguite nei file Office provenienti da Internet.\n\n        Se non si configura questa impostazione criterio, l'esecuzione delle macro verrà bloccata. Gli utenti riceveranno una notifica che informa dei rischi per la sicurezza delle macro provenienti da Internet insieme a un collegamento per ulteriori informazioni.\n\n        Per altre informazioni, vedere https://go.microsoft.com/fwlink/p/?linkid=2185771.\n      ",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\security",
+            "valueName": "blockcontentexecutionfrominternet"
         },
         {
             "parentCategory": {

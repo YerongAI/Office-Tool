@@ -57,6 +57,20 @@
             "parentCategory": {
                 "ref": "L_MicrosoftOfficePublisher"
             },
+            "name": "L_Security",
+            "displayName": "Beveiliging"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_Security"
+            },
+            "name": "L_TrustCenter",
+            "displayName": "Vertrouwenscentrum"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_MicrosoftOfficePublisher"
+            },
             "name": "L_Miscellaneous",
             "displayName": "Diversen"
         }
@@ -607,6 +621,35 @@
             "application": "pub16",
             "key": "software\\microsoft\\office\\16.0\\publisher\\preferences",
             "valueName": "backgroundsave"
+        },
+        {
+            "parentCategory": {
+                "ref": "L_TrustCenter"
+            },
+            "supportedOn": {
+                "ref": "windows:SUPPORTED_Windows7"
+            },
+            "enabledValue": {
+                "decimal": {
+                    "value": 1
+                }
+            },
+            "disabledValue": {
+                "decimal": {
+                    "value": 0
+                }
+            },
+            "name": "L_BlockMacroExecutionFromInternet",
+            "displayName": "Voorkomen dat macro's vanaf het internet worden uitgevoerd in Office-bestanden",
+            "explainText": "\n        Met deze beleidsinstelling kunt u voorkomen dat macro's worden uitgevoerd in Office-bestanden die afkomstig zijn van internet.\n\n        Als u deze beleidsinstelling inschakelt, kunnen macro's niet worden uitgevoerd, zelfs als Alle macro's inschakelen is geselecteerd in de sectie Macro-instellingen van het Vertrouwenscentrum. Gebruikers ontvangen een melding dat macro's niet kunnen worden uitgevoerd.\n\n        De uitzonderingen wanneer macro's mogen worden uitgevoerd, zijn:\n         - Het Office-bestand wordt opgeslagen op een vertrouwde locatie.\n         - Het Office-bestand is eerder vertrouwd door de gebruiker.\n         - Macro's zijn digitaal ondertekend en het overeenkomende vertrouwde uitgeverscertificaat is geïnstalleerd op het apparaat.\n\n        Als u deze beleidsinstelling uitschakelt, bepalen de instellingen die zijn geconfigureerd in de sectie Macro-instellingen van het Vertrouwenscentrum of macro's worden uitgevoerd in Office-bestanden die afkomstig zijn van internet.\n\n       Als u deze beleidsinstelling niet configureert, worden macro's geblokkeerd. Gebruikers ontvangen een melding over de beveiligingsrisico's van macro's van internet, samen met een koppeling voor meer informatie.\n\n        Zie https://go.microsoft.com/fwlink/p/?linkid=2185771 voor meer informatie.\n      ",
+            "tags": [
+                "L_TrustCenter",
+                "L_Security",
+                "L_MicrosoftOfficePublisher"
+            ],
+            "application": "pub16",
+            "key": "software\\microsoft\\office\\16.0\\publisher\\security",
+            "valueName": "blockcontentexecutionfrominternet"
         },
         {
             "parentCategory": {

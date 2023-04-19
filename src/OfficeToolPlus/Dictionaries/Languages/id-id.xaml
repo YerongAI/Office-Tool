@@ -309,22 +309,23 @@
     <sys:String x:Key="Activate_License_Status.Activated">Activated</sys:String>
     <!-- vNext Licnese -->
     <sys:String x:Key="Activate_License_vNext.Type">License type:</sys:String>
-    <sys:String x:Key="Activate_License_vNext.Type.Subscription">subscription</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Type.User">User</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Type.Device">Device</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Type.Subscription">Subscription</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Type.Perpetual">Perpetual</sys:String>
     <sys:String x:Key="Activate_License_vNext.ExpireDate">License expiry date:</sys:String>
     <sys:String x:Key="Activate_License_vNext.MaxDevice">Max devices allowed:</sys:String>
     <sys:String x:Key="Activate_License_vNext.Status">Status:</sys:String>
     <sys:String x:Key="Activate_License_vNext.Status.Provisioned">provisioned</sys:String>
     <sys:String x:Key="Activate_License_vNext.Code">Reason code:</sys:String>
-    <sys:String x:Key="Activate_License_vNext.Beneficiary.User">The license is assigned to the following user:</sys:String>
-    <sys:String x:Key="Activate_License_vNext.Beneficiary.Device">The license is assigned to the following device:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Beneficiary.User">The license is assigned to the user:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Beneficiary.Device">The license is assigned to the device:</sys:String>
     <sys:String x:Key="Activate_License_vNext_Metadata.TenantID">Tenant ID:</sys:String>
     <sys:String x:Key="Activate_License_vNext_Metadata.DeviceID">Device ID:</sys:String>
     <sys:String x:Key="Activate_License_vNext_Metadata.UserID">User ID:</sys:String>
     <sys:String x:Key="Activate_License_vNext_Metadata.UserEmail">User Email:</sys:String>
-    <sys:String x:Key="Activate_License_vNext_Metadata.UserValidFrom">Authorization valid from:</sys:String>
-    <sys:String x:Key="Activate_License_vNext_Metadata.UserValidTo">Authorization valid to:</sys:String>
-    <sys:String x:Key="Activate_License_vNext_Metadata.ValidFrom">Valid from:</sys:String>
-    <sys:String x:Key="Activate_License_vNext_Metadata.ValidTo">Valid to:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.ValidFrom">Authorization valid from:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.ValidTo">Authorization valid to:</sys:String>
     <sys:String x:Key="Activate_License_vNext_Metadata.RenewalTime">Next renewal time:</sys:String>
     <!-- Legacy License -->
     <sys:String x:Key="Activate_License_Lic.Description">Description:</sys:String>
@@ -425,9 +426,6 @@
     <sys:String x:Key="Toolbox_Reset_OfficeSettings_GlobalSettings">Delete applications preference Settings</sys:String>
 
     <sys:String x:Key="Toolbox_Windows_Tools">Windows tools</sys:String>
-    <sys:String x:Key="Toolbox_Repair_VBS">Reset VBS file associations</sys:String>
-    <sys:String x:Key="Toolbox_Repair_VBS.Description">This will reset VBS file association, it can solve some problems that VBS cannot execute.</sys:String>
-    <sys:String x:Key="Toolbox_Repair_VBS.LearnMore">Learn more about reset VBS file associations.</sys:String>
     <sys:String x:Key="Toolbox_Reset_SPPSvc">Mengatur ulang layanan Software Protection</sys:String>
     <sys:String x:Key="Toolbox_Reset_SPPSvc.Description">This will reset the configuration of Software Protection service, including KMS configuration.</sys:String>
     <sys:String x:Key="Toolbox_Reset_SPPSvc.LearnMore">Learn more about reset Software Protection service.</sys:String>
@@ -607,6 +605,7 @@
     <sys:String x:Key="Settings_Download_Engine">Engine</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Description">Select which engine to use when downloading Office.</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Xunlei">Xunlei</sys:String>
+    <!-- Do not translate 'bezzad.Downloader' -->
     <sys:String x:Key="Settings_Download_Engine.Downloader">bezzad.Downloader</sys:String>
     <sys:String x:Key="Settings_Download_Engine.OfficeToolPlus">Office Tool Plus</sys:String>
     <sys:String x:Key="Settings_Download_Engine.OfficeDeploymentTool">Office Deployment Tool</sys:String>
@@ -617,6 +616,14 @@
     <sys:String x:Key="Settings_Download_UA">Windows version</sys:String>
     <sys:String x:Key="Settings_Download_UA.Description">The default version of Office for the current Windows version is downloaded. Change this if you want to download Office for a different version of Windows.</sys:String>
     <sys:String x:Key="Settings_Download_UA.AutoDetection">Automatic detection</sys:String>
+    <!-- Do not translate 'bezzad.Downloader' -->
+    <sys:String x:Key="Settings_Download_Downloader">bezzad.Downloader settings</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Chunks">Chunks</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Chunks.Description">Divides the file into specified chunks for download. Setting it too high may slow down the speed.</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Parallel">Parallel download in chunks</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Parallel.Description">In most cases, enabling parallel downloads gives the best download speed.</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Limit">Speed limit</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Limit.Description">Limit the speed when downloading files, unit is KBps. Default value is 0 (no limit).</sys:String>
     <sys:String x:Key="Settings_Download_Proxy">Proxy</sys:String>
     <sys:String x:Key="Settings_Download_Proxy.Description">Set the proxy to use when downloading Office.</sys:String>
     <sys:String x:Key="Settings_Download_Proxy.Type">Proxy type</sys:String>
@@ -755,6 +762,7 @@
     <sys:String x:Key="Info_Office_License_Activation_Successful">Product activation successful.</sys:String>
     <sys:String x:Key="Info_KMS_Test_Result.Success">KMS test method: {0}. Test result: success, elapsed time: {1}ms.</sys:String>
     <sys:String x:Key="Info_KMS_Test_Result.Failed">KMS test failure.</sys:String>
+    <sys:String x:Key="Info_Parallel_Download">You are using 32-bit version of Office Tool Plus, enable "Parallel download in chunks" may cause memory errors, especially if you have a fast Internet connection and slow hard drive read/write speeds.&#x000A;&#x000A;If application crashes during download, please disable "Parallel download in chunks" or switch to 64-bit version of Office Tool Plus to avoid the problem.</sys:String>
 
     <!-- Success Message -->
     <sys:String x:Key="Success_Add_Download_Task">Successfully added download tasks.</sys:String>

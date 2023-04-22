@@ -7,10 +7,10 @@ Telegram
 > Word lid van onze officiële groep en chat met ons.
 
 Discord
-> Join our official Discord Community.
+> Word lid van onze officiële Discord community.
 
 Office
-> Microsoft Office homepagina.
+> Microsoft Office startpagina.
 
 Access
 > Snel een professionele app bouwen om gegevens te beheren.

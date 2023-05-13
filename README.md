@@ -60,7 +60,7 @@ Functions and Features:
 | pt-br | Português (Brasil) | [Hélio de Souza](https://tinyurl.com/hdstec), [Igor Rückert](https://github.com/igorruckert) |
 | ro-ro | Română (România) | [ianymaty](https://github.com/ianymaty) |
 | ru-ru | Русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov) |
-| th-th | ไทย (ไทย) | [Filling Developer](https://github.com/OllyMaster) |
+| th-th | ไทย (ไทย) | [Freeling Developer](https://github.com/freelingdeveloper), [泰国孩子在中国](https://github.com/dekthaiinchina) |
 | tr-tr | Türkçe (Türkiye) | [Tayfun Akkoyun](https://github.com/crasadure) |
 | vi-vn | Tiếng Việt (Việt Nam) | [phjtieudoc](https://github.com/phjtieudoc) |
 | zh-hk | 繁體中文 (香港) | [TurboHK](https://github.com/TurboHK) |

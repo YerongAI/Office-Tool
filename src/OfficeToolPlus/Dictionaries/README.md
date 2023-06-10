@@ -80,7 +80,7 @@ Programs name can be found on Microsoft's website. You can try to search it on G
 
 - [Office Deployment Tool](https://aka.ms/ODT)
 
-Some processes name should be same as Windows diaplayed.
+Some processes name should be same as Windows displayed.
 
 - Software Protection: you can find it on *Start -> Windows Administrative Tools -> Services*.
 - Windows Management Instrumentation: you can find it on *Start -> Windows Administrative Tools -> Services*.

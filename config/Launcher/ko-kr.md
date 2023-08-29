@@ -4,10 +4,10 @@ GitHub 위키
 > Office Tool Plus 빠른 시작을 보려면 클릭하십시오.
 
 Telegram
-> 공식 텔레그램 커뮤니티에 가입하십시오.
+> 공식 Telegram 커뮤니티에 가입하십시오.
 
 Discord
-> 공식 디스코드 커뮤니티에 가입하십시오.
+> 공식 Discord 커뮤니티에 가입하십시오.
 
 Office
 > Microsoft Office 홈페이지입니다.

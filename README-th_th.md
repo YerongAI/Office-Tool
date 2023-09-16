@@ -45,4 +45,4 @@
 
 © 2016-2023 Yerong. สงวนลิขสิทธิ์
 
-> บล็อก [@Yerong の小窝](https://www.coolhub.top/) · กิตฮับ [@YerongAI](https://github.com/YerongAI) · เทเลแกรม [@Office Tool Plus](https://t.me/s/otp_channel) · [อีเมล](mailto:yerong@coolhub.top)
+> บล็อก [@Yerong の小窝](https://www.coolhub.top/) · กิตฮับ [@YerongAI](https://github.com/YerongAI) · เทเลแกรม [@Office Tool Plus](https://t.me/s/otp_channel)

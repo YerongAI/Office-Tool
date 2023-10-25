@@ -45,6 +45,6 @@ Funktionen und Features:
 
 © 2016-2023 Yerong. Alle Rechte vorbehalten.
 
-> Blog: [@Yerong の小窝](https://www.coolhub.top/) · GitHub: [@YerongAI](https://github.com/YerongAI) · Telegram: [@Office Tool Plus](https://t.me/s/otp_channel) · [E-Mail](mailto:yerong@coolhub.top)
+> Blog: [@Yerong の小窝](https://www.coolhub.top/) · GitHub: [@YerongAI](https://github.com/YerongAI) · Telegram: [@Office Tool Plus](https://t.me/s/otp_channel)
 
 <!-- © 2021 | German translation by Berny23 | v4.10 | https://steamcommunity.com/id/Berny23 | https://sourceforge.net/u/berny23 | https://github.com/Berny23 -->

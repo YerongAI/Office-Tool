@@ -58,4 +58,4 @@ Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.c
 
 © 2016-2023 Yerong. All Rights Reserved.
 
-> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/ot_channel_tw) · [E-mail](mailto:yerong@coolhub.top)
+> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/ot_channel_tw)

@@ -39,7 +39,7 @@ Functies en kenmerken:
 
 - [Download](https://otp.landian.vip/download.html)
 - [Snelstart](https://github.com/YerongAI/Office-Tool/wiki)
-- [Documentation](https://help.coolhub.top)
+- [Documentation](https://otp.landian.vip/help/)
 
 ## Over
 

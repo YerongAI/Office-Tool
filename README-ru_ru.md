@@ -37,7 +37,7 @@
 
 - [Скачать](https://otp.landian.vip/download.html)
 - [Быстрый старт](https://github.com/YerongAI/Office-Tool/wiki)
-- [Документация](https://help.coolhub.top)
+- [Документация](https://otp.landian.vip/help/)
 
 ## О разработке
 

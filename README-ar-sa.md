@@ -39,7 +39,7 @@
 
 - [تحميل](https://otp.landian.vip/download.html)
 - [البدء السريع](https://github.com/YerongAI/Office-Tool/wiki)
-- [التوثيق](https://help.coolhub.top)
+- [التوثيق](https://otp.landian.vip/help/)
 
 ## عنا
 

@@ -39,7 +39,7 @@ Funcții și caracteristici:
 
 - [Descarcă](https://otp.landian.vip/download.html)
 - [Pornire rapidă](https://github.com/YerongAI/Office-Tool/wiki)
-- [Documentation](https://help.coolhub.top)
+- [Documentation](https://otp.landian.vip/help/)
 
 ## Despre
 

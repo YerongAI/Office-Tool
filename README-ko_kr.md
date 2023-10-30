@@ -39,7 +39,7 @@
 
 - [다운로드](https://otp.landian.vip/download.html)
 - [빠른시작](https://github.com/YerongAI/Office-Tool/wiki)
-- [문서](https://help.coolhub.top)
+- [문서](https://otp.landian.vip/help/)
 
 ## 추가정보
 

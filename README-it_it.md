@@ -37,7 +37,7 @@ Funzioni e caratteristiche::
 
 - [Scarica](https://otp.landian.vip/download.html)
 - [Lezione rapida](https://github.com/YerongAI/Office-Tool/wiki)
-- [Documentazione](https://help.coolhub.top)
+- [Documentazione](https://otp.landian.vip/help/)
 
 ## Informazioni
 

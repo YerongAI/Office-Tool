@@ -35,8 +35,8 @@
 
 ## 下載 & 快速入門
 
-- [下載](https://help.coolhub.top/start/)
-- [快速入門(繁體)](https://help.coolhub.top/zh-tw/)
+- [下載](https://otp.landian.vip/download.html)
+- [快速入門(繁體)](https://otp.landian.vip/help/)
 - [教學文章(繁體)](https://www.cotpear.com/topics/office-tool-plus/?utm_source=github.com/office-tool)
 
 ## 合法性

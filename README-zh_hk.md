@@ -36,7 +36,7 @@
 ## 下載 & 快速入門
 
 - [下載](https://otp.landian.vip/download.html)
-- [快速入門(台灣繁體)](https://help.coolhub.top/zh-tw/)
+- [快速入門(台灣繁體)](https://otp.landian.vip/help/)
 
 ## 合法性
 

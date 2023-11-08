@@ -37,7 +37,7 @@ Dodatkowe funkcje:
 
 - [Pobierz](https://otp.landian.vip/download.html)
 - [Szybki start](https://github.com/YerongAI/Office-Tool/wiki)
-- [Dokumentacja](https://help.coolhub.top)
+- [Dokumentacja](https://otp.landian.vip/help/)
 
 ## O...
 

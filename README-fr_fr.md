@@ -39,7 +39,7 @@ Fonctionnalités et caractéristiques :
 
 - [Téléchargement](https://otp.landian.vip/download.html)
 - [Démarrage rapide](https://github.com/YerongAI/Office-Tool/wiki)
-- [Documentation](https://help.coolhub.top)
+- [Documentation](https://otp.landian.vip/help/)
 
 ## À propos
 

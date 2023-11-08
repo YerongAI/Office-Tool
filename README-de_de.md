@@ -39,7 +39,7 @@ Funktionen und Features:
 
 - [Download](https://otp.landian.vip/download.html)
 - [Schnellstart](https://github.com/YerongAI/Office-Tool/wiki)
-- [Dokumentation](https://help.coolhub.top)
+- [Dokumentation](https://otp.landian.vip/help/)
 
 ## Über Office Tool Plus
 

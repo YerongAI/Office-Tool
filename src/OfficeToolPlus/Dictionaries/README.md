@@ -17,7 +17,7 @@ Don't change any strings or words like this:
 
 This remarks or escape characters should be kept as original.
 
-## Proper nouns
+### Proper nouns
 
 Products name and channels name is named by Microsoft, if possible, we should keep it same as Microsoft used.
 
@@ -29,7 +29,7 @@ Products and channels name can be found on Microsoft docs or Office applications
 
 > Note: Some text may be translated by machine, and you will need to decide how to translate these proper names.
 
-## File formats name
+### File formats name
 
 File extensions shoule be same as Windows or Office displayed.
 
@@ -37,7 +37,7 @@ To get the file formats information, you can open Office applications, create a 
 
 > Also you can search it on Google.
 
-## Programs name and processes name
+### Programs name and processes name
 
 Programs name can be found on Microsoft's website. You can try to search it on Google, here is some example links:
 
@@ -47,3 +47,9 @@ Some processes name should be same as Windows displayed.
 
 - Software Protection: you can find it on *Start -> Windows Administrative Tools -> Services*.
 - Windows Management Instrumentation: you can find it on *Start -> Windows Administrative Tools -> Services*.
+
+## How to load and test new translation
+
+On the latest version of Office Tool Plus, press <kbd>Ctrl + Shift + P</kbd> to open command box. Enter command `/loaddict <path to localization file>`, such as `/loaddict "D:\Test\en-us.xaml"`.
+
+To remove the loaded resource, use command `/cldict`.

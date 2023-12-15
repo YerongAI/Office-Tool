@@ -85,10 +85,7 @@ src\OfficeToolPlus\Dictionaries\Languages
 src\OfficeToolPlus\Dictionaries\ProductsName
 config\Launcher
 config\Message
-config\Update Logs
 ```
-
-Note: I don't suggest anyone to change preferences data! This data is provided by Microsoft.
 
 ## About
 

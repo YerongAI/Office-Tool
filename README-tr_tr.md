@@ -44,6 +44,6 @@ Aşağıdaki ürünlerin özel dağıtımını ve etkinleştirilmesini destekler
 
 ## Hakkında
 
-© 2016-2023 Yerong.Her hakkı saklıdır.
+© 2016-2024 Yerong.Her hakkı saklıdır.
 
 > Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel)

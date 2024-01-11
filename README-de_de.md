@@ -43,7 +43,7 @@ Funktionen und Features:
 
 ## Über Office Tool Plus
 
-© 2016-2023 Yerong. Alle Rechte vorbehalten.
+© 2016-2024 Yerong. Alle Rechte vorbehalten.
 
 > Blog: [@Yerong の小窝](https://www.coolhub.top/) · GitHub: [@YerongAI](https://github.com/YerongAI) · Telegram: [@Office Tool Plus](https://t.me/s/otp_channel)
 

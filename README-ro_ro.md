@@ -43,6 +43,6 @@ Funcții și caracteristici:
 
 ## Despre
 
-© 2016-2023 Yerong. Toate drepturile rezervate.
+© 2016-2024 Yerong. Toate drepturile rezervate.
 
 > Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel)

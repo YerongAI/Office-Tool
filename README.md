@@ -48,6 +48,7 @@ Functions and Features:
 | :-- | :-- | :-- |
 | ar-sa | العربية (المملكة العربية السعودية) | [Yarani](https://github.com/Yarani) |
 | de-de | Deutsch (Deutschland) | [Berny23](https://steamcommunity.com/id/Berny23) |
+| en-gb | English (United Kingdom) | [Mcforwin](https://github.com/Mcforwin) |
 | en-us | English (United States) | [Yerong](https://officetool.plus/), [Moedog](https://prprpr.love) |
 | es-es | Español (España) | Xoseba |
 | fr-fr | Français (France) | Drake4478, MONOKUMA |

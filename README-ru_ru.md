@@ -16,9 +16,9 @@
 Поддерживает индивидуальное развертывание и активацию следующих продуктов:
 
 - Microsoft 365
-- Office 2016, 2019, 2021
-- Visio 2016, 2019, 2021 & Online Plan 2
-- Project 2016, 2019, 2021 & Online Desktop Client
+- Office 2016, 2019, 2021, 2024
+- Visio 2016, 2019, 2021, 2024 & Online Plan 2
+- Project 2016, 2019, 2021, 2024 & Online Desktop Client
 
 Дополнительные возможности:
 
@@ -38,6 +38,20 @@
 - [Скачать](https://otp.landian.vip/download.html)
 - [Быстрый старт](https://github.com/YerongAI/Office-Tool/wiki)
 - [Документация](https://otp.landian.vip/help/)
+
+Or download Office Tool Plus using PowerShell:
+
+Site 1:
+
+```powershell
+irm https://otp.landian.vip/get/ | iex
+```
+
+Site 2:
+
+```powershell
+irm https://officetool.plus/get/ | iex
+```
 
 ## О разработке
 

@@ -16,9 +16,9 @@
 다음 제품의 사용자 정의 배포 및 활성화를 지원합니다:
 
 - Microsoft 365
-- Office 2016, 2019, 2021
-- Visio 2016, 2019, 2021 및 온라인 플랜 2
-- Project 2016, 2019, 2021 및 온라인 데스크톱 클라이언트
+- Office 2016, 2019, 2021, 2024
+- Visio 2016, 2019, 2021, 2024 및 온라인 플랜 2
+- Project 2016, 2019, 2021, 2024 및 온라인 데스크톱 클라이언트
 
 기능 및 특징:
 
@@ -40,6 +40,20 @@
 - [다운로드](https://otp.landian.vip/download.html)
 - [빠른시작](https://github.com/YerongAI/Office-Tool/wiki)
 - [문서](https://otp.landian.vip/help/)
+
+Or download Office Tool Plus using PowerShell:
+
+Site 1:
+
+```powershell
+irm https://otp.landian.vip/get/ | iex
+```
+
+Site 2:
+
+```powershell
+irm https://officetool.plus/get/ | iex
+```
 
 ## 추가정보
 

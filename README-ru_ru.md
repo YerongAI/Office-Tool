@@ -39,15 +39,15 @@
 - [Быстрый старт](https://github.com/YerongAI/Office-Tool/wiki)
 - [Документация](https://otp.landian.vip/help/)
 
-Or download Office Tool Plus using PowerShell:
+Или скачайте Office Tool Plus с использованием PowerShell:
 
-Site 1:
+Первый сайт:
 
 ```powershell
 irm https://otp.landian.vip/get/ | iex
 ```
 
-Site 2:
+Второй сайт:
 
 ```powershell
 irm https://officetool.plus/get/ | iex

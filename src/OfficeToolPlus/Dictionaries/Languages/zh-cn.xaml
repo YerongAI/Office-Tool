@@ -92,8 +92,8 @@
     <sys:String x:Key="SemiAnnual">半年度企业通道</sys:String>
     <sys:String x:Key="MonthlyEnterprise">月度企业通道</sys:String>
     <sys:String x:Key="Current">当前通道</sys:String>
-    <sys:String x:Key="SemiAnnualPreview">半年度企业通道 (预览)</sys:String>
-    <sys:String x:Key="CurrentPreview">当前通道 (预览)</sys:String>
+    <sys:String x:Key="SemiAnnualPreview">半年度企业通道（预览）</sys:String>
+    <sys:String x:Key="CurrentPreview">当前通道（预览）</sys:String>
     <sys:String x:Key="BetaChannel">测试通道</sys:String>
 
     <!-- Error messages -->
@@ -106,7 +106,7 @@
     <!-- {0} means channel name, such as Current Channel. -->
     <sys:String x:Key="Deploy_Error_Unsupported_Channel">如果你想使用 {0}，请将安装模块更改为 Office Tool Plus。</sys:String>
     <sys:String x:Key="Deploy_Error_System_Architecture">你不能在 32 位的系统上安装 64 位的 Office。</sys:String>
-    <!-- Example: You can't install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
+    <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
     <sys:String x:Key="Deploy_Error_Office_Architecture">你无法安装 {0}的 Office，因为你的计算机上已安装 {1}的 Office。</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Arch">您所选择的体系结构与本地安装文件的体系结构不匹配。请重新选择体系结构，或不使用本地安装文件进行部署。</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Channel">您所选择的更新通道与本地安装文件的更新通道不匹配。请重新选择更新通道，或不使用本地安装文件进行部署。</sys:String>
@@ -126,12 +126,15 @@
     <sys:String x:Key="Deploy_Mode.Install">安装</sys:String>
     <sys:String x:Key="Deploy_Mode.Create_ISO">创建 ISO 文件</sys:String>
     <sys:String x:Key="Deploy_Architecture">体系结构</sys:String>
+    <sys:String x:Key="Deploy_Architecture_Current_Installed">当前已安装的 Office 的体系结构: {0}。</sys:String>
     <sys:String x:Key="Deploy_Architecture.x86">32 位</sys:String>
     <sys:String x:Key="Deploy_Architecture.x64">64 位</sys:String>
     <sys:String x:Key="Deploy_Architecture.ARM">ARM（兼容 32 位）</sys:String>
     <sys:String x:Key="Deploy_Architecture.ARM64">ARM64（兼容 64 位）</sys:String>
     <sys:String x:Key="Deploy_Channel">更新通道</sys:String>
+    <sys:String x:Key="Deploy_Channel_Available_Version">当前可用的 Office 版本: {0}</sys:String>
     <sys:String x:Key="Deploy_Module">安装模块</sys:String>
+    <sys:String x:Key="Deploy_Module.Description">选择 Office 部署工具以获得更好的兼容性，或选择 Office Tool Plus 以获得更好的体验。</sys:String>
     <sys:String x:Key="Deploy_Module.ODT">Office 部署工具</sys:String>
     <sys:String x:Key="Deploy_Module.OTP">Office Tool Plus</sys:String>
     <sys:String x:Key="Deploy_Download_First">下载后再部署</sys:String>
@@ -219,6 +222,7 @@
     <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback">允许回退到 CDN</sys:String>
     <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback.Description">允许安装程序回退到 Office CDN 服务器以下载缺少的语言包。</sys:String>
     <sys:String x:Key="Deploy_Advanced_Force_Close_Apps">强制关闭正在运行的 Office 应用程序</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Force_Close_Apps.Description">未保存的数据可能会丢失。</sys:String>
     <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar">固定到任务栏</sys:String>
     <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar.Description">在 Windows 7, 8, 8.1 中向任务栏添加 Office 应用程序的快捷方式图标。</sys:String>
 
@@ -232,6 +236,7 @@
     <sys:String x:Key="Deploy_Advanced_Upgrade_Settings">升级选项</sys:String>
     <sys:String x:Key="Deploy_Advanced_Migrate_Arch">迁移体系结构</sys:String>
     <sys:String x:Key="Deploy_Advanced_Migrate_Arch.Description">将现有的 Office 安装更改为当前指定的体系结构，例如：从 32 位迁移到 64 位。</sys:String>
+    <sys:String x:Key="Deploy_Advanced_MSI_Notice">以下设置仅在使用 Office 部署工具作为安装模块时生效。</sys:String>
     <sys:String x:Key="Deploy_Advanced_Remove_MSI">移除现有的 MSI 版本的 Office</sys:String>
     <sys:String x:Key="Deploy_Advanced_Match_Previous_MSI">为新的 Office 安装与先前 MSI 版本相同的语言</sys:String>
     <sys:String x:Key="Deploy_Advanced_Ignore_Product">忽略下列产品</sys:String>
@@ -305,6 +310,7 @@
     <sys:String x:Key="Activate_License_Expand">全部展开(_E)</sys:String>
     <sys:String x:Key="Activate_License_Collapse">全部收起(_C)</sys:String>
     <sys:String x:Key="Activate_License_Clear">清空列表(_L)</sys:String>
+    <sys:String x:Key="Activate_License_Nothing_Here">这里空空如也哦~</sys:String>
     <sys:String x:Key="Activate_License_Status.Unactivated">未激活</sys:String>
     <sys:String x:Key="Activate_License_Status.Activated">已激活</sys:String>
     <!-- vNext Licnese -->
@@ -335,7 +341,7 @@
     <sys:String x:Key="Activate_License_Lic.Error_Description">错误描述:</sys:String>
     <sys:String x:Key="Activate_License_VL.Type">激活类型:</sys:String>
     <!-- AO equal to Activation Object -->
-    <sys:String x:Key="Activate_License_AD.ObjectName">激活对象（AO）名称: </sys:String>
+    <sys:String x:Key="Activate_License_AD.ObjectName">激活对象 (AO) 名称: </sys:String>
     <sys:String x:Key="Activate_License_AD.ObjectDN">AO DN: </sys:String>
     <sys:String x:Key="Activate_License_AD.ExtendedPid">AO 扩展 PID: </sys:String>
     <sys:String x:Key="Activate_License_AD.AID">AO 激活 ID: </sys:String>
@@ -388,7 +394,7 @@
 
     <sys:String x:Key="Toolbox_Office_Tools">Office 工具</sys:String>
     <sys:String x:Key="Toolbox_Remove_Office">移除 Office</sys:String>
-    <sys:String x:Key="Toolbox_Remove_Office.Description">移除和 Office 有关的组件和注册表信息。</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Office.Description">强制移除和 Office 有关的组件和注册表信息。</sys:String>
     <sys:String x:Key="Toolbox_Remove_Office.Description_Bold">注意：仅当 Office 无法正常卸载时才应该使用此功能。</sys:String>
     <sys:String x:Key="Toolbox_Remove_Office_Button">移除</sys:String>
     <sys:String x:Key="Toolbox_Remove_APPX">同时移除 Microsoft Store 版本的 Office。</sys:String>
@@ -510,7 +516,7 @@
     <sys:String x:Key="File_Type.Excel_XLSX">Excel 工作簿</sys:String>
     <sys:String x:Key="File_Type.Excel_XLSM">启用宏的 Excel 工作簿</sys:String>
     <sys:String x:Key="File_Type.Excel_XLS">Excel 97-2003 工作簿</sys:String>
-    <sys:String x:Key="File_Type.Excel_CSV">CSV UTF-8 (逗号分隔)</sys:String>
+    <sys:String x:Key="File_Type.Excel_CSV">CSV UTF-8（逗号分隔）</sys:String>
     <sys:String x:Key="File_Type.Excel_XLTX">Excel 模板</sys:String>
     <sys:String x:Key="File_Type.Excel_XLTM">启用宏的 Excel 模板</sys:String>
     <sys:String x:Key="File_Type.Excel_XLT">Excel 97-2003 模板</sys:String>
@@ -621,7 +627,7 @@
     <sys:String x:Key="Settings_Download_Downloader_Chunks">分块</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Chunks.Description">将文件分成指定数量的块进行下载。设置过高的值可能会降低下载速度。</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Parallel">分块同时下载</sys:String>
-    <sys:String x:Key="Settings_Download_Downloader_Parallel.Description">在大多数情况下，启用分块同时下载可以获得最好的下载速度。</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Parallel.Description">下载到机械硬盘 (HDD) 时，启用此选项可能会降低写入速度，尤其是设置了很多分块的情况下。</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Limit">下载限速</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Limit.Description">限制下载文件时的速度，单位：KBps。默认值为 0（不限速）。</sys:String>
     <sys:String x:Key="Settings_Download_Proxy">代理</sys:String>
@@ -685,7 +691,7 @@
     <!-- Office ISO Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
     <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
-    <!-- If you can't understand what is hotkey, remove '&amp;' when you are translating. -->
+    <!-- If you cannot understand what is hotkey, remove '&amp;' when you are translating. -->
     <sys:String x:Key="CD-ROM_InstallNow">立即安装(&amp;I)</sys:String>
 
     <!-- Task Message -->
@@ -749,6 +755,7 @@
     <sys:String x:Key="Info_Restart_Required">你需要重新启动程序以使更改生效。</sys:String>
     <sys:String x:Key="Info_No_Updates">您使用的是最新版本的 Office Tool Plus。</sys:String>
     <sys:String x:Key="Info_Update_In_Progress">更新正在进行中，请稍候。</sys:String>
+    <sys:String x:Key="Info_Updates_Incomplete">部分更新应用失败，请稍后重试。</sys:String>
     <sys:String x:Key="Info_No_Language_Added_For_Download">检测到您没有添加 Office 语言。大多数情况下，我们建议添加语言以免发生问题。</sys:String>
     <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">请选择 Office 安装文件的保存位置。&#x000A;若要使用默认位置，请在设置页面禁用“询问文件保存位置”。</sys:String>
     <sys:String x:Key="Info_All_Files_Exist">没有需要下载的文件，所有文件均存在。</sys:String>
@@ -765,9 +772,9 @@
     <sys:String x:Key="Info_KMS_Test_Result.Success">KMS 测试方法: {0}。测试结果：成功，耗时：{1}ms</sys:String>
     <sys:String x:Key="Info_KMS_Test_Result.Failed">KMS 测试失败。</sys:String>
     <sys:String x:Key="Info_Enable_Mica">云母效果需要 Windows 11 才能正常显示。</sys:String>
-    <sys:String x:Key="Info_Parallel_Download">你正在使用 32 位的 Office Tool Plus，启用“分块同时下载”可能会导致程序出现内存不足的错误。&#x000A;&#x000A;如果程序在下载过程中崩溃了，请禁用“分块同时下载”，或改用 64 位的 Office Tool Plus 以避免此问题。</sys:String>
 
     <!-- Success Message -->
+    <sys:String x:Key="Success_Download_Updates">成功应用了更新。</sys:String>
     <sys:String x:Key="Success_Add_Download_Task">成功添加下载任务。</sys:String>
     <sys:String x:Key="Success_Create_ISO">Office ISO 文件创建完成。</sys:String>
     <sys:String x:Key="Success_Installation_Verify">安装文件校验完成，没有发现错误。</sys:String>

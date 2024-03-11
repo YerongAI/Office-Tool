@@ -16,9 +16,9 @@
 支援以下 Office 產品的自訂部署和啟用：
 
 - Microsoft 365
-- Office 2016, 2019, 2021
-- Visio 2016, 2019, 2021 & Online Plan 2
-- Project 2016, 2019, 2021 & Online Desktop Client
+- Office 2016, 2019, 2021, 2024
+- Visio 2016, 2019, 2021, 2024 & Online Plan 2
+- Project 2016, 2019, 2021, 2024 & Online Desktop Client
 
 除了部署 Office 之外，Office Tool Plus 還擁有以下便利功能：
 
@@ -38,6 +38,20 @@
 - [下載](https://otp.landian.vip/download.html)
 - [快速入門(台灣繁體)](https://otp.landian.vip/help/)
 
+Or download Office Tool Plus using PowerShell:
+
+Site 1:
+
+```powershell
+irm https://otp.landian.vip/get/ | iex
+```
+
+Site 2:
+
+```powershell
+irm https://officetool.plus/get/ | iex
+```
+
 ## 合法性
 
 Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-2016-deployment-tool)、[OSPP](https://docs.microsoft.com/zh-tw/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)、遵循 Microsoft 開發文件為基礎打造，因此並不存在有關「破解」、「KMS 破解」、「盜版啟用」等違法功能。
@@ -52,6 +66,6 @@ Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.c
 
 ## 關於
 
-© 2016-2023 Yerong. All Rights Reserved.
+© 2016-2024 Yerong. All Rights Reserved.
 
 > Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel)

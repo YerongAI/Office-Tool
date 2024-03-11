@@ -16,9 +16,9 @@
 Admite la implementación y activación personalizadas de los siguientes productos:
 
 - Microsoft 365
-- Office 2016, 2019, 2021
-- Visio 2016, 2019, 2021 y plan en línea 2
-- Project 2016, 2019, 2021 y cliente de escritorio en línea
+- Office 2016, 2019, 2021, 2024
+- Visio 2016, 2019, 2021, 2024 y plan en línea 2
+- Project 2016, 2019, 2021, 2024 y cliente de escritorio en línea
 
 Funciones adicionales:
 
@@ -41,8 +41,22 @@ Funciones adicionales:
 - [Quick start](https://github.com/YerongAI/Office-Tool/wiki)
 - [Documentation](https://otp.landian.vip/help//)
 
+Or download Office Tool Plus using PowerShell:
+
+Site 1:
+
+```powershell
+irm https://otp.landian.vip/get/ | iex
+```
+
+Site 2:
+
+```powershell
+irm https://officetool.plus/get/ | iex
+```
+
 ## A propósito
 
-© 2016-2023 Yerong. Todos los derechos reservados.
+© 2016-2024 Yerong. Todos los derechos reservados.
 
 > Blog [@Yerong の 小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel)

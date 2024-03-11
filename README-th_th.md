@@ -16,9 +16,9 @@
 รองรับการปรับใช้แบบกำหนดเองและการเปิดใช้งานผลิตภัณฑ์ต่อไปนี้:
 
 - Microsoft 365
-- Office 2016, 2019, 2021
-- Visio 2016, 2019, 2021 & Online Plan 2
-- Project 2016, 2019, 2021 & Online Desktop Client
+- Office 2016, 2019, 2021, 2024
+- Visio 2016, 2019, 2021, 2024 & Online Plan 2
+- Project 2016, 2019, 2021, 2024 & Online Desktop Client
 
 ฟังก์ชั่นและคุณสมบัติ:
 
@@ -41,8 +41,22 @@
 - [เริ่มต้นอย่างรวดเร็ว](https://github.com/YerongAI/Office-Tool/wiki)
 - [เอกสาร](https://otp.landian.vip/help/)
 
+Or download Office Tool Plus using PowerShell:
+
+Site 1:
+
+```powershell
+irm https://otp.landian.vip/get/ | iex
+```
+
+Site 2:
+
+```powershell
+irm https://officetool.plus/get/ | iex
+```
+
 ## เกี่ยวกับเรา
 
-© 2016-2023 Yerong. สงวนลิขสิทธิ์
+© 2016-2024 Yerong. สงวนลิขสิทธิ์
 
 > บล็อก [@Yerong の小窝](https://www.coolhub.top/) · กิตฮับ [@YerongAI](https://github.com/YerongAI) · เทเลแกรม [@Office Tool Plus](https://t.me/s/otp_channel)

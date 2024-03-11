@@ -33,7 +33,7 @@
     <sys:String x:Key="Navigate_Page.Activate">Активировать</sys:String>
     <sys:String x:Key="Navigate_Page.Toolbox">Инструменты</sys:String>
     <sys:String x:Key="Navigate_Page.ConvertDocuments">Конвертер документов</sys:String>
-    <sys:String x:Key="Navigate_Page.HashChecker">Проверить хэш</sys:String>
+    <sys:String x:Key="Navigate_Page.HashChecker">Проверить хеш</sys:String>
 
     <sys:String x:Key="Navigate_Page.Settings">Настройки</sys:String>
     <sys:String x:Key="Navigate_Page.About">О программе</sys:String>
@@ -106,7 +106,7 @@
     <!-- {0} means channel name, such as Current Channel. -->
     <sys:String x:Key="Deploy_Error_Unsupported_Channel">Если вы хотите использовать {0}, то измените модуль установки на Office Tool Plus.</sys:String>
     <sys:String x:Key="Deploy_Error_System_Architecture">Вы не можете установить Office 64-бита на не 64-битную систему.</sys:String>
-    <!-- Example: You can not install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
+    <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
     <sys:String x:Key="Deploy_Error_Office_Architecture">Вы не можете установить Office {0}, потому что уже установлен Office {1} на Вашем компьютере.</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Arch">Выбранная вами архитектура не соответствует архитектуре локальных установочных файлов. Выберите архитектуру повторно или не используйте локальные установочные файлы для развертывания.</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Channel">Выбранный вами канал обновления не соответствует каналу обновления локальных установочных файлов. Выберите канал обновления повторно или не используйте локальные установочные файлы для развертывания.</sys:String>
@@ -126,12 +126,15 @@
     <sys:String x:Key="Deploy_Mode.Install">Установка</sys:String>
     <sys:String x:Key="Deploy_Mode.Create_ISO">Создать ISO файл</sys:String>
     <sys:String x:Key="Deploy_Architecture">Архитектура</sys:String>
+    <sys:String x:Key="Deploy_Architecture_Current_Installed">Архитектура установленного в данный момент Office: {0}.</sys:String>
     <sys:String x:Key="Deploy_Architecture.x86">32-бита</sys:String>
     <sys:String x:Key="Deploy_Architecture.x64">64-бита</sys:String>
     <sys:String x:Key="Deploy_Architecture.ARM">ARM (32-бита совместимый)</sys:String>
     <sys:String x:Key="Deploy_Architecture.ARM64">ARM64 (64-бита совместимый)</sys:String>
     <sys:String x:Key="Deploy_Channel">Канал обновлений</sys:String>
+    <sys:String x:Key="Deploy_Channel_Available_Version">Текущая доступная версия Office: {0}</sys:String>
     <sys:String x:Key="Deploy_Module">Установочный модуль</sys:String>
+    <sys:String x:Key="Deploy_Module.Description">Выберите Office Deployment Tool для лучшей совместимости или выберите Office Tool Plus для больших возможностей.</sys:String>
     <sys:String x:Key="Deploy_Module.ODT">Office Deployment Tool</sys:String>
     <sys:String x:Key="Deploy_Module.OTP">Office Tool Plus</sys:String>
     <sys:String x:Key="Deploy_Download_First">Сначала загрузка, затем развёртывание</sys:String>
@@ -219,21 +222,23 @@
     <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback">Разрешить резервный CDN</sys:String>
     <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback.Description">Разрешить установщику Office использовать резервную сеть Office CDN для загрузки отсутствующих языков.</sys:String>
     <sys:String x:Key="Deploy_Advanced_Force_Close_Apps">Принудительно закрыть все работающие приложения Office</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Force_Close_Apps.Description">Несохранённые данные могут быть потеряны.</sys:String>
     <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar">Закрепить на панели задач</sys:String>
     <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar.Description">Закрепление значков приложений Office на панели задач в Windows 7, 8 и 8.1.</sys:String>
 
     <sys:String x:Key="Deploy_Advanced_Update_Settings">Настройки обновления</sys:String>
-    <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM">Управляйте обновлениями с помощью MECM.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM">Управляйте обновлениями с помощью MECM</sys:String>
     <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM.Description">При управлении обновлениями с помощью Microsoft Endpoint Configuration Manager, которым управляет администратор.</sys:String>
     <sys:String x:Key="Deploy_Advanced_Enable_Update">Включить автоматическое обновление Office</sys:String>
     <sys:String x:Key="Deploy_Advanced_Update_Path">Источник обновлений</sys:String>
     <sys:String x:Key="Deploy_Advanced_Update_Path.Description">Если путь пуст, в качестве источника по умолчанию используется Office CDN.</sys:String>
 
     <sys:String x:Key="Deploy_Advanced_Upgrade_Settings">Переустанавливающие опции</sys:String>
-    <sys:String x:Key="Deploy_Advanced_Migrate_Arch">Миграция архитектуры Office.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Migrate_Arch">Миграция архитектуры Office</sys:String>
     <sys:String x:Key="Deploy_Advanced_Migrate_Arch.Description">Изменить существующую установку Office на текущую указанную архитектуру. Например, с 32-битной на 64-битную.</sys:String>
-    <sys:String x:Key="Deploy_Advanced_Remove_MSI">Удаление существующих MSI версий Office.</sys:String>
-    <sys:String x:Key="Deploy_Advanced_Match_Previous_MSI">Использовать язык от предыдущей MSI версии.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_MSI_Notice">Следующие параметры вступают в силу только при использовании Office Deployment Tool в качестве модуля установки.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Remove_MSI">Удаление существующих MSI версий Office</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Match_Previous_MSI">Использовать язык от предыдущей MSI версии</sys:String>
     <sys:String x:Key="Deploy_Advanced_Ignore_Product">Игнорировать эти продукты</sys:String>
 
     <sys:String x:Key="Deploy_Advanced_Activate_Settings">Настройки активации</sys:String>
@@ -305,6 +310,7 @@
     <sys:String x:Key="Activate_License_Expand">Развернуть всё</sys:String>
     <sys:String x:Key="Activate_License_Collapse">Свернуть всё</sys:String>
     <sys:String x:Key="Activate_License_Clear">Очистить список</sys:String>
+    <sys:String x:Key="Activate_License_Nothing_Here">Здесь ничего нет.</sys:String>
     <sys:String x:Key="Activate_License_Status.Unactivated">Неактивировано</sys:String>
     <sys:String x:Key="Activate_License_Status.Activated">Активировано</sys:String>
     <!-- vNext Licnese -->
@@ -516,8 +522,8 @@
     <sys:String x:Key="File_Type.Excel_XLT">Шаблон Excel 97-2003</sys:String>
 
     <!-- Hash checker page -->
-    <sys:String x:Key="Hash_Checker_Hash">Хэш</sys:String>
-    <sys:String x:Key="Hash_Checker_Hash.Description">Генерирует хэш файлов, поддерживает MD5, SHA-1, SHA-256, SHA-384 и SHA-512.</sys:String>
+    <sys:String x:Key="Hash_Checker_Hash">Хеш</sys:String>
+    <sys:String x:Key="Hash_Checker_Hash.Description">Генерирует хеш файлов, поддерживает MD5, SHA-1, SHA-256, SHA-384 и SHA-512.</sys:String>
     <sys:String x:Key="Hash_Checker_Actions">Импорт файлов</sys:String>
     <sys:String x:Key="Hash_Checker_Actions.SelectFiles">Выбрать файлы</sys:String>
     <sys:String x:Key="Hash_Checker_Actions.SelectFolder">Выбрать папку</sys:String>
@@ -537,7 +543,7 @@
     <sys:String x:Key="Hash_Checker_File_List">Список файлов</sys:String>
     <sys:String x:Key="Hash_Checker_TypeToSearch">Введите, чтобы сравнить значение хеш-функции.</sys:String>
     <sys:String x:Key="Hash_Checker_StartCompute">Вычислить</sys:String>
-    <sys:String x:Key="Hash_Checker_StartCompute.ToolTip">Начать вычислять хэш-значения.</sys:String>
+    <sys:String x:Key="Hash_Checker_StartCompute.ToolTip">Начать вычислять хеш-значения.</sys:String>
     <sys:String x:Key="Hash_Checker_RemoveAll">Удалить всё</sys:String>
     <sys:String x:Key="Hash_Checker_Export">Экспорт</sys:String>
     <sys:String x:Key="Hash_Checker_Export.ToolTip">Экспорт результатов в файл</sys:String>
@@ -621,7 +627,7 @@
     <sys:String x:Key="Settings_Download_Downloader_Chunks">Фрагменты</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Chunks.Description">Разделяет файл на указанные фрагменты для загрузки. Установка слишком высокого значения может снизить скорость.</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Parallel">Параллельная загрузка фрагментов</sys:String>
-    <sys:String x:Key="Settings_Download_Downloader_Parallel.Description">В большинстве случаев включение параллельной загрузки обеспечивает наилучшую скорость загрузки.</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Parallel.Description">Включение этой опции может снизить скорость записи при загрузке на HDD, особенно если задано слишком много фрагментов.</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Limit">Ограничение скорости</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Limit.Description">Ограничение скорости при скачивании файлов, единица измерения - КБ/с. Значение по умолчанию — 0 (без ограничений).</sys:String>
     <sys:String x:Key="Settings_Download_Proxy">Прокси</sys:String>
@@ -640,7 +646,7 @@
     <!-- About page -->
     <sys:String x:Key="About_Link.Homepage">Домашняя страница</sys:String>
     <sys:String x:Key="About_Link.Docs">Документация</sys:String>
-    <sys:String x:Key="About_Link.Sponsor">Спонсоры</sys:String>
+    <sys:String x:Key="About_Link.Sponsor">Спонсировать</sys:String>
     <sys:String x:Key="About_Link.Report_Issue">Отчёт об ошибке</sys:String>
     <sys:String x:Key="About_Version">Версия</sys:String>
     <sys:String x:Key="About_ReleaseDate">Дата выпуска:</sys:String>
@@ -685,7 +691,7 @@
     <!-- Office ISO Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
     <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
-    <!-- If you can't understand what is hotkey, remove '&amp;' when you are translating. -->
+    <!-- If you cannot understand what is hotkey, remove '&amp;' when you are translating. -->
     <sys:String x:Key="CD-ROM_InstallNow">Установить сейчас</sys:String>
 
     <!-- Task Message -->
@@ -708,7 +714,7 @@
     <sys:String x:Key="Task_Repairing_WMI">Восстановление компонентов WMI, подождите.</sys:String>
     <sys:String x:Key="Task_Converting_Documents">Преобразование документов Office, осталось {0}.</sys:String>
     <sys:String x:Key="Task_Importing_Files">Импорт файлов, подождите.</sys:String>
-    <sys:String x:Key="Task_Computing_Hash">Вычисление хэша, осталось {0} файлов.</sys:String>
+    <sys:String x:Key="Task_Computing_Hash">Вычисление хеш, осталось {0} файлов.</sys:String>
     <sys:String x:Key="Task_Exporting_Hash">Экспорт результатов, пожалуйста, подождите.</sys:String>
     <!-- Example: Installing iSlide, please wait. -->
     <sys:String x:Key="Task_Installing_App">Установка {0}, нужно подождать.</sys:String>
@@ -749,6 +755,7 @@
     <sys:String x:Key="Info_Restart_Required">Вам необходимо перезапустить приложение для просмотра изменений.</sys:String>
     <sys:String x:Key="Info_No_Updates">Вы используете последнюю версию Office Tool Plus.</sys:String>
     <sys:String x:Key="Info_Update_In_Progress">Выполняется обновление, пожалуйста, подождите.</sys:String>
+    <sys:String x:Key="Info_Updates_Incomplete">Не удалось применить некоторые обновления. Пожалуйста, повторите попытку позже.</sys:String>
     <sys:String x:Key="Info_No_Language_Added_For_Download">Мы обнаружили, что вы не добавили язык. В большинстве случаев мы рекомендуем добавлять языки, чтобы избежать проблем.</sys:String>
     <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">Выберите папку для сохранения установочных файлов Office.&#x000A;Чтобы использовать расположение по умолчанию, отключите параметр «Спрашивать место сохранения файлов» на странице настроек.</sys:String>
     <sys:String x:Key="Info_All_Files_Exist">Скачивание не требуется, все файлы существуют.</sys:String>
@@ -765,16 +772,16 @@
     <sys:String x:Key="Info_KMS_Test_Result.Success">Тестирование KMS: {0}. Результат: успех, затраченное время: {1}ms.</sys:String>
     <sys:String x:Key="Info_KMS_Test_Result.Failed">Тест KMS провален.</sys:String>
     <sys:String x:Key="Info_Enable_Mica">Для отображения с эффектом Mica требуется Windows 11.</sys:String>
-    <sys:String x:Key="Info_Parallel_Download">Вы используете 32-разрядную версию Office Tool Plus, включение "Параллельной загрузки фрагментами" может вызвать ошибку нехватки памяти.&#x000A;&#x000A;Если во время загрузки происходит сбой приложения, отключите "Параллельную загрузку фрагментами" или переключитесь на 64-разрядную версию Office Tool Plus, чтобы избежать этой проблемы.</sys:String>
 
     <!-- Success Message -->
+    <sys:String x:Key="Success_Download_Updates">Обновление(-я) успешно применено.</sys:String>
     <sys:String x:Key="Success_Add_Download_Task">Успешно добавлены задачи загрузки.</sys:String>
     <sys:String x:Key="Success_Create_ISO">Создан файл Office ISO.</sys:String>
     <sys:String x:Key="Success_Installation_Verify">Установочные файлы проверены, ошибки не найдены.</sys:String>
     <sys:String x:Key="Success_Installer_Exited">Работа Office Deployment Tool завершена нормально.</sys:String>
-    <sys:String x:Key="Success_Apply_Preferences">Успешно применены настройки приложения Office.</sys:String>
-    <sys:String x:Key="Success_Install_Licenses">Successfully installed Office licenses.</sys:String>
-    <sys:String x:Key="Success_Install_Product_Key">Successfully installed product key.</sys:String>
+    <sys:String x:Key="Success_Apply_Preferences">Настройки приложения Office успешно применены.</sys:String>
+    <sys:String x:Key="Success_Install_Licenses">Лицензии Office успешно установлены.</sys:String>
+    <sys:String x:Key="Success_Install_Product_Key">Ключ продукта успешно установлен.</sys:String>
     <sys:String x:Key="Success_Set_KMS">Настройки KMS применены.</sys:String>
     <sys:String x:Key="Success_Save">Успешное сохранение.</sys:String>
     <sys:String x:Key="Success_Collect_Logs">Файлы журнала собираются и сохраняются в: {0}</sys:String>
@@ -791,7 +798,7 @@
     <sys:String x:Key="Err_Checking_Installation">Произошла ошибка при проверке установочных файлов. Повторите попытку позже или повторно загрузите установочные файлы Office.</sys:String>
     <sys:String x:Key="Err_Installation">Установочный файл ({0}) содержит ошибки:&#x000A;{1}</sys:String>
     <sys:String x:Key="Err_Installation_File_Missing">Отсутствуют файлы: {0}</sys:String>
-    <sys:String x:Key="Err_Installation_Hash">Ошибка проверки хэша, файл: {0}&#x000A;Хэш: {1}&#x000A;Фактический хэш: {2}</sys:String>
+    <sys:String x:Key="Err_Installation_Hash">Ошибка проверки хеша, файл: {0}&#x000A;Хеш: {1}&#x000A;Фактический хеш: {2}</sys:String>
     <sys:String x:Key="Err_Installation_Version">Неудачная проверка версии, файл: {0}&#x000A;Версия: {1}&#x000A;Версия клиента: {2}</sys:String>
     <sys:String x:Key="Err_Installation_Mismatch">Версия отличается, файл: {0}&#x000A;Фактическая версия: {1}&#x000A;Архитектура: {2}</sys:String>
     <sys:String x:Key="Err_Installation_Redownload">Установочные файлы содержат ошибки, попробуйте удалить и загрузить их снова.</sys:String>

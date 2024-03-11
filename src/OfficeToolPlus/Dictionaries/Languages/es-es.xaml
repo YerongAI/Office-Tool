@@ -106,7 +106,7 @@
     <!-- {0} means channel name, such as Current Channel. -->
     <sys:String x:Key="Deploy_Error_Unsupported_Channel">Si desea utilizar {0}, cambie el módulo de instalación a Office Tool Plus.</sys:String>
     <sys:String x:Key="Deploy_Error_System_Architecture">No puede instalar Office de 64 bits en un sistema que no sea de 64 bits.</sys:String>
-    <!-- Example: You can not install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
+    <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
     <sys:String x:Key="Deploy_Error_Office_Architecture">No puede instalar {0} de Office porque tiene {1} de Office instalado en su computadora.</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Arch">La arquitectura que ha seleccionado no coincide con la arquitectura de los archivos de instalación locales, vuelva a seleccionar la arquitectura o no utilice los archivos de instalación locales para la implementación.</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Channel">El canal de actualización que ha seleccionado no coincide con el canal de actualización de los archivos de instalación local, vuelva a seleccionar el canal de actualización o no utilice los archivos de instalación local para la implementación.</sys:String>
@@ -126,12 +126,15 @@
     <sys:String x:Key="Deploy_Mode.Install">Instalar</sys:String>
     <sys:String x:Key="Deploy_Mode.Create_ISO">Crear fichero ISO</sys:String>
     <sys:String x:Key="Deploy_Architecture">Arquitectura</sys:String>
+    <sys:String x:Key="Deploy_Architecture_Current_Installed">Architecture of the currently installed Office: {0}.</sys:String>
     <sys:String x:Key="Deploy_Architecture.x86">32-bit</sys:String>
     <sys:String x:Key="Deploy_Architecture.x64">64-bit</sys:String>
     <sys:String x:Key="Deploy_Architecture.ARM">ARM (32-bit compatible)</sys:String>
     <sys:String x:Key="Deploy_Architecture.ARM64">ARM64 (64-bit compatible)</sys:String>
     <sys:String x:Key="Deploy_Channel">Actualizar canal</sys:String>
+    <sys:String x:Key="Deploy_Channel_Available_Version">Currently available Office version: {0}</sys:String>
     <sys:String x:Key="Deploy_Module">Módulo de instalación</sys:String>
+    <sys:String x:Key="Deploy_Module.Description">Choose Office Deployment Tool for better compatibility, or Office Tool Plus for better experiences.</sys:String>
     <sys:String x:Key="Deploy_Module.ODT">Herramienta de implementación de Office</sys:String>
     <sys:String x:Key="Deploy_Module.OTP">Office Tool Plus</sys:String>
     <sys:String x:Key="Deploy_Download_First">Primero descargar, después implementar</sys:String>
@@ -219,11 +222,12 @@
     <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback">Permitir respaldo a CDN</sys:String>
     <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback.Description">Permita que el instalador de Office recurra a Office CDN para descargar los idiomas que faltan.</sys:String>
     <sys:String x:Key="Deploy_Advanced_Force_Close_Apps">Forzar el cierre de todas las aplicaciones de Office en ejecución</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Force_Close_Apps.Description">Unsaved data may be lost.</sys:String>
     <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar">Fijar a la barra de tareas</sys:String>
     <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar.Description">Fijar los iconos de las aplicaciones de Office a la barra de tareas en Windows 7, 8 y 8.1.</sys:String>
 
     <sys:String x:Key="Deploy_Advanced_Update_Settings">Establecer actualización</sys:String>
-    <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM">Administrar actualizaciones usando MECM.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM">Administrar actualizaciones usando MECM</sys:String>
     <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM.Description">Al administrar las actualizaciones con Microsoft Endpoint Configuration Manager, las actualizaciones son administradas por el administrador.</sys:String>
     <sys:String x:Key="Deploy_Advanced_Enable_Update">Habilitar la actualización automática de Office</sys:String>
     <sys:String x:Key="Deploy_Advanced_Update_Path">Fuente de actualización</sys:String>
@@ -232,8 +236,9 @@
     <sys:String x:Key="Deploy_Advanced_Upgrade_Settings">Opciones de actualización</sys:String>
     <sys:String x:Key="Deploy_Advanced_Migrate_Arch">Migración de arquitectura</sys:String>
     <sys:String x:Key="Deploy_Advanced_Migrate_Arch.Description">Cambie la instalación de Office existente a la arquitectura especificada actualmente. Por ejemplo, de 32 bits a 64 bits.</sys:String>
-    <sys:String x:Key="Deploy_Advanced_Remove_MSI">Eliminar las versiones MSI instaladas de Office.</sys:String>
-    <sys:String x:Key="Deploy_Advanced_Match_Previous_MSI">Instalar el mismo idioma que la versión anterior de MSI.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_MSI_Notice">The following settings only take effect when using Office Deployment Tool as the installation module.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Remove_MSI">Eliminar las versiones MSI instaladas de Office</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Match_Previous_MSI">Instalar el mismo idioma que la versión anterior de MSI</sys:String>
     <sys:String x:Key="Deploy_Advanced_Ignore_Product">Ignorar estos productos</sys:String>
 
     <sys:String x:Key="Deploy_Advanced_Activate_Settings">Configuración de activación</sys:String>
@@ -305,6 +310,7 @@
     <sys:String x:Key="Activate_License_Expand">_Expandir todo</sys:String>
     <sys:String x:Key="Activate_License_Collapse">_Contraer todo</sys:String>
     <sys:String x:Key="Activate_License_Clear">B_orrar lista</sys:String>
+    <sys:String x:Key="Activate_License_Nothing_Here">No hay nada aquí.</sys:String>
     <sys:String x:Key="Activate_License_Status.Unactivated">Desactivado</sys:String>
     <sys:String x:Key="Activate_License_Status.Activated">Activado</sys:String>
     <!-- vNext Licnese -->
@@ -621,7 +627,7 @@
     <sys:String x:Key="Settings_Download_Downloader_Chunks">Chunks</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Chunks.Description">Divides the file into specified chunks for download. Setting it too high may slow down the speed.</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Parallel">Parallel download in chunks</sys:String>
-    <sys:String x:Key="Settings_Download_Downloader_Parallel.Description">In most cases, enabling parallel downloads gives the best download speed.</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Parallel.Description">When downloading to a hard disk drive (HDD), enable this option may reduce write speeds, especially if too many chunks are set.</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Limit">Speed limit</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Limit.Description">Limit the speed when downloading files, unit is KBps. Default value is 0 (no limit).</sys:String>
     <sys:String x:Key="Settings_Download_Proxy">Proxy</sys:String>
@@ -685,7 +691,7 @@
     <!-- Office ISO Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
     <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
-    <!-- If you can't understand what is hotkey, remove '&amp;' when you are translating. -->
+    <!-- If you cannot understand what is hotkey, remove '&amp;' when you are translating. -->
     <sys:String x:Key="CD-ROM_InstallNow">&amp;Install now</sys:String>
 
     <!-- Task Message -->
@@ -749,6 +755,7 @@
     <sys:String x:Key="Info_Restart_Required">Es necesario reiniciar la aplicación para que surta efecto.</sys:String>
     <sys:String x:Key="Info_No_Updates">Está utilizando la última versión de Office Tool Plus.</sys:String>
     <sys:String x:Key="Info_Update_In_Progress">Actualización(es) en curso, por favor espere.</sys:String>
+    <sys:String x:Key="Info_Updates_Incomplete">Some updates failed to apply, please try again later.</sys:String>
     <sys:String x:Key="Info_No_Language_Added_For_Download">Hemos detectado que no ha añadido ningún idioma. En la mayoría de los casos, recomendamos añadir idiomas para evitar problemas.</sys:String>
     <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">Para utilizar la ubicación predeterminada, desactive la opción "Preguntar dónde guardar los archivos" en la página de configuración.</sys:String>
     <sys:String x:Key="Info_All_Files_Exist">No es necesario descargar el archivo, todos los archivos ya existen.</sys:String>
@@ -765,9 +772,9 @@
     <sys:String x:Key="Info_KMS_Test_Result.Success">Método de ensayo KMS: {0}. Resultado de la prueba: éxito, tiempo transcurrido: {1}ms.</sys:String>
     <sys:String x:Key="Info_KMS_Test_Result.Failed">Fallo en la prueba KMS.</sys:String>
     <sys:String x:Key="Info_Enable_Mica">Mica effect requires Windows 11 to be displayed.</sys:String>
-    <sys:String x:Key="Info_Parallel_Download">You are using 32-bit version of Office Tool Plus, enable "Parallel download in chunks" may cause out of memory error.&#x000A;&#x000A;If application crashes during download, please disable "Parallel download in chunks" or switch to 64-bit version of Office Tool Plus to avoid the problem.</sys:String>
 
     <!-- Success Message -->
+    <sys:String x:Key="Success_Download_Updates">Successfully applied the update(s).</sys:String>
     <sys:String x:Key="Success_Add_Download_Task">Tareas de descarga añadidas con éxito.</sys:String>
     <sys:String x:Key="Success_Create_ISO">Se ha creado el archivo ISO de Office.</sys:String>
     <sys:String x:Key="Success_Installation_Verify">Se ha verificado el archivo de instalación y no se han encontrado errores.</sys:String>

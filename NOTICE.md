@@ -40,5 +40,5 @@ Apache-2.0 license
 - Microsoft.Xaml.Behaviors.Wpf (1.1.77)
 - Prism.DryIoc (8.1.97)
 - Prism.Wpf (8.1.97)
-- System.Management (7.0.2)
-- System.ServiceProcess.ServiceController (7.0.1)
+- System.Management (8.0.0)
+- System.ServiceProcess.ServiceController (8.0.0)

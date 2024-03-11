@@ -17,9 +17,9 @@ src="https://img.shields.io/github/v/release/YerongAI/Office-Tool?style=flat-squ
 Supports custom deployment and activation of the following products:
 
 - Microsoft 365.
-- Office 2016, 2019, 2021.
-- Visio 2016, 2019, 2021 & Online Plan 2.
-- Project 2016, 2019, 2021 & Online Desktop Client.
+- Office 2016, 2019, 2021, 2024.
+- Visio 2016, 2019, 2021, 2024 & Online Plan 2.
+- Project 2016, 2019, 2021, 2024 & Online Desktop Client.
 
 Functions and Features:
 
@@ -42,12 +42,27 @@ Functions and Features:
 - [Quick start](https://github.com/YerongAI/Office-Tool/wiki)
 - [Documentation](https://otp.landian.vip/help/)
 
+Or download Office Tool Plus using PowerShell:
+
+Site 1:
+
+```powershell
+irm https://otp.landian.vip/get/ | iex
+```
+
+Site 2:
+
+```powershell
+irm https://officetool.plus/get/ | iex
+```
+
 ## Thanks to the Translators
 
 | Culture | Name | Translators |
 | :-- | :-- | :-- |
 | ar-sa | العربية (المملكة العربية السعودية) | [Yarani](https://github.com/Yarani) |
 | de-de | Deutsch (Deutschland) | [Berny23](https://steamcommunity.com/id/Berny23) |
+| en-gb | English (United Kingdom) | [Mcforwin](https://github.com/Mcforwin) |
 | en-us | English (United States) | [Yerong](https://officetool.plus/), [Moedog](https://prprpr.love) |
 | es-es | Español (España) | Xoseba |
 | fr-fr | Français (France) | Drake4478, MONOKUMA |
@@ -85,13 +100,10 @@ src\OfficeToolPlus\Dictionaries\Languages
 src\OfficeToolPlus\Dictionaries\ProductsName
 config\Launcher
 config\Message
-config\Update Logs
 ```
-
-Note: I don't suggest anyone to change preferences data! This data is provided by Microsoft.
 
 ## About
 
-© 2016-2023 Yerong. All Rights Reserved.
+© 2016-2024 Yerong. All Rights Reserved.
 
 > Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel)

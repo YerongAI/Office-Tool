@@ -106,7 +106,7 @@
     <!-- {0} means channel name, such as Current Channel. -->
     <sys:String x:Key="Deploy_Error_Unsupported_Channel">如欲使用「{0}」，請將安裝模組變更為「Office Tool Plus」。</sys:String>
     <sys:String x:Key="Deploy_Error_System_Architecture">無法在 32 位元的系統中安裝 64 位元的 Office。</sys:String>
-    <!-- Example: You can't install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
+    <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
     <sys:String x:Key="Deploy_Error_Office_Architecture">無法在已安裝 Office {1} 的電腦中再安裝 Office {0}。</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Arch">已選取的架構配置和安裝檔案架構不相符。請重新選取架構配置，或不使用安裝檔案進行部署。</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Channel">已選取的更新通道配置和安裝檔案更新通道不相符。請重新選取更新通道配置，或不使用安裝檔案進行部署。</sys:String>
@@ -126,12 +126,15 @@
     <sys:String x:Key="Deploy_Mode.Install">安裝</sys:String>
     <sys:String x:Key="Deploy_Mode.Create_ISO">建立 ISO 檔案</sys:String>
     <sys:String x:Key="Deploy_Architecture">架構</sys:String>
+    <sys:String x:Key="Deploy_Architecture_Current_Installed">Architecture of the currently installed Office: {0}.</sys:String>
     <sys:String x:Key="Deploy_Architecture.x86">32 位元</sys:String>
     <sys:String x:Key="Deploy_Architecture.x64">64 位元</sys:String>
     <sys:String x:Key="Deploy_Architecture.ARM">ARM (相容 32 位元)</sys:String>
     <sys:String x:Key="Deploy_Architecture.ARM64">ARM64 (相容 64 位元)</sys:String>
     <sys:String x:Key="Deploy_Channel">更新通道</sys:String>
+    <sys:String x:Key="Deploy_Channel_Available_Version">目前可用的 Office 版本: {0}</sys:String>
     <sys:String x:Key="Deploy_Module">安裝模組</sys:String>
+    <sys:String x:Key="Deploy_Module.Description">選擇 Office 部署工具以取得較佳相容性，或選擇 Office Tool Plus 取得較佳使用體驗。</sys:String>
     <sys:String x:Key="Deploy_Module.ODT">Office 部署工具</sys:String>
     <sys:String x:Key="Deploy_Module.OTP">Office Tool Plus</sys:String>
     <sys:String x:Key="Deploy_Download_First">下載後再部署</sys:String>
@@ -219,6 +222,7 @@
     <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback">允許安裝時從 CDN 下載遺失的語言套件</sys:String>
     <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback.Description">如開啟此項，將允許安裝程式從 Office CDN 伺服器下載遺失的語言套件。</sys:String>
     <sys:String x:Key="Deploy_Advanced_Force_Close_Apps">強制結束正在執行的 Office 應用程式</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Force_Close_Apps.Description">未儲存的資料可能會遺失。</sys:String>
     <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar">釘選到工作列</sys:String>
     <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar.Description">在 Windows 7, 8, 8.1 工作列中新增 Office 應用程式捷徑圖示</sys:String>
 
@@ -232,6 +236,7 @@
     <sys:String x:Key="Deploy_Advanced_Upgrade_Settings">升級設定</sys:String>
     <sys:String x:Key="Deploy_Advanced_Migrate_Arch">變更架構</sys:String>
     <sys:String x:Key="Deploy_Advanced_Migrate_Arch.Description">如開啟此項，將變更已安裝的 Office 至與其相反的架構；例如: 從 32 位元變更成 64 位元</sys:String>
+    <sys:String x:Key="Deploy_Advanced_MSI_Notice">以下設定僅在使用 Office 部署工具作為安裝模組時生效。</sys:String>
     <sys:String x:Key="Deploy_Advanced_Remove_MSI">移除電腦中的 MSI 版本</sys:String>
     <sys:String x:Key="Deploy_Advanced_Match_Previous_MSI">為新的 Office 安裝先前 MSI 版本相同的語言</sys:String>
     <sys:String x:Key="Deploy_Advanced_Ignore_Product">忽略下列產品</sys:String>
@@ -305,6 +310,7 @@
     <sys:String x:Key="Activate_License_Expand">全部展開(_E)</sys:String>
     <sys:String x:Key="Activate_License_Collapse">全部摺疊(_C)</sys:String>
     <sys:String x:Key="Activate_License_Clear">清除列表(_C)</sys:String>
+    <sys:String x:Key="Activate_License_Nothing_Here">這裡沒有任何內容。</sys:String>
     <sys:String x:Key="Activate_License_Status.Unactivated">未啟用</sys:String>
     <sys:String x:Key="Activate_License_Status.Activated">已啟用</sys:String>
     <!-- vNext Licnese -->
@@ -335,7 +341,7 @@
     <sys:String x:Key="Activate_License_Lic.Error_Description">錯誤描述:</sys:String>
     <sys:String x:Key="Activate_License_VL.Type">啟用類型:</sys:String>
     <!-- AO equal to Activation Object -->
-    <sys:String x:Key="Activate_License_AD.ObjectName">啟用物件 (AO)名稱: </sys:String>
+    <sys:String x:Key="Activate_License_AD.ObjectName">啟用物件 (AO) 名稱: </sys:String>
     <sys:String x:Key="Activate_License_AD.ObjectDN">AO DN: </sys:String>
     <sys:String x:Key="Activate_License_AD.ExtendedPid">AO 延伸的 PID: </sys:String>
     <sys:String x:Key="Activate_License_AD.AID">AO 啟用 ID: </sys:String>
@@ -621,7 +627,7 @@
     <sys:String x:Key="Settings_Download_Downloader_Chunks">區塊</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Chunks.Description">相除檔案至特定區塊以進行下載。如配置過高數值，可能會降低下載速度。</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Parallel">平行下載區塊</sys:String>
-    <sys:String x:Key="Settings_Download_Downloader_Parallel.Description">在大部分情況下，啟用平行下載會提供最佳下載速度。</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Parallel.Description">下載至傳統硬碟 (HDD) 時，開啟此選項可能可以降低寫入速度 (特別是配置大量區塊的情況下)。</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Limit">速度限制</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Limit.Description">限制下載檔案時的速度 (KBps)。預設值為 0 (不限速)。</sys:String>
     <sys:String x:Key="Settings_Download_Proxy">Proxy</sys:String>
@@ -685,33 +691,33 @@
     <!-- Office ISO Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
     <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
-    <!-- If you can't understand what is hotkey, remove '&amp;' when you are translating. -->
+    <!-- If you cannot understand what is hotkey, remove '&amp;' when you are translating. -->
     <sys:String x:Key="CD-ROM_InstallNow">立即安裝(&amp;I)</sys:String>
 
     <!-- Task Message -->
     <sys:String x:Key="Task_Checking_Updates">正在檢查更新</sys:String>
     <sys:String x:Key="Task_Downloading_Updates">正在下載更新，{0} 已完成 (第 {1} 個，共 {2} 個)</sys:String>
-    <sys:String x:Key="Task_Verifying_Installation_Files">正在驗證檔案，請稍候</sys:String>
-    <sys:String x:Key="Task_Loading_Preferences">正在載入應用程式喜好設定，請稍候</sys:String>
-    <sys:String x:Key="Task_Downloading_Web_Config">正在從網際網路取得配置資訊，請稍候</sys:String>
-    <sys:String x:Key="Task_Preparing_Download">正在準備下載 Office，請稍候</sys:String>
+    <sys:String x:Key="Task_Verifying_Installation_Files">正在驗證檔案，請稍候。</sys:String>
+    <sys:String x:Key="Task_Loading_Preferences">正在載入應用程式喜好設定，請稍候。</sys:String>
+    <sys:String x:Key="Task_Downloading_Web_Config">正在從網際網路取得配置資訊，請稍候。</sys:String>
+    <sys:String x:Key="Task_Preparing_Download">正在準備下載 Office，請稍候。</sys:String>
     <!-- Example: Creating Office ISO file, file size: 3.1GB, 45% completed. -->
     <sys:String x:Key="Task_Creating_ISO">正在建立 Office ISO 檔案，檔案大小：{0}，{1} 已完成</sys:String>
-    <sys:String x:Key="Task_ODT">正在部署，請稍後</sys:String>
+    <sys:String x:Key="Task_ODT">正在部署，請稍候。</sys:String>
     <sys:String x:Key="Task_SPP">正在執行 SPP，請稍候。</sys:String>
     <sys:String x:Key="Task_Searching_KMS_Events">正在查詢 KMS 啟用歷史記錄，請稍候。</sys:String>
     <sys:String x:Key="Task_Searching_IAF_Events">正在查詢網際網路啟用失敗歷史記錄，請稍候。</sys:String>
-    <sys:String x:Key="Task_Checking_Office_Update_Channel">正在查詢 Office 更新通道資訊</sys:String>
-    <sys:String x:Key="Task_Testing_KMS_Host">正在測試 KMS 主機可用性</sys:String>
-    <sys:String x:Key="Task_Collecting_Installer_Logs">正在擷取 Office 安裝記錄檔，請稍候</sys:String>
-    <sys:String x:Key="Task_Removing_Office">正在移除 Office，請稍候</sys:String>
-    <sys:String x:Key="Task_Repairing_WMI">正在修復 WMI 元件，請稍候</sys:String>
+    <sys:String x:Key="Task_Checking_Office_Update_Channel">正在查詢 Office 更新通道資訊。</sys:String>
+    <sys:String x:Key="Task_Testing_KMS_Host">正在測試 KMS 主機可用性。</sys:String>
+    <sys:String x:Key="Task_Collecting_Installer_Logs">正在擷取 Office 安裝記錄檔，請稍候。</sys:String>
+    <sys:String x:Key="Task_Removing_Office">正在移除 Office，請稍候。</sys:String>
+    <sys:String x:Key="Task_Repairing_WMI">正在修復 WMI 元件，請稍候。</sys:String>
     <sys:String x:Key="Task_Converting_Documents">正在轉換 Office 文件，剩餘 {0} 個</sys:String>
-    <sys:String x:Key="Task_Importing_Files">正在匯入檔案，請稍候</sys:String>
+    <sys:String x:Key="Task_Importing_Files">正在匯入檔案，請稍候。</sys:String>
     <sys:String x:Key="Task_Computing_Hash">正在計算雜湊碼，剩餘 {0} 個檔案</sys:String>
-    <sys:String x:Key="Task_Exporting_Hash">正在匯出結果，請稍候</sys:String>
+    <sys:String x:Key="Task_Exporting_Hash">正在匯出結果，請稍候。</sys:String>
     <!-- Example: Installing iSlide, please wait. -->
-    <sys:String x:Key="Task_Installing_App">正在安裝 {0}，請稍候</sys:String>
+    <sys:String x:Key="Task_Installing_App">正在安裝 {0}，請稍候。</sys:String>
 
     <!-- Question Message -->
     <sys:String x:Key="Ques_Update.Title">Office Tool Plus 更新</sys:String>
@@ -749,12 +755,13 @@
     <sys:String x:Key="Info_Restart_Required">您必須重新啟動程式以套用新變更。</sys:String>
     <sys:String x:Key="Info_No_Updates">您使用的是最新版本的 Office Tool Plus。</sys:String>
     <sys:String x:Key="Info_Update_In_Progress">正在更新，請稍候。</sys:String>
+    <sys:String x:Key="Info_Updates_Incomplete">Some updates failed to apply, please try again later.</sys:String>
     <sys:String x:Key="Info_No_Language_Added_For_Download">尚未新增語言套件。在一般情況下，建議新增語言套件以免發生問題。</sys:String>
     <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">請選取 Office 安裝文件儲存位置。&#x000A;如要使用預設位置，請在設定頁面停用「詢問檔案儲存位置」。</sys:String>
-    <sys:String x:Key="Info_All_Files_Exist">沒有需要下載的檔案，全部檔案均存在</sys:String>
-    <sys:String x:Key="Info_Office_Downloading">正在下載 Office</sys:String>
-    <sys:String x:Key="Info_Software_Installation_Complete">安裝完成</sys:String>
-    <sys:String x:Key="Info_Software_Installation_Failed">安裝時發生錯誤</sys:String>
+    <sys:String x:Key="Info_All_Files_Exist">沒有需要下載的檔案，全部檔案均存在。</sys:String>
+    <sys:String x:Key="Info_Office_Downloading">正在下載 Office。</sys:String>
+    <sys:String x:Key="Info_Software_Installation_Complete">安裝完成。</sys:String>
+    <sys:String x:Key="Info_Software_Installation_Failed">安裝時發生錯誤。</sys:String>
     <sys:String x:Key="Info_Auto_Shutdown">電腦將在一分鐘後登出/關機/重新啟動。</sys:String>
     <sys:String x:Key="Info_No_Events">沒有找到任何歷史記錄。</sys:String>
     <sys:String x:Key="Info_No_Office_Licenses">沒有找到任何 Office 授權。</sys:String>
@@ -765,20 +772,20 @@
     <sys:String x:Key="Info_KMS_Test_Result.Success">KMS 測試方法: {0}。測試結果: 成功，耗時: {1}ms</sys:String>
     <sys:String x:Key="Info_KMS_Test_Result.Failed">KMS 測試失敗。</sys:String>
     <sys:String x:Key="Info_Enable_Mica">需要具備 Windows 11 才能正常顯示 Mica 效果。</sys:String>
-    <sys:String x:Key="Info_Parallel_Download">您正在使用 32 位元的 Office Tool Plus，啟用「平行下載區塊」可能會造成記憶體錯誤。&#x000A;&#x000A;如應用程式在下載過程中當機，請停用「平行下載區塊」，或切換至 64 位元的 Office Tool Plus 以避免問題發生。</sys:String>
 
     <!-- Success Message -->
+    <sys:String x:Key="Success_Download_Updates">Successfully applied the update(s).</sys:String>
     <sys:String x:Key="Success_Add_Download_Task">已新增下載任務。</sys:String>
     <sys:String x:Key="Success_Create_ISO">已建立 Office ISO 檔案。</sys:String>
     <sys:String x:Key="Success_Installation_Verify">已完成安裝檔案驗證，沒有發現錯誤。</sys:String>
-    <sys:String x:Key="Success_Installer_Exited">已正常結束 Office 部署工具</sys:String>
+    <sys:String x:Key="Success_Installer_Exited">已正常結束 Office 部署工具。</sys:String>
     <sys:String x:Key="Success_Apply_Preferences">已套用 Office 應用程式喜好設定。</sys:String>
-    <sys:String x:Key="Success_Install_Licenses">Successfully installed Office licenses.</sys:String>
-    <sys:String x:Key="Success_Install_Product_Key">Successfully installed product key.</sys:String>
+    <sys:String x:Key="Success_Install_Licenses">已成功安裝 Office 授權。</sys:String>
+    <sys:String x:Key="Success_Install_Product_Key">已成功安裝 Office 產品金鑰。</sys:String>
     <sys:String x:Key="Success_Set_KMS">套用 KMS 設定成功。</sys:String>
-    <sys:String x:Key="Success_Save">已成功儲存</sys:String>
+    <sys:String x:Key="Success_Save">已成功儲存。</sys:String>
     <sys:String x:Key="Success_Collect_Logs">已完成收集記錄並儲存在: {0}</sys:String>
-    <sys:String x:Key="Success_Repair">已成功修復</sys:String>
+    <sys:String x:Key="Success_Repair">已成功修復。</sys:String>
     <sys:String x:Key="Success_Repair_System_Variables">已重設系統變數，請重新啟動系統以使變更生效。</sys:String>
     <sys:String x:Key="Success_Repair_WMI_Components">已完成修復 WMI 元件，請重新啟動系統以使變更生效。</sys:String>
 
@@ -787,7 +794,7 @@
     <sys:String x:Key="Err_Already_Running">Office Tool Plus 已在執行。</sys:String>
     <sys:String x:Key="Err_Perform_Update">執行更新時出錯，請手動下載最新版本的 Office Tool Plus。</sys:String>
     <sys:String x:Key="Err_Unknown_Command">未知的命令: {0}</sys:String>
-    <sys:String x:Key="Err_Command_Parameter">Missing required parameters.</sys:String>
+    <sys:String x:Key="Err_Command_Parameter">缺少必要的參數。</sys:String>
     <sys:String x:Key="Err_Checking_Installation">讀取安裝檔案時出現錯誤，請嘗試重新讀取，或者重新下載 Office 安裝檔案。</sys:String>
     <sys:String x:Key="Err_Installation">安裝檔案 {0} 包含錯誤：&#x000A;{1}</sys:String>
     <sys:String x:Key="Err_Installation_File_Missing">檔案遺失: {0}</sys:String>
@@ -802,7 +809,7 @@
     <sys:String x:Key="Err_Start_Deploy.Preferences">無法部署應用程式喜好設定，請確認是否已正確配置「應用程式喜好設定」，並重新嘗試。</sys:String>
     <sys:String x:Key="Err_Installer_Exited">Office 部署工具未正常結束。</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">無法取得版本資訊，請再試一次。或者改用下載引擎「Office 部署工具」。</sys:String>
-    <sys:String x:Key="Err_Create_ISO">在 Office Tool Plus 資料夾中找不到任何安裝檔案，請先下載 Office 安裝檔案 (或移動安裝檔案)後，再執行此操作。</sys:String>
+    <sys:String x:Key="Err_Create_ISO">在 Office Tool Plus 資料夾中找不到任何安裝檔案，請先下載 Office 安裝檔案 (或移動安裝檔案) 後，再執行此操作。</sys:String>
     <sys:String x:Key="Err_Query_Office_Licenses">無法查詢 Office 授權，請再試一次。</sys:String>
     <sys:String x:Key="Err_Loading_Office_Licenses">找不到 Click-to-Run 版本的 Office，因此無法載入 Office 授權。請確認是否已安裝最新版本的 Office。</sys:String>
     <sys:String x:Key="Err_Product_Key_Invalid">產品金鑰輸入不正確，請檢查後再試一次。</sys:String>

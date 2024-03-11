@@ -16,9 +16,9 @@
 Unterstützt die benutzerdefinierte Bereitstellung und Aktivierung der folgenden Produkte:
 
 - Microsoft 365
-- Office 2016, 2019, 2021
-- Visio 2016, 2019, 2021 & Online Plan 2
-- Project 2016, 2019, 2021 & Online Desktop Client
+- Office 2016, 2019, 2021, 2024
+- Visio 2016, 2019, 2021, 2024 & Online Plan 2
+- Project 2016, 2019, 2021, 2024 & Online Desktop Client
 
 Funktionen und Features:
 
@@ -41,9 +41,23 @@ Funktionen und Features:
 - [Schnellstart](https://github.com/YerongAI/Office-Tool/wiki)
 - [Dokumentation](https://otp.landian.vip/help/)
 
+Or download Office Tool Plus using PowerShell:
+
+Site 1:
+
+```powershell
+irm https://otp.landian.vip/get/ | iex
+```
+
+Site 2:
+
+```powershell
+irm https://officetool.plus/get/ | iex
+```
+
 ## Über Office Tool Plus
 
-© 2016-2023 Yerong. Alle Rechte vorbehalten.
+© 2016-2024 Yerong. Alle Rechte vorbehalten.
 
 > Blog: [@Yerong の小窝](https://www.coolhub.top/) · GitHub: [@YerongAI](https://github.com/YerongAI) · Telegram: [@Office Tool Plus](https://t.me/s/otp_channel)
 

@@ -106,7 +106,7 @@
     <!-- {0} means channel name, such as Current Channel. -->
     <sys:String x:Key="Deploy_Error_Unsupported_Channel">Als u {0} wilt gebruiken, wijzigt u de installatiemodule in Office Tool Plus.</sys:String>
     <sys:String x:Key="Deploy_Error_System_Architecture">U kunt geen 64-bits versie van Office installeren op een niet-64-bits systeem.</sys:String>
-    <!-- Example: You can not install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
+    <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
     <sys:String x:Key="Deploy_Error_Office_Architecture">U kunt {0} van Office niet installeren, omdat u {1} van Office op uw computer hebt geןnstalleerd.</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Arch">De door u geselecteerde architectuur komt niet overeen met de architectuur van de lokale installatiebestanden. Selecteer de architectuur opnieuw of gebruik de lokale installatiebestanden niet voor implementatie.</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Channel">Het door u geselecteerde updatekanaal komt niet overeen met het updatekanaal van de lokale installatiebestanden. Selecteer het updatekanaal opnieuw of gebruik de lokale installatiebestanden niet voor implementatie.</sys:String>
@@ -126,12 +126,15 @@
     <sys:String x:Key="Deploy_Mode.Install">Installeer</sys:String>
     <sys:String x:Key="Deploy_Mode.Create_ISO">Maak een ISO bestand</sys:String>
     <sys:String x:Key="Deploy_Architecture">Architectuur</sys:String>
+    <sys:String x:Key="Deploy_Architecture_Current_Installed">Architecture of the currently installed Office: {0}.</sys:String>
     <sys:String x:Key="Deploy_Architecture.x86">32-bit</sys:String>
     <sys:String x:Key="Deploy_Architecture.x64">64-bit</sys:String>
     <sys:String x:Key="Deploy_Architecture.ARM">ARM (32-bit compatible)</sys:String>
     <sys:String x:Key="Deploy_Architecture.ARM64">ARM64 (64-bit compatible)</sys:String>
     <sys:String x:Key="Deploy_Channel">Update Kanaal</sys:String>
+    <sys:String x:Key="Deploy_Channel_Available_Version">Currently available Office version: {0}</sys:String>
     <sys:String x:Key="Deploy_Module">Installatie module</sys:String>
+    <sys:String x:Key="Deploy_Module.Description">Choose Office Deployment Tool for better compatibility, or Office Tool Plus for better experiences.</sys:String>
     <sys:String x:Key="Deploy_Module.ODT">Office Deployment Tool</sys:String>
     <sys:String x:Key="Deploy_Module.OTP">Office Tool Plus</sys:String>
     <sys:String x:Key="Deploy_Download_First">Eerst downloaden en dan implementeren</sys:String>
@@ -219,21 +222,23 @@
     <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback">Terugval naar CDN toestaan</sys:String>
     <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback.Description">Laat het Office installatieprogramma terugvallen op Office CDN om de ontbrekende talen te downloaden.</sys:String>
     <sys:String x:Key="Deploy_Advanced_Force_Close_Apps">Sluit alle actieve Office-toepassingen geforceerd af</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Force_Close_Apps.Description">Unsaved data may be lost.</sys:String>
     <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar">Vastzetten op taakbalk</sys:String>
     <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar.Description">Pin Office-toepassingspictogrammen op de taakbalk op Windows 7, 8 en 8.1.</sys:String>
 
     <sys:String x:Key="Deploy_Advanced_Update_Settings">Update instellingen</sys:String>
-    <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM">Beheer updates met behulp van MECM.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM">Beheer updates met behulp van MECM</sys:String>
     <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM.Description">Bij het beheren van updates met Microsoft Endpoint Configuration Manager, worden updates beheerd door de beheerder.</sys:String>
     <sys:String x:Key="Deploy_Advanced_Enable_Update">Automatische Office update inschakelen</sys:String>
     <sys:String x:Key="Deploy_Advanced_Update_Path">Bron bijwerken</sys:String>
     <sys:String x:Key="Deploy_Advanced_Update_Path.Description">Als het pad leeg is, wordt standaard het Office CDN als bron gebruikt.</sys:String>
 
     <sys:String x:Key="Deploy_Advanced_Upgrade_Settings">Upgrade opties</sys:String>
-    <sys:String x:Key="Deploy_Advanced_Migrate_Arch">Migreer architectuur.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Migrate_Arch">Migreer architectuur</sys:String>
     <sys:String x:Key="Deploy_Advanced_Migrate_Arch.Description">Wijzig de bestaande Office-installatie naar de momenteel opgegeven architectuur. Bijvoorbeeld van 32 bit naar 64 bit.</sys:String>
-    <sys:String x:Key="Deploy_Advanced_Remove_MSI">Verwijder bestaande MSI-versies van Office.</sys:String>
-    <sys:String x:Key="Deploy_Advanced_Match_Previous_MSI">Installeer dezelfde taal als bij de vorige MSI-versie.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_MSI_Notice">The following settings only take effect when using Office Deployment Tool as the installation module.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Remove_MSI">Verwijder bestaande MSI-versies van Office</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Match_Previous_MSI">Installeer dezelfde taal als bij de vorige MSI-versie</sys:String>
     <sys:String x:Key="Deploy_Advanced_Ignore_Product">Negeer deze producten</sys:String>
 
     <sys:String x:Key="Deploy_Advanced_Activate_Settings">Activerings instellingen</sys:String>
@@ -305,6 +310,7 @@
     <sys:String x:Key="Activate_License_Expand">_Alles uitvouwen</sys:String>
     <sys:String x:Key="Activate_License_Collapse">_Alles inklappen</sys:String>
     <sys:String x:Key="Activate_License_Clear">C_lear lijst</sys:String>
+    <sys:String x:Key="Activate_License_Nothing_Here">Er is hier niets.</sys:String>
     <sys:String x:Key="Activate_License_Status.Unactivated">Unactivated</sys:String>
     <sys:String x:Key="Activate_License_Status.Activated">Geactiveerd</sys:String>
     <!-- vNext Licnese -->
@@ -621,7 +627,7 @@
     <sys:String x:Key="Settings_Download_Downloader_Chunks">Chunks</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Chunks.Description">Divides the file into specified chunks for download. Setting it too high may slow down the speed.</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Parallel">Parallel download in chunks</sys:String>
-    <sys:String x:Key="Settings_Download_Downloader_Parallel.Description">In most cases, enabling parallel downloads gives the best download speed.</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Parallel.Description">When downloading to a hard disk drive (HDD), enable this option may reduce write speeds, especially if too many chunks are set.</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Limit">Speed limit</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Limit.Description">Limit the speed when downloading files, unit is KBps. Default value is 0 (no limit).</sys:String>
     <sys:String x:Key="Settings_Download_Proxy">Proxy</sys:String>
@@ -685,7 +691,7 @@
     <!-- Office ISO Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
     <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
-    <!-- If you can't understand what is hotkey, remove '&amp;' when you are translating. -->
+    <!-- If you cannot understand what is hotkey, remove '&amp;' when you are translating. -->
     <sys:String x:Key="CD-ROM_InstallNow">&amp;Install now</sys:String>
 
     <!-- Task Message -->
@@ -749,6 +755,7 @@
     <sys:String x:Key="Info_Restart_Required">U moet de toepassing opnieuw starten om van kracht te worden.</sys:String>
     <sys:String x:Key="Info_No_Updates">U gebruikt de nieuwste versie van Office Tool Plus.</sys:String>
     <sys:String x:Key="Info_Update_In_Progress">Update(s) worden uitgevoerd, even geduld a.u.b.</sys:String>
+    <sys:String x:Key="Info_Updates_Incomplete">Some updates failed to apply, please try again later.</sys:String>
     <sys:String x:Key="Info_No_Language_Added_For_Download">We hebben vastgesteld dat u geen taal heeft toegevoegd. In de meeste gevallen raden we aan om talen toe te voegen om problemen te voorkomen.</sys:String>
     <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">Selecteer de map om de Office installatiebestanden op te slaan. Om de standaardlocatie te gebruiken, schakelt u "Vragen waar bestanden moeten worden opgeslagen" uit op de instellingenpagina.</sys:String>
     <sys:String x:Key="Info_All_Files_Exist">Downloaden is niet nodig, alle bestanden bestaan.</sys:String>
@@ -767,6 +774,7 @@
     <sys:String x:Key="Info_Enable_Mica">Mica effect requires Windows 11 to be displayed.</sys:String>
 
     <!-- Success Message -->
+    <sys:String x:Key="Success_Download_Updates">Successfully applied the update(s).</sys:String>
     <sys:String x:Key="Success_Add_Download_Task">Downloadtaken toegevoegd.</sys:String>
     <sys:String x:Key="Success_Create_ISO">Office ISO bestand is gemaakt.</sys:String>
     <sys:String x:Key="Success_Installation_Verify">Het installatiebestand is geverifieerd en er zijn geen fouten gevonden.</sys:String>

@@ -16,9 +16,9 @@
 支持以下产品的自定义部署与激活：
 
 - Microsoft 365
-- Office 2016, 2019, 2021
-- Visio 2016, 2019, 2021 & Online Plan 2
-- Project 2016, 2019, 2021 & Online Desktop Client
+- Office 2016, 2019, 2021, 2024
+- Visio 2016, 2019, 2021, 2024 & Online Plan 2
+- Project 2016, 2019, 2021, 2024 & Online Desktop Client
 
 功能与特性：
 
@@ -42,10 +42,24 @@
 - [快速入门](https://github.com/YerongAI/Office-Tool/wiki)
 - [帮助文档](https://otp.landian.vip/help/)
 
+或者使用 PowerShell 下载 Office Tool Plus:
+
+站点 1:
+
+```powershell
+irm https://otp.landian.vip/get/ | iex
+```
+
+站点 2:
+
+```powershell
+irm https://officetool.plus/get/ | iex
+```
+
 更多详细教程可访问 [Yerong の小窝](https://www.coolhub.top/) 获取。
 
 ## 关于
 
-© 2016-2023 Yerong. All Rights Reserved.
+© 2016-2024 Yerong. All Rights Reserved.
 
 > 博客 [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel)

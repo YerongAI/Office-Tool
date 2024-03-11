@@ -6,7 +6,7 @@
     <!-- Country settings, it is used to get information from server. -->
     <sys:String x:Key="Culture">ko-kr</sys:String>
     <!-- Products name settings, "en-us" is default value if not set. -->
-    <sys:String x:Key="ProductDict">en-us</sys:String>
+    <sys:String x:Key="ProductDict">ko-kr</sys:String>
 
     <!-- Eula content -->
     <sys:String x:Key="Eula.Title">이용 약관</sys:String>
@@ -51,7 +51,7 @@
     <!-- 00:00 -> 05:00 -->
     <sys:String x:Key="Home_Greeting_Hour.0">늦었어요, 좋은 꿈 꾸세요!</sys:String>
     <!-- 05:00 -> 06:00 -->
-    <sys:String x:Key="Home_Greeting_Hour.5">날이 거의 밝았어요, 일어날 준비 됐어요?</sys:String>
+    <sys:String x:Key="Home_Greeting_Hour.5">새벽이 다 되었는데 일어날 준비가 되셨나요?</sys:String>
     <!-- 06:00 -> 10:00 -->
     <sys:String x:Key="Home_Greeting_Hour.6">좋은 아침이에요</sys:String>
     <!-- 10:00 -> 11:00 -->
@@ -90,7 +90,7 @@
     <sys:String x:Key="PerpetualVL2019">Office 2019 장기 엔터프라이즈</sys:String>
     <sys:String x:Key="PerpetualVL2021">Office 2021 장기 엔터프라이즈</sys:String>
     <sys:String x:Key="SemiAnnual">반기 엔터프라이즈 채널</sys:String>
-    <sys:String x:Key="MonthlyEnterprise">월 단위 엔터프라이즈 채널</sys:String>
+    <sys:String x:Key="MonthlyEnterprise">월간 엔터프라이즈 채널</sys:String>
     <sys:String x:Key="Current">현재 채널</sys:String>
     <sys:String x:Key="SemiAnnualPreview">반기 엔터프라이즈 채널 (미리 보기)</sys:String>
     <sys:String x:Key="CurrentPreview">현재 채널 (미리 보기)</sys:String>
@@ -106,7 +106,7 @@
     <!-- {0} means channel name, such as Current Channel. -->
     <sys:String x:Key="Deploy_Error_Unsupported_Channel">{0}을(를) 사용하려면 설치 모듈을 Office Tool Plus로 변경하십시오</sys:String>
     <sys:String x:Key="Deploy_Error_System_Architecture">64비트가 아닌 시스템에는 64비트 Office를 설치할 수 없습니다.</sys:String>
-    <!-- Example: You can not install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
+    <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
     <sys:String x:Key="Deploy_Error_Office_Architecture">컴퓨터에 {1}의 Office가 설치되어 있으므로 {0}의 Office를 설치할 수 없습니다.</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Arch">선택한 아키텍처가 로컬 설치 파일의 아키텍처와 일치하지 않습니다. 아키텍처를 다시 선택하거나 로컬 설치 파일을 배포에 사용하지 마십시오.</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Channel">선택한 업데이트 채널이 로컬 설치 파일의 업데이트 채널과 일치하지 않습니다. 업데이트 채널을 다시 선택하거나 로컬 설치 파일을 배포에 사용하지 마십시오.</sys:String>
@@ -126,12 +126,15 @@
     <sys:String x:Key="Deploy_Mode.Install">설치</sys:String>
     <sys:String x:Key="Deploy_Mode.Create_ISO">ISO 파일 만들기</sys:String>
     <sys:String x:Key="Deploy_Architecture">아키텍쳐</sys:String>
+    <sys:String x:Key="Deploy_Architecture_Current_Installed">Architecture of the currently installed Office: {0}.</sys:String>
     <sys:String x:Key="Deploy_Architecture.x86">32비트</sys:String>
     <sys:String x:Key="Deploy_Architecture.x64">64비트</sys:String>
     <sys:String x:Key="Deploy_Architecture.ARM">32비트 (ARM 호환)</sys:String>
     <sys:String x:Key="Deploy_Architecture.ARM64">64비트 (ARM64 호환)</sys:String>
     <sys:String x:Key="Deploy_Channel">엡데이트 채널</sys:String>
+    <sys:String x:Key="Deploy_Channel_Available_Version">현재 사용 가능한 Office 버전: {0}</sys:String>
     <sys:String x:Key="Deploy_Module">설치 모듈</sys:String>
+    <sys:String x:Key="Deploy_Module.Description">호환성을 높이려면 Office 배포 도구을 선택하고, 경험을 높이려면 Office Tool Plus를 선택합니다.</sys:String>
     <sys:String x:Key="Deploy_Module.ODT">Office 배포 도구</sys:String>
     <sys:String x:Key="Deploy_Module.OTP">Office Tool Plus</sys:String>
     <sys:String x:Key="Deploy_Download_First">먼저 다운로드한 다음 배포</sys:String>
@@ -189,7 +192,7 @@
     <sys:String x:Key="Deploy_Installation_Files_Reset">재설정</sys:String>
     <sys:String x:Key="Deploy_Installation_Files_Reset.Description">현재 설치 파일을 사용하여 Office를 배포하지 마십시오.</sys:String>
     <sys:String x:Key="Deploy_Installation_Files_UseAsSource">소스로 사용</sys:String>
-    <sys:String x:Key="Deploy_Installation_Files_UseAsSource.Description">아키텍처 및 업데이트 채널이 자동으로 이 설치와 일치합니다.</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_UseAsSource.Description">아키텍처 및 업데이트 채널이 자동으로 이 설치와 일치됩니다.</sys:String>
     <sys:String x:Key="Deploy_Installation_Files_Delete">삭제</sys:String>
 
     <sys:String x:Key="Deploy_Advanced_Settings">고급 설정으로 이동</sys:String>
@@ -219,21 +222,23 @@
     <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback">CDN으로 대체 허용</sys:String>
     <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback.Description">Office CDN로 대체해서 필요한 언어를 다운로드하는 기능을 허용합니다.</sys:String>
     <sys:String x:Key="Deploy_Advanced_Force_Close_Apps">실행 중인 모든 Office 응용 프로그램 강제 종료</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Force_Close_Apps.Description">Unsaved data may be lost.</sys:String>
     <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar">작업 표시줄에 고정</sys:String>
     <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar.Description">Windows 7, 8 및 8.1에서 Office 응용 프로그램 아이콘을 작업 표시줄에 고정합니다.</sys:String>
 
     <sys:String x:Key="Deploy_Advanced_Update_Settings">업데이트 설정</sys:String>
-    <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM">MECM을 사용하여 업데이트를 관리합니다.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM">MECM을 사용하여 업데이트를 관리합니다</sys:String>
     <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM.Description">Microsoft Endpoint 구성 관리자를 사용하여 업데이트를 관리하는 경우 업데이트는 관리자가 관리합니다.</sys:String>
     <sys:String x:Key="Deploy_Advanced_Enable_Update">Office 자동 업데이트 사용</sys:String>
     <sys:String x:Key="Deploy_Advanced_Update_Path">업데이트 소스</sys:String>
     <sys:String x:Key="Deploy_Advanced_Update_Path.Description">경로가 비어 있으면 Office CDN이 기본적으로 원본으로 사용됩니다.</sys:String>
 
     <sys:String x:Key="Deploy_Advanced_Upgrade_Settings">업데이트 옵션</sys:String>
-    <sys:String x:Key="Deploy_Advanced_Migrate_Arch">아키텍처를 마이그레이션합니다.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Migrate_Arch">아키텍처를 마이그레이션합니다</sys:String>
     <sys:String x:Key="Deploy_Advanced_Migrate_Arch.Description">기존 Office 설치를 현재 지정된 아키텍처로 변경합니다. 예를 들어 32비트에서 64비트로 변경합니다.</sys:String>
-    <sys:String x:Key="Deploy_Advanced_Remove_MSI">Office의 기존 MSI 버전을 제거합니다.</sys:String>
-    <sys:String x:Key="Deploy_Advanced_Match_Previous_MSI">이전 MSI 버전과 동일한 언어를 설치합니다.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_MSI_Notice">The following settings only take effect when using Office Deployment Tool as the installation module.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Remove_MSI">Office의 기존 MSI 버전을 제거합니다</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Match_Previous_MSI">이전 MSI 버전과 동일한 언어를 설치합니다</sys:String>
     <sys:String x:Key="Deploy_Advanced_Ignore_Product">이 제품 무시</sys:String>
 
     <sys:String x:Key="Deploy_Advanced_Activate_Settings">활성화 설정</sys:String>
@@ -250,11 +255,11 @@
 
     <sys:String x:Key="Deploy_Advanced_Preferences">응용 프로그램 환경설정</sys:String>
     <sys:String x:Key="Deploy_Advanced_Apply_Preferences.Description">응용 프로그램 환경설정을 Office 응용 프로그램에 즉시 적용합니다.</sys:String>
-    <sys:String x:Key="Deploy_Advanced_Reset_Preferences">모든 응용 프로그램 환경 설정을 재설정합니다</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Reset_Preferences">모든 응용 프로그램 환경설정을 재설정합니다</sys:String>
     <sys:String x:Key="Deploy_Advanced_Reset_Preferences_Button">재설정</sys:String>
-    <sys:String x:Key="Deploy_Advanced_Load_Preferences_Button">응용 프로그램 환경 설정 불러오기</sys:String>
-    <sys:String x:Key="Deploy_Advanced_Preferences_Type_To_Search.Name">응용 프로그램 환경 설정 검색</sys:String>
-    <sys:String x:Key="Deploy_Advanced_Preferences_Type_To_Search.HelpText">응용 프로그램 환경 설정을 검색할 유형</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Load_Preferences_Button">응용 프로그램 환경설정 불러오기</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Type_To_Search.Name">응용 프로그램 환경설정 검색</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Type_To_Search.HelpText">응용 프로그램 환경설정을 검색할 유형</sys:String>
     <sys:String x:Key="Deploy_Advanced_Preferences_Settings">설정</sys:String>
     <sys:String x:Key="Deploy_Advanced_Preferences_Enable">사용함</sys:String>
     <sys:String x:Key="Deploy_Advanced_Set_Preferences_Button">적용</sys:String>
@@ -305,6 +310,7 @@
     <sys:String x:Key="Activate_License_Expand">모두 확장(_E)</sys:String>
     <sys:String x:Key="Activate_License_Collapse">모두 축소(_C)</sys:String>
     <sys:String x:Key="Activate_License_Clear">목록 지우기(_L)</sys:String>
+    <sys:String x:Key="Activate_License_Nothing_Here">여기 아무것도 없습니다.</sys:String>
     <sys:String x:Key="Activate_License_Status.Unactivated">활성화되지 않음</sys:String>
     <sys:String x:Key="Activate_License_Status.Activated">활성화됨</sys:String>
     <!-- vNext Licnese -->
@@ -316,7 +322,7 @@
     <sys:String x:Key="Activate_License_vNext.ExpireDate">라이선스 만료 날짜:</sys:String>
     <sys:String x:Key="Activate_License_vNext.MaxDevice">허용되는 최대 장치 수:</sys:String>
     <sys:String x:Key="Activate_License_vNext.Status">상태:</sys:String>
-    <sys:String x:Key="Activate_License_vNext.Status.Provisioned">프로비젼됨</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Status.Provisioned">제공됨</sys:String>
     <sys:String x:Key="Activate_License_vNext.Code">이유 코드:</sys:String>
     <sys:String x:Key="Activate_License_vNext.Beneficiary.User">The license is assigned to the user:</sys:String>
     <sys:String x:Key="Activate_License_vNext.Beneficiary.Device">The license is assigned to the device:</sys:String>
@@ -422,7 +428,7 @@
     <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserAppData.Description">응용 프로그램 캐시를 포함합니다.</sys:String>
     <sys:String x:Key="Toolbox_Reset_OfficeSettings_NormalTemplate">일반 템플릿 삭제</sys:String>
     <sys:String x:Key="Toolbox_Reset_OfficeSettings_NormalTemplate.Description">Normal.dotm</sys:String>
-    <sys:String x:Key="Toolbox_Reset_OfficeSettings_GlobalSettings">응용 프로그램 환경 설정 삭제</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_GlobalSettings">응용 프로그램 환경설정 삭제</sys:String>
 
     <sys:String x:Key="Toolbox_Windows_Tools">Windows 도구</sys:String>
     <sys:String x:Key="Toolbox_Reset_SPPSvc">소프트웨어 보호 서비스 재설정</sys:String>
@@ -621,7 +627,7 @@
     <sys:String x:Key="Settings_Download_Downloader_Chunks">큰 덩어리</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Chunks.Description">다운로드할 파일을 지정된 큰 덩어리로 나눕니다. 너무 높게 설정하면 속도가 느려질 수 있습니다.</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Parallel">큰 덩어리 단위의 병렬 다운로드</sys:String>
-    <sys:String x:Key="Settings_Download_Downloader_Parallel.Description">대부분의 경우 병렬 다운로드를 활성화하면 최상의 다운로드 속도를 얻을 수 있습니다.</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Parallel.Description">하드 디스크 드라이브 (HDD)에 다운로드할 때 이 옵션을 활성화하면 특히 청크가 너무 많이 설정된 경우 쓰기 속도가 느려질 수 있습니다.</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Limit">속도 제한</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Limit.Description">파일을 다운로드할 때 속도를 제한합니다. 단위는 KBps입니다. 기본값은 0 (제한 없음)입니다.</sys:String>
     <sys:String x:Key="Settings_Download_Proxy">프록시</sys:String>
@@ -685,14 +691,14 @@
     <!-- Office ISO Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
     <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
-    <!-- If you can't understand what is hotkey, remove '&amp;' when you are translating. -->
+    <!-- If you cannot understand what is hotkey, remove '&amp;' when you are translating. -->
     <sys:String x:Key="CD-ROM_InstallNow">지금 설치(&amp;I)</sys:String>
 
     <!-- Task Message -->
     <sys:String x:Key="Task_Checking_Updates">업데이트를 확인하는 중입니다.</sys:String>
     <sys:String x:Key="Task_Downloading_Updates">업데이트를 다운로드하는 중, {0} 완료 ({1} / {2}).</sys:String>
     <sys:String x:Key="Task_Verifying_Installation_Files">파일을 확인하는 중, 잠시 기다려 주십시오.</sys:String>
-    <sys:String x:Key="Task_Loading_Preferences">응용 프로그램 환경 설정을 불러오는 중입니다. 잠시 기다려 주십시오.</sys:String>
+    <sys:String x:Key="Task_Loading_Preferences">응용 프로그램 환경설정을 불러오는 중입니다. 잠시 기다려 주십시오.</sys:String>
     <sys:String x:Key="Task_Downloading_Web_Config">웹에서 구성 파일을 가져오는 중입니다. 잠시 기다려 주십시오.</sys:String>
     <sys:String x:Key="Task_Preparing_Download">Office 다운로드를 준비하는 중입니다.</sys:String>
     <!-- Example: Creating Office ISO file, file size: 3.1GB, 45% completed. -->
@@ -749,6 +755,7 @@
     <sys:String x:Key="Info_Restart_Required">적용하려면 응용 프로그램을 다시 시작해야 합니다.</sys:String>
     <sys:String x:Key="Info_No_Updates">Office Tool Plus의 최신 버전을 사용하고 있습니다.</sys:String>
     <sys:String x:Key="Info_Update_In_Progress">업데이트가 진행 중, 잠시 기다려 주십시오.</sys:String>
+    <sys:String x:Key="Info_Updates_Incomplete">Some updates failed to apply, please try again later.</sys:String>
     <sys:String x:Key="Info_No_Language_Added_For_Download">언어를 추가하지 않았습니다. 대부분의 경우 문제가 발생하지 않도록 언어를 추가하는 것이 좋습니다.</sys:String>
     <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">Office 설치 파일을 저장할 폴더를 선택하십시오.&#x000A;기본 위치를 사용하려면 설정 페이지에서 "파일 저장 위치 묻기"를 비활성화하십시오.</sys:String>
     <sys:String x:Key="Info_All_Files_Exist">다운로드할 필요가 없습니다. 모든 파일이 존재합니다.</sys:String>
@@ -765,14 +772,14 @@
     <sys:String x:Key="Info_KMS_Test_Result.Success">KMS 테스트 방법: {0}. 테스트 결과: 성공, 경과 시간: {1}ms.</sys:String>
     <sys:String x:Key="Info_KMS_Test_Result.Failed">KMS 테스트 실패입니다.</sys:String>
     <sys:String x:Key="Info_Enable_Mica">Mica 효과를 사용하려면 Windows 11이 표시되어야 합니다.</sys:String>
-    <sys:String x:Key="Info_Parallel_Download">32비트 버전의 Office Tool Plus를 사용 중이므로 "청크에서 병렬 다운로드"를 활성화하면 메모리 부족 오류가 발생할 수 있습니다.&#x000A;&#x000A;다운로드 중에 응용 프로그램이 충돌하면 "청크에서 병렬 다운로드"를 비활성화하거나 64비트 버전의 Office Tool Plus로 전환하여 문제를 방지하십시오.</sys:String>
 
     <!-- Success Message -->
+    <sys:String x:Key="Success_Download_Updates">Successfully applied the update(s).</sys:String>
     <sys:String x:Key="Success_Add_Download_Task">다운로드 작업을 성공적으로 추가했습니다.</sys:String>
-    <sys:String x:Key="Success_Create_ISO">Office ISO 파일이 생성됩니다.</sys:String>
+    <sys:String x:Key="Success_Create_ISO">Office ISO 파일이 만들어졌습니다.</sys:String>
     <sys:String x:Key="Success_Installation_Verify">설치 파일을 확인했으며 오류를 찾을 수 없습니다.</sys:String>
     <sys:String x:Key="Success_Installer_Exited">Office Deployment Tool이 정상적으로 종료되었습니다.</sys:String>
-    <sys:String x:Key="Success_Apply_Preferences">Office 응용 프로그램 환경 설정을 적용했습니다.</sys:String>
+    <sys:String x:Key="Success_Apply_Preferences">Office 응용 프로그램 환경설정을 적용했습니다.</sys:String>
     <sys:String x:Key="Success_Install_Licenses">Office 라이선스를 성공적으로 설치했습니다.</sys:String>
     <sys:String x:Key="Success_Install_Product_Key">제품 키를 성공적으로 설치했습니다.</sys:String>
     <sys:String x:Key="Success_Set_KMS">KMS 설정을 적용했습니다.</sys:String>
@@ -799,7 +806,7 @@
     <sys:String x:Key="Err_Saving_Info">Office 정보를 저장하는 동안 오류가 발생했습니다</sys:String>
     <sys:String x:Key="Err_Start_Deploy.Download">Office를 다운로드할 수 없습니다. 제품 또는 언어를 추가했는지 확인한 후 다시 시도하십시오.</sys:String>
     <sys:String x:Key="Err_Start_Deploy.Deploy">Office를 배포할 수 없습니다. 기본 설정을 올바르게 설정했는지 확인한 후 다시 시도하십시오.</sys:String>
-    <sys:String x:Key="Err_Start_Deploy.Preferences">응용 프로그램 환경 설정을 설정할 수 없습니다. 응용 프로그램 환경설정을 올바르게 설정했는지 확인한 후 다시 시도하십시오.</sys:String>
+    <sys:String x:Key="Err_Start_Deploy.Preferences">응용 프로그램 환경설정을 설정할 수 없습니다. 응용 프로그램 환경설정을 올바르게 설정했는지 확인한 후 다시 시도하십시오.</sys:String>
     <sys:String x:Key="Err_Installer_Exited">Office Deployment Tool이 비정상적으로 종료되었습니다.</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">Office 버전을 가져올 수 없습니다. 다시 시도하거나 Office Deployment Tool을 다운로드 엔진으로 사용하십시오.</sys:String>
     <sys:String x:Key="Err_Create_ISO">Office Tool Plus의 루트 디렉터리에서 Office 설치 파일을 찾을 수 없습니다. 설치 파일을 먼저 다운로드하거나 설치 파일을 작업 경로로 이동하십시오.</sys:String>

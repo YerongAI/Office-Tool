@@ -106,7 +106,7 @@
     <!-- {0} means channel name, such as Current Channel. -->
     <sys:String x:Key="Deploy_Error_Unsupported_Channel">หากคุณต้องการใช้ {0}, เปลี่ยนโมดูลการติดตั้งไปยัง Office Tool Plus</sys:String>
     <sys:String x:Key="Deploy_Error_System_Architecture">คุณไม่สามารถติดตั้ง Office แบบ 64 บิตบนระบบที่ไม่ใช่แบบ 64 บิตได้</sys:String>
-    <!-- Example: You can not install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
+    <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
     <sys:String x:Key="Deploy_Error_Office_Architecture">คุณไม่สามารถติดตั้งได้ {0} ของ Office เนื่องจากคุณมี {1} ของ Office ที่ติดตั้งไว้ในคอมพิวเตอร์ของคุณ</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Arch">สถาปัตยกรรมที่คุณเลือกไม่ตรงกับสถาปัตยกรรมของไฟล์การติดตั้งในเครื่อง โปรดเลือกสถาปัตยกรรมอีกครั้ง หรืออย่าใช้ไฟล์การติดตั้งในเครื่องสำหรับการปรับใช้</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Channel">ช่องทางการอัปเดตที่คุณเลือกไม่ตรงกับช่องทางการอัปเดตของไฟล์การติดตั้งในเครื่อง โปรดเลือกช่องทางการอัปเดตใหม่หรืออย่าใช้ไฟล์การติดตั้งในเครื่องสำหรับการปรับใช้</sys:String>
@@ -126,12 +126,15 @@
     <sys:String x:Key="Deploy_Mode.Install">ติดตั้ง</sys:String>
     <sys:String x:Key="Deploy_Mode.Create_ISO">การสร้างไฟล์ ISO</sys:String>
     <sys:String x:Key="Deploy_Architecture">สถาปัตยกรรม</sys:String>
+    <sys:String x:Key="Deploy_Architecture_Current_Installed">Architecture of the currently installed Office: {0}.</sys:String>
     <sys:String x:Key="Deploy_Architecture.x86">32 บิต</sys:String>
     <sys:String x:Key="Deploy_Architecture.x64">64 บิต</sys:String>
     <sys:String x:Key="Deploy_Architecture.ARM">ARM (32-bit compatible)</sys:String>
     <sys:String x:Key="Deploy_Architecture.ARM64">ARM64 (64-bit compatible)</sys:String>
     <sys:String x:Key="Deploy_Channel">ช่องทางอัพเดท</sys:String>
+    <sys:String x:Key="Deploy_Channel_Available_Version">Currently available Office version: {0}</sys:String>
     <sys:String x:Key="Deploy_Module">การติดตั้งโมดูล</sys:String>
+    <sys:String x:Key="Deploy_Module.Description">Choose Office Deployment Tool for better compatibility, or Office Tool Plus for better experiences.</sys:String>
     <sys:String x:Key="Deploy_Module.ODT">เครื่องมือปรับใช้ Office</sys:String>
     <sys:String x:Key="Deploy_Module.OTP">Office Tool Plus</sys:String>
     <sys:String x:Key="Deploy_Download_First">ดาวน์โหลดก่อน จากนั้นปรับใช้</sys:String>
@@ -219,6 +222,7 @@
     <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback">อนุญาตทางเลือกสำรองไปยัง CDN</sys:String>
     <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback.Description">อนุญาตให้โปรแกรมติดตั้ง Office สำรอง Office CDN เพื่อดาวน์โหลดภาษาที่ขาดหายไป</sys:String>
     <sys:String x:Key="Deploy_Advanced_Force_Close_Apps">บังคับปิดแอปพลิเคชัน Office ที่ทำงานอยู่ทั้งหมด</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Force_Close_Apps.Description">Unsaved data may be lost.</sys:String>
     <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar">ปักหมุดไปที่ทาสก์บาร์</sys:String>
     <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar.Description">ตรึงไอคอนแอปพลิเคชัน Office ไว้ที่ทาสก์บาร์บน Windows 7, 8 และ 8.1</sys:String>
     
@@ -232,6 +236,7 @@
     <sys:String x:Key="Deploy_Advanced_Upgrade_Settings">ตัวเลือกการปรับปรุง</sys:String>
     <sys:String x:Key="Deploy_Advanced_Migrate_Arch">โยกย้ายสถาปัตยกรรม</sys:String>
     <sys:String x:Key="Deploy_Advanced_Migrate_Arch.Description">เปลี่ยนการติดตั้ง Office ที่มีอยู่เป็นสถาปัตยกรรมที่ระบุในปัจจุบัน เช่น จาก 32 บิตเป็น 64 บิต</sys:String>
+    <sys:String x:Key="Deploy_Advanced_MSI_Notice">The following settings only take effect when using Office Deployment Tool as the installation module.</sys:String>
     <sys:String x:Key="Deploy_Advanced_Remove_MSI">ลบ Office เวอร์ชั่น MSI ที่มีอยู่</sys:String>
     <sys:String x:Key="Deploy_Advanced_Match_Previous_MSI">ติดตั้งภาษาเดียวกับ MSI เวอร์ชั่นก่อนหน้า</sys:String>
     <sys:String x:Key="Deploy_Advanced_Ignore_Product">เพิกเฉยต่อผลิตภัณฑ์นี้</sys:String>
@@ -305,6 +310,7 @@
     <sys:String x:Key="Activate_License_Expand">_ขยายทั้งหมด</sys:String>
     <sys:String x:Key="Activate_License_Collapse">_ยุบทั้งหมด</sys:String>
     <sys:String x:Key="Activate_License_Clear">_ล้างรายการ</sys:String>
+    <sys:String x:Key="Activate_License_Nothing_Here">ไม่พบผลิตภัณฑ์</sys:String>
     <sys:String x:Key="Activate_License_Status.Unactivated">ยกเลิกการเปิดใช้งานแล้ว</sys:String>
     <sys:String x:Key="Activate_License_Status.Activated">เปิดใช้งานแล้ว</sys:String>
     <!-- vNext Licnese -->
@@ -621,7 +627,7 @@
     <sys:String x:Key="Settings_Download_Downloader_Chunks">ชิ้น</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Chunks.Description">ไฟล์จะถูกแบ่งออกเป็นชิ้น ๆ สำหรับการดาวน์โหลดที่มีการระบุ การตั้งค่าสูงเกินไปอาจทำให้ความเร็วช้าลง</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Parallel">ดาวน์โหลดแบบขนานเป็นชิ้น ๆ</sys:String>
-    <sys:String x:Key="Settings_Download_Downloader_Parallel.Description">ในกรณีส่วนใหญ่ การเปิดใช้งานการดาวน์โหลดแบบขนานจะให้ความเร็วในการดาวน์โหลดที่ดีที่สุด</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Parallel.Description">When downloading to a hard disk drive (HDD), enable this option may reduce write speeds, especially if too many chunks are set.</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Limit">จำกัดความเร็ว</sys:String>
     <sys:String x:Key="Settings_Download_Downloader_Limit.Description">จำกัดความเร็วในการดาวน์โหลดไฟล์ หน่วยเป็น KBps ค่าเริ่มต้นคือ 0 (ไม่จำกัด)</sys:String>
     <sys:String x:Key="Settings_Download_Proxy">พร็อกซี่</sys:String>
@@ -685,7 +691,7 @@
     <!-- Office ISO Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
     <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
-    <!-- If you can't understand what is hotkey, remove '&amp;' when you are translating. -->
+    <!-- If you cannot understand what is hotkey, remove '&amp;' when you are translating. -->
     <sys:String x:Key="CD-ROM_InstallNow">&amp;ติดตั้งทันที</sys:String>
 
     <!-- Task Message -->
@@ -749,6 +755,7 @@
     <sys:String x:Key="Info_Restart_Required">คุณต้องรีสตาร์ทแอปพลิเคชันเพื่อให้มีผล</sys:String>
     <sys:String x:Key="Info_No_Updates">คุณกำลังใช้งาน Office Tool Plus เวอร์ชั่นล่าสุด</sys:String>
     <sys:String x:Key="Info_Update_In_Progress">กำลังดำเนินการปรับปรุง โปรดรอสักครู่</sys:String>
+    <sys:String x:Key="Info_Updates_Incomplete">Some updates failed to apply, please try again later.</sys:String>
     <sys:String x:Key="Info_No_Language_Added_For_Download">เราตรวจพบว่าคุณยังไม่ได้เพิ่มภาษา ในกรณีส่วนใหญ่ เราแนะนำให้เพิ่มภาษาเพื่อหลีกเลี่ยงปัญหา</sys:String>
     <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">โปรดเลือกโฟลเดอร์ที่จะบันทึกไฟล์การติดตั้ง Office&#x000A;หากต้องการใช้ตำแหน่งเริ่มต้น ให้ปิด "ถามตำแหน่งที่จะบันทึกไฟล์" ในหน้าการตั้งค่า</sys:String>
     <sys:String x:Key="Info_All_Files_Exist">คุณไม่จำเป็นต้องดาวน์โหลด เพราะคุณมีไฟล์ทั้งหมดอยู่แล้ว</sys:String>
@@ -765,9 +772,9 @@
     <sys:String x:Key="Info_KMS_Test_Result.Success">วิธีทดสอบ KMS: {0} ผลการทดสอบ: สำเร็จ เวลาที่ผ่านไป: {1}ms</sys:String>
     <sys:String x:Key="Info_KMS_Test_Result.Failed">การทดสอบ KMS ล้มเหลว</sys:String>
     <sys:String x:Key="Info_Enable_Mica">เอฟเฟกต์ ไมกา ต้องใช้ Windows 11 จึงจะแสดงได้</sys:String>
-    <sys:String x:Key="Info_Parallel_Download">คุณกำลังใช้ Office Tool Plus เวอร์ชัน 32 บิต การเปิดใช้งาน "การดาวน์โหลดแบบขนานเป็นกลุ่ม" อาจทำให้เกิดข้อผิดพลาดหน่วยความจำไม่เพียงพอ&#x000A;&#x000A;หากแอปพลิเคชันขัดข้องระหว่างการดาวน์โหลด โปรดปิดใช้งาน "การดาวน์โหลดแบบขนานเป็นกลุ่ม" หรือเปลี่ยนเป็น Office Tool Plus เวอร์ชัน 64 บิตเพื่อหลีกเลี่ยงปัญหา</sys:String>
 
     <!-- Success Message -->
+    <sys:String x:Key="Success_Download_Updates">Successfully applied the update(s).</sys:String>
     <sys:String x:Key="Success_Add_Download_Task">เพิ่มงานดาวน์โหลดเรียบร้อยแล้ว</sys:String>
     <sys:String x:Key="Success_Create_ISO">สร้างไฟล์ Office ISO แล้ว</sys:String>
     <sys:String x:Key="Success_Installation_Verify">ไฟล์การติดตั้งได้รับการตรวจสอบและไม่พบข้อผิดพลาด</sys:String>

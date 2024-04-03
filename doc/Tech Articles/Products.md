@@ -8,7 +8,7 @@ DCF stand for [Database Compare](https://support.microsoft.com/en-us/office/over
 
 OSM and OSMUX stand for [Telemetry Dashboard](https://docs.microsoft.com/en-us/deployoffice/compat/compatibility-and-telemetry-in-office) and **Telemetry Log for Office**.
 
-MondoOnly stand for Office Lime application, some test components will also be released.
+MondoOnly stand for Office Lime application.
 
 ## Products List
 

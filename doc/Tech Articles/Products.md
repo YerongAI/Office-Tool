@@ -41,7 +41,7 @@ MondoOnly stand for Office Lime application.
 | Professional2019Retail | Office Professional 2019 | Access, Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | PowerPivot, PowerView | ✔ | 7PND3-J7G8B-9M7V3-8VXHR-QGQYY |
 | ProfessionalPipcRetail | Office Professional Premium | Access, Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word |  | ❌ | Q6NGD-M6J3Y-29HGJ-3RB6Y-G29KC |
 | ProfessionalRetail | Office Professional 2016 | Access, Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | PowerPivot, PowerView | ✔ | J2VPX-NMM9V-TPYKJ-P7VT2-3YJDQ |
-| ProPlus2024Retail | Office Professional Plus 2024 | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ |  |
+| ProPlus2024Retail | Office Professional Plus 2024 | Access, Excel, OneDrive, OneNote, Outlook, PowerPoint, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ |  |
 | ProPlus2024Volume | Office LTSC Professional Plus 2024 | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ |  |
 | ProPlus2021Retail | Office Professional Plus 2021 | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ | YNYDT-B8RMY-G8WJX-RPTY2-PG343 |
 | ProPlus2021Volume | Office LTSC Professional Plus 2021 | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ | FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH |

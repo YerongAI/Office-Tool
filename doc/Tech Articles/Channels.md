@@ -14,7 +14,7 @@ If a channel hasn't been updated in over a year, I'll mark it as deprecated.
 | :---   | :--- | :---         | :---       | :---:      |
 | Production::LTSC | f2e724c1-748f-4b47-8fb8-8e0d210e9208 | Office 2019 Perpetual Enterprise Channel | PerpetualVL2019 |  |
 | Production::LTSC2021 | 5030841d-c919-4594-8d2d-84ae4f96e58e | Office 2021 Perpetual Enterprise Channel | PerpetualVL2021 |  |
-| Production::LTSC2024 | 7983bac0-e531-40cf-be00-fd24fe66619c | Office 2024 Perpetual Enterprise Channel | ~~PerpetualVL2024~~ |  |
+| Production::LTSC2024 | 7983bac0-e531-40cf-be00-fd24fe66619c | Office 2024 Perpetual Enterprise Channel | PerpetualVL2024 |  |
 | Production::DC | 7ffbc6bf-bc32-4f92-8982-f9dd17fd3114 | Semi-Annual Enterprise Channel | SemiAnnual |  |
 | Production::MEC | 55336b82-a18d-4dd6-b5f6-9e5095c314a6 | Monthly Enterprise Channel | MonthlyEnterprise |  |
 | Production::CC | 492350f6-3a01-4f97-b9c0-c7c6ddf67d60 | Current Channel | Current |  |

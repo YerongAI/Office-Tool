@@ -16,41 +16,41 @@ MondoOnly stand for Office Lime application.
 
 | Product ID | Product Name | Apps | Add-Ons | ODT Supported | Default Product Key |
 | :-- | :-- | :-- | :-- | :-- | :-- |
+| Home2024Retail | Office Home 2024 | Excel, OneDrive, OneNote, PowerPoint, Word |  | ✔ |  |
 | HomeBusiness2024Retail | Office Home and Business 2024 | Excel, OneDrive, OneNote, Outlook, PowerPoint, Word | PowerPivot | ✔ |  |
 | HomeBusiness2021Retail | Office Home and Business 2021 | Excel, OneDrive, OneNote, Outlook, PowerPoint, Teams, Word | PowerPivot | ✔ | QGTQ3-RNVPB-6YJ23-Y32R4-X2HMD |
 | HomeBusiness2019Retail | Office Home and Business 2019 | Excel, OneDrive, OneNote, Outlook, PowerPoint, Word | PowerPivot | ✔ | 3F4GT-DN2RR-B89CP-8KVPC-J46MR |
 | HomeBusinessPipcRetail | Office Home and Business Premium | Excel, OneDrive, OneNote, Outlook, PowerPoint, Word |  | ❌ | NMRD9-JVD2M-7MDJG-3DBC4-GXWPX |
 | HomeBusinessRetail | Office Home and Business 2016 | Excel, OneDrive, OneNote, Outlook, PowerPoint, Word |  | ✔ | NKVRG-XP9FX-FKFRD-2HXY2-D6928 |
-| Home2024Retail | Office Home 2024 | Excel, OneDrive, OneNote, PowerPoint, Word |  | ✔ |  |
-| HomeStudent2021Retail | Office Home and Student 2021 | Excel, OneDrive, OneNote, PowerPoint, Teams, Word |  | ✔ | PB2D6-G4NJR-4CD7B-DF7RH-9BXFH |
+| HomeStudent2021Retail | Office Home and Student 2021 | Excel, OneDrive, OneNote, PowerPoint, Teams, Word | PowerPivot | ✔ | PB2D6-G4NJR-4CD7B-DF7RH-9BXFH |
 | HomeStudent2019Retail | Office Home and Student 2019 | Excel, OneDrive, OneNote, PowerPoint, Word | PowerPivot | ✔ | NTMYR-DM4C3-MHK32-7QBRC-RVXB8 |
 | HomeStudentRetail | Office Home and Student 2016 | Excel, OneDrive, OneNote, PowerPoint, Word |  | ✔ | RGNMP-V32H3-QBWXM-BF7XR-DJ3QD |
 | HomeStudentVNextRetail | Office Home and Student 2016 | Excel, OneDrive, OneNote, PowerPoint, Word |  | ❌ | T2NP2-GM3V4-VYBYW-HT963-B99M9 |
-| MondoRetail | Office Mondo 2016 | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Project, Publisher, Visio, Word | DCF, MondoOnly, OSM, OSMUX, PowerPivot, PowerView | ✔ | DMTCJ-KNRKX-26982-JYCKT-P7KB6 |
-| MondoVolume | Office Mondo 2016 | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Project, Publisher, Visio, Word | DCF, MondoOnly, OSM, OSMUX, PowerPivot, PowerView | ❌ | HFTND-W9MK4-8B7MJ-B6C4G-XQBR2 |
+| MondoRetail | Office Mondo 2016 | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Project, Publisher, Visio, Word | DCF, MondoOnly, OSM, OSMUX, PowerPivot | ✔ | DMTCJ-KNRKX-26982-JYCKT-P7KB6 |
+| MondoVolume | Office Mondo 2016 | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Project, Publisher, Visio, Word | DCF, MondoOnly, OSM, OSMUX, PowerPivot | ❌ | HFTND-W9MK4-8B7MJ-B6C4G-XQBR2 |
 | O365BusinessRetail | Microsoft 365 Apps for business | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | PowerPivot | ✔ | NCHRJ-3VPGW-X73DM-6B36K-3RQ6B |
-| O365EduCloudRetail | Microsoft 365 | Excel, OneDrive, OneNote, PowerPoint, Word | PowerPivot, PowerView | ✔ | 8843N-BCXXD-Q84H8-R4Q37-T3CPT |
+| O365EduCloudRetail | Microsoft 365 | Excel, OneDrive, OneNote, PowerPoint, Word | PowerPivot | ✔ | 8843N-BCXXD-Q84H8-R4Q37-T3CPT |
 | O365HomePremRetail | Microsoft 365 | Access, Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | PowerPivot | ✔ | 9FNY8-PWWTY-8RY4F-GJMTV-KHGM9 |
-| O365ProPlusRetail | Microsoft 365 Apps for enterprise | Access, Bing, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ | DRNV7-VGMM2-B3G9T-4BF84-VMFTK |
+| O365ProPlusRetail | Microsoft 365 Apps for enterprise | Access, Bing, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | DCF, OSM, OSMUX, PowerPivot | ✔ | DRNV7-VGMM2-B3G9T-4BF84-VMFTK |
 | O365SmallBusPremRetail | Microsoft 365 Small Business Premium | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | PowerPivot | ✔ | 3FBRX-NFP7C-6JWVK-F2YGK-H499R |
 | Personal2021Retail | Office Personal 2021 | Excel, OneDrive, Outlook, Teams, Word |  | ✔ | WN2B7-QJPXV-93VY2-6WTH3-BHC6H |
 | Personal2019Retail | Office Personal 2019 | Excel, OneDrive, Outlook, Word |  | ✔ | VQFTQ-GNRXK-HCVHQ-DWJDJ-JFJHV |
 | PersonalPipcRetail | Office Personal Premium | Excel, OneDrive, Outlook, Word |  | ❌ | RV7NR-XV7HY-VM488-H6JCC-J4287 |
 | PersonalRetail | Office Personal 2016 | Excel, OneDrive, Outlook, Word |  | ✔ | CJKFJ-WNWBK-29CW7-P9786-C9X7Y |
-| Professional2021Retail | Office Professional 2021 | Access, Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word |  | ✔ | G7R2D-6NQ7C-CX62B-9YR9J-DGRYH |
+| Professional2021Retail | Office Professional 2021 | Access, Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | PowerPivot | ✔ | G7R2D-6NQ7C-CX62B-9YR9J-DGRYH |
 | Professional2019Retail | Office Professional 2019 | Access, Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | PowerPivot, PowerView | ✔ | 7PND3-J7G8B-9M7V3-8VXHR-QGQYY |
 | ProfessionalPipcRetail | Office Professional Premium | Access, Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word |  | ❌ | Q6NGD-M6J3Y-29HGJ-3RB6Y-G29KC |
 | ProfessionalRetail | Office Professional 2016 | Access, Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | PowerPivot, PowerView | ✔ | J2VPX-NMM9V-TPYKJ-P7VT2-3YJDQ |
-| ProPlus2024Retail | Office Professional Plus 2024 | Access, Excel, OneDrive, OneNote, Outlook, PowerPoint, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ |  |
-| ProPlus2024Volume | Office LTSC Professional Plus 2024 | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ |  |
-| ProPlus2021Retail | Office Professional Plus 2021 | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ | YNYDT-B8RMY-G8WJX-RPTY2-PG343 |
-| ProPlus2021Volume | Office LTSC Professional Plus 2021 | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ | FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH |
+| ProPlus2024Retail | Office Professional Plus 2024 | Access, Excel, OneDrive, OneNote, Outlook, PowerPoint, Word | DCF, PowerPivot | ✔ |  |
+| ProPlus2024Volume | Office LTSC Professional Plus 2024 | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Word | DCF, PowerPivot | ✔ |  |
+| ProPlus2021Retail | Office Professional Plus 2021 | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | DCF, OSM, OSMUX, PowerPivot | ✔ | YNYDT-B8RMY-G8WJX-RPTY2-PG343 |
+| ProPlus2021Volume | Office LTSC Professional Plus 2021 | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | DCF, OSM, OSMUX, PowerPivot | ✔ | FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH |
 | ProPlusSPLA2021Volume | Office LTSC Professional Plus 2021 (SPLA) | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | DCF, OSM, OSMUX, PowerPivot | ✔ |  |
 | ProPlus2019Retail | Office Professional Plus 2019 | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ | Y64MN-DK448-Q3VK7-YBTP3-8MBCX |
 | ProPlus2019Volume | Office Professional Plus 2019 | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ | NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP |
 | ProPlusRetail | Office Professional Plus 2016 | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ | CYC3N-BHX8G-QJVJV-H2WWP-BTDRB |
 | ProPlusVolume | Office Professional Plus 2016 | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ❌ | XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99 |
-| Standard2024Volume | Office LTSC Standard 2024 | Excel, OneDrive, OneNote, Outlook, PowerPoint, Word | OSM, OSMUX, PowerPivot | ✔ |  |
+| Standard2024Volume | Office LTSC Standard 2024 | Excel, OneDrive, OneNote, Outlook, PowerPoint, Word | PowerPivot | ✔ |  |
 | Standard2021Retail | Office Standard 2021 | Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | OSM, OSMUX, PowerPivot | ✔ | RXK2W-N42KP-FT9W3-Q7DG8-TRBHK |
 | Standard2021Volume | Office LTSC Standard 2021 | Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | OSM, OSMUX, PowerPivot | ✔ | KDX7X-BNVR8-TXXGX-4Q7Y8-78VT3 |
 | StandardSPLA2021Volume | Office LTSC Standard 2021 (SPLA) | Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | OSM, OSMUX, PowerPivot | ✔ |  |
@@ -71,7 +71,7 @@ MondoOnly stand for Office Lime application.
 | VisioPro2019Volume | Visio Professional 2019 | Groove, OneDrive |  | ✔ | 9BGNQ-K37YR-RQHF2-38RQ3-7VCBB |
 | VisioProRetail | Visio Professional 2016 | Groove, OneDrive | OSM | ✔ | BB6YN-3W2C6-R82H2-PTBMF-F6YYT |
 | VisioProVolume | Visio Professional 2016 | Groove, OneDrive | OSM | ❌ | PD3PC-RHNGV-FXJ29-8JK7D-RJRJK |
-| VisioProXVolume | Visio Professional 2016 | Groove, OneDrive | OSM | ✔ | 69WXN-MBYV6-22PQG-3WGHK-RM6XC |
+| VisioProXVolume | Visio Professional 2016 | Groove, OneDrive |  | ✔ | 69WXN-MBYV6-22PQG-3WGHK-RM6XC |
 | VisioStd2024Retail | Visio Standard 2024 | OneDrive |  | ✔ |  |
 | VisioStd2024Volume | Visio LTSC Standard 2024 | OneDrive |  | ✔ |  |
 | VisioStd2021Retail | Visio Standard 2021 | OneDrive |  | ✔ | QFNR2-YGMTQ-7PYYT-667D2-V8VVX |
@@ -80,7 +80,7 @@ MondoOnly stand for Office Lime application.
 | VisioStd2019Volume | Visio Standard 2019 | Groove, OneDrive |  | ✔ | 7TQNQ-K3YQQ-3PFH7-CCPPM-X4VQ2 |
 | VisioStdRetail | Visio Standard 2016 | Groove, OneDrive | OSM | ✔ | NJFDP-X46PK-M7DBR-VMHW6-MKMYV |
 | VisioStdVolume | Visio Standard 2016 | Groove, OneDrive | OSM | ❌ | 7WHWN-4T7MP-G96JF-G33KR-W8GF4 |
-| VisioStdXVolume | Visio Standard 2016 | Groove, OneDrive | OSM | ✔ | NY48V-PPYYH-3F4PX-XJRKJ-W4423 |
+| VisioStdXVolume | Visio Standard 2016 | Groove, OneDrive |  | ✔ | NY48V-PPYYH-3F4PX-XJRKJ-W4423 |
 
 ### Project
 
@@ -94,7 +94,7 @@ MondoOnly stand for Office Lime application.
 | ProjectPro2019Volume | Project Professional 2019 |  |  | ✔ | B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B |
 | ProjectProRetail | Project Professional 2016 |  | OSM | ✔ | GJN26-8DV6F-76VJT-PMF6Y-92FK9 |
 | ProjectProVolume | Project Professional 2016 |  | OSM | ❌ | YG9NW-3K39V-2T3HJ-93F3Q-G83KT |
-| ProjectProXVolume | Project Professional 2016 |  | OSM | ✔ | WGT24-HCNMF-FQ7XH-6M8K7-DRTW9 |
+| ProjectProXVolume | Project Professional 2016 |  |  | ✔ | WGT24-HCNMF-FQ7XH-6M8K7-DRTW9 |
 | ProjectStd2024Retail | Project Standard 2024 |  |  | ✔ |  |
 | ProjectStd2024Volume | Project Standard 2024 |  |  | ✔ |  |
 | ProjectStd2021Retail | Project Standard 2021 |  |  | ✔ | NM67Q-YGTRY-898DB-67RF6-QYMFQ |
@@ -103,7 +103,7 @@ MondoOnly stand for Office Lime application.
 | ProjectStd2019Volume | Project Standard 2019 |  |  | ✔ | C4F7P-NCP8C-6CQPT-MQHV9-JXD2M |
 | ProjectStdRetail | Project Standard 2016 |  | OSM | ✔ | CXTPN-YWF37-D3TPH-6DHJH-6XX33 |
 | ProjectStdVolume | Project Standard 2016 |  | OSM | ❌ | GNFHQ-F6YQM-KQDGJ-327XX-KQBVC |
-| ProjectStdXVolume | Project Standard 2016 |  | OSM | ✔ | D8NRQ-JTYM3-7J2DX-646CT-6836M |
+| ProjectStdXVolume | Project Standard 2016 |  |  | ✔ | D8NRQ-JTYM3-7J2DX-646CT-6836M |
 
 ### Single Apps
 
@@ -121,8 +121,8 @@ MondoOnly stand for Office Lime application.
 | AccessRuntimeRetail | Access Runtime 2016 |  |  | ✔ | TTB3B-NT2JQ-YBBFK-76BX4-JHV3V |
 | Excel2024Retail | Excel 2024 | OneDrive | DCF, PowerPivot | ✔ |  |
 | Excel2024Volume | Excel LTSC | OneDrive | DCF, PowerPivot | ✔ |  |
-| Excel2021Retail | Excel 2021 | OneDrive | DCF, OSM, PowerPivot, PowerView | ✔ | J2B4N-TKGVF-9GKM3-86QGC-Q3Y68 |
-| Excel2021Volume | Excel LTSC | OneDrive | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ | NWG3X-87C9K-TC7YY-BC2G7-G6RVC |
+| Excel2021Retail | Excel 2021 | OneDrive | DCF, OSM, PowerPivot | ✔ | J2B4N-TKGVF-9GKM3-86QGC-Q3Y68 |
+| Excel2021Volume | Excel LTSC | OneDrive | DCF, OSM, OSMUX, PowerPivot | ✔ | NWG3X-87C9K-TC7YY-BC2G7-G6RVC |
 | Excel2019Retail | Excel 2019 | OneDrive | DCF, OSM, PowerPivot, PowerView | ✔ | R9Q2B-N7FCB-66HFM-6WJ6T-TJHHK |
 | Excel2019Volume | Excel 2019 | OneDrive | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ | TMJWT-YYNMB-3BKTF-644FC-RVXBD |
 | ExcelRetail | Excel 2016 | OneDrive | DCF, OSM, PowerPivot, PowerView | ✔ | YY6CN-WVPG8-T72BH-QB6QH-RGDRJ |
@@ -173,4 +173,4 @@ MondoOnly stand for Office Lime application.
 | WordVolume | Word 2016 | OneDrive | OSM | ❌ | WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6 |
 
 <center>　</center>
-<center>© 2024 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 2.0</center>
+<center>© 2024 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 2.1</center>

@@ -35,4 +35,4 @@ If a channel hasn't been updated in over a year, I'll mark it as deprecated.
 | Dogfood::DevMain | ea4a4090-de26-49d7-93c1-91bff9e53fc3 | Beta Channel |  |  |
 
 <center>　</center>
-<center>© 2024 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.6 | [Source](https://github.com/YerongAI/Office-Tool/blob/main/doc/Tech Articles/Channels.md)</center>
+<center>© 2024 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.6 | [Source](https://github.com/YerongAI/Office-Tool/blob/main/doc/Tech%20Articles/Channels.md)</center>

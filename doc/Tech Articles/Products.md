@@ -173,4 +173,4 @@ MondoOnly stand for Office Lime application.
 | WordVolume | Word 2016 | OneDrive | OSM | ❌ | WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6 |
 
 <center>　</center>
-<center>© 2024 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 2.2 | [Source](https://github.com/YerongAI/Office-Tool/blob/main/doc/Tech%20Articles/Products.md)</center>
+<center>© 2024 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 2.2 | <a href="https://github.com/YerongAI/Office-Tool/blob/main/doc/Tech%20Articles/Products.md" target="_blank">Source</a></center>

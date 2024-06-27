@@ -7,13 +7,13 @@ Telegram
 > Unisciti al nostro gruppo ufficiale e chatta con noi.
 
 Discord
-> Join our official Discord Community.
+> Unisciti alla nostra Community Discord ufficiale.
 
 Office
 > Home page di Microsoft Office.
 
 Access
-> Crea rapidamente un'app professionale per gestire i dati.
+> Crea rapidamente un app professionale per gestire i dati.
 
 Excel
 > Scopri e connettiti ai dati, modellali, analizzali e visualizza approfondimenti.

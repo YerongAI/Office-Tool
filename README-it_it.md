@@ -39,7 +39,7 @@ Funzioni e caratteristiche::
 - [Lezione rapida](https://github.com/YerongAI/Office-Tool/wiki)
 - [Documentazione](https://otp.landian.vip/help/)
 
-Or download Office Tool Plus using PowerShell:
+Oppure scarica Office Tool Plus utilizzando PowerShell:
 
 Site 1:
 

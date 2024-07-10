@@ -69,7 +69,7 @@ irm https://officetool.plus/get/ | iex
 | id-id | Bahasa Indonesia (Indonesia) | [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Jovanzers](https://github.com/jovanzers) |
 | it-it | Italiano (Italia) | [garf02](https://github.com/garf02), tfrtint |
 | ja-jp | 日本語 (日本) | [秋山へいわ](https://github.com/akio1321)|
-| ko-kr | 한국어 (대한민국) | [Jay Jang](https://iamx.work), [Oein](https://github.com/Oein), [VenusGirl❤](https://github.com/VenusGirl) |
+| ko-kr | 한국어 (대한민국) | [VenusGirl❤](https://github.com/VenusGirl) |
 | nl-nl | Nederlands (Nederland) | [Kajoe](https://github.com/Kajoe1) |
 | pl-pl | Polski (Polska) | [JakubDriver](https://github.com/jakubdriver) |
 | pt-br | Português (Brasil) | [Hélio de Souza](https://tinyurl.com/hdstec), [Igor Rückert](https://github.com/igorruckert) |

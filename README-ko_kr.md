@@ -59,4 +59,4 @@ irm https://officetool.plus/get/ | iex
 
 © 2016-2024 Yerong. All Rights Reserved.
 
-> 블로그 [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel)>
+> 블로그 [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel)

@@ -89,6 +89,7 @@
     <!-- Channels Name, if you do not want to translate them, please keep in English. -->
     <sys:String x:Key="PerpetualVL2019">Office 2019 Perpetual Enterprise</sys:String>
     <sys:String x:Key="PerpetualVL2021">Office 2021 Perpetual Enterprise</sys:String>
+    <sys:String x:Key="PerpetualVL2024">Office 2024 Perpetual Enterprise</sys:String>
     <sys:String x:Key="SemiAnnual">Semi-Annual Enterprise Channel</sys:String>
     <sys:String x:Key="MonthlyEnterprise">Monthly Enterprise Channel</sys:String>
     <sys:String x:Key="Current">Current Channel</sys:String>
@@ -158,6 +159,8 @@
     <sys:String x:Key="Deploy_Cancel_Uninstall_Product">Cancelar desinstalação</sys:String>
     <sys:String x:Key="Deploy_Cancel_Deploy_Product">Cancelar implementação</sys:String>
     <sys:String x:Key="Deploy_Applications">Aplicativos</sys:String>
+    <sys:String x:Key="Deploy_Addons">Add-ons</sys:String>
+    <sys:String x:Key="Deploy_Addons.Tip">Não desmarque os add-ons se você não sabe o que eles são.</sys:String>
     <sys:String x:Key="Deploy_Language">Pacote de Idiomas</sys:String>
     <sys:String x:Key="Deploy_Language.Description">{0} idioma(s) instalados, {1} pronto(s) para implementar e {2} pronto(s) para desinstalar.</sys:String>
     <sys:String x:Key="Deploy_Language_Button">Adicionar _idiomas</sys:String>
@@ -466,15 +469,20 @@
     <sys:String x:Key="Convert_File">Arquivo</sys:String>
     <sys:String x:Key="Convert_NewFormat">Novo formato</sys:String>
     <sys:String x:Key="Convert_Open_File_Location">A_brir local do arquivo</sys:String>
+    <sys:String x:Key="Convert_Page_Count">Página {0} de {1}</sys:String>
+    <sys:String x:Key="Convert_Previous_Page">Página anterior</sys:String>
+    <sys:String x:Key="Convert_Next_Page">Próxima página</sys:String>
 
     <sys:String x:Key="Convert_Settings">COnfigurações de conversão</sys:String>
     <sys:String x:Key="Convert_Settings.Description">Ajuste as configurações.</sys:String>
     <sys:String x:Key="Convert_SearchOnSubfolders">Pesquisar subpastas</sys:String>
     <sys:String x:Key="Convert_SearchOnSubfolders.Description">Pesquise por arquivos em subpastas ao selecionar uma pasta.</sys:String>
     <sys:String x:Key="Convert_Delete">Excluir arquivo</sys:String>
-    <sys:String x:Key="Convert_Delete.Description">Move o arquivo original para a Lixeira após uma conversão bem sucedida. Se a ixeira não estiver disponível, o arquivo será permanentemente excluído.</sys:String>
+    <sys:String x:Key="Convert_Delete.Description">Move o arquivo original para a Lixeira após uma conversão bem sucedida. Se a lixeira não estiver disponível, o arquivo será permanentemente excluído.</sys:String>
     <sys:String x:Key="Convert_HideUI">Ocultar interface do usuário</sys:String>
     <sys:String x:Key="Convert_HideUI.Description">Oculta a janela de alerta quando o Office está em execução.</sys:String>
+    <sys:String x:Key="Convert_Rows_Per_Page">Linhas por página</sys:String>
+    <sys:String x:Key="Convert_Rows_Per_Page.Description">Defina o número de arquivos exibidos por página na lista de arquivos.</sys:String>
 
     <!-- File types -->
     <!-- Common -->
@@ -523,7 +531,7 @@
 
     <!-- Hash checker page -->
     <sys:String x:Key="Hash_Checker_Hash">Hash</sys:String>
-    <sys:String x:Key="Hash_Checker_Hash.Description">Gera o hash de arquivos. Suporta MD5, SHA-1, SHA-256, SHA-384 e SHA-512.</sys:String>
+    <sys:String x:Key="Hash_Checker_Hash.Description">Gera a soma de verificação de arquivos, suporta vários algoritmos de hash.</sys:String>
     <sys:String x:Key="Hash_Checker_Actions">_Importar arquivos</sys:String>
     <sys:String x:Key="Hash_Checker_Actions.SelectFiles">Selecionar arquivos</sys:String>
     <sys:String x:Key="Hash_Checker_Actions.SelectFolder">Selecionar pasta</sys:String>
@@ -534,11 +542,21 @@
     <sys:String x:Key="Hash_Checker_DisplayPath">Exibir caminho do arquivo</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute">Cálculo automático</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute.Description">Começa a calcular automaticamente o valor de hash após a conclusão da importação do arquivo.</sys:String>
+    <sys:String x:Key="Hash_Checker_CRC32.Description">Habilita/desabilita o cálculo de CRC-32.</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH32.Description">Habilita/desabilita o cálculo de XXH32.</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH64.Description">Habilita/desabilita o cálculo de XXH64.</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH3.Description">Habilita/desabilita o cálculo de XXH3.</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH128.Description">Habilita/desabilita o cálculo de XXH128.</sys:String>
     <sys:String x:Key="Hash_Checker_MD5.Description">Habilita/desabilita o cálculo de MD5.</sys:String>
     <sys:String x:Key="Hash_Checker_SHA1.Description">Habilita/desabilita o cálculo de SHA-1.</sys:String>
     <sys:String x:Key="Hash_Checker_SHA256.Description">Habilita/desabilita o cálculo de SHA-256.</sys:String>
     <sys:String x:Key="Hash_Checker_SHA384.Description">Habilita/desabilita o cálculo de SHA-384.</sys:String>
     <sys:String x:Key="Hash_Checker_SHA512.Description">Habilita/desabilita o cálculo de SHA-512.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA3_256.Description">Habilita ou desabilita o cálculo de SHA3-256, suportado somente no Windows 11 build 25324 ou superior.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA3_384.Description">Habilita ou desabilita o cálculo de SHA3-384, suportado somente no Windows 11 build 25324 ou superior.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA3_512.Description">Habilita ou desabilita o cálculo de SHA3-512, suportado somente no Windows 11 build 25324 ou superior.</sys:String>
+    <sys:String x:Key="Hash_Checker_Rows_Per_Page">Linhas por página</sys:String>
+    <sys:String x:Key="Hash_Checker_Rows_Per_Page.Description">Defina o número de arquivos exibidos por página na lista de arquivos..</sys:String>
 
     <sys:String x:Key="Hash_Checker_File_List">Lista de arquivos</sys:String>
     <sys:String x:Key="Hash_Checker_TypeToSearch">Digite para comparar o valor do hash.</sys:String>
@@ -557,6 +575,9 @@
     <sys:String x:Key="Hash_Checker_Open_File_Location">A_brir local do(s) arquivo(s)</sys:String>
     <sys:String x:Key="Hash_Checker_Copy_Hash_Value">Copiar valor do _hash</sys:String>
     <sys:String x:Key="Hash_Checker_Create_Hash_File">Criar arquivo(s) h_ash</sys:String>
+    <sys:String x:Key="Hash_Checker_Page_Count">Página {0} de {1}</sys:String>
+    <sys:String x:Key="Hash_Checker_Previous_Page">Página anterior</sys:String>
+    <sys:String x:Key="Hash_Checker_Next_Page">Próxima página</sys:String>
 
     <!-- Settings page -->
     <sys:String x:Key="Settings_General">Geral</sys:String>
@@ -571,13 +592,14 @@
     <sys:String x:Key="Settings_Theme_OpenColorSetting">Configurações de cor do Windows</sys:String>
     <sys:String x:Key="Settings_Background">Plano de fundo</sys:String>
     <sys:String x:Key="Settings_Background.Description">Altera o plano de fundo do aplicativo.</sys:String>
+    <sys:String x:Key="Settings_Background.Automatic">Automático</sys:String>
     <sys:String x:Key="Settings_Background.Off">Desligado</sys:String>
     <sys:String x:Key="Settings_Background.Acrylic">Acrílico</sys:String>
     <sys:String x:Key="Settings_Background.Blur">Desfocado</sys:String>
     <sys:String x:Key="Settings_Background.Mica">Mica</sys:String>
     <sys:String x:Key="Settings_Background.Bing">Wallpaper do Bing</sys:String>
     <sys:String x:Key="Settings_Background.Local">Imagem local</sys:String>
-    <sys:String x:Key="Settings_SelectLocalImage.Title">Selecione uma imagem local e defina como plano de fundo do aplicativo</sys:String>
+    <sys:String x:Key="Settings_SelectLocalImage.Description">Selecione uma imagem local e defina como plano de fundo do aplicativo.</sys:String>
     <sys:String x:Key="Settings_SelectLocalImage.Button">Selecionar arquivo</sys:String>
     <sys:String x:Key="Settings_Opacity">Opacidade</sys:String>
     <sys:String x:Key="Settings_Blur">Desfocado</sys:String>
@@ -618,7 +640,7 @@
     <sys:String x:Key="Settings_Download_HTTPS">Conectar usando HTTPS</sys:String>
     <sys:String x:Key="Settings_Download_HTTPS.Description">Tente habilitar isto se tiver problemas ao baixar o Office.</sys:String>
     <sys:String x:Key="Settings_Download_Verify">Verificar arquivos</sys:String>
-    <sys:String x:Key="Settings_Download_Verify.Description">Verifica a(s) instalação(ões) do Office após baixar.</sys:String>
+    <sys:String x:Key="Settings_Download_Verify.Description">Verifica as instalações do Office após baixar.</sys:String>
     <sys:String x:Key="Settings_Download_UA">Versão do Windows</sys:String>
     <sys:String x:Key="Settings_Download_UA.Description">A versão padrão do Office para a versão atual do Windows é baixada. Altere isto se deseja baixar o Office para uma versão diferente do Windows.</sys:String>
     <sys:String x:Key="Settings_Download_UA.AutoDetection">Detecção automática</sys:String>
@@ -765,6 +787,7 @@
     <sys:String x:Key="Info_Auto_Shutdown">O seu PC será suspenso/desligado/reiniciado em 1 minuto.</sys:String>
     <sys:String x:Key="Info_No_Events">Nenhum evento encontrado.</sys:String>
     <sys:String x:Key="Info_No_Office_Licenses">Nenhuma licença do Office encontrada.</sys:String>
+    <sys:String x:Key="Info_No_Office_Product_Key">Nenhuma chave de produto do Office detectada.</sys:String>
     <sys:String x:Key="Info_Number_Of_Keys_Uninstalled">{0} chave(s) de produto(s) desinstalada(s).</sys:String>
     <sys:String x:Key="Info_Number_Of_Lics_Uninstalled">{0} licença(s) do Office desinstalada(s).</sys:String>
     <sys:String x:Key="Info_Office_License_Activation.Title">Resultado da ativação do produto</sys:String>
@@ -809,13 +832,13 @@
     <sys:String x:Key="Err_Start_Deploy.Preferences">Não foi possível definir as preferências do aplicativo, certifique-se de ter definido as preferências do aplicativo corretamente, então tente novamente.</sys:String>
     <sys:String x:Key="Err_Installer_Exited">Ocorreu um erro ao sair da ferramenta de implantação do Office.</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">Não foi possível obter as informações da versão. Por favor, tente novamente ou use o Office Deployment Tool.</sys:String>
-    <sys:String x:Key="Err_Create_ISO">Não foi possível localizar os arquivos de instalação do Office na pasta raiz do Office Toool Plus. Por favor, baixe os arquivos de instalação primeiro, ou mova os arquivos de instalação para o caminho de trabalho.</sys:String>
+    <sys:String x:Key="Err_Create_ISO">Nenhum arquivo de instalação do Office foi encontrado. Por favor, baixe os arquivos de instalação primeiro, ou selecione arquivos de instalação existentes, então tente novamente.</sys:String>
     <sys:String x:Key="Err_Query_Office_Licenses">Não foi possível consultar as licenças do Office. Por favor, tente novamente.</sys:String>
     <sys:String x:Key="Err_Loading_Office_Licenses">A versão Click-to-Run do Office não foi detectada neste computador, as licenças do Office não puderam ser carregadas. Por favor, certifique-se de ter a versão mais recente do Office instalada.</sys:String>
     <sys:String x:Key="Err_Product_Key_Invalid">A chave de produto inserida é inválida. Por favor, verifique e tente novamente.</sys:String>
     <sys:String x:Key="Err_Confirmation_ID_Invalid">O ID de confirmação inserido é inválido. Por favor, verifique e tente novamente.</sys:String>
     <sys:String x:Key="Err_KMS_Host_Invalid">Não foi possível salvas as configurações do KMS. Por favor, verifique o nome do host KMS e tente novamente.</sys:String>
-    <sys:String x:Key="Err_No_KMS_Lic">Não foi possível salvar as configurações do KMS, nenhuma licença do Office está instalada no sistema.</sys:String>
+    <sys:String x:Key="Err_No_KMS_Lic">Não foi possível salvar as configurações do KMS, nenhuma licença KMS válida do Office encontrada no sistema.</sys:String>
     <sys:String x:Key="Err_Set_KMS">Não foi possível salvar as configurações do KMS. Por favor, tente novamente.</sys:String>
     <sys:String x:Key="Err_Act_Run_Commands">Ocorreu um erro ao executar comandos.&#x000A;&#x000A;Código de erro: {0}</sys:String>
     <sys:String x:Key="Err_Act_Office_License">Ocorreu um erro ao ativar o produto.&#x000A;&#x000A;Código de erro: {0}</sys:String>

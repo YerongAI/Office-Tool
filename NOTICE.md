@@ -36,9 +36,10 @@ Apache-2.0 license
 
 ## NuGet Packages
 
-- Downloader (3.0.6)
-- Microsoft.Xaml.Behaviors.Wpf (1.1.77)
+- Downloader (3.1.2)
+- Microsoft.Xaml.Behaviors.Wpf (1.1.122)
 - Prism.DryIoc (8.1.97)
 - Prism.Wpf (8.1.97)
 - System.Management (8.0.0)
 - System.ServiceProcess.ServiceController (8.0.0)
+- System.IO.Hashing (8.0.0)

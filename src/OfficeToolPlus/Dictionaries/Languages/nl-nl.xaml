@@ -89,6 +89,7 @@
     <!-- Channels Name, if you do not want to translate them, please keep in English. -->
     <sys:String x:Key="PerpetualVL2019">Office 2019 Enterprise (onbeperkt)</sys:String>
     <sys:String x:Key="PerpetualVL2021">Office 2021 Enterprise (onbeperkt)</sys:String>
+    <sys:String x:Key="PerpetualVL2024">Office 2024 Enterprise (onbeperkt)</sys:String>
     <sys:String x:Key="SemiAnnual">Halfjaarlijks Enterprise Kanaal</sys:String>
     <sys:String x:Key="MonthlyEnterprise">Maandelijks Enterprise Kanaal</sys:String>
     <sys:String x:Key="Current">Huidige Kanaal</sys:String>
@@ -158,6 +159,8 @@
     <sys:String x:Key="Deploy_Cancel_Uninstall_Product">Verwijderen annuleren</sys:String>
     <sys:String x:Key="Deploy_Cancel_Deploy_Product">Annuleer de implementatie</sys:String>
     <sys:String x:Key="Deploy_Applications">Applicaties</sys:String>
+    <sys:String x:Key="Deploy_Addons">Add-ons</sys:String>
+    <sys:String x:Key="Deploy_Addons.Tip">Do not uncheck the add-ons if you don't know what they are.</sys:String>
     <sys:String x:Key="Deploy_Language">Talen</sys:String>
     <sys:String x:Key="Deploy_Language.Description">{0} geןnstalleerde taal(talen), {1} klaar om te implementeren en {2} klaar om te verwijderen.</sys:String>
     <sys:String x:Key="Deploy_Language_Button">Voeg _talen toe</sys:String>
@@ -466,6 +469,9 @@
     <sys:String x:Key="Convert_File">Bestand</sys:String>
     <sys:String x:Key="Convert_NewFormat">Nieuw formaat</sys:String>
     <sys:String x:Key="Convert_Open_File_Location">_Open bestandslocatie</sys:String>
+    <sys:String x:Key="Convert_Page_Count">Page {0} of {1}</sys:String>
+    <sys:String x:Key="Convert_Previous_Page">Previous page</sys:String>
+    <sys:String x:Key="Convert_Next_Page">Next page</sys:String>
 
     <sys:String x:Key="Convert_Settings">Converteer instellingen</sys:String>
     <sys:String x:Key="Convert_Settings.Description">De instellingen aanpassen.</sys:String>
@@ -475,6 +481,8 @@
     <sys:String x:Key="Convert_Delete.Description">Verplaats het originele bestand naar de Prullenbak na succesvolle conversie. Als de Prullenbak niet beschikbaar is, wordt het bestand permanent verwijderd.</sys:String>
     <sys:String x:Key="Convert_HideUI">Verberg gebruikersinterface</sys:String>
     <sys:String x:Key="Convert_HideUI.Description">Waarschuwingsvenster verbergen wanneer Office werkt.</sys:String>
+    <sys:String x:Key="Convert_Rows_Per_Page">Rows per page</sys:String>
+    <sys:String x:Key="Convert_Rows_Per_Page.Description">Set the number of files displayed per page in the file list.</sys:String>
 
     <!-- File types -->
     <!-- Common -->
@@ -523,7 +531,7 @@
 
     <!-- Hash checker page -->
     <sys:String x:Key="Hash_Checker_Hash">Hash</sys:String>
-    <sys:String x:Key="Hash_Checker_Hash.Description">Genereer de hash van bestanden, ondersteunt MD5, SHA-1, SHA-256, SHA-384 en SHA-512.</sys:String>
+    <sys:String x:Key="Hash_Checker_Hash.Description">Generate the hash of files, support multiple hash algorithms.</sys:String>
     <sys:String x:Key="Hash_Checker_Actions">_Importeer bestanden</sys:String>
     <sys:String x:Key="Hash_Checker_Actions.SelectFiles">Selecteer bestanden</sys:String>
     <sys:String x:Key="Hash_Checker_Actions.SelectFolder">Selecteer map</sys:String>
@@ -534,11 +542,21 @@
     <sys:String x:Key="Hash_Checker_DisplayPath">Toon bestandspad</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute">Automatische berekening</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute.Description">Begin automatisch met het berekenen van de hashwaarde nadat het importeren van het bestand is voltooid.</sys:String>
+    <sys:String x:Key="Hash_Checker_CRC32.Description">Schakel CRC-32 Berekenen in of uit.</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH32.Description">Schakel XXH32 Berekenen in of uit.</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH64.Description">Schakel XXH64 Berekenen in of uit.</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH3.Description">Schakel XXH3 Berekenen in of uit.</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH128.Description">Schakel XXH128 Berekenen in of uit.</sys:String>
     <sys:String x:Key="Hash_Checker_MD5.Description">Schakel MD5 Berekenen in of uit.</sys:String>
     <sys:String x:Key="Hash_Checker_SHA1.Description">Schakel SHA-1 Berekenen in of uit.</sys:String>
     <sys:String x:Key="Hash_Checker_SHA256.Description">Schakel SHA-256 Berekenen in of uit.</sys:String>
     <sys:String x:Key="Hash_Checker_SHA384.Description">Schakel SHA-384 Berekenen in of uit.</sys:String>
     <sys:String x:Key="Hash_Checker_SHA512.Description">Schakel SHA-512 Berekenen in of uit.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA3_256.Description">Enable or disable SHA3-256 computing, only supported on Windows 11 build 25324 or later.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA3_384.Description">Enable or disable SHA3-384 computing, only supported on Windows 11 build 25324 or later.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA3_512.Description">Enable or disable SHA3-512 computing, only supported on Windows 11 build 25324 or later.</sys:String>
+    <sys:String x:Key="Hash_Checker_Rows_Per_Page">Rows per page</sys:String>
+    <sys:String x:Key="Hash_Checker_Rows_Per_Page.Description">Set the number of files displayed per page in the file list.</sys:String>
 
     <sys:String x:Key="Hash_Checker_File_List">Bestandslijst</sys:String>
     <sys:String x:Key="Hash_Checker_TypeToSearch">Typ om de hash waarde te vergelijken.</sys:String>
@@ -557,6 +575,9 @@
     <sys:String x:Key="Hash_Checker_Open_File_Location">_Open bestandslocatie</sys:String>
     <sys:String x:Key="Hash_Checker_Copy_Hash_Value">Kopieer de _hash-waarde</sys:String>
     <sys:String x:Key="Hash_Checker_Create_Hash_File">H_ash-bestand(en) maken</sys:String>
+    <sys:String x:Key="Hash_Checker_Page_Count">Page {0} of {1}</sys:String>
+    <sys:String x:Key="Hash_Checker_Previous_Page">Previous page</sys:String>
+    <sys:String x:Key="Hash_Checker_Next_Page">Next page</sys:String>
 
     <!-- Settings page -->
     <sys:String x:Key="Settings_General">Algemeen</sys:String>
@@ -571,13 +592,14 @@
     <sys:String x:Key="Settings_Theme_OpenColorSetting">Windows kleurinstelling</sys:String>
     <sys:String x:Key="Settings_Background">Achtergrond</sys:String>
     <sys:String x:Key="Settings_Background.Description">Wijzig de achtergrond van de toepassing.</sys:String>
+    <sys:String x:Key="Settings_Background.Automatic">Automatic</sys:String>
     <sys:String x:Key="Settings_Background.Off">Uit</sys:String>
     <sys:String x:Key="Settings_Background.Acrylic">Acryl</sys:String>
     <sys:String x:Key="Settings_Background.Blur">Blur</sys:String>
     <sys:String x:Key="Settings_Background.Mica">Mica</sys:String>
     <sys:String x:Key="Settings_Background.Bing">Bing achtergrond</sys:String>
     <sys:String x:Key="Settings_Background.Local">Lokale afbeelding</sys:String>
-    <sys:String x:Key="Settings_SelectLocalImage.Title">Selecteer een lokale afbeelding en stel deze in op toepassingsachtergrond</sys:String>
+    <sys:String x:Key="Settings_SelectLocalImage.Description">Selecteer een lokale afbeelding en stel deze in op toepassingsachtergrond.</sys:String>
     <sys:String x:Key="Settings_SelectLocalImage.Button">Selecteer bestand</sys:String>
     <sys:String x:Key="Settings_Opacity">dekking</sys:String>
     <sys:String x:Key="Settings_Blur">Blur</sys:String>
@@ -755,7 +777,7 @@
     <sys:String x:Key="Info_Restart_Required">U moet de toepassing opnieuw starten om van kracht te worden.</sys:String>
     <sys:String x:Key="Info_No_Updates">U gebruikt de nieuwste versie van Office Tool Plus.</sys:String>
     <sys:String x:Key="Info_Update_In_Progress">Update(s) worden uitgevoerd, even geduld a.u.b.</sys:String>
-    <sys:String x:Key="Info_Updates_Incomplete">Some updates failed to apply, please try again later.</sys:String>
+    <sys:String x:Key="Info_Updates_Incomplete">Failed to apply updates, please try again later.</sys:String>
     <sys:String x:Key="Info_No_Language_Added_For_Download">We hebben vastgesteld dat u geen taal heeft toegevoegd. In de meeste gevallen raden we aan om talen toe te voegen om problemen te voorkomen.</sys:String>
     <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">Selecteer de map om de Office installatiebestanden op te slaan. Om de standaardlocatie te gebruiken, schakelt u "Vragen waar bestanden moeten worden opgeslagen" uit op de instellingenpagina.</sys:String>
     <sys:String x:Key="Info_All_Files_Exist">Downloaden is niet nodig, alle bestanden bestaan.</sys:String>
@@ -765,6 +787,7 @@
     <sys:String x:Key="Info_Auto_Shutdown">Uw pc zal zich binnen ייn minuut afmelden/afsluiten/opnieuw opstarten.</sys:String>
     <sys:String x:Key="Info_No_Events">Geen evenementen gevonden.</sys:String>
     <sys:String x:Key="Info_No_Office_Licenses">Er zijn geen Office licenties gevonden.</sys:String>
+    <sys:String x:Key="Info_No_Office_Product_Key">No Office product keys were detected.</sys:String>
     <sys:String x:Key="Info_Number_Of_Keys_Uninstalled">Number of {0} product key(s) uninstalled.</sys:String>
     <sys:String x:Key="Info_Number_Of_Lics_Uninstalled">Number of {0} Office license(s) uninstalled.</sys:String>
     <sys:String x:Key="Info_Office_License_Activation.Title">Resultaten van productactivering</sys:String>
@@ -809,13 +832,13 @@
     <sys:String x:Key="Err_Start_Deploy.Preferences">Kan de toepassingsvoorkeuren niet instellen. Controleer of u de toepassingsvoorkeuren correct hebt ingesteld en probeer het opnieuw.</sys:String>
     <sys:String x:Key="Err_Installer_Exited">Office Deployment Tool is abnormaal afgesloten.</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">Kan geen versie informatie verkrijgen. Probeer het opnieuw of gebruik Office Deployment Tool.</sys:String>
-    <sys:String x:Key="Err_Create_ISO">Kan Office installatiebestanden niet vinden in de hoofdmap van Office Tool Plus. Download eerst installatiebestanden of verplaats installatiebestanden naar het werkpad.</sys:String>
+    <sys:String x:Key="Err_Create_ISO">No Office installation files were found. Please download installation files first, or select existing installation files, then try again.</sys:String>
     <sys:String x:Key="Err_Query_Office_Licenses">Kan Office licenties niet opvragen. Probeer het opnieuw.</sys:String>
     <sys:String x:Key="Err_Loading_Office_Licenses">De Click-to-Run-versie van Office is niet gedetecteerd op deze computer, de Office-licenties kunnen niet worden geladen. Zorg ervoor dat u de nieuwste versie van Office hebt geןnstalleerd.</sys:String>
     <sys:String x:Key="Err_Product_Key_Invalid">De ingevoerde productcode is ongeldig, controleer dit en probeer het opnieuw.</sys:String>
     <sys:String x:Key="Err_Confirmation_ID_Invalid">De ingevoerde bevestigings ID is ongeldig. Controleer dit en probeer het opnieuw.</sys:String>
     <sys:String x:Key="Err_KMS_Host_Invalid">Kan KMS instellingen niet opslaan. Controleer de KMS hostnaam en probeer het opnieuw.</sys:String>
-    <sys:String x:Key="Err_No_KMS_Lic">KMS-instellingen kunnen niet worden opgeslagen, er zijn geen Office KMS-licenties op het systeem geןnstalleerd.</sys:String>
+    <sys:String x:Key="Err_No_KMS_Lic">Unable to save KMS settings, no valid Office KMS licenses were found on the system.</sys:String>
     <sys:String x:Key="Err_Set_KMS">Kan KMS instellingen niet opslaan, probeer het opnieuw.</sys:String>
     <sys:String x:Key="Err_Act_Office_License">Er is een fout opgetreden tijdens het activeren van het product.&#x000A;&#x000A;Foutcode: {0}</sys:String>
     <sys:String x:Key="Err_Act_Run_Commands">An error occurred while executing commands.&#x000A;&#x000A;Error code: {0}</sys:String>

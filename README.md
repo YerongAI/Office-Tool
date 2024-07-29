@@ -60,24 +60,20 @@ irm https://officetool.plus/get/ | iex
 
 | Culture | Name | Translators |
 | :-- | :-- | :-- |
-| ar-sa | العربية (المملكة العربية السعودية) | [Yarani](https://github.com/Yarani) |
 | de-de | Deutsch (Deutschland) | [Berny23](https://steamcommunity.com/id/Berny23) |
 | en-gb | English (United Kingdom) | [Mcforwin](https://github.com/Mcforwin) |
-| en-us | English (United States) | [Yerong](https://officetool.plus/), [Moedog](https://prprpr.love) |
-| es-es | Español (España) | Xoseba |
-| fr-fr | Français (France) | Drake4478, MONOKUMA |
-| id-id | Bahasa Indonesia (Indonesia) | [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Jovanzers](https://github.com/jovanzers) |
-| it-it | Italiano (Italia) | [garf02](https://github.com/garf02), tfrtint |
+| en-us | English (United States) | [Yerong](https://officetool.plus/) |
+| fr-fr | Français (France) | Drake4478 |
+| id-id | Bahasa Indonesia (Indonesia) | [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17) |
+| it-it | Italiano (Italia) | [garf02](https://github.com/garf02) |
 | ja-jp | 日本語 (日本) | [秋山へいわ](https://github.com/akio1321)|
 | ko-kr | 한국어 (대한민국) | [VenusGirl❤](https://github.com/VenusGirl) |
 | nl-nl | Nederlands (Nederland) | [Kajoe](https://github.com/Kajoe1) |
 | pl-pl | Polski (Polska) | [JakubDriver](https://github.com/jakubdriver) |
-| pt-br | Português (Brasil) | [Hélio de Souza](https://tinyurl.com/hdstec), [Igor Rückert](https://github.com/igorruckert) |
-| ro-ro | Română (România) | [ianymaty](https://github.com/ianymaty) |
+| pt-br | Português (Brasil) | [Igor Rückert](https://github.com/igorruckert) |
 | ru-ru | Русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov) |
-| th-th | ไทย (ไทย) | [Freeling Developer](https://github.com/freelingdeveloper), [泰国孩子在中国](https://github.com/dekthaiinchina) |
+| th-th | ไทย (ไทย) | [泰国孩子在中国](https://github.com/dekthaiinchina) |
 | tr-tr | Türkçe (Türkiye) | [Tayfun Akkoyun](https://github.com/crasadure) |
-| vi-vn | Tiếng Việt (Việt Nam) | [phjtieudoc](https://github.com/phjtieudoc) |
 | zh-hk | 繁體中文 (香港) | [TurboHK](https://github.com/TurboHK) |
 | zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412) |
 

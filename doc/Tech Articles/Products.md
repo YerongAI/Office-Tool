@@ -49,7 +49,7 @@ Starting September 2023, the Teams app will no longer be installed by default.
 | ProPlus2021Volume | Office LTSC Professional Plus 2021 | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | DCF, OSM, OSMUX, PowerPivot | ✔ | FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH |
 | ProPlusSPLA2021Volume | Office LTSC Professional Plus 2021 (SPLA) | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | DCF, OSM, OSMUX, PowerPivot | ✔ | HNQ22-HGCKV-RK4TT-47RH9-BKQ9B |
 | ProPlus2024Retail | Office Professional Plus 2024 | Access, Excel, OneDrive, OneNote, Outlook, PowerPoint, Word | DCF, PowerPivot | ✔ | HD4NY-QVXPH-VPXH8-YY4WV-R9GQV |
-| ProPlus2024Volume | Office LTSC Professional Plus 2024 | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Word | DCF, PowerPivot | ✔ |  |
+| ProPlus2024Volume | Office LTSC Professional Plus 2024 | Access, Excel, Lync, OneDrive, OneNote, Outlook, PowerPoint, Word | DCF, PowerPivot | ✔ | XJ2XN-FW8RK-P4HMP-DKDBV-GCVGB |
 | ProPlusRetail | Office Professional Plus 2016 | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ✔ | CYC3N-BHX8G-QJVJV-H2WWP-BTDRB |
 | ProPlusVolume | Office Professional Plus 2016 | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | DCF, OSM, OSMUX, PowerPivot, PowerView | ❌ | XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99 |
 | Standard2019Retail | Office Standard 2019 | Excel, Groove, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | OSM, OSMUX, PowerPivot | ✔ | MKFY8-QNW8D-YKV28-H2CJD-Y4JMV |
@@ -70,7 +70,7 @@ Starting September 2023, the Teams app will no longer be installed by default.
 | VisioPro2021Retail | Visio Professional 2021 | OneDrive |  | ✔ | 6PKRH-BNYBM-JWY82-4PBJ8-Q7DBB |
 | VisioPro2021Volume | Visio LTSC Professional 2021 | OneDrive |  | ✔ | KNH8D-FGHT4-T8RK3-CTDYJ-K2HT4 |
 | VisioPro2024Retail | Visio Professional 2024 | OneDrive |  | ✔ | WW24K-7QNGC-GF4B3-P2F2D-WQQYF |
-| VisioPro2024Volume | Visio LTSC Professional 2024 | OneDrive |  | ✔ |  |
+| VisioPro2024Volume | Visio LTSC Professional 2024 | OneDrive |  | ✔ | B7TN8-FJ8V3-7QYCP-HQPMV-YY89G |
 | VisioProRetail | Visio Professional 2016 | Groove, OneDrive | OSM | ✔ | BB6YN-3W2C6-R82H2-PTBMF-F6YYT |
 | VisioProVolume | Visio Professional 2016 | Groove, OneDrive | OSM | ❌ | PD3PC-RHNGV-FXJ29-8JK7D-RJRJK |
 | VisioProXVolume | Visio Professional 2016 | Groove, OneDrive |  | ✔ | 69WXN-MBYV6-22PQG-3WGHK-RM6XC |
@@ -93,7 +93,7 @@ Starting September 2023, the Teams app will no longer be installed by default.
 | ProjectPro2021Retail | Project Professional 2021 |  |  | ✔ | BN7TR-MVXBP-VVR8B-G6WDG-FVYFG |
 | ProjectPro2021Volume | Project Professional 2021 |  |  | ✔ | FTNWT-C6WBT-8HMGF-K9PRX-QV9H8 |
 | ProjectPro2024Retail | Project Professional 2024 |  |  | ✔ | CBNBW-Y38B2-926G3-FDJTQ-YBM7F |
-| ProjectPro2024Volume | Project Professional 2024 |  |  | ✔ |  |
+| ProjectPro2024Volume | Project Professional 2024 |  |  | ✔ | FQQ23-N4YCY-73HQ3-FM9WC-76HF4 |
 | ProjectProRetail | Project Professional 2016 |  | OSM | ✔ | GJN26-8DV6F-76VJT-PMF6Y-92FK9 |
 | ProjectProVolume | Project Professional 2016 |  | OSM | ❌ | YG9NW-3K39V-2T3HJ-93F3Q-G83KT |
 | ProjectProXVolume | Project Professional 2016 |  |  | ✔ | WGT24-HCNMF-FQ7XH-6M8K7-DRTW9 |

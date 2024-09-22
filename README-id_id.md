@@ -33,21 +33,21 @@ Fungsi Tambahan:
 - Mengubah saluran pembaruan Office tanpa perlu memasang kembali Office.
 - Sejumlah konversi dokumen Office, berdasarkan Office API
 
-## Download and quick start
+## Unduh dan mulai cepat
 
-- [Download](https://otp.landian.vip/download.html)
-- [Quick start](https://github.com/YerongAI/Office-Tool/wiki)
-- [Documentation](https://otp.landian.vip/help/)
+- [Unduh](https://otp.landian.vip/download.html)
+- [Mulai cepat](https://github.com/YerongAI/Office-Tool/wiki)
+- [Dokumentasi](https://otp.landian.vip/help/)
 
-Or download Office Tool Plus using PowerShell:
+Atau unduh Office Tool Plus menggunakan PowerShell:
 
-Site 1:
+Situs 1:
 
 ```powershell
 irm https://otp.landian.vip/get/ | iex
 ```
 
-Site 2:
+Situs 2:
 
 ```powershell
 irm https://officetool.plus/get/ | iex

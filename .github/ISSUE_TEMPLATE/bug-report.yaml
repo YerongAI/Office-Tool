@@ -1,0 +1,56 @@
+name: Bug Report
+description: Submit a bug report to help us resolve issue.
+title: "[Bug] "
+labels: ["bug"]
+assignees:
+  - YerongAI
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping us improve our software, we just need some information below.
+  - type: input
+    id: version
+    attributes:
+      label: What is the version of Office Tool Plus?
+      description: You can find it on the About page or on the package name.
+      placeholder: ex. v10.0.0.0 (x64)
+    validations:
+      required: true
+  - type: input
+    id: os-version
+    attributes:
+      label: What is the version of your Operating System?
+      description: Also let us know the language and the culture of your OS if possible.
+      placeholder: ex. Windows 11 24H2 build 26100 (x64), Simplified Chinese (Singapore)
+    validations:
+      required: true
+  - type: input
+    id: error-description
+    attributes:
+      label: What is the error?
+      description: The error can be a sentence or an error code.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How does this problem occur?
+      description: Steps required to reproduce the problem. Or anything you did before the problem occurred.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log output
+      description: You can find the log on %temp%\OTP_Logs
+      render: shell
+    validations:
+      required: false
+  - type: textarea
+    id: others
+    attributes:
+      label: Anything else you want to tell us.
+      description: If you have any more information please let us know.
+    validations:
+      required: false

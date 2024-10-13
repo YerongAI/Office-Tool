@@ -29,7 +29,7 @@
 - Office를 활성화합니다. 온라인 활성화, 전화 활성화 및 KMS 활성화를 지원합니다.
 - 라이선스 관리, 키 관리 및 KMS 관리를 포함한 Office 활성화 관리를 지원합니다.
 - Office 업데이트 채널을 변경하고 Office를 다시 설치하지 않고 Office 업그레이드/다운그레이드를 지원합니다.
-- Office를 제거합니다. 일반적인 방법으로 제거할 수 없는 Office를 강제로 제거하고 Office 2003에서 최신 Office 버전으로 Office를 지원합니다.
+- Office를 제거합니다. 정상적인 방법으로 제거할 수 없는 경우 Office를 강제 제거하고 Office 2003부터 최신 Office 버전까지 Office를 지원합니다.
 - 설정 초기화, Office 문제 해결을 포함한 통합 Office 도구입니다.
 - Office COM을 기반으로 Office 문서를 변환합니다. 빠르고 안정적입니다.
 - 테마를 개인화하면 특별한 Office Tool Plus를 구축할 수 있습니다.

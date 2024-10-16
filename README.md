@@ -72,7 +72,7 @@ irm https://officetool.plus/get/ | iex
 | pl-pl | Polski (Polska) | [JakubDriver](https://github.com/jakubdriver) |
 | pt-br | Português (Brasil) | [Igor Rückert](https://github.com/igorruckert) |
 | ru-ru | Русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov) |
-| th-th | ไทย (ไทย) | [泰国孩子在中国](https://github.com/dekthaiinchina) |
+| th-th | ไทย (ไทย) | [dekthaiinchina](https://github.com/dekthaiinchina) |
 | tr-tr | Türkçe (Türkiye) | [Tayfun Akkoyun](https://github.com/crasadure) |
 | zh-hk | 繁體中文 (香港) | [TurboHK](https://github.com/TurboHK) |
 | zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412) |

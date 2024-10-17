@@ -36,7 +36,6 @@ Funzioni e caratteristiche::
 ## Scaricamento e lezione rapida
 
 - [Scarica](https://otp.landian.vip/download.html)
-- [Lezione rapida](https://github.com/YerongAI/Office-Tool/wiki)
 - [Documentazione](https://otp.landian.vip/help/)
 
 Oppure scarica Office Tool Plus utilizzando PowerShell:
@@ -50,7 +49,7 @@ irm https://otp.landian.vip/get/ | iex
 Site 2:
 
 ```powershell
-irm https://officetool.plus/get/ | iex
+irm https://www.officetool.plus/get/ | iex
 ```
 
 ## Informazioni

@@ -38,7 +38,6 @@ Funcții și caracteristici:
 ## Descărcare și pornire rapidă
 
 - [Descarcă](https://otp.landian.vip/download.html)
-- [Pornire rapidă](https://github.com/YerongAI/Office-Tool/wiki)
 - [Documentation](https://otp.landian.vip/help/)
 
 Or download Office Tool Plus using PowerShell:
@@ -52,7 +51,7 @@ irm https://otp.landian.vip/get/ | iex
 Site 2:
 
 ```powershell
-irm https://officetool.plus/get/ | iex
+irm https://www.officetool.plus/get/ | iex
 ```
 
 ## Despre

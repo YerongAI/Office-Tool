@@ -38,7 +38,6 @@
 ## 다운로드 및 빠른 시작
 
 - [다운로드](https://otp.landian.vip/download.html)
-- [빠른 시작](https://github.com/YerongAI/Office-Tool/wiki)
 - [문서](https://otp.landian.vip/help/)
 
 또는 PowerShell을 사용하여 Office Tool Plus를 다운로드하세요:
@@ -52,7 +51,7 @@ irm https://otp.landian.vip/get/ | iex
 사이트 2:
 
 ```powershell
-irm https://officetool.plus/get/ | iex
+irm https://www.officetool.plus/get/ | iex
 ```
 
 ## 추가 정보

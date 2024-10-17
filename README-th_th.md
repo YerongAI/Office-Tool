@@ -40,15 +40,15 @@
 - [ดาวน์โหลด](https://otp.landian.vip/download.html)
 - [เอกสาร](https://otp.landian.vip/help/)
 
-Or download Office Tool Plus using PowerShell:
+หรือดาวน์โหลด Office Tool Plus โดยใช้ PowerShell:
 
-Site 1:
+ไซต์ 1:
 
 ```powershell
 irm https://otp.landian.vip/get/ | iex
 ```
 
-Site 2:
+ไซต์ 2:
 
 ```powershell
 irm https://www.officetool.plus/get/ | iex

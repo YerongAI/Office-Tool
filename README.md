@@ -73,7 +73,6 @@ irm https://www.officetool.plus/get/ | iex
 | ru-ru | Русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov) |
 | th-th | ไทย (ไทย) | [dekthaiinchina](https://github.com/dekthaiinchina) |
 | tr-tr | Türkçe (Türkiye) | [Tayfun Akkoyun](https://github.com/crasadure) |
-| zh-hk | 繁體中文 (香港) | [TurboHK](https://github.com/TurboHK) |
 | zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412) |
 
 ## Help With Localization

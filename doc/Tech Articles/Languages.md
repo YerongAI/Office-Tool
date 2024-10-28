@@ -53,7 +53,7 @@ For more information about language ID, please visit [Languages, culture codes, 
 | қазақ тілі (Қазақстан) | Kazakh (Kazakhstan) | kk-kz | Kazakh, English, Russian | 1087 | Full |
 | ខ្មែរ (កម្ពុជា) | Khmer (Cambodia) | km-kh |  | 1107 | PartialWithoutProofingTools |
 | ಕನ್ನಡ (ಭಾರತ) | Kannada (India) | kn-in |  | 1099 | Partial |
-| कोंकणी (भारत) | Konkani (India) | kok-in |  | 1111 | Full |
+| कोंकणी (भारत) | Konkani (India) | kok-in |  | 1111 | Partial |
 | 한국어(대한민국) | Korean (Korea) | ko-kr | Korean, English | 1042 | Partial |
 | кыргызча (Кыргызстан) | Kyrgyz (Kyrgyzstan) | ky-kg |  | 1088 | Partial |
 | Lëtzebuergesch (Lëtzebuerg) | Luxembourgish (Luxembourg) | lb-lu |  | 1134 | Partial |
@@ -113,4 +113,4 @@ For more information about language ID, please visit [Languages, culture codes, 
 | isiZulu (iNingizimu Afrika) | isiZulu (South Africa) | zu-za |  | 1077 | Proofing |
 
 <center>　</center>
-<center>© 2023 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.2 | <a href="https://github.com/YerongAI/Office-Tool/blob/main/doc/Tech%20Articles/Languages.md" target="_blank">Source</a></center>
+<center>© 2024 <a href="https://www.coolhub.top" target="_blank">Yerong の小窝</a>. | Powered by Yerong | Ver 1.3 | <a href="https://github.com/YerongAI/Office-Tool/blob/main/doc/Tech%20Articles/Languages.md" target="_blank">Source</a></center>

@@ -21,24 +21,26 @@ Supporta la distribuzione personalizzata e l'attivazione dei seguenti prodotti:
 - Project 2016, 2019, 2021, 2024 & Online Desktop Client
 
 Funzioni e caratteristiche::
+  
+- Crea la configurazione di installazione di Office. La configurazione può essere esportata in locale o importata da locale o web.
+- Scarica Office, supporta 'TUTTI' i canali di Office e 'TUTTE' le lingue di Office.
+- Installa Office o modifica Office esistente, ad esempio aggiungendo nuovi prodotti e applicazioni o rimuovendo prodotti ed applicazioni.
+- Crea le immagini ISO di Office, supporta la configurazione di installazione predefinita e la configurazione di installazione silenziosa.
+- Attiva Office. Supporta l'attivazione online, l'attivazione telefonica e l'attivazione KMS.
+- Supporta la gestione dell'attivazione di Office, inclusa la gestione delle licenze, la gestione delle chiavi e la gestione di KMS.
+- Modifica il canale di aggiornamento di Office, supporta l'aggiornamento/downgrade di Office senza reinstallare Office.
+- Rimuovi Office. Forza la rimozione di Office mentre non può essere disinstallato normalmente, supporta da Office 2003 alla versione più recente di Office.
+- Strumenti di Office integrati, incluso il ripristino delle impostazioni e la risoluzione dei problemi di Office.
+- Conversione documenti Office, basati su Office COM. è veloce e stabile.
+- Personalizza il tema, puoi creare il tema speciale Office Tool Plus.
+- Le impostazioni avanzate consentono di usare funzionalità più avanzate, come i canali interni di Office.
 
-- Supporto per tutti i 17 canali di Office, inclusi query, scaricamento e installazione.
-- Modifiche all'Office esistente, incluse aggiunte ed eliminazioni di prodotti, applicazioni, language pack, ecc.
-- Importazione/Esportazione profili XML.
-- Creazione file ISO per la condivisione o per l'installazione offline.
-- Installazione licenze di Office (edizione convertita).
-- Cancellazione delle licenze e chiavi di Office.
-- Supporto attivazione online, telefonica (attivazione offline) e attivazione KMS.
-- Reimpostazione/rimozione forzata di Office.
-- Modifica del canale di aggiornamento di Office senza dover reinstallare Office.
-- Conversione in massa di documenti Office, basata sulle API di Office.
+## Download ed avvio rapido
 
-## Scaricamento e lezione rapida
-
-- [Scarica](https://otp.landian.vip/download.html)
+- [Download](https://otp.landian.vip/download.html)
 - [Documentazione](https://otp.landian.vip/help/)
 
-Oppure scarica Office Tool Plus utilizzando PowerShell:
+Oppure scarica Office Tool Plus usando PowerShell:
 
 Site 1:
 
@@ -52,8 +54,8 @@ Site 2:
 irm https://www.officetool.plus/get/ | iex
 ```
 
-## Informazioni
+## Info programma
 
-© 2016-2024 Yerong. All Rights Reserved.
+© 2016-2024 Yerong. Tutti i diritti riservati.
 
 > Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel)

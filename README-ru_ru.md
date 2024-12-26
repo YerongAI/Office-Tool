@@ -46,10 +46,16 @@
 irm https://otp.landian.vip/get/ | iex
 ```
 
-Второй сайт:
+Второй сайт (три варианта):
 
 ```powershell
 irm https://www.officetool.plus/get/ | iex
+```
+```powershell
+irm officetool.plus | iex
+```
+```powershell
+irm officetool.plus -UserAgent "WindowsPowerShell"  | iex
 ```
 
 ## О разработке

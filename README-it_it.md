@@ -47,40 +47,6 @@ Oppure scarica Office Tool Plus usando PowerShell:
 irm officetool.plus | iex
 ```
 
-## Grazie ai traduttori
-
-| Lingua | Nome | Traduttori |
-| :-- | :-- | :-- |
-| de-de | Deutsch (Deutschland) | [Berny23](https://steamcommunity.com/id/Berny23) |
-| en-gb | English (United Kingdom) | [Mcforwin](https://github.com/Mcforwin) |
-| en-us | English (United States) | [Yerong](https://officetool.plus/) |
-| fr-fr | Français (France) | Drake4478 |
-| id-id | Bahasa Indonesia (Indonesia) | [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17) |
-| it-it | Italiano (Italia) | [garf02](https://github.com/garf02) |
-| ja-jp | 日本語 (日本) | [秋山へいわ](https://github.com/akio1321)|
-| ko-kr | 한국어 (대한민국) | [VenusGirl❤](https://github.com/VenusGirl) |
-| nl-nl | Nederlands (Nederland) | [Kajoe](https://github.com/Kajoe1) |
-| pl-pl | Polski (Polska) | [JakubDriver](https://github.com/jakubdriver) |
-| pt-br | Português (Brasil) | [Igor Rückert](https://github.com/igorruckert) |
-| ru-ru | Русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov) |
-| th-th | ไทย (ไทย) | [dekthaiinchina](https://github.com/dekthaiinchina) |
-| tr-tr | Türkçe (Türkiye) | [Tayfun Akkoyun](https://github.com/crasadure) |
-| zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412) |
-
-## Aiuto con la localizzazione
-
-Incoraggiamo tutti ad aiutarci con la localizzazione. Di seguito è riportato come farlo.
-
-1. Effettua il fork di questo repository.
-
-2. Traduci **en-us.xaml** nella tua lingua, quindi salvalo come **it-it.xaml**.
-
-3. Copialo nel giusto percorso.
-
-4. Crea una Pull Request.
-
-Ci sono i file con cui puoi tradurre:
-
 ``` batch
 src\OfficeToolPlus\Dictionaries\Languages
 src\OfficeToolPlus\Dictionaries\ProductsName

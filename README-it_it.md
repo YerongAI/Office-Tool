@@ -40,16 +40,8 @@ Funzioni e caratteristiche::
 
 Oppure scarica Office Tool Plus utilizzando PowerShell:
 
-Site 1:
-
 ```powershell
-irm https://otp.landian.vip/get/ | iex
-```
-
-Site 2:
-
-```powershell
-irm https://www.officetool.plus/get/ | iex
+irm officetool.plus | iex
 ```
 
 ## Informazioni

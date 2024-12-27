@@ -42,16 +42,8 @@
 
 หรือดาวน์โหลด Office Tool Plus โดยใช้ PowerShell:
 
-ไซต์ 1:
-
 ```powershell
-irm https://otp.landian.vip/get/ | iex
-```
-
-ไซต์ 2:
-
-```powershell
-irm https://www.officetool.plus/get/ | iex
+irm officetool.plus | iex
 ```
 
 ## เกี่ยวกับเรา

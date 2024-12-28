@@ -47,13 +47,6 @@ Oppure scarica Office Tool Plus usando PowerShell:
 irm officetool.plus | iex
 ```
 
-``` batch
-src\OfficeToolPlus\Dictionaries\Languages
-src\OfficeToolPlus\Dictionaries\ProductsName
-config\Launcher
-config\Message
-```
-
 ## Info programma
 
 © 2016-2024 Yerong. Tutti i diritti riservati.

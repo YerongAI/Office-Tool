@@ -1,0 +1,888 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=System.RunTime"
+                    xml:space="preserve">
+
+    <!-- Country settings, it is used to get information from server. -->
+    <sys:String x:Key="Culture">hu-hu</sys:String>
+    <!-- Products name settings, "en-us" is default value if not set. -->
+    <sys:String x:Key="ProductDict">en-us</sys:String>
+
+    <!-- Eula content -->
+    <sys:String x:Key="Eula.Title">Licencfeltételek</sys:String>
+    <sys:String x:Key="Eula.Content">A szoftver használatával el kell fogadnia a [Szoftver licencfeltételeit]({0}) és a [Microsoft szolgáltatási szerződést]({1}).</sys:String>
+
+    <!-- Custom control -->
+    <sys:String x:Key="Yerong_String_ToggleButton.Unset">Nem beállított</sys:String>
+    <sys:String x:Key="Yerong_String_ToggleButton.Off">Ki</sys:String>
+    <sys:String x:Key="Yerong_String_ToggleButton.On">Be</sys:String>
+    <sys:String x:Key="Yerong_String_MicaMenu.Name">Menü</sys:String>
+    <sys:String x:Key="Yerong_String_MicaMenu.HelpText">Kattintson a helyi menü megnyitásához.</sys:String>
+
+    <!-- Title bar -->
+    <sys:String x:Key="Title_Bar_GoBack_Button">Vissza</sys:String>
+    <sys:String x:Key="Title_Bar_SysMenu_Button">Rendszer menü</sys:String>
+    <sys:String x:Key="Title_Bar_Command_Box">Parancs</sys:String>
+
+    <!-- Navigation bar -->
+    <sys:String x:Key="Navigation_Menu.Name">Navigációs menü</sys:String>
+    <sys:String x:Key="Navigation_Menu.ToolTip">Kattintson a navigációs sáv kibontásához vagy összecsukásához.</sys:String>
+    <sys:String x:Key="Navigation_Bar.Name">Navigációs sáv</sys:String>
+    <sys:String x:Key="Navigation_Bar_Bottom.Name">Alsó navigációs sáv</sys:String>
+
+    <sys:String x:Key="Navigate_Page.Home">Kezdőlap</sys:String>
+    <sys:String x:Key="Navigate_Page.Deploy">Telepítés</sys:String>
+    <sys:String x:Key="Navigate_Page.Activate">Aktiválás</sys:String>
+    <sys:String x:Key="Navigate_Page.Toolbox">Eszköztár</sys:String>
+    <sys:String x:Key="Navigate_Page.ConvertDocuments">Dokumentumok konvertálása</sys:String>
+    <sys:String x:Key="Navigate_Page.HashChecker">hash ellenőrzése</sys:String>
+
+    <sys:String x:Key="Navigate_Page.Settings">Beállítások</sys:String>
+    <sys:String x:Key="Navigate_Page.About">Névjegy</sys:String>
+
+    <!-- Notification list -->
+    <sys:String x:Key="Notification_Close_Message.Name">Üzenet bezárása</sys:String>
+    <sys:String x:Key="Notification_Message_Content">Üzenet tartalma: {0}, {1}</sys:String>
+    <sys:String x:Key="Notification_Message_Button_List">Üzenet gombok</sys:String>
+    <sys:String x:Key="Notification_Cancel_Task.Name">Feladat megszakítása</sys:String>
+
+    <!-- Home page -->
+    <sys:String x:Key="Home_Messages_Center.Name">Üzenetközpont</sys:String>
+    <!-- Greetings, customize it according to your country and habits. -->
+    <sys:String x:Key="Home_Greeting_Hello">Helló</sys:String>
+    <!-- 00:00 -> 05:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.0">Korán keltél, jó reggelt!</sys:String>
+    <!-- 05:00 -> 06:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.5">Jó reggelt, készen állsz akezdésre?</sys:String>
+    <!-- 06:00 -> 10:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.6">Jó napot!</sys:String>
+    <!-- 10:00 -> 11:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.10">Jó napot!</sys:String>
+    <!-- 11:00 -> 12:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.11">Jó napot!</sys:String>
+    <!-- 12:00 -> 13:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.12">Jó napot!</sys:String>
+    <!-- 13:00 -> 15:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.13">Jó napot!</sys:String>
+    <!-- 15:00 -> 17:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.15">Jó napot!</sys:String>
+    <!-- 17:00 -> 18:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.17">Jó estét!</sys:String>
+    <!-- 18:00 -> 21:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.18">Jó estét!</sys:String>
+    <!-- 21:00 -> 22:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.21">Ideje aludni, szép álmokat!</sys:String>
+    <!-- 22:00 -> 00:00 (+1) -->
+    <sys:String x:Key="Home_Greeting_Hour.22">Késő van, szép álmokat!</sys:String>
+    <!-- Greetings end -->
+    <sys:String x:Key="Home_Install_Office">Office telepítése</sys:String>
+    <sys:String x:Key="Home_Install_Office.O365PPRDescription">Tartalmazza az Outlook, a OneDrive Vállalati verzió, a Word, az Excel, a PowerPoint és egyebeket.</sys:String>
+    <sys:String x:Key="Home_Install_Office.O365HPRDescription">Tartalmazza az Outlook, a Word, az Excel, a PowerPoint és egyebeket.</sys:String>
+    <sys:String x:Key="Home_Install_Office.PP2019RDescription">Tartalmazza az Outlook, a Word, az Excel, a PowerPoint és egyebeket.</sys:String>
+    <sys:String x:Key="Home_Install_Office.HS2019Description">Tartalmazza a Word, Excel, PowerPoint.</sys:String>
+    <sys:String x:Key="Home_Getting_Content">Tartalom letöltése, kérem, várjon...</sys:String>
+    <sys:String x:Key="Home_Error_While_Getting_Content">Nem érhető el a tartalom, ellenőrizze internetkapcsolatát, és próbálja újra!</sys:String>
+    <sys:String x:Key="Home_Retry">_Ismét</sys:String>
+    <sys:String x:Key="Home_Launcher.Name">Alkalmazások listája</sys:String>
+    <sys:String x:Key="Home_Launcher_OpenInBrowser">_Nyissa meg a böngészőben</sys:String>
+    <sys:String x:Key="Home_Launcher_CreateShortcut">_Hozzon létre egy asztali parancsikont</sys:String>
+
+    <!-- Deploy page -->
+    <sys:String x:Key="Deploy_Learn_More">További információ</sys:String>
+    <!-- Channels Name, if you do not want to translate them, please keep in English. -->
+    <sys:String x:Key="PerpetualVL2019">Office 2019 Perpetual Enterprise</sys:String>
+    <sys:String x:Key="PerpetualVL2021">Office 2021 Perpetual Enterprise</sys:String>
+    <sys:String x:Key="PerpetualVL2024">Office 2024 Perpetual Enterprise</sys:String>
+    <sys:String x:Key="SemiAnnual">Semi-Annual Enterprise Channel</sys:String>
+    <sys:String x:Key="MonthlyEnterprise">Monthly Enterprise Channel</sys:String>
+    <sys:String x:Key="Current">Current Channel</sys:String>
+    <sys:String x:Key="SemiAnnualPreview">Semi-Annual Enterprise Channel (Preview)</sys:String>
+    <sys:String x:Key="CurrentPreview">Current Channel (Preview)</sys:String>
+    <sys:String x:Key="BetaChannel">Beta Channel</sys:String>
+
+    <!-- Error messages -->
+    <!-- {0} means product name. -->
+    <sys:String x:Key="Deploy_Error_Coexist">A(z) {0} nem létezhet együtt meglévő termékekkel.</sys:String>
+    <!-- {0} means product name. -->
+    <sys:String x:Key="Deploy_Error_ODT_Not_Supported">Ha telepíteni szeretné a(z) {0} alkalmazást, módosítsa a telepítőmodult Office Tool Plus-ra.</sys:String>
+    <!-- {0} means product name, {1} means channel name. -->
+    <sys:String x:Key="Deploy_Error_Channel">A(z) {0} nem telepíthető a kiválasztott csatornára: {1}.</sys:String>
+    <!-- {0} means channel name, such as Current Channel. -->
+    <sys:String x:Key="Deploy_Error_Unsupported_Channel">Ha a(z) {0} alkalmazást szeretné használni, módosítsa a telepítőmodult Office Tool Plus-ra.</sys:String>
+    <sys:String x:Key="Deploy_Error_System_Architecture">A 64 bites Office nem telepíthető nem 64 bites operációs rendszerre.</sys:String>
+    <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
+    <sys:String x:Key="Deploy_Error_Office_Architecture">Nem telepítheti a(z) {0} Office-t, mert a(z) {1} Office telepítve van a rendszeren.</sys:String>
+    <sys:String x:Key="Deploy_Error_Installation_Arch">A kiválasztott architektúra nem egyezik a helyi telepítőfájlok architektúrájával. Kérjük, válassza ki újra az architektúrát, vagy ne használja a helyi telepítőfájlokat a telepítéshez.</sys:String>
+    <sys:String x:Key="Deploy_Error_Installation_Channel">A kiválasztott frissítési csatorna nem egyezik a helyi telepítési fájlok frissítési csatornájával. Kérjük, válassza ki újra a frissítési csatornát, vagy ne használja a helyi telepítési fájlokat a telepítéshez.</sys:String>
+
+    <sys:String x:Key="Deploy_Deployment">Office telepítése</sys:String>
+    <sys:String x:Key="Deploy_Deployment.Description">Az Office telepítése előtt győződjön meg arról, hogy a telepítési mód megfelelően van beállítva, és a termék és a nyelv konfigurálva van.</sys:String>
+    <sys:String x:Key="Deploy_Start_Deploy">Telepítés _indítása</sys:String>
+    <sys:String x:Key="Deploy_Reset">_Minden visszaállítása</sys:String>
+    <sys:String x:Key="Deploy_View_Code">_XML-kód megtekintése</sys:String>
+    <sys:String x:Key="Deploy_Apply_Preferences">_Beállítások alkalmazása az Office-alkalmazásokhoz</sys:String>
+    <sys:String x:Key="Deploy_Export_Config">Konfiguráció _exportálása</sys:String>
+    <sys:String x:Key="Deploy_Import_Config">Konfiguráció _importálása</sys:String>
+    <sys:String x:Key="Deploy_Import_Config_Web">Konfiguráció importálása a _Webről</sys:String>
+    <sys:String x:Key="Deploy_Mode">Telepítési mód</sys:String>
+    <sys:String x:Key="Deploy_Mode.Edit">Konfiguráció szerkesztése</sys:String>
+    <sys:String x:Key="Deploy_Mode.Download">Letöltés</sys:String>
+    <sys:String x:Key="Deploy_Mode.Install">Telepítés</sys:String>
+    <sys:String x:Key="Deploy_Mode.Create_ISO">ISO fájl létrehozása</sys:String>
+    <sys:String x:Key="Deploy_Architecture">Architektúra</sys:String>
+    <sys:String x:Key="Deploy_Architecture_Current_Installed">A jelenleg telepített Office architektúrája: {0}.</sys:String>
+    <sys:String x:Key="Deploy_Architecture.x86">32-bit</sys:String>
+    <sys:String x:Key="Deploy_Architecture.x64">64-bit</sys:String>
+    <sys:String x:Key="Deploy_Architecture.ARM">ARM (32 bit kompatibilis)</sys:String>
+    <sys:String x:Key="Deploy_Architecture.ARM64">ARM64 (64 bit kompatibilis)</sys:String>
+    <sys:String x:Key="Deploy_Channel">Frissítési csatorna</sys:String>
+    <sys:String x:Key="Deploy_Channel_Available_Version">Jelenleg elérhető Office-verzió: {0}</sys:String>
+    <sys:String x:Key="Deploy_Module">ITelepítő modul</sys:String>
+    <sys:String x:Key="Deploy_Module.Description">Válassza az Office Deployment Tool eszközt a jobb kompatibilitás érdekében, vagy az Office Tool Plust a jobb élmény érdekében.</sys:String>
+    <sys:String x:Key="Deploy_Module.ODT">Office Deployment Tool</sys:String>
+    <sys:String x:Key="Deploy_Module.OTP">Office Tool Plus</sys:String>
+    <sys:String x:Key="Deploy_Download_First">Először töltse le, majd telepítse</sys:String>
+    <sys:String x:Key="Deploy_Download_First.Description">A telepítőfájlok a programkönyvtárba vagy a forrásútvonal által megadott könyvtárba kerülnek mentésre.</sys:String>
+    <sys:String x:Key="Deploy_Create_Shortcut">Asztali parancsikonok készítése</sys:String>
+    <sys:String x:Key="Deploy_Create_Shortcut.Description">Hozzon létre asztali parancsikonokat az Office alkalmazásokhoz az Office telepítése után.</sys:String>
+    <!-- Do not edit it or translate it. iSlide only provided in mainland China. -->
+    <sys:String x:Key="Deploy_iSlide">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_iSlide.Description">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_iSlide_Install">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_iSlide_Install.Name">PlaceHolder</sys:String>
+
+    <sys:String x:Key="Deploy_Product">Termékek</sys:String>
+    <sys:String x:Key="Deploy_Product.Description">{0} telepített termék, {1} készen áll a telepítésre és {2} készen áll az eltávolításra.</sys:String>
+    <sys:String x:Key="Deploy_Product_Button">_Termékek hozzáadása</sys:String>
+    <sys:String x:Key="Deploy_Product_Nothing_Here">Itt nincs semmi.</sys:String>
+    <sys:String x:Key="Deploy_Product_Installed">Telepített termék(ek)</sys:String>
+    <sys:String x:Key="Deploy_Product_To_Be_Deployed">Telepítésre kerül</sys:String>
+    <sys:String x:Key="Deploy_Product_To_Be_Uninstalled">Eltávolításra kerül</sys:String>
+    <sys:String x:Key="Deploy_Uninstall_Product">Eltávolítás</sys:String>
+    <sys:String x:Key="Deploy_Cancel_Uninstall_Product">Eltávolítás megszakítása</sys:String>
+    <sys:String x:Key="Deploy_Cancel_Deploy_Product">Telepítés megszakítása</sys:String>
+    <sys:String x:Key="Deploy_Applications">Alkalmazások</sys:String>
+    <sys:String x:Key="Deploy_Addons">Kiegészítők</sys:String>
+    <sys:String x:Key="Deploy_Addons.Tip">Ne törölje a jelölést a kiegészítőkről, ha nem tudja, mik azok.</sys:String>
+    <sys:String x:Key="Deploy_Language">Nyelvek</sys:String>
+    <sys:String x:Key="Deploy_Language.Description">{0} telepített nyelv, {1} készen áll a telepítésre és {2} készen áll az eltávolításra.</sys:String>
+    <sys:String x:Key="Deploy_Language_Button">_Nyelvek hozzáadása</sys:String>
+    <sys:String x:Key="Deploy_Language_Nothing_Here">Itt nincs semmi.</sys:String>
+    <sys:String x:Key="Deploy_Language_Installed">Telepített nyelv(ek)</sys:String>
+    <sys:String x:Key="Deploy_Language_To_Be_Deployed">Telepítésre kerül</sys:String>
+    <sys:String x:Key="Deploy_Language_To_Be_Uninstalled">Eltávolításra kerül</sys:String>
+    <sys:String x:Key="Deploy_Uninstall_Language">Eltávolítás</sys:String>
+    <sys:String x:Key="Deploy_Cancel_Uninstall_Language">Eltávolítás megszakítása</sys:String>
+    <sys:String x:Key="Deploy_Cancel_Deploy_Language">Telepítés megszakítása</sys:String>
+
+    <sys:String x:Key="Deploy_Products_List">Termékek listája</sys:String>
+    <sys:String x:Key="Deploy_Products_List_Type_To_Search">Kezdjen el beírni a terméklista szűréséhez</sys:String>
+    <sys:String x:Key="Deploy_Products_List_ID">Termék ID:</sys:String>
+    <sys:String x:Key="Deploy_Languages_List">Nyelvlista</sys:String>
+    <sys:String x:Key="Deploy_Languages_List_Type_To_Search">Kezdjen el beírni a nyelvlista szűréséhez</sys:String>
+    <sys:String x:Key="Deploy_Languages_As_Proofing_Tool">Csak ellenőrző eszközök telepítése.</sys:String>
+    <sys:String x:Key="Deploy_Languages_List_ID">Nyelv ID:</sys:String>
+    <sys:String x:Key="Deploy_Languages_List_Type">Nyelvtípus:</sys:String>
+    <sys:String x:Key="Deploy_Language_Tpye.Full">Teljes</sys:String>
+    <sys:String x:Key="Deploy_Language_Tpye.Partial">Részleges</sys:String>
+    <sys:String x:Key="Deploy_Language_Tpye.PartialWithoutProofingTools">Részleges ellenőrző eszközök nélkül</sys:String>
+    <sys:String x:Key="Deploy_Language_Tpye.ProofingTools">Ellenőrző eszközök</sys:String>
+
+    <sys:String x:Key="Deploy_Installation_Files">Telepítési fájlok</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files.Description">Válassza ki, ellenőrizze vagy törölje az Office telepítési fájljait.</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Select">Kiválasztás</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Select.Description">A telepítési fájlok kiválasztásakor válassza ki bármelyik CAB fájlt.</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Verify">Ellenőrzés</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Verify.Description">Ellenőrizze a telepítőfájlokat, hogy nem tartalmaznak-e hibákat.</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_DeleteAll">Az összes törlése</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Reset">Visszaállítás</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Reset.Description">Ne használja az aktuális telepítőfájlokat az Office telepítéséhez.</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_UseAsSource">_Használja forrásként</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_UseAsSource.Description">TAz architektúra és a frissítési csatorna automatikusan illeszkedik ehhez a telepítéshez.</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Open_Location">_Fájl helyének megnyitása</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Delete">Törlés</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Settings">Menjen a speciális beállításokhoz</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Settings.Description">További beállítások megadásához lépjen a speciális beállításokhoz.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Settings_Button">_Speciális beállítások</sys:String>
+
+    <!-- Deploy advanced page -->
+    <sys:String x:Key="Deploy_Advanced">Speciális beállítások</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Go_Back">Menjen vissza</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Go_Back.Description">Vissza az alapbeállításokhoz.</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_General_Settings">Általános beállítások</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Company_Name">Adja meg a szervezet nevét az Office-dokumentumok vállalati tulajdonságának beállításához.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Description">Adja meg a konfiguráció leírását a dokumentációhoz.</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Install_Settings">Telepítési beállítások</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Fallback_Language">Tartalék nyelv</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Fallback_Language.Description">Ha a nyelv a rendszer nyelvének megfelelőre van állítva, megadhat egy tartalék nyelvet, amelyet telepíteni kell, ha a megfelelő nyelvet az Office nem támogatja, vagy nem található a helyi forrásban..</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Version">Office verzió</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Version.Description">Alapértelmezés szerint a legfrissebb elérhető verzió, ha nincs megadva.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Download_Path">Letöltési útvonal</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Download_Path.Description">Meghatározza, hogy honnan töltsék le a telepítőfájlokat. A letöltési útvonal használatakor meg kell adni az Office verziót.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Source_Path">Forrás útvonal</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Source_Path.Description">Ha a forrás elérési útja üres, akkor alapértelmezés szerint az Office CDN-t használja forrásként. Letöltési módban meghatározza a fájlok mentési helyét.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_No_Display">Csendes telepítés</sys:String>
+    <sys:String x:Key="Deploy_Advanced_No_Display.Description">Az Office telepítése során nem jelennek meg folyamatjelző sávok, hibaüzenetek vagy egyéb felhasználói felület.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback">Engedélyezze a visszaállást a CDN-re</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback.Description">Engedélyezze az Office telepítőjének, hogy visszatérjen az Office CDN-hez a hiányzó nyelvek letöltéséhez.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Force_Close_Apps">Az összes futó Office-alkalmazás kényszerített bezárása</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Force_Close_Apps.Description">A nem mentett adatok elveszhetnek.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar">Rögzítés a tálcára</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar.Description">Rögzítse az Office-alkalmazások ikonjait a tálcára Windows 7, 8 és 8.1 rendszeren.</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Update_Settings">Beállítások frissítése</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM">A frissítések kezelése a MECM segítségével</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM.Description">A frissítések Microsoft Endpoint Configuration Managerrel történő kezelése esetén a frissítéseket a rendszergazda kezeli.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Enable_Update">Az Office automatikus frissítésének engedélyezése</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Update_Path">Frissítés forrása</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Update_Path.Description">Ha az elérési út üres, akkor alapértelmezés szerint az Office CDN-t használja forrásként.</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Upgrade_Settings">Frissítési beállítások</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Migrate_Arch">Architektúra migrálása</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Migrate_Arch.Description">Módosítsa a meglévő Office-telepítést a jelenleg megadott architektúrára. Például 32 bitről 64 bitre.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_MSI_Notice">A következő beállítások csak akkor lépnek érvénybe, ha az Office Deployment Tool-t használja telepítőmodulként.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Remove_MSI">Távolítsa el az Office meglévő MSI-verzióit</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Match_Previous_MSI">Telepítse ugyanazt a nyelvet, mint az előző MSI-verzió</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Ignore_Product">Hagyja figyelmen kívül ezeket a termékeket</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Activate_Settings">Aktiválási beállítások</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Accept_EULA">Az EULA automatikus elfogadása</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Accept_EULA.Description">Ha engedélyezve van, a „Microsoft szoftverlicenc feltételei” párbeszédpanel nem jelenik meg.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_MAK">MAK beállítás</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Auto_Activate">A MAK beállítása után megpróbáljuk automatikusan aktiválni a terméket.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Product_Activation">Termékaktiválás</sys:String>
+    <sys:String x:Key="Deploy_Advanced_UserBased">Felhasználó alapú</sys:String>
+    <sys:String x:Key="Deploy_Advanced_DeviceBased">Eszköz alapú</sys:String>
+    <sys:String x:Key="Deploy_Advanced_SCL">Megosztott számítógép</sys:String>
+    <sys:String x:Key="Deploy_Advanced_SCL_Cache_Override">Licenszelési token helyének felülírása</sys:String>
+    <sys:String x:Key="Deploy_Advanced_SCL_Cache_Override.ToolTip">Adja meg az licenszelési token mappájának helyét.</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Preferences">Alkalmazás beállítások</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Apply_Preferences.Description">Azonnal alkalmazza a beállításokat az Office-alkalmazásokra.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Reset_Preferences">Állítsa vissza az összes beállítást</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Reset_Preferences_Button">Visszaállítás</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Load_Preferences_Button">Alkalmazásbeállítások betöltése</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Type_To_Search.Name">Alkalmazásbeállítások keresése</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Type_To_Search.HelpText">Kezdjen el beírni az alkalmazásbeállítások kereséséhez</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Settings">Beállítások</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Enable">Engedélyezve</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Set_Preferences_Button">Alkalmaz</sys:String>
+
+    <!-- Activate page -->
+    <sys:String x:Key="Activate_Licenses_Management">Licenszek kezelése</sys:String>
+    <sys:String x:Key="Activate_Licenses_Management.Description">Office licencek telepítése, eltávolítása vagy aktiválása.</sys:String>
+    <sys:String x:Key="Activate_Button">_Aktiválás</sys:String>
+    <sys:String x:Key="Activate_Display_Internet_Act_Events">Internet-aktiválási hibaesemények megjelenítése</sys:String>
+    <sys:String x:Key="Activate_Display_KMS_Events">KMS aktiválási események megjelenítése</sys:String>
+    <sys:String x:Key="Activate_Clear_Activation">Aktiválás törlése</sys:String>
+    <sys:String x:Key="Activate_Install_Licenses">Licencek telepítése</sys:String>
+    <sys:String x:Key="Activate_Install_Licenses.Description">Szerezzen licenceket a telepített Office-ból, és telepítse azokat.</sys:String>
+    <sys:String x:Key="Activate_Install_Licenses_Button">Telepítés</sys:String>
+    <sys:String x:Key="Activate_Install_Other_Licenses">Telepítsen más licenceket</sys:String>
+    <sys:String x:Key="Activate_Install_Other_Licenses.Description">Telepítsen más licenceket a helyi lemezről.</sys:String>
+    <sys:String x:Key="Activate_Install_Other_Licenses_Button">Telepítés</sys:String>
+    <sys:String x:Key="Activate_Uninstall_All_Licenses">Távolítsa el az összes licencet</sys:String>
+    <sys:String x:Key="Activate_Uninstall_All_Licenses.Description">Távolítsa el az összes telepített licencet. A művelet után telepítenie kell a licencet.</sys:String>
+    <sys:String x:Key="Activate_Uninstall_All_Licenses_Button">Eltávolítás</sys:String>
+
+    <sys:String x:Key="Activate_Keys_Management">Kulcskezelés</sys:String>
+    <sys:String x:Key="Activate_Keys_Management.Description">Telepítse, távolítsa el a kulcsokat vagy aktiválja az Office-t offline.</sys:String>
+    <sys:String x:Key="Activate_Product_Key">Termékkulcs</sys:String>
+    <sys:String x:Key="Activate_Product_Key.Description">Telepítse az Office termékkulcsot, a termékkulcs formátuma: XXXXX-XXXXX-XXXXX-XXXXX-XXXXX.</sys:String>
+    <sys:String x:Key="Activate_Install_Product_Key">_Telepítési kulcs</sys:String>
+    <sys:String x:Key="Activate_Uninstall_Unactivated_Key">_Távolítsa el az összes nem aktivált kulcsot</sys:String>
+    <sys:String x:Key="Activate_Uninstall_All_Product_Keys">Távolítsa el _az összes kulcsot</sys:String>
+    <sys:String x:Key="Activate_Install_CID">Telepítse a megerősítő ID-t</sys:String>
+    <sys:String x:Key="Activate_Install_CID.Description">Telepítse a megerősítő azonosítót az Office offline aktiválásához.</sys:String>
+    <sys:String x:Key="Activate_Input_CID">Kérjük, adja meg a megerősítő azonosítót</sys:String>
+
+    <sys:String x:Key="Activate_KMS_Management">KMS kezelés</sys:String>
+    <sys:String x:Key="Activate_KMS_Management.Description">Állítsa be vagy állítsa vissza a KMS-állomást vagy portot.</sys:String>
+    <sys:String x:Key="Activate_KMS_Apply">_Host beállításat</sys:String>
+    <sys:String x:Key="Activate_KMS_Host">KMS host</sys:String>
+    <sys:String x:Key="Activate_KMS_Host.Description">KMS gazdagépnév. Például kms.example.com, kms.example.com:1688 vagy IP-cím.</sys:String>
+    <sys:String x:Key="Activate_KMS_Host_Cache.Enable">A gazdagép gyorsítótárazásának engedélyezése</sys:String>
+    <sys:String x:Key="Activate_KMS_Host_Cache.Disable">A gazdagép gyorsítótárazásának letiltása</sys:String>
+    <sys:String x:Key="Activate_KMS_Reset">KMS visszaállítása</sys:String>
+    <sys:String x:Key="Activate_KMS_Reset.Description">Távolítsa el a KMS-gazdanevet, és állítsa be a KMS-portot alapértelmezettre.</sys:String>
+
+    <!-- Licenses list -->
+    <sys:String x:Key="Activate_Licenses">Office licenszek</sys:String>
+    <sys:String x:Key="Activate_License">Licensz lista</sys:String>
+    <sys:String x:Key="Activate_License.Description">A telepített licencek kezelése.</sys:String>
+    <sys:String x:Key="Activate_License_Refresh">F_rissítés</sys:String>
+    <sys:String x:Key="Activate_License_Expand">Az össz_es kibontása</sys:String>
+    <sys:String x:Key="Activate_License_Collapse">Az összes be_csukása</sys:String>
+    <sys:String x:Key="Activate_License_Clear">_Lista törlése</sys:String>
+    <sys:String x:Key="Activate_License_Nothing_Here">Itt nincs semmi.</sys:String>
+    <sys:String x:Key="Activate_License_Status.Unactivated">Nincs aktiválva</sys:String>
+    <sys:String x:Key="Activate_License_Status.Activated">Aktiválva</sys:String>
+    <!-- vNext Licnese -->
+    <sys:String x:Key="Activate_License_vNext.Type">Licensz típusa:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Type.User">Felhasználó</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Type.Device">Eszköz</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Type.Subscription">Előfizetés</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Type.Perpetual">Örökös</sys:String>
+    <sys:String x:Key="Activate_License_vNext.ExpireDate">Licensz lejárati dátuma:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.MaxDevice">Engedélyezett eszközök maximális száma:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Status">Állapot:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Status.Provisioned">ellátva</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Code">Indok kód:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Beneficiary.User">A licensz hozzá van rendelve a felhasználóhoz:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Beneficiary.Device">A licensz hozzá van rendelve az eszközhöz:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.TenantID">Bérlő ID:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.DeviceID">Eszköz ID:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.UserID">Felhasználó ID:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.ValidFrom">A licensz ettől érvényes:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.ValidTo">A licensz eddig érvényes:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.RenewalTime">Következő megújítási időpont:</sys:String>
+    <!-- Legacy License -->
+    <sys:String x:Key="Activate_License_Lic.Description">Leírás:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Key">A kulcs utolsó 5 karaktere:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Period">Hátralévő időszak:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Error_Code">Hibakód:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Error_Description">Hiba leírása:</sys:String>
+    <sys:String x:Key="Activate_License_VL.Type">Aktiválás típusa:</sys:String>
+    <!-- AO equal to Activation Object -->
+    <sys:String x:Key="Activate_License_AD.ObjectName">Aktiválási Objektum neve: </sys:String>
+    <sys:String x:Key="Activate_License_AD.ObjectDN">AO DN: </sys:String>
+    <sys:String x:Key="Activate_License_AD.ExtendedPid">AO kiterjesztett PID: </sys:String>
+    <sys:String x:Key="Activate_License_AD.AID">AO aktiválási ID: </sys:String>
+    <sys:String x:Key="Activate_License_KMS.Host">KMS host:</sys:String>
+    <sys:String x:Key="Activate_License_KMS_Host_Caching">Host gyorsítótárazás:</sys:String>
+    <sys:String x:Key="Activate_License_KMS_Host_Caching.Enabled">Engedélyezve</sys:String>
+    <sys:String x:Key="Activate_License_KMS_Host_Caching.Disabled">Letiltva</sys:String>
+    <sys:String x:Key="Activate_License_KMS.Act_Interval">Aktiválási időköz:</sys:String>
+    <sys:String x:Key="Activate_License_KMS.Renew_Interval">Megújítási időköz:</sys:String>
+
+    <sys:String x:Key="Activate_License_Period.Infinite">végtelen</sys:String>
+    <sys:String x:Key="Activate_License_Period.Day">{0} nap</sys:String>
+    <sys:String x:Key="Activate_License_Period.Hour">{0} óra</sys:String>
+    <sys:String x:Key="Activate_License_Period.Minute">{0} perc</sys:String>
+
+    <sys:String x:Key="Activate_License_Button.Copy_LicenseID">Licencazonosító másolása</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_TenantID">Bérlőazonosító másolása</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_UserID">Felhasználói ID másolása</sys:String>
+    <sys:String x:Key="Activate_License_Button.Delete_License">Licensz törlése</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_SKU">SKU ID másolása</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_IID">Telepítési ID másolása</sys:String>
+    <sys:String x:Key="Activate_License_Button.Activate">Aktiválja</sys:String>
+    <sys:String x:Key="Activate_License_Button.Uninstall_Key">Kulcs eltávolítása</sys:String>
+
+    <sys:String x:Key="Activate_Licenses_List">Licenszlista</sys:String>
+    <sys:String x:Key="Activate_Licenses_List_Type_To_Search">Kezdjen el beírni a licenszlista szűréséhez</sys:String>
+    <sys:String x:Key="Activate_Licenses_List_ID">Termék ID:</sys:String>
+
+    <!-- Toolbox page -->
+    <sys:String x:Key="Toolbox_Repair">Javítás</sys:String>
+    <sys:String x:Key="Toolbox_Learn_More">Tudjon meg többet</sys:String>
+
+    <sys:String x:Key="Toolbox_General_Tools">Általános eszközök</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version">Office-verzió lekérdezése</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version.Description">Az Office frissítési csatornáira vonatkozó információk lekérdezése a Microsofttól.</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_GoBack">Vissza az eszköztár lapra.</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_Button">Lekérdezés</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List">Az Office frissítési csatornáinak információi</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_Channel">Mégse</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_Branch">Ág</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_Version">Verzió</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_CreatedTime">Készítés ideje</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_Copy">Másolja ki a verziószámot</sys:String>
+    <sys:String x:Key="Toolbox_Query_ErrorCode">Hibakód leírás lekérdezése</sys:String>
+    <sys:String x:Key="Toolbox_Query_ErrorCode.Description">A hibakód általában „0x”-al kezdődik. Például 0x2 vagy 0x80070002.</sys:String>
+    <sys:String x:Key="Toolbox_Query_ErrorCode_Button">Lekérdezés</sys:String>
+    <sys:String x:Key="Toolbox_Input_ErrorCode">Kérem, írja be a hibakódot!</sys:String>
+    <sys:String x:Key="Toolbox_Check_KMS">Tesztelje a KMS host elérhetőségét</sys:String>
+    <sys:String x:Key="Toolbox_Check_KMS.Description">A TC Ping segítségével ellenőrizze, hogy a KMS host csatlakoztatható-e!</sys:String>
+    <sys:String x:Key="Toolbox_Check_KMS_Button">Teszt</sys:String>
+
+    <sys:String x:Key="Toolbox_Office_Tools">Office eszközök</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Office">Office eltávolítása</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Office.Description">Az Office-hoz kapcsolódó összetevők és nyilvántartások kényszerített eltávolítása.</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Office.Description_Bold">Megjegyzés: csak akkor távolítsa el így az Office-t, ha nem lehet másképpen megfelelően eltávolítani.</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Office_Button">Eltávolítás</sys:String>
+    <sys:String x:Key="Toolbox_Remove_APPX">Távolítsa el az Office Microsoft Store-kiadását is</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Clear_Activation">Az aktiválást is</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Result">Eredmény eltávolítása</sys:String>
+    <sys:String x:Key="Toolbox_Collect_InstallerLog">Office telepítő naplóinak összegyűjtése</sys:String>
+    <sys:String x:Key="Toolbox_Collect_InstallerLog.Description">Naplók gyűjtése a problémák elemzéséhez és megoldásához.</sys:String>
+    <sys:String x:Key="Toolbox_Collect_InstallerLog_Button">Gyűjtés</sys:String>
+    <sys:String x:Key="Toolbox_Change_UpdateChannel">Az Office frissítési csatorna módosítása</sys:String>
+    <sys:String x:Key="Toolbox_Change_UpdateChannel.Description">A frissítési csatorna módosítása lehetővé teszi az Office frissítését vagy alacsonyabb verzióját az újratelepítés nélkül.</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner">Az Office-termék tulajdonosának megváltoztatása</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner.Description">A név megjelenik az Office alkalmazás fiókoldalán.</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Set">Név beállítása</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Reset">A tulajdonos nevének visszaállítása az alapértelmezett értékekre</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Name">Név</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Name.Description">A termék tulajdonosának beállítása. Például Jakab vagy ProPlus2019Volume:Jakab.</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Name.LearnMore">További információ a tulajdonosnév-formátumról.</sys:String>
+    <sys:String x:Key="Toolbox_Repair_DocumentIcon">Office dokumentumok javítás ikonja</sys:String>
+    <sys:String x:Key="Toolbox_Repair_DocumentIcon.Description">Ezzel visszaállítja az Office-dokumentumtársítást.</sys:String>
+    <sys:String x:Key="Toolbox_Backup_Restore_Settings">Az Office-beállítások biztonsági mentése vagy visszaállítása</sys:String>
+    <sys:String x:Key="Toolbox_Backup_Restore_Settings.Description">Készítsen biztonsági másolatot vagy állítsa vissza az Office-alkalmazások beállításait, zárja ki a fájlokat és tartalmakat.&#x000A;Megjegyzés: Ne ossza meg biztonsági másolatait, mert kiszivároghatnak személyes adatai.</sys:String>
+    <sys:String x:Key="Toolbox_Backup_Exclude_PersonalInf">A biztonsági mentés során zárja ki a személyes adatokat!</sys:String>
+    <sys:String x:Key="Toolbox_Backup">Biztonsági mentés</sys:String>
+    <sys:String x:Key="Toolbox_Restore">Visszaállítás</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings">Állítsa vissza az Office-beállításokat az alapértelmezett értékekre</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings.Description">Állítsa vissza az Office alapértelmezett beállításait, ahogy szeretné. Mielőtt elkezdené, zárja be az összes Office-alkalmazást.</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_Button">Visszaállítás</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserSettings">Az aktuális felhasználói beállítások törlése</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserSettings.Description">Tartalmazza az Office-alkalmazások beállításait, a legutóbb megnyitott fájlokat és a legutóbbi mentési helyet.</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserAppData">Törölje az alkalmazások adatait</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserAppData.Description">Tartalmazza az alkalmazások gyorsítótárát.</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_NormalTemplate">Törölje a Normál sablont</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_NormalTemplate.Description">Normal.dotm</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_GlobalSettings">Törölje az alkalmazások beállításait</sys:String>
+
+    <sys:String x:Key="Toolbox_Windows_Tools">Windows eszközök</sys:String>
+    <sys:String x:Key="Toolbox_Reset_SPPSvc">Szoftvervédelmi szolgáltatás visszaállítása</sys:String>
+    <sys:String x:Key="Toolbox_Reset_SPPSvc.Description">Ezzel visszaállítja a Szoftvervédelmi szolgáltatás konfigurációját, beleértve a KMS-konfigurációt is.</sys:String>
+    <sys:String x:Key="Toolbox_Reset_SPPSvc.LearnMore">További információ a Szoftvervédelmi szolgáltatás visszaállításáról.</sys:String>
+    <sys:String x:Key="Toolbox_Rebuild_ActivationToken">Windows aktiválási token újraépítése</sys:String>
+    <sys:String x:Key="Toolbox_Rebuild_ActivationToken.Description">Ez újraépíti a Windows aktiválási tokent. A Windows aktiválási állapota elveszhet.</sys:String>
+    <sys:String x:Key="Toolbox_Rebuild_ActivationToken.LearnMore">További információ a Windows aktiválási token újraépítéséről.</sys:String>
+    <sys:String x:Key="Toolbox_Repair_Variables">Rendszerváltozók visszaállítása</sys:String>
+    <sys:String x:Key="Toolbox_Repair_Variables.Description">Ezzel visszaállítja a rendszerváltozókat az alapértelmezett értékekre. Ne használja, ha nem biztos benne.</sys:String>
+    <sys:String x:Key="Toolbox_Repair_Variables.LearnMore">További információ a rendszerváltozók visszaállításáról.</sys:String>
+    <sys:String x:Key="Toolbox_Repair_WMI">WMI összetevők javítása</sys:String>
+    <sys:String x:Key="Toolbox_Repair_WMI.Description">Ezzel újraregisztrálja a WMI-összetevőket. Ne használja, ha nem biztos benne.</sys:String>
+    <sys:String x:Key="Toolbox_Repair_WMI.LearnMore">További információ a WMI-összetevők javításáról.</sys:String>
+
+    <!-- Convert page -->
+    <sys:String x:Key="Convert_Excel">Excel</sys:String>
+    <sys:String x:Key="Convert_Excel.Description">Excel dokumentumok konvertálása.</sys:String>
+    <sys:String x:Key="Convert_PowerPoint">PowerPoint</sys:String>
+    <sys:String x:Key="Convert_PowerPoint.Description">PowerPoint dokumentumok konvertálása.</sys:String>
+    <sys:String x:Key="Convert_Word">Word</sys:String>
+    <sys:String x:Key="Convert_Word.Description">Word dokumentumok konvertálása.</sys:String>
+    <sys:String x:Key="Convert_Actions">Dokumentumok _importálása</sys:String>
+    <sys:String x:Key="Convert_Actions.SelectFiles">Fájlok kiválasztása</sys:String>
+    <sys:String x:Key="Convert_Actions.SelectFolder">Mappa kiválasztása</sys:String>
+    <sys:String x:Key="Convert_Input">Bemeneti formátum</sys:String>
+    <sys:String x:Key="Convert_Input.Description">Mappa kiválasztásakor csak a bemeneti formátumnak megfelelő fájlok kerülnek importálásra.</sys:String>
+    <sys:String x:Key="Convert_Output">Kimeneti formátum</sys:String>
+
+    <sys:String x:Key="Convert_File_List">Fájllista</sys:String>
+    <sys:String x:Key="Convert_StartConvert">Konvertálás</sys:String>
+    <sys:String x:Key="Convert_StartConvert.ToolTip">Dokumentumok konvertálásának indítása.</sys:String>
+    <sys:String x:Key="Convert_ClearList">Lista törlése</sys:String>
+    <sys:String x:Key="Convert_File">Fájl</sys:String>
+    <sys:String x:Key="Convert_NewFormat">Új formátum</sys:String>
+    <sys:String x:Key="Convert_Open_File_Location">Fájl _helyének megnyitása</sys:String>
+    <sys:String x:Key="Convert_Page_Count">{1}/{0}. oldal</sys:String>
+    <sys:String x:Key="Convert_Previous_Page">Előző oldal</sys:String>
+    <sys:String x:Key="Convert_Next_Page">Következő oldal</sys:String>
+
+    <sys:String x:Key="Convert_Settings">Konvertálási beállítások</sys:String>
+    <sys:String x:Key="Convert_Settings.Description">A beállítások módosítása.</sys:String>
+    <sys:String x:Key="Convert_SearchOnSubfolders">Almappák keresése</sys:String>
+    <sys:String x:Key="Convert_SearchOnSubfolders.Description">Mappa kiválasztásakor keressen fájlokat az almappákban.</sys:String>
+    <sys:String x:Key="Convert_Delete">Fájl törlése</sys:String>
+    <sys:String x:Key="Convert_Delete.Description">A sikeres átalakítás után helyezze át az eredeti fájlt a Lomtárba. Ha a Lomtár nem érhető el, a fájl véglegesen törlődik.</sys:String>
+    <sys:String x:Key="Convert_HideUI">Felhasználói felület elrejtése</sys:String>
+    <sys:String x:Key="Convert_HideUI.Description">Figyelmeztető ablak elrejtése, amikor az Office működik.</sys:String>
+    <sys:String x:Key="Convert_Rows_Per_Page">Sorok oldalanként</sys:String>
+    <sys:String x:Key="Convert_Rows_Per_Page.Description">Állítsa be az oldalanként megjelenített fájlok számát a fájllistában.</sys:String>
+
+    <!-- File types -->
+    <!-- Common -->
+    <sys:String x:Key="File_Type.All">Minden fájl</sys:String>
+    <sys:String x:Key="File_Type.Supported">Minden támogatott fájl</sys:String>
+    <sys:String x:Key="File_Type.PDF">PDF</sys:String>
+    <sys:String x:Key="File_Type.XPS">XPS dokumentum</sys:String>
+    <sys:String x:Key="File_Type.TXT">Egyszerű szöveg</sys:String>
+    <sys:String x:Key="File_Type.MHTML">Egyfájlos weboldal</sys:String>
+    <sys:String x:Key="File_Type.HTML">Weboldal</sys:String>
+    <sys:String x:Key="File_Type.RTF">Rich Text Formátum</sys:String>
+    <!-- Image -->
+    <sys:String x:Key="File_Type.GIF">Animált GIF formátum</sys:String>
+    <sys:String x:Key="File_Type.JPG">JPEG fájlcsere formátum</sys:String>
+    <sys:String x:Key="File_Type.PNG">PNG Portable Network Graphics formátum</sys:String>
+    <sys:String x:Key="File_Type.TIF">TIFF Tag Image File formátum</sys:String>
+    <sys:String x:Key="File_Type.BMP">BMP Eszközfüggetlen bittérkép</sys:String>
+    <!-- Video -->
+    <sys:String x:Key="File_Type.MP4">MPEG-4 videó</sys:String>
+    <sys:String x:Key="File_Type.WMV">WMV Windows Média Videó</sys:String>
+    <!-- Word -->
+    <sys:String x:Key="File_Type.Word_DOCX">Word dokumentum</sys:String>
+    <sys:String x:Key="File_Type.Word_DOCM">Makróbarát Word dokumentum</sys:String>
+    <sys:String x:Key="File_Type.Word_DOC">Word 97-2003 dokumentum</sys:String>
+    <sys:String x:Key="File_Type.Word_DOTX">Word sablon</sys:String>
+    <sys:String x:Key="File_Type.Word_DOTM">Makróbarát Word sablon</sys:String>
+    <sys:String x:Key="File_Type.Word_DOT">Word 97-2003 sablon</sys:String>
+    <!-- PowerPoint -->
+    <sys:String x:Key="File_Type.PowerPoint_PPTX">PowerPoint bemutató</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPTM">Makróbarát PowerPoint bemutató</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPT">PowerPoint 97-2003 bemutató</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_POTX">PowerPoint sablon</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_POTM">Makróbarát PowerPoint sablon</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_POT">PowerPoint 97-2003 sablon</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPSX">PowerPoint diavetítés</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPSM">Makróbarát PowerPoint diavetítés</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPS">PowerPoint 97-2003 diavetítés</sys:String>
+    <!-- Excel -->
+    <sys:String x:Key="File_Type.Excel_XLSX">Excel munkafüzet</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLSM">Makróbarát Excel munkafüzet</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLS">Excel 97-2003 munkafüzet</sys:String>
+    <sys:String x:Key="File_Type.Excel_CSV">CSV UTF-8 (Vesszővel elválasztva)</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLTX">Excel sablon</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLTM">Makróbarát Excel sablon</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLT">Excel 97-2003 sablon</sys:String>
+
+    <!-- Hash checker page -->
+    <sys:String x:Key="Hash_Checker_Hash">Hash</sys:String>
+    <sys:String x:Key="Hash_Checker_Hash.Description">Fájlok kivonatának létrehozása, több hash-algoritmus támogatása.</sys:String>
+    <sys:String x:Key="Hash_Checker_Actions">Fájlok _importálása</sys:String>
+    <sys:String x:Key="Hash_Checker_Actions.SelectFiles">Fájlok kiválasztása</sys:String>
+    <sys:String x:Key="Hash_Checker_Actions.SelectFolder">Mappa kiválasztása</sys:String>
+    <sys:String x:Key="Hash_Checker_SearchOnSubfolders">Almappa kiválasztása</sys:String>
+    <sys:String x:Key="Hash_Checker_SearchOnSubfolders.Description">Mappa kiválasztásakor keressen fájlokat az almappákban.</sys:String>
+    <sys:String x:Key="Hash_Checker_SearchString">Karakterlánc keresése</sys:String>
+    <sys:String x:Key="Hash_Checker_SearchString.Description">Mappa kiválasztásakor keresse meg azokat a fájlokat, amelyek fájlnevei megegyeznek a keresési karakterlánccal.</sys:String>
+    <sys:String x:Key="Hash_Checker_ExcludeHashFiles">Hash-fájlok kizárása</sys:String>
+    <sys:String x:Key="Hash_Checker_ExcludeHashFiles.Description">Fájlok importálásakor zárja ki a hash fájlokat, például az md5, sha1 vagy crc32 kiterjesztésű fájlokat.</sys:String>
+    <sys:String x:Key="Hash_Checker_DisplayPath">Fájl elérési útjának megjelenítése</sys:String>
+    <sys:String x:Key="Hash_Checker_AutoCompute">Automatikus számítás</sys:String>
+    <sys:String x:Key="Hash_Checker_AutoCompute.Description">A hash érték kiszámításának automatikus megkezdése a fájl importálása után.</sys:String>
+    <sys:String x:Key="Hash_Checker_CRC32.Description">CRC-32 számítás engedélyezése vagy letiltása.</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH32.Description">XXH32 számítás engedélyezése vagy letiltása.</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH64.Description">XXH64 számítás engedélyezése vagy letiltása.</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH3.Description">XXH3 számítás engedélyezése vagy letiltása.</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH128.Description">XXH128 számítás engedélyezése vagy letiltása.</sys:String>
+    <sys:String x:Key="Hash_Checker_MD5.Description">MD5 számítás engedélyezése vagy letiltása.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA1.Description">SHA-1 számítás engedélyezése vagy letiltása.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA256.Description">SHA-256 számítás engedélyezése vagy letiltása.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA384.Description" SHA-384 számítás engedélyezése vagy letiltása.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA512.Description">Enable or disable SHA-512 computing.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA3_256.Description">SHA3-256 számítás engedélyezése vagy letiltása, csak a Windows 11 25324 vagy újabb build esetén támogatott.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA3_384.Description">SHA3-384 számítás engedélyezése vagy letiltása, csak a Windows 11 25324 vagy újabb build esetén támogatott.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA3_512.Description">SHA3-512 számítás engedélyezése vagy letiltása, csak a Windows 11 25324 vagy újabb build esetén támogatott.</sys:String>
+    <sys:String x:Key="Hash_Checker_Rows_Per_Page">Sorok oldalanként</sys:String>
+    <sys:String x:Key="Hash_Checker_Rows_Per_Page.Description">Állítsa be az oldalanként megjelenített fájlok számát a fájllistában.</sys:String>
+
+    <sys:String x:Key="Hash_Checker_File_List">Fájllista</sys:String>
+    <sys:String x:Key="Hash_Checker_TypeToSearch">Kezdjen el beírni a hash-érték összehasonlításához.</sys:String>
+    <sys:String x:Key="Hash_Checker_StartCompute">Számítás</sys:String>
+    <sys:String x:Key="Hash_Checker_StartCompute.ToolTip">Hash-értékek számításának indítása.</sys:String>
+    <sys:String x:Key="Hash_Checker_ClearList">Lista törlése</sys:String>
+    <sys:String x:Key="Hash_Checker_Export">Exportálás</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.ToolTip">Az eredményeket fájlokba exportálhatja.</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.AsTXT">Exportálás egyszerű szövegkén_t</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.AsCSV">Exportálás _CSV-ként</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.AsMD">Exportálás _Markdown-ként</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.AsJSON">Exportálás _JSON-ként</sys:String>
+    <sys:String x:Key="Hash_Checker_Compare">Összehasonlítás</sys:String>
+    <sys:String x:Key="Hash_Checker_Compare.ToolTip">Hasonlítsa össze a fájl hash értékét egy ismert értékkel.</sys:String>
+    <sys:String x:Key="Hash_Checker_Compare.JSON">Hasonlítsa össze a _JSON fájllal</sys:String>
+    <sys:String x:Key="Hash_Checker_Compare.HashFile">Hasonlítsa össze a _hash fájllal</sys:String>
+    <sys:String x:Key="Hash_Checker_FilePath">Fájl elérési útvonal</sys:String>
+    <sys:String x:Key="Hash_Checker_FileName">Fájlnév</sys:String>
+    <sys:String x:Key="Hash_Checker_Compute_Selected">A _kiválasztott fájlok hash értékének kiszámítása</sys:String>
+    <sys:String x:Key="Hash_Checker_Open_File_Location">Megnyitott fájl(ok) _helye</sys:String>
+    <sys:String x:Key="Hash_Checker_Copy_Hash_Value">_Hash érték másolása</sys:String>
+    <sys:String x:Key="Hash_Checker_Create_Hash_File">H_ash fájl(ok) létrehozása</sys:String>
+    <sys:String x:Key="Hash_Checker_Page_Count">{1}/{0}. oldal</sys:String>
+    <sys:String x:Key="Hash_Checker_Previous_Page">Előző oldal</sys:String>
+    <sys:String x:Key="Hash_Checker_Next_Page">Következő oldal</sys:String>
+    <sys:String x:Key="Hash_Checker_CompareMessage">{0} fájl(ok) hash-értékének ellenőrzése, {1} sikeres, {2} sikertelen, {3} kihagyva.</sys:String>
+    <sys:String x:Key="Hash_Checker_CompareMessage.Failed">A következő fájl(ok) hash értékei nem egyeznek:</sys:String>
+    <sys:String x:Key="Hash_Checker_CompareMessage.Error">Hiba történt a következő fájl(ok) feldolgozása során:</sys:String>
+    <sys:String x:Key="Hash_Checker_CompareMessage.Skipped">A következő fájl(ok) kimaradtak, mert a hash értéke(ik) nem található:</sys:String>
+
+    <!-- Settings page -->
+    <sys:String x:Key="Settings_General">Általános</sys:String>
+    <sys:String x:Key="Settings_Language">Nyelv</sys:String>
+    <sys:String x:Key="Settings_Language.Description">Az alkalmazás megjelenítési nyelvének módosítása.</sys:String>
+    <sys:String x:Key="Settings_MatchOS">Operációs rendszer szerint</sys:String>
+    <sys:String x:Key="Settings_Save">Beállítások mentése</sys:String>
+    <sys:String x:Key="Settings_Save.Description">Minden beállítás mentése helyben.</sys:String>
+
+    <sys:String x:Key="Settings_Appearance">Megjelenés &amp; viselkedés</sys:String>
+    <sys:String x:Key="Settings_Theme">Téma</sys:String>
+    <sys:String x:Key="Settings_Theme_OpenColorSetting">Windows színbeállítás</sys:String>
+    <sys:String x:Key="Settings_Background">Háttér</sys:String>
+    <sys:String x:Key="Settings_Background.Description">Alkalmazás hátterének módosítása.</sys:String>
+    <sys:String x:Key="Settings_Background.Automatic">Automatikus</sys:String>
+    <sys:String x:Key="Settings_Background.Off">Ki</sys:String>
+    <sys:String x:Key="Settings_Background.Acrylic">Acrylic</sys:String>
+    <sys:String x:Key="Settings_Background.Blur">Homályosított</sys:String>
+    <sys:String x:Key="Settings_Background.Mica">Mica</sys:String>
+    <sys:String x:Key="Settings_Background.Bing">Bing háttérkép</sys:String>
+    <sys:String x:Key="Settings_Background.Local">Helyi kép</sys:String>
+    <sys:String x:Key="Settings_SelectLocalImage.Description">Válasszon ki egy helyi képet, és állítsa be az alkalmazás hátterének.</sys:String>
+    <sys:String x:Key="Settings_SelectLocalImage.Button">Fájl kiválasztása</sys:String>
+    <sys:String x:Key="Settings_Opacity">Átlátszóság</sys:String>
+    <sys:String x:Key="Settings_Blur">Homályosított</sys:String>
+    <sys:String x:Key="Settings_Topmost">Mindig előtérben</sys:String>
+
+    <sys:String x:Key="Settings_Advanced">Speciális</sys:String>
+    <sys:String x:Key="Settings_SecurityProtocol">Biztonsági protokoll</sys:String>
+    <sys:String x:Key="Settings_SecurityProtocol.Description">Adja meg, hogy melyik TLS protokollt kell használni. Ne módosítsa, ha az alkalmazás képes csatlakozni a hálózathoz.</sys:String>
+    <sys:String x:Key="Settings_SecurityProtocol_SystemDefault">Rendszer alapértelmezett</sys:String>
+    <sys:String x:Key="Settings_HardwareAcceleration">Hardveres gyorsítás</sys:String>
+    <sys:String x:Key="Settings_HardwareAcceleration.Description">Ne kapcsolja ki, ha az alkalmazás jól működik. A letiltása csökkenti az alkalmazás teljesítményét.</sys:String>
+
+    <sys:String x:Key="Settings_Deploy">Telepítés</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation">Telepítés utáni művelet</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.Description">Az Office letöltése vagy telepítése után végrehajtandó művelet.</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.None">Nincs</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.Quit">Office Tool Plus bezárása</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.SignOut">Kijelentkezés</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.Shutdown">Kikapcsolás</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.Reboot">Újraindítás</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat">Irodai nyelvek megjelenítési formátuma</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat.Default">Alapértelmezett név</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat.Native">Eredeti név</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat.English">Angol név</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat.Localized">Honosított név</sys:String>
+    <sys:String x:Key="Settings_Deploy_Internal">Belső termékek és csatornák megjelenítése</sys:String>
+
+    <sys:String x:Key="Settings_Download">Letöltés</sys:String>
+    <sys:String x:Key="Settings_Download_Ask_Where_To_Save">Kérdezze meg, hová mentse a fájlokat</sys:String>
+    <sys:String x:Key="Settings_Download_Ask_Where_To_Save.Description">Az Office letöltése előtt válassza ki az Office telepítési fájljainak mentési helyét.</sys:String>
+    <sys:String x:Key="Settings_Download_Engine">Motor</sys:String>
+    <sys:String x:Key="Settings_Download_Engine.Description">Válassza ki, hogy melyik motort használja az Office letöltésekor.</sys:String>
+    <sys:String x:Key="Settings_Download_Engine.Thunder">Villám</sys:String>
+    <!-- Do not translate 'bezzad.Downloader' -->
+    <sys:String x:Key="Settings_Download_Engine.Downloader">bezzad.Downloader</sys:String>
+    <sys:String x:Key="Settings_Download_Engine.OfficeToolPlus">Office Tool Plus</sys:String>
+    <sys:String x:Key="Settings_Download_Engine.OfficeDeploymentTool">Office Deployment Tool</sys:String>
+    <sys:String x:Key="Settings_Download_HTTPS">Csatlakozás HTTPS használatával</sys:String>
+    <sys:String x:Key="Settings_Download_HTTPS.Description">Próbálja meg engedélyezni, ha problémái vannak az Office letöltésével.</sys:String>
+    <sys:String x:Key="Settings_Download_Verify">Fájlok ellenőrzése</sys:String>
+    <sys:String x:Key="Settings_Download_Verify.Description">A letöltés után ellenőrizze az Office-telepítési fájlokat.</sys:String>
+    <sys:String x:Key="Settings_Download_UA">Windows verzió</sys:String>
+    <sys:String x:Key="Settings_Download_UA.Description">A jelenlegi Windows-verzióhoz tartozó Office alapértelmezett verziója letöltődik. Módosítsa ezt, ha az Office-t egy másik Windows-verzióhoz szeretné letölteni.</sys:String>
+    <sys:String x:Key="Settings_Download_UA.AutoDetection">Automatikus felismerés</sys:String>
+    <!-- Do not translate 'bezzad.Downloader' -->
+    <sys:String x:Key="Settings_Download_Downloader">bezzad.Downloader beállítások</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Chunks">Darabok</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Chunks.Description">A fájlt meghatározott darabra osztja a letöltéshez. Ha túl magasra állítja, az csökkentheti a sebességet.</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Parallel">Darabok párhuzamos letöltése</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Parallel.Description">Merevlemezre (HDD) történő letöltéskor ennek az opciónak a bekapcsolása csökkentheti az írási sebességet, különösen, ha túl sok darab van beállítva.</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Limit">Sebességhatár</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Limit.Description">Fájlok letöltésekor korlátozza a sebességet, mértékegysége KBps. Az alapértelmezett érték 0 (nincs korlát).</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy">Proxy</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy.Description">Állítsa be az Office letöltésekor használandó proxyt.</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy.Type">Proxy típus</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy.None">Nincs</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy.HTTP">HTTP</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy.Socket4">Socket 4</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy.Socket5">Socket 5</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy_Host">Host</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy_Host.Hint">127.0.0.1:1080</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy_Username">Felhasználónév</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy_Password">Jelszó</sys:String>
+    <sys:String x:Key="Settings_Download_Proxy_Optional">Választható</sys:String>
+
+    <!-- About page -->
+    <sys:String x:Key="About_Link.Homepage">Honlap</sys:String>
+    <sys:String x:Key="About_Link.Docs">Dokumentumok</sys:String>
+    <sys:String x:Key="About_Link.Sponsor">Támogatás</sys:String>
+    <sys:String x:Key="About_Link.Report_Issue">Probléma bejelentése</sys:String>
+    <sys:String x:Key="About_Version">Verzió</sys:String>
+    <sys:String x:Key="About_ReleaseDate">Megjelenés dátuma:</sys:String>
+    <sys:String x:Key="About_CheckUpdate">Frissítések _ellenőrzése</sys:String>
+    <sys:String x:Key="About_CreatorInfo">Fejlesztője: Yerong, az Office Deployment Tool alapján.</sys:String>
+    <sys:String x:Key="About_Copyright">Szerzői jog © 2016-{0} Yerong Minden jog fenntartva.</sys:String>
+    <sys:String x:Key="About_TrademarkInfo">A Microsoft Office a Microsoft Corporation védjegye vagy bejegyzett védjegye az Egyesült Államokban és/vagy más országokban.</sys:String>
+
+    <sys:String x:Key="About_Server_Provider">Szerverszolgáltatók</sys:String>
+    <sys:String x:Key="About_Translator">Fordítók</sys:String>
+
+    <sys:String x:Key="About_MoreInfo">További információ</sys:String>
+    <sys:String x:Key="About_Image_Source">Háttérkép forrása</sys:String>
+    <sys:String x:Key="About_Link.OpenSourceNotice">Nyílt forráskódú nyilatkozat</sys:String>
+
+    <!-- Downloader -->
+    <sys:String x:Key="Downloader_Resume">Folytatás</sys:String>
+    <sys:String x:Key="Downloader_Pause">Szünet</sys:String>
+    <sys:String x:Key="Downloader_Cancel">Mégse</sys:String>
+    <sys:String x:Key="Downloader_SetSpeedLimit.Name">Letöltési sebességkorlát beállítása</sys:String>
+    <sys:String x:Key="Downloader_Percentage">Letöltés, {0} befejezve.</sys:String>
+    <sys:String x:Key="Downloader_Remaining">Letöltés, hátralévő idő: {0}</sys:String>
+    <sys:String x:Key="Downloader_Pending">Függőben levő</sys:String>
+    <sys:String x:Key="Downloader_Pausing">Szüneteltetés</sys:String>
+    <sys:String x:Key="Downloader_Paused">Szüneteltetve</sys:String>
+
+    <!-- Notification strings -->
+    <sys:String x:Key="Message">Üzenet</sys:String>
+    <sys:String x:Key="Notice">Értesítés</sys:String>
+    <sys:String x:Key="Warning">Figyelmeztetés</sys:String>
+    <sys:String x:Key="Error">Hiba</sys:String>
+    <sys:String x:Key="Yes">_Igen</sys:String>
+    <sys:String x:Key="No">_Nem</sys:String>
+    <sys:String x:Key="OK">_OK</sys:String>
+    <sys:String x:Key="Cancel">_Mégse</sys:String>
+
+    <!-- Inpupt box strings-->
+    <sys:String x:Key="Input_Command">Kérjük, adja meg az alkalmazás parancsait</sys:String>
+    <sys:String x:Key="Input_URL">Kérjük, adja meg az URL-t</sys:String>
+    <sys:String x:Key="Input_Thunder_Speed_Limit">A Thunder (Villám) letöltési sebességkorlátjának beállítása (KB/s-ban)</sys:String>
+
+    <!-- Office ISO Context Menu -->
+    <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
+    <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
+    <!-- If you cannot understand what is hotkey, remove '&amp;' when you are translating. -->
+    <sys:String x:Key="CD-ROM_InstallNow">&amp;Telepítés most</sys:String>
+
+    <!-- Task Message -->
+    <sys:String x:Key="Task_Checking_Updates">Frissítések ellenőrzése.</sys:String>
+    <sys:String x:Key="Task_Downloading_Updates">Frissítések letöltése, {0} befejezve ({1}/{2}).</sys:String>
+    <sys:String x:Key="Task_Verifying_Installation_Files">Fájlok ellenőrzése, kérjük, várjon.</sys:String>
+    <sys:String x:Key="Task_Loading_Preferences">Alkalmazásbeállítások betöltése, kérjük, várjon.</sys:String>
+    <sys:String x:Key="Task_Downloading_Web_Config">Konfigurációs fájl letöltése a webről, kérjük, várjon.</sys:String>
+    <sys:String x:Key="Task_Preparing_Download">Felkészülés az Office letöltésére.</sys:String>
+    <!-- Example: Creating Office ISO file, file size: 3.1GB, 45% completed. -->
+    <sys:String x:Key="Task_Creating_ISO">Office ISO-fájl létrehozása, fájlméret: {0}, {1} kész.</sys:String>
+    <sys:String x:Key="Task_ODT">Telepítés folyamatban, kérem várjon.</sys:String>
+    <sys:String x:Key="Task_SPP">Az SPP most dolgozik, kérjük, várjon.</sys:String>
+    <sys:String x:Key="Task_Searching_KMS_Events">KMS aktiválási események keresése, kérjük, várjon.</sys:String>
+    <sys:String x:Key="Task_Searching_IAF_Events">Internetes aktiválási hibaesemények keresése, kérjük, várjon.</sys:String>
+    <sys:String x:Key="Task_Checking_Office_Update_Channel">Az Office frissítési csatornáinak lekérdezése.</sys:String>
+    <sys:String x:Key="Task_Testing_KMS_Host">KMS gazdagép elérhetőségének tesztelése.</sys:String>
+    <sys:String x:Key="Task_Collecting_Installer_Logs">Office telepítői naplók gyűjtése.</sys:String>
+    <sys:String x:Key="Task_Removing_Office">Az Office eltávolítása, kérjük, várjon.</sys:String>
+    <sys:String x:Key="Task_Repairing_WMI">WMI összetevők javítása, kérjük, várjon.</sys:String>
+    <sys:String x:Key="Task_Converting_Documents">Office-dokumentumok konvertálása, {0} maradt.</sys:String>
+    <sys:String x:Key="Task_Importing_Files">Fájlok importálása, kérjük, várjon.</sys:String>
+    <sys:String x:Key="Task_Computing_Hash">Hash számítása, {0} fájl maradt.</sys:String>
+    <sys:String x:Key="Task_Exporting_Hash">Eredmények exportálása, kérem várjon.</sys:String>
+    <!-- Example: Installing iSlide, please wait. -->
+    <sys:String x:Key="Task_Installing_App">Telepítés {0}, kérjük, várjon.</sys:String>
+
+    <!-- Question Message -->
+    <sys:String x:Key="Ques_Update.Title">Office Tool Plus frissítés</sys:String>
+    <sys:String x:Key="Ques_Update.Content">Frissítés érhető el, letölti most?</sys:String>
+    <sys:String x:Key="Ques_Exit">Az Office Tool Plus már dolgozik. Mindenképpen ki akarsz lépni?</sys:String>
+    <sys:String x:Key="Ques_Can_Not_Verify_Signature">Nem tudjuk ellenőrizni a fájl aláírását, mindenképpen meg akarja nyitni?&#x000A;&#x000A;Fájl: {0}</sys:String>
+    <sys:String x:Key="Ques_Quick_Installation">A(z) {0} telepítését választotta.&#x000A;&#x000A;Kattintson az "Igen" gombra a letöltés utáni telepítéshez, a "Nem" gombra a letöltés közbeni telepítéshez, vagy zárja be az ablakot a törléshez.</sys:String>
+    <sys:String x:Key="Ques_Select_Office_To_Download">{0} Office verziót adott meg, de mi egy másik verziót kaptunk.&#x000A;&#x000A;Az „Igen” gombra kattintva letölti az Office {1} verzióját.&#x000A;A "Nem" gombra kattintva letölti az Office {2} verzióját.</sys:String>
+    <sys:String x:Key="Ques_Verify_Installation_Files">Szeretné ellenőrizni az Office telepítési fájljait, hogy megtalálja a lehetséges hibákat?</sys:String>
+    <sys:String x:Key="Ques_Deploy_Office">Készen áll az Office telepítésére?</sys:String>
+    <sys:String x:Key="Ques_Deploy_Office.ToInstall">Telepítendő termékek:</sys:String>
+    <sys:String x:Key="Ques_Deploy_Office.ToUninstall">Eltávolítandó termékek:</sys:String>
+    <sys:String x:Key="Ques_Install_Office.Applications">Alkalmazás(ok): {0}</sys:String>
+    <sys:String x:Key="Ques_Install_Office.Architecture">Architektúra: {0}</sys:String>
+    <sys:String x:Key="Ques_Install_Office.UpdateChannel">Frissítési csatorna: {0}</sys:String>
+    <sys:String x:Key="Ques_Install_Office.OfficeVersion">Office verzió: {0}</sys:String>
+    <sys:String x:Key="Ques_Install_Office.SourcePath">Telepítési fájlok forrása: {0}</sys:String>
+    <sys:String x:Key="Ques_Deploy_Configuration">Tekintse meg a kódot a részletes konfigurációhoz, helyes-e a fenti alapkonfiguráció?</sys:String>
+    <sys:String x:Key="Ques_Delete_All_Installations">Biztosan törli az összes telepítőfájlt?</sys:String>
+    <sys:String x:Key="Ques_Delete_Installation">Biztosan törli a következőt: {0}?</sys:String>
+    <sys:String x:Key="Ques_Delete_Installation_Languages">Biztosan törli a következőt: {0}?</sys:String>
+    <sys:String x:Key="Ques_Install_iSlide">Biztosan telepíteni szeretné az iSlide alkalmazást?</sys:String>
+    <sys:String x:Key="Ques_Clear_Activation">Biztosan el szeretné távolítani az összes licencet és kulcsot? A művelet után újra kell telepítenie a licenceket, és újra kell aktiválnia az Office-t.</sys:String>
+    <sys:String x:Key="Ques_Install_Licenses">Előfordulhat, hogy az Office-licenc telepítése után nem látja az aktiválási információkat az Office-ban, de az Office Tool Plus segítségével megtekintheti az információkat vagy aktiválhatja az Office-t. Szeretné folytatni?</sys:String>
+    <sys:String x:Key="Ques_Uninstall_Licenses">Biztosan el szeretné távolítani az összes Office-licencet?</sys:String>
+    <sys:String x:Key="Ques_Uninstall_All_Keys">Biztosan eltávolítja az összes Office-termékkulcsot? Kérjük, először készítsen biztonsági másolatot a kulcsokról, ha szükséges.</sys:String>
+    <sys:String x:Key="Ques_Uninstall_Product_Key">Biztosan el szeretné távolítani a termékkulcsot?</sys:String>
+    <sys:String x:Key="Ques_Delete_vNextLicense">Biztosan törli a licencet?</sys:String>
+    <sys:String x:Key="Ques_Remove_Office">Biztosan törli az Office-t? Az indítás után ez a művelet nem szakítható meg.</sys:String>
+    <sys:String x:Key="Ques_Invoke_Office_Update">A frissítési csatorna megváltozott, ellenőrizze most az Office-frissítéseket?</sys:String>
+
+    <!-- Info Message -->
+    <sys:String x:Key="Info_OS_Outdated">Az operációs rendszer már nem támogatott, kérjük, frissítse az operációs rendszert, vagy töltse le az Office Tool Plus egy régebbi verzióját a használathoz.</sys:String>
+    <sys:String x:Key="Info_User_Role">Az Office Tool Plus normál jogosultságokkal fut, egyes funkciók nem érhetők el.</sys:String>
+    <sys:String x:Key="Info_Restart_Required">A hatálybalépéshez újra kell indítania az alkalmazást.</sys:String>
+    <sys:String x:Key="Info_No_Updates">Az Office Tool Plus legújabb verzióját használja.</sys:String>
+    <sys:String x:Key="Info_Update_In_Progress">A frissítés(ek) folyamatban vannak, kérjük, várjon.</sys:String>
+    <sys:String x:Key="Info_Updates_Incomplete">Nem sikerült alkalmazni a frissítéseket, próbálkozzon újra később.</sys:String>
+    <sys:String x:Key="Info_No_Language_Added_For_Download">Azt észleltük, hogy nem adott hozzá nyelvet. A legtöbb esetben javasoljuk a nyelvek hozzáadását a problémák elkerülése érdekében.</sys:String>
+    <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">Válassza ki a mappát az Office telepítőfájljainak mentéséhez. Az alapértelmezett hely használatához tiltsa le a "Kérdezze meg, hová mentse a fájlokat" lehetőséget a beállítások oldalon.</sys:String>
+    <sys:String x:Key="Info_All_Files_Exist">Nincs szükség letöltésre, már minden fájl létezik.</sys:String>
+    <sys:String x:Key="Info_Office_Downloading">Az Office letöltése folyamatban van.</sys:String>
+    <sys:String x:Key="Info_Software_Installation_Complete">A telepítés befejeződött.</sys:String>
+    <sys:String x:Key="Info_Software_Installation_Failed">A telepítés sikertelen.</sys:String>
+    <sys:String x:Key="Info_Auto_Shutdown">A számítógép egy percen belül kijelentkezik/leáll/újraindul.</sys:String>
+    <sys:String x:Key="Info_No_Events">A rendszer nem talált eseményeket.</sys:String>
+    <sys:String x:Key="Info_No_Office_Licenses">Nem található Office-licenc.</sys:String>
+    <sys:String x:Key="Info_No_Office_Product_Key">A rendszer nem észlelt Office-termékkulcsokat.</sys:String>
+    <sys:String x:Key="Info_Number_Of_Keys_Uninstalled">Az eltávolított termékkulcs(ok) száma {0}.</sys:String>
+    <sys:String x:Key="Info_Number_Of_Lics_Uninstalled">Az eltávolított Office licenc(ek) száma {0}.</sys:String>
+    <sys:String x:Key="Info_Office_License_Activation.Title">Termékaktiválási eredmények</sys:String>
+    <sys:String x:Key="Info_Office_License_Activation_Successful">A termékaktiválás sikeres.</sys:String>
+    <sys:String x:Key="Info_KMS_Test_Result.Success">KMS vizsgálati módszer: {0}. Teszt eredménye: sikeres, eltelt idő: {1} ms.</sys:String>
+    <sys:String x:Key="Info_KMS_Test_Result.Failed">KMS teszt sikertelen.</sys:String>
+    <sys:String x:Key="Info_Enable_Mica">A csillámhatás megköveteli a Windows 11 használatát.</sys:String>
+
+    <!-- Success Message -->
+    <sys:String x:Key="Success_Download_Updates">A frissítés(ek) sikeresen alkalmazva.</sys:String>
+    <sys:String x:Key="Success_Add_Download_Task">A letöltési feladatok sikeresen hozzáadva.</sys:String>
+    <sys:String x:Key="Success_Create_ISO">Létrejön az Office ISO fájl.</sys:String>
+    <sys:String x:Key="Success_Installation_Verify">A telepítőfájl ellenőrzése megtörtént, és nem található hiba.</sys:String>
+    <sys:String x:Key="Success_Installer_Exited">Az Office Deployment Tool a szokásos módon kilépett.</sys:String>
+    <sys:String x:Key="Success_Apply_Preferences">Az Office-alkalmazások beállításai sikeresen alkalmazva.</sys:String>
+    <sys:String x:Key="Success_Install_Licenses">Az Office licencek sikeresen telepítve.</sys:String>
+    <sys:String x:Key="Success_Install_Product_Key">A termékkulcs sikeresen telepítve.</sys:String>
+    <sys:String x:Key="Success_Set_KMS">A KMS-beállítások sikeresen alkalmazva.</sys:String>
+    <sys:String x:Key="Success_Save">Sikeresen mentve.</sys:String>
+    <sys:String x:Key="Success_Collect_Logs">A naplófájlok gyűjtése és mentése a következőben történik:: {0}</sys:String>
+    <sys:String x:Key="Success_Repair">A javítás sikeres volt.</sys:String>
+    <sys:String x:Key="Success_Repair_System_Variables">A rendszerváltozók visszaállítása befejeződött. Kérjük, indítsa újra a rendszert, hogy a változtatások érvénybe lépjenek.</sys:String>
+    <sys:String x:Key="Success_Repair_WMI_Components">A WMI-összetevők javítása befejeződött, kérjük, indítsa újra a rendszert, hogy a változtatások érvénybe lépjenek.</sys:String>
+
+    <!-- Error Message -->
+    <sys:String x:Key="Err_Create_Temp_Path">Nem lehet ideiglenes elérési utat létrehozni. Kérjük, ellenőrizze a rendszerváltozókat, és próbálja újra.</sys:String>
+    <sys:String x:Key="Err_Already_Running">Az Office Tool Plus már fut.</sys:String>
+    <sys:String x:Key="Err_Perform_Update">Hiba történt a frissítés végrehajtásakor. Kérjük, töltse le manuálisan az Office Tool Plus legújabb verzióját.</sys:String>
+    <sys:String x:Key="Err_Unknown_Command">Ismeretlen parancs: {0}</sys:String>
+    <sys:String x:Key="Err_Command_Parameter">Hiányoznak a szükséges paraméterek.</sys:String>
+    <sys:String x:Key="Err_Checking_Installation">Hiba történt a telepítőfájlok ellenőrzése közben. Próbálkozzon újra később, vagy töltse le újra az Office telepítőfájljait.</sys:String>
+    <sys:String x:Key="Err_Installation">A telepítőfájl ({0}) hibákat tartalmaz:&#x000A;{1}</sys:String>
+    <sys:String x:Key="Err_Installation_File_Missing">Hiányzó fájl: {0}</sys:String>
+    <sys:String x:Key="Err_Installation_File_Corrupted">A fájl sérült: {0}</sys:String>
+    <sys:String x:Key="Err_Installation_Hash">Hash-ellenőrzési hiba, fájl: {0}&#x000A;Hash: {1}&#x000A;Aktuális hash: {2}</sys:String>
+    <sys:String x:Key="Err_Installation_Version">Verzióellenőrzési hiba, fájl: {0}&#x000A;Verzió: {1}&#x000A;Kliens verzió: {2}</sys:String>
+    <sys:String x:Key="Err_Installation_Mismatch">Nem egyezik a verzió, fájl: {0}&#x000A;Aktuális verzió: {1}&#x000A;Architektúra: {2}</sys:String>
+    <sys:String x:Key="Err_Installation_Redownload">A telepítőfájlok hibákat tartalmaznak, kérjük, próbálja meg törölni és töltse le újra.</sys:String>
+    <sys:String x:Key="Err_Reading_Info">Hiba történt az Office-információk olvasása közben.</sys:String>
+    <sys:String x:Key="Err_Saving_Info">Hiba történt az Office-adatok mentésekor.</sys:String>
+    <sys:String x:Key="Err_Start_Deploy.Download">Nem sikerült letölteni az Office-t, ellenőrizze, hogy hozzáadott-e egy terméket vagy nyelvet, majd próbálkozzon újra.</sys:String>
+    <sys:String x:Key="Err_Start_Deploy.Deploy">Nem lehet telepíteni az Office-t, ellenőrizze, hogy helyesen adta-e meg az alapbeállításokat, majd próbálkozzon újra.</sys:String>
+    <sys:String x:Key="Err_Start_Deploy.Preferences">Nem lehet beállítani az alkalmazás beállításait, ellenőrizze, hogy megfelelően állította-e be az alkalmazásbeállításokat, majd próbálja újra.</sys:String>
+    <sys:String x:Key="Err_Installer_Exited">Az Office-telepítő eszköz rendellenesen lépett ki.</sys:String>
+    <sys:String x:Key="Err_Prepare_To_Download_Office">Az Office-verzió nem érhető el, próbálkozzon újra, vagy használja az Office Deployment Tool-t letöltőmotorként.</sys:String>
+    <sys:String x:Key="Err_Create_ISO">Nem található Office telepítőfájl. Kérjük, először töltse le a telepítő fájlokat, vagy válassza ki a meglévő telepítési fájlokat, majd próbálkozzon újra.</sys:String>
+    <sys:String x:Key="Err_Query_Office_Licenses">Nem lehet lekérdezni az Office-licenceket, próbálkozzon újra.</sys:String>
+    <sys:String x:Key="Err_Loading_Office_Licenses">Az Office Click-to-Run verziója nem észlelhető a rendszeren, az Office licencek nem tölthetők be. Győződjön meg arról, hogy az Office legújabb verziója van telepítve.</sys:String>
+    <sys:String x:Key="Err_Product_Key_Invalid">A megadott termékkulcs érvénytelen, ellenőrizze, és próbálja újra.</sys:String>
+    <sys:String x:Key="Err_Confirmation_ID_Invalid">A megadott megerősítési azonosító érvénytelen, ellenőrizze, és próbálja újra.</sys:String>
+    <sys:String x:Key="Err_KMS_Host_Invalid">Nem sikerült menteni a KMS beállításait. Kérjük, ellenőrizze a KMS gazdagép nevét, és próbálja újra.</sys:String>
+    <sys:String x:Key="Err_No_KMS_Lic">Nem sikerült menteni a KMS-beállításokat, nem található érvényes Office KMS-licenc a rendszeren.</sys:String>
+    <sys:String x:Key="Err_Set_KMS">Nem sikerült menteni a KMS-beállításokat, próbálkozzon újra.</sys:String>
+    <sys:String x:Key="Err_Act_Run_Commands">Hiba történt a parancsok végrehajtása közben.&#x000A;&#x000A;Hibakód: {0}</sys:String>
+    <sys:String x:Key="Err_Act_Office_License">Hiba történt a termék aktiválása közben.&#x000A;&#x000A;Hibakód: {0}</sys:String>
+    <sys:String x:Key="Err_Install_Office_Lic">Hiba történt a licenc telepítésekor.&#x000A;&#x000A;Hibakód: {0}</sys:String>
+    <sys:String x:Key="Err_Install_Product_Key">Hiba történt a termékkulcs telepítésekor.&#x000A;&#x000A;Hibakód: {0}</sys:String>
+    <sys:String x:Key="Err_Uninstall_Product_Key">Hiba történt a termékkulcs eltávolítása közben.&#x000A;&#x000A;Hibakód: {0}</sys:String>
+    <sys:String x:Key="Err_Check_KMS_Status">Nem lehet ellenőrizni a KMS állapotát, ellenőrizze a KMS gazdagép nevét, és próbálja újra.</sys:String>
+    <sys:String x:Key="Err_Office_App_NotFound">{0} nem található a rendszeren, ellenőrizze, hogy telepítve van-e az Office legújabb verziója.</sys:String>
+    <sys:String x:Key="Err_Open_Clipboard">Nem lehet hozzáférni a vágólaphoz, próbálkozzon újra.</sys:String>
+
+    <!-- Error messages about Thunder -->
+    <sys:String x:Key="Thunder_Err_Init">A Thunder inicializálása nem sikerült.</sys:String>
+    <sys:String x:Key="Thunder_Err_Start">Nem sikerült elindítani a feladatot.</sys:String>
+    <sys:String x:Key="Thunder_Err_Stop">Nem sikerült szüneteltetni a feladatot.</sys:String>
+    <sys:String x:Key="Thunder_Err_Exit">Nem sikerült kilépni a Thunderből.</sys:String>
+    <sys:String x:Key="Thunder_Err_Unknown">Ismeretlen letöltési hiba.</sys:String>
+    <sys:String x:Key="Thunder_Err_Create">Nem sikerült létrehozni a fájlt.</sys:String>
+    <sys:String x:Key="Thunder_Err_Delete">Nem sikerült törölni a fájlt.</sys:String>
+    <sys:String x:Key="Thunder_Err_FileHash">A fájl ellenőrzése nem sikerült.</sys:String>
+    <sys:String x:Key="Thunder_Err_PieceHash">A fájl ellenőrzése nem sikerült.</sys:String>
+    <sys:String x:Key="Thunder_Err_Read">Nem sikerült beolvasni a fájlt.</sys:String>
+    <sys:String x:Key="Thunder_Err_Rename">Nem sikerült átnevezni a fájlt.</sys:String>
+    <sys:String x:Key="Thunder_Err_Write">Nem sikerült írni a fájlt.</sys:String>
+    <sys:String x:Key="Thunder_Err_DownInvalid">Érvénytelen cím.</sys:String>
+    <sys:String x:Key="Thunder_Err_NotIP">Nincs elérhető IP a HTTP letöltésben.</sys:String>
+    <sys:String x:Key="Thunder_Err_IDInvalid">Érvénytelen feladatazonosító.</sys:String>
+    <sys:String x:Key="Thunder_Err_SetProxy">Nem sikerült beállítani a proxyt.</sys:String>
+    <sys:String x:Key="Thunder_Err_ProxyAuthTypeFailed">A proxyhitelesítés nem sikerült.</sys:String>
+    <sys:String x:Key="Thunder_Err_ProxyAuthTypeUnknown">Ismeretlen proxytípus.</sys:String>
+    <sys:String x:Key="Thunder_Err_Timeout">Feladat időtúllépése.</sys:String>
+    <sys:String x:Key="Thunder_Err_Crashed">A Thunder motor összeomlott.</sys:String>
+    <sys:String x:Key="Thunder_Err_Cancel">Feladat törölve.</sys:String>
+</ResourceDictionary>

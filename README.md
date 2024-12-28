@@ -54,9 +54,9 @@ irm officetool.plus | iex
 | de-de | Deutsch (Deutschland) | [Berny23](https://steamcommunity.com/id/Berny23) |
 | en-gb | English (United Kingdom) | [Mcforwin](https://github.com/Mcforwin) |
 | en-us | English (United States) | [Yerong](https://officetool.plus/) |
-| fr-fr | Français (France) | Drake4478 |
+| hu-hu | magyar (Magyarország) | [John Fowler](https://github.com/JohnFowler58) |
 | id-id | Bahasa Indonesia (Indonesia) | [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17) |
-| it-it | Italiano (Italia) | [garf02](https://github.com/garf02) |
+| it-it | Italiano (Italia) | [garf02](https://github.com/garf02), [bovirus](https://github.com/bovirus) |
 | ja-jp | 日本語 (日本) | [秋山へいわ](https://github.com/akio1321)|
 | ko-kr | 한국어 (대한민국) | [VenusGirl❤](https://github.com/VenusGirl) |
 | nl-nl | Nederlands (Nederland) | [Kajoe](https://github.com/Kajoe1) |
@@ -65,7 +65,7 @@ irm officetool.plus | iex
 | ru-ru | Русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov) |
 | th-th | ไทย (ไทย) | [dekthaiinchina](https://github.com/dekthaiinchina) |
 | tr-tr | Türkçe (Türkiye) | [Tayfun Akkoyun](https://github.com/crasadure) |
-| zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com), [Yi-Jyun Pan](https://github.com/pan93412) |
+| zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com) |
 
 ## Help With Localization
 

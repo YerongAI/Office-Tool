@@ -47,47 +47,6 @@ Vagy töltse le az Office Tool Plus-t a PowerShell segítségével:
 irm officetool.plus | iex
 ```
 
-## Köszönet a fordítóknak
-
-| Culture | Name | Translators |
-| :-- | :-- | :-- |
-| de-de | Deutsch (Deutschland) | [Berny23](https://steamcommunity.com/id/Berny23) |
-| en-gb | English (United Kingdom) | [Mcforwin](https://github.com/Mcforwin) |
-| en-us | English (United States) | [Yerong](https://officetool.plus/) |
-| hu-hu | magyar (Magyarország) | [John Fowler](https://github.com/JohnFowler58) |
-| id-id | Bahasa Indonesia (Indonesia) | [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17) |
-| it-it | Italiano (Italia) | [garf02](https://github.com/garf02), [bovirus](https://github.com/bovirus) |
-| ja-jp | 日本語 (日本) | [秋山へいわ](https://github.com/akio1321)|
-| ko-kr | 한국어 (대한민국) | [VenusGirl❤](https://github.com/VenusGirl) |
-| nl-nl | Nederlands (Nederland) | [Kajoe](https://github.com/Kajoe1) |
-| pl-pl | Polski (Polska) | [JakubDriver](https://github.com/jakubdriver) |
-| pt-br | Português (Brasil) | [Igor Rückert](https://github.com/igorruckert) |
-| ru-ru | Русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov) |
-| th-th | ไทย (ไทย) | [dekthaiinchina](https://github.com/dekthaiinchina) |
-| tr-tr | Türkçe (Türkiye) | [Tayfun Akkoyun](https://github.com/crasadure) |
-| zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com) |
-
-## Segítség a honosításhoz
-
-Mindenkit arra bátorítunk, hogy segítsen a honosításban. Az alábbiakban ismertetjük, hogyan kell ezt megtenni.
-
-1. Forkolja ezt a tárolót. (Saját másolat készítése.)
-
-2. Fordítsa le az **en-us.xaml** fájlt a saját nyelvére, majd mentse el plédául **xy-xy.xaml** néven, ahol az **xy** a honosított nyelv ISO 639-1 kódja.
-
-3. Másolja a megfelelő elérési útvonalra.
-
-4. Készítsen egy Pull Request-et (Egyesítési Kérelem).
-
-Ezek a fájlok amelyeket lefordíthat:
-
-``` batch
-src\OfficeToolPlus\Dictionaries\Languages
-src\OfficeToolPlus\Dictionaries\ProductsName
-config\Launcher
-config\Message
-```
-
 ## Névjegy
 
 © 2016-2024 Yerong. Minden jog fenntartva.

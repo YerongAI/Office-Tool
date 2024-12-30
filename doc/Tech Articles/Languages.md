@@ -4,7 +4,7 @@ For more information about language ID, please visit [Languages, culture codes, 
 
 ## Languages List
 
-| Language | Name | Culture (ll-cc) | Contains Proofing Languages | ID | Type |
+| Language | English Name | Culture (ll-cc) | Contains Proofing Languages | ID | Type |
 | :-- | :-- | :--: | :-- | :--: | :--: |
 | Afrikaans (Suid-Afrika) | Afrikaans (South Africa) | af-za |  | 1078 | Partial |
 | አማርኛ (ኢትዮጵያ) | Amharic (Ethiopia) | am-et |  | 1118 | PartialWithoutProofingTools |
@@ -26,13 +26,13 @@ For more information about language ID, please visit [Languages, culture codes, 
 | English (United Kingdom) | English (United Kingdom) | en-gb | English, Irish, Scottish Gaelic, Welsh | 2057 | Full |
 | English (United States) | English (United States) | en-us | English, French, Spanish | 1033 | Full |
 | español (España) | Spanish (Spain) | es-es | Spanish, English, French, Basque (Basque), Catalan, Galician, Brazilian | 3082 | Full |
-| español (México) | Spanish (Mexico) | es-mx | Spanish, English, French, Brazilian | 2058 |  |
+| español (México) | Spanish (Mexico) | es-mx | Spanish, English, French, Brazilian | 2058 | Full |
 | eesti (Eesti) | Estonian (Estonia) | et-ee | Estonian, English, German, Russian, Finnish, | 1061 | Full |
 | euskara (Espainia) | Basque (Spain) | eu-es |  | 1069 | Partial |
 | فارسی (ایران) | Persian (Iran) | fa-ir |  | 1065 | Partial |
 | suomi (Suomi) | Finnish (Finland) | fi-fi | Finnish, English, Swedish, German, Russian | 1035 | Full |
 | Filipino (Pilipinas) | Filipino (Philippines) | fil-ph |  | 1124 | PartialWithoutProofingTools |
-| français (Canada) | French (Canada) | fa-ca | French, English, German, Dutch, Arabic, Spanish | 3084 | Full |
+| français (Canada) | French (Canada) | fr-ca | French, English, German, Dutch, Arabic, Spanish | 3084 | Full |
 | français (France) | French (France) | fr-fr | French, English, German, Dutch, Arabic, Spanish | 1036 | Full |
 | Gaeilge (Éire) | Irish (Ireland) | ga-ie |  | 2108 | Partial |
 | Gàidhlig (An Rìoghachd Aonaichte) | Scottish Gaelic (United Kingdom) | gd-gb |  | 1169 | Partial |
@@ -54,7 +54,7 @@ For more information about language ID, please visit [Languages, culture codes, 
 | ខ្មែរ (កម្ពុជា) | Khmer (Cambodia) | km-kh |  | 1107 | PartialWithoutProofingTools |
 | ಕನ್ನಡ (ಭಾರತ) | Kannada (India) | kn-in |  | 1099 | Partial |
 | कोंकणी (भारत) | Konkani (India) | kok-in |  | 1111 | Partial |
-| 한국어(대한민국) | Korean (Korea) | ko-kr | Korean, English | 1042 | Partial |
+| 한국어(대한민국) | Korean (Korea) | ko-kr | Korean, English | 1042 | Full |
 | кыргызча (Кыргызстан) | Kyrgyz (Kyrgyzstan) | ky-kg |  | 1088 | Partial |
 | Lëtzebuergesch (Lëtzebuerg) | Luxembourgish (Luxembourg) | lb-lu |  | 1134 | Partial |
 | lietuvių (Lietuva) | Lithuanian (Lithuania) | lt-lt | Lithuanian, English, German, Russian, Polish | 1063 | Full |

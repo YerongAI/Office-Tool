@@ -49,6 +49,6 @@ irm officetool.plus | iex
 
 ## Névjegy
 
-© 2016-2024 Yerong. Minden jog fenntartva.
+© 2016-2025 Yerong. Minden jog fenntartva.
 
 > Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel)

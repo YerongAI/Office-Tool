@@ -48,6 +48,6 @@ irm officetool.plus | iex
 
 ## Over
 
-© 2016-2024 Yerong. All Rights Reserved.
+© 2016-2025 Yerong. All Rights Reserved.
 
 > Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel)

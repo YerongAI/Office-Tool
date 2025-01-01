@@ -46,6 +46,6 @@ irm officetool.plus | iex
 
 ## О разработке
 
-© 2016-2024 Yerong. All Rights Reserved.
+© 2016-2025 Yerong. All Rights Reserved.
 
 > Blog [@Yerong の小窝](https://www.coolhub.top/) В· GitHub [@YerongAI](https://github.com/YerongAI) В· Telegram [@Office Tool Plus](https://t.me/s/otp_channel)

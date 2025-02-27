@@ -127,6 +127,7 @@
     <sys:String x:Key="Deploy_Import_Config">_Configuratie importeren</sys:String>
     <sys:String x:Key="Deploy_Import_Config_Web">Configuratie importeren uit _Web</sys:String>
     <sys:String x:Key="Deploy_Check_Updates">Check Office _updates</sys:String>
+    <sys:String x:Key="Deploy_Repair_Office">Re_pair Office</sys:String>
     <sys:String x:Key="Deploy_Mode">Implementatiemodus</sys:String>
     <sys:String x:Key="Deploy_Mode.Edit">Bewerk alleen config</sys:String>
     <sys:String x:Key="Deploy_Mode.Download">Alleen downloaden</sys:String>
@@ -206,6 +207,9 @@
     <sys:String x:Key="Deploy_Installation_Files_UseAsSource.Description">De architectuur en het updatekanaal komen automatisch overeen met deze installatie.</sys:String>
     <sys:String x:Key="Deploy_Installation_Files_Open_Location">_Open bestandslocatie</sys:String>
     <sys:String x:Key="Deploy_Installation_Files_Delete">Verwijderen</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none">Base package (Required)</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.arm64x">ARM64 package</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.chpe">ARM package</sys:String>
 
     <sys:String x:Key="Deploy_Advanced_Settings">Ga naar geavanceerde instellingen</sys:String>
     <sys:String x:Key="Deploy_Advanced_Settings.Description">Ga naar geavanceerde instellingen om meer opties in te stellen.</sys:String>
@@ -654,6 +658,8 @@
     <sys:String x:Key="Settings_Download">Alleen downloaden</sys:String>
     <sys:String x:Key="Settings_Download_Ask_Where_To_Save">Vraag waar u bestanden wilt opslaan</sys:String>
     <sys:String x:Key="Settings_Download_Ask_Where_To_Save.Description">Selecteer waar u Office installatiebestanden wilt opslaan voordat u Office downloadt.</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API">Get file list using Microsoft's API</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API.Description">If enabled, the file list will be obtained from Microsoft's API, otherwise the file list will be generated using built-in rules.</sys:String>
     <sys:String x:Key="Settings_Download_Engine">Engine</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Description">Selecteer welke engine u wilt gebruiken bij het downloaden van Office.</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Thunder">Thunder</sys:String>
@@ -784,7 +790,7 @@
     <sys:String x:Key="Ques_Deploy_Configuration">Bekijk code voor detail configuratie, is bovenstaande basis configuratie correct?</sys:String>
     <sys:String x:Key="Ques_Delete_All_Installations">Weet u zeker dat u alle installatiebestanden wilt verwijderen?</sys:String>
     <sys:String x:Key="Ques_Delete_Installation">Weet u zeker dat u {0} wilt verwijderen?</sys:String>
-    <sys:String x:Key="Ques_Delete_Installation_Languages">Weet u zeker dat u {0} wilt verwijderen?</sys:String>
+    <sys:String x:Key="Ques_Delete_Installation_Package">Weet u zeker dat u {0} wilt verwijderen?</sys:String>
     <sys:String x:Key="Ques_Install_iSlide">Weet je zeker dat je iSlide nu wilt installeren?</sys:String>
     <sys:String x:Key="Ques_Clear_Activation">Weet u zeker dat u alle licenties en sleutels wilt verwijderen? Na deze bewerking moet u de licenties opnieuw installeren en Office opnieuw activeren.</sys:String>
     <sys:String x:Key="Ques_Install_Licenses">Mogelijk ziet u geen activeringsinformatie in Office nadat u een Office licentie hebt geןnstalleerd, maar u kunt informatie bekijken of Office activeren via Office Tool Plus. Wil je doorgaan?</sys:String>
@@ -842,13 +848,14 @@
     <sys:String x:Key="Err_Unknown_Command">Onbekend commando: {0}</sys:String>
     <sys:String x:Key="Err_Checking_Installation">Er is een fout opgetreden bij het controleren van de installatiebestanden. Probeer het later opnieuw of download de Office installatiebestanden opnieuw.</sys:String>
     <sys:String x:Key="Err_Command_Parameter">Missing required parameters.</sys:String>
-    <sys:String x:Key="Err_Installation">Installatiebestand ({0}) bevat fouten:&#x000A;{1}</sys:String>
+    <sys:String x:Key="Err_Installation">Installatiebestand {0} bevat fouten:&#x000A;{1}</sys:String>
     <sys:String x:Key="Err_Installation_File_Missing">Bestand ontbreekt: {0}</sys:String>
     <sys:String x:Key="Err_Installation_File_Corrupted">File is corrupted: {0}</sys:String>
     <sys:String x:Key="Err_Installation_Hash">Hashcontrole mislukt, bestand: {0}&#x000A;Hash: {1}&#x000A;Werkelijke hash: {2}</sys:String>
     <sys:String x:Key="Err_Installation_Version">Versiecontrole mislukt, bestand: {0}&#x000A;Versie: {1}&#x000A;Clientversie: {2}</sys:String>
     <sys:String x:Key="Err_Installation_Mismatch">Versie komt niet overeen, bestand: {0}&#x000A;Actuele versie: {1}&#x000A;Architectuur: {2}</sys:String>
     <sys:String x:Key="Err_Installation_Redownload">De installatiebestanden bevatten fouten, probeer deze te verwijderen en opnieuw te downloaden.</sys:String>
+    <sys:String x:Key="Err_Installation_No_BasePack">The installation files does not contain the base package, please try to download it again.</sys:String>
     <sys:String x:Key="Err_Reading_Info">Er is een fout opgetreden tijdens het lezen van Office informatie.</sys:String>
     <sys:String x:Key="Err_Saving_Info">An error occurred while saving Office information.</sys:String>
     <sys:String x:Key="Err_Start_Deploy.Download">Kan Office niet downloaden. Controleer of u een product of taal hebt toegevoegd en probeer het opnieuw.</sys:String>
@@ -856,6 +863,8 @@
     <sys:String x:Key="Err_Start_Deploy.Preferences">Kan de toepassingsvoorkeuren niet instellen. Controleer of u de toepassingsvoorkeuren correct hebt ingesteld en probeer het opnieuw.</sys:String>
     <!-- {0} means product name, for example: Microsoft 365 Apps for Enterprise. -->
     <sys:String x:Key="Err_Start_Deploy_ProductNotSupported">{0} is not supported on this version of Office.</sys:String>
+    <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
+    <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} does not support the {1} language.</sys:String>
     <sys:String x:Key="Err_Installer_Exited">Office Deployment Tool is abnormaal afgesloten.</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">Kan geen versie informatie verkrijgen. Probeer het opnieuw of gebruik Office Deployment Tool.</sys:String>
     <sys:String x:Key="Err_Create_ISO">No Office installation files were found. Please download installation files first, or select existing installation files, then try again.</sys:String>

@@ -127,6 +127,7 @@
     <sys:String x:Key="Deploy_Import_Config">导入配置(_I)</sys:String>
     <sys:String x:Key="Deploy_Import_Config_Web">从网络位置导入配置(_W)</sys:String>
     <sys:String x:Key="Deploy_Check_Updates">检查 Office 更新(_U)</sys:String>
+    <sys:String x:Key="Deploy_Repair_Office">修复 Office (_R)</sys:String>
     <sys:String x:Key="Deploy_Mode">部署模式</sys:String>
     <sys:String x:Key="Deploy_Mode.Edit">编辑配置</sys:String>
     <sys:String x:Key="Deploy_Mode.Download">下载</sys:String>
@@ -206,6 +207,9 @@
     <sys:String x:Key="Deploy_Installation_Files_UseAsSource.Description">体系结构和更新通道将自动匹配此安装文件。</sys:String>
     <sys:String x:Key="Deploy_Installation_Files_Open_Location">打开文件位置(_O)</sys:String>
     <sys:String x:Key="Deploy_Installation_Files_Delete">删除</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none">基础包（必需的）</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.arm64x">ARM64 包</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.chpe">ARM 包</sys:String>
 
     <sys:String x:Key="Deploy_Advanced_Settings">转到高级设置</sys:String>
     <sys:String x:Key="Deploy_Advanced_Settings.Description">转到高级设置以设置更多选项。</sys:String>
@@ -654,6 +658,8 @@
     <sys:String x:Key="Settings_Download">下载</sys:String>
     <sys:String x:Key="Settings_Download_Ask_Where_To_Save">询问文件保存位置</sys:String>
     <sys:String x:Key="Settings_Download_Ask_Where_To_Save.Description">在下载 Office 之前选择保存 Office 安装文件的位置。</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API">使用微软的 API 获取文件列表</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API.Description">启用后，将从微软的 API 获取文件列表，否则使用内置的规则生成文件列表。</sys:String>
     <sys:String x:Key="Settings_Download_Engine">引擎</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Description">选择下载 Office 时使用的引擎。</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Thunder">迅雷</sys:String>
@@ -784,7 +790,7 @@
     <sys:String x:Key="Ques_Deploy_Configuration">如要了解详细配置请查看代码，以上基本配置是否正确？</sys:String>
     <sys:String x:Key="Ques_Delete_All_Installations">你确定要删除所有的安装文件吗？</sys:String>
     <sys:String x:Key="Ques_Delete_Installation">你确定要删除安装文件 {0} 吗？</sys:String>
-    <sys:String x:Key="Ques_Delete_Installation_Languages">你确定要删除语言包 {0} 吗？</sys:String>
+    <sys:String x:Key="Ques_Delete_Installation_Package">你确定要删除 {0} 吗？</sys:String>
     <sys:String x:Key="Ques_Install_iSlide">你确定要下载并安装 iSlide 吗？</sys:String>
     <sys:String x:Key="Ques_Clear_Activation">你确定要卸载所有许可证和密钥吗？操作完成后，你需要重新安装许可证并激活 Office。</sys:String>
     <sys:String x:Key="Ques_Install_Licenses">安装 Office 许可证后可能不会在 Office 内显示许可证信息，但是可以通过 Office Tool Plus 查询或者进行激活操作，是否继续？</sys:String>
@@ -849,6 +855,7 @@
     <sys:String x:Key="Err_Installation_Version">版本不匹配，文件：{0}&#x000A;版本：{1}&#x000A;实际的版本：{2}</sys:String>
     <sys:String x:Key="Err_Installation_Mismatch">版本不匹配，文件：{0}&#x000A;实际版本：{1}&#x000A;体系结构：{2}</sys:String>
     <sys:String x:Key="Err_Installation_Redownload">该安装文件包含错误，请尝试将其删除并重新下载。</sys:String>
+    <sys:String x:Key="Err_Installation_No_BasePack">该安装文件不包含基础包，请尝试重新下载。</sys:String>
     <sys:String x:Key="Err_Reading_Info">读取 Office 信息时发生错误。</sys:String>
     <sys:String x:Key="Err_Saving_Info">保存 Office 信息时发生错误。</sys:String>
     <sys:String x:Key="Err_Start_Deploy.Download">无法下载 Office，请确保您已添加产品或语言，然后重试。</sys:String>
@@ -856,6 +863,8 @@
     <sys:String x:Key="Err_Start_Deploy.Preferences">无法设置应用程序首选项，请确保您已正确设置应用程序首选项，然后重试。</sys:String>
     <!-- {0} means product name, for example: Microsoft 365 Apps for Enterprise. -->
     <sys:String x:Key="Err_Start_Deploy_ProductNotSupported">此版本的 Office 不支持安装 {0}。</sys:String>
+    <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
+    <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} 不支持 {1} 语言。</sys:String>
     <sys:String x:Key="Err_Installer_Exited">Office 部署工具未正常退出。</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">无法获取 Office 版本，请再试一次，或者改用 Office 部署工具作为下载引擎。</sys:String>
     <sys:String x:Key="Err_Create_ISO">未找到 Office 安装文件。请先下载安装文件，或选择现有的安装文件，然后重试。</sys:String>

@@ -127,6 +127,7 @@
     <sys:String x:Key="Deploy_Import_Config">กำหนดค่าการนำเข้า</sys:String>
     <sys:String x:Key="Deploy_Import_Config_Web">นำเข้าการกำหนดค่าจากเว็บ</sys:String>
     <sys:String x:Key="Deploy_Check_Updates">Check Office _updates</sys:String>
+    <sys:String x:Key="Deploy_Repair_Office">Re_pair Office</sys:String>
     <sys:String x:Key="Deploy_Mode">โหมดการปรับใช้</sys:String>
     <sys:String x:Key="Deploy_Mode.Edit">แก้ไขการกำหนดค่า</sys:String>
     <sys:String x:Key="Deploy_Mode.Download">ดาวน์โหลด</sys:String>
@@ -206,6 +207,9 @@
     <sys:String x:Key="Deploy_Installation_Files_UseAsSource.Description">สถาปัตยกรรมและช่องทางการอัปเดตจะจับคู่การติดตั้งนี้โดยอัตโนมัติ</sys:String>
     <sys:String x:Key="Deploy_Installation_Files_Open_Location">เปิดตำแหน่งที่ตั้งของไฟล์</sys:String>
     <sys:String x:Key="Deploy_Installation_Files_Delete">ลบ</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none">Base package (Required)</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.arm64x">ARM64 package</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.chpe">ARM package</sys:String>
     
     <sys:String x:Key="Deploy_Advanced_Settings">ไปที่การตั้งค่าขั้นสูง</sys:String>
     <sys:String x:Key="Deploy_Advanced_Settings.Description">ไปที่การตั้งค่าขั้นสูงเพื่อตั้งค่าตัวเลือกเพิ่มเติม</sys:String>
@@ -654,6 +658,8 @@
     <sys:String x:Key="Settings_Download">ดาวน์โหลด</sys:String>
     <sys:String x:Key="Settings_Download_Ask_Where_To_Save">ถามตำแหน่งที่จะบันทึกไฟล์</sys:String>
     <sys:String x:Key="Settings_Download_Ask_Where_To_Save.Description">เลือกตำแหน่งที่จะบันทึกไฟล์การติดตั้ง Office ก่อนดาวน์โหลด Office</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API">Get file list using Microsoft's API</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API.Description">If enabled, the file list will be obtained from Microsoft's API, otherwise the file list will be generated using built-in rules.</sys:String>
     <sys:String x:Key="Settings_Download_Engine">เอนจิ้น</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Description">เลือกเอ็นจิ้นที่จะใช้เมื่อดาวน์โหลด Office</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Thunder">Thunder</sys:String>
@@ -784,7 +790,7 @@
     <sys:String x:Key="Ques_Deploy_Configuration">ดูโค้ดสำหรับการกำหนดค่าโดยละเอียด การกำหนดค่าพื้นฐานด้านบนถูกต้องหรือไม่?</sys:String>
     <sys:String x:Key="Ques_Delete_All_Installations">คุณแน่ใจหรือไม่ว่าต้องการลบไฟล์การติดตั้งทั้งหมด?</sys:String>
     <sys:String x:Key="Ques_Delete_Installation">คุณแน่ใจหรือไม่ว่าต้องการลบ {0}?</sys:String>
-    <sys:String x:Key="Ques_Delete_Installation_Languages">คุณแน่ใจหรือว่าต้องการลบ {0}?</sys:String>
+    <sys:String x:Key="Ques_Delete_Installation_Package">คุณแน่ใจหรือว่าต้องการลบ {0}?</sys:String>
     <sys:String x:Key="Ques_Install_iSlide">คุณแน่ใจหรือไม่ว่าต้องการติดตั้ง iSlide ตอนนี้?</sys:String>
     <sys:String x:Key="Ques_Clear_Activation">คุณแน่ใจหรือไม่ว่าต้องการถอนการติดตั้งใบอนุญาตและคีย์ทั้งหมด หลังจากการดำเนินการนี้ คุณจะต้องติดตั้งใบอนุญาตใหม่และเปิดใช้งาน Office ใหม่อีกครั้ง</sys:String>
     <sys:String x:Key="Ques_Install_Licenses">คุณอาจไม่เห็นข้อมูลการเปิดใช้งานใน Office หลังจากที่คุณติดตั้งใบอนุญาต Office แต่คุณสามารถดูข้อมูลหรือเปิดใช้งาน Office ผ่าน Office Tool Plus ได้ คุณต้องการดำเนินการต่อหรือไม่?</sys:String>
@@ -842,13 +848,14 @@
     <sys:String x:Key="Err_Unknown_Command">คำสั่งที่ไม่รู้จัก: {0}</sys:String>
     <sys:String x:Key="Err_Command_Parameter">พารามิเตอร์ที่จำเป็นขาดหายไป</sys:String>
     <sys:String x:Key="Err_Checking_Installation">เกิดข้อผิดพลาดขณะตรวจสอบไฟล์การติดตั้ง โปรดลองอีกครั้งในภายหลัง หรือดาวน์โหลดไฟล์การติดตั้ง Office อีกครั้ง</sys:String>
-    <sys:String x:Key="Err_Installation">ไฟล์ติดตั้ง ({0}) มีข้อผิดพลาด:&#x000A;{1}</sys:String>
+    <sys:String x:Key="Err_Installation">ไฟล์ติดตั้ง {0} มีข้อผิดพลาด:&#x000A;{1}</sys:String>
     <sys:String x:Key="Err_Installation_File_Missing">ไฟล์สูญหาย: {0}</sys:String>
     <sys:String x:Key="Err_Installation_File_Corrupted">File is corrupted: {0}</sys:String>
     <sys:String x:Key="Err_Installation_Hash">การตรวจสอบแฮชไฟล์ล้มเหลว: {0}&#x000A;แฮช: {1}&#x000A;แฮชที่เกิดขึ้นจริง: {2}</sys:String>
     <sys:String x:Key="Err_Installation_Version">การตรวจสอบเวอร์ชันไฟล์ล้มเหลว: {0}&#x000A;เวอร์ชัน: {1}&#x000A;เวอร์ชันไคลเอ็นต์: {2}</sys:String>
     <sys:String x:Key="Err_Installation_Mismatch">เวอร์ชันไม่ตรงกันกับไฟล์: {0}&#x000A;รุ่นที่ใช้งานจริง: {1}&#x000A;สถาปัตยกรรม: {2}</sys:String>
     <sys:String x:Key="Err_Installation_Redownload">ไฟล์การติดตั้งมีข้อผิดพลาด โปรดลองลบและดาวน์โหลดอีกครั้ง</sys:String>
+    <sys:String x:Key="Err_Installation_No_BasePack">The installation files does not contain the base package, please try to download it again.</sys:String>
     <sys:String x:Key="Err_Reading_Info">เกิดข้อผิดพลาดขณะอ่านข้อมูล Office</sys:String>
     <sys:String x:Key="Err_Saving_Info">เกิดข้อผิดพลาดขณะบันทึกข้อมูล Office</sys:String>
     <sys:String x:Key="Err_Start_Deploy.Download">ไม่สามารถดาวน์โหลด Office ตรวจสอบให้แน่ใจว่าคุณได้เพิ่มผลิตภัณฑ์หรือภาษาแล้ว จากนั้นลองอีกครั้ง</sys:String>
@@ -856,6 +863,8 @@
     <sys:String x:Key="Err_Start_Deploy.Preferences">ไม่สามารถตั้งค่าแอปพลิเคชันได้ ตรวจสอบให้แน่ใจว่าคุณได้ตั้งค่าแอปพลิเคชันอย่างถูกต้อง จากนั้นลองอีกครั้ง</sys:String>
     <!-- {0} means product name, for example: Microsoft 365 Apps for Enterprise. -->
     <sys:String x:Key="Err_Start_Deploy_ProductNotSupported">{0} is not supported on this version of Office.</sys:String>
+    <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
+    <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} does not support the {1} language.</sys:String>
     <sys:String x:Key="Err_Installer_Exited">เครื่องมือปรับใช้ Office ออกอย่างผิดปกติ</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">ไม่สามารถรับเวอร์ชัน Office โปรดลองอีกครั้งหรือใช้ เครื่องมือปรับใช้ Office เป็นเครื่องมือดาวน์โหลด</sys:String>
     <sys:String x:Key="Err_Create_ISO">ไม่พบแฟ้มการติดตั้ง Office โปรดดาวน์โหลดไฟล์ติดตั้งก่อนหรือเลือกไฟล์ติดตั้งที่มีอยู่แล้วลองอีกครั้ง</sys:String>

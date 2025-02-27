@@ -127,6 +127,7 @@
     <sys:String x:Key="Deploy_Import_Config">Konfiguráció _importálása</sys:String>
     <sys:String x:Key="Deploy_Import_Config_Web">Konfiguráció importálása a _Webről</sys:String>
     <sys:String x:Key="Deploy_Check_Updates">Check Office _updates</sys:String>
+    <sys:String x:Key="Deploy_Repair_Office">Re_pair Office</sys:String>
     <sys:String x:Key="Deploy_Mode">Telepítési mód</sys:String>
     <sys:String x:Key="Deploy_Mode.Edit">Konfiguráció szerkesztése</sys:String>
     <sys:String x:Key="Deploy_Mode.Download">Letöltés</sys:String>
@@ -206,6 +207,9 @@
     <sys:String x:Key="Deploy_Installation_Files_UseAsSource.Description">TAz architektúra és a frissítési csatorna automatikusan illeszkedik ehhez a telepítéshez.</sys:String>
     <sys:String x:Key="Deploy_Installation_Files_Open_Location">_Fájl helyének megnyitása</sys:String>
     <sys:String x:Key="Deploy_Installation_Files_Delete">Törlés</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none">Base package (Required)</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.arm64x">ARM64 package</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.chpe">ARM package</sys:String>
 
     <sys:String x:Key="Deploy_Advanced_Settings">Menjen a speciális beállításokhoz</sys:String>
     <sys:String x:Key="Deploy_Advanced_Settings.Description">További beállítások megadásához lépjen a speciális beállításokhoz.</sys:String>
@@ -654,6 +658,8 @@
     <sys:String x:Key="Settings_Download">Letöltés</sys:String>
     <sys:String x:Key="Settings_Download_Ask_Where_To_Save">Kérdezze meg, hová mentse a fájlokat</sys:String>
     <sys:String x:Key="Settings_Download_Ask_Where_To_Save.Description">Az Office letöltése előtt válassza ki az Office telepítési fájljainak mentési helyét.</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API">Get file list using Microsoft's API</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API.Description">If enabled, the file list will be obtained from Microsoft's API, otherwise the file list will be generated using built-in rules.</sys:String>
     <sys:String x:Key="Settings_Download_Engine">Motor</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Description">Válassza ki, hogy melyik motort használja az Office letöltésekor.</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Thunder">Villám</sys:String>
@@ -784,7 +790,7 @@
     <sys:String x:Key="Ques_Deploy_Configuration">Tekintse meg a kódot a részletes konfigurációhoz, helyes-e a fenti alapkonfiguráció?</sys:String>
     <sys:String x:Key="Ques_Delete_All_Installations">Biztosan törli az összes telepítőfájlt?</sys:String>
     <sys:String x:Key="Ques_Delete_Installation">Biztosan törli a következőt: {0}?</sys:String>
-    <sys:String x:Key="Ques_Delete_Installation_Languages">Biztosan törli a következőt: {0}?</sys:String>
+    <sys:String x:Key="Ques_Delete_Installation_Package">Biztosan törli a következőt: {0}?</sys:String>
     <sys:String x:Key="Ques_Install_iSlide">Biztosan telepíteni szeretné az iSlide alkalmazást?</sys:String>
     <sys:String x:Key="Ques_Clear_Activation">Biztosan el szeretné távolítani az összes licencet és kulcsot? A művelet után újra kell telepítenie a licenceket, és újra kell aktiválnia az Office-t.</sys:String>
     <sys:String x:Key="Ques_Install_Licenses">Előfordulhat, hogy az Office-licenc telepítése után nem látja az aktiválási információkat az Office-ban, de az Office Tool Plus segítségével megtekintheti az információkat vagy aktiválhatja az Office-t. Szeretné folytatni?</sys:String>
@@ -842,13 +848,14 @@
     <sys:String x:Key="Err_Unknown_Command">Ismeretlen parancs: {0}</sys:String>
     <sys:String x:Key="Err_Command_Parameter">Hiányoznak a szükséges paraméterek.</sys:String>
     <sys:String x:Key="Err_Checking_Installation">Hiba történt a telepítőfájlok ellenőrzése közben. Próbálkozzon újra később, vagy töltse le újra az Office telepítőfájljait.</sys:String>
-    <sys:String x:Key="Err_Installation">A telepítőfájl ({0}) hibákat tartalmaz:&#x000A;{1}</sys:String>
+    <sys:String x:Key="Err_Installation">A telepítőfájl {0} hibákat tartalmaz:&#x000A;{1}</sys:String>
     <sys:String x:Key="Err_Installation_File_Missing">Hiányzó fájl: {0}</sys:String>
     <sys:String x:Key="Err_Installation_File_Corrupted">A fájl sérült: {0}</sys:String>
     <sys:String x:Key="Err_Installation_Hash">Hash-ellenőrzési hiba, fájl: {0}&#x000A;Hash: {1}&#x000A;Aktuális hash: {2}</sys:String>
     <sys:String x:Key="Err_Installation_Version">Verzióellenőrzési hiba, fájl: {0}&#x000A;Verzió: {1}&#x000A;Kliens verzió: {2}</sys:String>
     <sys:String x:Key="Err_Installation_Mismatch">Nem egyezik a verzió, fájl: {0}&#x000A;Aktuális verzió: {1}&#x000A;Architektúra: {2}</sys:String>
     <sys:String x:Key="Err_Installation_Redownload">A telepítőfájlok hibákat tartalmaznak, kérjük, próbálja meg törölni és töltse le újra.</sys:String>
+    <sys:String x:Key="Err_Installation_No_BasePack">The installation files does not contain the base package, please try to download it again.</sys:String>
     <sys:String x:Key="Err_Reading_Info">Hiba történt az Office-információk olvasása közben.</sys:String>
     <sys:String x:Key="Err_Saving_Info">Hiba történt az Office-adatok mentésekor.</sys:String>
     <sys:String x:Key="Err_Start_Deploy.Download">Nem sikerült letölteni az Office-t, ellenőrizze, hogy hozzáadott-e egy terméket vagy nyelvet, majd próbálkozzon újra.</sys:String>
@@ -856,6 +863,8 @@
     <sys:String x:Key="Err_Start_Deploy.Preferences">Nem lehet beállítani az alkalmazás beállításait, ellenőrizze, hogy megfelelően állította-e be az alkalmazásbeállításokat, majd próbálja újra.</sys:String>
     <!-- {0} means product name, for example: Microsoft 365 Apps for Enterprise. -->
     <sys:String x:Key="Err_Start_Deploy_ProductNotSupported">{0} is not supported on this version of Office.</sys:String>
+    <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
+    <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} does not support the {1} language.</sys:String>
     <sys:String x:Key="Err_Installer_Exited">Az Office-telepítő eszköz rendellenesen lépett ki.</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">Az Office-verzió nem érhető el, próbálkozzon újra, vagy használja az Office Deployment Tool-t letöltőmotorként.</sys:String>
     <sys:String x:Key="Err_Create_ISO">Nem található Office telepítőfájl. Kérjük, először töltse le a telepítő fájlokat, vagy válassza ki a meglévő telepítési fájlokat, majd próbálkozzon újra.</sys:String>

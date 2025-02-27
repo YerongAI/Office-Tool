@@ -127,6 +127,7 @@
     <sys:String x:Key="Deploy_Import_Config">匯入配置(_I)</sys:String>
     <sys:String x:Key="Deploy_Import_Config_Web">從網路位址匯入設定(_W)</sys:String>
     <sys:String x:Key="Deploy_Check_Updates">Check Office _updates</sys:String>
+    <sys:String x:Key="Deploy_Repair_Office">Re_pair Office</sys:String>
     <sys:String x:Key="Deploy_Mode">部署模式</sys:String>
     <sys:String x:Key="Deploy_Mode.Edit">編輯設定</sys:String>
     <sys:String x:Key="Deploy_Mode.Download">下載安裝檔案</sys:String>
@@ -206,6 +207,9 @@
     <sys:String x:Key="Deploy_Installation_Files_UseAsSource.Description">將架構和更新通道自動套用至此安裝檔案。</sys:String>
     <sys:String x:Key="Deploy_Installation_Files_Open_Location">開啟檔案位置(_O)</sys:String>
     <sys:String x:Key="Deploy_Installation_Files_Delete">刪除</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none">Base package (Required)</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.arm64x">ARM64 package</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.chpe">ARM package</sys:String>
 
     <sys:String x:Key="Deploy_Advanced_Settings">前往進階設定</sys:String>
     <sys:String x:Key="Deploy_Advanced_Settings.Description">前往進階設定以配置更多選項。</sys:String>
@@ -654,6 +658,8 @@
     <sys:String x:Key="Settings_Download">下載</sys:String>
     <sys:String x:Key="Settings_Download_Ask_Where_To_Save">詢問檔案儲存位置</sys:String>
     <sys:String x:Key="Settings_Download_Ask_Where_To_Save.Description">在下載 Office 前，選取 Office 安裝檔案的儲存位置。</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API">Get file list using Microsoft's API</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API.Description">If enabled, the file list will be obtained from Microsoft's API, otherwise the file list will be generated using built-in rules.</sys:String>
     <sys:String x:Key="Settings_Download_Engine">引擎</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Description">選取下載 Office 時使用的引擎。</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Thunder">Thunder</sys:String>
@@ -784,7 +790,7 @@
     <sys:String x:Key="Ques_Deploy_Configuration">如要了解詳細內容及設定，請查看 [檢視代碼]，以上設定是否正確？</sys:String>
     <sys:String x:Key="Ques_Delete_All_Installations">確定要刪除 {0} 嗎？</sys:String>
     <sys:String x:Key="Ques_Delete_Installation">確定要刪除安裝檔案 {0} 嗎？</sys:String>
-    <sys:String x:Key="Ques_Delete_Installation_Languages">確定要刪除語言套件 {0} 嗎？</sys:String>
+    <sys:String x:Key="Ques_Delete_Installation_Package">確定要刪除 {0} 嗎？</sys:String>
     <sys:String x:Key="Ques_Install_iSlide">確定要下載並安裝 iSlide 嗎？</sys:String>
     <sys:String x:Key="Ques_Clear_Activation">確定要解除安裝全部授權和金鑰嗎？操作完成後，需要重新安裝授權和啟用 Office。</sys:String>
     <sys:String x:Key="Ques_Install_Licenses">操作完成後，可能不會在 Office 應用程式中顯示授權資訊，但仍可透過 Office Tool Plus 查詢或執行啟用操作，是否繼續？</sys:String>
@@ -849,6 +855,7 @@
     <sys:String x:Key="Err_Installation_Version">版本不相符，檔案: {0}&#x000A;版本: {1}&#x000A;實際版本: {2}</sys:String>
     <sys:String x:Key="Err_Installation_Mismatch">版本不相符，檔案: {0}&#x000A;實際版本: {1}&#x000A;結構: {2}</sys:String>
     <sys:String x:Key="Err_Installation_Redownload">安裝檔案包含錯誤，請嘗試將其刪除並重新下載。</sys:String>
+    <sys:String x:Key="Err_Installation_No_BasePack">The installation files does not contain the base package, please try to download it again.</sys:String>
     <sys:String x:Key="Err_Reading_Info">讀取 Office 資訊時發生錯誤。</sys:String>
     <sys:String x:Key="Err_Saving_Info">儲存 Office 資訊時發生錯誤。</sys:String>
     <sys:String x:Key="Err_Start_Deploy.Download">無法下載 Office，請確認是否已新增產品或語言，並重新嘗試。</sys:String>
@@ -856,6 +863,8 @@
     <sys:String x:Key="Err_Start_Deploy.Preferences">無法部署應用程式喜好設定，請確認是否已正確配置「應用程式喜好設定」，並重新嘗試。</sys:String>
     <!-- {0} means product name, for example: Microsoft 365 Apps for Enterprise. -->
     <sys:String x:Key="Err_Start_Deploy_ProductNotSupported">{0} is not supported on this version of Office.</sys:String>
+    <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
+    <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} does not support the {1} language.</sys:String>
     <sys:String x:Key="Err_Installer_Exited">Office 部署工具未正常結束。</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">無法取得版本資訊，請再試一次。或者改用下載引擎「Office 部署工具」。</sys:String>
     <sys:String x:Key="Err_Create_ISO">找不到 Office 安裝文件。請先下載安裝文件，或選取現有的安裝文件，並再試一次。</sys:String>

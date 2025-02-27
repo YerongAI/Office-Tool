@@ -127,6 +127,7 @@
     <sys:String x:Key="Deploy_Import_Config">_Importuj konfigurację</sys:String>
     <sys:String x:Key="Deploy_Import_Config_Web">Importuj konfigurację z _Web</sys:String>
     <sys:String x:Key="Deploy_Check_Updates">Check Office _updates</sys:String>
+    <sys:String x:Key="Deploy_Repair_Office">Re_pair Office</sys:String>
     <sys:String x:Key="Deploy_Mode">Tryb wdrażania</sys:String>
     <sys:String x:Key="Deploy_Mode.Edit">Edytuj tylko konfigurację</sys:String>
     <sys:String x:Key="Deploy_Mode.Download">Tylko do pobrania</sys:String>
@@ -206,6 +207,9 @@
     <sys:String x:Key="Deploy_Installation_Files_UseAsSource.Description">Architektura i kanał aktualizacji zostaną automatycznie dopasowane do tej instalacji.</sys:String>
     <sys:String x:Key="Deploy_Installation_Files_Open_Location">_Otwórz lokalizację pliku</sys:String>
     <sys:String x:Key="Deploy_Installation_Files_Delete">Usuń</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none">Base package (Required)</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.arm64x">ARM64 package</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.chpe">ARM package</sys:String>
 
     <sys:String x:Key="Deploy_Advanced_Settings">Przejdź do ustawień zaawansowanych</sys:String>
     <sys:String x:Key="Deploy_Advanced_Settings.Description">Przejdź do ustawień zaawansowanych, aby ustawić więcej opcji.</sys:String>
@@ -654,6 +658,8 @@
     <sys:String x:Key="Settings_Download">Tylko do pobrania</sys:String>
     <sys:String x:Key="Settings_Download_Ask_Where_To_Save">Zapytaj, gdzie zapisać pliki</sys:String>
     <sys:String x:Key="Settings_Download_Ask_Where_To_Save.Description">Wybierz, gdzie zapisać pliki instalacyjne pakietu Office przed pobraniem pakietu Office.</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API">Get file list using Microsoft's API</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API.Description">If enabled, the file list will be obtained from Microsoft's API, otherwise the file list will be generated using built-in rules.</sys:String>
     <sys:String x:Key="Settings_Download_Engine">Silnik</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Description">Wybierz silnik, który ma być używany podczas pobierania pakietu Office.</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Thunder">Thunder</sys:String>
@@ -783,7 +789,7 @@
     <sys:String x:Key="Ques_Deploy_Configuration">Wyświetl kod dla konfiguracji szczegółów, czy powyższa podstawowa konfiguracja jest poprawna?</sys:String>
     <sys:String x:Key="Ques_Delete_All_Installations">Czy na pewno chcesz usunąć wszystkie pliki instalacyjne?</sys:String>
     <sys:String x:Key="Ques_Delete_Installation">Czy na pewno chcesz usunąć {0}?</sys:String>
-    <sys:String x:Key="Ques_Delete_Installation_Languages">Czy na pewno chcesz usunąć {0}?</sys:String>
+    <sys:String x:Key="Ques_Delete_Installation_Package">Czy na pewno chcesz usunąć {0}?</sys:String>
     <sys:String x:Key="Ques_Install_iSlide">Czy na pewno chcesz teraz zainstalować iSlide?</sys:String>
     <sys:String x:Key="Ques_Clear_Activation">Czy na pewno chcesz odinstalować wszystkie licencje i klucze? Po tej operacji będziesz musiał ponownie zainstalować licencje i reaktywować pakiet Office.</sys:String>
     <sys:String x:Key="Ques_Install_Licenses">Możesz nie widzieć informacji o aktywacji w pakiecie Office po zainstalowaniu licencji Office, ale możesz wyświetlać informacje lub aktywować Office przez Office Tool Plus. Kontynuować?</sys:String>
@@ -841,7 +847,7 @@
     <sys:String x:Key="Err_Unknown_Command">Nieznane polecenie: {0}</sys:String>
     <sys:String x:Key="Err_Command_Parameter">Brak wymaganych parametrów.</sys:String>
     <sys:String x:Key="Err_Checking_Installation">Podczas sprawdzania plików instalacyjnych wystąpił błąd. Proszę spróbować ponownie później lub ponownie pobrać pliki instalacyjne pakietu Office.</sys:String>
-    <sys:String x:Key="Err_Installation">Plik instalacyjny ({0}) zawiera błędy:&#x000A;{1}</sys:String>
+    <sys:String x:Key="Err_Installation">Plik instalacyjny {0} zawiera błędy:&#x000A;{1}</sys:String>
     <sys:String x:Key="Err_Installation_File_Missing">Brak pliku: {0}</sys:String>
     <sys:String x:Key="Err_Installation_File_Corrupted">Plik jest uszkodzony: {0}</sys:String>
     <sys:String x:Key="Err_Installation_Hash">Błąd sprawdzania skrótu, plik: {0}&#x000A;Hash: {1}&#x000A;Rzeczywisty hash: {2}</sys:String>
@@ -849,6 +855,7 @@
     <sys:String x:Key="Err_Installation_Mismatch">Niezgodność wersji, plik: {0}&#x000A;Aktualna wersja: {1}&#x000A;Architektura: {2}</sys:String>
     <sys:String x:Key="Err_Installation_Redownload">Pliki instalacyjne zawierają błędy, spróbuj je usunąć i pobrać ponownie.</sys:String>
     <sys:String x:Key="Err_Reading_Info">Wystąpił błąd podczas odczytywania informacji pakietu Office.</sys:String>
+    <sys:String x:Key="Err_Installation_No_BasePack">The installation files does not contain the base package, please try to download it again.</sys:String>
     <sys:String x:Key="Err_Saving_Info">Wystąpił błąd podczas zapisywania informacji pakietu Office.</sys:String>
     <sys:String x:Key="Err_Start_Deploy.Download">Nie można pobrać pakietu Office. Upewnij się, że dodałeś produkt lub język, a następnie spróbuj ponownie.</sys:String>
     <sys:String x:Key="Err_Start_Deploy.Deploy">Nie można wdrożyć pakietu Office. Upewnij się, że ustawienia podstawowe zostały poprawnie skonfigurowane, a następnie spróbuj ponownie.</sys:String>
@@ -856,6 +863,8 @@
     <!-- {0} means product name, for example: Microsoft 365 Apps for Enterprise. -->
     <sys:String x:Key="Err_Start_Deploy_ProductNotSupported">{0} nie jest obsługiwany w tej wersji pakietu Office.</sys:String>
     <sys:String x:Key="Err_Installer_Exited">Wystąpił błąd podczas wychodzenia z narzędzia narzędzie do wdrażania pakietu Office.</sys:String>
+    <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
+    <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} does not support the {1} language.</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">Nie można uzyskać informacji o wersji, spróbuj ponownie lub użyj narzędzia Office Deployment Tool.</sys:String>
     <sys:String x:Key="Err_Create_ISO">Nie znaleziono plików instalacyjnych pakietu Office. Najpierw pobierz pliki instalacyjne lub wybierz istniejące pliki instalacyjne, a następnie spróbuj ponownie.</sys:String>
     <sys:String x:Key="Err_Query_Office_Licenses">Nie można przeprowadzić zapytania o licencje Office, proszę spróbować ponownie.</sys:String>

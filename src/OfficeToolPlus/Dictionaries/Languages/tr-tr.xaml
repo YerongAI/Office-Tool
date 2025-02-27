@@ -127,6 +127,7 @@
     <sys:String x:Key="Deploy_Import_Config">_Yapılandırmayı içe aktar</sys:String>
     <sys:String x:Key="Deploy_Import_Config_Web">Yapılandırmayı _Web'den içe aktar</sys:String>
     <sys:String x:Key="Deploy_Check_Updates">Check Office _updates</sys:String>
+    <sys:String x:Key="Deploy_Repair_Office">Re_pair Office</sys:String>
     <sys:String x:Key="Deploy_Mode">İndirme Modu</sys:String>
     <sys:String x:Key="Deploy_Mode.Edit">Yapılandırmayı düzenle</sys:String>
     <sys:String x:Key="Deploy_Mode.Download">İndir</sys:String>
@@ -206,6 +207,9 @@
     <sys:String x:Key="Deploy_Installation_Files_UseAsSource.Description">Mimari ve güncelleme kanalı otomatik olarak bu kurulumla eşleşecektir.</sys:String>
     <sys:String x:Key="Deploy_Installation_Files_Open_Location">_Dosya konumunu aç</sys:String>
     <sys:String x:Key="Deploy_Installation_Files_Delete">Sil</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none">Base package (Required)</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.arm64x">ARM64 package</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.chpe">ARM package</sys:String>
 
     <sys:String x:Key="Deploy_Advanced_Settings">Gelişmiş ayarlara git</sys:String>
     <sys:String x:Key="Deploy_Advanced_Settings.Description">Daha fazla seçenek belirlemek için gelişmiş ayarlara gidin.</sys:String>
@@ -654,6 +658,8 @@
     <sys:String x:Key="Settings_Download">İndir</sys:String>
     <sys:String x:Key="Settings_Download_Ask_Where_To_Save">Dosyaların nereye kaydedileceğini sor</sys:String>
     <sys:String x:Key="Settings_Download_Ask_Where_To_Save.Description">Office'i indirmeden önce Office yükleme dosyalarının nereye kaydedeceğileceğini seçin.</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API">Get file list using Microsoft's API</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API.Description">If enabled, the file list will be obtained from Microsoft's API, otherwise the file list will be generated using built-in rules.</sys:String>
     <sys:String x:Key="Settings_Download_Engine">İndirme Aracı</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Description">Office'i indirirken hangi indirme aracının kullanılacağını seçin.</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Thunder">Thunder</sys:String>
@@ -784,7 +790,7 @@
     <sys:String x:Key="Ques_Deploy_Configuration">Ayrıntılı yapılandırma için kodu görüntüleyin, yukarıdaki temel yapılandırma doğru mu?</sys:String>
     <sys:String x:Key="Ques_Delete_All_Installations">Tüm yükleme dosyalarını silmek istediğinizden emin misiniz?</sys:String>
     <sys:String x:Key="Ques_Delete_Installation">{0} silmek istediğinizden emin misiniz?</sys:String>
-    <sys:String x:Key="Ques_Delete_Installation_Languages">{0} silmek istediğinizden emin misiniz?</sys:String>
+    <sys:String x:Key="Ques_Delete_Installation_Package">{0} silmek istediğinizden emin misiniz?</sys:String>
     <sys:String x:Key="Ques_Install_iSlide">iSlide'ı şimdi yüklemek istediğinizden emin misiniz?</sys:String>
     <sys:String x:Key="Ques_Clear_Activation">Tüm lisansları ve anahtarları kaldırmak istediğinizden emin misiniz? Bu işlemden sonra lisansları yeniden yüklemeniz ve Office'i yeniden etkinleştirmeniz gerekecektir.</sys:String>
     <sys:String x:Key="Ques_Install_Licenses">Office lisansını yükledikten sonra Office'te etkinleştirme bilgilerini göremeyebilirsiniz, ancak Office ToolPlus aracılığıyla bilgileri görüntüleyebilir veya Office'i etkinleştirebilirsiniz. Devam etmek istiyor musun?</sys:String>
@@ -842,13 +848,14 @@
     <sys:String x:Key="Err_Unknown_Command">Bilinmeyen komut: {0}</sys:String>
     <sys:String x:Key="Err_Command_Parameter">Gerekli parametreler eksik.</sys:String>
     <sys:String x:Key="Err_Checking_Installation">Yükleme dosyaları denetlenirken bir hata oluştu. Lütfen daha sonra yeniden deneyin veya Office yükleme dosyalarını yeniden indirin.</sys:String>
-    <sys:String x:Key="Err_Installation">Kurulum dosyası ({0}) hatalar içeriyor: &#x000A; {1}</sys:String>
+    <sys:String x:Key="Err_Installation">Kurulum dosyası {0} hatalar içeriyor: &#x000A; {1}</sys:String>
     <sys:String x:Key="Err_Installation_File_Missing">Dosya eksik: {0}</sys:String>
     <sys:String x:Key="Err_Installation_File_Corrupted">File is corrupted: {0}</sys:String>
     <sys:String x:Key="Err_Installation_Hash">Hash değeri hatalı, Dosya: {0}&#x000A;Hash: {1}&#x000A;Gerçek hash değeri: {2}</sys:String>
     <sys:String x:Key="Err_Installation_Version">Sürüm kontrolü hatası, dosya: {0}&#x000A;Sürüm: {1}&#x000A;İstemci sürümü: {2}</sys:String>
     <sys:String x:Key="Err_Installation_Mismatch">Sürüm uyuşmazlığı, dosya: {0}&#x000A;Gerçek sürüm: {1}&#x000A;Mimari: {2}</sys:String>
     <sys:String x:Key="Err_Installation_Redownload">Kurulum dosyalarında hatalar var, lütfen silip tekrar indirmeyi deneyin.</sys:String>
+    <sys:String x:Key="Err_Installation_No_BasePack">The installation files does not contain the base package, please try to download it again.</sys:String>
     <sys:String x:Key="Err_Reading_Info">Office bilgileri okunurken bir hata oluştu.</sys:String>
     <sys:String x:Key="Err_Saving_Info">Office bilgileri kaydedilirken bir hata oluştu.</sys:String>
     <sys:String x:Key="Err_Start_Deploy.Download">Office indirilemiyor, bir ürün veya dil eklediğinizden emin olun ve yeniden deneyin.</sys:String>
@@ -856,6 +863,8 @@
     <sys:String x:Key="Err_Start_Deploy.Preferences">Uygulama tercihleri ​​ayarlanamıyor, uygulama tercihlerini doğru ayarladığınızdan emin olun ve tekrar deneyin.</sys:String>
     <!-- {0} means product name, for example: Microsoft 365 Apps for Enterprise. -->
     <sys:String x:Key="Err_Start_Deploy_ProductNotSupported">{0} is not supported on this version of Office.</sys:String>
+    <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
+    <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} does not support the {1} language.</sys:String>
     <sys:String x:Key="Err_Installer_Exited">Office Deployment Tool aracından anormal şekilde çıkıldı.</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">Office sürümü alınamıyor, lütfen yeniden deneyin veya indirme motoru olarak Office Deployment Tool Aracı'nı kullanın.</sys:String>
     <sys:String x:Key="Err_Create_ISO">Hiçbir Office yükleme dosyası bulunamadı. Lütfen önce kurulum dosyalarını indirin veya mevcut kurulum dosyalarını seçip tekrar deneyin.</sys:String>

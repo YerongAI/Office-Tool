@@ -127,6 +127,7 @@
     <sys:String x:Key="Deploy_Import_Config">_Impor konfigurasi</sys:String>
     <sys:String x:Key="Deploy_Import_Config_Web">Impor konfigurasi dari _Web</sys:String>
     <sys:String x:Key="Deploy_Check_Updates">Check Office _updates</sys:String>
+    <sys:String x:Key="Deploy_Repair_Office">Re_pair Office</sys:String>
     <sys:String x:Key="Deploy_Mode">Mode pemasangan</sys:String>
     <sys:String x:Key="Deploy_Mode.Edit">Hanya mengubah konfigurasi</sys:String>
     <sys:String x:Key="Deploy_Mode.Download">Hanya mengunduh</sys:String>
@@ -206,6 +207,9 @@
     <sys:String x:Key="Deploy_Installation_Files_UseAsSource.Description">Arsitektur dan saluran pembaruan akan mencocokkan pemasangan ini secara otomatis.</sys:String>
     <sys:String x:Key="Deploy_Installation_Files_Open_Location">_Buka lokasi berkas</sys:String>
     <sys:String x:Key="Deploy_Installation_Files_Delete">Hapus</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none">Base package (Required)</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.arm64x">ARM64 package</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.chpe">ARM package</sys:String>
 
     <sys:String x:Key="Deploy_Advanced_Settings">Pergi ke pengaturan lanjutan</sys:String>
     <sys:String x:Key="Deploy_Advanced_Settings.Description">Pergi ke pengaturan lanjutan untuk mengatur opsi lainnya.</sys:String>
@@ -654,6 +658,8 @@
     <sys:String x:Key="Settings_Download">Hanya mengunduh</sys:String>
     <sys:String x:Key="Settings_Download_Ask_Where_To_Save">Tanya dimana tempat menyimpan berkas</sys:String>
     <sys:String x:Key="Settings_Download_Ask_Where_To_Save.Description">Pilih dimana tempat menyimpan berkas pemasangan Office sebelum mengunduh Office.</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API">Get file list using Microsoft's API</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API.Description">If enabled, the file list will be obtained from Microsoft's API, otherwise the file list will be generated using built-in rules.</sys:String>
     <sys:String x:Key="Settings_Download_Engine">Mesin</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Description">Pilih mesin yang digunakan untuk mengunduh Office.</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Thunder">Thunder</sys:String>
@@ -784,7 +790,7 @@
     <sys:String x:Key="Ques_Deploy_Configuration">Tampilkan kode untuk konfigurasi detail, apakah konfigurasi dasar di atas sudah tepat?</sys:String>
     <sys:String x:Key="Ques_Delete_All_Installations">Apakah anda yakin untuk menghapus semua berkas pemasangan?</sys:String>
     <sys:String x:Key="Ques_Delete_Installation">Apakah anda yakin untuk ingin menghapus {0}?</sys:String>
-    <sys:String x:Key="Ques_Delete_Installation_Languages">Apakah anda yakin untuk ingin menghapus {0}?</sys:String>
+    <sys:String x:Key="Ques_Delete_Installation_Package">Apakah anda yakin untuk ingin menghapus {0}?</sys:String>
     <sys:String x:Key="Ques_Install_iSlide">Apakah anda yakin untuk memasang iSlide sekarang?</sys:String>
     <sys:String x:Key="Ques_Clear_Activation">Apakah anda yakin untuk mencopot semua kunci dan lisensi? Setelah operasi ini anda perlu memasang kembali lisensi dan mengaktivasikan Office kembali.</sys:String>
     <sys:String x:Key="Ques_Install_Licenses">Anda mungkin tidak melihat informasi aktivasi di Office setelah memasang lisensi Office, tetapi anda dapat melihat informasi atau mengaktivasi Office melalui Office Tool Plus. Apakah anda ingin melanjutkan?</sys:String>
@@ -842,13 +848,14 @@
     <sys:String x:Key="Err_Unknown_Command">Perintah tidak diketahui: {0}</sys:String>
     <sys:String x:Key="Err_Command_Parameter">Parameter yang diperlukan hilang.</sys:String>
     <sys:String x:Key="Err_Checking_Installation">Terjadi kesalahan ketika memeriksa berkas pemasangan. Silakan coba lagi, atau mengunduh kembali berkas pemasangan Office.</sys:String>
-    <sys:String x:Key="Err_Installation">Berkas pemasangan ({0}) mengandung kesalahan:&#x000A;{1}</sys:String>
+    <sys:String x:Key="Err_Installation">Berkas pemasangan {0} mengandung kesalahan:&#x000A;{1}</sys:String>
     <sys:String x:Key="Err_Installation_File_Missing">Berkas hilang: {0}</sys:String>
     <sys:String x:Key="Err_Installation_File_Corrupted">File is corrupted: {0}</sys:String>
     <sys:String x:Key="Err_Installation_Hash">Memeriksa hash gagal, berkas: {0}&#x000A;Hash: {1}&#x000A;Hash sebenarnya: {2}</sys:String>
     <sys:String x:Key="Err_Installation_Version">Memeriksa versi gagal, berkas: {0}&#x000A;Versi: {1}&#x000A;Versi klien: {2}</sys:String>
     <sys:String x:Key="Err_Installation_Mismatch">Versi tidak cocok, berkas: {0}&#x000A;Versi sebenarnya: {1}&#x000A;Arsitektur: {2}</sys:String>
     <sys:String x:Key="Err_Installation_Redownload">Berkas pemasangan mengandung kesalahan, silakan coba hapus dan mengunduh kembali.</sys:String>
+    <sys:String x:Key="Err_Installation_No_BasePack">The installation files does not contain the base package, please try to download it again.</sys:String>
     <sys:String x:Key="Err_Reading_Info">Terjadi kesalahan ketika membaca informasi Office.</sys:String>
     <sys:String x:Key="Err_Saving_Info">Terjadi kesalahan ketika menyimpan informasi Office.</sys:String>
     <sys:String x:Key="Err_Start_Deploy.Download">Tidak dapat mengunduh Office, pastikan anda telah menambahkan produk atau bahasa, lalu coba lagi.</sys:String>
@@ -856,6 +863,8 @@
     <sys:String x:Key="Err_Start_Deploy.Preferences">Tidak dapat mengatur preferensi  aplikasi, pastikan anda telah mengatur preferensi aplikasi dengan benar, lalu coba lagi.</sys:String>
     <!-- {0} means product name, for example: Microsoft 365 Apps for Enterprise. -->
     <sys:String x:Key="Err_Start_Deploy_ProductNotSupported">{0} is not supported on this version of Office.</sys:String>
+    <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
+    <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} does not support the {1} language.</sys:String>
     <sys:String x:Key="Err_Installer_Exited">Office Deployment Tool tertutup secara tidak normal.</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">Tidak dapat mendapatkan informasi versi, silakan coba lagi atau gunakan Office Deployment Tool.</sys:String>
     <sys:String x:Key="Err_Create_ISO">No Office installation files were found. Please download installation files first, or select existing installation files, then try again.</sys:String>

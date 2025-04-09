@@ -55,7 +55,7 @@ irm officetool.plus | iex
 | en-gb | English (United Kingdom) | [Mcforwin](https://github.com/Mcforwin) |
 | en-us | English (United States) | [Yerong](https://officetool.plus/) |
 | hu-hu | magyar (Magyarország) | [John Fowler](https://github.com/JohnFowler58) |
-| id-id | Bahasa Indonesia (Indonesia) | [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17) |
+| id-id | Bahasa Indonesia (Indonesia) | [Ida Bagus](https://fb.me/Anom.Sanjaya17), [Reno Sifana Paksi](https://linktr.ee/renosifana.paksi) |
 | it-it | Italiano (Italia) | [garf02](https://github.com/garf02), [bovirus](https://github.com/bovirus) |
 | ja-jp | 日本語 (日本) | [秋山へいわ](https://github.com/akio1321)|
 | ko-kr | 한국어 (대한민국) | [VenusGirl❤](https://github.com/VenusGirl) |
@@ -65,6 +65,8 @@ irm officetool.plus | iex
 | ru-ru | Русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov) |
 | th-th | ไทย (ไทย) | [dekthaiinchina](https://github.com/dekthaiinchina) |
 | tr-tr | Türkçe (Türkiye) | [Tayfun Akkoyun](https://github.com/crasadure) |
+| uk-ua | українська (Україна) | [Olexii Korshunov](https://github.com/korshunov-olexiy) |
+| vi-vn | Tiếng Việt (Việt Nam) | [Nguyen Quang Trung](https://github.com/TrungThachDau) |
 | zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com) |
 
 ## Help With Localization

@@ -65,6 +65,7 @@ irm officetool.plus | iex
 | ru-ru | Русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov) |
 | th-th | ไทย (ไทย) | [dekthaiinchina](https://github.com/dekthaiinchina) |
 | tr-tr | Türkçe (Türkiye) | [Tayfun Akkoyun](https://github.com/crasadure) |
+| uk-ua | українська (Україна) | [Olexii Korshunov](https://github.com/korshunov-olexiy) |
 | vi-vn | Tiếng Việt (Việt Nam) | [Nguyen Quang Trung](https://github.com/TrungThachDau) |
 | zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com) |
 

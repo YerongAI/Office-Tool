@@ -32,7 +32,7 @@ $AllLanguages = @{
         en_US      = "Select a edition to download"
         zh_Hans_CN = "选择一个版本下载"
     }
-    "HomeOP4"             = [PSCustomObject]@{
+    "Exit"                = [PSCustomObject]@{
         en_US      = "Exit"
         zh_Hans_CN = "退出"
     }
@@ -117,8 +117,28 @@ $AllLanguages = @{
         zh_Hans_CN = "  Office Tool Plus 已保存到 {0}"
     }
     "StartProgram"        = [PSCustomObject]@{
-        en_US      = "  Press Enter to start the program, or close the window to exit."
-        zh_Hans_CN = "  按下回车键启动程序，或者关闭窗口以退出。"
+        en_US      = "Start program"
+        zh_Hans_CN = "启动程序"
+    }
+    "QuickInstallation"   = [PSCustomObject]@{
+        en_US      = "Quick installation"
+        zh_Hans_CN = "快速安装选项"
+    }
+    "ManuallyForMore"     = [PSCustomObject]@{
+        en_US      = "Tips: for more install options please launch application and configure as you want."
+        zh_Hans_CN = "提示：如果你需要其他安装选项，请启动程序并手动进行配置。"
+    }
+    "InvokeCommand"       = [PSCustomObject]@{
+        en_US      = "Invoke commands"
+        zh_Hans_CN = "执行命令"
+    }
+    "EnterCommand"        = [PSCustomObject]@{
+        en_US      = "Enter a command to execute, or enter nothing to go back"
+        zh_Hans_CN = "请输入命令并回车，或直接回车以返回上一级"
+    }
+    "PressToContinue"     = [PSCustomObject]@{
+        en_US      = "Press Enter to continue."
+        zh_Hans_CN = "请按下回车键以继续"
     }
 }
 
@@ -126,6 +146,110 @@ function Get-LString {
     param([string]$Key)
 
     return $AllLanguages[$Key].$CurrentLang
+}
+
+function Invoke-Command {
+    param([string]$Path)
+
+    Clear-Host
+    Write-Host "=========================== Office Tool Plus ==========================="
+    Write-Host
+    $UserInput = Read-Host "  $(Get-LString -Key "EnterCommand")"
+    if ($null -eq $UserInput -or $UserInput -eq "") {
+        Invoke-Launch-App -Path $Path
+    }
+    else {
+        Clear-Host
+        Start-Process -FilePath "$Path\Office Tool\Office Tool Plus.Console.exe" -ArgumentList $UserInput -Wait -NoNewWindow -WorkingDirectory "$Path\Office Tool"
+        Write-Host
+        Get-LString "PressToContinue"
+        Read-Host
+        Invoke-Command -Path $Path
+    }
+}
+
+function Invoke-Quick-Install {
+    param([string]$Path)
+
+    $DownloadURL = "https://server-win.ccin.top/office-tool-plus/api/xml_generator/?module=1"
+    $Channel = "Current"
+
+    Clear-Host
+    Write-Host "=========================== Office Tool Plus ==========================="
+    Write-Host
+    Write-Host "  $(Get-LString "QuickInstallation")"
+    Write-Host
+    Write-Host "    1: Microsoft 365"
+    Write-Host "    2: Microsoft 365 & Visio"
+    Write-Host "    3: Office 2024 Pro Plus Volume"
+    Write-Host "    4: Office 2024 Pro Plus Volume & Visio 2024 Pro Volume"
+    Write-Host "    5: $(Get-LString "GoBack")"
+    Write-Host
+    Write-Host "  $(Get-LString "ManuallyForMore")"
+    Write-Host
+    $UserChoice = Read-Host "  $(Get-LString -Key "ChooseOP")"
+    switch ($UserChoice) {
+        "1" {
+            $DownloadURL += "&products=O365ProPlusRetail_MatchOS&O365ProPlusRetail.exclapps=Access,Bing,Groove,Lync,OneDrive,OneNote,Outlook,Publisher,Teams"
+        }
+        "2" {
+            $DownloadURL += "&products=O365ProPlusRetail_MatchOS|VisioProRetail_MatchOS&O365ProPlusRetail.exclapps=Access,Bing,Groove,Lync,OneDrive,OneNote,Outlook,Publisher,Teams&VisioProRetail.exclapps=Groove,OneDrive"
+        }
+        "3" {
+            $DownloadURL += "&products=ProPlus2024Volume_MatchOS&ProPlus2024Volume.exclapps=Access,Lync,OneDrive,OneNote,Outlook"
+            $Channel = "PerpetualVL2024"
+        }
+        "4" {
+            $DownloadURL += "&products=ProPlus2024Volume_MatchOS|VisioPro2024Volume_MatchOS&ProPlus2024Volume.exclapps=Access,Lync,OneDrive,OneNote,Outlook&VisioPro2024Volume.exclapps=OneDrive"
+            $Channel = "PerpetualVL2024"
+        }
+        "5" { Invoke-Launch-App -Path $Path }
+        default { Invoke-Quick-Install -Path $Path }
+    }
+    $DownloadURL += "&channel=$Channel"
+
+    $FileName = "$env:TEMP\Config.xml"
+    $DownloadSuccess = $false
+    do {
+        try {
+            Invoke-WebRequest -Uri $DownloadURL -UseBasicParsing -OutFile $FileName -ErrorAction Stop
+            $DownloadSuccess = $true
+        }
+        catch {
+            Get-LString "ErrorDownloading"
+            $UserChoice = Read-Host $(Get-LString "RetryDownload")
+            if ($UserChoice -ne "Y") {
+                Get-LString "RedownloadTip"
+                Read-Host
+                Exit
+            }
+        }
+    } while (-not $DownloadSuccess)
+    Start-Process -FilePath "$Path\Office Tool\Office Tool Plus.exe" -ArgumentList "`"$FileName`""
+}
+
+function Invoke-Launch-App {
+    param([string]$Path)
+
+    Clear-Host
+    Write-Host "=========================== Office Tool Plus ==========================="
+    Write-Host
+    Write-Host $([string]::Format($(Get-LString "DownloadSuccess"), "$Path"))
+    Write-Host
+    Write-Host "    1: $(Get-LString "StartProgram")"
+    Write-Host "    2: $(Get-LString "QuickInstallation")"
+    Write-Host "    3: $(Get-LString "InvokeCommand")"
+    Write-Host "    4: $(Get-LString "Exit")"
+    Write-Host
+    $UserChoice = Read-Host "  $(Get-LString -Key "ChooseOP")"
+    switch ($UserChoice) {
+        "1" { Start-Process "$Path\Office Tool\Office Tool Plus.exe" }
+        "2" { Invoke-Quick-Install -Path $Path }
+        "3" { Invoke-Command -Path $Path }
+        "4" { Exit }
+        default { Invoke-Launch-App -Path $Path }
+    }
+    Exit
 }
 
 function Get-OTP {
@@ -157,15 +281,7 @@ function Get-OTP {
             }
         }
     } while (-not $DownloadSuccess)
-    Clear-Host
-    Write-Host "=========================== Office Tool Plus ==========================="
-    Write-Host
-    Write-Host $([string]::Format($(Get-LString "DownloadSuccess"), "$SavePath\Office Tool"))
-    Write-Host
-    Get-LString "StartProgram"
-    Read-Host
-    Start-Process "$SavePath\Office Tool\Office Tool Plus.exe"
-    Exit
+    Invoke-Launch-App -Path $SavePath
 }
 
 function Get-RuntimeVersion {
@@ -283,6 +399,7 @@ function Get-DownloadPage {
         $Type = "runtime"
         Write-Host $([string]::Format($(Get-LString "DownRuntime"), $Arch))
     }
+    Start-Sleep -Seconds 3
     Get-SelecFolderPage -Type $Type -Architecture $Arch
 }
 
@@ -359,7 +476,7 @@ function Get-Homepage {
     Write-Host "    1: $(Get-LString "HomeOP1")"
     Write-Host "    2: $(Get-LString "HomeOP2")"
     Write-Host "    3: Choose language"
-    Write-Host "    4: $(Get-LString "HomeOP4")"
+    Write-Host "    4: $(Get-LString "Exit")"
     Write-Host
     $UserChoice = Read-Host "  $(Get-LString -Key "ChooseOP")"
     switch ($UserChoice) {

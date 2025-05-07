@@ -46,6 +46,7 @@ Volume products can only coexist with their corresponding product families.
 | HomeStudentVNextRetail | Office Home and Student 2016 | Excel, OneDrive, OneNote, PowerPoint, Word |  | Office16 | T2NP2-GM3V4-VYBYW-HT963-B99M9 |
 | MondoRetail | Office Mondo 2016 | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Project, Publisher, Visio, Word | DCF, MondoOnly, OSM, OSMUX, PowerPivot | Office16R | DMTCJ-KNRKX-26982-JYCKT-P7KB6 |
 | MondoVolume | Office Mondo 2016 | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Project, Publisher, Visio, Word | DCF, MondoOnly, OSM, OSMUX, PowerPivot | Office16R | HFTND-W9MK4-8B7MJ-B6C4G-XQBR2 |
+| O365AppsBasicRetail | Microsoft 365 Apps Basic | Excel, OneDrive, OneNote, PowerPoint, Word | PowerPivot | M365 | 3HYJN-9KG99-F8VG9-V3DT8-JFMHV |
 | O365BusinessRetail | Microsoft 365 Apps for business | Access, Excel, Groove, Lync, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Teams, Word | PowerPivot | M365 | NCHRJ-3VPGW-X73DM-6B36K-3RQ6B |
 | O365EduCloudRetail | Microsoft 365 | Excel, OneDrive, OneNote, PowerPoint, Word | PowerPivot | M365 | 8843N-BCXXD-Q84H8-R4Q37-T3CPT |
 | O365HomePremRetail | Microsoft 365 | Access, Excel, OneDrive, OneNote, Outlook, PowerPoint, Publisher, Word | PowerPivot | M365 | 9FNY8-PWWTY-8RY4F-GJMTV-KHGM9 |

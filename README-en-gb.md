@@ -44,7 +44,7 @@ Functions and Features:
 Or download Office Tool Plus using PowerShell:
 
 ```powershell
-irm officetool.plus | iex
+irm https://officetool.plus | iex
 ```
 
 ## About

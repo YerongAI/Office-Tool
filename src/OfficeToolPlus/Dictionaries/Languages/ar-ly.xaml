@@ -1,0 +1,908 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=System.RunTime"
+                    xml:space="preserve">
+
+    <!-- Country settings, it is used to get information from server. -->
+    <sys:String x:Key="Culture">ar-sa</sys:String>
+    <!-- Products name settings, "en-us" is default value if not set. -->
+    <sys:String x:Key="ProductDict">ar-sa</sys:String>
+    <!-- Markdown document font family. -->
+    <FontFamily x:Key="Markdown.FontFamily">Segoe UI</FontFamily>
+
+    <!-- Eula content -->
+    <sys:String x:Key="Eula.Title">شروط الترخيص</sys:String>
+    <sys:String x:Key="Eula.Content">باستخدام هذا البرنامج، يجب أن تقبل [شروط ترخيص البرنامج]({0}) و[اتفاقية خدمات مايكروسوفت]({1}).</sys:String>
+
+    <!-- Custom control -->
+    <sys:String x:Key="Yerong_String_ToggleButton.Unset">غير محدد</sys:String>
+    <sys:String x:Key="Yerong_String_ToggleButton.Off">إيقاف</sys:String>
+    <sys:String x:Key="Yerong_String_ToggleButton.On">تشغيل</sys:String>
+    <sys:String x:Key="Yerong_String_MicaMenu.Name">القائمة</sys:String>
+    <sys:String x:Key="Yerong_String_MicaMenu.HelpText">انقر لفتح قائمة السياق.</sys:String>
+
+    <!-- Title bar -->
+    <sys:String x:Key="Title_Bar_GoBack_Button">رجوع</sys:String>
+    <sys:String x:Key="Title_Bar_SysMenu_Button">قائمة النظام</sys:String>
+    <sys:String x:Key="Title_Bar_Command_Box">أمر</sys:String>
+
+    <!-- Navigation bar -->
+    <sys:String x:Key="Navigation_Menu.Name">قائمة التنقل</sys:String>
+    <sys:String x:Key="Navigation_Menu.ToolTip">انقر لتوسيع أو طي شريط التنقل.</sys:String>
+    <sys:String x:Key="Navigation_Bar.Name">شريط التنقل</sys:String>
+    <sys:String x:Key="Navigation_Bar_Bottom.Name">شريط التنقل السفلي</sys:String>
+
+    <sys:String x:Key="Navigate_Page.Home">الرئيسية</sys:String>
+    <sys:String x:Key="Navigate_Page.Deploy">النشر</sys:String>
+    <sys:String x:Key="Navigate_Page.Activate">التفعيل</sys:String>
+    <sys:String x:Key="Navigate_Page.Toolbox">الأدوات</sys:String>
+    <sys:String x:Key="Navigate_Page.ConvertDocuments">تحويل المستندات</sys:String>
+    <sys:String x:Key="Navigate_Page.HashChecker">فحص التحقق</sys:String>
+
+    <sys:String x:Key="Navigate_Page.Settings">الإعدادات</sys:String>
+    <sys:String x:Key="Navigate_Page.About">حول</sys:String>
+
+    <!-- Notification list -->
+    <sys:String x:Key="Notification_Close_Message.Name">إغلاق الرسالة</sys:String>
+    <sys:String x:Key="Notification_Message_Content">محتوى الرسالة: {0}، {1}</sys:String>
+    <sys:String x:Key="Notification_Message_Button_List">أزرار الرسالة</sys:String>
+    <sys:String x:Key="Notification_Cancel_Task.Name">إلغاء المهمة</sys:String>
+
+    <!-- Home page -->
+    <sys:String x:Key="Home_Messages_Center.Name">مركز الرسائل</sys:String>
+    <!-- Greetings, customize it according to your country and habits. -->
+    <sys:String x:Key="Home_Greeting_Hello">مرحبًا</sys:String>
+    <!-- 00:00 -> 05:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.0">لقد تأخر الوقت، نتمنى لك أحلامًا سعيدة!</sys:String>
+    <!-- 05:00 -> 06:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.5">يكاد الفجر يطلع، هل أنت مستعد للاستيقاظ؟</sys:String>
+    <!-- 06:00 -> 10:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.6">صباح الخير</sys:String>
+    <!-- 10:00 -> 11:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.10">صباح الخير</sys:String>
+    <!-- 11:00 -> 12:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.11">مساء الخير</sys:String>
+    <!-- 12:00 -> 13:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.12">مساء الخير</sys:String>
+    <!-- 13:00 -> 15:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.13">مساء الخير</sys:String>
+    <!-- 15:00 -> 17:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.15">مساء الخير</sys:String>
+    <!-- 17:00 -> 18:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.17">مساء الخير</sys:String>
+    <!-- 18:00 -> 21:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.18">مساء الخير</sys:String>
+    <!-- 21:00 -> 22:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.21">حان وقت النوم، نتمنى لك أحلامًا سعيدة!</sys:String>
+    <!-- 22:00 -> 00:00 (+1) -->
+    <sys:String x:Key="Home_Greeting_Hour.22">لقد تأخر الوقت، نتمنى لك أحلامًا سعيدة!</sys:String>
+    <!-- Greetings end -->
+    <sys:String x:Key="Home_Install_Office">تثبيت أوفيس</sys:String>
+    <sys:String x:Key="Home_Install_Office.O365PPRDescription">يشمل Outlook وOneDrive للأعمال وWord وExcel وPowerPoint والمزيد.</sys:String>
+    <sys:String x:Key="Home_Install_Office.O365HPRDescription">يشمل Outlook وWord وExcel وPowerPoint والمزيد.</sys:String>
+    <sys:String x:Key="Home_Install_Office.PP2019RDescription">يشمل Outlook وWord وExcel وPowerPoint والمزيد.</sys:String>
+    <sys:String x:Key="Home_Install_Office.HS2019Description">يشمل Word وExcel وPowerPoint.</sys:String>
+    <sys:String x:Key="Home_Fetching_Content">جاري جلب المحتوى، يرجى الانتظار...</sys:String>
+    <sys:String x:Key="Home_Error_While_Fetching_Content">تعذر جلب المحتوى، يرجى التحقق من اتصال الإنترنت والمحاولة مرة أخرى.</sys:String>
+    <sys:String x:Key="Home_Retry">_إعادة المحاولة</sys:String>
+    <sys:String x:Key="Home_Launcher.Name">قائمة التطبيقات</sys:String>
+    <sys:String x:Key="Home_Launcher_OpenInBrowser">_فتح في المتصفح</sys:String>
+    <sys:String x:Key="Home_Launcher_CreateShortcut">_إنشاء اختصار على سطح المكتب</sys:String>
+
+    <!-- Deploy page -->
+    <sys:String x:Key="Deploy_Learn_More">اعرف المزيد</sys:String>
+    <!-- Channels Name, if you do not want to translate them, please keep in English. -->
+    <sys:String x:Key="PerpetualVL2019">أوفيس 2019 إصدار المؤسسات الدائم</sys:String>
+    <sys:String x:Key="PerpetualVL2021">أوفيس 2021 إصدار المؤسسات الدائم</sys:String>
+    <sys:String x:Key="PerpetualVL2024">أوفيس 2024 إصدار المؤسسات الدائم</sys:String>
+    <sys:String x:Key="SemiAnnual">قناة المؤسسات نصف السنوية</sys:String>
+    <sys:String x:Key="MonthlyEnterprise">قناة المؤسسات الشهرية</sys:String>
+    <sys:String x:Key="Current">القناة الحالية</sys:String>
+    <sys:String x:Key="CurrentPreview">القناة الحالية (معاينة)</sys:String>
+    <sys:String x:Key="BetaChannel">قناة بيتا</sys:String>
+
+    <!-- Error messages -->
+    <!-- {0} means product name. -->
+    <sys:String x:Key="Deploy_Error_Coexist">{0} لا يمكن أن يتواجد مع المنتجات الحالية.</sys:String>
+    <!-- {0} means product name. -->
+    <sys:String x:Key="Deploy_Error_ODT_Not_Supported">إذا كنت تريد تثبيت {0}، غيّر وحدة التثبيت إلى Office Tool Plus.</sys:String>
+    <!-- {0} means product name, {1} means channel name. -->
+    <sys:String x:Key="Deploy_Error_Channel">{0} لا يمكن تثبيته على القناة المحددة: {1}.</sys:String>
+    <!-- {0} means channel name, such as Current Channel. -->
+    <sys:String x:Key="Deploy_Error_Unsupported_Channel">إذا كنت تريد استخدام {0}، غيّر وحدة التثبيت إلى Office Tool Plus.</sys:String>
+    <sys:String x:Key="Deploy_Error_System_Architecture">لا يمكنك تثبيت إصدار 64 بت من أوفيس على نظام تشغيل غير 64 بت.</sys:String>
+    <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
+    <sys:String x:Key="Deploy_Error_Office_Architecture">لا يمكنك تثبيت {0} من أوفيس، لأن لديك {1} من أوفيس مثبت على النظام.</sys:String>
+    <sys:String x:Key="Deploy_Error_Installation_Arch">البنية التي اخترتها لا تتطابق مع بنية ملفات التثبيت المحلية. يرجى إعادة اختيار البنية أو عدم استخدام الملفات المحلية للنشر.</sys:String>
+    <sys:String x:Key="Deploy_Error_Installation_Channel">قناة التحديث التي اخترتها لا تتطابق مع قناة التحديث لملفات التثبيت المحلية. يرجى إعادة اختيار قناة التحديث أو عدم استخدام الملفات المحلية للنشر.</sys:String>
+
+    <sys:String x:Key="Deploy_Deployment">نشر أوفيس</sys:String>
+    <sys:String x:Key="Deploy_Deployment.Description">قبل نشر أوفيس، تأكد من ضبط وضع النشر بشكل صحيح وتكوين المنتج واللغة.</sys:String>
+    <sys:String x:Key="Deploy_Start_Deploy">بدء _النشر</sys:String>
+    <sys:String x:Key="Deploy_Reset">_إعادة ضبط جميع الإعدادات</sys:String>
+    <sys:String x:Key="Deploy_View_Code">_عرض كود XML</sys:String>
+    <sys:String x:Key="Deploy_Generate_Command">_توليد أوامر النشر</sys:String>
+    <sys:String x:Key="Deploy_Apply_Preferences">_تطبيق تفضيلات تطبيقات أوفيس</sys:String>
+    <sys:String x:Key="Deploy_Export_Config">_تصدير التكوين</sys:String>
+    <sys:String x:Key="Deploy_Import_Config">_استيراد التكوين</sys:String>
+    <sys:String x:Key="Deploy_Import_Config_Web">استيراد التكوين من _الويب</sys:String>
+    <sys:String x:Key="Deploy_Check_Updates">التحقق من _تحديثات أوفيس</sys:String>
+    <sys:String x:Key="Deploy_Repair_Office">إصلاح أوفيس</sys:String>
+    <sys:String x:Key="Deploy_Mode">وضع النشر</sys:String>
+    <sys:String x:Key="Deploy_Mode.Edit">تعديل التكوين</sys:String>
+    <sys:String x:Key="Deploy_Mode.Download">تنزيل</sys:String>
+    <sys:String x:Key="Deploy_Mode.Install">تثبيت</sys:String>
+    <sys:String x:Key="Deploy_Mode.Create_ISO">إنشاء ملف ISO</sys:String>
+    <sys:String x:Key="Deploy_Architecture">البنية</sys:String>
+    <sys:String x:Key="Deploy_Architecture_Current_Installed">بنية أوفيس المثبت حاليًا: {0}.</sys:String>
+    <sys:String x:Key="Deploy_Architecture.x86">32-بت</sys:String>
+    <sys:String x:Key="Deploy_Architecture.x64">64-بت</sys:String>
+    <sys:String x:Key="Deploy_Architecture.ARM">ARM (متوافق مع 32-بت)</sys:String>
+    <sys:String x:Key="Deploy_Architecture.ARM64">ARM64 (متوافق مع 64-بت)</sys:String>
+    <sys:String x:Key="Deploy_Channel">قناة التحديث</sys:String>
+    <sys:String x:Key="Deploy_Channel_Available_Version">إصدار أوفيس المتوفر حاليًا: {0}</sys:String>
+    <sys:String x:Key="Deploy_Module">وحدة التثبيت</sys:String>
+    <sys:String x:Key="Deploy_Module.Description">اختر Office Deployment Tool لمزيد من التوافق، أو Office Tool Plus لتجربة أفضل.</sys:String>
+    <sys:String x:Key="Deploy_Module.ODT">Office Deployment Tool</sys:String>
+    <sys:String x:Key="Deploy_Module.OTP">Office Tool Plus</sys:String>
+    <sys:String x:Key="Deploy_Download_First">التنزيل أولاً، ثم النشر</sys:String>
+    <sys:String x:Key="Deploy_Download_First.Description">سيتم حفظ ملفات التثبيت في دليل البرنامج أو الدليل المحدد بواسطة مسار المصدر.</sys:String>
+    <sys:String x:Key="Deploy_Create_Shortcut">إنشاء اختصارات سطح المكتب</sys:String>
+    <sys:String x:Key="Deploy_Create_Shortcut.Description">إنشاء اختصارات سطح المكتب لتطبيقات أوفيس بعد تثبيت أوفيس.</sys:String>
+    <!-- Do not edit them or translate them. iSlide only provided in mainland China. -->
+    <sys:String x:Key="Deploy_iSlide">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_iSlide.Description">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_iSlide_Install">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_iSlide_Install.Name">PlaceHolder</sys:String>
+
+    <sys:String x:Key="Deploy_Product">المنتجات</sys:String>
+    <sys:String x:Key="Deploy_Product.Description">{0} منتج(ات) مثبتة، {1} جاهزة للنشر و{2} جاهزة للإزالة.</sys:String>
+    <sys:String x:Key="Deploy_Product_Button">إضافة _منتجات</sys:String>
+    <sys:String x:Key="Deploy_Product_Nothing_Here">لا يوجد شيء هنا.</sys:String>
+    <sys:String x:Key="Deploy_Product_Installed">المنتجات المثبتة</sys:String>
+    <sys:String x:Key="Deploy_Product_To_Be_Deployed">جاهزة للنشر</sys:String>
+    <sys:String x:Key="Deploy_Product_To_Be_Uninstalled">جاهزة للإزالة</sys:String>
+    <sys:String x:Key="Deploy_Uninstall_Product">إزالة التثبيت</sys:String>
+    <sys:String x:Key="Deploy_Cancel_Uninstall_Product">إلغاء الإزالة</sys:String>
+    <sys:String x:Key="Deploy_Cancel_Deploy_Product">إلغاء النشر</sys:String>
+    <sys:String x:Key="Deploy_Applications">التطبيقات</sys:String>
+    <sys:String x:Key="Deploy_Addons">الإضافات</sys:String>
+    <sys:String x:Key="Deploy_Addons.Tip">لا تقم بإلغاء تحديد الإضافات إذا لم تكن تعرف ما هي.</sys:String>
+    <sys:String x:Key="Deploy_Language">اللغات</sys:String>
+    <sys:String x:Key="Deploy_Language.Description">{0} لغة مثبتة، {1} جاهزة للنشر و{2} جاهزة للإزالة.</sys:String>
+    <sys:String x:Key="Deploy_Language_Button">إضافة _لغات</sys:String>
+    <sys:String x:Key="Deploy_Language_Nothing_Here">لا يوجد شيء هنا.</sys:String>
+    <sys:String x:Key="Deploy_Language_Installed">اللغات المثبتة</sys:String>
+    <sys:String x:Key="Deploy_Language_To_Be_Deployed">جاهزة للنشر</sys:String>
+    <sys:String x:Key="Deploy_Language_To_Be_Uninstalled">جاهزة للإزالة</sys:String>
+    <sys:String x:Key="Deploy_Uninstall_Language">إزالة التثبيت</sys:String>
+    <sys:String x:Key="Deploy_Cancel_Uninstall_Language">إلغاء الإزالة</sys:String>
+    <sys:String x:Key="Deploy_Edit_Language_Settings">إعدادات اللغة</sys:String>
+    <sys:String x:Key="Deploy_Cancel_Deploy_Language">إلغاء النشر</sys:String>
+
+    <sys:String x:Key="Deploy_Products_List">قائمة المنتجات</sys:String>
+    <sys:String x:Key="Deploy_Products_List_Type_To_Search">اكتب لتصفية قائمة المنتجات</sys:String>
+    <sys:String x:Key="Deploy_Products_List_ID">معرف المنتج:</sys:String>
+    <sys:String x:Key="Deploy_Languages_List">قائمة اللغات</sys:String>
+    <sys:String x:Key="Deploy_Languages_List_Type_To_Search">اكتب لتصفية قائمة اللغات</sys:String>
+    <sys:String x:Key="Deploy_Languages_As_Proofing_Tool">نشر أدوات التدقيق فقط.</sys:String>
+    <sys:String x:Key="Deploy_Languages_List_ID">معرف اللغة:</sys:String>
+    <sys:String x:Key="Deploy_Languages_List_Type">نوع اللغة:</sys:String>
+    <sys:String x:Key="Deploy_Language_Type.Full">كامل</sys:String>
+    <sys:String x:Key="Deploy_Language_Type.PartialAndProofing">جزئي</sys:String>
+    <sys:String x:Key="Deploy_Language_Type.Partial">جزئي بدون أدوات التدقيق</sys:String>
+    <sys:String x:Key="Deploy_Language_Type.Proofing">أدوات التدقيق</sys:String>
+    <sys:String x:Key="Deploy_Language_Settings_Exclude">تثبيت للمنتجات التالية</sys:String>
+
+    <sys:String x:Key="Deploy_Installation_Files">ملفات التثبيت</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files.Description">حدد أو تحقق أو احذف ملفات تثبيت أوفيس.</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Select">تحديد</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Select.Description">عند تحديد ملفات التثبيت، اختر أي ملف من ملفات CAB.</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Verify">تحقق</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Verify.Description">تحقق من ملفات التثبيت بحثًا عن الأخطاء.</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_DeleteAll">حذف الكل</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Reset">إعادة ضبط</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Reset.Description">لا تستخدم ملفات التثبيت الحالية لنشر أوفيس.</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_UseAsSource">_استخدام كمصدر</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_UseAsSource.Description">سيتم مطابقة البنية وقناة التحديث تلقائيًا مع هذا التثبيت.</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Open_Location">_فتح موقع الملف</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Delete">حذف</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none">الحزمة الأساسية (مطلوبة)</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.arm64x">حزمة ARM64</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.chpe">حزمة ARM</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Settings">الانتقال إلى الإعدادات المتقدمة</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Settings.Description">انتقل إلى الإعدادات المتقدمة لضبط المزيد من الخيارات.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Settings_Button">_إعدادات متقدمة</sys:String>
+
+    <!-- Deploy advanced page -->
+    <sys:String x:Key="Deploy_Advanced">الإعدادات المتقدمة</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Go_Back">العودة</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Go_Back.Description">العودة إلى الإعدادات الأساسية.</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_General_Settings">الإعدادات العامة</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Company_Name">أدخل اسم مؤسستك لتعيين خاصية الشركة في مستندات أوفيس.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Description">أدخل وصفًا للتكوين لأغراض التوثيق.</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Install_Settings">إعدادات التثبيت</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Fallback_Language">لغة بديلة</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Fallback_Language.Description">عند تعيين اللغة لمطابقة لغة النظام، يمكنك تحديد لغة بديلة للتثبيت إذا لم تكن اللغة المدعومة متوفرة في أوفيس أو لم يتم العثور عليها في المصدر المحلي.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Version">إصدار أوفيس</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Version.Description">يتم افتراضيًا استخدام أحدث إصدار متوفر إذا لم يتم تحديده.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Download_Path">مسار التنزيل</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Download_Path.Description">يحدد من أين يتم تنزيل ملفات التثبيت، يجب تحديد إصدار أوفيس عند استخدام مسار التنزيل.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Source_Path">مسار المصدر</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Source_Path.Description">إذا كان مسار المصدر فارغًا، يتم استخدام CDN الخاص بأوفيس كمصدر افتراضيًا. في وضع التنزيل، يحدد مكان حفظ الملفات.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_No_Display">تثبيت صامت</sys:String>
+    <sys:String x:Key="Deploy_Advanced_No_Display.Description">لن يتم عرض أشرطة التقدم أو رسائل الخطأ أو أي واجهة مستخدم أخرى أثناء تثبيت أوفيس.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback">السماح بالرجوع إلى CDN</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback.Description">السماح لمثبت أوفيس بالرجوع إلى CDN الخاص بأوفيس لتنزيل اللغات المفقودة.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Force_Close_Apps">إغلاق جميع تطبيقات أوفيس قسريًا</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Force_Close_Apps.Description">قد يتم فقدان البيانات غير المحفوظة.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar">تثبيت على شريط المهام</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar.Description">تثبيت أيقونات تطبيقات أوفيس على شريط المهام في ويندوز 7 و8 و8.1.</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Update_Settings">إعدادات التحديث</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM">إدارة التحديثات باستخدام MECM</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM.Description">عند إدارة التحديثات باستخدام Microsoft Endpoint Configuration Manager، تتم إدارة التحديثات بواسطة المسؤول.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Enable_Update">تمكين التحديث التلقائي لأوفيس</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Update_Path">مصدر التحديث</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Update_Path.Description">إذا كان المسار فارغًا، يتم استخدام CDN الخاص بأوفيس كمصدر افتراضيًا.</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Upgrade_Settings">خيارات الترقية</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Migrate_Arch">ترحيل البنية</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Migrate_Arch.Description">تغيير تثبيت أوفيس الحالي إلى البنية المحددة حاليًا. على سبيل المثال، من 32 بت إلى 64 بت.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_MSI_Notice">الإعدادات التالية تسري فقط عند استخدام Office Deployment Tool كوحدة تثبيت.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Remove_MSI">إزالة إصدارات أوفيس MSI الحالية</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Match_Previous_MSI">تثبيت نفس لغة إصدار MSI السابق</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Ignore_Product">تجاهل هذه المنتجات</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Activate_Settings">إعدادات التفعيل</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Accept_EULA">قبول اتفاقية الترخيص تلقائيًا</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Accept_EULA.Description">إذا تم التمكين، لن تظهر نافذة "شروط ترخيص برامج مايكروسوفت".</sys:String>
+    <sys:String x:Key="Deploy_Advanced_MAK">إعداد MAK</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Auto_Activate">بعد تعيين MAK، سنحاول تفعيل المنتج تلقائيًا.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Product_Activation">تفعيل المنتج</sys:String>
+    <sys:String x:Key="Deploy_Advanced_UserBased">حسب المستخدم</sys:String>
+    <sys:String x:Key="Deploy_Advanced_DeviceBased">حسب الجهاز</sys:String>
+    <sys:String x:Key="Deploy_Advanced_SCL">جهاز مشترك</sys:String>
+    <sys:String x:Key="Deploy_Advanced_SCL_Cache_Override">تجاوز موقع رمز الترخيص</sys:String>
+    <sys:String x:Key="Deploy_Advanced_SCL_Cache_Override.ToolTip">حدد موقع مجلد لرمز الترخيص.</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Preferences">تفضيلات التطبيق</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Apply_Preferences.Description">تطبيق التفضيلات على تطبيقات أوفيس فورًا.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Reset_Preferences">إعادة ضبط جميع التفضيلات</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Reset_Preferences_Button">إعادة ضبط</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Load_Preferences_Button">تحميل تفضيلات التطبيق</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Type_To_Search.Name">بحث في تفضيلات التطبيق</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Type_To_Search.HelpText">اكتب للبحث في تفضيلات التطبيق</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Settings">الإعدادات</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Enable">تمكين</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Set_Preferences_Button">تطبيق</sys:String>
+
+    <!-- Activate page -->
+    <sys:String x:Key="Activate_NonAdmin_Privileges">أنت تقوم بتشغيل Office Tool Plus بدون صلاحيات المسؤول، بعض الميزات غير متاحة الآن.</sys:String>
+
+    <sys:String x:Key="Activate_Licenses_Management">إدارة التراخيص</sys:String>
+    <sys:String x:Key="Activate_Licenses_Management.Description">تثبيت أو إزالة أو تفعيل تراخيص أوفيس.</sys:String>
+    <sys:String x:Key="Activate_Button">_تفعيل</sys:String>
+    <sys:String x:Key="Activate_Display_Internet_Act_Events">عرض أحداث فشل التفعيل عبر الإنترنت</sys:String>
+    <sys:String x:Key="Activate_Display_KMS_Events">عرض أحداث تفعيل KMS</sys:String>
+    <sys:String x:Key="Activate_Clear_Activation">مسح التفعيل</sys:String>
+    <sys:String x:Key="Activate_Install_Licenses">تثبيت التراخيص</sys:String>
+    <sys:String x:Key="Activate_Install_Licenses.Description">الحصول على التراخيص من أوفيس المثبت وتثبيتها.</sys:String>
+    <sys:String x:Key="Activate_Install_Licenses_Button">تثبيت</sys:String>
+    <sys:String x:Key="Activate_Install_Other_Licenses">تثبيت تراخيص أخرى</sys:String>
+    <sys:String x:Key="Activate_Install_Other_Licenses.Description">تثبيت تراخيص أخرى من القرص المحلي.</sys:String>
+    <sys:String x:Key="Activate_Install_Other_Licenses_Button">تثبيت</sys:String>
+    <sys:String x:Key="Activate_Uninstall_All_Licenses">إزالة جميع التراخيص</sys:String>
+    <sys:String x:Key="Activate_Uninstall_All_Licenses.Description">إزالة جميع التراخيص المثبتة. ستحتاج إلى تثبيت ترخيص بعد هذه العملية.</sys:String>
+    <sys:String x:Key="Activate_Uninstall_All_Licenses_Button">إزالة</sys:String>
+
+    <sys:String x:Key="Activate_Keys_Management">إدارة المفاتيح</sys:String>
+    <sys:String x:Key="Activate_Keys_Management.Description">تثبيت أو إزالة المفاتيح أو تفعيل أوفيس دون اتصال.</sys:String>
+    <sys:String x:Key="Activate_Product_Key">مفتاح المنتج</sys:String>
+    <sys:String x:Key="Activate_Product_Key.Description">تثبيت مفتاح منتج أوفيس، صيغة المفتاح: XXXXX-XXXXX-XXXXX-XXXXX-XXXXX.</sys:String>
+    <sys:String x:Key="Activate_Install_Product_Key">_تثبيت المفتاح</sys:String>
+    <sys:String x:Key="Activate_Uninstall_Unactivated_Key">_إزالة جميع المفاتيح غير المفعلة</sys:String>
+    <sys:String x:Key="Activate_Uninstall_All_Product_Keys">إزالة _جميع المفاتيح</sys:String>
+    <sys:String x:Key="Activate_Install_CID">تثبيت معرف التأكيد</sys:String>
+    <sys:String x:Key="Activate_Install_CID.Description">تثبيت معرف التأكيد لتفعيل أوفيس دون اتصال.</sys:String>
+    <sys:String x:Key="Activate_Input_CID">يرجى إدخال معرف التأكيد</sys:String>
+
+    <sys:String x:Key="Activate_KMS_Management">إدارة KMS</sys:String>
+    <sys:String x:Key="Activate_KMS_Management.Description">تعيين أو إعادة تعيين مضيف KMS أو المنفذ.</sys:String>
+    <sys:String x:Key="Activate_KMS_Apply">_تعيين المضيف</sys:String>
+    <sys:String x:Key="Activate_KMS_Host">مضيف KMS</sys:String>
+    <sys:String x:Key="Activate_KMS_Host.Description">اسم مضيف KMS. مثال: kms.example.com أو kms.example.com:1688 أو عنوان IP.</sys:String>
+    <sys:String x:Key="Activate_KMS_Host_Cache.Enable">تمكين تخزين المضيف المؤقت</sys:String>
+    <sys:String x:Key="Activate_KMS_Host_Cache.Disable">تعطيل تخزين المضيف المؤقت</sys:String>
+    <sys:String x:Key="Activate_KMS_Reset">إعادة تعيين KMS</sys:String>
+    <sys:String x:Key="Activate_KMS_Reset.Description">إزالة اسم مضيف KMS وتعيين منفذ KMS إلى الافتراضي.</sys:String>
+
+    <!-- Licenses list -->
+    <sys:String x:Key="Activate_Licenses">تراخيص أوفيس</sys:String>
+    <sys:String x:Key="Activate_License">قائمة التراخيص</sys:String>
+    <sys:String x:Key="Activate_License.Description">إدارة التراخيص المثبتة.</sys:String>
+    <sys:String x:Key="Activate_License_Refresh">_تحديث</sys:String>
+    <sys:String x:Key="Activate_License_Expand">_توسيع الكل</sys:String>
+    <sys:String x:Key="Activate_License_Collapse">_طي الكل</sys:String>
+    <sys:String x:Key="Activate_License_Clear">م_سح القائمة</sys:String>
+    <sys:String x:Key="Activate_License_Nothing_Here">لا يوجد شيء هنا.</sys:String>
+    <sys:String x:Key="Activate_License_Status.Unactivated">غير مفعل</sys:String>
+    <sys:String x:Key="Activate_License_Status.Activated">مفعل</sys:String>
+    <!-- vNext License -->
+    <sys:String x:Key="Activate_License_vNext_Type">نوع الترخيص:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Type.User">مستخدم</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Type.Device">جهاز</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Type.Subscription">اشتراك</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Type.Perpetual">دائم</sys:String>
+    <sys:String x:Key="Activate_License_vNext.ExpireDate">تاريخ انتهاء الترخيص:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.MaxDevice">الحد الأقصى للأجهزة المسموح بها:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Status">الحالة:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Status.Provisioned">مفعل</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Status.Deprovisioned">غير مفعل</sys:String>
+    <sys:String x:Key="Activate_License_vNext_ReasonCode">رمز السبب:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_ReasonCode.DeviceDeprovisionedByUser">تم إلغاء تفعيل الجهاز بواسطة المستخدم</sys:String>
+    <sys:String x:Key="Activate_License_vNext_ReasonCode.SubscriptionCancelled">تم إلغاء الاشتراك</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Beneficiary.User">الترخيص مخصص للمستخدم:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Beneficiary.Device">الترخيص مخصص للجهاز:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.TenantID">معرف المستأجر:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.DeviceID">معرف الجهاز:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.UserID">معرف المستخدم:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.ValidFrom">الصلاحية من:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.ValidTo">الصلاحية إلى:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.RenewalTime">وقت التجديد القادم:</sys:String>
+    <!-- Legacy License -->
+    <sys:String x:Key="Activate_License_Lic.Description">الوصف:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Key">آخر 5 أحرف من المفتاح:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Period">الفترة المتبقية:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Error_Code">رمز الخطأ:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Error_Description">وصف الخطأ:</sys:String>
+    <sys:String x:Key="Activate_License_VL.Type">نوع التفعيل:</sys:String>
+    <!-- AO equal to Activation Object -->
+    <sys:String x:Key="Activate_License_AD.ObjectName">اسم كائن التفعيل: </sys:String>
+    <sys:String x:Key="Activate_License_AD.ObjectDN">اسم التمييز لكائن التفعيل: </sys:String>
+    <sys:String x:Key="Activate_License_AD.ExtendedPid">معرف PID الموسع لكائن التفعيل: </sys:String>
+    <sys:String x:Key="Activate_License_AD.AID">معرف التفعيل لكائن التفعيل: </sys:String>
+    <sys:String x:Key="Activate_License_KMS.Host">مضيف KMS:</sys:String>
+    <sys:String x:Key="Activate_License_KMS_Host_Caching">تخزين المضيف المؤقت:</sys:String>
+    <sys:String x:Key="Activate_License_KMS_Host_Caching.Enabled">مفعل</sys:String>
+    <sys:String x:Key="Activate_License_KMS_Host_Caching.Disabled">معطل</sys:String>
+    <sys:String x:Key="Activate_License_KMS.Act_Interval">فترة التفعيل:</sys:String>
+    <sys:String x:Key="Activate_License_KMS.Renew_Interval">فترة التجديد:</sys:String>
+
+    <sys:String x:Key="Activate_License_Period.Infinite">غير محدود</sys:String>
+    <sys:String x:Key="Activate_License_Period.Day">{0} يوم/أيام</sys:String>
+    <sys:String x:Key="Activate_License_Period.Hour">{0} ساعة/ساعات</sys:String>
+    <sys:String x:Key="Activate_License_Period.Minute">{0} دقيقة/دقائق</sys:String>
+
+    <sys:String x:Key="Activate_License_Button.Copy_LicenseID">نسخ معرف الترخيص</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_TenantID">نسخ معرف المستأجر</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_UserID">نسخ معرف المستخدم</sys:String>
+    <sys:String x:Key="Activate_License_Button.Delete_License">حذف الترخيص</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_SKU">نسخ معرف SKU</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_IID">نسخ معرف التثبيت</sys:String>
+    <sys:String x:Key="Activate_License_Button.Activate">تفعيل</sys:String>
+    <sys:String x:Key="Activate_License_Button.Uninstall_Key">إزالة المفتاح</sys:String>
+
+    <sys:String x:Key="Activate_Licenses_List">قائمة التراخيص</sys:String>
+    <sys:String x:Key="Activate_Licenses_List_Type_To_Search">اكتب لتصفية قائمة التراخيص</sys:String>
+    <sys:String x:Key="Activate_Licenses_List_ID">معرف المنتج:</sys:String>
+
+    <!-- Toolbox page -->
+    <sys:String x:Key="Toolbox_NonAdmin_Privileges">أنت تقوم بتشغيل Office Tool Plus بدون صلاحيات المسؤول، بعض الميزات غير متاحة الآن.</sys:String>
+    <sys:String x:Key="Toolbox_Repair">إصلاح</sys:String>
+    <sys:String x:Key="Toolbox_Learn_More">اعرف المزيد</sys:String>
+
+    <sys:String x:Key="Toolbox_General_Tools">أدوات عامة</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version">استعلام عن إصدار أوفيس</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version.Description">استعلام عن معلومات قنوات تحديث أوفيس من مايكروسوفت.</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_GoBack">العودة إلى صفحة الأدوات.</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_Button">استعلام</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List">معلومات قنوات تحديث أوفيس</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_Channel">القناة</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_Branch">الفرع</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_Version">الإصدار</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_CreatedTime">وقت الإنشاء</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_Copy">نسخ رقم الإصدار</sys:String>
+    <sys:String x:Key="Toolbox_Query_ErrorCode">استعلام عن وصف رمز الخطأ</sys:String>
+    <sys:String x:Key="Toolbox_Query_ErrorCode.Description">عادةً ما يبدأ رمز الخطأ بـ '0x'. مثال: 0x2 أو 0x80070002.</sys:String>
+    <sys:String x:Key="Toolbox_Query_ErrorCode_Button">استعلام</sys:String>
+    <sys:String x:Key="Toolbox_Input_ErrorCode">يرجى إدخال رمز الخطأ</sys:String>
+    <sys:String x:Key="Toolbox_Check_KMS">اختبار إمكانية الوصول إلى مضيف KMS</sys:String>
+    <sys:String x:Key="Toolbox_Check_KMS.Description">استخدم TCPing لاختبار إمكانية الاتصال بمضيف KMS.</sys:String>
+    <sys:String x:Key="Toolbox_Check_KMS_Button">اختبار</sys:String>
+
+    <sys:String x:Key="Toolbox_Office_Tools">أدوات أوفيس</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Office">إزالة أوفيس</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Office.Description">إزالة مكونات أوفيس والسجلات المرتبطة به بالقوة.</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Office.Description_Bold">ملاحظة: يجب إزالة أوفيس فقط إذا تعذر إلغاء تثبيته بشكل صحيح.</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Office_Button">إزالة</sys:String>
+    <sys:String x:Key="Toolbox_Remove_APPX">إزالة إصدار أوفيس من متجر مايكروسوفت أيضًا</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Clear_Activation">مسح التفعيل أيضًا</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Result">نتيجة الإزالة</sys:String>
+    <sys:String x:Key="Toolbox_Collect_InstallerLog">جمع سجلات مثبت أوفيس</sys:String>
+    <sys:String x:Key="Toolbox_Collect_InstallerLog.Description">جمع السجلات لتحليلها وحل المشكلات.</sys:String>
+    <sys:String x:Key="Toolbox_Collect_InstallerLog_Button">جمع</sys:String>
+    <sys:String x:Key="Toolbox_Change_UpdateChannel">تغيير قناة تحديث أوفيس</sys:String>
+    <sys:String x:Key="Toolbox_Change_UpdateChannel.Description">تغيير قناة التحديث يسمح لك بالترقية أو الرجوع لإصدار سابق من أوفيس دون إعادة التثبيت.</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner">تغيير مالك منتج أوفيس</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner.Description">يتم عرض الاسم في صفحة الحساب في تطبيق أوفيس.</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Set">تعيين الاسم</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Reset">إعادة تعيين اسم المالك إلى الافتراضي</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Name">الاسم</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Name.Description">تعيين مالك المنتج. مثال: James أو ProPlus2019Volume:James.</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Name.LearnMore">اعرف المزيد حول صيغة اسم المالك.</sys:String>
+    <sys:String x:Key="Toolbox_Repair_DocumentIcon">إصلاح أيقونة مستندات أوفيس</sys:String>
+    <sys:String x:Key="Toolbox_Repair_DocumentIcon.Description">سيتم إعادة تعيين ارتباط مستندات أوفيس.</sys:String>
+    <sys:String x:Key="Toolbox_Backup_Restore_Settings">نسخ أو استعادة إعدادات أوفيس</sys:String>
+    <sys:String x:Key="Toolbox_Backup_Restore_Settings.Description">نسخ أو استعادة إعدادات تطبيقات أوفيس الخاصة بك، باستثناء الملفات والمحتوى.&#x000A;ملاحظة: لا تشارك النسخ الاحتياطية الخاصة بك، فقد تتسرب معلوماتك الشخصية.</sys:String>
+    <sys:String x:Key="Toolbox_Backup_Exclude_PersonalInf">استبعاد المعلومات الشخصية عند النسخ الاحتياطي.</sys:String>
+    <sys:String x:Key="Toolbox_Backup">نسخ احتياطي</sys:String>
+    <sys:String x:Key="Toolbox_Restore">استعادة</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings">إعادة تعيين إعدادات أوفيس إلى الافتراضي</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings.Description">إعادة تعيين أوفيس إلى الإعدادات الافتراضية كما تريد. قبل البدء، يرجى إغلاق جميع تطبيقات أوفيس.</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_Button">إعادة تعيين</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserSettings">حذف إعدادات المستخدم الحالية</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserSettings.Description">تشمل إعدادات تطبيقات أوفيس، الملفات التي تم فتحها مؤخرًا ومواقع الحفظ الأخيرة.</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserAppData">حذف بيانات التطبيقات</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserAppData.Description">تشمل ذاكرة التخزين المؤقت للتطبيقات.</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_NormalTemplate">حذف القالب الافتراضي</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_NormalTemplate.Description">Normal.dotm</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_GlobalSettings">حذف تفضيلات التطبيقات</sys:String>
+
+    <sys:String x:Key="Toolbox_Windows_Tools">أدوات ويندوز</sys:String>
+    <sys:String x:Key="Toolbox_Reset_SPPSvc">إعادة تعيين خدمة حماية البرامج</sys:String>
+    <sys:String x:Key="Toolbox_Reset_SPPSvc.Description">سيتم إعادة تعيين إعدادات خدمة حماية البرامج، بما في ذلك إعدادات KMS.</sys:String>
+    <sys:String x:Key="Toolbox_Reset_SPPSvc.LearnMore">اعرف المزيد حول إعادة تعيين خدمة حماية البرامج.</sys:String>
+    <sys:String x:Key="Toolbox_Rebuild_ActivationToken">إعادة بناء رمز تفعيل ويندوز</sys:String>
+    <sys:String x:Key="Toolbox_Rebuild_ActivationToken.Description">سيتم إعادة بناء رمز تفعيل ويندوز. قد تفقد حالة تفعيل ويندوز الخاصة بك.</sys:String>
+    <sys:String x:Key="Toolbox_Rebuild_ActivationToken.LearnMore">اعرف المزيد حول إعادة بناء رمز تفعيل ويندوز.</sys:String>
+    <sys:String x:Key="Toolbox_Repair_Variables">إعادة تعيين متغيرات النظام</sys:String>
+    <sys:String x:Key="Toolbox_Repair_Variables.Description">سيتم إعادة تعيين متغيرات النظام إلى القيم الافتراضية. لا تستخدمها إذا لم تكن متأكدًا.</sys:String>
+    <sys:String x:Key="Toolbox_Repair_Variables.LearnMore">اعرف المزيد حول إعادة تعيين متغيرات النظام.</sys:String>
+    <sys:String x:Key="Toolbox_Repair_WMI">إصلاح مكونات WMI</sys:String>
+    <sys:String x:Key="Toolbox_Repair_WMI.Description">سيتم إعادة تسجيل مكونات WMI. لا تستخدمها إذا لم تكن متأكدًا.</sys:String>
+    <sys:String x:Key="Toolbox_Repair_WMI.LearnMore">اعرف المزيد حول إصلاح مكونات WMI.</sys:String>
+
+    <!-- Convert page -->
+    <sys:String x:Key="Convert_Excel">إكسل</sys:String>
+    <sys:String x:Key="Convert_Excel.Description">تحويل مستندات إكسل.</sys:String>
+    <sys:String x:Key="Convert_PowerPoint">باوربوينت</sys:String>
+    <sys:String x:Key="Convert_PowerPoint.Description">تحويل مستندات باوربوينت.</sys:String>
+    <sys:String x:Key="Convert_Word">وورد</sys:String>
+    <sys:String x:Key="Convert_Word.Description">تحويل مستندات وورد.</sys:String>
+    <sys:String x:Key="Convert_Actions">_استيراد مستندات</sys:String>
+    <sys:String x:Key="Convert_Actions.SelectFiles">تحديد ملفات</sys:String>
+    <sys:String x:Key="Convert_Actions.SelectFolder">تحديد مجلد</sys:String>
+    <sys:String x:Key="Convert_Input">صيغة الإدخال</sys:String>
+    <sys:String x:Key="Convert_Input.Description">عند تحديد مجلد، سيتم استيراد الملفات التي تطابق صيغة الإدخال فقط.</sys:String>
+    <sys:String x:Key="Convert_Output">صيغة الإخراج</sys:String>
+
+    <sys:String x:Key="Convert_File_List">قائمة الملفات</sys:String>
+    <sys:String x:Key="Convert_StartConvert">تحويل</sys:String>
+    <sys:String x:Key="Convert_StartConvert.ToolTip">بدء تحويل المستندات.</sys:String>
+    <sys:String x:Key="Convert_ClearList">مسح القائمة</sys:String>
+    <sys:String x:Key="Convert_File">ملف</sys:String>
+    <sys:String x:Key="Convert_NewFormat">الصيغة الجديدة</sys:String>
+    <sys:String x:Key="Convert_Open_File_Location">_فتح موقع الملف</sys:String>
+    <sys:String x:Key="Convert_Page_Count">الصفحة {0} من {1}</sys:String>
+    <sys:String x:Key="Convert_Previous_Page">الصفحة السابقة</sys:String>
+    <sys:String x:Key="Convert_Next_Page">الصفحة التالية</sys:String>
+
+    <sys:String x:Key="Convert_Settings">إعدادات التحويل</sys:String>
+    <sys:String x:Key="Convert_Settings.Description">تعديل الإعدادات.</sys:String>
+    <sys:String x:Key="Convert_SearchOnSubfolders">البحث في المجلدات الفرعية</sys:String>
+    <sys:String x:Key="Convert_SearchOnSubfolders.Description">البحث عن الملفات في المجلدات الفرعية عند تحديد مجلد.</sys:String>
+    <sys:String x:Key="Convert_Delete">حذف الملف</sys:String>
+    <sys:String x:Key="Convert_Delete.Description">نقل الملف الأصلي إلى سلة المحذوفات بعد التحويل بنجاح. إذا لم تتوفر سلة المحذوفات، سيتم حذف الملف نهائيًا.</sys:String>
+    <sys:String x:Key="Convert_HideUI">إخفاء واجهة المستخدم</sys:String>
+    <sys:String x:Key="Convert_HideUI.Description">إخفاء نافذة التنبيه عند عمل أوفيس.</sys:String>
+    <sys:String x:Key="Convert_Rows_Per_Page">عدد الصفوف في الصفحة</sys:String>
+    <sys:String x:Key="Convert_Rows_Per_Page.Description">تعيين عدد الملفات المعروضة في كل صفحة من قائمة الملفات.</sys:String>
+
+    <!-- File types -->
+    <!-- Common -->
+    <sys:String x:Key="File_Type.All">كل الملفات</sys:String>
+    <sys:String x:Key="File_Type.Supported">كل الملفات المدعومة</sys:String>
+    <sys:String x:Key="File_Type.PDF">PDF</sys:String>
+    <sys:String x:Key="File_Type.XPS">مستند XPS</sys:String>
+    <sys:String x:Key="File_Type.TXT">نص عادي</sys:String>
+    <sys:String x:Key="File_Type.MHTML">صفحة ويب بملف واحد</sys:String>
+    <sys:String x:Key="File_Type.HTML">صفحة ويب</sys:String>
+    <sys:String x:Key="File_Type.RTF">تنسيق نص منسق</sys:String>
+    <!-- Image -->
+    <sys:String x:Key="File_Type.GIF">تنسيق GIF متحرك</sys:String>
+    <sys:String x:Key="File_Type.JPG">تنسيق JPEG</sys:String>
+    <sys:String x:Key="File_Type.PNG">تنسيق PNG</sys:String>
+    <sys:String x:Key="File_Type.TIF">تنسيق TIFF</sys:String>
+    <sys:String x:Key="File_Type.BMP">صورة نقطية (BMP)</sys:String>
+    <!-- Video -->
+    <sys:String x:Key="File_Type.MP4">فيديو MPEG-4</sys:String>
+    <sys:String x:Key="File_Type.WMV">فيديو Windows Media</sys:String>
+    <!-- Word -->
+    <sys:String x:Key="File_Type.Word_DOCX">مستند وورد</sys:String>
+    <sys:String x:Key="File_Type.Word_DOCM">مستند وورد مع وحدات ماكرو</sys:String>
+    <sys:String x:Key="File_Type.Word_DOC">مستند وورد 97-2003</sys:String>
+    <sys:String x:Key="File_Type.Word_DOTX">قالب وورد</sys:String>
+    <sys:String x:Key="File_Type.Word_DOTM">قالب وورد مع وحدات ماكرو</sys:String>
+    <sys:String x:Key="File_Type.Word_DOT">قالب وورد 97-2003</sys:String>
+    <!-- PowerPoint -->
+    <sys:String x:Key="File_Type.PowerPoint_PPTX">عرض باوربوينت</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPTM">عرض باوربوينت مع وحدات ماكرو</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPT">عرض باوربوينت 97-2003</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_POTX">قالب باوربوينت</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_POTM">قالب باوربوينت مع وحدات ماكرو</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_POT">قالب باوربوينت 97-2003</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPSX">عرض باوربوينت (عرض تقديمي)</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPSM">عرض باوربوينت مع وحدات ماكرو (عرض تقديمي)</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPS">عرض باوربوينت 97-2003 (عرض تقديمي)</sys:String>
+    <!-- Excel -->
+    <sys:String x:Key="File_Type.Excel_XLSX">مصنف إكسل</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLSM">مصنف إكسل مع وحدات ماكرو</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLS">مصنف إكسل 97-2003</sys:String>
+    <sys:String x:Key="File_Type.Excel_CSV">CSV UTF-8 (مفصول بفواصل)</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLTX">قالب إكسل</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLTM">قالب إكسل مع وحدات ماكرو</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLT">قالب إكسل 97-2003</sys:String>
+
+    <!-- Hash checker page -->
+    <sys:String x:Key="Hash_Checker_Hash">التجزئة</sys:String>
+    <sys:String x:Key="Hash_Checker_Hash.Description">توليد تجزئة الملفات، يدعم عدة خوارزميات تجزئة.</sys:String>
+    <sys:String x:Key="Hash_Checker_Actions">_استيراد ملفات</sys:String>
+    <sys:String x:Key="Hash_Checker_Actions.SelectFiles">تحديد ملفات</sys:String>
+    <sys:String x:Key="Hash_Checker_Actions.SelectFolder">تحديد مجلد</sys:String>
+    <sys:String x:Key="Hash_Checker_SearchOnSubfolders">البحث في المجلدات الفرعية</sys:String>
+    <sys:String x:Key="Hash_Checker_SearchOnSubfolders.Description">البحث عن الملفات في المجلدات الفرعية عند تحديد مجلد.</sys:String>
+    <sys:String x:Key="Hash_Checker_SearchString">سلسلة البحث</sys:String>
+    <sys:String x:Key="Hash_Checker_SearchString.Description">عند تحديد مجلد، ابحث عن الملفات التي تطابق أسماؤها سلسلة البحث.</sys:String>
+    <sys:String x:Key="Hash_Checker_ExcludeHashFiles">استبعاد ملفات التجزئة</sys:String>
+    <sys:String x:Key="Hash_Checker_ExcludeHashFiles.Description">استبعاد ملفات التجزئة عند استيراد الملفات، مثل الملفات ذات الامتدادات md5 أو sha1 أو crc32.</sys:String>
+    <sys:String x:Key="Hash_Checker_DisplayPath">عرض مسار الملف</sys:String>
+    <sys:String x:Key="Hash_Checker_AutoCompute">الحساب التلقائي</sys:String>
+    <sys:String x:Key="Hash_Checker_AutoCompute.Description">بدء حساب قيمة التجزئة تلقائيًا بعد اكتمال استيراد الملفات.</sys:String>
+    <sys:String x:Key="Hash_Checker_CRC32.Description">تمكين أو تعطيل حساب CRC-32.</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH32.Description">تمكين أو تعطيل حساب XXH32.</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH64.Description">تمكين أو تعطيل حساب XXH64.</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH3.Description">تمكين أو تعطيل حساب XXH3.</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH128.Description">تمكين أو تعطيل حساب XXH128.</sys:String>
+    <sys:String x:Key="Hash_Checker_MD5.Description">تمكين أو تعطيل حساب MD5.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA1.Description">تمكين أو تعطيل حساب SHA-1.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA256.Description">تمكين أو تعطيل حساب SHA-256.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA384.Description">تمكين أو تعطيل حساب SHA-384.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA512.Description">تمكين أو تعطيل حساب SHA-512.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA3_256.Description">تمكين أو تعطيل حساب SHA3-256، مدعوم فقط على ويندوز 11 إصدار 25324 أو أحدث.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA3_384.Description">تمكين أو تعطيل حساب SHA3-384، مدعوم فقط على ويندوز 11 إصدار 25324 أو أحدث.</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA3_512.Description">تمكين أو تعطيل حساب SHA3-512، مدعوم فقط على ويندوز 11 إصدار 25324 أو أحدث.</sys:String>
+    <sys:String x:Key="Hash_Checker_Rows_Per_Page">عدد الصفوف في الصفحة</sys:String>
+    <sys:String x:Key="Hash_Checker_Rows_Per_Page.Description">تعيين عدد الملفات المعروضة في كل صفحة من قائمة الملفات.</sys:String>
+
+    <sys:String x:Key="Hash_Checker_File_List">قائمة الملفات</sys:String>
+    <sys:String x:Key="Hash_Checker_TypeToSearch">اكتب لمقارنة قيمة التجزئة.</sys:String>
+    <sys:String x:Key="Hash_Checker_StartCompute">حساب</sys:String>
+    <sys:String x:Key="Hash_Checker_StartCompute.ToolTip">بدء حساب قيم التجزئة.</sys:String>
+    <sys:String x:Key="Hash_Checker_ClearList">مسح القائمة</sys:String>
+    <sys:String x:Key="Hash_Checker_Export">تصدير</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.ToolTip">تصدير النتائج إلى ملفات.</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.AsTXT">تصدير كنص _عادي</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.AsCSV">تصدير كـ _CSV</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.AsMD">تصدير كـ _Markdown</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.AsJSON">تصدير كـ _JSON</sys:String>
+    <sys:String x:Key="Hash_Checker_Compare">مقارنة</sys:String>
+    <sys:String x:Key="Hash_Checker_Compare.ToolTip">مقارنة قيمة تجزئة الملف بقيمة معروفة.</sys:String>
+    <sys:String x:Key="Hash_Checker_Compare.JSON">مقارنة مع ملف _JSON</sys:String>
+    <sys:String x:Key="Hash_Checker_Compare.HashFile">مقارنة مع ملف _تجزئة</sys:String>
+    <sys:String x:Key="Hash_Checker_FilePath">مسار الملف</sys:String>
+    <sys:String x:Key="Hash_Checker_FileName">اسم الملف</sys:String>
+    <sys:String x:Key="Hash_Checker_Compute_Selected">_حساب قيمة التجزئة للملفات المحددة</sys:String>
+    <sys:String x:Key="Hash_Checker_Open_File_Location">_فتح موقع الملف(ات)</sys:String>
+    <sys:String x:Key="Hash_Checker_Copy_Hash_Value">نسخ _قيمة التجزئة</sys:String>
+    <sys:String x:Key="Hash_Checker_Create_Hash_File">إنشاء م_لف(ات) تجزئة</sys:String>
+    <sys:String x:Key="Hash_Checker_Page_Count">الصفحة {0} من {1}</sys:String>
+    <sys:String x:Key="Hash_Checker_Previous_Page">الصفحة السابقة</sys:String>
+    <sys:String x:Key="Hash_Checker_Next_Page">الصفحة التالية</sys:String>
+    <sys:String x:Key="Hash_Checker_CompareMessage">تم التحقق من قيم التجزئة لـ {0} ملف(ات)، {1} نجحت، {2} فشلت، {3} تم تخطيها.</sys:String>
+    <sys:String x:Key="Hash_Checker_CompareMessage.Failed">قيم التجزئة للملفات التالية لا تتطابق:</sys:String>
+    <sys:String x:Key="Hash_Checker_CompareMessage.Error">حدثت أخطاء أثناء معالجة الملفات التالية:</sys:String>
+    <sys:String x:Key="Hash_Checker_CompareMessage.Skipped">تم تخطي الملفات التالية لأنه لم يتم العثور على قيمة التجزئة:</sys:String>
+
+    <!-- Settings page -->
+    <sys:String x:Key="Settings_General">عام</sys:String>
+    <sys:String x:Key="Settings_Language">اللغة</sys:String>
+    <sys:String x:Key="Settings_Language.Description">تغيير لغة عرض التطبيق.</sys:String>
+    <sys:String x:Key="Settings_MatchOS">مطابقة نظام التشغيل</sys:String>
+    <sys:String x:Key="Settings_Save">حفظ الإعدادات</sys:String>
+    <sys:String x:Key="Settings_Save.Description">حفظ جميع الإعدادات محليًا.</sys:String>
+
+    <sys:String x:Key="Settings_Appearance">المظهر والسلوك</sys:String>
+    <sys:String x:Key="Settings_Theme">السمة</sys:String>
+    <sys:String x:Key="Settings_Theme.Description">تغيير سمة التطبيق.</sys:String>
+    <sys:String x:Key="Settings_Auto_Dark_Theme">سمة داكنة تلقائية</sys:String>
+    <sys:String x:Key="Settings_Auto_Dark_Theme.Description">اتبع إعدادات النظام وقم بالتبديل تلقائيًا إلى السمة الداكنة.</sys:String>
+    <sys:String x:Key="Settings_Theme_OpenColorSetting">إعداد لون ويندوز</sys:String>
+    <sys:String x:Key="Settings_Background">الخلفية</sys:String>
+    <sys:String x:Key="Settings_Background.Description">تغيير خلفية التطبيق.</sys:String>
+    <sys:String x:Key="Settings_Background.Automatic">تلقائي</sys:String>
+    <sys:String x:Key="Settings_Background.Off">إيقاف</sys:String>
+    <sys:String x:Key="Settings_Background.Acrylic">أكريليك</sys:String>
+    <sys:String x:Key="Settings_Background.Blur">ضبابي</sys:String>
+    <sys:String x:Key="Settings_Background.Mica">ميكا</sys:String>
+    <sys:String x:Key="Settings_Background.Bing">خلفية Bing</sys:String>
+    <sys:String x:Key="Settings_Background.Local">صورة محلية</sys:String>
+    <sys:String x:Key="Settings_SelectLocalImage.Description">حدد صورة محلية واضبطها كخلفية للتطبيق.</sys:String>
+    <sys:String x:Key="Settings_SelectLocalImage.Button">تحديد ملف</sys:String>
+    <sys:String x:Key="Settings_Opacity">الشفافية</sys:String>
+    <sys:String x:Key="Settings_Blur">الضبابية</sys:String>
+    <sys:String x:Key="Settings_Topmost">دائمًا في الأعلى</sys:String>
+
+    <sys:String x:Key="Settings_Advanced">متقدم</sys:String>
+    <sys:String x:Key="Settings_HardwareAcceleration">تسريع الأجهزة</sys:String>
+    <sys:String x:Key="Settings_HardwareAcceleration.Description">لا تقم بإيقافه إذا كان التطبيق يعمل بشكل جيد. تعطيله سيقلل من أداء التطبيق.</sys:String>
+    <sys:String x:Key="Settings_SecurityProtocol">بروتوكول الأمان</sys:String>
+    <sys:String x:Key="Settings_SecurityProtocol.Description">حدد بروتوكول TLS الذي يجب استخدامه. لا تغيره إذا كان التطبيق يمكنه الاتصال بالشبكة.</sys:String>
+    <sys:String x:Key="Settings_SecurityProtocol_SystemDefault">افتراضي النظام</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy">الوكيل</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy.Type">نوع الوكيل</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy.None">بدون</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy_Host">المضيف</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy_Host.Hint">127.0.0.1:1080</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy_Username">اسم المستخدم</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy_Password">كلمة المرور</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy_Optional">اختياري</sys:String>
+
+    <sys:String x:Key="Settings_Deploy">النشر</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation">بعد النشر</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.Description">الإجراء الذي سيتم تنفيذه بعد اكتمال تنزيل أو تثبيت أوفيس.</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.None">بدون</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.Quit">إغلاق Office Tool Plus</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.SignOut">تسجيل الخروج</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.Shutdown">إيقاف التشغيل</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.Reboot">إعادة التشغيل</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat">تنسيق عرض لغات أوفيس</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat.Default">الاسم الافتراضي</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat.Native">الاسم الأصلي</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat.English">الاسم الإنجليزي</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat.Localized">الاسم المحلي</sys:String>
+    <sys:String x:Key="Settings_Deploy_Internal">عرض المنتجات والقنوات الداخلية</sys:String>
+
+    <sys:String x:Key="Settings_Download">التنزيل</sys:String>
+    <sys:String x:Key="Settings_Download_Ask_Where_To_Save">اسأل عن مكان حفظ الملفات</sys:String>
+    <sys:String x:Key="Settings_Download_Ask_Where_To_Save.Description">حدد مكان حفظ ملفات تثبيت أوفيس قبل تنزيل أوفيس.</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API">الحصول على قائمة الملفات باستخدام واجهة مايكروسوفت البرمجية</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API.Description">إذا تم التمكين، سيتم الحصول على قائمة الملفات من واجهة مايكروسوفت البرمجية، وإلا سيتم إنشاء القائمة باستخدام القواعد المدمجة.</sys:String>
+    <sys:String x:Key="Settings_Download_Engine">المحرك</sys:String>
+    <sys:String x:Key="Settings_Download_Engine.Description">حدد المحرك الذي سيتم استخدامه عند تنزيل أوفيس.</sys:String>
+    <sys:String x:Key="Settings_Download_Engine.Thunder">Thunder</sys:String>
+    <!-- Do not translate 'bezzad.Downloader' -->
+    <sys:String x:Key="Settings_Download_Engine.Downloader">bezzad.Downloader</sys:String>
+    <sys:String x:Key="Settings_Download_Engine.OfficeToolPlus">Office Tool Plus</sys:String>
+    <sys:String x:Key="Settings_Download_Engine.OfficeDeploymentTool">Office Deployment Tool</sys:String>
+    <sys:String x:Key="Settings_Download_HTTPS">الاتصال باستخدام HTTPS</sys:String>
+    <sys:String x:Key="Settings_Download_HTTPS.Description">حاول تمكينه إذا واجهت مشاكل في تنزيل أوفيس.</sys:String>
+    <sys:String x:Key="Settings_Download_Verify">التحقق من الملفات</sys:String>
+    <sys:String x:Key="Settings_Download_Verify.Description">التحقق من تثبيت أوفيس بعد التنزيل.</sys:String>
+    <sys:String x:Key="Settings_Download_UA">إصدار ويندوز</sys:String>
+    <sys:String x:Key="Settings_Download_UA.Description">يتم تنزيل إصدار أوفيس الافتراضي لإصدار ويندوز الحالي. غيّر هذا إذا كنت تريد تنزيل أوفيس لإصدار مختلف من ويندوز.</sys:String>
+    <sys:String x:Key="Settings_Download_UA.AutoDetection">اكتشاف تلقائي</sys:String>
+    <!-- Do not translate 'bezzad.Downloader' -->
+    <sys:String x:Key="Settings_Download_Downloader">إعدادات bezzad.Downloader</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Chunks">الأجزاء</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Chunks.Description">يتم تقسيم الملف إلى أجزاء محددة للتنزيل. تعيين قيمة عالية جدًا قد يقلل من السرعة.</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Parallel">تنزيل متوازي في الأجزاء</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Parallel.Description">عند التنزيل إلى قرص صلب (HDD)، قد يؤدي تمكين هذا الخيار إلى تقليل سرعة الكتابة، خاصة إذا تم تعيين عدد كبير من الأجزاء.</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Limit">حد السرعة</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Limit.Description">تحديد السرعة عند تنزيل الملفات، الوحدة KBps. القيمة الافتراضية 0 (بدون حد).</sys:String>
+
+    <!-- About page -->
+    <sys:String x:Key="About_Link.Homepage">الصفحة الرئيسية</sys:String>
+    <sys:String x:Key="About_Link.Docs">التوثيق</sys:String>
+    <sys:String x:Key="About_Link.Sponsor">ادعمنا</sys:String>
+    <sys:String x:Key="About_Link.Report_Issue">الإبلاغ عن مشكلة</sys:String>
+    <sys:String x:Key="About_Version">الإصدار</sys:String>
+    <sys:String x:Key="About_ReleaseDate">تاريخ الإصدار:</sys:String>
+    <sys:String x:Key="About_CheckUpdate">_التحقق من التحديثات</sys:String>
+    <sys:String x:Key="About_CreatorInfo">تم التطوير بواسطة Yerong، بالاعتماد على Office Deployment Tool.</sys:String>
+    <sys:String x:Key="About_Copyright">حقوق النشر © 2016-{0} Yerong جميع الحقوق محفوظة.</sys:String>
+    <sys:String x:Key="About_TrademarkInfo">Microsoft Office علامة تجارية مسجلة أو علامة تجارية لشركة Microsoft Corporation في الولايات المتحدة و/أو دول أخرى.</sys:String>
+
+    <sys:String x:Key="About_Server_Provider">مزودو الخوادم</sys:String>
+    <sys:String x:Key="About_Translator">المترجمون</sys:String>
+
+    <sys:String x:Key="About_MoreInfo">معلومات إضافية</sys:String>
+    <sys:String x:Key="About_Image_Source">مصدر صورة الخلفية</sys:String>
+    <sys:String x:Key="About_Link.OpenSourceNotice">إشعار المصدر المفتوح</sys:String>
+
+    <!-- Downloader -->
+    <sys:String x:Key="Downloader_ProgressBar.Name">شريط تقدم تنزيل أوفيس</sys:String>
+    <sys:String x:Key="Downloader_Resume">استئناف</sys:String>
+    <sys:String x:Key="Downloader_Pause">إيقاف مؤقت</sys:String>
+    <sys:String x:Key="Downloader_Cancel">إلغاء</sys:String>
+    <sys:String x:Key="Downloader_SetSpeedLimit.Name">تعيين حد سرعة التنزيل</sys:String>
+    <sys:String x:Key="Downloader_Percentage">جاري التنزيل، تم إكمال {0}.</sys:String>
+    <sys:String x:Key="Downloader_Remaining">جاري التنزيل، الوقت المتبقي: {0}</sys:String>
+    <sys:String x:Key="Downloader_Pending">قيد الانتظار</sys:String>
+    <sys:String x:Key="Downloader_Pausing">جاري الإيقاف المؤقت</sys:String>
+    <sys:String x:Key="Downloader_Paused">متوقف مؤقتًا</sys:String>
+
+    <!-- Notification strings -->
+    <sys:String x:Key="Message">رسالة</sys:String>
+    <sys:String x:Key="Notice">تنبيه</sys:String>
+    <sys:String x:Key="Warning">تحذير</sys:String>
+    <sys:String x:Key="Error">خطأ</sys:String>
+    <sys:String x:Key="Yes">_نعم</sys:String>
+    <sys:String x:Key="No">_لا</sys:String>
+    <sys:String x:Key="OK">_موافق</sys:String>
+    <sys:String x:Key="Cancel">_إلغاء</sys:String>
+
+    <!-- Input box strings-->
+    <sys:String x:Key="Input_Command">يرجى إدخال أوامر التطبيق</sys:String>
+    <sys:String x:Key="Input_URL">يرجى إدخال الرابط</sys:String>
+    <sys:String x:Key="Input_Thunder_Speed_Limit">تعيين حد سرعة تنزيل Thunder (بالـ KBps)</sys:String>
+
+    <!-- Office ISO Context Menu -->
+    <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
+    <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
+    <!-- If you cannot understand what is hotkey, remove '&amp;' when you are translating. -->
+    <sys:String x:Key="CD-ROM_InstallNow">&amp;تثبيت الآن</sys:String>
+
+    <!-- Task Message -->
+    <sys:String x:Key="Task_Checking_Updates">جاري التحقق من التحديثات.</sys:String>
+    <sys:String x:Key="Task_Downloading_Updates">جاري تنزيل التحديثات، تم إكمال {0} ({1} من {2}).</sys:String>
+    <sys:String x:Key="Task_Verifying_Installation_Files">جاري التحقق من الملفات، يرجى الانتظار.</sys:String>
+    <sys:String x:Key="Task_Loading_Preferences">جاري تحميل تفضيلات التطبيق، يرجى الانتظار.</sys:String>
+    <sys:String x:Key="Task_Downloading_Web_Config">جاري الحصول على ملف التكوين من الويب، يرجى الانتظار.</sys:String>
+    <sys:String x:Key="Task_Preparing_Download">جاري التحضير لتنزيل أوفيس.</sys:String>
+    <!-- Example: Creating Office ISO file, file size: 3.1GB, 45% completed. -->
+    <sys:String x:Key="Task_Creating_ISO">جاري إنشاء ملف ISO لأوفيس، حجم الملف: {0}، تم إكمال {1}.</sys:String>
+    <sys:String x:Key="Task_ODT">جاري النشر الآن، يرجى الانتظار.</sys:String>
+    <sys:String x:Key="Task_SPP">SPP يعمل الآن، يرجى الانتظار.</sys:String>
+    <sys:String x:Key="Task_Searching_KMS_Events">جاري البحث عن أحداث تفعيل KMS، يرجى الانتظار.</sys:String>
+    <sys:String x:Key="Task_Searching_IAF_Events">جاري البحث عن أحداث فشل التفعيل عبر الإنترنت، يرجى الانتظار.</sys:String>
+    <sys:String x:Key="Task_Checking_Office_Update_Channel">جاري استعلام معلومات قنوات تحديث أوفيس.</sys:String>
+    <sys:String x:Key="Task_Testing_KMS_Host">جاري اختبار إمكانية الوصول إلى مضيف KMS.</sys:String>
+    <sys:String x:Key="Task_Collecting_Installer_Logs">جاري جمع سجلات مثبت أوفيس.</sys:String>
+    <sys:String x:Key="Task_Removing_Office">جاري إزالة أوفيس، يرجى الانتظار.</sys:String>
+    <sys:String x:Key="Task_Repairing_WMI">جاري إصلاح مكونات WMI، يرجى الانتظار.</sys:String>
+    <sys:String x:Key="Task_Converting_Documents">جاري تحويل مستندات أوفيس، متبقي {0}.</sys:String>
+    <sys:String x:Key="Task_Importing_Files">جاري استيراد الملفات، يرجى الانتظار.</sys:String>
+    <sys:String x:Key="Task_Computing_Hash">جاري حساب التجزئة، متبقي {0} ملف(ات).</sys:String>
+    <sys:String x:Key="Task_Exporting_Hash">جاري تصدير النتائج، يرجى الانتظار.</sys:String>
+    <!-- Example: Installing iSlide, please wait. -->
+    <sys:String x:Key="Task_Installing_App">جاري تثبيت {0}، يرجى الانتظار.</sys:String>
+
+    <!-- Question Message -->
+    <sys:String x:Key="Ques_Update.Title">تحديث Office Tool Plus</sys:String>
+    <sys:String x:Key="Ques_Update.Content">يتوفر تحديث، هل تريد التنزيل الآن؟</sys:String>
+    <sys:String x:Key="Ques_Exit">Office Tool Plus يعمل الآن. هل تريد الخروج على أي حال؟</sys:String>
+    <sys:String x:Key="Ques_Can_Not_Verify_Signature">تعذر التحقق من توقيع الملف، هل تريد فتحه على أي حال؟&#x000A;&#x000A;الملف: {0}</sys:String>
+    <sys:String x:Key="Ques_Quick_Installation">اخترت تثبيت {0}.&#x000A;&#x000A;انقر "نعم" للتثبيت بعد التنزيل، "لا" للتثبيت أثناء التنزيل، أو أغلق النافذة للإلغاء.</sys:String>
+    <sys:String x:Key="Ques_Select_Office_To_Download">لقد حددت إصدار أوفيس إلى {0}، لكننا حصلنا على إصدار مختلف.&#x000A;&#x000A;بالنقر على "نعم" سيتم تنزيل إصدار {1} من أوفيس.&#x000A;بالنقر على "لا" سيتم تنزيل إصدار {2} من أوفيس.</sys:String>
+    <sys:String x:Key="Ques_Deploy_Office">هل أنت مستعد لنشر أوفيس؟</sys:String>
+    <sys:String x:Key="Ques_Deploy_Office.ToInstall">المنتجات التي سيتم تثبيتها:</sys:String>
+    <sys:String x:Key="Ques_Deploy_Office.ToUninstall">المنتجات التي سيتم إزالتها:</sys:String>
+    <sys:String x:Key="Ques_Install_Office.Applications">التطبيقات: {0}</sys:String>
+    <sys:String x:Key="Ques_Install_Office.Architecture">البنية: {0}</sys:String>
+    <sys:String x:Key="Ques_Install_Office.UpdateChannel">قناة التحديث: {0}</sys:String>
+    <sys:String x:Key="Ques_Install_Office.OfficeVersion">إصدار أوفيس: {0}</sys:String>
+    <sys:String x:Key="Ques_Install_Office.SourcePath">مصدر ملفات التثبيت: {0}</sys:String>
+    <sys:String x:Key="Ques_Deploy_Configuration">عرض الكود لمزيد من تفاصيل التكوين، هل الإعدادات الأساسية أعلاه صحيحة؟</sys:String>
+    <sys:String x:Key="Ques_Delete_All_Installations">هل أنت متأكد أنك تريد حذف جميع ملفات التثبيت؟</sys:String>
+    <sys:String x:Key="Ques_Delete_Installation">هل أنت متأكد أنك تريد حذف {0}؟</sys:String>
+    <sys:String x:Key="Ques_Delete_Installation_Package">هل أنت متأكد أنك تريد حذف {0}؟</sys:String>
+    <sys:String x:Key="Ques_Install_iSlide">PlaceHolder</sys:String>
+    <sys:String x:Key="Ques_Clear_Activation">هل أنت متأكد أنك تريد إزالة جميع التراخيص والمفاتيح؟ بعد هذه العملية ستحتاج إلى إعادة تثبيت التراخيص وتفعيل أوفيس من جديد.</sys:String>
+    <sys:String x:Key="Ques_Install_Licenses">قد لا ترى معلومات التفعيل في أوفيس بعد تثبيت ترخيص أوفيس، لكن يمكنك عرض المعلومات أو تفعيل أوفيس من خلال Office Tool Plus. هل تريد المتابعة؟</sys:String>
+    <sys:String x:Key="Ques_Uninstall_Licenses">هل أنت متأكد أنك تريد إزالة جميع تراخيص أوفيس؟</sys:String>
+    <sys:String x:Key="Ques_Uninstall_All_Keys">هل أنت متأكد أنك تريد إزالة جميع مفاتيح منتجات أوفيس؟ يرجى نسخ مفاتيحك احتياطيًا إذا لزم الأمر.</sys:String>
+    <sys:String x:Key="Ques_Uninstall_Product_Key">هل أنت متأكد أنك تريد إزالة مفتاح المنتج؟</sys:String>
+    <sys:String x:Key="Ques_Delete_vNextLicense">هل أنت متأكد أنك تريد حذف الترخيص؟</sys:String>
+    <sys:String x:Key="Ques_Remove_Office">هل أنت متأكد من تنظيف أوفيس؟ بمجرد البدء، لا يمكن إيقاف هذه العملية.</sys:String>
+    <sys:String x:Key="Ques_Invoke_Office_Update">تم تغيير قناة التحديث، هل تريد التحقق من تحديثات أوفيس الآن؟</sys:String>
+
+    <!-- Info Message -->
+    <sys:String x:Key="Info_OS_Outdated">نظام التشغيل الخاص بك لم يعد مدعومًا، يرجى ترقية نظام التشغيل أو تنزيل إصدار أقدم من Office Tool Plus للاستخدام.</sys:String>
+    <sys:String x:Key="Info_Restart_Required">تحتاج إلى إعادة تشغيل التطبيق لتطبيق التغييرات.</sys:String>
+    <sys:String x:Key="Info_No_Updates">أنت تستخدم أحدث إصدار من Office Tool Plus.</sys:String>
+    <sys:String x:Key="Info_Update_In_Progress">التحديث(ات) قيد التنفيذ، يرجى الانتظار.</sys:String>
+    <sys:String x:Key="Info_Updates_Incomplete">فشل تطبيق التحديثات، يرجى المحاولة مرة أخرى لاحقًا.</sys:String>
+    <sys:String x:Key="Info_No_Language_Added_For_Download">لم تقم بإضافة أي لغة. في معظم الحالات، نوصي بإضافة لغات لتجنب المشاكل.</sys:String>
+    <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">يرجى تحديد المجلد لحفظ ملفات تثبيت أوفيس.&#x000A;لاستخدام الموقع الافتراضي، قم بتعطيل "اسأل عن مكان حفظ الملفات" في صفحة الإعدادات.</sys:String>
+    <sys:String x:Key="Info_All_Files_Exist">لا حاجة للتنزيل، جميع الملفات موجودة.</sys:String>
+    <sys:String x:Key="Info_Office_Downloading">يتم تنزيل أوفيس.</sys:String>
+    <sys:String x:Key="Info_Software_Installation_Complete">اكتمل التثبيت.</sys:String>
+    <sys:String x:Key="Info_Software_Installation_Failed">فشل التثبيت.</sys:String>
+    <sys:String x:Key="Info_Auto_Shutdown">سيتم تسجيل الخروج/إيقاف التشغيل/إعادة التشغيل خلال دقيقة واحدة.</sys:String>
+    <sys:String x:Key="Info_No_Events">لم يتم العثور على أحداث.</sys:String>
+    <sys:String x:Key="Info_No_Office_Licenses">لم يتم العثور على تراخيص أوفيس.</sys:String>
+    <sys:String x:Key="Info_No_Office_Product_Key">لم يتم اكتشاف أي مفاتيح منتجات أوفيس.</sys:String>
+    <sys:String x:Key="Info_Number_Of_Keys_Uninstalled">عدد مفاتيح المنتج التي تمت إزالتها: {0}.</sys:String>
+    <sys:String x:Key="Info_Number_Of_Lics_Uninstalled">عدد تراخيص أوفيس التي تمت إزالتها: {0}.</sys:String>
+    <sys:String x:Key="Info_Office_License_Activation.Title">نتائج تفعيل المنتج</sys:String>
+    <sys:String x:Key="Info_Office_License_Activation_Successful">تم تفعيل المنتج بنجاح.</sys:String>
+    <sys:String x:Key="Info_KMS_Test_Result.Success">طريقة اختبار KMS: {0}. النتيجة: نجاح، الوقت المستغرق: {1} مللي ثانية.</sys:String>
+    <sys:String x:Key="Info_KMS_Test_Result.Failed">فشل اختبار KMS.</sys:String>
+    <sys:String x:Key="Info_Enable_Mica">تأثير Mica يتطلب ويندوز 11 ليظهر.</sys:String>
+
+    <!-- Success Message -->
+    <sys:String x:Key="Success_Download_Updates">تم تطبيق التحديث(ات) بنجاح.</sys:String>
+    <sys:String x:Key="Success_Add_Download_Task">تمت إضافة مهام التنزيل بنجاح.</sys:String>
+    <sys:String x:Key="Success_Create_ISO">تم إنشاء ملف ISO لأوفيس.</sys:String>
+    <sys:String x:Key="Success_Installation_Verify">تم التحقق من ملف التثبيت ولم يتم العثور على أخطاء.</sys:String>
+    <sys:String x:Key="Success_Installer_Exited">خرج Office Deployment Tool بشكل طبيعي.</sys:String>
+    <sys:String x:Key="Success_Apply_Preferences">تم تطبيق تفضيلات تطبيقات أوفيس بنجاح.</sys:String>
+    <sys:String x:Key="Success_Install_Licenses">تم تثبيت تراخيص أوفيس بنجاح.</sys:String>
+    <sys:String x:Key="Success_Install_Product_Key">تم تثبيت مفتاح المنتج بنجاح.</sys:String>
+    <sys:String x:Key="Success_Set_KMS">تم تطبيق إعدادات KMS بنجاح.</sys:String>
+    <sys:String x:Key="Success_Save">تم الحفظ بنجاح.</sys:String>
+    <sys:String x:Key="Success_Collect_Logs">تم جمع ملفات السجل وحفظها في: {0}</sys:String>
+    <sys:String x:Key="Success_Repair">تمت عملية الإصلاح بنجاح.</sys:String>
+    <sys:String x:Key="Success_Repair_System_Variables">اكتملت إعادة تعيين متغيرات النظام، يرجى إعادة تشغيل النظام لتطبيق التغييرات.</sys:String>
+    <sys:String x:Key="Success_Repair_WMI_Components">اكتمل إصلاح مكونات WMI، يرجى إعادة تشغيل النظام لتطبيق التغييرات.</sys:String>
+
+    <!-- Error Message -->
+    <sys:String x:Key="Err_Create_Temp_Path">تعذر إنشاء المسار المؤقت. يرجى التحقق من متغيرات النظام والمحاولة مرة أخرى.</sys:String>
+    <sys:String x:Key="Err_Already_Running">Office Tool Plus يعمل بالفعل.</sys:String>
+    <sys:String x:Key="Err_Perform_Update">حدث خطأ أثناء تنفيذ التحديث، يرجى تنزيل أحدث إصدار من Office Tool Plus يدويًا.</sys:String>
+    <sys:String x:Key="Err_Unknown_Command">أمر غير معروف: {0}</sys:String>
+    <sys:String x:Key="Err_Command_Parameter">المعلمات المطلوبة مفقودة.</sys:String>
+    <sys:String x:Key="Err_Checking_Installation">حدث خطأ أثناء التحقق من ملفات التثبيت. يرجى المحاولة مرة أخرى لاحقًا، أو إعادة تنزيل ملفات تثبيت أوفيس.</sys:String>
+    <sys:String x:Key="Err_Installation">ملف التثبيت {0} يحتوي على أخطاء:&#x000A;{1}</sys:String>
+    <sys:String x:Key="Err_Installation_File_Missing">الملف مفقود: {0}</sys:String>
+    <sys:String x:Key="Err_Installation_File_Corrupted">الملف تالف: {0}</sys:String>
+    <sys:String x:Key="Err_Installation_Hash">فشل التحقق من التجزئة، الملف: {0}&#x000A;التجزئة: {1}&#x000A;التجزئة الفعلية: {2}</sys:String>
+    <sys:String x:Key="Err_Installation_Version">فشل التحقق من الإصدار، الملف: {0}&#x000A;الإصدار: {1}&#x000A;إصدار العميل: {2}</sys:String>
+    <sys:String x:Key="Err_Installation_Mismatch">عدم تطابق الإصدار، الملف: {0}&#x000A;الإصدار الفعلي: {1}&#x000A;البنية: {2}</sys:String>
+    <sys:String x:Key="Err_Installation_Redownload">تحتوي ملفات التثبيت على أخطاء، يرجى محاولة حذفها وتنزيلها مرة أخرى.</sys:String>
+    <sys:String x:Key="Err_Installation_No_BasePack">لا تحتوي ملفات التثبيت على الحزمة الأساسية، يرجى محاولة تنزيلها مرة أخرى.</sys:String>
+    <sys:String x:Key="Err_Reading_Info">حدث خطأ أثناء قراءة معلومات أوفيس.</sys:String>
+    <sys:String x:Key="Err_Saving_Info">حدث خطأ أثناء حفظ معلومات أوفيس.</sys:String>
+    <sys:String x:Key="Err_Start_Deploy.Download">تعذر تنزيل أوفيس، تأكد من إضافة منتج أو لغة، ثم حاول مرة أخرى.</sys:String>
+    <sys:String x:Key="Err_Start_Deploy.Deploy">تعذر نشر أوفيس، تأكد من ضبط الإعدادات الأساسية بشكل صحيح، ثم حاول مرة أخرى.</sys:String>
+    <sys:String x:Key="Err_Start_Deploy.Preferences">تعذر تعيين تفضيلات التطبيق، تأكد من ضبط تفضيلات التطبيق بشكل صحيح، ثم حاول مرة أخرى.</sys:String>
+    <!-- {0} means product name, for example: Microsoft 365 Apps for Enterprise. -->
+    <sys:String x:Key="Err_Start_Deploy_ProductNotSupported">{0} غير مدعوم في هذا الإصدار من أوفيس.</sys:String>
+    <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
+    <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} لا يدعم اللغة {1}.</sys:String>
+    <sys:String x:Key="Err_Installer_Exited">خرج Office Deployment Tool بشكل غير طبيعي.</sys:String>
+    <sys:String x:Key="Err_Prepare_To_Download_Office">تعذر الحصول على إصدار أوفيس، يرجى المحاولة مرة أخرى أو استخدام Office Deployment Tool كمحرك تنزيل.</sys:String>
+    <sys:String x:Key="Err_Create_ISO">لم يتم العثور على ملفات تثبيت أوفيس. يرجى تنزيل ملفات التثبيت أولاً، أو تحديد ملفات تثبيت موجودة، ثم حاول مرة أخرى.</sys:String>
+    <sys:String x:Key="Err_Query_Office_Licenses">تعذر استعلام تراخيص أوفيس، يرجى المحاولة مرة أخرى.</sys:String>
+    <sys:String x:Key="Err_Loading_Office_Licenses">لم يتم اكتشاف إصدار Click-to-Run من أوفيس على النظام، تعذر تحميل تراخيص أوفيس. يرجى التأكد من تثبيت أحدث إصدار من أوفيس.</sys:String>
+    <sys:String x:Key="Err_Product_Key_Invalid">مفتاح المنتج الذي تم إدخاله غير صالح، يرجى التحقق والمحاولة مرة أخرى.</sys:String>
+    <sys:String x:Key="Err_Confirmation_ID_Invalid">معرف التأكيد الذي تم إدخاله غير صالح، يرجى التحقق والمحاولة مرة أخرى.</sys:String>
+    <sys:String x:Key="Err_KMS_Host_Invalid">تعذر حفظ إعدادات KMS، يرجى التحقق من اسم مضيف KMS والمحاولة مرة أخرى.</sys:String>
+    <sys:String x:Key="Err_No_KMS_Lic">تعذر حفظ إعدادات KMS، لم يتم العثور على تراخيص KMS صالحة لأوفيس على النظام.</sys:String>
+    <sys:String x:Key="Err_Set_KMS">تعذر حفظ إعدادات KMS، يرجى المحاولة مرة أخرى.</sys:String>
+    <sys:String x:Key="Err_Act_Run_Commands">حدث خطأ أثناء تنفيذ الأوامر.&#x000A;&#x000A;رمز الخطأ: {0}</sys:String>
+    <sys:String x:Key="Err_Act_Office_License">حدث خطأ أثناء تفعيل المنتج.&#x000A;&#x000A;رمز الخطأ: {0}</sys:String>
+    <sys:String x:Key="Err_Install_Office_Lic">حدث خطأ أثناء تثبيت الترخيص.&#x000A;&#x000A;رمز الخطأ: {0}</sys:String>
+    <sys:String x:Key="Err_Install_Product_Key">حدث خطأ أثناء تثبيت مفتاح المنتج.&#x000A;&#x000A;رمز الخطأ: {0}</sys:String>
+    <sys:String x:Key="Err_Uninstall_Product_Key">حدث خطأ أثناء إزالة مفتاح المنتج.&#x000A;&#x000A;رمز الخطأ: {0}</sys:String>
+    <sys:String x:Key="Err_Check_KMS_Status">تعذر التحقق من حالة KMS، يرجى التحقق من اسم مضيف KMS والمحاولة مرة أخرى.</sys:String>
+    <sys:String x:Key="Err_Office_App_NotFound">{0} لم يتم العثور عليه على النظام، يرجى التأكد من تثبيت أحدث إصدار من أوفيس.</sys:String>
+    <sys:String x:Key="Err_Open_Clipboard">تعذر الوصول إلى الحافظة، يرجى المحاولة مرة أخرى.</sys:String>
+
+    <!-- Error messages about Thunder -->
+    <sys:String x:Key="Thunder_Err_Init">فشل في تهيئة Thunder.</sys:String>
+    <sys:String x:Key="Thunder_Err_Start">فشل في بدء المهمة.</sys:String>
+    <sys:String x:Key="Thunder_Err_Stop">فشل في إيقاف المهمة مؤقتًا.</sys:String>
+    <sys:String x:Key="Thunder_Err_Exit">فشل في إنهاء Thunder.</sys:String>
+    <sys:String x:Key="Thunder_Err_Unknown">خطأ غير معروف في التنزيل.</sys:String>
+    <sys:String x:Key="Thunder_Err_Create">فشل في إنشاء الملف.</sys:String>
+    <sys:String x:Key="Thunder_Err_Delete">فشل في حذف الملف.</sys:String>
+    <sys:String x:Key="Thunder_Err_FileHash">فشل التحقق من الملف.</sys:String>
+    <sys:String x:Key="Thunder_Err_PieceHash">فشل التحقق من الملف.</sys:String>
+    <sys:String x:Key="Thunder_Err_Read">فشل في قراءة الملف.</sys:String>
+    <sys:String x:Key="Thunder_Err_Rename">فشل في إعادة تسمية الملف.</sys:String>
+    <sys:String x:Key="Thunder_Err_Write">فشل في كتابة الملف.</sys:String>
+    <sys:String x:Key="Thunder_Err_DownInvalid">عنوان غير صالح.</sys:String>
+    <sys:String x:Key="Thunder_Err_NotIP">لا يوجد عنوان IP متاح في تنزيل HTTP.</sys:String>
+    <sys:String x:Key="Thunder_Err_IDInvalid">معرف المهمة غير صالح.</sys:String>
+    <sys:String x:Key="Thunder_Err_SetProxy">فشل في تعيين الوكيل.</sys:String>
+    <sys:String x:Key="Thunder_Err_ProxyAuthTypeFailed">فشل مصادقة الوكيل.</sys:String>
+    <sys:String x:Key="Thunder_Err_ProxyAuthTypeUnknown">نوع وكيل غير معروف.</sys:String>
+    <sys:String x:Key="Thunder_Err_Timeout">انتهت مهلة المهمة.</sys:String>
+    <sys:String x:Key="Thunder_Err_Crashed">تعطل محرك Thunder.</sys:String>
+    <sys:String x:Key="Thunder_Err_Cancel">تم إلغاء المهمة.</sys:String>
+</ResourceDictionary>

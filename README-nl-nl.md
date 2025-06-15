@@ -43,7 +43,7 @@ Functies en kenmerken:
 Or download Office Tool Plus using PowerShell:
 
 ```powershell
-irm officetool.plus | iex
+irm https://officetool.plus | iex
 ```
 
 ## Over

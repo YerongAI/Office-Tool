@@ -44,13 +44,14 @@ Functions and Features:
 Or download Office Tool Plus using PowerShell:
 
 ```powershell
-irm officetool.plus | iex
+irm https://officetool.plus | iex
 ```
 
 ## Thanks to the Translators
 
 | Culture | Name | Translators |
 | :-- | :-- | :-- |
+| ar-ly | العربية (ليبيا) | Abdul Salam Bin Ali |
 | de-de | Deutsch (Deutschland) | [Berny23](https://steamcommunity.com/id/Berny23) |
 | en-gb | English (United Kingdom) | [Mcforwin](https://github.com/Mcforwin) |
 | en-us | English (United States) | [Yerong](https://officetool.plus/) |

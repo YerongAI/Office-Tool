@@ -41,7 +41,7 @@
 Или скачайте Office Tool Plus с использованием PowerShell:
 
 ```powershell
-irm officetool.plus | iex
+irm https://officetool.plus | iex
 ```
 
 ## О разработке

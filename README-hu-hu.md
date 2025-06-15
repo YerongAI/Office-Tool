@@ -44,7 +44,7 @@ Funkciók és jellemzők:
 Vagy töltse le az Office Tool Plus-t a PowerShell segítségével:
 
 ```powershell
-irm officetool.plus | iex
+irm https://officetool.plus | iex
 ```
 
 ## Névjegy

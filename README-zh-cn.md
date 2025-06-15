@@ -44,7 +44,7 @@
 或者使用 PowerShell 下载 Office Tool Plus:
 
 ```powershell
-irm officetool.plus | iex
+irm https://officetool.plus | iex
 ```
 
 更多详细教程可访问 [Yerong の小窝](https://www.coolhub.top/) 获取。

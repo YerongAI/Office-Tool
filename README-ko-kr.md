@@ -43,7 +43,7 @@
 또는 PowerShell을 사용하여 Office Tool Plus를 다운로드하세요:
 
 ```powershell
-irm officetool.plus | iex
+irm https://officetool.plus | iex
 ```
 
 ## 추가 정보

@@ -19,14 +19,14 @@ If a channel hasn't been updated in over a year, I'll mark it as deprecated.
 | Production::MEC | 55336b82-a18d-4dd6-b5f6-9e5095c314a6 | Monthly Enterprise Channel | MonthlyEnterprise |  |
 | Production::CC | 492350f6-3a01-4f97-b9c0-c7c6ddf67d60 | Current Channel | Current |  |
 | Insiders::LTSC | 2e148de9-61c8-4051-b103-4af54baffbb4 | Office 2019 Perpetual Enterprise Channel |  | ⛔ |
-| Insiders::FRDC | b8f9b850-328d-4355-9145-c59439a0c4cf | Semi-Annual Enterprise Channel (Preview) | SemiAnnualPreview |  |
+| Insiders::FRDC | b8f9b850-328d-4355-9145-c59439a0c4cf | Semi-Annual Enterprise Channel (Preview) | SemiAnnualPreview | ⛔ |
 | Insiders::CC | 64256afe-f5d9-4f86-8936-8840a6a4f5be | Current Channel (Preview) | CurrentPreview |  |
 | Insiders::DevMain | 5440fd1f-7ecb-4221-8110-145efaa6372f | Beta Channel | BetaChannel |  |
 | Microsoft::LTSC | 1d2d2ea6-1680-4c56-ac58-a441c8c24ff | Office 2019 Perpetual Enterprise Channel |  |  |
 | Microsoft::LTSC2021 | 86752282-5841-4120-ac80-db03ae6b5fdb | Office 2021 Perpetual Enterprise Channel |  |  |
 | Microsoft::LTSC2024 | c02d8fe6-5242-4da8-972f-82ee55e00671 | Office 2024 Perpetual Enterprise Channel |  |  |
 | Microsoft::DC | f4f024c8-d611-4748-a7e0-02b6e754c0fe | Semi-Annual Enterprise Channel |  |  |
-| Microsoft::FRDC | 9a3b7ff2-58ed-40fd-add5-1e5158059d1c | Semi-Annual Enterprise Channel (Preview) |  |  |
+| Microsoft::FRDC | 9a3b7ff2-58ed-40fd-add5-1e5158059d1c | Semi-Annual Enterprise Channel (Preview) |  | ⛔ |
 | Microsoft::CC | 5462eee5-1e97-495b-9370-853cd873bb07 | Beta Channel |  |  |
 | Microsoft::DevMain | b61285dd-d9f7-41f2-9757-8f61cba4e9c | Beta Channel |  |  |
 | Dogfood::DCEXT | c4a7726f-06ea-48e2-a13a-9d78849eb706 | Semi-Annual Enterprise Channel |  | ⛔ |

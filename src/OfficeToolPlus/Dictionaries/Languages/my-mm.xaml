@@ -1,0 +1,967 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=System.RunTime"
+                    xml:space="preserve">
+
+    <!-- Country settings, it is used to get information from server. -->
+    <sys:String x:Key="Culture">my-mm</sys:String>
+    <!-- Products name settings, "en-us" is default value if not set. -->
+    <sys:String x:Key="ProductDict">my-mm</sys:String>
+    <!-- Markdown document font family. -->
+    <FontFamily x:Key="Markdown.FontFamily">Myanmar Text</FontFamily>
+
+    <!-- Eula content -->
+    <sys:String x:Key="Eula.Title">လိုင်စင်သတ်မှတ်ချက်များ</sys:String>
+    <sys:String x:Key="Eula.Content">ဤဆော့ဖ်ဝဲကို အသုံးပြုလိုလျှင်၊ သင် [ဆော့ဖ်ဝဲလိုင်စင်]({0}) နှင့် Microsoft ဧ။် [ဝန်ဆောင်မှုသဘောတူညီချက်]({1}) ကိုလက်ခံရမည်။</sys:String>
+
+    <!-- Custom control -->
+    <sys:String x:Key="Yerong_String_ToggleButton.Unset">မသတ်မှတ်ထား</sys:String>
+    <sys:String x:Key="Yerong_String_ToggleButton.Off">ပိတ်</sys:String>
+    <sys:String x:Key="Yerong_String_ToggleButton.On">ဖွင့်</sys:String>
+    <sys:String x:Key="Yerong_String_MicaMenu.Name">မီနူး</sys:String>
+    <sys:String x:Key="Yerong_String_MicaMenu.HelpText">ဤခလုတ်ကိုနှိပ်၍ မီနူးအသေးဆိပ် ကိုဖွင့်ပါ။</sys:String>
+
+    <!-- Title bar -->
+    <sys:String x:Key="Title_Bar_GoBack_Button">နောက်သို့</sys:String>
+    <sys:String x:Key="Title_Bar_SysMenu_Button">စနစ် မီနူး</sys:String>
+    <sys:String x:Key="Title_Bar_Command_Box">အမိန့်</sys:String>
+
+    <!-- Navigation bar -->
+    <sys:String x:Key="Navigation_Menu.Name">လမ်းညွှန် မီနူး</sys:String>
+    <sys:String x:Key="Navigation_Menu.ToolTip">နှိုပ်၍ လမ်းညွှန်ဘား ကို ဖွင့်၊ပိတ် လုပ်ပါ။</sys:String>
+    <sys:String x:Key="Navigation_Bar.Name">လမ်းညွှန်ဘား</sys:String>
+    <sys:String x:Key="Navigation_Bar_Bottom.Name">အောက်‌ခြေ လမ်းညွှန်ဘား</sys:String>
+
+    <sys:String x:Key="Navigate_Page.Home">မူလစာမျက်နှာ</sys:String>
+    <sys:String x:Key="Navigate_Page.Deploy">တင်သွင်းမည်</sys:String>
+    <sys:String x:Key="Navigate_Page.Activate">စတင်မည်</sys:String>
+    <sys:String x:Key="Navigate_Page.Toolbox">ကိရိယာများ</sys:String>
+    <sys:String x:Key="Navigate_Page.ConvertDocuments">စာရွက်စာတမ်း ပြောင်းရန်</sys:String>
+    <sys:String x:Key="Navigate_Page.HashChecker">ဟက်ရှ်စစ်ရန်</sys:String>
+
+    <sys:String x:Key="Navigate_Page.Settings">စက်တင်</sys:String>
+    <sys:String x:Key="Navigate_Page.About">အကြောင်းအရာ</sys:String>
+
+    <!-- Notification list -->
+    <sys:String x:Key="Notification_Close_Message.Name">မက်စေ့ပိတ်ရန်</sys:String>
+    <sys:String x:Key="Notification_Message_Content">မက်စေ့အကြာင်းအရာ: {0}, {1}</sys:String>
+    <sys:String x:Key="Notification_Message_Button_List">မက်စေ့ခလုတ်</sys:String>
+    <sys:String x:Key="Notification_Cancel_Task.Name">ပယ်ဖျက်ရန်</sys:String>
+
+    <!-- Home page -->
+    <sys:String x:Key="Home_Messages_Center.Name">မက်စေ့စင်တာ</sys:String>
+    <!-- Greetings, customize it according to your country and habits. -->
+    <sys:String x:Key="Home_Greeting_Hello">မင်္ဂလာပါ</sys:String>
+    <!-- 00:00 -> 05:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.0">အိပ်မက်ကောင်း မက်ပါစေ။</sys:String>
+    <!-- 05:00 -> 06:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.5">မိုးလင်းခါနီးပြီ၊ အိပ်ရာထဖို့ အဆင်သင့်ဖြစ်ပြီလား။</sys:String>
+    <!-- 06:00 -> 10:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.6">မင်္ဂလာနံနက်ခင်းပါ</sys:String>
+    <!-- 10:00 -> 11:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.10">မင်္ဂလာနံနက်ခင်းပါ</sys:String>
+    <!-- 11:00 -> 12:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.11">မင်္ဂလာနံနက်ခင်းပါ</sys:String>
+    <!-- 12:00 -> 13:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.12">မင်္ဂလာနေ့လည်ခင်းပါ</sys:String>
+    <!-- 13:00 -> 15:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.13">မင်္ဂလာနေ့လည်ခင်းပါ</sys:String>
+    <!-- 15:00 -> 17:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.15">မင်္ဂလာနေ့လည်ခင်းပါ</sys:String>
+    <!-- 17:00 -> 18:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.17">မင်္ဂလာညနေခင်းပါ</sys:String>
+    <!-- 18:00 -> 21:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.18">မင်္ဂလာညနေခင်းပါ</sys:String>
+    <!-- 21:00 -> 22:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.21">အိပ်ချိန်ရောက်ပါပြီ။ အိပ်မက်ကောင်းမက်ပါစေ။</sys:String>
+    <!-- 22:00 -> 00:00 (+1) -->
+    <sys:String x:Key="Home_Greeting_Hour.22">အိပ်စက်ချိန်တန်ပြီ။ အိပ်မက်ကောင်းမက်ပါစေ။</sys:String>
+    <!-- Greetings end -->
+    <sys:String x:Key="Home_Install_Office">Office သွင်းရန်</sys:String>
+    <sys:String x:Key="Home_Install_Office.O365PPRDescription">Outlook, OneDrive for Business, Word, Excel, PowerPoint သာမက တစ်ခြားဆော့ဖ်ဝဲများလည်း ပါဝင်ပါတယ်။</sys:String>
+    <sys:String x:Key="Home_Install_Office.O365HPRDescription">Outlook, Word, Excel, PowerPoint သာမက တစ်ခြားဆော့ဖ်ဝဲများလည်း ပါဝင်ပါတယ်။</sys:String>
+    <sys:String x:Key="Home_Install_Office.PP2019RDescription">Outlook, Word, Excel, PowerPoint သာမက တစ်ခြားဆော့ဖ်ဝဲများလည်း ပါဝင်ပါတယ်။</sys:String>
+    <sys:String x:Key="Home_Install_Office.HS2019Description">Word, Excel, PowerPoint များပါဝင်ပါတယ်။</sys:String>
+    <sys:String x:Key="Home_Fetching_Content">အကြောင်းအရာများစုစည်းနေပါသည် ကျေးဇူးပြူ၍ ခဏစောင့်ပါ ...</sys:String>
+    <sys:String x:Key="Home_Error_While_Fetching_Content">အကြောင်းအရာများစုစည်းမရပါ။ ကျေးဇူးပြု၍ အင်တာနက်ချိတ်ဆက်မှုကိုစစ်ဆေးပြီး ထပ်မံကြိုးစားပါ။</sys:String>
+    <sys:String x:Key="Home_Retry">ပြန်စရန်(_R)</sys:String>
+    <sys:String x:Key="Home_Launcher.Name">အပ်ပလီကေးရှင်းစာရင်း</sys:String>
+    <sys:String x:Key="Home_Launcher_OpenInBrowser">ဘရောက်ဇာတွင်ဖွင့်ရန်(_O)</sys:String>
+    <sys:String x:Key="Home_Launcher_CreateShortcut">ဒက်စ်တော့ပ်ရှော့ကတ် တစ်ခုဖန်တီးရန်(_C)</sys:String>
+
+    <!-- Deploy page -->
+    <sys:String x:Key="Deploy_Learn_More">ပိုမိုလေ့လာရန်</sys:String>
+    <!-- Channels Name, if you do not want to translate them, please keep in English. -->
+    <sys:String x:Key="PerpetualVL2019">Office 2019 Perpetual Enterprise</sys:String>
+    <sys:String x:Key="PerpetualVL2021">Office 2021 Perpetual Enterprise</sys:String>
+    <sys:String x:Key="PerpetualVL2024">Office 2024 Perpetual Enterprise</sys:String>
+    <sys:String x:Key="SemiAnnual">Semi-Annual Enterprise Channel</sys:String>
+    <sys:String x:Key="MonthlyEnterprise">Monthly Enterprise Channel</sys:String>
+    <sys:String x:Key="Current">Current Channel</sys:String>
+    <sys:String x:Key="CurrentPreview">Current Channel (Preview)</sys:String>
+    <sys:String x:Key="BetaChannel">Beta Channel</sys:String>
+
+    <!-- Error messages -->
+    <!-- {0} means product name. -->
+    <sys:String x:Key="Deploy_Error_Coexist">{0} လက်ရှိထည့်သွင်းပြီးသောစနစ်များနှင့် တပြိုင်နက်တည်းမရှိနိုင်ပါ။</sys:String>
+    <!-- {0} means product name. -->
+    <sys:String x:Key="Deploy_Error_ODT_Not_Supported">{0} ကိုထည့်သွင်းလိုလျှင်, တပ်ဆင်မှုမော်ဂျူးကို Office Tool Plus သို့ပြောင်းလဲပါ။</sys:String>
+    <!-- {0} means product name, {1} means channel name. -->
+    <sys:String x:Key="Deploy_Error_Channel">{0} ကို လက်ရှိရွေးချယ်ထားသောချန်နယ် : {1} တွင်ထည့်သွင်းမရပါ။</sys:String>
+    <!-- {0} means channel name, such as Current Channel. -->
+    <sys:String x:Key="Deploy_Error_Unsupported_Channel">ချန်နယ် {0} ကိုအသုံးပြုလိုလျှင် တပ်ဆင်မှုမော်ဂျူးကို Office Tool Plus သို့ပြောင်းလဲပါ။</sys:String>
+    <sys:String x:Key="Deploy_Error_System_Architecture">၆၄ bit Office ကို ၆၄ bit မဟုတ်သော အော်ပရေးတင်းစနစ် တွင်ထည့်သွင်းမရပါ။</sys:String>
+    <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
+    <sys:String x:Key="Deploy_Error_Office_Architecture">သင် {1} of Office ကိုလက်ရှိစနစ်တွင် ထည့်သွင်းထားသော‌ကြောင့် {0} of Office ကိုသွင်းမရပါ။</sys:String>
+    <sys:String x:Key="Deploy_Error_Installation_Arch">သင်ရွေးချယ်ထားသောဖွဲ့စည်းပုံသည် လက်ရှိတပ်ဆင်မှုဖိုင်ဧ။် ဖွဲ့စည်းပုံနှင့် မတူပါ။ ကျေးဇူးပြု၍ ဖွဲ့စည်းပုံကို ထပ်မံ ရွေးချယ်ပါ၊ မဟုတ်လျှင် လက်ရှိတပ်ဆင်မှုဖိုင်များကို deployment အတွက် အသုံးမပြုပါနှင့်။</sys:String>
+    <sys:String x:Key="Deploy_Error_Installation_Channel">သင့်ရွေးချယ်ထားသော အပ်ဒိတ်ချန်နယ်သည် လက်ရှိတပ်ဆင်မှုနှင့်ဆိုင်သောအပ်ဒိတ်ချန်နယ်နှင့် မကိုက်ညီပါ။ ကျေးဇူးပြု၍ အပ်ဒိတ်ချန်နယ်ကိုပြန်လည်ရွေးချယ်ပါ၊ မဟုတ်လျှင် လက်ရှိတပ်ဆင်မှုဖိုင်များကို deployment အတွက် အသုံးမပြုပါနှင့်။</sys:String>
+
+    <sys:String x:Key="Deploy_Deployment">Office ကို deploy ရန်</sys:String>
+    <sys:String x:Key="Deploy_Deployment.Description">Office ကို deploy မလုပ်ခင်, deploy အမျိုးအစား၊ ပစ္စည်းနှင့် ဘာသာစကား များကို မှန်ကန်စွာသတ်မှတ်ထားပါ။</sys:String>
+    <sys:String x:Key="Deploy_Start_Deploy">စတင် deploy ရန် (_D)</sys:String>
+    <sys:String x:Key="Deploy_Reset">စက်တင်အားလုံးပြန်လည်သတ်မှတ်ရန်(_R)</sys:String>
+    <sys:String x:Key="Deploy_View_Code">XML ကုတ်ကြည့်ရန်(_V)</sys:String>
+    <sys:String x:Key="Deploy_Generate_Command">ဖြန့်ချိရန် command များ ထုတ်လုပ်ရန်(_G)</sys:String>
+    <sys:String x:Key="Deploy_Apply_Preferences"> Office အပလီကေးရှင်းများကို မိမိစိတ်ကြိုက်ပြောင်းလဲရန်(_A)</sys:String>
+    <sys:String x:Key="Deploy_Export_Config">ဖွဲ့စည်းမှုကို ပို့ဆောင်ရန်(_E)</sys:String>
+    <sys:String x:Key="Deploy_Import_Config">ဖွဲ့စည်းမှုကို ထည့်သွင်းရန်(_I)</sys:String>
+    <sys:String x:Key="Deploy_Import_Config_Web">Web မှ ဖွဲ့စည်းမှုကို ထည့်သွင်းရန်(_W)</sys:String>
+    <sys:String x:Key="Deploy_Check_Updates">Office အပ်ဒိတ်စစ်ရန်(_U)</sys:String>
+    <sys:String x:Key="Deploy_Repair_Office">Office ပြင်ရန်(_P)</sys:String>
+    <sys:String x:Key="Deploy_Mode">Deployment </sys:String>
+    <sys:String x:Key="Deploy_Mode.Edit">ဖွဲ့စည်းမှုကို ပြင်ရန်</sys:String>
+    <sys:String x:Key="Deploy_Mode.Download">ဒေါင်းလုတ်လုပ်ရန်</sys:String>
+    <sys:String x:Key="Deploy_Mode.Install">ထည့်သွင်းရန်</sys:String>
+    <sys:String x:Key="Deploy_Mode.Create_ISO">ISO ဖိုင်ပြုလုပ်ရန်</sys:String>
+    <sys:String x:Key="Deploy_Architecture">ဖွဲ့စည်းပုံစနစ်</sys:String>
+    <sys:String x:Key="Deploy_Architecture_Current_Installed">လက်ရှိထည့်သွင်းထားသော Office ဧ။် ဖွဲ့စည်းပုံစနစ်: {0}.</sys:String>
+    <sys:String x:Key="Deploy_Architecture.x86">၃၂ bit</sys:String>
+    <sys:String x:Key="Deploy_Architecture.x64">၆၄ bit</sys:String>
+    <sys:String x:Key="Deploy_Architecture.ARM">ARM (32-bit နှင့်ကိုက်ညီသော)</sys:String>
+    <sys:String x:Key="Deploy_Architecture.ARM64">ARM64 (64-bit နှင့်ကိုက်ညီသော)</sys:String>
+    <sys:String x:Key="Deploy_Channel">ချန်နယ်အပ်ဒိတ်လုပ်ရန်</sys:String>
+    <sys:String x:Key="Deploy_Channel_Available_Version">လက်ရှိရယူနိုင်သော Office ဗားရှင်း: {0}</sys:String>
+    <sys:String x:Key="Deploy_Module">ထည့်သွင်း‌မော်ဂျူး</sys:String>
+    <sys:String x:Key="Deploy_Module.Description">ကောင်းမွန်သောကိုက်ညီမှုရရှိရန် Office ဖြန့်ချိမှု ကိရိယာ သို့မဟုတ်  Office Tool Plus ကိုရွေးချယ်ပါ။</sys:String>
+    <sys:String x:Key="Deploy_Module.ODT">Office မုဒ်မှု ကိရိယာ</sys:String>
+    <sys:String x:Key="Deploy_Module.OTP">Office Tool Plus</sys:String>
+    <sys:String x:Key="Deploy_Download_First">‌ဒေါင်းလုတ်လုပ်ပြီးမှ deploy ရန်</sys:String>
+    <sys:String x:Key="Deploy_Download_First.Description">တပ်ဆင်မှုဖိုင်များကို program directory သို့မဟုတ် source path တွင် သိမ်းဆည်းမည်။</sys:String>
+    <sys:String x:Key="Deploy_Create_Shortcut">Desktop ဖြတ်လမ်းများ ဖန်တီးရန်</sys:String>
+    <sys:String x:Key="Deploy_Create_Shortcut.Description">Office ထည့်သွင်းပြီးမှ Office အပ်လီကေးရှင်းများအတွက် Desktop ဖြတ်လမ်းများ ဖန်တီးရန်</sys:String>
+    <!-- Do not edit them or translate them. iSlide only provided in mainland China. -->
+    <sys:String x:Key="Deploy_iSlide">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_iSlide.Description">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_iSlide_Install">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_iSlide_Install.Name">PlaceHolder</sys:String>
+
+    <sys:String x:Key="Deploy_Product">Product များ</sys:String>
+    <sys:String x:Key="Deploy_Product.Description">{0} ခု ထည့်သွင်းပြီးသော product၊ {1} ခု deploy ရန် ပြင်ဆင်ပြီး၊ {2} ခု ဖြုတ်ရန် ပြင်ဆင်ထားသည်။</sys:String>
+    <sys:String x:Key="Deploy_Product_Button">productများထည့်ရန်(_P)</sys:String>
+    <sys:String x:Key="Deploy_Product_Nothing_Here">ဘာမှ မရှိပါ။</sys:String>
+    <sys:String x:Key="Deploy_Product_Installed">ထည့်သွင်းပြီးသော product များ</sys:String>
+    <sys:String x:Key="Deploy_Product_To_Be_Deployed">deploy ရန် product များ</sys:String>
+    <sys:String x:Key="Deploy_Product_To_Be_Uninstalled">ဖြုတ်ရန် product မျာ</sys:String>
+    <sys:String x:Key="Deploy_Uninstall_Product">ဖြုတ်ရန်</sys:String>
+    <sys:String x:Key="Deploy_Cancel_Uninstall_Product">ဖြုတ်မှု ဖျက်သိမ်းရန်</sys:String>
+    <sys:String x:Key="Deploy_Cancel_Deploy_Product">Deployment ဖျက်သိမ်းရန်</sys:String>
+    <sys:String x:Key="Deploy_Applications">အပ်လီကေးရှင်းများ</sys:String>
+    <sys:String x:Key="Deploy_Addons">အပိုပရိုဂရမ်များ</sys:String>
+    <sys:String x:Key="Deploy_Addons.Tip">၎င်းအပိုပရိုဂရမ်များအကြောင်း မသိပါက မဖြုတ်ပါနှင့်။</sys:String>
+    <sys:String x:Key="Deploy_Language">ဘာသာစကားမျာ</sys:String>
+    <sys:String x:Key="Deploy_Language.Description">{0} ခု ထည့်သွင်းပြီးသော ဘာသာစကား၊ {1} ခု deploy ရန် ပြင်ဆင်ပြီး၊ {2} ခု ဖြုတ်ရန် ပြင်ဆင်ထားသည်။</sys:String>
+    <sys:String x:Key="Deploy_Language_Button">ဘာသာစကားများ ထည့်ရန်(_L)</sys:String>
+    <sys:String x:Key="Deploy_Language_Nothing_Here">ဘာမှ မရှိပါ။</sys:String>
+    <sys:String x:Key="Deploy_Language_Installed">ထည့်သွင်းပြီးသော ဘာသာစကားများ</sys:String>
+    <sys:String x:Key="Deploy_Language_To_Be_Deployed">deploy ရန် ဘာသာစကားများ</sys:String>
+    <sys:String x:Key="Deploy_Language_To_Be_Uninstalled">ဖြုတ်ရန် ဘာသာစကားများ</sys:String>
+    <sys:String x:Key="Deploy_Uninstall_Language">ဖြုတ်ရန်</sys:String>
+    <sys:String x:Key="Deploy_Cancel_Uninstall_Language">ဖြုတ်မှု ဖျက်သိမ်းရန်</sys:String>
+    <sys:String x:Key="Deploy_Edit_Language_Settings">ဘာသာစကား ဆက်တင်များ</sys:String>
+    <sys:String x:Key="Deploy_Cancel_Deploy_Language">Deployment ဖျက်သိမ်းရန်</sys:String>
+
+    <sys:String x:Key="Deploy_Products_List">product စာရင်း</sys:String>
+    <sys:String x:Key="Deploy_Products_List_Type_To_Search">product စာရင်းကို ရှာဖွေရန် စာရိုက်ပါ</sys:String>
+    <sys:String x:Key="Deploy_Products_List_ID">Product ID:</sys:String>
+    <sys:String x:Key="Deploy_Languages_List">ဘာသာစကားစာရင်း</sys:String>
+    <sys:String x:Key="Deploy_Languages_List_Type_To_Search">ဘာသာစကားစာရင်းကို ရှာဖွေရန် စာရိုက်ပါ</sys:String>
+    <sys:String x:Key="Deploy_Languages_List_Proofing_Tool_Only">စစ်ဆေးရေးကိရိယာများသာ deploy ပါ။</sys:String>
+    <sys:String x:Key="Deploy_Languages_List_ID">ဘာသာစကား ID:</sys:String>
+    <sys:String x:Key="Deploy_Languages_List_Type">ဘာသာစကားအမျိုးအစား:</sys:String>
+    <sys:String x:Key="Deploy_Language_Type.Full">အပြည့်အစုံ</sys:String>
+    <sys:String x:Key="Deploy_Language_Type.PartialAndProofing">အပိုင်းအစ (စစ်ဆေးရေးကိရိယာများ ပါဝင်)</sys:String>
+    <sys:String x:Key="Deploy_Language_Type.Partial">အပိုင်းအစ (စစ်ဆေးရေးကိရိယာများ မပါဝင်)</sys:String>
+    <sys:String x:Key="Deploy_Language_Type.Proofing">စစ်ဆေးရေးကိရိယာများ</sys:String>
+    <sys:String x:Key="Deploy_Language_Settings_Exclude">အောက်ဖော်ပြပါ product များအတွက် ထည့်သွင်းရန်</sys:String>
+
+    <sys:String x:Key="Deploy_Installation_Files">တပ်ဆင်ရန်ဖိုင်များ</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files.Description">Office တပ်ဆင်ရန်ဖိုင်များကို ရွေးချယ်၊ စစ်ဆေး သို့မဟုတ် ဖျက်ပါ။</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Select">ရွေးချယ်ရန်</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Select.Description">တပ်ဆင်ရန်ဖိုင်များကို ရွေးချယ်ရာတွင် CAB ဖိုင်များကို ရွေးချယ်ပါ။</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Verify">စစ်ဆေးရန်</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Verify.Description">တပ်ဆင်ရန်ဖိုင်များတွင် အမှားများရှိမရှိ စစ်ဆေးပါ။</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_DeleteAll">အားလုံး ဖျက်ရန်</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Reset">ပြန်လည်သတ်မှတ်ရန်</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Reset.Description">လက်ရှိတပ်ဆင်မှုဖိုင်များကို Office deploy ရန် အသုံးမပြုပါနှင့်။</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_UseAsSource">အရင်းအမြစ်အဖြစ် အသုံးပြုရန်(_U)</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_UseAsSource.Description">ဖွဲ့စည်းပုံနှင့် အပ်ဒိတ်ချန်နယ်သည် အလိုအလျောက် ဤတပ်ဆင်မှုနှင့် ကိုက်ညီပါလိမ့်မည်။</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Open_Location">ဖိုင်တည်နေရာ ဖွင့်ရန်(_O)</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Delete">ဖျက်ရန်</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none">အခြေခံပက်ကေ့ချ် (လိုအပ်သည်)</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.arm64x">ARM64 ပက်ကေ့ချ်</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.chpe">ARM ပက်ကေ့ချ်</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Settings">အဆင့်မြင့်ချိန်ညှိချက်များသို့သွားရန်</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Settings.Description">ပိုမိုရွေးချယ်စရာများ သတ်မှတ်ရန် အဆင့်မြင့်ချိန်ညှိချက်များသို့ သွားပါ။</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Settings_Button">အဆင့်မြင့်ချိန်ညှိချက်များ(_A)</sys:String>
+
+    <!-- Deploy advanced page -->
+    <sys:String x:Key="Deploy_Advanced">အဆင့်မြင့် ဆက်တင်များ</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Go_Back">နောက်သို့ ပြန်သွားရန်</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Go_Back.Description">အခြေခံ ဆက်တင်များသို့ ပြန်သွားပါ။</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_General_Settings">အထွေထွေ ဆက်တင်များ</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Company_Name">Office စာရွက်များတွင် ကုမ္ပဏီ ပိုင်ဆိုင်မှုကို သတ်မှတ်ရန် သင့်အဖွဲ့အစည်းအမည်ကို ထည့်သွင်းပါ။</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Description">စာရွက်စာတမ်းအတွက် ဖော်ပြချက်တစ်ခု ထည့်သွင်းပါ။</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Install_Settings">တပ်ဆင်မှု ဆက်တင်များ</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Fallback_Language">အစားထိုးဘာသာစကား</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Fallback_Language.Description">စနစ်ဘာသာစကားနှင့် ကိုက်ညီရန်ထားသောအခါ Office မှ ပံ့ပိုးမရသည့် ဘာသာစကား သို့မဟုတ် local source တွင် မတွေ့ရှိနိုင်သည့်အခါ တပ်ဆင်ရန် အစားထိုးဘာသာစကားကို သတ်မှတ်နိုင်သည်။</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Version">Office ဗားရှင်း</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Version.Description">ဗားရှင်းမသတ်မှတ်ပါက နောက်ဆုံး ဗားရှင်းဖြင့် အလိုအလျောက် သတ်မှတ်မည်။</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Download_Path">ဒေါင်းလုတ် path</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Download_Path.Description">တပ်ဆင်ဖိုင်များကို ဒေါင်းလုပ်ရန် အရင်းအမြစ်နေရာကို သတ်မှတ်သည်၊ ဒေါင်းလုတ်path အသုံးပြုမည့်အခါ Office ဗားရှင်းကို သတ်မှတ်ရမည်။</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Source_Path">အရင်းအမြစ် path</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Source_Path.Description">အရင်းအမြစ် path မရှိပါက Office CDN ကို အရင်းအမြစ်အဖြစ် အလိုအလျောက် အသုံးပြုသည်။ ဒေါင်းလုတ် mode တွင် ဖိုင်များသိမ်းဆည်းရန် နေရာကို သတ်မှတ်သည်။</sys:String>
+    <sys:String x:Key="Deploy_Advanced_No_Display">တိတ်ဆိတ်စွာ တပ်ဆင်ခြင်း</sys:String>
+    <sys:String x:Key="Deploy_Advanced_No_Display.Description">တပ်ဆင်စဉ် တိုးတက်မှုဘား၊ အမှားများ သို့မဟုတ် အခြား UI များ မပြသပါ။</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback">CDN သို့ အစားထိုး ခွင့်ပြုရန်</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback.Description">Allow Office installer to fallback to Office CDN to download the missing languages.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Force_Close_Apps">Office အပလီကေးရှင်းများအားလုံးကို အတင်း ပိတ်မည်</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Force_Close_Apps.Description">မသိမ်းဆည်းထားသည့် ဒေတာများ ပျောက်ဆုံးနိုင်သည်။</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar">Taskbar တွင် Pin ချမည် </sys:String>
+    <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar.Description">Windows 7, 8 နှင့် 8.1 တွင် Office အပလီကေးရှင်း icon များကို taskbar တွင် Pin ချရန်။</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Update_Settings">အပ်ဒိတ် ဆက်တင်များ</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM">MECM ဖြင့် အပ်ဒိတ်များကို စီမံရန်</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM.Description">Microsoft Endpoint Configuration Manager ဖြင့် အပ်ဒိတ်များကို စီမံသောအခါ အပ်ဒိတ်များကို admin က စီမံသည်။</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Enable_Update">Office အလိုအလျောက် အပ်ဒိတ် ဖွင့်ရန်</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Update_Path">source အပ်ဒိတ်ရန်</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Update_Path.Description">path မသတ်မှတ်ပါက အစဉ်အလာအရ Office CDN ကို အရင်းအမြစ်အဖြစ် အသုံးပြုသည်။</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Upgrade_Settings">အဆင့်မြှင့်ရန် ရွေးချယ်စရာများ</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Migrate_Arch">ဖွဲ့စည်းပုံ ပြောင်းရွှေ့ရန်</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Migrate_Arch.Description">လက်ရှိ Office တပ်ဆင်မှုကို လက်ရှိ သတ်မှတ်ထားသော ဖွဲ့စည်းပုံသို့ ပြောင်းရန်။ ဥပမာ 32-bit မှ 64-bit သို့။</sys:String>
+    <sys:String x:Key="Deploy_Advanced_MSI_Notice">အောက်ဖော်ပြပါ ဆက်တင်များသည် Office Deployment Tool ကို တပ်ဆင်မှု မော်ဂျူးအဖြစ် အသုံးပြုသောအခါသာ သက်ရောက်ပါမည်။</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Remove_MSI">လက်ရှိ MSI ဗားရှင်း Office များ ဖယ်ရှားရန်</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Match_Previous_MSI">ယခင် MSI ဗားရှင်းနှင့် တူညီသော ဘာသာစကား တပ်ဆင်ရန်</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Ignore_Product">ဤ product အား မစဉ်းစားရန်</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Activate_Settings">လုပ်ဆောင်မှု ဆက်တင်များ</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Accept_EULA">EULA ကို အလိုအလျောက် လက်ခံရန်</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Accept_EULA.Description">ဖွင့်ထားပါက "Microsoft Software License Terms" ကိုမမြင်ရပါ။</sys:String>
+    <sys:String x:Key="Deploy_Advanced_MAK">MAK ဆက်တင်</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Auto_Activate">MAK သတ်မှတ်ပြီးနောက် product ကို အလိုအလျောက် အတည်ပြုရန် ကြိုးပမ်းမည်။</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Product_Activation">product လုပ်ဆောင်မှု</sys:String>
+    <sys:String x:Key="Deploy_Advanced_UserBased">အသုံးပြုသူအခြေပြု </sys:String>
+    <sys:String x:Key="Deploy_Advanced_DeviceBased">စက်ပစ္စည်းအခြေပြု</sys:String>
+    <sys:String x:Key="Deploy_Advanced_SCL">Shared ကွန်ပျူတာ </sys:String>
+    <sys:String x:Key="Deploy_Advanced_SCL_Cache_Override">လိုင်စင် တိုကင် တည်နေရာကို အစားထိုးရန်</sys:String>
+    <sys:String x:Key="Deploy_Advanced_SCL_Cache_Override.ToolTip">လိုင်စင် တိုကင်အတွက် folder တည်နေရာကို သတ်မှတ်ပါ။</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Preferences">အပ်လီကေးရှင်းဧ။် မိမိသတ်မှတ်ချက်များ</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Apply_Preferences.Description">Office အပလီကေးရှင်းများတွင် မိမိသတ်မှတ်ချက်များ ချက်ချင်း အသုံးပြုပါ။</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Reset_Preferences">မိမိသတ်မှတ်ချက်များကို ပြန်လည်သတ်မှတ်ရန်</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Reset_Preferences_Button">ပြန်လည်သတ်မှတ်ရန်</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Filter">စစ်ထုတ်ရန်</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Filter.HelpText">အမျိုးအစားအလိုက် စစ်ထုတ်ရန် နှိပ်ပါ။</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Filtered">စစ်ထုတ်ပြီးသော အမျိုးအစားမျာ</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Filtered.HelpText">ဤအမျိုးအစားကို မစစ်ထုတ်ရန် နှိပ်ပါ။</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Type_To_Search.Name">အပလီကေးရှင်း သတ်မှတ်ချက်များ ရှာဖွေရန်</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Type_To_Search.HelpText">အပလီကေးရှင်း နသတ်မှတ်ချက်များ ရှာဖွေရန် ရိုက်ထည့်ပါ။</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_DataGrid.HelpText">န Enter သို့မဟုတ် ကလစ် နှစ်ချက်နှိုပ်ချင်းဖြင့် သတ်မှတ်ချက်များ ပြင်ဆင်နိုင်သည်။</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Application">အပလီကေးရှင်</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Settings">စက်တင်</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Status">အခြေအနေ</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Enable">ဖွင့်ရန်</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Set_Preferences_Button">အသုံးပြုရန်</sys:String>
+
+    <!-- Activate page -->
+    <sys:String x:Key="Activate_NonAdmin_Privileges">သင်သည် admin အဆင့်မဟုတ်သောအခွင့်အရေးဖြင့် Office Tool Plus ကို အသုံးပြုနေသည်။ အချို့သောလုပ်ဆောင်ချက်များကို ယခု အသုံးပြု၍ မရနိုင်ပါ။</sys:String>
+
+    <sys:String x:Key="Activate_Licenses_Management">လိုင်စင် စီမံခန့်ခွဲမှု</sys:String>
+    <sys:String x:Key="Activate_Licenses_Management.Description">Office လိုင်စင်များ ထည့်သွင်းခြင်း၊ ဖျက်ခြင်း သို့မဟုတ် အသက်သွင်းခြင်း။</sys:String>
+    <sys:String x:Key="Activate_Button">အသက်သွင်းရန်(_A)</sys:String>
+    <sys:String x:Key="Activate_Display_Internet_Act_Events">အင်တာနက်အသက်သွင်းမှု မအောင်မြင်သောဖြစ်ရပ်များ ပြသရန်</sys:String>
+    <sys:String x:Key="Activate_Display_KMS_Events">KMS အသက်သွင်းမှုများ ပြသရန်</sys:String>
+    <sys:String x:Key="Activate_Clear_Activation">အသက်သွင်းမှု ဖျက်ရန်</sys:String>
+    <sys:String x:Key="Activate_Install_Licenses">လိုင်စင်များ ထည့်သွင်းရန်</sys:String>
+    <sys:String x:Key="Activate_Install_Licenses.Description">ထည့်သွင်းပြီးသော Office မှ လိုင်စင်များ ရယူပြီး ထည့်သွင်းပါ။</sys:String>
+    <sys:String x:Key="Activate_Install_Licenses_Button">ထည့်သွင်းရန်</sys:String>
+    <sys:String x:Key="Activate_Install_Other_Licenses">အခြားလိုင်စင်များ ထည့်သွင်းရန်</sys:String>
+    <sys:String x:Key="Activate_Install_Other_Licenses.Description">Local disk မှ အခြားလိုင်စင်များကို ထည့်သွင်းပါ။</sys:String>
+    <sys:String x:Key="Activate_Install_Other_Licenses_Button">ထည့်သွင်းရန်</sys:String>
+    <sys:String x:Key="Activate_Uninstall_All_Licenses">လိုင်စင်အားလုံး ဖယ်ရှားရန်</sys:String>
+    <sys:String x:Key="Activate_Uninstall_All_Licenses.Description">ထည့်သွင်းထားသော လိုင်စင်အားလုံးကို ဖယ်ရှားပါ။ ၎င်းလုပ်ဆောင်မှုပြီးလျှင် လိုင်စင်ထည့်သွင်းရန် လိုအပ်ပါမည်။</sys:String>
+    <sys:String x:Key="Activate_Uninstall_All_Licenses_Button">ဖယ်ရှားရန်</sys:String>
+
+    <sys:String x:Key="Activate_Keys_Management">Key စီမံခန့်ခွဲမှု</sys:String>
+    <sys:String x:Key="Activate_Keys_Management.Description">Key များကို ထည့်သွင်းခြင်း၊ ဖယ်ရှားခြင်း သို့မဟုတ် Offline အသက်သွင်းခြင်း။</sys:String>
+    <sys:String x:Key="Activate_Product_Key">Product Key</sys:String>
+    <sys:String x:Key="Activate_Product_Key.Description">Office product key ကို ထည့်သွင်းပါ။ ပုံစံမှာ - XXXXX-XXXXX-XXXXX-XXXXX-XXXXX ဖြစ်ပါသည်။</sys:String>
+    <sys:String x:Key="Activate_Install_Product_Key">Key ထည့်သွင်းရန်(_I) </sys:String>
+    <sys:String x:Key="Activate_Uninstall_Unactivated_Key">အသက်မသွင်းထားသော key များအားလုံး ဖယ်ရှားရန်(_U)</sys:String>
+    <sys:String x:Key="Activate_Uninstall_All_Product_Keys">Key များအားလုံး ဖယ်ရှားရန်(_A)</sys:String>
+    <sys:String x:Key="Activate_Install_CID">အတည်ပြု ID ထည့်သွင်းရန်</sys:String>
+    <sys:String x:Key="Activate_Install_CID.Description">Office ကို Offline အသက်သွင်းရန် အတည်ပြု ID ကို ထည့်သွင်းပါ။</sys:String>
+    <sys:String x:Key="Activate_Input_CID">အတည်ပြု ID ကို ထည့်ပါ</sys:String>
+
+    <sys:String x:Key="Activate_KMS_Management">KMS စီမံခန့်ခွဲမှု</sys:String>
+    <sys:String x:Key="Activate_KMS_Management.Description">KMS host သို့မဟုတ် port ကို သတ်မှတ်ခြင်း သို့မဟုတ် reset ပြုလုပ်ခြင်း။</sys:String>
+    <sys:String x:Key="Activate_KMS_Apply">Host သတ်မှတ်ပါ(_S)</sys:String>
+    <sys:String x:Key="Activate_KMS_Host">KMS host</sys:String>
+    <sys:String x:Key="Activate_KMS_Host.Description">KMS Host အမည်။ ဥပမာ - kms.example.com, kms.example.com:1688 သို့မဟုတ် IP လိပ်စာ။</sys:String>
+    <sys:String x:Key="Activate_KMS_Host_Cache.Enable">Host Cache ကို ဖွင့်ရန်ု</sys:String>
+    <sys:String x:Key="Activate_KMS_Host_Cache.Disable">Host Cache ကို ပိတ်ရန်</sys:String>
+    <sys:String x:Key="Activate_KMS_Reset">KMS ကို Reset ပြုလုပ်ရန်</sys:String>
+    <sys:String x:Key="Activate_KMS_Reset.Description">KMS Host အမည်ကို ဖယ်ရှားပြီး KMS port ကို မူရင်းသတ်မှတ်ချက်သို့ ပြန်သတ်မှတ်ပါ။</sys:String>
+
+    <!-- Licenses list -->
+    <sys:String x:Key="Activate_Licenses">Office လိုင်စင်များ</sys:String>
+    <sys:String x:Key="Activate_License">လိုင်စင်စာရင်း</sys:String>
+    <sys:String x:Key="Activate_License.Description">ထည့်သွင်းထားသော လိုင်စင်များကို စီမံရန်။</sys:String>
+    <sys:String x:Key="Activate_License_Refresh">ပြန်လည်သတ်မှတ်ရန်(_R)</sys:String>
+    <sys:String x:Key="Activate_License_Expand">အားလုံးဖွင့်ရန်(_E)</sys:String>
+    <sys:String x:Key="Activate_License_Collapse">အားလုံးသိမ်းရန်(_C)</sys:String>
+    <sys:String x:Key="Activate_License_Clear">စာရင်းရှင်းရန်(_L)</sys:String>
+    <sys:String x:Key="Activate_License_Nothing_Here">ဤနေရာတွင် မည်သည့်အရာမှ မရှိပါ။</sys:String>
+    <sys:String x:Key="Activate_License_Status.Unactivated">မဖွင့်ရသေးပါ။</sys:String>
+    <sys:String x:Key="Activate_License_Status.Activated">ဖွင့်ပြီးသော</sys:String>
+    <!-- vNext License -->
+    <sys:String x:Key="Activate_License_vNext_Type">လိုင်စင်အမျိုးအစား:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Type.User">အသုံးပြုသူ</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Type.Device">စက်ပစ္စည်း</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Type.Subscription">စာရင်းသွင်းခြင်း</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Type.Perpetual">အမြဲတမ်း</sys:String>
+    <sys:String x:Key="Activate_License_vNext.ExpireDate">လိုင်စင်သက်တမ်းကုန်ဆုံးသည့်နေ့:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.MaxDevice">ခွင့်ပြုထားသော စက်ပစ္စည်းအများဆုံးအရေအတွက်:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Status">အခြေအနေ:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Status.Provisioned">စီမံပြီး</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Status.Deprovisioned">ဖယ်ရှားပြီး</sys:String>
+    <sys:String x:Key="Activate_License_vNext_ReasonCode">အကြောင်းပြချက်ကုဒ်:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_ReasonCode.DeviceDeprovisionedByUser">အသုံးပြုသူမှ ဖယ်ရှားထားသောစက်</sys:String>
+    <sys:String x:Key="Activate_License_vNext_ReasonCode.SubscriptionCancelled">စာရင်းသွင်းခြင်း ဖျက်သိမ်းပြီး</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Beneficiary.User">ဤလိုင်စင်သည် အောက်ဖော်ပြပါ အသုံးပြုသူအား ပေးအပ်ထားပါသည်:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Beneficiary.Device">ဤလိုင်စင်သည် အောက်ဖော်ပြပါ စက်ပစ္စည်းအားပေးအပ်ထားပါသည်:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.TenantID">ငှားသူ ID:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.DeviceID">စက် ID:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.UserID">အသုံးပြုသူ ID:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.ValidFrom">ခွင့်ပြုချက်စတင်သက်တမ်း:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.ValidTo">ခွင့်ပြုချက်သက်တမ်းကုန်ဆုံး:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.RenewalTime">နောက်တစ်ကြိမ် အသစ်ပြန်လည်သက်တမ်းတိုးချိန်:</sys:String>
+    <!-- Legacy License -->
+    <sys:String x:Key="Activate_License_Lic.Description">ဖော်ပြချက်:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Key">key ၏ နောက်ဆုံး ၅ လုံး:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Period">ကျန်ရှိသည့်ကာလ:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Error_Code">အမှားကုဒ်:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Error_Description">အမှားဖော်ပြချက်:</sys:String>
+    <sys:String x:Key="Activate_License_VL.Type">Activate အမျိုးအစား:</sys:String>
+    <!-- AO equal to Activation Object -->
+    <sys:String x:Key="Activate_License_AD.ObjectName">Activation Object အမည်:</sys:String>
+    <sys:String x:Key="Activate_License_AD.ObjectDN">AO DN: </sys:String>
+    <sys:String x:Key="Activate_License_AD.ExtendedPid">AO extended PID: </sys:String>
+    <sys:String x:Key="Activate_License_AD.AID">AO activation ID: </sys:String>
+    <sys:String x:Key="Activate_License_KMS.Host">KMS host:</sys:String>
+    <sys:String x:Key="Activate_License_KMS_Host_Caching">Host caching:</sys:String>
+    <sys:String x:Key="Activate_License_KMS_Host_Caching.Enabled">ဖွင့်ထားသည်</sys:String>
+    <sys:String x:Key="Activate_License_KMS_Host_Caching.Disabled">ပိတ်ထားသည်</sys:String>
+    <sys:String x:Key="Activate_License_KMS.Act_Interval">Activate ကြားကာလ:</sys:String>
+    <sys:String x:Key="Activate_License_KMS.Renew_Interval">သက်တမ်းတိုးကြားကာလ:</sys:String>
+
+    <sys:String x:Key="Activate_License_Period.Infinite">မသတ်မှတ်ထားပါ</sys:String>
+    <sys:String x:Key="Activate_License_Period.Day">{0} ရက်</sys:String>
+    <sys:String x:Key="Activate_License_Period.Hour">{0} နာရီ</sys:String>
+    <sys:String x:Key="Activate_License_Period.Minute">{0} မိနစ်</sys:String>
+
+    <sys:String x:Key="Activate_License_Button.Copy_LicenseID">လိုင်စင် ID ကို ကော်ပီယူရန်</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_TenantID">Tenant ID ကို ကော်ပီယူရန်</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_UserID">အသုံးပြုသူ ID ကို ကော်ပီယူရန်</sys:String>
+    <sys:String x:Key="Activate_License_Button.Delete_License">လိုင်စင် ဖျက်ရန်</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_SKU">SKU ID ကို ကော်ပီယူရန်</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_IID">Installation ID ကို ကော်ပီယူရန်</sys:String>
+    <sys:String x:Key="Activate_License_Button.Activate">Activate ပြုလုပ်ရန်</sys:String>
+    <sys:String x:Key="Activate_License_Button.Uninstall_Key">key ဖျက်ရန်</sys:String>
+
+    <sys:String x:Key="Activate_Licenses_List">လိုင်စင်စာရင်း</sys:String>
+    <sys:String x:Key="Activate_Licenses_List_Type_To_Search">လိုင်စင်စာရင်းကို စစ်ထုတ်ရန် ရိုက်ထည့်ပါ</sys:String>
+    <sys:String x:Key="Activate_Licenses_List_ID">Product ID:</sys:String>
+
+    <!-- Toolbox page -->
+    <sys:String x:Key="Toolbox_NonAdmin_Privileges">သင်သည် admin အဆင့်မဟုတ်သောအခွင့်အရေးဖြင့် Office Tool Plus ကို အသုံးပြုနေသည်။ အချို့သောလုပ်ဆောင်ချက်များကို ယခု အသုံးပြု၍ မရနိုင်ပါ။</sys:String>
+    <sys:String x:Key="Toolbox_Repair">ပြုပြင်ရန်</sys:String>
+    <sys:String x:Key="Toolbox_Learn_More">အသေးစိတ် သိရှိရန်</sys:String>
+
+    <sys:String x:Key="Toolbox_General_Tools">အထွေထွေ ကိရိယာများ</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version">Office ဗားရှင်းစစ်ဆေးရန်</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version.Description">Microsoft ထံမှ Office အပ်ဒိတ် ချန်နယ်အချက်အလက်များကို စစ်ဆေးပါ။</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_GoBack">Toolbox စာမျက်နှာသို့ ပြန်သွားရန်</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_Button">စစ်ဆေးရန်</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List">Office အပ်ဒိတ် ချန်နယ်အချက်အလက်</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_Channel">ချန်နယ်</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_Branch">ဌာနခွဲ</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_Version">ဗားရှင်း</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_CreatedTime">ဖန်တီးသည့်အချိန်</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_Copy">ဗားရှင်းနံပါတ် ကော်ပီယူရန်</sys:String>
+    <sys:String x:Key="Toolbox_Query_ErrorCode">Error code ဖော်ပြချက် စစ်ဆေးရန်</sys:String>
+    <sys:String x:Key="Toolbox_Query_ErrorCode.Description">Error code သည် '0x' ဖြင့် စတင်လေ့ရှိသည်။ ဥပမာ - 0x2 သို့မဟုတ် 0x80070002။</sys:String>
+    <sys:String x:Key="Toolbox_Query_ErrorCode_Button">စစ်ဆေးရန်</sys:String>
+    <sys:String x:Key="Toolbox_Input_ErrorCode">Error code ထည့်ပါ</sys:String>
+    <sys:String x:Key="Toolbox_Check_KMS">KMS host တက်မတက် စစ်ဆေးရန်</sys:String>
+    <sys:String x:Key="Toolbox_Check_KMS.Description">KMS host ကို ချိတ်ဆက်နိုင်ခြင်းရှိ/မရှိ TCPing ဖြင့် စစ်ဆေးပါ။</sys:String>
+    <sys:String x:Key="Toolbox_Check_KMS_Button">စစ်ဆေးရန်</sys:String>
+
+    <sys:String x:Key="Toolbox_Office_Tools">Office ကိရိယာများ</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Office">Office ဖျက်ခြင်း</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Office.Description">Office သက်ဆိုင်ရာ ကိရိယာများနှင့် မှတ်ပုံတင်များကို အတင်းအကျပ် ဖျက်ရန်။</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Office.Description_Bold">မှတ်ချက် - Office ကို မှန်ကန်စွာ ဖျက်၍မရပါကသာ ဖျက်ပါ။</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Office_Button">ဖျက်မည်</sys:String>
+    <sys:String x:Key="Toolbox_Remove_APPX">Microsoft Store မှ ထုတ်လုပ်ထားသော Office ကိုလည်း ဖျက်မည်</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Clear_Activation">activation ကိုလည်း ဖျက်မည်</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Result">ရလဒ်ဖျက်ရန်</sys:String>
+    <!-- Office Installer Events Viewer -->
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr">Office installer events viewer</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr.Description">View or collect Office installation event logs.</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Create">Create a copy</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Create.Description">Creates a ZIP file that contains the Office Deployment Tool, Office Click-to-Run, Windows Installer, and Application log files.</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Create_Button">_Create</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer">Installer log viewer</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer.Description">View installer events.</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_Refresh">_Refresh</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_ViewMSI">View Windows Installer events</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_ViewApplication">View application events</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_Import">Import logs from ZIP file</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_Source">Log source</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_Source.ODT">Office Deployment Tool</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_Source.C2R">Click-to-Run</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_FileName">Log file</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_FileName.Description">Select a log file to view the events.</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_EventsLabel">Events</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_Event.Time">Time</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_Event.Category">Category</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_Event.ID">Event ID</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_Event.Level">Level</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_Event.Message">Message</sys:String>
+    <sys:String x:Key="Toolbox_Change_UpdateChannel">Office အပ်ဒိတ် ချန်နယ် ပြောင်းရန်</sys:String>
+    <sys:String x:Key="Toolbox_Change_UpdateChannel.Description">အပ်ဒိတ် ချန်နယ် ပြောင်းခြင်းအားဖြင့် Office ကို ပြန်ထည့်သွင်းရန် မလိုဘဲ အဆင့်မြှင့် သို့မဟုတ် အဆင့်လျော့ ပြုလုပ်နိုင်သည်။။</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner">Office product ပိုင်ရှင် ပြောင်းရန်</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner.Description">အမည်သည် Office အက်ပလီကေးရှင်း အကောင့်စာမျက်နှာတွင် ပြသထားသည်။</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Set">အမည် သတ်မှတ်မည်</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Reset">ပိုင်ရှင်အမည်ကို ပုံသေအမည်သို့ ပြန်သတ်မှတ်မည်</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Name">အမည်</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Name.Description">Product ပိုင်ရှင် အမည်သတ်မှတ်ရန်။ ဥပမာ - James သို့မဟုတ် ProPlus2019Volume:James။</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Name.LearnMore">ပိုင်ရှင်အမည် ပုံစံအကြောင်း ပိုမိုသိရှိရန်</sys:String>
+    <sys:String x:Key="Toolbox_Repair_DocumentIcon">Office စာရွက်စာတမ်း အိုင်ကွန် ပြုပြင်ခြင်း</sys:String>
+    <sys:String x:Key="Toolbox_Repair_DocumentIcon.Description">Office စာရွက်စာတမ်း ဆက်စပ်မှုကို ပြန်လည် သတ်မှတ်မည်။</sys:String>
+    <sys:String x:Key="Toolbox_Backup_Restore_Settings">Office ဆက်တင်များ အား အရန်သိမ်းခြင်း သို့မဟုတ် ပြန်လည်ထည့်သွင်းခြင်း</sys:String>
+    <sys:String x:Key="Toolbox_Backup_Restore_Settings.Description">Office အက်ပလီကေးရှင်း ဆက်တင်များကို အရန်သိမ်းခြင်း သို့မဟုတ် ပြန်လည်ထည့်သွင်းခြင်း၊ ဖိုင်နှင့် အကြောင်းအရာများ မပါဝင်ပါ။&#x000A;မှတ်ချက် - မိတ္တူကို မမျှဝေရန်၊ ကိုယ်ရေးကိုယ်တာအချက်အလက်များ ပေါက်ကြားနိုင်သည်။</sys:String>
+    <sys:String x:Key="Toolbox_Backup_Exclude_PersonalInf">အရန်သိမ်းစဉ် ကိုယ်ရေးကိုယ်တာအချက်အလက်များ မပါဝင်အောင် ထားပါ။</sys:String>
+    <sys:String x:Key="Toolbox_Backup">အရန်သိမ်းရန်</sys:String>
+    <sys:String x:Key="Toolbox_Restore">ပြန်လည်ထည့်သွင်းမည်</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings">Office ဆက်တင်များကို ပုံမှန်တန်ဖိုးသို့ ပြန်လည်သတ်မှတ်မည်</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings.Description">လိုအပ်သလို Office ကို ပုံမှန်တန်ဖိုးသို့ ပြန်လည်သတ်မှတ်မည်။ မစတင်ခင် Office အက်ပလီကေးရှင်းများအား ပိတ်ထားပါ။</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_Button">ပြန်လည်သတ်မှတ်မည်</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserSettings">လက်ရှိ အသုံးပြုသူ ဆက်တင်များ ဖျက်မည်</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserSettings.Description">Office အက်ပလီကေးရှင်း ဆက်တင်များ၊ မကြာသေးမီက ဖွင့်ထားသော ဖိုင်များနှင့် မကြာသေးမီ ထားရှိရာနေရာတို့ ပါဝင်သည်။</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserAppData">အက်ပလီကေးရှင်း ဒေတာ ဖျက်မည်</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserAppData.Description">အက်ပလီကေးရှင်းများ၏ အချက်အလက်သိုလှောင်မှုများပါဝင်သည်။</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_NormalTemplate">ormal template ဖျက်မည်</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_NormalTemplate.Description">Normal.dotm</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_GlobalSettings">အက်ပလီကေးရှင်း ဦးစားပေးချက်များ ဖျက်မည်</sys:String>
+
+    <sys:String x:Key="Toolbox_Windows_Tools">Windows ကိရိယာများ</sys:String>
+    <sys:String x:Key="Toolbox_Reset_SPPSvc">Software Protection ဝန်ဆောင်မှု ပြန်လည်သတ်မှတ်ခြင်း</sys:String>
+    <sys:String x:Key="Toolbox_Reset_SPPSvc.Description">Software Protection ဝန်ဆောင်မှု၏ ဖွဲ့စည်းမှု၊ KMS ဖွဲ့စည်းမှုအပါအဝင် ပြန်လည်သတ်မှတ်ပါမည်။</sys:String>
+    <sys:String x:Key="Toolbox_Reset_SPPSvc.LearnMore">Software Protection ဝန်ဆောင်မှု ပြန်လည်သတ်မှတ်ခြင်းအကြောင်း ပိုမိုသိရှိရန်။</sys:String>
+    <sys:String x:Key="Toolbox_Rebuild_ActivationToken">Windows activation တိုကင် ပြန်လည်ဖန်တီးခြင်း</sys:String>
+    <sys:String x:Key="Toolbox_Rebuild_ActivationToken.Description">Windows activation တိုကင်ကို ပြန်လည်ဖန်တီးမည်။ သင့် လက်ရှိ Windows activation အခြေအနေ ပျောက်ဆုံးနိုင်သည်။</sys:String>
+    <sys:String x:Key="Toolbox_Rebuild_ActivationToken.LearnMore">Windows activation တိုကင် ပြန်လည်ဖန်တီးခြင်းအကြောင်း ပိုမိုသိရှိရန်။</sys:String>
+    <sys:String x:Key="Toolbox_Repair_Variables">စနစ် ပြောင်းလဲသတ်မှတ်ချက်များ ပြန်လည်သတ်မှတ်ခြင်</sys:String>
+    <sys:String x:Key="Toolbox_Repair_Variables.Description">စနစ်ပြောင်းလဲသတ်မှတ်ချက်များကို ပုံမှန်တန်ဖိုးသို့ ပြန်လည်သတ်မှတ်မည်။ မသေချာပါက မသုံးပါနှင့်။</sys:String>
+    <sys:String x:Key="Toolbox_Repair_Variables.LearnMore">စနစ်ပြောင်းလဲသတ်မှတ်ချက်များ ပြန်လည်သတ်မှတ်ခြင်းအကြောင်း ပိုမိုသိရှိရန်</sys:String>
+    <sys:String x:Key="Toolbox_Repair_WMI">WMI အစိတ်အပိုင်းများ ပြုပြင်ခြင်း</sys:String>
+    <sys:String x:Key="Toolbox_Repair_WMI.Description">WMI အစိတ်အပိုင်းများကို ပြန်လည်မှတ်ပုံတင်မည်။ မသေချာပါက မသုံးပါနှင့်။</sys:String>
+    <sys:String x:Key="Toolbox_Repair_WMI.LearnMore">WMI အစိတ်အပိုင်းများ ပြုပြင်ခြင်းအကြောင်း ပိုမိုသိရှိရန်။</sys:String>
+
+    <!-- Convert page -->
+    <sys:String x:Key="Convert_Excel">Excel</sys:String>
+    <sys:String x:Key="Convert_Excel.Description">Excel စာရွက်စာတမ်းများကို ပြောင်းလဲမည်။</sys:String>
+    <sys:String x:Key="Convert_PowerPoint">PowerPoint</sys:String>
+    <sys:String x:Key="Convert_PowerPoint.Description">PowerPoint စာတမ်းများကို ပြောင်းလဲမည်။</sys:String>
+    <sys:String x:Key="Convert_Word">Word</sys:String>
+    <sys:String x:Key="Convert_Word.Description">Word စာတမ်းများကို ပြောင်းလဲမည်။</sys:String>
+    <sys:String x:Key="Convert_Actions">စာရွက်စာတမ်းများ ထည့်သွင်းမည်(_I)</sys:String>
+    <sys:String x:Key="Convert_Actions.SelectFiles">ဖိုင်များ ရွေးချယ်ပါ</sys:String>
+    <sys:String x:Key="Convert_Actions.SelectFolder">ဖိုလ်ဒါ ရွေးချယ်ပါ</sys:String>
+    <sys:String x:Key="Convert_Input">ထည့်သွင်းမည့်ပုံစံ</sys:String>
+    <sys:String x:Key="Convert_Input.Description">ဖိုလ်ဒါတစ်ခုကို ရွေးချယ်သောအခါ ထည့်သွင်းမည့်ပုံစံနှင့် ကိုက်ညီသောဖိုင်များသာ ထည့်သွင်းမည်။</sys:String>
+    <sys:String x:Key="Convert_Output">ထုတ်ပေးသည့်ပုံစံ</sys:String>
+
+    <sys:String x:Key="Convert_File_List">ဖိုင်စာရင်း</sys:String>
+    <sys:String x:Key="Convert_StartConvert">ပြောင်းလဲရန်</sys:String>
+    <sys:String x:Key="Convert_StartConvert.ToolTip">စာရွက်စာတမ်းများ ပြောင်းလဲခြင်းကို စတင်မည်။</sys:String>
+    <sys:String x:Key="Convert_ClearList">စာရင်းဖျက်မည်</sys:String>
+    <sys:String x:Key="Convert_File">ဖိုင်</sys:String>
+    <sys:String x:Key="Convert_NewFormat">ပုံစံအသစ်</sys:String>
+    <sys:String x:Key="Convert_Open_File_Location">ဖိုင်တည်နေရာ ဖွင့်မည်(_O)</sys:String>
+    <sys:String x:Key="Convert_Page_Count">စာမျက်နှာ  {0} / {1}</sys:String>
+    <sys:String x:Key="Convert_Previous_Page">နောက်သို့</sys:String>
+    <sys:String x:Key="Convert_Next_Page">ရှေ့သို့</sys:String>
+
+    <sys:String x:Key="Convert_Settings">ပြောင်းလဲမှု ဆက်တင်များ</sys:String>
+    <sys:String x:Key="Convert_Settings.Description">ဆက်တင်များကို ချိန်ညှိနေသည်။</sys:String>
+    <sys:String x:Key="Convert_SearchOnSubfolders">အခြားဖိုလ်ဒါတွင်း ရှာမည်</sys:String>
+    <sys:String x:Key="Convert_SearchOnSubfolders.Description">ဖိုလ်ဒါတစ်ခု ရွေးချယ်သောအခါ အတွင်းဖိုလ်ဒါများတွင် ဖိုင်များ ရှာမည်။</sys:String>
+    <sys:String x:Key="Convert_Delete">ဖိုင်ဖျက်မည်</sys:String>
+    <sys:String x:Key="Convert_Delete.Description">ပြောင်းလဲမှုအောင်မြင်ပြီးနောက် မူရင်းဖိုင်ကို Recycle Bin သို့ ရွှေ့မည်။ Recycle Bin မရှိပါက ဖိုင်ကို အပြီးဖျက်မည်။</sys:String>
+    <sys:String x:Key="Convert_HideUI">အသုံးပြုသူ interface ဖျောက်မည်</sys:String>
+    <sys:String x:Key="Convert_HideUI.Description">Office အလုပ်လုပ်နေစဉ် သတိပေးဝင်းဒိုးကို ဖျောက်ထားမည်။</sys:String>
+    <sys:String x:Key="Convert_Rows_Per_Page">စာမျက်နှာတစ်ခုစီတွင် စာတန်းများ</sys:String>
+    <sys:String x:Key="Convert_Rows_Per_Page.Description">ဖိုင်စာရင်းတွင် စာတစ်မျက်နှာလျှင် ပြသမည့် ဖိုင်အရေအတွက်ကို သတ်မှတ်ပါ။</sys:String>
+
+    <!-- File types -->
+    <!-- Common -->
+    <sys:String x:Key="File_Type.All">ဖိုင်အားလုံး</sys:String>
+    <sys:String x:Key="File_Type.Supported">ပံ့ပိုးထားသော ဖိုင်များအားလုံး</sys:String>
+    <sys:String x:Key="File_Type.PDF">PDF</sys:String>
+    <sys:String x:Key="File_Type.XPS">XPS စာတမ်း</sys:String>
+    <sys:String x:Key="File_Type.TXT">Plain စာသား</sys:String>
+    <sys:String x:Key="File_Type.XML">XML File</sys:String>
+    <sys:String x:Key="File_Type.MHTML">Single File ဝဘ်စာမျက်နှာ</sys:String>
+    <sys:String x:Key="File_Type.HTML">ဝဘ်စာမျက်နှာ</sys:String>
+    <sys:String x:Key="File_Type.AllWebPages">All Web Pages</sys:String>
+    <sys:String x:Key="File_Type.RTF">ချောမွေ့သော စာသားပဖော်မတ်</sys:String>
+    <sys:String x:Key="File_Type.WMF">Windows Metafile</sys:String>
+    <sys:String x:Key="File_Type.EMF">Enhanced Windows Metafile</sys:String>
+    <!-- Image -->
+    <sys:String x:Key="File_Type.GIF">Animated GIF ဖော်မတ်</sys:String>
+    <sys:String x:Key="File_Type.JPG">JPEG ဖိုင်ဖော်မတ်</sys:String>
+    <sys:String x:Key="File_Type.PNG">PNG ဖိုင်ဖော်မတ်</sys:String>
+    <sys:String x:Key="File_Type.TIF">TIFF ဖိုင်ဖော်မတ်</sys:String>
+    <sys:String x:Key="File_Type.BMP">အခြားပစ္စည်း မလိုသော bitmap</sys:String>
+    <!-- Video -->
+    <sys:String x:Key="File_Type.MP4">MPEG-4 ဗီဒီယို</sys:String>
+    <sys:String x:Key="File_Type.WMV">Windows Media ဗီဒီယို</sys:String>
+    <!-- Word -->
+    <sys:String x:Key="File_Type.Word_Documents">Documents</sys:String>
+    <sys:String x:Key="File_Type.Word_DOCX">Word စာတမ်း</sys:String>
+    <sys:String x:Key="File_Type.Word_DOCM">Macro ပါသော Word စာတမ်</sys:String>
+    <sys:String x:Key="File_Type.Word_DOC">Word 97-2003 စာတမ်း</sys:String>
+    <sys:String x:Key="File_Type.Word_DOTX">Word ပုံစံ</sys:String>
+    <sys:String x:Key="File_Type.Word_DOTM">Macro ပါသော Word ပုံစံ</sys:String>
+    <sys:String x:Key="File_Type.Word_DOT">Word 97-2003 ပုံစံ</sys:String>
+    <sys:String x:Key="File_Type.Word_XMLDocument">Word XML Document</sys:String>
+    <sys:String x:Key="File_Type.Word_OpenXMLStrictDocument">Strict Open XML Document</sys:String>
+    <sys:String x:Key="File_Type.Word_ODT">OpenDocument Text</sys:String>
+    <!-- PowerPoint -->
+    <sys:String x:Key="File_Type.PowerPoint_Presentations">Presentations</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPTX">PowerPoint Presentation</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPTM">Macro ပါသော PowerPoint Presentation</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPT">PowerPoint 97-2003 Presentation</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_POTX">PowerPoint ပုံစံ</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_POTM">Macro ပါသော PowerPoint ပုံစံ</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_POT">PowerPoint 97-2003 ပုံစံ</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPSX">PowerPoint ပြသမှု</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPSM">Macro ပါသော PowerPoint ပြသမှု</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPS">PowerPoint 97-2003 ပြသမှု</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPAM">PowerPoint Add-in</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPA">PowerPoint 97-2003 Add-in</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_XMLPresentation">PowerPoint XML Presentation</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_OpenXMLPicturePresentation">PowerPoint Picture Presentation</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_OpenXMLStrictPresentation">Strict Open XML Presentation</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_ODP">OpenDocument Presentation</sys:String>
+    <!-- Excel -->
+    <sys:String x:Key="File_Type.Excel_Workbooks">Workbooks</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLSX">Excel Workbook</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLSM">Macro ပါသော Excel Workbook</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLSB">Excel Binary Workbook</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLS">Excel 97-2003 Workbook</sys:String>
+    <sys:String x:Key="File_Type.Excel_CSV_UTF8">CSV UTF-8 (ကော်မာဖြင့်ခွဲထားသည်)</sys:String>
+    <sys:String x:Key="File_Type.Excel_CSV">CSV (ကော်မာဖြင့်ခွဲထားသည်)</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLTX">Excel ပုံစံ</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLTM">Macro ပါသော Excel ပုံစံ</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLT">Excel 97-2003 ပုံစံ</sys:String>
+    <sys:String x:Key="File_Type.Excel_UnicodeText">Unicode Text (Tab delimited)</sys:String>
+    <sys:String x:Key="File_Type.Excel_Text">Text (Tab delimited)</sys:String>
+    <sys:String x:Key="File_Type.Excel_XMLSpreadsheet">XML Spreadsheet 2003</sys:String>
+    <sys:String x:Key="File_Type.Excel_PRN">Formatted Text (Space delimited)</sys:String>
+    <sys:String x:Key="File_Type.Excel_DIF">DIF (Data Interchange Format)</sys:String>
+    <sys:String x:Key="File_Type.Excel_SYLK">SYLK (Symbolic Link)</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLAM">Excel Add-in</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLA">Excel 97-2003 Add-in</sys:String>
+    <sys:String x:Key="File_Type.Excel_OpenXMLStrictWorkbook">Strict Open XML Spreadsheet</sys:String>
+    <sys:String x:Key="File_Type.Excel_ODS">OpenDocument Spreadsheet</sys:String>
+    <sys:String x:Key="File_Type.Excel_BackupFiles">Backup Files</sys:String>
+
+    <!-- Hash checker page -->
+    <sys:String x:Key="Hash_Checker_Hash">Hash</sys:String>
+    <sys:String x:Key="Hash_Checker_Hash.Description">ဖိုင်များအတွက် Hash တန်ဖိုးများကိုဖန်တီးပါ၊ hash algorithm အမျိုးမျိုးကိုထောက်ပံ့ပါသည်။  </sys:String>
+    <sys:String x:Key="Hash_Checker_Actions">ဖိုင်များတင်သွင်းရန်(_I)</sys:String>
+    <sys:String x:Key="Hash_Checker_Actions.SelectFiles">ဖိုင်များရွေရန်</sys:String>
+    <sys:String x:Key="Hash_Checker_Actions.SelectFolder">ဖိုလ်ဒါရွေးရန်</sys:String>
+    <sys:String x:Key="Hash_Checker_SearchOnSubfolders">အတွင်းဖိုလ်ဒါများအတွင်းရှာဖွေရန်</sys:String>
+    <sys:String x:Key="Hash_Checker_SearchOnSubfolders.Description">ဖိုလ်ဒါရွေးချယ်သည့်အခါ အတွင်းဖိုလ်ဒါများအတွင်းရှိဖိုင်များကိုရှာပါ။ </sys:String>
+    <sys:String x:Key="Hash_Checker_SearchString">ရှာဖွေရန်စာသား</sys:String>
+    <sys:String x:Key="Hash_Checker_SearchString.Description">ဖိုလ်ဒါရွေးချယ်သောအခါ ရှာဖွေစာသားနှင့်ကိုက်ညီသောဖိုင်အမည်များပါရှိသည့်ဖိုင်များကိုရှာပါ။</sys:String>
+    <sys:String x:Key="Hash_Checker_ExcludeHashFiles">hash ဖိုင်များအား မပါဝင်စေပါနဲ့</sys:String>
+    <sys:String x:Key="Hash_Checker_ExcludeHashFiles.Description">ဖိုင်များထည့်သွင်းသည့်အချိန်တွင် MD5၊ SHA1၊ CRC32 တို့ကဲ့သို့သော hash ဖိုင်များအား မထည့်သွင်းပါနဲ့။ </sys:String>
+    <sys:String x:Key="Hash_Checker_DisplayPath">ဖိုင်လမ်းကြောင်းကိုပြပါ</sys:String>
+    <sys:String x:Key="Hash_Checker_AutoCompute">အလိုအလျှောက်တွက်ချက်ခြင်း  </sys:String>
+    <sys:String x:Key="Hash_Checker_AutoCompute.Description">ဖိုင်ထည့်သွင်းပြီးသည်နှင့်အလိုအလျှောက် hash တန်ဖိုးတွက်ချက်မှုစတင်ပါမည်။</sys:String>
+    <sys:String x:Key="Hash_Checker_CRC32.Description">CRC-32 တွက်ချက်ခြင်းကို ဖွင့်ရန်/ပိတ်ရန်။</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH32.Description">XXH32 တွက်ချက်ခြင်းကို ဖွင့်ရန်/ပိတ်ရန်။</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH64.Description">XXH64 တွက်ချက်ခြင်းကို ဖွင့်ရန်/ပိတ်ရန်။</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH3.Description">XXH3 တွက်ချက်ခြင်းကို ဖွင့်ရန်/ပိတ်ရန်။</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH128.Description">XXH128 တွက်ချက်ခြင်းကို ဖွင့်ရန်/ပိတ်ရန်။</sys:String>
+    <sys:String x:Key="Hash_Checker_MD5.Description">EMD5 တွက်ချက်ခြင်းကို ဖွင့်ရန်/ပိတ်ရန်။</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA1.Description">SHA-1 တွက်ချက်ခြင်းကို ဖွင့်ရန်/ပိတ်ရန်။</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA256.Description">SHA-256 တွက်ချက်ခြင်းကို ဖွင့်ရန်/ပိတ်ရန်။</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA384.Description">SHA-384 တွက်ချက်ခြင်းကို ဖွင့်ရန်/ပိတ်ရန်။</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA512.Description">SHA-512 တွက်ချက်ခြင်းကို ဖွင့်ရန်/ပိတ်ရန်။</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA3_256.Description">SHA3-256 တွက်ချက်ခြင်းကို ဖွင့်ရန်/ပိတ်ရန် (Windows 11 build 25324 သို့မဟုတ်အသစ်များတွင်သာထောက်ပံ့သည်)</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA3_384.Description">SHA3-384 တွက်ချက်ခြင်းကို ဖွင့်ရန်/ပိတ်ရန် (Windows 11 build 25324 သို့မဟုတ်အသစ်များတွင်သာထောက်ပံ့သည်)</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA3_512.Description">SHA3-512  တွက်ချက်ခြင်းကို ဖွင့်ရန်/ပိတ်ရန် (Windows 11 build 25324 သို့မဟုတ်အသစ်များတွင်သာထောက်ပံ့သည်)</sys:String>
+    <sys:String x:Key="Hash_Checker_Rows_Per_Page">စာမျက်နှာတစ်ခုစီတွင် စာတန်းများ</sys:String>
+    <sys:String x:Key="Hash_Checker_Rows_Per_Page.Description">ဖိုင်စာရင်းတွင် တစ်မျက်နှာလျှင် ပြသမည့်ဖိုင်အရေအတွက်ကို သတ်မှတ်ပါ။</sys:String>
+
+    <sys:String x:Key="Hash_Checker_File_List">ဖိုင်စာရင်း</sys:String>
+    <sys:String x:Key="Hash_Checker_TypeToSearch">Hash တန်ဖိုးနှိုင်းယှဉ်ရန် ရိုက်ထည့်ပါ။</sys:String>
+    <sys:String x:Key="Hash_Checker_StartCompute">တွက်ချက်ရန်</sys:String>
+    <sys:String x:Key="Hash_Checker_StartCompute.ToolTip">hash တန်ဖိုးများတွက်ခြင်းစတင်ပါ။</sys:String>
+    <sys:String x:Key="Hash_Checker_ClearList">စာရင်းရှင်းလင်းရန်</sys:String>
+    <sys:String x:Key="Hash_Checker_Export">ထုတ်ယူရန်</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.ToolTip">ရလဒ်များကို ဖိုင်အဖြစ်ထုတ်ယူပါ။</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.AsTXT">စာသားဖိုင်အဖြစ်ထုတ်ယူရန်(_T)</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.AsCSV">CSV အဖြစ်ထုတ်ယူရန်(_C)</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.AsMD">Markdown အဖြစ်ထုတ်ယူရန်(_M)</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.AsJSON">JSON အဖြစ်ထုတ်ယူရန်(_J)</sys:String>
+    <sys:String x:Key="Hash_Checker_Compare">နှိုင်းယှဉ်ရန်</sys:String>
+    <sys:String x:Key="Hash_Checker_Compare.ToolTip">ဖိုင်၏ hash တန်ဖိုးကို သိရှိထားသည့်တန်ဖိုးနှင့် နှိုင်းယှဉ်ပါ။</sys:String>
+    <sys:String x:Key="Hash_Checker_Compare.JSON">JSON ဖိုင်နှင့် နှိုင်းယှဉ်ပါ(_J)</sys:String>
+    <sys:String x:Key="Hash_Checker_Compare.HashFile">hash ဖိုင်နှင့် နှိုင်းယှဉ်ပါ(_H)</sys:String>
+    <sys:String x:Key="Hash_Checker_FilePath">ဖိုင်လမ်းကြောင်း </sys:String>
+    <sys:String x:Key="Hash_Checker_FileName">ဖိုင်အမည်</sys:String>
+    <sys:String x:Key="Hash_Checker_Compute_Selected">ရွေးချယ်ထားသည့်ဖိုင်များ၏ hash တန်ဖိုးကို တွက်ချက်ပါ(_C)</sys:String>
+    <sys:String x:Key="Hash_Checker_Open_File_Location">ဖိုင်တည်နေရာဖွင့်ပါ(_O)</sys:String>
+    <sys:String x:Key="Hash_Checker_Copy_Hash_Value">hash တန်ဖိုးကို ကူးယူပါ(_H)</sys:String>
+    <sys:String x:Key="Hash_Checker_Create_Hash_File">hash ဖိုင်(များ) ဖန်တီးပါ(_A)</sys:String>
+    <sys:String x:Key="Hash_Checker_Page_Count">စာမျက်နှာ {0} / {1}</sys:String>
+    <sys:String x:Key="Hash_Checker_Previous_Page">ယခင်စာမျက်နှာ</sys:String>
+    <sys:String x:Key="Hash_Checker_Next_Page">နောက်စာမျက်နှာ</sys:String>
+    <sys:String x:Key="Hash_Checker_CompareMessage">ဖိုင် {0} ဖိုင်အတွက် hash တန်ဖိုးများစစ်ဆေးပြီးပါပြီ။ {1} ခုအောင်မြင်ပြီး၊ {2} ခုမအောင်မြင်၊ {3} ခုကျော်လိုက်သည်။</sys:String>
+    <sys:String x:Key="Hash_Checker_CompareMessage.Failed">အောက်ဖော်ပြပါဖိုင်(များ)ဧ။် hash တန်ဖိုးများမကိုက်ညီပါ:</sys:String>
+    <sys:String x:Key="Hash_Checker_CompareMessage.Error">အောက်ဖော်ပြပါဖိုင်(များ)ကို တွက်ချက်သည့်အချိန်တွင်အမှားများ ဖြစ်ပွားခဲ့သည်:</sys:String>
+    <sys:String x:Key="Hash_Checker_CompareMessage.Skipped">အောက်ဖော်ပြပါဖိုင်(များ)အား hash တန်ဖိုးမတွေ့ရှိသဖြင့် ကျော်သွားခဲ့သည်:</sys:String>
+
+    <!-- Settings page -->
+    <sys:String x:Key="Settings_General">အထွေထွေ</sys:String>
+    <sys:String x:Key="Settings_Language">ဘာသာစကား</sys:String>
+    <sys:String x:Key="Settings_Language.Description">အက်ပ်ပလီကေးရှင်း ဧ။် ဘာသာစကားကို ပြောင်းလဲပါ။</sys:String>
+    <sys:String x:Key="Settings_MatchOS">Operating System ၏ ဘာသာစကားနှင့်ကိုက်ညီစေပါ</sys:String>
+    <sys:String x:Key="Settings_Save">ဆက်တင်များကို သိမ်းဆည်းမည်</sys:String>
+    <sys:String x:Key="Settings_Save.Description">ဆက်တင်အားလုံးကို local တွင်သိမ်းဆည်းပါ။</sys:String>
+
+    <sys:String x:Key="Settings_Appearance">အသွင်အပြင် နှင့် အပြုအမူ</sys:String>
+    <sys:String x:Key="Settings_Theme">အထွက်အမြင်</sys:String>
+    <sys:String x:Key="Settings_Theme.Description">အက်ပ်ပလီကေးရှင်းအထွက်အမြင်ကို ပြောင်းလဲပါ။</sys:String>
+    <sys:String x:Key="Settings_Auto_Dark_Theme">အလိုအလျောက်အမှောင်အထွက်အမြင်</sys:String>
+    <sys:String x:Key="Settings_Auto_Dark_Theme.Description">စနစ်ဆက်တင်များနှင့်လိုက်နာ၍ အမှောင်အမြင်အလိုအလျောက် ပြောင်းပါ။</sys:String>
+    <sys:String x:Key="Settings_Theme_OpenColorSetting">Windows အရောင်ဆက်တင်</sys:String>
+    <sys:String x:Key="Settings_Background">နောက်ခံ</sys:String>
+    <sys:String x:Key="Settings_Background.Description">အက်ပ်ပလီကေးရှင်းနောက်ခံကို ပြောင်းလဲပါ။</sys:String>
+    <sys:String x:Key="Settings_Background.Automatic">အလိုအလျောက်</sys:String>
+    <sys:String x:Key="Settings_Background.Off">ပိတ်မည်</sys:String>
+    <sys:String x:Key="Settings_Background.Acrylic">Acrylic</sys:String>
+    <sys:String x:Key="Settings_Background.Blur">မှုန်ဝါးခြင်း</sys:String>
+    <sys:String x:Key="Settings_Background.Mica">Mica</sys:String>
+    <sys:String x:Key="Settings_Background.Bing">Bing နောက်ခံပုံ</sys:String>
+    <sys:String x:Key="Settings_Background.Local">Local image</sys:String>
+    <sys:String x:Key="Settings_SelectLocalImage.Description">Local ပုံတစ်ပုံရွေးချယ်ပြီး နောက်ခံပုံအဖြစ် သတ်မှတ်ပါ။</sys:String>
+    <sys:String x:Key="Settings_SelectLocalImage.Button">ဖိုင်ရွေးချယ်ရန်</sys:String>
+    <sys:String x:Key="Settings_Opacity">မြင်သာမှု</sys:String>
+    <sys:String x:Key="Settings_Blur">မှုန်ဝါးခြင်း</sys:String>
+    <sys:String x:Key="Settings_Topmost">အမြဲအပေါ်ယံတွင်ထားမည်</sys:String>
+
+    <sys:String x:Key="Settings_Advanced">အဆင့်မြင့်</sys:String>
+    <sys:String x:Key="Settings_HardwareAcceleration">Hardware အရှိန်မြှင့်ခြင်း</sys:String>
+    <sys:String x:Key="Settings_HardwareAcceleration.Description">အက်ပ်လုပ်ဆောင်မှုမှန်ကန်နေပါက မပိတ်သင့်ပါ။ ပိတ်ထားလျှင် တတ်နိုင်သော စွမ်းဆောင်ရည်ကျဆင်းမှု ဖြစ်နိုင်သည်။</sys:String>
+    <sys:String x:Key="Settings_SecurityProtocol">လုံခြုံရေး protocol</sys:String>
+    <sys:String x:Key="Settings_SecurityProtocol.Description">အသုံးပြုရန် TLS protocol ကို သတ်မှတ်ပါ။ အက်ပ်က network နှင့် ချိတ်ဆက်နိုင်ပါက မပြောင်းပါနှင့်။</sys:String>
+    <sys:String x:Key="Settings_SecurityProtocol_SystemDefault">မူလစနစ်</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy">Proxy</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy.Type">Proxy အမျိုးအစား</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy.None">မရှိပါ</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy_Host">Host</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy_Host.Hint">127.0.0.1:1080</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy_Authentication">အထောက်အထားပြခြင်း</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy_Username">အသုံးပြုသူအမည်</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy_Password">စကားဝှက်</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy_PasswordSaved">စကားဝှက်သည် နောက်ဆုံးသိမ်းဆည်းချိန်မှ ပြောင်းလဲခြင်း မရှိပါ။</sys:String>
+
+    <sys:String x:Key="Settings_Deploy">deploy ရန်</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation">deploy ပြီးနောက်လုပ်ဆောင်ရန်</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.Description">Office ဒေါင်းလုဒ်/ထည့်သွင်းပြီးနောက် လုပ်ဆောင်ချက်တစ်ခု ပြုလုပ်ပါ။</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.None">မရှိပါ</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.Quit">Office Tool Plus ကို ပိတ်မည်</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.SignOut">အကောင့်မှ ထွက်မည်</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.Shutdown">စနစ်ပိတ်မည်</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.Reboot">စနစ်ပြန်စမည်</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat">Office ဘာသာစကား ပြသမှုပုံစံ</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat.Default">မူလအမည်</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat.Native">ဒေသခံအမည်</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat.English">အင်္ဂလိပ်အမည်</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat.Localized">ဘာသာပြန်အမည်</sys:String>
+    <sys:String x:Key="Settings_Deploy_Internal">အတွင်းပိုင်း product နှင့် ချန်နယ်များပြမည်</sys:String>
+
+    <sys:String x:Key="Settings_Download">ဒေါင်းလုဒ်</sys:String>
+    <sys:String x:Key="Settings_Download_Ask_Where_To_Save">ဖိုင်များ သိမ်းရာနေရာ မေးမြန်းရန်</sys:String>
+    <sys:String x:Key="Settings_Download_Ask_Where_To_Save.Description">Office ကို ဒေါင်းလုဒ်မလုပ်မီ သိမ်းရန်နေရာရွေးချယ်ပါ။</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API">Microsoft API ကိုသုံး၍ ဖိုင်စာရင်းရယူမည်</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API.Description">ဖွင့်ထားပါက Microsoft ၏ API မှဖိုင်စာရင်းရယူမည်၊ မဟုတ်ပါက built-in စည်းမျဉ်းများဖြင့် ဖန်တီးမည်။</sys:String>
+    <sys:String x:Key="Settings_Download_Engine">ဒေါင်းလုဒ်အင်ဂျင်</sys:String>
+    <sys:String x:Key="Settings_Download_Engine.Description">Office ဒေါင်းလုဒ်အတွက် အသုံးပြုမည့်အင်ဂျင်ကို ရွေးချယ်ပါ။</sys:String>
+    <sys:String x:Key="Settings_Download_Engine.Thunder">Thunder</sys:String>
+    <!-- Do not translate 'bezzad.Downloader' -->
+    <sys:String x:Key="Settings_Download_Engine.Downloader">bezzad.Downloader</sys:String>
+    <sys:String x:Key="Settings_Download_Engine.OfficeToolPlus">Office Tool Plus</sys:String>
+    <sys:String x:Key="Settings_Download_Engine.OfficeDeploymentTool">Office Deployment Tool</sys:String>
+    <sys:String x:Key="Settings_Download_HTTPS">HTTPS ဖြင့် ချိတ်ဆက်မည်</sys:String>
+    <sys:String x:Key="Settings_Download_HTTPS.Description">ဒေါင်းလုဒ် ပြဿနာရှိပါက ဖွင့်ထားရန် ကြိုးစားပါ။</sys:String>
+    <sys:String x:Key="Settings_Download_Verify">ဖိုင်စစ်ဆေးမည်</sys:String>
+    <sys:String x:Key="Settings_Download_Verify.Description">Office ထည့်သွင်းမှုများကို ဒေါင်းလုဒ်ပြီးနောက် စစ်ဆေးပါ။</sys:String>
+    <sys:String x:Key="Settings_Download_UA">Windows ဗားရှင်း</sys:String>
+    <sys:String x:Key="Settings_Download_UA.Description">လက်ရှိ Windows ဗားရှင်းအတွက် မူလ Office ဗားရှင်းကို ဒေါင်းလုဒ်လုပ်ပါသည်။ တခြားဗားရှင်းအတွက်လည်း ပြောင်းလဲနိုင်သည်။</sys:String>
+    <sys:String x:Key="Settings_Download_UA.AutoDetection">အလိုအလျောက်စစ်ဆေးခြင်း</sys:String>
+    <!-- Do not translate 'bezzad.Downloader' -->
+    <sys:String x:Key="Settings_Download_Downloader">bezzad.Downloader ဆက်တင်များ</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Chunks">ဖိုင်ခွဲခြမ်းမှု</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Chunks.Description">ဖိုင်ကို ခွဲခြမ်း၍ ဒေါင်းလုဒ်လုပ်မည်။ များလွန်းပါက အမြန်နှုန်းကျဆင်းနိုင်သည်။</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Parallel">ပြိုင်တူ ခွဲခြမ်းဒေါင်းလုဒ်လုပ်မည်</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Parallel.Description">HDD သို့ ဒေါင်းလုဒ်လုပ်သောအခါ အရမ်းပိုင်းခြားခြင်းသည် စနစ်ဧ။်ရေးခြင်းကို နှေးကွေးစေနိုင်သည်။</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Limit">အမြန်နှုန်းကန့်သတ်ခြင်း</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Limit.Description">ဒေါင်းလုဒ်လုပ်စဉ်အတွင်းအမြန်နှုန်းကို ကန့်သတ်ပါ။ တိုင်းတာမှုသည် KBps ဖြစ်သည်။ မူလတန်ဖိုးမှာ 0 ဖြစ်သည် (ကန့်သတ်မှုမရှိပါ)။</sys:String>
+
+    <!-- About page -->
+    <sys:String x:Key="About_Link.Homepage">ပင်မစာမျက်နှာ</sys:String>
+    <sys:String x:Key="About_Link.Docs">မှတ်တမ်းစာတမ်းများ</sys:String>
+    <sys:String x:Key="About_Link.Sponsor">အထောက်အပံ့ပေးသူ</sys:String>
+    <sys:String x:Key="About_Link.Report_Issue">ပြဿနာတင်ပြရန်</sys:String>
+    <sys:String x:Key="About_Version">ဗားရှင်း </sys:String>
+    <sys:String x:Key="About_ReleaseDate">ဖြန့်ချိသည့်ရက်စွဲ:</sys:String>
+    <sys:String x:Key="About_CheckUpdate">အပ်ဒိတ်များ စစ်ဆေးရန်(_C)</sys:String>
+    <sys:String x:Key="About_CreatorInfo">Office Deployment Tool ကိုအခြေခံ၍ Yerong တီထွင်ခဲ့သည်။</sys:String>
+    <sys:String x:Key="About_Copyright">မူပိုင်ခွင့် © ၂၀၁၆-{0} Yerong အားလုံးမူပိုင်သည်။</sys:String>
+    <sys:String x:Key="About_TrademarkInfo">Microsoft Office သည် အမေရိကန်နှင့်/သို့မဟုတ် အခြားနိုင်ငံများတွင် Microsoft ကုမ္ပဏီ၏ မှတ်ပုံတင်ထားသော သို့မဟုတ် မှတ်သားထားသော တံဆိပ်အမှတ်တံဆိပ်ဖြစ်သည်။</sys:String>
+
+    <sys:String x:Key="About_Server_Provider">ဆာဗာပံ့ပိုးသူများ</sys:String>
+    <sys:String x:Key="About_Translator">ဘာသာပြန်သူများ</sys:String>
+
+    <sys:String x:Key="About_MoreInfo">နောက်ထပ်အချက်အလက်</sys:String>
+    <sys:String x:Key="About_Image_Source">နောက်ခံပုံရင်းမြစ်</sys:String>
+    <sys:String x:Key="About_Link.OpenSourceNotice">Open Source အသိပေးချက်</sys:String>
+
+    <!-- Downloader -->
+    <sys:String x:Key="Downloader_ProgressBar.Name">Office ဒေါင်းလုပ် တိုးတက်မှု</sys:String>
+    <sys:String x:Key="Downloader_Resume">ဆက်လက်လုပ်ဆောင်ရန်</sys:String>
+    <sys:String x:Key="Downloader_Pause">ရပ်ရန်</sys:String>
+    <sys:String x:Key="Downloader_Cancel">ပယ်ဖျက်ရန်</sys:String>
+    <sys:String x:Key="Downloader_SetSpeedLimit.Name">ဒေါင်းလုပ်အမြန်နှုန်းကန့်သတ်ချက် ချမှတ်ရန်</sys:String>
+    <sys:String x:Key="Downloader_Percentage">ဒေါင်းလုပ်လုပ်နေသည်၊ {0} ပြီးစီးခဲ့သည်။</sys:String>
+    <sys:String x:Key="Downloader_Remaining">ဒေါင်းလုပ်လုပ်နေသည်၊ ကျန်ရှိသည့်အချိန် : {0}</sys:String>
+    <sys:String x:Key="Downloader_Pending">စောင့်ဆိုင်းနေသည်</sys:String>
+    <sys:String x:Key="Downloader_Pausing">ခေတ္တရပ်ထားသည်</sys:String>
+    <sys:String x:Key="Downloader_Paused">ရပ်ထားသည်</sys:String>
+
+    <!-- Notification strings -->
+    <sys:String x:Key="Message">မက်ဆေ့ချ်</sys:String>
+    <sys:String x:Key="Notice">အသိပေးချက်</sys:String>
+    <sys:String x:Key="Warning">သတိပေးချက်</sys:String>
+    <sys:String x:Key="Error">အမှား</sys:String>
+    <sys:String x:Key="Yes">ဟုတ်သည်(_Y)</sys:String>
+    <sys:String x:Key="No">မဟုတ်ပါ(_N)</sys:String>
+    <sys:String x:Key="OK">အိုကေ(_O)</sys:String>
+    <sys:String x:Key="Cancel">ပယ်ဖျက်မည်(_C)</sys:String>
+
+    <!-- Input box strings-->
+    <sys:String x:Key="Input_Command">အက်ပလီကေးရှင်းcommands များကို ထည့်သွင်းပါ</sys:String>
+    <sys:String x:Key="Input_URL">URL ကို ထည့်သွင်းပါ</sys:String>
+    <sys:String x:Key="Input_Thunder_Speed_Limit">Thunder ဒေါင်းလုပ်အမြန်နှုန်းကန့်သတ်ချက်ကို (KBps ဖြင့်) ချမှတ်ပါ</sys:String>
+
+    <!-- Office ISO Context Menu -->
+    <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
+    <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
+    <!-- If you cannot understand what is hotkey, remove '&amp;' when you are translating. -->
+    <sys:String x:Key="CD-ROM_InstallNow">ယခုထည့်သွင်းပါ(&amp;I)</sys:String>
+
+    <!-- Task Message -->
+    <sys:String x:Key="Task_Checking_Updates">အပ်ဒိတ်များကိုစစ်ဆေးနေသည်။</sys:String>
+    <sys:String x:Key="Task_Downloading_Updates">အပ်ဒိတ်များကိုဒေါင်းလုဒ်လုပ်နေသည်၊ {0} ပြီးစီးပြီးပါပြီ ({1} / {2})။</sys:String>
+    <sys:String x:Key="Task_Verifying_Installation_Files">အက်ပလီကေးရှင်း အကြိုသတ်မှတ်ချက်များကို တင်နေသည်၊ ကျေးဇူးပြု၍ ခေတ္တစောင့်ပါ။</sys:String>
+    <sys:String x:Key="Task_Loading_Preferences">အက်ပလီကေးရှင်း အကြိုသတ်မှတ်ချက်များကို တင်နေသည်၊ ကျေးဇူးပြု၍ ခေတ္တစောင့်ပါ။</sys:String>
+    <sys:String x:Key="Task_Downloading_Web_Config">ဝဘ်မှ configuration ဖိုင်ကိုရယူနေသည်၊ ကျေးဇူးပြု၍ ခေတ္တစောင့်ပါ။</sys:String>
+    <sys:String x:Key="Task_Preparing_Download">Office ကိုဒေါင်းလုဒ်လုပ်ရန်ပြင်ဆင်နေသည်။</sys:String>
+    <!-- Example: Creating Office ISO file, file size: 3.1GB, 45% completed. -->
+    <sys:String x:Key="Task_Creating_ISO">Office ISO ဖိုင်ဖန်တီးနေသည်၊ ဖိုင်အရွယ်အစား: {0}, {1} ပြီးစီးပြီးပါပြီ။</sys:String>
+    <sys:String x:Key="Task_ODT">Deploy နေသည်၊ ကျေးဇူးပြုပြီးစောင့်ပါ။</sys:String>
+    <sys:String x:Key="Task_SPP">SPP အလုပ်လုပ်နေသည်၊ ကျေးဇူးပြုပြီးစောင့်ပါ။</sys:String>
+    <sys:String x:Key="Task_Searching_KMS_Events">KMS activation များကို ရှာဖွေနေသည်၊ ကျေးဇူးပြု၍ ခေတ္တစောင့်ပါ။</sys:String>
+    <sys:String x:Key="Task_Searching_IAF_Events">အင်တာနက်အားဖြင့် activation မအောင်မြင်မှုဖြစ်စဉ်များကို ရှာဖွေနေသည်၊ ကျေးဇူးပြု၍ ခေတ္တစောင့်ပါ။</sys:String>
+    <sys:String x:Key="Task_Checking_Office_Update_Channel">Office အပ်ဒိတ်ချန်နယ်အချက်အလက်ကိုစစ်ဆေးနေသည်။</sys:String>
+    <sys:String x:Key="Task_Testing_KMS_Host">KMS host ရောက်ရှိနိုင်မှုကို စမ်းသပ်နေသည်။</sys:String>
+    <sys:String x:Key="Task_Collecting_Installer_Logs">Office တင်သွင်းသူ၏မှတ်တမ်းများကို စုဆောင်းနေသည်။</sys:String>
+    <sys:String x:Key="Task_Searching_MSI_Events">Searching for Windows Installer events, please wait.</sys:String>
+    <sys:String x:Key="Task_Searching_Application_Events">Searching for application events, please wait.</sys:String>
+    <sys:String x:Key="Task_Removing_Office">Office ကိုဖယ်ရှားနေသည်၊ ကျေးဇူးပြု၍ ခေတ္တစောင့်ပါ။</sys:String>
+    <sys:String x:Key="Task_Repairing_WMI">WMI components များကို ပြုပြင်နေသည်၊  ကျေးဇူးပြု၍ ခေတ္တစောင့်ပါ။</sys:String>
+    <sys:String x:Key="Task_Converting_Documents">Office စာရွက်စာတမ်း(များ)ကိုပြောင်းလဲနေသည်၊ ကျန်ရှိသော စာရွက်စာတမ်း {0}။</sys:String>
+    <sys:String x:Key="Task_Importing_Files">ဖိုင်များတင်သွင်းနေသည်၊ ကျေးဇူးပြု၍ ခေတ္တစောင့်ပါ။</sys:String>
+    <sys:String x:Key="Task_Computing_Hash">Hash ကိုတွက်ချက်နေသည်၊ ကျန်ရှိသောဖိုင် {0}။</sys:String>
+    <sys:String x:Key="Task_Exporting_Hash">ရလဒ်များကိုထုတ်ယူနေသည်၊  ကျေးဇူးပြု၍ ခေတ္တစောင့်ပါ။</sys:String>
+    <!-- Example: Installing iSlide, please wait. -->
+    <sys:String x:Key="Task_Installing_App">{0} ကိုတင်သွင်းနေသည်၊ ကျေးဇူးပြု၍ ခေတ္တစောင့်ပါ။</sys:String>
+
+    <!-- Question Message -->
+    <sys:String x:Key="Ques_Update.Title">Office Tool Plus အပ်ဒိတ်</sys:String>
+    <sys:String x:Key="Ques_Update.Content">အပ်ဒိတ်အသစ် ရနိုင်ပါသည်၊ ယခုပင်ဒေါင်းလုဒ်လုပ်မည်လား?</sys:String>
+    <sys:String x:Key="Ques_Exit">Office Tool Plus သည် လုပ်ဆောင်နေသည်။ ထွက်မည်လား?</sys:String>
+    <sys:String x:Key="Ques_Can_Not_Verify_Signature">ဖိုင်၏ လက်မှတ်ကိုအတည်ပြု၍မရပါ။ သို့သော်ဖွင့်ချင်ပါသလား?&#x000A;&#x000A;ဖိုင်: {0}</sys:String>
+    <sys:String x:Key="Ques_Quick_Installation">သင်သည် {0} ကို တင်သွင်းရန် ရွေးချယ်ထားသည်။&#x000A;&#x000A;"Yes" ကိုနှိပ်ပါက ဒေါင်းလုဒ်ပြီးသည်နှင့် တင်သွင်းမည်။ "No" ကိုနှိပ်ပါက ဒေါင်းလုဒ်နေစဉ်တွင် တင်သွင်းမည်။ ပိတ်လိုက်ပါက ဖျက်သိမ်းမည်။</sys:String>
+    <sys:String x:Key="Ques_Select_Office_To_Download">သင်ရွေးချယ်သော Office ဗားရှင်းမှာ {0} ဖြစ်သည်။ သို့သော် မတူညီသောဗားရှင်းတစ်ခုရရှိနေပါသည်။&#x000A;&#x000A;"Yes" ကိုနှိပ်ပါက Office ဗားရှင်း {1} ကို ဒေါင်းလုဒ်လုပ်မည်။&#x000A;"No" ကိုနှိပ်ပါက ဗားရှင်း {2} ကို ဒေါင်းလုဒ်လုပ်မည်။</sys:String>
+    <sys:String x:Key="Ques_Deploy_Office">Office Deploy ရန် အသင့်ဖြစ်ပြီလား?</sys:String>
+    <sys:String x:Key="Ques_Deploy_Office.ToInstall">ထည့်သွင်းရန် product များ:</sys:String>
+    <sys:String x:Key="Ques_Deploy_Office.ToUninstall">ဖယ်ရှားရန် product များ:</sys:String>
+    <sys:String x:Key="Ques_Install_Office.Applications">အက်ပလီကေးရှင်း(များ): {0}</sys:String>
+    <sys:String x:Key="Ques_Install_Office.Architecture">Architecture: {0}</sys:String>
+    <sys:String x:Key="Ques_Install_Office.UpdateChannel">အပ်ဒိတ်ချန်နယ်: {0}</sys:String>
+    <sys:String x:Key="Ques_Install_Office.OfficeVersion">Office ဗားရှင်း: {0}</sys:String>
+    <sys:String x:Key="Ques_Install_Office.SourcePath">တင်သွင်းဖိုင်များရင်းမြစ်: {0}</sys:String>
+    <sys:String x:Key="Ques_Deploy_Configuration">အသေးစိတ်ပြုပြင်မှုအတွက် ကုဒ်ကိုကြည့်ပါ၊ အထက်ဖော်ပြပါအခြေခံပြုပြင်မှု မှန်ကန်ပါသလား?</sys:String>
+    <sys:String x:Key="Ques_Delete_All_Installations">ထည့်သွင်းထားသောဖိုင်အားလုံးကိုဖျက်မည်မှာ သေချာပါသလား?</sys:String>
+    <sys:String x:Key="Ques_Delete_Installation">{0} ကိုဖျက်မည်မှာ သေချာပါသလား?</sys:String>
+    <sys:String x:Key="Ques_Delete_Installation_Package">{0} ကိုဖျက်မည်မှာ သေချာပါသလား?</sys:String>
+    <sys:String x:Key="Ques_Install_iSlide">PlaceHolder</sys:String>
+    <sys:String x:Key="Ques_Clear_Activation">လိုင်စင်နှင့် သက်တမ်းအကုန်လုံးကိုဖယ်ရှားရန် သေချာပါသလား? ၎င်းနောက်တွင် အသစ်ပြန်လည်တင်သွင်းရမည်။</sys:String>
+    <sys:String x:Key="Ques_Install_Licenses">Office ကိုလိုင်စင်တင်ပြီးသော်လည်း activation ကိုမမြင်နိုင်ပါ။ သို့သော် Office Tool Plus မှတစ်ဆင့်ကြည့်နိုင်သည်။ ဆက်လုပ်မည်လား?</sys:String>
+    <sys:String x:Key="Ques_Uninstall_Licenses">Office လိုင်စင်အားလုံးကိုဖယ်ရှားမည်မှာ သေချာပါသလား?</sys:String>
+    <sys:String x:Key="Ques_Uninstall_All_Keys">Office Product Key အားလုံးကိုဖယ်ရှားမည်မှာ သေချာပါသလား? လိုအပ်ပါက backup ပြုလုပ်ထားပါ။</sys:String>
+    <sys:String x:Key="Ques_Uninstall_Product_Key">Product Key ကိုဖယ်ရှားမည်မှာ သေချာပါသလား??</sys:String>
+    <sys:String x:Key="Ques_Delete_vNextLicense">လိုင်စင်ကိုဖျက်မည်မှာ သေချာပါသလား?</sys:String>
+    <sys:String x:Key="Ques_Remove_Office">Office ကိုဖျက်မည်မှာ သေချာပါသလား? စတင်ပြီးနောက် ရပ်တန့်၍မရပါ။</sys:String>
+    <sys:String x:Key="Ques_Invoke_Office_Update">အပ်ဒိတ်ချန်နယ်ကိုပြောင်းပြီးပါပြီ၊ အပ်ဒိတ်များကိုစစ်ဆေးမည်လား?</sys:String>
+
+    <!-- Info Message -->
+    <sys:String x:Key="Info_OS_Outdated">သင့် Operating System ဧ။် ထောက်ခံမှု ပြီးဆုံးသွားပါပြီ၊ Operating System ကို အပ်ဒိတ်လုပ်ပါ၊ သို့မဟုတ် Office Tool Plus ၏ ဗားရှင်းအဟောင်းကို ဒေါင်းလုဒ်လုပ်ပါ။</sys:String>
+    <sys:String x:Key="Info_Restart_Required">ပြောင်းလဲမှုများ အကျုံးဝင်ရန် အက်ပ်လီကေးရှင်းကို ပြန်ဖွင့်ရန် လိုအပ်သည်။</sys:String>
+    <sys:String x:Key="Info_No_Updates">သင်အသုံးပြုနေသော Office Tool Plus သည် နောက်ဆုံးဗားရှင်းဖြစ်ပါသည်။</sys:String>
+    <sys:String x:Key="Info_Update_In_Progress">အပ်ဒိတ်လုပ်နေသည်၊ ကျေးဇူးပြု၍ ခေတ္တစောင့်ပါ။</sys:String>
+    <sys:String x:Key="Info_Updates_Incomplete">အပ်ဒိတ်များကို လုပ်ဆောင်ခြင်း မအောင်မြင်ပါ၊ နောက်မှ ထပ်မံကြိုးစားပါ။</sys:String>
+    <sys:String x:Key="Info_No_Language_Added_For_Download">ဘာသာစကား မထည့်သွင်းထားခြင်းကို ရှာဖွေတွေ့ရှိပါသည်။ မတော်တဆပြဿနာများ မဖြစ်စေရန် ဘာသာစကားထည့်သွင်းရန် အကြံပြုပါသည်။</sys:String>
+    <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">Office installation ဖိုင်များကို သိမ်းဆည်းရန် ဖိုလ်ဒါတစ်ခု ရွေးပါ။&#x000A;Default နေရာသုံးမည်ဆိုပါက "ဖိုင်များ သိမ်းရာနေရာ မေးမြန်းရန်" ကို ဆက်တင်များထဲမှ ပိတ်ထားပါ။</sys:String>
+    <sys:String x:Key="Info_All_Files_Exist">ဖိုင်အားလုံး ရှိပြီးဖြစ်သည်၊ ဒေါင်းလုဒ်မလိုအပ်တော့ပါ။</sys:String>
+    <sys:String x:Key="Info_Office_Downloading">Office ကို ဒေါင်းလုဒ်လုပ်နေသည်။</sys:String>
+    <sys:String x:Key="Info_Software_Installation_Complete">ထည့်သွင်းမှု ပြီးစီးပါသည်။</sys:String>
+    <sys:String x:Key="Info_Software_Installation_Failed">ထည့်သွင်းမှု မအောင်မြင်ပါ။</sys:String>
+    <sys:String x:Key="Info_Auto_Shutdown">သင်၏ကွန်ပျူတာသည် တစ်မိနစ်အတွင်း Sign out/Shutdown/Restart လုပ်မည်ဖြစ်သည်။</sys:String>
+    <sys:String x:Key="Info_No_Events">ဖြစ်ရပ်မရှိပါ။</sys:String>
+    <sys:String x:Key="Info_No_Office_Licenses">Office လိုင်စင် မတွေ့ပါ။</sys:String>
+    <sys:String x:Key="Info_No_Office_Product_Key">Office Product Key မတွေ့ရှိပါ။</sys:String>
+    <sys:String x:Key="Info_Number_Of_Keys_Uninstalled">ဖယ်ရှားခဲ့သော {0} product key(s) အရေအတွက်။</sys:String>
+    <sys:String x:Key="Info_Number_Of_Lics_Uninstalled">ဖယ်ရှားခဲ့သော Office လိုင်စင် {0} ခု။</sys:String>
+    <sys:String x:Key="Info_Office_License_Activation.Title">Product activation ရလဒ်များ</sys:String>
+    <sys:String x:Key="Info_Office_License_Activation_Successful">Product activation အောင်မြင်ပါသည်။</sys:String>
+    <sys:String x:Key="Info_KMS_Test_Result.Success">KMS စမ်းသပ်မှုနည်းလမ်း: {0}။ ရလဒ်: အောင်မြင်သည်၊ ကြာချိန်: {1} မီလီစက္ကန့်။</sys:String>
+    <sys:String x:Key="Info_KMS_Test_Result.Failed">KMS စမ်းသပ်မှု မအောင်မြင်ပါ။</sys:String>
+    <sys:String x:Key="Info_Enable_Mica">Mica Effect ကို ပြသရန် Windows 11 လိုအပ်သည်။</sys:String>
+
+    <!-- Success Message -->
+    <sys:String x:Key="Success_Download_Updates">အပ်ဒိတ်(များ)ကိုအောင်မြင်စွာတပ်ဆင်ပြီးပါပြီ။</sys:String>
+    <sys:String x:Key="Success_Add_Download_Task">ဒေါင်းလုပ်လုပ်ငန်းများကိုအောင်မြင်စွာထည့်သွင်းပြီးပါပြီ။</sys:String>
+    <sys:String x:Key="Success_Create_ISO">Office ISO ဖိုင်ကိုဖန်တီးပြီးပါပြီ။</sys:String>
+    <sys:String x:Key="Success_Installation_Verify">Installation ဖိုင်ကိုစစ်ဆေးပြီး အမှားမတွေ့ပါ။</sys:String>
+    <sys:String x:Key="Success_Installer_Exited">Office Deployment Tool သည်ပုံမှန်အတိုင်းပိတ်သွားပါသည်။</sys:String>
+    <sys:String x:Key="Success_Apply_Preferences">Office အပလီကေးရှင်း စိတ်ကြိုက်ရွေးချယ်မှုများကိုအောင်မြင်စွာသတ်မှတ်ပြီးပါပြီ။</sys:String>
+    <sys:String x:Key="Success_Install_Licenses">Office လိုင်စင်များကိုအောင်မြင်စွာတပ်ဆင်ပြီးပါပြီ။</sys:String>
+    <sys:String x:Key="Success_Install_Product_Key">Product key ကိုအောင်မြင်စွာတပ်ဆင်ပြီးပါပြီ။</sys:String>
+    <sys:String x:Key="Success_Set_KMS">KMS ဆက်တင်များကိုအောင်မြင်စွာသတ်မှတ်ပြီးပါပြီ။</sys:String>
+    <sys:String x:Key="Success_Save">အောင်မြင်စွာသိမ်းဆည်းပြီးပါပြီ။</sys:String>
+    <sys:String x:Key="Success_Collect_Logs">မှတ်တမ်းဖိုင်များကိုစုဆောင်းပြီး သိမ်းဆည်းထားသောနေရာ: {0}</sys:String>
+    <sys:String x:Key="Success_Repair">ပြုပြင်ခြင်းအောင်မြင်ခဲ့ပါသည်။</sys:String>
+    <sys:String x:Key="Success_Repair_System_Variables">စနစ်အပြောင်းအလဲများကို ပြန်လည်သတ်မှတ်ပြီးပါပြီ၊ ပြောင်းလဲမှုများအကျုံးဝင်စေရန်စနစ်ကို ပြန်စတင်ပါ။</sys:String>
+    <sys:String x:Key="Success_Repair_WMI_Components">WMI အစိတ်အပိုင်းများကို ပြန်လည်ပြုပြင်ပြီးပါပြီ၊ ပြောင်းလဲမှုများအကျုံးဝင်စေရန်စနစ်ကို ပြန်စတင်ပါ။</sys:String>
+
+    <!-- Error Message -->
+    <sys:String x:Key="Err_Create_Temp_Path">ယာယီpath ဖန်တီးလို့မရပါ။ စနစ်အပြောင်းအလဲများကိုစစ်ဆေးပြီး ထပ်မံကြိုးစားပါ။</sys:String>
+    <sys:String x:Key="Err_Already_Running">Office Tool Plus သည်လက်ရှိတွင်လည်ပတ်နေပြီးဖြစ်သည်။</sys:String>
+    <sys:String x:Key="Err_Perform_Update">အပ်ဒိတ်လုပ်ဆောင်စဉ် အမှားအယွင်းတစ်ခုဖြစ်ပွားခဲ့သည်၊ Office Tool Plus ၏နောက်ဆုံးဗားရှင်းကို ကိုယ်တိုင်ဒေါင်းလုပ်ဆွဲပါ။</sys:String>
+    <sys:String x:Key="Err_Unknown_Command">မသိသော command: {0}</sys:String>
+    <sys:String x:Key="Err_Command_Parameter">လိုအပ်သော parameters မပါရှိပါ။</sys:String>
+    <sys:String x:Key="Err_Checking_Installation">Installation ဖိုင်များစစ်ဆေးစဉ် အမှားအယွင်းတစ်ခုဖြစ်ပွားခဲ့သည်။ နောက်တစ်ကြိမ်ကြိုးစားပါ၊ သို့မဟုတ် Office Installation ဖိုင်များကို ပြန်လည်ဒေါင်းလုပ်ဆွဲပါ။</sys:String>
+    <sys:String x:Key="Err_Installation">The installation ဖိုင် {0} တွင်အမှားများရှိသည်။&#x000A;{1}</sys:String>
+    <sys:String x:Key="Err_Installation_File_Missing">မတွေ့သောဖိုင်: {0}</sys:String>
+    <sys:String x:Key="Err_Installation_File_Corrupted">ဖိုင်ပျက်စီးနေသည်: {0}</sys:String>
+    <sys:String x:Key="Err_Installation_Hash">Hash စစ်ဆေးမှုမအောင်မြင်ပါ၊ ဖိုင်: {0}&#x000A;Hash: {1}&#x000A;အမှန်တကယ် hash: {2}</sys:String>
+    <sys:String x:Key="Err_Installation_Version">ဗားရှင်းစစ်ဆေးမှုမအောင်မြင်ပါ၊ ဖိုင်: {0}&#x000A;ဗားရှင်း: {1}&#x000A;ဖောက်သည်ဗားရှင်း: {2}</sys:String>
+    <sys:String x:Key="Err_Installation_Mismatch">ဗားရှင်းမကိုက်ညီမှု၊ ဖိုင်: {0}&#x000A;အမှန်တကယ်ဗားရှင်း: {1}&#x000A;Architecture: {2}</sys:String>
+    <sys:String x:Key="Err_Installation_Redownload">Installation ဖိုင်များတွင်အမှားရှိနေသည်၊ ဖျက်ပြီးပြန်လည်ဒေါင်းလုပ်ဆွဲရန်ကြိုးစားပါ။</sys:String>
+    <sys:String x:Key="Err_Installation_No_BasePack">Installation ဖိုင်များတွင် base package မပါဝင်ပါ၊ ပြန်လည်ဒေါင်းလုပ်ဆွဲပါ။</sys:String>
+    <sys:String x:Key="Err_Reading_Info">Office အချက်အလက်ဖတ်ရှုစဉ်အမှားဖြစ်ပွားခဲ့သည်။</sys:String>
+    <sys:String x:Key="Err_Saving_Info">Office အချက်အလက်သိမ်းဆည်းစဉ်အမှားဖြစ်ပွားခဲ့သည်။</sys:String>
+    <sys:String x:Key="Err_Start_Deploy.Download">Office ကိုဒေါင်းလုပ်ဆွဲလို့မရပါ၊ product သို့မဟုတ် ဘာသာစကားတစ်ခုထည့်သွင်းပြီး ထပ်မံကြိုးစားပါ။</sys:String>
+    <sys:String x:Key="Err_Start_Deploy.Deploy">Office ကို deploy လုပ်လို့မရပါ၊ မူလဆက်တင်များကိုမှန်ကန်စွာသတ်မှတ်ထားကြောင်းသေချာပြီး ထပ်မံကြိုးစားပါ။</sys:String>
+    <sys:String x:Key="Err_Start_Deploy.Preferences">အပလီကေးရှင်း ဦးစားပေးချက်များသတ်မှတ်လို့မရပါ၊ သတ်မှတ်ချက်များကိုစစ်ဆေးပြီး ထပ်မံကြိုးစားပါ။</sys:String>
+    <!-- {0} means product name, for example: Microsoft 365 Apps for Enterprise. -->
+    <sys:String x:Key="Err_Start_Deploy_ProductNotSupported">{0} သည် ဤOffice ဗားရှင်းတွင် ပံ့ပိုးထားခြင်းမရှိပါ။</sys:String>
+    <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
+    <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} သည် {1} ဘာသာစကားကို မပံ့ပိုးပါ။</sys:String>
+    <sys:String x:Key="Err_System_Variables_Incorrect">စနစ်အပြောင်းအလဲတစ်ခု သို့မဟုတ် တော်တော်များများ မှားနေသည်၊ Toolbox စာမျက်နှာတွင်ပြုပြင်ပါ။</sys:String>
+    <sys:String x:Key="Err_Installer_Exited">Office Deployment Tool သည်မူမမှန်သောနည်းဖြင့် ပိတ်သွားသည်။</sys:String>
+    <sys:String x:Key="Err_Prepare_To_Download_Office">Office ဗားရှင်းကိုရယူလို့မရပါ၊ ထပ်မံကြိုးစားပါ သို့မဟုတ် Office Deployment Tool ကိုဒေါင်းလုပ်အင်ဂျင်အဖြစ်သုံးပါ။</sys:String>
+    <sys:String x:Key="Err_Create_ISO">Office installation ဖိုင်များမတွေ့ပါ။ ဦးစွာ၄င်းဖိုင်များကိုဒေါင်းလုပ်ဆွဲပါ သို့မဟုတ် ရှိပြီးသားဖိုင်များရွေးချယ်ပြီး ထပ်မံကြိုးစားပါ။</sys:String>
+    <sys:String x:Key="Err_Query_Office_Licenses">Unable to query Office licenses, please try again.</sys:String>
+    <sys:String x:Key="Err_Loading_Office_Licenses">စနစ်တွင် Click-to-Run ဗားရှင်းအတွက် Office ကိုမတွေ့ပါ၊ လိုင်စင်များ ကိုအသုံးမပြုနိုင်ပါ။ နောက်ဆုံးဗားရှင်းရှိကြောင်းသေချာအောင်လုပ်ပါ။</sys:String>
+    <sys:String x:Key="Err_Product_Key_Invalid">ထည့်သွင်းထားသော Product key သည်မမှန်ကန်ပါ၊ စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ။</sys:String>
+    <sys:String x:Key="Err_Confirmation_ID_Invalid">ထည့်သွင်းထားသော Confirmation ID သည်မမှန်ကန်ပါ၊ စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ။</sys:String>
+    <sys:String x:Key="Err_KMS_Host_Invalid">KMS ဆက်တင်များကိုမသိမ်းနိုင်ပါ၊ KMS hostname ကိုစစ်ဆေးပြီး ထပ်မံကြိုးစားပါ။</sys:String>
+    <sys:String x:Key="Err_No_KMS_Lic">KMS ဆက်တင်များကိုမသိမ်းနိုင်ပါ၊ Office KMS လိုင်စင်အတည်ပြုထားသောအရာမတွေ့ပါ။</sys:String>
+    <sys:String x:Key="Err_Set_KMS">KMS ဆက်တင်များကိုမသိမ်းနိုင်ပါ၊ ထပ်မံကြိုးစားပါ။</sys:String>
+    <sys:String x:Key="Err_Act_Run_Commands">Command များကိုတည်ဆောက်စဉ်အမှားဖြစ်ပွားခဲ့သည်။&#x000A;&#x000A;Error ကုတ်: {0}</sys:String>
+    <sys:String x:Key="Err_Act_Office_License">Product ကိုလက်ခံစဉ် အမှားဖြစ်ပွားခဲ့သည်။&#x000A;&#x000A;Error ကုတ်: {0}</sys:String>
+    <sys:String x:Key="Err_Install_Office_Lic">လိုင်စင်ထည့်သွင်းစဉ် အမှားဖြစ်ပွားခဲ့သည်။&#x000A;&#x000A;Error ကုတ်: {0}</sys:String>
+    <sys:String x:Key="Err_Install_Product_Key">Product key ထည့်သွင်းစဉ် အမှားဖြစ်ပွားခဲ့သည်။&#x000A;&#x000A;Error ကုတ်: {0}</sys:String>
+    <sys:String x:Key="Err_Uninstall_Product_Key">Product key ဖျက်ခြင်းအတွင်း အမှားဖြစ်ပွားခဲ့သည်။&#x000A;&#x000A;Error ကုတ်: {0}</sys:String>
+    <sys:String x:Key="Err_Check_KMS_Status">KMS အခြေအနေကိုစစ်ဆေးလို့မရပါ၊ KMS hostname ကိုစစ်ဆေးပြီး ထပ်မံကြိုးစားပါ။</sys:String>
+    <sys:String x:Key="Err_Office_App_NotFound">{0} ကိုစနစ်တွင်မတွေ့ပါ၊ Office ၏နောက်ဆုံးဗားရှင်းတပ်ဆင်ထားမထား စစ်ဆေးပါ။</sys:String>
+    <sys:String x:Key="Err_Open_Clipboard">Clipboard ကိုဖွင့်လို့မရပါ၊ ထပ်မံကြိုးစားပါ။</sys:String>
+
+    <!-- Error messages about Thunder -->
+    <sys:String x:Key="Thunder_Err_Init">Thunder ကို စတင်ဖွင့်ရန် မအောင်မြင်ပါ။</sys:String>
+    <sys:String x:Key="Thunder_Err_Start">လုပ်ဆောင်ချက်ကို စတင်ရန် မအောင်မြင်ပါ။</sys:String>
+    <sys:String x:Key="Thunder_Err_Stop">လုပ်ဆောင်ချက်ကို ခေတ္တရပ်ရန် မအောင်မြင်ပါ။</sys:String>
+    <sys:String x:Key="Thunder_Err_Exit">Thunder ထွက်ရန် မအောင်မြင်ပါ။</sys:String>
+    <sys:String x:Key="Thunder_Err_Unknown">မသိသောဒေါင်းလုပ်အမှား။</sys:String>
+    <sys:String x:Key="Thunder_Err_Create">ဖိုင်ကို ဖန်တီးရန် မအောင်မြင်ပါ။</sys:String>
+    <sys:String x:Key="Thunder_Err_Delete">ဖိုင်ကို ဖျက်ရန် မအောင်မြင်ပါ။</sys:String>
+    <sys:String x:Key="Thunder_Err_FileHash">ဖိုင်အပိုင်းအတည်ပြုမှု မအောင်မြင်ပါ။</sys:String>
+    <sys:String x:Key="Thunder_Err_PieceHash">ဖိုင်အပိုင်းအတည်ပြုမှု မအောင်မြင်ပါ။</sys:String>
+    <sys:String x:Key="Thunder_Err_Read">ဖိုင်ကို ဖတ်ရန် မအောင်မြင်ပါ။</sys:String>
+    <sys:String x:Key="Thunder_Err_Rename">ဖိုင်အမည်ပြောင်းရန် မအောင်မြင်ပါ။</sys:String>
+    <sys:String x:Key="Thunder_Err_Write">ဖိုင်ကို ရေးရန် မအောင်မြင်ပါ။</sys:String>
+    <sys:String x:Key="Thunder_Err_DownInvalid">Address မမှန်ပါ။</sys:String>
+    <sys:String x:Key="Thunder_Err_NotIP">HTTP ဒေါင်းလုပ်တွင် IP မရှိပါ။</sys:String>
+    <sys:String x:Key="Thunder_Err_IDInvalid">လုပ်ဆောင်ချက် ID မမှန်ပါ။</sys:String>
+    <sys:String x:Key="Thunder_Err_SetProxy">Proxy ပြင်ရန်မအောင်မြင်ပါ။</sys:String>
+    <sys:String x:Key="Thunder_Err_ProxyAuthTypeFailed">Proxy အထောက်အထားစစ်ဆေးမှု မ‌အောင်မြင်ပါ။</sys:String>
+    <sys:String x:Key="Thunder_Err_ProxyAuthTypeUnknown">မသိသော proxy အမျိုးအစား။</sys:String>
+    <sys:String x:Key="Thunder_Err_Timeout">လုပ်ဆောင်ချက် အချိန်လွန်သွားသည်။</sys:String>
+    <sys:String x:Key="Thunder_Err_Crashed">Thunder အင်ဂျင် ပြတ်ပျက်သွားသည်။</sys:String>
+    <sys:String x:Key="Thunder_Err_Cancel">လုပ်ဆောင်ချက် ဖျက်သိမ်းပြီးပါပြီ။</sys:String>
+</ResourceDictionary>

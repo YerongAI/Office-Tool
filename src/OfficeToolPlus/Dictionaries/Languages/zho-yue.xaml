@@ -1,0 +1,966 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=System.RunTime"
+                    xml:space="preserve">
+
+    <!-- Country settings, it is used to get information from server. -->
+    <sys:String x:Key="Culture">zho-yue</sys:String>
+    <!-- Products name settings, "en-us" is default value if not set. -->
+    <sys:String x:Key="ProductDict">zh-cn</sys:String>
+    <!-- Markdown document font family. -->
+    <FontFamily x:Key="Markdown.FontFamily">Microsoft YaHei UI</FontFamily>
+
+    <!-- Eula content -->
+    <sys:String x:Key="Eula.Title">許可條款</sys:String>
+    <sys:String x:Key="Eula.Content">使用呢個軟件即係表示你接受[軟件許可條款]({0})同埋 [Microsoft 服務協議]({1})</sys:String>
+
+    <!-- Custom control -->
+    <sys:String x:Key="Yerong_String_ToggleButton.Unset">未設定</sys:String>
+    <sys:String x:Key="Yerong_String_ToggleButton.Off">閂</sys:String>
+    <sys:String x:Key="Yerong_String_ToggleButton.On">開</sys:String>
+    <sys:String x:Key="Yerong_String_MicaMenu.Name">選單</sys:String>
+    <sys:String x:Key="Yerong_String_MicaMenu.HelpText">撳一下開啟上下文選單。</sys:String>
+
+    <!-- Title bar -->
+    <sys:String x:Key="Title_Bar_GoBack_Button">返回</sys:String>
+    <sys:String x:Key="Title_Bar_SysMenu_Button">系統選單</sys:String>
+    <sys:String x:Key="Title_Bar_Command_Box">命令</sys:String>
+
+    <!-- Navigation bar -->
+    <sys:String x:Key="Navigation_Menu.Name">導航列選單</sys:String>
+    <sys:String x:Key="Navigation_Menu.ToolTip">撳一下展開或者收埋導航列</sys:String>
+    <sys:String x:Key="Navigation_Bar.Name">導航列</sys:String>
+    <sys:String x:Key="Navigation_Bar_Bottom.Name">底部導航列</sys:String>
+
+    <sys:String x:Key="Navigate_Page.Home">主頁</sys:String>
+    <sys:String x:Key="Navigate_Page.Deploy">部署</sys:String>
+    <sys:String x:Key="Navigate_Page.Activate">激活</sys:String>
+    <sys:String x:Key="Navigate_Page.Toolbox">工具箱</sys:String>
+    <sys:String x:Key="Navigate_Page.ConvertDocuments">文檔轉換</sys:String>
+    <sys:String x:Key="Navigate_Page.HashChecker">哈希值校驗</sys:String>
+
+    <sys:String x:Key="Navigate_Page.Settings">設定</sys:String>
+    <sys:String x:Key="Navigate_Page.About">關於</sys:String>
+
+    <!-- Notification list -->
+    <sys:String x:Key="Notification_Close_Message.Name">關閉信息</sys:String>
+    <sys:String x:Key="Notification_Message_Button_List">信息按鈕</sys:String>
+    <sys:String x:Key="Notification_Cancel_Task.Name">取消任務</sys:String>
+
+    <!-- Home page -->
+    <sys:String x:Key="Home_Messages_Center.Name">信息中心</sys:String>
+    <!-- Greetings, customize it according to your country and habits. -->
+    <sys:String x:Key="Home_Greeting_Hello">你好</sys:String>
+    <!-- 00:00 -> 05:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.0">夜深喇！早啲瞓啦</sys:String>
+    <!-- 05:00 -> 06:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.5">天快光喇，準備好起身未呀？</sys:String>
+    <!-- 06:00 -> 10:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.6">早晨</sys:String>
+    <!-- 10:00 -> 11:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.10">早晨，嘩，就快中午喇喎</sys:String>
+    <!-- 11:00 -> 12:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.11">午安</sys:String>
+    <!-- 12:00 -> 13:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.12">午安</sys:String>
+    <!-- 13:00 -> 15:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.13">下午好</sys:String>
+    <!-- 15:00 -> 17:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.15">下午好</sys:String>
+    <!-- 17:00 -> 18:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.17">下午好</sys:String>
+    <!-- 18:00 -> 21:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.18">晚上好</sys:String>
+    <!-- 21:00 -> 22:00 -->
+    <sys:String x:Key="Home_Greeting_Hour.21">瞓覺時間喇，晚安</sys:String>
+    <!-- 22:00 -> 00:00 (+1) -->
+    <sys:String x:Key="Home_Greeting_Hour.22">時間唔早喇~晚安</sys:String>
+    <!-- Greetings end -->
+    <sys:String x:Key="Home_Install_Office">安裝 Office</sys:String>
+    <sys:String x:Key="Home_Install_Office.O365PPRDescription">包含 Outlook、OneDrive for Business、Word、Excel、PowerPoint 同埋更多</sys:String>
+    <sys:String x:Key="Home_Install_Office.O365HPRDescription">包含 Outlook、Word、Excel、PowerPoint 同埋更多</sys:String>
+    <sys:String x:Key="Home_Install_Office.PP2019RDescription">包含 Outlook、Word、Excel、PowerPoint 同埋更多</sys:String>
+    <sys:String x:Key="Home_Install_Office.HS2019Description">包含 Word、Excel、PowerPoint</sys:String>
+    <sys:String x:Key="Home_Fetching_Content">撈緊內容，等陣……</sys:String>
+    <sys:String x:Key="Home_Error_While_Fetching_Content">撈唔到內容，檢查下你嘅網絡連接，然後再試過。</sys:String>
+    <sys:String x:Key="Home_Retry">重試(_R)</sys:String>
+    <sys:String x:Key="Home_Launcher.Name">應用程式列表</sys:String>
+    <sys:String x:Key="Home_Launcher_OpenInBrowser">喺瀏覽器開啟(_O)</sys:String>
+    <sys:String x:Key="Home_Launcher_CreateShortcut">整個桌面捷徑(_C)</sys:String>
+
+    <!-- Deploy page -->
+    <sys:String x:Key="Deploy_Learn_More">了解多啲</sys:String>
+    <!-- Channels Name, if you do not want to translate them, please keep in English. -->
+    <sys:String x:Key="PerpetualVL2019">Office 2019 企業長期版</sys:String>
+    <sys:String x:Key="PerpetualVL2021">Office 2021 企業長期版</sys:String>
+    <sys:String x:Key="PerpetualVL2024">Office 2024 企業長期版</sys:String>
+    <sys:String x:Key="SemiAnnual">半年度企業通道</sys:String>
+    <sys:String x:Key="MonthlyEnterprise">月度企業通道</sys:String>
+    <sys:String x:Key="Current">目前通道</sys:String>
+    <sys:String x:Key="CurrentPreview">目前通道（預覽）</sys:String>
+    <sys:String x:Key="BetaChannel">測試通道</sys:String>
+
+    <!-- Error messages -->
+    <!-- {0} means product name. -->
+    <sys:String x:Key="Deploy_Error_Coexist">{0} 唔能夠同現有產品共存。</sys:String>
+    <!-- {0} means product name. -->
+    <sys:String x:Key="Deploy_Error_ODT_Not_Supported">如果你想安裝 {0}，請將安裝模組改為 Office Tool Plus。</sys:String>
+    <!-- {0} means product name, {1} means channel name. -->
+    <sys:String x:Key="Deploy_Error_Channel">{0} 唔能夠安裝喺選定嘅通道上: {1}。</sys:String>
+    <!-- {0} means channel name, such as Current Channel. -->
+    <sys:String x:Key="Deploy_Error_Unsupported_Channel">如果你想用 {0}，請將安裝模組改為 Office Tool Plus。</sys:String>
+    <sys:String x:Key="Deploy_Error_System_Architecture">你唔能夠喺 32 位嘅系統度安裝 64 位嘅 Office。</sys:String>
+    <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
+    <sys:String x:Key="Deploy_Error_Office_Architecture">你唔能夠安裝 {0}嘅 Office，因為你部機已經裝咗 {1}嘅 Office。</sys:String>
+    <sys:String x:Key="Deploy_Error_Installation_Arch">你揀嘅系統架構同本地安裝檔案嘅系統架構唔一樣。請重新揀過系統架構，或者唔好用本地安裝檔案嚟部署。</sys:String>
+    <sys:String x:Key="Deploy_Error_Installation_Channel">你揀嘅更新通道同本地安裝檔案嘅更新通道唔一樣。請重新揀過更新通道，或者唔好用本地安裝檔案嚟部署。</sys:String>
+
+    <sys:String x:Key="Deploy_Deployment">部署 Office</sys:String>
+    <sys:String x:Key="Deploy_Deployment.Description">部署 Office 之前，請確保部署模式設定正確，產品同語言都設定咗。</sys:String>
+    <sys:String x:Key="Deploy_Start_Deploy">開始部署(_D)</sys:String>
+    <sys:String x:Key="Deploy_Reset">重設所有設定(_R)</sys:String>
+    <sys:String x:Key="Deploy_View_Code">睇 XML 程式碼(_V)</sys:String>
+    <sys:String x:Key="Deploy_Generate_Command">產生部署命令(_G)</sys:String>
+    <sys:String x:Key="Deploy_Apply_Preferences">將偏好設定應用到 Office 應用程式(_A)</sys:String>
+    <sys:String x:Key="Deploy_Export_Config">匯出設定(_E)</sys:String>
+    <sys:String x:Key="Deploy_Import_Config">匯入設定(_I)</sys:String>
+    <sys:String x:Key="Deploy_Import_Config_Web">從網絡位置匯入設定(_W)</sys:String>
+    <sys:String x:Key="Deploy_Check_Updates">檢查 Office 更新(_U)</sys:String>
+    <sys:String x:Key="Deploy_Repair_Office">修復 Office (_P)</sys:String>
+    <sys:String x:Key="Deploy_Mode">部署模式</sys:String>
+    <sys:String x:Key="Deploy_Mode.Edit">編輯設定</sys:String>
+    <sys:String x:Key="Deploy_Mode.Download">下載</sys:String>
+    <sys:String x:Key="Deploy_Mode.Install">安裝</sys:String>
+    <sys:String x:Key="Deploy_Mode.Create_ISO">整個 ISO 檔案</sys:String>
+    <sys:String x:Key="Deploy_Architecture">系統架構</sys:String>
+    <sys:String x:Key="Deploy_Architecture_Current_Installed">宜家安裝咗嘅 Office 系統架構係: {0}。</sys:String>
+    <sys:String x:Key="Deploy_Architecture.x86">32 位</sys:String>
+    <sys:String x:Key="Deploy_Architecture.x64">64 位</sys:String>
+    <sys:String x:Key="Deploy_Architecture.ARM">ARM（兼容 32 位）</sys:String>
+    <sys:String x:Key="Deploy_Architecture.ARM64">ARM64（兼容 64 位）</sys:String>
+    <sys:String x:Key="Deploy_Channel">更新通道</sys:String>
+    <sys:String x:Key="Deploy_Channel_Available_Version">而家可以用嘅 Office 版本: {0}</sys:String>
+    <sys:String x:Key="Deploy_Module">安裝模組</sys:String>
+    <sys:String x:Key="Deploy_Module.Description">揀 Office 部署工具可以有更好嘅兼容性，揀 Office Tool Plus 可以有更好嘅體驗。</sys:String>
+    <sys:String x:Key="Deploy_Module.ODT">Office 部署工具</sys:String>
+    <sys:String x:Key="Deploy_Module.OTP">Office Tool Plus</sys:String>
+    <sys:String x:Key="Deploy_Download_First">下載完再部署</sys:String>
+    <sys:String x:Key="Deploy_Download_First.Description">安裝檔案會保存喺程式目錄或者源路徑指定嘅目錄入面。</sys:String>
+    <sys:String x:Key="Deploy_Create_Shortcut">整個桌面捷徑</sys:String>
+    <sys:String x:Key="Deploy_Create_Shortcut.Description">Office 安裝完之後喺桌面整個 Office 應用程式嘅捷徑。</sys:String>
+    <!-- Do not edit them or translate them. iSlide only provided in mainland China. -->
+    <sys:String x:Key="Deploy_iSlide">安裝 iSlide 插件</sys:String>
+    <sys:String x:Key="Deploy_iSlide.Description">Office 安裝完成後安裝 iSlide 插件。iSlide 提供好多 PPT 素材下載，仲有 PPT 智能排版，等 PPT 設計更簡單。</sys:String>
+    <sys:String x:Key="Deploy_iSlide_Install">即刻安裝</sys:String>
+    <sys:String x:Key="Deploy_iSlide_Install.Name">即刻安裝 iSlide。</sys:String>
+
+    <sys:String x:Key="Deploy_Product">產品</sys:String>
+    <sys:String x:Key="Deploy_Product.Description">{0} 個已安裝嘅產品，{1} 個準備部署，{2} 個準備卸載。</sys:String>
+    <sys:String x:Key="Deploy_Product_Button">加產品(_P)</sys:String>
+    <sys:String x:Key="Deploy_Product_Nothing_Here">呢度乜都冇喎~</sys:String>
+    <sys:String x:Key="Deploy_Product_Installed">已安裝嘅產品</sys:String>
+    <sys:String x:Key="Deploy_Product_To_Be_Deployed">準備部署</sys:String>
+    <sys:String x:Key="Deploy_Product_To_Be_Uninstalled">準備卸載</sys:String>
+    <sys:String x:Key="Deploy_Uninstall_Product">卸載</sys:String>
+    <sys:String x:Key="Deploy_Cancel_Uninstall_Product">取消卸載</sys:String>
+    <sys:String x:Key="Deploy_Cancel_Deploy_Product">取消部署</sys:String>
+    <sys:String x:Key="Deploy_Applications">應用程式</sys:String>
+    <sys:String x:Key="Deploy_Addons">附加組件</sys:String>
+    <sys:String x:Key="Deploy_Addons.Tip">如果你唔知附加組件係乜嘢，唔好取消剔佢哋。</sys:String>
+    <sys:String x:Key="Deploy_Language">語言</sys:String>
+    <sys:String x:Key="Deploy_Language.Description">{0} 個已安裝嘅語言，{1} 個準備部署，{2} 個準備卸載。</sys:String>
+    <sys:String x:Key="Deploy_Language_Button">加語言(_L)</sys:String>
+    <sys:String x:Key="Deploy_Language_Nothing_Here">呢度乜都冇喎~</sys:String>
+    <sys:String x:Key="Deploy_Language_Installed">已安裝嘅語言</sys:String>
+    <sys:String x:Key="Deploy_Language_To_Be_Deployed">準備部署</sys:String>
+    <sys:String x:Key="Deploy_Language_To_Be_Uninstalled">準備卸載</sys:String>
+    <sys:String x:Key="Deploy_Uninstall_Language">卸載</sys:String>
+    <sys:String x:Key="Deploy_Cancel_Uninstall_Language">取消卸載</sys:String>
+    <sys:String x:Key="Deploy_Edit_Language_Settings">語言設定</sys:String>
+    <sys:String x:Key="Deploy_Cancel_Deploy_Language">取消部署</sys:String>
+
+    <sys:String x:Key="Deploy_Products_List">產品列表</sys:String>
+    <sys:String x:Key="Deploy_Products_List_Type_To_Search">打字搵產品</sys:String>
+    <sys:String x:Key="Deploy_Products_List_ID">產品 ID:</sys:String>
+    <sys:String x:Key="Deploy_Languages_List">語言列表</sys:String>
+    <sys:String x:Key="Deploy_Languages_List_Type_To_Search">打字搵語言</sys:String>
+    <sys:String x:Key="Deploy_Languages_List_Proofing_Tool_Only">淨係部署校對工具</sys:String>
+    <sys:String x:Key="Deploy_Languages_List_ID">語言 ID:</sys:String>
+    <sys:String x:Key="Deploy_Languages_List_Type">語言類型:</sys:String>
+    <sys:String x:Key="Deploy_Language_Type.Full">完整</sys:String>
+    <sys:String x:Key="Deploy_Language_Type.PartialAndProofing">部分</sys:String>
+    <sys:String x:Key="Deploy_Language_Type.Partial">部分但唔包含校對工具</sys:String>
+    <sys:String x:Key="Deploy_Language_Type.Proofing">校對工具</sys:String>
+    <sys:String x:Key="Deploy_Language_Settings_Exclude">為下面啲產品進行安裝</sys:String>
+
+    <sys:String x:Key="Deploy_Installation_Files">安裝檔案</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files.Description">揀選、檢查或者刪除 Office 安裝檔案。</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Select">揀選</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Select.Description">揀安裝檔案嗰陣，請揀任何一個 CAB 檔案。</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Verify">檢查</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Verify.Description">檢查安裝檔案有冇問題。</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_DeleteAll">全部刪除</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Reset">重設</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Reset.Description">唔再用而家嘅安裝檔案部署 Office。</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_UseAsSource">當做安裝源使用(_U)</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_UseAsSource.Description">系統架構同更新通道會自動配合呢個安裝檔案。</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Open_Location">開檔案位置(_O)</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Delete">刪除</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none">基礎包（必需嘅）</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.arm64x">ARM64 包</sys:String>
+    <sys:String x:Key="Deploy_Installation_Files_Package.x-none.chpe">ARM 包</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Settings">去高級設定</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Settings.Description">去高級設定設定更多選項。</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Settings_Button">高級設定(_A)</sys:String>
+
+    <!-- Deploy advanced page -->
+    <sys:String x:Key="Deploy_Advanced">高級設定</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Go_Back">返回</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Go_Back.Description">返回基本設定。</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_General_Settings">一般設定</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Company_Name">輸入機構名稱喺 Office 文檔度設定公司屬性。</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Description">輸入呢個設定嘅說明嚟做記錄用。</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Install_Settings">安裝設定</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Fallback_Language">後備語言</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Fallback_Language.Description">當 Office 嘅語言設定為配合系統語言嗰陣，你可以指定一個後備語言，以備 Office 唔支援系統語言或者安裝程式喺本地源搵唔到目標語言包嗰陣用。</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Version">Office 版本</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Version.Description">如果未指定 Office 版本，就會預設安裝得到嘅最新版本。</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Download_Path">下載路徑</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Download_Path.Description">設定應該喺邊度下載安裝檔案，如果要用呢個設定，就一定要設定 Office 版本號。</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Source_Path">源路徑</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Source_Path.Description">如果源路徑冇填，就會預設用 Office CDN 做源；喺下載模式，呢個設定係用嚟話你知應該將安裝檔案儲存喺邊度。</sys:String>
+    <sys:String x:Key="Deploy_Advanced_No_Display">靜默安裝</sys:String>
+    <sys:String x:Key="Deploy_Advanced_No_Display.Description">Office 安裝嗰陣唔顯示進度條、錯誤信息或者其他用戶介面。</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback">允許返回 CDN</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback.Description">允許安裝程式返去 Office CDN 伺服器下載缺少嘅語言包。</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Force_Close_Apps">強制關閂運行緊嘅 Office 應用程式</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Force_Close_Apps.Description">未儲存嘅資料可能會冇咗。</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar">釘喺任務欄</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar.Description">喺 Windows 7、8、8.1 度將 Office 應用程式嘅捷徑圖示加到任務欄。</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Update_Settings">更新設定</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM">用 MECM 管理更新</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM.Description">用 Microsoft Endpoint Configuration Manager 管理更新嗰陣，更新由管理員管理。</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Enable_Update">啟用 Office 自動更新</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Update_Path">更新源</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Update_Path.Description">如果路徑冇填，就會預設用 Office CDN 做更新源。</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Upgrade_Settings">升級選項</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Migrate_Arch">遷移系統架構</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Migrate_Arch.Description">將而家嘅 Office 安裝改做目前指定嘅系統架構，例如：由 32 位遷移去 64 位。</sys:String>
+    <sys:String x:Key="Deploy_Advanced_MSI_Notice">以下設定淨係喺用 Office 部署工具做安裝模組嗰陣先會生效。</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Remove_MSI">移除現有嘅 MSI 版本嘅 Office</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Match_Previous_MSI">幫新嘅 Office 安裝同之前 MSI 版本一樣嘅語言</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Ignore_Product">唔理以下產品</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Activate_Settings">激活設定</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Accept_EULA">自動接受軟件許可條款</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Accept_EULA.Description">啟用之後，用戶就唔會見到「Microsoft 軟件許可條款」對話框。</sys:String>
+    <sys:String x:Key="Deploy_Advanced_MAK">多次激活密鑰（MAK）設定</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Auto_Activate">當你設定咗 MAK 之後，我哋會試下自動激活產品。</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Product_Activation">產品激活</sys:String>
+    <sys:String x:Key="Deploy_Advanced_UserBased">基於用戶</sys:String>
+    <sys:String x:Key="Deploy_Advanced_DeviceBased">基於裝置</sys:String>
+    <sys:String x:Key="Deploy_Advanced_SCL">共用電腦</sys:String>
+    <sys:String x:Key="Deploy_Advanced_SCL_Cache_Override">自訂許可證令牌位置</sys:String>
+    <sys:String x:Key="Deploy_Advanced_SCL_Cache_Override.ToolTip">指定許可證令牌嘅資料夾路徑</sys:String>
+
+    <sys:String x:Key="Deploy_Advanced_Preferences">應用程式偏好設定</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Apply_Preferences.Description">即刻將偏好設定應用到 Office 應用程式。</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Reset_Preferences">重設所有偏好設定</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Reset_Preferences_Button">重設</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Filter">篩選</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Filter.HelpText">撳一下去篩選。</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Filtered">已篩選嘅類別</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Filtered.HelpText">撳一下取消篩選呢個類別。</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Type_To_Search.Name">搵應用程式偏好設定</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Type_To_Search.HelpText">打字搵應用程式偏好設定</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_DataGrid.HelpText">撳 Enter 掣或者雙撳去編輯偏好設定。</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Application">應用程式</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Settings">設定</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Status">狀態</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Preferences_Enable">啟用</sys:String>
+    <sys:String x:Key="Deploy_Advanced_Set_Preferences_Button">應用</sys:String>
+
+    <!-- Activate page -->
+    <sys:String x:Key="Activate_NonAdmin_Privileges">你而家用緊非管理員權限運行 Office Tool Plus，有啲功能用唔到。</sys:String>
+
+    <sys:String x:Key="Activate_Licenses_Management">許可證管理</sys:String>
+    <sys:String x:Key="Activate_Licenses_Management.Description">安裝、卸載或者激活 Office 許可證。</sys:String>
+    <sys:String x:Key="Activate_Button">激活(_A)</sys:String>
+    <sys:String x:Key="Activate_Display_Internet_Act_Events">顯示在線激活失敗事件</sys:String>
+    <sys:String x:Key="Activate_Display_KMS_Events">顯示 KMS 激活事件</sys:String>
+    <sys:String x:Key="Activate_Clear_Activation">清除激活資料</sys:String>
+    <sys:String x:Key="Activate_Install_Licenses">安裝許可證</sys:String>
+    <sys:String x:Key="Activate_Install_Licenses.Description">從已安裝嘅 Office 度攞許可證嚟安裝。</sys:String>
+    <sys:String x:Key="Activate_Install_Licenses_Button">安裝</sys:String>
+    <sys:String x:Key="Activate_Install_Other_Licenses">安裝其它許可證</sys:String>
+    <sys:String x:Key="Activate_Install_Other_Licenses.Description">從本地磁碟安裝其它許可證。</sys:String>
+    <sys:String x:Key="Activate_Install_Other_Licenses_Button">安裝</sys:String>
+    <sys:String x:Key="Activate_Uninstall_All_Licenses">卸載所有許可證</sys:String>
+    <sys:String x:Key="Activate_Uninstall_All_Licenses.Description">卸載所有已安裝嘅許可證。做完之後，你要重新安裝許可證。</sys:String>
+    <sys:String x:Key="Activate_Uninstall_All_Licenses_Button">卸載</sys:String>
+
+    <sys:String x:Key="Activate_Keys_Management">密鑰管理</sys:String>
+    <sys:String x:Key="Activate_Keys_Management.Description">安裝、卸載密鑰，或者離線激活 Office。</sys:String>
+    <sys:String x:Key="Activate_Product_Key">產品密鑰</sys:String>
+    <sys:String x:Key="Activate_Product_Key.Description">安裝 Office 產品密鑰，產品密鑰好似：XXXXX-XXXXX-XXXXX-XXXXX-XXXXX。</sys:String>
+    <sys:String x:Key="Activate_Install_Product_Key">安裝密鑰(_I)</sys:String>
+    <sys:String x:Key="Activate_Uninstall_Unactivated_Key">卸載所有未激活嘅密鑰(_U)</sys:String>
+    <sys:String x:Key="Activate_Uninstall_All_Product_Keys">卸載所有產品密鑰(_A)</sys:String>
+    <sys:String x:Key="Activate_Install_CID">安裝確認 ID</sys:String>
+    <sys:String x:Key="Activate_Install_CID.Description">安裝確認 ID 嚟離線激活產品。</sys:String>
+    <sys:String x:Key="Activate_Input_CID">請輸入確認 ID</sys:String>
+
+    <sys:String x:Key="Activate_KMS_Management">KMS 管理</sys:String>
+    <sys:String x:Key="Activate_KMS_Management.Description">設定或者重設 KMS 主機或者端口。</sys:String>
+    <sys:String x:Key="Activate_KMS_Apply">設定主機(_S)</sys:String>
+    <sys:String x:Key="Activate_KMS_Host">KMS 主機</sys:String>
+    <sys:String x:Key="Activate_KMS_Host.Description">KMS 主機名，例如 kms.example.com、kms.example.com:1688 或者 IP 地址。</sys:String>
+    <sys:String x:Key="Activate_KMS_Host_Cache.Enable">啟用主機緩存</sys:String>
+    <sys:String x:Key="Activate_KMS_Host_Cache.Disable">停用主機緩存</sys:String>
+    <sys:String x:Key="Activate_KMS_Reset">重設 KMS</sys:String>
+    <sys:String x:Key="Activate_KMS_Reset.Description">移除 KMS 主機名同埋重設端口做預設值。</sys:String>
+
+    <!-- Licenses list -->
+    <sys:String x:Key="Activate_Licenses">Office 許可證</sys:String>
+    <sys:String x:Key="Activate_License">許可證列表</sys:String>
+    <sys:String x:Key="Activate_License.Description">管理已安裝嘅許可證。</sys:String>
+    <sys:String x:Key="Activate_License_Refresh">重新整理(_R)</sys:String>
+    <sys:String x:Key="Activate_License_Expand">全部展開(_E)</sys:String>
+    <sys:String x:Key="Activate_License_Collapse">全部收埋(_C)</sys:String>
+    <sys:String x:Key="Activate_License_Clear">清空列表(_L)</sys:String>
+    <sys:String x:Key="Activate_License_Nothing_Here">呢度乜都冇喎~</sys:String>
+    <sys:String x:Key="Activate_License_Status.Unactivated">未激活</sys:String>
+    <sys:String x:Key="Activate_License_Status.Activated">已激活</sys:String>
+    <!-- vNext License -->
+    <sys:String x:Key="Activate_License_vNext_Type">許可證類型:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Type.User">用戶</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Type.Device">裝置</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Type.Subscription">訂閱</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Type.Perpetual">永久</sys:String>
+    <sys:String x:Key="Activate_License_vNext.ExpireDate">許可證到期時間:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.MaxDevice">容許嘅最大裝置數:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Status">狀態:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Status.Provisioned">已提供</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Status.Deprovisioned">已取消提供</sys:String>
+    <sys:String x:Key="Activate_License_vNext_ReasonCode">原因代碼:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_ReasonCode.DeviceDeprovisionedByUser">用戶已經取消配置裝置</sys:String>
+    <sys:String x:Key="Activate_License_vNext_ReasonCode.SubscriptionCancelled">訂閱已取消</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Beneficiary.User">呢個許可證分配俾用戶使用:</sys:String>
+    <sys:String x:Key="Activate_License_vNext.Beneficiary.Device">呢個許可證分配俾裝置使用:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.TenantID">租戶 ID:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.DeviceID">裝置 ID:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.UserID">用戶 ID:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.ValidFrom">授權有效期由:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.ValidTo">授權有效期至:</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Metadata.RenewalTime">下次續訂時間:</sys:String>
+    <!-- Legacy License -->
+    <sys:String x:Key="Activate_License_Lic.Description">描述:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Key">密鑰最後五個字符:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Period">剩餘期限:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Error_Code">錯誤代碼:</sys:String>
+    <sys:String x:Key="Activate_License_Lic.Error_Description">錯誤描述:</sys:String>
+    <sys:String x:Key="Activate_License_VL.Type">激活類型:</sys:String>
+    <!-- AO equal to Activation Object -->
+    <sys:String x:Key="Activate_License_AD.ObjectName">激活對象 (AO) 名稱: </sys:String>
+    <sys:String x:Key="Activate_License_AD.ObjectDN">AO DN: </sys:String>
+    <sys:String x:Key="Activate_License_AD.ExtendedPid">AO 擴展 PID: </sys:String>
+    <sys:String x:Key="Activate_License_AD.AID">AO 激活 ID: </sys:String>
+    <sys:String x:Key="Activate_License_KMS.Host">KMS 主機:</sys:String>
+    <sys:String x:Key="Activate_License_KMS_Host_Caching">主機緩存:</sys:String>
+    <sys:String x:Key="Activate_License_KMS_Host_Caching.Enabled">已啟用</sys:String>
+    <sys:String x:Key="Activate_License_KMS_Host_Caching.Disabled">已停用</sys:String>
+    <sys:String x:Key="Activate_License_KMS.Act_Interval">激活間隔:</sys:String>
+    <sys:String x:Key="Activate_License_KMS.Renew_Interval">續期間隔:</sys:String>
+
+    <sys:String x:Key="Activate_License_Period.Infinite">無限期</sys:String>
+    <sys:String x:Key="Activate_License_Period.Day">{0} 日</sys:String>
+    <sys:String x:Key="Activate_License_Period.Hour">{0} 個鐘</sys:String>
+    <sys:String x:Key="Activate_License_Period.Minute">{0} 分鐘</sys:String>
+
+    <sys:String x:Key="Activate_License_Button.Copy_LicenseID">複製許可證 ID</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_TenantID">複製租戶 ID</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_UserID">複製用戶 ID</sys:String>
+    <sys:String x:Key="Activate_License_Button.Delete_License">刪除許可證</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_SKU">複製 SKU ID</sys:String>
+    <sys:String x:Key="Activate_License_Button.Copy_IID">複製安裝 ID</sys:String>
+    <sys:String x:Key="Activate_License_Button.Activate">激活</sys:String>
+    <sys:String x:Key="Activate_License_Button.Uninstall_Key">卸載密鑰</sys:String>
+
+    <sys:String x:Key="Activate_Licenses_List">許可證列表</sys:String>
+    <sys:String x:Key="Activate_Licenses_List_Type_To_Search">打字搵許可證</sys:String>
+    <sys:String x:Key="Activate_Licenses_List_ID">產品 ID:</sys:String>
+
+    <!-- Toolbox page -->
+    <sys:String x:Key="Toolbox_NonAdmin_Privileges">你而家用緊非管理員權限運行 Office Tool Plus，有啲功能用唔到。</sys:String>
+    <sys:String x:Key="Toolbox_Repair">修復</sys:String>
+    <sys:String x:Key="Toolbox_Learn_More">了解多啲</sys:String>
+
+    <sys:String x:Key="Toolbox_General_Tools">一般工具</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version">查詢 Office 版本資料</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version.Description">從微軟伺服器度攞 Office 各個更新通道嘅資料。</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_GoBack">返番去工具箱頁面</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_Button">查詢</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List">Office 更新通道資料</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_Channel">通道</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_Branch">分支</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_Version">版本</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_List_CreatedTime">創建時間</sys:String>
+    <sys:String x:Key="Toolbox_Query_Office_Version_Copy">複製版本號</sys:String>
+    <sys:String x:Key="Toolbox_Query_ErrorCode">查詢錯誤代碼描述</sys:String>
+    <sys:String x:Key="Toolbox_Query_ErrorCode.Description">錯誤代碼通常以 '0x' 開頭，例如 0x2 或者 0x80070002。</sys:String>
+    <sys:String x:Key="Toolbox_Query_ErrorCode_Button">查詢</sys:String>
+    <sys:String x:Key="Toolbox_Input_ErrorCode">請輸入錯誤代碼</sys:String>
+    <sys:String x:Key="Toolbox_Check_KMS">測試 KMS 主機可用性</sys:String>
+    <sys:String x:Key="Toolbox_Check_KMS.Description">用 TCPing 測試 KMS 主機係咪連到。</sys:String>
+    <sys:String x:Key="Toolbox_Check_KMS_Button">測試</sys:String>
+
+    <sys:String x:Key="Toolbox_Office_Tools">Office 工具</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Office">移除 Office</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Office.Description">強制移除同 Office 有關嘅組件同埋註冊表資料。</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Office.Description_Bold">注意：淨係喺 Office 唔能夠正常卸載嗰陣先好用呢個功能。</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Office_Button">移除</sys:String>
+    <sys:String x:Key="Toolbox_Remove_APPX">同時移除 Microsoft Store 版本嘅 Office。</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Clear_Activation">同時清除激活資料</sys:String>
+    <sys:String x:Key="Toolbox_Remove_Result">清除結果</sys:String>
+    <!-- Office Installer Events Viewer -->
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr">Office 安裝程式事件查看器</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr.Description">睇或者收集 Office 安裝事件日誌。</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Create">整個副本</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Create.Description">整個包含 Office 部署工具、Click-to-Run、Windows Installer 同埋應用程式日誌檔案嘅 ZIP 檔案。</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Create_Button">整(_C)</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer">安裝程式日誌查看器</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer.Description">睇安裝程式事件。</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_Refresh">重新整理(_R)</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_ViewMSI">睇 Windows Installer 事件</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_ViewApplication">睇應用程式事件</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_Import">從 ZIP 檔案匯入日誌</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_Source">日誌來源</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_Source.ODT">Office 部署工具</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_Source.C2R">Click-to-Run</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_FileName">日誌檔案</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_FileName.Description">揀一個日誌檔案嚟睇事件。</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_EventsLabel">事件</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_Event.Time">時間</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_Event.Category">類別</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_Event.ID">事件 ID</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_Event.Level">級別</sys:String>
+    <sys:String x:Key="Toolbox_OfficeInstEventVwr_Viewer_Event.Message">信息</sys:String>
+    <sys:String x:Key="Toolbox_Change_UpdateChannel">更改 Office 更新通道</sys:String>
+    <sys:String x:Key="Toolbox_Change_UpdateChannel.Description">更改更新通道可以喺唔使重裝 Office 嘅情況下進行升級或者降級。</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner">更改 Office 產品屬於者</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner.Description">產品屬於者會喺 Office 應用程式嘅帳戶頁面度顯示。</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Set">設定名稱</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Reset">重設名稱做預設值</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Name">名稱</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Name.Description">設定產品屬於者名稱。例如「小明」或者 ProPlus2019Volume:小明。</sys:String>
+    <sys:String x:Key="Toolbox_Change_Owner_Name.LearnMore">了解多啲關於名稱格式嘅資料。</sys:String>
+    <sys:String x:Key="Toolbox_Repair_DocumentIcon">修復 Office 文檔圖示</sys:String>
+    <sys:String x:Key="Toolbox_Repair_DocumentIcon.Description">呢個會重設 Office 文檔關聯。</sys:String>
+    <sys:String x:Key="Toolbox_Backup_Restore_Settings">備份或者還原 Office 設定</sys:String>
+    <sys:String x:Key="Toolbox_Backup_Restore_Settings.Description">備份或者還原 Office 應用程式設定，唔包括文檔同文字內容。&#x000A;注意：唔好同人分享你嘅備份，可能會洩露你嘅個人資料。</sys:String>
+    <sys:String x:Key="Toolbox_Backup_Exclude_PersonalInf">備份嗰陣排除個人資料</sys:String>
+    <sys:String x:Key="Toolbox_Backup">備份</sys:String>
+    <sys:String x:Key="Toolbox_Restore">還原</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings">重設 Office 設定做預設設定</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings.Description">根據需要將 Office 重設做預設設定。開始之前，請閂晒所有 Office 應用程式。</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_Button">重設</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserSettings">刪除而家用緊嘅用戶設定</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserSettings.Description">包括 Office 應用程式設定、最近開過嘅檔案同埋最近儲存嘅位置。</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserAppData">刪除應用程式資料</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserAppData.Description">包括 Office 程式緩存。</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_NormalTemplate">刪除預設範本</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_NormalTemplate.Description">Normal.dotm</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings_GlobalSettings">刪除應用程式首選項</sys:String>
+
+    <sys:String x:Key="Toolbox_Windows_Tools">Windows 工具</sys:String>
+    <sys:String x:Key="Toolbox_Reset_SPPSvc">重設 Software Protection 服務</sys:String>
+    <sys:String x:Key="Toolbox_Reset_SPPSvc.Description">呢個會重設 Software Protection 服務嘅配置，包括 KMS 配置資料。</sys:String>
+    <sys:String x:Key="Toolbox_Reset_SPPSvc.LearnMore">了解多啲關於重設 Software Protection 服務嘅資料。</sys:String>
+    <sys:String x:Key="Toolbox_Rebuild_ActivationToken">重建 Windows 激活令牌</sys:String>
+    <sys:String x:Key="Toolbox_Rebuild_ActivationToken.Description">呢個會重設 Windows 激活令牌，你嘅 Windows 激活狀態可能會冇晒。</sys:String>
+    <sys:String x:Key="Toolbox_Rebuild_ActivationToken.LearnMore">了解多啲關於重建 Windows 激活令牌嘅資料。</sys:String>
+    <sys:String x:Key="Toolbox_Repair_Variables">重設系統變量</sys:String>
+    <sys:String x:Key="Toolbox_Repair_Variables.Description">呢個會重設你嘅系統變量做預設值。如果你唔肯定，咪用呢個功能。</sys:String>
+    <sys:String x:Key="Toolbox_Repair_Variables.LearnMore">了解多啲關於重設系統變量嘅資料。</sys:String>
+    <sys:String x:Key="Toolbox_Repair_WMI">修復 WMI 組件</sys:String>
+    <sys:String x:Key="Toolbox_Repair_WMI.Description">呢個會重新註冊 WMI 組件。如果你唔肯定，咪用呢個功能。</sys:String>
+    <sys:String x:Key="Toolbox_Repair_WMI.LearnMore">了解多啲關於修復 WMI 組件嘅資料。</sys:String>
+
+    <!-- Convert page -->
+    <sys:String x:Key="Convert_Excel">Excel</sys:String>
+    <sys:String x:Key="Convert_Excel.Description">轉換 Excel 文檔。</sys:String>
+    <sys:String x:Key="Convert_PowerPoint">PowerPoint</sys:String>
+    <sys:String x:Key="Convert_PowerPoint.Description">轉換 PowerPoint 文檔。</sys:String>
+    <sys:String x:Key="Convert_Word">Word</sys:String>
+    <sys:String x:Key="Convert_Word.Description">轉換 Word 文檔。</sys:String>
+    <sys:String x:Key="Convert_Actions">匯入文檔(_I)</sys:String>
+    <sys:String x:Key="Convert_Actions.SelectFiles">揀選檔案</sys:String>
+    <sys:String x:Key="Convert_Actions.SelectFolder">揀選資料夾</sys:String>
+    <sys:String x:Key="Convert_Input">輸入格式</sys:String>
+    <sys:String x:Key="Convert_Input.Description">揀選資料夾嗰陣，淨係會匯入同輸入格式一致嘅檔案。</sys:String>
+    <sys:String x:Key="Convert_Output">輸出格式</sys:String>
+
+    <sys:String x:Key="Convert_File_List">檔案列表</sys:String>
+    <sys:String x:Key="Convert_StartConvert">轉換</sys:String>
+    <sys:String x:Key="Convert_StartConvert.ToolTip">開始轉換文檔</sys:String>
+    <sys:String x:Key="Convert_ClearList">清空列表</sys:String>
+    <sys:String x:Key="Convert_File">檔案</sys:String>
+    <sys:String x:Key="Convert_NewFormat">新格式</sys:String>
+    <sys:String x:Key="Convert_Open_File_Location">開檔案位置(_O)</sys:String>
+    <sys:String x:Key="Convert_Page_Count">第 {0} 頁，總共 {1} 頁</sys:String>
+    <sys:String x:Key="Convert_Previous_Page">上一頁</sys:String>
+    <sys:String x:Key="Convert_Next_Page">下一頁</sys:String>
+
+    <sys:String x:Key="Convert_Settings">設定</sys:String>
+    <sys:String x:Key="Convert_Settings.Description">調整各項設定</sys:String>
+    <sys:String x:Key="Convert_SearchOnSubfolders">搵子資料夾</sys:String>
+    <sys:String x:Key="Convert_SearchOnSubfolders.Description">揀選資料夾嗰陣，喺子資料夾搵檔案。</sys:String>
+    <sys:String x:Key="Convert_Delete">刪除檔案</sys:String>
+    <sys:String x:Key="Convert_Delete.Description">轉換成功之後將原本檔案搬去回收桶。如果回收桶用唔到，檔案會永久刪除。</sys:String>
+    <sys:String x:Key="Convert_HideUI">隱藏用戶界面</sys:String>
+    <sys:String x:Key="Convert_HideUI.Description">Office 做嘢嗰陣唔顯示任何提示框。</sys:String>
+    <sys:String x:Key="Convert_Rows_Per_Page">每頁行數</sys:String>
+    <sys:String x:Key="Convert_Rows_Per_Page.Description">設定檔案列表每頁顯示幾多個檔案。</sys:String>
+
+    <!-- File types -->
+    <!-- Common -->
+    <sys:String x:Key="File_Type.All">全部檔案</sys:String>
+    <sys:String x:Key="File_Type.Supported">所有支援嘅檔案</sys:String>
+    <sys:String x:Key="File_Type.PDF">PDF</sys:String>
+    <sys:String x:Key="File_Type.XPS">XPS 文檔</sys:String>
+    <sys:String x:Key="File_Type.TXT">純文字</sys:String>
+    <sys:String x:Key="File_Type.XML">XML 檔案</sys:String>
+    <sys:String x:Key="File_Type.MHTML">單個檔案網頁</sys:String>
+    <sys:String x:Key="File_Type.HTML">網頁</sys:String>
+    <sys:String x:Key="File_Type.AllWebPages">所有網頁</sys:String>
+    <sys:String x:Key="File_Type.RTF">RTF 格式</sys:String>
+    <sys:String x:Key="File_Type.WMF">Windows Metafile</sys:String>
+    <sys:String x:Key="File_Type.EMF">增強型 Windows Metafile</sys:String>
+    <!-- Image -->
+    <sys:String x:Key="File_Type.GIF">動態 GIF 格式</sys:String>
+    <sys:String x:Key="File_Type.JPG">JPEG 檔案交換格式</sys:String>
+    <sys:String x:Key="File_Type.PNG">PNG 可移植網路圖形格式</sys:String>
+    <sys:String x:Key="File_Type.TIF">TIFF Tag 圖像檔案格式</sys:String>
+    <sys:String x:Key="File_Type.BMP">裝置無關位圖</sys:String>
+    <!-- Video -->
+    <sys:String x:Key="File_Type.MP4">MPEG-4 影片</sys:String>
+    <sys:String x:Key="File_Type.WMV">Windows Media 影片</sys:String>
+    <!-- Word -->
+    <sys:String x:Key="File_Type.Word_Documents">文檔</sys:String>
+    <sys:String x:Key="File_Type.Word_DOCX">Word 文檔</sys:String>
+    <sys:String x:Key="File_Type.Word_DOCM">啟用宏嘅 Word 文檔</sys:String>
+    <sys:String x:Key="File_Type.Word_DOC">Word 97-2003 文檔</sys:String>
+    <sys:String x:Key="File_Type.Word_DOTX">Word 範本</sys:String>
+    <sys:String x:Key="File_Type.Word_DOTM">啟用宏嘅 Word 範本</sys:String>
+    <sys:String x:Key="File_Type.Word_DOT">Word 97-2003 範本</sys:String>
+    <sys:String x:Key="File_Type.Word_XMLDocument">Word XML 文檔</sys:String>
+    <sys:String x:Key="File_Type.Word_OpenXMLStrictDocument">Strict Open XML 文檔</sys:String>
+    <sys:String x:Key="File_Type.Word_ODT">OpenDocument 文字</sys:String>
+    <!-- PowerPoint -->
+    <sys:String x:Key="File_Type.PowerPoint_Presentations">演示文稿</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPTX">PowerPoint 演示文稿</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPTM">啟用宏嘅 PowerPoint 演示文稿</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPT">PowerPoint 97-2003 演示文稿</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_POTX">PowerPoint 範本</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_POTM">啟用宏嘅 PowerPoint 範本</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_POT">PowerPoint 97-2003 範本</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPSX">PowerPoint 放映</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPSM">啟用宏嘅 PowerPoint 放映</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPS">PowerPoint 97-2003 放映</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPAM">PowerPoint 增益集</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_PPA">PowerPoint 97-2003 增益集</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_XMLPresentation">PowerPoint XML 演示文稿</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_OpenXMLPicturePresentation">PowerPoint 圖片演示文稿</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_OpenXMLStrictPresentation">Strict Open XML 演示文稿</sys:String>
+    <sys:String x:Key="File_Type.PowerPoint_ODP">OpenDocument 演示文稿</sys:String>
+    <!-- Excel -->
+    <sys:String x:Key="File_Type.Excel_Workbooks">工作簿</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLSX">Excel 工作簿</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLSM">啟用宏嘅 Excel 工作簿</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLSB">Excel 二進制工作簿</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLS">Excel 97-2003 工作簿</sys:String>
+    <sys:String x:Key="File_Type.Excel_CSV_UTF8">CSV UTF-8（逗號分隔）</sys:String>
+    <sys:String x:Key="File_Type.Excel_CSV">CSV（逗號分隔）</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLTX">Excel 範本</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLTM">啟用宏嘅 Excel 範本</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLT">Excel 97-2003 範本</sys:String>
+    <sys:String x:Key="File_Type.Excel_UnicodeText">Unicode 文字（定位點分隔）</sys:String>
+    <sys:String x:Key="File_Type.Excel_Text">文字（定位點分隔）</sys:String>
+    <sys:String x:Key="File_Type.Excel_XMLSpreadsheet">XML 電子表格 2003</sys:String>
+    <sys:String x:Key="File_Type.Excel_PRN">帶格式文字檔案（空格分隔）</sys:String>
+    <sys:String x:Key="File_Type.Excel_DIF">DIF（數據交換格式）</sys:String>
+    <sys:String x:Key="File_Type.Excel_SYLK">SYLK（符號連結）</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLAM">Excel 增益集</sys:String>
+    <sys:String x:Key="File_Type.Excel_XLA">Excel 97-2003 增益集</sys:String>
+    <sys:String x:Key="File_Type.Excel_OpenXMLStrictWorkbook">Strict Open XML 電子表格</sys:String>
+    <sys:String x:Key="File_Type.Excel_ODS">OpenDocument 電子表格</sys:String>
+    <sys:String x:Key="File_Type.Excel_BackupFiles">備份檔案</sys:String>
+
+    <!-- Hash checker page -->
+    <sys:String x:Key="Hash_Checker_Hash">哈希值</sys:String>
+    <sys:String x:Key="Hash_Checker_Hash.Description">計算檔案嘅哈希值，支援好多種哈希算法。</sys:String>
+    <sys:String x:Key="Hash_Checker_Actions">匯入檔案(_I)</sys:String>
+    <sys:String x:Key="Hash_Checker_Actions.SelectFiles">揀選檔案</sys:String>
+    <sys:String x:Key="Hash_Checker_Actions.SelectFolder">揀選資料夾</sys:String>
+    <sys:String x:Key="Hash_Checker_SearchOnSubfolders">搵子資料夾</sys:String>
+    <sys:String x:Key="Hash_Checker_SearchOnSubfolders.Description">揀選資料夾嗰陣，喺子資料夾搵檔案。</sys:String>
+    <sys:String x:Key="Hash_Checker_SearchString">搵字串</sys:String>
+    <sys:String x:Key="Hash_Checker_SearchString.Description">揀選資料夾嗰陣，搵檔名同搵字串相符嘅檔案。</sys:String>
+    <sys:String x:Key="Hash_Checker_ExcludeHashFiles">排除哈希檔案</sys:String>
+    <sys:String x:Key="Hash_Checker_ExcludeHashFiles.Description">匯入檔案嗰陣唔包埋哈希檔案，例如副檔名係 md5、sha1 或者 crc32 嘅檔案。</sys:String>
+    <sys:String x:Key="Hash_Checker_DisplayPath">顯示檔案路徑</sys:String>
+    <sys:String x:Key="Hash_Checker_AutoCompute">自動計算</sys:String>
+    <sys:String x:Key="Hash_Checker_AutoCompute.Description">檔案匯入完之後自動計算哈希值。</sys:String>
+    <sys:String x:Key="Hash_Checker_CRC32.Description">開或者閂 CRC-32 計算。</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH32.Description">開或者閂 XXH32 計算。</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH64.Description">開或者閂 XXH64 計算。</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH3.Description">開或者閂 XXH3 計算。</sys:String>
+    <sys:String x:Key="Hash_Checker_XXH128.Description">開或者閂 XXH128 計算。</sys:String>
+    <sys:String x:Key="Hash_Checker_MD5.Description">開或者閂 MD5 計算。</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA1.Description">開或者閂 SHA-1 計算。</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA256.Description">開或者閂 SHA-256 計算。</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA384.Description">開或者閂 SHA-384 計算。</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA512.Description">開或者閂 SHA-512 計算。</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA3_256.Description">開或者閂 SHA3-256 計算，淨係支援 Windows 11 build 25324 或者更新版本。</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA3_384.Description">開或者閂 SHA3-384 計算，淨係支援 Windows 11 build 25324 或者更新版本。</sys:String>
+    <sys:String x:Key="Hash_Checker_SHA3_512.Description">開或者閂 SHA3-512 計算，淨係支援 Windows 11 build 25324 或者更新版本。</sys:String>
+    <sys:String x:Key="Hash_Checker_Rows_Per_Page">每頁行數</sys:String>
+    <sys:String x:Key="Hash_Checker_Rows_Per_Page.Description">設定檔案列表每頁顯示幾多個檔案。</sys:String>
+
+    <sys:String x:Key="Hash_Checker_File_List">檔案列表</sys:String>
+    <sys:String x:Key="Hash_Checker_TypeToSearch">輸入嚟比較哈希值</sys:String>
+    <sys:String x:Key="Hash_Checker_StartCompute">計算</sys:String>
+    <sys:String x:Key="Hash_Checker_StartCompute.ToolTip">開始計算哈希值</sys:String>
+    <sys:String x:Key="Hash_Checker_ClearList">清空列表</sys:String>
+    <sys:String x:Key="Hash_Checker_Export">匯出</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.ToolTip">匯出結果做檔案</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.AsTXT">匯出做純文字(_T)</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.AsCSV">匯出做 _CSV</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.AsMD">匯出做 _Markdown</sys:String>
+    <sys:String x:Key="Hash_Checker_Export.AsJSON">匯出做 _JSON</sys:String>
+    <sys:String x:Key="Hash_Checker_Compare">比較</sys:String>
+    <sys:String x:Key="Hash_Checker_Compare.ToolTip">將檔案嘅哈希值同已知值做比較</sys:String>
+    <sys:String x:Key="Hash_Checker_Compare.JSON">用 _JSON 檔案做比較</sys:String>
+    <sys:String x:Key="Hash_Checker_Compare.HashFile">用哈希檔案做比較(_H)</sys:String>
+    <sys:String x:Key="Hash_Checker_FilePath">路徑</sys:String>
+    <sys:String x:Key="Hash_Checker_FileName">檔案名</sys:String>
+    <sys:String x:Key="Hash_Checker_Compute_Selected">計算揀選咗嘅檔案嘅哈希值(_C)</sys:String>
+    <sys:String x:Key="Hash_Checker_Open_File_Location">開檔案位置(_O)</sys:String>
+    <sys:String x:Key="Hash_Checker_Copy_Hash_Value">複製哈希值(_H)</sys:String>
+    <sys:String x:Key="Hash_Checker_Create_Hash_File">整個哈希檔案(_A)</sys:String>
+    <sys:String x:Key="Hash_Checker_Page_Count">第 {0} 頁，總共 {1} 頁</sys:String>
+    <sys:String x:Key="Hash_Checker_Previous_Page">上一頁</sys:String>
+    <sys:String x:Key="Hash_Checker_Next_Page">下一頁</sys:String>
+    <sys:String x:Key="Hash_Checker_CompareMessage">檢查咗 {0} 個檔案嘅哈希值，其中 {1} 個成功，{2} 個失敗，跳過咗 {3} 個檔案。</sys:String>
+    <sys:String x:Key="Hash_Checker_CompareMessage.Failed">呢啲檔案嘅哈希值唔相符：</sys:String>
+    <sys:String x:Key="Hash_Checker_CompareMessage.Error">處理呢啲檔案嗰陣出咗錯：</sys:String>
+    <sys:String x:Key="Hash_Checker_CompareMessage.Skipped">呢啲檔案因為搵唔到哈希值，所以跳過咗：</sys:String>
+
+    <!-- Settings page -->
+    <sys:String x:Key="Settings_General">一般</sys:String>
+    <sys:String x:Key="Settings_Language">語言</sys:String>
+    <sys:String x:Key="Settings_Language.Description">更改應用程式顯示語言。</sys:String>
+    <sys:String x:Key="Settings_MatchOS">跟隨作業系統</sys:String>
+    <sys:String x:Key="Settings_Save">儲存設定</sys:String>
+    <sys:String x:Key="Settings_Save.Description">儲存所有設定去本地。</sys:String>
+
+    <sys:String x:Key="Settings_Appearance">外觀同行為</sys:String>
+    <sys:String x:Key="Settings_Theme">主題</sys:String>
+    <sys:String x:Key="Settings_Theme.Description">更改應用程式主題。</sys:String>
+    <sys:String x:Key="Settings_Auto_Dark_Theme">自動深色主題</sys:String>
+    <sys:String x:Key="Settings_Auto_Dark_Theme.Description">跟隨系統設定並自動切換做深色主題。</sys:String>
+    <sys:String x:Key="Settings_Theme_OpenColorSetting">Windows 顏色設定</sys:String>
+    <sys:String x:Key="Settings_Background">背景</sys:String>
+    <sys:String x:Key="Settings_Background.Description">更改應用程式背景。</sys:String>
+    <sys:String x:Key="Settings_Background.Automatic">自動</sys:String>
+    <sys:String x:Key="Settings_Background.Off">閂</sys:String>
+    <sys:String x:Key="Settings_Background.Acrylic">亞加力效果</sys:String>
+    <sys:String x:Key="Settings_Background.Blur">模糊效果</sys:String>
+    <sys:String x:Key="Settings_Background.Mica">雲母效果</sys:String>
+    <sys:String x:Key="Settings_Background.Bing">必應壁紙</sys:String>
+    <sys:String x:Key="Settings_Background.Local">本地圖片</sys:String>
+    <sys:String x:Key="Settings_SelectLocalImage.Description">揀選一個本地圖片並設定做應用程式背景。</sys:String>
+    <sys:String x:Key="Settings_SelectLocalImage.Button">揀選檔案</sys:String>
+    <sys:String x:Key="Settings_Opacity">不透明度</sys:String>
+    <sys:String x:Key="Settings_Blur">模糊度</sys:String>
+    <sys:String x:Key="Settings_Topmost">視窗置頂</sys:String>
+
+    <sys:String x:Key="Settings_Advanced">進階</sys:String>
+    <sys:String x:Key="Settings_HardwareAcceleration">硬件加速</sys:String>
+    <sys:String x:Key="Settings_HardwareAcceleration.Description">如果程式運行正常，唔好閂佢。停用硬件加速會令應用程式性能降低。</sys:String>
+    <sys:String x:Key="Settings_SecurityProtocol">安全協定</sys:String>
+    <sys:String x:Key="Settings_SecurityProtocol.Description">指定程式應該用邊種傳輸層安全性協定，如果程式可以正常連網，唔好改。</sys:String>
+    <sys:String x:Key="Settings_SecurityProtocol_SystemDefault">系統預設</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy">代理</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy.Type">代理類型</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy.None">冇</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy_Host">主機</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy_Host.Hint">127.0.0.1:1080</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy_Authentication">身份驗證</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy_Username">用戶名</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy_Password">密碼</sys:String>
+    <sys:String x:Key="Settings_Advanced_Proxy_PasswordSaved">自上次儲存之後，密碼仲未改過。</sys:String>
+
+    <sys:String x:Key="Settings_Deploy">部署</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation">部署完成之後</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.Description">Office 下載或者安裝完成之後做嘅嘢。</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.None">冇</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.Quit">關閉 Office Tool Plus</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.SignOut">登出</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.Shutdown">閂機</sys:String>
+    <sys:String x:Key="Settings_Deploy_Operation.Reboot">重開機</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat">Office 語言顯示格式</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat.Default">預設名稱</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat.Native">本地名稱</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat.English">英文名稱</sys:String>
+    <sys:String x:Key="Settings_Deploy_LanguageFormat.Localized">本地化名稱</sys:String>
+    <sys:String x:Key="Settings_Deploy_Internal">顯示內部產品同通道</sys:String>
+
+    <sys:String x:Key="Settings_Download">下載</sys:String>
+    <sys:String x:Key="Settings_Download_Ask_Where_To_Save">問檔案儲存位置</sys:String>
+    <sys:String x:Key="Settings_Download_Ask_Where_To_Save.Description">下載 Office 之前揀選儲存 Office 安裝檔案嘅位置。</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API">用微軟嘅 API 攞檔案列表</sys:String>
+    <sys:String x:Key="Settings_Download_MsFileList_API.Description">開咗之後，會從微軟嘅 API 攞檔案列表，否則就用內置嘅規則生成檔案列表。</sys:String>
+    <sys:String x:Key="Settings_Download_Engine">引擎</sys:String>
+    <sys:String x:Key="Settings_Download_Engine.Description">揀選下載 Office 嗰陣用邊個引擎。</sys:String>
+    <sys:String x:Key="Settings_Download_Engine.Thunder">迅雷</sys:String>
+    <!-- Do not translate 'bezzad.Downloader' -->
+    <sys:String x:Key="Settings_Download_Engine.Downloader">bezzad.Downloader</sys:String>
+    <sys:String x:Key="Settings_Download_Engine.OfficeToolPlus">Office Tool Plus</sys:String>
+    <sys:String x:Key="Settings_Download_Engine.OfficeDeploymentTool">Office 部署工具</sys:String>
+    <sys:String x:Key="Settings_Download_HTTPS">用 HTTPS 連接</sys:String>
+    <sys:String x:Key="Settings_Download_HTTPS.Description">下載 Office 有問題嗰陣可以試下開呢個選項。</sys:String>
+    <sys:String x:Key="Settings_Download_Verify">驗證檔案</sys:String>
+    <sys:String x:Key="Settings_Download_Verify.Description">Office 下載完成之後驗證安裝檔案。</sys:String>
+    <sys:String x:Key="Settings_Download_UA">Windows 版本</sys:String>
+    <sys:String x:Key="Settings_Download_UA.Description">預設下載啱而家系統嘅 Office 版本，如果要下載其他系統嘅 Office，就改呢個選項。</sys:String>
+    <sys:String x:Key="Settings_Download_UA.AutoDetection">自動檢測</sys:String>
+    <!-- Do not translate 'bezzad.Downloader' -->
+    <sys:String x:Key="Settings_Download_Downloader">bezzad.Downloader 設定</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Chunks">分塊</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Chunks.Description">將檔案分成指定數量嘅塊嚟下載。設定太多塊可能會令下載速度減慢。</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Parallel">分塊同時下載</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Parallel.Description">下載去機械硬碟 (HDD) 嗰陣，開呢個選項可能會令寫入速度減慢，特別係設定咗好多分塊嘅情況下。</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Limit">下載限速</sys:String>
+    <sys:String x:Key="Settings_Download_Downloader_Limit.Description">限制下載檔案嗰陣嘅速度，單位：KBps。預設值係 0（唔限速）。</sys:String>
+
+    <!-- About page -->
+    <sys:String x:Key="About_Link.Homepage">主頁</sys:String>
+    <sys:String x:Key="About_Link.Docs">文檔</sys:String>
+    <sys:String x:Key="About_Link.Sponsor">贊助</sys:String>
+    <sys:String x:Key="About_Link.Report_Issue">報告 bug</sys:String>
+    <sys:String x:Key="About_Version">版本資料</sys:String>
+    <sys:String x:Key="About_ReleaseDate">發佈時間:</sys:String>
+    <sys:String x:Key="About_CheckUpdate">檢查更新(_C)</sys:String>
+    <sys:String x:Key="About_CreatorInfo">由 Yerong 開發同維護，基於 Office 部署工具打造。</sys:String>
+    <sys:String x:Key="About_Copyright">Copyright © 2016-{0} Yerong All Rights Reserved.</sys:String>
+    <sys:String x:Key="About_TrademarkInfo">Microsoft Office 係 Microsoft Corporation 喺美國同/或其他國家/地區嘅註冊商標或者商標。</sys:String>
+
+    <sys:String x:Key="About_Server_Provider">服務提供者</sys:String>
+    <sys:String x:Key="About_Translator">翻譯人員</sys:String>
+
+    <sys:String x:Key="About_MoreInfo">相關資料</sys:String>
+    <sys:String x:Key="About_Image_Source">背景圖來源</sys:String>
+    <sys:String x:Key="About_Link.OpenSourceNotice">開放源碼通知</sys:String>
+
+    <!-- Downloader -->
+    <sys:String x:Key="Downloader_ProgressBar.Name">Office 下載進度</sys:String>
+    <sys:String x:Key="Downloader_Resume">繼續下載</sys:String>
+    <sys:String x:Key="Downloader_Pause">暫停下載</sys:String>
+    <sys:String x:Key="Downloader_Cancel">取消下載</sys:String>
+    <sys:String x:Key="Downloader_SetSpeedLimit.Name">設定下載限速</sys:String>
+    <sys:String x:Key="Downloader_Percentage">下載緊，{0} 已完成</sys:String>
+    <sys:String x:Key="Downloader_Remaining">下載緊，仲有: {0}</sys:String>
+    <sys:String x:Key="Downloader_Pending">等緊下載</sys:String>
+    <sys:String x:Key="Downloader_Pausing">暫停緊</sys:String>
+    <sys:String x:Key="Downloader_Paused">已經暫停</sys:String>
+
+    <!-- Notification strings -->
+    <sys:String x:Key="Message">訊息提示</sys:String>
+    <sys:String x:Key="Notice">注意</sys:String>
+    <sys:String x:Key="Warning">警告</sys:String>
+    <sys:String x:Key="Error">錯誤</sys:String>
+    <sys:String x:Key="Yes">係(_Y)</sys:String>
+    <sys:String x:Key="No">唔係(_N)</sys:String>
+    <sys:String x:Key="OK">確定(_O)</sys:String>
+    <sys:String x:Key="Cancel">取消(_C)</sys:String>
+
+    <!-- Input box strings-->
+    <sys:String x:Key="Input_Command">請輸入應用程式命令</sys:String>
+    <sys:String x:Key="Input_URL">請輸入 URL</sys:String>
+    <sys:String x:Key="Input_Thunder_Speed_Limit">設定迅雷下載限速（單位 KBps）</sys:String>
+
+    <!-- Office ISO Context Menu -->
+    <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
+    <!-- Learn more about hotkey and autorun.inf: https://en.wikipedia.org/wiki/Autorun.inf#:~:text=shell%5Cverb%3Dmenu%20text -->
+    <!-- If you cannot understand what is hotkey, remove '&amp;' when you are translating. -->
+    <sys:String x:Key="CD-ROM_InstallNow">即刻安裝(&amp;I)</sys:String>
+
+    <!-- Task Message -->
+    <sys:String x:Key="Task_Checking_Updates">檢查緊更新</sys:String>
+    <sys:String x:Key="Task_Downloading_Updates">下載緊更新，{0} 已完成（第 {1} 個檔案，總共 {2} 個）</sys:String>
+    <sys:String x:Key="Task_Verifying_Installation_Files">校驗緊檔案，請等陣</sys:String>
+    <sys:String x:Key="Task_Loading_Preferences">載入緊應用程式偏好設定，請等陣</sys:String>
+    <sys:String x:Key="Task_Downloading_Web_Config">喺網路度攞配置檔案，請等陣</sys:String>
+    <sys:String x:Key="Task_Preparing_Download">準備下載 Office</sys:String>
+    <!-- Example: Creating Office ISO file, file size: 3.1GB, 45% completed. -->
+    <sys:String x:Key="Task_Creating_ISO">整緊 Office ISO 檔案，檔案大細：{0}，{1} 已完成</sys:String>
+    <sys:String x:Key="Task_ODT">部署緊，請等陣</sys:String>
+    <sys:String x:Key="Task_SPP">SPP 運行緊，請等陣</sys:String>
+    <sys:String x:Key="Task_Searching_KMS_Events">搵緊 KMS 激活事件，請等陣</sys:String>
+    <sys:String x:Key="Task_Searching_IAF_Events">搵緊網上激活失敗事件，請等陣</sys:String>
+    <sys:String x:Key="Task_Checking_Office_Update_Channel">查詢緊 Office 更新通道資料</sys:String>
+    <sys:String x:Key="Task_Testing_KMS_Host">測試緊 KMS 主機可唔可以用</sys:String>
+    <sys:String x:Key="Task_Collecting_Installer_Logs">收集緊 Office 安裝程式日誌</sys:String>
+    <sys:String x:Key="Task_Searching_MSI_Events">搵緊 Windows Installer 事件，請等陣</sys:String>
+    <sys:String x:Key="Task_Searching_Application_Events">搵緊應用程式事件，請等陣</sys:String>
+    <sys:String x:Key="Task_Removing_Office">移除緊 Office，請等陣</sys:String>
+    <sys:String x:Key="Task_Repairing_WMI">修復緊 WMI 組件，請等陣</sys:String>
+    <sys:String x:Key="Task_Converting_Documents">轉換緊 Office 文檔，仲有 {0} 個</sys:String>
+    <sys:String x:Key="Task_Importing_Files">匯入緊檔案，請等陣</sys:String>
+    <sys:String x:Key="Task_Computing_Hash">計算緊哈希值，仲有 {0} 個檔案</sys:String>
+    <sys:String x:Key="Task_Exporting_Hash">匯出緊結果，請等陣</sys:String>
+    <!-- Example: Installing iSlide, please wait. -->
+    <sys:String x:Key="Task_Installing_App">安裝緊 {0}，請等陣</sys:String>
+
+    <!-- Question Message -->
+    <sys:String x:Key="Ques_Update.Title">Office Tool Plus 更新</sys:String>
+    <sys:String x:Key="Ques_Update.Content">有更新可以用，而家下載？</sys:String>
+    <sys:String x:Key="Ques_Exit">程式仲做緊嘢，肯定要退出？</sys:String>
+    <sys:String x:Key="Ques_Can_Not_Verify_Signature">我哋核實唔到呢個檔案嘅簽名，仲係要開佢？&#x000A;&#x000A;檔案: {0}</sys:String>
+    <sys:String x:Key="Ques_Quick_Installation">你揀咗安裝 {0}。&#x000A;&#x000A;撳「係」下載完再安裝，撳「唔係」就邊下載邊安裝，或者閂咗視窗就取消安裝。</sys:String>
+    <sys:String x:Key="Ques_Select_Office_To_Download">你指定下載版本號係 {0} 嘅 Office，但係我哋搵到唔同嘅版本。&#x000A;&#x000A;撳「係」會下載版本號係 {1} 嘅 Office。&#x000A;撳「唔係」會下載版本號係 {2} 嘅 Office。</sys:String>
+    <sys:String x:Key="Ques_Deploy_Office">準備好部署 Office 未？</sys:String>
+    <sys:String x:Key="Ques_Deploy_Office.ToInstall">即將安裝嘅產品:</sys:String>
+    <sys:String x:Key="Ques_Deploy_Office.ToUninstall">即將卸載嘅產品:</sys:String>
+    <sys:String x:Key="Ques_Install_Office.Applications">應用程式: {0}</sys:String>
+    <sys:String x:Key="Ques_Install_Office.Architecture">體系結構: {0}</sys:String>
+    <sys:String x:Key="Ques_Install_Office.UpdateChannel">更新通道: {0}</sys:String>
+    <sys:String x:Key="Ques_Install_Office.OfficeVersion">Office 版本: {0}</sys:String>
+    <sys:String x:Key="Ques_Install_Office.SourcePath">安裝檔案來源: {0}</sys:String>
+    <sys:String x:Key="Ques_Deploy_Configuration">如果要睇詳細配置請睇代碼，以上基本配置啱唔啱？</sys:String>
+    <sys:String x:Key="Ques_Delete_All_Installations">你肯定要刪除所有安裝檔案？</sys:String>
+    <sys:String x:Key="Ques_Delete_Installation">你肯定要刪除安裝檔案 {0}？</sys:String>
+    <sys:String x:Key="Ques_Delete_Installation_Package">你肯定要刪除 {0}？</sys:String>
+    <sys:String x:Key="Ques_Install_iSlide">你肯定要下載同安裝 iSlide？</sys:String>
+    <sys:String x:Key="Ques_Clear_Activation">你肯定要卸載晒所有許可證同密鑰？操作完成之後，你需要重新安裝許可證同激活 Office。</sys:String>
+    <sys:String x:Key="Ques_Install_Licenses">安裝 Office 許可證之後可能唔會喺 Office 入面顯示許可證資料，但係可以用 Office Tool Plus 查詢或者激活，係咪要繼續？</sys:String>
+    <sys:String x:Key="Ques_Uninstall_Licenses">你肯定要卸載晒所有 Office 許可證？</sys:String>
+    <sys:String x:Key="Ques_Uninstall_All_Keys">你肯定要卸載晒所有 Office 密鑰？如果有需要請提前備份你嘅 Office 密鑰。</sys:String>
+    <sys:String x:Key="Ques_Uninstall_Product_Key">你肯定要卸載呢個產品密鑰？</sys:String>
+    <sys:String x:Key="Ques_Delete_vNextLicense">你肯定要刪除呢個許可證？</sys:String>
+    <sys:String x:Key="Ques_Remove_Office">肯定要清除 Office？一開始就冇得取消㗎喇。</sys:String>
+    <sys:String x:Key="Ques_Invoke_Office_Update">更新通道改咗喇，而家檢查 Office 更新？</sys:String>
+
+    <!-- Info Message -->
+    <sys:String x:Key="Info_OS_Outdated">你嘅作業系統已經冇得用，請升級你嘅作業系統或者下載舊版本嘅 Office Tool Plus 嚟用。</sys:String>
+    <sys:String x:Key="Info_Restart_Required">你需要重新啟動程式先可以令更改生效。</sys:String>
+    <sys:String x:Key="Info_No_Updates">你用緊最新版本嘅 Office Tool Plus。</sys:String>
+    <sys:String x:Key="Info_Update_In_Progress">更新緊，請等等。</sys:String>
+    <sys:String x:Key="Info_Updates_Incomplete">更新嗰陣出咗問題，等陣再試過。</sys:String>
+    <sys:String x:Key="Info_No_Language_Added_For_Download">檢測到你冇加 Office 語言。大多數情況下，我哋建議加埋語言以免出現問題。</sys:String>
+    <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">請揀選 Office 安裝檔案嘅儲存位置。&#x000A;如果要用預設位置，請喺設定頁面停用「問檔案儲存位置」。</sys:String>
+    <sys:String x:Key="Info_All_Files_Exist">冇需要下載嘅檔案，所有檔案都有。</sys:String>
+    <sys:String x:Key="Info_Office_Downloading">Office 下載緊。</sys:String>
+    <sys:String x:Key="Info_Software_Installation_Complete">安裝完成</sys:String>
+    <sys:String x:Key="Info_Software_Installation_Failed">安裝失敗</sys:String>
+    <sys:String x:Key="Info_Auto_Shutdown">你嘅電腦將會喺一分鐘後登出/關機/重開機。</sys:String>
+    <sys:String x:Key="Info_No_Events">搵唔到任何事件。</sys:String>
+    <sys:String x:Key="Info_No_Office_Licenses">搵唔到任何 Office 許可證。</sys:String>
+    <sys:String x:Key="Info_No_Office_Product_Key">檢測唔到任何 Office 產品密鑰。</sys:String>
+    <sys:String x:Key="Info_Number_Of_Keys_Uninstalled">已經卸載咗 {0} 個 Office 產品密鑰。</sys:String>
+    <sys:String x:Key="Info_Number_Of_Lics_Uninstalled">已經卸載咗 {0} 個 Office 許可證。</sys:String>
+    <sys:String x:Key="Info_Office_License_Activation.Title">產品激活結果</sys:String>
+    <sys:String x:Key="Info_Office_License_Activation_Successful">產品激活成功</sys:String>
+    <sys:String x:Key="Info_KMS_Test_Result.Success">KMS 測試方法: {0}。測試結果：成功，用咗時間：{1}ms</sys:String>
+    <sys:String x:Key="Info_KMS_Test_Result.Failed">KMS 測試失敗。</sys:String>
+    <sys:String x:Key="Info_Enable_Mica">雲母效果要用 Windows 11 先至可以正常顯示。</sys:String>
+
+    <!-- Success Message -->
+    <sys:String x:Key="Success_Download_Updates">成功套用咗更新。</sys:String>
+    <sys:String x:Key="Success_Add_Download_Task">成功加入下載任務。</sys:String>
+    <sys:String x:Key="Success_Create_ISO">Office ISO 檔案整好咗。</sys:String>
+    <sys:String x:Key="Success_Installation_Verify">安裝檔案驗證完成，冇發現錯誤。</sys:String>
+    <sys:String x:Key="Success_Installer_Exited">Office 部署工具已經正常退出。</sys:String>
+    <sys:String x:Key="Success_Apply_Preferences">成功套用 Office 應用程式首選項。</sys:String>
+    <sys:String x:Key="Success_Install_Licenses">成功安裝 Office 許可證。</sys:String>
+    <sys:String x:Key="Success_Install_Product_Key">成功安裝 Office 產品密鑰。</sys:String>
+    <sys:String x:Key="Success_Set_KMS">成功套用 KMS 設定。</sys:String>
+    <sys:String x:Key="Success_Save">儲存成功</sys:String>
+    <sys:String x:Key="Success_Collect_Logs">日誌檔案已收集並儲存喺：{0}</sys:String>
+    <sys:String x:Key="Success_Repair">修復成功</sys:String>
+    <sys:String x:Key="Success_Repair_System_Variables">系統變量重設完成，請重新啟動你嘅系統令更改生效。</sys:String>
+    <sys:String x:Key="Success_Repair_WMI_Components">WMI 組件修復完成，請重新啟動你嘅系統令更改生效。</sys:String>
+
+    <!-- Error Message -->
+    <sys:String x:Key="Err_Create_Temp_Path">開唔到臨時資料夾，請確認系統環境變數係咪設定正確！</sys:String>
+    <sys:String x:Key="Err_Already_Running">Office Tool Plus 運行緊喇。</sys:String>
+    <sys:String x:Key="Err_Perform_Update">執行更新嗰陣出錯，請手動下載最新版本嘅 Office Tool Plus。</sys:String>
+    <sys:String x:Key="Err_Unknown_Command">未知嘅命令: {0}</sys:String>
+    <sys:String x:Key="Err_Command_Parameter">缺少必需嘅參數。</sys:String>
+    <sys:String x:Key="Err_Checking_Installation">讀取安裝檔案嗰陣出錯，請試下重新讀取，或者重新下載 Office 安裝檔案。</sys:String>
+    <sys:String x:Key="Err_Installation">安裝檔案 {0} 有錯誤：&#x000A;{1}</sys:String>
+    <sys:String x:Key="Err_Installation_File_Missing">檔案唔見咗：{0}</sys:String>
+    <sys:String x:Key="Err_Installation_File_Corrupted">檔案損壞：{0}</sys:String>
+    <sys:String x:Key="Err_Installation_Hash">哈希值唔相符，檔案：{0}</sys:String>
+    <sys:String x:Key="Err_Installation_Version">版本唔相符，檔案：{0}&#x000A;版本：{1}&#x000A;實際嘅版本：{2}</sys:String>
+    <sys:String x:Key="Err_Installation_Mismatch">版本唔相符，檔案：{0}&#x000A;實際版本：{1}&#x000A;系統架構：{2}</sys:String>
+    <sys:String x:Key="Err_Installation_Redownload">呢個安裝檔案有錯誤，請試下刪咗佢重新下載過。</sys:String>
+    <sys:String x:Key="Err_Installation_No_BasePack">呢個安裝檔案冇基礎包，請試下重新下載。</sys:String>
+    <sys:String x:Key="Err_Reading_Info">讀取 Office 資料嗰陣出錯。</sys:String>
+    <sys:String x:Key="Err_Saving_Info">儲存 Office 資料嗰陣出錯。</sys:String>
+    <sys:String x:Key="Err_Start_Deploy.Download">下載唔到 Office，請確認你加咗產品或語言，然後再試過。</sys:String>
+    <sys:String x:Key="Err_Start_Deploy.Deploy">部署唔到 Office，請確認你正確設定咗基本設定，然後再試過。</sys:String>
+    <sys:String x:Key="Err_Start_Deploy.Preferences">設定唔到應用程式首選項，請確認你正確設定咗應用程式首選項，然後再試過。</sys:String>
+    <!-- {0} means product name, for example: Microsoft 365 Apps for Enterprise. -->
+    <sys:String x:Key="Err_Start_Deploy_ProductNotSupported">呢個版本嘅 Office 唔支援安裝 {0}。</sys:String>
+    <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
+    <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} 唔支援 {1} 語言。</sys:String>
+    <sys:String x:Key="Err_System_Variables_Incorrect">一個或者多個系統變量唔正確，請喺工具箱頁面度修復。</sys:String>
+    <sys:String x:Key="Err_Installer_Exited">Office 部署工具未能正常退出。</sys:String>
+    <sys:String x:Key="Err_Prepare_To_Download_Office">攞唔到 Office 版本，請再試過，或者改用 Office 部署工具做下載引擎。</sys:String>
+    <sys:String x:Key="Err_Create_ISO">搵唔到 Office 安裝檔案。請先下載安裝檔案，或者揀選現有嘅安裝檔案，然後再試過。</sys:String>
+    <sys:String x:Key="Err_Query_Office_Licenses">查詢唔到 Office 許可證。請再試過。</sys:String>
+    <sys:String x:Key="Err_Loading_Office_Licenses">喺系統度搵唔到 Click-to-Run 版本嘅 Office，載入唔到 Office 許可證。請確認你已經安裝咗最新版本嘅 Office。</sys:String>
+    <sys:String x:Key="Err_Product_Key_Invalid">輸入嘅產品密鑰唔正確，請檢查咗再試過。</sys:String>
+    <sys:String x:Key="Err_Confirmation_ID_Invalid">輸入嘅確認 ID 唔正確，請檢查咗再試過。</sys:String>
+    <sys:String x:Key="Err_KMS_Host_Invalid">儲存唔到 KMS 設定，請檢查 KMS 主機名稱係咪正確，然後再試過。</sys:String>
+    <sys:String x:Key="Err_No_KMS_Lic">儲存唔到 KMS 設定，喺系統度搵唔到有效嘅 Office KMS 許可證。</sys:String>
+    <sys:String x:Key="Err_Set_KMS">儲存唔到 KMS 設定，請再試過。</sys:String>
+    <sys:String x:Key="Err_Act_Run_Commands">執行命令嗰陣出現錯誤。&#x000A;&#x000A;錯誤代碼: {0}</sys:String>
+    <sys:String x:Key="Err_Act_Office_License">激活產品嗰陣出現錯誤。&#x000A;&#x000A;錯誤代碼: {0}</sys:String>
+    <sys:String x:Key="Err_Install_Office_Lic">安裝許可證嗰陣出現錯誤。&#x000A;&#x000A;錯誤代碼: {0}</sys:String>
+    <sys:String x:Key="Err_Install_Product_Key">安裝產品密鑰嗰陣出現錯誤。&#x000A;&#x000A;錯誤代碼: {0}</sys:String>
+    <sys:String x:Key="Err_Uninstall_Product_Key">卸載產品密鑰嗰陣出現錯誤。&#x000A;&#x000A;錯誤代碼: {0}</sys:String>
+    <sys:String x:Key="Err_Check_KMS_Status">測試唔到 KMS 狀態，請檢查 KMS 主機名稱係咪正確，然後再試過。</sys:String>
+    <sys:String x:Key="Err_Office_App_NotFound">喺系統度搵唔到 {0}，請確認係咪已經安裝咗最新版本嘅 Office。</sys:String>
+    <sys:String x:Key="Err_Open_Clipboard">存取唔到剪貼板，請再試過。</sys:String>
+
+    <!-- Error messages about Thunder -->
+    <sys:String x:Key="Thunder_Err_Init">迅雷下載引擎初始化失敗。</sys:String>
+    <sys:String x:Key="Thunder_Err_Start">任務啟動失敗。</sys:String>
+    <sys:String x:Key="Thunder_Err_Stop">任務暫停失敗。</sys:String>
+    <sys:String x:Key="Thunder_Err_Exit">迅雷退出失敗。</sys:String>
+    <sys:String x:Key="Thunder_Err_Unknown">未知嘅下載錯誤。</sys:String>
+    <sys:String x:Key="Thunder_Err_Create">整唔到檔案。</sys:String>
+    <sys:String x:Key="Thunder_Err_Delete">刪除唔到檔案。</sys:String>
+    <sys:String x:Key="Thunder_Err_FileHash">檔案全文校驗失敗。</sys:String>
+    <sys:String x:Key="Thunder_Err_PieceHash">檔案片校驗失敗。</sys:String>
+    <sys:String x:Key="Thunder_Err_Read">讀唔到檔案。</sys:String>
+    <sys:String x:Key="Thunder_Err_Rename">改唔到檔案名。</sys:String>
+    <sys:String x:Key="Thunder_Err_Write">寫唔到檔案。</sys:String>
+    <sys:String x:Key="Thunder_Err_DownInvalid">下載地址無效。</sys:String>
+    <sys:String x:Key="Thunder_Err_NotIP">HTTP 下載中冇 IP 用到。</sys:String>
+    <sys:String x:Key="Thunder_Err_IDInvalid">TaskID 無效。</sys:String>
+    <sys:String x:Key="Thunder_Err_SetProxy">設定唔到代理。</sys:String>
+    <sys:String x:Key="Thunder_Err_ProxyAuthTypeFailed">代理認證失敗。</sys:String>
+    <sys:String x:Key="Thunder_Err_ProxyAuthTypeUnknown">代理類型未知。</sys:String>
+    <sys:String x:Key="Thunder_Err_Timeout">任務超時。</sys:String>
+    <sys:String x:Key="Thunder_Err_Crashed">迅雷下載引擎死咗。</sys:String>
+    <sys:String x:Key="Thunder_Err_Cancel">任務被取消咗。</sys:String>
+</ResourceDictionary>

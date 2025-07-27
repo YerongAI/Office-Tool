@@ -57,18 +57,20 @@ irm https://officetool.plus | iex
 | en-us | English (United States) | [Yerong](https://officetool.plus/) |
 | hu-hu | magyar (Magyarország) | [John Fowler](https://github.com/JohnFowler58) |
 | id-id | Bahasa Indonesia (Indonesia) | [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Reno Sifana Paksi](https://linktr.ee/renosifana.paksi) |
-| it-it | Italiano (Italia) | [garf02](https://github.com/garf02), [bovirus](https://github.com/bovirus) |
+| it-it | italiano (Italia) | [garf02](https://github.com/garf02), [bovirus](https://github.com/bovirus) |
 | ja-jp | 日本語 (日本) | [秋山へいわ](https://github.com/akio1321)|
 | ko-kr | 한국어 (대한민국) | [VenusGirl❤](https://github.com/VenusGirl) |
+| my-mm | မြန်မာ (မြန်မာ) | [Paing Thet Kyaw](https://github.com/Paing100) |
 | nl-nl | Nederlands (Nederland) | [Kajoe](https://github.com/Kajoe1) |
-| pl-pl | Polski (Polska) | [JakubDriver](https://github.com/jakubdriver) |
-| pt-br | Português (Brasil) | [Igor Rückert](https://github.com/igorruckert) |
-| ru-ru | Русский (Россия) | [Долматов Алексей](https://github.com/iDolmatov) |
+| pl-pl | polski (Polska) | [JakubDriver](https://github.com/jakubdriver) |
+| pt-br | português (Brasil) | [Igor Rückert](https://github.com/igorruckert) |
+| ru-ru | pусский (Россия) | [Долматов Алексей](https://github.com/iDolmatov) |
 | th-th | ไทย (ไทย) | [dekthaiinchina](https://github.com/dekthaiinchina) |
 | tr-tr | Türkçe (Türkiye) | [Tayfun Akkoyun](https://github.com/crasadure) |
 | uk-ua | українська (Україна) | [Olexii Korshunov](https://github.com/korshunov-olexiy) |
 | vi-vn | Tiếng Việt (Việt Nam) | [Nguyen Quang Trung](https://github.com/TrungThachDau) |
 | zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com) |
+| zho-yue | 粵語 (廣東) | [Yerong](https://officetool.plus/), GitHub Copilot |
 
 ## Help With Localization
 

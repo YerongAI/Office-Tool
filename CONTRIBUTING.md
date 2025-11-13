@@ -1,4 +1,4 @@
-## Help With Localization
+# Help With Localization
 
 We encourage everyone to help with localization. The following is how to do it.
 

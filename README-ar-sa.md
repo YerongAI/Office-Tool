@@ -37,17 +37,19 @@
 
 ## التحميل والبدء السريع
 
-- [تحميل](https://otp.landian.vip/download.html)
+- [تحميل](https://otp.landian.vip/)
 - [التوثيق](https://otp.landian.vip/help/)
 
 Or download Office Tool Plus using PowerShell:
 
 ```powershell
+
 irm https://officetool.plus | iex
+
 ```
 
 ## عنا
 
 © 2016-2025 Yerong. جميع الحقوق محفوظة.
 
-> المدونة [@Yerong の小窝](https://www.coolhub.top/) · جيت هب [@YerongAI](https://github.com/YerongAI) · تليجرام [@Office Tool Plus](https://t.me/s/otp_channel) · [مراسلتنا](mailto:yerong@coolhub.top)
+> المدونة [@Yerong の小窝](https://www.coolhub.top/) · جيت هب [@YerongAI](https://github.com/YerongAI) · تليجرام [@Office Tool Plus](https://t.me/s/otp_channel) · Discord [Office Tool Plus](https://otp.landian.vip/redirect/?ref=discord)

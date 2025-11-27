@@ -37,17 +37,19 @@
 
 ## 다운로드 및 빠른 시작
 
-- [다운로드](https://otp.landian.vip/download.html)
+- [다운로드](https://otp.landian.vip/)
 - [문서](https://otp.landian.vip/help/)
 
 또는 PowerShell을 사용하여 Office Tool Plus를 다운로드하세요:
 
 ```powershell
+
 irm https://officetool.plus | iex
+
 ```
 
 ## 추가 정보
 
 © 2016-2025 Yerong. All Rights Reserved.
 
-> 블로그 [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel)
+> 블로그 [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel) · Discord [Office Tool Plus](https://otp.landian.vip/redirect/?ref=discord)

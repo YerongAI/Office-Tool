@@ -35,17 +35,19 @@ Fungsi Tambahan:
 
 ## Download and quick start
 
-- [Download](https://otp.landian.vip/download.html)
+- [Download](https://otp.landian.vip/)
 - [Documentation](https://otp.landian.vip/help/)
 
 Or download Office Tool Plus using PowerShell:
 
 ```powershell
+
 irm https://officetool.plus | iex
+
 ```
 
 ## Tentang
 
 © 2016-2025 Yerong. Semua Hak Cipta Dilindungi.
 
-> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel)
+> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel) · Discord [Office Tool Plus](https://otp.landian.vip/redirect/?ref=discord)

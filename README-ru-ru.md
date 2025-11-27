@@ -35,17 +35,19 @@
 
 ## Скачивание и быстрый старт
 
-- [Скачать](https://otp.landian.vip/download.html)
+- [Скачать](https://otp.landian.vip/)
 - [Документация](https://otp.landian.vip/help/)
 
 Или скачайте Office Tool Plus с использованием PowerShell:
 
 ```powershell
+
 irm https://officetool.plus | iex
+
 ```
 
 ## О разработке
 
 © 2016-2025 Yerong. All Rights Reserved.
 
-> Blog [@Yerong の小窝](https://www.coolhub.top/) В· GitHub [@YerongAI](https://github.com/YerongAI) В· Telegram [@Office Tool Plus](https://t.me/s/otp_channel)
+> Blog [@Yerong の小窝](https://www.coolhub.top/) В· GitHub [@YerongAI](https://github.com/YerongAI) В· Telegram [@Office Tool Plus](https://t.me/s/otp_channel) · Discord [Office Tool Plus](https://otp.landian.vip/redirect/?ref=discord)

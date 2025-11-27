@@ -38,13 +38,15 @@
 
 ## 下载 & 快速入门
 
-- [下载](https://otp.landian.vip/download.html)
+- [下载](https://otp.landian.vip/)
 - [帮助文档](https://otp.landian.vip/help/)
 
 或者使用 PowerShell 下载 Office Tool Plus:
 
 ```powershell
+
 irm https://officetool.plus | iex
+
 ```
 
 更多详细教程可访问 [Yerong の小窝](https://www.coolhub.top/) 获取。
@@ -53,4 +55,4 @@ irm https://officetool.plus | iex
 
 © 2016-2025 Yerong. All Rights Reserved.
 
-> 博客 [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel)
+> 博客 [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [Office Tool Plus](https://t.me/s/otp_channel) · Discord [Office Tool Plus](https://otp.landian.vip/redirect/?ref=discord)

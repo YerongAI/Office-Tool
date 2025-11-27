@@ -38,17 +38,19 @@ Funkciók és jellemzők:
 
 ## Letöltés és gyors indítás
 
-- [Download](https://otp.landian.vip/download.html)
+- [Download](https://otp.landian.vip/)
 - [Documentation](https://otp.landian.vip/help/)
 
 Vagy töltse le az Office Tool Plus-t a PowerShell segítségével:
 
 ```powershell
+
 irm https://officetool.plus | iex
+
 ```
 
 ## Névjegy
 
 © 2016-2025 Yerong. Minden jog fenntartva.
 
-> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel)
+> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel) · Discord [Office Tool Plus](https://otp.landian.vip/redirect/?ref=discord)

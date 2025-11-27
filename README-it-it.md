@@ -38,17 +38,19 @@ Funzioni e caratteristiche::
 
 ## Download ed avvio rapido
 
-- [Download](https://otp.landian.vip/download.html)
+- [Download](https://otp.landian.vip/)
 - [Documentazione](https://otp.landian.vip/help/)
 
 Oppure scarica Office Tool Plus usando PowerShell:
 
 ```powershell
+
 irm https://officetool.plus | iex
+
 ```
 
 ## Info programma
 
 © 2016-2025 Yerong. Tutti i diritti riservati.
 
-> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel)
+> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel) · Discord [Office Tool Plus](https://otp.landian.vip/redirect/?ref=discord)

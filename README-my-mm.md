@@ -38,17 +38,19 @@ src="https://img.shields.io/github/v/release/YerongAI/Office-Tool?style=flat-squ
 
 ## ဒေါင်းလုပ်လုပ်ခြင်းနှင့် အမြန်ဆုံးစဆင်အသုံးပြုခြင်း
 
-- [ဒေါင်းလုပ်လုပ်ရန်](https://otp.landian.vip/download.html)
+- [ဒေါင်းလုပ်လုပ်ရန်](https://otp.landian.vip/)
 - [စာရွက်စာတမ်း](https://otp.landian.vip/help/)
 
 သို့မဟုတ် Office Tool Plus ကို PowerShell မှတဆင့် ဒေါင်းလုပ်လုပ်ရန်:
 
 ```powershell
+
 irm https://officetool.plus | iex
+
 ```
 
 ## အကြောင်းစုံ
 
 © 2016-2025 Yerong. All Rights Reserved.
 
-> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel)
+> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel) · Discord [Office Tool Plus](https://otp.landian.vip/redirect/?ref=discord)

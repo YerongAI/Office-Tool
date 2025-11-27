@@ -35,19 +35,17 @@
 
 ## 下載 & 快速入門
 
-- [下載](https://otp.landian.vip/download.html)
+- [下載](https://otp.landian.vip/)
 - [快速入門(繁體)](https://otp.landian.vip/help/)
 - [教學文章(繁體)](https://www.cotpear.com/topics/office-tool-plus/?utm_source=github.com/office-tool)
 
 Or download Office Tool Plus using PowerShell:
 
 ```powershell
+
 irm https://officetool.plus | iex
+
 ```
-
-## 合法性
-
-Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.com/zh-tw/DeployOffice/overview-of-the-office-2016-deployment-tool)、[OSPP](https://docs.microsoft.com/zh-tw/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office)、遵循 Microsoft 開發文件為基礎打造，因此並不存在有關「破解」、「KMS 破解」、「盜版啟用」等違法功能。
 
 ## 關於繁體中文(台灣) 維護與翻譯者
 
@@ -64,4 +62,4 @@ Office Tool Plus 是以 [Microsoft Office 部署工具](https://docs.microsoft.c
 
 © 2016-2025 Yerong. All Rights Reserved.
 
-> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/ot_channel_tw)
+> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel) · Discord [Office Tool Plus](https://otp.landian.vip/redirect/?ref=discord)

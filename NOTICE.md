@@ -38,6 +38,8 @@ Apache-2.0 license
 
 - Downloader (4.0.3)
 - Microsoft.Extensions.Caching.Memory (10.0.0)
+- Microsoft.Extensions.Http (10.0.0)
+- Microsoft.Net.Http.Headers (8.0.22)
 - Microsoft.Security.Extensions (1.4.0)
 - Microsoft.Xaml.Behaviors.Wpf (1.1.135)
 - Prism.DryIoc (9.0.537)

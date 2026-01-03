@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-<a href="https://www.coolhub.top/" target="_blank"><img alt="Author" src="https://img.shields.io/badge/Author-Yerong-blue?style=flat-square"/></a>
+<a href="https://blog.yerong.org/" target="_blank"><img alt="Author" src="https://img.shields.io/badge/Author-Yerong-blue?style=flat-square"/></a>
 <img alt="Language" src="https://img.shields.io/badge/Language-C%23-green?style=flat-square"/>
 <a href="https://otp.landian.vip/" target="_blank"><img alt="release" src="https://img.shields.io/github/v/release/YerongAI/Office-Tool?style=flat-square"/></a>
 <img alt="license" src="https://img.shields.io/github/license/YerongAI/Office-Tool?style=flat-square"/>
@@ -50,6 +50,6 @@ irm https://officetool.plus | iex
 
 ## عنا
 
-© 2016-2025 Yerong. جميع الحقوق محفوظة.
+© 2016-2026 Yerong. جميع الحقوق محفوظة.
 
-> المدونة [@Yerong の小窝](https://www.coolhub.top/) · جيت هب [@YerongAI](https://github.com/YerongAI) · تليجرام [@Office Tool Plus](https://t.me/s/otp_channel) · Discord [Office Tool Plus](https://otp.landian.vip/redirect/?ref=discord)
+> المدونة [@Yerong の小窝](https://blog.yerong.org/) · جيت هب [@YerongAI](https://github.com/YerongAI) · تليجرام [@Office Tool Plus](https://t.me/s/otp_channel) · Discord [Office Tool Plus](https://otp.landian.vip/redirect/?ref=discord)

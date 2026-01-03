@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-<a href="https://www.coolhub.top/" target="_blank"><img alt="Yazar" src="https://img.shields.io/badge/Author-Yerong-blue?style=flat-square"/></a>
+<a href="https://blog.yerong.org/" target="_blank"><img alt="Yazar" src="https://img.shields.io/badge/Author-Yerong-blue?style=flat-square"/></a>
 <img alt="Dil" src="https://img.shields.io/badge/Language-C%23-green?style=flat-square"/>
 <a href="https://otp.landian.vip/" target="_blank"><img alt="Sürüm" 
 src="https://img.shields.io/github/v/release/YerongAI/Office-Tool?style=flat-square"/></a>
@@ -51,6 +51,6 @@ irm https://officetool.plus | iex
 
 ## Hakkında
 
-© 2016-2025 Yerong.Her hakkı saklıdır.
+© 2016-2026 Yerong.Her hakkı saklıdır.
 
-> Blog [@Yerong の小窝](https://www.coolhub.top/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel) · Discord [Office Tool Plus](https://otp.landian.vip/redirect/?ref=discord)
+> Blog [@Yerong の小窝](https://blog.yerong.org/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel) · Discord [Office Tool Plus](https://otp.landian.vip/redirect/?ref=discord)

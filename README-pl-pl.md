@@ -38,7 +38,7 @@ Dodatkowe funkcje:
 - [Pobierz](https://otp.landian.vip/)
 - [Dokumentacja](https://otp.landian.vip/help/)
 
-Or download Office Tool Plus using PowerShell:
+Lub pobierz Office Tool Plus za pomocą PowerShell:
 
 ```powershell
 

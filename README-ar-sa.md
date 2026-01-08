@@ -40,7 +40,7 @@
 - [تحميل](https://otp.landian.vip/)
 - [التوثيق](https://otp.landian.vip/help/)
 
-Or download Office Tool Plus using PowerShell:
+أو قم بتحميل Office Tool Plus باستخدام PowerShell:
 
 ```powershell
 

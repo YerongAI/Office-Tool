@@ -41,7 +41,7 @@ Aşağıdaki ürünlerin özel dağıtımını ve etkinleştirilmesini destekler
 - [Download](https://otp.landian.vip/)
 - [Documentation](https://otp.landian.vip/help/)
 
-Or download Office Tool Plus using PowerShell:
+Veya PowerShell kullanarak Office Tool Plus'ı indirin:
 
 ```powershell
 

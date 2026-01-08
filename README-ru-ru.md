@@ -50,4 +50,4 @@ irm https://officetool.plus | iex
 
 © 2016-2026 Yerong. All Rights Reserved.
 
-> Blog [@Yerong の小窝](https://blog.yerong.org/) В· GitHub [@YerongAI](https://github.com/YerongAI) В· Telegram [@Office Tool Plus](https://t.me/s/otp_channel) · Discord [Office Tool Plus](https://otp.landian.vip/redirect/?ref=discord)
+> Blog [@Yerong の小窝](https://blog.yerong.org/) · GitHub [@YerongAI](https://github.com/YerongAI) · Telegram [@Office Tool Plus](https://t.me/s/otp_channel) · Discord [Office Tool Plus](https://otp.landian.vip/redirect/?ref=discord)

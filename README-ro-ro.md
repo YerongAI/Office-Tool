@@ -40,7 +40,7 @@ Funcții și caracteristici:
 - [Descarcă](https://otp.landian.vip/)
 - [Documentation](https://otp.landian.vip/help/)
 
-Or download Office Tool Plus using PowerShell:
+Sau descărcați Office Tool Plus folosind PowerShell:
 
 ```powershell
 

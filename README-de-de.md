@@ -40,7 +40,7 @@ Funktionen und Features:
 - [Download](https://otp.landian.vip/)
 - [Dokumentation](https://otp.landian.vip/help/)
 
-Or download Office Tool Plus using PowerShell:
+Oder laden Sie Office Tool Plus mit PowerShell herunter:
 
 ```powershell
 

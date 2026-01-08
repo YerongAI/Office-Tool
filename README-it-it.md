@@ -38,7 +38,7 @@ Funzioni e caratteristiche::
 
 ## Download ed avvio rapido
 
-- [Download](https://otp.landian.vip/)
+- [Scarica](https://otp.landian.vip/)
 - [Documentazione](https://otp.landian.vip/help/)
 
 Oppure scarica Office Tool Plus usando PowerShell:

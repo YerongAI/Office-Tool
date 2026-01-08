@@ -39,7 +39,7 @@
 - [快速入門(繁體)](https://otp.landian.vip/help/)
 - [教學文章(繁體)](https://www.cotpear.com/topics/office-tool-plus/?utm_source=github.com/office-tool)
 
-Or download Office Tool Plus using PowerShell:
+或使用 PowerShell 下載 Office Tool Plus：
 
 ```powershell
 

@@ -38,7 +38,7 @@ Functies en kenmerken:
 ## Downloaden en snelstart
 
 - [Download](https://otp.landian.vip/)
-- [Documentation](https://otp.landian.vip/help/)
+- [Documentatie](https://otp.landian.vip/help/)
 
 Of download Office Tool Plus met PowerShell:
 

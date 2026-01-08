@@ -38,8 +38,8 @@ Aşağıdaki ürünlerin özel dağıtımını ve etkinleştirilmesini destekler
 
 ## İndirme ve hızlı başlangıç
 
-- [Download](https://otp.landian.vip/)
-- [Documentation](https://otp.landian.vip/help/)
+- [İndir](https://otp.landian.vip/)
+- [Belgeler](https://otp.landian.vip/help/)
 
 Veya PowerShell kullanarak Office Tool Plus'ı indirin:
 

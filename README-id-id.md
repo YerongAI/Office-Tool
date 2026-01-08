@@ -35,8 +35,8 @@ Fungsi Tambahan:
 
 ## Unduh dan mulai cepat
 
-- [Download](https://otp.landian.vip/)
-- [Documentation](https://otp.landian.vip/help/)
+- [Unduh](https://otp.landian.vip/)
+- [Dokumentasi](https://otp.landian.vip/help/)
 
 Atau unduh Office Tool Plus menggunakan PowerShell:
 

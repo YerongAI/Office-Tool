@@ -38,8 +38,8 @@ Funkciók és jellemzők:
 
 ## Letöltés és gyors indítás
 
-- [Download](https://otp.landian.vip/)
-- [Documentation](https://otp.landian.vip/help/)
+- [Letöltés](https://otp.landian.vip/)
+- [Dokumentáció](https://otp.landian.vip/help/)
 
 Vagy töltse le az Office Tool Plus-t a PowerShell segítségével:
 

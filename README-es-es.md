@@ -37,8 +37,8 @@ Funciones adicionales:
 
 ## Descarga e inicio rápido
 
-- [Download](https://otp.landian.vip/)
-- [Documentation](https://otp.landian.vip/help/)
+- [Descargar](https://otp.landian.vip/)
+- [Documentación](https://otp.landian.vip/help/)
 
 O descarga Office Tool Plus usando PowerShell:
 

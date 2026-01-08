@@ -38,7 +38,7 @@ Funcții și caracteristici:
 ## Descărcare și pornire rapidă
 
 - [Descarcă](https://otp.landian.vip/)
-- [Documentation](https://otp.landian.vip/help/)
+- [Documentație](https://otp.landian.vip/help/)
 
 Sau descărcați Office Tool Plus folosind PowerShell:
 

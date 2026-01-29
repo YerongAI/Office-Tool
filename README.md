@@ -1,13 +1,13 @@
 #
 
 <p align="center">
-<img alt="Office Tool Plus Logo" src="https://otp.landian.vip/static/images/logo.webp"/>
+<img alt="Office Tool Plus Logo" src="https://otp.landian.vip/assets/images/logo.webp"/>
 </p>
 
 <p align="center">
 <a href="https://blog.yerong.org/" target="_blank"><img alt="Author" src="https://img.shields.io/badge/Author-Yerong-blue?style=flat-square"/></a>
 <img alt="Language" src="https://img.shields.io/badge/Language-C%23-green?style=flat-square"/>
-<a href="https://otp.landian.vip/" target="_blank"><img alt="Release" 
+<a href="https://otp.landian.vip/" target="_blank"><img alt="Release"
 src="https://img.shields.io/github/v/release/YerongAI/Office-Tool?style=flat-square"/></a>
 <img alt="License" src="https://img.shields.io/github/license/YerongAI/Office-Tool?style=flat-square"/>
 </p>
@@ -23,18 +23,18 @@ Supports custom deployment and activation of the following products:
 
 Functions and Features:
 
-- Create Office installation configuration. The config can be exported to local, or imported from local or web.
-- Download Office, supporting `ALL` Office channels and `ALL` Office languages.
-- Install Office or modify the existing Office, such as adding new products and applications, or uninstalling products and applications.
+- Create, import or export Office installation configuration.
+- Download Office in any language, and from any update channel.
+- Install Office in just a few steps, choose the product, language, and apps you want.
+- Modify Office installation, easy to add or remove anything at once.
 - Create Office ISO, supports default installation config and silent installation config.
-- Activate Office. Support online activation, phone activation and KMS activation.
+- Activate Office, support online activation, phone activation and KMS activation.
 - Support Office activation management, including license management, key management and KMS management.
 - Change Office update channel, support upgrading/downgrading Office without reinstalling Office.
-- Remove Office. Force remove Office while it can’t be uninstalled in normal way, support Office from Office 2003 to the latest Office version.
+- Force remove Office while it can’t be uninstalled in normal way, supports from Office 2003 to the latest Office version.
+- Fast and stable to convert Office documents, based on Office COM.
 - Integrated Office tools, including resetting settings, fixing Office problems.
-- Convert Office documents, based on Office COM. it's fast and stable.
-- Personalize theme, you can build your special Office Tool Plus.
-- Advanced settings allow you to use more advanced features, such as Office internal channels.
+- Personalize theme, build your special Office Tool Plus.
 
 ## Download and quick start
 
@@ -56,11 +56,11 @@ irm https://officetool.plus | iex
 | ar-ly | العربية (ليبيا) | Abdul Salam Bin Ali |
 | de-de | Deutsch (Deutschland) | [Berny23](https://steamcommunity.com/id/Berny23) |
 | en-gb | English (United Kingdom) | [Mcforwin](https://github.com/Mcforwin) |
-| en-us | English (United States) | [Yerong](https://officetool.plus/) |
+| en-us | English (United States) | [Yerong](https://www.officetool.plus/) |
 | hu-hu | magyar (Magyarország) | [John Fowler](https://github.com/JohnFowler58) |
 | id-id | Bahasa Indonesia (Indonesia) | [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Reno Sifana Paksi](https://linktr.ee/renosifana.paksi) |
 | it-it | italiano (Italia) | [garf02](https://github.com/garf02), [bovirus](https://github.com/bovirus) |
-| ja-jp | 日本語 (日本) | [秋山へいわ](https://github.com/akio1321)|
+| ja-jp | 日本語 (日本) | [秋山へいわ](https://github.com/akio1321) |
 | ko-kr | 한국어 (대한민국) | [VenusGirl❤](https://github.com/VenusGirl) |
 | my-mm | မြန်မာ (မြန်မာ) | [Paing Thet Kyaw](https://github.com/Paing100) |
 | nl-nl | Nederlands (Nederland) | [Kajoe](https://github.com/Kajoe1) |
@@ -72,7 +72,7 @@ irm https://officetool.plus | iex
 | uk-ua | українська (Україна) | [Olexii Korshunov](https://github.com/korshunov-olexiy) |
 | vi-vn | Tiếng Việt (Việt Nam) | [Nguyen Quang Trung](https://github.com/TrungThachDau) |
 | zh-tw | 繁體中文 (台灣) | [Yi Chi](https://www.cotpear.com) |
-| zho-yue | 粵語 (廣東) | [Yerong](https://officetool.plus/), GitHub Copilot |
+| zho-yue | 粵語 (廣東) | [Yerong](https://www.officetool.plus/) |
 
 ## About
 

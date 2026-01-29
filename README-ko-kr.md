@@ -1,7 +1,7 @@
 ﻿#
 
 <p align="center">
-<img alt="Office Tool Plus Logo" src="https://otp.landian.vip/static/images/logo.webp"/>
+<img alt="Office Tool Plus Logo" src="https://otp.landian.vip/assets/images/logo.webp"/>
 </p>
 
 <p align="center">

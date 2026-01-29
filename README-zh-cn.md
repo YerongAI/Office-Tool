@@ -1,7 +1,7 @@
 ﻿#
 
 <p align="center">
-<img alt="Office Tool Plus Logo" src="https://otp.landian.vip/static/images/logo.webp"/>
+<img alt="Office Tool Plus Logo" src="https://otp.landian.vip/assets/images/logo.webp"/>
 </p>
 
 <p align="center">
@@ -22,19 +22,18 @@
 
 功能与特性：
 
-- 支持 Office 的全部 17 个通道，包括查询、下载、安装
-- 对现有的产品、应用程序、语言包进行增删操作
-- 从本地/网络位置导入 XML 配置
-- 导出 XML 配置到本地
-- 创建 Office ISO 文件供离线安装使用
-- 安装 Office 许可证（转换 Office 版本）
-- 清理 Office 的许可证以及密钥
-- 支持在线激活、电话激活（离线激活）以及 KMS 激活
-- 强制移除 Office，支持所有版本的 Office
-- 重置 Office 为默认设置
-- 更改 Office 的更新通道
-- 批量转换 Office 文档
-- 自定义主题，支持保存程序设置
+- 创建、导入或导出 Office 安装配置。
+- 下载 Office，无论什么语言，什么更新通道，只要有的，我们都能给你。
+- 安装 Office，简单几步，即可轻松选择任何你想要的产品、语言和应用程序。
+- 修改 Office，支持一次性添加/删除任何东西。
+- 创建 Office ISO 镜像文件，支持默认配置或后台安装。
+- 激活 Office，支持联网激活、电话激活和 KMS 激活。
+- 管理 Office 激活，可管理许可证、密钥以及 KMS 配置。
+- 修改 Office 更新通道，支持在不重装的情况下升级/降级 Office。
+- 移除 Office，即使无法正常卸载，我们也能帮你完整清理 Office。
+- 转换 Office 文档，多种格式批量转换，又快又稳定。
+- 更多 Office 工具，无论修复问题，亦或者重置 Office，都不在话下。
+- 个性化主题，打造只属于你的 Office Tool Plus。
 
 ## 下载 & 快速入门
 

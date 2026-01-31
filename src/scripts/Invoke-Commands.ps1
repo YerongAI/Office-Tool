@@ -21,6 +21,11 @@ $AllLanguages = @{
         zh_Hans_CN = "系统信息:"
         vi_VN      = "Thông tin hệ điều hành:"
     }
+    "UnsupportedArch"  = [PSCustomObject]@{
+        en_US      = "  Unsupported system architecture: {0}"
+        zh_Hans_CN = "  不支持的系统架构: {0}"
+        vi_VN      = "  Kiến trúc hệ thống không được hỗ trợ: {0}"
+    }
     "CommandsWillBeExec" = [PSCustomObject]@{
         en_US      = "  The following commands will be executed in sequence:"
         zh_Hans_CN = "  将会依次执行以下命令："
@@ -100,14 +105,9 @@ function Get-OTP {
     } while (-not $DownloadSuccess)
 }
 
-function Get-RuntimeVersion {
+function Get-RuntimeInstalled {
     try {
         $DotnetInfo = dotnet --list-runtimes | Select-String -Pattern "Microsoft.WindowsDesktop.App 8"
-        $IsX86Version = $DotnetInfo | Select-String -Pattern "(x86)"
-        # If x86 version of runtime is installed on system, ignore it. Because we will download x64 version of OTP by default.
-        if ($null -ne $IsX86Version) {
-            return $false
-        }
         if ($null -ne $DotnetInfo) {
             return $true
         }
@@ -128,11 +128,17 @@ Write-Host "=========================== Office Tool Plus =======================
 Write-Host
 Write-Host "  $(Get-LString "OSInfo") $OsVersion $Arch"
 Write-Host
-if (Get-RuntimeVersion -eq $true) {
+if (Get-RuntimeInstalled -eq $false) {
     $Type = "normal"
 }
 else {
     $Type = "runtime"
+}
+
+if ($Arch -eq "x86") {
+    Write-Host $([string]::Format($(Get-LString "UnsupportedArch"), $Arch))
+    Read-Host
+    Exit
 }
 
 Write-Host "$(Get-LString "CommandsWillBeExec")"
@@ -146,7 +152,7 @@ Read-Host
 
 # Download Office Tool Plus
 $TempFolder = "$env:TEMP\Office Tool Plus"
-Get-OTP -DownloadURL "https://www.officetool.plus/redirect/download.php?type=$Type&arch=$Arch" -SavePath $TempFolder
+Get-OTP -DownloadURL "https://$DownloadHost/redirect/download.php?type=$Type&arch=$Arch" -SavePath $TempFolder
 
 # Run commands
 foreach ($Command in $Commands) {

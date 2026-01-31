@@ -47,6 +47,11 @@ $AllLanguages = @{
         zh_Hans_CN = "系统信息:"
         vi_VN      = "Thông tin hệ điều hành:"
     }
+    "UnsupportedArch"     = [PSCustomObject]@{
+        en_US      = "  Unsupported system architecture: {0}"
+        zh_Hans_CN = "  不支持的系统架构: {0}"
+        vi_VN      = "  Kiến trúc hệ thống không được hỗ trợ: {0}"
+    }
     "SelToDownload"       = [PSCustomObject]@{
         en_US      = "  Select the edition to download:"
         zh_Hans_CN = "  请选择需要下载的版本："
@@ -57,11 +62,6 @@ $AllLanguages = @{
         zh_Hans_CN = "64 位（包含框架）"
         vi_VN      = "64-bit (kèm runtime)"
     }
-    "DownSelx86Runtime"   = [PSCustomObject]@{
-        en_US      = "32-bit with runtime"
-        zh_Hans_CN = "32 位（包含框架）"
-        vi_VN      = "32-bit (kèm runtime)"
-    }
     "DownSelArm64Runtime" = [PSCustomObject]@{
         en_US      = "ARM64 with runtime"
         zh_Hans_CN = "ARM64 位（包含框架）"
@@ -71,11 +71,6 @@ $AllLanguages = @{
         en_US      = "64-bit"
         zh_Hans_CN = "64 位"
         vi_VN      = "64-bit"
-    }
-    "DownSelx86"          = [PSCustomObject]@{
-        en_US      = "32-bit"
-        zh_Hans_CN = "32 位"
-        vi_VN      = "32-bit"
     }
     "DownSelArm64"        = [PSCustomObject]@{
         en_US      = "ARM64"
@@ -203,7 +198,7 @@ function Invoke-Command {
 function Invoke-Quick-Install {
     param([string]$Path)
 
-    $DownloadURL = "https://server-win.ccin.top/office-tool-plus/api/xml_generator/?module=1"
+    $DownloadURL = "https://$ServerHost/office-tool-plus/api/xml_generator/?module=1"
     $Channel = "Current"
 
     Clear-Host
@@ -316,14 +311,9 @@ function Get-OTP {
     Invoke-Launch-App -Path $SavePath
 }
 
-function Get-RuntimeVersion {
+function Get-RuntimeInstalled {
     try {
         $DotnetInfo = dotnet --list-runtimes | Select-String -Pattern "Microsoft.WindowsDesktop.App 8"
-        $IsX86Version = $DotnetInfo | Select-String -Pattern "(x86)"
-        # If x86 version of runtime is installed on system, ignore it. Because we will download x64 version of OTP by default.
-        if ($null -ne $IsX86Version) {
-            return $false
-        }
         if ($null -ne $DotnetInfo) {
             return $true
         }
@@ -409,7 +399,7 @@ function Get-SelecFolderPage {
         default { Get-SelecFolderPage -Type $Type -Architecture $Architecture }
     }
     Write-Host
-    Get-OTP -DownloadURL "https://www.officetool.plus/redirect/download.php?type=$Type&arch=$Architecture" -SavePath $UserSpecifiedPath
+    Get-OTP -DownloadURL "https://$DownloadHost/redirect/download.php?type=$Type&arch=$Architecture" -SavePath $UserSpecifiedPath
 }
 
 function Get-DownloadPage {
@@ -423,7 +413,12 @@ function Get-DownloadPage {
     Write-Host
     Write-Host "  $(Get-LString "OSInfo") $OsVersion $Arch"
     Write-Host
-    if (Get-RuntimeVersion -eq $true) {
+    if ($Arch -eq "x86") {
+        Write-Host $([string]::Format($(Get-LString "UnsupportedArch"), $Arch))
+        Read-Host
+        Exit
+    }
+    if (Get-RuntimeInstalled -eq $false) {
         $Type = "normal"
         Write-Host $([string]::Format($(Get-LString "DownNormal"), $Arch))
     }
@@ -450,32 +445,25 @@ function Get-SelectEditionPage {
     Get-LString "SelToDownload"
     Write-Host
     Write-Host "    1: $(Get-LString "DownSelx64Runtime")"
-    Write-Host "    2: $(Get-LString "DownSelx86Runtime")"
-    Write-Host "    3: $(Get-LString "DownSelArm64Runtime")"
-    Write-Host "    4: $(Get-LString "DownSelx64")"
-    Write-Host "    5: $(Get-LString "DownSelx86")"
-    Write-Host "    6: $(Get-LString "DownSelArm64")"
+    Write-Host "    2: $(Get-LString "DownSelArm64Runtime")"
+    Write-Host "    3: $(Get-LString "DownSelx64")"
+    Write-Host "    4: $(Get-LString "DownSelArm64")"
     Write-Host
-    Write-Host "    7: $(Get-LString "GoBack")"
+    Write-Host "    5: $(Get-LString "GoBack")"
     Write-Host
     $UserChoice = Read-Host "  $(Get-LString -Key "ChooseOP")"
     switch ($UserChoice) {
         "1" { $Arch = "x64" }
-        "2" { $Arch = "x86" }
-        "3" { $Arch = "arm64" }
-        "4" {
+        "2" { $Arch = "arm64" }
+        "3" {
             $Arch = "x64"
             $Type = "normal"
         }
-        "5" {
-            $Arch = "x86"
-            $Type = "normal"
-        }
-        "6" {
+        "4" {
             $Arch = "arm64"
             $Type = "normal"
         }
-        "7" { Get-Homepage }
+        "5" { Get-Homepage }
         default { Get-SelectEditionPage }
     }
     Get-SelecFolderPage -Type $Type -Architecture $Arch

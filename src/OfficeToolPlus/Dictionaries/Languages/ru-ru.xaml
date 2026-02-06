@@ -109,7 +109,6 @@
     <sys:String x:Key="Deploy_Error_Channel">{0} не может быть установлен с выбранного канала: {1}.</sys:String>
     <!-- {0} means channel name, such as Current Channel. -->
     <sys:String x:Key="Deploy_Error_Unsupported_Channel">Если вы хотите использовать {0}, то измените модуль установки на Office Tool Plus.</sys:String>
-    <sys:String x:Key="Deploy_Error_System_Architecture">Вы не можете установить Office 64-бита на не 64-битную систему.</sys:String>
     <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
     <sys:String x:Key="Deploy_Error_Office_Architecture">Вы не можете установить Office {0}, потому что уже установлен Office {1} на Вашем компьютере.</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Arch">Выбранная вами архитектура не соответствует архитектуре локальных установочных файлов. Выберите архитектуру повторно или не используйте локальные установочные файлы для развертывания.</sys:String>
@@ -630,6 +629,8 @@
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles">Исключить хеш-файлы</sys:String>
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles.Description">Исключите хеш-файлы при импорте файлов, например файлы с расширениями md5, sha1 или crc32.</sys:String>
     <sys:String x:Key="Hash_Checker_DisplayPath">Показать путь к файлу</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing">Parallel computing</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing.Description">Set the number of files for parallel computing. Note that processing too many files simultaneously may reduce computing speed.</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute">Автоматический расчёт</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute.Description">Автоматически начинать вычисление хеш-значения после завершения импорта файла(ов).</sys:String>
     <sys:String x:Key="Hash_Checker_CRC32.Description">Включить или отключить вычисление CRC-32.</sys:String>
@@ -745,7 +746,6 @@
     <sys:String x:Key="Settings_Download_MsFileList_API.Description">Если включено, список файлов будет получен из Microsoft's API, в противном случае список файлов будет сформирован с использованием встроенных правил.</sys:String>
     <sys:String x:Key="Settings_Download_Engine">Движок</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Description">Выбрать движок, используемый при скачивании Office.</sys:String>
-    <sys:String x:Key="Settings_Download_Engine.Thunder">Thunder</sys:String>
     <!-- Do not translate 'bezzad.Downloader' -->
     <sys:String x:Key="Settings_Download_Engine.Downloader">bezzad.Downloader</sys:String>
     <sys:String x:Key="Settings_Download_Engine.OfficeToolPlus">Office Tool Plus</sys:String>
@@ -813,7 +813,6 @@
     <sys:String x:Key="Input_Command">Пожалуйста, введите команду приложения</sys:String>
     <sys:String x:Key="Input_URL">Пожалуйста, введите URL</sys:String>
     <sys:String x:Key="Input_vNext_License_Name">Пожалуйста, введите имя</sys:String>
-    <sys:String x:Key="Input_Thunder_Speed_Limit">Установите ограничение скорости скачивания для Thunder (в KBps)</sys:String>
 
     <!-- Office ISO Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
@@ -824,6 +823,7 @@
     <!-- Task Message -->
     <sys:String x:Key="Task_Checking_Updates">Проверка обновлений.</sys:String>
     <sys:String x:Key="Task_Downloading_Updates">Скачивание обновлений, {0} завершено ({1} из {2}).</sys:String>
+    <sys:String x:Key="Task_Downloading_Updates_NoPercentage">Скачивание обновлений, {0} из {1}.</sys:String>
     <sys:String x:Key="Task_Verifying_Installation_Files">Проверка файлов, пожалуйста, подождите.</sys:String>
     <sys:String x:Key="Task_Loading_Preferences">Загрузка настроек приложения, подождите.</sys:String>
     <sys:String x:Key="Task_Downloading_Web_Config">Получение файла конфигурации из Интернета, подождите.</sys:String>
@@ -883,6 +883,7 @@
     <sys:String x:Key="Info_No_Updates">Вы используете последнюю версию Office Tool Plus.</sys:String>
     <sys:String x:Key="Info_Update_In_Progress">Выполняется обновление, пожалуйста, подождите.</sys:String>
     <sys:String x:Key="Info_Updates_Incomplete">Не удалось применить некоторые обновления. Пожалуйста, повторите попытку позже.</sys:String>
+    <sys:String x:Key="Info_SystemDrive_NoSpace">Your system drive is running out of space, which may cause some operations to fail.</sys:String>
     <sys:String x:Key="Info_No_Language_Added_For_Download">Мы обнаружили, что вы не добавили язык. В большинстве случаев мы рекомендуем добавлять языки, чтобы избежать проблем.</sys:String>
     <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">Выберите папку для сохранения установочных файлов Office.&#x000A;Чтобы использовать расположение по умолчанию, отключите параметр «Спрашивать место сохранения файлов» на странице настроек.</sys:String>
     <sys:String x:Key="Info_All_Files_Exist">Скачивание не требуется, все файлы существуют.</sys:String>
@@ -949,6 +950,7 @@
     <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
     <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} не поддерживает язык {1}.</sys:String>
     <sys:String x:Key="Err_System_Variables_Incorrect">Одна или несколько системных переменных неверны, пожалуйста, исправьте их на странице Инструменты.</sys:String>
+    <sys:String x:Key="Err_Folder_Permissions_Incorrect">One or more folder permissions are incorrect, and we were unable to fix them. Please restart your system and try again, or contact technical support for assistance.</sys:String>
     <sys:String x:Key="Err_Installation_Is_In_Progress">Активен другой процесс установки Office, проверьте панель задач Windows для уточнения статуса.</sys:String>
     <sys:String x:Key="Err_Installer_Exited">Нестандартно завершена работа Office Deployment Tool.</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">Не удалось получить информацию о версии, попробуйте еще раз или используйте Office Deployment Tool.</sys:String>
@@ -968,27 +970,4 @@
     <sys:String x:Key="Err_Check_KMS_Status">Не удалось проверить состояние KMS. Проверьте имя KMS-хоста и повторите попытку.</sys:String>
     <sys:String x:Key="Err_Office_App_NotFound">{0} не был найден на компьютере, проверьте, установлена ли последняя версия Office.</sys:String>
     <sys:String x:Key="Err_Open_Clipboard">Не удалось получить доступ к буферу обмена. Пожалуйста, повторите попытку.</sys:String>
-
-    <!-- Error messages about Thunder -->
-    <sys:String x:Key="Thunder_Err_Init">Не удалось инициализировать Thunder.</sys:String>
-    <sys:String x:Key="Thunder_Err_Start">Запуск задачи провален.</sys:String>
-    <sys:String x:Key="Thunder_Err_Stop">Приостановка задачи провалена.</sys:String>
-    <sys:String x:Key="Thunder_Err_Exit">Не удалось выйти из Thunder.</sys:String>
-    <sys:String x:Key="Thunder_Err_Unknown">Неизвестная ошибка скачивания.</sys:String>
-    <sys:String x:Key="Thunder_Err_Create">Ошибка создания файла.</sys:String>
-    <sys:String x:Key="Thunder_Err_Delete">Ошибка удаления файла.</sys:String>
-    <sys:String x:Key="Thunder_Err_FileHash">Ошибка проверки файла.</sys:String>
-    <sys:String x:Key="Thunder_Err_PieceHash">Ошибка проверки файла.</sys:String>
-    <sys:String x:Key="Thunder_Err_Read">Ошибка чтения файла.</sys:String>
-    <sys:String x:Key="Thunder_Err_Rename">Ошибка переименования файла.</sys:String>
-    <sys:String x:Key="Thunder_Err_Write">Ошибка записи файла.</sys:String>
-    <sys:String x:Key="Thunder_Err_DownInvalid">Неверный адрес.</sys:String>
-    <sys:String x:Key="Thunder_Err_NotIP">Не обнаружен IP для скачивания по HTTP.</sys:String>
-    <sys:String x:Key="Thunder_Err_IDInvalid">Неверный ID задачи.</sys:String>
-    <sys:String x:Key="Thunder_Err_SetProxy">Не удалось задать прокси.</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeFailed">Ошибка авторизации прокси.</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeUnknown">Неизвестный тип прокси.</sys:String>
-    <sys:String x:Key="Thunder_Err_Timeout">Время задачи истекло.</sys:String>
-    <sys:String x:Key="Thunder_Err_Crashed">Движок Thunder вышел из строя/неожиданно завершился.</sys:String>
-    <sys:String x:Key="Thunder_Err_Cancel">Задача отменена.</sys:String>
 </ResourceDictionary>

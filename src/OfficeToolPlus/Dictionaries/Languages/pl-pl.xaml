@@ -109,7 +109,6 @@
     <sys:String x:Key="Deploy_Error_Channel">{0} nie można zainstalować na wybranym kanale: {1}.</sys:String>
     <!-- {0} means channel name, such as Current Channel. -->
     <sys:String x:Key="Deploy_Error_Unsupported_Channel">Jeśli chcesz używać {0}, zmień moduł instalacyjny na Office Tool Plus.</sys:String>
-    <sys:String x:Key="Deploy_Error_System_Architecture">Nie można zainstalować 64-bitowego pakietu Office na systemie nie64-bitowym.</sys:String>
     <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
     <sys:String x:Key="Deploy_Error_Office_Architecture">Nie można zainstalować {0} Office, ponieważ na komputerze jest zainstalowany {1} Office.</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Arch">Wybrana architektura nie pasuje do architektury lokalnych plików instalacyjnych, wybierz ponownie architekturę lub nie używaj lokalnych plików instalacyjnych do wdrożenia.</sys:String>
@@ -630,6 +629,8 @@
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles">Wyklucz pliki hash</sys:String>
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles.Description">Wyklucz pliki hash podczas importowania plików, takich jak pliki z rozszerzeniami md5, sha1 lub crc32.</sys:String>
     <sys:String x:Key="Hash_Checker_DisplayPath">Pokaż ścieżkę do pliku</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing">Parallel computing</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing.Description">Set the number of files for parallel computing. Note that processing too many files simultaneously may reduce computing speed.</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute">Automatyczne obliczenia</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute.Description">Automatyczne rozpoczęcie obliczania wartości hash po zakończeniu importu pliku.</sys:String>
     <sys:String x:Key="Hash_Checker_CRC32.Description">Włączenie lub wyłączenie przetwarzania CRC-32.</sys:String>
@@ -745,7 +746,6 @@
     <sys:String x:Key="Settings_Download_MsFileList_API.Description">If enabled, the file list will be obtained from Microsoft's API, otherwise the file list will be generated using built-in rules.</sys:String>
     <sys:String x:Key="Settings_Download_Engine">Silnik</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Description">Wybierz silnik, który ma być używany podczas pobierania pakietu Office.</sys:String>
-    <sys:String x:Key="Settings_Download_Engine.Thunder">Thunder</sys:String>
     <!-- Do not translate 'bezzad.Downloader' -->
     <sys:String x:Key="Settings_Download_Engine.Downloader">bezzad.Downloader</sys:String>
     <sys:String x:Key="Settings_Download_Engine.OfficeToolPlus">Office Tool Plus</sys:String>
@@ -813,7 +813,6 @@
     <sys:String x:Key="Input_Command">Proszę wprowadzić polecenia aplikacji</sys:String>
     <sys:String x:Key="Input_URL">Proszę wpisać adres URL</sys:String>
     <sys:String x:Key="Input_vNext_License_Name">Please enter the name</sys:String>
-    <sys:String x:Key="Input_Thunder_Speed_Limit">Ustawienie limitu prędkości pobierania Thunder (w KBps)</sys:String>
 
     <!-- Office ISO Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
@@ -824,6 +823,7 @@
     <!-- Task Message -->
     <sys:String x:Key="Task_Checking_Updates">Sprawdzanie aktualizacji.</sys:String>
     <sys:String x:Key="Task_Downloading_Updates">Pobieranie aktualizacji, {0} zakończone ({1} z {2}).</sys:String>
+    <sys:String x:Key="Task_Downloading_Updates_NoPercentage">Pobieranie aktualizacji, {0} z {1}.</sys:String>
     <sys:String x:Key="Task_Verifying_Installation_Files">Weryfikuję pliki, proszę czekać.</sys:String>
     <sys:String x:Key="Task_Loading_Preferences">Trwa ładowanie preferencji aplikacji, proszę czekać.</sys:String>
     <sys:String x:Key="Task_Downloading_Web_Config">Pobieranie pliku konfiguracyjnego z sieci, proszę czekać.</sys:String>
@@ -883,6 +883,7 @@
     <sys:String x:Key="Info_No_Updates">Używasz najnowszej wersji pakietu Office Tool Plus.</sys:String>
     <sys:String x:Key="Info_Update_In_Progress">Trwa aktualizacja, proszę czekać.</sys:String>
     <sys:String x:Key="Info_Updates_Incomplete">Nie udało się zastosować aktualizacji, spróbuj ponownie później.</sys:String>
+    <sys:String x:Key="Info_SystemDrive_NoSpace">Your system drive is running out of space, which may cause some operations to fail.</sys:String>
     <sys:String x:Key="Info_No_Language_Added_For_Download">Wykryliśmy, że nie dodałeś języka. W większości przypadków zalecamy dodanie języków, aby uniknąć problemów.</sys:String>
     <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">Proszę wybrać folder do zapisania plików instalacyjnych Office.&#x000A;Aby użyć domyślnej lokalizacji, wyłącz opcję "Zapytaj, gdzie zapisać pliki" na stronie ustawień.</sys:String>
     <sys:String x:Key="Info_All_Files_Exist">Nie ma potrzeby pobierania pliku, wszystkie pliki istnieją.</sys:String>
@@ -949,6 +950,7 @@
     <sys:String x:Key="Err_Installer_Exited">Wystąpił błąd podczas wychodzenia z narzędzia narzędzie do wdrażania pakietu Office.</sys:String>
     <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
     <sys:String x:Key="Err_System_Variables_Incorrect">One or more system variables are incorrect, please repair them on the Toolbox page.</sys:String>
+    <sys:String x:Key="Err_Folder_Permissions_Incorrect">One or more folder permissions are incorrect, and we were unable to fix them. Please restart your system and try again, or contact technical support for assistance.</sys:String>
     <sys:String x:Key="Err_Installation_Is_In_Progress">Another Office installation is in progress, check the Windows taskbar for status.</sys:String>
     <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} does not support the {1} language.</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">Nie można uzyskać informacji o wersji, spróbuj ponownie lub użyj narzędzia Office Deployment Tool.</sys:String>
@@ -968,27 +970,4 @@
     <sys:String x:Key="Err_Check_KMS_Status">Nie można sprawdzić statusu KMS, proszę sprawdzić nazwę hosta KMS i spróbować ponownie.</sys:String>
     <sys:String x:Key="Err_Office_App_NotFound">Nie znaleziono {0} na komputerze. Potwierdź, czy zainstalowano najnowszą wersję pakietu Office.</sys:String>
     <sys:String x:Key="Err_Open_Clipboard">Nie można uzyskać dostępu do schowka, proszę spróbować ponownie.</sys:String>
-
-    <!-- Error messages about Thunder -->
-    <sys:String x:Key="Thunder_Err_Init">Nie udało się zainicjować Thunder.</sys:String>
-    <sys:String x:Key="Thunder_Err_Start">Nie można uruchomić zadania.</sys:String>
-    <sys:String x:Key="Thunder_Err_Stop">Nie można wstrzymać zadania.</sys:String>
-    <sys:String x:Key="Thunder_Err_Exit">Nie udało się wyjść z Thunder.</sys:String>
-    <sys:String x:Key="Thunder_Err_Unknown">Nieznany błąd pobierania.</sys:String>
-    <sys:String x:Key="Thunder_Err_Create">Nie można utworzyć pliku.</sys:String>
-    <sys:String x:Key="Thunder_Err_Delete">Usunięty plik nie powiódł się.</sys:String>
-    <sys:String x:Key="Thunder_Err_FileHash">Weryfikacja pliku nie powiodła się.</sys:String>
-    <sys:String x:Key="Thunder_Err_PieceHash">Weryfikacja pliku nie powiodła się.</sys:String>
-    <sys:String x:Key="Thunder_Err_Read">Błąd odczytu pliku.</sys:String>
-    <sys:String x:Key="Thunder_Err_Rename">Zmień nazwę pliku nie powiodło się.</sys:String>
-    <sys:String x:Key="Thunder_Err_Write">Błąd zapisu pliku.</sys:String>
-    <sys:String x:Key="Thunder_Err_DownInvalid">Niepoprawny adres.</sys:String>
-    <sys:String x:Key="Thunder_Err_NotIP">W pobieraniu HTTP nie ma dostępnego adresu IP.</sys:String>
-    <sys:String x:Key="Thunder_Err_IDInvalid">Identyfikator zadania jest nieprawidłowy.</sys:String>
-    <sys:String x:Key="Thunder_Err_SetProxy">Nie udało się ustawić proxy.</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeFailed">Uwierzytelnienie proxy nie powiodło się.</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeUnknown">Nieznany typ proxy.</sys:String>
-    <sys:String x:Key="Thunder_Err_Timeout">Limit czasu zadania.</sys:String>
-    <sys:String x:Key="Thunder_Err_Crashed">Silnik Thunder uległ awarii.</sys:String>
-    <sys:String x:Key="Thunder_Err_Cancel">Zadanie zostało anulowane.</sys:String>
 </ResourceDictionary>

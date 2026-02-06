@@ -109,7 +109,6 @@
     <sys:String x:Key="Deploy_Error_Channel">{0} は、選択したチャネルにインストールできません: {1}。</sys:String>
     <!-- {0} means channel name, such as Current Channel. -->
     <sys:String x:Key="Deploy_Error_Unsupported_Channel">{0} を使用する場合は、インストール モジュールを Office Tool Plus に変更してください。</sys:String>
-    <sys:String x:Key="Deploy_Error_System_Architecture">64 ビット版の Office は、64 ビット版以外のシステムにはインストールできません。</sys:String>
     <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
     <sys:String x:Key="Deploy_Error_Office_Architecture">Office {1} がコンピューターにインストールされているため、Office {0} をインストールできません。</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Arch">選択したアーキテクチャは、ローカル インストール ファイルのアーキテクチャと一致しません。アーキテクチャを選択し直すか、展開にローカル インストール ファイルを使用しないでください。</sys:String>
@@ -630,6 +629,8 @@
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles">Hashファイルを除外する</sys:String>
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles.Description">ファイルをインポートするときに、拡張子が md5、sha1、または crc32 のファイルなどのHash ファイルを除外します。</sys:String>
     <sys:String x:Key="Hash_Checker_DisplayPath">ファイルパスを表示します</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing">Parallel computing</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing.Description">Set the number of files for parallel computing. Note that processing too many files simultaneously may reduce computing speed.</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute">自動計算</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute.Description">ファイルの輸入が完了した後、「Hash」値の計算を自動的に開始します。</sys:String>
     <sys:String x:Key="Hash_Checker_CRC32.Description">CRC-32 を有効または無効にする</sys:String>
@@ -745,7 +746,6 @@
     <sys:String x:Key="Settings_Download_MsFileList_API.Description">If enabled, the file list will be obtained from Microsoft's API, otherwise the file list will be generated using built-in rules.</sys:String>
     <sys:String x:Key="Settings_Download_Engine">ダウンローダーのエンジン</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Description">ダウンロードに使用するダウンローダーエンジンを選択する。</sys:String>
-    <sys:String x:Key="Settings_Download_Engine.Thunder">Thunder</sys:String>
     <!-- Do not translate 'bezzad.Downloader' -->
     <sys:String x:Key="Settings_Download_Engine.Downloader">bezzad.Downloader</sys:String>
     <sys:String x:Key="Settings_Download_Engine.OfficeToolPlus">Office Tool Plus</sys:String>
@@ -813,7 +813,6 @@
     <sys:String x:Key="Input_Command">アプリケーションコマンドを入力してください</sys:String>
     <sys:String x:Key="Input_URL">URLを入力してください</sys:String>
     <sys:String x:Key="Input_vNext_License_Name">Please enter the name</sys:String>
-    <sys:String x:Key="Input_Thunder_Speed_Limit">Thunder のダウンロード速度制限を設定します。(KB/s)</sys:String>
 
     <!-- Office ISO Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
@@ -824,9 +823,10 @@
     <!-- Task Message -->
     <sys:String x:Key="Task_Checking_Updates">アップデート確認中</sys:String>
     <sys:String x:Key="Task_Downloading_Updates">アップデートファイルを準備中、{0}完了 ({1} of {2}).</sys:String>
+    <sys:String x:Key="Task_Downloading_Updates_NoPercentage">アップデートファイルを準備中, {0} of {1}.</sys:String>
     <sys:String x:Key="Task_Verifying_Installation_Files">ファイルを検証中。お待ちください。</sys:String>
     <sys:String x:Key="Task_Loading_Preferences">アプリケーション設定を読み込んでいます。お待ちください。</sys:String>
-    <sys:String x:Key="Task_Downloading_Web_Config">Web ページから構成ファイルを取得中。 お待ちください。</sys:String>
+    <sys:String x:Key="Task_Downloading_Web_Config">Web ページから構成ファイルを取得中。お待ちください。</sys:String>
     <sys:String x:Key="Task_Preparing_Download">Officeをダウンロードする準備をしています。</sys:String>
     <!-- Example: Creating Office ISO file, file size: 3.1GB, 45% completed. -->
     <sys:String x:Key="Task_Creating_ISO">Office ISO ファイルの作成中、ファイルサイズ：{0}、{1} 完了。</sys:String>
@@ -883,6 +883,7 @@
     <sys:String x:Key="Info_No_Updates">最新バージョンのOffice Tool Plusを使用しています。</sys:String>
     <sys:String x:Key="Info_Update_In_Progress">更新が進行中です。しばらくお待ちください。</sys:String>
     <sys:String x:Key="Info_Updates_Incomplete">一部の更新を適用できませんでした。後でもう一度試してください。</sys:String>
+    <sys:String x:Key="Info_SystemDrive_NoSpace">Your system drive is running out of space, which may cause some operations to fail.</sys:String>
     <sys:String x:Key="Info_No_Language_Added_For_Download">言語が追加されていないことが検出されました。ほとんどの場合、問題を回避するために言語を追加することをお勧めします。</sys:String>
     <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">Officeインストールファイルを保存するフォルダを選択してください。&#x000A;デフォルトの場所を使用するには、設定ページで「ファイルの保存場所を確認」を無効にします。</sys:String>
     <sys:String x:Key="Info_All_Files_Exist">ダウンロードするファイルはありません。すべてのファイルが存在します。</sys:String>
@@ -949,6 +950,7 @@
     <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
     <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} does not support the {1} language.</sys:String>
     <sys:String x:Key="Err_System_Variables_Incorrect">One or more system variables are incorrect, please repair them on the Toolbox page.</sys:String>
+    <sys:String x:Key="Err_Folder_Permissions_Incorrect">One or more folder permissions are incorrect, and we were unable to fix them. Please restart your system and try again, or contact technical support for assistance.</sys:String>
     <sys:String x:Key="Err_Installation_Is_In_Progress">Another Office installation is in progress, check the Windows taskbar for status.</sys:String>
     <sys:String x:Key="Err_Installer_Exited">「Office 展開ツール」の終了中にエラーが発生しました。</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">バージョン情報を取得できません。もう一度試すか、エンジンを「Office 展開ツール」に切り替えてください。</sys:String>
@@ -968,27 +970,4 @@
     <sys:String x:Key="Err_Check_KMS_Status">KMS の状態を確認できません。KMS ホスト名を確認して、もう一度やり直してください。</sys:String>
     <sys:String x:Key="Err_Office_App_NotFound">コンピュータで {0} が見つかりませんでした。最新バージョンのOfficeがインストールされているかどうかを確認してください。</sys:String>
     <sys:String x:Key="Err_Open_Clipboard">クリップボードにアクセスできません。もう一度やり直してください。</sys:String>
-
-    <!-- Error messages about Thunder -->
-    <sys:String x:Key="Thunder_Err_Init">Thunder の初期化中にエラーが発生しました。</sys:String>
-    <sys:String x:Key="Thunder_Err_Start">ダウンロードの開始に失敗しました</sys:String>
-    <sys:String x:Key="Thunder_Err_Stop">ダウンロードの一時停止に失敗しました</sys:String>
-    <sys:String x:Key="Thunder_Err_Exit">Thunderの終了中にエラーが発生しました。</sys:String>
-    <sys:String x:Key="Thunder_Err_Unknown">未知のダウンロードエラーが発生しました</sys:String>
-    <sys:String x:Key="Thunder_Err_Create">ファイルの作成に失敗しました</sys:String>
-    <sys:String x:Key="Thunder_Err_Delete">ファイルを削除できませんでした</sys:String>
-    <sys:String x:Key="Thunder_Err_FileHash">ファイル全文の検証に失敗しました</sys:String>
-    <sys:String x:Key="Thunder_Err_PieceHash">ファイルフラグメントの検証に失敗しました</sys:String>
-    <sys:String x:Key="Thunder_Err_Read">ファイルの読み込みに失敗しました</sys:String>
-    <sys:String x:Key="Thunder_Err_Rename">ファイルの名前を変更できませんでした</sys:String>
-    <sys:String x:Key="Thunder_Err_Write">ファイルへの書き込みに失敗しました</sys:String>
-    <sys:String x:Key="Thunder_Err_DownInvalid">無効なダウンロードアドレス</sys:String>
-    <sys:String x:Key="Thunder_Err_NotIP">HTTPのダウンロードで使用可能なIPはありません</sys:String>
-    <sys:String x:Key="Thunder_Err_IDInvalid">TaskID無効</sys:String>
-    <sys:String x:Key="Thunder_Err_SetProxy">プロキシの設定に失敗しました。</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeFailed">プロキシ認証に失敗しました</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeUnknown">プロキシの種類が不明です</sys:String>
-    <sys:String x:Key="Thunder_Err_Timeout">タイムアウト</sys:String>
-    <sys:String x:Key="Thunder_Err_Crashed">Thunder エンジンがクラッシュしました。</sys:String>
-    <sys:String x:Key="Thunder_Err_Cancel">タスクがキャンセルされた</sys:String>
 </ResourceDictionary>

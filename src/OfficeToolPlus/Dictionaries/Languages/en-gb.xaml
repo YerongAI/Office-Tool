@@ -109,7 +109,6 @@
     <sys:String x:Key="Deploy_Error_Channel">{0} cannot be installed on the selected channel: {1}.</sys:String>
     <!-- {0} means channel name, such as Current Channel. -->
     <sys:String x:Key="Deploy_Error_Unsupported_Channel">If you want to use {0}, change the installation module to Office Tool Plus.</sys:String>
-    <sys:String x:Key="Deploy_Error_System_Architecture">You cannot install 64-bit of Office on a non-64-bit system.</sys:String>
     <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
     <sys:String x:Key="Deploy_Error_Office_Architecture">You cannot install {0} of Office, because you have the {1} of Office installed on your computer.</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Arch">The architecture you have selected does not match the architecture of the local installation files. Please reselect architecture or do not use the local installation files for deployment.</sys:String>
@@ -630,6 +629,8 @@
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles">Exclude hash files</sys:String>
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles.Description">Exclude hash files when importing files, such as files with extensions md5, sha1 or crc32.</sys:String>
     <sys:String x:Key="Hash_Checker_DisplayPath">Show file path</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing">Parallel computing</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing.Description">Set the number of files for parallel computing. Note that processing too many files simultaneously may reduce computing speed.</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute">Automatic computation</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute.Description">Automatically start computing hash value after the file import is completed.</sys:String>
     <sys:String x:Key="Hash_Checker_CRC32.Description">Enable or disable CRC-32 computing.</sys:String>
@@ -745,7 +746,6 @@
     <sys:String x:Key="Settings_Download_MsFileList_API.Description">If enabled, the file list will be obtained from Microsoft's API, otherwise the file list will be generated using built-in rules.</sys:String>
     <sys:String x:Key="Settings_Download_Engine">Engine</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Description">Select which engine to use when downloading Office.</sys:String>
-    <sys:String x:Key="Settings_Download_Engine.Thunder">Thunder</sys:String>
     <!-- Do not translate 'bezzad.Downloader' -->
     <sys:String x:Key="Settings_Download_Engine.Downloader">bezzad.Downloader</sys:String>
     <sys:String x:Key="Settings_Download_Engine.OfficeToolPlus">Office Tool Plus</sys:String>
@@ -813,7 +813,6 @@
     <sys:String x:Key="Input_Command">Please enter the application commands</sys:String>
     <sys:String x:Key="Input_URL">Please enter the URL</sys:String>
     <sys:String x:Key="Input_vNext_License_Name">Please enter the name</sys:String>
-    <sys:String x:Key="Input_Thunder_Speed_Limit">Set Thunder download speed limit (in KBps)</sys:String>
 
     <!-- Office ISO Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
@@ -824,6 +823,7 @@
     <!-- Task Message -->
     <sys:String x:Key="Task_Checking_Updates">Checking updates.</sys:String>
     <sys:String x:Key="Task_Downloading_Updates">Downloading updates, {0} completed ({1} of {2}).</sys:String>
+    <sys:String x:Key="Task_Downloading_Updates_NoPercentage">Downloading updates, {0} of {1}.</sys:String>
     <sys:String x:Key="Task_Verifying_Installation_Files">Verifying files, please wait.</sys:String>
     <sys:String x:Key="Task_Loading_Preferences">Loading application preferences, please wait.</sys:String>
     <sys:String x:Key="Task_Downloading_Web_Config">Getting configuration file from web, please wait.</sys:String>
@@ -883,6 +883,7 @@
     <sys:String x:Key="Info_No_Updates">You are using the latest version of Office Tool Plus.</sys:String>
     <sys:String x:Key="Info_Update_In_Progress">Update(s) is in progress, please wait.</sys:String>
     <sys:String x:Key="Info_Updates_Incomplete">Failed to apply updates, please try again later.</sys:String>
+    <sys:String x:Key="Info_SystemDrive_NoSpace">Your system drive is running out of space, which may cause some operations to fail.</sys:String>
     <sys:String x:Key="Info_No_Language_Added_For_Download">We have detected that you have not added a language. In most cases, we recommend to add languages to avoid problems.</sys:String>
     <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">Please select the folder to save the Office installation files.&#x000A;To use default location, disable "Ask where to save files" on the settings page.</sys:String>
     <sys:String x:Key="Info_All_Files_Exist">There is no need to download, all files exist.</sys:String>
@@ -949,6 +950,7 @@
     <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
     <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} does not support the {1} language.</sys:String>
     <sys:String x:Key="Err_System_Variables_Incorrect">One or more system variables are incorrect, please repair them on the Toolbox page.</sys:String>
+    <sys:String x:Key="Err_Folder_Permissions_Incorrect">One or more folder permissions are incorrect, and we were unable to fix them. Please restart your system and try again, or contact technical support for assistance.</sys:String>
     <sys:String x:Key="Err_Installation_Is_In_Progress">Another Office installation is in progress, check the Windows taskbar for status.</sys:String>
     <sys:String x:Key="Err_Installer_Exited">Office Deployment Tool exited abnormally.</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">Unable to get Office version, please try again or use Office Deployment Tool as download engine.</sys:String>
@@ -968,27 +970,4 @@
     <sys:String x:Key="Err_Check_KMS_Status">Unable to check KMS status, please check the KMS host name and try again.</sys:String>
     <sys:String x:Key="Err_Office_App_NotFound">{0} was not found on the computer, please confirm whether the latest version of Office has been installed.</sys:String>
     <sys:String x:Key="Err_Open_Clipboard">Unable to access clipboard, please try again.</sys:String>
-
-    <!-- Error messages about Thunder -->
-    <sys:String x:Key="Thunder_Err_Init">Failed to initialize Thunder.</sys:String>
-    <sys:String x:Key="Thunder_Err_Start">Failed to start task.</sys:String>
-    <sys:String x:Key="Thunder_Err_Stop">Failed to pause task.</sys:String>
-    <sys:String x:Key="Thunder_Err_Exit">Failed to exit Thunder.</sys:String>
-    <sys:String x:Key="Thunder_Err_Unknown">Unknown download error.</sys:String>
-    <sys:String x:Key="Thunder_Err_Create">Failed to create file.</sys:String>
-    <sys:String x:Key="Thunder_Err_Delete">Failed to deleted file.</sys:String>
-    <sys:String x:Key="Thunder_Err_FileHash">File verification failed.</sys:String>
-    <sys:String x:Key="Thunder_Err_PieceHash">File verification failed.</sys:String>
-    <sys:String x:Key="Thunder_Err_Read">Failed to read file.</sys:String>
-    <sys:String x:Key="Thunder_Err_Rename">Failed to rename file.</sys:String>
-    <sys:String x:Key="Thunder_Err_Write">Failed to write file.</sys:String>
-    <sys:String x:Key="Thunder_Err_DownInvalid">Invalid address.</sys:String>
-    <sys:String x:Key="Thunder_Err_NotIP">No IP available in HTTP download.</sys:String>
-    <sys:String x:Key="Thunder_Err_IDInvalid">Invalid task ID.</sys:String>
-    <sys:String x:Key="Thunder_Err_SetProxy">Failed to set proxy.</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeFailed">Proxy authentication failed.</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeUnknown">Unknown proxy type.</sys:String>
-    <sys:String x:Key="Thunder_Err_Timeout">Task timeout.</sys:String>
-    <sys:String x:Key="Thunder_Err_Crashed">Thunder engine has crashed.</sys:String>
-    <sys:String x:Key="Thunder_Err_Cancel">Task canceled.</sys:String>
 </ResourceDictionary>

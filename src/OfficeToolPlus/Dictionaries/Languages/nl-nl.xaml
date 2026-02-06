@@ -109,7 +109,6 @@
     <sys:String x:Key="Deploy_Error_Channel">{0} kan niet worden geןnstalleerd op het geselecteerde kanaal: {1}.</sys:String>
     <!-- {0} means channel name, such as Current Channel. -->
     <sys:String x:Key="Deploy_Error_Unsupported_Channel">Als u {0} wilt gebruiken, wijzigt u de installatiemodule in Office Tool Plus.</sys:String>
-    <sys:String x:Key="Deploy_Error_System_Architecture">U kunt geen 64-bits versie van Office installeren op een niet-64-bits systeem.</sys:String>
     <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
     <sys:String x:Key="Deploy_Error_Office_Architecture">U kunt {0} van Office niet installeren, omdat u {1} van Office op uw computer hebt geןnstalleerd.</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Arch">De door u geselecteerde architectuur komt niet overeen met de architectuur van de lokale installatiebestanden. Selecteer de architectuur opnieuw of gebruik de lokale installatiebestanden niet voor implementatie.</sys:String>
@@ -630,6 +629,8 @@
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles">Hashbestanden uitsluiten</sys:String>
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles.Description">Hash-bestanden uitsluiten bij het importeren van bestanden, zoals bestanden met de extensies md5, sha1 of crc32.</sys:String>
     <sys:String x:Key="Hash_Checker_DisplayPath">Toon bestandspad</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing">Parallel computing</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing.Description">Set the number of files for parallel computing. Note that processing too many files simultaneously may reduce computing speed.</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute">Automatische berekening</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute.Description">Begin automatisch met het berekenen van de hashwaarde nadat het importeren van het bestand is voltooid.</sys:String>
     <sys:String x:Key="Hash_Checker_CRC32.Description">Schakel CRC-32 Berekenen in of uit.</sys:String>
@@ -745,7 +746,6 @@
     <sys:String x:Key="Settings_Download_MsFileList_API.Description">Als deze optie is ingeschakeld, wordt de bestandslijst opgehaald via de Microsoft API. Anders wordt de bestandslijst gegenereerd met behulp van ingebouwde regels..</sys:String>
     <sys:String x:Key="Settings_Download_Engine">Engine</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Description">Selecteer welke engine u wilt gebruiken bij het downloaden van Office.</sys:String>
-    <sys:String x:Key="Settings_Download_Engine.Thunder">Thunder</sys:String>
       <!-- Do not translate 'bezzad.Downloader' -->
     <sys:String x:Key="Settings_Download_Engine.Downloader">bezzad.Downloader</sys:String>
     <sys:String x:Key="Settings_Download_Engine.OfficeToolPlus">Office Tool Plus</sys:String>
@@ -813,7 +813,6 @@
     <sys:String x:Key="Input_Command">Voer de toepassingsopdrachten in</sys:String>
     <sys:String x:Key="Input_URL">Voer de URL in</sys:String>
     <sys:String x:Key="Input_vNext_License_Name">Please enter the name</sys:String>
-    <sys:String x:Key="Input_Thunder_Speed_Limit">Thunder-downloadsnelheidslimiet instellen (in KBps)</sys:String>
 
     <!-- Office ISO Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
@@ -824,6 +823,7 @@
     <!-- Task Message -->
     <sys:String x:Key="Task_Checking_Updates">Updates controleren.</sys:String>
     <sys:String x:Key="Task_Downloading_Updates">Updates downloaden, {0} Gereed ({1} van {2}).</sys:String>
+    <sys:String x:Key="Task_Downloading_Updates_NoPercentage">Updates downloaden, {0} van {1}.</sys:String>
     <sys:String x:Key="Task_Verifying_Installation_Files">Bestanden verifiëren, even geduld a.u.b.</sys:String>
     <sys:String x:Key="Task_Loading_Preferences">Toepassingsvoorkeuren laden, even geduld a.u.b.</sys:String>
     <sys:String x:Key="Task_Downloading_Web_Config">Configuratiebestand ophalen van internet, even geduld a.u.b.</sys:String>
@@ -883,6 +883,7 @@
     <sys:String x:Key="Info_No_Updates">U gebruikt de nieuwste versie van Office Tool Plus.</sys:String>
     <sys:String x:Key="Info_Update_In_Progress">Update(s) worden uitgevoerd, even geduld a.u.b.</sys:String>
     <sys:String x:Key="Info_Updates_Incomplete">Het is niet gelukt om de updates toe te passen. Probeer het later opnieuw..</sys:String>
+    <sys:String x:Key="Info_SystemDrive_NoSpace">Your system drive is running out of space, which may cause some operations to fail.</sys:String>
     <sys:String x:Key="Info_No_Language_Added_For_Download">We hebben vastgesteld dat u geen taal heeft toegevoegd. In de meeste gevallen raden we aan om talen toe te voegen om problemen te voorkomen.</sys:String>
     <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">Selecteer de map om de Office installatiebestanden op te slaan. Om de standaardlocatie te gebruiken, schakelt u "Vragen waar bestanden moeten worden opgeslagen" uit op de instellingenpagina.</sys:String>
     <sys:String x:Key="Info_All_Files_Exist">Downloaden is niet nodig, alle bestanden bestaan.</sys:String>
@@ -949,6 +950,7 @@
     <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
     <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} ondersteunt de {1} taal niet.</sys:String>
     <sys:String x:Key="Err_System_Variables_Incorrect">Een of meer systeemvariabelen zijn onjuist. Repareer ze op de Toolbox-pagina.</sys:String>
+    <sys:String x:Key="Err_Folder_Permissions_Incorrect">One or more folder permissions are incorrect, and we were unable to fix them. Please restart your system and try again, or contact technical support for assistance.</sys:String>
     <sys:String x:Key="Err_Installation_Is_In_Progress">Another Office installation is in progress, check the Windows taskbar for status.</sys:String>
     <sys:String x:Key="Err_Installer_Exited">Office Deployment Tool is abnormaal afgesloten.</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">Kan geen versie informatie verkrijgen. Probeer het opnieuw of gebruik Office Deployment Tool.</sys:String>
@@ -968,27 +970,4 @@
     <sys:String x:Key="Err_Check_KMS_Status">Kan de KMS status niet controleren. Controleer de KMS hostnaam en probeer het opnieuw.</sys:String>
     <sys:String x:Key="Err_Office_App_NotFound">{0} is niet gevonden op de computer, controleer dan of de nieuwste versie van Office is geןnstalleerd.</sys:String>
     <sys:String x:Key="Err_Open_Clipboard">Geen toegang tot klembord, probeer het opnieuw.</sys:String>
-
-    <!-- Error messages about Thunder -->
-    <sys:String x:Key="Thunder_Err_Init">Kan Thunder niet initialiseren.</sys:String>
-    <sys:String x:Key="Thunder_Err_Start">De taak kan niet worden gestart.</sys:String>
-    <sys:String x:Key="Thunder_Err_Stop">Kan taak niet onderbreken.</sys:String>
-    <sys:String x:Key="Thunder_Err_Exit">Kan Thunder niet verlaten.</sys:String>
-    <sys:String x:Key="Thunder_Err_Unknown">Onbekende downloadfout.</sys:String>
-    <sys:String x:Key="Thunder_Err_Create">Aanmaken bestand mislukt.</sys:String>
-    <sys:String x:Key="Thunder_Err_Delete">Kan bestand niet verwijderen.</sys:String>
-    <sys:String x:Key="Thunder_Err_FileHash">Bestandsverificatie mislukt.</sys:String>
-    <sys:String x:Key="Thunder_Err_PieceHash">Bestandsverificatie mislukt.</sys:String>
-    <sys:String x:Key="Thunder_Err_Read">Kan bestand niet lezen.</sys:String>
-    <sys:String x:Key="Thunder_Err_Rename">Het hernoemen van het bestand is mislukt.</sys:String>
-    <sys:String x:Key="Thunder_Err_Write">Bestand schrijven mislukt.</sys:String>
-    <sys:String x:Key="Thunder_Err_DownInvalid">Ongeldig adres.</sys:String>
-    <sys:String x:Key="Thunder_Err_NotIP">Geen IP beschikbaar in HTTP download.</sys:String>
-    <sys:String x:Key="Thunder_Err_IDInvalid">Ongeldige taak ID.</sys:String>
-    <sys:String x:Key="Thunder_Err_SetProxy">Kan proxy niet instellen.</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeFailed">Proxyverificatie mislukt.</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeUnknown">Onbekend proxy type.</sys:String>
-    <sys:String x:Key="Thunder_Err_Timeout">Time-out van taak.</sys:String>
-    <sys:String x:Key="Thunder_Err_Crashed">Thunder engine is gecrasht.</sys:String>
-    <sys:String x:Key="Thunder_Err_Cancel">Taak geannuleerd.</sys:String>
 </ResourceDictionary>

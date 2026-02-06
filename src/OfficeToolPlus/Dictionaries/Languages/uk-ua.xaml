@@ -109,7 +109,6 @@
     <sys:String x:Key="Deploy_Error_Channel">{0} не може бути встановлено на вибраному каналі: {1}.</sys:String>
     <!-- {0} means channel name, such as Current Channel. -->
     <sys:String x:Key="Deploy_Error_Unsupported_Channel">Якщо ви хочете використовувати {0}, змініть модуль встановлення на Office Tool Plus.</sys:String>
-    <sys:String x:Key="Deploy_Error_System_Architecture">Ви не можете встановити 64-бітну версію Office на операційну систему, що не підтримує 64 біти.</sys:String>
     <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
     <sys:String x:Key="Deploy_Error_Office_Architecture">Ви не можете встановити {0} Office, оскільки в системі встановлено {1} Office.</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Arch">Обрана вами архітектура не відповідає архітектурі локальних файлів встановлення. Будь ласка, оберіть іншу архітектуру або не використовуйте локальні файли встановлення для розгортання.</sys:String>
@@ -630,6 +629,8 @@
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles">Виключити файли з хешами</sys:String>
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles.Description">Виключіть файли з хешами при імпорті файлів, наприклад, файли з розширеннями md5, sha1 або crc32.</sys:String>
     <sys:String x:Key="Hash_Checker_DisplayPath">Показувати шлях до файлу</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing">Parallel computing</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing.Description">Set the number of files for parallel computing. Note that processing too many files simultaneously may reduce computing speed.</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute">Автоматичне обчислення</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute.Description">Автоматично починає обчислення хеш-значення після завершення імпорту файлів.</sys:String>
     <sys:String x:Key="Hash_Checker_CRC32.Description">Увімкнути або вимкнути обчислення CRC-32.</sys:String>
@@ -745,7 +746,6 @@
     <sys:String x:Key="Settings_Download_MsFileList_API.Description">Якщо увімкнено, список файлів буде отримано через API Microsoft, інакше він буде згенеровано за вбудованими правилами.</sys:String>
     <sys:String x:Key="Settings_Download_Engine">Двигун</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Description">Виберіть, який двигун використовувати під час завантаження Office.</sys:String>
-    <sys:String x:Key="Settings_Download_Engine.Thunder">Thunder</sys:String>
     <!-- Do not translate 'bezzad.Downloader' -->
     <sys:String x:Key="Settings_Download_Engine.Downloader">bezzad.Downloader</sys:String>
     <sys:String x:Key="Settings_Download_Engine.OfficeToolPlus">Office Tool Plus</sys:String>
@@ -813,7 +813,6 @@
     <sys:String x:Key="Input_Command">Будь ласка, введіть команди додатку</sys:String>
     <sys:String x:Key="Input_URL">Будь ласка, введіть URL</sys:String>
     <sys:String x:Key="Input_vNext_License_Name">Please enter the name</sys:String>
-    <sys:String x:Key="Input_Thunder_Speed_Limit">Встановіть обмеження швидкості завантаження Thunder (у КБ/с)</sys:String>
 
     <!-- Office ISO Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
@@ -824,6 +823,7 @@
     <!-- Task Message -->
     <sys:String x:Key="Task_Checking_Updates">Перевірка оновлень.</sys:String>
     <sys:String x:Key="Task_Downloading_Updates">Завантаження оновлень, {0} завершено ({1} з {2}).</sys:String>
+    <sys:String x:Key="Task_Downloading_Updates_NoPercentage">Завантаження оновлень, {0} з {1}.</sys:String>
     <sys:String x:Key="Task_Verifying_Installation_Files">Перевірка файлів, будь ласка, зачекайте.</sys:String>
     <sys:String x:Key="Task_Loading_Preferences">Завантаження налаштувань додатку, будь ласка, зачекайте.</sys:String>
     <sys:String x:Key="Task_Downloading_Web_Config">Отримання конфігураційного файлу з вебу, будь ласка, зачекайте.</sys:String>
@@ -883,6 +883,7 @@
     <sys:String x:Key="Info_No_Updates">Ви використовуєте найновішу версію Office Tool Plus.</sys:String>
     <sys:String x:Key="Info_Update_In_Progress">Оновлення триває, будь ласка, зачекайте.</sys:String>
     <sys:String x:Key="Info_Updates_Incomplete">Не вдалося застосувати оновлення, будь ласка, спробуйте пізніше.</sys:String>
+    <sys:String x:Key="Info_SystemDrive_NoSpace">Your system drive is running out of space, which may cause some operations to fail.</sys:String>
     <sys:String x:Key="Info_No_Language_Added_For_Download">Ми виявили, що ви не додали мову. У більшості випадків рекомендується додати мови для уникнення проблем.</sys:String>
     <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">Будь ласка, виберіть папку для збереження файлів встановлення Office.&#x000A;&#x000A;Щоб використовувати стандартне розташування, вимкніть опцію «Запитувати, куди зберігати файли» на сторінці налаштувань.</sys:String>
     <sys:String x:Key="Info_All_Files_Exist">Завантажувати не потрібно, усі файли вже існують.</sys:String>
@@ -949,6 +950,7 @@
     <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
     <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} не підтримує мову {1}.</sys:String>
     <sys:String x:Key="Err_System_Variables_Incorrect">One or more system variables are incorrect, please repair them on the Toolbox page.</sys:String>
+    <sys:String x:Key="Err_Folder_Permissions_Incorrect">One or more folder permissions are incorrect, and we were unable to fix them. Please restart your system and try again, or contact technical support for assistance.</sys:String>
     <sys:String x:Key="Err_Installation_Is_In_Progress">Another Office installation is in progress, check the Windows taskbar for status.</sys:String>
     <sys:String x:Key="Err_Installer_Exited">Office Deployment Tool завершив роботу аномально.</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">Не вдалося отримати версію Office, спробуйте ще раз або використовуйте Office Deployment Tool як двигун завантаження.</sys:String>
@@ -968,27 +970,4 @@
     <sys:String x:Key="Err_Check_KMS_Status">Не вдалося перевірити статус KMS, перевірте ім'я KMS-хоста та спробуйте ще раз.</sys:String>
     <sys:String x:Key="Err_Office_App_NotFound">{0} не знайдено в системі, переконайтеся, що встановлено останню версію Office.</sys:String>
     <sys:String x:Key="Err_Open_Clipboard">Не вдалося отримати доступ до буфера обміну, спробуйте ще раз.</sys:String>
-
-    <!-- Error messages about Thunder -->
-    <sys:String x:Key="Thunder_Err_Init">Не вдалося ініціалізувати Thunder.</sys:String>
-    <sys:String x:Key="Thunder_Err_Start">Не вдалося запустити завдання.</sys:String>
-    <sys:String x:Key="Thunder_Err_Stop">Не вдалося призупинити завдання.</sys:String>
-    <sys:String x:Key="Thunder_Err_Exit">Не вдалося завершити роботу Thunder.</sys:String>
-    <sys:String x:Key="Thunder_Err_Unknown">Невідома помилка завантаження.</sys:String>
-    <sys:String x:Key="Thunder_Err_Create">Не вдалося створити файл.</sys:String>
-    <sys:String x:Key="Thunder_Err_Delete">Не вдалося видалити файл.</sys:String>
-    <sys:String x:Key="Thunder_Err_FileHash">Перевірка файлу не пройшла.</sys:String>
-    <sys:String x:Key="Thunder_Err_PieceHash">Перевірка частини файлу не пройшла.</sys:String>
-    <sys:String x:Key="Thunder_Err_Read">Не вдалося прочитати файл.</sys:String>
-    <sys:String x:Key="Thunder_Err_Rename">Не вдалося перейменувати файл.</sys:String>
-    <sys:String x:Key="Thunder_Err_Write">Не вдалося записати файл.</sys:String>
-    <sys:String x:Key="Thunder_Err_DownInvalid">Невірна адреса.</sys:String>
-    <sys:String x:Key="Thunder_Err_NotIP">IP-адреса відсутня в HTTP-завантаженні.</sys:String>
-    <sys:String x:Key="Thunder_Err_IDInvalid">Невірний ID завдання.</sys:String>
-    <sys:String x:Key="Thunder_Err_SetProxy">Не вдалося встановити проксі.</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeFailed">Аутентифікація проксі не вдалася.</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeUnknown">Невідомий тип проксі.</sys:String>
-    <sys:String x:Key="Thunder_Err_Timeout">Тайм-аут завдання.</sys:String>
-    <sys:String x:Key="Thunder_Err_Crashed">Двигун Thunder аварійно завершив роботу.</sys:String>
-    <sys:String x:Key="Thunder_Err_Cancel">Завдання скасовано.</sys:String>
 </ResourceDictionary>

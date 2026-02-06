@@ -109,7 +109,6 @@
     <sys:String x:Key="Deploy_Error_Channel">{0} không thể cài đặt trên kênh đã chọn: {1}.</sys:String>
     <!-- {0} means channel name, such as Current Channel. -->
     <sys:String x:Key="Deploy_Error_Unsupported_Channel">Nếu bạn muốn sử dụng {0}, hãy chuyển mô-đun cài đặt sang Office Tool Plus.</sys:String>
-    <sys:String x:Key="Deploy_Error_System_Architecture">Bạn không thể cài đặt Office 64-bit trên hệ điều hành không phải 64-bit.</sys:String>
     <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
     <sys:String x:Key="Deploy_Error_Office_Architecture">Bạn không thể cài đặt Office {0}-bit vì hệ thống đã cài đặt Office {1}-bit.</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Arch">Kiến trúc bạn chọn không khớp với kiến trúc của tệp cài đặt cục bộ. Vui lòng chọn lại kiến trúc hoặc không sử dụng tệp cài đặt cục bộ để triển khai.</sys:String>
@@ -630,6 +629,8 @@
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles">Loại trừ tệp hash</sys:String>
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles.Description">Loại trừ các tệp hash khi nhập tệp, chẳng hạn như tệp có đuôi md5, sha1 hoặc crc32.</sys:String>
     <sys:String x:Key="Hash_Checker_DisplayPath">Hiển thị đường dẫn tệp</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing">Parallel computing</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing.Description">Set the number of files for parallel computing. Note that processing too many files simultaneously may reduce computing speed.</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute">Tính toán tự động</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute.Description">Tự động bắt đầu tính toán giá trị hash sau khi nhập tệp xong.</sys:String>
     <sys:String x:Key="Hash_Checker_CRC32.Description">Bật hoặc tắt tính toán CRC-32.</sys:String>
@@ -745,7 +746,6 @@
     <sys:String x:Key="Settings_Download_MsFileList_API.Description">Nếu bật, danh sách tệp sẽ được lấy từ API của Microsoft, nếu không sẽ được tạo bằng quy tắc tích hợp sẵn.</sys:String>
     <sys:String x:Key="Settings_Download_Engine">Công cụ tải xuống</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Description">Chọn công cụ sử dụng khi tải xuống Office.</sys:String>
-    <sys:String x:Key="Settings_Download_Engine.Thunder">Thunder</sys:String>
     <!-- Do not translate 'bezzad.Downloader' -->
     <sys:String x:Key="Settings_Download_Engine.Downloader">bezzad.Downloader</sys:String>
     <sys:String x:Key="Settings_Download_Engine.OfficeToolPlus">Office Tool Plus</sys:String>
@@ -813,7 +813,6 @@
     <sys:String x:Key="Input_Command">Vui lòng nhập lệnh ứng dụng</sys:String>
     <sys:String x:Key="Input_URL">Vui lòng nhập URL</sys:String>
     <sys:String x:Key="Input_vNext_License_Name">Please enter the name</sys:String>
-    <sys:String x:Key="Input_Thunder_Speed_Limit">Đặt giới hạn tốc độ tải xuống của Thunder (tính bằng KBps)</sys:String>
 
     <!-- Office ISO Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
@@ -824,6 +823,7 @@
     <!-- Task Message -->
     <sys:String x:Key="Task_Checking_Updates">Đang kiểm tra cập nhật.</sys:String>
     <sys:String x:Key="Task_Downloading_Updates">Đang tải về cập nhật, đã hoàn tất {0} ({1} trong {2}).</sys:String>
+    <sys:String x:Key="Task_Downloading_Updates_NoPercentage">Đang tải về cập nhật, {0} trong {1}.</sys:String>
     <sys:String x:Key="Task_Verifying_Installation_Files">Đang xác minh tệp, xin chờ.</sys:String>
     <sys:String x:Key="Task_Loading_Preferences">Đang tải tùy chọn ứng dụng, xin chờ.</sys:String>
     <sys:String x:Key="Task_Downloading_Web_Config">Đang tải tệp cấu hình từ web, xin chờ.</sys:String>
@@ -883,6 +883,7 @@
     <sys:String x:Key="Info_No_Updates">Bạn đang sử dụng phiên bản mới nhất của Office Tool Plus.</sys:String>
     <sys:String x:Key="Info_Update_In_Progress">Đang cập nhật, vui lòng chờ.</sys:String>
     <sys:String x:Key="Info_Updates_Incomplete">Không thể áp dụng cập nhật, vui lòng thử lại sau.</sys:String>
+    <sys:String x:Key="Info_SystemDrive_NoSpace">Your system drive is running out of space, which may cause some operations to fail.</sys:String>
     <sys:String x:Key="Info_No_Language_Added_For_Download">Chúng tôi phát hiện bạn chưa thêm ngôn ngữ. Trong hầu hết các trường hợp, chúng tôi khuyến nghị thêm ngôn ngữ để tránh sự cố.</sys:String>
     <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">Vui lòng chọn thư mục để lưu tệp cài đặt Office.&#x000A;Để sử dụng vị trí mặc định, hãy tắt "Hỏi nơi lưu tệp" trong trang cài đặt.</sys:String>
     <sys:String x:Key="Info_All_Files_Exist">Không cần tải về, tất cả tập tin đã tồn tại trong máy.</sys:String>
@@ -949,6 +950,7 @@
     <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
     <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} không hỗ trợ ngôn ngữ {1}.</sys:String>
     <sys:String x:Key="Err_System_Variables_Incorrect">One or more system variables are incorrect, please repair them on the Toolbox page.</sys:String>
+    <sys:String x:Key="Err_Folder_Permissions_Incorrect">One or more folder permissions are incorrect, and we were unable to fix them. Please restart your system and try again, or contact technical support for assistance.</sys:String>
     <sys:String x:Key="Err_Installation_Is_In_Progress">Another Office installation is in progress, check the Windows taskbar for status.</sys:String>
     <sys:String x:Key="Err_Installer_Exited">Công cụ triển khai Office đã thoát bất thường.</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">Không thể nhận phiên bản Office, hãy thử lại hoặc dùng Công cụ triển khai Office để tải về.</sys:String>
@@ -968,27 +970,4 @@
     <sys:String x:Key="Err_Check_KMS_Status">Không thể kiểm tra trạng thái KMS, vui lòng kiểm tra tên máy chủ KMS và thử lại.</sys:String>
     <sys:String x:Key="Err_Office_App_NotFound">{0} không được tìm thấy trên máy tính của bạn, hãy kiểm tra xem phiên bản Office mới nhất đã được cài đặt chưa.</sys:String>
     <sys:String x:Key="Err_Open_Clipboard">Không thể truy cập clipboard, vui lòng thử lại.</sys:String>
-
-    <!-- Error messages about Thunder -->
-    <sys:String x:Key="Thunder_Err_Init">Không khởi tạo được Thunder.</sys:String>
-    <sys:String x:Key="Thunder_Err_Start">Không thể bắt đầu tác vụ.</sys:String>
-    <sys:String x:Key="Thunder_Err_Stop">Không thể tạm dừng tác vụ.</sys:String>
-    <sys:String x:Key="Thunder_Err_Exit">Lỗi khi thoát Thunder.</sys:String>
-    <sys:String x:Key="Thunder_Err_Unknown">Lỗi tải về không rõ.</sys:String>
-    <sys:String x:Key="Thunder_Err_Create">Không thể tạo tập tin.</sys:String>
-    <sys:String x:Key="Thunder_Err_Delete">Không thể xoá tập tin.</sys:String>
-    <sys:String x:Key="Thunder_Err_FileHash">Không thể xác minh tập tin.</sys:String>
-    <sys:String x:Key="Thunder_Err_PieceHash">Không thể xác minh tập tin.</sys:String>
-    <sys:String x:Key="Thunder_Err_Read">Không thể đọc tập tin.</sys:String>
-    <sys:String x:Key="Thunder_Err_Rename">Không thể đổi tên tập tin.</sys:String>
-    <sys:String x:Key="Thunder_Err_Write">Không thể viết tập tin.</sys:String>
-    <sys:String x:Key="Thunder_Err_DownInvalid">Địa chỉ không hợp lệ.</sys:String>
-    <sys:String x:Key="Thunder_Err_NotIP">Không có IP trong tải về HTTP.</sys:String>
-    <sys:String x:Key="Thunder_Err_IDInvalid">ID tác vụ không hợp lệ.</sys:String>
-    <sys:String x:Key="Thunder_Err_SetProxy">Lỗi khi cài proxy.</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeFailed">Không thể xác thực proxy.</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeUnknown">Loại proxy không rõ.</sys:String>
-    <sys:String x:Key="Thunder_Err_Timeout">Hết thời gian chờ tác vụ.</sys:String>
-    <sys:String x:Key="Thunder_Err_Crashed">Nhân Thunder đã bị hỏng.</sys:String>
-    <sys:String x:Key="Thunder_Err_Cancel">Đã huỷ bỏ tác vụ.</sys:String>
 </ResourceDictionary>

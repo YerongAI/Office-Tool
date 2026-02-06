@@ -109,7 +109,6 @@
     <sys:String x:Key="Deploy_Error_Channel">{0} ไม่สามารถติดตั้งในช่องที่เลือกได้: {1}.</sys:String>
     <!-- {0} means channel name, such as Current Channel. -->
     <sys:String x:Key="Deploy_Error_Unsupported_Channel">หากคุณต้องการใช้ {0}, เปลี่ยนโมดูลการติดตั้งไปยัง Office Tool Plus</sys:String>
-    <sys:String x:Key="Deploy_Error_System_Architecture">คุณไม่สามารถติดตั้ง Office แบบ 64 บิตบนระบบที่ไม่ใช่แบบ 64 บิตได้</sys:String>
     <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
     <sys:String x:Key="Deploy_Error_Office_Architecture">คุณไม่สามารถติดตั้งได้ {0} ของ Office เนื่องจากคุณมี {1} ของ Office ที่ติดตั้งไว้ในคอมพิวเตอร์ของคุณ</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Arch">สถาปัตยกรรมที่คุณเลือกไม่ตรงกับสถาปัตยกรรมของไฟล์การติดตั้งในเครื่อง โปรดเลือกสถาปัตยกรรมอีกครั้ง หรืออย่าใช้ไฟล์การติดตั้งในเครื่องสำหรับการปรับใช้</sys:String>
@@ -630,6 +629,8 @@
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles">ไม่รวมไฟล์แฮช</sys:String>
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles.Description">ไม่รวมไฟล์แฮชเมื่อนำเข้าไฟล์ เช่น ไฟล์ที่มีนามสกุล md5, sha1 หรือ crc32</sys:String>
     <sys:String x:Key="Hash_Checker_DisplayPath">แสดงเส้นทางของไฟล์</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing">Parallel computing</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing.Description">Set the number of files for parallel computing. Note that processing too many files simultaneously may reduce computing speed.</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute">การคำนวณอัตโนมัติ</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute.Description">เริ่มคำนวณค่าแฮชโดยอัตโนมัติหลังจากการนำเข้าไฟล์เสร็จสิ้น</sys:String>
     <sys:String x:Key="Hash_Checker_CRC32.Description">เปิดหรือปิดใช้งานการประมวลผล CRC-32</sys:String>
@@ -745,7 +746,6 @@
     <sys:String x:Key="Settings_Download_MsFileList_API.Description">หากเปิดใช้งาน รายการไฟล์จะถูกดึงมาจาก API ของ Microsoft มิฉะนั้น รายการไฟล์จะถูกสร้างขึ้นโดยใช้กฎในตัว</sys:String>
     <sys:String x:Key="Settings_Download_Engine">เอนจิ้น</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Description">เลือกเอ็นจิ้นที่จะใช้เมื่อดาวน์โหลด Office</sys:String>
-    <sys:String x:Key="Settings_Download_Engine.Thunder">Thunder</sys:String>
     <!-- Do not translate 'bezzad.Downloader' -->
     <sys:String x:Key="Settings_Download_Engine.Downloader">bezzad.Downloader</sys:String>
     <sys:String x:Key="Settings_Download_Engine.OfficeToolPlus">Office Tool Plus</sys:String>
@@ -813,7 +813,6 @@
     <sys:String x:Key="Input_Command">โปรดป้อนคำสั่งแอปพลิเคชัน</sys:String>
     <sys:String x:Key="Input_URL">กรุณาใส่ URL</sys:String>
     <sys:String x:Key="Input_vNext_License_Name">Please enter the name</sys:String>
-    <sys:String x:Key="Input_Thunder_Speed_Limit">ตั้งค่าขีดจำกัดความเร็วในการดาวน์โหลด Thunder (เป็น KBps)</sys:String>
 
     <!-- Office ISO Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
@@ -824,6 +823,7 @@
     <!-- Task Message -->
     <sys:String x:Key="Task_Checking_Updates">กำลังตรวจสอบการอัปเดต</sys:String>
     <sys:String x:Key="Task_Downloading_Updates">กำลังดาวน์โหลดอัปเดต, {0} สมบูรณ์ ({1} จาก {2}).</sys:String>
+    <sys:String x:Key="Task_Downloading_Updates_NoPercentage">กำลังดาวน์โหลดอัปเดต, {0} จาก {1}.</sys:String>
     <sys:String x:Key="Task_Verifying_Installation_Files">กำลังตรวจสอบไฟล์ โปรดรอสักครู่</sys:String>
     <sys:String x:Key="Task_Loading_Preferences">กำลังโหลดการตั้งค่าแอปพลิเคชัน โปรดรอสักครู่</sys:String>
     <sys:String x:Key="Task_Downloading_Web_Config">กำลังรับไฟล์การกำหนดค่าจากเว็บ กรุณารอสักครู่</sys:String>
@@ -883,6 +883,7 @@
     <sys:String x:Key="Info_No_Updates">คุณกำลังใช้งาน Office Tool Plus เวอร์ชั่นล่าสุด</sys:String>
     <sys:String x:Key="Info_Update_In_Progress">กำลังดำเนินการปรับปรุง โปรดรอสักครู่</sys:String>
     <sys:String x:Key="Info_Updates_Incomplete">การอัปเดตแอปล้มเหลว โปรดลองอีกครั้งในภายหลัง</sys:String>
+    <sys:String x:Key="Info_SystemDrive_NoSpace">Your system drive is running out of space, which may cause some operations to fail.</sys:String>
     <sys:String x:Key="Info_No_Language_Added_For_Download">เราตรวจพบว่าคุณยังไม่ได้เพิ่มภาษา ในกรณีส่วนใหญ่ เราแนะนำให้เพิ่มภาษาเพื่อหลีกเลี่ยงปัญหา</sys:String>
     <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">โปรดเลือกโฟลเดอร์ที่จะบันทึกไฟล์การติดตั้ง Office&#x000A;หากต้องการใช้ตำแหน่งเริ่มต้น ให้ปิด "ถามตำแหน่งที่จะบันทึกไฟล์" ในหน้าการตั้งค่า</sys:String>
     <sys:String x:Key="Info_All_Files_Exist">คุณไม่จำเป็นต้องดาวน์โหลด เพราะคุณมีไฟล์ทั้งหมดอยู่แล้ว</sys:String>
@@ -949,6 +950,7 @@
     <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
     <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} ไม่รองรับภาษา {1}</sys:String>
     <sys:String x:Key="Err_System_Variables_Incorrect">ตัวแปรระบบบางตัวไม่ถูกต้อง กรุณาแก้ไขได้ที่หน้ากล่องเครื่องมือ</sys:String>
+    <sys:String x:Key="Err_Folder_Permissions_Incorrect">One or more folder permissions are incorrect, and we were unable to fix them. Please restart your system and try again, or contact technical support for assistance.</sys:String>
     <sys:String x:Key="Err_Installation_Is_In_Progress">Another Office installation is in progress, check the Windows taskbar for status.</sys:String>
     <sys:String x:Key="Err_Installer_Exited">เครื่องมือปรับใช้ Office ออกอย่างผิดปกติ</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">ไม่สามารถรับเวอร์ชัน Office โปรดลองอีกครั้งหรือใช้ เครื่องมือปรับใช้ Office เป็นเครื่องมือดาวน์โหลด</sys:String>
@@ -968,27 +970,4 @@
     <sys:String x:Key="Err_Check_KMS_Status">ตรวจสอบสถานะ KMS ไม่ได้ โปรดตรวจสอบชื่อโฮสต์ KMS แล้วลองอีกครั้ง</sys:String>
     <sys:String x:Key="Err_Office_App_NotFound">{0} ไม่พบการติดตั้ง Office บนคอมพิวเตอร์ โปรดยืนยันว่าได้ติดตั้ง Office เวอร์ชันล่าสุดแล้วหรือไม่</sys:String>
     <sys:String x:Key="Err_Open_Clipboard">ไม่สามารถเข้าถึงคลิปบอร์ด โปรดลองอีกครั้ง</sys:String>
-
-    <!-- Error messages about Thunder -->
-    <sys:String x:Key="Thunder_Err_Init">ไม่สามารถเริ่มต้น Thunder</sys:String>
-    <sys:String x:Key="Thunder_Err_Start">ไม่สามารถเริ่มการทำงานได้</sys:String>
-    <sys:String x:Key="Thunder_Err_Stop">ไม่สามารถหยุดการทำงานชั่วคราวได้</sys:String>
-    <sys:String x:Key="Thunder_Err_Exit">ไม่สามารถออกจาก Thunder</sys:String>
-    <sys:String x:Key="Thunder_Err_Unknown">ข้อผิดพลาดในการดาวน์โหลดที่ไม่รู้จัก</sys:String>
-    <sys:String x:Key="Thunder_Err_Create">สร้างไฟล์ล้มเหลว</sys:String>
-    <sys:String x:Key="Thunder_Err_Delete">ลบไฟล์ล้มเหลว</sys:String>
-    <sys:String x:Key="Thunder_Err_FileHash">ตรวจสอบไฟล์ล้มเหลว</sys:String>
-    <sys:String x:Key="Thunder_Err_PieceHash">ตรวจสอบไฟล์ล้มเหลว</sys:String>
-    <sys:String x:Key="Thunder_Err_Read">อ่านไฟล์ล้มเหลว</sys:String>
-    <sys:String x:Key="Thunder_Err_Rename">เปลี่ยนชื่อไฟล์ล้มเหลว</sys:String>
-    <sys:String x:Key="Thunder_Err_Write">เขียนไฟล์ล้มเหลว</sys:String>
-    <sys:String x:Key="Thunder_Err_DownInvalid">ไม่พบที่อยู่</sys:String>
-    <sys:String x:Key="Thunder_Err_NotIP">ไม่มี IP ในการดาวน์โหลดแบบ HTTP</sys:String>
-    <sys:String x:Key="Thunder_Err_IDInvalid">หมายงานไม่ถูกต้อง</sys:String>
-    <sys:String x:Key="Thunder_Err_SetProxy">ตั้งค่าพร็อกซี่ไม่สำเร็จ</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeFailed">ตรวจสอบ Proxy ล้มเหลว</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeUnknown">ประเภท Proxy ที่ไม่รู้จัก</sys:String>
-    <sys:String x:Key="Thunder_Err_Timeout">หมดเวลาใช้งาน</sys:String>
-    <sys:String x:Key="Thunder_Err_Crashed">Thunder เอ็นจิ้นขัดข้อง</sys:String>
-    <sys:String x:Key="Thunder_Err_Cancel">งานถูกยกเลิก</sys:String>
 </ResourceDictionary>

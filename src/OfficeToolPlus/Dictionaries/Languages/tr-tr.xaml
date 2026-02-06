@@ -109,7 +109,6 @@
     <sys:String x:Key="Deploy_Error_Channel">{0}, seçilen kanaldan yükleme yapılamaz: {1}.</sys:String>
     <!-- {0} means channel name, such as Current Channel. -->
     <sys:String x:Key="Deploy_Error_Unsupported_Channel">{0} kullanmak istiyorsanız, kurulum modülünü Office Tool Plus olarak değiştirin.</sys:String>
-    <sys:String x:Key="Deploy_Error_System_Architecture">64 bit olmayan bir sisteme 64 bit Office yükleyemezsiniz.</sys:String>
     <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
     <sys:String x:Key="Deploy_Error_Office_Architecture">Bilgisayarınızda {1} Office yüklü olduğu için {0} Office'i yükleyemezsiniz.</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Arch">Seçtiğiniz mimari, yerel kurulum dosyalarının mimarisiyle eşleşmiyor, lütfen mimariyi yeniden seçin veya kurulum için yerel kurulum dosyalarını kullanmayın.</sys:String>
@@ -630,6 +629,8 @@
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles">Karma dosyaları hariç tut</sys:String>
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles.Description">md5, sha1 veya crc32 uzantılı dosyalar gibi dosyaları içe aktarırken karma dosyaları hariç tut</sys:String>
     <sys:String x:Key="Hash_Checker_DisplayPath">Dosya yolunu göster</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing">Parallel computing</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing.Description">Set the number of files for parallel computing. Note that processing too many files simultaneously may reduce computing speed.</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute">Otomatik Hash değerini hesapla</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute.Description">Dosya içe aktarma işlemi tamamlandıktan sonra Hash değerini hesaplamayı otomatik olarak başlatır.</sys:String>
     <sys:String x:Key="Hash_Checker_CRC32.Description">CRC-32 hesaplamayı Aktif veya Pasif yap.</sys:String>
@@ -745,7 +746,6 @@
     <sys:String x:Key="Settings_Download_MsFileList_API.Description">Etkinleştirilirse dosya listesi Microsoft'un API'sinden alınacaktır, aksi takdirde dosya listesi yerleşik kurallar kullanılarak oluşturulacaktır.</sys:String>
     <sys:String x:Key="Settings_Download_Engine">İndirme Aracı</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Description">Office'i indirirken hangi indirme aracının kullanılacağını seçin.</sys:String>
-    <sys:String x:Key="Settings_Download_Engine.Thunder">Thunder</sys:String>
     <!-- Do not translate 'bezzad.Downloader' -->
     <sys:String x:Key="Settings_Download_Engine.Downloader">bezzad.Downloader</sys:String>
     <sys:String x:Key="Settings_Download_Engine.OfficeToolPlus">Office Tool Plus</sys:String>
@@ -813,7 +813,6 @@
     <sys:String x:Key="Input_Command">Lütfen uygulama komutlarını girin</sys:String>
     <sys:String x:Key="Input_URL">Lütfen URL'yi girin</sys:String>
     <sys:String x:Key="Input_vNext_License_Name">Please enter the name</sys:String>
-    <sys:String x:Key="Input_Thunder_Speed_Limit">Thunder indirme hız sınırını ayarlayın (KBps olarak)</sys:String>
 
     <!-- Office ISO Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
@@ -824,6 +823,7 @@
     <!-- Task Message -->
     <sys:String x:Key="Task_Checking_Updates">Güncellemeler kontrol ediliyor.</sys:String>
     <sys:String x:Key="Task_Downloading_Updates">Güncellemeler indiriliyor, {0} tamamlandı ({1}/{2}).</sys:String>
+    <sys:String x:Key="Task_Downloading_Updates_NoPercentage">Güncellemeler indiriliyor, {0}/{1}.</sys:String>
     <sys:String x:Key="Task_Verifying_Installation_Files">Dosyalar doğrulanıyor, lütfen bekleyin.</sys:String>
     <sys:String x:Key="Task_Loading_Preferences">Uygulama tercihleri ​​yükleniyor, lütfen bekleyin.</sys:String>
     <sys:String x:Key="Task_Downloading_Web_Config">Web'den yapılandırma dosyası alınıyor, lütfen bekleyin.</sys:String>
@@ -883,6 +883,7 @@
     <sys:String x:Key="Info_No_Updates">Office Tool Plus'ın en son sürümünü kullanıyorsunuz.</sys:String>
     <sys:String x:Key="Info_Update_In_Progress">Güncelleme(ler) devam ediyor, lütfen bekleyin.</sys:String>
     <sys:String x:Key="Info_Updates_Incomplete">Güncellemeler uygulanamadı. Lütfen daha sonra tekrar deneyin.</sys:String>
+    <sys:String x:Key="Info_SystemDrive_NoSpace">Your system drive is running out of space, which may cause some operations to fail.</sys:String>
     <sys:String x:Key="Info_No_Language_Added_For_Download">Dil eklemediğinizi tespit ettik. Çoğu durumda, sorunları önlemek için dil eklemenizi öneririz.</sys:String>
     <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">Lütfen Office yükleme dosyalarını kaydedeceğiniz klasörü seçin.&#x000A;Varsayılan konumu kullanmak için, ayarlar sayfasında "Dosyaların nereye kaydedileceğini sor" seçeneğini devre dışı bırakın.</sys:String>
     <sys:String x:Key="Info_All_Files_Exist">İndirmeye gerek yok, tüm dosyalar güncel.</sys:String>
@@ -949,6 +950,7 @@
     <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
     <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0}, {1} dilini desteklemiyor.</sys:String>
     <sys:String x:Key="Err_System_Variables_Incorrect">One or more system variables are incorrect, please repair them on the Toolbox page.</sys:String>
+    <sys:String x:Key="Err_Folder_Permissions_Incorrect">One or more folder permissions are incorrect, and we were unable to fix them. Please restart your system and try again, or contact technical support for assistance.</sys:String>
     <sys:String x:Key="Err_Installation_Is_In_Progress">Another Office installation is in progress, check the Windows taskbar for status.</sys:String>
     <sys:String x:Key="Err_Installer_Exited">Office Deployment Tool aracından anormal şekilde çıkıldı.</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">Office sürümü alınamıyor, lütfen yeniden deneyin veya indirme motoru olarak Office Deployment Tool Aracı'nı kullanın.</sys:String>
@@ -968,27 +970,4 @@
     <sys:String x:Key="Err_Check_KMS_Status">KMS durumu kontrol edilemiyor, lütfen KMS ana bilgisayar adını kontrol edin ve tekrar deneyin.</sys:String>
     <sys:String x:Key="Err_Office_App_NotFound">{0} bilgisayarda bulunamadı, lütfen Office'in en son sürümünün kurulu olup olmadığını onaylayın.</sys:String>
     <sys:String x:Key="Err_Open_Clipboard">Panoya erişilemiyor, lütfen tekrar deneyin.</sys:String>
-
-    <!-- Error messages about Thunder -->
-    <sys:String x:Key="Thunder_Err_Init">Thunder başlatılamadı.</sys:String>
-    <sys:String x:Key="Thunder_Err_Start">Görev başlatılamadı.</sys:String>
-    <sys:String x:Key="Thunder_Err_Stop">Görev duraklatılamadı.</sys:String>
-    <sys:String x:Key="Thunder_Err_Exit">Thunder'dan çıkılamadı.</sys:String>
-    <sys:String x:Key="Thunder_Err_Unknown">Bilinmeyen indirme hatası.</sys:String>
-    <sys:String x:Key="Thunder_Err_Create">Dosya oluşturulamadı.</sys:String>
-    <sys:String x:Key="Thunder_Err_Delete">Dosya silinemedi.</sys:String>
-    <sys:String x:Key="Thunder_Err_FileHash">Dosya doğrulama başarısız oldu.</sys:String>
-    <sys:String x:Key="Thunder_Err_PieceHash">Dosya doğrulama başarısız oldu.</sys:String>
-    <sys:String x:Key="Thunder_Err_Read">Dosya okunamadı.</sys:String>
-    <sys:String x:Key="Thunder_Err_Rename">Dosya yeniden adlandırılamadı.</sys:String>
-    <sys:String x:Key="Thunder_Err_Write">Dosyaya yazılamadı.</sys:String>
-    <sys:String x:Key="Thunder_Err_DownInvalid">Geçersiz adres.</sys:String>
-    <sys:String x:Key="Thunder_Err_NotIP">HTTP indirmede kullanılabilir IP yok.</sys:String>
-    <sys:String x:Key="Thunder_Err_IDInvalid">Geçersiz görev kimliği.</sys:String>
-    <sys:String x:Key="Thunder_Err_SetProxy">Proxy ayarlanamadı.</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeFailed">Proxy kimlik doğrulaması başarısız oldu.</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeUnknown">Bilinmeyen proxy türü.</sys:String>
-    <sys:String x:Key="Thunder_Err_Timeout">Görev zaman aşımı.</sys:String>
-    <sys:String x:Key="Thunder_Err_Crashed">Thunder motoru çöktü.</sys:String>
-    <sys:String x:Key="Thunder_Err_Cancel">Görev iptal edildi.</sys:String>
 </ResourceDictionary>

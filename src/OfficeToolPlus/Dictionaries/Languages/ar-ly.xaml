@@ -109,7 +109,6 @@
     <sys:String x:Key="Deploy_Error_Channel">{0} لا يمكن تثبيته على القناة المحددة: {1}.</sys:String>
     <!-- {0} means channel name, such as Current Channel. -->
     <sys:String x:Key="Deploy_Error_Unsupported_Channel">إذا كنت تريد استخدام {0}، غيّر وحدة التثبيت إلى Office Tool Plus.</sys:String>
-    <sys:String x:Key="Deploy_Error_System_Architecture">لا يمكنك تثبيت إصدار 64 بت من أوفيس على نظام تشغيل غير 64 بت.</sys:String>
     <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
     <sys:String x:Key="Deploy_Error_Office_Architecture">لا يمكنك تثبيت {0} من أوفيس، لأن لديك {1} من أوفيس مثبت على النظام.</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Arch">البنية التي اخترتها لا تتطابق مع بنية ملفات التثبيت المحلية. يرجى إعادة اختيار البنية أو عدم استخدام الملفات المحلية للنشر.</sys:String>
@@ -630,6 +629,8 @@
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles">استبعاد ملفات التجزئة</sys:String>
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles.Description">استبعاد ملفات التجزئة عند استيراد الملفات، مثل الملفات ذات الامتدادات md5 أو sha1 أو crc32.</sys:String>
     <sys:String x:Key="Hash_Checker_DisplayPath">عرض مسار الملف</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing">Parallel computing</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing.Description">Set the number of files for parallel computing. Note that processing too many files simultaneously may reduce computing speed.</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute">الحساب التلقائي</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute.Description">بدء حساب قيمة التجزئة تلقائيًا بعد اكتمال استيراد الملفات.</sys:String>
     <sys:String x:Key="Hash_Checker_CRC32.Description">تمكين أو تعطيل حساب CRC-32.</sys:String>
@@ -745,7 +746,6 @@
     <sys:String x:Key="Settings_Download_MsFileList_API.Description">إذا تم التمكين، سيتم الحصول على قائمة الملفات من واجهة مايكروسوفت البرمجية، وإلا سيتم إنشاء القائمة باستخدام القواعد المدمجة.</sys:String>
     <sys:String x:Key="Settings_Download_Engine">المحرك</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Description">حدد المحرك الذي سيتم استخدامه عند تنزيل أوفيس.</sys:String>
-    <sys:String x:Key="Settings_Download_Engine.Thunder">Thunder</sys:String>
     <!-- Do not translate 'bezzad.Downloader' -->
     <sys:String x:Key="Settings_Download_Engine.Downloader">bezzad.Downloader</sys:String>
     <sys:String x:Key="Settings_Download_Engine.OfficeToolPlus">Office Tool Plus</sys:String>
@@ -813,7 +813,6 @@
     <sys:String x:Key="Input_Command">يرجى إدخال أوامر التطبيق</sys:String>
     <sys:String x:Key="Input_URL">يرجى إدخال الرابط</sys:String>
     <sys:String x:Key="Input_vNext_License_Name">Please enter the name</sys:String>
-    <sys:String x:Key="Input_Thunder_Speed_Limit">تعيين حد سرعة تنزيل Thunder (بالـ KBps)</sys:String>
 
     <!-- Office ISO Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
@@ -824,6 +823,7 @@
     <!-- Task Message -->
     <sys:String x:Key="Task_Checking_Updates">جاري التحقق من التحديثات.</sys:String>
     <sys:String x:Key="Task_Downloading_Updates">جاري تنزيل التحديثات، تم إكمال {0} ({1} من {2}).</sys:String>
+    <sys:String x:Key="Task_Downloading_Updates_NoPercentage">جاري تنزيل التحديثات، {0} من {1}.</sys:String>
     <sys:String x:Key="Task_Verifying_Installation_Files">جاري التحقق من الملفات، يرجى الانتظار.</sys:String>
     <sys:String x:Key="Task_Loading_Preferences">جاري تحميل تفضيلات التطبيق، يرجى الانتظار.</sys:String>
     <sys:String x:Key="Task_Downloading_Web_Config">جاري الحصول على ملف التكوين من الويب، يرجى الانتظار.</sys:String>
@@ -883,6 +883,7 @@
     <sys:String x:Key="Info_No_Updates">أنت تستخدم أحدث إصدار من Office Tool Plus.</sys:String>
     <sys:String x:Key="Info_Update_In_Progress">التحديث(ات) قيد التنفيذ، يرجى الانتظار.</sys:String>
     <sys:String x:Key="Info_Updates_Incomplete">فشل تطبيق التحديثات، يرجى المحاولة مرة أخرى لاحقًا.</sys:String>
+    <sys:String x:Key="Info_SystemDrive_NoSpace">Your system drive is running out of space, which may cause some operations to fail.</sys:String>
     <sys:String x:Key="Info_No_Language_Added_For_Download">لم تقم بإضافة أي لغة. في معظم الحالات، نوصي بإضافة لغات لتجنب المشاكل.</sys:String>
     <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">يرجى تحديد المجلد لحفظ ملفات تثبيت أوفيس.&#x000A;لاستخدام الموقع الافتراضي، قم بتعطيل "اسأل عن مكان حفظ الملفات" في صفحة الإعدادات.</sys:String>
     <sys:String x:Key="Info_All_Files_Exist">لا حاجة للتنزيل، جميع الملفات موجودة.</sys:String>
@@ -949,6 +950,7 @@
     <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
     <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} لا يدعم اللغة {1}.</sys:String>
     <sys:String x:Key="Err_System_Variables_Incorrect">One or more system variables are incorrect, please repair them on the Toolbox page.</sys:String>
+    <sys:String x:Key="Err_Folder_Permissions_Incorrect">One or more folder permissions are incorrect, and we were unable to fix them. Please restart your system and try again, or contact technical support for assistance.</sys:String>
     <sys:String x:Key="Err_Installation_Is_In_Progress">Another Office installation is in progress, check the Windows taskbar for status.</sys:String>
     <sys:String x:Key="Err_Installer_Exited">خرج Office Deployment Tool بشكل غير طبيعي.</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">تعذر الحصول على إصدار أوفيس، يرجى المحاولة مرة أخرى أو استخدام Office Deployment Tool كمحرك تنزيل.</sys:String>
@@ -968,27 +970,4 @@
     <sys:String x:Key="Err_Check_KMS_Status">تعذر التحقق من حالة KMS، يرجى التحقق من اسم مضيف KMS والمحاولة مرة أخرى.</sys:String>
     <sys:String x:Key="Err_Office_App_NotFound">{0} لم يتم العثور عليه على النظام، يرجى التأكد من تثبيت أحدث إصدار من أوفيس.</sys:String>
     <sys:String x:Key="Err_Open_Clipboard">تعذر الوصول إلى الحافظة، يرجى المحاولة مرة أخرى.</sys:String>
-
-    <!-- Error messages about Thunder -->
-    <sys:String x:Key="Thunder_Err_Init">فشل في تهيئة Thunder.</sys:String>
-    <sys:String x:Key="Thunder_Err_Start">فشل في بدء المهمة.</sys:String>
-    <sys:String x:Key="Thunder_Err_Stop">فشل في إيقاف المهمة مؤقتًا.</sys:String>
-    <sys:String x:Key="Thunder_Err_Exit">فشل في إنهاء Thunder.</sys:String>
-    <sys:String x:Key="Thunder_Err_Unknown">خطأ غير معروف في التنزيل.</sys:String>
-    <sys:String x:Key="Thunder_Err_Create">فشل في إنشاء الملف.</sys:String>
-    <sys:String x:Key="Thunder_Err_Delete">فشل في حذف الملف.</sys:String>
-    <sys:String x:Key="Thunder_Err_FileHash">فشل التحقق من الملف.</sys:String>
-    <sys:String x:Key="Thunder_Err_PieceHash">فشل التحقق من الملف.</sys:String>
-    <sys:String x:Key="Thunder_Err_Read">فشل في قراءة الملف.</sys:String>
-    <sys:String x:Key="Thunder_Err_Rename">فشل في إعادة تسمية الملف.</sys:String>
-    <sys:String x:Key="Thunder_Err_Write">فشل في كتابة الملف.</sys:String>
-    <sys:String x:Key="Thunder_Err_DownInvalid">عنوان غير صالح.</sys:String>
-    <sys:String x:Key="Thunder_Err_NotIP">لا يوجد عنوان IP متاح في تنزيل HTTP.</sys:String>
-    <sys:String x:Key="Thunder_Err_IDInvalid">معرف المهمة غير صالح.</sys:String>
-    <sys:String x:Key="Thunder_Err_SetProxy">فشل في تعيين الوكيل.</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeFailed">فشل مصادقة الوكيل.</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeUnknown">نوع وكيل غير معروف.</sys:String>
-    <sys:String x:Key="Thunder_Err_Timeout">انتهت مهلة المهمة.</sys:String>
-    <sys:String x:Key="Thunder_Err_Crashed">تعطل محرك Thunder.</sys:String>
-    <sys:String x:Key="Thunder_Err_Cancel">تم إلغاء المهمة.</sys:String>
 </ResourceDictionary>

@@ -109,7 +109,6 @@
     <sys:String x:Key="Deploy_Error_Channel">{0} Tidak dapat dipasang di saluran terpilih : {1}.</sys:String>
     <!-- {0} means channel name, such as Current Channel. -->
     <sys:String x:Key="Deploy_Error_Unsupported_Channel">Jika anda ingin gunakan {0}, ganti modul pemasangan ke Office Tool Plus.</sys:String>
-    <sys:String x:Key="Deploy_Error_System_Architecture">Anda tidak dapat memasang Office 64-bit pada sistem non-64-bit.</sys:String>
     <!-- Example: You cannot install 32 bit of Office, because you have the 64 bit of Office installed on your computer. -->
     <sys:String x:Key="Deploy_Error_Office_Architecture">Anda tidak dapat memasang Offie {0}, karena memiliki Office {1} yang terpasang pada komputer anda.</sys:String>
     <sys:String x:Key="Deploy_Error_Installation_Arch">Arsitektur yang telah anda pilih tidak sesuai dengan arsitektur berkas pemasangan lokal, silakan pilih kembali arsitektur atau jangan gunakan berkas pemasangan lokal untuk dipasangkan.</sys:String>
@@ -630,6 +629,8 @@
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles">Mengecualikan berkas hash</sys:String>
     <sys:String x:Key="Hash_Checker_ExcludeHashFiles.Description">Mengecualikan berkas hash ketika Mengimpor berkas, seperti berkas yang berekstensi md5, sha1 atau crc32.</sys:String>
     <sys:String x:Key="Hash_Checker_DisplayPath">Tampilkan jalur berkas</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing">Parallel computing</sys:String>
+    <sys:String x:Key="Hash_Checker_ParallelComputing.Description">Set the number of files for parallel computing. Note that processing too many files simultaneously may reduce computing speed.</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute">Menghitung otomatis</sys:String>
     <sys:String x:Key="Hash_Checker_AutoCompute.Description">Memulai menghitung nilai hash otomatis setelah berkas selesai diimpor.</sys:String>
     <sys:String x:Key="Hash_Checker_CRC32.Description">Aktifkan atau nonaktifkan hitungan CRC-32.</sys:String>
@@ -745,7 +746,6 @@
     <sys:String x:Key="Settings_Download_MsFileList_API.Description">Apabila diaktifkan, daftar berkas akan ditemukan dari API Microsoft , sebaliknya daftar berkas akan dibuat menggunakan aturan bawaan.</sys:String>
     <sys:String x:Key="Settings_Download_Engine">Mesin</sys:String>
     <sys:String x:Key="Settings_Download_Engine.Description">Pilih mesin yang digunakan untuk mengunduh Office.</sys:String>
-    <sys:String x:Key="Settings_Download_Engine.Thunder">Thunder</sys:String>
     <!-- Do not translate 'bezzad.Downloader' -->
     <sys:String x:Key="Settings_Download_Engine.Downloader">bezzad.Downloader</sys:String>
     <sys:String x:Key="Settings_Download_Engine.OfficeToolPlus">Office Tool Plus</sys:String>
@@ -813,7 +813,6 @@
     <sys:String x:Key="Input_Command">Silakan masukkan perintah aplikasi</sys:String>
     <sys:String x:Key="Input_URL">Silakan masukkan URL</sys:String>
     <sys:String x:Key="Input_vNext_License_Name">Please enter the name</sys:String>
-    <sys:String x:Key="Input_Thunder_Speed_Limit">Mengatur batas kecepatan unduhan Thunder (dalam KBps)</sys:String>
 
     <!-- Office ISO Context Menu -->
     <!-- What is &amp; means? '&amp;' stands for '&', so it is &Install now, users can press the hotkey (I) to execute the command when menu is opened. -->
@@ -824,6 +823,7 @@
     <!-- Task Message -->
     <sys:String x:Key="Task_Checking_Updates">Memeriksa pembaruan.</sys:String>
     <sys:String x:Key="Task_Downloading_Updates">Mengunduh pembaruan, {0} ({1} dari {2}).</sys:String>
+    <sys:String x:Key="Task_Downloading_Updates_NoPercentage">Mengunduh pembaruan, {0} dari {1}.</sys:String>
     <sys:String x:Key="Task_Verifying_Installation_Files">Memeriksa berkas, silakan tunggu.</sys:String>
     <sys:String x:Key="Task_Loading_Preferences">Memuat preferensi aplikasi, silakan tunggu.</sys:String>
     <sys:String x:Key="Task_Downloading_Web_Config">Mendapatkan berkas konfigurasi dari web, mohon tunggu.</sys:String>
@@ -883,6 +883,7 @@
     <sys:String x:Key="Info_No_Updates">Anda menggunakan Office Tool Plus versi terbaru.</sys:String>
     <sys:String x:Key="Info_Update_In_Progress">Pembaruan sedang dalam proses, silakan tunggu.</sys:String>
     <sys:String x:Key="Info_Updates_Incomplete">Gagal menerapkan pembaruan, silakan coba lagi nanti.</sys:String>
+    <sys:String x:Key="Info_SystemDrive_NoSpace">Your system drive is running out of space, which may cause some operations to fail.</sys:String>
     <sys:String x:Key="Info_No_Language_Added_For_Download">Kami mendeteksi bahwa Anda belum menambahkan bahasa. Dalam kebanyakan kasus, kami sarankan untuk menambahkan bahasa untuk menghindari masalah.</sys:String>
     <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">Silakan pilih folder dimana berkas pemasangan Office disimpan.&#x000A;Untuk menggunakan lokasi bawaan, matikan "Tanya dimana tempat menyimpan berkas" pada laman Pengaturan.</sys:String>
     <sys:String x:Key="Info_All_Files_Exist">Tidak perlu mengunduh, semua berkas sudah ada.</sys:String>
@@ -949,6 +950,7 @@
     <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
     <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} tidak mendukung bahasa {1}.</sys:String>
     <sys:String x:Key="Err_System_Variables_Incorrect">Satu atau lebih variabel sistem salah, harap perbaiki di halaman Kotak Alat.</sys:String>
+    <sys:String x:Key="Err_Folder_Permissions_Incorrect">One or more folder permissions are incorrect, and we were unable to fix them. Please restart your system and try again, or contact technical support for assistance.</sys:String>
     <sys:String x:Key="Err_Installation_Is_In_Progress">Another Office installation is in progress, check the Windows taskbar for status.</sys:String>
     <sys:String x:Key="Err_Installer_Exited">Office Deployment Tool tertutup secara tidak normal.</sys:String>
     <sys:String x:Key="Err_Prepare_To_Download_Office">Tidak dapat mendapatkan informasi versi, silakan coba lagi atau gunakan Office Deployment Tool.</sys:String>
@@ -968,27 +970,4 @@
     <sys:String x:Key="Err_Check_KMS_Status">Tidak dapat memeriksa status KMS, silakan periksa host KMS dan coba lagi.</sys:String>
     <sys:String x:Key="Err_Office_App_NotFound">{0} tidak ditemukan di komputer, silakan konfirmasi apakah versi Office terbaru telah dipasang.</sys:String>
     <sys:String x:Key="Err_Open_Clipboard">Tidak dapat mengakses papan klip, silakan coba lagi.</sys:String>
-
-    <!-- Error messages about Thunder -->
-    <sys:String x:Key="Thunder_Err_Init">Gagal menginisiasi Thunder.</sys:String>
-    <sys:String x:Key="Thunder_Err_Start">Gagal menjalankan tugas.</sys:String>
-    <sys:String x:Key="Thunder_Err_Stop">Gagal menjeda tugas.</sys:String>
-    <sys:String x:Key="Thunder_Err_Exit">Gagal menutup Thunder.</sys:String>
-    <sys:String x:Key="Thunder_Err_Unknown">Unduhan gagal tidak diketahui.</sys:String>
-    <sys:String x:Key="Thunder_Err_Create">Gagal membuat tugas.</sys:String>
-    <sys:String x:Key="Thunder_Err_Delete">Gagal menghapus berkas.</sys:String>
-    <sys:String x:Key="Thunder_Err_FileHash">Verifikasi berkas gagal.</sys:String>
-    <sys:String x:Key="Thunder_Err_PieceHash">Verifikasi berkas gagal.</sys:String>
-    <sys:String x:Key="Thunder_Err_Read">Gagal membaca berkas.</sys:String>
-    <sys:String x:Key="Thunder_Err_Rename">Gagal mengubah nama berkas.</sys:String>
-    <sys:String x:Key="Thunder_Err_Write">Gagal menuliskan berkas.</sys:String>
-    <sys:String x:Key="Thunder_Err_DownInvalid">Alamat tidak cocok.</sys:String>
-    <sys:String x:Key="Thunder_Err_NotIP">Tidak ada IP tersedia dalam unduhan HTTP.</sys:String>
-    <sys:String x:Key="Thunder_Err_IDInvalid">ID Tugas tidak valid.</sys:String>
-    <sys:String x:Key="Thunder_Err_SetProxy">Gagal mengatur proxy.</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeFailed">Otentikasi proxy gagal.</sys:String>
-    <sys:String x:Key="Thunder_Err_ProxyAuthTypeUnknown">Tipe proxy tidak diketahui.</sys:String>
-    <sys:String x:Key="Thunder_Err_Timeout">Waktu tugas telah habis.</sys:String>
-    <sys:String x:Key="Thunder_Err_Crashed">Mesin Thunder mogok.</sys:String>
-    <sys:String x:Key="Thunder_Err_Cancel">Tugas dibatalkan.</sys:String>
 </ResourceDictionary>

@@ -80,15 +80,15 @@
     <sys:String x:Key="Home_Install_Office.O365HPRDescription">包含 Outlook、Word、Excel、PowerPoint 同埋更多</sys:String>
     <sys:String x:Key="Home_Install_Office.PP2019RDescription">包含 Outlook、Word、Excel、PowerPoint 同埋更多</sys:String>
     <sys:String x:Key="Home_Install_Office.HS2019Description">包含 Word、Excel、PowerPoint</sys:String>
-    <sys:String x:Key="Home_Fetching_Content">撈緊內容，等陣……</sys:String>
-    <sys:String x:Key="Home_Error_While_Fetching_Content">撈唔到內容，檢查下你嘅網絡連接，然後再試過。</sys:String>
+    <sys:String x:Key="Home_Loading_Content">撈緊內容...</sys:String>
+    <sys:String x:Key="Home_Error_While_Loading_Content">撈唔到內容，檢查下你嘅網絡連接，然後再試過。</sys:String>
     <sys:String x:Key="Home_Retry">重試(_R)</sys:String>
     <sys:String x:Key="Home_Launcher.Name">應用程式列表</sys:String>
     <sys:String x:Key="Home_Launcher_OpenInBrowser">喺瀏覽器開啟(_O)</sys:String>
     <sys:String x:Key="Home_Launcher_CreateShortcut">整個桌面捷徑(_C)</sys:String>
 
     <!-- Deploy page -->
-    <sys:String x:Key="Deploy_Help_Docs">安裝 Office 時遇到問題？请睇下我哋嘅幫助文件，搵下可行嘅解決方法。</sys:String>
+    <sys:String x:Key="Deploy_Help_Docs">安裝 Office 時遇到問題？請睇下我哋嘅幫助文件，搵下可行嘅解決方法。</sys:String>
     <sys:String x:Key="Deploy_Learn_More">了解多啲</sys:String>
     <!-- Channels Name, if you do not want to translate them, please keep in English. -->
     <sys:String x:Key="PerpetualVL2019">Office 2019 企業長期版</sys:String>
@@ -152,11 +152,15 @@
     <sys:String x:Key="Deploy_Download_First.Description">安裝文件會保存喺程式目錄或者源路徑指定嘅目錄入面。</sys:String>
     <sys:String x:Key="Deploy_Create_Shortcut">整個桌面捷徑</sys:String>
     <sys:String x:Key="Deploy_Create_Shortcut.Description">Office 安裝完之後喺桌面整個 Office 應用程式嘅捷徑。</sys:String>
-    <!-- Do not edit them or translate them. iSlide only provided in mainland China. -->
-    <sys:String x:Key="Deploy_iSlide">安裝 iSlide 插件</sys:String>
-    <sys:String x:Key="Deploy_iSlide.Description">Office 安裝完成後安裝 iSlide 插件。iSlide 提供好多 PPT 素材下載，仲有 PPT 智能排版，等 PPT 設計更簡單。</sys:String>
-    <sys:String x:Key="Deploy_iSlide_Install">即刻安裝</sys:String>
-    <sys:String x:Key="Deploy_iSlide_Install.Name">即刻安裝 iSlide。</sys:String>
+    <!-- Do not edit them or translate them. iSlide and AiPPT only provided in mainland China. -->
+    <sys:String x:Key="Deploy_iSlide">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_iSlide.Description">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_iSlide_Install">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_iSlide_Install.Name">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_AiPPT">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_AiPPT.Description">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_AiPPT_Install">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_AiPPT_Install.Name">PlaceHolder</sys:String>
 
     <sys:String x:Key="Deploy_Product">產品</sys:String>
     <sys:String x:Key="Deploy_Product.Description">{0} 個已安裝嘅產品，{1} 個準備部署，{2} 個準備卸載。</sys:String>
@@ -477,7 +481,7 @@
     <sys:String x:Key="Toolbox_Backup">備份</sys:String>
     <sys:String x:Key="Toolbox_Restore">還原</sys:String>
     <sys:String x:Key="Toolbox_Reset_OfficeSettings">重設 Office 設定做預設設定</sys:String>
-    <sys:String x:Key="Toolbox_Reset_OfficeSettings.Description">根據需要將 Office 重設做預設設定。開始之前，請閂晒所有 Office 應用程式。</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings.Description">將 Office 重設做預設設定。請在開始之前閂晒所有 Office 應用程式。</sys:String>
     <sys:String x:Key="Toolbox_Reset_OfficeSettings_Button">重設</sys:String>
     <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserSettings">刪除而家用緊嘅用戶設定</sys:String>
     <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserSettings.Description">包括 Office 應用程式設定、最近開過嘅文件同埋最近儲存嘅位置。</sys:String>
@@ -532,7 +536,7 @@
     <sys:String x:Key="Convert_Next_Page">下一頁</sys:String>
 
     <sys:String x:Key="Convert_Settings">設定</sys:String>
-    <sys:String x:Key="Convert_Settings.Description">調整各項設定</sys:String>
+    <sys:String x:Key="Convert_Settings.Description">調整各項設定。</sys:String>
     <sys:String x:Key="Convert_SearchOnSubfolders">搵子資料夾</sys:String>
     <sys:String x:Key="Convert_SearchOnSubfolders.Description">揀選資料夾嗰陣，喺子資料夾搵文件。</sys:String>
     <sys:String x:Key="Convert_Delete">刪除文件</sys:String>
@@ -821,32 +825,30 @@
     <sys:String x:Key="CD-ROM_InstallNow">即刻安裝(&amp;I)</sys:String>
 
     <!-- Task Message -->
-    <sys:String x:Key="Task_Checking_Updates">檢查緊更新</sys:String>
+    <sys:String x:Key="Task_Checking_Updates">檢查緊更新...</sys:String>
     <sys:String x:Key="Task_Downloading_Updates">下載緊更新，{0} 已完成（第 {1} 個，總共 {2} 個）</sys:String>
     <sys:String x:Key="Task_Downloading_Updates_NoPercentage">下載緊更新，第 {0} 個，總共 {1} 個</sys:String>
-    <sys:String x:Key="Task_Verifying_Installation_Files">校驗緊文件，請等陣</sys:String>
-    <sys:String x:Key="Task_Loading_Preferences">載入緊應用程式偏好設定，請等陣</sys:String>
-    <sys:String x:Key="Task_Downloading_Web_Config">喺網路度攞配置文件，請等陣</sys:String>
+    <sys:String x:Key="Task_Verifying_Installation_Files">校驗緊文件...</sys:String>
+    <sys:String x:Key="Task_Downloading_Web_Config">喺網路度攞配置文件...</sys:String>
     <sys:String x:Key="Task_Preparing_Download">準備下載 Office</sys:String>
     <!-- Example: Creating Office ISO file, file size: 3.1GB, 45% completed. -->
     <sys:String x:Key="Task_Creating_ISO">整緊 Office ISO 文件，文件大細：{0}，{1} 已完成</sys:String>
     <sys:String x:Key="Task_ODT">部署緊，請等陣</sys:String>
     <sys:String x:Key="Task_SPP">SPP 運行緊，請等陣</sys:String>
-    <sys:String x:Key="Task_Searching_KMS_Events">搵緊 KMS 激活事件，請等陣</sys:String>
-    <sys:String x:Key="Task_Searching_IAF_Events">搵緊網上激活失敗事件，請等陣</sys:String>
-    <sys:String x:Key="Task_Checking_Office_Update_Channel">查詢緊 Office 更新通道資料</sys:String>
-    <sys:String x:Key="Task_Testing_KMS_Host">測試緊 KMS 主機可唔可以用</sys:String>
-    <sys:String x:Key="Task_Collecting_Office_Logs">收集緊 Office 日誌</sys:String>
-    <sys:String x:Key="Task_Searching_MSI_Events">搵緊 Windows Installer 事件，請等陣</sys:String>
-    <sys:String x:Key="Task_Searching_Application_Events">搵緊應用程式事件，請等陣</sys:String>
-    <sys:String x:Key="Task_Removing_Office">移除緊 Office，請等陣</sys:String>
-    <sys:String x:Key="Task_Repairing_WMI">修復緊 WMI 組件，請等陣</sys:String>
+    <sys:String x:Key="Task_Searching_KMS_Events">搵緊 KMS 激活事件...</sys:String>
+    <sys:String x:Key="Task_Searching_IAF_Events">搵緊網上激活失敗事件...</sys:String>
+    <sys:String x:Key="Task_Checking_Office_Update_Channel">查詢緊 Office 更新通道資料...</sys:String>
+    <sys:String x:Key="Task_Testing_KMS_Host">測試緊 KMS 主機可唔可以用...</sys:String>
+    <sys:String x:Key="Task_Collecting_Office_Logs">收集緊 Office 日誌...</sys:String>
+    <sys:String x:Key="Task_Searching_MSI_Events">搵緊 Windows Installer 事件...</sys:String>
+    <sys:String x:Key="Task_Searching_Application_Events">搵緊應用程式事件...</sys:String>
+    <sys:String x:Key="Task_Removing_Office">移除緊 Office...</sys:String>
+    <sys:String x:Key="Task_Repairing_WMI">修復緊 WMI 組件...</sys:String>
     <sys:String x:Key="Task_Converting_Documents">轉換緊 Office 文檔，仲有 {0} 個</sys:String>
-    <sys:String x:Key="Task_Importing_Files">匯入緊文件，請等陣</sys:String>
+    <sys:String x:Key="Task_Importing_Files">匯入緊文件...</sys:String>
     <sys:String x:Key="Task_Computing_Hash">計算緊哈希值，仲有 {0} 個文件</sys:String>
-    <sys:String x:Key="Task_Exporting_Hash">匯出緊結果，請等陣</sys:String>
-    <!-- Example: Installing iSlide, please wait. -->
-    <sys:String x:Key="Task_Installing_App">安裝緊 {0}，請等陣</sys:String>
+    <sys:String x:Key="Task_Exporting_Hash">匯出緊結果...</sys:String>
+    <sys:String x:Key="Task_Installing_App">安裝緊 {0}...</sys:String>
 
     <!-- Question Message -->
     <sys:String x:Key="Ques_Update.Title">Office Tool Plus 更新</sys:String>
@@ -867,7 +869,7 @@
     <sys:String x:Key="Ques_Delete_All_Installations">你肯定要刪除所有安裝文件？</sys:String>
     <sys:String x:Key="Ques_Delete_Installation">你肯定要刪除安裝文件 {0}？</sys:String>
     <sys:String x:Key="Ques_Delete_Installation_Package">你肯定要刪除 {0}？</sys:String>
-    <sys:String x:Key="Ques_Install_iSlide">你肯定要下載同安裝 iSlide？</sys:String>
+    <sys:String x:Key="Ques_Install_Custom_Software">PlaceHolder</sys:String>
     <sys:String x:Key="Ques_Clear_Activation">你肯定要卸載晒所有許可證同密鑰？操作完成之後，你需要重新安裝許可證同激活 Office。</sys:String>
     <sys:String x:Key="Ques_Install_Licenses">安裝 Office 許可證之後可能唔會喺 Office 入面顯示許可證資料，但係可以用 Office Tool Plus 查詢或者激活，係咪要繼續？</sys:String>
     <sys:String x:Key="Ques_Uninstall_Licenses">你肯定要卸載晒所有 Office 許可證？</sys:String>
@@ -878,18 +880,19 @@
     <sys:String x:Key="Ques_Invoke_Office_Update">更新通道改咗喇，而家檢查 Office 更新？</sys:String>
 
     <!-- Info Message -->
-    <sys:String x:Key="Info_OS_Outdated">你嘅作業系統已經冇得用，請升級你嘅作業系統或者下載舊版本嘅 Office Tool Plus 嚟用。</sys:String>
+    <sys:String x:Key="Info_OS_Outdated">你嘅作業系統已經冇得用。請升級你嘅作業系統或者下載舊版本嘅 Office Tool Plus 嚟用。</sys:String>
     <sys:String x:Key="Info_Restart_Required">你需要重新啟動程式先可以令更改生效。</sys:String>
     <sys:String x:Key="Info_No_Updates">你用緊最新版本嘅 Office Tool Plus。</sys:String>
-    <sys:String x:Key="Info_Update_In_Progress">更新緊，請等等。</sys:String>
+    <sys:String x:Key="Info_Update_In_Progress">更新緊。</sys:String>
     <sys:String x:Key="Info_Updates_Incomplete">更新嗰陣出咗問題，等陣再試過。</sys:String>
+    <sys:String x:Key="Info_SystemDrive_Permissions">你嘅系統盤權限唔正確。請過大佬嚟幫你呀。</sys:String>
     <sys:String x:Key="Info_SystemDrive_NoSpace">你嘅系統盤空間唔夠使啦，有啲嘢可能辦唔到呀。</sys:String>
     <sys:String x:Key="Info_No_Language_Added_For_Download">檢測到你冇加 Office 語言。大多數情況下，我哋建議加埋語言以免出現問題。</sys:String>
     <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">請揀選 Office 安裝文件嘅儲存位置。&#x000A;如果要用預設位置，請喺設定頁面停用「問文件儲存位置」。</sys:String>
     <sys:String x:Key="Info_All_Files_Exist">冇需要下載嘅文件，所有文件都有。</sys:String>
     <sys:String x:Key="Info_Office_Downloading">Office 下載緊。</sys:String>
-    <sys:String x:Key="Info_Software_Installation_Complete">安裝完成</sys:String>
-    <sys:String x:Key="Info_Software_Installation_Failed">安裝失敗</sys:String>
+    <sys:String x:Key="Info_Software_Installation_Complete">安裝完成。</sys:String>
+    <sys:String x:Key="Info_Software_Installation_Failed">安裝失敗。</sys:String>
     <sys:String x:Key="Info_No_Events">搵唔到任何事件。</sys:String>
     <sys:String x:Key="Info_No_Office_Licenses">搵唔到任何 Office 許可證。</sys:String>
     <sys:String x:Key="Info_No_Office_Product_Key">檢測唔到任何 Office 產品密鑰。</sys:String>
@@ -921,17 +924,17 @@
     <sys:String x:Key="Success_Save">儲存成功</sys:String>
     <sys:String x:Key="Success_Collect_Logs">日誌文件已收集並儲存喺：{0}</sys:String>
     <sys:String x:Key="Success_Repair">修復成功。</sys:String>
-    <sys:String x:Key="Success_Repair_System_Variables">系統變量重設完成，請重新啟動你嘅系統令更改生效。</sys:String>
-    <sys:String x:Key="Success_Repair_WMI_Components">WMI 組件修復完成，請重新啟動你嘅系統令更改生效。</sys:String>
+    <sys:String x:Key="Success_Repair_System_Variables">系統變量重設完成。請重新啟動你嘅系統令更改生效。</sys:String>
+    <sys:String x:Key="Success_Repair_WMI_Components">WMI 組件修復完成。請重新啟動你嘅系統令更改生效。</sys:String>
 
     <!-- Error Message -->
-    <sys:String x:Key="Err_Create_Temp_Path">開唔到臨時資料夾，請確認系統環境變數係咪設定正確！</sys:String>
+    <sys:String x:Key="Err_Create_Temp_Path">開唔到臨時資料夾。請確認系統環境變數係咪設定正確！</sys:String>
     <sys:String x:Key="Err_Already_Running">Office Tool Plus 運行緊喇。</sys:String>
-    <sys:String x:Key="Err_Perform_Update">執行更新嗰陣出錯，請手動下載最新版本嘅 Office Tool Plus。</sys:String>
+    <sys:String x:Key="Err_Perform_Update">執行更新嗰陣出錯。請手動下載最新版本嘅 Office Tool Plus。</sys:String>
     <sys:String x:Key="Err_Unknown_Command">未知嘅命令: {0}</sys:String>
     <sys:String x:Key="Err_Command_Parameter">缺少必需嘅參數。</sys:String>
-    <sys:String x:Key="Err_Checking_Installation">讀取安裝文件嗰陣出錯，請試下重新讀取，或者重新下載 Office 安裝文件。</sys:String>
-    <sys:String x:Key="Err_Installation_Corrupted">安裝文件損壞，請刪咗佢重新下載過。</sys:String>
+    <sys:String x:Key="Err_Checking_Installation">讀取安裝文件嗰陣出錯。請試下重新讀取，或者重新下載 Office 安裝文件。</sys:String>
+    <sys:String x:Key="Err_Installation_Corrupted">安裝文件損壞。請刪咗佢重新下載過。</sys:String>
     <sys:String x:Key="Err_Installation">安裝文件 {0} 有问题:&#x000A;{1}</sys:String>
     <sys:String x:Key="Err_Installation_File_Missing">文件唔見咗：{0}</sys:String>
     <sys:String x:Key="Err_Installation_File_Corrupted">文件損壞：{0}</sys:String>
@@ -939,36 +942,36 @@
     <sys:String x:Key="Err_Installation_SignatureInvalid">呢個文件嘅簽名有问题：{0}</sys:String>
     <sys:String x:Key="Err_Installation_Version">版本唔相符，文件：{0}&#x000A;版本：{1}&#x000A;實際嘅版本：{2}</sys:String>
     <sys:String x:Key="Err_Installation_Mismatch">版本唔相符，文件：{0}&#x000A;實際版本：{1}&#x000A;系統架構：{2}</sys:String>
-    <sys:String x:Key="Err_Installation_No_BasePack">呢個安裝文件冇基礎包，請試下重新下載。</sys:String>
+    <sys:String x:Key="Err_Installation_No_BasePack">呢個安裝文件冇基礎包。請試下重新下載。</sys:String>
     <sys:String x:Key="Err_Reading_Info">讀取 Office 資料嗰陣出錯。</sys:String>
     <sys:String x:Key="Err_Saving_Info">儲存 Office 資料嗰陣出錯。</sys:String>
-    <sys:String x:Key="Err_Start_Deploy.Download">下載唔到 Office，請確認你加咗產品或語言，然後再試過。</sys:String>
-    <sys:String x:Key="Err_Start_Deploy.Deploy">部署唔到 Office，請確認你正確設定咗基本設定，然後再試過。</sys:String>
-    <sys:String x:Key="Err_Start_Deploy.Preferences">設定唔到應用程式首選項，請確認你正確設定咗應用程式首選項，然後再試過。</sys:String>
+    <sys:String x:Key="Err_Start_Deploy.Download">下載唔到 Office。請確認你加咗產品或語言，然後再試過。</sys:String>
+    <sys:String x:Key="Err_Start_Deploy.Deploy">部署唔到 Office。請確認你正確設定咗基本設定，然後再試過。</sys:String>
+    <sys:String x:Key="Err_Start_Deploy.Preferences">設定唔到應用程式首選項。請確認你正確設定咗應用程式首選項，然後再試過。</sys:String>
     <!-- {0} means product name, for example: Microsoft 365 Apps for Enterprise. -->
     <sys:String x:Key="Err_Start_Deploy_ProductNotSupported">呢個版本嘅 Office 唔支援安裝 {0}。</sys:String>
     <!-- {0} means product name, for example: Visio Professional 2016. {1} means language code, for example: en-gb. -->
     <sys:String x:Key="Err_Start_Deploy_CultureNotSupported">{0} 唔支援 {1} 語言。</sys:String>
-    <sys:String x:Key="Err_System_Variables_Incorrect">一個或者多個系統變量唔正確，請喺工具箱頁面度修復。</sys:String>
+    <sys:String x:Key="Err_System_Variables_Incorrect">一個或者多個系統變量唔正確。請喺工具箱頁面度修復。</sys:String>
     <sys:String x:Key="Err_Folder_Permissions_Incorrect">一個或者多個資料夾權限唔正確，我們都整唔好佢。請重新啟動你嘅系統，再試過；或者請大佬嚟幫你呀。</sys:String>
     <sys:String x:Key="Err_Installation_Is_In_Progress">仲有另一個 Office 安裝程序運行緊，睇下 Windows 任務欄嘅狀態先。</sys:String>
     <sys:String x:Key="Err_Installer_Exited">Office 部署工具未能正常退出。</sys:String>
-    <sys:String x:Key="Err_Prepare_To_Download_Office">攞唔到 Office 版本，請再試過，或者改用 Office 部署工具做下載引擎。</sys:String>
+    <sys:String x:Key="Err_Prepare_To_Download_Office">攞唔到 Office 版本。請再試過，或者改用 Office 部署工具做下載引擎。</sys:String>
     <sys:String x:Key="Err_Create_ISO">搵唔到 Office 安裝文件。請先下載安裝文件，或者揀選現有嘅安裝文件，然後再試過。</sys:String>
     <sys:String x:Key="Err_WPA_Registry">呢個 WPA 注册表有問題。請睇睇[呢個說明]({0})來解決問題。</sys:String>
     <sys:String x:Key="Err_Query_Office_Licenses">查詢唔到 Office 許可證。請再試過。</sys:String>
     <sys:String x:Key="Err_Loading_Office_Licenses">喺系統度搵唔到 Click-to-Run 版本嘅 Office，載入唔到 Office 許可證。請確認你已經安裝咗最新版本嘅 Office。</sys:String>
-    <sys:String x:Key="Err_Product_Key_Invalid">輸入嘅產品密鑰唔正確，請檢查咗再試過。</sys:String>
-    <sys:String x:Key="Err_Confirmation_ID_Invalid">輸入嘅確認 ID 唔正確，請檢查咗再試過。</sys:String>
-    <sys:String x:Key="Err_KMS_Host_Invalid">儲存唔到 KMS 設定，請檢查 KMS 主機名稱係咪正確，然後再試過。</sys:String>
-    <sys:String x:Key="Err_No_KMS_Lic">儲存唔到 KMS 設定，喺系統度搵唔到有效嘅 Office KMS 許可證。</sys:String>
-    <sys:String x:Key="Err_Set_KMS">儲存唔到 KMS 設定，請再試過。</sys:String>
+    <sys:String x:Key="Err_Product_Key_Invalid">輸入嘅產品密鑰唔正確。請檢查咗再試過。</sys:String>
+    <sys:String x:Key="Err_Confirmation_ID_Invalid">輸入嘅確認 ID 唔正確。請檢查咗再試過。</sys:String>
+    <sys:String x:Key="Err_KMS_Host_Invalid">儲存唔到 KMS 設定。請檢查 KMS 主機名稱係咪正確，然後再試過。</sys:String>
+    <sys:String x:Key="Err_No_KMS_Lic">儲存唔到 KMS 設定。喺系統度搵唔到有效嘅 Office KMS 許可證。</sys:String>
+    <sys:String x:Key="Err_Set_KMS">儲存唔到 KMS 設定。請再試過。</sys:String>
     <sys:String x:Key="Err_Act_Run_Commands">執行命令嗰陣出現錯誤。&#x000A;&#x000A;錯誤代碼: {0}</sys:String>
     <sys:String x:Key="Err_Act_Office_License">激活產品嗰陣出現錯誤。&#x000A;&#x000A;錯誤代碼: {0}</sys:String>
     <sys:String x:Key="Err_Install_Office_Lic">安裝許可證嗰陣出現錯誤。&#x000A;&#x000A;錯誤代碼: {0}</sys:String>
     <sys:String x:Key="Err_Install_Product_Key">安裝產品密鑰嗰陣出現錯誤。&#x000A;&#x000A;錯誤代碼: {0}</sys:String>
     <sys:String x:Key="Err_Uninstall_Product_Key">卸載產品密鑰嗰陣出現錯誤。&#x000A;&#x000A;錯誤代碼: {0}</sys:String>
-    <sys:String x:Key="Err_Check_KMS_Status">測試唔到 KMS 狀態，請檢查 KMS 主機名稱係咪正確，然後再試過。</sys:String>
-    <sys:String x:Key="Err_Office_App_NotFound">喺系統度搵唔到 {0}，請確認係咪已經安裝咗最新版本嘅 Office。</sys:String>
-    <sys:String x:Key="Err_Open_Clipboard">存取唔到剪貼板，請再試過。</sys:String>
+    <sys:String x:Key="Err_Check_KMS_Status">測試唔到 KMS 狀態。請檢查 KMS 主機名稱係咪正確，然後再試過。</sys:String>
+    <sys:String x:Key="Err_Office_App_NotFound">喺系統度搵唔到 {0}。請確認係咪已經安裝咗最新版本嘅 Office。</sys:String>
+    <sys:String x:Key="Err_Open_Clipboard">存取唔到剪貼板。請再試過。</sys:String>
 </ResourceDictionary>

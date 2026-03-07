@@ -80,8 +80,8 @@
     <sys:String x:Key="Home_Install_Office.O365HPRDescription">يشمل Outlook وWord وExcel وPowerPoint والمزيد.</sys:String>
     <sys:String x:Key="Home_Install_Office.PP2019RDescription">يشمل Outlook وWord وExcel وPowerPoint والمزيد.</sys:String>
     <sys:String x:Key="Home_Install_Office.HS2019Description">يشمل Word وExcel وPowerPoint.</sys:String>
-    <sys:String x:Key="Home_Fetching_Content">جاري جلب المحتوى، يرجى الانتظار...</sys:String>
-    <sys:String x:Key="Home_Error_While_Fetching_Content">تعذر جلب المحتوى، يرجى التحقق من اتصال الإنترنت والمحاولة مرة أخرى.</sys:String>
+    <sys:String x:Key="Home_Loading_Content">Loading content...</sys:String>
+    <sys:String x:Key="Home_Error_While_Loading_Content">Unable to load content. Please check your Internet connection and try again.</sys:String>
     <sys:String x:Key="Home_Retry">_إعادة المحاولة</sys:String>
     <sys:String x:Key="Home_Launcher.Name">قائمة التطبيقات</sys:String>
     <sys:String x:Key="Home_Launcher_OpenInBrowser">_فتح في المتصفح</sys:String>
@@ -152,11 +152,15 @@
     <sys:String x:Key="Deploy_Download_First.Description">سيتم حفظ ملفات التثبيت في دليل البرنامج أو الدليل المحدد بواسطة مسار المصدر.</sys:String>
     <sys:String x:Key="Deploy_Create_Shortcut">إنشاء اختصارات سطح المكتب</sys:String>
     <sys:String x:Key="Deploy_Create_Shortcut.Description">إنشاء اختصارات سطح المكتب لتطبيقات أوفيس بعد تثبيت أوفيس.</sys:String>
-    <!-- Do not edit them or translate them. iSlide only provided in mainland China. -->
+    <!-- Do not edit them or translate them. iSlide and AiPPT only provided in mainland China. -->
     <sys:String x:Key="Deploy_iSlide">PlaceHolder</sys:String>
     <sys:String x:Key="Deploy_iSlide.Description">PlaceHolder</sys:String>
     <sys:String x:Key="Deploy_iSlide_Install">PlaceHolder</sys:String>
     <sys:String x:Key="Deploy_iSlide_Install.Name">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_AiPPT">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_AiPPT.Description">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_AiPPT_Install">PlaceHolder</sys:String>
+    <sys:String x:Key="Deploy_AiPPT_Install.Name">PlaceHolder</sys:String>
 
     <sys:String x:Key="Deploy_Product">المنتجات</sys:String>
     <sys:String x:Key="Deploy_Product.Description">{0} منتج(ات) مثبتة، {1} جاهزة للنشر و{2} جاهزة للإزالة.</sys:String>
@@ -477,7 +481,7 @@
     <sys:String x:Key="Toolbox_Backup">نسخ احتياطي</sys:String>
     <sys:String x:Key="Toolbox_Restore">استعادة</sys:String>
     <sys:String x:Key="Toolbox_Reset_OfficeSettings">إعادة تعيين إعدادات أوفيس إلى الافتراضي</sys:String>
-    <sys:String x:Key="Toolbox_Reset_OfficeSettings.Description">إعادة تعيين أوفيس إلى الإعدادات الافتراضية كما تريد. قبل البدء، يرجى إغلاق جميع تطبيقات أوفيس.</sys:String>
+    <sys:String x:Key="Toolbox_Reset_OfficeSettings.Description">Reset Office to default settings. Please close all Office applications before proceeding.</sys:String>
     <sys:String x:Key="Toolbox_Reset_OfficeSettings_Button">إعادة تعيين</sys:String>
     <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserSettings">حذف إعدادات المستخدم الحالية</sys:String>
     <sys:String x:Key="Toolbox_Reset_OfficeSettings_UserSettings.Description">تشمل إعدادات تطبيقات أوفيس، الملفات التي تم فتحها مؤخرًا ومواقع الحفظ الأخيرة.</sys:String>
@@ -825,7 +829,6 @@
     <sys:String x:Key="Task_Downloading_Updates">جاري تنزيل التحديثات، تم إكمال {0} ({1} من {2}).</sys:String>
     <sys:String x:Key="Task_Downloading_Updates_NoPercentage">جاري تنزيل التحديثات، {0} من {1}.</sys:String>
     <sys:String x:Key="Task_Verifying_Installation_Files">جاري التحقق من الملفات، يرجى الانتظار.</sys:String>
-    <sys:String x:Key="Task_Loading_Preferences">جاري تحميل تفضيلات التطبيق، يرجى الانتظار.</sys:String>
     <sys:String x:Key="Task_Downloading_Web_Config">جاري الحصول على ملف التكوين من الويب، يرجى الانتظار.</sys:String>
     <sys:String x:Key="Task_Preparing_Download">جاري التحضير لتنزيل أوفيس.</sys:String>
     <!-- Example: Creating Office ISO file, file size: 3.1GB, 45% completed. -->
@@ -845,7 +848,6 @@
     <sys:String x:Key="Task_Importing_Files">جاري استيراد الملفات، يرجى الانتظار.</sys:String>
     <sys:String x:Key="Task_Computing_Hash">جاري حساب التجزئة، متبقي {0} ملف(ات).</sys:String>
     <sys:String x:Key="Task_Exporting_Hash">جاري تصدير النتائج، يرجى الانتظار.</sys:String>
-    <!-- Example: Installing iSlide, please wait. -->
     <sys:String x:Key="Task_Installing_App">جاري تثبيت {0}، يرجى الانتظار.</sys:String>
 
     <!-- Question Message -->
@@ -867,7 +869,7 @@
     <sys:String x:Key="Ques_Delete_All_Installations">هل أنت متأكد أنك تريد حذف جميع ملفات التثبيت؟</sys:String>
     <sys:String x:Key="Ques_Delete_Installation">هل أنت متأكد أنك تريد حذف {0}؟</sys:String>
     <sys:String x:Key="Ques_Delete_Installation_Package">هل أنت متأكد أنك تريد حذف {0}؟</sys:String>
-    <sys:String x:Key="Ques_Install_iSlide">PlaceHolder</sys:String>
+    <sys:String x:Key="Ques_Install_Custom_Software">PlaceHolder</sys:String>
     <sys:String x:Key="Ques_Clear_Activation">هل أنت متأكد أنك تريد إزالة جميع التراخيص والمفاتيح؟ بعد هذه العملية ستحتاج إلى إعادة تثبيت التراخيص وتفعيل أوفيس من جديد.</sys:String>
     <sys:String x:Key="Ques_Install_Licenses">قد لا ترى معلومات التفعيل في أوفيس بعد تثبيت ترخيص أوفيس، لكن يمكنك عرض المعلومات أو تفعيل أوفيس من خلال Office Tool Plus. هل تريد المتابعة؟</sys:String>
     <sys:String x:Key="Ques_Uninstall_Licenses">هل أنت متأكد أنك تريد إزالة جميع تراخيص أوفيس؟</sys:String>
@@ -883,6 +885,7 @@
     <sys:String x:Key="Info_No_Updates">أنت تستخدم أحدث إصدار من Office Tool Plus.</sys:String>
     <sys:String x:Key="Info_Update_In_Progress">التحديث(ات) قيد التنفيذ، يرجى الانتظار.</sys:String>
     <sys:String x:Key="Info_Updates_Incomplete">فشل تطبيق التحديثات، يرجى المحاولة مرة أخرى لاحقًا.</sys:String>
+    <sys:String x:Key="Info_SystemDrive_Permissions">Your system drive permissions are incorrect. Please contact technical support for assistance.</sys:String>
     <sys:String x:Key="Info_SystemDrive_NoSpace">Your system drive is running out of space, which may cause some operations to fail.</sys:String>
     <sys:String x:Key="Info_No_Language_Added_For_Download">لم تقم بإضافة أي لغة. في معظم الحالات، نوصي بإضافة لغات لتجنب المشاكل.</sys:String>
     <sys:String x:Key="Info_Select_Where_To_Save_Office_Installation">يرجى تحديد المجلد لحفظ ملفات تثبيت أوفيس.&#x000A;لاستخدام الموقع الافتراضي، قم بتعطيل "اسأل عن مكان حفظ الملفات" في صفحة الإعدادات.</sys:String>

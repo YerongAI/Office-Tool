@@ -36,14 +36,13 @@ Apache-2.0 license
 
 ## NuGet Packages
 
-- Downloader (5.0.0)
-- Microsoft.Extensions.Caching.Memory (10.0.4)
-- Microsoft.Extensions.Http (10.0.4)
+- Downloader (5.1.0)
+- Microsoft.Extensions.Caching.Memory (10.0.6)
+- Microsoft.Extensions.Http (10.0.6)
 - Microsoft.Security.Extensions (1.4.0)
 - Microsoft.Xaml.Behaviors.Wpf (1.1.142)
 - Prism.DryIoc (9.0.537)
 - Prism.Wpf (9.0.537)
-- System.IO.Hashing (10.0.4)
-- System.Management (10.0.4)
-- System.ServiceProcess.ServiceController (10.0.4)
-- WixToolset.Dtf.Compression.Cab (6.0.2)
+- System.IO.Hashing (10.0.6)
+- System.Management (10.0.6)
+- System.ServiceProcess.ServiceController (10.0.6)

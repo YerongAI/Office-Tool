@@ -57,6 +57,7 @@ irm https://officetool.plus | iex
 | de-de | Deutsch (Deutschland) | [Berny23](https://steamcommunity.com/id/Berny23) |
 | en-gb | English (United Kingdom) | [Mcforwin](https://github.com/Mcforwin) |
 | en-us | English (United States) | [Yerong](https://www.officetool.plus/) |
+| fa-ir | فارسی (ایران) | [Artman YP](https://github.com/artmanyp) |
 | hu-hu | magyar (Magyarország) | [John Fowler](https://github.com/JohnFowler58) |
 | id-id | Bahasa Indonesia (Indonesia) | [Ida Bagus Anom Sanjaya](https://fb.me/Anom.Sanjaya17), [Reno Sifana Paksi](https://linktr.ee/renosifana.paksi) |
 | it-it | italiano (Italia) | [garf02](https://github.com/garf02), [bovirus](https://github.com/bovirus) |

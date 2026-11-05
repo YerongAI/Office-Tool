@@ -12,7 +12,7 @@
 
     <!-- Eula content -->
     <sys:String x:Key="Eula.Title">Termini licenza</sys:String>
-    <sys:String x:Key="Eula.Content">Per usare questo software, è necessario accettare i [Termini licenza del software]({0}) e l'[Accordo sui servizi Microsoft]({1}).</sys:String>
+    <sys:String x:Key="Eula.Content">Usando questo software, accetti le [Condizioni di licenza con l'utente finale]({0}) e il [Contratto di Servizi Microsoft]({1}).&#x000A;&#x000A;Questo software è destinato esclusivamente a un uso non commerciale.&#x000A;Se non accetti queste condizioni, seleziona 'No' per uscire dall'applicazione.</sys:String>
 
     <!-- Custom control -->
     <sys:String x:Key="Yerong_String_ToggleButton.Unset">Non impostato</sys:String>
@@ -115,7 +115,7 @@
     <sys:String x:Key="Deploy_Error_Installation_Channel">Il canale di aggiornamento selezionato non corrisponde al canale di aggiornamento dei file di installazione locale, seleziona nuovamente il canale di aggiornamento o non usare per la distribuzione i file di installazione locale.</sys:String>
 
     <sys:String x:Key="Deploy_Deployment">Distribuzione di Office</sys:String>
-    <sys:String x:Key="Deploy_Deployment.Description">Prima di distribuire Office, assicurati che la modalità di distribuzione sia impostata correttamente e che siano configurati il prodotto e la lingua.</sys:String>
+    <sys:String x:Key="Deploy_Deployment.Description">Prima di distribuire Office, assicurati che la modalità distribuzione sia impostata correttamente e che siano configurati il prodotto e la lingua.</sys:String>
     <sys:String x:Key="Deploy_Start_Deploy">Avvia _distribuzione</sys:String>
     <sys:String x:Key="Deploy_Reset">_Ripristina tutte le impostazioni</sys:String>
     <sys:String x:Key="Deploy_View_Code">_Visualizza codice XML</sys:String>
@@ -242,8 +242,6 @@
     <sys:String x:Key="Deploy_Advanced_Allow_CDN_Fallback.Description">Consente al programma di installazione di Office per scaricare le lingue mancanti di eseguire il fallback sulla rete CDN di Office.</sys:String>
     <sys:String x:Key="Deploy_Advanced_Force_Close_Apps">Forza la chiusura di tutte le applicazioni di Office in esecuzione</sys:String>
     <sys:String x:Key="Deploy_Advanced_Force_Close_Apps.Description">I dati non salvati potrebbero andare persi.</sys:String>
-    <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar">Aggiungi alla barra applicazioni</sys:String>
-    <sys:String x:Key="Deploy_Advanced_Pin_To_Taskbar.Description">In Windows 7, 8 e 8.1 aggiungi le icone delle applicazioni Office alla barra applicazioni.</sys:String>
 
     <sys:String x:Key="Deploy_Advanced_Update_Settings">Impostazioni aggiornamento</sys:String>
     <sys:String x:Key="Deploy_Advanced_Enable_Mgnt_COM">Gestisci aggiornamenti usando MECM</sys:String>
@@ -266,9 +264,12 @@
     <sys:String x:Key="Deploy_Advanced_MAK">Impostazione MAK</sys:String>
     <sys:String x:Key="Deploy_Advanced_Auto_Activate">Dopo aver impostato il MAK, proveremo ad attivare automaticamente il prodotto.</sys:String>
     <sys:String x:Key="Deploy_Advanced_Product_Activation">Attivazione prodotto</sys:String>
-    <sys:String x:Key="Deploy_Advanced_UserBased">Basato sull'utente</sys:String>
-    <sys:String x:Key="Deploy_Advanced_DeviceBased">Basato sul dispositivo</sys:String>
-    <sys:String x:Key="Deploy_Advanced_SCL">Computer condiviso</sys:String>
+    <sys:String x:Key="Deploy_Advanced_LicensingMode">Modalità licenza</sys:String>
+    <sys:String x:Key="Deploy_Advanced_LicensingMode.Description">Imposta la modalità licenza per le app Microsoft 365.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_LicensingMode_LearnMode">Ulteriori info sulla modalità licenza.</sys:String>
+    <sys:String x:Key="Deploy_Advanced_LicensingMode.UserBased">Basata sull'utente</sys:String>
+    <sys:String x:Key="Deploy_Advanced_LicensingMode.DeviceBased">Basata sul dispositivo</sys:String>
+    <sys:String x:Key="Deploy_Advanced_LicensingMode.SCL">Computer condiviso</sys:String>
     <sys:String x:Key="Deploy_Advanced_SCL_Cache_Override">Sovrascrivi percorso token licenza</sys:String>
     <sys:String x:Key="Deploy_Advanced_SCL_Cache_Override.Title">Percorso cartella</sys:String>
     <sys:String x:Key="Deploy_Advanced_SCL_Cache_Override.Description">Specifica il percorso della cartella del token licenza.</sys:String>
@@ -297,6 +298,25 @@
 
     <!-- Activate page -->
     <sys:String x:Key="Activate_NonAdmin_Privileges">Office Tool Plus è in esecuzione con privilegi non di amministratore, alcune funzionalità non sono ora disponibili.</sys:String>
+    <sys:String x:Key="Activate_Notif_LicensingMode_DeviceBased">Le app Microsoft 365 sono state configurate per licenze basate sul dispositivo. Prima di poter usare le app Microsoft 365 gli amministratori devono assegnare una licenza valida a questo dispositivo.</sys:String>
+    <sys:String x:Key="Activate_Notif_LicensingMode_SharedComputer">Le app Microsoft 365 sono state configurate per la modalità computer condiviso. Per usare le app Microsoft 365 ogni utente deve accedere e verificare la propria licenza.</sys:String>
+    <sys:String x:Key="Activate_Notif_LicensingMode_ViewerMode">Le app Microsoft 365 sono state configurate per la modalità visualizzatore. Per le app senza licenza, gli utenti possono visualizzare o stampare file ma non possono creare o modificare alcun file.</sys:String>
+    <sys:String x:Key="Activate_LearnMore">Maggiori info</sys:String>
+
+    <sys:String x:Key="Activate_Licensing_Mode_Management">Gestione modalità licenza</sys:String>
+    <sys:String x:Key="Activate_Licensing_Mode_Management.Description">Gestisci come attivare le app Microsoft 365.</sys:String>
+    <sys:String x:Key="Activate_Licensing_Mode">Modalità licenza</sys:String>
+    <sys:String x:Key="Activate_Licensing_Mode.Description">Modifica la modalità licenza per le app Microsoft 365.</sys:String>
+    <sys:String x:Key="Activate_Licensing_Mode_LearnMore">Maggiori info sulla modalità licenza.</sys:String>
+    <sys:String x:Key="Activate_Licensing_Mode_Apply">Applica</sys:String>
+    <sys:String x:Key="Activate_Licensing_Mode_Reset">Ripristina</sys:String>
+    <sys:String x:Key="Activate_Licensing_Mode.UserBased">Basata sull'utente</sys:String>
+    <sys:String x:Key="Activate_Licensing_Mode.DeviceBased">Basata sul dispositivo</sys:String>
+    <sys:String x:Key="Activate_Licensing_Mode.SCL">Computer condiviso</sys:String>
+    <sys:String x:Key="Activate_Licensing_Mode.ViewerMode">Modo visualizzatore</sys:String>
+    <sys:String x:Key="Activate_Licensing_Mode_SCL_Cache_Override">Sovrascrivi percorso token licenza</sys:String>
+    <sys:String x:Key="Activate_Licensing_Mode_SCL_Cache_Override.Title">Percorso cartella</sys:String>
+    <sys:String x:Key="Activate_Licensing_Mode_SCL_Cache_Override.Description">Specifica il percorso della cartella del token licenza.</sys:String>
 
     <sys:String x:Key="Activate_Licenses_Management">Gestione licenze</sys:String>
     <sys:String x:Key="Activate_Licenses_Management.Description">Installa, disinstalla o attiva le licenze Office.</sys:String>
@@ -357,9 +377,8 @@
     <sys:String x:Key="Activate_License_vNext_Status">Stato:</sys:String>
     <sys:String x:Key="Activate_License_vNext_Status.Provisioned">Fornito</sys:String>
     <sys:String x:Key="Activate_License_vNext_Status.Deprovisioned">deprovisionato</sys:String>
+    <sys:String x:Key="Activate_License_vNext_Status.Suspended">sospesa</sys:String>
     <sys:String x:Key="Activate_License_vNext_ReasonCode">Codice argomento:</sys:String>
-    <sys:String x:Key="Activate_License_vNext_ReasonCode.DeviceDeprovisionedByUser">dispositivo deprovisionato dall'utente</sys:String>
-    <sys:String x:Key="Activate_License_vNext_ReasonCode.SubscriptionCancelled">iscrizione annullata</sys:String>
     <sys:String x:Key="Activate_License_vNext.Beneficiary.User">La licenza viene assegnata all'utente:</sys:String>
     <sys:String x:Key="Activate_License_vNext.Beneficiary.Device">La licenza viene assegnata al dispositivo:</sys:String>
     <sys:String x:Key="Activate_License_vNext_Metadata.TenantID">ID occupante:</sys:String>

@@ -1,0 +1,68 @@
+name: Syntax Check (JSON, XML & XAML)
+
+on:
+  pull_request:
+    branches: [ "main" ]
+    # Syntax Check for JSON, XML and XAML files only
+    paths:
+      - '**.json'
+      - '**.xml'
+      - '**.xaml'
+
+jobs:
+  lint-syntax:
+    name: Validate JSON, XML & XAML Syntax
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install validation tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq libxml2-utils
+
+      - name: Validate JSON files
+        run: |
+          echo "Checking modified JSON files..."
+          FILES=$(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep -E '\.json$' || true)
+          
+          if [ -z "$FILES" ]; then
+            echo "No JSON files to check."
+            exit 0
+          fi
+
+          ERROR=0
+          for file in $FILES; do
+            if ! jq empty "$file" > /dev/null; then
+              echo "Validation failed: $file"
+              ERROR=1
+            else
+              echo "Validation succeed: $file"
+            fi
+          done
+          exit $ERROR
+
+      - name: Validate XML and XAML files
+        run: |
+          echo "Checking modified XML and XAML files..."
+          FILES=$(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep -E '\.(xml|xaml)$' || true)
+          
+          if [ -z "$FILES" ]; then
+            echo "No XML or XAML files to check."
+            exit 0
+          fi
+
+          ERROR=0
+          for file in $FILES; do
+            if ! xmllint --noout "$file"; then
+              echo "Validation failed: $file"
+              ERROR=1
+            else
+              echo "Validation succeed: $file"
+            fi
+          done
+          exit $ERROR
